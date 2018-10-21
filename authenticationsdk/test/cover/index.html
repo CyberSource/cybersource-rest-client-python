@@ -1,0 +1,356 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">85%</span>
+        </h1>
+
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        
+        <span class="key">b</span>
+        <span class="key">p</span>
+        
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+
+<div id="index">
+    <table class="index">
+        <thead>
+            
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                
+                <th class="shortkey_b">branches</th>
+                <th class="shortkey_p">partial</th>
+                
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>595</td>
+                <td>56</td>
+                <td>0</td>
+                
+                <td>154</td>
+                <td>46</td>
+                
+                <td class="right" data-ratio="633 749">85%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk___init___py.html">authenticationsdk\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core_Authorization_py.html">authenticationsdk\core\Authorization.py</a></td>
+                <td>55</td>
+                <td>12</td>
+                <td>0</td>
+                
+                <td>20</td>
+                <td>4</td>
+                
+                <td class="right" data-ratio="51 75">68%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core_ExceptionHandling_py.html">authenticationsdk\core\ExceptionHandling.py</a></td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="2 3">67%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core_MerchantConfigaration_py.html">authenticationsdk\core\MerchantConfigaration.py</a></td>
+                <td>167</td>
+                <td>15</td>
+                <td>0</td>
+                
+                <td>84</td>
+                <td>31</td>
+                
+                <td class="right" data-ratio="205 251">82%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core_MockData_py.html">authenticationsdk\core\MockData.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core_TokenGeneration_py.html">authenticationsdk\core\TokenGeneration.py</a></td>
+                <td>5</td>
+                <td>1</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="4 5">80%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_core___init___py.html">authenticationsdk\core\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_http_GetSignatureParameter_py.html">authenticationsdk\http\GetSignatureParameter.py</a></td>
+                <td>52</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>10</td>
+                <td>1</td>
+                
+                <td class="right" data-ratio="61 62">98%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_http_HTTPSignatureToken_py.html">authenticationsdk\http\HTTPSignatureToken.py</a></td>
+                <td>42</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>8</td>
+                <td>1</td>
+                
+                <td class="right" data-ratio="49 50">98%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_http___init___py.html">authenticationsdk\http\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_jwt_Token_py.html">authenticationsdk\jwt\Token.py</a></td>
+                <td>83</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>8</td>
+                <td>1</td>
+                
+                <td class="right" data-ratio="90 91">99%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_jwt___init___py.html">authenticationsdk\jwt\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_logger_Log_py.html">authenticationsdk\logger\Log.py</a></td>
+                <td>22</td>
+                <td>4</td>
+                <td>0</td>
+                
+                <td>10</td>
+                <td>5</td>
+                
+                <td class="right" data-ratio="23 32">72%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_logger___init___py.html">authenticationsdk\logger\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_payloaddigest_PayLoadDigest_py.html">authenticationsdk\payloaddigest\PayLoadDigest.py</a></td>
+                <td>25</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="27 27">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_payloaddigest___init___py.html">authenticationsdk\payloaddigest\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_util_Cache_py.html">authenticationsdk\util\Cache.py</a></td>
+                <td>27</td>
+                <td>7</td>
+                <td>0</td>
+                
+                <td>4</td>
+                <td>2</td>
+                
+                <td class="right" data-ratio="22 31">71%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_util_ExceptionAuth_py.html">authenticationsdk\util\ExceptionAuth.py</a></td>
+                <td>14</td>
+                <td>8</td>
+                <td>0</td>
+                
+                <td>6</td>
+                <td>1</td>
+                
+                <td class="right" data-ratio="7 20">35%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_util_GlobalLabelParameters_py.html">authenticationsdk\util\GlobalLabelParameters.py</a></td>
+                <td>77</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="77 77">100%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_util_PropertiesUtil_py.html">authenticationsdk\util\PropertiesUtil.py</a></td>
+                <td>17</td>
+                <td>8</td>
+                <td>0</td>
+                
+                <td>2</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="9 19">47%</td>
+            </tr>
+            
+            <tr class="file">
+                <td class="name left"><a href="authenticationsdk_util___init___py.html">authenticationsdk\util\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+                <td>0</td>
+                <td>0</td>
+                
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.1</a>,
+            created at 2018-08-22 19:04
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
