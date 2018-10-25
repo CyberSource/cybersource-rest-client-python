@@ -64,16 +64,16 @@ class Authorization:
             cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, e, mconfig)
         except IOError as e:
             cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger,
-                                                               GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
-                                                               mconfig)
+                                                                                              GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
+                                                                                              mconfig)
         except WindowsError as e:
             cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger,
-                                                               GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
-                                                               mconfig)
+                                                                                              GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
+                                                                                              mconfig)
         except Exception as e:
             if "mac verify failure" in str(e):
                 cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, GlobalLabelParameters.INCORRECT_KEY_PASSWORD,
-                                                                   mconfig)
+                                                                                                  mconfig)
             else:
                 cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, repr(e), mconfig)
 

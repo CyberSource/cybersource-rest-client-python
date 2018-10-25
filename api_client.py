@@ -242,8 +242,8 @@ class ApiClient(object):
 
         return_data = response_data
 
-        print(return_data.status)
-        print(return_data.data)
+        #print(return_data.status)
+        #print(return_data.data)
         if _preload_content:
             # deserialize response data
             if response_type:
@@ -257,7 +257,7 @@ class ApiClient(object):
             else:
                 callback((return_data, response_data.status, response_data.getheaders()))
         elif _return_http_data_only:
-            return (return_data)
+            return (return_data,response_data.status, response_data.data)
         else:
             return (return_data, response_data.status, response_data.getheaders())
 
