@@ -1,7 +1,8 @@
-from cybersource_rest_client_python.authenticationsdk.http.HTTPSignatureToken import *
-from cybersource_rest_client_python.authenticationsdk.jwt.Token import *
-from cybersource_rest_client_python.authenticationsdk.core.ExceptionHandling import *
-import cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth
+from authenticationsdk.http.HTTPSignatureToken import *
+from authenticationsdk.jwt.Token import *
+from authenticationsdk.core.ExceptionHandling import *
+import authenticationsdk.util.ExceptionAuth
+
 
 
 # This class calls for the generation of Signature message depending on the authentication type
@@ -61,21 +62,21 @@ class Authorization:
             else:
                 raise ApiException(1, GlobalLabelParameters.AUTH_ERROR)
         except ApiException as e:
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, e, mconfig)
+            authenticationsdk.util.ExceptionAuth.log_exception(logger, e, mconfig)
         except IOError as e:
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger,
-                                                                                              GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
-                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.log_exception(logger,
+                                                               GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
+                                                               mconfig)
         except WindowsError as e:
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger,
-                                                                                              GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
-                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.log_exception(logger,
+                                                               GlobalLabelParameters.FILE_NOT_FOUND + str(e.filename),
+                                                               mconfig)
         except Exception as e:
             if "mac verify failure" in str(e):
-                cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, GlobalLabelParameters.INCORRECT_KEY_PASSWORD,
-                                                                                                  mconfig)
+                authenticationsdk.util.ExceptionAuth.log_exception(logger, GlobalLabelParameters.INCORRECT_KEY_PASSWORD,
+                                                                   mconfig)
             else:
-                cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.log_exception(logger, repr(e), mconfig)
+                authenticationsdk.util.ExceptionAuth.log_exception(logger, repr(e), mconfig)
 
     # noinspection PyMethodMayBeStatic
     def validate_request_type_method(self, mconfig):
