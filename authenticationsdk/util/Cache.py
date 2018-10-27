@@ -1,5 +1,5 @@
 import os
-from cybersource_rest_client_python.authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.util.GlobalLabelParameters import *
 from OpenSSL import crypto
 import ssl
 import base64

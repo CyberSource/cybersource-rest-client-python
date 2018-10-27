@@ -1,7 +1,7 @@
-from cybersource_rest_client_python.authenticationsdk.http.GetSignatureParameter import *
+from authenticationsdk.http.GetSignatureParameter import *
 
-from cybersource_rest_client_python.authenticationsdk.core.TokenGeneration import *
-from cybersource_rest_client_python.authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.core.TokenGeneration import *
+from authenticationsdk.util.GlobalLabelParameters import *
 
 
 # HttpSigToken return SignatureHeader Value that contains following paramters
@@ -33,6 +33,7 @@ class HTTPSignatureToken(TokenGeneration):
         self.http_method_sig = mconfig.request_type_method
         self.http_merchant_id = mconfig.merchant_id
         self.date_time = date_time
+		
 
     def get_token(self):
 
@@ -72,6 +73,7 @@ class HTTPSignatureToken(TokenGeneration):
         header_list.append(
             GlobalLabelParameters.SIGNATURE_HEADER + signature + "\"")
         signature_value = ''.join(header_list)
+		
 
 
         return signature_value

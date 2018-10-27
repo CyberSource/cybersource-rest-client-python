@@ -1,12 +1,12 @@
-from cybersource_rest_client_python.authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.util.GlobalLabelParameters import *
 from wsgiref.handlers import format_date_time
 from datetime import datetime
 from time import mktime
 import ast
 import json
-import cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth
+import authenticationsdk.util.ExceptionAuth
 import os
-import cybersource_rest_client_python.authenticationsdk.logger.Log
+import authenticationsdk.logger.Log
 
 
 class MerchantConfigaration:
@@ -154,50 +154,50 @@ class MerchantConfigaration:
     # This validates the Merchant details
     def validate_merchant_details(self, details, mconfig):
         # verify Mandatory Properties
-        logger = cybersource_rest_client_python.authenticationsdk.logger.Log.setup_logger(mconfig)
+        logger =authenticationsdk.logger.Log.setup_logger(mconfig)
         mconfig.log = logger
         if self.enable_log is True:
             logger.info("START> ======================================= ")
         if self.merchant_id is None or self.merchant_id == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                              GlobalLabelParameters.MERCHANTID_REQ,
-                                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.MERCHANTID_REQ,
+                                                                               mconfig)
 
         if self.authentication_type is None or self.authentication_type == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                              GlobalLabelParameters.AUTHENTICATION_REQ,
-                                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.AUTHENTICATION_REQ,
+                                                                               mconfig)
 
 
         if self.run_environment is None or self.run_environment == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                              GlobalLabelParameters.RUN_ENVIRONMENT_EMPTY,
-                                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.RUN_ENVIRONMENT_EMPTY,
+                                                                               mconfig)
 
         # Fallback for missing values
         if details.get('enable_log') is None or details.get('enable_log') == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                        GlobalLabelParameters.ENABLE_LOG_DEFAULT_MESSAGE,
-                                                                                                        mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                         GlobalLabelParameters.ENABLE_LOG_DEFAULT_MESSAGE,
+                                                                         mconfig)
 
         if details.get('log_maximum_size') is None or details.get('log_maximum_size') == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                        GlobalLabelParameters.LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE,
-                                                                                                        mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                         GlobalLabelParameters.LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE,
+                                                                         mconfig)
         if details.get('log_file_name') is None or details.get('log_file_name') == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                        GlobalLabelParameters.DEFAULT_LOG_FILE_NAME,
-                                                                                                        mconfig)
+           authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                         GlobalLabelParameters.DEFAULT_LOG_FILE_NAME,
+                                                                         mconfig)
 
         if details.get('log_directory') is None or details.get('log_directory') == "":
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                        GlobalLabelParameters.LOG_DIRECTORY_DEFAULT_MESSAGE,
-                                                                                                        mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                         GlobalLabelParameters.LOG_DIRECTORY_DEFAULT_MESSAGE,
+                                                                         mconfig)
         elif not (os.path.exists(details.get('log_directory')) or os.path.isdir(details.get('log_directory'))):
 
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                        GlobalLabelParameters.LOG_DIRECTORY_INCORRECT_MESSAGE,
-                                                                                                        mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                         GlobalLabelParameters.LOG_DIRECTORY_INCORRECT_MESSAGE,
+                                                                         mconfig)
 
         # This process ensures that merchant_keyid and merchant_secretkey are mandatory in case of HTTP
         # And displays warning if key alias ,key_password,key_filepath,keyfilename are not present when
@@ -206,49 +206,49 @@ class MerchantConfigaration:
         if type(self.authentication_type) == str:
             if self.authentication_type.lower() == GlobalLabelParameters.HTTP.lower():
                 if self.merchant_keyid is None or self.merchant_keyid == "":
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                                      GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
-                                                                                                                      mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                                       GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
+                                                                                       mconfig)
 
                 if self.merchant_secretkey is None or self.merchant_secretkey == "":
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                                      GlobalLabelParameters.MERCHANT_SECRET_KEY_REQ,
-                                                                                                                      mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                                       GlobalLabelParameters.MERCHANT_SECRET_KEY_REQ,
+                                                                                       mconfig)
 
             elif self.authentication_type.lower() == GlobalLabelParameters.JWT.lower():
                 if self.key_alias is None or self.key_alias == "":
                     self.key_alias = self.merchant_id
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                                GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
-                                                                                                                mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                                 GlobalLabelParameters.KEY_ALIAS_NULL_EMPTY,
+                                                                                 mconfig)
                 if not (self.key_alias == self.merchant_id):
                     self.key_alias = self.merchant_id
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                                GlobalLabelParameters.INVALID_KEY_ALIAS,
-                                                                                                                mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                                 GlobalLabelParameters.INVALID_KEY_ALIAS,
+                                                                                 mconfig)
 
                 if self.key_password is None or self.key_password == "":
                     self.key_password = self.merchant_id
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                                GlobalLabelParameters.KEY_PASSWORD_EMPTY,
-                                                                                                                mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                                 GlobalLabelParameters.KEY_PASSWORD_EMPTY,
+                                                                                 mconfig)
 
                 if self.key_file_path is None or self.key_file_path == "":
                     self.key_file_path = GlobalLabelParameters.DEFAULT_KEY_FILE_PATH
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                                GlobalLabelParameters.KEY_DIRECTORY_EMPTY + self.key_file_path,
-                                                                                                                mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                                 GlobalLabelParameters.KEY_DIRECTORY_EMPTY + self.key_file_path,
+                                                                                 mconfig)
 
                 if self.key_file_name is None or self.key_file_name == "":
                     self.key_file_name = self.merchant_id
 
-                    cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
-                                                                                                                GlobalLabelParameters.KEY_FILE_EMPTY,
-                                                                                                                mconfig)
+                    authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+                                                                                 GlobalLabelParameters.KEY_FILE_EMPTY,
+                                                                                 mconfig)
         else:
-            cybersource_rest_client_python.authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                                                              GlobalLabelParameters.AUTH_ERROR,
-                                                                                                              mconfig)
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.AUTH_ERROR,
+                                                                               mconfig)
 
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS
         # This displays the logic for logging all cybs.json values

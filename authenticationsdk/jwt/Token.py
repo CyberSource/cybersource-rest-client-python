@@ -1,7 +1,7 @@
 import jwt
-from cybersource_rest_client_python.authenticationsdk.payloaddigest.PayLoadDigest import *
-from cybersource_rest_client_python.authenticationsdk.core.TokenGeneration import *
-from cybersource_rest_client_python.authenticationsdk.util.Cache import *
+from authenticationsdk.payloaddigest.PayLoadDigest import *
+from authenticationsdk.core.TokenGeneration import *
+from authenticationsdk.util.Cache import *
 
 
 class JwtSignatureToken(TokenGeneration):

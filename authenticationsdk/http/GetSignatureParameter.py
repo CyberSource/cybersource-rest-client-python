@@ -1,6 +1,6 @@
 import hmac
-from cybersource_rest_client_python.authenticationsdk.payloaddigest.PayLoadDigest import *
-from cybersource_rest_client_python.authenticationsdk.util.GlobalLabelParameters import *
+from authenticationsdk.payloaddigest.PayLoadDigest import *
+from authenticationsdk.util.GlobalLabelParameters import *
 
 
 # This method returns value for parameter Signature which is then passed to Signature header
@@ -15,6 +15,7 @@ from cybersource_rest_client_python.authenticationsdk.util.GlobalLabelParameters
 
 class GetSignatureParameter:
     def __init__(self):
+
         self.merchant_config_sigparam = None
         self.date = None
 
@@ -31,6 +32,7 @@ class GetSignatureParameter:
 
         signature_list = ([])
         # This method adds the host header
+		
 
         signature_list.append(GlobalLabelParameters.HOST.lower())
         signature_list.append(": ")
