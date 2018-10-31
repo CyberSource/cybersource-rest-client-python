@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.2"
+VERSION = "0.0.1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -12,7 +12,53 @@ VERSION = "0.0.2"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl", "PyYAML",
+            "asn1crypto",
+            "bcrypt",
+
+            "certifi",
+            "cffi",
+            "chardet",
+            "extras",
+            "fixtures",
+            "configparser",
+
+            "crypto",
+            "cryptography",
+            "enum34",
+            "funcsigs",
+            "nose",
+            "coverage",
+            "jsonschema",
+            "linecache2",
+            "pbr",
+            "idna",
+            "ipaddress",
+            "logger",
+
+            "paramiko",
+            "pip",
+            "pyOpenSSL",
+            "pyasn1",
+            "pycparser",
+            "pycryptodome",
+            "pycryptodomex",
+            "pypi",
+            "python-mimeparse",
+            "python-subunit",
+            "python-toolbox",
+            "pytz",
+            "requests",
+            "rsa",
+            "setuptools",
+            "shellescape",
+            "six",
+            "typing",
+            "testtools",
+            "traceback2",
+            "wheel",
+            "x509",
+            "zope.interface",]
 
 setup(
     name=NAME,
