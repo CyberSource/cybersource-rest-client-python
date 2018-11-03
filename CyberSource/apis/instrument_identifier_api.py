@@ -30,8 +30,8 @@ class InstrumentIdentifierApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-
-    def __init__(self, api_client=None):
+	
+    def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
             self.api_client = api_client
@@ -39,6 +39,8 @@ class InstrumentIdentifierApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+        self.api_client.set_configaration(merchant_config) 
+
 
     def instrumentidentifiers_post(self, profile_id, **kwargs):
         """
@@ -105,10 +107,10 @@ class InstrumentIdentifierApi(object):
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `instrumentidentifiers_post`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_post`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_post`, must be a value greater than or equal to `36`")'''
+        #if 'profile_id' in params and params['profile_id'] > 36:
+            #raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_post`, must be a value less than or equal to `36`")
+        #if 'profile_id' in params and params['profile_id'] < 36:
+            #raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_post`, must be a value greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -451,14 +453,14 @@ class InstrumentIdentifierApi(object):
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `instrumentidentifiers_token_id_patch`")
 
-        #if 'profile_id' in params and params['profile_id'] > 36:
-            #raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_patch`, must be a value less than or equal to `36`")
-        #if 'profile_id' in params and params['profile_id'] < 36:
-            #raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `36`")
-        #if 'token_id' in params and params['token_id'] > 32:
-            #raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_patch`, must be a value less than or equal to `32`")
-        #if 'token_id' in params and params['token_id'] < 16:
-            #raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `16`")
+        '''if 'profile_id' in params and params['profile_id'] > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_patch`, must be a value less than or equal to `36`")
+        if 'profile_id' in params and params['profile_id'] < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `36`")
+        if 'token_id' in params and params['token_id'] > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_patch`, must be a value less than or equal to `32`")
+        if 'token_id' in params and params['token_id'] < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `16`")'''
 
         collection_formats = {}
 
@@ -575,8 +577,8 @@ class InstrumentIdentifierApi(object):
         '''if 'profile_id' in params and params['profile_id'] > 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_paymentinstruments_get`, must be a value less than or equal to `36`")
         if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `36`")'''
-        '''if 'token_id' in params and params['token_id'] > 32:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `36`")
+        if 'token_id' in params and params['token_id'] > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_paymentinstruments_get`, must be a value less than or equal to `32`")
         if 'token_id' in params and params['token_id'] < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `16`")'''

@@ -17,9 +17,6 @@ import json
 import mimetypes
 import tempfile
 import threading
-import  sys
-
-
 
 from datetime import date, datetime
 
@@ -34,7 +31,6 @@ from authenticationsdk.core.Authorization import *
 from authenticationsdk.core.MerchantConfigaration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
-from data.Configaration import *
 
 
 class ApiClient(object):
@@ -81,7 +77,7 @@ class ApiClient(object):
             self.host = host
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Mozilla/5.0'
+        self.user_agent = 'Swagger-Codegen/1.0.0/python'
 
     @property
     def user_agent(self):
@@ -99,8 +95,8 @@ class ApiClient(object):
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
-
-    # replace the underscore
+	
+	# replace the underscore
     def replace_underscore(self, d):
         for oldkey, v in list(d.items()):
             if isinstance(v, dict):
@@ -125,19 +121,21 @@ class ApiClient(object):
 
         camel = title[0].lower() + title[1:]
         return camel
+		
+	# Setting Merchant Configuration
+    def set_configaration(self,config):
+        global mconfig
+        mconfig = MerchantConfigaration()
+        mconfig.set_merchantconfig(config)
+        # This implements the fall back logic for JWT parameters key alias,key password,json file path
+        mconfig.validate_merchant_details(config, mconfig)
 
     # Calling the authentication header
     def call_authentication_header(self, resource_path, method, header_params, body):
 
         # give the URL path to where the data needs to be authenticated
         url = GlobalLabelParameters.HTTP_URL_PREFIX
-        configaration = Configaration()
-        details_dict1 = configaration.get_configaration()
-        # Here we set the values from dictionary to Merchant Configaration object
-        mconfig = MerchantConfigaration()
-        mconfig.set_merchantconfig(details_dict1)
-        # This implements the fall back logic for JWT parameters key alias,key password,json file path
-        mconfig.validate_merchant_details(details_dict1, mconfig)
+        
         time = mconfig.get_time()
 
         mconfig.request_type_method = method
@@ -151,9 +149,6 @@ class ApiClient(object):
 
         auth = Authorization()
         token = auth.get_token(mconfig, mconfig.get_time(), logger)
-
-
-
         if mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = mconfig.merchant_id
@@ -168,17 +163,18 @@ class ApiClient(object):
                     GlobalLabelParameters.DIGEST] = GlobalLabelParameters.DIGEST_PREFIX + digest_header.decode("utf-8")
 
             header_params["Signature"] = token
-
         elif mconfig.authentication_type.upper() == GlobalLabelParameters.JWT:
 
             token = "Bearer " + token.decode("utf-8")
             header_params['Authorization'] = str(token)
+
 
     #  Set the digest
     def set_digest(self, body):
         digest_obj = DigestAndPayload()
 
         encoded_digest = digest_obj.string_digest_generation((body))
+
 
         return encoded_digest
 
@@ -245,9 +241,6 @@ class ApiClient(object):
         self.last_response = response_data
 
         return_data = response_data
-
-        #print(return_data.status)
-        #print(return_data.data)
         if _preload_content:
             # deserialize response data
             if response_type:
@@ -262,7 +255,6 @@ class ApiClient(object):
                 callback((return_data, response_data.status, response_data.getheaders()))
         elif _return_http_data_only:
             return (return_data,response_data.status, response_data.data)
-
         else:
             return (return_data, response_data.status, response_data.getheaders())
 
@@ -381,7 +373,6 @@ class ApiClient(object):
         if method.upper() == GlobalLabelParameters.POST:
             request_body = self.replace_underscore(json.loads(body))
             body = json.dumps(request_body)
-
         self.call_authentication_header(resource_path, method, header_params, body)
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
@@ -418,13 +409,11 @@ class ApiClient(object):
             then the method will return the response directly.
         """
         if callback is None:
-
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
                                    body, post_params, files,
                                    response_type, auth_settings, callback,
                                    _return_http_data_only, collection_formats, _preload_content, _request_timeout)
-
         else:
             thread = threading.Thread(target=self.__call_api,
                                       args=(resource_path, method,
@@ -552,8 +541,8 @@ class ApiClient(object):
                     with open(n, 'rb') as f:
                         filename = os.path.basename(f.name)
                         filedata = f.read()
-                        mimetype = mimetypes. \
-                                       guess_type(filename)[0] or 'application/octet-stream'
+                        mimetype = mimetypes.\
+                            guess_type(filename)[0] or 'application/octet-stream'
                         params.append(tuple([k, tuple([filename, filedata, mimetype])]))
 
         return params
@@ -635,8 +624,8 @@ class ApiClient(object):
 
         content_disposition = response.getheader("Content-Disposition")
         if content_disposition:
-            filename = re. \
-                search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition). \
+            filename = re.\
+                search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition).\
                 group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
@@ -706,7 +695,7 @@ class ApiClient(object):
                 status=0,
                 reason=(
                     "Failed to parse `{0}` into a datetime object"
-                        .format(string)
+                    .format(string)
                 )
             )
 
@@ -724,11 +713,11 @@ class ApiClient(object):
         kwargs = {}
         for attr, attr_type in iteritems(klass.swagger_types):
             if data is not None \
-                    and klass.attribute_map[attr] in data \
-                    and isinstance(data, (list, dict)):
+               and klass.attribute_map[attr] in data \
+               and isinstance(data, (list, dict)):
                 value = data[klass.attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
-        instance = klass(**kwargs)
+        instance = klass(**kwargs)     
 
         return instance

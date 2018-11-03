@@ -46,7 +46,7 @@ class V2paymentsPointOfSaleInformationEmv(object):
         'fallback_condition': 'fallbackCondition'
     }
 
-    def __init__(self, tags=None, cardholder_verification_method=None, card_sequence_number=None, fallback=None, fallback_condition=None):
+    def __init__(self, tags=None, cardholder_verification_method=None, card_sequence_number=None, fallback=False, fallback_condition=None):
         """
         V2paymentsPointOfSaleInformationEmv - a model defined in Swagger
         """

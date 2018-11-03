@@ -97,7 +97,7 @@ class V2paymentsidreversalsReversalInformation(object):
         #if reason is not None and len(reason) > 3:
             #raise ValueError("Invalid value for `reason`, length must be less than or equal to `3`")
 
-        #self._reason = reason
+        self._reason = reason
 
     def to_dict(self):
         """

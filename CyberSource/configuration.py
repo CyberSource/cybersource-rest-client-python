@@ -73,7 +73,6 @@ class Configuration(object):
         self.logger_file_handler = None
         # Debug file location
         self.logger_file = None
-
         # Debug switch
         self.debug = False
 

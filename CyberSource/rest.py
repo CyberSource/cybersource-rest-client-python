@@ -200,9 +200,6 @@ class RESTClientObject(object):
                                               preload_content=_preload_content,
                                               timeout=timeout,
                                               headers=headers)
-
-
-
         except urllib3.exceptions.SSLError as e:
             msg = "{0}\n{1}".format(type(e).__name__, str(e))
             raise ApiException(status=0, reason=msg)

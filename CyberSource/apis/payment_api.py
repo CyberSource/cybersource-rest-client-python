@@ -30,8 +30,8 @@ class PaymentApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-
-    def __init__(self, api_client=None):
+	
+    def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
             self.api_client = api_client
@@ -39,6 +39,8 @@ class PaymentApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+        self.api_client.set_configaration(merchant_config) 
+
 
     def create_payment(self, create_payment_request, **kwargs):
         """
@@ -120,6 +122,7 @@ class PaymentApi(object):
         body_params = None
         if 'create_payment_request' in params:
             body_params = params['create_payment_request']
+        # HTTP header `Accept`
         header_params['Accept'] = self.api_client. \
             select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -231,7 +234,7 @@ class PaymentApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json;charset=utf-8'])
+            select_header_content_type(['application/json'])
 
         # Authentication setting
         auth_settings = []

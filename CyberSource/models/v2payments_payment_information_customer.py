@@ -68,8 +68,8 @@ class V2paymentsPaymentInformationCustomer(object):
         :param customer_id: The customer_id of this V2paymentsPaymentInformationCustomer.
         :type: str
         """
-        #if customer_id is not None and len(customer_id) > 26:
-            #raise ValueError("Invalid value for `customer_id`, length must be less than or equal to `26`")
+        if customer_id is not None and len(customer_id) > 26:
+            raise ValueError("Invalid value for `customer_id`, length must be less than or equal to `26`")
 
         self._customer_id = customer_id
 
