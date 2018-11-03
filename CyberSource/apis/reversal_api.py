@@ -30,8 +30,8 @@ class ReversalApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-
-    def __init__(self, api_client=None):
+	
+    def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
             self.api_client = api_client
@@ -39,6 +39,8 @@ class ReversalApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+        self.api_client.set_configaration(merchant_config) 
+
 
     def auth_reversal(self, id, auth_reversal_request, **kwargs):
         """
@@ -127,6 +129,8 @@ class ReversalApi(object):
         body_params = None
         if 'auth_reversal_request' in params:
             body_params = params['auth_reversal_request']
+
+        # HTTP header `Accept`
         header_params['Accept'] = self.api_client. \
             select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -233,17 +237,13 @@ class ReversalApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
-            select_header_accept(['application/hal+json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
 
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/pts/v2/reversals/'+id, 'GET',
+        return self.api_client.call_api('/v2/reversals/{id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

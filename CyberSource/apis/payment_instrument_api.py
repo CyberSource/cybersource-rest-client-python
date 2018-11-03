@@ -30,8 +30,8 @@ class PaymentInstrumentApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-
-    def __init__(self, api_client=None):
+	
+    def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
             self.api_client = api_client
@@ -39,6 +39,8 @@ class PaymentInstrumentApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+        self.api_client.set_configaration(merchant_config) 
+
 
     def paymentinstruments_post(self, profile_id, body, **kwargs):
         """

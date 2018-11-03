@@ -30,8 +30,8 @@ class RefundApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-
-    def __init__(self, api_client=None):
+	
+    def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
             self.api_client = api_client
@@ -39,6 +39,8 @@ class RefundApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
+        self.api_client.set_configaration(merchant_config) 
+
 
     def get_refund(self, id, **kwargs):
         """
@@ -126,7 +128,7 @@ class RefundApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json;charset=utf-8'])
+            select_header_content_type(['application/json'])
 
         # Authentication setting
         auth_settings = []
@@ -233,6 +235,7 @@ class RefundApi(object):
         body_params = None
         if 'refund_capture_request' in params:
             body_params = params['refund_capture_request']
+        # HTTP header `Accept`
         header_params['Accept'] = self.api_client. \
             select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -345,6 +348,7 @@ class RefundApi(object):
         body_params = None
         if 'refund_payment_request' in params:
             body_params = params['refund_payment_request']
+        # HTTP header `Accept`
         header_params['Accept'] = self.api_client. \
             select_header_accept(['application/hal+json;charset=utf-8'])
 
