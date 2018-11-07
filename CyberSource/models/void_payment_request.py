@@ -31,7 +31,7 @@ class VoidPaymentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'V2paymentsidreversalsClientReferenceInformation'
+        'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class VoidPaymentRequest(object):
         Gets the client_reference_information of this VoidPaymentRequest.
 
         :return: The client_reference_information of this VoidPaymentRequest.
-        :rtype: V2paymentsidreversalsClientReferenceInformation
+        :rtype: Ptsv2paymentsidreversalsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -64,7 +64,7 @@ class VoidPaymentRequest(object):
         Sets the client_reference_information of this VoidPaymentRequest.
 
         :param client_reference_information: The client_reference_information of this VoidPaymentRequest.
-        :type: V2paymentsidreversalsClientReferenceInformation
+        :type: Ptsv2paymentsidreversalsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

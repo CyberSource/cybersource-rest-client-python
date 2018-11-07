@@ -52,7 +52,7 @@ class InlineResponse201PaymentInformationCard(object):
     def suffix(self):
         """
         Gets the suffix of this InlineResponse201PaymentInformationCard.
-        Last four digits of the cardholderâ€™s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
+        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
 
         :return: The suffix of this InlineResponse201PaymentInformationCard.
         :rtype: str
@@ -63,7 +63,7 @@ class InlineResponse201PaymentInformationCard(object):
     def suffix(self, suffix):
         """
         Sets the suffix of this InlineResponse201PaymentInformationCard.
-        Last four digits of the cardholderâ€™s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
+        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
 
         :param suffix: The suffix of this InlineResponse201PaymentInformationCard.
         :type: str

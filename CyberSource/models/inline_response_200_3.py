@@ -31,243 +31,45 @@ class InlineResponse2003(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse201EmbeddedCaptureLinks',
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reconciliation_id': 'str',
-        'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'processor_information': 'InlineResponse2011ProcessorInformation',
-        'reversal_amount_details': 'InlineResponse2011ReversalAmountDetails'
+        'notification_of_changes': 'list[InlineResponse2003NotificationOfChanges]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reconciliation_id': 'reconciliationId',
-        'client_reference_information': 'clientReferenceInformation',
-        'processor_information': 'processorInformation',
-        'reversal_amount_details': 'reversalAmountDetails'
+        'notification_of_changes': 'notificationOfChanges'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, processor_information=None, reversal_amount_details=None):
+    def __init__(self, notification_of_changes=None):
         """
         InlineResponse2003 - a model defined in Swagger
         """
 
-        self._links = None
-        self._id = None
-        self._submit_time_utc = None
-        self._status = None
-        self._reconciliation_id = None
-        self._client_reference_information = None
-        self._processor_information = None
-        self._reversal_amount_details = None
+        self._notification_of_changes = None
 
-        if links is not None:
-          self.links = links
-        if id is not None:
-          self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reconciliation_id is not None:
-          self.reconciliation_id = reconciliation_id
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if processor_information is not None:
-          self.processor_information = processor_information
-        if reversal_amount_details is not None:
-          self.reversal_amount_details = reversal_amount_details
+        if notification_of_changes is not None:
+          self.notification_of_changes = notification_of_changes
 
     @property
-    def links(self):
+    def notification_of_changes(self):
         """
-        Gets the links of this InlineResponse2003.
+        Gets the notification_of_changes of this InlineResponse2003.
+        List of Notification Of Change Info values
 
-        :return: The links of this InlineResponse2003.
-        :rtype: InlineResponse201EmbeddedCaptureLinks
+        :return: The notification_of_changes of this InlineResponse2003.
+        :rtype: list[InlineResponse2003NotificationOfChanges]
         """
-        return self._links
+        return self._notification_of_changes
 
-    @links.setter
-    def links(self, links):
+    @notification_of_changes.setter
+    def notification_of_changes(self, notification_of_changes):
         """
-        Sets the links of this InlineResponse2003.
+        Sets the notification_of_changes of this InlineResponse2003.
+        List of Notification Of Change Info values
 
-        :param links: The links of this InlineResponse2003.
-        :type: InlineResponse201EmbeddedCaptureLinks
-        """
-
-        self._links = links
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2003.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :return: The id of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2003.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :param id: The id of this InlineResponse2003.
-        :type: str
-        """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
-
-        self._id = id
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse2003.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse2003.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2003.
-        :type: str
+        :param notification_of_changes: The notification_of_changes of this InlineResponse2003.
+        :type: list[InlineResponse2003NotificationOfChanges]
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2003.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2003.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse2003.
-        :type: str
-        """
-        allowed_values = ["REVERSED"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
-
-        self._status = status
-
-    @property
-    def reconciliation_id(self):
-        """
-        Gets the reconciliation_id of this InlineResponse2003.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :return: The reconciliation_id of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._reconciliation_id
-
-    @reconciliation_id.setter
-    def reconciliation_id(self, reconciliation_id):
-        """
-        Sets the reconciliation_id of this InlineResponse2003.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :param reconciliation_id: The reconciliation_id of this InlineResponse2003.
-        :type: str
-        """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
-
-        self._reconciliation_id = reconciliation_id
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2003.
-
-        :return: The client_reference_information of this InlineResponse2003.
-        :rtype: InlineResponse201ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2003.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2003.
-        :type: InlineResponse201ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
-
-    @property
-    def processor_information(self):
-        """
-        Gets the processor_information of this InlineResponse2003.
-
-        :return: The processor_information of this InlineResponse2003.
-        :rtype: InlineResponse2011ProcessorInformation
-        """
-        return self._processor_information
-
-    @processor_information.setter
-    def processor_information(self, processor_information):
-        """
-        Sets the processor_information of this InlineResponse2003.
-
-        :param processor_information: The processor_information of this InlineResponse2003.
-        :type: InlineResponse2011ProcessorInformation
-        """
-
-        self._processor_information = processor_information
-
-    @property
-    def reversal_amount_details(self):
-        """
-        Gets the reversal_amount_details of this InlineResponse2003.
-
-        :return: The reversal_amount_details of this InlineResponse2003.
-        :rtype: InlineResponse2011ReversalAmountDetails
-        """
-        return self._reversal_amount_details
-
-    @reversal_amount_details.setter
-    def reversal_amount_details(self, reversal_amount_details):
-        """
-        Sets the reversal_amount_details of this InlineResponse2003.
-
-        :param reversal_amount_details: The reversal_amount_details of this InlineResponse2003.
-        :type: InlineResponse2011ReversalAmountDetails
-        """
-
-        self._reversal_amount_details = reversal_amount_details
+        self._notification_of_changes = notification_of_changes
 
     def to_dict(self):
         """

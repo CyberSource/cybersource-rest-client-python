@@ -31,16 +31,16 @@ class CapturePaymentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'V2paymentsClientReferenceInformation',
-        'processing_information': 'V2paymentsidcapturesProcessingInformation',
-        'payment_information': 'V2paymentsidcapturesPaymentInformation',
-        'order_information': 'V2paymentsidcapturesOrderInformation',
-        'buyer_information': 'V2paymentsidcapturesBuyerInformation',
-        'device_information': 'V2paymentsDeviceInformation',
-        'merchant_information': 'V2paymentsidcapturesMerchantInformation',
-        'aggregator_information': 'V2paymentsidcapturesAggregatorInformation',
-        'point_of_sale_information': 'V2paymentsidcapturesPointOfSaleInformation',
-        'merchant_defined_information': 'list[V2paymentsMerchantDefinedInformation]'
+        'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
+        'processing_information': 'Ptsv2paymentsidcapturesProcessingInformation',
+        'payment_information': 'Ptsv2paymentsidcapturesPaymentInformation',
+        'order_information': 'Ptsv2paymentsidcapturesOrderInformation',
+        'buyer_information': 'Ptsv2paymentsidcapturesBuyerInformation',
+        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'merchant_information': 'Ptsv2paymentsidcapturesMerchantInformation',
+        'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
+        'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]'
     }
 
     attribute_map = {
@@ -99,7 +99,7 @@ class CapturePaymentRequest(object):
         Gets the client_reference_information of this CapturePaymentRequest.
 
         :return: The client_reference_information of this CapturePaymentRequest.
-        :rtype: V2paymentsClientReferenceInformation
+        :rtype: Ptsv2paymentsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -109,7 +109,7 @@ class CapturePaymentRequest(object):
         Sets the client_reference_information of this CapturePaymentRequest.
 
         :param client_reference_information: The client_reference_information of this CapturePaymentRequest.
-        :type: V2paymentsClientReferenceInformation
+        :type: Ptsv2paymentsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -120,7 +120,7 @@ class CapturePaymentRequest(object):
         Gets the processing_information of this CapturePaymentRequest.
 
         :return: The processing_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesProcessingInformation
+        :rtype: Ptsv2paymentsidcapturesProcessingInformation
         """
         return self._processing_information
 
@@ -130,7 +130,7 @@ class CapturePaymentRequest(object):
         Sets the processing_information of this CapturePaymentRequest.
 
         :param processing_information: The processing_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesProcessingInformation
+        :type: Ptsv2paymentsidcapturesProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -141,7 +141,7 @@ class CapturePaymentRequest(object):
         Gets the payment_information of this CapturePaymentRequest.
 
         :return: The payment_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesPaymentInformation
+        :rtype: Ptsv2paymentsidcapturesPaymentInformation
         """
         return self._payment_information
 
@@ -151,7 +151,7 @@ class CapturePaymentRequest(object):
         Sets the payment_information of this CapturePaymentRequest.
 
         :param payment_information: The payment_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesPaymentInformation
+        :type: Ptsv2paymentsidcapturesPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -162,7 +162,7 @@ class CapturePaymentRequest(object):
         Gets the order_information of this CapturePaymentRequest.
 
         :return: The order_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesOrderInformation
+        :rtype: Ptsv2paymentsidcapturesOrderInformation
         """
         return self._order_information
 
@@ -172,7 +172,7 @@ class CapturePaymentRequest(object):
         Sets the order_information of this CapturePaymentRequest.
 
         :param order_information: The order_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesOrderInformation
+        :type: Ptsv2paymentsidcapturesOrderInformation
         """
 
         self._order_information = order_information
@@ -183,7 +183,7 @@ class CapturePaymentRequest(object):
         Gets the buyer_information of this CapturePaymentRequest.
 
         :return: The buyer_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesBuyerInformation
+        :rtype: Ptsv2paymentsidcapturesBuyerInformation
         """
         return self._buyer_information
 
@@ -193,7 +193,7 @@ class CapturePaymentRequest(object):
         Sets the buyer_information of this CapturePaymentRequest.
 
         :param buyer_information: The buyer_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesBuyerInformation
+        :type: Ptsv2paymentsidcapturesBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -204,7 +204,7 @@ class CapturePaymentRequest(object):
         Gets the device_information of this CapturePaymentRequest.
 
         :return: The device_information of this CapturePaymentRequest.
-        :rtype: V2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsDeviceInformation
         """
         return self._device_information
 
@@ -214,7 +214,7 @@ class CapturePaymentRequest(object):
         Sets the device_information of this CapturePaymentRequest.
 
         :param device_information: The device_information of this CapturePaymentRequest.
-        :type: V2paymentsDeviceInformation
+        :type: Ptsv2paymentsDeviceInformation
         """
 
         self._device_information = device_information
@@ -225,7 +225,7 @@ class CapturePaymentRequest(object):
         Gets the merchant_information of this CapturePaymentRequest.
 
         :return: The merchant_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesMerchantInformation
+        :rtype: Ptsv2paymentsidcapturesMerchantInformation
         """
         return self._merchant_information
 
@@ -235,7 +235,7 @@ class CapturePaymentRequest(object):
         Sets the merchant_information of this CapturePaymentRequest.
 
         :param merchant_information: The merchant_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesMerchantInformation
+        :type: Ptsv2paymentsidcapturesMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -246,7 +246,7 @@ class CapturePaymentRequest(object):
         Gets the aggregator_information of this CapturePaymentRequest.
 
         :return: The aggregator_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesAggregatorInformation
+        :rtype: Ptsv2paymentsidcapturesAggregatorInformation
         """
         return self._aggregator_information
 
@@ -256,7 +256,7 @@ class CapturePaymentRequest(object):
         Sets the aggregator_information of this CapturePaymentRequest.
 
         :param aggregator_information: The aggregator_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesAggregatorInformation
+        :type: Ptsv2paymentsidcapturesAggregatorInformation
         """
 
         self._aggregator_information = aggregator_information
@@ -267,7 +267,7 @@ class CapturePaymentRequest(object):
         Gets the point_of_sale_information of this CapturePaymentRequest.
 
         :return: The point_of_sale_information of this CapturePaymentRequest.
-        :rtype: V2paymentsidcapturesPointOfSaleInformation
+        :rtype: Ptsv2paymentsidcapturesPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -277,7 +277,7 @@ class CapturePaymentRequest(object):
         Sets the point_of_sale_information of this CapturePaymentRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this CapturePaymentRequest.
-        :type: V2paymentsidcapturesPointOfSaleInformation
+        :type: Ptsv2paymentsidcapturesPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information
@@ -286,10 +286,10 @@ class CapturePaymentRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CapturePaymentRequest.
-        TBD
+        Description of this field is not available.
 
         :return: The merchant_defined_information of this CapturePaymentRequest.
-        :rtype: list[V2paymentsMerchantDefinedInformation]
+        :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -297,10 +297,10 @@ class CapturePaymentRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this CapturePaymentRequest.
-        TBD
+        Description of this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this CapturePaymentRequest.
-        :type: list[V2paymentsMerchantDefinedInformation]
+        :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information

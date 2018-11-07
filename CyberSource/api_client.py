@@ -95,8 +95,8 @@ class ApiClient(object):
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
-	
-	# replace the underscore
+
+    # replace the underscore
     def replace_underscore(self, d):
         for oldkey, v in list(d.items()):
             if isinstance(v, dict):
@@ -121,9 +121,10 @@ class ApiClient(object):
 
         camel = title[0].lower() + title[1:]
         return camel
-		
-	# Setting Merchant Configuration
-    def set_configaration(self,config):
+
+        # Setting Merchant Configuration
+
+    def set_configaration(self, config):
         global mconfig
         mconfig = MerchantConfigaration()
         mconfig.set_merchantconfig(config)
@@ -135,14 +136,13 @@ class ApiClient(object):
 
         # give the URL path to where the data needs to be authenticated
         url = GlobalLabelParameters.HTTP_URL_PREFIX
-        
-        time = mconfig.get_time()
+
+        time = mconfig.get_time()#mconfig.get_time()
 
         mconfig.request_type_method = method
-        mconfig.request_target = resource_path
 
         mconfig.url = url + mconfig.request_host + mconfig.request_target
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT:
+        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
         logger = mconfig.log
@@ -155,7 +155,7 @@ class ApiClient(object):
             header_params["Date"] = time
             header_params["Host"] = mconfig.request_host
             header_params["User-Agent"] = GlobalLabelParameters.USER_AGENT_VALUE
-            if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT:
+            if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
                 '''print((ast.literal_eval(json.dumps(self.del_none(json.loads(body))))))'''
                 digest_header = self.set_digest((body))
 
@@ -168,15 +168,28 @@ class ApiClient(object):
             token = "Bearer " + token.decode("utf-8")
             header_params['Authorization'] = str(token)
 
-
     #  Set the digest
     def set_digest(self, body):
         digest_obj = DigestAndPayload()
 
         encoded_digest = digest_obj.string_digest_generation((body))
 
-
         return encoded_digest
+
+    # Adds query param to URL
+    def set_query_params(self, path, query_param):
+        query_param = dict(query_param)
+        if query_param:
+            first_query_param = True
+            for param in query_param:
+
+                if (not first_query_param):
+                    path = path + "&" + param + "=" + str(query_param[param])
+                else:
+                    path = path + "?" + param + "=" + str(query_param[param])
+                    first_query_param = False
+
+            return path
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
@@ -254,7 +267,7 @@ class ApiClient(object):
             else:
                 callback((return_data, response_data.status, response_data.getheaders()))
         elif _return_http_data_only:
-            return (return_data,response_data.status, response_data.data)
+            return (return_data, response_data.status, response_data.data)
         else:
             return (return_data, response_data.status, response_data.getheaders())
 
@@ -370,9 +383,15 @@ class ApiClient(object):
                  response_type=None, auth_settings=None, callback=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
-        if method.upper() == GlobalLabelParameters.POST:
+        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             request_body = self.replace_underscore(json.loads(body))
             body = json.dumps(request_body)
+        query_param_path = self.set_query_params(resource_path, query_params)
+        if query_param_path:
+            mconfig.request_target = query_param_path
+        else:
+            mconfig.request_target = resource_path
+
         self.call_authentication_header(resource_path, method, header_params, body)
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
@@ -541,8 +560,8 @@ class ApiClient(object):
                     with open(n, 'rb') as f:
                         filename = os.path.basename(f.name)
                         filedata = f.read()
-                        mimetype = mimetypes.\
-                            guess_type(filename)[0] or 'application/octet-stream'
+                        mimetype = mimetypes. \
+                                       guess_type(filename)[0] or 'application/octet-stream'
                         params.append(tuple([k, tuple([filename, filedata, mimetype])]))
 
         return params
@@ -624,8 +643,8 @@ class ApiClient(object):
 
         content_disposition = response.getheader("Content-Disposition")
         if content_disposition:
-            filename = re.\
-                search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition).\
+            filename = re. \
+                search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition). \
                 group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
@@ -695,7 +714,7 @@ class ApiClient(object):
                 status=0,
                 reason=(
                     "Failed to parse `{0}` into a datetime object"
-                    .format(string)
+                        .format(string)
                 )
             )
 
@@ -713,11 +732,11 @@ class ApiClient(object):
         kwargs = {}
         for attr, attr_type in iteritems(klass.swagger_types):
             if data is not None \
-               and klass.attribute_map[attr] in data \
-               and isinstance(data, (list, dict)):
+                    and klass.attribute_map[attr] in data \
+                    and isinstance(data, (list, dict)):
                 value = data[klass.attribute_map[attr]]
                 kwargs[attr] = self.__deserialize(value, attr_type)
 
-        instance = klass(**kwargs)     
+        instance = klass(**kwargs)
 
         return instance

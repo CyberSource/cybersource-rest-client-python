@@ -31,217 +31,425 @@ class InlineResponse2008(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2008Links',
-        'object': 'str',
-        'offset': 'str',
-        'limit': 'str',
-        'count': 'str',
-        'total': 'str',
-        'embedded': 'object'
+        'organization_id': 'str',
+        'report_id': 'str',
+        'report_definition_id': 'str',
+        'report_name': 'str',
+        'report_mime_type': 'str',
+        'report_frequency': 'str',
+        'report_fields': 'list[str]',
+        'report_status': 'str',
+        'report_start_time': 'datetime',
+        'report_end_time': 'datetime',
+        'timezone': 'str',
+        'report_filters': 'dict(str, list[str])',
+        'report_preferences': 'InlineResponse2006ReportPreferences',
+        'selected_merchant_group_name': 'str'
     }
 
     attribute_map = {
-        'links': '_links',
-        'object': 'object',
-        'offset': 'offset',
-        'limit': 'limit',
-        'count': 'count',
-        'total': 'total',
-        'embedded': '_embedded'
+        'organization_id': 'organizationId',
+        'report_id': 'reportId',
+        'report_definition_id': 'reportDefinitionId',
+        'report_name': 'reportName',
+        'report_mime_type': 'reportMimeType',
+        'report_frequency': 'reportFrequency',
+        'report_fields': 'reportFields',
+        'report_status': 'reportStatus',
+        'report_start_time': 'reportStartTime',
+        'report_end_time': 'reportEndTime',
+        'timezone': 'timezone',
+        'report_filters': 'reportFilters',
+        'report_preferences': 'reportPreferences',
+        'selected_merchant_group_name': 'selectedMerchantGroupName'
     }
 
-    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
+    def __init__(self, organization_id=None, report_id=None, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, report_fields=None, report_status=None, report_start_time=None, report_end_time=None, timezone=None, report_filters=None, report_preferences=None, selected_merchant_group_name=None):
         """
         InlineResponse2008 - a model defined in Swagger
         """
 
-        self._links = None
-        self._object = None
-        self._offset = None
-        self._limit = None
-        self._count = None
-        self._total = None
-        self._embedded = None
+        self._organization_id = None
+        self._report_id = None
+        self._report_definition_id = None
+        self._report_name = None
+        self._report_mime_type = None
+        self._report_frequency = None
+        self._report_fields = None
+        self._report_status = None
+        self._report_start_time = None
+        self._report_end_time = None
+        self._timezone = None
+        self._report_filters = None
+        self._report_preferences = None
+        self._selected_merchant_group_name = None
 
-        if links is not None:
-          self.links = links
-        if object is not None:
-          self.object = object
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if count is not None:
-          self.count = count
-        if total is not None:
-          self.total = total
-        if embedded is not None:
-          self.embedded = embedded
+        if organization_id is not None:
+          self.organization_id = organization_id
+        if report_id is not None:
+          self.report_id = report_id
+        if report_definition_id is not None:
+          self.report_definition_id = report_definition_id
+        if report_name is not None:
+          self.report_name = report_name
+        if report_mime_type is not None:
+          self.report_mime_type = report_mime_type
+        if report_frequency is not None:
+          self.report_frequency = report_frequency
+        if report_fields is not None:
+          self.report_fields = report_fields
+        if report_status is not None:
+          self.report_status = report_status
+        if report_start_time is not None:
+          self.report_start_time = report_start_time
+        if report_end_time is not None:
+          self.report_end_time = report_end_time
+        if timezone is not None:
+          self.timezone = timezone
+        if report_filters is not None:
+          self.report_filters = report_filters
+        if report_preferences is not None:
+          self.report_preferences = report_preferences
+        if selected_merchant_group_name is not None:
+          self.selected_merchant_group_name = selected_merchant_group_name
 
     @property
-    def links(self):
+    def organization_id(self):
         """
-        Gets the links of this InlineResponse2008.
+        Gets the organization_id of this InlineResponse2008.
+        CyberSource merchant id
 
-        :return: The links of this InlineResponse2008.
-        :rtype: InlineResponse2008Links
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse2008.
-
-        :param links: The links of this InlineResponse2008.
-        :type: InlineResponse2008Links
-        """
-
-        self._links = links
-
-    @property
-    def object(self):
-        """
-        Gets the object of this InlineResponse2008.
-        Shows the response is a collection of objects.
-
-        :return: The object of this InlineResponse2008.
+        :return: The organization_id of this InlineResponse2008.
         :rtype: str
         """
-        return self._object
+        return self._organization_id
 
-    @object.setter
-    def object(self, object):
+    @organization_id.setter
+    def organization_id(self, organization_id):
         """
-        Sets the object of this InlineResponse2008.
-        Shows the response is a collection of objects.
+        Sets the organization_id of this InlineResponse2008.
+        CyberSource merchant id
 
-        :param object: The object of this InlineResponse2008.
+        :param organization_id: The organization_id of this InlineResponse2008.
         :type: str
         """
-        allowed_values = ["collection"]
-        if object not in allowed_values:
+
+        self._organization_id = organization_id
+
+    @property
+    def report_id(self):
+        """
+        Gets the report_id of this InlineResponse2008.
+        Report ID Value
+
+        :return: The report_id of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._report_id
+
+    @report_id.setter
+    def report_id(self, report_id):
+        """
+        Sets the report_id of this InlineResponse2008.
+        Report ID Value
+
+        :param report_id: The report_id of this InlineResponse2008.
+        :type: str
+        """
+
+        self._report_id = report_id
+
+    @property
+    def report_definition_id(self):
+        """
+        Gets the report_definition_id of this InlineResponse2008.
+        Report definition Id
+
+        :return: The report_definition_id of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._report_definition_id
+
+    @report_definition_id.setter
+    def report_definition_id(self, report_definition_id):
+        """
+        Sets the report_definition_id of this InlineResponse2008.
+        Report definition Id
+
+        :param report_definition_id: The report_definition_id of this InlineResponse2008.
+        :type: str
+        """
+
+        self._report_definition_id = report_definition_id
+
+    @property
+    def report_name(self):
+        """
+        Gets the report_name of this InlineResponse2008.
+        Report Name
+
+        :return: The report_name of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._report_name
+
+    @report_name.setter
+    def report_name(self, report_name):
+        """
+        Sets the report_name of this InlineResponse2008.
+        Report Name
+
+        :param report_name: The report_name of this InlineResponse2008.
+        :type: str
+        """
+
+        self._report_name = report_name
+
+    @property
+    def report_mime_type(self):
+        """
+        Gets the report_mime_type of this InlineResponse2008.
+        Report Format
+
+        :return: The report_mime_type of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._report_mime_type
+
+    @report_mime_type.setter
+    def report_mime_type(self, report_mime_type):
+        """
+        Sets the report_mime_type of this InlineResponse2008.
+        Report Format
+
+        :param report_mime_type: The report_mime_type of this InlineResponse2008.
+        :type: str
+        """
+        allowed_values = ["application/xml", "text/csv"]
+        if report_mime_type not in allowed_values:
             raise ValueError(
-                "Invalid value for `object` ({0}), must be one of {1}"
-                .format(object, allowed_values)
+                "Invalid value for `report_mime_type` ({0}), must be one of {1}"
+                .format(report_mime_type, allowed_values)
             )
 
-        self._object = object
+        self._report_mime_type = report_mime_type
 
     @property
-    def offset(self):
+    def report_frequency(self):
         """
-        Gets the offset of this InlineResponse2008.
-        The offset parameter supplied in the request.
+        Gets the report_frequency of this InlineResponse2008.
+        Report Frequency Value
 
-        :return: The offset of this InlineResponse2008.
+        :return: The report_frequency of this InlineResponse2008.
         :rtype: str
         """
-        return self._offset
+        return self._report_frequency
 
-    @offset.setter
-    def offset(self, offset):
+    @report_frequency.setter
+    def report_frequency(self, report_frequency):
         """
-        Sets the offset of this InlineResponse2008.
-        The offset parameter supplied in the request.
+        Sets the report_frequency of this InlineResponse2008.
+        Report Frequency Value
 
-        :param offset: The offset of this InlineResponse2008.
+        :param report_frequency: The report_frequency of this InlineResponse2008.
+        :type: str
+        """
+        allowed_values = ["DAILY", "WEEKLY", "MONTHLY"]
+        #if report_frequency not in allowed_values:
+            #raise ValueError(
+                #"Invalid value for `report_frequency` ({0}), must be one of {1}"
+                #.format(report_frequency, allowed_values)
+            #)
+
+        self._report_frequency = report_frequency
+
+    @property
+    def report_fields(self):
+        """
+        Gets the report_fields of this InlineResponse2008.
+        List of Integer Values
+
+        :return: The report_fields of this InlineResponse2008.
+        :rtype: list[str]
+        """
+        return self._report_fields
+
+    @report_fields.setter
+    def report_fields(self, report_fields):
+        """
+        Sets the report_fields of this InlineResponse2008.
+        List of Integer Values
+
+        :param report_fields: The report_fields of this InlineResponse2008.
+        :type: list[str]
+        """
+
+        self._report_fields = report_fields
+
+    @property
+    def report_status(self):
+        """
+        Gets the report_status of this InlineResponse2008.
+        Report Status Value
+
+        :return: The report_status of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._report_status
+
+    @report_status.setter
+    def report_status(self, report_status):
+        """
+        Sets the report_status of this InlineResponse2008.
+        Report Status Value
+
+        :param report_status: The report_status of this InlineResponse2008.
+        :type: str
+        """
+        allowed_values = ["COMPLETED", "PENDING", "QUEUED", "RUNNING", "ERROR", "NO_DATA", "RERUN"]
+        if report_status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `report_status` ({0}), must be one of {1}"
+                .format(report_status, allowed_values)
+            )
+
+        self._report_status = report_status
+
+    @property
+    def report_start_time(self):
+        """
+        Gets the report_start_time of this InlineResponse2008.
+        Report Start Time Value
+
+        :return: The report_start_time of this InlineResponse2008.
+        :rtype: datetime
+        """
+        return self._report_start_time
+
+    @report_start_time.setter
+    def report_start_time(self, report_start_time):
+        """
+        Sets the report_start_time of this InlineResponse2008.
+        Report Start Time Value
+
+        :param report_start_time: The report_start_time of this InlineResponse2008.
+        :type: datetime
+        """
+
+        self._report_start_time = report_start_time
+
+    @property
+    def report_end_time(self):
+        """
+        Gets the report_end_time of this InlineResponse2008.
+        Report End Time Value
+
+        :return: The report_end_time of this InlineResponse2008.
+        :rtype: datetime
+        """
+        return self._report_end_time
+
+    @report_end_time.setter
+    def report_end_time(self, report_end_time):
+        """
+        Sets the report_end_time of this InlineResponse2008.
+        Report End Time Value
+
+        :param report_end_time: The report_end_time of this InlineResponse2008.
+        :type: datetime
+        """
+
+        self._report_end_time = report_end_time
+
+    @property
+    def timezone(self):
+        """
+        Gets the timezone of this InlineResponse2008.
+        Time Zone Value
+
+        :return: The timezone of this InlineResponse2008.
+        :rtype: str
+        """
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, timezone):
+        """
+        Sets the timezone of this InlineResponse2008.
+        Time Zone Value
+
+        :param timezone: The timezone of this InlineResponse2008.
         :type: str
         """
 
-        self._offset = offset
+        self._timezone = timezone
 
     @property
-    def limit(self):
+    def report_filters(self):
         """
-        Gets the limit of this InlineResponse2008.
-        The limit parameter supplied in the request.
+        Gets the report_filters of this InlineResponse2008.
+        Report Filters
 
-        :return: The limit of this InlineResponse2008.
+        :return: The report_filters of this InlineResponse2008.
+        :rtype: dict(str, list[str])
+        """
+        return self._report_filters
+
+    @report_filters.setter
+    def report_filters(self, report_filters):
+        """
+        Sets the report_filters of this InlineResponse2008.
+        Report Filters
+
+        :param report_filters: The report_filters of this InlineResponse2008.
+        :type: dict(str, list[str])
+        """
+
+        self._report_filters = report_filters
+
+    @property
+    def report_preferences(self):
+        """
+        Gets the report_preferences of this InlineResponse2008.
+
+        :return: The report_preferences of this InlineResponse2008.
+        :rtype: InlineResponse2006ReportPreferences
+        """
+        return self._report_preferences
+
+    @report_preferences.setter
+    def report_preferences(self, report_preferences):
+        """
+        Sets the report_preferences of this InlineResponse2008.
+
+        :param report_preferences: The report_preferences of this InlineResponse2008.
+        :type: InlineResponse2006ReportPreferences
+        """
+
+        self._report_preferences = report_preferences
+
+    @property
+    def selected_merchant_group_name(self):
+        """
+        Gets the selected_merchant_group_name of this InlineResponse2008.
+        Selected Merchant Group name
+
+        :return: The selected_merchant_group_name of this InlineResponse2008.
         :rtype: str
         """
-        return self._limit
+        return self._selected_merchant_group_name
 
-    @limit.setter
-    def limit(self, limit):
+    @selected_merchant_group_name.setter
+    def selected_merchant_group_name(self, selected_merchant_group_name):
         """
-        Sets the limit of this InlineResponse2008.
-        The limit parameter supplied in the request.
+        Sets the selected_merchant_group_name of this InlineResponse2008.
+        Selected Merchant Group name
 
-        :param limit: The limit of this InlineResponse2008.
+        :param selected_merchant_group_name: The selected_merchant_group_name of this InlineResponse2008.
         :type: str
         """
 
-        self._limit = limit
-
-    @property
-    def count(self):
-        """
-        Gets the count of this InlineResponse2008.
-        The number of Payment Instruments returned in the array.
-
-        :return: The count of this InlineResponse2008.
-        :rtype: str
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """
-        Sets the count of this InlineResponse2008.
-        The number of Payment Instruments returned in the array.
-
-        :param count: The count of this InlineResponse2008.
-        :type: str
-        """
-
-        self._count = count
-
-    @property
-    def total(self):
-        """
-        Gets the total of this InlineResponse2008.
-        The total number of Payment Instruments associated with the Instrument Identifier in the zero-based dataset.
-
-        :return: The total of this InlineResponse2008.
-        :rtype: str
-        """
-        return self._total
-
-    @total.setter
-    def total(self, total):
-        """
-        Sets the total of this InlineResponse2008.
-        The total number of Payment Instruments associated with the Instrument Identifier in the zero-based dataset.
-
-        :param total: The total of this InlineResponse2008.
-        :type: str
-        """
-
-        self._total = total
-
-    @property
-    def embedded(self):
-        """
-        Gets the embedded of this InlineResponse2008.
-        Array of Payment Instruments returned for the supplied Instrument Identifier.
-
-        :return: The embedded of this InlineResponse2008.
-        :rtype: object
-        """
-        return self._embedded
-
-    @embedded.setter
-    def embedded(self, embedded):
-        """
-        Sets the embedded of this InlineResponse2008.
-        Array of Payment Instruments returned for the supplied Instrument Identifier.
-
-        :param embedded: The embedded of this InlineResponse2008.
-        :type: object
-        """
-
-        self._embedded = embedded
+        self._selected_merchant_group_name = selected_merchant_group_name
 
     def to_dict(self):
         """

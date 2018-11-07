@@ -73,8 +73,8 @@ class InlineResponse201ProcessorInformationAvs(object):
         :param code: The code of this InlineResponse201ProcessorInformationAvs.
         :type: str
         """
-        if code is not None and len(code) > 1:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `1`")
+        #if code is not None and len(code) > 1:
+            #raise ValueError("Invalid value for `code`, length must be less than or equal to `1`")
 
         self._code = code
 

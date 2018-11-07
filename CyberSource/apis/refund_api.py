@@ -30,7 +30,7 @@ class RefundApi(object):
     Do not edit the class manually.
     Ref: https://github.com/swagger-api/swagger-codegen
     """
-	
+
     def __init__(self, merchant_config, api_client=None):
         config = Configuration()
         if api_client:
@@ -39,114 +39,7 @@ class RefundApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configaration(merchant_config) 
-
-
-    def get_refund(self, id, **kwargs):
-        """
-        Retrieve a Refund
-        Include the refund ID in the GET request to to retrieve the refund details.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_refund(id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str id: The refund ID. This ID is returned from a previous refund request. (required)
-        :return: InlineResponse2005
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_refund_with_http_info(id, **kwargs)
-        else:
-            (data) = self.get_refund_with_http_info(id, **kwargs)
-            return data
-
-    def get_refund_with_http_info(self, id, **kwargs):
-        """
-        Retrieve a Refund
-        Include the refund ID in the GET request to to retrieve the refund details.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_refund_with_http_info(id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str id: The refund ID. This ID is returned from a previous refund request. (required)
-        :return: InlineResponse2005
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_refund" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_refund`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
-            select_header_accept(['application/hal+json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api('/pts/v2/refunds/'+id, 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2005',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
+        self.api_client.set_configaration(merchant_config)
 
     def refund_capture(self, refund_capture_request, id, **kwargs):
         """
@@ -236,11 +129,11 @@ class RefundApi(object):
         if 'refund_capture_request' in params:
             body_params = params['refund_capture_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
+        header_params['Content-Type'] = self.api_client.\
             select_header_content_type(['application/json'])
 
         # Authentication setting
@@ -349,11 +242,11 @@ class RefundApi(object):
         if 'refund_payment_request' in params:
             body_params = params['refund_payment_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
+        header_params['Content-Type'] = self.api_client.\
             select_header_content_type(['application/json'])
 
         # Authentication setting

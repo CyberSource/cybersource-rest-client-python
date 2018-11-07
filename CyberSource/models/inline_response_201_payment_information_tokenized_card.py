@@ -232,7 +232,7 @@ class InlineResponse201PaymentInformationTokenizedCard(object):
     def requestor_id(self):
         """
         Gets the requestor_id of this InlineResponse201PaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholderâ€™s account number is tokenized. This value is assigned by the token service provider and is unique within the token service providerâ€™s database.  `Note` This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  `Note` This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :return: The requestor_id of this InlineResponse201PaymentInformationTokenizedCard.
         :rtype: str
@@ -243,7 +243,7 @@ class InlineResponse201PaymentInformationTokenizedCard(object):
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this InlineResponse201PaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholderâ€™s account number is tokenized. This value is assigned by the token service provider and is unique within the token service providerâ€™s database.  `Note` This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  `Note` This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :param requestor_id: The requestor_id of this InlineResponse201PaymentInformationTokenizedCard.
         :type: str

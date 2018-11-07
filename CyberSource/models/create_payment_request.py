@@ -31,18 +31,18 @@ class CreatePaymentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'V2paymentsClientReferenceInformation',
-        'processing_information': 'V2paymentsProcessingInformation',
-        'payment_information': 'V2paymentsPaymentInformation',
-        'order_information': 'V2paymentsOrderInformation',
-        'buyer_information': 'V2paymentsBuyerInformation',
-        'recipient_information': 'V2paymentsRecipientInformation',
-        'device_information': 'V2paymentsDeviceInformation',
-        'merchant_information': 'V2paymentsMerchantInformation',
-        'aggregator_information': 'V2paymentsAggregatorInformation',
-        'consumer_authentication_information': 'V2paymentsConsumerAuthenticationInformation',
-        'point_of_sale_information': 'V2paymentsPointOfSaleInformation',
-        'merchant_defined_information': 'list[V2paymentsMerchantDefinedInformation]'
+        'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
+        'processing_information': 'Ptsv2paymentsProcessingInformation',
+        'payment_information': 'Ptsv2paymentsPaymentInformation',
+        'order_information': 'Ptsv2paymentsOrderInformation',
+        'buyer_information': 'Ptsv2paymentsBuyerInformation',
+        'recipient_information': 'Ptsv2paymentsRecipientInformation',
+        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'merchant_information': 'Ptsv2paymentsMerchantInformation',
+        'aggregator_information': 'Ptsv2paymentsAggregatorInformation',
+        'consumer_authentication_information': 'Ptsv2paymentsConsumerAuthenticationInformation',
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]'
     }
 
     attribute_map = {
@@ -109,7 +109,7 @@ class CreatePaymentRequest(object):
         Gets the client_reference_information of this CreatePaymentRequest.
 
         :return: The client_reference_information of this CreatePaymentRequest.
-        :rtype: V2paymentsClientReferenceInformation
+        :rtype: Ptsv2paymentsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -119,7 +119,7 @@ class CreatePaymentRequest(object):
         Sets the client_reference_information of this CreatePaymentRequest.
 
         :param client_reference_information: The client_reference_information of this CreatePaymentRequest.
-        :type: V2paymentsClientReferenceInformation
+        :type: Ptsv2paymentsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -130,7 +130,7 @@ class CreatePaymentRequest(object):
         Gets the processing_information of this CreatePaymentRequest.
 
         :return: The processing_information of this CreatePaymentRequest.
-        :rtype: V2paymentsProcessingInformation
+        :rtype: Ptsv2paymentsProcessingInformation
         """
         return self._processing_information
 
@@ -140,7 +140,7 @@ class CreatePaymentRequest(object):
         Sets the processing_information of this CreatePaymentRequest.
 
         :param processing_information: The processing_information of this CreatePaymentRequest.
-        :type: V2paymentsProcessingInformation
+        :type: Ptsv2paymentsProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -151,7 +151,7 @@ class CreatePaymentRequest(object):
         Gets the payment_information of this CreatePaymentRequest.
 
         :return: The payment_information of this CreatePaymentRequest.
-        :rtype: V2paymentsPaymentInformation
+        :rtype: Ptsv2paymentsPaymentInformation
         """
         return self._payment_information
 
@@ -161,7 +161,7 @@ class CreatePaymentRequest(object):
         Sets the payment_information of this CreatePaymentRequest.
 
         :param payment_information: The payment_information of this CreatePaymentRequest.
-        :type: V2paymentsPaymentInformation
+        :type: Ptsv2paymentsPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -172,7 +172,7 @@ class CreatePaymentRequest(object):
         Gets the order_information of this CreatePaymentRequest.
 
         :return: The order_information of this CreatePaymentRequest.
-        :rtype: V2paymentsOrderInformation
+        :rtype: Ptsv2paymentsOrderInformation
         """
         return self._order_information
 
@@ -182,7 +182,7 @@ class CreatePaymentRequest(object):
         Sets the order_information of this CreatePaymentRequest.
 
         :param order_information: The order_information of this CreatePaymentRequest.
-        :type: V2paymentsOrderInformation
+        :type: Ptsv2paymentsOrderInformation
         """
 
         self._order_information = order_information
@@ -193,7 +193,7 @@ class CreatePaymentRequest(object):
         Gets the buyer_information of this CreatePaymentRequest.
 
         :return: The buyer_information of this CreatePaymentRequest.
-        :rtype: V2paymentsBuyerInformation
+        :rtype: Ptsv2paymentsBuyerInformation
         """
         return self._buyer_information
 
@@ -203,7 +203,7 @@ class CreatePaymentRequest(object):
         Sets the buyer_information of this CreatePaymentRequest.
 
         :param buyer_information: The buyer_information of this CreatePaymentRequest.
-        :type: V2paymentsBuyerInformation
+        :type: Ptsv2paymentsBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -214,7 +214,7 @@ class CreatePaymentRequest(object):
         Gets the recipient_information of this CreatePaymentRequest.
 
         :return: The recipient_information of this CreatePaymentRequest.
-        :rtype: V2paymentsRecipientInformation
+        :rtype: Ptsv2paymentsRecipientInformation
         """
         return self._recipient_information
 
@@ -224,7 +224,7 @@ class CreatePaymentRequest(object):
         Sets the recipient_information of this CreatePaymentRequest.
 
         :param recipient_information: The recipient_information of this CreatePaymentRequest.
-        :type: V2paymentsRecipientInformation
+        :type: Ptsv2paymentsRecipientInformation
         """
 
         self._recipient_information = recipient_information
@@ -235,7 +235,7 @@ class CreatePaymentRequest(object):
         Gets the device_information of this CreatePaymentRequest.
 
         :return: The device_information of this CreatePaymentRequest.
-        :rtype: V2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsDeviceInformation
         """
         return self._device_information
 
@@ -245,7 +245,7 @@ class CreatePaymentRequest(object):
         Sets the device_information of this CreatePaymentRequest.
 
         :param device_information: The device_information of this CreatePaymentRequest.
-        :type: V2paymentsDeviceInformation
+        :type: Ptsv2paymentsDeviceInformation
         """
 
         self._device_information = device_information
@@ -256,7 +256,7 @@ class CreatePaymentRequest(object):
         Gets the merchant_information of this CreatePaymentRequest.
 
         :return: The merchant_information of this CreatePaymentRequest.
-        :rtype: V2paymentsMerchantInformation
+        :rtype: Ptsv2paymentsMerchantInformation
         """
         return self._merchant_information
 
@@ -266,7 +266,7 @@ class CreatePaymentRequest(object):
         Sets the merchant_information of this CreatePaymentRequest.
 
         :param merchant_information: The merchant_information of this CreatePaymentRequest.
-        :type: V2paymentsMerchantInformation
+        :type: Ptsv2paymentsMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -277,7 +277,7 @@ class CreatePaymentRequest(object):
         Gets the aggregator_information of this CreatePaymentRequest.
 
         :return: The aggregator_information of this CreatePaymentRequest.
-        :rtype: V2paymentsAggregatorInformation
+        :rtype: Ptsv2paymentsAggregatorInformation
         """
         return self._aggregator_information
 
@@ -287,7 +287,7 @@ class CreatePaymentRequest(object):
         Sets the aggregator_information of this CreatePaymentRequest.
 
         :param aggregator_information: The aggregator_information of this CreatePaymentRequest.
-        :type: V2paymentsAggregatorInformation
+        :type: Ptsv2paymentsAggregatorInformation
         """
 
         self._aggregator_information = aggregator_information
@@ -298,7 +298,7 @@ class CreatePaymentRequest(object):
         Gets the consumer_authentication_information of this CreatePaymentRequest.
 
         :return: The consumer_authentication_information of this CreatePaymentRequest.
-        :rtype: V2paymentsConsumerAuthenticationInformation
+        :rtype: Ptsv2paymentsConsumerAuthenticationInformation
         """
         return self._consumer_authentication_information
 
@@ -308,7 +308,7 @@ class CreatePaymentRequest(object):
         Sets the consumer_authentication_information of this CreatePaymentRequest.
 
         :param consumer_authentication_information: The consumer_authentication_information of this CreatePaymentRequest.
-        :type: V2paymentsConsumerAuthenticationInformation
+        :type: Ptsv2paymentsConsumerAuthenticationInformation
         """
 
         self._consumer_authentication_information = consumer_authentication_information
@@ -319,7 +319,7 @@ class CreatePaymentRequest(object):
         Gets the point_of_sale_information of this CreatePaymentRequest.
 
         :return: The point_of_sale_information of this CreatePaymentRequest.
-        :rtype: V2paymentsPointOfSaleInformation
+        :rtype: Ptsv2paymentsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -329,7 +329,7 @@ class CreatePaymentRequest(object):
         Sets the point_of_sale_information of this CreatePaymentRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this CreatePaymentRequest.
-        :type: V2paymentsPointOfSaleInformation
+        :type: Ptsv2paymentsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information
@@ -338,10 +338,10 @@ class CreatePaymentRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CreatePaymentRequest.
-        TBD
+        Description of this field is not available.
 
         :return: The merchant_defined_information of this CreatePaymentRequest.
-        :rtype: list[V2paymentsMerchantDefinedInformation]
+        :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -349,10 +349,10 @@ class CreatePaymentRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this CreatePaymentRequest.
-        TBD
+        Description of this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this CreatePaymentRequest.
-        :type: list[V2paymentsMerchantDefinedInformation]
+        :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information

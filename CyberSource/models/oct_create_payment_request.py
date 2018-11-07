@@ -32,12 +32,12 @@ class OctCreatePaymentRequest(object):
     """
     swagger_types = {
         'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'order_information': 'V2payoutsOrderInformation',
-        'merchant_information': 'V2payoutsMerchantInformation',
-        'recipient_information': 'V2payoutsRecipientInformation',
-        'sender_information': 'V2payoutsSenderInformation',
-        'processing_information': 'V2payoutsProcessingInformation',
-        'payment_information': 'V2payoutsPaymentInformation'
+        'order_information': 'Ptsv2payoutsOrderInformation',
+        'merchant_information': 'Ptsv2payoutsMerchantInformation',
+        'recipient_information': 'Ptsv2payoutsRecipientInformation',
+        'sender_information': 'Ptsv2payoutsSenderInformation',
+        'processing_information': 'Ptsv2payoutsProcessingInformation',
+        'payment_information': 'Ptsv2payoutsPaymentInformation'
     }
 
     attribute_map = {
@@ -105,7 +105,7 @@ class OctCreatePaymentRequest(object):
         Gets the order_information of this OctCreatePaymentRequest.
 
         :return: The order_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsOrderInformation
+        :rtype: Ptsv2payoutsOrderInformation
         """
         return self._order_information
 
@@ -115,7 +115,7 @@ class OctCreatePaymentRequest(object):
         Sets the order_information of this OctCreatePaymentRequest.
 
         :param order_information: The order_information of this OctCreatePaymentRequest.
-        :type: V2payoutsOrderInformation
+        :type: Ptsv2payoutsOrderInformation
         """
 
         self._order_information = order_information
@@ -126,7 +126,7 @@ class OctCreatePaymentRequest(object):
         Gets the merchant_information of this OctCreatePaymentRequest.
 
         :return: The merchant_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsMerchantInformation
+        :rtype: Ptsv2payoutsMerchantInformation
         """
         return self._merchant_information
 
@@ -136,7 +136,7 @@ class OctCreatePaymentRequest(object):
         Sets the merchant_information of this OctCreatePaymentRequest.
 
         :param merchant_information: The merchant_information of this OctCreatePaymentRequest.
-        :type: V2payoutsMerchantInformation
+        :type: Ptsv2payoutsMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -147,7 +147,7 @@ class OctCreatePaymentRequest(object):
         Gets the recipient_information of this OctCreatePaymentRequest.
 
         :return: The recipient_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsRecipientInformation
+        :rtype: Ptsv2payoutsRecipientInformation
         """
         return self._recipient_information
 
@@ -157,7 +157,7 @@ class OctCreatePaymentRequest(object):
         Sets the recipient_information of this OctCreatePaymentRequest.
 
         :param recipient_information: The recipient_information of this OctCreatePaymentRequest.
-        :type: V2payoutsRecipientInformation
+        :type: Ptsv2payoutsRecipientInformation
         """
 
         self._recipient_information = recipient_information
@@ -168,7 +168,7 @@ class OctCreatePaymentRequest(object):
         Gets the sender_information of this OctCreatePaymentRequest.
 
         :return: The sender_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsSenderInformation
+        :rtype: Ptsv2payoutsSenderInformation
         """
         return self._sender_information
 
@@ -178,7 +178,7 @@ class OctCreatePaymentRequest(object):
         Sets the sender_information of this OctCreatePaymentRequest.
 
         :param sender_information: The sender_information of this OctCreatePaymentRequest.
-        :type: V2payoutsSenderInformation
+        :type: Ptsv2payoutsSenderInformation
         """
 
         self._sender_information = sender_information
@@ -189,7 +189,7 @@ class OctCreatePaymentRequest(object):
         Gets the processing_information of this OctCreatePaymentRequest.
 
         :return: The processing_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsProcessingInformation
+        :rtype: Ptsv2payoutsProcessingInformation
         """
         return self._processing_information
 
@@ -199,7 +199,7 @@ class OctCreatePaymentRequest(object):
         Sets the processing_information of this OctCreatePaymentRequest.
 
         :param processing_information: The processing_information of this OctCreatePaymentRequest.
-        :type: V2payoutsProcessingInformation
+        :type: Ptsv2payoutsProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -210,7 +210,7 @@ class OctCreatePaymentRequest(object):
         Gets the payment_information of this OctCreatePaymentRequest.
 
         :return: The payment_information of this OctCreatePaymentRequest.
-        :rtype: V2payoutsPaymentInformation
+        :rtype: Ptsv2payoutsPaymentInformation
         """
         return self._payment_information
 
@@ -220,7 +220,7 @@ class OctCreatePaymentRequest(object):
         Sets the payment_information of this OctCreatePaymentRequest.
 
         :param payment_information: The payment_information of this OctCreatePaymentRequest.
-        :type: V2payoutsPaymentInformation
+        :type: Ptsv2payoutsPaymentInformation
         """
 
         self._payment_information = payment_information

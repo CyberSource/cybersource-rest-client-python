@@ -31,217 +31,43 @@ class InlineResponse2006(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2013Links',
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reconciliation_id': 'str',
-        'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'credit_amount_details': 'InlineResponse2014CreditAmountDetails'
+        'subscriptions': 'list[InlineResponse2006Subscriptions]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reconciliation_id': 'reconciliationId',
-        'client_reference_information': 'clientReferenceInformation',
-        'credit_amount_details': 'creditAmountDetails'
+        'subscriptions': 'subscriptions'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None):
+    def __init__(self, subscriptions=None):
         """
         InlineResponse2006 - a model defined in Swagger
         """
 
-        self._links = None
-        self._id = None
-        self._submit_time_utc = None
-        self._status = None
-        self._reconciliation_id = None
-        self._client_reference_information = None
-        self._credit_amount_details = None
+        self._subscriptions = None
 
-        if links is not None:
-          self.links = links
-        if id is not None:
-          self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reconciliation_id is not None:
-          self.reconciliation_id = reconciliation_id
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if credit_amount_details is not None:
-          self.credit_amount_details = credit_amount_details
+        if subscriptions is not None:
+          self.subscriptions = subscriptions
 
     @property
-    def links(self):
+    def subscriptions(self):
         """
-        Gets the links of this InlineResponse2006.
+        Gets the subscriptions of this InlineResponse2006.
 
-        :return: The links of this InlineResponse2006.
-        :rtype: InlineResponse2013Links
+        :return: The subscriptions of this InlineResponse2006.
+        :rtype: list[InlineResponse2006Subscriptions]
         """
-        return self._links
+        return self._subscriptions
 
-    @links.setter
-    def links(self, links):
+    @subscriptions.setter
+    def subscriptions(self, subscriptions):
         """
-        Sets the links of this InlineResponse2006.
+        Sets the subscriptions of this InlineResponse2006.
 
-        :param links: The links of this InlineResponse2006.
-        :type: InlineResponse2013Links
-        """
-
-        self._links = links
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2006.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :return: The id of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2006.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :param id: The id of this InlineResponse2006.
-        :type: str
-        """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
-
-        self._id = id
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse2006.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse2006.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2006.
-        :type: str
+        :param subscriptions: The subscriptions of this InlineResponse2006.
+        :type: list[InlineResponse2006Subscriptions]
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2006.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2006.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse2006.
-        :type: str
-        """
-        allowed_values = ["PENDING", "TRANSMITTED", "BATCH_ERROR", "VOIDED"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
-
-        self._status = status
-
-    @property
-    def reconciliation_id(self):
-        """
-        Gets the reconciliation_id of this InlineResponse2006.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :return: The reconciliation_id of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._reconciliation_id
-
-    @reconciliation_id.setter
-    def reconciliation_id(self, reconciliation_id):
-        """
-        Sets the reconciliation_id of this InlineResponse2006.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :param reconciliation_id: The reconciliation_id of this InlineResponse2006.
-        :type: str
-        """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
-
-        self._reconciliation_id = reconciliation_id
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2006.
-
-        :return: The client_reference_information of this InlineResponse2006.
-        :rtype: InlineResponse201ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2006.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2006.
-        :type: InlineResponse201ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
-
-    @property
-    def credit_amount_details(self):
-        """
-        Gets the credit_amount_details of this InlineResponse2006.
-
-        :return: The credit_amount_details of this InlineResponse2006.
-        :rtype: InlineResponse2014CreditAmountDetails
-        """
-        return self._credit_amount_details
-
-    @credit_amount_details.setter
-    def credit_amount_details(self, credit_amount_details):
-        """
-        Sets the credit_amount_details of this InlineResponse2006.
-
-        :param credit_amount_details: The credit_amount_details of this InlineResponse2006.
-        :type: InlineResponse2014CreditAmountDetails
-        """
-
-        self._credit_amount_details = credit_amount_details
+        self._subscriptions = subscriptions
 
     def to_dict(self):
         """

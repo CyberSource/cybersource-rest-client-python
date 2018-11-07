@@ -31,18 +31,18 @@ class InlineResponse2016(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InstrumentidentifiersLinks',
+        'links': 'Tmsv1instrumentidentifiersLinks',
         'id': 'str',
         'object': 'str',
         'state': 'str',
-        'bank_account': 'PaymentinstrumentsBankAccount',
-        'card': 'PaymentinstrumentsCard',
-        'buyer_information': 'PaymentinstrumentsBuyerInformation',
-        'bill_to': 'PaymentinstrumentsBillTo',
-        'processing_information': 'PaymentinstrumentsProcessingInformation',
-        'merchant_information': 'PaymentinstrumentsMerchantInformation',
-        'meta_data': 'InstrumentidentifiersMetadata',
-        'instrument_identifier': 'PaymentinstrumentsInstrumentIdentifier'
+        'bank_account': 'Tmsv1paymentinstrumentsBankAccount',
+        'card': 'Tmsv1paymentinstrumentsCard',
+        'buyer_information': 'Tmsv1paymentinstrumentsBuyerInformation',
+        'bill_to': 'Tmsv1paymentinstrumentsBillTo',
+        'processing_information': 'Tmsv1paymentinstrumentsProcessingInformation',
+        'merchant_information': 'Tmsv1paymentinstrumentsMerchantInformation',
+        'meta_data': 'Tmsv1instrumentidentifiersMetadata',
+        'instrument_identifier': 'Tmsv1paymentinstrumentsInstrumentIdentifier'
     }
 
     attribute_map = {
@@ -109,7 +109,7 @@ class InlineResponse2016(object):
         Gets the links of this InlineResponse2016.
 
         :return: The links of this InlineResponse2016.
-        :rtype: InstrumentidentifiersLinks
+        :rtype: Tmsv1instrumentidentifiersLinks
         """
         return self._links
 
@@ -119,7 +119,7 @@ class InlineResponse2016(object):
         Sets the links of this InlineResponse2016.
 
         :param links: The links of this InlineResponse2016.
-        :type: InstrumentidentifiersLinks
+        :type: Tmsv1instrumentidentifiersLinks
         """
 
         self._links = links
@@ -211,7 +211,7 @@ class InlineResponse2016(object):
         Gets the bank_account of this InlineResponse2016.
 
         :return: The bank_account of this InlineResponse2016.
-        :rtype: PaymentinstrumentsBankAccount
+        :rtype: Tmsv1paymentinstrumentsBankAccount
         """
         return self._bank_account
 
@@ -221,7 +221,7 @@ class InlineResponse2016(object):
         Sets the bank_account of this InlineResponse2016.
 
         :param bank_account: The bank_account of this InlineResponse2016.
-        :type: PaymentinstrumentsBankAccount
+        :type: Tmsv1paymentinstrumentsBankAccount
         """
 
         self._bank_account = bank_account
@@ -232,7 +232,7 @@ class InlineResponse2016(object):
         Gets the card of this InlineResponse2016.
 
         :return: The card of this InlineResponse2016.
-        :rtype: PaymentinstrumentsCard
+        :rtype: Tmsv1paymentinstrumentsCard
         """
         return self._card
 
@@ -242,7 +242,7 @@ class InlineResponse2016(object):
         Sets the card of this InlineResponse2016.
 
         :param card: The card of this InlineResponse2016.
-        :type: PaymentinstrumentsCard
+        :type: Tmsv1paymentinstrumentsCard
         """
 
         self._card = card
@@ -253,7 +253,7 @@ class InlineResponse2016(object):
         Gets the buyer_information of this InlineResponse2016.
 
         :return: The buyer_information of this InlineResponse2016.
-        :rtype: PaymentinstrumentsBuyerInformation
+        :rtype: Tmsv1paymentinstrumentsBuyerInformation
         """
         return self._buyer_information
 
@@ -263,7 +263,7 @@ class InlineResponse2016(object):
         Sets the buyer_information of this InlineResponse2016.
 
         :param buyer_information: The buyer_information of this InlineResponse2016.
-        :type: PaymentinstrumentsBuyerInformation
+        :type: Tmsv1paymentinstrumentsBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -274,7 +274,7 @@ class InlineResponse2016(object):
         Gets the bill_to of this InlineResponse2016.
 
         :return: The bill_to of this InlineResponse2016.
-        :rtype: PaymentinstrumentsBillTo
+        :rtype: Tmsv1paymentinstrumentsBillTo
         """
         return self._bill_to
 
@@ -284,7 +284,7 @@ class InlineResponse2016(object):
         Sets the bill_to of this InlineResponse2016.
 
         :param bill_to: The bill_to of this InlineResponse2016.
-        :type: PaymentinstrumentsBillTo
+        :type: Tmsv1paymentinstrumentsBillTo
         """
 
         self._bill_to = bill_to
@@ -295,7 +295,7 @@ class InlineResponse2016(object):
         Gets the processing_information of this InlineResponse2016.
 
         :return: The processing_information of this InlineResponse2016.
-        :rtype: PaymentinstrumentsProcessingInformation
+        :rtype: Tmsv1paymentinstrumentsProcessingInformation
         """
         return self._processing_information
 
@@ -305,7 +305,7 @@ class InlineResponse2016(object):
         Sets the processing_information of this InlineResponse2016.
 
         :param processing_information: The processing_information of this InlineResponse2016.
-        :type: PaymentinstrumentsProcessingInformation
+        :type: Tmsv1paymentinstrumentsProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -316,7 +316,7 @@ class InlineResponse2016(object):
         Gets the merchant_information of this InlineResponse2016.
 
         :return: The merchant_information of this InlineResponse2016.
-        :rtype: PaymentinstrumentsMerchantInformation
+        :rtype: Tmsv1paymentinstrumentsMerchantInformation
         """
         return self._merchant_information
 
@@ -326,7 +326,7 @@ class InlineResponse2016(object):
         Sets the merchant_information of this InlineResponse2016.
 
         :param merchant_information: The merchant_information of this InlineResponse2016.
-        :type: PaymentinstrumentsMerchantInformation
+        :type: Tmsv1paymentinstrumentsMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -337,7 +337,7 @@ class InlineResponse2016(object):
         Gets the meta_data of this InlineResponse2016.
 
         :return: The meta_data of this InlineResponse2016.
-        :rtype: InstrumentidentifiersMetadata
+        :rtype: Tmsv1instrumentidentifiersMetadata
         """
         return self._meta_data
 
@@ -347,7 +347,7 @@ class InlineResponse2016(object):
         Sets the meta_data of this InlineResponse2016.
 
         :param meta_data: The meta_data of this InlineResponse2016.
-        :type: InstrumentidentifiersMetadata
+        :type: Tmsv1instrumentidentifiersMetadata
         """
 
         self._meta_data = meta_data
@@ -358,7 +358,7 @@ class InlineResponse2016(object):
         Gets the instrument_identifier of this InlineResponse2016.
 
         :return: The instrument_identifier of this InlineResponse2016.
-        :rtype: PaymentinstrumentsInstrumentIdentifier
+        :rtype: Tmsv1paymentinstrumentsInstrumentIdentifier
         """
         return self._instrument_identifier
 
@@ -368,7 +368,7 @@ class InlineResponse2016(object):
         Sets the instrument_identifier of this InlineResponse2016.
 
         :param instrument_identifier: The instrument_identifier of this InlineResponse2016.
-        :type: PaymentinstrumentsInstrumentIdentifier
+        :type: Tmsv1paymentinstrumentsInstrumentIdentifier
         """
 
         self._instrument_identifier = instrument_identifier

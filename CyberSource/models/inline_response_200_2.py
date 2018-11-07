@@ -31,92 +31,53 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse201Links',
-        'embedded': 'InlineResponse201Embedded',
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reconciliation_id': 'str',
-        'error_information': 'InlineResponse201ErrorInformation',
-        'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'processing_information': 'InlineResponse2002ProcessingInformation',
-        'processor_information': 'InlineResponse2002ProcessorInformation',
-        'payment_information': 'InlineResponse2002PaymentInformation',
-        'order_information': 'InlineResponse2002OrderInformation',
-        'buyer_information': 'InlineResponse2002BuyerInformation',
-        'merchant_information': 'InlineResponse2002MerchantInformation',
-        'device_information': 'InlineResponse2002DeviceInformation'
+        'transaction_batches': 'list[InlineResponse2002TransactionBatches]',
+        'links': 'InlineResponse2002Links',
+        'submit_time_utc': 'str'
     }
 
     attribute_map = {
+        'transaction_batches': 'transactionBatches',
         'links': '_links',
-        'embedded': '_embedded',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reconciliation_id': 'reconciliationId',
-        'error_information': 'errorInformation',
-        'client_reference_information': 'clientReferenceInformation',
-        'processing_information': 'processingInformation',
-        'processor_information': 'processorInformation',
-        'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation',
-        'buyer_information': 'buyerInformation',
-        'merchant_information': 'merchantInformation',
-        'device_information': 'deviceInformation'
+        'submit_time_utc': 'submitTimeUtc'
     }
 
-    def __init__(self, links=None, embedded=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, payment_information=None, order_information=None, buyer_information=None, merchant_information=None, device_information=None):
+    def __init__(self, transaction_batches=None, links=None, submit_time_utc=None):
         """
         InlineResponse2002 - a model defined in Swagger
         """
 
+        self._transaction_batches = None
         self._links = None
-        self._embedded = None
-        self._id = None
         self._submit_time_utc = None
-        self._status = None
-        self._reconciliation_id = None
-        self._error_information = None
-        self._client_reference_information = None
-        self._processing_information = None
-        self._processor_information = None
-        self._payment_information = None
-        self._order_information = None
-        self._buyer_information = None
-        self._merchant_information = None
-        self._device_information = None
 
+        if transaction_batches is not None:
+          self.transaction_batches = transaction_batches
         if links is not None:
           self.links = links
-        if embedded is not None:
-          self.embedded = embedded
-        if id is not None:
-          self.id = id
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reconciliation_id is not None:
-          self.reconciliation_id = reconciliation_id
-        if error_information is not None:
-          self.error_information = error_information
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if processing_information is not None:
-          self.processing_information = processing_information
-        if processor_information is not None:
-          self.processor_information = processor_information
-        if payment_information is not None:
-          self.payment_information = payment_information
-        if order_information is not None:
-          self.order_information = order_information
-        if buyer_information is not None:
-          self.buyer_information = buyer_information
-        if merchant_information is not None:
-          self.merchant_information = merchant_information
-        if device_information is not None:
-          self.device_information = device_information
+
+    @property
+    def transaction_batches(self):
+        """
+        Gets the transaction_batches of this InlineResponse2002.
+
+        :return: The transaction_batches of this InlineResponse2002.
+        :rtype: list[InlineResponse2002TransactionBatches]
+        """
+        return self._transaction_batches
+
+    @transaction_batches.setter
+    def transaction_batches(self, transaction_batches):
+        """
+        Sets the transaction_batches of this InlineResponse2002.
+
+        :param transaction_batches: The transaction_batches of this InlineResponse2002.
+        :type: list[InlineResponse2002TransactionBatches]
+        """
+
+        self._transaction_batches = transaction_batches
 
     @property
     def links(self):
@@ -124,7 +85,7 @@ class InlineResponse2002(object):
         Gets the links of this InlineResponse2002.
 
         :return: The links of this InlineResponse2002.
-        :rtype: InlineResponse201Links
+        :rtype: InlineResponse2002Links
         """
         return self._links
 
@@ -134,56 +95,10 @@ class InlineResponse2002(object):
         Sets the links of this InlineResponse2002.
 
         :param links: The links of this InlineResponse2002.
-        :type: InlineResponse201Links
+        :type: InlineResponse2002Links
         """
 
         self._links = links
-
-    @property
-    def embedded(self):
-        """
-        Gets the embedded of this InlineResponse2002.
-
-        :return: The embedded of this InlineResponse2002.
-        :rtype: InlineResponse201Embedded
-        """
-        return self._embedded
-
-    @embedded.setter
-    def embedded(self, embedded):
-        """
-        Sets the embedded of this InlineResponse2002.
-
-        :param embedded: The embedded of this InlineResponse2002.
-        :type: InlineResponse201Embedded
-        """
-
-        self._embedded = embedded
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2002.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :return: The id of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2002.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :param id: The id of this InlineResponse2002.
-        :type: str
-        """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
-
-        self._id = id
 
     @property
     def submit_time_utc(self):
@@ -207,249 +122,6 @@ class InlineResponse2002(object):
         """
 
         self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2002.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2002.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse2002.
-        :type: str
-        """
-        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
-
-        self._status = status
-
-    @property
-    def reconciliation_id(self):
-        """
-        Gets the reconciliation_id of this InlineResponse2002.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :return: The reconciliation_id of this InlineResponse2002.
-        :rtype: str
-        """
-        return self._reconciliation_id
-
-    @reconciliation_id.setter
-    def reconciliation_id(self, reconciliation_id):
-        """
-        Sets the reconciliation_id of this InlineResponse2002.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :param reconciliation_id: The reconciliation_id of this InlineResponse2002.
-        :type: str
-        """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
-
-        self._reconciliation_id = reconciliation_id
-
-    @property
-    def error_information(self):
-        """
-        Gets the error_information of this InlineResponse2002.
-
-        :return: The error_information of this InlineResponse2002.
-        :rtype: InlineResponse201ErrorInformation
-        """
-        return self._error_information
-
-    @error_information.setter
-    def error_information(self, error_information):
-        """
-        Sets the error_information of this InlineResponse2002.
-
-        :param error_information: The error_information of this InlineResponse2002.
-        :type: InlineResponse201ErrorInformation
-        """
-
-        self._error_information = error_information
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2002.
-
-        :return: The client_reference_information of this InlineResponse2002.
-        :rtype: InlineResponse201ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2002.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2002.
-        :type: InlineResponse201ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
-
-    @property
-    def processing_information(self):
-        """
-        Gets the processing_information of this InlineResponse2002.
-
-        :return: The processing_information of this InlineResponse2002.
-        :rtype: InlineResponse2002ProcessingInformation
-        """
-        return self._processing_information
-
-    @processing_information.setter
-    def processing_information(self, processing_information):
-        """
-        Sets the processing_information of this InlineResponse2002.
-
-        :param processing_information: The processing_information of this InlineResponse2002.
-        :type: InlineResponse2002ProcessingInformation
-        """
-
-        self._processing_information = processing_information
-
-    @property
-    def processor_information(self):
-        """
-        Gets the processor_information of this InlineResponse2002.
-
-        :return: The processor_information of this InlineResponse2002.
-        :rtype: InlineResponse2002ProcessorInformation
-        """
-        return self._processor_information
-
-    @processor_information.setter
-    def processor_information(self, processor_information):
-        """
-        Sets the processor_information of this InlineResponse2002.
-
-        :param processor_information: The processor_information of this InlineResponse2002.
-        :type: InlineResponse2002ProcessorInformation
-        """
-
-        self._processor_information = processor_information
-
-    @property
-    def payment_information(self):
-        """
-        Gets the payment_information of this InlineResponse2002.
-
-        :return: The payment_information of this InlineResponse2002.
-        :rtype: InlineResponse2002PaymentInformation
-        """
-        return self._payment_information
-
-    @payment_information.setter
-    def payment_information(self, payment_information):
-        """
-        Sets the payment_information of this InlineResponse2002.
-
-        :param payment_information: The payment_information of this InlineResponse2002.
-        :type: InlineResponse2002PaymentInformation
-        """
-
-        self._payment_information = payment_information
-
-    @property
-    def order_information(self):
-        """
-        Gets the order_information of this InlineResponse2002.
-
-        :return: The order_information of this InlineResponse2002.
-        :rtype: InlineResponse2002OrderInformation
-        """
-        return self._order_information
-
-    @order_information.setter
-    def order_information(self, order_information):
-        """
-        Sets the order_information of this InlineResponse2002.
-
-        :param order_information: The order_information of this InlineResponse2002.
-        :type: InlineResponse2002OrderInformation
-        """
-
-        self._order_information = order_information
-
-    @property
-    def buyer_information(self):
-        """
-        Gets the buyer_information of this InlineResponse2002.
-
-        :return: The buyer_information of this InlineResponse2002.
-        :rtype: InlineResponse2002BuyerInformation
-        """
-        return self._buyer_information
-
-    @buyer_information.setter
-    def buyer_information(self, buyer_information):
-        """
-        Sets the buyer_information of this InlineResponse2002.
-
-        :param buyer_information: The buyer_information of this InlineResponse2002.
-        :type: InlineResponse2002BuyerInformation
-        """
-
-        self._buyer_information = buyer_information
-
-    @property
-    def merchant_information(self):
-        """
-        Gets the merchant_information of this InlineResponse2002.
-
-        :return: The merchant_information of this InlineResponse2002.
-        :rtype: InlineResponse2002MerchantInformation
-        """
-        return self._merchant_information
-
-    @merchant_information.setter
-    def merchant_information(self, merchant_information):
-        """
-        Sets the merchant_information of this InlineResponse2002.
-
-        :param merchant_information: The merchant_information of this InlineResponse2002.
-        :type: InlineResponse2002MerchantInformation
-        """
-
-        self._merchant_information = merchant_information
-
-    @property
-    def device_information(self):
-        """
-        Gets the device_information of this InlineResponse2002.
-
-        :return: The device_information of this InlineResponse2002.
-        :rtype: InlineResponse2002DeviceInformation
-        """
-        return self._device_information
-
-    @device_information.setter
-    def device_information(self, device_information):
-        """
-        Sets the device_information of this InlineResponse2002.
-
-        :param device_information: The device_information of this InlineResponse2002.
-        :type: InlineResponse2002DeviceInformation
-        """
-
-        self._device_information = device_information
 
     def to_dict(self):
         """

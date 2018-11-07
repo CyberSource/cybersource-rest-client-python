@@ -220,7 +220,7 @@ class InlineResponse201ProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this InlineResponse201ProcessorInformation.
-        TBD
+        Description of this field is not available.
 
         :return: The network_transaction_id of this InlineResponse201ProcessorInformation.
         :rtype: str
@@ -231,7 +231,7 @@ class InlineResponse201ProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this InlineResponse201ProcessorInformation.
-        TBD
+        Description of this field is not available.
 
         :param network_transaction_id: The network_transaction_id of this InlineResponse201ProcessorInformation.
         :type: str
@@ -243,7 +243,7 @@ class InlineResponse201ProcessorInformation(object):
     def provider_transaction_id(self):
         """
         Gets the provider_transaction_id of this InlineResponse201ProcessorInformation.
-        TBD
+        Description of this field is not available.
 
         :return: The provider_transaction_id of this InlineResponse201ProcessorInformation.
         :rtype: str
@@ -254,7 +254,7 @@ class InlineResponse201ProcessorInformation(object):
     def provider_transaction_id(self, provider_transaction_id):
         """
         Sets the provider_transaction_id of this InlineResponse201ProcessorInformation.
-        TBD
+        Description of this field is not available.
 
         :param provider_transaction_id: The provider_transaction_id of this InlineResponse201ProcessorInformation.
         :type: str
@@ -341,7 +341,7 @@ class InlineResponse201ProcessorInformation(object):
     def response_category_code(self):
         """
         Gets the response_category_code of this InlineResponse201ProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the auth_auth_response field or the auth_reversal_auth_ response field depending on which service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latinoâ€”processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the auth_auth_response field or the auth_reversal_auth_ response field depending on which service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
 
         :return: The response_category_code of this InlineResponse201ProcessorInformation.
         :rtype: str
@@ -352,7 +352,7 @@ class InlineResponse201ProcessorInformation(object):
     def response_category_code(self, response_category_code):
         """
         Sets the response_category_code of this InlineResponse201ProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the auth_auth_response field or the auth_reversal_auth_ response field depending on which service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latinoâ€”processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the auth_auth_response field or the auth_reversal_auth_ response field depending on which service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
 
         :param response_category_code: The response_category_code of this InlineResponse201ProcessorInformation.
         :type: str
@@ -538,7 +538,7 @@ class InlineResponse201ProcessorInformation(object):
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this InlineResponse201ProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customerâ€™s receipt. 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customer’s receipt. 
 
         :return: The system_trace_audit_number of this InlineResponse201ProcessorInformation.
         :rtype: str
@@ -549,7 +549,7 @@ class InlineResponse201ProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this InlineResponse201ProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customerâ€™s receipt. 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customer’s receipt. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this InlineResponse201ProcessorInformation.
         :type: str
@@ -588,7 +588,7 @@ class InlineResponse201ProcessorInformation(object):
     def transaction_integrity_code(self):
         """
         Gets the transaction_integrity_code of this InlineResponse201ProcessorInformation.
-        Transaction integrity classification provided by Mastercard. This value specifies Mastercardâ€™s evaluation of the transactionâ€™s safety and security. This field is returned only for **CyberSource through VisaNet**.  For card-present transactions, possible values:   - **A1**: EMV or token in a secure, trusted environment  - **B1**: EMV or chip equivalent  - **C1**: Magnetic stripe  - **E1**: Key entered  - **U0**: Unclassified  For card-not-present transactions, possible values:   - **A2**: Digital transactions  - **B2**: Authenticated checkout  - **C2**: Transaction validation  - **D2**: Enhanced data  - **E2**: Generic messaging  - **U0**: Unclassified  For information about these values, contact Mastercard or your acquirer. 
+        Transaction integrity classification provided by Mastercard. This value specifies Mastercard’s evaluation of the transaction’s safety and security. This field is returned only for **CyberSource through VisaNet**.  For card-present transactions, possible values:   - **A1**: EMV or token in a secure, trusted environment  - **B1**: EMV or chip equivalent  - **C1**: Magnetic stripe  - **E1**: Key entered  - **U0**: Unclassified  For card-not-present transactions, possible values:   - **A2**: Digital transactions  - **B2**: Authenticated checkout  - **C2**: Transaction validation  - **D2**: Enhanced data  - **E2**: Generic messaging  - **U0**: Unclassified  For information about these values, contact Mastercard or your acquirer. 
 
         :return: The transaction_integrity_code of this InlineResponse201ProcessorInformation.
         :rtype: str
@@ -599,7 +599,7 @@ class InlineResponse201ProcessorInformation(object):
     def transaction_integrity_code(self, transaction_integrity_code):
         """
         Sets the transaction_integrity_code of this InlineResponse201ProcessorInformation.
-        Transaction integrity classification provided by Mastercard. This value specifies Mastercardâ€™s evaluation of the transactionâ€™s safety and security. This field is returned only for **CyberSource through VisaNet**.  For card-present transactions, possible values:   - **A1**: EMV or token in a secure, trusted environment  - **B1**: EMV or chip equivalent  - **C1**: Magnetic stripe  - **E1**: Key entered  - **U0**: Unclassified  For card-not-present transactions, possible values:   - **A2**: Digital transactions  - **B2**: Authenticated checkout  - **C2**: Transaction validation  - **D2**: Enhanced data  - **E2**: Generic messaging  - **U0**: Unclassified  For information about these values, contact Mastercard or your acquirer. 
+        Transaction integrity classification provided by Mastercard. This value specifies Mastercard’s evaluation of the transaction’s safety and security. This field is returned only for **CyberSource through VisaNet**.  For card-present transactions, possible values:   - **A1**: EMV or token in a secure, trusted environment  - **B1**: EMV or chip equivalent  - **C1**: Magnetic stripe  - **E1**: Key entered  - **U0**: Unclassified  For card-not-present transactions, possible values:   - **A2**: Digital transactions  - **B2**: Authenticated checkout  - **C2**: Transaction validation  - **D2**: Enhanced data  - **E2**: Generic messaging  - **U0**: Unclassified  For information about these values, contact Mastercard or your acquirer. 
 
         :param transaction_integrity_code: The transaction_integrity_code of this InlineResponse201ProcessorInformation.
         :type: str

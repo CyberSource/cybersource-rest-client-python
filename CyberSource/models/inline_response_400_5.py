@@ -31,42 +31,48 @@ class InlineResponse4005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
-        'message': 'str',
-        'details': 'list[InlineResponse201ErrorInformationDetails]'
+        'error_information': 'InlineResponse4005ErrorInformation',
+        'submit_time_utc': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
-        'message': 'message',
-        'details': 'details'
+        'error_information': 'errorInformation',
+        'submit_time_utc': 'submitTimeUtc'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, error_information=None, submit_time_utc=None):
         """
         InlineResponse4005 - a model defined in Swagger
         """
 
+        self._error_information = None
         self._submit_time_utc = None
-        self._status = None
-        self._reason = None
-        self._message = None
-        self._details = None
 
+        if error_information is not None:
+          self.error_information = error_information
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reason is not None:
-          self.reason = reason
-        if message is not None:
-          self.message = message
-        if details is not None:
-          self.details = details
+
+    @property
+    def error_information(self):
+        """
+        Gets the error_information of this InlineResponse4005.
+
+        :return: The error_information of this InlineResponse4005.
+        :rtype: InlineResponse4005ErrorInformation
+        """
+        return self._error_information
+
+    @error_information.setter
+    def error_information(self, error_information):
+        """
+        Sets the error_information of this InlineResponse4005.
+
+        :param error_information: The error_information of this InlineResponse4005.
+        :type: InlineResponse4005ErrorInformation
+        """
+
+        self._error_information = error_information
 
     @property
     def submit_time_utc(self):
@@ -90,102 +96,6 @@ class InlineResponse4005(object):
         """
 
         self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse4005.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse4005.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse4005.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4005.
-        The reason of the status. 
-
-        :return: The reason of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4005.
-        The reason of the status. 
-
-        :param reason: The reason of this InlineResponse4005.
-        :type: str
-        """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_MERCHANT_CONFIGURATION", "INVALID_AMOUNT", "DEBIT_CARD_USEAGE_EXCEEDD_LIMIT"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
-
-        self._reason = reason
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse4005.
-        The detail message related to the status and reason listed above. Possible value is:    - Your aggregator or acquirer is not accepting transactions from you at this time.   - Your aggregator or acquirer is not accepting this transaction.   - CyberSource declined the request because the credit card has expired. You might also receive this value if     the expiration date you provided does not match the date the issuing bank has on file.   - The bank declined the transaction.   - The merchant reference number for this authorization request matches the merchant reference number of     another authorization request that you sent within the past 15 minutes. Resend the request with a unique     merchant reference number.   - The credit card number did not pass CyberSource basic checks.   - Data provided is not consistent with the request. For example, you requested a product with negative cost.   - The request is missing a required field. 
-
-        :return: The message of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse4005.
-        The detail message related to the status and reason listed above. Possible value is:    - Your aggregator or acquirer is not accepting transactions from you at this time.   - Your aggregator or acquirer is not accepting this transaction.   - CyberSource declined the request because the credit card has expired. You might also receive this value if     the expiration date you provided does not match the date the issuing bank has on file.   - The bank declined the transaction.   - The merchant reference number for this authorization request matches the merchant reference number of     another authorization request that you sent within the past 15 minutes. Resend the request with a unique     merchant reference number.   - The credit card number did not pass CyberSource basic checks.   - Data provided is not consistent with the request. For example, you requested a product with negative cost.   - The request is missing a required field. 
-
-        :param message: The message of this InlineResponse4005.
-        :type: str
-        """
-
-        self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse4005.
-
-        :return: The details of this InlineResponse4005.
-        :rtype: list[InlineResponse201ErrorInformationDetails]
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse4005.
-
-        :param details: The details of this InlineResponse4005.
-        :type: list[InlineResponse201ErrorInformationDetails]
-        """
-
-        self._details = details
 
     def to_dict(self):
         """

@@ -31,347 +31,43 @@ class InlineResponse2004(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2012Links',
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reconciliation_id': 'str',
-        'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'processing_information': 'InlineResponse2004ProcessingInformation',
-        'processor_information': 'InlineResponse2012ProcessorInformation',
-        'order_information': 'InlineResponse2004OrderInformation',
-        'buyer_information': 'V2paymentsidcapturesBuyerInformation',
-        'merchant_information': 'InlineResponse2002MerchantInformation',
-        'device_information': 'InlineResponse2004DeviceInformation'
+        'report_definitions': 'list[InlineResponse2004ReportDefinitions]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reconciliation_id': 'reconciliationId',
-        'client_reference_information': 'clientReferenceInformation',
-        'processing_information': 'processingInformation',
-        'processor_information': 'processorInformation',
-        'order_information': 'orderInformation',
-        'buyer_information': 'buyerInformation',
-        'merchant_information': 'merchantInformation',
-        'device_information': 'deviceInformation'
+        'report_definitions': 'reportDefinitions'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, processing_information=None, processor_information=None, order_information=None, buyer_information=None, merchant_information=None, device_information=None):
+    def __init__(self, report_definitions=None):
         """
         InlineResponse2004 - a model defined in Swagger
         """
 
-        self._links = None
-        self._id = None
-        self._submit_time_utc = None
-        self._status = None
-        self._reconciliation_id = None
-        self._client_reference_information = None
-        self._processing_information = None
-        self._processor_information = None
-        self._order_information = None
-        self._buyer_information = None
-        self._merchant_information = None
-        self._device_information = None
+        self._report_definitions = None
 
-        if links is not None:
-          self.links = links
-        if id is not None:
-          self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reconciliation_id is not None:
-          self.reconciliation_id = reconciliation_id
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if processing_information is not None:
-          self.processing_information = processing_information
-        if processor_information is not None:
-          self.processor_information = processor_information
-        if order_information is not None:
-          self.order_information = order_information
-        if buyer_information is not None:
-          self.buyer_information = buyer_information
-        if merchant_information is not None:
-          self.merchant_information = merchant_information
-        if device_information is not None:
-          self.device_information = device_information
+        if report_definitions is not None:
+          self.report_definitions = report_definitions
 
     @property
-    def links(self):
+    def report_definitions(self):
         """
-        Gets the links of this InlineResponse2004.
+        Gets the report_definitions of this InlineResponse2004.
 
-        :return: The links of this InlineResponse2004.
-        :rtype: InlineResponse2012Links
+        :return: The report_definitions of this InlineResponse2004.
+        :rtype: list[InlineResponse2004ReportDefinitions]
         """
-        return self._links
+        return self._report_definitions
 
-    @links.setter
-    def links(self, links):
+    @report_definitions.setter
+    def report_definitions(self, report_definitions):
         """
-        Sets the links of this InlineResponse2004.
+        Sets the report_definitions of this InlineResponse2004.
 
-        :param links: The links of this InlineResponse2004.
-        :type: InlineResponse2012Links
-        """
-
-        self._links = links
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2004.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :return: The id of this InlineResponse2004.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this InlineResponse2004.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :param id: The id of this InlineResponse2004.
-        :type: str
-        """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
-
-        self._id = id
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse2004.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse2004.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse2004.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2004.
-        :type: str
+        :param report_definitions: The report_definitions of this InlineResponse2004.
+        :type: list[InlineResponse2004ReportDefinitions]
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2004.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse2004.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2004.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse2004.
-        :type: str
-        """
-        allowed_values = ["PENDING", "TRANSMITTED", "BATCH_ERROR", "VOIDED"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
-
-        self._status = status
-
-    @property
-    def reconciliation_id(self):
-        """
-        Gets the reconciliation_id of this InlineResponse2004.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :return: The reconciliation_id of this InlineResponse2004.
-        :rtype: str
-        """
-        return self._reconciliation_id
-
-    @reconciliation_id.setter
-    def reconciliation_id(self, reconciliation_id):
-        """
-        Sets the reconciliation_id of this InlineResponse2004.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
-
-        :param reconciliation_id: The reconciliation_id of this InlineResponse2004.
-        :type: str
-        """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
-
-        self._reconciliation_id = reconciliation_id
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2004.
-
-        :return: The client_reference_information of this InlineResponse2004.
-        :rtype: InlineResponse201ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2004.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2004.
-        :type: InlineResponse201ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
-
-    @property
-    def processing_information(self):
-        """
-        Gets the processing_information of this InlineResponse2004.
-
-        :return: The processing_information of this InlineResponse2004.
-        :rtype: InlineResponse2004ProcessingInformation
-        """
-        return self._processing_information
-
-    @processing_information.setter
-    def processing_information(self, processing_information):
-        """
-        Sets the processing_information of this InlineResponse2004.
-
-        :param processing_information: The processing_information of this InlineResponse2004.
-        :type: InlineResponse2004ProcessingInformation
-        """
-
-        self._processing_information = processing_information
-
-    @property
-    def processor_information(self):
-        """
-        Gets the processor_information of this InlineResponse2004.
-
-        :return: The processor_information of this InlineResponse2004.
-        :rtype: InlineResponse2012ProcessorInformation
-        """
-        return self._processor_information
-
-    @processor_information.setter
-    def processor_information(self, processor_information):
-        """
-        Sets the processor_information of this InlineResponse2004.
-
-        :param processor_information: The processor_information of this InlineResponse2004.
-        :type: InlineResponse2012ProcessorInformation
-        """
-
-        self._processor_information = processor_information
-
-    @property
-    def order_information(self):
-        """
-        Gets the order_information of this InlineResponse2004.
-
-        :return: The order_information of this InlineResponse2004.
-        :rtype: InlineResponse2004OrderInformation
-        """
-        return self._order_information
-
-    @order_information.setter
-    def order_information(self, order_information):
-        """
-        Sets the order_information of this InlineResponse2004.
-
-        :param order_information: The order_information of this InlineResponse2004.
-        :type: InlineResponse2004OrderInformation
-        """
-
-        self._order_information = order_information
-
-    @property
-    def buyer_information(self):
-        """
-        Gets the buyer_information of this InlineResponse2004.
-
-        :return: The buyer_information of this InlineResponse2004.
-        :rtype: V2paymentsidcapturesBuyerInformation
-        """
-        return self._buyer_information
-
-    @buyer_information.setter
-    def buyer_information(self, buyer_information):
-        """
-        Sets the buyer_information of this InlineResponse2004.
-
-        :param buyer_information: The buyer_information of this InlineResponse2004.
-        :type: V2paymentsidcapturesBuyerInformation
-        """
-
-        self._buyer_information = buyer_information
-
-    @property
-    def merchant_information(self):
-        """
-        Gets the merchant_information of this InlineResponse2004.
-
-        :return: The merchant_information of this InlineResponse2004.
-        :rtype: InlineResponse2002MerchantInformation
-        """
-        return self._merchant_information
-
-    @merchant_information.setter
-    def merchant_information(self, merchant_information):
-        """
-        Sets the merchant_information of this InlineResponse2004.
-
-        :param merchant_information: The merchant_information of this InlineResponse2004.
-        :type: InlineResponse2002MerchantInformation
-        """
-
-        self._merchant_information = merchant_information
-
-    @property
-    def device_information(self):
-        """
-        Gets the device_information of this InlineResponse2004.
-
-        :return: The device_information of this InlineResponse2004.
-        :rtype: InlineResponse2004DeviceInformation
-        """
-        return self._device_information
-
-    @device_information.setter
-    def device_information(self, device_information):
-        """
-        Sets the device_information of this InlineResponse2004.
-
-        :param device_information: The device_information of this InlineResponse2004.
-        :type: InlineResponse2004DeviceInformation
-        """
-
-        self._device_information = device_information
+        self._report_definitions = report_definitions
 
     def to_dict(self):
         """

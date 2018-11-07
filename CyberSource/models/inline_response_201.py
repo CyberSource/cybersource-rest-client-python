@@ -32,7 +32,6 @@ class InlineResponse201(object):
     """
     swagger_types = {
         'links': 'InlineResponse201Links',
-        'embedded': 'InlineResponse201Embedded',
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
@@ -47,7 +46,6 @@ class InlineResponse201(object):
 
     attribute_map = {
         'links': '_links',
-        'embedded': '_embedded',
         'id': 'id',
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
@@ -60,13 +58,12 @@ class InlineResponse201(object):
         'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, links=None, embedded=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processor_information=None, payment_information=None, order_information=None, point_of_sale_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processor_information=None, payment_information=None, order_information=None, point_of_sale_information=None):
         """
         InlineResponse201 - a model defined in Swagger
         """
 
         self._links = None
-        self._embedded = None
         self._id = None
         self._submit_time_utc = None
         self._status = None
@@ -80,8 +77,6 @@ class InlineResponse201(object):
 
         if links is not None:
           self.links = links
-        if embedded is not None:
-          self.embedded = embedded
         if id is not None:
           self.id = id
         if submit_time_utc is not None:
@@ -123,27 +118,6 @@ class InlineResponse201(object):
         """
 
         self._links = links
-
-    @property
-    def embedded(self):
-        """
-        Gets the embedded of this InlineResponse201.
-
-        :return: The embedded of this InlineResponse201.
-        :rtype: InlineResponse201Embedded
-        """
-        return self._embedded
-
-    @embedded.setter
-    def embedded(self, embedded):
-        """
-        Sets the embedded of this InlineResponse201.
-
-        :param embedded: The embedded of this InlineResponse201.
-        :type: InlineResponse201Embedded
-        """
-
-        self._embedded = embedded
 
     @property
     def id(self):

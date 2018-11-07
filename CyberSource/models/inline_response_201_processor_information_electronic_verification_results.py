@@ -107,7 +107,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def code(self):
         """
         Gets the code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s name. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :return: The code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -118,7 +118,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def code(self, code):
         """
         Sets the code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s name. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :param code: The code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -132,7 +132,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def code_raw(self):
         """
         Gets the code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s last name
+        Raw Electronic Verification response code from the processor for the customer’s last name
 
         :return: The code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -143,7 +143,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def code_raw(self, code_raw):
         """
         Sets the code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s last name
+        Raw Electronic Verification response code from the processor for the customer’s last name
 
         :param code_raw: The code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -157,7 +157,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def email(self):
         """
         Gets the email of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s email address. 
+        Mapped Electronic Verification response code for the customer’s email address. 
 
         :return: The email of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -168,7 +168,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def email(self, email):
         """
         Sets the email of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s email address. 
+        Mapped Electronic Verification response code for the customer’s email address. 
 
         :param email: The email of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -182,7 +182,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def email_raw(self):
         """
         Gets the email_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s email address.
+        Raw Electronic Verification response code from the processor for the customer’s email address.
 
         :return: The email_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -193,7 +193,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def email_raw(self, email_raw):
         """
         Sets the email_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s email address.
+        Raw Electronic Verification response code from the processor for the customer’s email address.
 
         :param email_raw: The email_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -207,7 +207,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def phone_number(self):
         """
         Gets the phone_number of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s phone number. 
+        Mapped Electronic Verification response code for the customer’s phone number. 
 
         :return: The phone_number of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -218,7 +218,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s phone number. 
+        Mapped Electronic Verification response code for the customer’s phone number. 
 
         :param phone_number: The phone_number of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -232,7 +232,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def phone_number_raw(self):
         """
         Gets the phone_number_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s phone number.
+        Raw Electronic Verification response code from the processor for the customer’s phone number.
 
         :return: The phone_number_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -243,7 +243,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def phone_number_raw(self, phone_number_raw):
         """
         Sets the phone_number_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s phone number.
+        Raw Electronic Verification response code from the processor for the customer’s phone number.
 
         :param phone_number_raw: The phone_number_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -257,7 +257,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def postal_code(self):
         """
         Gets the postal_code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s postal code. 
+        Mapped Electronic Verification response code for the customer’s postal code. 
 
         :return: The postal_code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -268,7 +268,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s postal code. 
+        Mapped Electronic Verification response code for the customer’s postal code. 
 
         :param postal_code: The postal_code of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -282,7 +282,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def postal_code_raw(self):
         """
         Gets the postal_code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s postal code.
+        Raw Electronic Verification response code from the processor for the customer’s postal code.
 
         :return: The postal_code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -293,7 +293,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def postal_code_raw(self, postal_code_raw):
         """
         Sets the postal_code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s postal code.
+        Raw Electronic Verification response code from the processor for the customer’s postal code.
 
         :param postal_code_raw: The postal_code_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -307,7 +307,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def street(self):
         """
         Gets the street of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s street address. 
+        Mapped Electronic Verification response code for the customer’s street address. 
 
         :return: The street of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -318,7 +318,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def street(self, street):
         """
         Sets the street of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customerâ€™s street address. 
+        Mapped Electronic Verification response code for the customer’s street address. 
 
         :param street: The street of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str
@@ -332,7 +332,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def street_raw(self):
         """
         Gets the street_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s street address.
+        Raw Electronic Verification response code from the processor for the customer’s street address.
 
         :return: The street_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -343,7 +343,7 @@ class InlineResponse201ProcessorInformationElectronicVerificationResults(object)
     def street_raw(self, street_raw):
         """
         Sets the street_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customerâ€™s street address.
+        Raw Electronic Verification response code from the processor for the customer’s street address.
 
         :param street_raw: The street_raw of this InlineResponse201ProcessorInformationElectronicVerificationResults.
         :type: str

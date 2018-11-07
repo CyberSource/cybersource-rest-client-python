@@ -31,7 +31,7 @@ class InlineResponse2015(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse201EmbeddedCaptureLinks',
+        'links': 'InlineResponse2011Links',
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
@@ -79,7 +79,7 @@ class InlineResponse2015(object):
         Gets the links of this InlineResponse2015.
 
         :return: The links of this InlineResponse2015.
-        :rtype: InlineResponse201EmbeddedCaptureLinks
+        :rtype: InlineResponse2011Links
         """
         return self._links
 
@@ -89,7 +89,7 @@ class InlineResponse2015(object):
         Sets the links of this InlineResponse2015.
 
         :param links: The links of this InlineResponse2015.
-        :type: InlineResponse201EmbeddedCaptureLinks
+        :type: InlineResponse2011Links
         """
 
         self._links = links

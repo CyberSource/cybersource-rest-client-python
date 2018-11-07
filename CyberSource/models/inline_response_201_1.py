@@ -31,7 +31,7 @@ class InlineResponse2011(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse201EmbeddedCaptureLinks',
+        'links': 'InlineResponse2011Links',
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
@@ -40,7 +40,7 @@ class InlineResponse2011(object):
         'reversal_amount_details': 'InlineResponse2011ReversalAmountDetails',
         'processor_information': 'InlineResponse2011ProcessorInformation',
         'authorization_information': 'InlineResponse2011AuthorizationInformation',
-        'point_of_sale_information': 'V2paymentsidreversalsPointOfSaleInformation'
+        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation'
     }
 
     attribute_map = {
@@ -99,7 +99,7 @@ class InlineResponse2011(object):
         Gets the links of this InlineResponse2011.
 
         :return: The links of this InlineResponse2011.
-        :rtype: InlineResponse201EmbeddedCaptureLinks
+        :rtype: InlineResponse2011Links
         """
         return self._links
 
@@ -109,7 +109,7 @@ class InlineResponse2011(object):
         Sets the links of this InlineResponse2011.
 
         :param links: The links of this InlineResponse2011.
-        :type: InlineResponse201EmbeddedCaptureLinks
+        :type: InlineResponse2011Links
         """
 
         self._links = links
@@ -306,7 +306,7 @@ class InlineResponse2011(object):
         Gets the point_of_sale_information of this InlineResponse2011.
 
         :return: The point_of_sale_information of this InlineResponse2011.
-        :rtype: V2paymentsidreversalsPointOfSaleInformation
+        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -316,7 +316,7 @@ class InlineResponse2011(object):
         Sets the point_of_sale_information of this InlineResponse2011.
 
         :param point_of_sale_information: The point_of_sale_information of this InlineResponse2011.
-        :type: V2paymentsidreversalsPointOfSaleInformation
+        :type: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

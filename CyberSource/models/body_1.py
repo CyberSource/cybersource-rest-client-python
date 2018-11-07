@@ -31,7 +31,7 @@ class Body1(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'processing_information': 'InstrumentidentifiersProcessingInformation'
+        'processing_information': 'Tmsv1instrumentidentifiersProcessingInformation'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class Body1(object):
         Gets the processing_information of this Body1.
 
         :return: The processing_information of this Body1.
-        :rtype: InstrumentidentifiersProcessingInformation
+        :rtype: Tmsv1instrumentidentifiersProcessingInformation
         """
         return self._processing_information
 
@@ -64,7 +64,7 @@ class Body1(object):
         Sets the processing_information of this Body1.
 
         :param processing_information: The processing_information of this Body1.
-        :type: InstrumentidentifiersProcessingInformation
+        :type: Tmsv1instrumentidentifiersProcessingInformation
         """
 
         self._processing_information = processing_information

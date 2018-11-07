@@ -31,217 +31,180 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2013Links',
-        'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reconciliation_id': 'str',
-        'client_reference_information': 'InlineResponse201ClientReferenceInformation',
-        'refund_amount_details': 'InlineResponse2013RefundAmountDetails'
+        'type': 'str',
+        'report_definition_id': 'int',
+        'report_defintion_name': 'str',
+        'attributes': 'list[InlineResponse2005Attributes]',
+        'supported_formats': 'list[str]',
+        'description': 'str'
     }
 
     attribute_map = {
-        'links': '_links',
-        'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reconciliation_id': 'reconciliationId',
-        'client_reference_information': 'clientReferenceInformation',
-        'refund_amount_details': 'refundAmountDetails'
+        'type': 'type',
+        'report_definition_id': 'reportDefinitionId',
+        'report_defintion_name': 'reportDefintionName',
+        'attributes': 'attributes',
+        'supported_formats': 'supportedFormats',
+        'description': 'description'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, refund_amount_details=None):
+    def __init__(self, type=None, report_definition_id=None, report_defintion_name=None, attributes=None, supported_formats=None, description=None):
         """
         InlineResponse2005 - a model defined in Swagger
         """
 
-        self._links = None
-        self._id = None
-        self._submit_time_utc = None
-        self._status = None
-        self._reconciliation_id = None
-        self._client_reference_information = None
-        self._refund_amount_details = None
+        self._type = None
+        self._report_definition_id = None
+        self._report_defintion_name = None
+        self._attributes = None
+        self._supported_formats = None
+        self._description = None
 
-        if links is not None:
-          self.links = links
-        if id is not None:
-          self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reconciliation_id is not None:
-          self.reconciliation_id = reconciliation_id
-        if client_reference_information is not None:
-          self.client_reference_information = client_reference_information
-        if refund_amount_details is not None:
-          self.refund_amount_details = refund_amount_details
+        if type is not None:
+          self.type = type
+        if report_definition_id is not None:
+          self.report_definition_id = report_definition_id
+        if report_defintion_name is not None:
+          self.report_defintion_name = report_defintion_name
+        if attributes is not None:
+          self.attributes = attributes
+        if supported_formats is not None:
+          self.supported_formats = supported_formats
+        if description is not None:
+          self.description = description
 
     @property
-    def links(self):
+    def type(self):
         """
-        Gets the links of this InlineResponse2005.
+        Gets the type of this InlineResponse2005.
 
-        :return: The links of this InlineResponse2005.
-        :rtype: InlineResponse2013Links
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse2005.
-
-        :param links: The links of this InlineResponse2005.
-        :type: InlineResponse2013Links
-        """
-
-        self._links = links
-
-    @property
-    def id(self):
-        """
-        Gets the id of this InlineResponse2005.
-        An unique identification number assigned by CyberSource to identify the submitted request.
-
-        :return: The id of this InlineResponse2005.
+        :return: The type of this InlineResponse2005.
         :rtype: str
         """
-        return self._id
+        return self._type
 
-    @id.setter
-    def id(self, id):
+    @type.setter
+    def type(self, type):
         """
-        Sets the id of this InlineResponse2005.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        Sets the type of this InlineResponse2005.
 
-        :param id: The id of this InlineResponse2005.
-        :type: str
-        """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
-
-        self._id = id
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse2005.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse2005.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse2005.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2005.
+        :param type: The type of this InlineResponse2005.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._type = type
 
     @property
-    def status(self):
+    def report_definition_id(self):
         """
-        Gets the status of this InlineResponse2005.
-        The status of the submitted transaction.
+        Gets the report_definition_id of this InlineResponse2005.
 
-        :return: The status of this InlineResponse2005.
+        :return: The report_definition_id of this InlineResponse2005.
+        :rtype: int
+        """
+        return self._report_definition_id
+
+    @report_definition_id.setter
+    def report_definition_id(self, report_definition_id):
+        """
+        Sets the report_definition_id of this InlineResponse2005.
+
+        :param report_definition_id: The report_definition_id of this InlineResponse2005.
+        :type: int
+        """
+
+        self._report_definition_id = report_definition_id
+
+    @property
+    def report_defintion_name(self):
+        """
+        Gets the report_defintion_name of this InlineResponse2005.
+
+        :return: The report_defintion_name of this InlineResponse2005.
         :rtype: str
         """
-        return self._status
+        return self._report_defintion_name
 
-    @status.setter
-    def status(self, status):
+    @report_defintion_name.setter
+    def report_defintion_name(self, report_defintion_name):
         """
-        Sets the status of this InlineResponse2005.
-        The status of the submitted transaction.
+        Sets the report_defintion_name of this InlineResponse2005.
 
-        :param status: The status of this InlineResponse2005.
+        :param report_defintion_name: The report_defintion_name of this InlineResponse2005.
         :type: str
         """
-        allowed_values = ["PENDING", "TRANSMITTED", "BATCH_ERROR", "VOIDED"]
-        if status not in allowed_values:
+
+        self._report_defintion_name = report_defintion_name
+
+    @property
+    def attributes(self):
+        """
+        Gets the attributes of this InlineResponse2005.
+
+        :return: The attributes of this InlineResponse2005.
+        :rtype: list[InlineResponse2005Attributes]
+        """
+        return self._attributes
+
+    @attributes.setter
+    def attributes(self, attributes):
+        """
+        Sets the attributes of this InlineResponse2005.
+
+        :param attributes: The attributes of this InlineResponse2005.
+        :type: list[InlineResponse2005Attributes]
+        """
+
+        self._attributes = attributes
+
+    @property
+    def supported_formats(self):
+        """
+        Gets the supported_formats of this InlineResponse2005.
+
+        :return: The supported_formats of this InlineResponse2005.
+        :rtype: list[str]
+        """
+        return self._supported_formats
+
+    @supported_formats.setter
+    def supported_formats(self, supported_formats):
+        """
+        Sets the supported_formats of this InlineResponse2005.
+
+        :param supported_formats: The supported_formats of this InlineResponse2005.
+        :type: list[str]
+        """
+        allowed_values = ["application/xml", "text/csv"]
+        if not set(supported_formats).issubset(set(allowed_values)):
             raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
+                "Invalid values for `supported_formats` [{0}], must be a subset of [{1}]"
+                .format(", ".join(map(str, set(supported_formats)-set(allowed_values))),
+                        ", ".join(map(str, allowed_values)))
             )
 
-        self._status = status
+        self._supported_formats = supported_formats
 
     @property
-    def reconciliation_id(self):
+    def description(self):
         """
-        Gets the reconciliation_id of this InlineResponse2005.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Gets the description of this InlineResponse2005.
 
-        :return: The reconciliation_id of this InlineResponse2005.
+        :return: The description of this InlineResponse2005.
         :rtype: str
         """
-        return self._reconciliation_id
+        return self._description
 
-    @reconciliation_id.setter
-    def reconciliation_id(self, reconciliation_id):
+    @description.setter
+    def description(self, description):
         """
-        Sets the reconciliation_id of this InlineResponse2005.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Sets the description of this InlineResponse2005.
 
-        :param reconciliation_id: The reconciliation_id of this InlineResponse2005.
+        :param description: The description of this InlineResponse2005.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
-        self._reconciliation_id = reconciliation_id
-
-    @property
-    def client_reference_information(self):
-        """
-        Gets the client_reference_information of this InlineResponse2005.
-
-        :return: The client_reference_information of this InlineResponse2005.
-        :rtype: InlineResponse201ClientReferenceInformation
-        """
-        return self._client_reference_information
-
-    @client_reference_information.setter
-    def client_reference_information(self, client_reference_information):
-        """
-        Sets the client_reference_information of this InlineResponse2005.
-
-        :param client_reference_information: The client_reference_information of this InlineResponse2005.
-        :type: InlineResponse201ClientReferenceInformation
-        """
-
-        self._client_reference_information = client_reference_information
-
-    @property
-    def refund_amount_details(self):
-        """
-        Gets the refund_amount_details of this InlineResponse2005.
-
-        :return: The refund_amount_details of this InlineResponse2005.
-        :rtype: InlineResponse2013RefundAmountDetails
-        """
-        return self._refund_amount_details
-
-    @refund_amount_details.setter
-    def refund_amount_details(self, refund_amount_details):
-        """
-        Sets the refund_amount_details of this InlineResponse2005.
-
-        :param refund_amount_details: The refund_amount_details of this InlineResponse2005.
-        :type: InlineResponse2013RefundAmountDetails
-        """
-
-        self._refund_amount_details = refund_amount_details
+        self._description = description
 
     def to_dict(self):
         """
