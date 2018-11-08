@@ -60,6 +60,9 @@ class GetSignatureParameter:
         elif httpmethod.upper() == GlobalLabelParameters.PUT:
             put_request_target = GlobalLabelParameters.PUT_LOWER_CASE + self.merchant_config_sigparam.request_target
             signature_list.append(put_request_target)
+        elif httpmethod.upper() == GlobalLabelParameters.PATCH:
+            patch_request_target = GlobalLabelParameters.PATCH_LOWER_CASE + self.merchant_config_sigparam.request_target
+            signature_list.append(patch_request_target)
         elif httpmethod.upper() == GlobalLabelParameters.DELETE:
             delete_request_target = GlobalLabelParameters.DELETE_LOWER_CASE + self.merchant_config_sigparam.request_target
             signature_list.append(delete_request_target)
@@ -67,7 +70,7 @@ class GetSignatureParameter:
         signature_list.append("\n")
 
         # This method adds the digest header only for post
-        if httpmethod.upper() == GlobalLabelParameters.POST or httpmethod.upper() == GlobalLabelParameters.PUT:
+        if httpmethod.upper() == GlobalLabelParameters.POST or httpmethod.upper() == GlobalLabelParameters.PUT or httpmethod.upper() == GlobalLabelParameters.PATCH :
             digest_get_obj = DigestAndPayload()
             digest = digest_get_obj.string_digest_generation(
                 self.merchant_config_sigparam.request_json_path_data)

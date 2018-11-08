@@ -82,5 +82,5 @@ class Authorization:
     def validate_request_type_method(self, mconfig):
 
         if not (
-                mconfig.request_type_method.upper() == GlobalLabelParameters.GET or mconfig.request_type_method.upper() == GlobalLabelParameters.POST or mconfig.request_type_method.upper() == GlobalLabelParameters.PUT or mconfig.request_type_method.upper() == GlobalLabelParameters.DELETE):
+                mconfig.request_type_method.upper() == GlobalLabelParameters.GET or mconfig.request_type_method.upper() == GlobalLabelParameters.POST or mconfig.request_type_method.upper() == GlobalLabelParameters.PUT or mconfig.request_type_method.upper() == GlobalLabelParameters.DELETE or  mconfig.request_type_method.upper() == GlobalLabelParameters.PATCH):
             raise ApiException(1, GlobalLabelParameters.INVALID_REQUEST_TYPE_METHOD)

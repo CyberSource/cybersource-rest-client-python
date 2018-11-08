@@ -32,7 +32,7 @@ class TokenizeRequest(object):
     """
     swagger_types = {
         'key_id': 'str',
-        'card_info': 'Paymentsflexv1tokensCardInfo'
+        'card_info': 'Flexv1tokensCardInfo'
     }
 
     attribute_map = {
@@ -82,7 +82,7 @@ class TokenizeRequest(object):
         Gets the card_info of this TokenizeRequest.
 
         :return: The card_info of this TokenizeRequest.
-        :rtype: Paymentsflexv1tokensCardInfo
+        :rtype: Flexv1tokensCardInfo
         """
         return self._card_info
 
@@ -92,7 +92,7 @@ class TokenizeRequest(object):
         Sets the card_info of this TokenizeRequest.
 
         :param card_info: The card_info of this TokenizeRequest.
-        :type: Paymentsflexv1tokensCardInfo
+        :type: Flexv1tokensCardInfo
         """
 
         self._card_info = card_info

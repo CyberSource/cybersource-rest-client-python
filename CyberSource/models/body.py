@@ -31,14 +31,14 @@ class Body(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InstrumentidentifiersLinks',
+        'links': 'Tmsv1instrumentidentifiersLinks',
         'id': 'str',
         'object': 'str',
         'state': 'str',
-        'card': 'InstrumentidentifiersCard',
-        'bank_account': 'InstrumentidentifiersBankAccount',
-        'processing_information': 'InstrumentidentifiersProcessingInformation',
-        'metadata': 'InstrumentidentifiersMetadata'
+        'card': 'Tmsv1instrumentidentifiersCard',
+        'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
+        'processing_information': 'Tmsv1instrumentidentifiersProcessingInformation',
+        'metadata': 'Tmsv1instrumentidentifiersMetadata'
     }
 
     attribute_map = {
@@ -89,7 +89,7 @@ class Body(object):
         Gets the links of this Body.
 
         :return: The links of this Body.
-        :rtype: InstrumentidentifiersLinks
+        :rtype: Tmsv1instrumentidentifiersLinks
         """
         return self._links
 
@@ -99,7 +99,7 @@ class Body(object):
         Sets the links of this Body.
 
         :param links: The links of this Body.
-        :type: InstrumentidentifiersLinks
+        :type: Tmsv1instrumentidentifiersLinks
         """
 
         self._links = links
@@ -191,7 +191,7 @@ class Body(object):
         Gets the card of this Body.
 
         :return: The card of this Body.
-        :rtype: InstrumentidentifiersCard
+        :rtype: Tmsv1instrumentidentifiersCard
         """
         return self._card
 
@@ -201,7 +201,7 @@ class Body(object):
         Sets the card of this Body.
 
         :param card: The card of this Body.
-        :type: InstrumentidentifiersCard
+        :type: Tmsv1instrumentidentifiersCard
         """
 
         self._card = card
@@ -212,7 +212,7 @@ class Body(object):
         Gets the bank_account of this Body.
 
         :return: The bank_account of this Body.
-        :rtype: InstrumentidentifiersBankAccount
+        :rtype: Tmsv1instrumentidentifiersBankAccount
         """
         return self._bank_account
 
@@ -222,7 +222,7 @@ class Body(object):
         Sets the bank_account of this Body.
 
         :param bank_account: The bank_account of this Body.
-        :type: InstrumentidentifiersBankAccount
+        :type: Tmsv1instrumentidentifiersBankAccount
         """
 
         self._bank_account = bank_account
@@ -233,7 +233,7 @@ class Body(object):
         Gets the processing_information of this Body.
 
         :return: The processing_information of this Body.
-        :rtype: InstrumentidentifiersProcessingInformation
+        :rtype: Tmsv1instrumentidentifiersProcessingInformation
         """
         return self._processing_information
 
@@ -243,7 +243,7 @@ class Body(object):
         Sets the processing_information of this Body.
 
         :param processing_information: The processing_information of this Body.
-        :type: InstrumentidentifiersProcessingInformation
+        :type: Tmsv1instrumentidentifiersProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -254,7 +254,7 @@ class Body(object):
         Gets the metadata of this Body.
 
         :return: The metadata of this Body.
-        :rtype: InstrumentidentifiersMetadata
+        :rtype: Tmsv1instrumentidentifiersMetadata
         """
         return self._metadata
 
@@ -264,7 +264,7 @@ class Body(object):
         Sets the metadata of this Body.
 
         :param metadata: The metadata of this Body.
-        :type: InstrumentidentifiersMetadata
+        :type: Tmsv1instrumentidentifiersMetadata
         """
 
         self._metadata = metadata
