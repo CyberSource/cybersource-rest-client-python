@@ -39,14 +39,6 @@ class TestReversalApi(unittest.TestCase):
         """
         pass
 
-    def test_get_auth_reversal(self):
-        """
-        Test case for get_auth_reversal
-
-        Retrieve an Authorization Reversal
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

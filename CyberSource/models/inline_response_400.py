@@ -31,129 +31,59 @@ class InlineResponse400(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
+        'type': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse201ErrorInformationDetails]'
+        'details': 'Tmsv1instrumentidentifiersDetails'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
+        'type': 'type',
         'message': 'message',
         'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, type=None, message=None, details=None):
         """
         InlineResponse400 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
-        self._reason = None
+        self._type = None
         self._message = None
         self._details = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reason is not None:
-          self.reason = reason
+        if type is not None:
+          self.type = type
         if message is not None:
           self.message = message
         if details is not None:
           self.details = details
 
     @property
-    def submit_time_utc(self):
+    def type(self):
         """
-        Gets the submit_time_utc of this InlineResponse400.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Gets the type of this InlineResponse400.
 
-        :return: The submit_time_utc of this InlineResponse400.
+        :return: The type of this InlineResponse400.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._type
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @type.setter
+    def type(self, type):
         """
-        Sets the submit_time_utc of this InlineResponse400.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Sets the type of this InlineResponse400.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse400.
+        :param type: The type of this InlineResponse400.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse400.
-        The status of the submitted transaction.
-
-        :return: The status of this InlineResponse400.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse400.
-        The status of the submitted transaction.
-
-        :param status: The status of this InlineResponse400.
-        :type: str
-        """
-        allowed_values = ["INVALID_REQUEST"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
-
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse400.
-        The reason of the status. 
-
-        :return: The reason of this InlineResponse400.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse400.
-        The reason of the status. 
-
-        :param reason: The reason of this InlineResponse400.
-        :type: str
-        """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_CARD", "CARD_TYPE_NOT_ACCEPTED", "INVALID_MERCHANT_CONFIGURATION", "PROCESSOR_UNAVAILABLE", "INVALID_AMOUNT", "INVALID_CARD_TYPE", "DEBIT_CARD_USEAGE_EXCEEDD_LIMIT"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
-
-        self._reason = reason
+        self._type = type
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse400.
-        The detail message related to the status and reason listed above.
+        The detailed message related to the type stated above.
 
         :return: The message of this InlineResponse400.
         :rtype: str
@@ -164,7 +94,7 @@ class InlineResponse400(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse400.
-        The detail message related to the status and reason listed above.
+        The detailed message related to the type stated above.
 
         :param message: The message of this InlineResponse400.
         :type: str
@@ -178,7 +108,7 @@ class InlineResponse400(object):
         Gets the details of this InlineResponse400.
 
         :return: The details of this InlineResponse400.
-        :rtype: list[InlineResponse201ErrorInformationDetails]
+        :rtype: Tmsv1instrumentidentifiersDetails
         """
         return self._details
 
@@ -188,7 +118,7 @@ class InlineResponse400(object):
         Sets the details of this InlineResponse400.
 
         :param details: The details of this InlineResponse400.
-        :type: list[InlineResponse201ErrorInformationDetails]
+        :type: Tmsv1instrumentidentifiersDetails
         """
 
         self._details = details

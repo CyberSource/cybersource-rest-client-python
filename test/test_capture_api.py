@@ -39,14 +39,6 @@ class TestCaptureApi(unittest.TestCase):
         """
         pass
 
-    def test_get_capture(self):
-        """
-        Test case for get_capture
-
-        Retrieve a Capture
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

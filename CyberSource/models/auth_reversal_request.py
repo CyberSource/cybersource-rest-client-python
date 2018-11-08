@@ -31,11 +31,11 @@ class AuthReversalRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'V2paymentsidreversalsClientReferenceInformation',
-        'reversal_information': 'V2paymentsidreversalsReversalInformation',
-        'processing_information': 'V2paymentsidreversalsProcessingInformation',
-        'order_information': 'V2paymentsidreversalsOrderInformation',
-        'point_of_sale_information': 'V2paymentsidreversalsPointOfSaleInformation'
+        'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation',
+        'reversal_information': 'Ptsv2paymentsidreversalsReversalInformation',
+        'processing_information': 'Ptsv2paymentsidreversalsProcessingInformation',
+        'order_information': 'Ptsv2paymentsidreversalsOrderInformation',
+        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class AuthReversalRequest(object):
         Gets the client_reference_information of this AuthReversalRequest.
 
         :return: The client_reference_information of this AuthReversalRequest.
-        :rtype: V2paymentsidreversalsClientReferenceInformation
+        :rtype: Ptsv2paymentsidreversalsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -84,7 +84,7 @@ class AuthReversalRequest(object):
         Sets the client_reference_information of this AuthReversalRequest.
 
         :param client_reference_information: The client_reference_information of this AuthReversalRequest.
-        :type: V2paymentsidreversalsClientReferenceInformation
+        :type: Ptsv2paymentsidreversalsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -95,7 +95,7 @@ class AuthReversalRequest(object):
         Gets the reversal_information of this AuthReversalRequest.
 
         :return: The reversal_information of this AuthReversalRequest.
-        :rtype: V2paymentsidreversalsReversalInformation
+        :rtype: Ptsv2paymentsidreversalsReversalInformation
         """
         return self._reversal_information
 
@@ -105,7 +105,7 @@ class AuthReversalRequest(object):
         Sets the reversal_information of this AuthReversalRequest.
 
         :param reversal_information: The reversal_information of this AuthReversalRequest.
-        :type: V2paymentsidreversalsReversalInformation
+        :type: Ptsv2paymentsidreversalsReversalInformation
         """
 
         self._reversal_information = reversal_information
@@ -116,7 +116,7 @@ class AuthReversalRequest(object):
         Gets the processing_information of this AuthReversalRequest.
 
         :return: The processing_information of this AuthReversalRequest.
-        :rtype: V2paymentsidreversalsProcessingInformation
+        :rtype: Ptsv2paymentsidreversalsProcessingInformation
         """
         return self._processing_information
 
@@ -126,7 +126,7 @@ class AuthReversalRequest(object):
         Sets the processing_information of this AuthReversalRequest.
 
         :param processing_information: The processing_information of this AuthReversalRequest.
-        :type: V2paymentsidreversalsProcessingInformation
+        :type: Ptsv2paymentsidreversalsProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -137,7 +137,7 @@ class AuthReversalRequest(object):
         Gets the order_information of this AuthReversalRequest.
 
         :return: The order_information of this AuthReversalRequest.
-        :rtype: V2paymentsidreversalsOrderInformation
+        :rtype: Ptsv2paymentsidreversalsOrderInformation
         """
         return self._order_information
 
@@ -147,7 +147,7 @@ class AuthReversalRequest(object):
         Sets the order_information of this AuthReversalRequest.
 
         :param order_information: The order_information of this AuthReversalRequest.
-        :type: V2paymentsidreversalsOrderInformation
+        :type: Ptsv2paymentsidreversalsOrderInformation
         """
 
         self._order_information = order_information
@@ -158,7 +158,7 @@ class AuthReversalRequest(object):
         Gets the point_of_sale_information of this AuthReversalRequest.
 
         :return: The point_of_sale_information of this AuthReversalRequest.
-        :rtype: V2paymentsidreversalsPointOfSaleInformation
+        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -168,7 +168,7 @@ class AuthReversalRequest(object):
         Sets the point_of_sale_information of this AuthReversalRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this AuthReversalRequest.
-        :type: V2paymentsidreversalsPointOfSaleInformation
+        :type: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information

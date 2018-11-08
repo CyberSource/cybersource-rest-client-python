@@ -32,8 +32,8 @@ class KeyResult(object):
     """
     swagger_types = {
         'key_id': 'str',
-        'der': 'InlineResponse200Der',
-        'jwk': 'InlineResponse200Jwk'
+        'der': 'FlexV1KeysPost200ResponseDer',
+        'jwk': 'FlexV1KeysPost200ResponseJwk'
     }
 
     attribute_map = {
@@ -87,7 +87,7 @@ class KeyResult(object):
         Gets the der of this KeyResult.
 
         :return: The der of this KeyResult.
-        :rtype: InlineResponse200Der
+        :rtype: FlexV1KeysPost200ResponseDer
         """
         return self._der
 
@@ -97,7 +97,7 @@ class KeyResult(object):
         Sets the der of this KeyResult.
 
         :param der: The der of this KeyResult.
-        :type: InlineResponse200Der
+        :type: FlexV1KeysPost200ResponseDer
         """
 
         self._der = der
@@ -108,7 +108,7 @@ class KeyResult(object):
         Gets the jwk of this KeyResult.
 
         :return: The jwk of this KeyResult.
-        :rtype: InlineResponse200Jwk
+        :rtype: FlexV1KeysPost200ResponseJwk
         """
         return self._jwk
 
@@ -118,7 +118,7 @@ class KeyResult(object):
         Sets the jwk of this KeyResult.
 
         :param jwk: The jwk of this KeyResult.
-        :type: InlineResponse200Jwk
+        :type: FlexV1KeysPost200ResponseJwk
         """
 
         self._jwk = jwk

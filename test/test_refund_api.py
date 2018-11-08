@@ -31,14 +31,6 @@ class TestRefundApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_refund(self):
-        """
-        Test case for get_refund
-
-        Retrieve a Refund
-        """
-        pass
-
     def test_refund_capture(self):
         """
         Test case for refund_capture

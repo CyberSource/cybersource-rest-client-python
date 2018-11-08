@@ -15,14 +15,12 @@ VERSION = "0.0.3"
 REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl", "PyYAML",
             "asn1crypto",
             "bcrypt",
-
             "certifi",
             "cffi",
             "chardet",
             "extras",
             "fixtures",
             "configparser",
-
             "crypto",
             "cryptography",
             "enum34",
@@ -35,7 +33,6 @@ REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl",
             "idna",
             "ipaddress",
             "logger",
-
             "paramiko",
             "pip",
             "pyOpenSSL",

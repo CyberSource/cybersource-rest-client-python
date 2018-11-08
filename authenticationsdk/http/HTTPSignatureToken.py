@@ -59,6 +59,9 @@ class HTTPSignatureToken(TokenGeneration):
         elif self.http_method_sig.upper() == GlobalLabelParameters.PUT:
             putheaders = "host date (request-target) digest v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + putheaders + "\"")
+        elif self.http_method_sig.upper() == GlobalLabelParameters.PATCH:
+            patchheaders = "host date (request-target) digest v-c-merchant-id"
+            header_list.append(GlobalLabelParameters.HEADERS_PARAM + patchheaders + "\"")
         elif self.http_method_sig.upper() == GlobalLabelParameters.DELETE:
             deleteheaders = "host date (request-target)" + " " + "v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + deleteheaders + "\"")

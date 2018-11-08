@@ -31,14 +31,6 @@ class TestVoidApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_void(self):
-        """
-        Test case for get_void
-
-        Retrieve A Void
-        """
-        pass
-
     def test_void_capture(self):
         """
         Test case for void_capture

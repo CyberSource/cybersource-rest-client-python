@@ -1,15 +1,14 @@
 # CyberSource.ReversalApi
 
-All URIs are relative to *https://api.cybersource.com*
+All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**auth_reversal**](ReversalApi.md#auth_reversal) | **POST** /v2/payments/{id}/reversals | Process an Authorization Reversal
-[**get_auth_reversal**](ReversalApi.md#get_auth_reversal) | **GET** /v2/reversals/{id} | Retrieve an Authorization Reversal
+[**auth_reversal**](ReversalApi.md#auth_reversal) | **POST** /pts/v2/payments/{id}/reversals | Process an Authorization Reversal
 
 
 # **auth_reversal**
-> InlineResponse2011 auth_reversal(id, auth_reversal_request)
+> PtsV2PaymentsReversalsPost201Response auth_reversal(id, auth_reversal_request)
 
 Process an Authorization Reversal
 
@@ -45,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**PtsV2PaymentsReversalsPost201Response**](PtsV2PaymentsReversalsPost201Response.md)
 
 ### Authorization
 
@@ -53,56 +52,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_auth_reversal**
-> InlineResponse2003 get_auth_reversal(id)
-
-Retrieve an Authorization Reversal
-
-Include the authorization reversal ID in the GET request to retrieve the authorization reversal details. 
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import CyberSource
-from CyberSource.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = CyberSource.ReversalApi()
-id = 'id_example' # str | The authorization reversal ID returned from a previous authorization reversal request.
-
-try: 
-    # Retrieve an Authorization Reversal
-    api_response = api_instance.get_auth_reversal(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ReversalApi->get_auth_reversal: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The authorization reversal ID returned from a previous authorization reversal request. | 
-
-### Return type
-
-[**InlineResponse2003**](InlineResponse2003.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

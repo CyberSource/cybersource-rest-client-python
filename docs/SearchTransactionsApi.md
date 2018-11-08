@@ -1,0 +1,106 @@
+# CyberSource.SearchTransactionsApi
+
+All URIs are relative to *https://apitest.cybersource.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_search**](SearchTransactionsApi.md#create_search) | **POST** /tss/v2/searches | Create a search request
+[**get_search**](SearchTransactionsApi.md#get_search) | **GET** /tss/v2/searches/{id} | Get Search results
+
+
+# **create_search**
+> TssV2TransactionsPost201Response create_search(create_search_request)
+
+Create a search request
+
+Create a search request. 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.SearchTransactionsApi()
+create_search_request = CyberSource.TssV2TransactionsPostResponse() # TssV2TransactionsPostResponse | 
+
+try: 
+    # Create a search request
+    api_response = api_instance.create_search(create_search_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SearchTransactionsApi->create_search: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **create_search_request** | [**TssV2TransactionsPostResponse**](TssV2TransactionsPostResponse.md)|  | 
+
+### Return type
+
+[**TssV2TransactionsPost201Response**](TssV2TransactionsPost201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_search**
+> TssV2TransactionsPost201Response get_search(id)
+
+Get Search results
+
+Include the Search ID in the GET request to retrieve the search results.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.SearchTransactionsApi()
+id = 'id_example' # str | Search ID.
+
+try: 
+    # Get Search results
+    api_response = api_instance.get_search(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SearchTransactionsApi->get_search: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| Search ID. | 
+
+### Return type
+
+[**TssV2TransactionsPost201Response**](TssV2TransactionsPost201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

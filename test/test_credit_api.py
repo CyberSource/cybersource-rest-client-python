@@ -39,14 +39,6 @@ class TestCreditApi(unittest.TestCase):
         """
         pass
 
-    def test_get_credit(self):
-        """
-        Test case for get_credit
-
-        Retrieve a Credit
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

@@ -131,18 +131,17 @@ class ApiClient(object):
         mconfig.validate_merchant_details(config, mconfig)
 
     # Calling the authentication header
-    def call_authentication_header(self, resource_path, method, header_params, body):
+    def call_authentication_header(self,method, header_params, body):
 
         # give the URL path to where the data needs to be authenticated
         url = GlobalLabelParameters.HTTP_URL_PREFIX
-        
-        time = mconfig.get_time()
+
+        time = mconfig.get_time()  # mconfig.get_time()
 
         mconfig.request_type_method = method
-        mconfig.request_target = resource_path
 
         mconfig.url = url + mconfig.request_host + mconfig.request_target
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT:
+        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
         logger = mconfig.log
@@ -155,7 +154,7 @@ class ApiClient(object):
             header_params["Date"] = time
             header_params["Host"] = mconfig.request_host
             header_params["User-Agent"] = GlobalLabelParameters.USER_AGENT_VALUE
-            if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT:
+            if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
                 '''print((ast.literal_eval(json.dumps(self.del_none(json.loads(body))))))'''
                 digest_header = self.set_digest((body))
 
@@ -168,7 +167,6 @@ class ApiClient(object):
             token = "Bearer " + token.decode("utf-8")
             header_params['Authorization'] = str(token)
 
-
     #  Set the digest
     def set_digest(self, body):
         digest_obj = DigestAndPayload()
@@ -177,6 +175,21 @@ class ApiClient(object):
 
 
         return encoded_digest
+
+    # Adds query param to URL
+    def set_query_params(self, path, query_param):
+        query_param = dict(query_param)
+        if query_param:
+            first_query_param = True
+            for param in query_param:
+
+                if (not first_query_param):
+                    path = path + "&" + param + "=" + str(query_param[param])
+                else:
+                    path = path + "?" + param + "=" + str(query_param[param])
+                    first_query_param = False
+
+            return path
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
@@ -254,7 +267,7 @@ class ApiClient(object):
             else:
                 callback((return_data, response_data.status, response_data.getheaders()))
         elif _return_http_data_only:
-            return (return_data,response_data.status, response_data.data)
+            return (return_data, response_data.status, response_data.data)
         else:
             return (return_data, response_data.status, response_data.getheaders())
 
@@ -370,10 +383,15 @@ class ApiClient(object):
                  response_type=None, auth_settings=None, callback=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
-        if method.upper() == GlobalLabelParameters.POST:
+        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             request_body = self.replace_underscore(json.loads(body))
             body = json.dumps(request_body)
-        self.call_authentication_header(resource_path, method, header_params, body)
+        query_param_path = self.set_query_params(resource_path, query_params)
+        if query_param_path:
+            mconfig.request_target = query_param_path
+        else:
+            mconfig.request_target = resource_path
+        self.call_authentication_header(method, header_params, body)
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
         To make an async request, define a function for callback.
