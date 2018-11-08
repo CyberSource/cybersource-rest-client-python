@@ -1,14 +1,14 @@
 # CyberSource.KeyGenerationApi
 
-All URIs are relative to *https://api.cybersource.com*
+All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generate_public_key**](KeyGenerationApi.md#generate_public_key) | **POST** /payments/flex/v1/keys/ | Generate Key
+[**generate_public_key**](KeyGenerationApi.md#generate_public_key) | **POST** /flex/v1/keys/ | Generate Key
 
 
 # **generate_public_key**
-> InlineResponse200 generate_public_key(generate_public_key_request)
+> FlexV1KeysPost200Response generate_public_key(generate_public_key_request=generate_public_key_request)
 
 Generate Key
 
@@ -24,11 +24,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.KeyGenerationApi()
-generate_public_key_request = CyberSource.GeneratePublicKeyRequest() # GeneratePublicKeyRequest | 
+generate_public_key_request = CyberSource.GeneratePublicKeyRequest() # GeneratePublicKeyRequest |  (optional)
 
 try: 
     # Generate Key
-    api_response = api_instance.generate_public_key(generate_public_key_request)
+    api_response = api_instance.generate_public_key(generate_public_key_request=generate_public_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling KeyGenerationApi->generate_public_key: %s\n" % e)
@@ -38,11 +38,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **generate_public_key_request** | [**GeneratePublicKeyRequest**](GeneratePublicKeyRequest.md)|  | 
+ **generate_public_key_request** | [**GeneratePublicKeyRequest**](GeneratePublicKeyRequest.md)|  | [optional] 
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**FlexV1KeysPost200Response**](FlexV1KeysPost200Response.md)
 
 ### Authorization
 
@@ -50,7 +50,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

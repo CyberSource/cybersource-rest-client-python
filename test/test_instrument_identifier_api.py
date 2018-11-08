@@ -31,43 +31,27 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_instrumentidentifiers_post(self):
+    def test_tms_v1_instrumentidentifiers_token_id_delete(self):
         """
-        Test case for instrumentidentifiers_post
-
-        Create an Instrument Identifier
-        """
-        pass
-
-    def test_instrumentidentifiers_token_id_delete(self):
-        """
-        Test case for instrumentidentifiers_token_id_delete
+        Test case for tms_v1_instrumentidentifiers_token_id_delete
 
         Delete an Instrument Identifier
         """
         pass
 
-    def test_instrumentidentifiers_token_id_get(self):
+    def test_tms_v1_instrumentidentifiers_token_id_get(self):
         """
-        Test case for instrumentidentifiers_token_id_get
+        Test case for tms_v1_instrumentidentifiers_token_id_get
 
         Retrieve an Instrument Identifier
         """
         pass
 
-    def test_instrumentidentifiers_token_id_patch(self):
+    def test_tms_v1_instrumentidentifiers_token_id_patch(self):
         """
-        Test case for instrumentidentifiers_token_id_patch
+        Test case for tms_v1_instrumentidentifiers_token_id_patch
 
         Update a Instrument Identifier
-        """
-        pass
-
-    def test_instrumentidentifiers_token_id_paymentinstruments_get(self):
-        """
-        Test case for instrumentidentifiers_token_id_paymentinstruments_get
-
-        Retrieve all Payment Instruments associated with an Instrument Identifier
         """
         pass
 
