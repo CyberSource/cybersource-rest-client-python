@@ -17,16 +17,17 @@ def setup_logger(mconfig):
             if os.stat(logger_file).st_size > int(mconfig.maximum_size):
                 updated_file = logger_folder + mconfig.log_file_name+"_" + datetime.now().strftime("%Y%m%d%H%M%S") + ".log"
                 os.rename(logger_file, updated_file)
-
-        # add a File handler
-        handler = logging.FileHandler(filename=logger_file)
-        # create a logging format
-        formatter = logging.Formatter('%(asctime)s- %(message)s')
-        handler.setFormatter(formatter)
         # setting the logger object
         logger = logging.getLogger()
-        logger.setLevel(logging.INFO)
-        # add the handlers to the logger
-        logger.addHandler(handler)
+        if not logger.handlers:
+            # add a File handler
+            handler = logging.FileHandler(filename=logger_file)
+            # create a logging format
+            formatter = logging.Formatter('%(asctime)s- %(message)s')
+            handler.setFormatter(formatter)
+
+            logger.setLevel(logging.INFO)
+            # add the handlers to the logger
+            logger.addHandler(handler)
 
         return logger
