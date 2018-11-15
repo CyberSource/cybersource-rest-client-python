@@ -12,12 +12,12 @@ class FileCache:
 
     def grab_file(self, mconfig, filepath, filename):
 
-        file_mod_time = os.stat(filepath + filename + GlobalLabelParameters.P12_PREFIX).st_mtime
+        file_mod_time = os.stat(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX).st_mtime
 
         if filename not in self.filecache:
 
             p12 = crypto.load_pkcs12(open(
-                filepath + filename + GlobalLabelParameters.P12_PREFIX,
+                os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,
                 'rb').read(), mconfig.key_password)
             cert_str = crypto.dump_certificate(crypto.FILETYPE_PEM, p12.get_certificate())
             der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_str.decode("utf-8")))
@@ -29,7 +29,7 @@ class FileCache:
 
         if file_mod_time != self.filecache[filename][2]:
             p12 = crypto.load_pkcs12(open(
-                filepath + filename + GlobalLabelParameters.P12_PREFIX,
+                os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX,
                 'rb').read(), mconfig.key_password)
             cert_str = crypto.dump_certificate(crypto.FILETYPE_PEM, p12.get_certificate())
             der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_str.decode("utf-8")))

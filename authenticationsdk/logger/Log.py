@@ -8,7 +8,7 @@ def setup_logger(mconfig):
     # If the directory is present then just append in the file
     if mconfig.enable_log is True:
         logger_folder = mconfig.log_directory
-        logger_file = logger_folder + mconfig.log_file_name + ".log"
+        logger_file = os.path.join(logger_folder , mconfig.log_file_name)+ ".log"
         if not os.path.exists(logger_folder):
             os.makedirs(logger_folder)
         if not os.path.exists(logger_file):

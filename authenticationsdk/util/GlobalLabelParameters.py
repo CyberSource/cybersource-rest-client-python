@@ -69,10 +69,10 @@ class GlobalLabelParameters:
     DEFAULT_ENABLE_LOG = True
     DEFAULT_MAXIMUM_SIZE = 10487560
     DEFAULT_TIMEOUT = 1000
-    DEFAULT_LOG_DIRECTORY =os.getcwd()+"\\Logs\\"
+    DEFAULT_LOG_DIRECTORY =os.path.join(os.getcwd(),"Logs")
     DEFAULT_PROXY_ADDRESS = "userproxy.visa.com"
     DEFAULT_PROXY_PORT = 443
-    DEFAULT_KEY_FILE_PATH = os.getcwd()+"\\resources\\"
+    DEFAULT_KEY_FILE_PATH = os.path.join(os.getcwd(),"resources")
     ENABLE_LOG_DEFAULT_MESSAGE = "Enable log value Empty/None.Using Default Value"
     LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE = "Log Maximum Size Empty/None.Using Default Value"
     LOG_DIRECTORY_DEFAULT_MESSAGE = "Log Directory value Empty/None.Using Default Value"
