@@ -39,7 +39,7 @@ class CaptureApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configaration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
 
 
     def capture_payment(self, capture_payment_request, id, **kwargs):

@@ -39,7 +39,7 @@ class ReportDownloadsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configaration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
 
 
     def download_report(self, report_date, report_name, **kwargs):

@@ -39,7 +39,7 @@ class PaymentInstrumentsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configaration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
 
 
     def tms_v1_instrumentidentifiers_token_id_paymentinstruments_get(self, profile_id, token_id, **kwargs):

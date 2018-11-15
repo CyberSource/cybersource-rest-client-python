@@ -1,9 +1,9 @@
 import unittest
-from authenticationsdk.core.MerchantConfigaration import *
+from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.core.Authorization import *
 import authenticationsdk.logger.Log
 import authenticationsdk.util.PropertiesUtil
-import cybersource_authentication_sdk_python.data.RequestData
+import cybersource_rest_samples_python.data.RequestData
 import logging
 from authenticationsdk.core.MockData import *
 
@@ -11,7 +11,7 @@ from authenticationsdk.core.MockData import *
 class TestBasicFunction(unittest.TestCase):
     def setUp(self):
         self.func = Authorization()
-        self.merchant_config = MerchantConfigaration()
+        self.merchant_config = MerchantConfiguration()
         self.date = self.merchant_config.get_time()
         logging.disable(logging.CRITICAL)
 

@@ -9,7 +9,7 @@ import os
 import authenticationsdk.logger.Log
 
 
-class MerchantConfigaration:
+class MerchantConfiguration:
 
     def __init__(self):
         self.merchant_keyid = None
@@ -122,7 +122,7 @@ class MerchantConfigaration:
         if not (value.get('key_file_name') is None):
             self.key_file_name = value['key_file_name']
 
-    # This method sets the Merchant Configaration Variables to its respective values after reading from cybs.properties
+    # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
 
         self.set_key_password(val)

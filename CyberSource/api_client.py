@@ -28,7 +28,7 @@ from . import models
 from .configuration import Configuration
 from .rest import ApiException, RESTClientObject
 from authenticationsdk.core.Authorization import *
-from authenticationsdk.core.MerchantConfigaration import *
+from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
 
@@ -123,9 +123,9 @@ class ApiClient(object):
         return camel
 		
 	# Setting Merchant Configuration
-    def set_configaration(self,config):
+    def set_configuration(self,config):
         global mconfig
-        mconfig = MerchantConfigaration()
+        mconfig = MerchantConfiguration()
         mconfig.set_merchantconfig(config)
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         mconfig.validate_merchant_details(config, mconfig)
