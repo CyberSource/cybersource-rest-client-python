@@ -33,7 +33,7 @@ The API Reference Guide provides examples of what information is needed for a pa
 
 
 ### Switching between the sandbox environment and the production environment
-Cybersource maintains a complete sandbox environment for testing and development purposes. This sandbox environment is an exact duplicate of our production environment with the transaction authorization and settlement process simulated. By default, this SDK is configured to communicate with the sandbox environment. To switch to the production environment, set the `runEnvironment` property in the SDK Configuration.  See our sample at https://github.com/CyberSource/cybersource-rest-samples-python/blob/master/data/Configuration.py
+Cybersource maintains a complete sandbox environment for testing and development purposes. This sandbox environment is an exact duplicate of our production environment with the transaction authorization and settlement process simulated. By default, this SDK is configured to communicate with the sandbox environment. To switch to the production environment, set the `run_environment` property in the SDK Configuration.  See our sample at https://github.com/CyberSource/cybersource-rest-samples-python/blob/master/data/Configuration.py
 
 ```python
  #For TESTING use
