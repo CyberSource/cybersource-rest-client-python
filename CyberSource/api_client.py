@@ -31,7 +31,7 @@ from authenticationsdk.core.Authorization import *
 from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
-
+from six.moves.urllib.parse import urlencode
 
 class ApiClient(object):
     """
@@ -72,6 +72,7 @@ class ApiClient(object):
         if header_name is not None:
             self.default_headers[header_name] = header_value
         if host is None:
+
             self.host = Configuration().host
         else:
             self.host = host
@@ -129,18 +130,21 @@ class ApiClient(object):
         mconfig.set_merchantconfig(config)
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         mconfig.validate_merchant_details(config, mconfig)
+        # Setting the Host by reading the Environment(SANDBOX/PRODUCTION) from Merchant Config
+        self.host = mconfig.request_host
 
     # Calling the authentication header
     def call_authentication_header(self,method, header_params, body):
 
         # give the URL path to where the data needs to be authenticated
-        url = GlobalLabelParameters.HTTP_URL_PREFIX
+        #url = GlobalLabelParameters.HTTP_URL_PREFIX
 
         time = mconfig.get_time()  # mconfig.get_time()
 
         mconfig.request_type_method = method
 
-        mconfig.url = url + mconfig.request_host + mconfig.request_target
+        #mconfig.url = url + mconfig.request_host + mconfig.request_target
+
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
@@ -178,18 +182,10 @@ class ApiClient(object):
 
     # Adds query param to URL
     def set_query_params(self, path, query_param):
-        query_param = dict(query_param)
         if query_param:
-            first_query_param = True
-            for param in query_param:
+            path += '?' + urlencode(query_param)
 
-                if (not first_query_param):
-                    path = path + "&" + param + "=" + str(query_param[param])
-                else:
-                    path = path + "?" + param + "=" + str(query_param[param])
-                    first_query_param = False
-
-            return path
+        return path
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
@@ -241,7 +237,8 @@ class ApiClient(object):
             body = self.sanitize_for_serialization(body)
 
         # request url
-        url = self.host + resource_path
+        url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
+
 
         # perform request and return response
         response_data = self.request(method, url,

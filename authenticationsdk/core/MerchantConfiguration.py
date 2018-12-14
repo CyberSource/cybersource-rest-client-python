@@ -142,8 +142,6 @@ class MerchantConfiguration:
         self.set_proxy_address(val)
         self.set_proxy_port(val)
 
-
-
     # Returns the time in format as defined by RFC7231
     def get_time(self):
         now = datetime.now()
@@ -154,7 +152,7 @@ class MerchantConfiguration:
     # This validates the Merchant details
     def validate_merchant_details(self, details, mconfig):
         # verify Mandatory Properties
-        logger =authenticationsdk.logger.Log.setup_logger(mconfig)
+        logger = authenticationsdk.logger.Log.setup_logger(mconfig)
         mconfig.log = logger
         if self.enable_log is True:
             logger.info("START> ======================================= ")
@@ -167,7 +165,6 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
                                                                                GlobalLabelParameters.AUTHENTICATION_REQ,
                                                                                mconfig)
-
 
         if self.run_environment is None or self.run_environment == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
@@ -185,7 +182,7 @@ class MerchantConfiguration:
                                                                          GlobalLabelParameters.LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE,
                                                                          mconfig)
         if details.get('log_file_name') is None or details.get('log_file_name') == "":
-           authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
+            authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
                                                                          GlobalLabelParameters.DEFAULT_LOG_FILE_NAME,
                                                                          mconfig)
 

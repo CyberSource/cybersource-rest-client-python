@@ -152,6 +152,7 @@ class RESTClientObject(object):
             if method in ['POST', 'PUT', 'PATCH', 'OPTIONS', 'DELETE']:
                 if query_params:
                     url += '?' + urlencode(query_params)
+
                 if re.search('json', headers['Content-Type'], re.IGNORECASE):
                     request_body = None
                     if body:
