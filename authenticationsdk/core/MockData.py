@@ -14,7 +14,7 @@ class MockData:
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
         "log_directory": os.path.join(os.getcwd(),"Logs"),
-        "proxy_address": "userproxy.visa.com",
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     JWT_VALUES = {
@@ -31,7 +31,7 @@ class MockData:
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
         "log_directory": os.path.join(os.getcwd(),"Logs"),
-        "proxy_address": "userproxy.visa.com",
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     HTTP_DEFAULT_VALUES = {
@@ -48,7 +48,7 @@ class MockData:
         "log_file_name": "cybs",
         "log_maximum_size": "",
         "log_directory": "",
-        "proxy_address": "userproxy.visa.com",
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     JWT_VALUES_FOR_PRODUCTION = {
@@ -65,7 +65,7 @@ class MockData:
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
         "log_directory": os.path.join(os.getcwd(),"Logs"),
-        "proxy_address": "userproxy.visa.com",
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     REQUEST_DATA = {

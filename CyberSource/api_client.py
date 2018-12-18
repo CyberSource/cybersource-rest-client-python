@@ -136,15 +136,8 @@ class ApiClient(object):
     # Calling the authentication header
     def call_authentication_header(self,method, header_params, body):
 
-        # give the URL path to where the data needs to be authenticated
-        #url = GlobalLabelParameters.HTTP_URL_PREFIX
-
-        time = mconfig.get_time()  # mconfig.get_time()
-
+        time = mconfig.get_time()
         mconfig.request_type_method = method
-
-        #mconfig.url = url + mconfig.request_host + mconfig.request_target
-
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
