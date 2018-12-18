@@ -4,7 +4,6 @@ from authenticationsdk.core.ExceptionHandling import *
 import authenticationsdk.util.ExceptionAuth
 
 
-
 # This class calls for the generation of Signature message depending on the authentication type
 class Authorization:
 
@@ -36,7 +35,8 @@ class Authorization:
                         encoded_digest = digest_obj.string_digest_generation(
                             mconfig.request_json_path_data)
                         logger.info(
-                            GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (encoded_digest).decode("utf-8"))
+                            GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (
+                                encoded_digest).decode("utf-8"))
                     logger.info("Signature:     " + sig_token)
 
                 return sig_token
@@ -82,5 +82,5 @@ class Authorization:
     def validate_request_type_method(self, mconfig):
 
         if not (
-                mconfig.request_type_method.upper() == GlobalLabelParameters.GET or mconfig.request_type_method.upper() == GlobalLabelParameters.POST or mconfig.request_type_method.upper() == GlobalLabelParameters.PUT or mconfig.request_type_method.upper() == GlobalLabelParameters.DELETE or  mconfig.request_type_method.upper() == GlobalLabelParameters.PATCH):
+                mconfig.request_type_method.upper() == GlobalLabelParameters.GET or mconfig.request_type_method.upper() == GlobalLabelParameters.POST or mconfig.request_type_method.upper() == GlobalLabelParameters.PUT or mconfig.request_type_method.upper() == GlobalLabelParameters.DELETE or mconfig.request_type_method.upper() == GlobalLabelParameters.PATCH):
             raise ApiException(1, GlobalLabelParameters.INVALID_REQUEST_TYPE_METHOD)

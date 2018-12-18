@@ -1,3 +1,4 @@
+import os
 class MockData:
     HTTP_VALUES = {
         "authentication_type": "HTTP_SIGNATURE",
@@ -6,14 +7,14 @@ class MockData:
         "key_alias": "testrest",
         "key_password": "testrest",
         "key_file_name": "testrest",
-        "keys_directory": "../../cybersource_authentication_sdk_python/Resources/",
+        "keys_directory": os.path.join(os.getcwd(),"resources"),
         "merchant_keyid": "08c94330-f618-42a3-b09d-e1e43be5efda",
         "merchant_secretkey": "yBJxy6LjM2TmcPGu+GaJrHtkke25fPpUX+UY6/L/1tE=",
-        "enable_log": True,
+        "enable_log": False,
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
-        "log_directory": "../../cybersource_authentication_sdk_python/Logs/",
-        "proxy_address": "userproxy.visa.com",
+        "log_directory": os.path.join(os.getcwd(),"Logs"),
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     JWT_VALUES = {
@@ -23,14 +24,14 @@ class MockData:
         "key_alias": "testrest",
         "key_password": "testrest",
         "key_file_name": "testrest",
-        "keys_directory": "../../cybersource_authentication_sdk_python/Resources/",
+        "keys_directory": os.path.join(os.getcwd(),"resources"),
         "merchant_keyid": "08c94330-f618-42a3-b09d-e1e43be5efda",
         "merchant_secretkey": "yBJxy6LjM2TmcPGu+GaJrHtkke25fPpUX+UY6/L/1tE=",
-        "enable_log": True,
+        "enable_log": False,
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
-        "log_directory": "../../cybersource_authentication_sdk_python/Logs/",
-        "proxy_address": "userproxy.visa.com",
+        "log_directory": os.path.join(os.getcwd(),"Logs"),
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     HTTP_DEFAULT_VALUES = {
@@ -40,14 +41,14 @@ class MockData:
         "key_alias": "testrest",
         "key_password": "testrest",
         "key_file_name": "testrest",
-        "keys_directory": "../../cybersource_authentication_sdk_python/Resources/",
+        "keys_directory": os.path.join(os.getcwd(),"resources"),
         "merchant_keyid": "08c94330-f618-42a3-b09d-e1e43be5efda",
         "merchant_secretkey": "yBJxy6LjM2TmcPGu+GaJrHtkke25fPpUX+UY6/L/1tE=",
         "enable_log": "",
         "log_file_name": "cybs",
         "log_maximum_size": "",
         "log_directory": "",
-        "proxy_address": "userproxy.visa.com",
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     JWT_VALUES_FOR_PRODUCTION = {
@@ -60,11 +61,11 @@ class MockData:
         "keys_directory": "",
         "merchant_keyid": "08c94330-f618-42a3-b09d-e1e43be5efda",
         "merchant_secretkey": "yBJxy6LjM2TmcPGu+GaJrHtkke25fPpUX+UY6/L/1tE=",
-        "enable_log": True,
+        "enable_log": False,
         "log_file_name": "cybs",
         "log_maximum_size": 10485760,
-        "log_directory": "../../cybersource_authentication_sdk_python/Logs/",
-        "proxy_address": "userproxy.visa.com",
+        "log_directory": os.path.join(os.getcwd(),"Logs"),
+        "proxy_address": "userproxy.com",
         "proxy_port": ""
     }
     REQUEST_DATA = {
@@ -120,4 +121,17 @@ class MockData:
                 "type": "002"
             }
         }
+    }
+    TRR_DATA = {
+        "startDay": "23",
+        "timeZone": "America/Chicago",
+        "reportDefinitionName": "TransactionRequestClass",
+        "startTime": "1100",
+        "reportFrequency": "DAILY",
+        "ReportName": "TRRReport",
+        "reportFormat": "csv",
+        "orgId": "testrest",
+        "reportType": "detail",
+        "reportFields": ["Request.RequestID", "Request.TransactionDate", "Request.MerchantReferenceNumber",
+                         "Request.MerchantID"]
     }

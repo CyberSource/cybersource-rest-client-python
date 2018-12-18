@@ -15,7 +15,7 @@ def setup_logger(mconfig):
             open(logger_file, "a+")
         if logger_file:
             if os.stat(logger_file).st_size > int(mconfig.maximum_size):
-                updated_file = logger_folder + mconfig.log_file_name+"_" + datetime.now().strftime("%Y%m%d%H%M%S") + ".log"
+                updated_file = os.path.join(logger_folder , mconfig.log_file_name)+"_" + datetime.now().strftime("%Y%m%d%H%M%S") + ".log"
                 os.rename(logger_file, updated_file)
         # setting the logger object
         logger = logging.getLogger()

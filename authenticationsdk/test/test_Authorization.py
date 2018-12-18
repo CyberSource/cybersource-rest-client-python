@@ -3,7 +3,6 @@ from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.core.Authorization import *
 import authenticationsdk.logger.Log
 import authenticationsdk.util.PropertiesUtil
-import cybersource_rest_samples_python.data.RequestData
 import logging
 from authenticationsdk.core.MockData import *
 
@@ -11,7 +10,7 @@ from authenticationsdk.core.MockData import *
 class TestBasicFunction(unittest.TestCase):
     def setUp(self):
         self.func = Authorization()
-        self.merchant_config = MerchantConfiguration()
+        self.merchant_config =MerchantConfiguration()
         self.date = self.merchant_config.get_time()
         logging.disable(logging.CRITICAL)
 
@@ -61,9 +60,8 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_target = "/pts/v2/payments"
 
         self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
-        self.request_json_path = "../../cybersource_authentication_sdk_python/Resources/request.json"
-        self.merchant_config.request_json_path_data = cybersource_rest_samples_python.data.RequestData.json_file_data(
-            self.request_json_path, self.merchant_config)
+        
+        self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -75,9 +73,8 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
         self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
-        self.request_json_path = "../../cybersource_authentication_sdk_python/Resources/trr_report.json"
-        self.merchant_config.request_json_path_data = cybersource_rest_samples_python.data.RequestData.json_file_data(
-            self.request_json_path, self.merchant_config)
+        
+        self.merchant_config.request_json_path_data = json.dumps(MockData.TRR_DATA)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -108,11 +105,10 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.set_merchantconfig(MockData.JWT_VALUES)
         self.merchant_config.request_type_method = "POST"
         self.merchant_config.request_target = "/pts/v2/payments/5246387105766473203529"
-
+        
         self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
-        self.request_json_path = "../../cybersource_authentication_sdk_python/Resources/request.json"
-        self.merchant_config.request_json_path_data = cybersource_rest_samples_python.data.RequestData.json_file_data(
-            self.request_json_path, self.merchant_config)
+
+        self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -124,9 +120,8 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
         self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
-        self.request_json_path = "../../cybersource_authentication_sdk_python/Resources/trr_report.json"
-        self.merchant_config.request_json_path_data = cybersource_rest_samples_python.data.RequestData.json_file_data(
-            self.request_json_path, self.merchant_config)
+        
+        self.merchant_config.request_json_path_data =json.dumps(MockData.TRR_DATA)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
