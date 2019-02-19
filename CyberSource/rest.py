@@ -25,7 +25,7 @@ from six import PY3
 from six.moves.urllib.parse import urlencode
 
 from .configuration import Configuration
-
+from authenticationsdk.logger.Log import MyLogger
 try:
     import urllib3
 except ImportError:
@@ -147,6 +147,7 @@ class RESTClientObject(object):
         if 'Content-Type' not in headers:
             headers['Content-Type'] = 'application/json'
 
+
         try:
             # For `POST`, `PUT`, `PATCH`, `OPTIONS`, `DELETE`
             if method in ['POST', 'PUT', 'PATCH', 'OPTIONS', 'DELETE']:
@@ -162,6 +163,7 @@ class RESTClientObject(object):
                                                   preload_content=_preload_content,
                                                   timeout=timeout,
                                                   headers=headers)
+
                 elif headers['Content-Type'] == 'application/x-www-form-urlencoded':
                     r = self.pool_manager.request(method, url,
                                                   fields=post_params,
@@ -179,6 +181,7 @@ class RESTClientObject(object):
                                                   preload_content=_preload_content,
                                                   timeout=timeout,
                                                   headers=headers)
+
                 # Pass a `string` parameter directly in the body to support
                 # other content types than Json when `body` argument is provided
                 # in serialized form
@@ -208,16 +211,27 @@ class RESTClientObject(object):
         if _preload_content:
             r = RESTResponse(r)
 
+
             # In the python 3, the response.data is bytes.
             # we need to decode it to string.
             if PY3:
                 r.data = r.data.decode('utf8')
 
             # log response body
-            logger.debug("response body: %s", r.data)
 
+            if Configuration().merchantconfig.enable_log is True:
+                logger = MyLogger.__call__(Configuration().merchantconfig).get_logger()
+                #logger=Configuration().merchantconfig.log
+                if body:
+                    logger.info("Request Body: %s", Configuration().api_client.masking(body))
+                logger.info("Request Headers: %s",str(Configuration().api_client.request_headers))
+                logger.info("Response Body: %s",str(Configuration().api_client.masking(r.data)))
+                logger.info("Response Status: %s",r.status)
+                logger.info("Response Headers: %s",r.getheaders())
+                logger.info("END> =======================================")
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)
+
 
         return r
 
@@ -292,6 +306,8 @@ class ApiException(Exception):
             self.reason = http_resp.reason
             self.body = http_resp.data
             self.headers = http_resp.getheaders()
+
+
         else:
             self.status = status
             self.reason = reason
@@ -302,12 +318,19 @@ class ApiException(Exception):
         """
         Custom error messages for exception
         """
-        error_message = "({0})\n"\
-                        "Reason: {1}\n".format(self.status, self.reason)
-        if self.headers:
-            error_message += "HTTP response headers: {0}\n".format(self.headers)
-
+        error_message=""
+        if Configuration().api_client.request_headers:
+            error_message += "\nAPI REQUEST HEADERS: {0}\n".format(Configuration().api_client.request_headers)
+        error_message += "\nAPI RESPONSE CODE: {0}\n"\
+                        "\nReason: {1}\n".format(self.status, self.reason)
         if self.body:
-            error_message += "HTTP response body: {0}\n".format(self.body)
+            error_message += "\nAPI RESPONSE BODY: {0}\n".format(self.body)
+
+        if self.headers:
+            error_message += "\nAPI RESPONSE HEADERS: {0}".format(self.headers)
+
+        #Configuration().logger_obj.info(error_message)
+
+
 
         return error_message

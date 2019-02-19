@@ -6,8 +6,8 @@ import ast
 import json
 import authenticationsdk.util.ExceptionAuth
 import os
-import authenticationsdk.logger.Log
-
+#import authenticationsdk.logger.Log
+from authenticationsdk.logger.Log import MyLogger
 
 class MerchantConfiguration:
 
@@ -152,8 +152,9 @@ class MerchantConfiguration:
     # This validates the Merchant details
     def validate_merchant_details(self, details, mconfig):
         # verify Mandatory Properties
-        logger = authenticationsdk.logger.Log.setup_logger(mconfig)
-        mconfig.log = logger
+        #logger = authenticationsdk.logger.Log.setup_logger(mconfig)
+        #mconfig.log = logger
+        logger = MyLogger.__call__(mconfig).get_logger()
         if self.enable_log is True:
             logger.info("START> ======================================= ")
         if self.merchant_id is None or self.merchant_id == "":

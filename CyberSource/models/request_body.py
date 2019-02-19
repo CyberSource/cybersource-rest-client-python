@@ -80,13 +80,13 @@ class RequestBody(object):
 
         if organization_id is not None:
           self.organization_id = organization_id
-        #self.report_definition_name = report_definition_name
-        #self.report_fields = report_fields
+        self.report_definition_name = report_definition_name
+        self.report_fields = report_fields
         if report_mime_type is not None:
           self.report_mime_type = report_mime_type
         if report_frequency is not None:
           self.report_frequency = report_frequency
-        #self.report_name = report_name
+        self.report_name = report_name
         if timezone is not None:
           self.timezone = timezone
         if start_time is not None:

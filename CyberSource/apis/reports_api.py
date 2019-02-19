@@ -365,12 +365,12 @@ class ReportsApi(object):
         query_params = []
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
-        '''if 'start_time' in params:
+        if 'start_time' in params:
             query_params.append(('startTime', params['start_time']))
         if 'end_time' in params:
             query_params.append(('endTime', params['end_time']))
         if 'time_query_type' in params:
-            query_params.append(('timeQueryType', params['time_query_type']))'''
+            query_params.append(('timeQueryType', params['time_query_type']))
         if 'report_mime_type' in params:
             query_params.append(('reportMimeType', params['report_mime_type']))
         if 'report_frequency' in params:
@@ -399,7 +399,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/reports?startTime='+start_time+'&endTime='+end_time+'&timeQueryType='+time_query_type, 'GET',
+        return self.api_client.call_api('/reporting/v3/reports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

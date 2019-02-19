@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import json
 
 
 class PaymentInstrumentsApi(object):
@@ -274,6 +275,8 @@ class PaymentInstrumentsApi(object):
 
         # Authentication setting
         auth_settings = []
+        # Check to delete null values in Input request json
+        body_params = json.dumps(self.del_none(json.loads(body_params)))
 
         return self.api_client.call_api('/tms/v1/paymentinstruments', 'POST',
                                         path_params,
@@ -638,6 +641,8 @@ class PaymentInstrumentsApi(object):
 
         # Authentication setting
         auth_settings = []
+        # Check to delete null values in Input request json
+        body_params = json.dumps(self.del_none(json.loads(body_params)))
 
         return self.api_client.call_api('/tms/v1/paymentinstruments/'+token_id, 'PATCH',
                                         path_params,
@@ -653,3 +658,11 @@ class PaymentInstrumentsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+    # To delete None values in Input Request Json body(This code needs to be added through mustache changes)
+    def del_none(self,body):
+        for key, value in list(body.items()):
+            if value is None:
+                del body[key]
+            elif isinstance(value, dict):
+                self.del_none(value)
+        return body

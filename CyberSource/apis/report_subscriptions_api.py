@@ -106,8 +106,8 @@ class ReportSubscriptionsApi(object):
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'report_name' is set
-        #if ('report_name' not in params) or (params['report_name'] is None):
-            #raise ValueError("Missing the required parameter `report_name` when calling `create_subscription`")
+        if ('report_name' not in params) or (params['report_name'] is None):
+            raise ValueError("Missing the required parameter `report_name` when calling `create_subscription`")
         # verify the required parameter 'request_body' is set
         if ('request_body' not in params) or (params['request_body'] is None):
             raise ValueError("Missing the required parameter `request_body` when calling `create_subscription`")

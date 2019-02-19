@@ -118,10 +118,10 @@ class NotificationOfChangesApi(object):
         path_params = {}
 
         query_params = []
-        '''if 'start_time' in params:
+        if 'start_time' in params:
             query_params.append(('startTime', params['start_time']))
         if 'end_time' in params:
-            query_params.append(('endTime', params['end_time']))'''
+            query_params.append(('endTime', params['end_time']))
 
         header_params = {}
 
@@ -140,7 +140,7 @@ class NotificationOfChangesApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/notification-of-changes?startTime='+start_time+'&endTime='+end_time, 'GET',
+        return self.api_client.call_api('/reporting/v3/notification-of-changes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
