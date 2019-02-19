@@ -1,11 +1,9 @@
 import unittest
 from authenticationsdk.core.MerchantConfiguration import *
 from authenticationsdk.core.Authorization import *
-import authenticationsdk.logger.Log
-import authenticationsdk.util.PropertiesUtil
 import logging
 from authenticationsdk.core.MockData import *
-
+from authenticationsdk.logger.Log import MyLogger
 
 class TestBasicFunction(unittest.TestCase):
     def setUp(self):
@@ -24,7 +22,7 @@ class TestBasicFunction(unittest.TestCase):
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -35,7 +33,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "GET"
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
         self.merchant_config.validate_merchant_details(MockData.HTTP_DEFAULT_VALUES, self.merchant_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
@@ -47,7 +45,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "GET"
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
         self.merchant_config.validate_merchant_details(MockData.JWT_VALUES_FOR_PRODUCTION,
                                                        self.merchant_config)
 
@@ -59,7 +57,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "POST"
         self.merchant_config.request_target = "/pts/v2/payments"
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
         
         self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
@@ -72,7 +70,7 @@ class TestBasicFunction(unittest.TestCase):
 
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
         
         self.merchant_config.request_json_path_data = json.dumps(MockData.TRR_DATA)
 
@@ -83,9 +81,22 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.set_merchantconfig(MockData.HTTP_VALUES)
         self.merchant_config.request_type_method = "DELETE"
 
-        self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest/5246387105766473203529"
+        self.merchant_config.request_target = "/tms/v1/instrumentidentifiers/7010000000004750123"
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
+
+        self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
+
+    # This method checks the HTTP_Patch token  Generation Unit Testing
+    def test_token_for_patch_http(self):
+        self.merchant_config.set_merchantconfig(MockData.JWT_VALUES)
+        self.merchant_config.request_type_method = "PATCH"
+
+        self.merchant_config.request_target = "/tms/v1/instrumentidentifiers/7010000000004750123"
+
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
+
+        self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -96,7 +107,7 @@ class TestBasicFunction(unittest.TestCase):
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -105,8 +116,8 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.set_merchantconfig(MockData.JWT_VALUES)
         self.merchant_config.request_type_method = "POST"
         self.merchant_config.request_target = "/pts/v2/payments/5246387105766473203529"
-        
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
 
         self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
@@ -119,7 +130,7 @@ class TestBasicFunction(unittest.TestCase):
 
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
         
         self.merchant_config.request_json_path_data =json.dumps(MockData.TRR_DATA)
 
@@ -131,9 +142,25 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "DELETE"
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest/5246387105766473203529"
 
-        self.logger = authenticationsdk.logger.Log.setup_logger(self.merchant_config)
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
+
+    # This method checks the JWT_Patch token  Generation Unit Testing
+    def test_token_for_patch_jwt(self):
+        self.merchant_config.set_merchantconfig(MockData.JWT_VALUES)
+        self.merchant_config.request_type_method = "PATCH"
+
+        self.merchant_config.request_target = "/tms/v1/instrumentidentifiers/7010000000004750123"
+
+        self.logger = MyLogger.__call__(mconfig=self.merchant_config).get_logger()
+
+        self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
+
+        self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
+
+
+
 
 
 if __name__ == '__main__':

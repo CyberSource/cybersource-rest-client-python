@@ -97,8 +97,8 @@ class GeneratePublicKeyRequest(object):
         :param encryption_type: The encryption_type of this GeneratePublicKeyRequest.
         :type: str
         """
-        #if encryption_type is None:
-            #raise ValueError("Invalid value for `encryption_type`, must not be `None`")
+        if encryption_type is None:
+            raise ValueError("Invalid value for `encryption_type`, must not be `None`")
 
         self._encryption_type = encryption_type
 

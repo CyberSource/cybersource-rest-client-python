@@ -69,10 +69,14 @@ class ApiClient(object):
         """
         self.rest_client = RESTClientObject()
         self.default_headers = {}
+        self.request_headers={}
+        #self.request_body={}
+
         if header_name is not None:
             self.default_headers[header_name] = header_value
-        if host is None:
 
+
+        if host is None:
             self.host = Configuration().host
         else:
             self.host = host
@@ -94,8 +98,12 @@ class ApiClient(object):
         """
         self.default_headers['User-Agent'] = value
 
+
+
+
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
+
 	
 	# replace the underscore
     def replace_underscore(self, d):
@@ -141,8 +149,8 @@ class ApiClient(object):
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
-        logger = mconfig.log
-
+        logger = MyLogger.__call__(mconfig).get_logger()
+        Configuration().merchantconfig=mconfig
         auth = Authorization()
         token = auth.get_token(mconfig, mconfig.get_time(), logger)
         if mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
@@ -152,7 +160,7 @@ class ApiClient(object):
             header_params["Host"] = mconfig.request_host
             header_params["User-Agent"] = GlobalLabelParameters.USER_AGENT_VALUE
             if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-                '''print((ast.literal_eval(json.dumps(self.del_none(json.loads(body))))))'''
+
                 digest_header = self.set_digest((body))
 
                 header_params[
@@ -163,6 +171,7 @@ class ApiClient(object):
 
             token = "Bearer " + token.decode("utf-8")
             header_params['Authorization'] = str(token)
+
 
     #  Set the digest
     def set_digest(self, body):
@@ -180,6 +189,36 @@ class ApiClient(object):
 
         return path
 
+    # This method reads the items to be masked and accordingly masks the response from the server
+    def masking(self,unmasked_data):
+        try:
+            unmasked_data_dict = json.loads(unmasked_data)
+            maskdata = json.dumps(
+                self.remove_key(unmasked_data_dict, "expirationMonth", "expirationYear", "email", "firstName", "lastName", "phoneNumber",
+                           "number", "securityCode", "type"))
+
+
+            return maskdata
+        except Exception :
+            return unmasked_data
+
+
+    # This function replaces the value of the items to be masked to "XXXXX"
+    def remove_key(self,obj, *keys):
+        if type(obj) is dict:
+            for key, value in list(obj.items()):
+                if key not in keys:
+                    obj[key] = self.remove_key(value, *keys)
+                    obj[key] = value
+                else:
+                    obj[key] = GlobalLabelParameters.MASKING_VALUE
+        elif type(obj) is list:
+            for i in range(len(obj)):
+                obj[i] = self.remove_key(obj[i],*keys)
+
+
+        return obj
+
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
                    body=None, post_params=None, files=None,
@@ -191,7 +230,10 @@ class ApiClient(object):
 
         # header parameters
         header_params = header_params or {}
-        header_params.update(self.default_headers)
+        #header_params.update(self.default_headers)
+        # sankalp
+        self.request_headers.update(header_params)
+        #self.request_body.update(body)
         if self.cookie:
             header_params['Cookie'] = self.cookie
         if header_params:
@@ -231,8 +273,6 @@ class ApiClient(object):
 
         # request url
         url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
-
-
         # perform request and return response
         response_data = self.request(method, url,
                                      query_params=query_params,
@@ -242,14 +282,31 @@ class ApiClient(object):
                                      _request_timeout=_request_timeout)
 
         self.last_response = response_data
-
         return_data = response_data
+
+
         if _preload_content:
             # deserialize response data
             if response_type:
                 return_data = self.deserialize(response_data, response_type)
+
             else:
                 return_data = None
+        # Calling the masking logic
+        if response_data.data:
+            mask_values = self.masking(response_data.data)
+            response_data.data = mask_values
+        # Logging the details
+        '''if mconfig.enable_log is True:
+            self.logger.info("User Agent  :  "+(self.request_headers["User-Agent"]))
+            if body:
+                self.logger.info("Request Body :  "+body)
+            self.logger.info("Request Headers :  " + str(self.request_headers))
+            self.logger.info("Response Code :  " + str(response_data.status))
+            self.logger.info("Response Message :  "+response_data.data)
+            self.logger.info("Response Headers  :  "+str(response_data.getheaders()))
+            self.logger.info("END> =======================================")'''
+
 
         if callback:
             if _return_http_data_only:
@@ -257,7 +314,7 @@ class ApiClient(object):
             else:
                 callback((return_data, response_data.status, response_data.getheaders()))
         elif _return_http_data_only:
-            return (return_data, response_data.status, response_data.data)
+            return (response_data)
         else:
             return (return_data, response_data.status, response_data.getheaders())
 
@@ -367,6 +424,7 @@ class ApiClient(object):
         else:
             return self.__deserialize_model(data, klass)
 
+
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
                  body=None, post_params=None, files=None,
@@ -377,6 +435,7 @@ class ApiClient(object):
             request_body = self.replace_underscore(json.loads(body))
             body = json.dumps(request_body)
         query_param_path = self.set_query_params(resource_path, query_params)
+
         if query_param_path:
             mconfig.request_target = query_param_path
         else:
@@ -416,6 +475,7 @@ class ApiClient(object):
             If parameter callback is None,
             then the method will return the response directly.
         """
+
         if callback is None:
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
@@ -431,6 +491,7 @@ class ApiClient(object):
                                             response_type, auth_settings,
                                             callback, _return_http_data_only,
                                             collection_formats, _preload_content, _request_timeout))
+
         thread.start()
         return thread
 

@@ -36,6 +36,7 @@ class PaymentsApi(object):
         if api_client:
             self.api_client = api_client
         else:
+            
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
@@ -66,6 +67,7 @@ class PaymentsApi(object):
             return self.create_payment_with_http_info(create_payment_request, **kwargs)
         else:
             (data) = self.create_payment_with_http_info(create_payment_request, **kwargs)
+           
             return data
 
     def create_payment_with_http_info(self, create_payment_request, **kwargs):

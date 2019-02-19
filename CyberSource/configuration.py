@@ -60,7 +60,6 @@ class Configuration(object):
         self.username = ""
         # Password for HTTP basic authentication
         self.password = ""
-
         # Logging Settings
         self.logger = {}
         self.logger["package_logger"] = logging.getLogger("CyberSource")
@@ -90,6 +89,8 @@ class Configuration(object):
         self.proxy = None
         # Safe chars for path_param
         self.safe_chars_for_path_param = ''
+        #merchantconfig obj of authsdk
+        self.merchantconfig=None
 
     @property
     def logger_file(self):
