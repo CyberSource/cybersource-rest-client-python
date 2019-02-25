@@ -57,10 +57,16 @@ powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object {
 
 powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.tmsv1instrumentidentifiers_processing_information_authorization_options_initiator_merchant_initiated_transaction import Tmsv1instrumentidentifiersProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction', 'from .models.tmsv1instrumentidentifiers_merchant_initiated_transaction import Tmsv1instrumentidentifiersProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'} | Set-Content ..\CyberSource\__init__.py"
 
+del ..\CyberSource\models\ptsv2payments_merchant_initiated_transaction.py
+del ..\CyberSource\models\tmsv1instrumentidentifiers_merchant_initiated_transaction.py
+del ..\test\test_ptsv2payments_merchant_initiated_transaction.py
+del ..\test\test_tmsv1instrumentidentifiers_merchant_initiated_transaction.py
+del ..\docs\Ptsv2paymentsMerchantInitiatedTransaction.md
+del ..\docs\Tmsv1instrumentidentifiersMerchantInitiatedTransaction.md
+
 powershell -Command " rename-item -Path ..\CyberSource\models\ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction.py  -newname ptsv2payments_merchant_initiated_transaction.py"
 
 powershell -Command " rename-item -Path ..\CyberSource\models\tmsv1instrumentidentifiers_processing_information_authorization_options_initiator_merchant_initiated_transaction.py   -newname tmsv1instrumentidentifiers_merchant_initiated_transaction.py"
-
 
 powershell -Command " rename-item -Path ..\test\test_ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction.py   -newname test_ptsv2payments_merchant_initiated_transaction.py"
 
@@ -95,6 +101,8 @@ powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''application/json', 'select_header_content_type([''*/*'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
 
+git checkout ..\README.md
 
+git checkout ..\setup.py
 
 pause
