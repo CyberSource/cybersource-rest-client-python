@@ -1,0 +1,3 @@
+testCaseId,name,query,message
+CrSR_01,TSS search,clientReferenceInformation.code:12345,Success
+CrSR_02,TS Far,clientRefeInfo.code:52565,Fails due to invalid name

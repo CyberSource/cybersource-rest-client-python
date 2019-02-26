@@ -1,0 +1,195 @@
+TestCaseId,APIName,Status,Message,TimeStamp
+GenKey_01,GenerateKey,Passed:200-07smvL6jBuQGZpPAauXR9OG2tMTVK4CI ,Success,2019-02-26 12:35:32.055382
+GenKey_02,GenerateKey,Failed:400,One or more validation errors occurred,2019-02-26 12:35:32.271561
+TokC_01,TokenizedCard,Failed:400,VALIDATION_ERROR,2019-02-26 12:35:32.456488
+TokC_02,TokenizedCard,Failed:400,VALIDATION_ERROR,2019-02-26 12:35:32.625261
+KeyGenNE_01,KeyGenerationNoEnc,Passed:200-077wDBt22iaH5HjcLPRdaRMJUXrSeRkW ,Success,2019-02-26 12:35:32.840958
+KeyGenNE_02,KeyGenerationNoEnc,Failed:400,VALIDATION_ERROR,2019-02-26 12:35:33.041538
+CPAP_01,ProcessPayment,Passed:201-5511647332676852603002 ,Success,2019-02-26 12:35:33.688874
+CPAP_02,ProcessPayment,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 12:35:34.397260
+CPAP_03,ProcessPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:34.982668
+CACre_01,ProcessCredit,Passed:201-5511647351856375103006 ,Success,2019-02-26 12:35:35.557773
+CACre_02,ProcessCredit,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 12:35:36.124709
+CACre_03,ProcessCredit,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:36.675448
+CARev_01,ProcessAuthorizationReversal,Failed:400,Decline - The transaction has already been settled or reversed.,2019-02-26 12:35:37.277735
+CARev_02,ProcessAuthorizationReversal,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:37.832170
+CARev_03,ProcessAuthorizationReversal,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:48.394666
+RAC_01,RefundCapture,Failed:400,Decline - You requested a credit for a capture that was previously voided.,2019-02-26 12:35:48.964815
+RAC_02,RefundCapture,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 12:35:49.627874
+RAC_03,RefundCapture,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:50.182086
+CACap_01,CapturePayment,Passed:201-5511647503826853003002 ,Success,2019-02-26 12:35:50.783091
+CACap_02,CapturePayment,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 12:35:51.384358
+CACap_03,CapturePayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:35:51.916256
+RAP_01,RefundPayment,Failed:400,Decline - You requested a credit for a capture that was previously voided.,2019-02-26 12:35:52.501546
+RAP_02,RefundCapture,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 12:35:53.287188
+RAP_03,RefundPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:03.871370
+VAC_01,VoidCredit,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 12:36:04.540485
+VAC_02,VoidCredit,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:15.121656
+VAC_01,VoidCapture,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 12:36:15.685021
+VAC_02,VoidCapture,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:26.295169
+VAP_01,VoidPayment,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 12:36:27.040284
+VAP_02,VoidPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:37.726935
+VAR_01,VoidRefund,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 12:36:38.280472
+VAR_02,VoidRefund,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:48.887149
+CPPay_01,ProcessPayout,Passed:201-5511648090616303903005 ,Success,2019-02-26 12:36:49.565650
+CPPay_02,ProcessPayout,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 12:36:50.204264
+DFWFI_01,DownloadFileWithFileIdentifier,Passed:200-VFJSUmVwb3J0LTc4NTVkMTNmLTkzOTgtNTExMy1lMDUzLWEyNTg4ZTBhNzE5Mi5jc3YtMjAxOC0xMC0yMA== ,Success,2019-02-26 12:36:51.838466
+DFWFI_02,DownloadFileWithFileIdentifier,Failed:400,Fails due to invalid fieldId,2019-02-26 12:36:52.392152
+GLF_01,GetListOfFiles,Passed:200-testrest ,Success,2019-02-26 12:36:53.356466
+GLF_02,GetListOfFiles,Failed:403,Merchant - Unauthorised access to Reseller/Account,2019-02-26 12:36:53.926119
+GIBF_01,GetIndividualBatchFile,Passed:200-Owcyk6pl ,Success,2019-02-26 12:36:54.195718
+GIBF_02,GetIndividualBatchFile,Failed:404,The requested resource does not exist,2019-02-26 12:36:54.427555
+GLOF_01,GetListOfBatchFile,Passed:200,Success,2019-02-26 12:36:54.674487
+GLOF_02,GetListOfBatchFile,Failed:400,Field validation errors-Fails due to invalid startDate.,2019-02-26 12:36:54.912476
+GLOF_03,GetListOfBatchFile,Failed:400,Field validation errors-Fails due to invalid endDate.,2019-02-26 12:36:55.143902
+RT_01,RetrieveTransaction,Passed:200-5408386919326811103004 ,Success,2019-02-26 12:36:55.444739
+RT_02,RetrieveTransaction,Failed:404,The requested resource does not exist,2019-02-26 12:36:55.698694
+CrSR_01,CreateSearchRequest,Passed:201,Success,2019-02-26 12:36:56.579113
+CrSR_02,CreateSearchRequest,Failed:400,Incorrectly formatted query string,2019-02-26 12:36:56.816472
+GetSR_01,GetSearchResults,Failed:400,search Id not fount.,2019-02-26 12:36:57.048027
+GetSR_02,GetSearchResults,Failed:400,search Id not fount.,2019-02-26 12:36:57.279115
+CInstIden_01,CreateInstrumentIdentifier,Passed:200-7020000000001328765,Success,2019-02-26 12:36:57.532432
+CInstIden_02,CreateInstrumentIdentifier,Failed:400,Invalid header values,2019-02-26 12:36:57.748635
+CPIns_01,CreatePaymentsInstrument,Passed:201-82C7ADA91E652D9DE05340588D0AD6A6,Success,2019-02-26 12:36:58.002591
+CPIns_02,CreatePaymentsInstrument,Failed:400,Invalid header values,2019-02-26 12:36:58.202762
+RemInsIden_01,DeleteInstrumentIdentifier,Failed:410,Token not available,2019-02-26 12:36:58.418976
+RemInsIden_02,DeleteInstrumentIdentifier,Failed:404,Token not found,2019-02-26 12:36:58.650491
+RemPIns_01,DeletePaymentInstrument,Failed:410,Token not available,2019-02-26 12:36:58.866691
+RemPIns_02,DeletePaymentInstrument,Failed:404,Token not found,2019-02-26 12:36:59.082604
+RAPIdenGInsIden_01,RetrieveAllPaymentIdentifiers,Failed:410,Token not available,2019-02-26 12:36:59.312121
+RAPIdenGInsIden_02,RetrieveAllPaymentIdentifiers,Failed:404,Token not found,2019-02-26 12:36:59.512263
+RInsIden_01,RetrieveInstrumentIdentifier,Failed:410,Token not available,2019-02-26 12:36:59.744094
+RInsIden_02,RetrieveInstrumentIdentifier,Failed:404,Token not found,2019-02-26 12:36:59.944661
+RPIden_01,RetrievePaymentInstrument,Passed:200-819A80F076FCC30BE05340588D0AA493,Success,2019-02-26 12:37:00.213898
+RPIden_02,RetrievePaymentInstrument,Failed:404,Token not found,2019-02-26 12:37:00.430099
+UpdInsIden_01,UpdateInstrumentIdentifier,Passed:200-7020000000001328765,Success,2019-02-26 12:37:00.713782
+UpdPIden_01,UpdatePaymentInstrument,Passed:200-819A80F076F5C30BE05340588D0AA493,Success,2019-02-26 12:37:00.946833
+CAdR_01,CreateAdhocReport,Failed:400,Field validation errors:Success,2019-02-26 12:37:01.763728
+CAdR_02,CreateAdhocReport,Failed:400,Field validation errors:fails due to invalid reportDefinitionName,2019-02-26 12:37:02.265159
+CRSFRNO_01,CreateReportSubscriptionForReportNameByOrganization,Passed:201,Success,2019-02-26 12:37:03.219564
+CRSFRNO_02,CreateReportSubscriptionForReportNameByOrganization,Failed:400,Field validation errors:Fails due to invalid reportDefinitionName,2019-02-26 12:37:03.720663
+DSRNO_01,DeleteSubscriptionOfReportNameByOrganization,Passed:200,Success,2019-02-26 12:37:04.227333
+DSRNO_02,DeleteSubscriptionOfReportNameByOrganization,Failed:404,Requested subscription does not exist.:Fails due to invalid reportName,2019-02-26 12:37:04.705875
+DR_01,DownloadReport,Passed:200-testrest ,Success,2019-02-26 12:37:05.660746
+DR_02,DownloadReport,Failed:404,Fails due to invalid reportName,2019-02-26 12:37:06.261913
+DR_03,DownloadReport,Failed:404,Fails due to invalid reportDate,2019-02-26 12:37:06.831617
+GAS_01,GetAllSubscriptions,Passed:200,Success,2019-02-26 12:37:07.648482
+GNOC_01,GetNotificationOfChanges,Failed:404,No results found for the given dates,2019-02-26 12:37:08.350146
+GNOC_02,GetNotificationOfChanges,Failed:400,Field validation errors,2019-02-26 12:37:08.835103
+GNOC_03,GetNotificationOfChanges,Failed:400,Field validation errors,2019-02-26 12:37:09.313309
+GPARD_01,GetPurchaseAndRefundDetails,Failed:404,No Purchase and Refunds found.,2019-02-26 12:37:09.813787
+GPARD_02,GetPurchaseAndRefundDetails,Failed:400,Field validation errors,2019-02-26 12:37:10.298769
+GPARD_03,GetPurchaseAndRefundDetails,Failed:400,Field validation errors,2019-02-26 12:37:10.767971
+GPARD_04,GetPurchaseAndRefundDetails,Failed:404,No Purchase and Refunds found.,2019-02-26 12:37:11.238425
+GRBRI_01,GetReportBasedOnReportId,Passed:200:79642c43-2368-0cd5-e053-a2588e0a7b3c,Success,2019-02-26 12:37:11.770003
+GRBRI_02,GetReportBasedOnReportId,Failed:404,Fails due to invalid reportId,2019-02-26 12:37:12.261132
+GRBRI_03,GetReportBasedOnReportId,Failed:400,Fails due to invalid organizationId,2019-02-26 12:37:12.729140
+GRD_01,GetReportDefinition,Passed:200,Success,2019-02-26 12:37:13.283196
+GRD_02,GetReportDefinition,Failed:404,Fails due to invalid reportDefinitionName,2019-02-26 12:37:13.753354
+GRRI_01,GetReportingResourceInformation,Passed:200,Success,2019-02-26 12:37:14.284694
+GRRI_02,GetReportingResourceInformation,Failed:400,Invalid Merchant,2019-02-26 12:37:14.753782
+GSFRN_01,GetSubscriptionForReportName,Failed:404,Requested subscription does not exist.:Success,2019-02-26 12:37:15.232311
+GSFRN_02,GetSubscriptionForReportName,Failed:404,Requested subscription does not exist.:Fails due to invalid reportName,2019-02-26 12:37:15.702066
+RAR_01,RetrieveAvailableReports,Passed:200,Success,2019-02-26 12:37:17.314248
+RAR_02,RetrieveAvailableReports,Failed:400,Field validation errors:Fails due to invalid timeQueryType,2019-02-26 12:37:17.830219
+RAR_03,RetrieveAvailableReports,Failed:500,Error encountered while processing request:Fails due to invalid startTime,2019-02-26 12:37:18.311740
+RAR_04,RetrieveAvailableReports,Failed:500,Error encountered while processing request:Fails due to invalid endTime,2019-02-26 12:37:18.797115
+GUI_01,GetUserInformation,Passed:200-testrest ,Success,2019-02-26 12:37:19.113228
+GUI_02,GetUserInformation,Failed:401,Fail due to invalid organizationId,2019-02-26 12:37:19.360380
+GenKey_01,GenerateKey,Failed:502,API Gateway Authentication issue,2019-02-26 15:01:57.239394
+GenKey_02,GenerateKey,Failed:502,API Gateway Authentication issue,2019-02-26 15:01:57.455585
+TokC_01,TokenizedCard,Failed:400,VALIDATION_ERROR,2019-02-26 15:01:57.624897
+TokC_02,TokenizedCard,Failed:400,VALIDATION_ERROR,2019-02-26 15:01:57.810320
+KeyGenNE_01,KeyGenerationNoEnc,Failed:502,API_GATEWAY_ERROR,2019-02-26 15:01:58.026278
+KeyGenNE_02,KeyGenerationNoEnc,Failed:502,API_GATEWAY_ERROR,2019-02-26 15:01:58.257988
+CPAP_01,ProcessPayment,Passed:201-5511735185316983503001 ,Success,2019-02-26 15:01:58.907710
+CPAP_02,ProcessPayment,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 15:01:59.589213
+CPAP_03,ProcessPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:00.220059
+CACre_01,ProcessCredit,Passed:201-5511735204736956303003 ,Success,2019-02-26 15:02:00.846453
+CACre_02,ProcessCredit,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 15:02:01.468999
+CACre_03,ProcessCredit,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:02.072449
+CARev_01,ProcessAuthorizationReversal,Failed:400,Decline - The transaction has already been settled or reversed.,2019-02-26 15:02:02.693965
+CARev_02,ProcessAuthorizationReversal,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:03.280011
+CARev_03,ProcessAuthorizationReversal,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:13.870286
+RAC_01,RefundCapture,Failed:400,Decline - You requested a credit for a capture that was previously voided.,2019-02-26 15:02:14.450818
+RAC_02,RefundCapture,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 15:02:15.001818
+RAC_03,RefundCapture,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:15.608417
+CACap_01,CapturePayment,Passed:201-5511735358286372003005 ,Success,2019-02-26 15:02:16.275991
+CACap_02,CapturePayment,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 15:02:16.903950
+CACap_03,CapturePayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:17.482961
+RAP_01,RefundPayment,Failed:400,Decline - You requested a credit for a capture that was previously voided.,2019-02-26 15:02:18.040526
+RAP_02,RefundCapture,Assertion Failed: 201,Fails due to mismatch amount,2019-02-26 15:02:18.840870
+RAP_03,RefundPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:29.434787
+VAC_01,VoidCredit,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 15:02:30.087906
+VAC_02,VoidCredit,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:40.739068
+VAC_01,VoidCapture,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 15:02:41.486661
+VAC_02,VoidCapture,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:02:52.079060
+VAP_01,VoidPayment,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 15:02:52.626921
+VAP_02,VoidPayment,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:03:03.350274
+VAR_01,VoidRefund,Failed:400,|Decline - The capture or credit is not voidable because the capture or credit information has already been submitted to your processor. Or, you requested a void for a type of transaction that cannot be voided.|,2019-02-26 15:03:04.084234
+VAR_02,VoidRefund,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:03:14.700265
+CPPay_01,ProcessPayout,Passed:201-5511735948976372603005 ,Success,2019-02-26 15:03:15.410468
+CPPay_02,ProcessPayout,Failed:400,Declined - One or more fields in the request contains invalid data,2019-02-26 15:03:15.943532
+DFWFI_01,DownloadFileWithFileIdentifier,Passed:200-VFJSUmVwb3J0LTc4NTVkMTNmLTkzOTgtNTExMy1lMDUzLWEyNTg4ZTBhNzE5Mi5jc3YtMjAxOC0xMC0yMA== ,Success,2019-02-26 15:03:16.559208
+DFWFI_02,DownloadFileWithFileIdentifier,Failed:400,Fails due to invalid fieldId,2019-02-26 15:03:17.146477
+GLF_01,GetListOfFiles,Passed:200-testrest ,Success,2019-02-26 15:03:18.120167
+GLF_02,GetListOfFiles,Failed:403,Merchant - Unauthorised access to Reseller/Account,2019-02-26 15:03:18.706500
+GIBF_01,GetIndividualBatchFile,Passed:200-Owcyk6pl ,Success,2019-02-26 15:03:18.969094
+GIBF_02,GetIndividualBatchFile,Failed:404,The requested resource does not exist,2019-02-26 15:03:19.207429
+GLOF_01,GetListOfBatchFile,Passed:200,Success,2019-02-26 15:03:19.454919
+GLOF_02,GetListOfBatchFile,Failed:400,Field validation errors-Fails due to invalid startDate.,2019-02-26 15:03:19.686282
+GLOF_03,GetListOfBatchFile,Failed:400,Field validation errors-Fails due to invalid endDate.,2019-02-26 15:03:19.923770
+RT_01,RetrieveTransaction,Passed:200-5408386919326811103004 ,Success,2019-02-26 15:03:20.240546
+RT_02,RetrieveTransaction,Failed:404,The requested resource does not exist,2019-02-26 15:03:20.510019
+CrSR_01,CreateSearchRequest,Passed:201,Success,2019-02-26 15:03:21.442046
+CrSR_02,CreateSearchRequest,Failed:400,Incorrectly formatted query string,2019-02-26 15:03:21.673843
+GetSR_01,GetSearchResults,Failed:400,search Id not fount.,2019-02-26 15:03:21.912186
+GetSR_02,GetSearchResults,Failed:400,search Id not fount.,2019-02-26 15:03:22.143639
+CInstIden_01,CreateInstrumentIdentifier,Passed:200-7020000000001328765,Success,2019-02-26 15:03:22.412488
+CInstIden_02,CreateInstrumentIdentifier,Failed:400,Invalid header values,2019-02-26 15:03:22.631086
+CPIns_01,CreatePaymentsInstrument,Passed:201-82C9920AA9C0A5D4E05340588D0A1DD0,Success,2019-02-26 15:03:22.850503
+CPIns_02,CreatePaymentsInstrument,Failed:400,Invalid header values,2019-02-26 15:03:23.069024
+RemInsIden_01,DeleteInstrumentIdentifier,Failed:410,Token not available,2019-02-26 15:03:23.337424
+RemInsIden_02,DeleteInstrumentIdentifier,Failed:404,Token not found,2019-02-26 15:03:23.553644
+RemPIns_01,DeletePaymentInstrument,Failed:410,Token not available,2019-02-26 15:03:23.769403
+RemPIns_02,DeletePaymentInstrument,Failed:404,Token not found,2019-02-26 15:03:23.991184
+RAPIdenGInsIden_01,RetrieveAllPaymentIdentifiers,Failed:410,Token not available,2019-02-26 15:03:24.229303
+RAPIdenGInsIden_02,RetrieveAllPaymentIdentifiers,Failed:404,Token not found,2019-02-26 15:03:24.448354
+RInsIden_01,RetrieveInstrumentIdentifier,Failed:410,Token not available,2019-02-26 15:03:24.666360
+RInsIden_02,RetrieveInstrumentIdentifier,Failed:404,Token not found,2019-02-26 15:03:24.896128
+RPIden_01,RetrievePaymentInstrument,Passed:200-819A80F076FCC30BE05340588D0AA493,Success,2019-02-26 15:03:25.149901
+RPIden_02,RetrievePaymentInstrument,Failed:404,Token not found,2019-02-26 15:03:25.370693
+UpdInsIden_01,UpdateInstrumentIdentifier,Passed:200-7020000000001328765,Success,2019-02-26 15:03:25.623364
+UpdPIden_01,UpdatePaymentInstrument,Passed:200-819A80F076F5C30BE05340588D0AA493,Success,2019-02-26 15:03:25.868035
+CAdR_01,CreateAdhocReport,Failed:400,Field validation errors:Success,2019-02-26 15:03:26.622477
+CAdR_02,CreateAdhocReport,Failed:400,Field validation errors:fails due to invalid reportDefinitionName,2019-02-26 15:03:27.124131
+CRSFRNO_01,CreateReportSubscriptionForReportNameByOrganization,Passed:201,Success,2019-02-26 15:03:27.910440
+CRSFRNO_02,CreateReportSubscriptionForReportNameByOrganization,Failed:400,Field validation errors:Fails due to invalid reportDefinitionName,2019-02-26 15:03:28.410946
+DSRNO_01,DeleteSubscriptionOfReportNameByOrganization,Passed:200,Success,2019-02-26 15:03:28.918367
+DSRNO_02,DeleteSubscriptionOfReportNameByOrganization,Failed:404,Requested subscription does not exist.:Fails due to invalid reportName,2019-02-26 15:03:29.388552
+DR_01,DownloadReport,Passed:200-testrest ,Success,2019-02-26 15:03:30.181173
+DR_02,DownloadReport,Failed:404,Fails due to invalid reportName,2019-02-26 15:03:30.766387
+DR_03,DownloadReport,Failed:404,Fails due to invalid reportDate,2019-02-26 15:03:31.313830
+GAS_01,GetAllSubscriptions,Passed:200,Success,2019-02-26 15:03:32.115697
+GNOC_01,GetNotificationOfChanges,Failed:404,No results found for the given dates,2019-02-26 15:03:32.632366
+GNOC_02,GetNotificationOfChanges,Failed:400,Field validation errors,2019-02-26 15:03:33.102033
+GNOC_03,GetNotificationOfChanges,Failed:400,Field validation errors,2019-02-26 15:03:33.587010
+GPARD_01,GetPurchaseAndRefundDetails,Failed:404,No Purchase and Refunds found.,2019-02-26 15:03:34.073058
+GPARD_02,GetPurchaseAndRefundDetails,Failed:400,Field validation errors,2019-02-26 15:03:34.554682
+GPARD_03,GetPurchaseAndRefundDetails,Failed:400,Field validation errors,2019-02-26 15:03:35.031841
+GPARD_04,GetPurchaseAndRefundDetails,Failed:404,No Purchase and Refunds found.,2019-02-26 15:03:35.529072
+GRBRI_01,GetReportBasedOnReportId,Passed:200:79642c43-2368-0cd5-e053-a2588e0a7b3c,Success,2019-02-26 15:03:36.047968
+GRBRI_02,GetReportBasedOnReportId,Failed:404,Fails due to invalid reportId,2019-02-26 15:03:36.532617
+GRBRI_03,GetReportBasedOnReportId,Failed:400,Fails due to invalid organizationId,2019-02-26 15:03:37.017227
+GRD_01,GetReportDefinition,Passed:200,Success,2019-02-26 15:03:37.550532
+GRD_02,GetReportDefinition,Failed:404,Fails due to invalid reportDefinitionName,2019-02-26 15:03:38.037964
+GRRI_01,GetReportingResourceInformation,Passed:200,Success,2019-02-26 15:03:38.537980
+GRRI_02,GetReportingResourceInformation,Failed:400,Invalid Merchant,2019-02-26 15:03:39.011333
+GSFRN_01,GetSubscriptionForReportName,Failed:404,Requested subscription does not exist.:Success,2019-02-26 15:03:39.495121
+GSFRN_02,GetSubscriptionForReportName,Failed:404,Requested subscription does not exist.:Fails due to invalid reportName,2019-02-26 15:03:39.976537
+RAR_01,RetrieveAvailableReports,Passed:200,Success,2019-02-26 15:03:41.433020
+RAR_02,RetrieveAvailableReports,Failed:400,Field validation errors:Fails due to invalid timeQueryType,2019-02-26 15:03:41.930431
+RAR_03,RetrieveAvailableReports,Failed:500,Error encountered while processing request:Fails due to invalid startTime,2019-02-26 15:03:42.450202
+RAR_04,RetrieveAvailableReports,Failed:500,Error encountered while processing request:Fails due to invalid endTime,2019-02-26 15:03:42.937007
+GUI_01,GetUserInformation,Passed:200-testrest ,Success,2019-02-26 15:03:43.253513
+GUI_02,GetUserInformation,Failed:401,Fail due to invalid organizationId,2019-02-26 15:03:43.538263
