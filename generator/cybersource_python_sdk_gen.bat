@@ -30,7 +30,8 @@ powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) 
 
 
 
-powershell -Command "(Get-Content ..\CyberSource\apis\transaction_batch_api.py) | ForEach-Object { $_ -replace '''/pts/v1/transaction-batches/{id}''', '''/pts/v1/transaction-batches/''+id'} | Set-Content ..\CyberSource\apis\transaction_batch_api.py"
+powershell -Command "(Get-Content ..\CyberSource\apis\transaction_batches_api.py) | ForEach-Object { $_ -replace '''/pts/v1/transaction-batches/{id}''', '''/pts/v1/transaction-batches/''+id'} | Set-Content ..\CyberSource\apis\transaction_batches_api.py"
+
 
 
 powershell -Command "(Get-Content ..\CyberSource\apis\transaction_details_api.py) | ForEach-Object { $_ -replace '''/tss/v2/transactions/{id}''', '''/tss/v2/transactions/''+id'} | Set-Content ..\CyberSource\apis\transaction_details_api.py"
