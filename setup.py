@@ -12,7 +12,7 @@ VERSION = "0.0.4"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl", "PyYAML",
+REQUIRES = ["pycryptodome","urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl", "PyYAML",
             "asn1crypto",
             "bcrypt",
             "certifi",
@@ -38,7 +38,6 @@ REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl",
             "pyOpenSSL",
             "pyasn1",
             "pycparser",
-            "pycryptodome",
             "pycryptodomex",
             "pypi",
             "python-mimeparse",
