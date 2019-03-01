@@ -90,7 +90,7 @@ class PtsV2PaymentsPost502Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost502Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - SERVER_ERROR 
 
         :return: The status of this PtsV2PaymentsPost502Response.
         :rtype: str
@@ -101,7 +101,7 @@ class PtsV2PaymentsPost502Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost502Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - SERVER_ERROR 
 
         :param status: The status of this PtsV2PaymentsPost502Response.
         :type: str
@@ -119,7 +119,7 @@ class PtsV2PaymentsPost502Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsPost502Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG  - PROCESSOR_TIMEOUT 
 
         :return: The reason of this PtsV2PaymentsPost502Response.
         :rtype: str
@@ -130,7 +130,7 @@ class PtsV2PaymentsPost502Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsPost502Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG  - PROCESSOR_TIMEOUT 
 
         :param reason: The reason of this PtsV2PaymentsPost502Response.
         :type: str

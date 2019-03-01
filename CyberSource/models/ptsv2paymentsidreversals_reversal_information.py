@@ -94,8 +94,6 @@ class Ptsv2paymentsidreversalsReversalInformation(object):
         :param reason: The reason of this Ptsv2paymentsidreversalsReversalInformation.
         :type: str
         """
-        #if reason is not None and len(reason) > 3:
-            #raise ValueError("Invalid value for `reason`, length must be less than or equal to `3`")
 
         self._reason = reason
 

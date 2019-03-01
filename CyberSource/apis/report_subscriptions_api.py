@@ -39,13 +39,13 @@ class ReportSubscriptionsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def create_subscription(self, request_body, **kwargs):
         """
         Create Report Subscription for a report name by organization
-        
+        Create a report subscription for your organization. The report name must be unique. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -56,8 +56,8 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str report_name: Name of the Report to Create (required)
-        :param RequestBody request_body: Report subscription request payload (required)
+        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,10 +69,10 @@ class ReportSubscriptionsApi(object):
             (data) = self.create_subscription_with_http_info(request_body, **kwargs)
             return data
 
-    def create_subscription_with_http_info(self,request_body, **kwargs):
+    def create_subscription_with_http_info(self, request_body, **kwargs):
         """
         Create Report Subscription for a report name by organization
-        
+        Create a report subscription for your organization. The report name must be unique. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -83,14 +83,14 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str report_name: Name of the Report to Create (required)
-        :param RequestBody request_body: Report subscription request payload (required)
+        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_name', 'request_body']
+        all_params = ['request_body', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -105,21 +105,24 @@ class ReportSubscriptionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'report_name' is set
-        #if ('report_name' not in params) or (params['report_name'] is None):
-            #raise ValueError("Missing the required parameter `report_name` when calling `create_subscription`")
         # verify the required parameter 'request_body' is set
         if ('request_body' not in params) or (params['request_body'] is None):
             raise ValueError("Missing the required parameter `request_body` when calling `create_subscription`")
 
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'report_name' in params:
-            path_params['reportName'] = params['report_name']
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -140,7 +143,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-subscriptions/', 'PUT',
+        return self.api_client.call_api('/reporting/v3/report-subscriptions', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -158,7 +161,7 @@ class ReportSubscriptionsApi(object):
     def delete_subscription(self, report_name, **kwargs):
         """
         Delete subscription of a report name by organization
-        
+        Delete a report subscription for your organization. You must know the unique name of the report you want to delete. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -184,7 +187,7 @@ class ReportSubscriptionsApi(object):
     def delete_subscription_with_http_info(self, report_name, **kwargs):
         """
         Delete subscription of a report name by organization
-        
+        Delete a report subscription for your organization. You must know the unique name of the report you want to delete. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -269,8 +272,8 @@ class ReportSubscriptionsApi(object):
 
     def get_all_subscriptions(self, **kwargs):
         """
-        Retrieve all subscriptions by organization
-        
+        Get all subscriptions
+        View a summary of all report subscriptions. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -294,8 +297,8 @@ class ReportSubscriptionsApi(object):
 
     def get_all_subscriptions_with_http_info(self, **kwargs):
         """
-        Retrieve all subscriptions by organization
-        
+        Get all subscriptions
+        View a summary of all report subscriptions. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -367,8 +370,8 @@ class ReportSubscriptionsApi(object):
 
     def get_subscription(self, report_name, **kwargs):
         """
-        Retrieve subscription for a report name by organization
-        
+        Get subscription for report name
+        View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -393,8 +396,8 @@ class ReportSubscriptionsApi(object):
 
     def get_subscription_with_http_info(self, report_name, **kwargs):
         """
-        Retrieve subscription for a report name by organization
-        
+        Get subscription for report name
+        View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

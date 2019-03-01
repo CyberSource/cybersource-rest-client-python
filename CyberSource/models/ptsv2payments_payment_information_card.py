@@ -42,7 +42,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'account_encoder_id': 'str',
         'issue_number': 'str',
         'start_month': 'str',
-        'start_year': 'str'
+        'start_year': 'str',
+        'product_name': 'str'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'account_encoder_id': 'accountEncoderId',
         'issue_number': 'issueNumber',
         'start_month': 'startMonth',
-        'start_year': 'startYear'
+        'start_year': 'startYear',
+        'product_name': 'productName'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None):
         """
         Ptsv2paymentsPaymentInformationCard - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         self._issue_number = None
         self._start_month = None
         self._start_year = None
+        self._product_name = None
 
         if number is not None:
           self.number = number
@@ -102,6 +105,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
           self.start_month = start_month
         if start_year is not None:
           self.start_year = start_year
+        if product_name is not None:
+          self.product_name = product_name
 
     @property
     def number(self):
@@ -132,7 +137,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def expiration_month(self):
         """
         Gets the expiration_month of this Ptsv2paymentsPaymentInformationCard.
-        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_month of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -143,7 +148,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Ptsv2paymentsPaymentInformationCard.
-        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_month: The expiration_month of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -157,7 +162,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Ptsv2paymentsPaymentInformationCard.
-        Four-digit year in which the credit card expires. `Format: YYYY`.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit year in which the credit card expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_year of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -168,7 +173,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Ptsv2paymentsPaymentInformationCard.
-        Four-digit year in which the credit card expires. `Format: YYYY`.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit year in which the credit card expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_year: The expiration_year of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -198,8 +203,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-        if type is not None and len(type) > 3:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 
@@ -223,8 +226,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param use_as: The use_as of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-        if use_as is not None and len(use_as) > 2:
-            raise ValueError("Invalid value for `use_as`, length must be less than or equal to `2`")
+        if use_as is not None and len(use_as) > 20:
+            raise ValueError("Invalid value for `use_as`, length must be less than or equal to `20`")
 
         self._use_as = use_as
 
@@ -232,7 +235,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def source_account_type(self):
         """
         Gets the source_account_type of this Ptsv2paymentsPaymentInformationCard.
-        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process. This field is required in the following cases.   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for CTV.      **Note** Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - CHECKING: Checking account  - CREDIT: Credit card account  - SAVING: Saving account  - LINE_OF_CREDIT: Line of credit  - PREPAID: Prepaid card account  - UNIVERSAL: Universal account 
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  This field is required in the following cases:   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for Visa Platform Connect (VPC).      **Note**\\ Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - **CHECKING**: Checking account  - **CREDIT**: Credit card account  - **SAVING**: Saving account  - **LINE_OF_CREDIT**: Line of credit or credit portion of combo card  - **PREPAID**: Prepaid card account or prepaid portion of combo card  - **UNIVERSAL**: Universal account 
 
         :return: The source_account_type of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -243,13 +246,13 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def source_account_type(self, source_account_type):
         """
         Sets the source_account_type of this Ptsv2paymentsPaymentInformationCard.
-        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process. This field is required in the following cases.   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for CTV.      **Note** Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - CHECKING: Checking account  - CREDIT: Credit card account  - SAVING: Saving account  - LINE_OF_CREDIT: Line of credit  - PREPAID: Prepaid card account  - UNIVERSAL: Universal account 
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  This field is required in the following cases:   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for Visa Platform Connect (VPC).      **Note**\\ Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - **CHECKING**: Checking account  - **CREDIT**: Credit card account  - **SAVING**: Saving account  - **LINE_OF_CREDIT**: Line of credit or credit portion of combo card  - **PREPAID**: Prepaid card account or prepaid portion of combo card  - **UNIVERSAL**: Universal account 
 
         :param source_account_type: The source_account_type of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-        if source_account_type is not None and len(source_account_type) > 2:
-            raise ValueError("Invalid value for `source_account_type`, length must be less than or equal to `2`")
+        if source_account_type is not None and len(source_account_type) > 20:
+            raise ValueError("Invalid value for `source_account_type`, length must be less than or equal to `20`")
 
         self._source_account_type = source_account_type
 
@@ -257,7 +260,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def security_code(self):
         """
         Gets the security_code of this Ptsv2paymentsPaymentInformationCard.
-        Card Verification Number.
+        Card Verification Number.  **Ingenico ePayments** Do not include this field when _commerceIndicator=recurring_. **Note** Ingenico ePayments was previously called Global Collect. 
 
         :return: The security_code of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -268,7 +271,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Ptsv2paymentsPaymentInformationCard.
-        Card Verification Number.
+        Card Verification Number.  **Ingenico ePayments** Do not include this field when _commerceIndicator=recurring_. **Note** Ingenico ePayments was previously called Global Collect. 
 
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -282,7 +285,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def security_code_indicator(self):
         """
         Gets the security_code_indicator of this Ptsv2paymentsPaymentInformationCard.
-        Flag that indicates whether a CVN code was sent. Possible values:   - 0 (default): CVN service not requested. CyberSource uses this default value when you do not include      _securityCode_ in the request.  - 1 (default): CVN service requested and supported. CyberSource uses this default value when you include      _securityCode_ in the request.  - 2: CVN on credit card is illegible.  - 9: CVN was not imprinted on credit card. 
+        Flag that indicates whether a CVN code was sent. Possible values:   - 0 (default): CVN service not requested. CyberSource uses this default value when you do not include      _securityCode_ field in the request.  - 1 (default): CVN service requested and supported. CyberSource uses this default value when you include      _securityCode_ field in the request.  - 2: CVN on credit card is illegible.  - 9: CVN was not imprinted on credit card. 
 
         :return: The security_code_indicator of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -293,7 +296,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def security_code_indicator(self, security_code_indicator):
         """
         Sets the security_code_indicator of this Ptsv2paymentsPaymentInformationCard.
-        Flag that indicates whether a CVN code was sent. Possible values:   - 0 (default): CVN service not requested. CyberSource uses this default value when you do not include      _securityCode_ in the request.  - 1 (default): CVN service requested and supported. CyberSource uses this default value when you include      _securityCode_ in the request.  - 2: CVN on credit card is illegible.  - 9: CVN was not imprinted on credit card. 
+        Flag that indicates whether a CVN code was sent. Possible values:   - 0 (default): CVN service not requested. CyberSource uses this default value when you do not include      _securityCode_ field in the request.  - 1 (default): CVN service requested and supported. CyberSource uses this default value when you include      _securityCode_ field in the request.  - 2: CVN on credit card is illegible.  - 9: CVN was not imprinted on credit card. 
 
         :param security_code_indicator: The security_code_indicator of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -332,7 +335,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def issue_number(self):
         """
         Gets the issue_number of this Ptsv2paymentsPaymentInformationCard.
-        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  The issue number is not required for Maestro (UK Domestic) transactions. 
+        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  **Note** The issue number is not required for Maestro (UK Domestic) transactions. 
 
         :return: The issue_number of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -343,7 +346,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def issue_number(self, issue_number):
         """
         Sets the issue_number of this Ptsv2paymentsPaymentInformationCard.
-        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  The issue number is not required for Maestro (UK Domestic) transactions. 
+        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  **Note** The issue number is not required for Maestro (UK Domestic) transactions. 
 
         :param issue_number: The issue_number of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -357,7 +360,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def start_month(self):
         """
         Gets the start_month of this Ptsv2paymentsPaymentInformationCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :return: The start_month of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -368,7 +371,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def start_month(self, start_month):
         """
         Sets the start_month of this Ptsv2paymentsPaymentInformationCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :param start_month: The start_month of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -382,7 +385,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def start_year(self):
         """
         Gets the start_year of this Ptsv2paymentsPaymentInformationCard.
-        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :return: The start_year of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -393,7 +396,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def start_year(self, start_year):
         """
         Sets the start_year of this Ptsv2paymentsPaymentInformationCard.
-        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :param start_year: The start_year of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -402,6 +405,31 @@ class Ptsv2paymentsPaymentInformationCard(object):
             raise ValueError("Invalid value for `start_year`, length must be less than or equal to `4`")
 
         self._start_year = start_year
+
+    @property
+    def product_name(self):
+        """
+        Gets the product_name of this Ptsv2paymentsPaymentInformationCard.
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+
+        :return: The product_name of this Ptsv2paymentsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._product_name
+
+    @product_name.setter
+    def product_name(self, product_name):
+        """
+        Sets the product_name of this Ptsv2paymentsPaymentInformationCard.
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+
+        :param product_name: The product_name of this Ptsv2paymentsPaymentInformationCard.
+        :type: str
+        """
+        if product_name is not None and len(product_name) > 15:
+            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `15`")
+
+        self._product_name = product_name
 
     def to_dict(self):
         """

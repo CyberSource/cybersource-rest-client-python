@@ -286,7 +286,7 @@ class RefundCaptureRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this RefundCaptureRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The merchant_defined_information of this RefundCaptureRequest.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -297,7 +297,7 @@ class RefundCaptureRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this RefundCaptureRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this RefundCaptureRequest.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]

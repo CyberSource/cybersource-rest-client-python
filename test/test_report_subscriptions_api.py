@@ -51,7 +51,7 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         Test case for get_all_subscriptions
 
-        Retrieve all subscriptions by organization
+        Get all subscriptions
         """
         pass
 
@@ -59,7 +59,7 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         Test case for get_subscription
 
-        Retrieve subscription for a report name by organization
+        Get subscription for report name
         """
         pass
 

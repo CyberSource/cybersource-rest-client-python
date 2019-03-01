@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsPost201ResponseErrorInformation.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - AVS_FAILED  - CONTACT_PROCESSOR  - EXPIRED_CARD  - PROCESSOR_DECLINED  - INSUFFICIENT_FUND  - STOLEN_LOST_CARD  - ISSUER_UNAVAILABLE  - UNAUTHORIZED_CARD  - CVN_NOT_MATCH  - EXCEEDS_CREDIT_LIMIT  - INVALID_CVN  - DECLINED_CHECK  - BLACKLISTED_CUSTOMER  - SUSPENDED_ACCOUNT  - PAYMENT_REFUSED  - CV_FAILED  - INVALID_ACCOUNT  - GENERAL_DECLINE  - INVALID_MERCHANT_CONFIGURATION 
 
         :return: The reason of this PtsV2PaymentsPost201ResponseErrorInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsPost201ResponseErrorInformation.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - AVS_FAILED  - CONTACT_PROCESSOR  - EXPIRED_CARD  - PROCESSOR_DECLINED  - INSUFFICIENT_FUND  - STOLEN_LOST_CARD  - ISSUER_UNAVAILABLE  - UNAUTHORIZED_CARD  - CVN_NOT_MATCH  - EXCEEDS_CREDIT_LIMIT  - INVALID_CVN  - DECLINED_CHECK  - BLACKLISTED_CUSTOMER  - SUSPENDED_ACCOUNT  - PAYMENT_REFUSED  - CV_FAILED  - INVALID_ACCOUNT  - GENERAL_DECLINE  - INVALID_MERCHANT_CONFIGURATION 
 
         :param reason: The reason of this PtsV2PaymentsPost201ResponseErrorInformation.
         :type: str

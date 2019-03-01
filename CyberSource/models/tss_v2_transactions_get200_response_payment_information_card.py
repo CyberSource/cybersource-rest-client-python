@@ -113,8 +113,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param suffix: The suffix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if suffix is not None and len(suffix) > 4:
-            raise ValueError("Invalid value for `suffix`, length must be less than or equal to `4`")
 
         self._suffix = suffix
 
@@ -288,8 +286,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        #if type is not None and len(type) > 3:
-            #raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 

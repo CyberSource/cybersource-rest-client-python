@@ -34,21 +34,27 @@ class Ptsv2paymentsMerchantInformation(object):
         'merchant_descriptor': 'Ptsv2paymentsMerchantInformationMerchantDescriptor',
         'sales_organization_id': 'str',
         'category_code': 'int',
+        'category_code_domestic': 'int',
+        'tax_id': 'str',
         'vat_registration_number': 'str',
         'card_acceptor_reference_number': 'str',
-        'transaction_local_date_time': 'str'
+        'transaction_local_date_time': 'str',
+        'service_fee_descriptor': 'Ptsv2paymentsMerchantInformationServiceFeeDescriptor'
     }
 
     attribute_map = {
         'merchant_descriptor': 'merchantDescriptor',
         'sales_organization_id': 'salesOrganizationId',
         'category_code': 'categoryCode',
+        'category_code_domestic': 'categoryCodeDomestic',
+        'tax_id': 'taxId',
         'vat_registration_number': 'vatRegistrationNumber',
         'card_acceptor_reference_number': 'cardAcceptorReferenceNumber',
-        'transaction_local_date_time': 'transactionLocalDateTime'
+        'transaction_local_date_time': 'transactionLocalDateTime',
+        'service_fee_descriptor': 'serviceFeeDescriptor'
     }
 
-    def __init__(self, merchant_descriptor=None, sales_organization_id=None, category_code=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None):
+    def __init__(self, merchant_descriptor=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
@@ -56,9 +62,12 @@ class Ptsv2paymentsMerchantInformation(object):
         self._merchant_descriptor = None
         self._sales_organization_id = None
         self._category_code = None
+        self._category_code_domestic = None
+        self._tax_id = None
         self._vat_registration_number = None
         self._card_acceptor_reference_number = None
         self._transaction_local_date_time = None
+        self._service_fee_descriptor = None
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
@@ -66,12 +75,18 @@ class Ptsv2paymentsMerchantInformation(object):
           self.sales_organization_id = sales_organization_id
         if category_code is not None:
           self.category_code = category_code
+        if category_code_domestic is not None:
+          self.category_code_domestic = category_code_domestic
+        if tax_id is not None:
+          self.tax_id = tax_id
         if vat_registration_number is not None:
           self.vat_registration_number = vat_registration_number
         if card_acceptor_reference_number is not None:
           self.card_acceptor_reference_number = card_acceptor_reference_number
         if transaction_local_date_time is not None:
           self.transaction_local_date_time = transaction_local_date_time
+        if service_fee_descriptor is not None:
+          self.service_fee_descriptor = service_fee_descriptor
 
     @property
     def merchant_descriptor(self):
@@ -98,7 +113,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def sales_organization_id(self):
         """
         Gets the sales_organization_id of this Ptsv2paymentsMerchantInformation.
-        Company ID assigned to an independent sales organization. Get this value from Mastercard.  For processor-specific information, see the sales_organization_ID field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Company ID assigned to an independent sales organization. Get this value from Mastercard.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Mastercard Independent Sales Organization ID  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  For processor-specific information, see the sales_organization_ID field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -109,7 +124,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def sales_organization_id(self, sales_organization_id):
         """
         Sets the sales_organization_id of this Ptsv2paymentsMerchantInformation.
-        Company ID assigned to an independent sales organization. Get this value from Mastercard.  For processor-specific information, see the sales_organization_ID field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Company ID assigned to an independent sales organization. Get this value from Mastercard.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Mastercard Independent Sales Organization ID  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  For processor-specific information, see the sales_organization_ID field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param sales_organization_id: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :type: str
@@ -123,7 +138,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def category_code(self):
         """
         Gets the category_code of this Ptsv2paymentsMerchantInformation.
-        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :return: The category_code of this Ptsv2paymentsMerchantInformation.
         :rtype: int
@@ -134,7 +149,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def category_code(self, category_code):
         """
         Sets the category_code of this Ptsv2paymentsMerchantInformation.
-        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :param category_code: The category_code of this Ptsv2paymentsMerchantInformation.
         :type: int
@@ -143,6 +158,56 @@ class Ptsv2paymentsMerchantInformation(object):
             raise ValueError("Invalid value for `category_code`, must be a value less than or equal to `9999`")
 
         self._category_code = category_code
+
+    @property
+    def category_code_domestic(self):
+        """
+        Gets the category_code_domestic of this Ptsv2paymentsMerchantInformation.
+        Merchant category code for domestic transactions. The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company’s cards. Including this field in a request for a domestic transaction might reduce interchange fees.  When you include this field in a request: - Do not include the merchantCategoryCode field. - The value for this field overrides the value in your CyberSource account.  This field is supported only for: - Domestic transactions with Mastercard in Spain. Domestic means that you and the cardholder are in the same country. - Merchants enrolled in the OmniPay Direct interchange program. - First Data Merchant Solutions (Europe) on OmniPay Direct. 
+
+        :return: The category_code_domestic of this Ptsv2paymentsMerchantInformation.
+        :rtype: int
+        """
+        return self._category_code_domestic
+
+    @category_code_domestic.setter
+    def category_code_domestic(self, category_code_domestic):
+        """
+        Sets the category_code_domestic of this Ptsv2paymentsMerchantInformation.
+        Merchant category code for domestic transactions. The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company’s cards. Including this field in a request for a domestic transaction might reduce interchange fees.  When you include this field in a request: - Do not include the merchantCategoryCode field. - The value for this field overrides the value in your CyberSource account.  This field is supported only for: - Domestic transactions with Mastercard in Spain. Domestic means that you and the cardholder are in the same country. - Merchants enrolled in the OmniPay Direct interchange program. - First Data Merchant Solutions (Europe) on OmniPay Direct. 
+
+        :param category_code_domestic: The category_code_domestic of this Ptsv2paymentsMerchantInformation.
+        :type: int
+        """
+        if category_code_domestic is not None and category_code_domestic > 9999:
+            raise ValueError("Invalid value for `category_code_domestic`, must be a value less than or equal to `9999`")
+
+        self._category_code_domestic = category_code_domestic
+
+    @property
+    def tax_id(self):
+        """
+        Gets the tax_id of this Ptsv2paymentsMerchantInformation.
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
+
+        :return: The tax_id of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._tax_id
+
+    @tax_id.setter
+    def tax_id(self, tax_id):
+        """
+        Sets the tax_id of this Ptsv2paymentsMerchantInformation.
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
+
+        :param tax_id: The tax_id of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+        if tax_id is not None and len(tax_id) > 15:
+            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
+
+        self._tax_id = tax_id
 
     @property
     def vat_registration_number(self):
@@ -198,7 +263,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def transaction_local_date_time(self):
         """
         Gets the transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
-        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the transaction_local_date_time field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  `Format: YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds 
+        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the transaction_local_date_time field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  `Format: YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds   For processor-specific information, see the _transaction_local_date_time_ field in Credit Card Services Using the SCMP API. 
 
         :return: The transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -209,7 +274,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def transaction_local_date_time(self, transaction_local_date_time):
         """
         Sets the transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
-        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the transaction_local_date_time field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  `Format: YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds 
+        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the transaction_local_date_time field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  `Format: YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds   For processor-specific information, see the _transaction_local_date_time_ field in Credit Card Services Using the SCMP API. 
 
         :param transaction_local_date_time: The transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
         :type: str
@@ -218,6 +283,27 @@ class Ptsv2paymentsMerchantInformation(object):
             raise ValueError("Invalid value for `transaction_local_date_time`, length must be less than or equal to `14`")
 
         self._transaction_local_date_time = transaction_local_date_time
+
+    @property
+    def service_fee_descriptor(self):
+        """
+        Gets the service_fee_descriptor of this Ptsv2paymentsMerchantInformation.
+
+        :return: The service_fee_descriptor of this Ptsv2paymentsMerchantInformation.
+        :rtype: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
+        """
+        return self._service_fee_descriptor
+
+    @service_fee_descriptor.setter
+    def service_fee_descriptor(self, service_fee_descriptor):
+        """
+        Sets the service_fee_descriptor of this Ptsv2paymentsMerchantInformation.
+
+        :param service_fee_descriptor: The service_fee_descriptor of this Ptsv2paymentsMerchantInformation.
+        :type: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
+        """
+
+        self._service_fee_descriptor = service_fee_descriptor
 
     def to_dict(self):
         """

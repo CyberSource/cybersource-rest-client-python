@@ -33,7 +33,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
     swagger_types = {
         'bill_to': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo',
         'ship_to': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo',
-        'amount_details': 'Ptsv2paymentsidreversalsReversalInformationAmountDetails'
+        'amount_details': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails'
     }
 
     attribute_map = {
@@ -106,7 +106,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         Gets the amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
 
         :return: The amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
-        :rtype: Ptsv2paymentsidreversalsReversalInformationAmountDetails
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails
         """
         return self._amount_details
 
@@ -116,7 +116,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         Sets the amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
 
         :param amount_details: The amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
-        :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
+        :type: TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails
         """
 
         self._amount_details = amount_details

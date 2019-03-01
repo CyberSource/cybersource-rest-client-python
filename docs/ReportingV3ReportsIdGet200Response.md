@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **report_start_time** | **datetime** | Report Start Time Value | [optional] 
 **report_end_time** | **datetime** | Report End Time Value | [optional] 
 **timezone** | **str** | Time Zone Value | [optional] 
-**report_filters** | **dict(str, list[str])** | Report Filters | [optional] 
-**report_preferences** | [**ReportingV3ReportSubscriptionsGet200ResponseReportPreferences**](ReportingV3ReportSubscriptionsGet200ResponseReportPreferences.md) |  | [optional] 
-**selected_merchant_group_name** | **str** | Selected Merchant Group name | [optional] 
+**report_filters** | **dict(str, list[str])** | List of filters to apply | [optional] 
+**report_preferences** | [**ReportingV3ReportsIdGet200ResponseReportPreferences**](ReportingV3ReportsIdGet200ResponseReportPreferences.md) |  | [optional] 
+**group_id** | **str** | Id for selected group. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

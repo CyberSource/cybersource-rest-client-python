@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str
         """
-        #if code is not None and len(code) > 1:
-            #raise ValueError("Invalid value for `code`, length must be less than or equal to `1`")
 
         self._code = code
 

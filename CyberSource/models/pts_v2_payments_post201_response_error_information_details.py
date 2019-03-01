@@ -80,7 +80,7 @@ class PtsV2PaymentsPost201ResponseErrorInformationDetails(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsPost201ResponseErrorInformationDetails.
-        Possible reasons for the error. 
+        Possible reasons for the error.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
 
         :return: The reason of this PtsV2PaymentsPost201ResponseErrorInformationDetails.
         :rtype: str
@@ -91,7 +91,7 @@ class PtsV2PaymentsPost201ResponseErrorInformationDetails(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsPost201ResponseErrorInformationDetails.
-        Possible reasons for the error. 
+        Possible reasons for the error.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
 
         :param reason: The reason of this PtsV2PaymentsPost201ResponseErrorInformationDetails.
         :type: str

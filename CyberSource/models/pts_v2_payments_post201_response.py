@@ -38,10 +38,13 @@ class PtsV2PaymentsPost201Response(object):
         'reconciliation_id': 'str',
         'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation',
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
+        'processing_information': 'PtsV2PaymentsPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsPost201ResponseProcessorInformation',
+        'issuer_information': 'PtsV2PaymentsPost201ResponseIssuerInformation',
         'payment_information': 'PtsV2PaymentsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
-        'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation'
+        'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
+        'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation'
     }
 
     attribute_map = {
@@ -52,13 +55,16 @@ class PtsV2PaymentsPost201Response(object):
         'reconciliation_id': 'reconciliationId',
         'error_information': 'errorInformation',
         'client_reference_information': 'clientReferenceInformation',
+        'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
+        'issuer_information': 'issuerInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
-        'point_of_sale_information': 'pointOfSaleInformation'
+        'point_of_sale_information': 'pointOfSaleInformation',
+        'installment_information': 'installmentInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processor_information=None, payment_information=None, order_information=None, point_of_sale_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -70,10 +76,13 @@ class PtsV2PaymentsPost201Response(object):
         self._reconciliation_id = None
         self._error_information = None
         self._client_reference_information = None
+        self._processing_information = None
         self._processor_information = None
+        self._issuer_information = None
         self._payment_information = None
         self._order_information = None
         self._point_of_sale_information = None
+        self._installment_information = None
 
         if links is not None:
           self.links = links
@@ -89,14 +98,20 @@ class PtsV2PaymentsPost201Response(object):
           self.error_information = error_information
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
+        if processing_information is not None:
+          self.processing_information = processing_information
         if processor_information is not None:
           self.processor_information = processor_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if payment_information is not None:
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
+        if installment_information is not None:
+          self.installment_information = installment_information
 
     @property
     def links(self):
@@ -171,7 +186,7 @@ class PtsV2PaymentsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -182,12 +197,12 @@ class PtsV2PaymentsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PaymentsPost201Response.
         :type: str
         """
-        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED"]
+        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED", "INVALID_REQUEST", "PENDING"]
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"
@@ -264,6 +279,27 @@ class PtsV2PaymentsPost201Response(object):
         self._client_reference_information = client_reference_information
 
     @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this PtsV2PaymentsPost201Response.
+
+        :return: The processing_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this PtsV2PaymentsPost201Response.
+
+        :param processing_information: The processing_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseProcessingInformation
+        """
+
+        self._processing_information = processing_information
+
+    @property
     def processor_information(self):
         """
         Gets the processor_information of this PtsV2PaymentsPost201Response.
@@ -283,6 +319,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this PtsV2PaymentsPost201Response.
+
+        :return: The issuer_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this PtsV2PaymentsPost201Response.
+
+        :param issuer_information: The issuer_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     @property
     def payment_information(self):
@@ -346,6 +403,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._point_of_sale_information = point_of_sale_information
+
+    @property
+    def installment_information(self):
+        """
+        Gets the installment_information of this PtsV2PaymentsPost201Response.
+
+        :return: The installment_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseInstallmentInformation
+        """
+        return self._installment_information
+
+    @installment_information.setter
+    def installment_information(self, installment_information):
+        """
+        Sets the installment_information of this PtsV2PaymentsPost201Response.
+
+        :param installment_information: The installment_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseInstallmentInformation
+        """
+
+        self._installment_information = installment_information
 
     def to_dict(self):
         """

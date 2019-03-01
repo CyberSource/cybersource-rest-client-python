@@ -40,7 +40,8 @@ class CapturePaymentRequest(object):
         'merchant_information': 'Ptsv2paymentsidcapturesMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
-        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]'
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
+        'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class CapturePaymentRequest(object):
         'merchant_information': 'merchantInformation',
         'aggregator_information': 'aggregatorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'merchant_defined_information': 'merchantDefinedInformation'
+        'merchant_defined_information': 'merchantDefinedInformation',
+        'installment_information': 'installmentInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None):
         """
         CapturePaymentRequest - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class CapturePaymentRequest(object):
         self._aggregator_information = None
         self._point_of_sale_information = None
         self._merchant_defined_information = None
+        self._installment_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -92,6 +95,8 @@ class CapturePaymentRequest(object):
           self.point_of_sale_information = point_of_sale_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if installment_information is not None:
+          self.installment_information = installment_information
 
     @property
     def client_reference_information(self):
@@ -286,7 +291,7 @@ class CapturePaymentRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CapturePaymentRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The merchant_defined_information of this CapturePaymentRequest.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -297,13 +302,34 @@ class CapturePaymentRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this CapturePaymentRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this CapturePaymentRequest.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def installment_information(self):
+        """
+        Gets the installment_information of this CapturePaymentRequest.
+
+        :return: The installment_information of this CapturePaymentRequest.
+        :rtype: Ptsv2paymentsidcapturesInstallmentInformation
+        """
+        return self._installment_information
+
+    @installment_information.setter
+    def installment_information(self, installment_information):
+        """
+        Sets the installment_information of this CapturePaymentRequest.
+
+        :param installment_information: The installment_information of this CapturePaymentRequest.
+        :type: Ptsv2paymentsidcapturesInstallmentInformation
+        """
+
+        self._installment_information = installment_information
 
     def to_dict(self):
         """

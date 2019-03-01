@@ -39,7 +39,7 @@ class PaymentInstrumentsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def tms_v1_instrumentidentifiers_token_id_paymentinstruments_get(self, profile_id, token_id, **kwargs):
@@ -114,14 +114,14 @@ class PaymentInstrumentsApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, length must be greater than or equal to `16`")
         if 'offset' in params and params['offset'] < 0:
             raise ValueError("Invalid value for parameter `offset` when calling `tms_v1_instrumentidentifiers_token_id_paymentinstruments_get`, must be a value greater than or equal to `0`")
         if 'limit' in params and params['limit'] > 100:
@@ -151,11 +151,11 @@ class PaymentInstrumentsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -243,10 +243,10 @@ class PaymentInstrumentsApi(object):
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `tms_v1_paymentinstruments_post`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_post`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_post`, must be a value greater than or equal to `36`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_post`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_post`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -266,11 +266,11 @@ class PaymentInstrumentsApi(object):
             body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -358,14 +358,14 @@ class PaymentInstrumentsApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_delete`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_delete`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_delete`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_delete`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_delete`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_delete`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_delete`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_delete`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_delete`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -385,11 +385,11 @@ class PaymentInstrumentsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -424,7 +424,7 @@ class PaymentInstrumentsApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1PaymentinstrumentsPost201Response
+        :return: TmsV1PaymentinstrumentsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -450,7 +450,7 @@ class PaymentInstrumentsApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1PaymentinstrumentsPost201Response
+        :return: TmsV1PaymentinstrumentsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -477,14 +477,14 @@ class PaymentInstrumentsApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_get`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_get`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_get`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_get`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_get`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_get`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_get`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_get`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_get`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -504,11 +504,11 @@ class PaymentInstrumentsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -520,7 +520,7 @@ class PaymentInstrumentsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1PaymentinstrumentsPost201Response',
+                                        response_type='TmsV1PaymentinstrumentsGet200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -544,7 +544,7 @@ class PaymentInstrumentsApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param Body3 body: Please specify the customers payment details. (required)
-        :return: TmsV1PaymentinstrumentsPost201Response
+        :return: TmsV1PaymentinstrumentsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -571,7 +571,7 @@ class PaymentInstrumentsApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param Body3 body: Please specify the customers payment details. (required)
-        :return: TmsV1PaymentinstrumentsPost201Response
+        :return: TmsV1PaymentinstrumentsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -601,14 +601,14 @@ class PaymentInstrumentsApi(object):
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `tms_v1_paymentinstruments_token_id_patch`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_patch`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_patch`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_patch`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_patch`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_patch`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_paymentinstruments_token_id_patch`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_patch`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_paymentinstruments_token_id_patch`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -646,7 +646,7 @@ class PaymentInstrumentsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1PaymentinstrumentsPost201Response',
+                                        response_type='TmsV1PaymentinstrumentsGet200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

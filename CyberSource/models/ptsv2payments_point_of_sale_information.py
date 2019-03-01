@@ -34,7 +34,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'terminal_id': 'str',
         'terminal_serial_number': 'str',
         'lane_number': 'str',
-        'card_present': 'bool',
         'cat_level': 'int',
         'entry_mode': 'str',
         'terminal_capability': 'int',
@@ -42,14 +41,24 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'operating_environment': 'str',
         'emv': 'Ptsv2paymentsPointOfSaleInformationEmv',
         'amex_capn_data': 'str',
-        'track_data': 'str'
+        'track_data': 'str',
+        'store_and_forward_indicator': 'str',
+        'cardholder_verification_method': 'list[str]',
+        'terminal_input_capability': 'list[str]',
+        'terminal_card_capture_capability': 'str',
+        'terminal_output_capability': 'str',
+        'terminal_pin_capability': 'int',
+        'device_id': 'str',
+        'pin_block_encoding_format': 'int',
+        'encrypted_pin': 'str',
+        'encrypted_key_serial_number': 'str',
+        'partner_sdk_version': 'str'
     }
 
     attribute_map = {
         'terminal_id': 'terminalId',
         'terminal_serial_number': 'terminalSerialNumber',
         'lane_number': 'laneNumber',
-        'card_present': 'cardPresent',
         'cat_level': 'catLevel',
         'entry_mode': 'entryMode',
         'terminal_capability': 'terminalCapability',
@@ -57,10 +66,21 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'operating_environment': 'operatingEnvironment',
         'emv': 'emv',
         'amex_capn_data': 'amexCapnData',
-        'track_data': 'trackData'
+        'track_data': 'trackData',
+        'store_and_forward_indicator': 'storeAndForwardIndicator',
+        'cardholder_verification_method': 'cardholderVerificationMethod',
+        'terminal_input_capability': 'terminalInputCapability',
+        'terminal_card_capture_capability': 'terminalCardCaptureCapability',
+        'terminal_output_capability': 'terminalOutputCapability',
+        'terminal_pin_capability': 'terminalPinCapability',
+        'device_id': 'deviceId',
+        'pin_block_encoding_format': 'pinBlockEncodingFormat',
+        'encrypted_pin': 'encryptedPin',
+        'encrypted_key_serial_number': 'encryptedKeySerialNumber',
+        'partner_sdk_version': 'partnerSdkVersion'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, card_present=None, cat_level=None, entry_mode=None, terminal_capability=None, pin_entry_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, pin_entry_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -68,7 +88,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._terminal_id = None
         self._terminal_serial_number = None
         self._lane_number = None
-        self._card_present = None
         self._cat_level = None
         self._entry_mode = None
         self._terminal_capability = None
@@ -77,6 +96,17 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._emv = None
         self._amex_capn_data = None
         self._track_data = None
+        self._store_and_forward_indicator = None
+        self._cardholder_verification_method = None
+        self._terminal_input_capability = None
+        self._terminal_card_capture_capability = None
+        self._terminal_output_capability = None
+        self._terminal_pin_capability = None
+        self._device_id = None
+        self._pin_block_encoding_format = None
+        self._encrypted_pin = None
+        self._encrypted_key_serial_number = None
+        self._partner_sdk_version = None
 
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -84,8 +114,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.terminal_serial_number = terminal_serial_number
         if lane_number is not None:
           self.lane_number = lane_number
-        if card_present is not None:
-          self.card_present = card_present
         if cat_level is not None:
           self.cat_level = cat_level
         if entry_mode is not None:
@@ -102,6 +130,28 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.amex_capn_data = amex_capn_data
         if track_data is not None:
           self.track_data = track_data
+        if store_and_forward_indicator is not None:
+          self.store_and_forward_indicator = store_and_forward_indicator
+        if cardholder_verification_method is not None:
+          self.cardholder_verification_method = cardholder_verification_method
+        if terminal_input_capability is not None:
+          self.terminal_input_capability = terminal_input_capability
+        if terminal_card_capture_capability is not None:
+          self.terminal_card_capture_capability = terminal_card_capture_capability
+        if terminal_output_capability is not None:
+          self.terminal_output_capability = terminal_output_capability
+        if terminal_pin_capability is not None:
+          self.terminal_pin_capability = terminal_pin_capability
+        if device_id is not None:
+          self.device_id = device_id
+        if pin_block_encoding_format is not None:
+          self.pin_block_encoding_format = pin_block_encoding_format
+        if encrypted_pin is not None:
+          self.encrypted_pin = encrypted_pin
+        if encrypted_key_serial_number is not None:
+          self.encrypted_key_serial_number = encrypted_key_serial_number
+        if partner_sdk_version is not None:
+          self.partner_sdk_version = partner_sdk_version
 
     @property
     def terminal_id(self):
@@ -132,7 +182,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_serial_number(self):
         """
         Gets the terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
-        Description of this field is not available.
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
 
         :return: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -143,11 +193,13 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_serial_number(self, terminal_serial_number):
         """
         Sets the terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
-        Description of this field is not available.
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
 
         :param terminal_serial_number: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+        if terminal_serial_number is not None and len(terminal_serial_number) > 32:
+            raise ValueError("Invalid value for `terminal_serial_number`, length must be less than or equal to `32`")
 
         self._terminal_serial_number = terminal_serial_number
 
@@ -175,29 +227,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
             raise ValueError("Invalid value for `lane_number`, length must be less than or equal to `8`")
 
         self._lane_number = lane_number
-
-    @property
-    def card_present(self):
-        """
-        Gets the card_present of this Ptsv2paymentsPointOfSaleInformation.
-        Indicates whether the card is present at the time of the transaction. Possible values:   - **true**: Card is present.  - **false**: Card is not present. 
-
-        :return: The card_present of this Ptsv2paymentsPointOfSaleInformation.
-        :rtype: bool
-        """
-        return self._card_present
-
-    @card_present.setter
-    def card_present(self, card_present):
-        """
-        Sets the card_present of this Ptsv2paymentsPointOfSaleInformation.
-        Indicates whether the card is present at the time of the transaction. Possible values:   - **true**: Card is present.  - **false**: Card is not present. 
-
-        :param card_present: The card_present of this Ptsv2paymentsPointOfSaleInformation.
-        :type: bool
-        """
-
-        self._card_present = card_present
 
     @property
     def cat_level(self):
@@ -309,7 +338,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def operating_environment(self):
         """
         Gets the operating_environment of this Ptsv2paymentsPointOfSaleInformation.
-        Operating environment. Possible values:   - 0: No terminal used or unknown environment.  - 1: On merchant premises, attended.  - 2: On merchant premises, unattended, or cardholder terminal. Examples: oil, kiosks, self-checkout, home       computer, mobile telephone, personal digital assistant (PDA). Cardholder terminal is supported only for       MasterCard transactions on **CyberSource through VisaNet**.  - 3: Off merchant premises, attended. Examples: portable POS devices at trade shows, at service calls, or in       taxis.  - 4: Off merchant premises, unattended, or cardholder terminal. Examples: vending machines, home computer,       mobile telephone, PDA. Cardholder terminal is supported only for MasterCard transactions on **CyberSource       through VisaNet**.  - 5: On premises of cardholder, unattended.  - 9: Unknown delivery mode.  - S: Electronic delivery of product. Examples: music, software, or eTickets that are downloaded over the       internet.  - T: Physical delivery of product. Examples: music or software that is delivered by mail or by a courier.  This field is supported only for **American Express Direct** and **CyberSource through VisaNet**.  **CyberSource through VisaNet**  For MasterCard transactions, the only valid values are 2 and 4. 
+        Operating environment. Possible values:   - 0: No terminal used or unknown environment.  - 1: On merchant premises, attended.  - 2: On merchant premises, unattended, or cardholder terminal. Examples: oil, kiosks, self-checkout, home       computer, mobile telephone, personal digital assistant (PDA). Cardholder terminal is supported only for       MasterCard transactions on **CyberSource through VisaNet**.  - 3: Off merchant premises, attended. Examples: portable POS devices at trade shows, at service calls, or in       taxis.  - 4: Off merchant premises, unattended, or cardholder terminal. Examples: vending machines, home computer,       mobile telephone, PDA. Cardholder terminal is supported only for MasterCard transactions on **CyberSource       through VisaNet**.  - 5: On premises of cardholder, unattended.  - 9: Unknown delivery mode.  - S: Electronic delivery of product. Examples: music, software, or eTickets that are downloaded over the       internet.  - T: Physical delivery of product. Examples: music or software that is delivered by mail or by a courier.  This field is supported only for **American Express Direct** and **CyberSource through VisaNet**.  **CyberSource through VisaNet**\\ For MasterCard transactions, the only valid values are 2 and 4. 
 
         :return: The operating_environment of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -320,7 +349,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def operating_environment(self, operating_environment):
         """
         Sets the operating_environment of this Ptsv2paymentsPointOfSaleInformation.
-        Operating environment. Possible values:   - 0: No terminal used or unknown environment.  - 1: On merchant premises, attended.  - 2: On merchant premises, unattended, or cardholder terminal. Examples: oil, kiosks, self-checkout, home       computer, mobile telephone, personal digital assistant (PDA). Cardholder terminal is supported only for       MasterCard transactions on **CyberSource through VisaNet**.  - 3: Off merchant premises, attended. Examples: portable POS devices at trade shows, at service calls, or in       taxis.  - 4: Off merchant premises, unattended, or cardholder terminal. Examples: vending machines, home computer,       mobile telephone, PDA. Cardholder terminal is supported only for MasterCard transactions on **CyberSource       through VisaNet**.  - 5: On premises of cardholder, unattended.  - 9: Unknown delivery mode.  - S: Electronic delivery of product. Examples: music, software, or eTickets that are downloaded over the       internet.  - T: Physical delivery of product. Examples: music or software that is delivered by mail or by a courier.  This field is supported only for **American Express Direct** and **CyberSource through VisaNet**.  **CyberSource through VisaNet**  For MasterCard transactions, the only valid values are 2 and 4. 
+        Operating environment. Possible values:   - 0: No terminal used or unknown environment.  - 1: On merchant premises, attended.  - 2: On merchant premises, unattended, or cardholder terminal. Examples: oil, kiosks, self-checkout, home       computer, mobile telephone, personal digital assistant (PDA). Cardholder terminal is supported only for       MasterCard transactions on **CyberSource through VisaNet**.  - 3: Off merchant premises, attended. Examples: portable POS devices at trade shows, at service calls, or in       taxis.  - 4: Off merchant premises, unattended, or cardholder terminal. Examples: vending machines, home computer,       mobile telephone, PDA. Cardholder terminal is supported only for MasterCard transactions on **CyberSource       through VisaNet**.  - 5: On premises of cardholder, unattended.  - 9: Unknown delivery mode.  - S: Electronic delivery of product. Examples: music, software, or eTickets that are downloaded over the       internet.  - T: Physical delivery of product. Examples: music or software that is delivered by mail or by a courier.  This field is supported only for **American Express Direct** and **CyberSource through VisaNet**.  **CyberSource through VisaNet**\\ For MasterCard transactions, the only valid values are 2 and 4. 
 
         :param operating_environment: The operating_environment of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
@@ -398,6 +427,271 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._track_data = track_data
+
+    @property
+    def store_and_forward_indicator(self):
+        """
+        Gets the store_and_forward_indicator of this Ptsv2paymentsPointOfSaleInformation.
+        When connectivity is unavailable, the client software that is installed on the POS terminal can store a transaction in its memory and send it for authorization when connectivity is restored. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  Possible values: - Y: Transaction was stored and then forwarded. - N (default): Transaction was not stored and then forwarded.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :return: The store_and_forward_indicator of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._store_and_forward_indicator
+
+    @store_and_forward_indicator.setter
+    def store_and_forward_indicator(self, store_and_forward_indicator):
+        """
+        Sets the store_and_forward_indicator of this Ptsv2paymentsPointOfSaleInformation.
+        When connectivity is unavailable, the client software that is installed on the POS terminal can store a transaction in its memory and send it for authorization when connectivity is restored. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  Possible values: - Y: Transaction was stored and then forwarded. - N (default): Transaction was not stored and then forwarded.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :param store_and_forward_indicator: The store_and_forward_indicator of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if store_and_forward_indicator is not None and len(store_and_forward_indicator) > 1:
+            raise ValueError("Invalid value for `store_and_forward_indicator`, length must be less than or equal to `1`")
+
+        self._store_and_forward_indicator = store_and_forward_indicator
+
+    @property
+    def cardholder_verification_method(self):
+        """
+        Gets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+
+        :return: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: list[str]
+        """
+        return self._cardholder_verification_method
+
+    @cardholder_verification_method.setter
+    def cardholder_verification_method(self, cardholder_verification_method):
+        """
+        Sets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+
+        :param cardholder_verification_method: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+        :type: list[str]
+        """
+
+        self._cardholder_verification_method = cardholder_verification_method
+
+    @property
+    def terminal_input_capability(self):
+        """
+        Gets the terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+
+        :return: The terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: list[str]
+        """
+        return self._terminal_input_capability
+
+    @terminal_input_capability.setter
+    def terminal_input_capability(self, terminal_input_capability):
+        """
+        Sets the terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+
+        :param terminal_input_capability: The terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :type: list[str]
+        """
+
+        self._terminal_input_capability = terminal_input_capability
+
+    @property
+    def terminal_card_capture_capability(self):
+        """
+        Gets the terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates whether the terminal can capture the card.  Possible values: - 1: Terminal can capture card. - 0: Terminal cannot capture card.  This field is supported only on American Express Direct. 
+
+        :return: The terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_card_capture_capability
+
+    @terminal_card_capture_capability.setter
+    def terminal_card_capture_capability(self, terminal_card_capture_capability):
+        """
+        Sets the terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates whether the terminal can capture the card.  Possible values: - 1: Terminal can capture card. - 0: Terminal cannot capture card.  This field is supported only on American Express Direct. 
+
+        :param terminal_card_capture_capability: The terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if terminal_card_capture_capability is not None and len(terminal_card_capture_capability) > 1:
+            raise ValueError("Invalid value for `terminal_card_capture_capability`, length must be less than or equal to `1`")
+
+        self._terminal_card_capture_capability = terminal_card_capture_capability
+
+    @property
+    def terminal_output_capability(self):
+        """
+        Gets the terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display  This field is supported only on American Express Direct. 
+
+        :return: The terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_output_capability
+
+    @terminal_output_capability.setter
+    def terminal_output_capability(self, terminal_output_capability):
+        """
+        Sets the terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display  This field is supported only on American Express Direct. 
+
+        :param terminal_output_capability: The terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if terminal_output_capability is not None and len(terminal_output_capability) > 1:
+            raise ValueError("Invalid value for `terminal_output_capability`, length must be less than or equal to `1`")
+
+        self._terminal_output_capability = terminal_output_capability
+
+    @property
+    def terminal_pin_capability(self):
+        """
+        Gets the terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported only on American Express Direct and SIX. 
+
+        :return: The terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: int
+        """
+        return self._terminal_pin_capability
+
+    @terminal_pin_capability.setter
+    def terminal_pin_capability(self, terminal_pin_capability):
+        """
+        Sets the terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported only on American Express Direct and SIX. 
+
+        :param terminal_pin_capability: The terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
+        :type: int
+        """
+
+        self._terminal_pin_capability = terminal_pin_capability
+
+    @property
+    def device_id(self):
+        """
+        Gets the device_id of this Ptsv2paymentsPointOfSaleInformation.
+        Value created by the client software that uniquely identifies the POS device. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :return: The device_id of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._device_id
+
+    @device_id.setter
+    def device_id(self, device_id):
+        """
+        Sets the device_id of this Ptsv2paymentsPointOfSaleInformation.
+        Value created by the client software that uniquely identifies the POS device. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :param device_id: The device_id of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if device_id is not None and len(device_id) > 32:
+            raise ValueError("Invalid value for `device_id`, length must be less than or equal to `32`")
+
+        self._device_id = device_id
+
+    @property
+    def pin_block_encoding_format(self):
+        """
+        Gets the pin_block_encoding_format of this Ptsv2paymentsPointOfSaleInformation.
+        Format that is used to encode the PIN block. This value is provided by the client software that is installed on the POS terminal.  Possible values: - 0: ISO 9564 format 0 - 1: ISO 9564 format 1 - 2: ISO 9564 format 2 - 3: ISO 9564 format 3  In the Credit Card Guide for the auth service: This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :return: The pin_block_encoding_format of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: int
+        """
+        return self._pin_block_encoding_format
+
+    @pin_block_encoding_format.setter
+    def pin_block_encoding_format(self, pin_block_encoding_format):
+        """
+        Sets the pin_block_encoding_format of this Ptsv2paymentsPointOfSaleInformation.
+        Format that is used to encode the PIN block. This value is provided by the client software that is installed on the POS terminal.  Possible values: - 0: ISO 9564 format 0 - 1: ISO 9564 format 1 - 2: ISO 9564 format 2 - 3: ISO 9564 format 3  In the Credit Card Guide for the auth service: This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :param pin_block_encoding_format: The pin_block_encoding_format of this Ptsv2paymentsPointOfSaleInformation.
+        :type: int
+        """
+        if pin_block_encoding_format is not None and pin_block_encoding_format > 9:
+            raise ValueError("Invalid value for `pin_block_encoding_format`, must be a value less than or equal to `9`")
+
+        self._pin_block_encoding_format = pin_block_encoding_format
+
+    @property
+    def encrypted_pin(self):
+        """
+        Gets the encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
+        Encrypted PIN.  This value is provided by the client software that is installed on the POS terminal.  In the Credit Card Guide for the auth service: This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :return: The encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._encrypted_pin
+
+    @encrypted_pin.setter
+    def encrypted_pin(self, encrypted_pin):
+        """
+        Sets the encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
+        Encrypted PIN.  This value is provided by the client software that is installed on the POS terminal.  In the Credit Card Guide for the auth service: This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :param encrypted_pin: The encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if encrypted_pin is not None and len(encrypted_pin) > 16:
+            raise ValueError("Invalid value for `encrypted_pin`, length must be less than or equal to `16`")
+
+        self._encrypted_pin = encrypted_pin
+
+    @property
+    def encrypted_key_serial_number(self):
+        """
+        Gets the encrypted_key_serial_number of this Ptsv2paymentsPointOfSaleInformation.
+        This is a combination of the device's unique identifier and a transaction counter that is used in the process of decrypting the encrypted PIN.  For all terminals that are using derived unique key per transaction (DUKPT) encryption, this is generated as a single number within the terminal. 
+
+        :return: The encrypted_key_serial_number of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._encrypted_key_serial_number
+
+    @encrypted_key_serial_number.setter
+    def encrypted_key_serial_number(self, encrypted_key_serial_number):
+        """
+        Sets the encrypted_key_serial_number of this Ptsv2paymentsPointOfSaleInformation.
+        This is a combination of the device's unique identifier and a transaction counter that is used in the process of decrypting the encrypted PIN.  For all terminals that are using derived unique key per transaction (DUKPT) encryption, this is generated as a single number within the terminal. 
+
+        :param encrypted_key_serial_number: The encrypted_key_serial_number of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if encrypted_key_serial_number is not None and len(encrypted_key_serial_number) > 20:
+            raise ValueError("Invalid value for `encrypted_key_serial_number`, length must be less than or equal to `20`")
+
+        self._encrypted_key_serial_number = encrypted_key_serial_number
+
+    @property
+    def partner_sdk_version(self):
+        """
+        Gets the partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
+        Version of the software installed on the POS terminal. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :return: The partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._partner_sdk_version
+
+    @partner_sdk_version.setter
+    def partner_sdk_version(self, partner_sdk_version):
+        """
+        Sets the partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
+        Version of the software installed on the POS terminal. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+
+        :param partner_sdk_version: The partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if partner_sdk_version is not None and len(partner_sdk_version) > 32:
+            raise ValueError("Invalid value for `partner_sdk_version`, length must be less than or equal to `32`")
+
+        self._partner_sdk_version = partner_sdk_version
 
     def to_dict(self):
         """

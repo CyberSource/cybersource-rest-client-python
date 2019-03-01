@@ -52,7 +52,7 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
     def customer_id(self):
         """
         Gets the customer_id of this Ptsv2paymentsPaymentInformationCustomer.
-        Unique identifier for the customer's card and billing information.
+        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  See \"Payment Tokenization,\" page 222, and \"Recurring Billing,\" page 225. 
 
         :return: The customer_id of this Ptsv2paymentsPaymentInformationCustomer.
         :rtype: str
@@ -63,13 +63,11 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
     def customer_id(self, customer_id):
         """
         Sets the customer_id of this Ptsv2paymentsPaymentInformationCustomer.
-        Unique identifier for the customer's card and billing information.
+        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  See \"Payment Tokenization,\" page 222, and \"Recurring Billing,\" page 225. 
 
         :param customer_id: The customer_id of this Ptsv2paymentsPaymentInformationCustomer.
         :type: str
         """
-        if customer_id is not None and len(customer_id) > 26:
-            raise ValueError("Invalid value for `customer_id`, length must be less than or equal to `26`")
 
         self._customer_id = customer_id
 

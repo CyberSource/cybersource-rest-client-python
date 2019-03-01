@@ -39,13 +39,13 @@ class NotificationOfChangesApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def get_notification_of_change_report(self, start_time, end_time, **kwargs):
         """
         Get Notification Of Changes
-        Notification of Change Report
+        Download the Notification of Change report. This report shows eCheck-related fields updated as a result of a response to an eCheck settlement transaction. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -72,7 +72,7 @@ class NotificationOfChangesApi(object):
     def get_notification_of_change_report_with_http_info(self, start_time, end_time, **kwargs):
         """
         Get Notification Of Changes
-        Notification of Change Report
+        Download the Notification of Change report. This report shows eCheck-related fields updated as a result of a response to an eCheck settlement transaction. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -118,10 +118,10 @@ class NotificationOfChangesApi(object):
         path_params = {}
 
         query_params = []
-        '''if 'start_time' in params:
+        if 'start_time' in params:
             query_params.append(('startTime', params['start_time']))
         if 'end_time' in params:
-            query_params.append(('endTime', params['end_time']))'''
+            query_params.append(('endTime', params['end_time']))
 
         header_params = {}
 
@@ -140,7 +140,7 @@ class NotificationOfChangesApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/notification-of-changes?startTime='+start_time+'&endTime='+end_time, 'GET',
+        return self.api_client.call_api('/reporting/v3/notification-of-changes', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

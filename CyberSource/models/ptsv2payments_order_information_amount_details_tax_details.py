@@ -36,7 +36,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         'rate': 'str',
         'code': 'str',
         'tax_id': 'str',
-        'applied': 'bool'
+        'applied': 'bool',
+        'exemption_code': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         'rate': 'rate',
         'code': 'code',
         'tax_id': 'taxId',
-        'applied': 'applied'
+        'applied': 'applied',
+        'exemption_code': 'exemptionCode'
     }
 
-    def __init__(self, type=None, amount=None, rate=None, code=None, tax_id=None, applied=None):
+    def __init__(self, type=None, amount=None, rate=None, code=None, tax_id=None, applied=None, exemption_code=None):
         """
         Ptsv2paymentsOrderInformationAmountDetailsTaxDetails - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         self._code = None
         self._tax_id = None
         self._applied = None
+        self._exemption_code = None
 
         if type is not None:
           self.type = type
@@ -72,12 +75,14 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
           self.tax_id = tax_id
         if applied is not None:
           self.applied = applied
+        if exemption_code is not None:
+          self.exemption_code = exemption_code
 
     @property
     def type(self):
         """
         Gets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        This is used to determine what type of tax related data should be inclued under _taxDetails_ object. 
+        This is used to determine what type of tax related data should be inclued under _taxDetails_ object.  Possible values:  - alternate  - local  - national  - vat 
 
         :return: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -88,7 +93,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        This is used to determine what type of tax related data should be inclued under _taxDetails_ object. 
+        This is used to determine what type of tax related data should be inclued under _taxDetails_ object.  Possible values:  - alternate  - local  - national  - vat 
 
         :param type: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -106,7 +111,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self):
         """
         Gets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Please see below table for related decription based on above _type_ field.  | type      | amount description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | 
+        Please see below table for related decription based on above _type_ field.  | type      | type description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | | other     | Other tax. | 
 
         :return: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -117,7 +122,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Please see below table for related decription based on above _type_ field.  | type      | amount description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | 
+        Please see below table for related decription based on above _type_ field.  | type      | type description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | | other     | Other tax. | 
 
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -156,7 +161,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :return: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -167,7 +172,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -224,6 +229,31 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         """
 
         self._applied = applied
+
+    @property
+    def exemption_code(self):
+        """
+        Gets the exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
+        Code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values, see Exemption Status Values. See Numbered Elements.  Important For information about using this field, see Item-Level Tax Fields. 
+
+        :return: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
+        :rtype: str
+        """
+        return self._exemption_code
+
+    @exemption_code.setter
+    def exemption_code(self, exemption_code):
+        """
+        Sets the exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
+        Code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values, see Exemption Status Values. See Numbered Elements.  Important For information about using this field, see Item-Level Tax Fields. 
+
+        :param exemption_code: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
+        :type: str
+        """
+        if exemption_code is not None and len(exemption_code) > 1:
+            raise ValueError("Invalid value for `exemption_code`, length must be less than or equal to `1`")
+
+        self._exemption_code = exemption_code
 
     def to_dict(self):
         """

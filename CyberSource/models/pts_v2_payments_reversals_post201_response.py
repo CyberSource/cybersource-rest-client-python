@@ -39,6 +39,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
         'reversal_amount_details': 'PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails',
         'processor_information': 'PtsV2PaymentsReversalsPost201ResponseProcessorInformation',
+        'issuer_information': 'PtsV2PaymentsReversalsPost201ResponseIssuerInformation',
         'authorization_information': 'PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation',
         'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation'
     }
@@ -52,11 +53,12 @@ class PtsV2PaymentsReversalsPost201Response(object):
         'client_reference_information': 'clientReferenceInformation',
         'reversal_amount_details': 'reversalAmountDetails',
         'processor_information': 'processorInformation',
+        'issuer_information': 'issuerInformation',
         'authorization_information': 'authorizationInformation',
         'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, reversal_amount_details=None, processor_information=None, authorization_information=None, point_of_sale_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, reversal_amount_details=None, processor_information=None, issuer_information=None, authorization_information=None, point_of_sale_information=None):
         """
         PtsV2PaymentsReversalsPost201Response - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
         self._client_reference_information = None
         self._reversal_amount_details = None
         self._processor_information = None
+        self._issuer_information = None
         self._authorization_information = None
         self._point_of_sale_information = None
 
@@ -88,6 +91,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
           self.reversal_amount_details = reversal_amount_details
         if processor_information is not None:
           self.processor_information = processor_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if authorization_information is not None:
           self.authorization_information = authorization_information
         if point_of_sale_information is not None:
@@ -166,7 +171,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsReversalsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - REVERSED 
 
         :return: The status of this PtsV2PaymentsReversalsPost201Response.
         :rtype: str
@@ -177,7 +182,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsReversalsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - REVERSED 
 
         :param status: The status of this PtsV2PaymentsReversalsPost201Response.
         :type: str
@@ -278,6 +283,27 @@ class PtsV2PaymentsReversalsPost201Response(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this PtsV2PaymentsReversalsPost201Response.
+
+        :return: The issuer_information of this PtsV2PaymentsReversalsPost201Response.
+        :rtype: PtsV2PaymentsReversalsPost201ResponseIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this PtsV2PaymentsReversalsPost201Response.
+
+        :param issuer_information: The issuer_information of this PtsV2PaymentsReversalsPost201Response.
+        :type: PtsV2PaymentsReversalsPost201ResponseIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     @property
     def authorization_information(self):

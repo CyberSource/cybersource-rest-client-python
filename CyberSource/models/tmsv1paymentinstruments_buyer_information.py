@@ -83,6 +83,8 @@ class Tmsv1paymentinstrumentsBuyerInformation(object):
         :param company_tax_id: The company_tax_id of this Tmsv1paymentinstrumentsBuyerInformation.
         :type: str
         """
+        if company_tax_id is not None and len(company_tax_id) > 9:
+            raise ValueError("Invalid value for `company_tax_id`, length must be less than or equal to `9`")
 
         self._company_tax_id = company_tax_id
 
@@ -106,6 +108,10 @@ class Tmsv1paymentinstrumentsBuyerInformation(object):
         :param currency: The currency of this Tmsv1paymentinstrumentsBuyerInformation.
         :type: str
         """
+        if currency is not None and len(currency) > 3:
+            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
+        if currency is not None and len(currency) < 3:
+            raise ValueError("Invalid value for `currency`, length must be greater than or equal to `3`")
 
         self._currency = currency
 

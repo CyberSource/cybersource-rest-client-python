@@ -112,7 +112,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def cavv_algorithm(self):
         """
         Gets the cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard SecureCode. 
+        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard Identity Check. 
 
         :return: The cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def cavv_algorithm(self, cavv_algorithm):
         """
         Sets the cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard SecureCode. 
+        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard Identity Check. 
 
         :param cavv_algorithm: The cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -137,7 +137,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self):
         """
         Gets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).
+        Raw electronic commerce indicator (ECI). For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -148,7 +148,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).
+        Raw electronic commerce indicator (ECI). For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param eci_raw: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -162,7 +162,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self):
         """
         Gets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.
+        Payer authentication response status. For the description and requirements, see \"Payer Authentication,\" page 180. 
 
         :return: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -173,7 +173,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self, pares_status):
         """
         Sets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.
+        Payer authentication response status. For the description and requirements, see \"Payer Authentication,\" page 180. 
 
         :param pares_status: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -187,7 +187,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self):
         """
         Gets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.
+        Verification response enrollment status. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -198,7 +198,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self, veres_enrolled):
         """
         Sets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.
+        Verification response enrollment status. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param veres_enrolled: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -212,7 +212,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -223,7 +223,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param xid: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -237,7 +237,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self):
         """
         Gets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.
+        Universal cardholder authentication field (UCAF) data.  For the description and requirements, see \"Payer Authentication,\" page 180. 
 
         :return: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -248,7 +248,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self, ucaf_authentication_data):
         """
         Sets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.
+        Universal cardholder authentication field (UCAF) data.  For the description and requirements, see \"Payer Authentication,\" page 180. 
 
         :param ucaf_authentication_data: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -262,7 +262,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_collection_indicator(self):
         """
         Gets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.
+        Universal cardholder authentication field (UCAF) collection indicator.  For the description and requirements, see \"Payer Authentication,\" page 180.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—-UCAF Collection Indicator 
 
         :return: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -273,7 +273,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_collection_indicator(self, ucaf_collection_indicator):
         """
         Sets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.
+        Universal cardholder authentication field (UCAF) collection indicator.  For the description and requirements, see \"Payer Authentication,\" page 180.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—-UCAF Collection Indicator 
 
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str

@@ -39,13 +39,13 @@ class PurchaseAndRefundDetailsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def get_purchase_and_refund_details(self, start_time, end_time, **kwargs):
         """
         Get Purchase and Refund details
-        Purchase And Refund Details Description
+        Download the Purchase and Refund Details report. This report report includes all purchases and refund transactions, as well as all activities related to transactions resulting in an adjustment to the net proceeds. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -64,7 +64,7 @@ class PurchaseAndRefundDetailsApi(object):
         :param str group_name: Valid CyberSource Group Name.User can define groups using CBAPI and Group Management Module in EBC2. Groups are collection of organizationIds
         :param int offset: Offset of the Purchase and Refund Results.
         :param int limit: Results count per page. Range(1-2000)
-        :return: None
+        :return: ReportingV3PurchaseRefundDetailsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -78,7 +78,7 @@ class PurchaseAndRefundDetailsApi(object):
     def get_purchase_and_refund_details_with_http_info(self, start_time, end_time, **kwargs):
         """
         Get Purchase and Refund details
-        Purchase And Refund Details Description
+        Download the Purchase and Refund Details report. This report report includes all purchases and refund transactions, as well as all activities related to transactions resulting in an adjustment to the net proceeds. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -97,7 +97,7 @@ class PurchaseAndRefundDetailsApi(object):
         :param str group_name: Valid CyberSource Group Name.User can define groups using CBAPI and Group Management Module in EBC2. Groups are collection of organizationIds
         :param int offset: Offset of the Purchase and Refund Results.
         :param int limit: Results count per page. Range(1-2000)
-        :return: None
+        :return: ReportingV3PurchaseRefundDetailsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -140,10 +140,10 @@ class PurchaseAndRefundDetailsApi(object):
         path_params = {}
 
         query_params = []
-        '''if 'start_time' in params:
+        if 'start_time' in params:
             query_params.append(('startTime', params['start_time']))
         if 'end_time' in params:
-            query_params.append(('endTime', params['end_time']))'''
+            query_params.append(('endTime', params['end_time']))
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
         if 'payment_subtype' in params:
@@ -174,14 +174,14 @@ class PurchaseAndRefundDetailsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/purchase-refund-details?startTime='+start_time+'&endTime='+end_time, 'GET',
+        return self.api_client.call_api('/reporting/v3/purchase-refund-details', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='ReportingV3PurchaseRefundDetailsGet200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

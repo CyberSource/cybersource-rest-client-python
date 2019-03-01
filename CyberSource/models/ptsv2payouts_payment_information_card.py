@@ -88,8 +88,6 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :param type: The type of this Ptsv2payoutsPaymentInformationCard.
         :type: str
         """
-        if type is not None and len(type) > 3:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 

@@ -39,7 +39,7 @@ class SearchTransactionsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def create_search(self, create_search_request, **kwargs):
@@ -124,7 +124,7 @@ class SearchTransactionsApi(object):
             body_params = params['create_search_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json;charset=utf-8'])
+            select_header_accept(['*/*;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
@@ -230,7 +230,7 @@ class SearchTransactionsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept([''])
+            select_header_accept(['*/*;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\

@@ -35,7 +35,7 @@ class TestReportDefinitionsApi(unittest.TestCase):
         """
         Test case for get_resource_info_by_report_definition
 
-        Get a single report definition information
+        Get report definition
         """
         pass
 

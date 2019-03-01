@@ -146,7 +146,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsVoidsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - VOIDED 
 
         :return: The status of this PtsV2PaymentsVoidsPost201Response.
         :rtype: str
@@ -157,7 +157,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsVoidsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - VOIDED 
 
         :param status: The status of this PtsV2PaymentsVoidsPost201Response.
         :type: str

@@ -10,11 +10,11 @@ Method | HTTP request | Description
 
 
 # **create_report**
-> create_report(request_body)
+> create_report(request_body, organization_id=organization_id)
 
 Create Adhoc Report
 
-Create one time report
+Create a one-time report. You must specify the type of report in reportDefinitionName. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation) 
 
 ### Example 
 ```python
@@ -26,11 +26,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportsApi()
-request_body = CyberSource.RequestBody1() # RequestBody1 | Report subscription request payload
+request_body = CyberSource.RequestBody() # RequestBody | Report subscription request payload
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Create Adhoc Report
-    api_instance.create_report(request_body)
+    api_instance.create_report(request_body, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling ReportsApi->create_report: %s\n" % e)
 ```
@@ -39,7 +40,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_body** | [**RequestBody1**](RequestBody1.md)| Report subscription request payload | 
+ **request_body** | [**RequestBody**](RequestBody.md)| Report subscription request payload | 
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
 
@@ -61,7 +63,7 @@ No authorization required
 
 Get Report based on reportId
 
-ReportId is mandatory input
+Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
 
 ### Example 
 ```python
@@ -111,7 +113,7 @@ No authorization required
 
 Retrieve available reports
 
-Retrieve list of available reports
+Retrieve a list of the available reports to which you are subscribed. This will also give you the reportId value, which you can also use to download a report. 
 
 ### Example 
 ```python
@@ -125,7 +127,7 @@ from pprint import pprint
 api_instance = CyberSource.ReportsApi()
 start_time = '2013-10-20T19:20:30+01:00' # datetime | Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX 
 end_time = '2013-10-20T19:20:30+01:00' # datetime | Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX 
-time_query_type = 'time_query_type_example' # str | Specify time you woud like to search
+time_query_type = 'time_query_type_example' # str | Specify time you would like to search
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 report_mime_type = 'report_mime_type_example' # str | Valid Report Format (optional)
 report_frequency = 'report_frequency_example' # str | Valid Report Frequency (optional)
@@ -147,7 +149,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start_time** | **datetime**| Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX  | 
  **end_time** | **datetime**| Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX  | 
- **time_query_type** | **str**| Specify time you woud like to search | 
+ **time_query_type** | **str**| Specify time you would like to search | 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
  **report_mime_type** | **str**| Valid Report Format | [optional] 
  **report_frequency** | **str**| Valid Report Frequency | [optional] 

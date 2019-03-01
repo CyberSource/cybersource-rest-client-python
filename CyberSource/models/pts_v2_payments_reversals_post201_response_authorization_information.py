@@ -32,26 +32,31 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
     """
     swagger_types = {
         'approval_code': 'str',
-        'reason_code': 'str'
+        'reason_code': 'str',
+        'reversal_submitted': 'str'
     }
 
     attribute_map = {
         'approval_code': 'approvalCode',
-        'reason_code': 'reasonCode'
+        'reason_code': 'reasonCode',
+        'reversal_submitted': 'reversalSubmitted'
     }
 
-    def __init__(self, approval_code=None, reason_code=None):
+    def __init__(self, approval_code=None, reason_code=None, reversal_submitted=None):
         """
         PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation - a model defined in Swagger
         """
 
         self._approval_code = None
         self._reason_code = None
+        self._reversal_submitted = None
 
         if approval_code is not None:
           self.approval_code = approval_code
         if reason_code is not None:
           self.reason_code = reason_code
+        if reversal_submitted is not None:
+          self.reversal_submitted = reversal_submitted
 
     @property
     def approval_code(self):
@@ -102,6 +107,31 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
             raise ValueError("Invalid value for `reason_code`, length must be less than or equal to `50`")
 
         self._reason_code = reason_code
+
+    @property
+    def reversal_submitted(self):
+        """
+        Gets the reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
+        Flag indicating whether a full authorization reversal was successfully submitted.  Possible values: - Y: The authorization reversal was successfully submitted. - N: The authorization reversal was not successfully submitted. You must send a credit request for a refund.  This field is supported only for **FDC Nashville Global**. 
+
+        :return: The reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
+        :rtype: str
+        """
+        return self._reversal_submitted
+
+    @reversal_submitted.setter
+    def reversal_submitted(self, reversal_submitted):
+        """
+        Sets the reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
+        Flag indicating whether a full authorization reversal was successfully submitted.  Possible values: - Y: The authorization reversal was successfully submitted. - N: The authorization reversal was not successfully submitted. You must send a credit request for a refund.  This field is supported only for **FDC Nashville Global**. 
+
+        :param reversal_submitted: The reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
+        :type: str
+        """
+        if reversal_submitted is not None and len(reversal_submitted) > 1:
+            raise ValueError("Invalid value for `reversal_submitted`, length must be less than or equal to `1`")
+
+        self._reversal_submitted = reversal_submitted
 
     def to_dict(self):
         """

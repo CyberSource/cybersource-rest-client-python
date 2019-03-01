@@ -57,7 +57,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
     def amount(self):
         """
         Gets the amount of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
-        The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking. The issuer can provide information about the surcharge amount to the customer.  - Applicable only for CTV for Payouts. - CTV (<= 08)  For processor-specific information, see the surcharge_amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking. The issuer can provide information about the surcharge amount to the customer.  If the amount is positive, then it is a debit for the customer.\\ If the amount is negative, then it is a credit for the customer.  **NOTE**: This field is supported only for CyberSource through VisaNet (CtV) for Payouts. For CtV, the maximum string length is 8.  For processor-specific information, see the surcharge_amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The amount of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
         :rtype: str
@@ -68,7 +68,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
     def amount(self, amount):
         """
         Sets the amount of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
-        The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking. The issuer can provide information about the surcharge amount to the customer.  - Applicable only for CTV for Payouts. - CTV (<= 08)  For processor-specific information, see the surcharge_amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking. The issuer can provide information about the surcharge amount to the customer.  If the amount is positive, then it is a debit for the customer.\\ If the amount is negative, then it is a credit for the customer.  **NOTE**: This field is supported only for CyberSource through VisaNet (CtV) for Payouts. For CtV, the maximum string length is 8.  For processor-specific information, see the surcharge_amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
         :type: str
@@ -82,7 +82,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
     def description(self):
         """
         Gets the description of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
-        Description of this field is not available.
+        Merchant-defined field for describing the surcharge amount.
 
         :return: The description of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
     def description(self, description):
         """
         Sets the description of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
-        Description of this field is not available.
+        Merchant-defined field for describing the surcharge amount.
 
         :param description: The description of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
         :type: str

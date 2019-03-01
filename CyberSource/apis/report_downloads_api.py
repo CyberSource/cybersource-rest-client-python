@@ -39,13 +39,13 @@ class ReportDownloadsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def download_report(self, report_date, report_name, **kwargs):
         """
         Download a report
-        Download a report for the given report name on the specified date
+        Download a report using the unique report name and date. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -73,7 +73,7 @@ class ReportDownloadsApi(object):
     def download_report_with_http_info(self, report_date, report_name, **kwargs):
         """
         Download a report
-        Download a report for the given report name on the specified date
+        Download a report using the unique report name and date. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -141,7 +141,7 @@ class ReportDownloadsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/xml', 'test/csv'])
+            select_header_accept(['application/xml', 'text/csv'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\

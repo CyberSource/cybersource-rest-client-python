@@ -31,11 +31,19 @@ class TestTransactionBatchesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_pts_v1_transaction_batches_get(self):
+    def test_get_transaction_batch_id(self):
         """
-        Test case for pts_v1_transaction_batches_get
+        Test case for get_transaction_batch_id
 
-        Get a list of batch files processed through the Offline Transaction Submission Services
+        Get individual batch file
+        """
+        pass
+
+    def test_get_transaction_batches(self):
+        """
+        Test case for get_transaction_batches
+
+        Get a list of batch files
         """
         pass
 

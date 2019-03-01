@@ -39,7 +39,7 @@ class SecureFileShareApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def get_file(self, file_id, **kwargs):
@@ -138,7 +138,7 @@ class SecureFileShareApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/hal+json'])
+            select_header_content_type(['*/*;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -261,7 +261,7 @@ class SecureFileShareApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json;charset=utf-8'])
+            select_header_content_type(['*/*;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

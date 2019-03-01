@@ -35,7 +35,7 @@ class PtsV2PayoutsPost400Response(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -172,7 +172,7 @@ class PtsV2PayoutsPost400Response(object):
         Gets the details of this PtsV2PayoutsPost400Response.
 
         :return: The details of this PtsV2PayoutsPost400Response.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -182,7 +182,7 @@ class PtsV2PayoutsPost400Response(object):
         Sets the details of this PtsV2PayoutsPost400Response.
 
         :param details: The details of this PtsV2PayoutsPost400Response.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

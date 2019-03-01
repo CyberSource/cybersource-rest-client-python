@@ -110,14 +110,14 @@ class InstrumentIdentifierApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_delete`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -137,11 +137,11 @@ class InstrumentIdentifierApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -229,14 +229,14 @@ class InstrumentIdentifierApi(object):
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_get`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_get`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -256,11 +256,11 @@ class InstrumentIdentifierApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -353,14 +353,14 @@ class InstrumentIdentifierApi(object):
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `tms_v1_instrumentidentifiers_token_id_patch`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `36`")
-        if 'token_id' in params and params['token_id'] > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, must be a value less than or equal to `32`")
-        if 'token_id' in params and params['token_id'] < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, must be a value greater than or equal to `16`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, length must be greater than or equal to `36`")
+        if 'token_id' in params and len(params['token_id']) > 32:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, length must be less than or equal to `32`")
+        if 'token_id' in params and len(params['token_id']) < 16:
+            raise ValueError("Invalid value for parameter `token_id` when calling `tms_v1_instrumentidentifiers_token_id_patch`, length must be greater than or equal to `16`")
 
         collection_formats = {}
 

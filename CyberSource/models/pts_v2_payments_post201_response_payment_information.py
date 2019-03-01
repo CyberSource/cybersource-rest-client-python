@@ -33,16 +33,18 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
     swagger_types = {
         'card': 'PtsV2PaymentsPost201ResponsePaymentInformationCard',
         'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
-        'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures'
+        'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
+        'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank'
     }
 
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
-        'account_features': 'accountFeatures'
+        'account_features': 'accountFeatures',
+        'bank': 'bank'
     }
 
-    def __init__(self, card=None, tokenized_card=None, account_features=None):
+    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         self._card = None
         self._tokenized_card = None
         self._account_features = None
+        self._bank = None
 
         if card is not None:
           self.card = card
@@ -57,6 +60,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
           self.tokenized_card = tokenized_card
         if account_features is not None:
           self.account_features = account_features
+        if bank is not None:
+          self.bank = bank
 
     @property
     def card(self):
@@ -120,6 +125,27 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         """
 
         self._account_features = account_features
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The bank of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param bank: The bank of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationBank
+        """
+
+        self._bank = bank
 
     def to_dict(self):
         """

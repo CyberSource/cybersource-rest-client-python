@@ -43,8 +43,8 @@ class ReportingV3ReportsIdGet200Response(object):
         'report_end_time': 'datetime',
         'timezone': 'str',
         'report_filters': 'dict(str, list[str])',
-        'report_preferences': 'ReportingV3ReportSubscriptionsGet200ResponseReportPreferences',
-        'selected_merchant_group_name': 'str'
+        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'group_id': 'str'
     }
 
     attribute_map = {
@@ -61,10 +61,10 @@ class ReportingV3ReportsIdGet200Response(object):
         'timezone': 'timezone',
         'report_filters': 'reportFilters',
         'report_preferences': 'reportPreferences',
-        'selected_merchant_group_name': 'selectedMerchantGroupName'
+        'group_id': 'groupId'
     }
 
-    def __init__(self, organization_id=None, report_id=None, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, report_fields=None, report_status=None, report_start_time=None, report_end_time=None, timezone=None, report_filters=None, report_preferences=None, selected_merchant_group_name=None):
+    def __init__(self, organization_id=None, report_id=None, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, report_fields=None, report_status=None, report_start_time=None, report_end_time=None, timezone=None, report_filters=None, report_preferences=None, group_id=None):
         """
         ReportingV3ReportsIdGet200Response - a model defined in Swagger
         """
@@ -82,7 +82,7 @@ class ReportingV3ReportsIdGet200Response(object):
         self._timezone = None
         self._report_filters = None
         self._report_preferences = None
-        self._selected_merchant_group_name = None
+        self._group_id = None
 
         if organization_id is not None:
           self.organization_id = organization_id
@@ -110,8 +110,8 @@ class ReportingV3ReportsIdGet200Response(object):
           self.report_filters = report_filters
         if report_preferences is not None:
           self.report_preferences = report_preferences
-        if selected_merchant_group_name is not None:
-          self.selected_merchant_group_name = selected_merchant_group_name
+        if group_id is not None:
+          self.group_id = group_id
 
     @property
     def organization_id(self):
@@ -254,12 +254,12 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_frequency: The report_frequency of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-        allowed_values = ["DAILY", "WEEKLY", "MONTHLY"]
-        #if report_frequency not in allowed_values:
-            #raise ValueError(
-                #"Invalid value for `report_frequency` ({0}), must be one of {1}"
-                #.format(report_frequency, allowed_values)
-            #)
+        allowed_values = ["DAILY", "WEEKLY", "MONTHLY", "ADHOC"]
+        if report_frequency not in allowed_values:
+            raise ValueError(
+                "Invalid value for `report_frequency` ({0}), must be one of {1}"
+                .format(report_frequency, allowed_values)
+            )
 
         self._report_frequency = report_frequency
 
@@ -388,7 +388,7 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_filters(self):
         """
         Gets the report_filters of this ReportingV3ReportsIdGet200Response.
-        Report Filters
+        List of filters to apply
 
         :return: The report_filters of this ReportingV3ReportsIdGet200Response.
         :rtype: dict(str, list[str])
@@ -399,7 +399,7 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_filters(self, report_filters):
         """
         Sets the report_filters of this ReportingV3ReportsIdGet200Response.
-        Report Filters
+        List of filters to apply
 
         :param report_filters: The report_filters of this ReportingV3ReportsIdGet200Response.
         :type: dict(str, list[str])
@@ -413,7 +413,7 @@ class ReportingV3ReportsIdGet200Response(object):
         Gets the report_preferences of this ReportingV3ReportsIdGet200Response.
 
         :return: The report_preferences of this ReportingV3ReportsIdGet200Response.
-        :rtype: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
         return self._report_preferences
 
@@ -423,33 +423,33 @@ class ReportingV3ReportsIdGet200Response(object):
         Sets the report_preferences of this ReportingV3ReportsIdGet200Response.
 
         :param report_preferences: The report_preferences of this ReportingV3ReportsIdGet200Response.
-        :type: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
 
         self._report_preferences = report_preferences
 
     @property
-    def selected_merchant_group_name(self):
+    def group_id(self):
         """
-        Gets the selected_merchant_group_name of this ReportingV3ReportsIdGet200Response.
-        Selected Merchant Group name
+        Gets the group_id of this ReportingV3ReportsIdGet200Response.
+        Id for selected group.
 
-        :return: The selected_merchant_group_name of this ReportingV3ReportsIdGet200Response.
+        :return: The group_id of this ReportingV3ReportsIdGet200Response.
         :rtype: str
         """
-        return self._selected_merchant_group_name
+        return self._group_id
 
-    @selected_merchant_group_name.setter
-    def selected_merchant_group_name(self, selected_merchant_group_name):
+    @group_id.setter
+    def group_id(self, group_id):
         """
-        Sets the selected_merchant_group_name of this ReportingV3ReportsIdGet200Response.
-        Selected Merchant Group name
+        Sets the group_id of this ReportingV3ReportsIdGet200Response.
+        Id for selected group.
 
-        :param selected_merchant_group_name: The selected_merchant_group_name of this ReportingV3ReportsIdGet200Response.
+        :param group_id: The group_id of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
 
-        self._selected_merchant_group_name = selected_merchant_group_name
+        self._group_id = group_id
 
     def to_dict(self):
         """

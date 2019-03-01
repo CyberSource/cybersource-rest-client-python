@@ -112,7 +112,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def expiration_month(self):
         """
         Gets the expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Two-digit month in which the credit card expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_month: The expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
@@ -137,7 +137,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Four-digit year in which the credit card expires. `Format: YYYY`.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit year in which the credit card expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :rtype: str
@@ -148,7 +148,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Four-digit year in which the credit card expires. `Format: YYYY`.  **Encoded Account Numbers**  For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit year in which the credit card expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_year: The expiration_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
@@ -178,8 +178,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param type: The type of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if type is not None and len(type) > 3:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 
@@ -212,7 +210,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def issue_number(self):
         """
         Gets the issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  The issue number is not required for Maestro (UK Domestic) transactions. 
+        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  **Note** The issue number is not required for Maestro (UK Domestic) transactions. 
 
         :return: The issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :rtype: str
@@ -223,7 +221,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def issue_number(self, issue_number):
         """
         Sets the issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  The issue number is not required for Maestro (UK Domestic) transactions. 
+        Number of times a Maestro (UK Domestic) card has been issued to the account holder. The card might or might not have an issue number. The number can consist of one or two digits, and the first digit might be a zero. When you include this value in your request, include exactly what is printed on the card. A value of 2 is different than a value of 02. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card.  **Note** The issue number is not required for Maestro (UK Domestic) transactions. 
 
         :param issue_number: The issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
@@ -237,7 +235,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def start_month(self):
         """
         Gets the start_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :return: The start_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :rtype: str
@@ -248,7 +246,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def start_month(self, start_month):
         """
         Sets the start_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :param start_month: The start_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
@@ -262,7 +260,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def start_year(self):
         """
         Gets the start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :return: The start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :rtype: str
@@ -273,7 +271,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
     def start_year(self, start_year):
         """
         Sets the start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
-        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  The start date is not required for Maestro (UK Domestic) transactions. 
+        Year of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: YYYY`.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :param start_year: The start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str

@@ -33,6 +33,7 @@ from authenticationsdk.util.PropertiesUtil import *
 from authenticationsdk.util.GlobalLabelParameters import *
 from six.moves.urllib.parse import urlencode
 
+
 class ApiClient(object):
     """
     Generic API client for Swagger client library builds.
@@ -72,7 +73,6 @@ class ApiClient(object):
         if header_name is not None:
             self.default_headers[header_name] = header_value
         if host is None:
-
             self.host = Configuration().host
         else:
             self.host = host
@@ -134,10 +134,14 @@ class ApiClient(object):
         self.host = mconfig.request_host
 
     # Calling the authentication header
-    def call_authentication_header(self,method, header_params, body):
-
+    def call_authentication_header(self, method, header_params, body):
+        
         time = mconfig.get_time()
+
         mconfig.request_type_method = method
+        
+
+        
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             mconfig.request_json_path_data = body
 
@@ -152,7 +156,7 @@ class ApiClient(object):
             header_params["Host"] = mconfig.request_host
             header_params["User-Agent"] = GlobalLabelParameters.USER_AGENT_VALUE
             if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-                '''print((ast.literal_eval(json.dumps(self.del_none(json.loads(body))))))'''
+                
                 digest_header = self.set_digest((body))
 
                 header_params[
@@ -163,6 +167,7 @@ class ApiClient(object):
 
             token = "Bearer " + token.decode("utf-8")
             header_params['Authorization'] = str(token)
+        
 
     #  Set the digest
     def set_digest(self, body):
@@ -172,13 +177,19 @@ class ApiClient(object):
 
 
         return encoded_digest
-
+		
+		
     # Adds query param to URL
     def set_query_params(self, path, query_param):
         if query_param:
             path += '?' + urlencode(query_param)
 
         return path
+		
+	
+    
+	
+  
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
@@ -231,7 +242,7 @@ class ApiClient(object):
 
         # request url
         url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
-
+        
 
         # perform request and return response
         response_data = self.request(method, url,

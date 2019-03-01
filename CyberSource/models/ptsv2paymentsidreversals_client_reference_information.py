@@ -32,32 +32,37 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
-        'comments': 'str'
+        'comments': 'str',
+        'partner': 'Ptsv2paymentsidreversalsClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
-        'comments': 'comments'
+        'comments': 'comments',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, comments=None):
+    def __init__(self, code=None, comments=None, partner=None):
         """
         Ptsv2paymentsidreversalsClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
         self._comments = None
+        self._partner = None
 
         if code is not None:
           self.code = code
         if comments is not None:
           self.comments = comments
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
         """
         Gets the code of this Ptsv2paymentsidreversalsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :rtype: str
@@ -68,7 +73,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsidreversalsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str
@@ -100,6 +105,27 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         """
 
         self._comments = comments
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this Ptsv2paymentsidreversalsClientReferenceInformation.
+
+        :return: The partner of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :rtype: Ptsv2paymentsidreversalsClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this Ptsv2paymentsidreversalsClientReferenceInformation.
+
+        :param partner: The partner of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :type: Ptsv2paymentsidreversalsClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

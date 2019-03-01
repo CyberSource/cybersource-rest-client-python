@@ -40,7 +40,9 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'ignore_avs_result': 'bool',
         'decline_avs_flags': 'list[str]',
         'ignore_cv_result': 'bool',
-        'initiator': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator'
+        'initiator': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator',
+        'bill_payment': 'bool',
+        'bill_payment_type': 'str'
     }
 
     attribute_map = {
@@ -53,10 +55,12 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'ignore_avs_result': 'ignoreAvsResult',
         'decline_avs_flags': 'declineAvsFlags',
         'ignore_cv_result': 'ignoreCvResult',
-        'initiator': 'initiator'
+        'initiator': 'initiator',
+        'bill_payment': 'billPayment',
+        'bill_payment_type': 'billPaymentType'
     }
 
-    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None):
+    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -71,6 +75,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._decline_avs_flags = None
         self._ignore_cv_result = None
         self._initiator = None
+        self._bill_payment = None
+        self._bill_payment_type = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -92,12 +98,16 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.ignore_cv_result = ignore_cv_result
         if initiator is not None:
           self.initiator = initiator
+        if bill_payment is not None:
+          self.bill_payment = bill_payment
+        if bill_payment_type is not None:
+          self.bill_payment_type = bill_payment_type
 
     @property
     def auth_type(self):
         """
         Gets the auth_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Authorization type. Possible values:   - **AUTOCAPTURE**: automatic capture.  - **STANDARDCAPTURE**: standard capture.  - **VERBAL**: forced capture. Include it in the payment request for a forced capture. Include it in the capture  request for a verbal payment.  For processor-specific information, see the auth_type field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization type.  Possible values:   - **AUTOCAPTURE**: automatic capture.  - **STANDARDCAPTURE**: standard capture.  - **VERBAL**: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  **Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing**\\ Set this field to _AUTOCAPTURE_ and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to STANDARDCAPTURE and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see \"Automatic Captures,\" page 33.  **Forced Capture**\\ Set this field to _VERBAL_ and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system. For more information, see \"Forced Captures,\" page 123.  **Verbal Authorization**\\ Set this field to _VERBAL_ and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations,\" page 84.  For processor-specific information, see the auth_type field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The auth_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -108,7 +118,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def auth_type(self, auth_type):
         """
         Sets the auth_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Authorization type. Possible values:   - **AUTOCAPTURE**: automatic capture.  - **STANDARDCAPTURE**: standard capture.  - **VERBAL**: forced capture. Include it in the payment request for a forced capture. Include it in the capture  request for a verbal payment.  For processor-specific information, see the auth_type field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization type.  Possible values:   - **AUTOCAPTURE**: automatic capture.  - **STANDARDCAPTURE**: standard capture.  - **VERBAL**: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  **Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing**\\ Set this field to _AUTOCAPTURE_ and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to STANDARDCAPTURE and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see \"Automatic Captures,\" page 33.  **Forced Capture**\\ Set this field to _VERBAL_ and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system. For more information, see \"Forced Captures,\" page 123.  **Verbal Authorization**\\ Set this field to _VERBAL_ and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations,\" page 84.  For processor-specific information, see the auth_type field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param auth_type: The auth_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -122,7 +132,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def verbal_auth_code(self):
         """
         Gets the verbal_auth_code of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Authorization code.  **Forced Capture**  Use this field to send the authorization code you received from a payment that you authorized outside the CyberSource system.  **Verbal Authorization**  Use this field in CAPTURE API to send the verbally received authorization code.  For processor-specific information, see the auth_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization code.  **Forced Capture**\\ Use this field to send the authorization code you received from a payment that you authorized outside the CyberSource system.  **Verbal Authorization**\\ Use this field in CAPTURE API to send the verbally received authorization code.  For processor-specific information, see the _auth_code_ field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The verbal_auth_code of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -133,7 +143,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def verbal_auth_code(self, verbal_auth_code):
         """
         Sets the verbal_auth_code of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Authorization code.  **Forced Capture**  Use this field to send the authorization code you received from a payment that you authorized outside the CyberSource system.  **Verbal Authorization**  Use this field in CAPTURE API to send the verbally received authorization code.  For processor-specific information, see the auth_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization code.  **Forced Capture**\\ Use this field to send the authorization code you received from a payment that you authorized outside the CyberSource system.  **Verbal Authorization**\\ Use this field in CAPTURE API to send the verbally received authorization code.  For processor-specific information, see the _auth_code_ field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param verbal_auth_code: The verbal_auth_code of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -172,7 +182,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def auth_indicator(self):
         """
         Gets the auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. See \"Final Authorization Indicator,\" page 119.  Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file5:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -183,7 +193,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def auth_indicator(self, auth_indicator):
         """
         Sets the auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. See \"Final Authorization Indicator,\" page 119.  Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file5:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param auth_indicator: The auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -197,7 +207,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def partial_auth_indicator(self):
         """
         Gets the partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the auth_partial_auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the _auth_partial_auth_indicator_ field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **CyberSource through VisaNet**\\ To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators  Possible values: - **true** Enable the transaction for partial authorization. - **false** Do not enable the transaction for partial authorization. 
 
         :return: The partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -208,7 +218,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def partial_auth_indicator(self, partial_auth_indicator):
         """
         Sets the partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the auth_partial_auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the _auth_partial_auth_indicator_ field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **CyberSource through VisaNet**\\ To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators  Possible values: - **true** Enable the transaction for partial authorization. - **false** Do not enable the transaction for partial authorization. 
 
         :param partial_auth_indicator: The partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -220,7 +230,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def balance_inquiry(self):
         """
         Gets the balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to return balance information.
+        Flag that indicates whether to return balance information.  Possible values: - **true** - **false** 
 
         :return: The balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -231,7 +241,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def balance_inquiry(self, balance_inquiry):
         """
         Sets the balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to return balance information.
+        Flag that indicates whether to return balance information.  Possible values: - **true** - **false** 
 
         :param balance_inquiry: The balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -243,7 +253,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_avs_result(self):
         """
         Gets the ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives an AVS decline. 
+        Flag that indicates whether to allow the capture service to run, even when the payment receives an AVS decline.  Possible values: - **true**  Ignore the results of AVS checking and run the capture service. - **false**  (default): If the authorization receives an AVS decline, do not run the capture service. 
 
         :return: The ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -254,7 +264,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_avs_result(self, ignore_avs_result):
         """
         Sets the ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives an AVS decline. 
+        Flag that indicates whether to allow the capture service to run, even when the payment receives an AVS decline.  Possible values: - **true**  Ignore the results of AVS checking and run the capture service. - **false**  (default): If the authorization receives an AVS decline, do not run the capture service. 
 
         :param ignore_avs_result: The ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -266,7 +276,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def decline_avs_flags(self):
         """
         Gets the decline_avs_flags of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        An array of AVS flags that cause the reply flag to be returned.  `Important` To receive declines for the AVS code N, include the value N in the array. 
+        An array of AVS flags that cause the reply flag to be returned.  `Important` To receive declines for the AVS code N, include the value N in the array.  Possible values: - D - A - V - S - N - O 
 
         :return: The decline_avs_flags of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: list[str]
@@ -277,7 +287,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def decline_avs_flags(self, decline_avs_flags):
         """
         Sets the decline_avs_flags of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        An array of AVS flags that cause the reply flag to be returned.  `Important` To receive declines for the AVS code N, include the value N in the array. 
+        An array of AVS flags that cause the reply flag to be returned.  `Important` To receive declines for the AVS code N, include the value N in the array.  Possible values: - D - A - V - S - N - O 
 
         :param decline_avs_flags: The decline_avs_flags of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: list[str]
@@ -296,7 +306,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_cv_result(self):
         """
         Gets the ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline. 
+        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline.  Possible values: - **true**  Ignore the results of CVN checking and run the capture service. - **false**  (default) If the authorization receives a CVN decline, do not run the capture service. 
 
         :return: The ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -307,7 +317,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_cv_result(self, ignore_cv_result):
         """
         Sets the ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline. 
+        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline.  Possible values: - **true**  Ignore the results of CVN checking and run the capture service. - **false**  (default) If the authorization receives a CVN decline, do not run the capture service. 
 
         :param ignore_cv_result: The ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -335,6 +345,52 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._initiator = initiator
+
+    @property
+    def bill_payment(self):
+        """
+        Gets the bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Flag that indicates that this is a payment for a bill or for an existing contractual loan. See \"Visa Bill Payments,\" page 220, and \"Visa Debt Repayments,\" page 221, for lists of processors that support these features.  Possible values: - true: Bill payment or loan payment. - false (default): Not a bill payment or loan payment. 
+
+        :return: The bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._bill_payment
+
+    @bill_payment.setter
+    def bill_payment(self, bill_payment):
+        """
+        Sets the bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Flag that indicates that this is a payment for a bill or for an existing contractual loan. See \"Visa Bill Payments,\" page 220, and \"Visa Debt Repayments,\" page 221, for lists of processors that support these features.  Possible values: - true: Bill payment or loan payment. - false (default): Not a bill payment or loan payment. 
+
+        :param bill_payment: The bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._bill_payment = bill_payment
+
+    @property
+    def bill_payment_type(self):
+        """
+        Gets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. See Mastercard Bill Payments.  Note For information about bill payments with Visa, see Visa Bill Payments. 
+
+        :return: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._bill_payment_type
+
+    @bill_payment_type.setter
+    def bill_payment_type(self, bill_payment_type):
+        """
+        Sets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. See Mastercard Bill Payments.  Note For information about bill payments with Visa, see Visa Bill Payments. 
+
+        :param bill_payment_type: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._bill_payment_type = bill_payment_type
 
     def to_dict(self):
         """

@@ -4,18 +4,18 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_subscription**](ReportSubscriptionsApi.md#create_subscription) | **PUT** /reporting/v3/report-subscriptions/{reportName} | Create Report Subscription for a report name by organization
+[**create_subscription**](ReportSubscriptionsApi.md#create_subscription) | **PUT** /reporting/v3/report-subscriptions | Create Report Subscription for a report name by organization
 [**delete_subscription**](ReportSubscriptionsApi.md#delete_subscription) | **DELETE** /reporting/v3/report-subscriptions/{reportName} | Delete subscription of a report name by organization
-[**get_all_subscriptions**](ReportSubscriptionsApi.md#get_all_subscriptions) | **GET** /reporting/v3/report-subscriptions | Retrieve all subscriptions by organization
-[**get_subscription**](ReportSubscriptionsApi.md#get_subscription) | **GET** /reporting/v3/report-subscriptions/{reportName} | Retrieve subscription for a report name by organization
+[**get_all_subscriptions**](ReportSubscriptionsApi.md#get_all_subscriptions) | **GET** /reporting/v3/report-subscriptions | Get all subscriptions
+[**get_subscription**](ReportSubscriptionsApi.md#get_subscription) | **GET** /reporting/v3/report-subscriptions/{reportName} | Get subscription for report name
 
 
 # **create_subscription**
-> create_subscription(report_name, request_body)
+> create_subscription(request_body, organization_id=organization_id)
 
 Create Report Subscription for a report name by organization
 
-
+Create a report subscription for your organization. The report name must be unique. 
 
 ### Example 
 ```python
@@ -27,12 +27,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
-report_name = 'report_name_example' # str | Name of the Report to Create
-request_body = CyberSource.RequestBody() # RequestBody | Report subscription request payload
+request_body = CyberSource.RequestBody1() # RequestBody1 | Report subscription request payload
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Create Report Subscription for a report name by organization
-    api_instance.create_subscription(report_name, request_body)
+    api_instance.create_subscription(request_body, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling ReportSubscriptionsApi->create_subscription: %s\n" % e)
 ```
@@ -41,8 +41,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **report_name** | **str**| Name of the Report to Create | 
- **request_body** | [**RequestBody**](RequestBody.md)| Report subscription request payload | 
+ **request_body** | [**RequestBody1**](RequestBody1.md)| Report subscription request payload | 
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
 
@@ -64,7 +64,7 @@ No authorization required
 
 Delete subscription of a report name by organization
 
-
+Delete a report subscription for your organization. You must know the unique name of the report you want to delete. 
 
 ### Example 
 ```python
@@ -109,9 +109,9 @@ No authorization required
 # **get_all_subscriptions**
 > ReportingV3ReportSubscriptionsGet200Response get_all_subscriptions()
 
-Retrieve all subscriptions by organization
+Get all subscriptions
 
-
+View a summary of all report subscriptions. 
 
 ### Example 
 ```python
@@ -125,7 +125,7 @@ from pprint import pprint
 api_instance = CyberSource.ReportSubscriptionsApi()
 
 try: 
-    # Retrieve all subscriptions by organization
+    # Get all subscriptions
     api_response = api_instance.get_all_subscriptions()
     pprint(api_response)
 except ApiException as e:
@@ -153,9 +153,9 @@ No authorization required
 # **get_subscription**
 > ReportingV3ReportSubscriptionsGet200ResponseSubscriptions get_subscription(report_name)
 
-Retrieve subscription for a report name by organization
+Get subscription for report name
 
-
+View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
 
 ### Example 
 ```python
@@ -170,7 +170,7 @@ api_instance = CyberSource.ReportSubscriptionsApi()
 report_name = 'report_name_example' # str | Name of the Report to Retrieve
 
 try: 
-    # Retrieve subscription for a report name by organization
+    # Get subscription for report name
     api_response = api_instance.get_subscription(report_name)
     pprint(api_response)
 except ApiException as e:

@@ -78,7 +78,7 @@ powershell -Command " rename-item -Path ..\docs\Ptsv2paymentsProcessingInformati
 powershell -Command " rename-item -Path ..\docs\Tmsv1instrumentidentifiersProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.md  -newname Tmsv1instrumentidentifiersMerchantInitiatedTransaction.md"
 
  REM To include application/json in supported formats
-powershell -Command "(Get-Content ..\CyberSource\models\reporting_v3_report_definitions_get200_response_report_definitions.py) | ForEach-Object { $_ -replace 'allowed_values = \[\"application/xml\", \"text/csv\"\]', 'allowed_values = [\"application/xml\", \"text/csv\",\"application/json\"]'} | Set-Content ..\CyberSource\models\reporting_v3_report_definitions_get200_response_report_definitions.py"
+powershell -Command "(Get-Content ..\CyberSource\models\reporting_v3_report_definitions_get200_response_report_definitions.py) | ForEach-Object { $_ -replace 'allowed_values = \[\"application/xml\", \"text/csv\"\]', 'allowed_values = [\"application/xml\", \"text/csv\", \"application/json\"]'} | Set-Content ..\CyberSource\models\reporting_v3_report_definitions_get200_response_report_definitions.py"
 
  REM To change the Accept type and Content type
 powershell -Command "(Get-Content ..\CyberSource\apis\capture_api.py) | ForEach-Object { $_ -replace 'select_header_accept\(\[''application/json', 'select_header_accept([''application/hal+json'} | Set-Content ..\CyberSource\apis\capture_api.py"

@@ -45,7 +45,7 @@ class ReportsApi(object):
     def create_report(self, request_body, **kwargs):
         """
         Create Adhoc Report
-        Create one time report
+        Create a one-time report. You must specify the type of report in reportDefinitionName. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -56,7 +56,8 @@ class ReportsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param RequestBody request_body: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -71,7 +72,7 @@ class ReportsApi(object):
     def create_report_with_http_info(self, request_body, **kwargs):
         """
         Create Adhoc Report
-        Create one time report
+        Create a one-time report. You must specify the type of report in reportDefinitionName. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -82,13 +83,14 @@ class ReportsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param RequestBody request_body: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['request_body']
+        all_params = ['request_body', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -107,12 +109,20 @@ class ReportsApi(object):
         if ('request_body' not in params) or (params['request_body'] is None):
             raise ValueError("Missing the required parameter `request_body` when calling `create_report`")
 
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -123,11 +133,11 @@ class ReportsApi(object):
         if 'request_body' in params:
             body_params = params['request_body']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
-            select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
+        header_params['Content-Type'] = self.api_client.\
             select_header_content_type(['application/json'])
 
         # Authentication setting
@@ -151,7 +161,7 @@ class ReportsApi(object):
     def get_report_by_report_id(self, report_id, **kwargs):
         """
         Get Report based on reportId
-        ReportId is mandatory input
+        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -178,7 +188,7 @@ class ReportsApi(object):
     def get_report_by_report_id_with_http_info(self, report_id, **kwargs):
         """
         Get Report based on reportId
-        ReportId is mandatory input
+        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -267,7 +277,7 @@ class ReportsApi(object):
     def search_reports(self, start_time, end_time, time_query_type, **kwargs):
         """
         Retrieve available reports
-        Retrieve list of available reports
+        Retrieve a list of the available reports to which you are subscribed. This will also give you the reportId value, which you can also use to download a report. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -280,7 +290,7 @@ class ReportsApi(object):
             for asynchronous request. (optional)
         :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
         :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
-        :param str time_query_type: Specify time you woud like to search (required)
+        :param str time_query_type: Specify time you would like to search (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str report_mime_type: Valid Report Format
         :param str report_frequency: Valid Report Frequency
@@ -301,7 +311,7 @@ class ReportsApi(object):
     def search_reports_with_http_info(self, start_time, end_time, time_query_type, **kwargs):
         """
         Retrieve available reports
-        Retrieve list of available reports
+        Retrieve a list of the available reports to which you are subscribed. This will also give you the reportId value, which you can also use to download a report. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -314,7 +324,7 @@ class ReportsApi(object):
             for asynchronous request. (optional)
         :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
         :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
-        :param str time_query_type: Specify time you woud like to search (required)
+        :param str time_query_type: Specify time you would like to search (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str report_mime_type: Valid Report Format
         :param str report_frequency: Valid Report Frequency
@@ -365,12 +375,12 @@ class ReportsApi(object):
         query_params = []
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
-        '''if 'start_time' in params:
+        if 'start_time' in params:
             query_params.append(('startTime', params['start_time']))
         if 'end_time' in params:
             query_params.append(('endTime', params['end_time']))
         if 'time_query_type' in params:
-            query_params.append(('timeQueryType', params['time_query_type']))'''
+            query_params.append(('timeQueryType', params['time_query_type']))
         if 'report_mime_type' in params:
             query_params.append(('reportMimeType', params['report_mime_type']))
         if 'report_frequency' in params:
@@ -399,7 +409,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/reports?startTime='+start_time+'&endTime='+end_time+'&timeQueryType='+time_query_type, 'GET',
+        return self.api_client.call_api('/reporting/v3/reports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

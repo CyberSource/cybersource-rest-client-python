@@ -62,7 +62,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self):
         """
         Gets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
         :rtype: bool
@@ -73,7 +73,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self, gift_wrap):
         """
         Sets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param gift_wrap: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: bool
@@ -85,7 +85,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def shipping_method(self):
         """
         Gets the shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
-        Shipping method for the product. Possible values:   - lowcost: Lowest-cost service  - sameday: Courier or same-day service  - oneday: Next-day or overnight service  - twoday: Two-day service  - threeday: Three-day service  - pickup: Store pick-up  - other: Other shipping method  - none: No shipping method because product is a service or subscription 
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription 
 
         :return: The shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
         :rtype: str
@@ -96,7 +96,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def shipping_method(self, shipping_method):
         """
         Sets the shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
-        Shipping method for the product. Possible values:   - lowcost: Lowest-cost service  - sameday: Courier or same-day service  - oneday: Next-day or overnight service  - twoday: Two-day service  - threeday: Three-day service  - pickup: Store pick-up  - other: Other shipping method  - none: No shipping method because product is a service or subscription 
+        Shipping method for the product. Possible values:   - `lowcost`: Lowest-cost service  - `sameday`: Courier or same-day service  - `oneday`: Next-day or overnight service  - `twoday`: Two-day service  - `threeday`: Three-day service  - `pickup`: Store pick-up  - `other`: Other shipping method  - `none`: No shipping method because product is a service or subscription 
 
         :param shipping_method: The shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: str

@@ -35,13 +35,14 @@ class RequestBody1(object):
         'report_definition_name': 'str',
         'report_fields': 'list[str]',
         'report_mime_type': 'str',
+        'report_frequency': 'str',
         'report_name': 'str',
         'timezone': 'str',
-        'report_start_time': 'datetime',
-        'report_end_time': 'datetime',
+        'start_time': 'str',
+        'start_day': 'int',
         'report_filters': 'dict(str, list[str])',
-        'report_preferences': 'ReportingV3ReportSubscriptionsGet200ResponseReportPreferences',
-        'selected_merchant_group_name': 'str'
+        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'group_name': 'str'
     }
 
     attribute_map = {
@@ -49,16 +50,17 @@ class RequestBody1(object):
         'report_definition_name': 'reportDefinitionName',
         'report_fields': 'reportFields',
         'report_mime_type': 'reportMimeType',
+        'report_frequency': 'reportFrequency',
         'report_name': 'reportName',
         'timezone': 'timezone',
-        'report_start_time': 'reportStartTime',
-        'report_end_time': 'reportEndTime',
+        'start_time': 'startTime',
+        'start_day': 'startDay',
         'report_filters': 'reportFilters',
         'report_preferences': 'reportPreferences',
-        'selected_merchant_group_name': 'selectedMerchantGroupName'
+        'group_name': 'groupName'
     }
 
-    def __init__(self, organization_id=None, report_definition_name=None, report_fields=None, report_mime_type=None, report_name=None, timezone=None, report_start_time=None, report_end_time=None, report_filters=None, report_preferences=None, selected_merchant_group_name=None):
+    def __init__(self, organization_id=None, report_definition_name=None, report_fields=None, report_mime_type=None, report_frequency=None, report_name=None, timezone=None, start_time=None, start_day=None, report_filters=None, report_preferences=None, group_name=None):
         """
         RequestBody1 - a model defined in Swagger
         """
@@ -67,42 +69,38 @@ class RequestBody1(object):
         self._report_definition_name = None
         self._report_fields = None
         self._report_mime_type = None
+        self._report_frequency = None
         self._report_name = None
         self._timezone = None
-        self._report_start_time = None
-        self._report_end_time = None
+        self._start_time = None
+        self._start_day = None
         self._report_filters = None
         self._report_preferences = None
-        self._selected_merchant_group_name = None
+        self._group_name = None
 
         if organization_id is not None:
           self.organization_id = organization_id
-        if report_definition_name is not None:
-          self.report_definition_name = report_definition_name
-        if report_fields is not None:
-          self.report_fields = report_fields
-        if report_mime_type is not None:
-          self.report_mime_type = report_mime_type
-        if report_name is not None:
-          self.report_name = report_name
-        if timezone is not None:
-          self.timezone = timezone
-        if report_start_time is not None:
-          self.report_start_time = report_start_time
-        if report_end_time is not None:
-          self.report_end_time = report_end_time
+        self.report_definition_name = report_definition_name
+        self.report_fields = report_fields
+        self.report_mime_type = report_mime_type
+        self.report_frequency = report_frequency
+        self.report_name = report_name
+        self.timezone = timezone
+        self.start_time = start_time
+        if start_day is not None:
+          self.start_day = start_day
         if report_filters is not None:
           self.report_filters = report_filters
         if report_preferences is not None:
           self.report_preferences = report_preferences
-        if selected_merchant_group_name is not None:
-          self.selected_merchant_group_name = selected_merchant_group_name
+        if group_name is not None:
+          self.group_name = group_name
 
     @property
     def organization_id(self):
         """
         Gets the organization_id of this RequestBody1.
-        Valid CyberSource Organization Id
+        Valid CyberSource organizationId
 
         :return: The organization_id of this RequestBody1.
         :rtype: str
@@ -113,7 +111,7 @@ class RequestBody1(object):
     def organization_id(self, organization_id):
         """
         Sets the organization_id of this RequestBody1.
-        Valid CyberSource Organization Id
+        Valid CyberSource organizationId
 
         :param organization_id: The organization_id of this RequestBody1.
         :type: str
@@ -127,6 +125,7 @@ class RequestBody1(object):
     def report_definition_name(self):
         """
         Gets the report_definition_name of this RequestBody1.
+        Valid Report Definition Name
 
         :return: The report_definition_name of this RequestBody1.
         :rtype: str
@@ -137,10 +136,13 @@ class RequestBody1(object):
     def report_definition_name(self, report_definition_name):
         """
         Sets the report_definition_name of this RequestBody1.
+        Valid Report Definition Name
 
         :param report_definition_name: The report_definition_name of this RequestBody1.
         :type: str
         """
+        if report_definition_name is None:
+            raise ValueError("Invalid value for `report_definition_name`, must not be `None`")
         if report_definition_name is not None and len(report_definition_name) > 80:
             raise ValueError("Invalid value for `report_definition_name`, length must be less than or equal to `80`")
         if report_definition_name is not None and len(report_definition_name) < 1:
@@ -154,7 +156,6 @@ class RequestBody1(object):
     def report_fields(self):
         """
         Gets the report_fields of this RequestBody1.
-        List of fields which needs to get included in a report
 
         :return: The report_fields of this RequestBody1.
         :rtype: list[str]
@@ -165,11 +166,12 @@ class RequestBody1(object):
     def report_fields(self, report_fields):
         """
         Sets the report_fields of this RequestBody1.
-        List of fields which needs to get included in a report
 
         :param report_fields: The report_fields of this RequestBody1.
         :type: list[str]
         """
+        if report_fields is None:
+            raise ValueError("Invalid value for `report_fields`, must not be `None`")
 
         self._report_fields = report_fields
 
@@ -177,7 +179,6 @@ class RequestBody1(object):
     def report_mime_type(self):
         """
         Gets the report_mime_type of this RequestBody1.
-         Format of the report
 
         :return: The report_mime_type of this RequestBody1.
         :rtype: str
@@ -188,11 +189,12 @@ class RequestBody1(object):
     def report_mime_type(self, report_mime_type):
         """
         Sets the report_mime_type of this RequestBody1.
-         Format of the report
 
         :param report_mime_type: The report_mime_type of this RequestBody1.
         :type: str
         """
+        if report_mime_type is None:
+            raise ValueError("Invalid value for `report_mime_type`, must not be `None`")
         allowed_values = ["application/xml", "text/csv"]
         if report_mime_type not in allowed_values:
             raise ValueError(
@@ -203,10 +205,40 @@ class RequestBody1(object):
         self._report_mime_type = report_mime_type
 
     @property
+    def report_frequency(self):
+        """
+        Gets the report_frequency of this RequestBody1.
+        The frequency for which subscription is created.
+
+        :return: The report_frequency of this RequestBody1.
+        :rtype: str
+        """
+        return self._report_frequency
+
+    @report_frequency.setter
+    def report_frequency(self, report_frequency):
+        """
+        Sets the report_frequency of this RequestBody1.
+        The frequency for which subscription is created.
+
+        :param report_frequency: The report_frequency of this RequestBody1.
+        :type: str
+        """
+        if report_frequency is None:
+            raise ValueError("Invalid value for `report_frequency`, must not be `None`")
+        allowed_values = ["DAILY", "WEEKLY", "MONTHLY"]
+        if report_frequency not in allowed_values:
+            raise ValueError(
+                "Invalid value for `report_frequency` ({0}), must be one of {1}"
+                .format(report_frequency, allowed_values)
+            )
+
+        self._report_frequency = report_frequency
+
+    @property
     def report_name(self):
         """
         Gets the report_name of this RequestBody1.
-        Name of the report
 
         :return: The report_name of this RequestBody1.
         :rtype: str
@@ -217,11 +249,12 @@ class RequestBody1(object):
     def report_name(self, report_name):
         """
         Sets the report_name of this RequestBody1.
-        Name of the report
 
         :param report_name: The report_name of this RequestBody1.
         :type: str
         """
+        if report_name is None:
+            raise ValueError("Invalid value for `report_name`, must not be `None`")
         if report_name is not None and len(report_name) > 128:
             raise ValueError("Invalid value for `report_name`, length must be less than or equal to `128`")
         if report_name is not None and len(report_name) < 1:
@@ -235,7 +268,6 @@ class RequestBody1(object):
     def timezone(self):
         """
         Gets the timezone of this RequestBody1.
-        Timezone of the report
 
         :return: The timezone of this RequestBody1.
         :rtype: str
@@ -246,64 +278,72 @@ class RequestBody1(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this RequestBody1.
-        Timezone of the report
 
         :param timezone: The timezone of this RequestBody1.
         :type: str
         """
+        if timezone is None:
+            raise ValueError("Invalid value for `timezone`, must not be `None`")
 
         self._timezone = timezone
 
     @property
-    def report_start_time(self):
+    def start_time(self):
         """
-        Gets the report_start_time of this RequestBody1.
-        Start time of the report
+        Gets the start_time of this RequestBody1.
+        The hour at which the report generation should start. It should be in hhmm format.
 
-        :return: The report_start_time of this RequestBody1.
-        :rtype: datetime
+        :return: The start_time of this RequestBody1.
+        :rtype: str
         """
-        return self._report_start_time
+        return self._start_time
 
-    @report_start_time.setter
-    def report_start_time(self, report_start_time):
+    @start_time.setter
+    def start_time(self, start_time):
         """
-        Sets the report_start_time of this RequestBody1.
-        Start time of the report
+        Sets the start_time of this RequestBody1.
+        The hour at which the report generation should start. It should be in hhmm format.
 
-        :param report_start_time: The report_start_time of this RequestBody1.
-        :type: datetime
+        :param start_time: The start_time of this RequestBody1.
+        :type: str
         """
+        if start_time is None:
+            raise ValueError("Invalid value for `start_time`, must not be `None`")
 
-        self._report_start_time = report_start_time
+        self._start_time = start_time
 
     @property
-    def report_end_time(self):
+    def start_day(self):
         """
-        Gets the report_end_time of this RequestBody1.
-        End time of the report
+        Gets the start_day of this RequestBody1.
+        This is the start day if the frequency is WEEKLY or MONTHLY. The value varies from 1-7 for WEEKLY and 1-31 for MONTHLY. For WEEKLY 1 means Sunday and 7 means Saturday. By default the value is 1.
 
-        :return: The report_end_time of this RequestBody1.
-        :rtype: datetime
+        :return: The start_day of this RequestBody1.
+        :rtype: int
         """
-        return self._report_end_time
+        return self._start_day
 
-    @report_end_time.setter
-    def report_end_time(self, report_end_time):
+    @start_day.setter
+    def start_day(self, start_day):
         """
-        Sets the report_end_time of this RequestBody1.
-        End time of the report
+        Sets the start_day of this RequestBody1.
+        This is the start day if the frequency is WEEKLY or MONTHLY. The value varies from 1-7 for WEEKLY and 1-31 for MONTHLY. For WEEKLY 1 means Sunday and 7 means Saturday. By default the value is 1.
 
-        :param report_end_time: The report_end_time of this RequestBody1.
-        :type: datetime
+        :param start_day: The start_day of this RequestBody1.
+        :type: int
         """
+        if start_day is not None and start_day > 31:
+            raise ValueError("Invalid value for `start_day`, must be a value less than or equal to `31`")
+        if start_day is not None and start_day < 1:
+            raise ValueError("Invalid value for `start_day`, must be a value greater than or equal to `1`")
 
-        self._report_end_time = report_end_time
+        self._start_day = start_day
 
     @property
     def report_filters(self):
         """
         Gets the report_filters of this RequestBody1.
+        List of filters to apply
 
         :return: The report_filters of this RequestBody1.
         :rtype: dict(str, list[str])
@@ -314,6 +354,7 @@ class RequestBody1(object):
     def report_filters(self, report_filters):
         """
         Sets the report_filters of this RequestBody1.
+        List of filters to apply
 
         :param report_filters: The report_filters of this RequestBody1.
         :type: dict(str, list[str])
@@ -327,7 +368,7 @@ class RequestBody1(object):
         Gets the report_preferences of this RequestBody1.
 
         :return: The report_preferences of this RequestBody1.
-        :rtype: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
         return self._report_preferences
 
@@ -337,35 +378,35 @@ class RequestBody1(object):
         Sets the report_preferences of this RequestBody1.
 
         :param report_preferences: The report_preferences of this RequestBody1.
-        :type: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
 
         self._report_preferences = report_preferences
 
     @property
-    def selected_merchant_group_name(self):
+    def group_name(self):
         """
-        Gets the selected_merchant_group_name of this RequestBody1.
-        Specifies the group name
+        Gets the group_name of this RequestBody1.
+        Valid GroupName
 
-        :return: The selected_merchant_group_name of this RequestBody1.
+        :return: The group_name of this RequestBody1.
         :rtype: str
         """
-        return self._selected_merchant_group_name
+        return self._group_name
 
-    @selected_merchant_group_name.setter
-    def selected_merchant_group_name(self, selected_merchant_group_name):
+    @group_name.setter
+    def group_name(self, group_name):
         """
-        Sets the selected_merchant_group_name of this RequestBody1.
-        Specifies the group name
+        Sets the group_name of this RequestBody1.
+        Valid GroupName
 
-        :param selected_merchant_group_name: The selected_merchant_group_name of this RequestBody1.
+        :param group_name: The group_name of this RequestBody1.
         :type: str
         """
-        if selected_merchant_group_name is not None and not re.search('[0-9]*', selected_merchant_group_name):
-            raise ValueError("Invalid value for `selected_merchant_group_name`, must be a follow pattern or equal to `/[0-9]*/`")
+        if group_name is not None and not re.search('[a-zA-Z0-9-_ ]+', group_name):
+            raise ValueError("Invalid value for `group_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
 
-        self._selected_merchant_group_name = selected_merchant_group_name
+        self._group_name = group_name
 
     def to_dict(self):
         """

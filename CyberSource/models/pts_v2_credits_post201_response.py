@@ -38,7 +38,9 @@ class PtsV2CreditsPost201Response(object):
         'reconciliation_id': 'str',
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
         'credit_amount_details': 'PtsV2CreditsPost201ResponseCreditAmountDetails',
+        'processing_information': 'PtsV2CreditsPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
+        'payment_information': 'PtsV2CreditsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation'
     }
 
@@ -50,11 +52,13 @@ class PtsV2CreditsPost201Response(object):
         'reconciliation_id': 'reconciliationId',
         'client_reference_information': 'clientReferenceInformation',
         'credit_amount_details': 'creditAmountDetails',
+        'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
+        'payment_information': 'paymentInformation',
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processor_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processing_information=None, processor_information=None, payment_information=None, order_information=None):
         """
         PtsV2CreditsPost201Response - a model defined in Swagger
         """
@@ -66,7 +70,9 @@ class PtsV2CreditsPost201Response(object):
         self._reconciliation_id = None
         self._client_reference_information = None
         self._credit_amount_details = None
+        self._processing_information = None
         self._processor_information = None
+        self._payment_information = None
         self._order_information = None
 
         if links is not None:
@@ -83,8 +89,12 @@ class PtsV2CreditsPost201Response(object):
           self.client_reference_information = client_reference_information
         if credit_amount_details is not None:
           self.credit_amount_details = credit_amount_details
+        if processing_information is not None:
+          self.processing_information = processing_information
         if processor_information is not None:
           self.processor_information = processor_information
+        if payment_information is not None:
+          self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
 
@@ -161,7 +171,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - PENDING 
 
         :return: The status of this PtsV2CreditsPost201Response.
         :rtype: str
@@ -172,7 +182,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - PENDING 
 
         :param status: The status of this PtsV2CreditsPost201Response.
         :type: str
@@ -254,6 +264,27 @@ class PtsV2CreditsPost201Response(object):
         self._credit_amount_details = credit_amount_details
 
     @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this PtsV2CreditsPost201Response.
+
+        :return: The processing_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2CreditsPost201ResponseProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this PtsV2CreditsPost201Response.
+
+        :param processing_information: The processing_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2CreditsPost201ResponseProcessingInformation
+        """
+
+        self._processing_information = processing_information
+
+    @property
     def processor_information(self):
         """
         Gets the processor_information of this PtsV2CreditsPost201Response.
@@ -273,6 +304,27 @@ class PtsV2CreditsPost201Response(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this PtsV2CreditsPost201Response.
+
+        :return: The payment_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2CreditsPost201ResponsePaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this PtsV2CreditsPost201Response.
+
+        :param payment_information: The payment_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2CreditsPost201ResponsePaymentInformation
+        """
+
+        self._payment_information = payment_information
 
     @property
     def order_information(self):

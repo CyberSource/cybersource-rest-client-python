@@ -67,7 +67,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def key(self):
         """
         Gets the key of this Ptsv2paymentsPaymentInformationFluidData.
-        Description of this field is not available.
+        The name of the merchant-defined data field. The range of this field starts at 1 and terminiates at 100.
 
         :return: The key of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -78,7 +78,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def key(self, key):
         """
         Sets the key of this Ptsv2paymentsPaymentInformationFluidData.
-        Description of this field is not available.
+        The name of the merchant-defined data field. The range of this field starts at 1 and terminiates at 100.
 
         :param key: The key of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
@@ -90,7 +90,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self):
         """
         Gets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        Format of the encrypted payment data.
+        The specific string for identifying the payment solution that is sending the encrypted payment data to CyberSource. Valid values: - `Apple Pay` - `Samsung Pay` **NOTE**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Merchant needs to pass in this value. 
 
         :return: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -101,7 +101,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self, descriptor):
         """
         Sets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        Format of the encrypted payment data.
+        The specific string for identifying the payment solution that is sending the encrypted payment data to CyberSource. Valid values: - `Apple Pay` - `Samsung Pay` **NOTE**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Merchant needs to pass in this value. 
 
         :param descriptor: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
@@ -115,7 +115,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self):
         """
         Gets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        The encrypted payment data value. If using Apple Pay or Samsung Pay, the values are:   - Apple Pay: RklEPUNPTU1PTi5BUFBMRS5JTkFQUC5QQVlNRU5U   - Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  Valid values: - Apple Pay: `RklEPUNPTU1PTi5BUFBMRS5JTkFQUC5QQVlNRU5U` - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=` **NOTE**: For other payment solutions, the value of the descriptor may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Merchant needs to pass in this value. 
 
         :return: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -126,7 +126,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self, value):
         """
         Sets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        The encrypted payment data value. If using Apple Pay or Samsung Pay, the values are:   - Apple Pay: RklEPUNPTU1PTi5BUFBMRS5JTkFQUC5QQVlNRU5U   - Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  Valid values: - Apple Pay: `RklEPUNPTU1PTi5BUFBMRS5JTkFQUC5QQVlNRU5U` - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=` **NOTE**: For other payment solutions, the value of the descriptor may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Merchant needs to pass in this value. 
 
         :param value: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
@@ -140,7 +140,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self):
         """
         Gets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Possible value: Base64 
+        Encoding method used to encrypt the payment data.  Valid value: Base64 
 
         :return: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -151,7 +151,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self, encoding):
         """
         Sets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Possible value: Base64 
+        Encoding method used to encrypt the payment data.  Valid value: Base64 
 
         :param encoding: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str

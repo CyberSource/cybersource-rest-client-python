@@ -67,7 +67,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction. 
+        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
 
         :return: The type of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :rtype: str
@@ -78,7 +78,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction. 
+        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
 
         :param type: The type of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :type: str
@@ -96,7 +96,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def credential_stored_on_file(self):
         """
         Gets the credential_stored_on_file of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not. 
+        Flag that indicates whether merchant intends to use this transaction to store payment credentials for follow-up merchant-initiated transactions.  Valid values: - `true` means merchant will use this transaction to store payment credentials for follow-up merchant-initiated transactions. - `false` means merchant will not use this transaction to store payment credentials for follow-up merchant-initiated transactions.  See \"Merchant-Initiated Transactions,\" page 177.  **NOTE:** The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on CyberSource through VisaNet. 
 
         :return: The credential_stored_on_file of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :rtype: bool
@@ -107,7 +107,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def credential_stored_on_file(self, credential_stored_on_file):
         """
         Sets the credential_stored_on_file of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not. 
+        Flag that indicates whether merchant intends to use this transaction to store payment credentials for follow-up merchant-initiated transactions.  Valid values: - `true` means merchant will use this transaction to store payment credentials for follow-up merchant-initiated transactions. - `false` means merchant will not use this transaction to store payment credentials for follow-up merchant-initiated transactions.  See \"Merchant-Initiated Transactions,\" page 177.  **NOTE:** The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on CyberSource through VisaNet. 
 
         :param credential_stored_on_file: The credential_stored_on_file of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :type: bool
@@ -119,7 +119,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def stored_credential_used(self):
         """
         Gets the stored_credential_used of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not. 
+        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not.  Possible values: - **true** - **false** 
 
         :return: The stored_credential_used of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :rtype: bool
@@ -130,7 +130,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
     def stored_credential_used(self, stored_credential_used):
         """
         Sets the stored_credential_used of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
-        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not. 
+        Flag that indicates whether merchant is intend to use this transaction to store payment credential for follow-up merchant-initiated transactions or not.  Possible values: - **true** - **false** 
 
         :param stored_credential_used: The stored_credential_used of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :type: bool
