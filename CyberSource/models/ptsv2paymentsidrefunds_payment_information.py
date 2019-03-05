@@ -31,22 +31,32 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'Ptsv2paymentsidrefundsPaymentInformationCard'
+        'card': 'Ptsv2paymentsidrefundsPaymentInformationCard',
+        'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
     }
 
     attribute_map = {
-        'card': 'card'
+        'card': 'card',
+        'bank': 'bank',
+        'customer': 'customer'
     }
 
-    def __init__(self, card=None):
+    def __init__(self, card=None, bank=None, customer=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
+        self._bank = None
+        self._customer = None
 
         if card is not None:
           self.card = card
+        if bank is not None:
+          self.bank = bank
+        if customer is not None:
+          self.customer = customer
 
     @property
     def card(self):
@@ -68,6 +78,48 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._card = card
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The bank of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param bank: The bank of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationBank
+        """
+
+        self._bank = bank
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The customer of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param customer: The customer of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationCustomer
+        """
+
+        self._customer = customer
 
     def to_dict(self):
         """

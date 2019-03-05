@@ -33,16 +33,18 @@ class Ptsv2paymentsClientReferenceInformation(object):
     swagger_types = {
         'code': 'str',
         'transaction_id': 'str',
-        'comments': 'str'
+        'comments': 'str',
+        'partner': 'Ptsv2paymentsClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
         'transaction_id': 'transactionId',
-        'comments': 'comments'
+        'comments': 'comments',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, transaction_id=None, comments=None):
+    def __init__(self, code=None, transaction_id=None, comments=None, partner=None):
         """
         Ptsv2paymentsClientReferenceInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
         self._code = None
         self._transaction_id = None
         self._comments = None
+        self._partner = None
 
         if code is not None:
           self.code = code
@@ -57,12 +60,14 @@ class Ptsv2paymentsClientReferenceInformation(object):
           self.transaction_id = transaction_id
         if comments is not None:
           self.comments = comments
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
         """
         Gets the code of this Ptsv2paymentsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -73,7 +78,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Ptsv2paymentsClientReferenceInformation.
         :type: str
@@ -87,7 +92,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self):
         """
         Gets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction. See \"Merchant-Initiated Reversals and Voids,\" page 176 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations . See \"Merchant-Initiated Reversals and Voids,\" page 176. 
 
         :return: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -98,7 +103,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction. See \"Merchant-Initiated Reversals and Voids,\" page 176 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations . See \"Merchant-Initiated Reversals and Voids,\" page 176. 
 
         :param transaction_id: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str
@@ -128,6 +133,27 @@ class Ptsv2paymentsClientReferenceInformation(object):
         """
 
         self._comments = comments
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this Ptsv2paymentsClientReferenceInformation.
+
+        :return: The partner of this Ptsv2paymentsClientReferenceInformation.
+        :rtype: Ptsv2paymentsClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this Ptsv2paymentsClientReferenceInformation.
+
+        :param partner: The partner of this Ptsv2paymentsClientReferenceInformation.
+        :type: Ptsv2paymentsClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

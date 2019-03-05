@@ -39,7 +39,7 @@ class InstrumentIdentifiersApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def tms_v1_instrumentidentifiers_post(self, profile_id, body, **kwargs):
@@ -110,10 +110,10 @@ class InstrumentIdentifiersApi(object):
         if ('body' not in params) or (params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `tms_v1_instrumentidentifiers_post`")
 
-        '''if 'profile_id' in params and params['profile_id'] > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_post`, must be a value less than or equal to `36`")
-        if 'profile_id' in params and params['profile_id'] < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_post`, must be a value greater than or equal to `36`")'''
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_post`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `tms_v1_instrumentidentifiers_post`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -133,11 +133,11 @@ class InstrumentIdentifiersApi(object):
             body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        #header_params['Content-Type'] = self.api_client.\
-            #select_header_content_type(['application/json;charset=utf-8'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

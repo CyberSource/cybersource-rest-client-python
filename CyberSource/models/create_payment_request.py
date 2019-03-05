@@ -33,6 +33,7 @@ class CreatePaymentRequest(object):
     swagger_types = {
         'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
         'processing_information': 'Ptsv2paymentsProcessingInformation',
+        'issuer_information': 'Ptsv2paymentsIssuerInformation',
         'payment_information': 'Ptsv2paymentsPaymentInformation',
         'order_information': 'Ptsv2paymentsOrderInformation',
         'buyer_information': 'Ptsv2paymentsBuyerInformation',
@@ -42,12 +43,14 @@ class CreatePaymentRequest(object):
         'aggregator_information': 'Ptsv2paymentsAggregatorInformation',
         'consumer_authentication_information': 'Ptsv2paymentsConsumerAuthenticationInformation',
         'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
-        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]'
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
+        'installment_information': 'Ptsv2paymentsInstallmentInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'processing_information': 'processingInformation',
+        'issuer_information': 'issuerInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
         'buyer_information': 'buyerInformation',
@@ -57,16 +60,18 @@ class CreatePaymentRequest(object):
         'aggregator_information': 'aggregatorInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'merchant_defined_information': 'merchantDefinedInformation'
+        'merchant_defined_information': 'merchantDefinedInformation',
+        'installment_information': 'installmentInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
 
         self._client_reference_information = None
         self._processing_information = None
+        self._issuer_information = None
         self._payment_information = None
         self._order_information = None
         self._buyer_information = None
@@ -77,11 +82,14 @@ class CreatePaymentRequest(object):
         self._consumer_authentication_information = None
         self._point_of_sale_information = None
         self._merchant_defined_information = None
+        self._installment_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if payment_information is not None:
           self.payment_information = payment_information
         if order_information is not None:
@@ -102,6 +110,8 @@ class CreatePaymentRequest(object):
           self.point_of_sale_information = point_of_sale_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if installment_information is not None:
+          self.installment_information = installment_information
 
     @property
     def client_reference_information(self):
@@ -144,6 +154,27 @@ class CreatePaymentRequest(object):
         """
 
         self._processing_information = processing_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this CreatePaymentRequest.
+
+        :return: The issuer_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this CreatePaymentRequest.
+
+        :param issuer_information: The issuer_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     @property
     def payment_information(self):
@@ -338,7 +369,7 @@ class CreatePaymentRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CreatePaymentRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The merchant_defined_information of this CreatePaymentRequest.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -349,13 +380,34 @@ class CreatePaymentRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this CreatePaymentRequest.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this CreatePaymentRequest.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def installment_information(self):
+        """
+        Gets the installment_information of this CreatePaymentRequest.
+
+        :return: The installment_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsInstallmentInformation
+        """
+        return self._installment_information
+
+    @installment_information.setter
+    def installment_information(self, installment_information):
+        """
+        Sets the installment_information of this CreatePaymentRequest.
+
+        :param installment_information: The installment_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsInstallmentInformation
+        """
+
+        self._installment_information = installment_information
 
     def to_dict(self):
         """

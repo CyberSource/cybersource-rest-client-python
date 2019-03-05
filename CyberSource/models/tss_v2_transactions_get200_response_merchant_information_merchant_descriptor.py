@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor(objec
         :param name: The name of this TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if name is not None and len(name) > 23:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `23`")
 
         self._name = name
 

@@ -39,7 +39,7 @@ class KeyGenerationApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def generate_public_key(self, **kwargs):
@@ -125,7 +125,7 @@ class KeyGenerationApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json'])
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

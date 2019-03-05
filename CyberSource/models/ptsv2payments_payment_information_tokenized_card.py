@@ -122,7 +122,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def expiration_month(self):
         """
         Gets the expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Two-digit month in which the payment network token expires. `Format: MM`. Possible values: 01 through 12. 
+        Two-digit month in which the payment network token expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -133,7 +133,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Two-digit month in which the payment network token expires. `Format: MM`. Possible values: 01 through 12. 
+        Two-digit month in which the payment network token expires. `Format: MM`. Possible values: 01 through 12.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (01 through 12) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **Encoded Account Numbers**\\ For encoded account numbers (_type_=039), if there is no expiration date on the card, use 12.  For processor-specific information, see the customer_cc_expmo field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_month: The expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -147,7 +147,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Four-digit year in which the payment network token expires. `Format: YYYY`. 
+        Four-digit year in which the payment network token expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (card_type=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The expiration_year of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -158,7 +158,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Four-digit year in which the payment network token expires. `Format: YYYY`. 
+        Four-digit year in which the payment network token expires. `Format: YYYY`.  **Barclays and Streamline**\\ For Maestro (UK Domestic) and Maestro (International) cards on Barclays and Streamline, this must be a valid value (1900 through 3000) but is not required to be a valid expiration date. In other words, an expiration date that is in the past does not cause CyberSource to reject your request. However, an invalid expiration date might cause the issuer to reject your request.  **FDC Nashville Global and FDMS South**\\ You can send in 2 digits or 4 digits. If you send in 2 digits, they must be the last 2 digits of the year.  **Encoded Account Numbers**\\ For encoded account numbers (card_type=039), if there is no expiration date on the card, use 2021.  For processor-specific information, see the customer_cc_expyr field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param expiration_year: The expiration_year of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -188,8 +188,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if type is not None and len(type) > 3:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 
@@ -322,7 +320,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def security_code(self):
         """
         Gets the security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        CVN.
+        Card Verification Number.  **Ingenico ePayments** Do not include this field when _commerceIndicator=recurring_. **Note** Ingenico ePayments was previously called Global Collect. CVN. 
 
         :return: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -333,7 +331,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        CVN.
+        Card Verification Number.  **Ingenico ePayments** Do not include this field when _commerceIndicator=recurring_. **Note** Ingenico ePayments was previously called Global Collect. CVN. 
 
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str

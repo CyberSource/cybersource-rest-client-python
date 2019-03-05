@@ -31,6 +31,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'auth_indicator': 'str',
         'approval_code': 'str',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
@@ -44,9 +45,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'card_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationCardVerification',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
         'electronic_verification_results': 'PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults',
+        'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'customer': 'PtsV2PaymentsPost201ResponseProcessorInformationCustomer',
         'consumer_authentication_response': 'PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse',
-        'issuer': 'PtsV2PaymentsPost201ResponseProcessorInformationIssuer',
         'system_trace_audit_number': 'str',
         'payment_account_reference_number': 'str',
         'transaction_integrity_code': 'str',
@@ -55,10 +56,13 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'master_card_service_code': 'str',
         'master_card_service_reply_code': 'str',
         'master_card_authentication_type': 'str',
-        'name': 'str'
+        'name': 'str',
+        'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting',
+        'merchant_number': 'str'
     }
 
     attribute_map = {
+        'auth_indicator': 'authIndicator',
         'approval_code': 'approvalCode',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
@@ -72,9 +76,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'card_verification': 'cardVerification',
         'merchant_advice': 'merchantAdvice',
         'electronic_verification_results': 'electronicVerificationResults',
+        'ach_verification': 'achVerification',
         'customer': 'customer',
         'consumer_authentication_response': 'consumerAuthenticationResponse',
-        'issuer': 'issuer',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'payment_account_reference_number': 'paymentAccountReferenceNumber',
         'transaction_integrity_code': 'transactionIntegrityCode',
@@ -83,14 +87,17 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'master_card_service_code': 'masterCardServiceCode',
         'master_card_service_reply_code': 'masterCardServiceReplyCode',
         'master_card_authentication_type': 'masterCardAuthenticationType',
-        'name': 'name'
+        'name': 'name',
+        'routing': 'routing',
+        'merchant_number': 'merchantNumber'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, provider_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, customer=None, consumer_authentication_response=None, issuer=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, sales_slip_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None):
+    def __init__(self, auth_indicator=None, approval_code=None, transaction_id=None, network_transaction_id=None, provider_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, sales_slip_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
+        self._auth_indicator = None
         self._approval_code = None
         self._transaction_id = None
         self._network_transaction_id = None
@@ -104,9 +111,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._card_verification = None
         self._merchant_advice = None
         self._electronic_verification_results = None
+        self._ach_verification = None
         self._customer = None
         self._consumer_authentication_response = None
-        self._issuer = None
         self._system_trace_audit_number = None
         self._payment_account_reference_number = None
         self._transaction_integrity_code = None
@@ -116,7 +123,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._master_card_service_reply_code = None
         self._master_card_authentication_type = None
         self._name = None
+        self._routing = None
+        self._merchant_number = None
 
+        if auth_indicator is not None:
+          self.auth_indicator = auth_indicator
         if approval_code is not None:
           self.approval_code = approval_code
         if transaction_id is not None:
@@ -143,12 +154,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.merchant_advice = merchant_advice
         if electronic_verification_results is not None:
           self.electronic_verification_results = electronic_verification_results
+        if ach_verification is not None:
+          self.ach_verification = ach_verification
         if customer is not None:
           self.customer = customer
         if consumer_authentication_response is not None:
           self.consumer_authentication_response = consumer_authentication_response
-        if issuer is not None:
-          self.issuer = issuer
         if system_trace_audit_number is not None:
           self.system_trace_audit_number = system_trace_audit_number
         if payment_account_reference_number is not None:
@@ -167,6 +178,35 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.master_card_authentication_type = master_card_authentication_type
         if name is not None:
           self.name = name
+        if routing is not None:
+          self.routing = routing
+        if merchant_number is not None:
+          self.merchant_number = merchant_number
+
+    @property
+    def auth_indicator(self):
+        """
+        Gets the auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :return: The auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._auth_indicator
+
+    @auth_indicator.setter
+    def auth_indicator(self, auth_indicator):
+        """
+        Sets the auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :param auth_indicator: The auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+        if auth_indicator is not None and len(auth_indicator) > 1:
+            raise ValueError("Invalid value for `auth_indicator`, length must be less than or equal to `1`")
+
+        self._auth_indicator = auth_indicator
 
     @property
     def approval_code(self):
@@ -195,7 +235,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def transaction_id(self):
         """
         Gets the transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this  value. 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value. 
 
         :return: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -206,7 +246,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this  value. 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value. 
 
         :param transaction_id: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -220,7 +260,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -231,7 +271,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -243,7 +283,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def provider_transaction_id(self):
         """
         Gets the provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -254,7 +294,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def provider_transaction_id(self, provider_transaction_id):
         """
         Sets the provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param provider_transaction_id: The provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -472,6 +512,27 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._electronic_verification_results = electronic_verification_results
 
     @property
+    def ach_verification(self):
+        """
+        Gets the ach_verification of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The ach_verification of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
+        """
+        return self._ach_verification
+
+    @ach_verification.setter
+    def ach_verification(self, ach_verification):
+        """
+        Sets the ach_verification of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param ach_verification: The ach_verification of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
+        """
+
+        self._ach_verification = ach_verification
+
+    @property
     def customer(self):
         """
         Gets the customer of this PtsV2PaymentsPost201ResponseProcessorInformation.
@@ -512,27 +573,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._consumer_authentication_response = consumer_authentication_response
-
-    @property
-    def issuer(self):
-        """
-        Gets the issuer of this PtsV2PaymentsPost201ResponseProcessorInformation.
-
-        :return: The issuer of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationIssuer
-        """
-        return self._issuer
-
-    @issuer.setter
-    def issuer(self, issuer):
-        """
-        Sets the issuer of this PtsV2PaymentsPost201ResponseProcessorInformation.
-
-        :param issuer: The issuer of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :type: PtsV2PaymentsPost201ResponseProcessorInformationIssuer
-        """
-
-        self._issuer = issuer
 
     @property
     def system_trace_audit_number(self):
@@ -758,6 +798,52 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
             raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
+
+    @property
+    def routing(self):
+        """
+        Gets the routing of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The routing of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationRouting
+        """
+        return self._routing
+
+    @routing.setter
+    def routing(self, routing):
+        """
+        Sets the routing of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param routing: The routing of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationRouting
+        """
+
+        self._routing = routing
+
+    @property
+    def merchant_number(self):
+        """
+        Gets the merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+
+        :return: The merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._merchant_number
+
+    @merchant_number.setter
+    def merchant_number(self, merchant_number):
+        """
+        Sets the merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+
+        :param merchant_number: The merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+        if merchant_number is not None and len(merchant_number) > 15:
+            raise ValueError("Invalid value for `merchant_number`, length must be less than or equal to `15`")
+
+        self._merchant_number = merchant_number
 
     def to_dict(self):
         """

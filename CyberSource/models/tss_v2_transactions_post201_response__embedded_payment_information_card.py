@@ -128,8 +128,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :param type: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :type: str
         """
-        if type is not None and len(type) > 3:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `3`")
 
         self._type = type
 

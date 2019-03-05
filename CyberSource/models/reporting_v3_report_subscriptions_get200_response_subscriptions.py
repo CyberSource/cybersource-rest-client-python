@@ -41,9 +41,9 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         'start_time': 'datetime',
         'start_day': 'int',
         'report_fields': 'list[str]',
-        'report_filters': 'list[str]',
-        'report_preferences': 'ReportingV3ReportSubscriptionsGet200ResponseReportPreferences',
-        'selected_merchant_group_name': 'str'
+        'report_filters': 'dict(str, list[str])',
+        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'group_id': 'str'
     }
 
     attribute_map = {
@@ -59,10 +59,10 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         'report_fields': 'reportFields',
         'report_filters': 'reportFilters',
         'report_preferences': 'reportPreferences',
-        'selected_merchant_group_name': 'selectedMerchantGroupName'
+        'group_id': 'groupId'
     }
 
-    def __init__(self, organization_id=None, report_definition_id=None, report_definition_name=None, report_mime_type=None, report_frequency=None, report_name=None, timezone=None, start_time=None, start_day=None, report_fields=None, report_filters=None, report_preferences=None, selected_merchant_group_name=None):
+    def __init__(self, organization_id=None, report_definition_id=None, report_definition_name=None, report_mime_type=None, report_frequency=None, report_name=None, timezone=None, start_time=None, start_day=None, report_fields=None, report_filters=None, report_preferences=None, group_id=None):
         """
         ReportingV3ReportSubscriptionsGet200ResponseSubscriptions - a model defined in Swagger
         """
@@ -79,7 +79,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         self._report_fields = None
         self._report_filters = None
         self._report_preferences = None
-        self._selected_merchant_group_name = None
+        self._group_id = None
 
         if organization_id is not None:
           self.organization_id = organization_id
@@ -105,14 +105,14 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
           self.report_filters = report_filters
         if report_preferences is not None:
           self.report_preferences = report_preferences
-        if selected_merchant_group_name is not None:
-          self.selected_merchant_group_name = selected_merchant_group_name
+        if group_id is not None:
+          self.group_id = group_id
 
     @property
     def organization_id(self):
         """
         Gets the organization_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Organization Id
+        Selected Organization Id
 
         :return: The organization_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
@@ -123,7 +123,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def organization_id(self, organization_id):
         """
         Sets the organization_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Organization Id
+        Selected Organization Id
 
         :param organization_id: The organization_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
@@ -158,7 +158,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_definition_name(self):
         """
         Gets the report_definition_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Definition
+        Report Definition Class
 
         :return: The report_definition_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
@@ -169,7 +169,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_definition_name(self, report_definition_name):
         """
         Sets the report_definition_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Definition
+        Report Definition Class
 
         :param report_definition_name: The report_definition_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
@@ -357,7 +357,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         List of filters to apply
 
         :return: The report_filters of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :rtype: list[str]
+        :rtype: dict(str, list[str])
         """
         return self._report_filters
 
@@ -368,7 +368,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         List of filters to apply
 
         :param report_filters: The report_filters of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :type: list[str]
+        :type: dict(str, list[str])
         """
 
         self._report_filters = report_filters
@@ -379,7 +379,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         Gets the report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
 
         :return: The report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :rtype: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
         return self._report_preferences
 
@@ -389,33 +389,33 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         Sets the report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
 
         :param report_preferences: The report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :type: ReportingV3ReportSubscriptionsGet200ResponseReportPreferences
+        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
         """
 
         self._report_preferences = report_preferences
 
     @property
-    def selected_merchant_group_name(self):
+    def group_id(self):
         """
-        Gets the selected_merchant_group_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Selected name of the group.
+        Gets the group_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
+        Id for the selected group.
 
-        :return: The selected_merchant_group_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
+        :return: The group_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
         """
-        return self._selected_merchant_group_name
+        return self._group_id
 
-    @selected_merchant_group_name.setter
-    def selected_merchant_group_name(self, selected_merchant_group_name):
+    @group_id.setter
+    def group_id(self, group_id):
         """
-        Sets the selected_merchant_group_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Selected name of the group.
+        Sets the group_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
+        Id for the selected group.
 
-        :param selected_merchant_group_name: The selected_merchant_group_name of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
+        :param group_id: The group_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
 
-        self._selected_merchant_group_name = selected_merchant_group_name
+        self._group_id = group_id
 
     def to_dict(self):
         """

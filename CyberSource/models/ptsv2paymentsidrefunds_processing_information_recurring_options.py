@@ -52,7 +52,7 @@ class Ptsv2paymentsidrefundsProcessingInformationRecurringOptions(object):
     def loan_payment(self):
         """
         Gets the loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan. 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - **true** Loan payment - **false** (default) Not a loan payment  See \"Visa Debt Repayments,\" page 218, for a list of processors that support this feature. 
 
         :return: The loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
         :rtype: bool
@@ -63,7 +63,7 @@ class Ptsv2paymentsidrefundsProcessingInformationRecurringOptions(object):
     def loan_payment(self, loan_payment):
         """
         Sets the loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan. 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - **true** Loan payment - **false** (default) Not a loan payment  See \"Visa Debt Repayments,\" page 218, for a list of processors that support this feature. 
 
         :param loan_payment: The loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
         :type: bool

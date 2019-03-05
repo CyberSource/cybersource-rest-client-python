@@ -357,7 +357,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self):
         """
         Gets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        TODO 
+        The description for this field is not available. 
 
         :return: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -368,7 +368,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self, name):
         """
         Sets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        TODO 
+        The description for this field is not available. 
 
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -382,7 +382,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self):
         """
         Gets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        TODO
+        The description for this field is not available.
 
         :return: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -393,7 +393,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        TODO
+        The description for this field is not available.
 
         :param name_raw: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str

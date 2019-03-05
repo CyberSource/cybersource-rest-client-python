@@ -182,6 +182,10 @@ class Tmsv1paymentinstrumentsInstrumentIdentifier(object):
         :param id: The id of this Tmsv1paymentinstrumentsInstrumentIdentifier.
         :type: str
         """
+        if id is not None and len(id) > 32:
+            raise ValueError("Invalid value for `id`, length must be less than or equal to `32`")
+        if id is not None and len(id) < 16:
+            raise ValueError("Invalid value for `id`, length must be greater than or equal to `16`")
 
         self._id = id
 

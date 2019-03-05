@@ -93,6 +93,7 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions(object):
     def report_definition_id(self):
         """
         Gets the report_definition_id of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
+        | Id  |         Definition Class          | | --- | --------------------------------- | | 210 | TransactionRequestClass           | | 211 | PaymentBatchDetailClass           | | 212 | ExceptionDetailClass              | | 213 | ProcessorSettlementDetailClass    | | 214 | ProcessorEventsDetailClass        | | 215 | FundingDetailClass                | | 216 | AgingDetailClass                  | | 217 | ChargebackAndRetrievalDetailClass | | 218 | DepositDetailClass                | | 219 | FeeDetailClass                    | | 220 | InvoiceSummaryClass               | | 221 | PayerAuthDetailClass              | | 222 | ConversionDetailClass             | | 270 | JPTransactionDetailClass          | | 271 | ServiceFeeDetailClass             | | 310 | GatewayTransactionRequestClass    | | 400 | DecisionManagerEventDetailClass   | | 401 | DecisionManagerDetailClass        | | 410 | FeeSummaryClass                   | | 420 | TaxCalculationClass               | | 520 | POSTerminalExceptionClass         | | 620 | SubscriptionDetailClass           | 
 
         :return: The report_definition_id of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
         :rtype: int
@@ -103,6 +104,7 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions(object):
     def report_definition_id(self, report_definition_id):
         """
         Sets the report_definition_id of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
+        | Id  |         Definition Class          | | --- | --------------------------------- | | 210 | TransactionRequestClass           | | 211 | PaymentBatchDetailClass           | | 212 | ExceptionDetailClass              | | 213 | ProcessorSettlementDetailClass    | | 214 | ProcessorEventsDetailClass        | | 215 | FundingDetailClass                | | 216 | AgingDetailClass                  | | 217 | ChargebackAndRetrievalDetailClass | | 218 | DepositDetailClass                | | 219 | FeeDetailClass                    | | 220 | InvoiceSummaryClass               | | 221 | PayerAuthDetailClass              | | 222 | ConversionDetailClass             | | 270 | JPTransactionDetailClass          | | 271 | ServiceFeeDetailClass             | | 310 | GatewayTransactionRequestClass    | | 400 | DecisionManagerEventDetailClass   | | 401 | DecisionManagerDetailClass        | | 410 | FeeSummaryClass                   | | 420 | TaxCalculationClass               | | 520 | POSTerminalExceptionClass         | | 620 | SubscriptionDetailClass           | 
 
         :param report_definition_id: The report_definition_id of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
         :type: int
@@ -149,13 +151,13 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions(object):
         :param supported_formats: The supported_formats of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
         :type: list[str]
         """
-        allowed_values = ["application/xml", "text/csv"]
-        #if not set(supported_formats).issubset(set(allowed_values)):
-            #raise ValueError(
-                #"Invalid values for `supported_formats` [{0}], must be a subset of [{1}]"
-                #.format(", ".join(map(str, set(supported_formats)-set(allowed_values))),
-                        #", ".join(map(str, allowed_values)))
-            #)
+        allowed_values = ["application/xml", "text/csv", "application/json"]
+        if not set(supported_formats).issubset(set(allowed_values)):
+            raise ValueError(
+                "Invalid values for `supported_formats` [{0}], must be a subset of [{1}]"
+                .format(", ".join(map(str, set(supported_formats)-set(allowed_values))),
+                        ", ".join(map(str, allowed_values)))
+            )
 
         self._supported_formats = supported_formats
 

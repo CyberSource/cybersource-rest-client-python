@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **merchant_information** | [**Ptsv2paymentsidcapturesMerchantInformation**](Ptsv2paymentsidcapturesMerchantInformation.md) |  | [optional] 
 **aggregator_information** | [**Ptsv2paymentsidcapturesAggregatorInformation**](Ptsv2paymentsidcapturesAggregatorInformation.md) |  | [optional] 
 **point_of_sale_information** | [**Ptsv2paymentsidcapturesPointOfSaleInformation**](Ptsv2paymentsidcapturesPointOfSaleInformation.md) |  | [optional] 
-**merchant_defined_information** | [**list[Ptsv2paymentsMerchantDefinedInformation]**](Ptsv2paymentsMerchantDefinedInformation.md) | Description of this field is not available. | [optional] 
+**merchant_defined_information** | [**list[Ptsv2paymentsMerchantDefinedInformation]**](Ptsv2paymentsMerchantDefinedInformation.md) | The description for this field is not available. | [optional] 
+**installment_information** | [**Ptsv2paymentsidcapturesInstallmentInformation**](Ptsv2paymentsidcapturesInstallmentInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

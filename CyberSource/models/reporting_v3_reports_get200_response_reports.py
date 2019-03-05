@@ -44,7 +44,8 @@ class ReportingV3ReportsGet200ResponseReports(object):
         'queued_time': 'datetime',
         'report_generating_time': 'datetime',
         'report_completed_time': 'datetime',
-        'selected_merchant_group_name': 'str'
+        'subscription_type': 'str',
+        'group_id': 'str'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class ReportingV3ReportsGet200ResponseReports(object):
         'queued_time': 'queuedTime',
         'report_generating_time': 'reportGeneratingTime',
         'report_completed_time': 'reportCompletedTime',
-        'selected_merchant_group_name': 'selectedMerchantGroupName'
+        'subscription_type': 'subscriptionType',
+        'group_id': 'groupId'
     }
 
-    def __init__(self, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, status=None, report_start_time=None, report_end_time=None, timezone=None, report_id=None, organization_id=None, queued_time=None, report_generating_time=None, report_completed_time=None, selected_merchant_group_name=None):
+    def __init__(self, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, status=None, report_start_time=None, report_end_time=None, timezone=None, report_id=None, organization_id=None, queued_time=None, report_generating_time=None, report_completed_time=None, subscription_type=None, group_id=None):
         """
         ReportingV3ReportsGet200ResponseReports - a model defined in Swagger
         """
@@ -82,7 +84,8 @@ class ReportingV3ReportsGet200ResponseReports(object):
         self._queued_time = None
         self._report_generating_time = None
         self._report_completed_time = None
-        self._selected_merchant_group_name = None
+        self._subscription_type = None
+        self._group_id = None
 
         if report_definition_id is not None:
           self.report_definition_id = report_definition_id
@@ -110,8 +113,10 @@ class ReportingV3ReportsGet200ResponseReports(object):
           self.report_generating_time = report_generating_time
         if report_completed_time is not None:
           self.report_completed_time = report_completed_time
-        if selected_merchant_group_name is not None:
-          self.selected_merchant_group_name = selected_merchant_group_name
+        if subscription_type is not None:
+          self.subscription_type = subscription_type
+        if group_id is not None:
+          self.group_id = group_id
 
     @property
     def report_definition_id(self):
@@ -431,27 +436,50 @@ class ReportingV3ReportsGet200ResponseReports(object):
         self._report_completed_time = report_completed_time
 
     @property
-    def selected_merchant_group_name(self):
+    def subscription_type(self):
         """
-        Gets the selected_merchant_group_name of this ReportingV3ReportsGet200ResponseReports.
-        Selected name of the group
+        Gets the subscription_type of this ReportingV3ReportsGet200ResponseReports.
+        Specifies whether the subscription created is either Custom, Standard or Classic 
 
-        :return: The selected_merchant_group_name of this ReportingV3ReportsGet200ResponseReports.
+        :return: The subscription_type of this ReportingV3ReportsGet200ResponseReports.
         :rtype: str
         """
-        return self._selected_merchant_group_name
+        return self._subscription_type
 
-    @selected_merchant_group_name.setter
-    def selected_merchant_group_name(self, selected_merchant_group_name):
+    @subscription_type.setter
+    def subscription_type(self, subscription_type):
         """
-        Sets the selected_merchant_group_name of this ReportingV3ReportsGet200ResponseReports.
-        Selected name of the group
+        Sets the subscription_type of this ReportingV3ReportsGet200ResponseReports.
+        Specifies whether the subscription created is either Custom, Standard or Classic 
 
-        :param selected_merchant_group_name: The selected_merchant_group_name of this ReportingV3ReportsGet200ResponseReports.
+        :param subscription_type: The subscription_type of this ReportingV3ReportsGet200ResponseReports.
         :type: str
         """
 
-        self._selected_merchant_group_name = selected_merchant_group_name
+        self._subscription_type = subscription_type
+
+    @property
+    def group_id(self):
+        """
+        Gets the group_id of this ReportingV3ReportsGet200ResponseReports.
+        Id for selected group.
+
+        :return: The group_id of this ReportingV3ReportsGet200ResponseReports.
+        :rtype: str
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """
+        Sets the group_id of this ReportingV3ReportsGet200ResponseReports.
+        Id for selected group.
+
+        :param group_id: The group_id of this ReportingV3ReportsGet200ResponseReports.
+        :type: str
+        """
+
+        self._group_id = group_id
 
     def to_dict(self):
         """

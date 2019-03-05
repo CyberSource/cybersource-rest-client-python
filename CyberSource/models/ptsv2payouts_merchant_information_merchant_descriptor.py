@@ -93,8 +93,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param name: The name of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if name is not None and len(name) > 23:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `23`")
 
         self._name = name
 

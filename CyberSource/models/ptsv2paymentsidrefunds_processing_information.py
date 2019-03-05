@@ -82,7 +82,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :return: The payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
@@ -132,7 +132,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Value that links the current payment request to the original request. Set this value to the ID that was returned in the reply message from the original payment request.  This value is used for:   - Partial authorizations.  - Split shipments. 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:   - Partial authorizations: See \"Partial Authorizations,\" page 88.  - Split shipments: See \"Split Shipments,\" page 210. 
 
         :return: The link_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -143,7 +143,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Value that links the current payment request to the original request. Set this value to the ID that was returned in the reply message from the original payment request.  This value is used for:   - Partial authorizations.  - Split shipments. 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:   - Partial authorizations: See \"Partial Authorizations,\" page 88.  - Split shipments: See \"Split Shipments,\" page 210. 
 
         :param link_id: The link_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
@@ -157,7 +157,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsidrefundsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Litle**. 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  See \"Report Groups,\" page 234. 
 
         :return: The report_group of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -168,7 +168,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsidrefundsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Litle**. 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  See \"Report Groups,\" page 234. 
 
         :param report_group: The report_group of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
@@ -182,7 +182,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For more details, see Visa Checkout Using the SCMP API. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -193,7 +193,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For more details, see Visa Checkout Using the SCMP API. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str

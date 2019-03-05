@@ -31,28 +31,38 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str'
+        'code': 'str',
+        'submit_local_date_time': 'str',
+        'owner_merchant_id': 'str'
     }
 
     attribute_map = {
-        'code': 'code'
+        'code': 'code',
+        'submit_local_date_time': 'submitLocalDateTime',
+        'owner_merchant_id': 'ownerMerchantId'
     }
 
-    def __init__(self, code=None):
+    def __init__(self, code=None, submit_local_date_time=None, owner_merchant_id=None):
         """
         PtsV2PaymentsPost201ResponseClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
+        self._submit_local_date_time = None
+        self._owner_merchant_id = None
 
         if code is not None:
           self.code = code
+        if submit_local_date_time is not None:
+          self.submit_local_date_time = submit_local_date_time
+        if owner_merchant_id is not None:
+          self.owner_merchant_id = owner_merchant_id
 
     @property
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
         :rtype: str
@@ -63,7 +73,7 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see Getting Started with CyberSource Advanced for the SCMP API.  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
         :type: str
@@ -72,6 +82,54 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
             raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
+
+    @property
+    def submit_local_date_time(self):
+        """
+        Gets the submit_local_date_time of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        Date and time at your physical location.  Format: `YYYYMMDDhhmmss`, where YYYY = year, MM = month, DD = day, hh = hour, mm = minutes ss = seconds 
+
+        :return: The submit_local_date_time of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        :rtype: str
+        """
+        return self._submit_local_date_time
+
+    @submit_local_date_time.setter
+    def submit_local_date_time(self, submit_local_date_time):
+        """
+        Sets the submit_local_date_time of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        Date and time at your physical location.  Format: `YYYYMMDDhhmmss`, where YYYY = year, MM = month, DD = day, hh = hour, mm = minutes ss = seconds 
+
+        :param submit_local_date_time: The submit_local_date_time of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        :type: str
+        """
+        if submit_local_date_time is not None and len(submit_local_date_time) > 14:
+            raise ValueError("Invalid value for `submit_local_date_time`, length must be less than or equal to `14`")
+
+        self._submit_local_date_time = submit_local_date_time
+
+    @property
+    def owner_merchant_id(self):
+        """
+        Gets the owner_merchant_id of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        Merchant ID that was used to create the subscription or customer profile for which the service was requested.  If your CyberSource account is enabled for Recurring Billing, this field is returned only if you are using subscription sharing and if your merchant ID is in the same merchant ID pool as the owner merchant ID.  See the subscription sharing information in Recurring Billing Using the Simple Order API.  If your CyberSource account is enabled for Payment Tokenization, this field is returned only if you are using profile sharing and if your merchant ID is in the same merchant ID pool as the owner merchant ID.  See the profile sharing information in Payment Tokenization Using the Simple Order API. 
+
+        :return: The owner_merchant_id of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        :rtype: str
+        """
+        return self._owner_merchant_id
+
+    @owner_merchant_id.setter
+    def owner_merchant_id(self, owner_merchant_id):
+        """
+        Sets the owner_merchant_id of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        Merchant ID that was used to create the subscription or customer profile for which the service was requested.  If your CyberSource account is enabled for Recurring Billing, this field is returned only if you are using subscription sharing and if your merchant ID is in the same merchant ID pool as the owner merchant ID.  See the subscription sharing information in Recurring Billing Using the Simple Order API.  If your CyberSource account is enabled for Payment Tokenization, this field is returned only if you are using profile sharing and if your merchant ID is in the same merchant ID pool as the owner merchant ID.  See the profile sharing information in Payment Tokenization Using the Simple Order API. 
+
+        :param owner_merchant_id: The owner_merchant_id of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
+        :type: str
+        """
+
+        self._owner_merchant_id = owner_merchant_id
 
     def to_dict(self):
         """

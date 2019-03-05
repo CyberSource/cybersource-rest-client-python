@@ -32,7 +32,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     """
     swagger_types = {
         'tags': 'str',
-        'cardholder_verification_method': 'float',
+        'cardholder_verification_method_used': 'float',
         'card_sequence_number': 'str',
         'fallback': 'bool',
         'fallback_condition': 'float'
@@ -40,27 +40,27 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
 
     attribute_map = {
         'tags': 'tags',
-        'cardholder_verification_method': 'cardholderVerificationMethod',
+        'cardholder_verification_method_used': 'cardholderVerificationMethodUsed',
         'card_sequence_number': 'cardSequenceNumber',
         'fallback': 'fallback',
         'fallback_condition': 'fallbackCondition'
     }
 
-    def __init__(self, tags=None, cardholder_verification_method=None, card_sequence_number=None, fallback=False, fallback_condition=None):
+    def __init__(self, tags=None, cardholder_verification_method_used=None, card_sequence_number=None, fallback=False, fallback_condition=None):
         """
         Ptsv2paymentsPointOfSaleInformationEmv - a model defined in Swagger
         """
 
         self._tags = None
-        self._cardholder_verification_method = None
+        self._cardholder_verification_method_used = None
         self._card_sequence_number = None
         self._fallback = None
         self._fallback_condition = None
 
         if tags is not None:
           self.tags = tags
-        if cardholder_verification_method is not None:
-          self.cardholder_verification_method = cardholder_verification_method
+        if cardholder_verification_method_used is not None:
+          self.cardholder_verification_method_used = cardholder_verification_method_used
         if card_sequence_number is not None:
           self.card_sequence_number = card_sequence_number
         if fallback is not None:
@@ -72,7 +72,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def tags(self):
         """
         Gets the tags of this Ptsv2paymentsPointOfSaleInformationEmv.
-        EMV data that is transmitted from the chip card to the issuer, and from the issuer to the chip card. The EMV data is in the tag-length-value format and includes chip card tags, terminal tags, and transaction detail tags.  `Important` The following tags contain sensitive information and **must not** be included in this field:   - **56**: Track 1 equivalent data  - **57**: Track 2 equivalent data  - **5A**: Application PAN  - **5F20**: Cardholder name  - **5F24**: Application expiration date (This sensitivity has been relaxed for cmcic, amexdirect, fdiglobal, opdfde, six)  - **99**: Transaction PIN  - **9F0B**: Cardholder name (extended)  - **9F1F**: Track 1 discretionary data  - **9F20**: Track 2 discretionary data  For captures, this field is required for contact EMV transactions. Otherwise, it is optional.  For credits, this field is required for contact EMV stand-alone credits and contactless EMV stand-alone credits. Otherwise, it is optional.  `Important` For contact EMV captures, contact EMV stand-alone credits, and contactless EMV stand-alone credits, you must include the following tags in this field. For all other types of EMV transactions, the following tags are optional.   - **95**: Terminal verification results  - **9F10**: Issuer application data  - **9F26**: Application cryptogram 
+        EMV data that is transmitted from the chip card to the issuer, and from the issuer to the chip card. The EMV data is in the tag-length-value format and includes chip card tags, terminal tags, and transaction detail tags.  See \"Europay, MasterCard, Visa (EMV),\" page 10. For information about the individual tags, see the “Application Specification” section in the EMV 4.3 Specifications: http://emvco.com  **Important** The following tags contain sensitive information and **must not** be included in this field:   - **56**: Track 1 equivalent data  - **57**: Track 2 equivalent data  - **5A**: Application PAN  - **5F20**: Cardholder name  - **5F24**: Application expiration date (This sensitivity has been relaxed for cmcic, amexdirect, fdiglobal, opdfde, and six)  - **99**: Transaction PIN  - **9F0B**: Cardholder name (extended)  - **9F1F**: Track 1 discretionary data  - **9F20**: Track 2 discretionary data  For captures, this field is required for contact EMV transactions. Otherwise, it is optional.  For credits, this field is required for contact EMV stand-alone credits and contactless EMV stand-alone credits. Otherwise, it is optional.  **Important** For contact EMV captures, contact EMV stand-alone credits, and contactless EMV stand-alone credits, you must include the following tags in this field. For all other types of EMV transactions, the following tags are optional.   - **95**: Terminal verification results  - **9F10**: Issuer application data  - **9F26**: Application cryptogram 
 
         :return: The tags of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: str
@@ -83,7 +83,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def tags(self, tags):
         """
         Sets the tags of this Ptsv2paymentsPointOfSaleInformationEmv.
-        EMV data that is transmitted from the chip card to the issuer, and from the issuer to the chip card. The EMV data is in the tag-length-value format and includes chip card tags, terminal tags, and transaction detail tags.  `Important` The following tags contain sensitive information and **must not** be included in this field:   - **56**: Track 1 equivalent data  - **57**: Track 2 equivalent data  - **5A**: Application PAN  - **5F20**: Cardholder name  - **5F24**: Application expiration date (This sensitivity has been relaxed for cmcic, amexdirect, fdiglobal, opdfde, six)  - **99**: Transaction PIN  - **9F0B**: Cardholder name (extended)  - **9F1F**: Track 1 discretionary data  - **9F20**: Track 2 discretionary data  For captures, this field is required for contact EMV transactions. Otherwise, it is optional.  For credits, this field is required for contact EMV stand-alone credits and contactless EMV stand-alone credits. Otherwise, it is optional.  `Important` For contact EMV captures, contact EMV stand-alone credits, and contactless EMV stand-alone credits, you must include the following tags in this field. For all other types of EMV transactions, the following tags are optional.   - **95**: Terminal verification results  - **9F10**: Issuer application data  - **9F26**: Application cryptogram 
+        EMV data that is transmitted from the chip card to the issuer, and from the issuer to the chip card. The EMV data is in the tag-length-value format and includes chip card tags, terminal tags, and transaction detail tags.  See \"Europay, MasterCard, Visa (EMV),\" page 10. For information about the individual tags, see the “Application Specification” section in the EMV 4.3 Specifications: http://emvco.com  **Important** The following tags contain sensitive information and **must not** be included in this field:   - **56**: Track 1 equivalent data  - **57**: Track 2 equivalent data  - **5A**: Application PAN  - **5F20**: Cardholder name  - **5F24**: Application expiration date (This sensitivity has been relaxed for cmcic, amexdirect, fdiglobal, opdfde, and six)  - **99**: Transaction PIN  - **9F0B**: Cardholder name (extended)  - **9F1F**: Track 1 discretionary data  - **9F20**: Track 2 discretionary data  For captures, this field is required for contact EMV transactions. Otherwise, it is optional.  For credits, this field is required for contact EMV stand-alone credits and contactless EMV stand-alone credits. Otherwise, it is optional.  **Important** For contact EMV captures, contact EMV stand-alone credits, and contactless EMV stand-alone credits, you must include the following tags in this field. For all other types of EMV transactions, the following tags are optional.   - **95**: Terminal verification results  - **9F10**: Issuer application data  - **9F26**: Application cryptogram 
 
         :param tags: The tags of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: str
@@ -94,33 +94,33 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         self._tags = tags
 
     @property
-    def cardholder_verification_method(self):
+    def cardholder_verification_method_used(self):
         """
-        Gets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Method that was used to verify the cardholder's identity. Possible values:   - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
+        Gets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
+        Method that was used to verify the cardholder's identity.  Possible values:  - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
 
-        :return: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformationEmv.
+        :return: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: float
         """
-        return self._cardholder_verification_method
+        return self._cardholder_verification_method_used
 
-    @cardholder_verification_method.setter
-    def cardholder_verification_method(self, cardholder_verification_method):
+    @cardholder_verification_method_used.setter
+    def cardholder_verification_method_used(self, cardholder_verification_method_used):
         """
-        Sets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Method that was used to verify the cardholder's identity. Possible values:   - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
+        Sets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
+        Method that was used to verify the cardholder's identity.  Possible values:  - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
 
-        :param cardholder_verification_method: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformationEmv.
+        :param cardholder_verification_method_used: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: float
         """
 
-        self._cardholder_verification_method = cardholder_verification_method
+        self._cardholder_verification_method_used = cardholder_verification_method_used
 
     @property
     def card_sequence_number(self):
         """
         Gets the card_sequence_number of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Number assigned to a specific card when two or more cards are associated with the same primary account number. This value enables issuers to distinguish among multiple cards that are linked to the same account. This value can also act as a tracking tool when reissuing cards. When this value is available, it is provided by the chip reader. When the chip reader does not provide this value, do not include this field in your request. 
+        Number assigned to a specific card when two or more cards are associated with the same primary account number. This value enables issuers to distinguish among multiple cards that are linked to the same account. This value can also act as a tracking tool when reissuing cards. When this value is available, it is provided by the chip reader. When the chip reader does not provide this value, do not include this field in your request.  See \"Europay, MasterCard, Visa (EMV),\" page 10. 
 
         :return: The card_sequence_number of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: str
@@ -131,7 +131,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def card_sequence_number(self, card_sequence_number):
         """
         Sets the card_sequence_number of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Number assigned to a specific card when two or more cards are associated with the same primary account number. This value enables issuers to distinguish among multiple cards that are linked to the same account. This value can also act as a tracking tool when reissuing cards. When this value is available, it is provided by the chip reader. When the chip reader does not provide this value, do not include this field in your request. 
+        Number assigned to a specific card when two or more cards are associated with the same primary account number. This value enables issuers to distinguish among multiple cards that are linked to the same account. This value can also act as a tracking tool when reissuing cards. When this value is available, it is provided by the chip reader. When the chip reader does not provide this value, do not include this field in your request.  See \"Europay, MasterCard, Visa (EMV),\" page 10. 
 
         :param card_sequence_number: The card_sequence_number of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: str
@@ -145,7 +145,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback(self):
         """
         Gets the fallback of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Indicates whether a fallback method was used to enter credit card information into the POS terminal. When a technical problem prevents a successful exchange of information between a chip card and a chip-capable terminal:   1. Swipe the card or key the credit card information into the POS terminal.  2. Use the pos_entry_mode field to indicate whether the information was swiped or keyed.  This field is supported only on **Chase Paymentech Solutions** and **GPN**. 
+        Indicates whether a fallback method was used to enter credit card information into the POS terminal. When a technical problem prevents a successful exchange of information between a chip card and a chip-capable terminal:   1. Swipe the card or key the credit card information into the POS terminal.  2. Use the pointOfSaleInformation.entryMode field to indicate whether the information was swiped or keyed.  Possible values:  - **true**  - **false** (default)  This field is supported only on **Chase Paymentech Solutions** and **GPN**. 
 
         :return: The fallback of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: bool
@@ -156,7 +156,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback(self, fallback):
         """
         Sets the fallback of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Indicates whether a fallback method was used to enter credit card information into the POS terminal. When a technical problem prevents a successful exchange of information between a chip card and a chip-capable terminal:   1. Swipe the card or key the credit card information into the POS terminal.  2. Use the pos_entry_mode field to indicate whether the information was swiped or keyed.  This field is supported only on **Chase Paymentech Solutions** and **GPN**. 
+        Indicates whether a fallback method was used to enter credit card information into the POS terminal. When a technical problem prevents a successful exchange of information between a chip card and a chip-capable terminal:   1. Swipe the card or key the credit card information into the POS terminal.  2. Use the pointOfSaleInformation.entryMode field to indicate whether the information was swiped or keyed.  Possible values:  - **true**  - **false** (default)  This field is supported only on **Chase Paymentech Solutions** and **GPN**. 
 
         :param fallback: The fallback of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: bool
@@ -168,7 +168,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback_condition(self):
         """
         Gets the fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**. 
+        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**.  **NOTE**: Merchants must include this field in a request whenever a transaction must fall back to swiped mode. 
 
         :return: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: float
@@ -179,7 +179,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback_condition(self, fallback_condition):
         """
         Sets the fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**. 
+        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**.  **NOTE**: Merchants must include this field in a request whenever a transaction must fall back to swiped mode. 
 
         :param fallback_condition: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: float

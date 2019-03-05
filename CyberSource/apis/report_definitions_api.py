@@ -44,8 +44,8 @@ class ReportDefinitionsApi(object):
 
     def get_resource_info_by_report_definition(self, report_definition_name, **kwargs):
         """
-        Get a single report definition information
-        The report definition name must be used as path parameter exclusive of each other
+        Get report definition
+        View the attributes of an individual report type. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -71,8 +71,8 @@ class ReportDefinitionsApi(object):
 
     def get_resource_info_by_report_definition_with_http_info(self, report_definition_name, **kwargs):
         """
-        Get a single report definition information
-        The report definition name must be used as path parameter exclusive of each other
+        Get report definition
+        View the attributes of an individual report type. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -161,7 +161,7 @@ class ReportDefinitionsApi(object):
     def get_resource_v2_info(self, **kwargs):
         """
         Get reporting resource information
-        
+        View a list of supported reports and their attributes before subscribing to them. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -187,7 +187,7 @@ class ReportDefinitionsApi(object):
     def get_resource_v2_info_with_http_info(self, **kwargs):
         """
         Get reporting resource information
-        
+        View a list of supported reports and their attributes before subscribing to them. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

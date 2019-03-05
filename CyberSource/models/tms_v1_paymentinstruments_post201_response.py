@@ -36,7 +36,7 @@ class TmsV1PaymentinstrumentsPost201Response(object):
         'object': 'str',
         'state': 'str',
         'bank_account': 'Tmsv1paymentinstrumentsBankAccount',
-        'card': 'Tmsv1paymentinstrumentsCard',
+        'card': 'TmsV1PaymentinstrumentsPost201ResponseCard',
         'buyer_information': 'Tmsv1paymentinstrumentsBuyerInformation',
         'bill_to': 'Tmsv1paymentinstrumentsBillTo',
         'processing_information': 'Tmsv1paymentinstrumentsProcessingInformation',
@@ -232,7 +232,7 @@ class TmsV1PaymentinstrumentsPost201Response(object):
         Gets the card of this TmsV1PaymentinstrumentsPost201Response.
 
         :return: The card of this TmsV1PaymentinstrumentsPost201Response.
-        :rtype: Tmsv1paymentinstrumentsCard
+        :rtype: TmsV1PaymentinstrumentsPost201ResponseCard
         """
         return self._card
 
@@ -242,7 +242,7 @@ class TmsV1PaymentinstrumentsPost201Response(object):
         Sets the card of this TmsV1PaymentinstrumentsPost201Response.
 
         :param card: The card of this TmsV1PaymentinstrumentsPost201Response.
-        :type: Tmsv1paymentinstrumentsCard
+        :type: TmsV1PaymentinstrumentsPost201ResponseCard
         """
 
         self._card = card

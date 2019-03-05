@@ -41,10 +41,10 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
-        'issuer': 'Ptsv2paymentsProcessingInformationIssuer',
         'authorization_options': 'Ptsv2paymentsProcessingInformationAuthorizationOptions',
         'capture_options': 'Ptsv2paymentsProcessingInformationCaptureOptions',
-        'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions'
+        'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions',
+        'bank_transfer_options': 'Ptsv2paymentsProcessingInformationBankTransferOptions'
     }
 
     attribute_map = {
@@ -58,13 +58,13 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'purchaseLevel',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
-        'issuer': 'issuer',
         'authorization_options': 'authorizationOptions',
         'capture_options': 'captureOptions',
-        'recurring_options': 'recurringOptions'
+        'recurring_options': 'recurringOptions',
+        'bank_transfer_options': 'bankTransferOptions'
     }
 
-    def __init__(self, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, issuer=None, authorization_options=None, capture_options=None, recurring_options=None):
+    def __init__(self, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -79,10 +79,10 @@ class Ptsv2paymentsProcessingInformation(object):
         self._purchase_level = None
         self._report_group = None
         self._visa_checkout_id = None
-        self._issuer = None
         self._authorization_options = None
         self._capture_options = None
         self._recurring_options = None
+        self._bank_transfer_options = None
 
         if capture is not None:
           self.capture = capture
@@ -104,20 +104,20 @@ class Ptsv2paymentsProcessingInformation(object):
           self.report_group = report_group
         if visa_checkout_id is not None:
           self.visa_checkout_id = visa_checkout_id
-        if issuer is not None:
-          self.issuer = issuer
         if authorization_options is not None:
           self.authorization_options = authorization_options
         if capture_options is not None:
           self.capture_options = capture_options
         if recurring_options is not None:
           self.recurring_options = recurring_options
+        if bank_transfer_options is not None:
+          self.bank_transfer_options = bank_transfer_options
 
     @property
     def capture(self):
         """
         Gets the capture of this Ptsv2paymentsProcessingInformation.
-        Flag that specifies whether to also include capture service in the submitted request or not.
+        Flag that specifies whether to also include capture service in the submitted request or not.  Possible values: - **true** - **false** (default). 
 
         :return: The capture of this Ptsv2paymentsProcessingInformation.
         :rtype: bool
@@ -128,7 +128,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def capture(self, capture):
         """
         Sets the capture of this Ptsv2paymentsProcessingInformation.
-        Flag that specifies whether to also include capture service in the submitted request or not.
+        Flag that specifies whether to also include capture service in the submitted request or not.  Possible values: - **true** - **false** (default). 
 
         :param capture: The capture of this Ptsv2paymentsProcessingInformation.
         :type: bool
@@ -140,7 +140,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def processor_id(self):
         """
         Gets the processor_id of this Ptsv2paymentsProcessingInformation.
-        Value that identifies the processor/acquirer to use for the transaction. This value is supported only for **CyberSource through VisaNet**. 
+        Value that identifies the processor/acquirer to use for the transaction. This value is supported only for **CyberSource through VisaNet**.  Contact CyberSource Customer Support to get the value for this field. 
 
         :return: The processor_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -151,7 +151,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def processor_id(self, processor_id):
         """
         Sets the processor_id of this Ptsv2paymentsProcessingInformation.
-        Value that identifies the processor/acquirer to use for the transaction. This value is supported only for **CyberSource through VisaNet**. 
+        Value that identifies the processor/acquirer to use for the transaction. This value is supported only for **CyberSource through VisaNet**.  Contact CyberSource Customer Support to get the value for this field. 
 
         :param processor_id: The processor_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -165,7 +165,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def business_application_id(self):
         """
         Gets the business_application_id of this Ptsv2paymentsProcessingInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :return: The business_application_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -176,7 +176,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this Ptsv2paymentsProcessingInformation.
-        Description of this field is not available.
+        The description for this field is not available.
 
         :param business_application_id: The business_application_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -213,7 +213,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :return: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -224,7 +224,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -263,7 +263,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current payment request to the original request. Set this value to the ID that was returned in the reply message from the original payment request.  This value is used for:   - Partial authorizations.  - Split shipments. 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:   - Partial authorizations: See \"Partial Authorizations,\" page 88.  - Split shipments: See \"Split Shipments,\" page 210. 
 
         :return: The link_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -274,7 +274,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current payment request to the original request. Set this value to the ID that was returned in the reply message from the original payment request.  This value is used for:   - Partial authorizations.  - Split shipments. 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:   - Partial authorizations: See \"Partial Authorizations,\" page 88.  - Split shipments: See \"Split Shipments,\" page 210. 
 
         :param link_id: The link_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -313,7 +313,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Litle**. 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  See \"Report Groups,\" page 234. 
 
         :return: The report_group of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -324,7 +324,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Litle**. 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  See \"Report Groups,\" page 234. 
 
         :param report_group: The report_group of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -338,7 +338,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For more details, see Visa Checkout Using the SCMP API. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -349,7 +349,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For more details, see Visa Checkout Using the SCMP API. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -358,27 +358,6 @@ class Ptsv2paymentsProcessingInformation(object):
             raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
-
-    @property
-    def issuer(self):
-        """
-        Gets the issuer of this Ptsv2paymentsProcessingInformation.
-
-        :return: The issuer of this Ptsv2paymentsProcessingInformation.
-        :rtype: Ptsv2paymentsProcessingInformationIssuer
-        """
-        return self._issuer
-
-    @issuer.setter
-    def issuer(self, issuer):
-        """
-        Sets the issuer of this Ptsv2paymentsProcessingInformation.
-
-        :param issuer: The issuer of this Ptsv2paymentsProcessingInformation.
-        :type: Ptsv2paymentsProcessingInformationIssuer
-        """
-
-        self._issuer = issuer
 
     @property
     def authorization_options(self):
@@ -442,6 +421,27 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._recurring_options = recurring_options
+
+    @property
+    def bank_transfer_options(self):
+        """
+        Gets the bank_transfer_options of this Ptsv2paymentsProcessingInformation.
+
+        :return: The bank_transfer_options of this Ptsv2paymentsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationBankTransferOptions
+        """
+        return self._bank_transfer_options
+
+    @bank_transfer_options.setter
+    def bank_transfer_options(self, bank_transfer_options):
+        """
+        Sets the bank_transfer_options of this Ptsv2paymentsProcessingInformation.
+
+        :param bank_transfer_options: The bank_transfer_options of this Ptsv2paymentsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationBankTransferOptions
+        """
+
+        self._bank_transfer_options = bank_transfer_options
 
     def to_dict(self):
         """

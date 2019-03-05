@@ -34,17 +34,19 @@ class Ptsv2paymentsPaymentInformation(object):
         'card': 'Ptsv2paymentsPaymentInformationCard',
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'bank': 'Ptsv2paymentsPaymentInformationBank'
     }
 
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
         'fluid_data': 'fluidData',
-        'customer': 'customer'
+        'customer': 'customer',
+        'bank': 'bank'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._tokenized_card = None
         self._fluid_data = None
         self._customer = None
+        self._bank = None
 
         if card is not None:
           self.card = card
@@ -62,6 +65,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.fluid_data = fluid_data
         if customer is not None:
           self.customer = customer
+        if bank is not None:
+          self.bank = bank
 
     @property
     def card(self):
@@ -146,6 +151,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._customer = customer
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this Ptsv2paymentsPaymentInformation.
+
+        :return: The bank of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this Ptsv2paymentsPaymentInformation.
+
+        :param bank: The bank of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationBank
+        """
+
+        self._bank = bank
 
     def to_dict(self):
         """

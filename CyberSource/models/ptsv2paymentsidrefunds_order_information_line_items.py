@@ -147,7 +147,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_code(self):
         """
         Gets the product_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  For a payment, when you set this field to a value other than default or any of the values related to shipping and handling, below fields _quantity_, _productName_, and _productSKU_ are required. 
+        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than default or any of the values related to shipping and handling, then the fields `quantity`, `productName`, and `productSku` are required.  See Appendix O, \"Product Codes,\" on page 373 for a list of valid values. 
 
         :return: The product_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -158,7 +158,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_code(self, product_code):
         """
         Sets the product_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  For a payment, when you set this field to a value other than default or any of the values related to shipping and handling, below fields _quantity_, _productName_, and _productSKU_ are required. 
+        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than default or any of the values related to shipping and handling, then the fields `quantity`, `productName`, and `productSku` are required.  See Appendix O, \"Product Codes,\" on page 373 for a list of valid values. 
 
         :param product_code: The product_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -172,7 +172,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_name(self):
         """
         Gets the product_name of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false` respectively), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The product_name of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -183,7 +183,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_name(self, product_name):
         """
         Sets the product_name of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false` respectively), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param product_name: The product_name of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -197,7 +197,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_sku(self):
         """
         Gets the product_sku of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product.  For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The product_sku of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -208,7 +208,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def product_sku(self, product_sku):
         """
         Sets the product_sku of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product.  For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param product_sku: The product_sku of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -222,7 +222,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def quantity(self):
         """
         Gets the quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: float
@@ -233,7 +233,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def quantity(self, quantity):
         """
         Sets the quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param quantity: The quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: float
@@ -249,7 +249,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def unit_price(self):
         """
         Gets the unit_price of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. This information is covered in: - Table 12, \"Authorization Information for Specific Processors,\" on page 36 - Table 16, \"Capture Information for Specific Processors,\" on page 51 - Table 20, \"Credit Information for Specific Processors,\" on page 65  **DCC for First Data**\\ This value is the original amount in your local currency. You must include this field. You cannot use grand_total_amount. See \"Dynamic Currency Conversion for First Data,\" page 113.  **FDMS South**\\ If you accept IDR or CLP currencies, see the entry for FDMS South in Table 12, \"Authorization Information for Specific Processors,\" on page 36.  **Zero Amount Authorizations**\\ If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. See \"Zero Amount Authorizations,\" page 220. 
 
         :return: The unit_price of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -260,7 +260,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def unit_price(self, unit_price):
         """
         Sets the unit_price of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. This information is covered in: - Table 12, \"Authorization Information for Specific Processors,\" on page 36 - Table 16, \"Capture Information for Specific Processors,\" on page 51 - Table 20, \"Credit Information for Specific Processors,\" on page 65  **DCC for First Data**\\ This value is the original amount in your local currency. You must include this field. You cannot use grand_total_amount. See \"Dynamic Currency Conversion for First Data,\" page 113.  **FDMS South**\\ If you accept IDR or CLP currencies, see the entry for FDMS South in Table 12, \"Authorization Information for Specific Processors,\" on page 36.  **Zero Amount Authorizations**\\ If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. See \"Zero Amount Authorizations,\" page 220. 
 
         :param unit_price: The unit_price of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -324,7 +324,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  If you want to include the tax amount and also request the ics_tax service, see Tax Calculation Service Using the SCMP API.  This field is frequently used for Level II and Level III transactions. See Level II and Level III Processing Using the SCMP API. 
 
         :return: The tax_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -335,7 +335,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  If you want to include the tax amount and also request the ics_tax service, see Tax Calculation Service Using the SCMP API.  This field is frequently used for Level II and Level III transactions. See Level II and Level III Processing Using the SCMP API. 
 
         :param tax_amount: The tax_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -424,7 +424,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def tax_type_code(self):
         """
         Gets the tax_type_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :return: The tax_type_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: str
@@ -435,7 +435,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def tax_type_code(self, tax_type_code):
         """
         Sets the tax_type_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
@@ -449,7 +449,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def amount_includes_tax(self):
         """
         Gets the amount_includes_tax of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Flag that indicates whether the tax amount is included in the Line Item Total. 
+        Flag that indicates whether the tax amount is included in the Line Item Total.  Possible values:  - **true**  - **false** 
 
         :return: The amount_includes_tax of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: bool
@@ -460,7 +460,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def amount_includes_tax(self, amount_includes_tax):
         """
         Sets the amount_includes_tax of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Flag that indicates whether the tax amount is included in the Line Item Total. 
+        Flag that indicates whether the tax amount is included in the Line Item Total.  Possible values:  - **true**  - **false** 
 
         :param amount_includes_tax: The amount_includes_tax of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: bool
@@ -547,7 +547,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def discount_applied(self):
         """
         Gets the discount_applied of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**. 
+        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**.  Possible values:  - **true**  - **false** 
 
         :return: The discount_applied of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :rtype: bool
@@ -558,7 +558,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
     def discount_applied(self, discount_applied):
         """
         Sets the discount_applied of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**. 
+        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**.  Possible values:  - **true**  - **false** 
 
         :param discount_applied: The discount_applied of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: bool

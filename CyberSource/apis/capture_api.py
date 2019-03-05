@@ -39,7 +39,7 @@ class CaptureApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def capture_payment(self, capture_payment_request, id, **kwargs):
@@ -130,12 +130,12 @@ class CaptureApi(object):
         if 'capture_payment_request' in params:
             body_params = params['capture_payment_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

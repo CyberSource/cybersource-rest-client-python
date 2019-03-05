@@ -32,26 +32,41 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
     """
     swagger_types = {
         'transaction_id': 'str',
-        'forwarded_acquirer_code': 'str'
+        'forwarded_acquirer_code': 'str',
+        'merchant_number': 'str',
+        'response_code': 'str',
+        'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification'
     }
 
     attribute_map = {
         'transaction_id': 'transactionId',
-        'forwarded_acquirer_code': 'forwardedAcquirerCode'
+        'forwarded_acquirer_code': 'forwardedAcquirerCode',
+        'merchant_number': 'merchantNumber',
+        'response_code': 'responseCode',
+        'ach_verification': 'achVerification'
     }
 
-    def __init__(self, transaction_id=None, forwarded_acquirer_code=None):
+    def __init__(self, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._transaction_id = None
         self._forwarded_acquirer_code = None
+        self._merchant_number = None
+        self._response_code = None
+        self._ach_verification = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if forwarded_acquirer_code is not None:
           self.forwarded_acquirer_code = forwarded_acquirer_code
+        if merchant_number is not None:
+          self.merchant_number = merchant_number
+        if response_code is not None:
+          self.response_code = response_code
+        if ach_verification is not None:
+          self.ach_verification = ach_verification
 
     @property
     def transaction_id(self):
@@ -102,6 +117,77 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
             raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
+
+    @property
+    def merchant_number(self):
+        """
+        Gets the merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+
+        :return: The merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._merchant_number
+
+    @merchant_number.setter
+    def merchant_number(self, merchant_number):
+        """
+        Sets the merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+
+        :param merchant_number: The merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+        if merchant_number is not None and len(merchant_number) > 15:
+            raise ValueError("Invalid value for `merchant_number`, length must be less than or equal to `15`")
+
+        self._merchant_number = merchant_number
+
+    @property
+    def response_code(self):
+        """
+        Gets the response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  Important Do not use this field to evaluate the result of the authorization. 
+
+        :return: The response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_code
+
+    @response_code.setter
+    def response_code(self, response_code):
+        """
+        Sets the response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  Important Do not use this field to evaluate the result of the authorization. 
+
+        :param response_code: The response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+        if response_code is not None and len(response_code) > 10:
+            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
+
+        self._response_code = response_code
+
+    @property
+    def ach_verification(self):
+        """
+        Gets the ach_verification of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+
+        :return: The ach_verification of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
+        """
+        return self._ach_verification
+
+    @ach_verification.setter
+    def ach_verification(self, ach_verification):
+        """
+        Sets the ach_verification of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+
+        :param ach_verification: The ach_verification of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
+        """
+
+        self._ach_verification = ach_verification
 
     def to_dict(self):
         """

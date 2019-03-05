@@ -112,7 +112,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character ISO Standard Currency Codes.  For an authorization reversal or a capture, you must use the same currency that you used in your request for Payment API. 
+        Currency used for the order. Use the three-character ISO Standard Currency Codes.  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your request for Payment API.  **DCC for First Data**\\ Your local currency. For details, see \"Dynamic Currency Conversion for First Data,\" page 113. 
 
         :return: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -123,7 +123,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character ISO Standard Currency Codes.  For an authorization reversal or a capture, you must use the same currency that you used in your request for Payment API. 
+        Currency used for the order. Use the three-character ISO Standard Currency Codes.  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your request for Payment API.  **DCC for First Data**\\ Your local currency. For details, see \"Dynamic Currency Conversion for First Data,\" page 113. 
 
         :param currency: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str

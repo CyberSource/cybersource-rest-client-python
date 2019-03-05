@@ -41,7 +41,9 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'vat_invoice_reference_number': 'str',
         'commodity_code': 'str',
         'merchandise_code': 'float',
-        'transaction_advice_addendum': 'list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]'
+        'transaction_advice_addendum': 'list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]',
+        'reference_data_code': 'str',
+        'reference_data_number': 'str'
     }
 
     attribute_map = {
@@ -55,10 +57,12 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'vat_invoice_reference_number': 'vatInvoiceReferenceNumber',
         'commodity_code': 'commodityCode',
         'merchandise_code': 'merchandiseCode',
-        'transaction_advice_addendum': 'transactionAdviceAddendum'
+        'transaction_advice_addendum': 'transactionAdviceAddendum',
+        'reference_data_code': 'referenceDataCode',
+        'reference_data_number': 'referenceDataNumber'
     }
 
-    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None):
+    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None):
         """
         Ptsv2paymentsOrderInformationInvoiceDetails - a model defined in Swagger
         """
@@ -74,6 +78,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         self._commodity_code = None
         self._merchandise_code = None
         self._transaction_advice_addendum = None
+        self._reference_data_code = None
+        self._reference_data_number = None
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
@@ -97,6 +103,10 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
           self.merchandise_code = merchandise_code
         if transaction_advice_addendum is not None:
           self.transaction_advice_addendum = transaction_advice_addendum
+        if reference_data_code is not None:
+          self.reference_data_code = reference_data_code
+        if reference_data_number is not None:
+          self.reference_data_number = reference_data_number
 
     @property
     def invoice_number(self):
@@ -246,7 +256,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def taxable(self):
         """
         Gets the taxable of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Flag that indicates whether an order is taxable. This value must be true if the sum of all _lineItems[].taxAmount_ values > 0.  If you do not include any _lineItems[].taxAmount_ values in your request, CyberSource does not include _invoiceDetails.taxable_ in the data it sends to the processor.  For processor-specific information, see the tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates whether an order is taxable. This value must be true if the sum of all _lineItems[].taxAmount_ values > 0.  If you do not include any _lineItems[].taxAmount_ values in your request, CyberSource does not include _invoiceDetails.taxable_ in the data it sends to the processor.  For processor-specific information, see the tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html)  Possible values:  - **true**  - **false** 
 
         :return: The taxable of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :rtype: bool
@@ -257,7 +267,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def taxable(self, taxable):
         """
         Sets the taxable of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Flag that indicates whether an order is taxable. This value must be true if the sum of all _lineItems[].taxAmount_ values > 0.  If you do not include any _lineItems[].taxAmount_ values in your request, CyberSource does not include _invoiceDetails.taxable_ in the data it sends to the processor.  For processor-specific information, see the tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates whether an order is taxable. This value must be true if the sum of all _lineItems[].taxAmount_ values > 0.  If you do not include any _lineItems[].taxAmount_ values in your request, CyberSource does not include _invoiceDetails.taxable_ in the data it sends to the processor.  For processor-specific information, see the tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html)  Possible values:  - **true**  - **false** 
 
         :param taxable: The taxable of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: bool
@@ -358,6 +368,56 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         """
 
         self._transaction_advice_addendum = transaction_advice_addendum
+
+    @property
+    def reference_data_code(self):
+        """
+        Gets the reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Code that identifies the value of the reference_data_number field. For the possible values, see Reference Data Codes.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :return: The reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._reference_data_code
+
+    @reference_data_code.setter
+    def reference_data_code(self, reference_data_code):
+        """
+        Sets the reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Code that identifies the value of the reference_data_number field. For the possible values, see Reference Data Codes.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :param reference_data_code: The reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+        if reference_data_code is not None and len(reference_data_code) > 3:
+            raise ValueError("Invalid value for `reference_data_code`, length must be less than or equal to `3`")
+
+        self._reference_data_code = reference_data_code
+
+    @property
+    def reference_data_number(self):
+        """
+        Gets the reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Reference number. The meaning of this value is identified by the value of the referenceDataCode field.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :return: The reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._reference_data_number
+
+    @reference_data_number.setter
+    def reference_data_number(self, reference_data_number):
+        """
+        Sets the reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Reference number. The meaning of this value is identified by the value of the referenceDataCode field.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :param reference_data_number: The reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+        if reference_data_number is not None and len(reference_data_number) > 30:
+            raise ValueError("Invalid value for `reference_data_number`, length must be less than or equal to `30`")
+
+        self._reference_data_number = reference_data_number
 
     def to_dict(self):
         """

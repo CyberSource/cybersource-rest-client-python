@@ -123,12 +123,12 @@ class PaymentsApi(object):
         if 'create_payment_request' in params:
             body_params = params['create_payment_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

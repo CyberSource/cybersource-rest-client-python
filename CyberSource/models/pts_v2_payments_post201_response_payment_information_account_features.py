@@ -257,7 +257,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_sign(self):
         """
         Gets the balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values: 
+        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **+**  - **-** 
 
         :return: The balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -268,7 +268,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_sign(self, balance_sign):
         """
         Sets the balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values: 
+        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **+**  - **-** 
 
         :param balance_sign: The balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str

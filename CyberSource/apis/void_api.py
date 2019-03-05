@@ -39,7 +39,7 @@ class VoidApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def void_capture(self, void_capture_request, id, **kwargs):
@@ -129,13 +129,13 @@ class VoidApi(object):
         body_params = None
         if 'void_capture_request' in params:
             body_params = params['void_capture_request']
-            # HTTP header `Accept`
-            header_params['Accept'] = self.api_client. \
-                select_header_accept(['application/hal+json;charset=utf-8'])
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
 
-            # HTTP header `Content-Type`
-            header_params['Content-Type'] = self.api_client. \
-                select_header_content_type(['application/json'])
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -243,12 +243,12 @@ class VoidApi(object):
         if 'void_credit_request' in params:
             body_params = params['void_credit_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -356,12 +356,12 @@ class VoidApi(object):
         if 'void_payment_request' in params:
             body_params = params['void_payment_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -469,12 +469,12 @@ class VoidApi(object):
         if 'void_refund_request' in params:
             body_params = params['void_refund_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []

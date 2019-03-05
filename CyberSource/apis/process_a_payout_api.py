@@ -39,7 +39,7 @@ class ProcessAPayoutApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config)
+        self.api_client.set_configuration(merchant_config) 
 
 
     def oct_create_payment(self, oct_create_payment_request, **kwargs):
@@ -57,7 +57,7 @@ class ProcessAPayoutApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PtsV2PayoutsPostResponse oct_create_payment_request: (required)
-        :return: None
+        :return: PtsV2PayoutsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class ProcessAPayoutApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PtsV2PayoutsPostResponse oct_create_payment_request: (required)
-        :return: None
+        :return: PtsV2PayoutsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -123,12 +123,12 @@ class ProcessAPayoutApi(object):
         if 'oct_create_payment_request' in params:
             body_params = params['oct_create_payment_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client. \
+        header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client. \
-            select_header_content_type(['application/json'])
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -140,7 +140,7 @@ class ProcessAPayoutApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='PtsV2PayoutsPost201Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

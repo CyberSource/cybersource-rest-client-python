@@ -31,7 +31,7 @@ class PtsV2PayoutsPostResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
+        'client_reference_information': 'Ptsv2payoutsClientReferenceInformation',
         'order_information': 'Ptsv2payoutsOrderInformation',
         'merchant_information': 'Ptsv2payoutsMerchantInformation',
         'recipient_information': 'Ptsv2payoutsRecipientInformation',
@@ -84,7 +84,7 @@ class PtsV2PayoutsPostResponse(object):
         Gets the client_reference_information of this PtsV2PayoutsPostResponse.
 
         :return: The client_reference_information of this PtsV2PayoutsPostResponse.
-        :rtype: PtsV2PaymentsPost201ResponseClientReferenceInformation
+        :rtype: Ptsv2payoutsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -94,7 +94,7 @@ class PtsV2PayoutsPostResponse(object):
         Sets the client_reference_information of this PtsV2PayoutsPostResponse.
 
         :param client_reference_information: The client_reference_information of this PtsV2PayoutsPostResponse.
-        :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
+        :type: Ptsv2payoutsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

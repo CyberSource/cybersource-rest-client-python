@@ -95,7 +95,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsVoidsPost400Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PaymentsVoidsPost400Response.
         :rtype: str
@@ -106,7 +106,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsVoidsPost400Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PaymentsVoidsPost400Response.
         :type: str
@@ -124,7 +124,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsVoidsPost400Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE 
 
         :return: The reason of this PtsV2PaymentsVoidsPost400Response.
         :rtype: str
@@ -135,7 +135,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsVoidsPost400Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE 
 
         :param reason: The reason of this PtsV2PaymentsVoidsPost400Response.
         :type: str

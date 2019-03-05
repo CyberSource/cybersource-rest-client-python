@@ -31,22 +31,48 @@ class Ptsv2paymentsidreversalsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'amount_details': 'Ptsv2paymentsidreversalsOrderInformationAmountDetails',
         'line_items': 'list[Ptsv2paymentsidreversalsOrderInformationLineItems]'
     }
 
     attribute_map = {
+        'amount_details': 'amountDetails',
         'line_items': 'lineItems'
     }
 
-    def __init__(self, line_items=None):
+    def __init__(self, amount_details=None, line_items=None):
         """
         Ptsv2paymentsidreversalsOrderInformation - a model defined in Swagger
         """
 
+        self._amount_details = None
         self._line_items = None
 
+        if amount_details is not None:
+          self.amount_details = amount_details
         if line_items is not None:
           self.line_items = line_items
+
+    @property
+    def amount_details(self):
+        """
+        Gets the amount_details of this Ptsv2paymentsidreversalsOrderInformation.
+
+        :return: The amount_details of this Ptsv2paymentsidreversalsOrderInformation.
+        :rtype: Ptsv2paymentsidreversalsOrderInformationAmountDetails
+        """
+        return self._amount_details
+
+    @amount_details.setter
+    def amount_details(self, amount_details):
+        """
+        Sets the amount_details of this Ptsv2paymentsidreversalsOrderInformation.
+
+        :param amount_details: The amount_details of this Ptsv2paymentsidreversalsOrderInformation.
+        :type: Ptsv2paymentsidreversalsOrderInformationAmountDetails
+        """
+
+        self._amount_details = amount_details
 
     @property
     def line_items(self):

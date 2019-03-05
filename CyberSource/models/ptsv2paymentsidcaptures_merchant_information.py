@@ -34,17 +34,21 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         'merchant_descriptor': 'Ptsv2paymentsMerchantInformationMerchantDescriptor',
         'card_acceptor_reference_number': 'str',
         'category_code': 'int',
-        'vat_registration_number': 'str'
+        'vat_registration_number': 'str',
+        'service_fee_descriptor': 'Ptsv2paymentsMerchantInformationServiceFeeDescriptor',
+        'tax_id': 'str'
     }
 
     attribute_map = {
         'merchant_descriptor': 'merchantDescriptor',
         'card_acceptor_reference_number': 'cardAcceptorReferenceNumber',
         'category_code': 'categoryCode',
-        'vat_registration_number': 'vatRegistrationNumber'
+        'vat_registration_number': 'vatRegistrationNumber',
+        'service_fee_descriptor': 'serviceFeeDescriptor',
+        'tax_id': 'taxId'
     }
 
-    def __init__(self, merchant_descriptor=None, card_acceptor_reference_number=None, category_code=None, vat_registration_number=None):
+    def __init__(self, merchant_descriptor=None, card_acceptor_reference_number=None, category_code=None, vat_registration_number=None, service_fee_descriptor=None, tax_id=None):
         """
         Ptsv2paymentsidcapturesMerchantInformation - a model defined in Swagger
         """
@@ -53,6 +57,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         self._card_acceptor_reference_number = None
         self._category_code = None
         self._vat_registration_number = None
+        self._service_fee_descriptor = None
+        self._tax_id = None
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
@@ -62,6 +68,10 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
           self.category_code = category_code
         if vat_registration_number is not None:
           self.vat_registration_number = vat_registration_number
+        if service_fee_descriptor is not None:
+          self.service_fee_descriptor = service_fee_descriptor
+        if tax_id is not None:
+          self.tax_id = tax_id
 
     @property
     def merchant_descriptor(self):
@@ -113,7 +123,7 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
     def category_code(self):
         """
         Gets the category_code of this Ptsv2paymentsidcapturesMerchantInformation.
-        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :return: The category_code of this Ptsv2paymentsidcapturesMerchantInformation.
         :rtype: int
@@ -124,7 +134,7 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
     def category_code(self, category_code):
         """
         Sets the category_code of this Ptsv2paymentsidcapturesMerchantInformation.
-        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Four-digit number that the payment card industry uses to classify merchants into market segments. Visa assigned one or more of these values to your business when you started accepting Visa cards.  If you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the merchant_category_code field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :param category_code: The category_code of this Ptsv2paymentsidcapturesMerchantInformation.
         :type: int
@@ -158,6 +168,52 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
             raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `21`")
 
         self._vat_registration_number = vat_registration_number
+
+    @property
+    def service_fee_descriptor(self):
+        """
+        Gets the service_fee_descriptor of this Ptsv2paymentsidcapturesMerchantInformation.
+
+        :return: The service_fee_descriptor of this Ptsv2paymentsidcapturesMerchantInformation.
+        :rtype: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
+        """
+        return self._service_fee_descriptor
+
+    @service_fee_descriptor.setter
+    def service_fee_descriptor(self, service_fee_descriptor):
+        """
+        Sets the service_fee_descriptor of this Ptsv2paymentsidcapturesMerchantInformation.
+
+        :param service_fee_descriptor: The service_fee_descriptor of this Ptsv2paymentsidcapturesMerchantInformation.
+        :type: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
+        """
+
+        self._service_fee_descriptor = service_fee_descriptor
+
+    @property
+    def tax_id(self):
+        """
+        Gets the tax_id of this Ptsv2paymentsidcapturesMerchantInformation.
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
+
+        :return: The tax_id of this Ptsv2paymentsidcapturesMerchantInformation.
+        :rtype: str
+        """
+        return self._tax_id
+
+    @tax_id.setter
+    def tax_id(self, tax_id):
+        """
+        Sets the tax_id of this Ptsv2paymentsidcapturesMerchantInformation.
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet. See BNDES.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
+
+        :param tax_id: The tax_id of this Ptsv2paymentsidcapturesMerchantInformation.
+        :type: str
+        """
+        if tax_id is not None and len(tax_id) > 15:
+            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
+
+        self._tax_id = tax_id
 
     def to_dict(self):
         """

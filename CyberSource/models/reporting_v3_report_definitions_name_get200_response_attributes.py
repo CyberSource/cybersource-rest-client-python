@@ -145,6 +145,7 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
     def filter_type(self):
         """
         Gets the filter_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
+        Attribute Filter Type.
 
         :return: The filter_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :rtype: str
@@ -155,6 +156,7 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
     def filter_type(self, filter_type):
         """
         Sets the filter_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
+        Attribute Filter Type.
 
         :param filter_type: The filter_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :type: str
@@ -208,6 +210,7 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
     def supported_type(self):
         """
         Gets the supported_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
+        Valid values for the filter.
 
         :return: The supported_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :rtype: str
@@ -218,6 +221,7 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
     def supported_type(self, supported_type):
         """
         Sets the supported_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
+        Valid values for the filter.
 
         :param supported_type: The supported_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :type: str

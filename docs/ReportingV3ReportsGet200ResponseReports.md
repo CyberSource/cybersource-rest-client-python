@@ -16,7 +16,8 @@ Name | Type | Description | Notes
 **queued_time** | **datetime** | Specifies the time of the report in queued  in ISO 8601 format | [optional] 
 **report_generating_time** | **datetime** | Specifies the time of the report started to generate  in ISO 8601 format | [optional] 
 **report_completed_time** | **datetime** | Specifies the time of the report completed the generation  in ISO 8601 format | [optional] 
-**selected_merchant_group_name** | **str** | Selected name of the group | [optional] 
+**subscription_type** | **str** | Specifies whether the subscription created is either Custom, Standard or Classic  | [optional] 
+**group_id** | **str** | Id for selected group. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

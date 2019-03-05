@@ -68,6 +68,10 @@ class Tmsv1instrumentidentifiersCard(object):
         :param number: The number of this Tmsv1instrumentidentifiersCard.
         :type: str
         """
+        if number is not None and len(number) > 19:
+            raise ValueError("Invalid value for `number`, length must be less than or equal to `19`")
+        if number is not None and len(number) < 12:
+            raise ValueError("Invalid value for `number`, length must be greater than or equal to `12`")
 
         self._number = number
 

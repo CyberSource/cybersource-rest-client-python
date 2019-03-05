@@ -34,7 +34,7 @@ class TssV2TransactionsPost400Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -144,7 +144,7 @@ class TssV2TransactionsPost400Response(object):
         Gets the details of this TssV2TransactionsPost400Response.
 
         :return: The details of this TssV2TransactionsPost400Response.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -154,7 +154,7 @@ class TssV2TransactionsPost400Response(object):
         Sets the details of this TssV2TransactionsPost400Response.
 
         :param details: The details of this TssV2TransactionsPost400Response.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

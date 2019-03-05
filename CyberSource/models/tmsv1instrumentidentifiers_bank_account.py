@@ -73,6 +73,10 @@ class Tmsv1instrumentidentifiersBankAccount(object):
         :param number: The number of this Tmsv1instrumentidentifiersBankAccount.
         :type: str
         """
+        if number is not None and len(number) > 19:
+            raise ValueError("Invalid value for `number`, length must be less than or equal to `19`")
+        if number is not None and len(number) < 1:
+            raise ValueError("Invalid value for `number`, length must be greater than or equal to `1`")
 
         self._number = number
 
@@ -96,6 +100,10 @@ class Tmsv1instrumentidentifiersBankAccount(object):
         :param routing_number: The routing_number of this Tmsv1instrumentidentifiersBankAccount.
         :type: str
         """
+        if routing_number is not None and len(routing_number) > 9:
+            raise ValueError("Invalid value for `routing_number`, length must be less than or equal to `9`")
+        if routing_number is not None and len(routing_number) < 1:
+            raise ValueError("Invalid value for `routing_number`, length must be greater than or equal to `1`")
 
         self._routing_number = routing_number
 

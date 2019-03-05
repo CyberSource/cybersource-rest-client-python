@@ -156,7 +156,7 @@ class PtsV2PaymentsCapturesPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsCapturesPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - PENDING 
 
         :return: The status of this PtsV2PaymentsCapturesPost201Response.
         :rtype: str
@@ -167,7 +167,7 @@ class PtsV2PaymentsCapturesPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsCapturesPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - PENDING 
 
         :param status: The status of this PtsV2PaymentsCapturesPost201Response.
         :type: str

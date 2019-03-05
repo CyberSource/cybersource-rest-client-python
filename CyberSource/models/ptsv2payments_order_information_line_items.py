@@ -51,7 +51,12 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'discount_rate': 'str',
         'invoice_number': 'str',
         'tax_details': 'list[Ptsv2paymentsOrderInformationAmountDetailsTaxDetails]',
-        'fulfillment_type': 'str'
+        'fulfillment_type': 'str',
+        'weight': 'str',
+        'weight_identifier': 'str',
+        'weight_unit': 'str',
+        'reference_data_code': 'str',
+        'reference_data_number': 'str'
     }
 
     attribute_map = {
@@ -75,10 +80,15 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'discount_rate': 'discountRate',
         'invoice_number': 'invoiceNumber',
         'tax_details': 'taxDetails',
-        'fulfillment_type': 'fulfillmentType'
+        'fulfillment_type': 'fulfillmentType',
+        'weight': 'weight',
+        'weight_identifier': 'weightIdentifier',
+        'weight_unit': 'weightUnit',
+        'reference_data_code': 'referenceDataCode',
+        'reference_data_number': 'referenceDataNumber'
     }
 
-    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None):
+    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None):
         """
         Ptsv2paymentsOrderInformationLineItems - a model defined in Swagger
         """
@@ -104,6 +114,11 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         self._invoice_number = None
         self._tax_details = None
         self._fulfillment_type = None
+        self._weight = None
+        self._weight_identifier = None
+        self._weight_unit = None
+        self._reference_data_code = None
+        self._reference_data_number = None
 
         if product_code is not None:
           self.product_code = product_code
@@ -147,12 +162,22 @@ class Ptsv2paymentsOrderInformationLineItems(object):
           self.tax_details = tax_details
         if fulfillment_type is not None:
           self.fulfillment_type = fulfillment_type
+        if weight is not None:
+          self.weight = weight
+        if weight_identifier is not None:
+          self.weight_identifier = weight_identifier
+        if weight_unit is not None:
+          self.weight_unit = weight_unit
+        if reference_data_code is not None:
+          self.reference_data_code = reference_data_code
+        if reference_data_number is not None:
+          self.reference_data_number = reference_data_number
 
     @property
     def product_code(self):
         """
         Gets the product_code of this Ptsv2paymentsOrderInformationLineItems.
-        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  For a payment, when you set this field to a value other than default or any of the values related to shipping and handling, below fields _quantity_, _productName_, and _productSKU_ are required. 
+        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than default or any of the values related to shipping and handling, then the fields `quantity`, `productName`, and `productSku` are required.  See Appendix O, \"Product Codes,\" on page 373 for a list of valid values. 
 
         :return: The product_code of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -163,7 +188,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def product_code(self, product_code):
         """
         Sets the product_code of this Ptsv2paymentsOrderInformationLineItems.
-        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  For a payment, when you set this field to a value other than default or any of the values related to shipping and handling, below fields _quantity_, _productName_, and _productSKU_ are required. 
+        Type of product. This value is used to determine the category that the product is in: electronic, handling, physical, service, or shipping. The default value is **default**.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than default or any of the values related to shipping and handling, then the fields `quantity`, `productName`, and `productSku` are required.  See Appendix O, \"Product Codes,\" on page 373 for a list of valid values. 
 
         :param product_code: The product_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -177,7 +202,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def product_name(self):
         """
         Gets the product_name of this Ptsv2paymentsOrderInformationLineItems.
-        For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false` respectively), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The product_name of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -188,7 +213,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def product_name(self, product_name):
         """
         Sets the product_name of this Ptsv2paymentsOrderInformationLineItems.
-        For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false` respectively), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param product_name: The product_name of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -202,7 +227,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def product_sku(self):
         """
         Gets the product_sku of this Ptsv2paymentsOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product.  For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The product_sku of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -213,7 +238,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def product_sku(self, product_sku):
         """
         Sets the product_sku of this Ptsv2paymentsOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product.  For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param product_sku: The product_sku of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -227,7 +252,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def quantity(self):
         """
         Gets the quantity of this Ptsv2paymentsOrderInformationLineItems.
-        For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :return: The quantity of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: float
@@ -238,7 +263,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def quantity(self, quantity):
         """
         Sets the quantity of this Ptsv2paymentsOrderInformationLineItems.
-        For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
+        For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling. 
 
         :param quantity: The quantity of this Ptsv2paymentsOrderInformationLineItems.
         :type: float
@@ -254,7 +279,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def unit_price(self):
         """
         Gets the unit_price of this Ptsv2paymentsOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. This information is covered in: - Table 12, \"Authorization Information for Specific Processors,\" on page 36 - Table 16, \"Capture Information for Specific Processors,\" on page 51 - Table 20, \"Credit Information for Specific Processors,\" on page 65  **DCC for First Data**\\ This value is the original amount in your local currency. You must include this field. You cannot use grand_total_amount. See \"Dynamic Currency Conversion for First Data,\" page 113.  **FDMS South**\\ If you accept IDR or CLP currencies, see the entry for FDMS South in Table 12, \"Authorization Information for Specific Processors,\" on page 36.  **Zero Amount Authorizations**\\ If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. See \"Zero Amount Authorizations,\" page 220. 
 
         :return: The unit_price of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -265,7 +290,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def unit_price(self, unit_price):
         """
         Sets the unit_price of this Ptsv2paymentsOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. This information is covered in: - Table 12, \"Authorization Information for Specific Processors,\" on page 36 - Table 16, \"Capture Information for Specific Processors,\" on page 51 - Table 20, \"Credit Information for Specific Processors,\" on page 65  **DCC for First Data**\\ This value is the original amount in your local currency. You must include this field. You cannot use grand_total_amount. See \"Dynamic Currency Conversion for First Data,\" page 113.  **FDMS South**\\ If you accept IDR or CLP currencies, see the entry for FDMS South in Table 12, \"Authorization Information for Specific Processors,\" on page 36.  **Zero Amount Authorizations**\\ If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. See \"Zero Amount Authorizations,\" page 220. 
 
         :param unit_price: The unit_price of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -329,7 +354,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Ptsv2paymentsOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  If you want to include the tax amount and also request the ics_tax service, see Tax Calculation Service Using the SCMP API.  This field is frequently used for Level II and Level III transactions. See Level II and Level III Processing Using the SCMP API. 
 
         :return: The tax_amount of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -340,7 +365,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Ptsv2paymentsOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:   1. You include each line item in your request.  ..- 1st line item has amount=10.00, quantity=1, and taxAmount=0.80  ..- 2nd line item has amount=20.00, quantity=1, and taxAmount=1.60  2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  If you want to include the tax amount and also request the ics_tax service, see Tax Calculation Service Using the SCMP API.  This field is frequently used for Level II and Level III transactions. See Level II and Level III Processing Using the SCMP API. 
 
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -429,7 +454,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def tax_type_code(self):
         """
         Gets the tax_type_code of this Ptsv2paymentsOrderInformationLineItems.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :return: The tax_type_code of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -440,7 +465,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def tax_type_code(self, tax_type_code):
         """
         Sets the tax_type_code of this Ptsv2paymentsOrderInformationLineItems.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax  - 0011: goods and services tax  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
 
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -454,7 +479,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def amount_includes_tax(self):
         """
         Gets the amount_includes_tax of this Ptsv2paymentsOrderInformationLineItems.
-        Flag that indicates whether the tax amount is included in the Line Item Total. 
+        Flag that indicates whether the tax amount is included in the Line Item Total.  Possible values:  - **true**  - **false** 
 
         :return: The amount_includes_tax of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: bool
@@ -465,7 +490,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def amount_includes_tax(self, amount_includes_tax):
         """
         Sets the amount_includes_tax of this Ptsv2paymentsOrderInformationLineItems.
-        Flag that indicates whether the tax amount is included in the Line Item Total. 
+        Flag that indicates whether the tax amount is included in the Line Item Total.  Possible values:  - **true**  - **false** 
 
         :param amount_includes_tax: The amount_includes_tax of this Ptsv2paymentsOrderInformationLineItems.
         :type: bool
@@ -552,7 +577,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def discount_applied(self):
         """
         Gets the discount_applied of this Ptsv2paymentsOrderInformationLineItems.
-        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**. 
+        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**.  Possible values:  - **true**  - **false** 
 
         :return: The discount_applied of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: bool
@@ -563,7 +588,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def discount_applied(self, discount_applied):
         """
         Sets the discount_applied of this Ptsv2paymentsOrderInformationLineItems.
-        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**. 
+        Flag that indicates whether the amount is discounted.  If you do not provide a value but you set Discount Amount to a value greater than zero, then CyberSource sets this field to **true**.  Possible values:  - **true**  - **false** 
 
         :param discount_applied: The discount_applied of this Ptsv2paymentsOrderInformationLineItems.
         :type: bool
@@ -646,7 +671,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def fulfillment_type(self):
         """
         Gets the fulfillment_type of this Ptsv2paymentsOrderInformationLineItems.
-        TODO
+        The description for this field is not available.
 
         :return: The fulfillment_type of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -657,13 +682,138 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def fulfillment_type(self, fulfillment_type):
         """
         Sets the fulfillment_type of this Ptsv2paymentsOrderInformationLineItems.
-        TODO
+        The description for this field is not available.
 
         :param fulfillment_type: The fulfillment_type of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
 
         self._fulfillment_type = fulfillment_type
+
+    @property
+    def weight(self):
+        """
+        Gets the weight of this Ptsv2paymentsOrderInformationLineItems.
+        Weight of the item. See Numbered Elements.
+
+        :return: The weight of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._weight
+
+    @weight.setter
+    def weight(self, weight):
+        """
+        Sets the weight of this Ptsv2paymentsOrderInformationLineItems.
+        Weight of the item. See Numbered Elements.
+
+        :param weight: The weight of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if weight is not None and len(weight) > 9:
+            raise ValueError("Invalid value for `weight`, length must be less than or equal to `9`")
+
+        self._weight = weight
+
+    @property
+    def weight_identifier(self):
+        """
+        Gets the weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
+        Type of weight. See Numbered Elements.  Possible values: - B: Billed weight - N: Actual net weight 
+
+        :return: The weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._weight_identifier
+
+    @weight_identifier.setter
+    def weight_identifier(self, weight_identifier):
+        """
+        Sets the weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
+        Type of weight. See Numbered Elements.  Possible values: - B: Billed weight - N: Actual net weight 
+
+        :param weight_identifier: The weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if weight_identifier is not None and len(weight_identifier) > 1:
+            raise ValueError("Invalid value for `weight_identifier`, length must be less than or equal to `1`")
+
+        self._weight_identifier = weight_identifier
+
+    @property
+    def weight_unit(self):
+        """
+        Gets the weight_unit of this Ptsv2paymentsOrderInformationLineItems.
+        Code that specifies the unit of measurement for the weight amount. For example, OZ specifies ounce and LB specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  See Numbered Elements. 
+
+        :return: The weight_unit of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._weight_unit
+
+    @weight_unit.setter
+    def weight_unit(self, weight_unit):
+        """
+        Sets the weight_unit of this Ptsv2paymentsOrderInformationLineItems.
+        Code that specifies the unit of measurement for the weight amount. For example, OZ specifies ounce and LB specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  See Numbered Elements. 
+
+        :param weight_unit: The weight_unit of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if weight_unit is not None and len(weight_unit) > 2:
+            raise ValueError("Invalid value for `weight_unit`, length must be less than or equal to `2`")
+
+        self._weight_unit = weight_unit
+
+    @property
+    def reference_data_code(self):
+        """
+        Gets the reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
+        Code that identifies the value of the corresponding item_#_referenceData_#_number field. See Numbered Elements.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :return: The reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._reference_data_code
+
+    @reference_data_code.setter
+    def reference_data_code(self, reference_data_code):
+        """
+        Sets the reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
+        Code that identifies the value of the corresponding item_#_referenceData_#_number field. See Numbered Elements.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :param reference_data_code: The reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if reference_data_code is not None and len(reference_data_code) > 2:
+            raise ValueError("Invalid value for `reference_data_code`, length must be less than or equal to `2`")
+
+        self._reference_data_code = reference_data_code
+
+    @property
+    def reference_data_number(self):
+        """
+        Gets the reference_data_number of this Ptsv2paymentsOrderInformationLineItems.
+        Reference number.  The meaning of this value is identified by the value of the corresponding `referenceDataCode` field. See Numbered Elements.  The maximum length for this field depends on the value of the corresponding `referenceDataCode` field: - When the code is `PO`, the maximum length for the reference number is 22. - When the code is `VC`, the maximum length for the reference number is 20. - For all other codes, the maximum length for the reference number is 30.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :return: The reference_data_number of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._reference_data_number
+
+    @reference_data_number.setter
+    def reference_data_number(self, reference_data_number):
+        """
+        Sets the reference_data_number of this Ptsv2paymentsOrderInformationLineItems.
+        Reference number.  The meaning of this value is identified by the value of the corresponding `referenceDataCode` field. See Numbered Elements.  The maximum length for this field depends on the value of the corresponding `referenceDataCode` field: - When the code is `PO`, the maximum length for the reference number is 22. - When the code is `VC`, the maximum length for the reference number is 20. - For all other codes, the maximum length for the reference number is 30.  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+
+        :param reference_data_number: The reference_data_number of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if reference_data_number is not None and len(reference_data_number) > 30:
+            raise ValueError("Invalid value for `reference_data_number`, length must be less than or equal to `30`")
+
+        self._reference_data_number = reference_data_number
 
     def to_dict(self):
         """

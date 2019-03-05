@@ -68,6 +68,8 @@ class Tmsv1instrumentidentifiersProcessingInformationAuthorizationOptionsInitiat
         :param previous_transaction_id: The previous_transaction_id of this Tmsv1instrumentidentifiersProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
+        if previous_transaction_id is not None and len(previous_transaction_id) > 15:
+            raise ValueError("Invalid value for `previous_transaction_id`, length must be less than or equal to `15`")
 
         self._previous_transaction_id = previous_transaction_id
 
