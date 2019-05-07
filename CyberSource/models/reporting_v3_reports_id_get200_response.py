@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -43,7 +43,7 @@ class ReportingV3ReportsIdGet200Response(object):
         'report_end_time': 'datetime',
         'timezone': 'str',
         'report_filters': 'dict(str, list[str])',
-        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'report_preferences': 'Reportingv3reportsReportPreferences',
         'group_id': 'str'
     }
 
@@ -413,7 +413,7 @@ class ReportingV3ReportsIdGet200Response(object):
         Gets the report_preferences of this ReportingV3ReportsIdGet200Response.
 
         :return: The report_preferences of this ReportingV3ReportsIdGet200Response.
-        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :rtype: Reportingv3reportsReportPreferences
         """
         return self._report_preferences
 
@@ -423,7 +423,7 @@ class ReportingV3ReportsIdGet200Response(object):
         Sets the report_preferences of this ReportingV3ReportsIdGet200Response.
 
         :param report_preferences: The report_preferences of this ReportingV3ReportsIdGet200Response.
-        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :type: Reportingv3reportsReportPreferences
         """
 
         self._report_preferences = report_preferences

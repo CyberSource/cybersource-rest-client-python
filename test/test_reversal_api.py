@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -36,6 +36,14 @@ class TestReversalApi(unittest.TestCase):
         Test case for auth_reversal
 
         Process an Authorization Reversal
+        """
+        pass
+
+    def test_mit_reversal(self):
+        """
+        Test case for mit_reversal
+
+        Merchant Initiated Reversal
         """
         pass
 

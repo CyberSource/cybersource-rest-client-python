@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**submit_time_utc** | **str** | Time of request in UTC  | 
+**submit_time_utc** | **datetime** | Time of request in UTC.   | 
 **reason** | **str** | Documented reason code  | 
 **message** | **str** | Short descriptive message to the user.  | 
 **details** | [**list[Reportingv3ReportDownloadsGet400ResponseDetails]**](Reportingv3ReportDownloadsGet400ResponseDetails.md) | Error field list  | 

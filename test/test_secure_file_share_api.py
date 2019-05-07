@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -39,9 +39,9 @@ class TestSecureFileShareApi(unittest.TestCase):
         """
         pass
 
-    def test_get_file_details(self):
+    def test_get_file_detail(self):
         """
-        Test case for get_file_details
+        Test case for get_file_detail
 
         Get list of files
         """

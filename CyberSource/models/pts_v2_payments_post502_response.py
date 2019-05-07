@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -67,7 +67,7 @@ class PtsV2PaymentsPost502Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV2PaymentsPost502Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this PtsV2PaymentsPost502Response.
         :rtype: str
@@ -78,7 +78,7 @@ class PtsV2PaymentsPost502Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV2PaymentsPost502Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost502Response.
         :type: str
@@ -135,7 +135,7 @@ class PtsV2PaymentsPost502Response(object):
         :param reason: The reason of this PtsV2PaymentsPost502Response.
         :type: str
         """
-        allowed_values = ["SYSTEM_ERROR", "SERVER_TIMEOUT", "SERVICE_TIMEOUT", "PROCESSOR_TIMEOUT"]
+        allowed_values = ["SYSTEM_ERROR", "SERVER_TIMEOUT", "SERVICE_TIMEOUT", "INVALID_OR_MISSING_CONFIG", "PROCESSOR_TIMEOUT"]
         if reason not in allowed_values:
             raise ValueError(
                 "Invalid value for `reason` ({0}), must be one of {1}"

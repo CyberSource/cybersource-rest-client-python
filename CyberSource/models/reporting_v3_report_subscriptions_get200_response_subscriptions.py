@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -42,7 +42,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         'start_day': 'int',
         'report_fields': 'list[str]',
         'report_filters': 'dict(str, list[str])',
-        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'report_preferences': 'Reportingv3reportsReportPreferences',
         'group_id': 'str'
     }
 
@@ -226,7 +226,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_frequency: The report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-        allowed_values = ["DAILY", "WEEKLY", "MONTHLY"]
+        allowed_values = ["DAILY", "WEEKLY", "MONTHLY", "ADHOC"]
         if report_frequency not in allowed_values:
             raise ValueError(
                 "Invalid value for `report_frequency` ({0}), must be one of {1}"
@@ -379,7 +379,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         Gets the report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
 
         :return: The report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :rtype: Reportingv3reportsReportPreferences
         """
         return self._report_preferences
 
@@ -389,7 +389,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         Sets the report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
 
         :param report_preferences: The report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :type: Reportingv3reportsReportPreferences
         """
 
         self._report_preferences = report_preferences

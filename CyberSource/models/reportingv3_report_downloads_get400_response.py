@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,7 +31,7 @@ class Reportingv3ReportDownloadsGet400Response(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'submit_time_utc': 'datetime',
         'reason': 'str',
         'message': 'str',
         'details': 'list[Reportingv3ReportDownloadsGet400ResponseDetails]'
@@ -63,10 +63,10 @@ class Reportingv3ReportDownloadsGet400Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this Reportingv3ReportDownloadsGet400Response.
-        Time of request in UTC 
+        Time of request in UTC.  
 
         :return: The submit_time_utc of this Reportingv3ReportDownloadsGet400Response.
-        :rtype: str
+        :rtype: datetime
         """
         return self._submit_time_utc
 
@@ -74,10 +74,10 @@ class Reportingv3ReportDownloadsGet400Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this Reportingv3ReportDownloadsGet400Response.
-        Time of request in UTC 
+        Time of request in UTC.  
 
         :param submit_time_utc: The submit_time_utc of this Reportingv3ReportDownloadsGet400Response.
-        :type: str
+        :type: datetime
         """
         if submit_time_utc is None:
             raise ValueError("Invalid value for `submit_time_utc`, must not be `None`")

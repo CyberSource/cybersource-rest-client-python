@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -34,7 +34,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         'terminal_id': 'str',
         'terminal_serial_number': 'str',
         'device_id': 'str',
-        'partner': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner'
+        'partner': 'Ptsv2paymentsClientReferenceInformationPartner'
     }
 
     attribute_map = {
@@ -92,7 +92,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_serial_number(self):
         """
         Gets the terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        The description for this field is not available.
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
 
         :return: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :rtype: str
@@ -103,11 +103,13 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_serial_number(self, terminal_serial_number):
         """
         Sets the terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        The description for this field is not available.
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
 
         :param terminal_serial_number: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
         """
+        if terminal_serial_number is not None and len(terminal_serial_number) > 32:
+            raise ValueError("Invalid value for `terminal_serial_number`, length must be less than or equal to `32`")
 
         self._terminal_serial_number = terminal_serial_number
 
@@ -140,7 +142,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Gets the partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :return: The partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner
+        :rtype: Ptsv2paymentsClientReferenceInformationPartner
         """
         return self._partner
 
@@ -150,7 +152,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Sets the partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :type: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner
+        :type: Ptsv2paymentsClientReferenceInformationPartner
         """
 
         self._partner = partner

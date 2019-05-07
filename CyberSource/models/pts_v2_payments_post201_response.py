@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -138,7 +138,7 @@ class PtsV2PaymentsPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :return: The id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -149,7 +149,7 @@ class PtsV2PaymentsPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :param id: The id of this PtsV2PaymentsPost201Response.
         :type: str
@@ -163,7 +163,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -174,7 +174,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :type: str
@@ -202,7 +202,7 @@ class PtsV2PaymentsPost201Response(object):
         :param status: The status of this PtsV2PaymentsPost201Response.
         :type: str
         """
-        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED", "INVALID_REQUEST", "PENDING"]
+        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED"]
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"

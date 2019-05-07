@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -33,7 +33,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
     swagger_types = {
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -110,7 +110,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
         Gets the details of this TssV2TransactionsGet200ResponseErrorInformation.
 
         :return: The details of this TssV2TransactionsGet200ResponseErrorInformation.
-        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -120,7 +120,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
         Sets the details of this TssV2TransactionsGet200ResponseErrorInformation.
 
         :param details: The details of this TssV2TransactionsGet200ResponseErrorInformation.
-        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

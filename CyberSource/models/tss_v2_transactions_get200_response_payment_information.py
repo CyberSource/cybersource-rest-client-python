@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -32,7 +32,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentType',
-        'customer': 'TssV2TransactionsGet200ResponsePaymentInformationCustomer',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'card': 'TssV2TransactionsGet200ResponsePaymentInformationCard',
         'invoice': 'TssV2TransactionsGet200ResponsePaymentInformationInvoice',
         'bank': 'TssV2TransactionsGet200ResponsePaymentInformationBank',
@@ -100,7 +100,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Gets the customer of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :return: The customer of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :rtype: TssV2TransactionsGet200ResponsePaymentInformationCustomer
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
         """
         return self._customer
 
@@ -110,7 +110,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Sets the customer of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :param customer: The customer of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :type: TssV2TransactionsGet200ResponsePaymentInformationCustomer
+        :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
         self._customer = customer

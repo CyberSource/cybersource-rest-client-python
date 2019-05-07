@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -56,7 +56,7 @@ class SearchTransactionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param TssV2TransactionsPostResponse create_search_request: (required)
+        :param CreateSearchRequest create_search_request: (required)
         :return: TssV2TransactionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -82,7 +82,7 @@ class SearchTransactionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param TssV2TransactionsPostResponse create_search_request: (required)
+        :param CreateSearchRequest create_search_request: (required)
         :return: TssV2TransactionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -148,53 +148,53 @@ class SearchTransactionsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_search(self, id, **kwargs):
+    def get_search(self, search_id, **kwargs):
         """
         Get Search results
-        Include the Search ID in the GET request to retrieve the search results.
+        Include the Search ID in the GET request to retrieve the search results. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_search(id, callback=callback_function)
+        >>> thread = api.get_search(search_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str id: Search ID. (required)
+        :param str search_id: Search ID. (required)
         :return: TssV2TransactionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_search_with_http_info(id, **kwargs)
+            return self.get_search_with_http_info(search_id, **kwargs)
         else:
-            (data) = self.get_search_with_http_info(id, **kwargs)
+            (data) = self.get_search_with_http_info(search_id, **kwargs)
             return data
 
-    def get_search_with_http_info(self, id, **kwargs):
+    def get_search_with_http_info(self, search_id, **kwargs):
         """
         Get Search results
-        Include the Search ID in the GET request to retrieve the search results.
+        Include the Search ID in the GET request to retrieve the search results. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_search_with_http_info(id, callback=callback_function)
+        >>> thread = api.get_search_with_http_info(search_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str id: Search ID. (required)
+        :param str search_id: Search ID. (required)
         :return: TssV2TransactionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id']
+        all_params = ['search_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -209,16 +209,16 @@ class SearchTransactionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params) or (params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_search`")
+        # verify the required parameter 'search_id' is set
+        if ('search_id' not in params) or (params['search_id'] is None):
+            raise ValueError("Missing the required parameter `search_id` when calling `get_search`")
 
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']
+        if 'search_id' in params:
+            path_params['searchId'] = params['search_id']
 
         query_params = []
 
@@ -239,7 +239,7 @@ class SearchTransactionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/tss/v2/searches/'+id, 'GET',
+        return self.api_client.call_api('/tss/v2/searches/{searchId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

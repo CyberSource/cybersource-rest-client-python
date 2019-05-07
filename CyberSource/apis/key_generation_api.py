@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -42,7 +42,7 @@ class KeyGenerationApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def generate_public_key(self, **kwargs):
+    def generate_public_key(self, generate_public_key_request, **kwargs):
         """
         Generate Key
         Generate a one-time use public key and key ID to encrypt the card number in the follow-on Tokenize Card request. The key used to encrypt the card number on the cardholder’s device or browser is valid for 15 minutes and must be used to verify the signature in the response message. CyberSource recommends creating a new key for each order. Generating a key is an authenticated request initiated from your servers, prior to requesting to tokenize the card data from your customer’s device or browser.
@@ -52,23 +52,23 @@ class KeyGenerationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.generate_public_key(callback=callback_function)
+        >>> thread = api.generate_public_key(generate_public_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param GeneratePublicKeyRequest generate_public_key_request:
+        :param GeneratePublicKeyRequest generate_public_key_request: (required)
         :return: FlexV1KeysPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.generate_public_key_with_http_info(**kwargs)
+            return self.generate_public_key_with_http_info(generate_public_key_request, **kwargs)
         else:
-            (data) = self.generate_public_key_with_http_info(**kwargs)
+            (data) = self.generate_public_key_with_http_info(generate_public_key_request, **kwargs)
             return data
 
-    def generate_public_key_with_http_info(self, **kwargs):
+    def generate_public_key_with_http_info(self, generate_public_key_request, **kwargs):
         """
         Generate Key
         Generate a one-time use public key and key ID to encrypt the card number in the follow-on Tokenize Card request. The key used to encrypt the card number on the cardholder’s device or browser is valid for 15 minutes and must be used to verify the signature in the response message. CyberSource recommends creating a new key for each order. Generating a key is an authenticated request initiated from your servers, prior to requesting to tokenize the card data from your customer’s device or browser.
@@ -78,11 +78,11 @@ class KeyGenerationApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.generate_public_key_with_http_info(callback=callback_function)
+        >>> thread = api.generate_public_key_with_http_info(generate_public_key_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param GeneratePublicKeyRequest generate_public_key_request:
+        :param GeneratePublicKeyRequest generate_public_key_request: (required)
         :return: FlexV1KeysPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -103,6 +103,9 @@ class KeyGenerationApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'generate_public_key_request' is set
+        if ('generate_public_key_request' not in params) or (params['generate_public_key_request'] is None):
+            raise ValueError("Missing the required parameter `generate_public_key_request` when calling `generate_public_key`")
 
 
         collection_formats = {}
@@ -130,7 +133,7 @@ class KeyGenerationApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/flex/v1/keys/', 'POST',
+        return self.api_client.call_api('/flex/v1/keys', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

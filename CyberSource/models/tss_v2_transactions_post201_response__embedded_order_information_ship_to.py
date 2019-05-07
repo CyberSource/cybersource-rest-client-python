@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -97,7 +97,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def last_name(self):
         """
         Gets the last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Last name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
 
         :return: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -108,7 +108,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Last name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
 
         :param last_name: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
@@ -147,7 +147,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :return: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -158,7 +158,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :param country: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
@@ -172,7 +172,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def phone_number(self):
         """
         Gets the phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :return: The phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -183,7 +183,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :param phone_number: The phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -54,14 +54,12 @@ class Flexv1tokensCardInfo(object):
         self._card_expiration_year = None
         self._card_type = None
 
-        if card_number is not None:
-          self.card_number = card_number
+        self.card_number = card_number
         if card_expiration_month is not None:
           self.card_expiration_month = card_expiration_month
         if card_expiration_year is not None:
           self.card_expiration_year = card_expiration_year
-        if card_type is not None:
-          self.card_type = card_type
+        self.card_type = card_type
 
     @property
     def card_number(self):
@@ -83,6 +81,8 @@ class Flexv1tokensCardInfo(object):
         :param card_number: The card_number of this Flexv1tokensCardInfo.
         :type: str
         """
+        if card_number is None:
+            raise ValueError("Invalid value for `card_number`, must not be `None`")
 
         self._card_number = card_number
 
@@ -152,6 +152,8 @@ class Flexv1tokensCardInfo(object):
         :param card_type: The card_type of this Flexv1tokensCardInfo.
         :type: str
         """
+        if card_type is None:
+            raise ValueError("Invalid value for `card_type`, must not be `None`")
 
         self._card_type = card_type
 

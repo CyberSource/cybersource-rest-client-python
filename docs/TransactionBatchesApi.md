@@ -4,12 +4,64 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_transaction_batch_details**](TransactionBatchesApi.md#get_transaction_batch_details) | **GET** /pts/v1/transaction-batch-details | Filters batch response. 
 [**get_transaction_batch_id**](TransactionBatchesApi.md#get_transaction_batch_id) | **GET** /pts/v1/transaction-batches/{id} | Get individual batch file
 [**get_transaction_batches**](TransactionBatchesApi.md#get_transaction_batches) | **GET** /pts/v1/transaction-batches | Get a list of batch files
 
 
+# **get_transaction_batch_details**
+> get_transaction_batch_details(transaction_batch_id, upload_date=upload_date, status=status)
+
+Filters batch response. 
+
+Filters batch response. 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.TransactionBatchesApi()
+transaction_batch_id = 'transaction_batch_id_example' # str | Transaction Batch Id, this is unique.
+upload_date = '2013-10-20' # date | Date in which the original batch file was uploaded. Date must be in ISO-8601 format. (optional)
+status = 'status_example' # str | Allows you to filter by rejected response.  (optional)
+
+try: 
+    # Filters batch response. 
+    api_instance.get_transaction_batch_details(transaction_batch_id, upload_date=upload_date, status=status)
+except ApiException as e:
+    print("Exception when calling TransactionBatchesApi->get_transaction_batch_details: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_batch_id** | **str**| Transaction Batch Id, this is unique. | 
+ **upload_date** | **date**| Date in which the original batch file was uploaded. Date must be in ISO-8601 format. | [optional] 
+ **status** | **str**| Allows you to filter by rejected response.  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: text/vnd.cybersource.map-csv
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_transaction_batch_id**
-> PtsV1TransactionBatchesIdGet200Response get_transaction_batch_id(id)
+> get_transaction_batch_id(id)
 
 Get individual batch file
 
@@ -29,8 +81,7 @@ id = 'id_example' # str | The batch id assigned for the template.
 
 try: 
     # Get individual batch file
-    api_response = api_instance.get_transaction_batch_id(id)
-    pprint(api_response)
+    api_instance.get_transaction_batch_id(id)
 except ApiException as e:
     print("Exception when calling TransactionBatchesApi->get_transaction_batch_id: %s\n" % e)
 ```
@@ -43,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PtsV1TransactionBatchesIdGet200Response**](PtsV1TransactionBatchesIdGet200Response.md)
+void (empty response body)
 
 ### Authorization
 

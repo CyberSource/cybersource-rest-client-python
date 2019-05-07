@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **report_end_time** | **datetime** | Report End Time Value | [optional] 
 **timezone** | **str** | Time Zone Value | [optional] 
 **report_filters** | **dict(str, list[str])** | List of filters to apply | [optional] 
-**report_preferences** | [**ReportingV3ReportsIdGet200ResponseReportPreferences**](ReportingV3ReportsIdGet200ResponseReportPreferences.md) |  | [optional] 
+**report_preferences** | [**Reportingv3reportsReportPreferences**](Reportingv3reportsReportPreferences.md) |  | [optional] 
 **group_id** | **str** | Id for selected group. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

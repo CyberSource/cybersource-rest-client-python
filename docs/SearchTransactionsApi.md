@@ -5,7 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_search**](SearchTransactionsApi.md#create_search) | **POST** /tss/v2/searches | Create a search request
-[**get_search**](SearchTransactionsApi.md#get_search) | **GET** /tss/v2/searches/{id} | Get Search results
+[**get_search**](SearchTransactionsApi.md#get_search) | **GET** /tss/v2/searches/{searchId} | Get Search results
 
 
 # **create_search**
@@ -25,7 +25,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.SearchTransactionsApi()
-create_search_request = CyberSource.TssV2TransactionsPostResponse() # TssV2TransactionsPostResponse | 
+create_search_request = CyberSource.CreateSearchRequest() # CreateSearchRequest | 
 
 try: 
     # Create a search request
@@ -39,7 +39,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_search_request** | [**TssV2TransactionsPostResponse**](TssV2TransactionsPostResponse.md)|  | 
+ **create_search_request** | [**CreateSearchRequest**](CreateSearchRequest.md)|  | 
 
 ### Return type
 
@@ -57,11 +57,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_search**
-> TssV2TransactionsPost201Response get_search(id)
+> TssV2TransactionsPost201Response get_search(search_id)
 
 Get Search results
 
-Include the Search ID in the GET request to retrieve the search results.
+Include the Search ID in the GET request to retrieve the search results. 
 
 ### Example 
 ```python
@@ -73,11 +73,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.SearchTransactionsApi()
-id = 'id_example' # str | Search ID.
+search_id = 'search_id_example' # str | Search ID.
 
 try: 
     # Get Search results
-    api_response = api_instance.get_search(id)
+    api_response = api_instance.get_search(search_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SearchTransactionsApi->get_search: %s\n" % e)
@@ -87,7 +87,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| Search ID. | 
+ **search_id** | **str**| Search ID. | 
 
 ### Return type
 

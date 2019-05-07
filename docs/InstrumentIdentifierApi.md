@@ -4,13 +4,69 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**tms_v1_instrumentidentifiers_token_id_delete**](InstrumentIdentifierApi.md#tms_v1_instrumentidentifiers_token_id_delete) | **DELETE** /tms/v1/instrumentidentifiers/{tokenId} | Delete an Instrument Identifier
-[**tms_v1_instrumentidentifiers_token_id_get**](InstrumentIdentifierApi.md#tms_v1_instrumentidentifiers_token_id_get) | **GET** /tms/v1/instrumentidentifiers/{tokenId} | Retrieve an Instrument Identifier
-[**tms_v1_instrumentidentifiers_token_id_patch**](InstrumentIdentifierApi.md#tms_v1_instrumentidentifiers_token_id_patch) | **PATCH** /tms/v1/instrumentidentifiers/{tokenId} | Update a Instrument Identifier
+[**create_instrument_identifier**](InstrumentIdentifierApi.md#create_instrument_identifier) | **POST** /tms/v1/instrumentidentifiers | Create an Instrument Identifier
+[**delete_instrument_identifier**](InstrumentIdentifierApi.md#delete_instrument_identifier) | **DELETE** /tms/v1/instrumentidentifiers/{tokenId} | Delete an Instrument Identifier
+[**get_all_payment_instruments**](InstrumentIdentifierApi.md#get_all_payment_instruments) | **GET** /tms/v1/instrumentidentifiers/{tokenId}/paymentinstruments | Retrieve all Payment Instruments associated with an Instrument Identifier
+[**get_instrument_identifier**](InstrumentIdentifierApi.md#get_instrument_identifier) | **GET** /tms/v1/instrumentidentifiers/{tokenId} | Retrieve an Instrument Identifier
+[**update_instrument_identifier**](InstrumentIdentifierApi.md#update_instrument_identifier) | **PATCH** /tms/v1/instrumentidentifiers/{tokenId} | Update a Instrument Identifier
 
 
-# **tms_v1_instrumentidentifiers_token_id_delete**
-> tms_v1_instrumentidentifiers_token_id_delete(profile_id, token_id)
+# **create_instrument_identifier**
+> TmsV1InstrumentIdentifiersPost200Response create_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, client_application=client_application)
+
+Create an Instrument Identifier
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.InstrumentIdentifierApi()
+profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
+v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
+v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
+create_instrument_identifier_request = CyberSource.CreateInstrumentIdentifierRequest() # CreateInstrumentIdentifierRequest | Please specify either a Card, Bank Account or Enrollable Card
+client_application = 'client_application_example' # str | Client application name (optional)
+
+try: 
+    # Create an Instrument Identifier
+    api_response = api_instance.create_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, client_application=client_application)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling InstrumentIdentifierApi->create_instrument_identifier: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
+ **v_c_merchant_id** | **str**| CyberSource merchant id. | 
+ **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
+ **create_instrument_identifier_request** | [**CreateInstrumentIdentifierRequest**](CreateInstrumentIdentifierRequest.md)| Please specify either a Card, Bank Account or Enrollable Card | 
+ **client_application** | **str**| Client application name | [optional] 
+
+### Return type
+
+[**TmsV1InstrumentIdentifiersPost200Response**](TmsV1InstrumentIdentifiersPost200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/hal+json;charset=utf-8
+ - **Accept**: application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_instrument_identifier**
+> delete_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
 
 Delete an Instrument Identifier
 
@@ -25,13 +81,16 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.InstrumentIdentifierApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
+v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
+v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of an Instrument Identifier.
+client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Delete an Instrument Identifier
-    api_instance.tms_v1_instrumentidentifiers_token_id_delete(profile_id, token_id)
+    api_instance.delete_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
 except ApiException as e:
-    print("Exception when calling InstrumentIdentifierApi->tms_v1_instrumentidentifiers_token_id_delete: %s\n" % e)
+    print("Exception when calling InstrumentIdentifierApi->delete_instrument_identifier: %s\n" % e)
 ```
 
 ### Parameters
@@ -39,7 +98,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
+ **v_c_merchant_id** | **str**| CyberSource merchant id. | 
+ **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of an Instrument Identifier. | 
+ **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
@@ -51,13 +113,71 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **tms_v1_instrumentidentifiers_token_id_get**
-> TmsV1InstrumentidentifiersPost200Response tms_v1_instrumentidentifiers_token_id_get(profile_id, token_id)
+# **get_all_payment_instruments**
+> TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response get_all_payment_instruments(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application, offset=offset, limit=limit)
+
+Retrieve all Payment Instruments associated with an Instrument Identifier
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.InstrumentIdentifierApi()
+profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
+v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
+v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
+token_id = 'token_id_example' # str | The TokenId of an Instrument Identifier.
+client_application = 'client_application_example' # str | Client application name (optional)
+offset = 0 # int | Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0. (optional) (default to 0)
+limit = 20 # int | The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. (optional) (default to 20)
+
+try: 
+    # Retrieve all Payment Instruments associated with an Instrument Identifier
+    api_response = api_instance.get_all_payment_instruments(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application, offset=offset, limit=limit)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling InstrumentIdentifierApi->get_all_payment_instruments: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
+ **v_c_merchant_id** | **str**| CyberSource merchant id. | 
+ **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
+ **token_id** | **str**| The TokenId of an Instrument Identifier. | 
+ **client_application** | **str**| Client application name | [optional] 
+ **offset** | **int**| Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0. | [optional] [default to 0]
+ **limit** | **int**| The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. | [optional] [default to 20]
+
+### Return type
+
+[**TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response**](TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_instrument_identifier**
+> TmsV1InstrumentIdentifiersPost200Response get_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
 
 Retrieve an Instrument Identifier
 
@@ -72,14 +192,17 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.InstrumentIdentifierApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
+v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
+v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of an Instrument Identifier.
+client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Retrieve an Instrument Identifier
-    api_response = api_instance.tms_v1_instrumentidentifiers_token_id_get(profile_id, token_id)
+    api_response = api_instance.get_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InstrumentIdentifierApi->tms_v1_instrumentidentifiers_token_id_get: %s\n" % e)
+    print("Exception when calling InstrumentIdentifierApi->get_instrument_identifier: %s\n" % e)
 ```
 
 ### Parameters
@@ -87,11 +210,14 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
+ **v_c_merchant_id** | **str**| CyberSource merchant id. | 
+ **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of an Instrument Identifier. | 
+ **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
-[**TmsV1InstrumentidentifiersPost200Response**](TmsV1InstrumentidentifiersPost200Response.md)
+[**TmsV1InstrumentIdentifiersPost200Response**](TmsV1InstrumentIdentifiersPost200Response.md)
 
 ### Authorization
 
@@ -99,13 +225,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **tms_v1_instrumentidentifiers_token_id_patch**
-> TmsV1InstrumentidentifiersPost200Response tms_v1_instrumentidentifiers_token_id_patch(profile_id, token_id, body)
+# **update_instrument_identifier**
+> TmsV1InstrumentIdentifiersPost200Response update_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, client_application=client_application)
 
 Update a Instrument Identifier
 
@@ -120,15 +246,18 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.InstrumentIdentifierApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
+v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
+v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of an Instrument Identifier.
-body = CyberSource.Body1() # Body1 | Please specify the previous transaction Id to update.
+update_instrument_identifier_request = CyberSource.UpdateInstrumentIdentifierRequest() # UpdateInstrumentIdentifierRequest | Specify the previous transaction ID to update.
+client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Update a Instrument Identifier
-    api_response = api_instance.tms_v1_instrumentidentifiers_token_id_patch(profile_id, token_id, body)
+    api_response = api_instance.update_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, client_application=client_application)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InstrumentIdentifierApi->tms_v1_instrumentidentifiers_token_id_patch: %s\n" % e)
+    print("Exception when calling InstrumentIdentifierApi->update_instrument_identifier: %s\n" % e)
 ```
 
 ### Parameters
@@ -136,12 +265,15 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
+ **v_c_merchant_id** | **str**| CyberSource merchant id. | 
+ **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of an Instrument Identifier. | 
- **body** | [**Body1**](Body1.md)| Please specify the previous transaction Id to update. | 
+ **update_instrument_identifier_request** | [**UpdateInstrumentIdentifierRequest**](UpdateInstrumentIdentifierRequest.md)| Specify the previous transaction ID to update. | 
+ **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
-[**TmsV1InstrumentidentifiersPost200Response**](TmsV1InstrumentidentifiersPost200Response.md)
+[**TmsV1InstrumentIdentifiersPost200Response**](TmsV1InstrumentIdentifiersPost200Response.md)
 
 ### Authorization
 
@@ -149,8 +281,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+ - **Content-Type**: */*
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

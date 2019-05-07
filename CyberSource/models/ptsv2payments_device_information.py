@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -62,7 +62,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def host_name(self):
         """
         Gets the host_name of this Ptsv2paymentsDeviceInformation.
-        DNS resolved hostname from above _ipAddress_.
+        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
 
         :return: The host_name of this Ptsv2paymentsDeviceInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def host_name(self, host_name):
         """
         Sets the host_name of this Ptsv2paymentsDeviceInformation.
-        DNS resolved hostname from above _ipAddress_.
+        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
 
         :param host_name: The host_name of this Ptsv2paymentsDeviceInformation.
         :type: str
@@ -87,7 +87,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this Ptsv2paymentsDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :return: The ip_address of this Ptsv2paymentsDeviceInformation.
         :rtype: str
@@ -98,7 +98,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this Ptsv2paymentsDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :param ip_address: The ip_address of this Ptsv2paymentsDeviceInformation.
         :type: str

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -72,7 +72,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def code(self):
         """
         Gets the code of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see [Getting Started with CyberSource Advanced for the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :rtype: str
@@ -83,7 +83,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction. 
+        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see [Getting Started with CyberSource Advanced for the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  **FDC Nashville Global**\\ Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
@@ -166,7 +166,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :rtype: str
@@ -177,11 +177,13 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
         """
+        if comments is not None and len(comments) > 255:
+            raise ValueError("Invalid value for `comments`, length must be less than or equal to `255`")
 
         self._comments = comments
 

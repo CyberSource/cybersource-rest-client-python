@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -87,7 +87,7 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :return: The country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :rtype: str
@@ -98,7 +98,7 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :param country: The country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str

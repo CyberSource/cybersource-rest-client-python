@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -29,6 +29,14 @@ class TestVoidApi(unittest.TestCase):
         self.api = CyberSource.apis.void_api.VoidApi()
 
     def tearDown(self):
+        pass
+
+    def test_mit_void(self):
+        """
+        Test case for mit_void
+
+        Merchant Initiated Void
+        """
         pass
 
     def test_void_capture(self):

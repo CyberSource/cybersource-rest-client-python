@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -282,7 +282,7 @@ class Ptsv2paymentsOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :return: The country of this Ptsv2paymentsOrderInformationShipTo.
         :rtype: str
@@ -293,7 +293,7 @@ class Ptsv2paymentsOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :param country: The country of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
@@ -357,7 +357,7 @@ class Ptsv2paymentsOrderInformationShipTo(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv2paymentsOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :return: The phone_number of this Ptsv2paymentsOrderInformationShipTo.
         :rtype: str
@@ -368,7 +368,7 @@ class Ptsv2paymentsOrderInformationShipTo(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv2paymentsOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :param phone_number: The phone_number of this Ptsv2paymentsOrderInformationShipTo.
         :type: str

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -39,9 +39,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'approval_code': 'str',
         'response_code': 'str',
         'avs': 'PtsV2PaymentsPost201ResponseProcessorInformationAvs',
-        'card_verification': 'TssV2TransactionsGet200ResponseProcessorInformationCardVerification',
-        'ach_verification': 'TssV2TransactionsGet200ResponseProcessorInformationAchVerification',
-        'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults'
+        'card_verification': 'Riskv1decisionsCardVerification',
+        'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
+        'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
+        'system_trace_audit_number': 'str',
+        'response_code_source': 'str'
     }
 
     attribute_map = {
@@ -55,10 +57,12 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'avs': 'avs',
         'card_verification': 'cardVerification',
         'ach_verification': 'achVerification',
-        'electronic_verification_results': 'electronicVerificationResults'
+        'electronic_verification_results': 'electronicVerificationResults',
+        'system_trace_audit_number': 'systemTraceAuditNumber',
+        'response_code_source': 'responseCodeSource'
     }
 
-    def __init__(self, processor=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None):
+    def __init__(self, processor=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -74,6 +78,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._card_verification = None
         self._ach_verification = None
         self._electronic_verification_results = None
+        self._system_trace_audit_number = None
+        self._response_code_source = None
 
         if processor is not None:
           self.processor = processor
@@ -97,6 +103,10 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.ach_verification = ach_verification
         if electronic_verification_results is not None:
           self.electronic_verification_results = electronic_verification_results
+        if system_trace_audit_number is not None:
+          self.system_trace_audit_number = system_trace_audit_number
+        if response_code_source is not None:
+          self.response_code_source = response_code_source
 
     @property
     def processor(self):
@@ -123,7 +133,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def transaction_id(self):
         """
         Gets the transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this  value. 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value. 
 
         :return: The transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -134,7 +144,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this  value. 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value. 
 
         :param transaction_id: The transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
@@ -288,7 +298,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Gets the card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :return: The card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: TssV2TransactionsGet200ResponseProcessorInformationCardVerification
+        :rtype: Riskv1decisionsCardVerification
         """
         return self._card_verification
 
@@ -298,7 +308,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Sets the card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :param card_verification: The card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: TssV2TransactionsGet200ResponseProcessorInformationCardVerification
+        :type: Riskv1decisionsCardVerification
         """
 
         self._card_verification = card_verification
@@ -309,7 +319,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Gets the ach_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :return: The ach_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: TssV2TransactionsGet200ResponseProcessorInformationAchVerification
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
         """
         return self._ach_verification
 
@@ -319,7 +329,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Sets the ach_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :param ach_verification: The ach_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: TssV2TransactionsGet200ResponseProcessorInformationAchVerification
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
         """
 
         self._ach_verification = ach_verification
@@ -344,6 +354,56 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._electronic_verification_results = electronic_verification_results
+
+    @property
+    def system_trace_audit_number(self):
+        """
+        Gets the system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customer’s receipt. 
+
+        :return: The system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._system_trace_audit_number
+
+    @system_trace_audit_number.setter
+    def system_trace_audit_number(self, system_trace_audit_number):
+        """
+        Sets the system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  **American Express Direct**  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  **CyberSource through VisaNet**  System trace number that must be printed on the customer’s receipt. 
+
+        :param system_trace_audit_number: The system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+        if system_trace_audit_number is not None and len(system_trace_audit_number) > 6:
+            raise ValueError("Invalid value for `system_trace_audit_number`, length must be less than or equal to `6`")
+
+        self._system_trace_audit_number = system_trace_audit_number
+
+    @property
+    def response_code_source(self):
+        """
+        Gets the response_code_source of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Used by Visa only and contains the response source/reason code that identifies the source of the response decision. 
+
+        :return: The response_code_source of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_code_source
+
+    @response_code_source.setter
+    def response_code_source(self, response_code_source):
+        """
+        Sets the response_code_source of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Used by Visa only and contains the response source/reason code that identifies the source of the response decision. 
+
+        :param response_code_source: The response_code_source of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+        if response_code_source is not None and len(response_code_source) > 1:
+            raise ValueError("Invalid value for `response_code_source`, length must be less than or equal to `1`")
+
+        self._response_code_source = response_code_source
 
     def to_dict(self):
         """

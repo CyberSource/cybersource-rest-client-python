@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,7 +31,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'gift_wrap': 'bool',
+        'gift_wrap': 'str',
         'shipping_method': 'str',
         'ship_from_postal_code': 'str'
     }
@@ -62,10 +62,10 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self):
         """
         Gets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        The description for this field is not available.
+        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values:  - `yes`: The customer requested gift wrapping. - `no`: The customer did not request gift wrapping. 
 
         :return: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        :rtype: bool
+        :rtype: str
         """
         return self._gift_wrap
 
@@ -73,11 +73,13 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self, gift_wrap):
         """
         Sets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        The description for this field is not available.
+        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values:  - `yes`: The customer requested gift wrapping. - `no`: The customer did not request gift wrapping. 
 
         :param gift_wrap: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        :type: bool
+        :type: str
         """
+        if gift_wrap is not None and len(gift_wrap) > 3:
+            raise ValueError("Invalid value for `gift_wrap`, length must be less than or equal to `3`")
 
         self._gift_wrap = gift_wrap
 

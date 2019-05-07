@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -52,7 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedMerchantInformation(object):
     def reseller_id(self):
         """
         Gets the reseller_id of this TssV2TransactionsPost201ResponseEmbeddedMerchantInformation.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :return: The reseller_id of this TssV2TransactionsPost201ResponseEmbeddedMerchantInformation.
         :rtype: str
@@ -63,7 +63,7 @@ class TssV2TransactionsPost201ResponseEmbeddedMerchantInformation(object):
     def reseller_id(self, reseller_id):
         """
         Sets the reseller_id of this TssV2TransactionsPost201ResponseEmbeddedMerchantInformation.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :param reseller_id: The reseller_id of this TssV2TransactionsPost201ResponseEmbeddedMerchantInformation.
         :type: str

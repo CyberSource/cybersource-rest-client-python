@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -33,7 +33,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     swagger_types = {
         'name': 'str',
         'type': 'str',
-        'sub_type': 'str',
         'method': 'str',
         'funding_source': 'str',
         'funding_source_affiliation': 'str',
@@ -43,21 +42,19 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     attribute_map = {
         'name': 'name',
         'type': 'type',
-        'sub_type': 'subType',
         'method': 'method',
         'funding_source': 'fundingSource',
         'funding_source_affiliation': 'fundingSourceAffiliation',
         'credential': 'credential'
     }
 
-    def __init__(self, name=None, type=None, sub_type=None, method=None, funding_source=None, funding_source_affiliation=None, credential=None):
+    def __init__(self, name=None, type=None, method=None, funding_source=None, funding_source_affiliation=None, credential=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformationPaymentType - a model defined in Swagger
         """
 
         self._name = None
         self._type = None
-        self._sub_type = None
         self._method = None
         self._funding_source = None
         self._funding_source_affiliation = None
@@ -67,8 +64,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
           self.name = name
         if type is not None:
           self.type = type
-        if sub_type is not None:
-          self.sub_type = sub_type
         if method is not None:
           self.method = method
         if funding_source is not None:
@@ -82,7 +77,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        The name of a payment method. This is required for non-credit card payment.  Examples: `SEARS`, `JCREW`, `PAYPAL`, `IDEAL`, `EPS` ...etc.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :return: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -93,7 +88,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        The name of a payment method. This is required for non-credit card payment.  Examples: `SEARS`, `JCREW`, `PAYPAL`, `IDEAL`, `EPS` ...etc.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :param name: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -105,7 +100,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def type(self):
         """
         Gets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        The type of payment method. This is required for non-credit card payment.  Possible values:  - BANK_TRANSFER  - CARD (Default)  - EWALLET  - DIGITAL  - DIRECT_DEBIT  - INVOICE  - PUSH_PAYMENT  - CARRIER_BILLING  - CASH  - CHECK  - CRYPTOGRAPHIC  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :return: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -116,7 +111,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def type(self, type):
         """
         Sets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        The type of payment method. This is required for non-credit card payment.  Possible values:  - BANK_TRANSFER  - CARD (Default)  - EWALLET  - DIGITAL  - DIRECT_DEBIT  - INVOICE  - PUSH_PAYMENT  - CARRIER_BILLING  - CASH  - CHECK  - CRYPTOGRAPHIC  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -125,33 +120,10 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         self._type = type
 
     @property
-    def sub_type(self):
-        """
-        Gets the sub_type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :return: The sub_type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :rtype: str
-        """
-        return self._sub_type
-
-    @sub_type.setter
-    def sub_type(self, sub_type):
-        """
-        Sets the sub_type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :param sub_type: The sub_type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :type: str
-        """
-
-        self._sub_type = sub_type
-
-    @property
     def method(self):
         """
         Gets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        This is an optional field.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :return: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -162,7 +134,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def method(self, method):
         """
         Sets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        This is an optional field.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
 
         :param method: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str

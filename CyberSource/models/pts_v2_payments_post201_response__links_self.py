@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
     def href(self):
         """
         Gets the href of this PtsV2PaymentsPost201ResponseLinksSelf.
-        URL
+        This is the endpoint of the resource that was created by the successful request.
 
         :return: The href of this PtsV2PaymentsPost201ResponseLinksSelf.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
     def href(self, href):
         """
         Sets the href of this PtsV2PaymentsPost201ResponseLinksSelf.
-        URL
+        This is the endpoint of the resource that was created by the successful request.
 
         :param href: The href of this PtsV2PaymentsPost201ResponseLinksSelf.
         :type: str
@@ -80,7 +80,7 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
     def method(self):
         """
         Gets the method of this PtsV2PaymentsPost201ResponseLinksSelf.
-        HTTP method applied to above URL
+        `method` refers to the HTTP method that you can send to the `self` endpoint to retrieve details of the resource.
 
         :return: The method of this PtsV2PaymentsPost201ResponseLinksSelf.
         :rtype: str
@@ -91,7 +91,7 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
     def method(self, method):
         """
         Sets the method of this PtsV2PaymentsPost201ResponseLinksSelf.
-        HTTP method applied to above URL
+        `method` refers to the HTTP method that you can send to the `self` endpoint to retrieve details of the resource.
 
         :param method: The method of this PtsV2PaymentsPost201ResponseLinksSelf.
         :type: str

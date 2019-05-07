@@ -5,7 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_file**](SecureFileShareApi.md#get_file) | **GET** /sfs/v1/files/{fileId} | Download a file with file identifier
-[**get_file_details**](SecureFileShareApi.md#get_file_details) | **GET** /sfs/v1/file-details | Get list of files
+[**get_file_detail**](SecureFileShareApi.md#get_file_detail) | **GET** /sfs/v1/file-details | Get list of files
 
 
 # **get_file**
@@ -57,8 +57,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_file_details**
-> V1FileDetailsGet200Response get_file_details(start_date, end_date, organization_id=organization_id)
+# **get_file_detail**
+> V1FileDetailsGet200Response get_file_detail(start_date, end_date, organization_id=organization_id)
 
 Get list of files
 
@@ -80,10 +80,10 @@ organization_id = 'organization_id_example' # str | Valid Cybersource Organizati
 
 try: 
     # Get list of files
-    api_response = api_instance.get_file_details(start_date, end_date, organization_id=organization_id)
+    api_response = api_instance.get_file_detail(start_date, end_date, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SecureFileShareApi->get_file_details: %s\n" % e)
+    print("Exception when calling SecureFileShareApi->get_file_detail: %s\n" % e)
 ```
 
 ### Parameters
