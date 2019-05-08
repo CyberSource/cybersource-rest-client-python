@@ -382,8 +382,8 @@ from .apis.capture_api import CaptureApi
 from .apis.conversion_details_api import ConversionDetailsApi
 from .apis.credit_api import CreditApi
 from .apis.decision_manager_api import DecisionManagerApi
-from .apis.download_dtd_api import DownloadDTDApi
-from .apis.download_xsd_api import DownloadXSDApi
+
+
 from .apis.instrument_identifier_api import InstrumentIdentifierApi
 from .apis.key_generation_api import KeyGenerationApi
 from .apis.net_fundings_api import NetFundingsApi
