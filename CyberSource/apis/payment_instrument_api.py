@@ -42,7 +42,7 @@ class PaymentInstrumentApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_payment_instrument(self, profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, **kwargs):
+    def create_payment_instrument(self, profile_id, create_payment_instrument_request, **kwargs):
         """
         Create a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -51,27 +51,24 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, callback=callback_function)
+        >>> thread = api.create_payment_instrument(profile_id, create_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, **kwargs)
+            return self.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, **kwargs)
         else:
-            (data) = self.create_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, **kwargs)
+            (data) = self.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, **kwargs)
             return data
 
-    def create_payment_instrument_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, **kwargs):
+    def create_payment_instrument_with_http_info(self, profile_id, create_payment_instrument_request, **kwargs):
         """
         Create a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -80,21 +77,18 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, callback=callback_function)
+        >>> thread = api.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'create_payment_instrument_request', 'client_application']
+        all_params = ['profile_id', 'create_payment_instrument_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -112,12 +106,6 @@ class PaymentInstrumentApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `create_payment_instrument`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `create_payment_instrument`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `create_payment_instrument`")
         # verify the required parameter 'create_payment_instrument_request' is set
         if ('create_payment_instrument_request' not in params) or (params['create_payment_instrument_request'] is None):
             raise ValueError("Missing the required parameter `create_payment_instrument_request` when calling `create_payment_instrument`")
@@ -126,20 +114,6 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `create_payment_instrument`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `create_payment_instrument`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `create_payment_instrument`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `create_payment_instrument`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `create_payment_instrument`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `create_payment_instrument`, length must be greater than or equal to `36`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_payment_instrument`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_payment_instrument`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_payment_instrument`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -150,12 +124,6 @@ class PaymentInstrumentApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -189,7 +157,7 @@ class PaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_payment_instrument(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def delete_payment_instrument(self, profile_id, token_id, **kwargs):
         """
         Delete a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -198,27 +166,24 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.delete_payment_instrument(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param str client_application: Client application name
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            return self.delete_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
         else:
-            (data) = self.delete_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            (data) = self.delete_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
             return data
 
-    def delete_payment_instrument_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def delete_payment_instrument_with_http_info(self, profile_id, token_id, **kwargs):
         """
         Delete a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -227,21 +192,18 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.delete_payment_instrument_with_http_info(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param str client_application: Client application name
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'client_application']
+        all_params = ['profile_id', 'token_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -259,12 +221,6 @@ class PaymentInstrumentApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `delete_payment_instrument`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `delete_payment_instrument`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `delete_payment_instrument`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `delete_payment_instrument`")
@@ -273,24 +229,10 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `delete_payment_instrument`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `delete_payment_instrument`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `delete_payment_instrument`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `delete_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_payment_instrument`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_payment_instrument`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_payment_instrument`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -303,12 +245,6 @@ class PaymentInstrumentApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -340,7 +276,7 @@ class PaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_payment_instrument(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_payment_instrument(self, profile_id, token_id, **kwargs):
         """
         Retrieve a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -349,27 +285,24 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_payment_instrument(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            return self.get_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
         else:
-            (data) = self.get_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            (data) = self.get_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
             return data
 
-    def get_payment_instrument_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_payment_instrument_with_http_info(self, profile_id, token_id, **kwargs):
         """
         Retrieve a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -378,21 +311,18 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_payment_instrument_with_http_info(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'client_application']
+        all_params = ['profile_id', 'token_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -410,12 +340,6 @@ class PaymentInstrumentApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `get_payment_instrument`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `get_payment_instrument`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `get_payment_instrument`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `get_payment_instrument`")
@@ -424,24 +348,10 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_payment_instrument`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_payment_instrument`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_payment_instrument`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_payment_instrument`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_payment_instrument`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_payment_instrument`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -454,12 +364,6 @@ class PaymentInstrumentApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -491,7 +395,7 @@ class PaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_payment_instrument(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, **kwargs):
+    def update_payment_instrument(self, profile_id, token_id, update_payment_instrument_request, **kwargs):
         """
         Update a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -500,28 +404,25 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, callback=callback_function)
+        >>> thread = api.update_payment_instrument(profile_id, token_id, update_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, **kwargs)
+            return self.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, **kwargs)
         else:
-            (data) = self.update_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, **kwargs)
+            (data) = self.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, **kwargs)
             return data
 
-    def update_payment_instrument_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, **kwargs):
+    def update_payment_instrument_with_http_info(self, profile_id, token_id, update_payment_instrument_request, **kwargs):
         """
         Update a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
@@ -530,22 +431,19 @@ class PaymentInstrumentApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_payment_instrument_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, callback=callback_function)
+        >>> thread = api.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :param str client_application: Client application name
         :return: TmsV1PaymentinstrumentsPatch200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'update_payment_instrument_request', 'client_application']
+        all_params = ['profile_id', 'token_id', 'update_payment_instrument_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -563,12 +461,6 @@ class PaymentInstrumentApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `update_payment_instrument`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `update_payment_instrument`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `update_payment_instrument`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `update_payment_instrument`")
@@ -580,24 +472,10 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_payment_instrument`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_payment_instrument`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `update_payment_instrument`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `update_payment_instrument`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `update_payment_instrument`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `update_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_payment_instrument`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_payment_instrument`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_payment_instrument`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -610,12 +488,6 @@ class PaymentInstrumentApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}

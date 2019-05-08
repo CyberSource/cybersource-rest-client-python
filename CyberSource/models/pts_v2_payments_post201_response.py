@@ -202,7 +202,7 @@ class PtsV2PaymentsPost201Response(object):
         :param status: The status of this PtsV2PaymentsPost201Response.
         :type: str
         """
-        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED"]
+        allowed_values = ["AUTHORIZED", "PARTIAL_AUTHORIZED", "AUTHORIZED_PENDING_REVIEW", "DECLINED", "INVALID_REQUEST", "PENDING"]
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"

@@ -42,7 +42,7 @@ class InstrumentIdentifierApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_instrument_identifier(self, profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, **kwargs):
+    def create_instrument_identifier(self, profile_id, create_instrument_identifier_request, **kwargs):
         """
         Create an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -51,27 +51,24 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.create_instrument_identifier(profile_id, create_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param CreateInstrumentIdentifierRequest create_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, **kwargs)
+            return self.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, **kwargs)
         else:
-            (data) = self.create_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, **kwargs)
+            (data) = self.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, **kwargs)
             return data
 
-    def create_instrument_identifier_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, **kwargs):
+    def create_instrument_identifier_with_http_info(self, profile_id, create_instrument_identifier_request, **kwargs):
         """
         Create an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -80,21 +77,18 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, create_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param CreateInstrumentIdentifierRequest create_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'create_instrument_identifier_request', 'client_application']
+        all_params = ['profile_id', 'create_instrument_identifier_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -112,12 +106,6 @@ class InstrumentIdentifierApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `create_instrument_identifier`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `create_instrument_identifier`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `create_instrument_identifier`")
         # verify the required parameter 'create_instrument_identifier_request' is set
         if ('create_instrument_identifier_request' not in params) or (params['create_instrument_identifier_request'] is None):
             raise ValueError("Missing the required parameter `create_instrument_identifier_request` when calling `create_instrument_identifier`")
@@ -126,20 +114,6 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `create_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `create_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `create_instrument_identifier`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `create_instrument_identifier`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `create_instrument_identifier`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `create_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_instrument_identifier`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_instrument_identifier`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `create_instrument_identifier`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -150,12 +124,6 @@ class InstrumentIdentifierApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -189,7 +157,7 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def delete_instrument_identifier(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def delete_instrument_identifier(self, profile_id, token_id, **kwargs):
         """
         Delete an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -198,27 +166,24 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.delete_instrument_identifier(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            return self.delete_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
         else:
-            (data) = self.delete_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            (data) = self.delete_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
             return data
 
-    def delete_instrument_identifier_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def delete_instrument_identifier_with_http_info(self, profile_id, token_id, **kwargs):
         """
         Delete an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -227,21 +192,18 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.delete_instrument_identifier_with_http_info(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'client_application']
+        all_params = ['profile_id', 'token_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -259,12 +221,6 @@ class InstrumentIdentifierApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `delete_instrument_identifier`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `delete_instrument_identifier`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `delete_instrument_identifier`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `delete_instrument_identifier`")
@@ -273,24 +229,10 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `delete_instrument_identifier`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_instrument_identifier`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_instrument_identifier`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `delete_instrument_identifier`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -303,12 +245,6 @@ class InstrumentIdentifierApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -340,7 +276,7 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_all_payment_instruments(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_all_payment_instruments(self, profile_id, token_id, **kwargs):
         """
         Retrieve all Payment Instruments associated with an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -349,15 +285,12 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_payment_instruments(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_all_payment_instruments(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :param int offset: Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response
@@ -366,12 +299,12 @@ class InstrumentIdentifierApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_all_payment_instruments_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            return self.get_all_payment_instruments_with_http_info(profile_id, token_id, **kwargs)
         else:
-            (data) = self.get_all_payment_instruments_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            (data) = self.get_all_payment_instruments_with_http_info(profile_id, token_id, **kwargs)
             return data
 
-    def get_all_payment_instruments_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_all_payment_instruments_with_http_info(self, profile_id, token_id, **kwargs):
         """
         Retrieve all Payment Instruments associated with an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -380,15 +313,12 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_payment_instruments_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_all_payment_instruments_with_http_info(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :param int offset: Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response
@@ -396,7 +326,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'client_application', 'offset', 'limit']
+        all_params = ['profile_id', 'token_id', 'offset', 'limit']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -414,12 +344,6 @@ class InstrumentIdentifierApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `get_all_payment_instruments`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `get_all_payment_instruments`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `get_all_payment_instruments`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `get_all_payment_instruments`")
@@ -428,24 +352,10 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_all_payment_instruments`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_all_payment_instruments`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_all_payment_instruments`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_all_payment_instruments`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_all_payment_instruments`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_all_payment_instruments`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
         if 'offset' in params and params['offset'] < 0:
             raise ValueError("Invalid value for parameter `offset` when calling `get_all_payment_instruments`, must be a value greater than or equal to `0`")
         if 'limit' in params and params['limit'] > 100:
@@ -468,12 +378,6 @@ class InstrumentIdentifierApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -505,7 +409,7 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_instrument_identifier(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_instrument_identifier(self, profile_id, token_id, **kwargs):
         """
         Retrieve an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -514,27 +418,24 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_instrument_identifier(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            return self.get_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
         else:
-            (data) = self.get_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs)
+            (data) = self.get_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
             return data
 
-    def get_instrument_identifier_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, **kwargs):
+    def get_instrument_identifier_with_http_info(self, profile_id, token_id, **kwargs):
         """
         Retrieve an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -543,21 +444,18 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, callback=callback_function)
+        >>> thread = api.get_instrument_identifier_with_http_info(profile_id, token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'client_application']
+        all_params = ['profile_id', 'token_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -575,12 +473,6 @@ class InstrumentIdentifierApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `get_instrument_identifier`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `get_instrument_identifier`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `get_instrument_identifier`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `get_instrument_identifier`")
@@ -589,24 +481,10 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `get_instrument_identifier`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_instrument_identifier`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_instrument_identifier`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `get_instrument_identifier`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -619,12 +497,6 @@ class InstrumentIdentifierApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}
@@ -656,7 +528,7 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_instrument_identifier(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, **kwargs):
+    def update_instrument_identifier(self, profile_id, token_id, update_instrument_identifier_request, **kwargs):
         """
         Update a Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -665,28 +537,25 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_instrument_identifier(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.update_instrument_identifier(profile_id, token_id, update_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
         :param UpdateInstrumentIdentifierRequest update_instrument_identifier_request: Specify the previous transaction ID to update. (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, **kwargs)
+            return self.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, **kwargs)
         else:
-            (data) = self.update_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, **kwargs)
+            (data) = self.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, **kwargs)
             return data
 
-    def update_instrument_identifier_with_http_info(self, profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, **kwargs):
+    def update_instrument_identifier_with_http_info(self, profile_id, token_id, update_instrument_identifier_request, **kwargs):
         """
         Update a Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -695,22 +564,19 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_instrument_identifier_with_http_info(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str v_c_merchant_id: CyberSource merchant id. (required)
-        :param str v_c_correlation_id: The mandatory correlation id passed by upstream (calling) system. (required)
         :param str token_id: The TokenId of an Instrument Identifier. (required)
         :param UpdateInstrumentIdentifierRequest update_instrument_identifier_request: Specify the previous transaction ID to update. (required)
-        :param str client_application: Client application name
         :return: TmsV1InstrumentIdentifiersPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'v_c_merchant_id', 'v_c_correlation_id', 'token_id', 'update_instrument_identifier_request', 'client_application']
+        all_params = ['profile_id', 'token_id', 'update_instrument_identifier_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -728,12 +594,6 @@ class InstrumentIdentifierApi(object):
         # verify the required parameter 'profile_id' is set
         if ('profile_id' not in params) or (params['profile_id'] is None):
             raise ValueError("Missing the required parameter `profile_id` when calling `update_instrument_identifier`")
-        # verify the required parameter 'v_c_merchant_id' is set
-        if ('v_c_merchant_id' not in params) or (params['v_c_merchant_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_merchant_id` when calling `update_instrument_identifier`")
-        # verify the required parameter 'v_c_correlation_id' is set
-        if ('v_c_correlation_id' not in params) or (params['v_c_correlation_id'] is None):
-            raise ValueError("Missing the required parameter `v_c_correlation_id` when calling `update_instrument_identifier`")
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params) or (params['token_id'] is None):
             raise ValueError("Missing the required parameter `token_id` when calling `update_instrument_identifier`")
@@ -745,24 +605,10 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) > 32:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `update_instrument_identifier`, length must be less than or equal to `32`")
-        if 'v_c_merchant_id' in params and len(params['v_c_merchant_id']) < 5:
-            raise ValueError("Invalid value for parameter `v_c_merchant_id` when calling `update_instrument_identifier`, length must be greater than or equal to `5`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `update_instrument_identifier`, length must be less than or equal to `36`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 36:
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `update_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be less than or equal to `32`")
         if 'token_id' in params and len(params['token_id']) < 16:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be greater than or equal to `16`")
-        if 'client_application' in params and len(params['client_application']) > 30:
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_instrument_identifier`, length must be less than or equal to `30`")
-        if 'client_application' in params and len(params['client_application']) < 3:
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_instrument_identifier`, length must be greater than or equal to `3`")
-        if 'client_application' in params and not re.search('^[a-zA-Z0-9\\\\-_]{3,30}|$', params['client_application']):
-            raise ValueError("Invalid value for parameter `client_application` when calling `update_instrument_identifier`, must conform to the pattern `/^[a-zA-Z0-9\\\\-_]{3,30}|$/`")
 
         collection_formats = {}
 
@@ -775,12 +621,6 @@ class InstrumentIdentifierApi(object):
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
-        if 'v_c_merchant_id' in params:
-            header_params['v-c-merchant-id'] = params['v_c_merchant_id']
-        if 'v_c_correlation_id' in params:
-            header_params['v-c-correlation-id'] = params['v_c_correlation_id']
-        if 'client_application' in params:
-            header_params['Client-Application'] = params['client_application']
 
         form_params = []
         local_var_files = {}

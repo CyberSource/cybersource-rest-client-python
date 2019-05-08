@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_payment_instrument**
-> TmsV1PaymentinstrumentsPatch200Response create_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, client_application=client_application)
+> TmsV1PaymentinstrumentsPatch200Response create_payment_instrument(profile_id, create_payment_instrument_request)
 
 Create a Payment Instrument
 
@@ -26,14 +26,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PaymentInstrumentApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
-v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
-v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 create_payment_instrument_request = CyberSource.CreatePaymentInstrumentRequest() # CreatePaymentInstrumentRequest | Specify the customer's payment details for card or bank account.
-client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Create a Payment Instrument
-    api_response = api_instance.create_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, create_payment_instrument_request, client_application=client_application)
+    api_response = api_instance.create_payment_instrument(profile_id, create_payment_instrument_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->create_payment_instrument: %s\n" % e)
@@ -44,10 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
- **v_c_merchant_id** | **str**| CyberSource merchant id. | 
- **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **create_payment_instrument_request** | [**CreatePaymentInstrumentRequest**](CreatePaymentInstrumentRequest.md)| Specify the customer&#39;s payment details for card or bank account. | 
- **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
@@ -65,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_payment_instrument**
-> delete_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
+> delete_payment_instrument(profile_id, token_id)
 
 Delete a Payment Instrument
 
@@ -80,14 +74,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PaymentInstrumentApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
-v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
-v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of a Payment Instrument.
-client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Delete a Payment Instrument
-    api_instance.delete_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
+    api_instance.delete_payment_instrument(profile_id, token_id)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->delete_payment_instrument: %s\n" % e)
 ```
@@ -97,10 +88,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
- **v_c_merchant_id** | **str**| CyberSource merchant id. | 
- **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of a Payment Instrument. | 
- **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
@@ -118,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_payment_instrument**
-> TmsV1PaymentinstrumentsPatch200Response get_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
+> TmsV1PaymentinstrumentsPatch200Response get_payment_instrument(profile_id, token_id)
 
 Retrieve a Payment Instrument
 
@@ -133,14 +121,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PaymentInstrumentApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
-v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
-v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of a Payment Instrument.
-client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Retrieve a Payment Instrument
-    api_response = api_instance.get_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, client_application=client_application)
+    api_response = api_instance.get_payment_instrument(profile_id, token_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->get_payment_instrument: %s\n" % e)
@@ -151,10 +136,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
- **v_c_merchant_id** | **str**| CyberSource merchant id. | 
- **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of a Payment Instrument. | 
- **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
@@ -172,7 +154,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_payment_instrument**
-> TmsV1PaymentinstrumentsPatch200Response update_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, client_application=client_application)
+> TmsV1PaymentinstrumentsPatch200Response update_payment_instrument(profile_id, token_id, update_payment_instrument_request)
 
 Update a Payment Instrument
 
@@ -187,15 +169,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PaymentInstrumentApi()
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration.
-v_c_merchant_id = 'v_c_merchant_id_example' # str | CyberSource merchant id.
-v_c_correlation_id = 'v_c_correlation_id_example' # str | The mandatory correlation id passed by upstream (calling) system.
 token_id = 'token_id_example' # str | The TokenId of a Payment Instrument.
 update_payment_instrument_request = CyberSource.UpdatePaymentInstrumentRequest() # UpdatePaymentInstrumentRequest | Specify the customer's payment details.
-client_application = 'client_application_example' # str | Client application name (optional)
 
 try: 
     # Update a Payment Instrument
-    api_response = api_instance.update_payment_instrument(profile_id, v_c_merchant_id, v_c_correlation_id, token_id, update_payment_instrument_request, client_application=client_application)
+    api_response = api_instance.update_payment_instrument(profile_id, token_id, update_payment_instrument_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->update_payment_instrument: %s\n" % e)
@@ -206,11 +185,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | 
- **v_c_merchant_id** | **str**| CyberSource merchant id. | 
- **v_c_correlation_id** | **str**| The mandatory correlation id passed by upstream (calling) system. | 
  **token_id** | **str**| The TokenId of a Payment Instrument. | 
  **update_payment_instrument_request** | [**UpdatePaymentInstrumentRequest**](UpdatePaymentInstrumentRequest.md)| Specify the customer&#39;s payment details. | 
- **client_application** | **str**| Client application name | [optional] 
 
 ### Return type
 
