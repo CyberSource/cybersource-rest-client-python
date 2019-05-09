@@ -37,7 +37,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response(object):
         'limit': 'str',
         'count': 'str',
         'total': 'str',
-        'embedded': 'list[TmsV1PaymentinstrumentsPatch200Response]'
+        'embedded': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbedded'
     }
 
     attribute_map = {
@@ -224,10 +224,9 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response(object):
     def embedded(self):
         """
         Gets the embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        Array of Payment Instruments returned for the supplied Instrument Identifier.
 
         :return: The embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        :rtype: list[TmsV1PaymentinstrumentsPatch200Response]
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbedded
         """
         return self._embedded
 
@@ -235,10 +234,9 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response(object):
     def embedded(self, embedded):
         """
         Sets the embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        Array of Payment Instruments returned for the supplied Instrument Identifier.
 
         :param embedded: The embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        :type: list[TmsV1PaymentinstrumentsPatch200Response]
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbedded
         """
 
         self._embedded = embedded

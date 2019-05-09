@@ -35,14 +35,14 @@ class UpdatePaymentInstrumentRequest(object):
         'id': 'str',
         'object': 'str',
         'state': 'str',
-        'bank_account': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBankAccount',
-        'card': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseCard',
-        'buyer_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBuyerInformation',
-        'bill_to': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBillTo',
-        'processing_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseProcessingInformation',
-        'merchant_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseMerchantInformation',
+        'bank_account': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount',
+        'card': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard',
+        'buyer_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation',
+        'bill_to': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo',
+        'processing_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation',
+        'merchant_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation',
         'meta_data': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata',
-        'instrument_identifier': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseInstrumentIdentifier'
+        'instrument_identifier': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier'
     }
 
     attribute_map = {
@@ -211,7 +211,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the bank_account of this UpdatePaymentInstrumentRequest.
 
         :return: The bank_account of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBankAccount
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount
         """
         return self._bank_account
 
@@ -221,7 +221,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the bank_account of this UpdatePaymentInstrumentRequest.
 
         :param bank_account: The bank_account of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBankAccount
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount
         """
 
         self._bank_account = bank_account
@@ -232,7 +232,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the card of this UpdatePaymentInstrumentRequest.
 
         :return: The card of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseCard
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard
         """
         return self._card
 
@@ -242,7 +242,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the card of this UpdatePaymentInstrumentRequest.
 
         :param card: The card of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseCard
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard
         """
 
         self._card = card
@@ -253,7 +253,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the buyer_information of this UpdatePaymentInstrumentRequest.
 
         :return: The buyer_information of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBuyerInformation
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation
         """
         return self._buyer_information
 
@@ -263,7 +263,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the buyer_information of this UpdatePaymentInstrumentRequest.
 
         :param buyer_information: The buyer_information of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBuyerInformation
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -274,7 +274,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the bill_to of this UpdatePaymentInstrumentRequest.
 
         :return: The bill_to of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBillTo
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo
         """
         return self._bill_to
 
@@ -284,7 +284,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the bill_to of this UpdatePaymentInstrumentRequest.
 
         :param bill_to: The bill_to of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseBillTo
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo
         """
 
         self._bill_to = bill_to
@@ -295,7 +295,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the processing_information of this UpdatePaymentInstrumentRequest.
 
         :return: The processing_information of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseProcessingInformation
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation
         """
         return self._processing_information
 
@@ -305,7 +305,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the processing_information of this UpdatePaymentInstrumentRequest.
 
         :param processing_information: The processing_information of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseProcessingInformation
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -316,7 +316,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the merchant_information of this UpdatePaymentInstrumentRequest.
 
         :return: The merchant_information of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseMerchantInformation
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation
         """
         return self._merchant_information
 
@@ -326,7 +326,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the merchant_information of this UpdatePaymentInstrumentRequest.
 
         :param merchant_information: The merchant_information of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseMerchantInformation
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -358,7 +358,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the instrument_identifier of this UpdatePaymentInstrumentRequest.
 
         :return: The instrument_identifier of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseInstrumentIdentifier
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
         """
         return self._instrument_identifier
 
@@ -368,7 +368,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the instrument_identifier of this UpdatePaymentInstrumentRequest.
 
         :param instrument_identifier: The instrument_identifier of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseInstrumentIdentifier
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
         """
 
         self._instrument_identifier = instrument_identifier

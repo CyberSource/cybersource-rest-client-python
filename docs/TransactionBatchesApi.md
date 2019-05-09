@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_transaction_batch_id**
-> get_transaction_batch_id(id)
+> PtsV1TransactionBatchesIdGet200Response get_transaction_batch_id(id)
 
 Get individual batch file
 
@@ -81,7 +81,8 @@ id = 'id_example' # str | The batch id assigned for the template.
 
 try: 
     # Get individual batch file
-    api_instance.get_transaction_batch_id(id)
+    api_response = api_instance.get_transaction_batch_id(id)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TransactionBatchesApi->get_transaction_batch_id: %s\n" % e)
 ```
@@ -94,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**PtsV1TransactionBatchesIdGet200Response**](PtsV1TransactionBatchesIdGet200Response.md)
 
 ### Authorization
 

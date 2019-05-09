@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_purchase_and_refund_details**
-> get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
+> ReportingV3PurchaseRefundDetailsGet200Response get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
 
 Get Purchase and Refund details
 
@@ -35,7 +35,8 @@ limit = 2000 # int | Results count per page. Range(1-2000) (optional) (default t
 
 try: 
     # Get Purchase and Refund details
-    api_instance.get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
+    api_response = api_instance.get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PurchaseAndRefundDetailsApi->get_purchase_and_refund_details: %s\n" % e)
 ```
@@ -55,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ReportingV3PurchaseRefundDetailsGet200Response**](ReportingV3PurchaseRefundDetailsGet200Response.md)
 
 ### Authorization
 

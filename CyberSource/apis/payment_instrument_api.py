@@ -57,7 +57,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -133,11 +133,11 @@ class PaymentInstrumentApi(object):
             body_params = params['create_payment_instrument_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -149,7 +149,7 @@ class PaymentInstrumentApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1PaymentinstrumentsPatch200Response',
+                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -252,11 +252,11 @@ class PaymentInstrumentApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -291,7 +291,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -317,7 +317,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -371,11 +371,11 @@ class PaymentInstrumentApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -387,7 +387,7 @@ class PaymentInstrumentApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1PaymentinstrumentsPatch200Response',
+                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -411,7 +411,7 @@ class PaymentInstrumentApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -438,7 +438,7 @@ class PaymentInstrumentApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
         :param str token_id: The TokenId of a Payment Instrument. (required)
         :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :return: TmsV1PaymentinstrumentsPatch200Response
+        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -497,11 +497,11 @@ class PaymentInstrumentApi(object):
             body_params = params['update_payment_instrument_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['*/*'])
+            select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
@@ -513,7 +513,7 @@ class PaymentInstrumentApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1PaymentinstrumentsPatch200Response',
+                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

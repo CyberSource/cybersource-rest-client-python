@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **oct_create_payment**
-> oct_create_payment(oct_create_payment_request)
+> PtsV2PayoutsPost201Response oct_create_payment(oct_create_payment_request)
 
 Process a Payout
 
@@ -28,7 +28,8 @@ oct_create_payment_request = CyberSource.OctCreatePaymentRequest() # OctCreatePa
 
 try: 
     # Process a Payout
-    api_instance.oct_create_payment(oct_create_payment_request)
+    api_response = api_instance.oct_create_payment(oct_create_payment_request)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayoutsApi->oct_create_payment: %s\n" % e)
 ```
@@ -41,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**PtsV2PayoutsPost201Response**](PtsV2PayoutsPost201Response.md)
 
 ### Authorization
 
