@@ -10,6 +10,7 @@ powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.
 
 powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{tokenId}''', '''/tms/v1/paymentinstruments/'' + token_id'} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
 
+powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '/tms/v1/paymentinstruments/{tokenId}', '/tms/v1/paymentinstruments/'' + token_id' } | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\capture_api.py) | ForEach-Object { $_ -replace '/pts/v2/payments/{id}/captures', '/pts/v2/payments/'' + id + ''/captures' } | Set-Content ..\CyberSource\apis\capture_api.py"
 
@@ -27,9 +28,11 @@ powershell -Command "(Get-Content ..\CyberSource\apis\reports_api.py) | ForEach-
 
 powershell -Command "(Get-Content ..\CyberSource\apis\reversal_api.py) | ForEach-Object { $_ -replace '/pts/v2/payments/{id}/reversals', '/pts/v2/payments/'' + id + ''/reversals' } | Set-Content ..\CyberSource\apis\reversal_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{id}''', '''/tss/v2/searches/'' + id'} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
+powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{searchId}''', '''/tss/v2/searches/'' + search_Id'} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace '''/sfs/v1/files/{fileId}''', '''/sfs/v1/files/'' + file_id'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
+
+powershell -Command "(Get-Content ..\CyberSource\apis\capture_api.py) | ForEach-Object { $_ -replace '/pts/v2/payments/{id}/captures', '/pts/v2/payments/'' + id + ''/captures' } | Set-Content ..\CyberSource\apis\capture_api.py"
 
 
 
