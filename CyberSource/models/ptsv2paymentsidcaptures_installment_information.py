@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -176,8 +176,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param invoice_data: The invoice_data of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if invoice_data is not None and len(invoice_data) > 20:
-            raise ValueError("Invalid value for `invoice_data`, length must be less than or equal to `20`")
 
         self._invoice_data = invoice_data
 
@@ -201,8 +199,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if payment_type is not None and len(payment_type) > 1:
-            raise ValueError("Invalid value for `payment_type`, length must be less than or equal to `1`")
 
         self._payment_type = payment_type
 
@@ -226,8 +222,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param additional_costs: The additional_costs of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if additional_costs is not None and len(additional_costs) > 12:
-            raise ValueError("Invalid value for `additional_costs`, length must be less than or equal to `12`")
 
         self._additional_costs = additional_costs
 
@@ -251,8 +245,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param additional_costs_percentage: The additional_costs_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if additional_costs_percentage is not None and len(additional_costs_percentage) > 4:
-            raise ValueError("Invalid value for `additional_costs_percentage`, length must be less than or equal to `4`")
 
         self._additional_costs_percentage = additional_costs_percentage
 
@@ -276,8 +268,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param amount_funded: The amount_funded of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if amount_funded is not None and len(amount_funded) > 12:
-            raise ValueError("Invalid value for `amount_funded`, length must be less than or equal to `12`")
 
         self._amount_funded = amount_funded
 
@@ -301,8 +291,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param amount_requested_percentage: The amount_requested_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if amount_requested_percentage is not None and len(amount_requested_percentage) > 4:
-            raise ValueError("Invalid value for `amount_requested_percentage`, length must be less than or equal to `4`")
 
         self._amount_requested_percentage = amount_requested_percentage
 
@@ -326,8 +314,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param annual_financing_cost: The annual_financing_cost of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if annual_financing_cost is not None and len(annual_financing_cost) > 7:
-            raise ValueError("Invalid value for `annual_financing_cost`, length must be less than or equal to `7`")
 
         self._annual_financing_cost = annual_financing_cost
 
@@ -374,8 +360,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param expenses: The expenses of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if expenses is not None and len(expenses) > 12:
-            raise ValueError("Invalid value for `expenses`, length must be less than or equal to `12`")
 
         self._expenses = expenses
 
@@ -399,8 +383,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param expenses_percentage: The expenses_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if expenses_percentage is not None and len(expenses_percentage) > 4:
-            raise ValueError("Invalid value for `expenses_percentage`, length must be less than or equal to `4`")
 
         self._expenses_percentage = expenses_percentage
 
@@ -424,8 +406,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param fees: The fees of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if fees is not None and len(fees) > 12:
-            raise ValueError("Invalid value for `fees`, length must be less than or equal to `12`")
 
         self._fees = fees
 
@@ -449,8 +429,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param fees_percentage: The fees_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if fees_percentage is not None and len(fees_percentage) > 4:
-            raise ValueError("Invalid value for `fees_percentage`, length must be less than or equal to `4`")
 
         self._fees_percentage = fees_percentage
 
@@ -474,8 +452,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param insurance: The insurance of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if insurance is not None and len(insurance) > 12:
-            raise ValueError("Invalid value for `insurance`, length must be less than or equal to `12`")
 
         self._insurance = insurance
 
@@ -499,8 +475,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param insurance_percentage: The insurance_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if insurance_percentage is not None and len(insurance_percentage) > 4:
-            raise ValueError("Invalid value for `insurance_percentage`, length must be less than or equal to `4`")
 
         self._insurance_percentage = insurance_percentage
 
@@ -547,8 +521,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param taxes: The taxes of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if taxes is not None and len(taxes) > 12:
-            raise ValueError("Invalid value for `taxes`, length must be less than or equal to `12`")
 
         self._taxes = taxes
 
@@ -572,8 +544,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param taxes_percentage: The taxes_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-        if taxes_percentage is not None and len(taxes_percentage) > 4:
-            raise ValueError("Invalid value for `taxes_percentage`, length must be less than or equal to `4`")
 
         self._taxes_percentage = taxes_percentage
 

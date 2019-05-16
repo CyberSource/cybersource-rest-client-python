@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,22 +31,27 @@ class Ptsv2payoutsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'Ptsv2payoutsPaymentInformationCard'
+        'card': 'Ptsv2payoutsPaymentInformationCard',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
     }
 
     attribute_map = {
-        'card': 'card'
+        'card': 'card',
+        'customer': 'customer'
     }
 
-    def __init__(self, card=None):
+    def __init__(self, card=None, customer=None):
         """
         Ptsv2payoutsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
+        self._customer = None
 
         if card is not None:
           self.card = card
+        if customer is not None:
+          self.customer = customer
 
     @property
     def card(self):
@@ -68,6 +73,27 @@ class Ptsv2payoutsPaymentInformation(object):
         """
 
         self._card = card
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this Ptsv2payoutsPaymentInformation.
+
+        :return: The customer of this Ptsv2payoutsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this Ptsv2payoutsPaymentInformation.
+
+        :param customer: The customer of this Ptsv2payoutsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationCustomer
+        """
+
+        self._customer = customer
 
     def to_dict(self):
         """

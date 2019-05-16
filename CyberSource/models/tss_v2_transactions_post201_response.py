@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,7 +31,7 @@ class TssV2TransactionsPost201Response(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
+        'search_id': 'str',
         'save': 'bool',
         'name': 'str',
         'timezone': 'str',
@@ -47,7 +47,7 @@ class TssV2TransactionsPost201Response(object):
     }
 
     attribute_map = {
-        'id': 'id',
+        'search_id': 'searchId',
         'save': 'save',
         'name': 'name',
         'timezone': 'timezone',
@@ -62,12 +62,12 @@ class TssV2TransactionsPost201Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, submit_time_utc=None, embedded=None, links=None):
+    def __init__(self, search_id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, submit_time_utc=None, embedded=None, links=None):
         """
         TssV2TransactionsPost201Response - a model defined in Swagger
         """
 
-        self._id = None
+        self._search_id = None
         self._save = None
         self._name = None
         self._timezone = None
@@ -81,8 +81,8 @@ class TssV2TransactionsPost201Response(object):
         self._embedded = None
         self._links = None
 
-        if id is not None:
-          self.id = id
+        if search_id is not None:
+          self.search_id = search_id
         if save is not None:
           self.save = save
         if name is not None:
@@ -109,29 +109,29 @@ class TssV2TransactionsPost201Response(object):
           self.links = links
 
     @property
-    def id(self):
+    def search_id(self):
         """
-        Gets the id of this TssV2TransactionsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        Gets the search_id of this TssV2TransactionsPost201Response.
+        An unique identification number assigned by CyberSource to identify each Search request.
 
-        :return: The id of this TssV2TransactionsPost201Response.
+        :return: The search_id of this TssV2TransactionsPost201Response.
         :rtype: str
         """
-        return self._id
+        return self._search_id
 
-    @id.setter
-    def id(self, id):
+    @search_id.setter
+    def search_id(self, search_id):
         """
-        Sets the id of this TssV2TransactionsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        Sets the search_id of this TssV2TransactionsPost201Response.
+        An unique identification number assigned by CyberSource to identify each Search request.
 
-        :param id: The id of this TssV2TransactionsPost201Response.
+        :param search_id: The search_id of this TssV2TransactionsPost201Response.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
+        if search_id is not None and len(search_id) > 60:
+            raise ValueError("Invalid value for `search_id`, length must be less than or equal to `60`")
 
-        self._id = id
+        self._search_id = search_id
 
     @property
     def save(self):
@@ -344,7 +344,7 @@ class TssV2TransactionsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsPost201Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this TssV2TransactionsPost201Response.
         :rtype: str
@@ -355,7 +355,7 @@ class TssV2TransactionsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this TssV2TransactionsPost201Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsPost201Response.
         :type: str

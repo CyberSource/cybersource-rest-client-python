@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -29,6 +29,14 @@ class TestTransactionBatchesApi(unittest.TestCase):
         self.api = CyberSource.apis.transaction_batches_api.TransactionBatchesApi()
 
     def tearDown(self):
+        pass
+
+    def test_get_transaction_batch_details(self):
+        """
+        Test case for get_transaction_batch_details
+
+        Filters batch response. 
+        """
         pass
 
     def test_get_transaction_batch_id(self):

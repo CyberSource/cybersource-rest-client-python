@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :param suffix: The suffix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :type: str
         """
-        if suffix is not None and len(suffix) > 4:
-            raise ValueError("Invalid value for `suffix`, length must be less than or equal to `4`")
 
         self._suffix = suffix
 
@@ -112,7 +110,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
     def type(self):
         """
         Gets the type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
-        Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover 
+        Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover - 005: Diners Club - 007: JCB - 024: Maestro (UK Domestic) - 039 Encoded account number - 042: Maestro (International) 
 
         :return: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :rtype: str
@@ -123,7 +121,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
     def type(self, type):
         """
         Sets the type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
-        Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover 
+        Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover - 005: Diners Club - 007: JCB - 024: Maestro (UK Domestic) - 039 Encoded account number - 042: Maestro (International) 
 
         :param type: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :type: str

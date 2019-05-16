@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -128,7 +128,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def check_number(self):
         """
         Gets the check_number of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Check number.  Chase Paymentech Solutions - Optional. CyberSource ACH Service - Not used. RBS WorldPay Atlanta - Optional on debits. Required on credits. TeleCheck - Strongly recommended on debit requests. Optional on credits. 
 
         :return: The check_number of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -139,11 +139,13 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def check_number(self, check_number):
         """
         Sets the check_number of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Check number.  Chase Paymentech Solutions - Optional. CyberSource ACH Service - Not used. RBS WorldPay Atlanta - Optional on debits. Required on credits. TeleCheck - Strongly recommended on debit requests. Optional on credits. 
 
         :param check_number: The check_number of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+        if check_number is not None and len(check_number) > 8:
+            raise ValueError("Invalid value for `check_number`, length must be less than or equal to `8`")
 
         self._check_number = check_number
 
@@ -151,7 +153,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def type(self):
         """
         Gets the type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Account type.  Possible values:  - **C**: Checking.  - **G**: General ledger. This value is supported only on Wells Fargo ACH.  - **S**: Savings (U.S. dollars only).  - **X**: Corporate checking (U.S. dollars only). 
 
         :return: The type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -162,11 +164,13 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def type(self, type):
         """
         Sets the type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Account type.  Possible values:  - **C**: Checking.  - **G**: General ledger. This value is supported only on Wells Fargo ACH.  - **S**: Savings (U.S. dollars only).  - **X**: Corporate checking (U.S. dollars only). 
 
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+        if type is not None and len(type) > 1:
+            raise ValueError("Invalid value for `type`, length must be less than or equal to `1`")
 
         self._type = type
 
@@ -220,7 +224,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self):
         """
         Gets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor. See \"Encoded Account Numbers,\" page 39. 
 
         :return: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -231,11 +235,13 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self, encoder_id):
         """
         Sets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        The description for this field is not available.
+        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor. See \"Encoded Account Numbers,\" page 39. 
 
         :param encoder_id: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+        if encoder_id is not None and len(encoder_id) > 3:
+            raise ValueError("Invalid value for `encoder_id`, length must be less than or equal to `3`")
 
         self._encoder_id = encoder_id
 

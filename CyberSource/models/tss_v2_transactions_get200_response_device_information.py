@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :return: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :param ip_address: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
@@ -87,7 +87,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def host_name(self):
         """
         Gets the host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
-        DNS resolved hostname from above _ipAddress_.
+        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
 
         :return: The host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -98,7 +98,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def host_name(self, host_name):
         """
         Sets the host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
-        DNS resolved hostname from above _ipAddress_.
+        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
 
         :param host_name: The host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
@@ -112,7 +112,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def cookies_accepted(self):
         """
         Gets the cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
-        The description for this field is not available.
+        Boolean that indicates whether the customer’s browser accepts cookies. This field can contain one of the following values:   - `yes`: The customer’s browser accepts cookies.   - `no`: The customer’s browser does not accept cookies. 
 
         :return: The cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -123,7 +123,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def cookies_accepted(self, cookies_accepted):
         """
         Sets the cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
-        The description for this field is not available.
+        Boolean that indicates whether the customer’s browser accepts cookies. This field can contain one of the following values:   - `yes`: The customer’s browser accepts cookies.   - `no`: The customer’s browser does not accept cookies. 
 
         :param cookies_accepted: The cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str

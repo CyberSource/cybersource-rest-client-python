@@ -4,11 +4,60 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**mit_void**](VoidApi.md#mit_void) | **POST** /pts/v2/voids/ | Merchant Initiated Void
 [**void_capture**](VoidApi.md#void_capture) | **POST** /pts/v2/captures/{id}/voids | Void a Capture
 [**void_credit**](VoidApi.md#void_credit) | **POST** /pts/v2/credits/{id}/voids | Void a Credit
 [**void_payment**](VoidApi.md#void_payment) | **POST** /pts/v2/payments/{id}/voids | Void a Payment
 [**void_refund**](VoidApi.md#void_refund) | **POST** /pts/v2/refunds/{id}/voids | Void a Refund
 
+
+# **mit_void**
+> PtsV2PaymentsVoidsPost201Response mit_void(mit_void_request)
+
+Merchant Initiated Void
+
+This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.VoidApi()
+mit_void_request = CyberSource.MitVoidRequest() # MitVoidRequest | 
+
+try: 
+    # Merchant Initiated Void
+    api_response = api_instance.mit_void(mit_void_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling VoidApi->mit_void: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mit_void_request** | [**MitVoidRequest**](MitVoidRequest.md)|  | 
+
+### Return type
+
+[**PtsV2PaymentsVoidsPost201Response**](PtsV2PaymentsVoidsPost201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **void_capture**
 > PtsV2PaymentsVoidsPost201Response void_capture(void_capture_request, id)

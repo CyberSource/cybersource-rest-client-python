@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -72,7 +72,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :return: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -83,7 +83,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution that is being used for the transaction. Possible Values:   - **visacheckout**: Visa Checkout.  - **001**: Apple Pay.  - **005**: Masterpass. Required for Masterpass transactions on OmniPay Direct.  - **006**: Android Pay.  - **008**: Samsung Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - **visacheckout**: Visa Checkout. This value is required for Visa Checkout transactions. See Visa Checkout Using the SCMP API.  - **005**: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. See \"Masterpass,\" page 153. 
 
         :param payment_solution: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str

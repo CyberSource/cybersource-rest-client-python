@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -33,7 +33,7 @@ class PtsV2PayoutsPost201ResponseErrorInformation(object):
     swagger_types = {
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -62,7 +62,7 @@ class PtsV2PayoutsPost201ResponseErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PayoutsPost201ResponseErrorInformation.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - EXPIRED_CARD  - PROCESSOR_DECLINED  - STOLEN_LOST_CARD  - UNAUTHORIZED_CARD  - CVN_NOT_MATCH  - INVALID_CVN  - BLACKLISTED_CUSTOMER  - INVALID_ACCOUNT  - GENERAL_DECLINE  - RISK_CONTROL_DECLINE  - PROCESSOR_RISK_CONTROL_DECLINE 
 
         :return: The reason of this PtsV2PayoutsPost201ResponseErrorInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PayoutsPost201ResponseErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PayoutsPost201ResponseErrorInformation.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - EXPIRED_CARD  - PROCESSOR_DECLINED  - STOLEN_LOST_CARD  - UNAUTHORIZED_CARD  - CVN_NOT_MATCH  - INVALID_CVN  - BLACKLISTED_CUSTOMER  - INVALID_ACCOUNT  - GENERAL_DECLINE  - RISK_CONTROL_DECLINE  - PROCESSOR_RISK_CONTROL_DECLINE 
 
         :param reason: The reason of this PtsV2PayoutsPost201ResponseErrorInformation.
         :type: str
@@ -116,7 +116,7 @@ class PtsV2PayoutsPost201ResponseErrorInformation(object):
         Gets the details of this PtsV2PayoutsPost201ResponseErrorInformation.
 
         :return: The details of this PtsV2PayoutsPost201ResponseErrorInformation.
-        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -126,7 +126,7 @@ class PtsV2PayoutsPost201ResponseErrorInformation(object):
         Sets the details of this PtsV2PayoutsPost201ResponseErrorInformation.
 
         :param details: The details of this PtsV2PayoutsPost201ResponseErrorInformation.
-        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

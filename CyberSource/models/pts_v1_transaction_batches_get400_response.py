@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -78,7 +78,7 @@ class PtsV1TransactionBatchesGet400Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV1TransactionBatchesGet400Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this PtsV1TransactionBatchesGet400Response.
         :rtype: str
@@ -89,7 +89,7 @@ class PtsV1TransactionBatchesGet400Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV1TransactionBatchesGet400Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV1TransactionBatchesGet400Response.
         :type: str

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -41,7 +41,7 @@ class RequestBody1(object):
         'start_time': 'str',
         'start_day': 'int',
         'report_filters': 'dict(str, list[str])',
-        'report_preferences': 'ReportingV3ReportsIdGet200ResponseReportPreferences',
+        'report_preferences': 'Reportingv3reportsReportPreferences',
         'group_name': 'str'
     }
 
@@ -226,7 +226,7 @@ class RequestBody1(object):
         """
         if report_frequency is None:
             raise ValueError("Invalid value for `report_frequency`, must not be `None`")
-        allowed_values = ["DAILY", "WEEKLY", "MONTHLY"]
+        allowed_values = ["DAILY", "WEEKLY", "MONTHLY", "ADHOC"]
         if report_frequency not in allowed_values:
             raise ValueError(
                 "Invalid value for `report_frequency` ({0}), must be one of {1}"
@@ -368,7 +368,7 @@ class RequestBody1(object):
         Gets the report_preferences of this RequestBody1.
 
         :return: The report_preferences of this RequestBody1.
-        :rtype: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :rtype: Reportingv3reportsReportPreferences
         """
         return self._report_preferences
 
@@ -378,7 +378,7 @@ class RequestBody1(object):
         Sets the report_preferences of this RequestBody1.
 
         :param report_preferences: The report_preferences of this RequestBody1.
-        :type: ReportingV3ReportsIdGet200ResponseReportPreferences
+        :type: Reportingv3reportsReportPreferences
         """
 
         self._report_preferences = report_preferences

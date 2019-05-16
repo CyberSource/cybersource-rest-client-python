@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationCard(object):
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationCard.
         :type: str
         """
-        if suffix is not None and len(suffix) > 4:
-            raise ValueError("Invalid value for `suffix`, length must be less than or equal to `4`")
 
         self._suffix = suffix
 

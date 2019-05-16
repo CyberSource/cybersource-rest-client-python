@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,25 +31,41 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_tms_v1_instrumentidentifiers_token_id_delete(self):
+    def test_create_instrument_identifier(self):
         """
-        Test case for tms_v1_instrumentidentifiers_token_id_delete
+        Test case for create_instrument_identifier
+
+        Create an Instrument Identifier
+        """
+        pass
+
+    def test_delete_instrument_identifier(self):
+        """
+        Test case for delete_instrument_identifier
 
         Delete an Instrument Identifier
         """
         pass
 
-    def test_tms_v1_instrumentidentifiers_token_id_get(self):
+    def test_get_all_payment_instruments(self):
         """
-        Test case for tms_v1_instrumentidentifiers_token_id_get
+        Test case for get_all_payment_instruments
+
+        Retrieve all Payment Instruments associated with an Instrument Identifier
+        """
+        pass
+
+    def test_get_instrument_identifier(self):
+        """
+        Test case for get_instrument_identifier
 
         Retrieve an Instrument Identifier
         """
         pass
 
-    def test_tms_v1_instrumentidentifiers_token_id_patch(self):
+    def test_update_instrument_identifier(self):
         """
-        Test case for tms_v1_instrumentidentifiers_token_id_patch
+        Test case for update_instrument_identifier
 
         Update a Instrument Identifier
         """

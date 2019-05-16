@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -35,7 +35,7 @@ class PtsV2PayoutsPost400Response(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -88,6 +88,10 @@ class PtsV2PayoutsPost400Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2PayoutsPost400Response.
         :type: str
         """
+        if submit_time_utc is not None and len(submit_time_utc) > 6:
+            raise ValueError("Invalid value for `submit_time_utc`, length must be less than or equal to `6`")
+        if submit_time_utc is not None and len(submit_time_utc) < 6:
+            raise ValueError("Invalid value for `submit_time_utc`, length must be greater than or equal to `6`")
 
         self._submit_time_utc = submit_time_utc
 
@@ -118,7 +122,7 @@ class PtsV2PayoutsPost400Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PayoutsPost400Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - DEBIT_CARD_USEAGE_EXCEEDD_LIMIT 
 
         :return: The reason of this PtsV2PayoutsPost400Response.
         :rtype: str
@@ -129,12 +133,12 @@ class PtsV2PayoutsPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PayoutsPost400Response.
-        The reason of the status. 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - DEBIT_CARD_USEAGE_EXCEEDD_LIMIT 
 
         :param reason: The reason of this PtsV2PayoutsPost400Response.
         :type: str
         """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_MERCHANT_CONFIGURATION", "INVALID_AMOUNT", "DEBIT_CARD_USEAGE_EXCEEDD_LIMIT"]
+        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_CARD", "INVALID_MERCHANT_CONFIGURATION", "INVALID_AMOUNT", "DEBIT_CARD_USEAGE_EXCEEDD_LIMIT"]
         if reason not in allowed_values:
             raise ValueError(
                 "Invalid value for `reason` ({0}), must be one of {1}"
@@ -147,7 +151,7 @@ class PtsV2PayoutsPost400Response(object):
     def message(self):
         """
         Gets the message of this PtsV2PayoutsPost400Response.
-        The detail message related to the status and reason listed above. Possible value is:    - Your aggregator or acquirer is not accepting transactions from you at this time.   - Your aggregator or acquirer is not accepting this transaction.   - CyberSource declined the request because the credit card has expired. You might also receive this value if     the expiration date you provided does not match the date the issuing bank has on file.   - The bank declined the transaction.   - The merchant reference number for this authorization request matches the merchant reference number of     another authorization request that you sent within the past 15 minutes. Resend the request with a unique     merchant reference number.   - The credit card number did not pass CyberSource basic checks.   - Data provided is not consistent with the request. For example, you requested a product with negative cost.   - The request is missing a required field. 
+        The detail message related to the status and reason listed above.
 
         :return: The message of this PtsV2PayoutsPost400Response.
         :rtype: str
@@ -158,7 +162,7 @@ class PtsV2PayoutsPost400Response(object):
     def message(self, message):
         """
         Sets the message of this PtsV2PayoutsPost400Response.
-        The detail message related to the status and reason listed above. Possible value is:    - Your aggregator or acquirer is not accepting transactions from you at this time.   - Your aggregator or acquirer is not accepting this transaction.   - CyberSource declined the request because the credit card has expired. You might also receive this value if     the expiration date you provided does not match the date the issuing bank has on file.   - The bank declined the transaction.   - The merchant reference number for this authorization request matches the merchant reference number of     another authorization request that you sent within the past 15 minutes. Resend the request with a unique     merchant reference number.   - The credit card number did not pass CyberSource basic checks.   - Data provided is not consistent with the request. For example, you requested a product with negative cost.   - The request is missing a required field. 
+        The detail message related to the status and reason listed above.
 
         :param message: The message of this PtsV2PayoutsPost400Response.
         :type: str
@@ -172,7 +176,7 @@ class PtsV2PayoutsPost400Response(object):
         Gets the details of this PtsV2PayoutsPost400Response.
 
         :return: The details of this PtsV2PayoutsPost400Response.
-        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -182,7 +186,7 @@ class PtsV2PayoutsPost400Response(object):
         Sets the details of this PtsV2PayoutsPost400Response.
 
         :param details: The details of this PtsV2PayoutsPost400Response.
-        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

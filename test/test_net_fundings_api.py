@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,9 +31,9 @@ class TestNetFundingsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_net_funding_info(self):
+    def test_get_net_funding_details(self):
         """
-        Test case for get_net_funding_info
+        Test case for get_net_funding_details
 
         Get Netfunding information for an account or a merchant
         """

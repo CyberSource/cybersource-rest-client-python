@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,51 +31,21 @@ class GeneratePublicKeyRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'encryption_type': 'str',
-        'target_origin': 'str',
-        'unmasked_left': 'int',
-        'unmasked_right': 'int',
-        'enable_billing_address': 'bool',
-        'currency': 'str',
-        'enable_auto_auth': 'bool'
+        'encryption_type': 'str'
     }
 
     attribute_map = {
-        'encryption_type': 'encryptionType',
-        'target_origin': 'targetOrigin',
-        'unmasked_left': 'unmaskedLeft',
-        'unmasked_right': 'unmaskedRight',
-        'enable_billing_address': 'enableBillingAddress',
-        'currency': 'currency',
-        'enable_auto_auth': 'enableAutoAuth'
+        'encryption_type': 'encryptionType'
     }
 
-    def __init__(self, encryption_type=None, target_origin=None, unmasked_left=None, unmasked_right=None, enable_billing_address=None, currency=None, enable_auto_auth=None):
+    def __init__(self, encryption_type=None):
         """
         GeneratePublicKeyRequest - a model defined in Swagger
         """
 
         self._encryption_type = None
-        self._target_origin = None
-        self._unmasked_left = None
-        self._unmasked_right = None
-        self._enable_billing_address = None
-        self._currency = None
-        self._enable_auto_auth = None
 
         self.encryption_type = encryption_type
-        if target_origin is not None:
-          self.target_origin = target_origin
-        if unmasked_left is not None:
-          self.unmasked_left = unmasked_left
-        if unmasked_right is not None:
-          self.unmasked_right = unmasked_right
-        if enable_billing_address is not None:
-          self.enable_billing_address = enable_billing_address
-        if currency is not None:
-          self.currency = currency
-        if enable_auto_auth is not None:
-          self.enable_auto_auth = enable_auto_auth
 
     @property
     def encryption_type(self):
@@ -101,144 +71,6 @@ class GeneratePublicKeyRequest(object):
             raise ValueError("Invalid value for `encryption_type`, must not be `None`")
 
         self._encryption_type = encryption_type
-
-    @property
-    def target_origin(self):
-        """
-        Gets the target_origin of this GeneratePublicKeyRequest.
-        This should only be used if using the Microform implementation. This is the protocol, URL, and if used, port number of the page that will host the Microform. Unless using http://localhost, the protocol must be https://. For example, if serving Microform on example.com, the targetOrigin is https://example.com The value is used to restrict the frame ancestor of the Microform. If there is a mismatch between this value and the frame ancestor, the Microfrom will not load.
-
-        :return: The target_origin of this GeneratePublicKeyRequest.
-        :rtype: str
-        """
-        return self._target_origin
-
-    @target_origin.setter
-    def target_origin(self, target_origin):
-        """
-        Sets the target_origin of this GeneratePublicKeyRequest.
-        This should only be used if using the Microform implementation. This is the protocol, URL, and if used, port number of the page that will host the Microform. Unless using http://localhost, the protocol must be https://. For example, if serving Microform on example.com, the targetOrigin is https://example.com The value is used to restrict the frame ancestor of the Microform. If there is a mismatch between this value and the frame ancestor, the Microfrom will not load.
-
-        :param target_origin: The target_origin of this GeneratePublicKeyRequest.
-        :type: str
-        """
-
-        self._target_origin = target_origin
-
-    @property
-    def unmasked_left(self):
-        """
-        Gets the unmasked_left of this GeneratePublicKeyRequest.
-        Specifies the number of card number digits to be returned un-masked from the left. For example, setting this value to 6 will return: 411111XXXXXXXXXX Default value: 6 Maximum value: 6
-
-        :return: The unmasked_left of this GeneratePublicKeyRequest.
-        :rtype: int
-        """
-        return self._unmasked_left
-
-    @unmasked_left.setter
-    def unmasked_left(self, unmasked_left):
-        """
-        Sets the unmasked_left of this GeneratePublicKeyRequest.
-        Specifies the number of card number digits to be returned un-masked from the left. For example, setting this value to 6 will return: 411111XXXXXXXXXX Default value: 6 Maximum value: 6
-
-        :param unmasked_left: The unmasked_left of this GeneratePublicKeyRequest.
-        :type: int
-        """
-
-        self._unmasked_left = unmasked_left
-
-    @property
-    def unmasked_right(self):
-        """
-        Gets the unmasked_right of this GeneratePublicKeyRequest.
-        Specifies the number of card number digits to be returned un-masked from the right. For example, setting this value to 4 will return: 411111XXXXXX1111 Default value: 4 Maximum value: 4
-
-        :return: The unmasked_right of this GeneratePublicKeyRequest.
-        :rtype: int
-        """
-        return self._unmasked_right
-
-    @unmasked_right.setter
-    def unmasked_right(self, unmasked_right):
-        """
-        Sets the unmasked_right of this GeneratePublicKeyRequest.
-        Specifies the number of card number digits to be returned un-masked from the right. For example, setting this value to 4 will return: 411111XXXXXX1111 Default value: 4 Maximum value: 4
-
-        :param unmasked_right: The unmasked_right of this GeneratePublicKeyRequest.
-        :type: int
-        """
-
-        self._unmasked_right = unmasked_right
-
-    @property
-    def enable_billing_address(self):
-        """
-        Gets the enable_billing_address of this GeneratePublicKeyRequest.
-        Specifies whether or not 'dummy' address data should be specified in the create token request. If you have 'Relaxed AVS' enabled for your MID, this value can be set to False.Default value: true
-
-        :return: The enable_billing_address of this GeneratePublicKeyRequest.
-        :rtype: bool
-        """
-        return self._enable_billing_address
-
-    @enable_billing_address.setter
-    def enable_billing_address(self, enable_billing_address):
-        """
-        Sets the enable_billing_address of this GeneratePublicKeyRequest.
-        Specifies whether or not 'dummy' address data should be specified in the create token request. If you have 'Relaxed AVS' enabled for your MID, this value can be set to False.Default value: true
-
-        :param enable_billing_address: The enable_billing_address of this GeneratePublicKeyRequest.
-        :type: bool
-        """
-
-        self._enable_billing_address = enable_billing_address
-
-    @property
-    def currency(self):
-        """
-        Gets the currency of this GeneratePublicKeyRequest.
-        Three character ISO currency code to be associated with the token. Required for legacy integrations. Default value: USD.
-
-        :return: The currency of this GeneratePublicKeyRequest.
-        :rtype: str
-        """
-        return self._currency
-
-    @currency.setter
-    def currency(self, currency):
-        """
-        Sets the currency of this GeneratePublicKeyRequest.
-        Three character ISO currency code to be associated with the token. Required for legacy integrations. Default value: USD.
-
-        :param currency: The currency of this GeneratePublicKeyRequest.
-        :type: str
-        """
-
-        self._currency = currency
-
-    @property
-    def enable_auto_auth(self):
-        """
-        Gets the enable_auto_auth of this GeneratePublicKeyRequest.
-        Specifies whether or not an account verification authorization ($0 Authorization) is carried out on token creation. Default is false, as it is assumed a full or zero amount authorization will be carried out in a separate call from your server.
-
-        :return: The enable_auto_auth of this GeneratePublicKeyRequest.
-        :rtype: bool
-        """
-        return self._enable_auto_auth
-
-    @enable_auto_auth.setter
-    def enable_auto_auth(self, enable_auto_auth):
-        """
-        Sets the enable_auto_auth of this GeneratePublicKeyRequest.
-        Specifies whether or not an account verification authorization ($0 Authorization) is carried out on token creation. Default is false, as it is assumed a full or zero amount authorization will be carried out in a separate call from your server.
-
-        :param enable_auto_auth: The enable_auto_auth of this GeneratePublicKeyRequest.
-        :type: bool
-        """
-
-        self._enable_auto_auth = enable_auto_auth
 
     def to_dict(self):
         """

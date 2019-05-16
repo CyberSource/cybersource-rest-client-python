@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -33,7 +33,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
     swagger_types = {
         'bill_to': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo',
         'ship_to': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo',
-        'amount_details': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails'
+        'amount_details': 'Ptsv2paymentsidreversalsReversalInformationAmountDetails'
     }
 
     attribute_map = {
@@ -106,7 +106,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         Gets the amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
 
         :return: The amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails
+        :rtype: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
         return self._amount_details
 
@@ -116,7 +116,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         Sets the amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
 
         :param amount_details: The amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
-        :type: TssV2TransactionsPost201ResponseEmbeddedOrderInformationAmountDetails
+        :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
 
         self._amount_details = amount_details

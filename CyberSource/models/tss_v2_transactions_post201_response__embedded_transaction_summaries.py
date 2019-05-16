@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -40,7 +40,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'consumer_authentication_information': 'TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation',
         'device_information': 'TssV2TransactionsPost201ResponseEmbeddedDeviceInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
-        'merchant_defined_information': 'list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]',
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsPost201ResponseEmbeddedMerchantInformation',
         'order_information': 'TssV2TransactionsPost201ResponseEmbeddedOrderInformation',
         'payment_information': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformation',
@@ -137,7 +137,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def id(self):
         """
         Gets the id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :return: The id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :rtype: str
@@ -148,7 +148,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def id(self, id):
         """
         Sets the id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :param id: The id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: str
@@ -162,7 +162,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :rtype: str
@@ -173,7 +173,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: str
@@ -337,7 +337,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         The description for this field is not available.
 
         :return: The merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :rtype: list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]
+        :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -348,7 +348,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         The description for this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :type: list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]
+        :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information

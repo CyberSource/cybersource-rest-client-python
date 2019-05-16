@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -48,8 +48,7 @@ class TokenizeRequest(object):
         self._key_id = None
         self._card_info = None
 
-        if key_id is not None:
-          self.key_id = key_id
+        self.key_id = key_id
         if card_info is not None:
           self.card_info = card_info
 
@@ -73,6 +72,8 @@ class TokenizeRequest(object):
         :param key_id: The key_id of this TokenizeRequest.
         :type: str
         """
+        if key_id is None:
+            raise ValueError("Invalid value for `key_id`, must not be `None`")
 
         self._key_id = key_id
 

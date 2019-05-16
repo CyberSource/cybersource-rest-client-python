@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -45,7 +45,7 @@ class TssV2TransactionsGet200Response(object):
         'error_information': 'TssV2TransactionsGet200ResponseErrorInformation',
         'installment_information': 'TssV2TransactionsGet200ResponseInstallmentInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
-        'merchant_defined_information': 'list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]',
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsGet200ResponseMerchantInformation',
         'order_information': 'TssV2TransactionsGet200ResponseOrderInformation',
         'payment_information': 'TssV2TransactionsGet200ResponsePaymentInformation',
@@ -54,7 +54,7 @@ class TssV2TransactionsGet200Response(object):
         'point_of_sale_information': 'TssV2TransactionsGet200ResponsePointOfSaleInformation',
         'risk_information': 'TssV2TransactionsGet200ResponseRiskInformation',
         'sender_information': 'TssV2TransactionsGet200ResponseSenderInformation',
-        'links': 'PtsV2PaymentsReversalsPost201ResponseLinks'
+        'links': 'TssV2TransactionsGet200ResponseLinks'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class TssV2TransactionsGet200Response(object):
         'reconciliation_id': 'reconciliationId',
         'merchant_id': 'merchantId',
         'status': 'status',
-        'submit_time_utc': 'submitTimeUtc',
+        'submit_time_utc': 'submitTimeUTC',
         'application_information': 'applicationInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
@@ -167,7 +167,7 @@ class TssV2TransactionsGet200Response(object):
     def id(self):
         """
         Gets the id of this TssV2TransactionsGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :return: The id of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -178,7 +178,7 @@ class TssV2TransactionsGet200Response(object):
     def id(self, id):
         """
         Sets the id of this TssV2TransactionsGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :param id: The id of this TssV2TransactionsGet200Response.
         :type: str
@@ -288,7 +288,7 @@ class TssV2TransactionsGet200Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsGet200Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -299,7 +299,7 @@ class TssV2TransactionsGet200Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this TssV2TransactionsGet200Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsGet200Response.
         :type: str
@@ -482,7 +482,7 @@ class TssV2TransactionsGet200Response(object):
         The description for this field is not available.
 
         :return: The merchant_defined_information of this TssV2TransactionsGet200Response.
-        :rtype: list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]
+        :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
         """
         return self._merchant_defined_information
 
@@ -493,7 +493,7 @@ class TssV2TransactionsGet200Response(object):
         The description for this field is not available.
 
         :param merchant_defined_information: The merchant_defined_information of this TssV2TransactionsGet200Response.
-        :type: list[TssV2TransactionsGet200ResponseMerchantDefinedInformation]
+        :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
         self._merchant_defined_information = merchant_defined_information
@@ -672,7 +672,7 @@ class TssV2TransactionsGet200Response(object):
         Gets the links of this TssV2TransactionsGet200Response.
 
         :return: The links of this TssV2TransactionsGet200Response.
-        :rtype: PtsV2PaymentsReversalsPost201ResponseLinks
+        :rtype: TssV2TransactionsGet200ResponseLinks
         """
         return self._links
 
@@ -682,7 +682,7 @@ class TssV2TransactionsGet200Response(object):
         Sets the links of this TssV2TransactionsGet200Response.
 
         :param links: The links of this TssV2TransactionsGet200Response.
-        :type: PtsV2PaymentsReversalsPost201ResponseLinks
+        :type: TssV2TransactionsGet200ResponseLinks
         """
 
         self._links = links

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -143,7 +143,7 @@ class SecureFileShareApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/sfs/v1/files/'+file_id, 'GET',
+        return self.api_client.call_api('/sfs/v1/files/' + file_id, 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -158,7 +158,7 @@ class SecureFileShareApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_file_details(self, start_date, end_date, **kwargs):
+    def get_file_detail(self, start_date, end_date, **kwargs):
         """
         Get list of files
         Get list of files and it's information of them available inside the report directory
@@ -168,7 +168,7 @@ class SecureFileShareApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_file_details(start_date, end_date, callback=callback_function)
+        >>> thread = api.get_file_detail(start_date, end_date, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -181,12 +181,12 @@ class SecureFileShareApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_file_details_with_http_info(start_date, end_date, **kwargs)
+            return self.get_file_detail_with_http_info(start_date, end_date, **kwargs)
         else:
-            (data) = self.get_file_details_with_http_info(start_date, end_date, **kwargs)
+            (data) = self.get_file_detail_with_http_info(start_date, end_date, **kwargs)
             return data
 
-    def get_file_details_with_http_info(self, start_date, end_date, **kwargs):
+    def get_file_detail_with_http_info(self, start_date, end_date, **kwargs):
         """
         Get list of files
         Get list of files and it's information of them available inside the report directory
@@ -196,7 +196,7 @@ class SecureFileShareApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_file_details_with_http_info(start_date, end_date, callback=callback_function)
+        >>> thread = api.get_file_detail_with_http_info(start_date, end_date, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -219,23 +219,23 @@ class SecureFileShareApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_file_details" % key
+                    " to method get_file_detail" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'start_date' is set
         if ('start_date' not in params) or (params['start_date'] is None):
-            raise ValueError("Missing the required parameter `start_date` when calling `get_file_details`")
+            raise ValueError("Missing the required parameter `start_date` when calling `get_file_detail`")
         # verify the required parameter 'end_date' is set
         if ('end_date' not in params) or (params['end_date'] is None):
-            raise ValueError("Missing the required parameter `end_date` when calling `get_file_details`")
+            raise ValueError("Missing the required parameter `end_date` when calling `get_file_detail`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_details`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_details`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 

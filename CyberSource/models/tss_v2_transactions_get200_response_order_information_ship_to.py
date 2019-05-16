@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -122,7 +122,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def last_name(self):
         """
         Gets the last_name of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Last name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
 
         :return: The last_name of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -133,7 +133,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Last name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
 
         :param last_name: The last_name of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
@@ -222,7 +222,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        State or province of the shipping address. Use the State, Province, and Territory Codes for the United States and Canada. 
+        State or province of the billing address. Use the State, Province, and Territory Codes for the United States and Canada.  For Payouts: This field may be sent only for FDC Compass.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  ccAuthService (Required when the billing country is the U.S. or Canada; otherwise, optional.) This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. See \"Relaxed Requirements for Address Data and Expiration Date,\" page 75. Important It is your responsibility to determine whether a field is required for the transaction you are requesting.  For processor-specific information, see the bill_state field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The administrative_area of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -233,13 +233,13 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        State or province of the shipping address. Use the State, Province, and Territory Codes for the United States and Canada. 
+        State or province of the billing address. Use the State, Province, and Territory Codes for the United States and Canada.  For Payouts: This field may be sent only for FDC Compass.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  ccAuthService (Required when the billing country is the U.S. or Canada; otherwise, optional.) This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. See \"Relaxed Requirements for Address Data and Expiration Date,\" page 75. Important It is your responsibility to determine whether a field is required for the transaction you are requesting.  For processor-specific information, see the bill_state field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param administrative_area: The administrative_area of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
+        if administrative_area is not None and len(administrative_area) > 3:
+            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
 
@@ -247,7 +247,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def postal_code(self):
         """
         Gets the postal_code of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Postal code for the shipping address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits]  Example 12345-6789  When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space][numeric][alpha][numeric]  Example A1B 2C3 
+        Postal code for the shipping address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits]  Example 12345-6789  When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space][numeric][alpha][numeric]  Example A1B 2C3  **American Express Direct**\\ Before sending the postal code to the processor, CyberSource removes all nonalphanumeric characters and, if the remaining value is longer than nine characters, truncates the value starting from the right side. 
 
         :return: The postal_code of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -258,7 +258,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Postal code for the shipping address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits]  Example 12345-6789  When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space][numeric][alpha][numeric]  Example A1B 2C3 
+        Postal code for the shipping address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits]  Example 12345-6789  When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space][numeric][alpha][numeric]  Example A1B 2C3  **American Express Direct**\\ Before sending the postal code to the processor, CyberSource removes all nonalphanumeric characters and, if the remaining value is longer than nine characters, truncates the value starting from the right side. 
 
         :param postal_code: The postal_code of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
@@ -297,7 +297,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :return: The country of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -308,7 +308,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Country of the shipping address. Use the two character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character ISO Standard Country Codes.
 
         :param country: The country of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
@@ -322,7 +322,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def phone_number(self):
         """
         Gets the phone_number of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :return: The phone_number of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -333,7 +333,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Phone number for the shipping address.
+        Phone number associated with the shipping address.
 
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str

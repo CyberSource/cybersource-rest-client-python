@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -34,7 +34,7 @@ class TssV2TransactionsPost400Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PayoutsPost201ResponseErrorInformationDetails]'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -67,7 +67,7 @@ class TssV2TransactionsPost400Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsPost400Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :return: The submit_time_utc of this TssV2TransactionsPost400Response.
         :rtype: str
@@ -78,7 +78,7 @@ class TssV2TransactionsPost400Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this TssV2TransactionsPost400Response.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsPost400Response.
         :type: str
@@ -90,7 +90,7 @@ class TssV2TransactionsPost400Response(object):
     def status(self):
         """
         Gets the status of this TssV2TransactionsPost400Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
 
         :return: The status of this TssV2TransactionsPost400Response.
         :rtype: str
@@ -101,7 +101,7 @@ class TssV2TransactionsPost400Response(object):
     def status(self, status):
         """
         Sets the status of this TssV2TransactionsPost400Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
 
         :param status: The status of this TssV2TransactionsPost400Response.
         :type: str
@@ -144,7 +144,7 @@ class TssV2TransactionsPost400Response(object):
         Gets the details of this TssV2TransactionsPost400Response.
 
         :return: The details of this TssV2TransactionsPost400Response.
-        :rtype: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
         return self._details
 
@@ -154,7 +154,7 @@ class TssV2TransactionsPost400Response(object):
         Sets the details of this TssV2TransactionsPost400Response.
 
         :param details: The details of this TssV2TransactionsPost400Response.
-        :type: list[PtsV2PayoutsPost201ResponseErrorInformationDetails]
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
         self._details = details

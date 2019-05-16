@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -67,7 +67,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def eci_raw(self):
         """
         Gets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).
+        Raw electronic commerce indicator (ECI). For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -78,7 +78,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).
+        Raw electronic commerce indicator (ECI). For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param eci_raw: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
@@ -117,7 +117,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param xid: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str

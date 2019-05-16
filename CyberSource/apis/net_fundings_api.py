@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -42,7 +42,7 @@ class NetFundingsApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def get_net_funding_info(self, start_time, end_time, **kwargs):
+    def get_net_funding_details(self, start_time, end_time, **kwargs):
         """
         Get Netfunding information for an account or a merchant
         Get Netfunding information for an account or a merchant.
@@ -52,12 +52,12 @@ class NetFundingsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_net_funding_info(start_time, end_time, callback=callback_function)
+        >>> thread = api.get_net_funding_details(start_time, end_time, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
-        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
+        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str group_name: Valid CyberSource Group Name.
         :return: ReportingV3NetFundingsGet200Response
@@ -66,12 +66,12 @@ class NetFundingsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_net_funding_info_with_http_info(start_time, end_time, **kwargs)
+            return self.get_net_funding_details_with_http_info(start_time, end_time, **kwargs)
         else:
-            (data) = self.get_net_funding_info_with_http_info(start_time, end_time, **kwargs)
+            (data) = self.get_net_funding_details_with_http_info(start_time, end_time, **kwargs)
             return data
 
-    def get_net_funding_info_with_http_info(self, start_time, end_time, **kwargs):
+    def get_net_funding_details_with_http_info(self, start_time, end_time, **kwargs):
         """
         Get Netfunding information for an account or a merchant
         Get Netfunding information for an account or a merchant.
@@ -81,12 +81,12 @@ class NetFundingsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_net_funding_info_with_http_info(start_time, end_time, callback=callback_function)
+        >>> thread = api.get_net_funding_details_with_http_info(start_time, end_time, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
-        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ssXXX  (required)
+        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str group_name: Valid CyberSource Group Name.
         :return: ReportingV3NetFundingsGet200Response
@@ -105,23 +105,23 @@ class NetFundingsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_net_funding_info" % key
+                    " to method get_net_funding_details" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
-            raise ValueError("Missing the required parameter `start_time` when calling `get_net_funding_info`")
+            raise ValueError("Missing the required parameter `start_time` when calling `get_net_funding_details`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
-            raise ValueError("Missing the required parameter `end_time` when calling `get_net_funding_info`")
+            raise ValueError("Missing the required parameter `end_time` when calling `get_net_funding_details`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_info`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_details`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_info`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_details`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_info`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_net_funding_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -52,7 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :return: The ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
         :rtype: str
@@ -63,7 +63,7 @@ class TssV2TransactionsPost201ResponseEmbeddedDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
-        IP address of the customer.
+        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
 
         :param ip_address: The ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
         :type: str

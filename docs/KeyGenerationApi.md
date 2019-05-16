@@ -4,11 +4,11 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generate_public_key**](KeyGenerationApi.md#generate_public_key) | **POST** /flex/v1/keys/ | Generate Key
+[**generate_public_key**](KeyGenerationApi.md#generate_public_key) | **POST** /flex/v1/keys | Generate Key
 
 
 # **generate_public_key**
-> FlexV1KeysPost200Response generate_public_key(generate_public_key_request=generate_public_key_request)
+> FlexV1KeysPost200Response generate_public_key(generate_public_key_request)
 
 Generate Key
 
@@ -24,11 +24,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.KeyGenerationApi()
-generate_public_key_request = CyberSource.GeneratePublicKeyRequest() # GeneratePublicKeyRequest |  (optional)
+generate_public_key_request = CyberSource.GeneratePublicKeyRequest() # GeneratePublicKeyRequest | 
 
 try: 
     # Generate Key
-    api_response = api_instance.generate_public_key(generate_public_key_request=generate_public_key_request)
+    api_response = api_instance.generate_public_key(generate_public_key_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling KeyGenerationApi->generate_public_key: %s\n" % e)
@@ -38,7 +38,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **generate_public_key_request** | [**GeneratePublicKeyRequest**](GeneratePublicKeyRequest.md)|  | [optional] 
+ **generate_public_key_request** | [**GeneratePublicKeyRequest**](GeneratePublicKeyRequest.md)|  | 
 
 ### Return type
 

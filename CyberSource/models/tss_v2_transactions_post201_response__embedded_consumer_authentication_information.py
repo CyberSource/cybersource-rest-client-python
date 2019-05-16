@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -57,7 +57,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :return: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :rtype: str
@@ -68,7 +68,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.
+        Transaction identifier. For the description and requirements, see \"Payer Authentication,\" page 180.
 
         :param xid: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str

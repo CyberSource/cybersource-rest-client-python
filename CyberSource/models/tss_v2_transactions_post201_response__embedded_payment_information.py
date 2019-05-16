@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -31,53 +31,53 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_method': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentMethod',
-        'customer': 'TssV2TransactionsGet200ResponsePaymentInformationCustomer',
+        'payment_type': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'card': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard'
     }
 
     attribute_map = {
-        'payment_method': 'paymentMethod',
+        'payment_type': 'paymentType',
         'customer': 'customer',
         'card': 'card'
     }
 
-    def __init__(self, payment_method=None, customer=None, card=None):
+    def __init__(self, payment_type=None, customer=None, card=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedPaymentInformation - a model defined in Swagger
         """
 
-        self._payment_method = None
+        self._payment_type = None
         self._customer = None
         self._card = None
 
-        if payment_method is not None:
-          self.payment_method = payment_method
+        if payment_type is not None:
+          self.payment_type = payment_type
         if customer is not None:
           self.customer = customer
         if card is not None:
           self.card = card
 
     @property
-    def payment_method(self):
+    def payment_type(self):
         """
-        Gets the payment_method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        Gets the payment_type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
-        :return: The payment_method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentMethod
+        :return: The payment_type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType
         """
-        return self._payment_method
+        return self._payment_type
 
-    @payment_method.setter
-    def payment_method(self, payment_method):
+    @payment_type.setter
+    def payment_type(self, payment_type):
         """
-        Sets the payment_method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        Sets the payment_type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
-        :param payment_method: The payment_method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentMethod
+        :param payment_type: The payment_type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType
         """
 
-        self._payment_method = payment_method
+        self._payment_type = payment_type
 
     @property
     def customer(self):
@@ -85,7 +85,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Gets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :return: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :rtype: TssV2TransactionsGet200ResponsePaymentInformationCustomer
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
         """
         return self._customer
 
@@ -95,7 +95,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Sets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :param customer: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :type: TssV2TransactionsGet200ResponsePaymentInformationCustomer
+        :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
         self._customer = customer

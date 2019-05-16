@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -32,9 +32,9 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
     """
     swagger_types = {
         'profile': 'TssV2TransactionsGet200ResponseRiskInformationProfile',
-        'rules': 'list[TssV2TransactionsGet200ResponseRiskInformationProfile]',
+        'rules': 'list[TssV2TransactionsGet200ResponseRiskInformationRules]',
         'passive_profile': 'TssV2TransactionsGet200ResponseRiskInformationProfile',
-        'passive_rules': 'list[TssV2TransactionsGet200ResponseRiskInformationProfile]',
+        'passive_rules': 'list[TssV2TransactionsGet200ResponseRiskInformationRules]',
         'score': 'TssV2TransactionsGet200ResponseRiskInformationScore',
         'local_time': 'str'
     }
@@ -100,7 +100,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         Gets the rules of this TssV2TransactionsGet200ResponseRiskInformation.
 
         :return: The rules of this TssV2TransactionsGet200ResponseRiskInformation.
-        :rtype: list[TssV2TransactionsGet200ResponseRiskInformationProfile]
+        :rtype: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
         return self._rules
 
@@ -110,7 +110,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         Sets the rules of this TssV2TransactionsGet200ResponseRiskInformation.
 
         :param rules: The rules of this TssV2TransactionsGet200ResponseRiskInformation.
-        :type: list[TssV2TransactionsGet200ResponseRiskInformationProfile]
+        :type: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
 
         self._rules = rules
@@ -142,7 +142,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         Gets the passive_rules of this TssV2TransactionsGet200ResponseRiskInformation.
 
         :return: The passive_rules of this TssV2TransactionsGet200ResponseRiskInformation.
-        :rtype: list[TssV2TransactionsGet200ResponseRiskInformationProfile]
+        :rtype: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
         return self._passive_rules
 
@@ -152,7 +152,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         Sets the passive_rules of this TssV2TransactionsGet200ResponseRiskInformation.
 
         :param passive_rules: The passive_rules of this TssV2TransactionsGet200ResponseRiskInformation.
-        :type: list[TssV2TransactionsGet200ResponseRiskInformationProfile]
+        :type: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
 
         self._passive_rules = passive_rules
@@ -182,7 +182,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
     def local_time(self):
         """
         Gets the local_time of this TssV2TransactionsGet200ResponseRiskInformation.
-        Time that the transaction was submitted in local time..
+        Time that the transaction was submitted in local time.
 
         :return: The local_time of this TssV2TransactionsGet200ResponseRiskInformation.
         :rtype: str
@@ -193,7 +193,7 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
     def local_time(self, local_time):
         """
         Sets the local_time of this TssV2TransactionsGet200ResponseRiskInformation.
-        Time that the transaction was submitted in local time..
+        Time that the transaction was submitted in local time.
 
         :param local_time: The local_time of this TssV2TransactionsGet200ResponseRiskInformation.
         :type: str

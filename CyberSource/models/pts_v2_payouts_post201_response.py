@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -36,9 +36,8 @@ class PtsV2PayoutsPost201Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'reconciliation_id': 'str',
-        'status_information': 'PtsV2PayoutsPost201ResponseStatusInformation',
         'error_information': 'PtsV2PayoutsPost201ResponseErrorInformation',
-        'client_reference_information': 'Ptsv2payoutsClientReferenceInformation',
+        'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
         'merchant_information': 'PtsV2PayoutsPost201ResponseMerchantInformation',
         'order_information': 'PtsV2PayoutsPost201ResponseOrderInformation',
         'processor_information': 'PtsV2PayoutsPost201ResponseProcessorInformation',
@@ -51,7 +50,6 @@ class PtsV2PayoutsPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reconciliation_id': 'reconciliationId',
-        'status_information': 'statusInformation',
         'error_information': 'errorInformation',
         'client_reference_information': 'clientReferenceInformation',
         'merchant_information': 'merchantInformation',
@@ -60,7 +58,7 @@ class PtsV2PayoutsPost201Response(object):
         'recipient_information': 'recipientInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, status_information=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None):
         """
         PtsV2PayoutsPost201Response - a model defined in Swagger
         """
@@ -70,7 +68,6 @@ class PtsV2PayoutsPost201Response(object):
         self._submit_time_utc = None
         self._status = None
         self._reconciliation_id = None
-        self._status_information = None
         self._error_information = None
         self._client_reference_information = None
         self._merchant_information = None
@@ -88,8 +85,6 @@ class PtsV2PayoutsPost201Response(object):
           self.status = status
         if reconciliation_id is not None:
           self.reconciliation_id = reconciliation_id
-        if status_information is not None:
-          self.status_information = status_information
         if error_information is not None:
           self.error_information = error_information
         if client_reference_information is not None:
@@ -128,7 +123,7 @@ class PtsV2PayoutsPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2PayoutsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :return: The id of this PtsV2PayoutsPost201Response.
         :rtype: str
@@ -139,7 +134,7 @@ class PtsV2PayoutsPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2PayoutsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
 
         :param id: The id of this PtsV2PayoutsPost201Response.
         :type: str
@@ -169,14 +164,13 @@ class PtsV2PayoutsPost201Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2PayoutsPost201Response.
         :type: str
         """
-
         self._submit_time_utc = submit_time_utc
 
     @property
     def status(self):
         """
         Gets the status of this PtsV2PayoutsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - ACCEPTED  - DECLINED  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PayoutsPost201Response.
         :rtype: str
@@ -187,12 +181,12 @@ class PtsV2PayoutsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PayoutsPost201Response.
-        The status of the submitted transaction.
+        The status of the submitted transaction.  Possible values:  - ACCEPTED  - DECLINED  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PayoutsPost201Response.
         :type: str
         """
-        allowed_values = ["ACCEPTED", "DECLINED"]
+        allowed_values = ["ACCEPTED", "DECLINED", "INVALID_REQUEST"]
         if status not in allowed_values:
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"
@@ -227,27 +221,6 @@ class PtsV2PayoutsPost201Response(object):
         self._reconciliation_id = reconciliation_id
 
     @property
-    def status_information(self):
-        """
-        Gets the status_information of this PtsV2PayoutsPost201Response.
-
-        :return: The status_information of this PtsV2PayoutsPost201Response.
-        :rtype: PtsV2PayoutsPost201ResponseStatusInformation
-        """
-        return self._status_information
-
-    @status_information.setter
-    def status_information(self, status_information):
-        """
-        Sets the status_information of this PtsV2PayoutsPost201Response.
-
-        :param status_information: The status_information of this PtsV2PayoutsPost201Response.
-        :type: PtsV2PayoutsPost201ResponseStatusInformation
-        """
-
-        self._status_information = status_information
-
-    @property
     def error_information(self):
         """
         Gets the error_information of this PtsV2PayoutsPost201Response.
@@ -274,7 +247,7 @@ class PtsV2PayoutsPost201Response(object):
         Gets the client_reference_information of this PtsV2PayoutsPost201Response.
 
         :return: The client_reference_information of this PtsV2PayoutsPost201Response.
-        :rtype: Ptsv2payoutsClientReferenceInformation
+        :rtype: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -284,7 +257,7 @@ class PtsV2PayoutsPost201Response(object):
         Sets the client_reference_information of this PtsV2PayoutsPost201Response.
 
         :param client_reference_information: The client_reference_information of this PtsV2PayoutsPost201Response.
-        :type: Ptsv2payoutsClientReferenceInformation
+        :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    CyberSource Flex API
+    CyberSource Merged Spec
 
-    Simple PAN tokenization service
+    All CyberSource API specs merged together. These are available at https://developer.cybersource.com/api/reference/api-reference.html
 
     OpenAPI spec version: 0.0.1
     
@@ -143,7 +143,7 @@ class ReportDefinitionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-definitions/'+report_definition_name, 'GET',
+        return self.api_client.call_api('/reporting/v3/report-definitions/' + report_definition_name, 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
