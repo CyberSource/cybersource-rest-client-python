@@ -8,9 +8,7 @@ java -jar swagger-codegen-cli-2.2.3.jar generate -t cybersource-python-template 
  REM To change the URL
 powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '/tms/v1/instrumentidentifiers/{tokenId}/paymentinstruments', '/tms/v1/instrumentidentifiers/'' + token_id + ''/paymentinstruments' } | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{tokenId}''', '''/tms/v1/paymentinstruments/'' + token_id'} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
-
-powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '/tms/v1/paymentinstruments/{tokenId}', '/tms/v1/paymentinstruments/'' + token_id' } | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
+powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{tokenId}''', '''/tms/v1/paymentinstruments/'' + token_id'} | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\capture_api.py) | ForEach-Object { $_ -replace '/pts/v2/payments/{id}/captures', '/pts/v2/payments/'' + id + ''/captures' } | Set-Content ..\CyberSource\apis\capture_api.py"
 
@@ -28,7 +26,7 @@ powershell -Command "(Get-Content ..\CyberSource\apis\reports_api.py) | ForEach-
 
 powershell -Command "(Get-Content ..\CyberSource\apis\reversal_api.py) | ForEach-Object { $_ -replace '/pts/v2/payments/{id}/reversals', '/pts/v2/payments/'' + id + ''/reversals' } | Set-Content ..\CyberSource\apis\reversal_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{searchId}''', '''/tss/v2/searches/'' + search_Id'} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
+powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{searchId}''', '''/tss/v2/searches/'' + search_id'} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace '''/sfs/v1/files/{fileId}''', '''/sfs/v1/files/'' + file_id'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
 
@@ -112,6 +110,8 @@ powershell -Command "(Get-Content ..\CyberSource\apis\void_api.py) | ForEach-Obj
 powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace 'select_header_accept\(\[''application/json', 'select_header_accept([''*/*'} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''application/json', 'select_header_content_type([''*/*'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
+
+powershell -Command "(Get-Content ..\CyberSource\apis\payer_authentication_api.py) | ForEach-Object { $_ -replace 'select_header_accept\(\[''application/json;charset=utf-8', 'select_header_accept([''application/hal+json;charset=utf-8'} | Set-Content ..\CyberSource\apis\payer_authentication_api.py"
 
 git checkout ..\README.md
 
