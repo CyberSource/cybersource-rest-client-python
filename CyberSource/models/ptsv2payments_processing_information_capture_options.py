@@ -62,7 +62,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def capture_sequence_number(self):
         """
         Gets the capture_sequence_number of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Capture number when requesting multiple partial captures for one payment. Used along with _totalCaptureCount_ to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - _captureSequenceNumber_ = 2, and   - _totalCaptureCount_ = 5 
+        Capture number when requesting multiple partial captures for one authorization. Used along with `totalCaptureCount` to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber_ = 2`, and   - `totalCaptureCount = 5` 
 
         :return: The capture_sequence_number of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :rtype: float
@@ -73,7 +73,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def capture_sequence_number(self, capture_sequence_number):
         """
         Sets the capture_sequence_number of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Capture number when requesting multiple partial captures for one payment. Used along with _totalCaptureCount_ to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - _captureSequenceNumber_ = 2, and   - _totalCaptureCount_ = 5 
+        Capture number when requesting multiple partial captures for one authorization. Used along with `totalCaptureCount` to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber_ = 2`, and   - `totalCaptureCount = 5` 
 
         :param capture_sequence_number: The capture_sequence_number of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :type: float
@@ -89,7 +89,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def total_capture_count(self):
         """
         Gets the total_capture_count of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Total number of captures when requesting multiple partial captures for one payment. Used along with _captureSequenceNumber_ which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - _captureSequenceNumber_ = 2, and   - _totalCaptureCount_ = 5 
+        Total number of captures when requesting multiple partial captures for one payment. Used along with `captureSequenceNumber` field to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber = 2`, and   - `totalCaptureCount = 5` 
 
         :return: The total_capture_count of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :rtype: float
@@ -100,7 +100,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def total_capture_count(self, total_capture_count):
         """
         Sets the total_capture_count of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Total number of captures when requesting multiple partial captures for one payment. Used along with _captureSequenceNumber_ which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - _captureSequenceNumber_ = 2, and   - _totalCaptureCount_ = 5 
+        Total number of captures when requesting multiple partial captures for one payment. Used along with `captureSequenceNumber` field to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber = 2`, and   - `totalCaptureCount = 5` 
 
         :param total_capture_count: The total_capture_count of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :type: float

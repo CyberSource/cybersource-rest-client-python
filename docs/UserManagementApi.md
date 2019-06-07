@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_users**](UserManagementApi.md#get_users) | **GET** /ums/v1/users | Get user based on organization Id, username, permission and role
+[**get_users**](UserManagementApi.md#get_users) | **GET** /ums/v1/users | Get user information
 
 
 # **get_users**
 > UmsV1UsersGet200Response get_users(organization_id=organization_id, user_name=user_name, permission_id=permission_id, role_id=role_id)
 
-Get user based on organization Id, username, permission and role
+Get user information
 
 This endpoint is to get all the user information depending on the filter criteria passed in the query.
 
@@ -30,7 +30,7 @@ permission_id = 'permission_id_example' # str | permission that you are trying t
 role_id = 'role_id_example' # str | role of the user you are trying to search on. (optional)
 
 try: 
-    # Get user based on organization Id, username, permission and role
+    # Get user information
     api_response = api_instance.get_users(organization_id=organization_id, user_name=user_name, permission_id=permission_id, role_id=role_id)
     pprint(api_response)
 except ApiException as e:

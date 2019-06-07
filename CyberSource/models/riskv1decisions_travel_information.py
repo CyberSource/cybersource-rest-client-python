@@ -31,6 +31,7 @@ class Riskv1decisionsTravelInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'actual_final_destination': 'str',
         'complete_route': 'str',
         'departure_time': 'str',
         'journey_type': 'str',
@@ -38,22 +39,26 @@ class Riskv1decisionsTravelInformation(object):
     }
 
     attribute_map = {
+        'actual_final_destination': 'actualFinalDestination',
         'complete_route': 'completeRoute',
         'departure_time': 'departureTime',
         'journey_type': 'journeyType',
         'legs': 'legs'
     }
 
-    def __init__(self, complete_route=None, departure_time=None, journey_type=None, legs=None):
+    def __init__(self, actual_final_destination=None, complete_route=None, departure_time=None, journey_type=None, legs=None):
         """
         Riskv1decisionsTravelInformation - a model defined in Swagger
         """
 
+        self._actual_final_destination = None
         self._complete_route = None
         self._departure_time = None
         self._journey_type = None
         self._legs = None
 
+        if actual_final_destination is not None:
+          self.actual_final_destination = actual_final_destination
         if complete_route is not None:
           self.complete_route = complete_route
         if departure_time is not None:
@@ -62,6 +67,31 @@ class Riskv1decisionsTravelInformation(object):
           self.journey_type = journey_type
         if legs is not None:
           self.legs = legs
+
+    @property
+    def actual_final_destination(self):
+        """
+        Gets the actual_final_destination of this Riskv1decisionsTravelInformation.
+        IATA Code for the actual final destination that the customer intends to travel to. It should be a destination on the completeRoute. 
+
+        :return: The actual_final_destination of this Riskv1decisionsTravelInformation.
+        :rtype: str
+        """
+        return self._actual_final_destination
+
+    @actual_final_destination.setter
+    def actual_final_destination(self, actual_final_destination):
+        """
+        Sets the actual_final_destination of this Riskv1decisionsTravelInformation.
+        IATA Code for the actual final destination that the customer intends to travel to. It should be a destination on the completeRoute. 
+
+        :param actual_final_destination: The actual_final_destination of this Riskv1decisionsTravelInformation.
+        :type: str
+        """
+        if actual_final_destination is not None and len(actual_final_destination) > 3:
+            raise ValueError("Invalid value for `actual_final_destination`, length must be less than or equal to `3`")
+
+        self._actual_final_destination = actual_final_destination
 
     @property
     def complete_route(self):

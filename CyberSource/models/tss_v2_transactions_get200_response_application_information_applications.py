@@ -87,7 +87,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        The CyberSource payment application processed for the transaction. 
 
         :return: The name of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -98,7 +98,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        The CyberSource payment application processed for the transaction. 
 
         :param name: The name of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
@@ -133,7 +133,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def reason_code(self):
         """
         Gets the reason_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        3-digit reason code that indicates why the customer profile payment succeeded or failed.
 
         :return: The reason_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -144,7 +144,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def reason_code(self, reason_code):
         """
         Sets the reason_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        3-digit reason code that indicates why the customer profile payment succeeded or failed.
 
         :param reason_code: The reason_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
@@ -156,7 +156,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_code(self):
         """
         Gets the r_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :return: The r_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -167,7 +167,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_code(self, r_code):
         """
         Sets the r_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :param r_code: The r_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
@@ -179,7 +179,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_flag(self):
         """
         Gets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        One-word description of the result of the application. 
 
         :return: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -190,7 +190,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_flag(self, r_flag):
         """
         Sets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        One-word description of the result of the application. 
 
         :param r_flag: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
@@ -202,7 +202,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Reference number that you use to reconcile your CyberSource reports with your processor reports. 
 
         :return: The reconciliation_id of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -213,7 +213,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Reference number that you use to reconcile your CyberSource reports with your processor reports. 
 
         :param reconciliation_id: The reconciliation_id of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
@@ -225,7 +225,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_message(self):
         """
         Gets the r_message of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Message that explains the reply flag for the application. 
 
         :return: The r_message of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :rtype: str
@@ -236,7 +236,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
     def r_message(self, r_message):
         """
         Sets the r_message of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        The description for this field is not available.
+        Message that explains the reply flag for the application. 
 
         :param r_message: The r_message of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str

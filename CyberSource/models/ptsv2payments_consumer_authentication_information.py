@@ -112,7 +112,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def cavv_algorithm(self):
         """
         Gets the cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard Identity Check. 
+        Algorithm used to generate the CAVV for Visa Secure or the UCAF authentication data for Mastercard Identity Check. 
 
         :return: The cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def cavv_algorithm(self, cavv_algorithm):
         """
         Sets the cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Algorithm used to generate the CAVV for Verified by Visa or the UCAF authentication data for Mastercard Identity Check. 
+        Algorithm used to generate the CAVV for Visa Secure or the UCAF authentication data for Mastercard Identity Check. 
 
         :param cavv_algorithm: The cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str

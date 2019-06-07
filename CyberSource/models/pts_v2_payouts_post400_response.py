@@ -88,10 +88,6 @@ class PtsV2PayoutsPost400Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2PayoutsPost400Response.
         :type: str
         """
-        if submit_time_utc is not None and len(submit_time_utc) > 6:
-            raise ValueError("Invalid value for `submit_time_utc`, length must be less than or equal to `6`")
-        if submit_time_utc is not None and len(submit_time_utc) < 6:
-            raise ValueError("Invalid value for `submit_time_utc`, length must be greater than or equal to `6`")
 
         self._submit_time_utc = submit_time_utc
 

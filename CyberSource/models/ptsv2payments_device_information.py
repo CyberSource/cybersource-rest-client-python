@@ -62,7 +62,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def host_name(self):
         """
         Gets the host_name of this Ptsv2paymentsDeviceInformation.
-        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
+        DNS resolved hostname from `ipAddress`.
 
         :return: The host_name of this Ptsv2paymentsDeviceInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def host_name(self, host_name):
         """
         Sets the host_name of this Ptsv2paymentsDeviceInformation.
-        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
+        DNS resolved hostname from `ipAddress`.
 
         :param host_name: The host_name of this Ptsv2paymentsDeviceInformation.
         :type: str
@@ -87,7 +87,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this Ptsv2paymentsDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :return: The ip_address of this Ptsv2paymentsDeviceInformation.
         :rtype: str
@@ -98,7 +98,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this Ptsv2paymentsDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :param ip_address: The ip_address of this Ptsv2paymentsDeviceInformation.
         :type: str
@@ -112,7 +112,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def user_agent(self):
         """
         Gets the user_agent of this Ptsv2paymentsDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, Mozilla is the value that identifies the Netscape browser. 
+        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :return: The user_agent of this Ptsv2paymentsDeviceInformation.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsDeviceInformation(object):
     def user_agent(self, user_agent):
         """
         Sets the user_agent of this Ptsv2paymentsDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, Mozilla is the value that identifies the Netscape browser. 
+        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :param user_agent: The user_agent of this Ptsv2paymentsDeviceInformation.
         :type: str

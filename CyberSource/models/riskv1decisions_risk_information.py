@@ -31,22 +31,27 @@ class Riskv1decisionsRiskInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'profile': 'Riskv1decisionsRiskInformationProfile'
+        'profile': 'Riskv1decisionsRiskInformationProfile',
+        'event_type': 'str'
     }
 
     attribute_map = {
-        'profile': 'profile'
+        'profile': 'profile',
+        'event_type': 'eventType'
     }
 
-    def __init__(self, profile=None):
+    def __init__(self, profile=None, event_type=None):
         """
         Riskv1decisionsRiskInformation - a model defined in Swagger
         """
 
         self._profile = None
+        self._event_type = None
 
         if profile is not None:
           self.profile = profile
+        if event_type is not None:
+          self.event_type = event_type
 
     @property
     def profile(self):
@@ -68,6 +73,31 @@ class Riskv1decisionsRiskInformation(object):
         """
 
         self._profile = profile
+
+    @property
+    def event_type(self):
+        """
+        Gets the event_type of this Riskv1decisionsRiskInformation.
+        Specifies one of the following types of events: - login - account_creation - account_update For regular payment transactions, do not send this field. 
+
+        :return: The event_type of this Riskv1decisionsRiskInformation.
+        :rtype: str
+        """
+        return self._event_type
+
+    @event_type.setter
+    def event_type(self, event_type):
+        """
+        Sets the event_type of this Riskv1decisionsRiskInformation.
+        Specifies one of the following types of events: - login - account_creation - account_update For regular payment transactions, do not send this field. 
+
+        :param event_type: The event_type of this Riskv1decisionsRiskInformation.
+        :type: str
+        """
+        if event_type is not None and len(event_type) > 255:
+            raise ValueError("Invalid value for `event_type`, length must be less than or equal to `255`")
+
+        self._event_type = event_type
 
     def to_dict(self):
         """

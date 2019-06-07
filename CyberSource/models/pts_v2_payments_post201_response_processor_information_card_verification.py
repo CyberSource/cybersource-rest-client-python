@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self):
         """
         Gets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        Result of card verification. Returned by the authorization service in the `processorInformation.cardVerification.resultCode` reply field. If ics_auth and ics_score are requested at the same time, the value is automatically passed from ics_auth to ics_score. For more information on using this field, see \"\"Sending the Results of Address and Card Verification Tests,\"\" page 16. The field contains one of the following values:   - `I`: Card verification number failed processor's data   validation check.   - `M`: Card verification number matched.   - `N`: Card verification number not matched.   - `P`: Card verification number not processed.   - `S`: Card verification number is on the card but was not included in the request.   - `U`: Card verification is not supported by the issuing bank.   - `X`: Card verification is not supported by the payment card company.   - Space Character: Deprecated. Ignore this value.   - `1`: CyberSource does not support card verification for this processor or card type.   - `2`: Processor returned value unrecognized for card verification response.   - `3`: Processor did not return card verification result code. 
+        CVN result code.  For details, see the `auth_cv_result` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a description of the card verification check, see \"Card Verification Numbers (CVNs)\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a list of possible values, see \"CVN Codes\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self, result_code):
         """
         Sets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        Result of card verification. Returned by the authorization service in the `processorInformation.cardVerification.resultCode` reply field. If ics_auth and ics_score are requested at the same time, the value is automatically passed from ics_auth to ics_score. For more information on using this field, see \"\"Sending the Results of Address and Card Verification Tests,\"\" page 16. The field contains one of the following values:   - `I`: Card verification number failed processor's data   validation check.   - `M`: Card verification number matched.   - `N`: Card verification number not matched.   - `P`: Card verification number not processed.   - `S`: Card verification number is on the card but was not included in the request.   - `U`: Card verification is not supported by the issuing bank.   - `X`: Card verification is not supported by the payment card company.   - Space Character: Deprecated. Ignore this value.   - `1`: CyberSource does not support card verification for this processor or card type.   - `2`: Processor returned value unrecognized for card verification response.   - `3`: Processor did not return card verification result code. 
+        CVN result code.  For details, see the `auth_cv_result` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a description of the card verification check, see \"Card Verification Numbers (CVNs)\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a list of possible values, see \"CVN Codes\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param result_code: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code_raw(self):
         """
         Gets the result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code sent directly from the processor. Returned only when the processor returns this value.  `Important` Do not use this field to evaluate the result of card verification. Use for debugging purposes only. 
+        CVN result code sent directly from the processor. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of card verification. Use for debugging purposes only. 
 
         :return: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code_raw(self, result_code_raw):
         """
         Sets the result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code sent directly from the processor. Returned only when the processor returns this value.  `Important` Do not use this field to evaluate the result of card verification. Use for debugging purposes only. 
+        CVN result code sent directly from the processor. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of card verification. Use for debugging purposes only. 
 
         :param result_code_raw: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str

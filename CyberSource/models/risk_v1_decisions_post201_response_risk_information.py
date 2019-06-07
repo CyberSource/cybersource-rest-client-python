@@ -37,10 +37,10 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
         'velocity': 'RiskV1DecisionsPost201ResponseRiskInformationVelocity',
         'case_priority': 'int',
         'local_time': 'str',
-        'payment_information': 'RiskV1DecisionsPost201ResponseRiskInformationPaymentInformation',
         'score': 'RiskV1DecisionsPost201ResponseRiskInformationScore',
         'ip_address': 'RiskV1DecisionsPost201ResponseRiskInformationIpAddress',
-        'providers': 'RiskV1DecisionsPost201ResponseRiskInformationProviders'
+        'providers': 'RiskV1DecisionsPost201ResponseRiskInformationProviders',
+        'travel': 'RiskV1DecisionsPost201ResponseRiskInformationTravel'
     }
 
     attribute_map = {
@@ -50,13 +50,13 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
         'velocity': 'velocity',
         'case_priority': 'casePriority',
         'local_time': 'localTime',
-        'payment_information': 'paymentInformation',
         'score': 'score',
         'ip_address': 'ipAddress',
-        'providers': 'providers'
+        'providers': 'providers',
+        'travel': 'travel'
     }
 
-    def __init__(self, profile=None, rules=None, info_codes=None, velocity=None, case_priority=None, local_time=None, payment_information=None, score=None, ip_address=None, providers=None):
+    def __init__(self, profile=None, rules=None, info_codes=None, velocity=None, case_priority=None, local_time=None, score=None, ip_address=None, providers=None, travel=None):
         """
         RiskV1DecisionsPost201ResponseRiskInformation - a model defined in Swagger
         """
@@ -67,10 +67,10 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
         self._velocity = None
         self._case_priority = None
         self._local_time = None
-        self._payment_information = None
         self._score = None
         self._ip_address = None
         self._providers = None
+        self._travel = None
 
         if profile is not None:
           self.profile = profile
@@ -84,14 +84,14 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
           self.case_priority = case_priority
         if local_time is not None:
           self.local_time = local_time
-        if payment_information is not None:
-          self.payment_information = payment_information
         if score is not None:
           self.score = score
         if ip_address is not None:
           self.ip_address = ip_address
         if providers is not None:
           self.providers = providers
+        if travel is not None:
+          self.travel = travel
 
     @property
     def profile(self):
@@ -181,7 +181,7 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
     def case_priority(self):
         """
         Gets the case_priority of this RiskV1DecisionsPost201ResponseRiskInformation.
-        You receive this field only if you subscribe to the Enhanced Case Management service. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/) - Look for 'Reply Fields': \"decisionReply_casePriority\". 
+        You receive this field only if you subscribe to the Enhanced Case Management service. The priority level ranges from 1 (highest) to 5 (lowest); the default value is 3. If you do not assign a priority to your rules or to your profiles, the default value is given to the order.  For all possible values, see the `decision_case_priority` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The case_priority of this RiskV1DecisionsPost201ResponseRiskInformation.
         :rtype: int
@@ -192,7 +192,7 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
     def case_priority(self, case_priority):
         """
         Sets the case_priority of this RiskV1DecisionsPost201ResponseRiskInformation.
-        You receive this field only if you subscribe to the Enhanced Case Management service. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/) - Look for 'Reply Fields': \"decisionReply_casePriority\". 
+        You receive this field only if you subscribe to the Enhanced Case Management service. The priority level ranges from 1 (highest) to 5 (lowest); the default value is 3. If you do not assign a priority to your rules or to your profiles, the default value is given to the order.  For all possible values, see the `decision_case_priority` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param case_priority: The case_priority of this RiskV1DecisionsPost201ResponseRiskInformation.
         :type: int
@@ -204,7 +204,7 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
     def local_time(self):
         """
         Gets the local_time of this RiskV1DecisionsPost201ResponseRiskInformation.
-        The customer's local time (hh:mm:ss), which is calculated from the transaction request time and the customer's billing address. 
+        The customer's local time (`hh:mm:ss`), which is calculated from the transaction request time and the customer's billing address.  For details, see the `score_time_local` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) 
 
         :return: The local_time of this RiskV1DecisionsPost201ResponseRiskInformation.
         :rtype: str
@@ -215,7 +215,7 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
     def local_time(self, local_time):
         """
         Sets the local_time of this RiskV1DecisionsPost201ResponseRiskInformation.
-        The customer's local time (hh:mm:ss), which is calculated from the transaction request time and the customer's billing address. 
+        The customer's local time (`hh:mm:ss`), which is calculated from the transaction request time and the customer's billing address.  For details, see the `score_time_local` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) 
 
         :param local_time: The local_time of this RiskV1DecisionsPost201ResponseRiskInformation.
         :type: str
@@ -224,27 +224,6 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
             raise ValueError("Invalid value for `local_time`, length must be less than or equal to `255`")
 
         self._local_time = local_time
-
-    @property
-    def payment_information(self):
-        """
-        Gets the payment_information of this RiskV1DecisionsPost201ResponseRiskInformation.
-
-        :return: The payment_information of this RiskV1DecisionsPost201ResponseRiskInformation.
-        :rtype: RiskV1DecisionsPost201ResponseRiskInformationPaymentInformation
-        """
-        return self._payment_information
-
-    @payment_information.setter
-    def payment_information(self, payment_information):
-        """
-        Sets the payment_information of this RiskV1DecisionsPost201ResponseRiskInformation.
-
-        :param payment_information: The payment_information of this RiskV1DecisionsPost201ResponseRiskInformation.
-        :type: RiskV1DecisionsPost201ResponseRiskInformationPaymentInformation
-        """
-
-        self._payment_information = payment_information
 
     @property
     def score(self):
@@ -308,6 +287,27 @@ class RiskV1DecisionsPost201ResponseRiskInformation(object):
         """
 
         self._providers = providers
+
+    @property
+    def travel(self):
+        """
+        Gets the travel of this RiskV1DecisionsPost201ResponseRiskInformation.
+
+        :return: The travel of this RiskV1DecisionsPost201ResponseRiskInformation.
+        :rtype: RiskV1DecisionsPost201ResponseRiskInformationTravel
+        """
+        return self._travel
+
+    @travel.setter
+    def travel(self, travel):
+        """
+        Sets the travel of this RiskV1DecisionsPost201ResponseRiskInformation.
+
+        :param travel: The travel of this RiskV1DecisionsPost201ResponseRiskInformation.
+        :type: RiskV1DecisionsPost201ResponseRiskInformationTravel
+        """
+
+        self._travel = travel
 
     def to_dict(self):
         """

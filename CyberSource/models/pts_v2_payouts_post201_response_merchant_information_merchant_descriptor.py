@@ -62,7 +62,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def name(self):
         """
         Gets the name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  For Payouts: * Paymentech (22) 
+        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
 
         :return: The name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def name(self, name):
         """
         Sets the name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  For Payouts: * Paymentech (22) 
+        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
 
         :param name: The name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
@@ -85,7 +85,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def locality(self):
         """
         Gets the locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant City. For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's City.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_city` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -96,7 +96,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def locality(self, locality):
         """
         Sets the locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant City. For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's City.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_city` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param locality: The locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
@@ -110,7 +110,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def country(self):
         """
         Gets the country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's country.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_country` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -121,7 +121,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def country(self, country):
         """
         Sets the country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's country.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_country` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param country: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str

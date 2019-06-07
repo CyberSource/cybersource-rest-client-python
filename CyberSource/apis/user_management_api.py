@@ -44,7 +44,7 @@ class UserManagementApi(object):
 
     def get_users(self, **kwargs):
         """
-        Get user based on organization Id, username, permission and role
+        Get user information
         This endpoint is to get all the user information depending on the filter criteria passed in the query.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -73,7 +73,7 @@ class UserManagementApi(object):
 
     def get_users_with_http_info(self, **kwargs):
         """
-        Get user based on organization Id, username, permission and role
+        Get user information
         This endpoint is to get all the user information depending on the filter criteria passed in the query.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

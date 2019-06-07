@@ -62,7 +62,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def count(self):
         """
         Gets the count of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Morphing count. Note The count is not returned for the initial transaction.
+        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction.  For all possible values, see the `decision_velocity_morphing_#_count` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The count of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :rtype: int
@@ -73,7 +73,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def count(self, count):
         """
         Sets the count of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Morphing count. Note The count is not returned for the initial transaction.
+        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction.  For all possible values, see the `decision_velocity_morphing_#_count` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param count: The count of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :type: int
@@ -85,7 +85,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def field_name(self):
         """
         Gets the field_name of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Field name of the morphing element. specified by the setting that you chose in the Velocity Editor. For all possible values, Please refer to Simple Order API Developer Guide  on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/) - Look for 'Reply Fields': \"decisionReply_morphingElement_#_fieldName\". 
+        Field name of the morphing element. specified by the setting that you chose in the Velocity Editor.  For all possible values, see the `decisionReply_morphingElement_#_fieldName` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The field_name of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :rtype: str
@@ -96,7 +96,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def field_name(self, field_name):
         """
         Sets the field_name of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Field name of the morphing element. specified by the setting that you chose in the Velocity Editor. For all possible values, Please refer to Simple Order API Developer Guide  on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/) - Look for 'Reply Fields': \"decisionReply_morphingElement_#_fieldName\". 
+        Field name of the morphing element. specified by the setting that you chose in the Velocity Editor.  For all possible values, see the `decisionReply_morphingElement_#_fieldName` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param field_name: The field_name of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :type: str
@@ -110,7 +110,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def information_code(self):
         """
         Gets the information_code of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Identifier that CYBS assigned to the velocity rule specified by the number.
+        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The information_code of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :rtype: str
@@ -121,7 +121,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing(object):
     def information_code(self, information_code):
         """
         Sets the information_code of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
-        Identifier that CYBS assigned to the velocity rule specified by the number.
+        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param information_code: The information_code of this RiskV1DecisionsPost201ResponseRiskInformationVelocityMorphing.
         :type: str

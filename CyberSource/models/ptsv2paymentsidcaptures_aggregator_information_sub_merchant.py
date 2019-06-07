@@ -112,7 +112,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        First line of the sub-merchant’s street address.  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field does not map to the TC 33 capture file5.  **FDC Compass**\\ This value must consist of uppercase characters. 
+        First line of the sub-merchant’s street address.  For processor-specific details, see `submerchant_street` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        First line of the sub-merchant’s street address.  See \"Aggregator Support,\" page 100.  **CyberSource through VisaNet**\\ The value for this field does not map to the TC 33 capture file5.  **FDC Compass**\\ This value must consist of uppercase characters. 
+        First line of the sub-merchant’s street address.  For processor-specific details, see `submerchant_street` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param address1: The address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
@@ -137,7 +137,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        Sub-merchant’s city.  **CyberSource through VisaNet**\\ The value for this field does not map to the TC 33 capture file.  **FDC Compass**\\ This value must consist of uppercase characters.  For details, see \"Aggregator Support,\" page 100. 
+        Sub-merchant’s city.  For processor-specific details, see `submerchant_city` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The locality of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :rtype: str
@@ -148,7 +148,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        Sub-merchant’s city.  **CyberSource through VisaNet**\\ The value for this field does not map to the TC 33 capture file.  **FDC Compass**\\ This value must consist of uppercase characters.  For details, see \"Aggregator Support,\" page 100. 
+        Sub-merchant’s city.  For processor-specific details, see `submerchant_city` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param locality: The locality of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str

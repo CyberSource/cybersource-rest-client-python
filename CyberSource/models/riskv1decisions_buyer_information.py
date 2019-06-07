@@ -31,26 +31,31 @@ class Riskv1decisionsBuyerInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'username': 'str',
         'hashed_password': 'str',
         'date_of_birth': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]'
     }
 
     attribute_map = {
+        'username': 'username',
         'hashed_password': 'hashedPassword',
         'date_of_birth': 'dateOfBirth',
         'personal_identification': 'personalIdentification'
     }
 
-    def __init__(self, hashed_password=None, date_of_birth=None, personal_identification=None):
+    def __init__(self, username=None, hashed_password=None, date_of_birth=None, personal_identification=None):
         """
         Riskv1decisionsBuyerInformation - a model defined in Swagger
         """
 
+        self._username = None
         self._hashed_password = None
         self._date_of_birth = None
         self._personal_identification = None
 
+        if username is not None:
+          self.username = username
         if hashed_password is not None:
           self.hashed_password = hashed_password
         if date_of_birth is not None:
@@ -59,10 +64,35 @@ class Riskv1decisionsBuyerInformation(object):
           self.personal_identification = personal_identification
 
     @property
+    def username(self):
+        """
+        Gets the username of this Riskv1decisionsBuyerInformation.
+        Specifies the customer account user name.
+
+        :return: The username of this Riskv1decisionsBuyerInformation.
+        :rtype: str
+        """
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        """
+        Sets the username of this Riskv1decisionsBuyerInformation.
+        Specifies the customer account user name.
+
+        :param username: The username of this Riskv1decisionsBuyerInformation.
+        :type: str
+        """
+        if username is not None and len(username) > 255:
+            raise ValueError("Invalid value for `username`, length must be less than or equal to `255`")
+
+        self._username = username
+
+    @property
     def hashed_password(self):
         """
         Gets the hashed_password of this Riskv1decisionsBuyerInformation.
-        The description for this field is not available. 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :return: The hashed_password of this Riskv1decisionsBuyerInformation.
         :rtype: str
@@ -73,7 +103,7 @@ class Riskv1decisionsBuyerInformation(object):
     def hashed_password(self, hashed_password):
         """
         Sets the hashed_password of this Riskv1decisionsBuyerInformation.
-        The description for this field is not available. 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :param hashed_password: The hashed_password of this Riskv1decisionsBuyerInformation.
         :type: str
@@ -87,7 +117,7 @@ class Riskv1decisionsBuyerInformation(object):
     def date_of_birth(self):
         """
         Gets the date_of_birth of this Riskv1decisionsBuyerInformation.
-        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a pass-through, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see \"Recipients,\" page 224. 
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The date_of_birth of this Riskv1decisionsBuyerInformation.
         :rtype: str
@@ -98,7 +128,7 @@ class Riskv1decisionsBuyerInformation(object):
     def date_of_birth(self, date_of_birth):
         """
         Sets the date_of_birth of this Riskv1decisionsBuyerInformation.
-        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a pass-through, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see \"Recipients,\" page 224. 
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param date_of_birth: The date_of_birth of this Riskv1decisionsBuyerInformation.
         :type: str
