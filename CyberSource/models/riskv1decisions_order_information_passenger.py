@@ -37,7 +37,8 @@ class Riskv1decisionsOrderInformationPassenger(object):
         'first_name': 'str',
         'last_name': 'str',
         'id': 'str',
-        'email': 'str'
+        'email': 'str',
+        'nationality': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class Riskv1decisionsOrderInformationPassenger(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'id': 'id',
-        'email': 'email'
+        'email': 'email',
+        'nationality': 'nationality'
     }
 
-    def __init__(self, type=None, status=None, phone=None, first_name=None, last_name=None, id=None, email=None):
+    def __init__(self, type=None, status=None, phone=None, first_name=None, last_name=None, id=None, email=None, nationality=None):
         """
         Riskv1decisionsOrderInformationPassenger - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class Riskv1decisionsOrderInformationPassenger(object):
         self._last_name = None
         self._id = None
         self._email = None
+        self._nationality = None
 
         if type is not None:
           self.type = type
@@ -77,6 +80,8 @@ class Riskv1decisionsOrderInformationPassenger(object):
           self.id = id
         if email is not None:
           self.email = email
+        if nationality is not None:
+          self.nationality = nationality
 
     @property
     def type(self):
@@ -132,7 +137,7 @@ class Riskv1decisionsOrderInformationPassenger(object):
     def phone(self):
         """
         Gets the phone of this Riskv1decisionsOrderInformationPassenger.
-        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the country code. 
+        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
 
         :return: The phone of this Riskv1decisionsOrderInformationPassenger.
         :rtype: str
@@ -143,7 +148,7 @@ class Riskv1decisionsOrderInformationPassenger(object):
     def phone(self, phone):
         """
         Sets the phone of this Riskv1decisionsOrderInformationPassenger.
-        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the country code. 
+        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
 
         :param phone: The phone of this Riskv1decisionsOrderInformationPassenger.
         :type: str
@@ -252,6 +257,31 @@ class Riskv1decisionsOrderInformationPassenger(object):
             raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
+
+    @property
+    def nationality(self):
+        """
+        Gets the nationality of this Riskv1decisionsOrderInformationPassenger.
+        Passenger's nationality country. Use the two character ISO Standard Country Codes.
+
+        :return: The nationality of this Riskv1decisionsOrderInformationPassenger.
+        :rtype: str
+        """
+        return self._nationality
+
+    @nationality.setter
+    def nationality(self, nationality):
+        """
+        Sets the nationality of this Riskv1decisionsOrderInformationPassenger.
+        Passenger's nationality country. Use the two character ISO Standard Country Codes.
+
+        :param nationality: The nationality of this Riskv1decisionsOrderInformationPassenger.
+        :type: str
+        """
+        if nationality is not None and len(nationality) > 2:
+            raise ValueError("Invalid value for `nationality`, length must be less than or equal to `2`")
+
+        self._nationality = nationality
 
     def to_dict(self):
         """

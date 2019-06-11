@@ -87,7 +87,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def velocity(self):
         """
         Gets the velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules. 
+        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules.  For all possible values, see the `decision_velocity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -98,7 +98,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def velocity(self, velocity):
         """
         Sets the velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules. 
+        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules.  For all possible values, see the `decision_velocity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param velocity: The velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -110,7 +110,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def address(self):
         """
         Gets the address of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses.
+        Indicates a mismatch between the customer’s billing and shipping addresses.  For all possible values, see the `score_address_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The address of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -121,7 +121,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def address(self, address):
         """
         Sets the address of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses.
+        Indicates a mismatch between the customer’s billing and shipping addresses.  For all possible values, see the `score_address_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param address: The address of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -133,7 +133,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def customer_list(self):
         """
         Gets the customer_list of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that customer information is associated with transactions that are either on the negative or the positive list. 
+        Indicates that customer information is associated with transactions that are either on the negative or the positive list.  For all possible values, see the `score_hotlist_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The customer_list of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -144,7 +144,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def customer_list(self, customer_list):
         """
         Sets the customer_list of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that customer information is associated with transactions that are either on the negative or the positive list. 
+        Indicates that customer information is associated with transactions that are either on the negative or the positive list.  For all possible values, see the `score_hotlist_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param customer_list: The customer_list of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -156,7 +156,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def identity_change(self):
         """
         Gets the identity_change of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^). 
+        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^).  For all possible values, see the `score_identity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The identity_change of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -167,7 +167,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def identity_change(self, identity_change):
         """
         Sets the identity_change of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^). 
+        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^).  For all possible values, see the `score_identity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param identity_change: The identity_change of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -179,7 +179,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self):
         """
         Gets the internet of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address.
+        Indicates a problem with the customer’s email address, IP address, or billing address.  For all possible values, see the `score_internet_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The internet of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -190,7 +190,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self, internet):
         """
         Sets the internet of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address.
+        Indicates a problem with the customer’s email address, IP address, or billing address.  For all possible values, see the `score_internet_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param internet: The internet of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -202,7 +202,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self):
         """
         Gets the phone of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number.
+        Indicates a problem with the customer’s phone number.  For all possible values, see the `score_phone_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The phone of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -213,7 +213,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self, phone):
         """
         Sets the phone of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number.
+        Indicates a problem with the customer’s phone number.  For all possible values, see the `score_phone_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param phone: The phone of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -225,7 +225,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def suspicious(self):
         """
         Gets the suspicious of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer provided potentially suspicious information.
+        Indicates that the customer provided potentially suspicious information.  For all possible values, see the `score_suspicious_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The suspicious of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -236,7 +236,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def suspicious(self, suspicious):
         """
         Sets the suspicious of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer provided potentially suspicious information.
+        Indicates that the customer provided potentially suspicious information.  For all possible values, see the `score_suspicious_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param suspicious: The suspicious of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -248,7 +248,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def global_velocity(self):
         """
         Gets the global_velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer has a high purchase frequency.
+        Indicates that the customer has a high purchase frequency.  For all possible values, see the `score_velocity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The global_velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -259,7 +259,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationInfoCodes(object):
     def global_velocity(self, global_velocity):
         """
         Sets the global_velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer has a high purchase frequency.
+        Indicates that the customer has a high purchase frequency.  For all possible values, see the `score_velocity_info` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param global_velocity: The global_velocity of this RiskV1DecisionsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]

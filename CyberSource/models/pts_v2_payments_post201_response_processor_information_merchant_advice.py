@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Reason the recurring payment transaction was declined. For some processors, this field is used only for Mastercard. For other processors, this field is used for Visa and Mastercard. And for other processors, this field is not implemented.  Possible values:   - **00**: Response not provided.  - **01**: New account information is available. Obtain the new information.  - **02**: Try again later.  - **03**: Do not try again. Obtain another type of payment from the customer.  - **04**: Problem with a token or a partial shipment indicator.  - **21**: Recurring payment cancellation service.  - **99**: An unknown value was returned from the processor. 
+        Reason the recurring payment transaction was declined. For some processors, this field is used only for Mastercard. For other processors, this field is used for Visa and Mastercard. And for other processors, this field is not implemented.  Possible values:   - `00`: Response not provided.  - `01`: New account information is available. Obtain the new information.  - `02`: Try again later.  - `03`: Do not try again. Obtain another type of payment from the customer.  - `04`: Problem with a token or a partial shipment indicator.  - `21`: Recurring payment cancellation service.  - `99`: An unknown value was returned from the processor.  For processor-specific information, see the `auth_merchant_advice_code` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The code of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Reason the recurring payment transaction was declined. For some processors, this field is used only for Mastercard. For other processors, this field is used for Visa and Mastercard. And for other processors, this field is not implemented.  Possible values:   - **00**: Response not provided.  - **01**: New account information is available. Obtain the new information.  - **02**: Try again later.  - **03**: Do not try again. Obtain another type of payment from the customer.  - **04**: Problem with a token or a partial shipment indicator.  - **21**: Recurring payment cancellation service.  - **99**: An unknown value was returned from the processor. 
+        Reason the recurring payment transaction was declined. For some processors, this field is used only for Mastercard. For other processors, this field is used for Visa and Mastercard. And for other processors, this field is not implemented.  Possible values:   - `00`: Response not provided.  - `01`: New account information is available. Obtain the new information.  - `02`: Try again later.  - `03`: Do not try again. Obtain another type of payment from the customer.  - `04`: Problem with a token or a partial shipment indicator.  - `21`: Recurring payment cancellation service.  - `99`: An unknown value was returned from the processor.  For processor-specific information, see the `auth_merchant_advice_code` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :type: str
@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code_raw(self):
         """
         Gets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  For processor-specific information, see the auth_merchant_advice_code_raw field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code_raw(self, code_raw):
         """
         Sets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  For processor-specific information, see the auth_merchant_advice_code_raw field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :type: str

@@ -56,7 +56,7 @@ class TokenizeRequest(object):
     def key_id(self):
         """
         Gets the key_id of this TokenizeRequest.
-        Unique identifier for the generated token. This is obtained from the Generate Key request. See the [Java Script and Java examples] (http://apps.cybersource.com/library/documentation/dev_guides/Secure_Acceptance_Flex/Key/html) on how to import the key and encrypt using the imported key.
+        Unique identifier for the generated token. This is obtained from the Generate Key request. See the [Java Script and Java examples](http://apps.cybersource.com/library/documentation/dev_guides/Secure_Acceptance_Flex/Key/html) on how to import the key and encrypt using the imported key.
 
         :return: The key_id of this TokenizeRequest.
         :rtype: str
@@ -67,7 +67,7 @@ class TokenizeRequest(object):
     def key_id(self, key_id):
         """
         Sets the key_id of this TokenizeRequest.
-        Unique identifier for the generated token. This is obtained from the Generate Key request. See the [Java Script and Java examples] (http://apps.cybersource.com/library/documentation/dev_guides/Secure_Acceptance_Flex/Key/html) on how to import the key and encrypt using the imported key.
+        Unique identifier for the generated token. This is obtained from the Generate Key request. See the [Java Script and Java examples](http://apps.cybersource.com/library/documentation/dev_guides/Secure_Acceptance_Flex/Key/html) on how to import the key and encrypt using the imported key.
 
         :param key_id: The key_id of this TokenizeRequest.
         :type: str

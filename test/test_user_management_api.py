@@ -35,7 +35,7 @@ class TestUserManagementApi(unittest.TestCase):
         """
         Test case for get_users
 
-        Get user based on organization Id, username, permission and role
+        Get user information
         """
         pass
 

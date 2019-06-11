@@ -83,7 +83,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationScore(object):
     def model_used(self):
         """
         Gets the model_used of this RiskV1DecisionsPost201ResponseRiskInformationScore.
-        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model. 
+        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The model_used of this RiskV1DecisionsPost201ResponseRiskInformationScore.
         :rtype: str
@@ -94,7 +94,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationScore(object):
     def model_used(self, model_used):
         """
         Sets the model_used of this RiskV1DecisionsPost201ResponseRiskInformationScore.
-        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model. 
+        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param model_used: The model_used of this RiskV1DecisionsPost201ResponseRiskInformationScore.
         :type: str
@@ -108,7 +108,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationScore(object):
     def result(self):
         """
         Gets the result of this RiskV1DecisionsPost201ResponseRiskInformationScore.
-        Total score calculated for this order. The value cannot be negative. 
+        Total score calculated for this order. The value cannot be negative.  For all possible values, see the `score_score_result` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The result of this RiskV1DecisionsPost201ResponseRiskInformationScore.
         :rtype: str
@@ -119,7 +119,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationScore(object):
     def result(self, result):
         """
         Sets the result of this RiskV1DecisionsPost201ResponseRiskInformationScore.
-        Total score calculated for this order. The value cannot be negative. 
+        Total score calculated for this order. The value cannot be negative.  For all possible values, see the `score_score_result` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param result: The result of this RiskV1DecisionsPost201ResponseRiskInformationScore.
         :type: str

@@ -52,7 +52,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationCard(object):
     def suffix(self):
         """
         Gets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationCard.
-        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
+        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder.  **Note** This field is returned only for CyberSource through VisaNet and FDC Nashville Global.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 85 - Field: American Express last 4 PAN return indicator. 
 
         :return: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationCard.
         :rtype: str
@@ -63,7 +63,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationCard(object):
     def suffix(self, suffix):
         """
         Sets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationCard.
-        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder. 
+        Last four digits of the cardholder’s account number. This field is returned only for tokenized transactions. You can use this value on the receipt that you give to the cardholder.  **Note** This field is returned only for CyberSource through VisaNet and FDC Nashville Global.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCRB - Position: 85 - Field: American Express last 4 PAN return indicator. 
 
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationCard.
         :type: str

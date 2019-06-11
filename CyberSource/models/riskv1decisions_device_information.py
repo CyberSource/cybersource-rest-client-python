@@ -77,7 +77,7 @@ class Riskv1decisionsDeviceInformation(object):
     def cookies_accepted(self):
         """
         Gets the cookies_accepted of this Riskv1decisionsDeviceInformation.
-        Boolean that indicates whether the customer’s browser accepts cookies. This field can contain one of the following values:   - `yes`: The customer’s browser accepts cookies.   - `no`: The customer’s browser does not accept cookies. 
+        Whether the customer’s browser accepts cookies. This field can contain one of the following values: - `yes`: The customer’s browser accepts cookies. - `no`: The customer’s browser does not accept cookies. 
 
         :return: The cookies_accepted of this Riskv1decisionsDeviceInformation.
         :rtype: str
@@ -88,7 +88,7 @@ class Riskv1decisionsDeviceInformation(object):
     def cookies_accepted(self, cookies_accepted):
         """
         Sets the cookies_accepted of this Riskv1decisionsDeviceInformation.
-        Boolean that indicates whether the customer’s browser accepts cookies. This field can contain one of the following values:   - `yes`: The customer’s browser accepts cookies.   - `no`: The customer’s browser does not accept cookies. 
+        Whether the customer’s browser accepts cookies. This field can contain one of the following values: - `yes`: The customer’s browser accepts cookies. - `no`: The customer’s browser does not accept cookies. 
 
         :param cookies_accepted: The cookies_accepted of this Riskv1decisionsDeviceInformation.
         :type: str
@@ -100,7 +100,7 @@ class Riskv1decisionsDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this Riskv1decisionsDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :return: The ip_address of this Riskv1decisionsDeviceInformation.
         :rtype: str
@@ -111,7 +111,7 @@ class Riskv1decisionsDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this Riskv1decisionsDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :param ip_address: The ip_address of this Riskv1decisionsDeviceInformation.
         :type: str
@@ -125,7 +125,7 @@ class Riskv1decisionsDeviceInformation(object):
     def host_name(self):
         """
         Gets the host_name of this Riskv1decisionsDeviceInformation.
-        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
+        DNS resolved hostname from `ipAddress`.
 
         :return: The host_name of this Riskv1decisionsDeviceInformation.
         :rtype: str
@@ -136,7 +136,7 @@ class Riskv1decisionsDeviceInformation(object):
     def host_name(self, host_name):
         """
         Sets the host_name of this Riskv1decisionsDeviceInformation.
-        Host name reported by the customer’s browser to your Web server identified via the HTTP header.
+        DNS resolved hostname from `ipAddress`.
 
         :param host_name: The host_name of this Riskv1decisionsDeviceInformation.
         :type: str
@@ -150,7 +150,7 @@ class Riskv1decisionsDeviceInformation(object):
     def fingerprint_session_id(self):
         """
         Gets the fingerprint_session_id of this Riskv1decisionsDeviceInformation.
-        Contains the session ID that you send to Decision Manager to obtain the device fingerprint information. The string can contain uppercase and lowercase letters, digits, hyphen (-), and underscore (_). However, do not use the same uppercase and lowercase letters to indicate different session IDs. The session ID must be unique for each merchant ID. You can use any string that you are already generating, such as an order number or web session ID.The session ID must be unique for each page load, regardless of an individual’s web session ID. If the same user navigates to a profiled page and is assigned a web session, navigates away from the profiled page, then navigates back to the profiled page, the generated session ID should be different and unique. An example of an ideal session ID would be a web session ID plus the timestamp. This measure ensures that a unique ID is generated every time the page is loaded, even if it is the same user reloading the page. 
+        Field that contains the session ID that you send to Decision Manager to obtain the device fingerprint information. The string can contain uppercase and lowercase letters, digits, hyphen (-), and underscore (_). However, do not use the same uppercase and lowercase letters to indicate different session IDs.  The session ID must be unique for each merchant ID. You can use any string that you are already generating, such as an order number or web session ID.  The session ID must be unique for each page load, regardless of an individual’s web session ID. If a user navigates to a profiled page and is assigned a web session, navigates away from the profiled page, then navigates back to the profiled page, the generated session ID should be different and unique. You may use a web session ID, but it is preferable to use an application GUID (Globally Unique Identifier). This measure ensures that a unique ID is generated every time the page is loaded, even if it is the same user reloading the page. 
 
         :return: The fingerprint_session_id of this Riskv1decisionsDeviceInformation.
         :rtype: str
@@ -161,7 +161,7 @@ class Riskv1decisionsDeviceInformation(object):
     def fingerprint_session_id(self, fingerprint_session_id):
         """
         Sets the fingerprint_session_id of this Riskv1decisionsDeviceInformation.
-        Contains the session ID that you send to Decision Manager to obtain the device fingerprint information. The string can contain uppercase and lowercase letters, digits, hyphen (-), and underscore (_). However, do not use the same uppercase and lowercase letters to indicate different session IDs. The session ID must be unique for each merchant ID. You can use any string that you are already generating, such as an order number or web session ID.The session ID must be unique for each page load, regardless of an individual’s web session ID. If the same user navigates to a profiled page and is assigned a web session, navigates away from the profiled page, then navigates back to the profiled page, the generated session ID should be different and unique. An example of an ideal session ID would be a web session ID plus the timestamp. This measure ensures that a unique ID is generated every time the page is loaded, even if it is the same user reloading the page. 
+        Field that contains the session ID that you send to Decision Manager to obtain the device fingerprint information. The string can contain uppercase and lowercase letters, digits, hyphen (-), and underscore (_). However, do not use the same uppercase and lowercase letters to indicate different session IDs.  The session ID must be unique for each merchant ID. You can use any string that you are already generating, such as an order number or web session ID.  The session ID must be unique for each page load, regardless of an individual’s web session ID. If a user navigates to a profiled page and is assigned a web session, navigates away from the profiled page, then navigates back to the profiled page, the generated session ID should be different and unique. You may use a web session ID, but it is preferable to use an application GUID (Globally Unique Identifier). This measure ensures that a unique ID is generated every time the page is loaded, even if it is the same user reloading the page. 
 
         :param fingerprint_session_id: The fingerprint_session_id of this Riskv1decisionsDeviceInformation.
         :type: str
@@ -196,7 +196,7 @@ class Riskv1decisionsDeviceInformation(object):
     def user_agent(self):
         """
         Gets the user_agent of this Riskv1decisionsDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, Mozilla is the value that identifies the Netscape browser. 
+        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :return: The user_agent of this Riskv1decisionsDeviceInformation.
         :rtype: str
@@ -207,7 +207,7 @@ class Riskv1decisionsDeviceInformation(object):
     def user_agent(self, user_agent):
         """
         Sets the user_agent of this Riskv1decisionsDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, Mozilla is the value that identifies the Netscape browser. 
+        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :param user_agent: The user_agent of this Riskv1decisionsDeviceInformation.
         :type: str

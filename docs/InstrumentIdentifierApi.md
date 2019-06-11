@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_instrument_identifier**](InstrumentIdentifierApi.md#create_instrument_identifier) | **POST** /tms/v1/instrumentidentifiers | Create an Instrument Identifier
 [**delete_instrument_identifier**](InstrumentIdentifierApi.md#delete_instrument_identifier) | **DELETE** /tms/v1/instrumentidentifiers/{tokenId} | Delete an Instrument Identifier
-[**get_all_payment_instruments**](InstrumentIdentifierApi.md#get_all_payment_instruments) | **GET** /tms/v1/instrumentidentifiers/{tokenId}/paymentinstruments | Retrieve all Payment Instruments associated with an Instrument Identifier
+[**get_all_payment_instruments**](InstrumentIdentifierApi.md#get_all_payment_instruments) | **GET** /tms/v1/instrumentidentifiers/{tokenId}/paymentinstruments | Retrieve all Payment Instruments
 [**get_instrument_identifier**](InstrumentIdentifierApi.md#get_instrument_identifier) | **GET** /tms/v1/instrumentidentifiers/{tokenId} | Retrieve an Instrument Identifier
 [**update_instrument_identifier**](InstrumentIdentifierApi.md#update_instrument_identifier) | **PATCH** /tms/v1/instrumentidentifiers/{tokenId} | Update a Instrument Identifier
 
@@ -109,7 +109,7 @@ No authorization required
 # **get_all_payment_instruments**
 > TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response get_all_payment_instruments(profile_id, token_id, offset=offset, limit=limit)
 
-Retrieve all Payment Instruments associated with an Instrument Identifier
+Retrieve all Payment Instruments
 
 ### Example 
 ```python
@@ -127,7 +127,7 @@ offset = 0 # int | Starting Payment Instrument record in zero-based dataset that
 limit = 20 # int | The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. (optional) (default to 20)
 
 try: 
-    # Retrieve all Payment Instruments associated with an Instrument Identifier
+    # Retrieve all Payment Instruments
     api_response = api_instance.get_all_payment_instruments(profile_id, token_id, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:

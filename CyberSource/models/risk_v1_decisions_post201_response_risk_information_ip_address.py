@@ -32,39 +32,39 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     """
     swagger_types = {
         'anonymizer_status': 'str',
-        'city': 'str',
+        'locality': 'str',
         'country': 'str',
-        'state': 'str',
+        'administrative_area': 'str',
         'routing_method': 'str'
     }
 
     attribute_map = {
         'anonymizer_status': 'anonymizerStatus',
-        'city': 'city',
+        'locality': 'locality',
         'country': 'country',
-        'state': 'state',
+        'administrative_area': 'administrativeArea',
         'routing_method': 'routingMethod'
     }
 
-    def __init__(self, anonymizer_status=None, city=None, country=None, state=None, routing_method=None):
+    def __init__(self, anonymizer_status=None, locality=None, country=None, administrative_area=None, routing_method=None):
         """
         RiskV1DecisionsPost201ResponseRiskInformationIpAddress - a model defined in Swagger
         """
 
         self._anonymizer_status = None
-        self._city = None
+        self._locality = None
         self._country = None
-        self._state = None
+        self._administrative_area = None
         self._routing_method = None
 
         if anonymizer_status is not None:
           self.anonymizer_status = anonymizer_status
-        if city is not None:
-          self.city = city
+        if locality is not None:
+          self.locality = locality
         if country is not None:
           self.country = country
-        if state is not None:
-          self.state = state
+        if administrative_area is not None:
+          self.administrative_area = administrative_area
         if routing_method is not None:
           self.routing_method = routing_method
 
@@ -72,7 +72,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def anonymizer_status(self):
         """
         Gets the anonymizer_status of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Indicates whether the transaction IP address is associated with a known anonymous proxy. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/)- Look for 'Reply Fields': \"afsReply_ipAnonymizerStatus\". 
+        Indicates whether the transaction IP address is associated with a known anonymous proxy.  For all possible values, see the `score_ip_anonymizer_status` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The anonymizer_status of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
@@ -83,7 +83,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def anonymizer_status(self, anonymizer_status):
         """
         Sets the anonymizer_status of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Indicates whether the transaction IP address is associated with a known anonymous proxy. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/)- Look for 'Reply Fields': \"afsReply_ipAnonymizerStatus\". 
+        Indicates whether the transaction IP address is associated with a known anonymous proxy.  For all possible values, see the `score_ip_anonymizer_status` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param anonymizer_status: The anonymizer_status of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str
@@ -94,35 +94,35 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
         self._anonymizer_status = anonymizer_status
 
     @property
-    def city(self):
+    def locality(self):
         """
-        Gets the city of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the city decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Gets the locality of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Name of the city decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_city` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
-        :return: The city of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :return: The locality of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
         """
-        return self._city
+        return self._locality
 
-    @city.setter
-    def city(self, city):
+    @locality.setter
+    def locality(self, locality):
         """
-        Sets the city of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the city decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Sets the locality of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Name of the city decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_city` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
-        :param city: The city of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :param locality: The locality of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if city is not None and len(city) > 255:
-            raise ValueError("Invalid value for `city`, length must be less than or equal to `255`")
+        if locality is not None and len(locality) > 255:
+            raise ValueError("Invalid value for `locality`, length must be less than or equal to `255`")
 
-        self._city = city
+        self._locality = locality
 
     @property
     def country(self):
         """
         Gets the country of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The country of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
@@ -133,7 +133,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def country(self, country):
         """
         Sets the country of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param country: The country of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str
@@ -144,35 +144,35 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
         self._country = country
 
     @property
-    def state(self):
+    def administrative_area(self):
         """
-        Gets the state of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the state decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Gets the administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
-        :return: The state of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :return: The administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
         """
-        return self._state
+        return self._administrative_area
 
-    @state.setter
-    def state(self, state):
+    @administrative_area.setter
+    def administrative_area(self, administrative_area):
         """
-        Sets the state of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the state decoded from the IP address used directly or indirectly by the customer to send the order. 
+        Sets the administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
-        :param state: The state of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :param administrative_area: The administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if state is not None and len(state) > 255:
-            raise ValueError("Invalid value for `state`, length must be less than or equal to `255`")
+        if administrative_area is not None and len(administrative_area) > 255:
+            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `255`")
 
-        self._state = state
+        self._administrative_area = administrative_area
 
     @property
     def routing_method(self):
         """
         Gets the routing_method of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Routing method decoded from the IP address used directly or indirectly by the customer to send the order. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/)- Look for 'Reply Fields': \"afsService_ipRoutingMethod \". 
+        Routing method decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_routing_method` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The routing_method of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
@@ -183,7 +183,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def routing_method(self, routing_method):
         """
         Sets the routing_method of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Routing method decoded from the IP address used directly or indirectly by the customer to send the order. For all possible values, Please refer to Simple Order API Developer Guide on [CyberSource Business Center](https://ebc2.cybersource.com/ebc2/)- Look for 'Reply Fields': \"afsService_ipRoutingMethod \". 
+        Routing method decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_routing_method` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param routing_method: The routing_method of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str

@@ -37,6 +37,7 @@ class RiskV1DecisionsPost201Response(object):
         'submit_time_local': 'str',
         'status': 'str',
         'risk_information': 'RiskV1DecisionsPost201ResponseRiskInformation',
+        'payment_information': 'RiskV1DecisionsPost201ResponsePaymentInformation',
         'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation'
     }
 
@@ -47,10 +48,11 @@ class RiskV1DecisionsPost201Response(object):
         'submit_time_local': 'submitTimeLocal',
         'status': 'status',
         'risk_information': 'riskInformation',
+        'payment_information': 'paymentInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, risk_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, risk_information=None, payment_information=None, error_information=None):
         """
         RiskV1DecisionsPost201Response - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class RiskV1DecisionsPost201Response(object):
         self._submit_time_local = None
         self._status = None
         self._risk_information = None
+        self._payment_information = None
         self._error_information = None
 
         if links is not None:
@@ -75,6 +78,8 @@ class RiskV1DecisionsPost201Response(object):
           self.status = status
         if risk_information is not None:
           self.risk_information = risk_information
+        if payment_information is not None:
+          self.payment_information = payment_information
         if error_information is not None:
           self.error_information = error_information
 
@@ -213,6 +218,27 @@ class RiskV1DecisionsPost201Response(object):
         """
 
         self._risk_information = risk_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this RiskV1DecisionsPost201Response.
+
+        :return: The payment_information of this RiskV1DecisionsPost201Response.
+        :rtype: RiskV1DecisionsPost201ResponsePaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this RiskV1DecisionsPost201Response.
+
+        :param payment_information: The payment_information of this RiskV1DecisionsPost201Response.
+        :type: RiskV1DecisionsPost201ResponsePaymentInformation
+        """
+
+        self._payment_information = payment_information
 
     @property
     def error_information(self):

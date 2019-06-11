@@ -52,7 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :return: The ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
         :rtype: str
@@ -63,7 +63,7 @@ class TssV2TransactionsPost201ResponseEmbeddedDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
-        Customer’s IP address, such as 10.1.27.63, reported by your Web server via socket information. 
+        IP address of the customer. 
 
         :param ip_address: The ip_address of this TssV2TransactionsPost201ResponseEmbeddedDeviceInformation.
         :type: str

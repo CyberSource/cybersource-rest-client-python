@@ -151,7 +151,7 @@ class SearchTransactionsApi(object):
     def get_search(self, search_id, **kwargs):
         """
         Get Search results
-        Include the Search ID in the GET request to retrieve the search results. 
+        Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -177,7 +177,7 @@ class SearchTransactionsApi(object):
     def get_search_with_http_info(self, search_id, **kwargs):
         """
         Get Search results
-        Include the Search ID in the GET request to retrieve the search results. 
+        Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
