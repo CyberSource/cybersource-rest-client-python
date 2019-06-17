@@ -34,7 +34,7 @@ class Riskv1decisionsOrderInformation(object):
         'amount_details': 'Riskv1decisionsOrderInformationAmountDetails',
         'shipping_details': 'Riskv1decisionsOrderInformationShippingDetails',
         'ship_to': 'Riskv1decisionsOrderInformationShipTo',
-        'returns_accepted': 'str',
+        'returns_accepted': 'bool',
         'line_items': 'list[Riskv1decisionsOrderInformationLineItems]',
         'bill_to': 'Riskv1decisionsOrderInformationBillTo'
     }
@@ -140,10 +140,10 @@ class Riskv1decisionsOrderInformation(object):
     def returns_accepted(self):
         """
         Gets the returns_accepted of this Riskv1decisionsOrderInformation.
-        Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - `yes`: Returns are accepted for this order. - `no`: Returns are not accepted for this order. 
+        Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - true: Returns are accepted for this order. - false: Returns are not accepted for this order. 
 
         :return: The returns_accepted of this Riskv1decisionsOrderInformation.
-        :rtype: str
+        :rtype: bool
         """
         return self._returns_accepted
 
@@ -151,13 +151,11 @@ class Riskv1decisionsOrderInformation(object):
     def returns_accepted(self, returns_accepted):
         """
         Sets the returns_accepted of this Riskv1decisionsOrderInformation.
-        Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - `yes`: Returns are accepted for this order. - `no`: Returns are not accepted for this order. 
+        Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - true: Returns are accepted for this order. - false: Returns are not accepted for this order. 
 
         :param returns_accepted: The returns_accepted of this Riskv1decisionsOrderInformation.
-        :type: str
+        :type: bool
         """
-        if returns_accepted is not None and len(returns_accepted) > 3:
-            raise ValueError("Invalid value for `returns_accepted`, length must be less than or equal to `3`")
 
         self._returns_accepted = returns_accepted
 

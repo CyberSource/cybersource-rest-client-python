@@ -87,7 +87,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def developer_id(self):
         """
         Gets the developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the developer that helped integrate a partner solution to CyberSource.  Send this value in all requests that are sent through the partner solutions built by that developer. CyberSource assigns the ID to the developer.  Note When you see a developer ID of 999 in reports, the developer ID that was submitted is incorrect. 
+        Identifier for the developer that helped integrate a partner solution to CyberSource.  Send this value in all requests that are sent through the partner solutions built by that developer. CyberSource assigns the ID to the developer.  **Note** When you see a developer ID of 999 in reports, the developer ID that was submitted is incorrect. 
 
         :return: The developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :rtype: str
@@ -98,7 +98,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def developer_id(self, developer_id):
         """
         Sets the developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the developer that helped integrate a partner solution to CyberSource.  Send this value in all requests that are sent through the partner solutions built by that developer. CyberSource assigns the ID to the developer.  Note When you see a developer ID of 999 in reports, the developer ID that was submitted is incorrect. 
+        Identifier for the developer that helped integrate a partner solution to CyberSource.  Send this value in all requests that are sent through the partner solutions built by that developer. CyberSource assigns the ID to the developer.  **Note** When you see a developer ID of 999 in reports, the developer ID that was submitted is incorrect. 
 
         :param developer_id: The developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
@@ -112,7 +112,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def solution_id(self):
         """
         Gets the solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  Note When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
+        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
 
         :return: The solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def solution_id(self, solution_id):
         """
         Sets the solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  Note When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
+        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
 
         :param solution_id: The solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str

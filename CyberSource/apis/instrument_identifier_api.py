@@ -278,7 +278,7 @@ class InstrumentIdentifierApi(object):
 
     def get_all_payment_instruments(self, profile_id, token_id, **kwargs):
         """
-        Retrieve all Payment Instruments associated with an Instrument Identifier
+        Retrieve all Payment Instruments
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -306,7 +306,7 @@ class InstrumentIdentifierApi(object):
 
     def get_all_payment_instruments_with_http_info(self, profile_id, token_id, **kwargs):
         """
-        Retrieve all Payment Instruments associated with an Instrument Identifier
+        Retrieve all Payment Instruments
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

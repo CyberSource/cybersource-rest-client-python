@@ -82,7 +82,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def name(self):
         """
         Gets the name of this Ptsv2paymentsOrderInformationBillToCompany.
-        Name of the customer’s company.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Name of the customer’s company.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  For processor-specific information, see the `company_name` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The name of this Ptsv2paymentsOrderInformationBillToCompany.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsOrderInformationBillToCompany.
-        Name of the customer’s company.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Name of the customer’s company.  **CyberSource through VisaNet** Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  For processor-specific information, see the `company_name` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param name: The name of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str
@@ -207,7 +207,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2paymentsOrderInformationBillToCompany.
-        Postal code in the address of the company purchasing the product. The postal code must consist of 5 to 9 digits.  When the company country is the U.S., the 9-digit postal code must follow this format: **[5 digits][dash][4 digits]** Example 12345-6789  When the company country is Canada, the 6-digit postal code must follow this format: **[alpha][numeric][alpha][space][numeric][alpha][numeric]** Example A1B 2C3 
+        Postal code in the address of the company purchasing the product. The postal code must consist of 5 to 9 digits.  When the company country is the U.S., the 9-digit postal code must follow this format: **[5 digits][dash][4 digits]** #### Example `12345-6789`  When the company country is Canada, the 6-digit postal code must follow this format: **[alpha][numeric][alpha][space][numeric][alpha][numeric]** #### Example `A1B 2C3` 
 
         :return: The postal_code of this Ptsv2paymentsOrderInformationBillToCompany.
         :rtype: str
@@ -218,7 +218,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv2paymentsOrderInformationBillToCompany.
-        Postal code in the address of the company purchasing the product. The postal code must consist of 5 to 9 digits.  When the company country is the U.S., the 9-digit postal code must follow this format: **[5 digits][dash][4 digits]** Example 12345-6789  When the company country is Canada, the 6-digit postal code must follow this format: **[alpha][numeric][alpha][space][numeric][alpha][numeric]** Example A1B 2C3 
+        Postal code in the address of the company purchasing the product. The postal code must consist of 5 to 9 digits.  When the company country is the U.S., the 9-digit postal code must follow this format: **[5 digits][dash][4 digits]** #### Example `12345-6789`  When the company country is Canada, the 6-digit postal code must follow this format: **[alpha][numeric][alpha][space][numeric][alpha][numeric]** #### Example `A1B 2C3` 
 
         :param postal_code: The postal_code of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str
@@ -232,7 +232,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsOrderInformationBillToCompany.
-        Country in the address of the company purchasing the product. Use the two-character ISO Standard Country Codes. 
+        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
 
         :return: The country of this Ptsv2paymentsOrderInformationBillToCompany.
         :rtype: str
@@ -243,7 +243,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsOrderInformationBillToCompany.
-        Country in the address of the company purchasing the product. Use the two-character ISO Standard Country Codes. 
+        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
 
         :param country: The country of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str

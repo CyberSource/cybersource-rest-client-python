@@ -32,32 +32,37 @@ class Riskv1decisionsTravelInformationLegs(object):
     """
     swagger_types = {
         'origination': 'str',
-        'destination': 'str'
+        'destination': 'str',
+        'departure_date_time': 'str'
     }
 
     attribute_map = {
         'origination': 'origination',
-        'destination': 'destination'
+        'destination': 'destination',
+        'departure_date_time': 'departureDateTime'
     }
 
-    def __init__(self, origination=None, destination=None):
+    def __init__(self, origination=None, destination=None, departure_date_time=None):
         """
         Riskv1decisionsTravelInformationLegs - a model defined in Swagger
         """
 
         self._origination = None
         self._destination = None
+        self._departure_date_time = None
 
         if origination is not None:
           self.origination = origination
         if destination is not None:
           self.destination = destination
+        if departure_date_time is not None:
+          self.departure_date_time = departure_date_time
 
     @property
     def origination(self):
         """
         Gets the origination of this Riskv1decisionsTravelInformationLegs.
-        Use to specify the airport code for the origin of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: decision_manager_travel_leg0_orig=SFO decision_manager_travel_leg1_orig=SFO Note In your request, send either the complete route or the individual legs (_leg#_orig and _leg#_dest). If you send all the fields, the complete route takes precedence over the individual legs. 
+        Use to specify the airport code for the origin of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: `travelInformation.legs.0.origination=SFO` `travelInformation.legs.1.origination=SFO`  **Note** In your request, send either the complete route or the individual legs (`legs.0.origination` and `legs.n.destination`). If you send all the fields, the complete route takes precedence over the individual legs.  For details, see the `decision_manager_travel_leg#_orig` field description in [Decision Manager Using the SCMP API Developer Guide.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :return: The origination of this Riskv1decisionsTravelInformationLegs.
         :rtype: str
@@ -68,7 +73,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def origination(self, origination):
         """
         Sets the origination of this Riskv1decisionsTravelInformationLegs.
-        Use to specify the airport code for the origin of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: decision_manager_travel_leg0_orig=SFO decision_manager_travel_leg1_orig=SFO Note In your request, send either the complete route or the individual legs (_leg#_orig and _leg#_dest). If you send all the fields, the complete route takes precedence over the individual legs. 
+        Use to specify the airport code for the origin of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: `travelInformation.legs.0.origination=SFO` `travelInformation.legs.1.origination=SFO`  **Note** In your request, send either the complete route or the individual legs (`legs.0.origination` and `legs.n.destination`). If you send all the fields, the complete route takes precedence over the individual legs.  For details, see the `decision_manager_travel_leg#_orig` field description in [Decision Manager Using the SCMP API Developer Guide.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :param origination: The origination of this Riskv1decisionsTravelInformationLegs.
         :type: str
@@ -82,7 +87,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def destination(self):
         """
         Gets the destination of this Riskv1decisionsTravelInformationLegs.
-        Use to specify the airport code for the destination of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: decision_manager_travel_leg0_dest=SFO decision_manager_travel_leg1_dest=SFO Note In your request, send either the complete route or the individual legs (_leg#_orig and _leg#_dest). If you send all the fields, the complete route takes precedence over the individual legs. 
+        Use to specify the airport code for the destination of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see [IATA Airline and Airport Code Search](https://www.iata.org/publications/Pages/code-search.aspx). The leg number can be a positive integer from 0 to N. For example:  `travelInformation.legs.0.destination=SFO` `travelInformation.legs.1.destination=SFO`  **Note** In your request, send either the complete route or the individual legs (`legs.0.origination` and `legs.n.destination`). If you send all the fields, the complete route takes precedence over the individual legs.  For details, see the `decision_manager_travel_leg#_dest` field description in [Decision Manager Using the SCMP API Developer Guide.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :return: The destination of this Riskv1decisionsTravelInformationLegs.
         :rtype: str
@@ -93,7 +98,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def destination(self, destination):
         """
         Sets the destination of this Riskv1decisionsTravelInformationLegs.
-        Use to specify the airport code for the destination of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see the IATA Airline and Airport Code Search. The leg number can be a positive integer from 0 to N. For example: decision_manager_travel_leg0_dest=SFO decision_manager_travel_leg1_dest=SFO Note In your request, send either the complete route or the individual legs (_leg#_orig and _leg#_dest). If you send all the fields, the complete route takes precedence over the individual legs. 
+        Use to specify the airport code for the destination of the leg of the trip, which is designated by the pound (#) symbol in the field name. This code is usually three digits long, for example: SFO = San Francisco. Do not use the colon (:) or the dash (-). For airport codes, see [IATA Airline and Airport Code Search](https://www.iata.org/publications/Pages/code-search.aspx). The leg number can be a positive integer from 0 to N. For example:  `travelInformation.legs.0.destination=SFO` `travelInformation.legs.1.destination=SFO`  **Note** In your request, send either the complete route or the individual legs (`legs.0.origination` and `legs.n.destination`). If you send all the fields, the complete route takes precedence over the individual legs.  For details, see the `decision_manager_travel_leg#_dest` field description in [Decision Manager Using the SCMP API Developer Guide.](https://www.cybersource.com/developers/documentation/fraud_management/) 
 
         :param destination: The destination of this Riskv1decisionsTravelInformationLegs.
         :type: str
@@ -102,6 +107,31 @@ class Riskv1decisionsTravelInformationLegs(object):
             raise ValueError("Invalid value for `destination`, length must be less than or equal to `3`")
 
         self._destination = destination
+
+    @property
+    def departure_date_time(self):
+        """
+        Gets the departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        Departure date and time for the nth leg of the trip. Use one of the following formats:   - yyyy-MM-dd HH:mm z   - yyyy-MM-dd hh:mm a z   - yyyy-MM-dd hh:mma z   `HH` = hour in 24-hour format   `hh` = hour in 12-hour format   `a` = am or pm (case insensitive)   `z` = time zone of the departing flight, for example: If the   airline is based in city A, but the flight departs from city   B, z is the time zone of city B at the time of departure. **Important** For travel information, use GMT instead of UTC, or use the local time zone. #### Examples 2011-03-20 11:30 PM PDT 2011-03-20 11:30pm GMT 2011-03-20 11:30pm GMT-05:00 Eastern Standard Time: GMT-05:00 or EST **Note** When specifying an offset from GMT, the format must be exactly as specified in the example. Insert no spaces between the time zone and the offset. 
+
+        :return: The departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        :rtype: str
+        """
+        return self._departure_date_time
+
+    @departure_date_time.setter
+    def departure_date_time(self, departure_date_time):
+        """
+        Sets the departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        Departure date and time for the nth leg of the trip. Use one of the following formats:   - yyyy-MM-dd HH:mm z   - yyyy-MM-dd hh:mm a z   - yyyy-MM-dd hh:mma z   `HH` = hour in 24-hour format   `hh` = hour in 12-hour format   `a` = am or pm (case insensitive)   `z` = time zone of the departing flight, for example: If the   airline is based in city A, but the flight departs from city   B, z is the time zone of city B at the time of departure. **Important** For travel information, use GMT instead of UTC, or use the local time zone. #### Examples 2011-03-20 11:30 PM PDT 2011-03-20 11:30pm GMT 2011-03-20 11:30pm GMT-05:00 Eastern Standard Time: GMT-05:00 or EST **Note** When specifying an offset from GMT, the format must be exactly as specified in the example. Insert no spaces between the time zone and the offset. 
+
+        :param departure_date_time: The departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        :type: str
+        """
+        if departure_date_time is not None and len(departure_date_time) > 25:
+            raise ValueError("Invalid value for `departure_date_time`, length must be less than or equal to `25`")
+
+        self._departure_date_time = departure_date_time
 
     def to_dict(self):
         """

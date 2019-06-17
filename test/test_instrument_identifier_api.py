@@ -51,7 +51,7 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
         """
         Test case for get_all_payment_instruments
 
-        Retrieve all Payment Instruments associated with an Instrument Identifier
+        Retrieve all Payment Instruments
         """
         pass
 

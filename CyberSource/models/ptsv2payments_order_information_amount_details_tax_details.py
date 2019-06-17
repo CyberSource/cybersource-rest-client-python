@@ -82,7 +82,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        This is used to determine what type of tax related data should be inclued under _taxDetails_ object.  Possible values:  - alternate  - local  - national  - vat 
+        Indicates the type of tax data for the _taxDetails_ object.  Possible values: For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -93,12 +93,12 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        This is used to determine what type of tax related data should be inclued under _taxDetails_ object.  Possible values:  - alternate  - local  - national  - vat 
+        Indicates the type of tax data for the _taxDetails_ object.  Possible values: For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param type: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        allowed_values = ["alternate", "local", "national", "vat"]
+        allowed_values = ["alternate", "local", "national", "vat", "other"]
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"
@@ -111,7 +111,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self):
         """
         Gets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Please see below table for related decription based on above _type_ field.  | type      | type description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | | other     | Other tax. | 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | |-----------|--------------------| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of Value Added Tax (VAT) included in the order. | | `other`     | Other tax. |  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -122,7 +122,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Please see below table for related decription based on above _type_ field.  | type      | type description | |-----------|--------------------| | alternate | Total amount of alternate tax for the order. | | local     | Sales tax for the order. | | national  | National tax for the order. | | vat       | Total amount of VAT or other tax included in the order. | | other     | Other tax. | 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | |-----------|--------------------| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of Value Added Tax (VAT) included in the order. | | `other`     | Other tax. |  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -136,7 +136,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def rate(self):
         """
         Gets the rate of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Rate of VAT or other tax for the order.  Example 0.040 (=4%)  Valid range: 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated) 
+        Rate of VAT or other tax for the order.  Example 0.040 (=4%)  Valid range: 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated)  For processor-specific details, see the `alternate_tax_amount`, `vat_rate`, `vat_tax_rate`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_rate` field descriptions in the [Level II and Level III Processing Using the SCMP API Guide.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The rate of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -147,7 +147,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def rate(self, rate):
         """
         Sets the rate of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Rate of VAT or other tax for the order.  Example 0.040 (=4%)  Valid range: 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated) 
+        Rate of VAT or other tax for the order.  Example 0.040 (=4%)  Valid range: 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated)  For processor-specific details, see the `alternate_tax_amount`, `vat_rate`, `vat_tax_rate`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_rate` field descriptions in the [Level II and Level III Processing Using the SCMP API Guide.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param rate: The rate of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -161,7 +161,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item.  For possible values, see the processor-specific field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm):  #### FDC Nashville Global - `alternate_tax_type_applied` - `alternate_tax_type_identifier`  #### Worldpay VAP - `alternate_tax_type_identifier`  #### RBS WorldPay Atlanta - `tax_type_applied`  #### TSYS Acquiring Solutions - `tax_type_applied` - `local_tax_indicator`  #### Chase Paymentech Solutions - `tax_type_applied`  #### Elavon Americas - `local_tax_indicator`  #### FDC Compass - `tax_type_applied`  #### OmniPay Direct - `local_tax_indicator` 
 
         :return: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -172,7 +172,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Type of tax being applied to the item. Possible values:  Below values are used by **RBS WorldPay Atlanta**, **FDC Nashville Global**, **Litle**   - 0000: unknown tax type  - 0001: federal/national sales tax  - 0002: state sales tax  - 0003: city sales tax  - 0004: local sales tax  - 0005: municipal sales tax  - 0006: other tax  - 0010: value-added tax (VAT)  - 0011: goods and services tax (GST)  - 0012: provincial sales tax  - 0013: harmonized sales tax  - 0014: Quebec sales tax (QST)  - 0020: room tax  - 0021: occupancy tax  - 0022: energy tax  - 0023: city tax  - 0024: county or parish sales tax  - 0025: county tax  - 0026: environment tax  - 0027: state and local sales tax (combined)  - Blank: Tax not supported on line item. 
+        Type of tax being applied to the item.  For possible values, see the processor-specific field descriptions in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm):  #### FDC Nashville Global - `alternate_tax_type_applied` - `alternate_tax_type_identifier`  #### Worldpay VAP - `alternate_tax_type_identifier`  #### RBS WorldPay Atlanta - `tax_type_applied`  #### TSYS Acquiring Solutions - `tax_type_applied` - `local_tax_indicator`  #### Chase Paymentech Solutions - `tax_type_applied`  #### Elavon Americas - `local_tax_indicator`  #### FDC Compass - `tax_type_applied`  #### OmniPay Direct - `local_tax_indicator` 
 
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -186,7 +186,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def tax_id(self):
         """
         Gets the tax_id of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Your tax ID number to use for the alternate tax amount. Required if you set alternate tax amount to any value, including zero. You may send this field without sending alternate tax amount. 
+        Your tax ID number to use for the alternate tax amount. Required if you set alternate tax amount to any value, including zero. You may send this field without sending alternate tax amount.  For processor-specific details, see `alternate_tax_id` field description in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The tax_id of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -197,7 +197,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def tax_id(self, tax_id):
         """
         Sets the tax_id of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Your tax ID number to use for the alternate tax amount. Required if you set alternate tax amount to any value, including zero. You may send this field without sending alternate tax amount. 
+        Your tax ID number to use for the alternate tax amount. Required if you set alternate tax amount to any value, including zero. You may send this field without sending alternate tax amount.  For processor-specific details, see `alternate_tax_id` field description in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param tax_id: The tax_id of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -211,7 +211,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def applied(self):
         """
         Gets the applied of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        The tax is applied. Valid value is `true` or `false`.
+        Flag that indicates whether the alternate tax amount (`orderInformation.amountDetails.taxDetails[].amount`) is included in the request.  Possible values: - `false`: alternate tax amount is not included in the request. - `true`: alternate tax amount is included in the request.  For processor-specific details, see `alternate_tax_amount_indicator` field description in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The applied of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: bool
@@ -222,7 +222,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def applied(self, applied):
         """
         Sets the applied of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        The tax is applied. Valid value is `true` or `false`.
+        Flag that indicates whether the alternate tax amount (`orderInformation.amountDetails.taxDetails[].amount`) is included in the request.  Possible values: - `false`: alternate tax amount is not included in the request. - `true`: alternate tax amount is included in the request.  For processor-specific details, see `alternate_tax_amount_indicator` field description in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param applied: The applied of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: bool
@@ -234,7 +234,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def exemption_code(self):
         """
         Gets the exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values, see Exemption Status Values. See Numbered Elements.  Important For information about using this field, see Item-Level Tax Fields. 
+        Status code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values and important information for using this field, see _Appendix B, \"Exemption Status Values_ and _Offer-Level Tax Fields_ in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -245,7 +245,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def exemption_code(self, exemption_code):
         """
         Sets the exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values, see Exemption Status Values. See Numbered Elements.  Important For information about using this field, see Item-Level Tax Fields. 
+        Status code for exemption from sales and use tax. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For possible values and important information for using this field, see _Appendix B, \"Exemption Status Values_ and _Offer-Level Tax Fields_ in [Level II and Level III Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param exemption_code: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str

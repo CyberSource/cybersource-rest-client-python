@@ -31,14 +31,6 @@ class TestTransactionBatchesApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_transaction_batch_details(self):
-        """
-        Test case for get_transaction_batch_details
-
-        Filters batch response. 
-        """
-        pass
-
     def test_get_transaction_batch_id(self):
         """
         Test case for get_transaction_batch_id
@@ -51,7 +43,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batches
 
-        Get a list of batch files
+        Gets a list of batch files
         """
         pass
 

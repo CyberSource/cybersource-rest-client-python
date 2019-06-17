@@ -52,7 +52,7 @@ class TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor(objec
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  For Payouts: * Paymentech (22) 
+        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
 
         :return: The name of this TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -63,7 +63,7 @@ class TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor(objec
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see Merchant Descriptors in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  For Payouts: * Paymentech (22) 
+        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
 
         :param name: The name of this TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor.
         :type: str

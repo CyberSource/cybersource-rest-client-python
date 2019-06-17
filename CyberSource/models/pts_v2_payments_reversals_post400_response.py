@@ -140,7 +140,7 @@ class PtsV2PaymentsReversalsPost400Response(object):
         :param reason: The reason of this PtsV2PaymentsReversalsPost400Response.
         :type: str
         """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_MERCHANT_CONFIGURATION", "AUTH_ALREADY_REVERSED", "MISSING_AUTH", "TRANSACTION_ALREADY_REVERSED_OR_SETTLED"]
+        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_MERCHANT_CONFIGURATION", "PROCESSOR_UNAVAILABLE", "AUTH_ALREADY_REVERSED", "TRANSACTION_ALREADY_SETTLED", "INVALID_AMOUNT", "MISSING_AUTH", "TRANSACTION_ALREADY_REVERSED_OR_SETTLED"]
         if reason not in allowed_values:
             raise ValueError(
                 "Invalid value for `reason` ({0}), must be one of {1}"

@@ -132,7 +132,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_type(self):
         """
         Gets the account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of account. This value is returned only if you requested a balance inquiry. Possible values:   - **00**: Not applicable or not specified  - **10**: Savings account  - **20**: Checking account  - **30**: Credit card account  - **40**: Universal account 
+        Type of account. This value is returned only if you requested a balance inquiry. Possible values:   - `00`: Not applicable or not specified  - `10`: Savings account  - `20`: Checking account  - `30`: Credit card account  - `40`: Universal account 
 
         :return: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -143,7 +143,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_type(self, account_type):
         """
         Sets the account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of account. This value is returned only if you requested a balance inquiry. Possible values:   - **00**: Not applicable or not specified  - **10**: Savings account  - **20**: Checking account  - **30**: Credit card account  - **40**: Universal account 
+        Type of account. This value is returned only if you requested a balance inquiry. Possible values:   - `00`: Not applicable or not specified  - `10`: Savings account  - `20`: Checking account  - `30`: Credit card account  - `40`: Universal account 
 
         :param account_type: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -157,7 +157,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_status(self):
         """
         Gets the account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Possible values:   - **N**: Nonregulated  - **R**: Regulated  `Note` This field is returned only for CyberSource through VisaNet. 
+        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for CyberSource through VisaNet. 
 
         :return: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -168,7 +168,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_status(self, account_status):
         """
         Sets the account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Possible values:   - **N**: Nonregulated  - **R**: Regulated  `Note` This field is returned only for CyberSource through VisaNet. 
+        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for CyberSource through VisaNet. 
 
         :param account_status: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -207,7 +207,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_amount_type(self):
         """
         Gets the balance_amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of amount. This value is returned only if you requested a balance inquiry. The issuer determines the value that is returned. Possible values for deposit accounts:   - **01**: Current ledger (posted) balance.  - **02**: Current available balance, which is typically the ledger balance less outstanding authorizations.  Some depository institutions also include pending deposits and the credit or overdraft line associated with the account. Possible values for credit card accounts:   - **01**: Credit amount remaining for customer (open to buy).  - **02**: Credit limit. 
+        Type of amount. This value is returned only if you requested a balance inquiry. The issuer determines the value that is returned. Possible values for deposit accounts:   - `01`: Current ledger (posted) balance.  - `02`: Current available balance, which is typically the ledger balance less outstanding authorizations.  Some depository institutions also include pending deposits and the credit or overdraft line associated with the account. Possible values for credit card accounts:   - `01`: Credit amount remaining for customer (open to buy).  - `02`: Credit limit. 
 
         :return: The balance_amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -218,7 +218,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_amount_type(self, balance_amount_type):
         """
         Sets the balance_amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of amount. This value is returned only if you requested a balance inquiry. The issuer determines the value that is returned. Possible values for deposit accounts:   - **01**: Current ledger (posted) balance.  - **02**: Current available balance, which is typically the ledger balance less outstanding authorizations.  Some depository institutions also include pending deposits and the credit or overdraft line associated with the account. Possible values for credit card accounts:   - **01**: Credit amount remaining for customer (open to buy).  - **02**: Credit limit. 
+        Type of amount. This value is returned only if you requested a balance inquiry. The issuer determines the value that is returned. Possible values for deposit accounts:   - `01`: Current ledger (posted) balance.  - `02`: Current available balance, which is typically the ledger balance less outstanding authorizations.  Some depository institutions also include pending deposits and the credit or overdraft line associated with the account. Possible values for credit card accounts:   - `01`: Credit amount remaining for customer (open to buy).  - `02`: Credit limit. 
 
         :param balance_amount_type: The balance_amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -232,7 +232,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the ISO Standard Currency Codes. 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `auth_account_balance_currency` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -243,7 +243,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the ISO Standard Currency Codes. 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `auth_account_balance_currency` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -311,7 +311,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def category(self):
         """
         Gets the category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        **CyberSource through VisaNet**  Visa product ID.  **GPN**  Visa or Mastercard product ID.  **Litle**  Type of card used in the transaction. The only possible value is:   - PREPAID: Prepaid Card  **RBS WorldPay Atlanta**  Type of card used in the transaction. Possible values:   - **B**: Business Card  - **O**: Noncommercial Card  - **R**: Corporate Card  - **S**: Purchase Card  - **Blank**: Purchase card not supported  **Maximum length for processors**:   - CyberSource through VisaNet: 3  - GPN: 3  - Litle: 7  - RBS WorldPay Atlanta: 1 
+        #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the Visa Request & Response Codes web page at https://developer.visa.com/guides/request_response_codes. For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
 
         :return: The category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -322,7 +322,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def category(self, category):
         """
         Sets the category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        **CyberSource through VisaNet**  Visa product ID.  **GPN**  Visa or Mastercard product ID.  **Litle**  Type of card used in the transaction. The only possible value is:   - PREPAID: Prepaid Card  **RBS WorldPay Atlanta**  Type of card used in the transaction. Possible values:   - **B**: Business Card  - **O**: Noncommercial Card  - **R**: Corporate Card  - **S**: Purchase Card  - **Blank**: Purchase card not supported  **Maximum length for processors**:   - CyberSource through VisaNet: 3  - GPN: 3  - Litle: 7  - RBS WorldPay Atlanta: 1 
+        #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the Visa Request & Response Codes web page at https://developer.visa.com/guides/request_response_codes. For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
 
         :param category: The category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -336,7 +336,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def commercial(self):
         """
         Gets the commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a commercial card, which enables you to include Level II data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a commercial card, which enables you to include Level II data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown  For details, see `auth_card_commercial` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -347,7 +347,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def commercial(self, commercial):
         """
         Sets the commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a commercial card, which enables you to include Level II data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a commercial card, which enables you to include Level II data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown  For details, see `auth_card_commercial` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param commercial: The commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -386,7 +386,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def health_care(self):
         """
         Gets the health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a healthcare card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a healthcare card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_healthcare` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -397,7 +397,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def health_care(self, health_care):
         """
         Sets the health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a healthcare card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a healthcare card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_healthcare` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param health_care: The health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -411,7 +411,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def payroll(self):
         """
         Gets the payroll of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a payroll card. This field is supported for Visa, Discover, Diners Club, and JCB on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a payroll card. This field is supported for Visa, Discover, Diners Club, and JCB on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_payroll` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The payroll of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -422,7 +422,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def payroll(self, payroll):
         """
         Sets the payroll of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a payroll card. This field is supported for Visa, Discover, Diners Club, and JCB on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a payroll card. This field is supported for Visa, Discover, Diners Club, and JCB on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_payroll` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param payroll: The payroll of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -436,7 +436,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def level3_eligible(self):
         """
         Gets the level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is eligible for Level III interchange fees, which enables you to include Level III data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is eligible for Level III interchange fees, which enables you to include Level III data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_level_3_eligible` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -447,7 +447,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def level3_eligible(self, level3_eligible):
         """
         Sets the level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is eligible for Level III interchange fees, which enables you to include Level III data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is eligible for Level III interchange fees, which enables you to include Level III data in your transaction requests. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_level_3_eligible` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param level3_eligible: The level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -461,7 +461,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def pinless_debit(self):
         """
         Gets the pinless_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a PINless debit card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a PINless debit card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_pinless_debit` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The pinless_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -472,7 +472,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def pinless_debit(self, pinless_debit):
         """
         Sets the pinless_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a PINless debit card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a PINless debit card. This field is supported for Visa and Mastercard on **Chase Paymentech Solutions**. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_pinless_debit` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param pinless_debit: The pinless_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -486,7 +486,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def signature_debit(self):
         """
         Gets the signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a signature debit card. This information enables you to alter the way an order is processed. For example, you might not want to reauthorize a transaction for a signature debit card, or you might want to perform reversals promptly for a signature debit card. This field is supported for Visa, Mastercard, and Maestro (International) on Chase Paymentech Solutions. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a signature debit card.  This information enables you to alter the way an order is processed. For example, you might not want to reauthorize a transaction for a signature debit card, or you might want to perform reversals promptly for a signature debit card. This field is supported for Visa, Mastercard, and Maestro (International) on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_signature_debit` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -497,7 +497,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def signature_debit(self, signature_debit):
         """
         Sets the signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a signature debit card. This information enables you to alter the way an order is processed. For example, you might not want to reauthorize a transaction for a signature debit card, or you might want to perform reversals promptly for a signature debit card. This field is supported for Visa, Mastercard, and Maestro (International) on Chase Paymentech Solutions. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a signature debit card.  This information enables you to alter the way an order is processed. For example, you might not want to reauthorize a transaction for a signature debit card, or you might want to perform reversals promptly for a signature debit card. This field is supported for Visa, Mastercard, and Maestro (International) on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_signature_debit` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param signature_debit: The signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -511,7 +511,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def prepaid(self):
         """
         Gets the prepaid of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a prepaid card. This information enables you to determine when a gift card or prepaid card is presented for use when establishing a new recurring, installment, or deferred billing relationship.  This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a prepaid card. This information enables you to determine when a gift card or prepaid card is presented for use when establishing a new recurring, installment, or deferred billing relationship.  This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see the `auth_card_prepaid` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The prepaid of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -522,7 +522,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def prepaid(self, prepaid):
         """
         Sets the prepaid of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is a prepaid card. This information enables you to determine when a gift card or prepaid card is presented for use when establishing a new recurring, installment, or deferred billing relationship.  This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - **Y**: Yes  - **N**: No  - **X**: Not applicable / Unknown 
+        Indicates whether the card is a prepaid card. This information enables you to determine when a gift card or prepaid card is presented for use when establishing a new recurring, installment, or deferred billing relationship.  This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see the `auth_card_prepaid` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param prepaid: The prepaid of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -536,7 +536,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def regulated(self):
         """
         Gets the regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is regulated according to the Durbin Amendment. If the card is regulated, the card issuer is subject to price caps and interchange rules. This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - **Y**: Yes (assets greater than 10B USD)  - **N**: No (assets less than 10B USD)  - **X**: Not applicable / Unknown 
+        Indicates whether the card is regulated according to the Durbin Amendment. If the card is regulated, the card issuer is subject to price caps and interchange rules. This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_regulated` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -547,7 +547,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def regulated(self, regulated):
         """
         Sets the regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Indicates whether the card is regulated according to the Durbin Amendment. If the card is regulated, the card issuer is subject to price caps and interchange rules. This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - **Y**: Yes (assets greater than 10B USD)  - **N**: No (assets less than 10B USD)  - **X**: Not applicable / Unknown 
+        Indicates whether the card is regulated according to the Durbin Amendment. If the card is regulated, the card issuer is subject to price caps and interchange rules. This field is supported for Visa, Mastercard, Discover, Diners Club, and JCB on Chase Paymentech Solutions. Possible values:   - `Y`: Yes  - `N`: No  - `X`: Not applicable / Unknown  For details, see `auth_card_regulated` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param regulated: The regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str

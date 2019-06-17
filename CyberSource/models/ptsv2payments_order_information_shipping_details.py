@@ -31,7 +31,7 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'gift_wrap': 'str',
+        'gift_wrap': 'bool',
         'shipping_method': 'str',
         'ship_from_postal_code': 'str'
     }
@@ -62,10 +62,10 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self):
         """
         Gets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values:  - `yes`: The customer requested gift wrapping. - `no`: The customer did not request gift wrapping. 
+        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values: - true: The customer requested gift wrapping. - false: The customer did not request gift wrapping. 
 
         :return: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        :rtype: str
+        :rtype: bool
         """
         return self._gift_wrap
 
@@ -73,13 +73,11 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
     def gift_wrap(self, gift_wrap):
         """
         Sets the gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values:  - `yes`: The customer requested gift wrapping. - `no`: The customer did not request gift wrapping. 
+        Boolean that indicates whether the customer requested gift wrapping for this purchase. This field can contain one of the following values: - true: The customer requested gift wrapping. - false: The customer did not request gift wrapping. 
 
         :param gift_wrap: The gift_wrap of this Ptsv2paymentsOrderInformationShippingDetails.
-        :type: str
+        :type: bool
         """
-        if gift_wrap is not None and len(gift_wrap) > 3:
-            raise ValueError("Invalid value for `gift_wrap`, length must be less than or equal to `3`")
 
         self._gift_wrap = gift_wrap
 
