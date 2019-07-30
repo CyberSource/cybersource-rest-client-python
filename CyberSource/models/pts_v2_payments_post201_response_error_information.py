@@ -78,12 +78,6 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
         :param reason: The reason of this PtsV2PaymentsPost201ResponseErrorInformation.
         :type: str
         """
-        allowed_values = ["AVS_FAILED", "CONTACT_PROCESSOR", "EXPIRED_CARD", "PROCESSOR_DECLINED", "INSUFFICIENT_FUND", "STOLEN_LOST_CARD", "ISSUER_UNAVAILABLE", "UNAUTHORIZED_CARD", "CVN_NOT_MATCH", "EXCEEDS_CREDIT_LIMIT", "INVALID_CVN", "DECLINED_CHECK", "BLACKLISTED_CUSTOMER", "SUSPENDED_ACCOUNT", "PAYMENT_REFUSED", "CV_FAILED", "INVALID_ACCOUNT", "GENERAL_DECLINE", "INVALID_MERCHANT_CONFIGURATION", "DECISION_PROFILE_REJECT", "SCORE_EXCEEDS_THRESHOLD", "PENDING_AUTHENTICATION"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

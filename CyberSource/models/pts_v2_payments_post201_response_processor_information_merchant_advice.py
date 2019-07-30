@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code_raw(self):
         """
         Gets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### Visa Platform Connect The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     def code_raw(self, code_raw):
         """
         Sets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
-        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Raw merchant advice code sent directly from the processor. This field is used only for Mastercard.  #### Visa Platform Connect The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR7 - Position: 96-99 - Field: Response Data-Merchant Advice Code   For processor-specific information, see the `auth_merchant_advice_code_raw` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :type: str

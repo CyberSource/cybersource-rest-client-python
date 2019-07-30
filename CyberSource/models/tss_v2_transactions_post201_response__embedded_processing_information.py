@@ -82,7 +82,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
     def business_application_id(self):
         """
         Gets the business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
-        The description for this field is not available.
+        Payouts transaction type. Required for OCT transactions. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. **Note** When the request includes this field, this value overrides the information in your CyberSource account.  For valid values, see the `invoiceHeader_businessApplicationID` field description in [Payouts Using the Simple Order API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SO/Payouts_SO_API.pdf) 
 
         :return: The business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :rtype: str
@@ -93,7 +93,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
-        The description for this field is not available.
+        Payouts transaction type. Required for OCT transactions. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. **Note** When the request includes this field, this value overrides the information in your CyberSource account.  For valid values, see the `invoiceHeader_businessApplicationID` field description in [Payouts Using the Simple Order API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SO/Payouts_SO_API.pdf) 
 
         :param business_application_id: The business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str

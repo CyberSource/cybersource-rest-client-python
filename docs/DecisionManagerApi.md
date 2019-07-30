@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_decision_manager_case**](DecisionManagerApi.md#create_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager case
+[**create_decision_manager_case**](DecisionManagerApi.md#create_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager Case
 
 
 # **create_decision_manager_case**
 > RiskV1DecisionsPost201Response create_decision_manager_case(create_decision_manager_case_request)
 
-Create Decision Manager case
+Create Decision Manager Case
 
 This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values. 
 
@@ -27,7 +27,7 @@ api_instance = CyberSource.DecisionManagerApi()
 create_decision_manager_case_request = CyberSource.CreateDecisionManagerCaseRequest() # CreateDecisionManagerCaseRequest | 
 
 try: 
-    # Create Decision Manager case
+    # Create Decision Manager Case
     api_response = api_instance.create_decision_manager_case(create_decision_manager_case_request)
     pprint(api_response)
 except ApiException as e:

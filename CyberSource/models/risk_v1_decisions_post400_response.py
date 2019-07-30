@@ -111,12 +111,6 @@ class RiskV1DecisionsPost400Response(object):
         :param status: The status of this RiskV1DecisionsPost400Response.
         :type: str
         """
-        allowed_values = ["INVALID_REQUEST"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

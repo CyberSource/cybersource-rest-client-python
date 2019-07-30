@@ -150,6 +150,7 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
     def status(self):
         """
         Gets the status of this UmsV1UsersGet200ResponseAccountInformation.
+        Valid values: - active - inactive - locked - disabled - forgotpassword - deleted 
 
         :return: The status of this UmsV1UsersGet200ResponseAccountInformation.
         :rtype: str
@@ -160,16 +161,11 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
     def status(self, status):
         """
         Sets the status of this UmsV1UsersGet200ResponseAccountInformation.
+        Valid values: - active - inactive - locked - disabled - forgotpassword - deleted 
 
         :param status: The status of this UmsV1UsersGet200ResponseAccountInformation.
         :type: str
         """
-        allowed_values = ["active", "inactive", "locked", "disabled", "forgotpassword", "deleted"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

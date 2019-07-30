@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this TssV2TransactionsGet200ResponseErrorInformation.
-        The description for this field is not available.
+        1-word description of why a request succeeded or failed. 
 
         :return: The reason of this TssV2TransactionsGet200ResponseErrorInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this TssV2TransactionsGet200ResponseErrorInformation.
-        The description for this field is not available.
+        1-word description of why a request succeeded or failed. 
 
         :param reason: The reason of this TssV2TransactionsGet200ResponseErrorInformation.
         :type: str
@@ -85,7 +85,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
     def message(self):
         """
         Gets the message of this TssV2TransactionsGet200ResponseErrorInformation.
-        The description for this field is not available.
+        The user-facing description for why a request succeeded or failed. 
 
         :return: The message of this TssV2TransactionsGet200ResponseErrorInformation.
         :rtype: str
@@ -96,7 +96,7 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
     def message(self, message):
         """
         Sets the message of this TssV2TransactionsGet200ResponseErrorInformation.
-        The description for this field is not available.
+        The user-facing description for why a request succeeded or failed. 
 
         :param message: The message of this TssV2TransactionsGet200ResponseErrorInformation.
         :type: str

@@ -95,7 +95,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def reason_code(self):
         """
         Gets the reason_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        Indicates the reason why a request succeeded or failed and possible action to take if a request fails.  For details, see the appendix of reason codes in the documentation for the relevant payment method. 
 
         :return: The reason_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :rtype: str
@@ -106,7 +106,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def reason_code(self, reason_code):
         """
         Sets the reason_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        Indicates the reason why a request succeeded or failed and possible action to take if a request fails.  For details, see the appendix of reason codes in the documentation for the relevant payment method. 
 
         :param reason_code: The reason_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str
@@ -118,7 +118,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_code(self):
         """
         Gets the r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :rtype: str
@@ -129,7 +129,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_code(self, r_code):
         """
         Sets the r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param r_code: The r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str
@@ -141,7 +141,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_flag(self):
         """
         Gets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
         :rtype: str
@@ -152,7 +152,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_flag(self, r_flag):
         """
         Sets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
-        The description for this field is not available.
+        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param r_flag: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str

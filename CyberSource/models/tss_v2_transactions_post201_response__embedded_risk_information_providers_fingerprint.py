@@ -62,7 +62,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self):
         """
         Gets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
 
         :return: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self, true_ipaddress):
         """
         Sets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
 
         :param true_ipaddress: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
@@ -87,7 +87,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def hash(self):
         """
         Gets the hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _CyberSource Decision Manager Device Fingerprinting Guide_on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link) 
 
         :return: The hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -98,7 +98,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def hash(self, hash):
         """
         Sets the hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _CyberSource Decision Manager Device Fingerprinting Guide_on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link) 
 
         :param hash: The hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
@@ -112,7 +112,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def smart_id(self):
         """
         Gets the smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        The device identifier generated from attributes collected during profiling. Returned by a 3rd party when you use device fingerprinting.  For details, see the `device_fingerprint_smart_id` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
 
         :return: The smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -123,7 +123,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def smart_id(self, smart_id):
         """
         Sets the smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The description for this field is not available.
+        The device identifier generated from attributes collected during profiling. Returned by a 3rd party when you use device fingerprinting.  For details, see the `device_fingerprint_smart_id` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
 
         :param smart_id: The smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str

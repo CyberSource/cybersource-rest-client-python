@@ -197,7 +197,7 @@ class FileDetail(object):
     def mime_type(self):
         """
         Gets the mime_type of this FileDetail.
-        File extension
+        'File extension'  Valid values: - 'application/xml' - 'text/csv' - 'application/pdf' - 'application/octet-stream' 
 
         :return: The mime_type of this FileDetail.
         :rtype: str
@@ -208,17 +208,11 @@ class FileDetail(object):
     def mime_type(self, mime_type):
         """
         Sets the mime_type of this FileDetail.
-        File extension
+        'File extension'  Valid values: - 'application/xml' - 'text/csv' - 'application/pdf' - 'application/octet-stream' 
 
         :param mime_type: The mime_type of this FileDetail.
         :type: str
         """
-        allowed_values = ["application/xml", "text/csv", "application/pdf", "application/octet-stream"]
-        if mime_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `mime_type` ({0}), must be one of {1}"
-                .format(mime_type, allowed_values)
-            )
 
         self._mime_type = mime_type
 

@@ -147,7 +147,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Name of the state decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_state` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :rtype: str
@@ -158,7 +158,7 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
-        Name of the country decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Name of the state decoded from the IP address used directly or indirectly by the customer to send the order.  For all possible values, see the `score_ip_state` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param administrative_area: The administrative_area of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
         :type: str

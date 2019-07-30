@@ -220,7 +220,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def requestor_id(self):
         """
         Gets the requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
 
         :return: The requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -231,7 +231,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
 
         :param requestor_id: The requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -270,7 +270,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
 
         :return: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -281,7 +281,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
 
         :param assurance_level: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -320,7 +320,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def security_code(self):
         """
         Gets the security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator**`=recurring`. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator=recurring**. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -331,7 +331,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator**`=recurring`. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator=recurring**. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str

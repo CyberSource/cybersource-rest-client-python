@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_search**
-> TssV2TransactionsPost201Response get_search(search_id)
+> TssV2TransactionsPost201Response1 get_search(search_id)
 
 Get Search results
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TssV2TransactionsPost201Response**](TssV2TransactionsPost201Response.md)
+[**TssV2TransactionsPost201Response1**](TssV2TransactionsPost201Response1.md)
 
 ### Authorization
 

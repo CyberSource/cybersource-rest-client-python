@@ -181,7 +181,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_mime_type(self):
         """
         Gets the report_mime_type of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Format
+        Report Format                          Valid values: - application/xml - text/csv 
 
         :return: The report_mime_type of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
@@ -192,17 +192,11 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_mime_type(self, report_mime_type):
         """
         Sets the report_mime_type of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Format
+        Report Format                          Valid values: - application/xml - text/csv 
 
         :param report_mime_type: The report_mime_type of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-        allowed_values = ["application/xml", "text/csv"]
-        if report_mime_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_mime_type` ({0}), must be one of {1}"
-                .format(report_mime_type, allowed_values)
-            )
 
         self._report_mime_type = report_mime_type
 
@@ -210,7 +204,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Frequency
+        'Report Frequency'  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :return: The report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
@@ -221,17 +215,11 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        Report Frequency
+        'Report Frequency'  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :param report_frequency: The report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-        allowed_values = ["DAILY", "WEEKLY", "MONTHLY", "ADHOC"]
-        if report_frequency not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_frequency` ({0}), must be one of {1}"
-                .format(report_frequency, allowed_values)
-            )
 
         self._report_frequency = report_frequency
 

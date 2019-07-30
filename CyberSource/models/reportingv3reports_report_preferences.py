@@ -80,7 +80,7 @@ class Reportingv3reportsReportPreferences(object):
     def field_name_convention(self):
         """
         Gets the field_name_convention of this Reportingv3reportsReportPreferences.
-        Specify the field naming convention to be followed in reports (applicable to only csv report formats
+        Specify the field naming convention to be followed in reports (applicable to only csv report formats)  Valid values: - SOAPI - SCMP 
 
         :return: The field_name_convention of this Reportingv3reportsReportPreferences.
         :rtype: str
@@ -91,17 +91,11 @@ class Reportingv3reportsReportPreferences(object):
     def field_name_convention(self, field_name_convention):
         """
         Sets the field_name_convention of this Reportingv3reportsReportPreferences.
-        Specify the field naming convention to be followed in reports (applicable to only csv report formats
+        Specify the field naming convention to be followed in reports (applicable to only csv report formats)  Valid values: - SOAPI - SCMP 
 
         :param field_name_convention: The field_name_convention of this Reportingv3reportsReportPreferences.
         :type: str
         """
-        allowed_values = ["SOAPI", "SCMP"]
-        if field_name_convention not in allowed_values:
-            raise ValueError(
-                "Invalid value for `field_name_convention` ({0}), must be one of {1}"
-                .format(field_name_convention, allowed_values)
-            )
 
         self._field_name_convention = field_name_convention
 

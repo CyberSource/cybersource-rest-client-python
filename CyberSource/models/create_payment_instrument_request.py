@@ -151,7 +151,7 @@ class CreatePaymentInstrumentRequest(object):
     def object(self):
         """
         Gets the object of this CreatePaymentInstrumentRequest.
-        Describes type of token.
+        'Describes type of token.'  Valid values: - paymentInstrument 
 
         :return: The object of this CreatePaymentInstrumentRequest.
         :rtype: str
@@ -162,17 +162,11 @@ class CreatePaymentInstrumentRequest(object):
     def object(self, object):
         """
         Sets the object of this CreatePaymentInstrumentRequest.
-        Describes type of token.
+        'Describes type of token.'  Valid values: - paymentInstrument 
 
         :param object: The object of this CreatePaymentInstrumentRequest.
         :type: str
         """
-        allowed_values = ["paymentInstrument"]
-        if object not in allowed_values:
-            raise ValueError(
-                "Invalid value for `object` ({0}), must be one of {1}"
-                .format(object, allowed_values)
-            )
 
         self._object = object
 
@@ -180,7 +174,7 @@ class CreatePaymentInstrumentRequest(object):
     def state(self):
         """
         Gets the state of this CreatePaymentInstrumentRequest.
-        Current state of the token.
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :return: The state of this CreatePaymentInstrumentRequest.
         :rtype: str
@@ -191,17 +185,11 @@ class CreatePaymentInstrumentRequest(object):
     def state(self, state):
         """
         Sets the state of this CreatePaymentInstrumentRequest.
-        Current state of the token.
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :param state: The state of this CreatePaymentInstrumentRequest.
         :type: str
         """
-        allowed_values = ["ACTIVE", "CLOSED"]
-        if state not in allowed_values:
-            raise ValueError(
-                "Invalid value for `state` ({0}), must be one of {1}"
-                .format(state, allowed_values)
-            )
 
         self._state = state
 

@@ -43,7 +43,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batches
 
-        Gets a list of batch files
+        Get a list of batch files
         """
         pass
 

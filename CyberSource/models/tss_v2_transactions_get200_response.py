@@ -242,7 +242,7 @@ class TssV2TransactionsGet200Response(object):
     def merchant_id(self):
         """
         Gets the merchant_id of this TssV2TransactionsGet200Response.
-        The description for this field is not available.
+        Your CyberSource merchant ID.
 
         :return: The merchant_id of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -253,7 +253,7 @@ class TssV2TransactionsGet200Response(object):
     def merchant_id(self, merchant_id):
         """
         Sets the merchant_id of this TssV2TransactionsGet200Response.
-        The description for this field is not available.
+        Your CyberSource merchant ID.
 
         :param merchant_id: The merchant_id of this TssV2TransactionsGet200Response.
         :type: str
@@ -479,7 +479,7 @@ class TssV2TransactionsGet200Response(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this TssV2TransactionsGet200Response.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :return: The merchant_defined_information of this TssV2TransactionsGet200Response.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -490,7 +490,7 @@ class TssV2TransactionsGet200Response(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this TssV2TransactionsGet200Response.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :param merchant_defined_information: The merchant_defined_information of this TssV2TransactionsGet200Response.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]

@@ -41,6 +41,7 @@ class TssV2TransactionsPost201Response(object):
         'sort': 'str',
         'count': 'int',
         'total_count': 'int',
+        'status': 'str',
         'submit_time_utc': 'str',
         'embedded': 'TssV2TransactionsPost201ResponseEmbedded',
         'links': 'PtsV2PaymentsReversalsPost201ResponseLinks'
@@ -57,12 +58,13 @@ class TssV2TransactionsPost201Response(object):
         'sort': 'sort',
         'count': 'count',
         'total_count': 'totalCount',
+        'status': 'status',
         'submit_time_utc': 'submitTimeUtc',
         'embedded': '_embedded',
         'links': '_links'
     }
 
-    def __init__(self, search_id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, submit_time_utc=None, embedded=None, links=None):
+    def __init__(self, search_id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, status=None, submit_time_utc=None, embedded=None, links=None):
         """
         TssV2TransactionsPost201Response - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class TssV2TransactionsPost201Response(object):
         self._sort = None
         self._count = None
         self._total_count = None
+        self._status = None
         self._submit_time_utc = None
         self._embedded = None
         self._links = None
@@ -101,6 +104,8 @@ class TssV2TransactionsPost201Response(object):
           self.count = count
         if total_count is not None:
           self.total_count = total_count
+        if status is not None:
+          self.status = status
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if embedded is not None:
@@ -183,7 +188,7 @@ class TssV2TransactionsPost201Response(object):
     def timezone(self):
         """
         Gets the timezone of this TssV2TransactionsPost201Response.
-        Time Zone.
+        Time Zone in ISO format.
 
         :return: The timezone of this TssV2TransactionsPost201Response.
         :rtype: str
@@ -194,7 +199,7 @@ class TssV2TransactionsPost201Response(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this TssV2TransactionsPost201Response.
-        Time Zone.
+        Time Zone in ISO format.
 
         :param timezone: The timezone of this TssV2TransactionsPost201Response.
         :type: str
@@ -252,7 +257,7 @@ class TssV2TransactionsPost201Response(object):
     def limit(self):
         """
         Gets the limit of this TssV2TransactionsPost201Response.
-        limit on number of results.
+        Limit on number of results.
 
         :return: The limit of this TssV2TransactionsPost201Response.
         :rtype: int
@@ -263,7 +268,7 @@ class TssV2TransactionsPost201Response(object):
     def limit(self, limit):
         """
         Sets the limit of this TssV2TransactionsPost201Response.
-        limit on number of results.
+        Limit on number of results.
 
         :param limit: The limit of this TssV2TransactionsPost201Response.
         :type: int
@@ -321,7 +326,7 @@ class TssV2TransactionsPost201Response(object):
     def total_count(self):
         """
         Gets the total_count of this TssV2TransactionsPost201Response.
-        total number of results.
+        Total number of results.
 
         :return: The total_count of this TssV2TransactionsPost201Response.
         :rtype: int
@@ -332,13 +337,36 @@ class TssV2TransactionsPost201Response(object):
     def total_count(self, total_count):
         """
         Sets the total_count of this TssV2TransactionsPost201Response.
-        total number of results.
+        Total number of results.
 
         :param total_count: The total_count of this TssV2TransactionsPost201Response.
         :type: int
         """
 
         self._total_count = total_count
+
+    @property
+    def status(self):
+        """
+        Gets the status of this TssV2TransactionsPost201Response.
+        The status of the submitted transaction.
+
+        :return: The status of this TssV2TransactionsPost201Response.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this TssV2TransactionsPost201Response.
+        The status of the submitted transaction.
+
+        :param status: The status of this TssV2TransactionsPost201Response.
+        :type: str
+        """
+
+        self._status = status
 
     @property
     def submit_time_utc(self):

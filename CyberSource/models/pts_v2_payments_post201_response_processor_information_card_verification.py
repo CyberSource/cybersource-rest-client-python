@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self):
         """
         Gets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a description of the card verification check, see \"Card Verification Numbers (CVNs)\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a list of possible values, see \"CVN Codes\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self, result_code):
         """
         Sets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a description of the card verification check, see \"Card Verification Numbers (CVNs)\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) For a list of possible values, see \"CVN Codes\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param result_code: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str

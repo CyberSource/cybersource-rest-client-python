@@ -209,7 +209,7 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_mime_type(self):
         """
         Gets the report_mime_type of this ReportingV3ReportsIdGet200Response.
-        Report Format
+        Report Format  Valid values: - application/xml - text/csv 
 
         :return: The report_mime_type of this ReportingV3ReportsIdGet200Response.
         :rtype: str
@@ -220,17 +220,11 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_mime_type(self, report_mime_type):
         """
         Sets the report_mime_type of this ReportingV3ReportsIdGet200Response.
-        Report Format
+        Report Format  Valid values: - application/xml - text/csv 
 
         :param report_mime_type: The report_mime_type of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-        allowed_values = ["application/xml", "text/csv"]
-        if report_mime_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_mime_type` ({0}), must be one of {1}"
-                .format(report_mime_type, allowed_values)
-            )
 
         self._report_mime_type = report_mime_type
 
@@ -238,7 +232,7 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this ReportingV3ReportsIdGet200Response.
-        Report Frequency Value
+        Report Frequency Value  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :return: The report_frequency of this ReportingV3ReportsIdGet200Response.
         :rtype: str
@@ -249,17 +243,11 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this ReportingV3ReportsIdGet200Response.
-        Report Frequency Value
+        Report Frequency Value  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :param report_frequency: The report_frequency of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-        allowed_values = ["DAILY", "WEEKLY", "MONTHLY", "ADHOC"]
-        if report_frequency not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_frequency` ({0}), must be one of {1}"
-                .format(report_frequency, allowed_values)
-            )
 
         self._report_frequency = report_frequency
 
@@ -290,7 +278,7 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_status(self):
         """
         Gets the report_status of this ReportingV3ReportsIdGet200Response.
-        Report Status Value
+        Report Status Value  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA - RERUN 
 
         :return: The report_status of this ReportingV3ReportsIdGet200Response.
         :rtype: str
@@ -301,17 +289,11 @@ class ReportingV3ReportsIdGet200Response(object):
     def report_status(self, report_status):
         """
         Sets the report_status of this ReportingV3ReportsIdGet200Response.
-        Report Status Value
+        Report Status Value  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA - RERUN 
 
         :param report_status: The report_status of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-        allowed_values = ["COMPLETED", "PENDING", "QUEUED", "RUNNING", "ERROR", "NO_DATA", "RERUN"]
-        if report_status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_status` ({0}), must be one of {1}"
-                .format(report_status, allowed_values)
-            )
 
         self._report_status = report_status
 

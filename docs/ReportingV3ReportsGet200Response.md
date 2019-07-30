@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reports** | [**list[ReportingV3ReportsGet200ResponseReports]**](ReportingV3ReportsGet200ResponseReports.md) |  | [optional] 
+**report_search_results** | [**list[ReportingV3ReportsGet200ResponseReportSearchResults]**](ReportingV3ReportsGet200ResponseReportSearchResults.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

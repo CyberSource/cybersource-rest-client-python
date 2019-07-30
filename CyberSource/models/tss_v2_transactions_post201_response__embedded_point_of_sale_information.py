@@ -34,7 +34,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         'terminal_id': 'str',
         'terminal_serial_number': 'str',
         'device_id': 'str',
-        'partner': 'Ptsv2paymentsClientReferenceInformationPartner'
+        'partner': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner'
     }
 
     attribute_map = {
@@ -117,7 +117,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def device_id(self):
         """
         Gets the device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        The description for this field is not available.
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def device_id(self, device_id):
         """
         Sets the device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        The description for this field is not available.
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param device_id: The device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
@@ -142,7 +142,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Gets the partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :return: The partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :rtype: Ptsv2paymentsClientReferenceInformationPartner
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner
         """
         return self._partner
 
@@ -152,7 +152,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         Sets the partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
 
         :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        :type: Ptsv2paymentsClientReferenceInformationPartner
+        :type: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner
         """
 
         self._partner = partner

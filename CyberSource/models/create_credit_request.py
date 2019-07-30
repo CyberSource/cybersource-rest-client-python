@@ -286,7 +286,7 @@ class CreateCreditRequest(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this CreateCreditRequest.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :return: The merchant_defined_information of this CreateCreditRequest.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -297,7 +297,7 @@ class CreateCreditRequest(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this CreateCreditRequest.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :param merchant_defined_information: The merchant_defined_information of this CreateCreditRequest.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]

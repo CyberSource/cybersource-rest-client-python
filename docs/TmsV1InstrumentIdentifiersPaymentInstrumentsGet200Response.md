@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **links** | [**TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseLinks**](TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseLinks.md) |  | [optional] 
-**object** | **str** | Shows the response is a collection of objects. | [optional] 
+**object** | **str** | &#39;Shows the response is a collection of objects.&#39;  Valid values: - collection  | [optional] 
 **offset** | **str** | The offset parameter supplied in the request. | [optional] 
 **limit** | **str** | The limit parameter supplied in the request. | [optional] 
 **count** | **str** | The number of Payment Instruments returned in the array. | [optional] 

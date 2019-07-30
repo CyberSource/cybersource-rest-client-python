@@ -31,43 +31,43 @@ class ReportingV3ReportsGet200Response(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'reports': 'list[ReportingV3ReportsGet200ResponseReports]'
+        'report_search_results': 'list[ReportingV3ReportsGet200ResponseReportSearchResults]'
     }
 
     attribute_map = {
-        'reports': 'reports'
+        'report_search_results': 'reportSearchResults'
     }
 
-    def __init__(self, reports=None):
+    def __init__(self, report_search_results=None):
         """
         ReportingV3ReportsGet200Response - a model defined in Swagger
         """
 
-        self._reports = None
+        self._report_search_results = None
 
-        if reports is not None:
-          self.reports = reports
+        if report_search_results is not None:
+          self.report_search_results = report_search_results
 
     @property
-    def reports(self):
+    def report_search_results(self):
         """
-        Gets the reports of this ReportingV3ReportsGet200Response.
+        Gets the report_search_results of this ReportingV3ReportsGet200Response.
 
-        :return: The reports of this ReportingV3ReportsGet200Response.
-        :rtype: list[ReportingV3ReportsGet200ResponseReports]
+        :return: The report_search_results of this ReportingV3ReportsGet200Response.
+        :rtype: list[ReportingV3ReportsGet200ResponseReportSearchResults]
         """
-        return self._reports
+        return self._report_search_results
 
-    @reports.setter
-    def reports(self, reports):
+    @report_search_results.setter
+    def report_search_results(self, report_search_results):
         """
-        Sets the reports of this ReportingV3ReportsGet200Response.
+        Sets the report_search_results of this ReportingV3ReportsGet200Response.
 
-        :param reports: The reports of this ReportingV3ReportsGet200Response.
-        :type: list[ReportingV3ReportsGet200ResponseReports]
+        :param report_search_results: The report_search_results of this ReportingV3ReportsGet200Response.
+        :type: list[ReportingV3ReportsGet200ResponseReportSearchResults]
         """
 
-        self._reports = reports
+        self._report_search_results = report_search_results
 
     def to_dict(self):
         """

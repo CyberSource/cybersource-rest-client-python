@@ -116,8 +116,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param ip_address: The ip_address of this Riskv1decisionsDeviceInformation.
         :type: str
         """
-        if ip_address is not None and len(ip_address) > 15:
-            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `15`")
+        if ip_address is not None and len(ip_address) > 48:
+            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `48`")
 
         self._ip_address = ip_address
 
