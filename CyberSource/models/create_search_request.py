@@ -128,7 +128,7 @@ class CreateSearchRequest(object):
     def timezone(self):
         """
         Gets the timezone of this CreateSearchRequest.
-        Time Zone.
+        Time Zone in ISO format.
 
         :return: The timezone of this CreateSearchRequest.
         :rtype: str
@@ -139,7 +139,7 @@ class CreateSearchRequest(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this CreateSearchRequest.
-        Time Zone.
+        Time Zone in ISO format.
 
         :param timezone: The timezone of this CreateSearchRequest.
         :type: str
@@ -197,7 +197,7 @@ class CreateSearchRequest(object):
     def limit(self):
         """
         Gets the limit of this CreateSearchRequest.
-        limit on number of results.
+        Limit on number of results.
 
         :return: The limit of this CreateSearchRequest.
         :rtype: int
@@ -208,7 +208,7 @@ class CreateSearchRequest(object):
     def limit(self, limit):
         """
         Sets the limit of this CreateSearchRequest.
-        limit on number of results.
+        Limit on number of results.
 
         :param limit: The limit of this CreateSearchRequest.
         :type: int

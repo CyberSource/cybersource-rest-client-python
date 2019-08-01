@@ -9,7 +9,6 @@ from .instrument_identifier_api import InstrumentIdentifierApi
 from .key_generation_api import KeyGenerationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi
-from .payer_authentication_api import PayerAuthenticationApi
 from .payment_instrument_api import PaymentInstrumentApi
 from .payments_api import PaymentsApi
 from .payouts_api import PayoutsApi

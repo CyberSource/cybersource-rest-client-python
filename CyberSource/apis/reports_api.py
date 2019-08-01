@@ -288,15 +288,15 @@ class ReportsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
-        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
-        :param str time_query_type: Specify time you would like to search (required)
+        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
         :param str organization_id: Valid Cybersource Organization Id
-        :param str report_mime_type: Valid Report Format
-        :param str report_frequency: Valid Report Frequency
+        :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
+        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
         :param str report_name: Valid Report Name
         :param int report_definition_id: Valid Report Definition Id
-        :param str report_status: Valid Report Status
+        :param str report_status: Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
         :return: ReportingV3ReportsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -322,15 +322,15 @@ class ReportsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
-        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
-        :param str time_query_type: Specify time you would like to search (required)
+        :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
+        :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
         :param str organization_id: Valid Cybersource Organization Id
-        :param str report_mime_type: Valid Report Format
-        :param str report_frequency: Valid Report Frequency
+        :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
+        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
         :param str report_name: Valid Report Name
         :param int report_definition_id: Valid Report Definition Id
-        :param str report_status: Valid Report Status
+        :param str report_status: Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
         :return: ReportingV3ReportsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.

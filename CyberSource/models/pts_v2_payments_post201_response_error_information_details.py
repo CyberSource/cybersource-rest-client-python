@@ -96,12 +96,6 @@ class PtsV2PaymentsPost201ResponseErrorInformationDetails(object):
         :param reason: The reason of this PtsV2PaymentsPost201ResponseErrorInformationDetails.
         :type: str
         """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

@@ -87,6 +87,7 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
     def type(self):
         """
         Gets the type of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
+        Valid values: - PURCHASES - REFUNDS - FEES - CHARGEBACKS 
 
         :return: The type of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :rtype: str
@@ -97,16 +98,11 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
     def type(self, type):
         """
         Sets the type of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
+        Valid values: - PURCHASES - REFUNDS - FEES - CHARGEBACKS 
 
         :param type: The type of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :type: str
         """
-        allowed_values = ["PURCHASES", "REFUNDS", "FEES", "CHARGEBACKS"]
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"
-                .format(type, allowed_values)
-            )
 
         self._type = type
 

@@ -187,12 +187,6 @@ class PtsV2PayoutsPost201Response(object):
         :param status: The status of this PtsV2PayoutsPost201Response.
         :type: str
         """
-        allowed_values = ["ACCEPTED", "DECLINED", "INVALID_REQUEST"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

@@ -87,7 +87,7 @@ class ReportingV3NetFundingsGet200Response(object):
     def start_time(self):
         """
         Gets the start_time of this ReportingV3NetFundingsGet200Response.
-        Valid report Start Date in **ISO 8601 format**. Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14  **Example:** - yyyy-MM-dd'T'HH:mm:ss.SSSZZ 
+        Valid report Start Date in **ISO 8601 format**. Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example:** - yyyy-MM-dd'T'HH:mm:ss.SSSZZ 
 
         :return: The start_time of this ReportingV3NetFundingsGet200Response.
         :rtype: datetime
@@ -98,7 +98,7 @@ class ReportingV3NetFundingsGet200Response(object):
     def start_time(self, start_time):
         """
         Sets the start_time of this ReportingV3NetFundingsGet200Response.
-        Valid report Start Date in **ISO 8601 format**. Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14  **Example:** - yyyy-MM-dd'T'HH:mm:ss.SSSZZ 
+        Valid report Start Date in **ISO 8601 format**. Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example:** - yyyy-MM-dd'T'HH:mm:ss.SSSZZ 
 
         :param start_time: The start_time of this ReportingV3NetFundingsGet200Response.
         :type: datetime

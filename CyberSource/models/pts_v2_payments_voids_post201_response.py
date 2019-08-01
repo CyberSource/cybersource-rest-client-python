@@ -162,12 +162,6 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :param status: The status of this PtsV2PaymentsVoidsPost201Response.
         :type: str
         """
-        allowed_values = ["VOIDED"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

@@ -185,7 +185,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def merchant_id(self):
         """
         Gets the merchant_id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        The description for this field is not available.
+        Your CyberSource merchant ID.
 
         :return: The merchant_id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :rtype: str
@@ -196,7 +196,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def merchant_id(self, merchant_id):
         """
         Sets the merchant_id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        The description for this field is not available.
+        Your CyberSource merchant ID.
 
         :param merchant_id: The merchant_id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: str
@@ -334,7 +334,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def merchant_defined_information(self):
         """
         Gets the merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :return: The merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :rtype: list[Ptsv2paymentsMerchantDefinedInformation]
@@ -345,7 +345,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
     def merchant_defined_information(self, merchant_defined_information):
         """
         Sets the merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        The description for this field is not available.
+        The object containing the custom data that the merchant defines. 
 
         :param merchant_defined_information: The merchant_defined_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: list[Ptsv2paymentsMerchantDefinedInformation]

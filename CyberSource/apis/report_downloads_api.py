@@ -56,7 +56,7 @@ class ReportDownloadsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd  (required)
+        :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd  (required)
         :param str report_name: Name of the report to download (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None
@@ -84,7 +84,7 @@ class ReportDownloadsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format. - https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14   **Example date format:**   - yyyy-MM-dd  (required)
+        :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd  (required)
         :param str report_name: Name of the report to download (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None

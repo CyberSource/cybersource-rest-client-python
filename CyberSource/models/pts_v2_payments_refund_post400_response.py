@@ -111,12 +111,6 @@ class PtsV2PaymentsRefundPost400Response(object):
         :param status: The status of this PtsV2PaymentsRefundPost400Response.
         :type: str
         """
-        allowed_values = ["INVALID_REQUEST"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
@@ -140,12 +134,6 @@ class PtsV2PaymentsRefundPost400Response(object):
         :param reason: The reason of this PtsV2PaymentsRefundPost400Response.
         :type: str
         """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_CARD", "INVALID_MERCHANT_CONFIGURATION", "INVALID_AMOUNT", "CAPTURE_ALREADY_VOIDED", "ACCOUNT_NOT_ALLOWED_CREDIT"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

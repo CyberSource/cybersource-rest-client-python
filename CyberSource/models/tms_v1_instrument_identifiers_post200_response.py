@@ -131,7 +131,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
     def object(self):
         """
         Gets the object of this TmsV1InstrumentIdentifiersPost200Response.
-        Describes type of token.
+        'Describes type of token.'  Valid values: - instrumentIdentifier 
 
         :return: The object of this TmsV1InstrumentIdentifiersPost200Response.
         :rtype: str
@@ -142,17 +142,11 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
     def object(self, object):
         """
         Sets the object of this TmsV1InstrumentIdentifiersPost200Response.
-        Describes type of token.
+        'Describes type of token.'  Valid values: - instrumentIdentifier 
 
         :param object: The object of this TmsV1InstrumentIdentifiersPost200Response.
         :type: str
         """
-        allowed_values = ["instrumentIdentifier"]
-        if object not in allowed_values:
-            raise ValueError(
-                "Invalid value for `object` ({0}), must be one of {1}"
-                .format(object, allowed_values)
-            )
 
         self._object = object
 
@@ -160,7 +154,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
     def state(self):
         """
         Gets the state of this TmsV1InstrumentIdentifiersPost200Response.
-        Current state of the token.
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :return: The state of this TmsV1InstrumentIdentifiersPost200Response.
         :rtype: str
@@ -171,17 +165,11 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
     def state(self, state):
         """
         Sets the state of this TmsV1InstrumentIdentifiersPost200Response.
-        Current state of the token.
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :param state: The state of this TmsV1InstrumentIdentifiersPost200Response.
         :type: str
         """
-        allowed_values = ["ACTIVE", "CLOSED"]
-        if state not in allowed_values:
-            raise ValueError(
-                "Invalid value for `state` ({0}), must be one of {1}"
-                .format(state, allowed_values)
-            )
 
         self._state = state
 

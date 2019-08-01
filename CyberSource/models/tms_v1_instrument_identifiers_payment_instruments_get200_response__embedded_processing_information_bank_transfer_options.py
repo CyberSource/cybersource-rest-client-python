@@ -68,12 +68,6 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessi
         :param sec_code: The sec_code of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformationBankTransferOptions.
         :type: str
         """
-        allowed_values = ["CCD", "PPD", "TEL", "WEB"]
-        if sec_code not in allowed_values:
-            raise ValueError(
-                "Invalid value for `sec_code` ({0}), must be one of {1}"
-                .format(sec_code, allowed_values)
-            )
 
         self._sec_code = sec_code
 

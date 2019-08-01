@@ -103,7 +103,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response(object):
     def object(self):
         """
         Gets the object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        Shows the response is a collection of objects.
+        'Shows the response is a collection of objects.'  Valid values: - collection 
 
         :return: The object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
         :rtype: str
@@ -114,17 +114,11 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response(object):
     def object(self, object):
         """
         Sets the object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
-        Shows the response is a collection of objects.
+        'Shows the response is a collection of objects.'  Valid values: - collection 
 
         :param object: The object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response.
         :type: str
         """
-        allowed_values = ["collection"]
-        if object not in allowed_values:
-            raise ValueError(
-                "Invalid value for `object` ({0}), must be one of {1}"
-                .format(object, allowed_values)
-            )
 
         self._object = object
 

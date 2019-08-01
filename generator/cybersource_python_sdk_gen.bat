@@ -4,9 +4,9 @@ cd %~dp0
 
 REM Delete the previously generated SDK code
 
-rm -r -f ..\docs
-rm -r -f ..\CyberSource
-rm -r -f ..\test
+rd /s /q ..\docs
+rd /s /q ..\CyberSource
+rd /s /q ..\test
 
 REM Command to generate SDK
 
@@ -112,7 +112,7 @@ powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''application/json', 'select_header_content_type([''*/*'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\payer_authentication_api.py) | ForEach-Object { $_ -replace 'select_header_accept\(\[''application/json;charset=utf-8', 'select_header_accept([''application/hal+json;charset=utf-8'} | Set-Content ..\CyberSource\apis\payer_authentication_api.py"
+REM powershell -Command "(Get-Content ..\CyberSource\apis\payer_authentication_api.py) | ForEach-Object { $_ -replace 'select_header_accept\(\[''application/json;charset=utf-8', 'select_header_accept([''application/hal+json;charset=utf-8'} | Set-Content ..\CyberSource\apis\payer_authentication_api.py"
 
 git checkout ..\README.md
 

@@ -177,7 +177,7 @@ class RequestBody(object):
     def report_mime_type(self):
         """
         Gets the report_mime_type of this RequestBody.
-         Format of the report
+        'Format of the report'                  Valid values: - application/xml - text/csv 
 
         :return: The report_mime_type of this RequestBody.
         :rtype: str
@@ -188,17 +188,11 @@ class RequestBody(object):
     def report_mime_type(self, report_mime_type):
         """
         Sets the report_mime_type of this RequestBody.
-         Format of the report
+        'Format of the report'                  Valid values: - application/xml - text/csv 
 
         :param report_mime_type: The report_mime_type of this RequestBody.
         :type: str
         """
-        allowed_values = ["application/xml", "text/csv"]
-        if report_mime_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `report_mime_type` ({0}), must be one of {1}"
-                .format(report_mime_type, allowed_values)
-            )
 
         self._report_mime_type = report_mime_type
 

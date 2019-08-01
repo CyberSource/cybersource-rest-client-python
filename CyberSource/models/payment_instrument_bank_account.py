@@ -68,12 +68,6 @@ class PaymentInstrumentBankAccount(object):
         :param type: The type of this PaymentInstrumentBankAccount.
         :type: str
         """
-        allowed_values = ["checking", "savings", "corporate checking", "general ledger"]
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"
-                .format(type, allowed_values)
-            )
 
         self._type = type
 

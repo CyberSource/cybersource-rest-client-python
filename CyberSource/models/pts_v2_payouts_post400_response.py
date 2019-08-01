@@ -134,12 +134,6 @@ class PtsV2PayoutsPost400Response(object):
         :param reason: The reason of this PtsV2PayoutsPost400Response.
         :type: str
         """
-        allowed_values = ["MISSING_FIELD", "INVALID_DATA", "DUPLICATE_REQUEST", "INVALID_CARD", "INVALID_MERCHANT_CONFIGURATION", "INVALID_AMOUNT", "DEBIT_CARD_USEAGE_EXCEEDD_LIMIT"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

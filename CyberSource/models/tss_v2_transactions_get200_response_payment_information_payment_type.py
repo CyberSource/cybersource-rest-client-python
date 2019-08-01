@@ -32,52 +32,47 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     """
     swagger_types = {
         'name': 'str',
-        'type': 'str',
+        'sub_type_name': 'str',
+        'funding_source': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource',
         'method': 'str',
-        'funding_source': 'str',
-        'funding_source_affiliation': 'str',
-        'credential': 'str'
+        'authentication_method': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'type': 'type',
-        'method': 'method',
+        'sub_type_name': 'subTypeName',
         'funding_source': 'fundingSource',
-        'funding_source_affiliation': 'fundingSourceAffiliation',
-        'credential': 'credential'
+        'method': 'method',
+        'authentication_method': 'authenticationMethod'
     }
 
-    def __init__(self, name=None, type=None, method=None, funding_source=None, funding_source_affiliation=None, credential=None):
+    def __init__(self, name=None, sub_type_name=None, funding_source=None, method=None, authentication_method=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformationPaymentType - a model defined in Swagger
         """
 
         self._name = None
-        self._type = None
-        self._method = None
+        self._sub_type_name = None
         self._funding_source = None
-        self._funding_source_affiliation = None
-        self._credential = None
+        self._method = None
+        self._authentication_method = None
 
         if name is not None:
           self.name = name
-        if type is not None:
-          self.type = type
-        if method is not None:
-          self.method = method
+        if sub_type_name is not None:
+          self.sub_type_name = sub_type_name
         if funding_source is not None:
           self.funding_source = funding_source
-        if funding_source_affiliation is not None:
-          self.funding_source_affiliation = funding_source_affiliation
-        if credential is not None:
-          self.credential = credential
+        if method is not None:
+          self.method = method
+        if authentication_method is not None:
+          self.authentication_method = authentication_method
 
     @property
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The name of a payment method. This is required for non-credit card payment.  Examples: `SEARS`, `JCREW`, `PAYPAL`, `IDEAL`, `EPS` ...etc.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
 
         :return: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -88,7 +83,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The name of a payment method. This is required for non-credit card payment.  Examples: `SEARS`, `JCREW`, `PAYPAL`, `IDEAL`, `EPS` ...etc.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
 
         :param name: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -97,33 +92,54 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         self._name = name
 
     @property
-    def type(self):
+    def sub_type_name(self):
         """
-        Gets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The type of payment method. This is required for non-credit card payment.  Possible values:  - BANK_TRANSFER  - CARD (Default)  - EWALLET  - DIGITAL  - DIRECT_DEBIT  - INVOICE  - PUSH_PAYMENT  - CARRIER_BILLING  - CASH  - CHECK  - CRYPTOGRAPHIC  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        Gets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
 
-        :return: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :return: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
         """
-        return self._type
+        return self._sub_type_name
 
-    @type.setter
-    def type(self, type):
+    @sub_type_name.setter
+    def sub_type_name(self, sub_type_name):
         """
-        Sets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The type of payment method. This is required for non-credit card payment.  Possible values:  - BANK_TRANSFER  - CARD (Default)  - EWALLET  - DIGITAL  - DIRECT_DEBIT  - INVOICE  - PUSH_PAYMENT  - CARRIER_BILLING  - CASH  - CHECK  - CRYPTOGRAPHIC  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        Sets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
 
-        :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :param sub_type_name: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
         """
 
-        self._type = type
+        self._sub_type_name = sub_type_name
+
+    @property
+    def funding_source(self):
+        """
+        Gets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+
+        :return: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :rtype: TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource
+        """
+        return self._funding_source
+
+    @funding_source.setter
+    def funding_source(self, funding_source):
+        """
+        Sets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+
+        :param funding_source: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :type: TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource
+        """
+
+        self._funding_source = funding_source
 
     @property
     def method(self):
         """
         Gets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        This is an optional field.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
 
         :return: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -134,7 +150,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def method(self, method):
         """
         Sets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        This is an optional field.  Please contact CyberSource Customer Support to enable the payment method of your choice and the value you should send in your payment request for this field. 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
 
         :param method: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -143,73 +159,27 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         self._method = method
 
     @property
-    def funding_source(self):
+    def authentication_method(self):
         """
-        Gets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        Gets the authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        A Payment Type Authentication Method is the means used to verify that the presenter of the Payment Type credential is an authorized user of the Payment Instrument. Examples: 3DSecure – Verified by Visa, 3DSecure – MasteCard Secure Code 
 
-        :return: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :return: The authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
         """
-        return self._funding_source
+        return self._authentication_method
 
-    @funding_source.setter
-    def funding_source(self, funding_source):
+    @authentication_method.setter
+    def authentication_method(self, authentication_method):
         """
-        Sets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
+        Sets the authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        A Payment Type Authentication Method is the means used to verify that the presenter of the Payment Type credential is an authorized user of the Payment Instrument. Examples: 3DSecure – Verified by Visa, 3DSecure – MasteCard Secure Code 
 
-        :param funding_source: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :param authentication_method: The authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
         """
 
-        self._funding_source = funding_source
-
-    @property
-    def funding_source_affiliation(self):
-        """
-        Gets the funding_source_affiliation of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :return: The funding_source_affiliation of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :rtype: str
-        """
-        return self._funding_source_affiliation
-
-    @funding_source_affiliation.setter
-    def funding_source_affiliation(self, funding_source_affiliation):
-        """
-        Sets the funding_source_affiliation of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :param funding_source_affiliation: The funding_source_affiliation of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :type: str
-        """
-
-        self._funding_source_affiliation = funding_source_affiliation
-
-    @property
-    def credential(self):
-        """
-        Gets the credential of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :return: The credential of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :rtype: str
-        """
-        return self._credential
-
-    @credential.setter
-    def credential(self, credential):
-        """
-        Sets the credential of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        The description for this field is not available.
-
-        :param credential: The credential of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :type: str
-        """
-
-        self._credential = credential
+        self._authentication_method = authentication_method
 
     def to_dict(self):
         """

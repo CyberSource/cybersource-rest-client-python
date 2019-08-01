@@ -151,13 +151,6 @@ class ReportingV3ReportDefinitionsGet200ResponseReportDefinitions(object):
         :param supported_formats: The supported_formats of this ReportingV3ReportDefinitionsGet200ResponseReportDefinitions.
         :type: list[str]
         """
-        allowed_values = ["application/xml", "text/csv", "application/json"]
-        if not set(supported_formats).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `supported_formats` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(supported_formats)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._supported_formats = supported_formats
 

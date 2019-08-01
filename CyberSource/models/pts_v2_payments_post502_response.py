@@ -106,12 +106,6 @@ class PtsV2PaymentsPost502Response(object):
         :param status: The status of this PtsV2PaymentsPost502Response.
         :type: str
         """
-        allowed_values = ["SERVER_ERROR"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
@@ -119,7 +113,7 @@ class PtsV2PaymentsPost502Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsPost502Response.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG  - PROCESSOR_TIMEOUT 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG 
 
         :return: The reason of this PtsV2PaymentsPost502Response.
         :rtype: str
@@ -130,17 +124,11 @@ class PtsV2PaymentsPost502Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsPost502Response.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG  - PROCESSOR_TIMEOUT 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG 
 
         :param reason: The reason of this PtsV2PaymentsPost502Response.
         :type: str
         """
-        allowed_values = ["SYSTEM_ERROR", "SERVER_TIMEOUT", "SERVICE_TIMEOUT", "INVALID_OR_MISSING_CONFIG", "PROCESSOR_TIMEOUT"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

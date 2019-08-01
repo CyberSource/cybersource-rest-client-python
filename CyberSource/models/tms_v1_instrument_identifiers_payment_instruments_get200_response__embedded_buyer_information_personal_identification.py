@@ -85,7 +85,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInf
     def type(self):
         """
         Gets the type of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformationPersonalIdentification.
-        Type of personal identification.  **Important**: Contact your TeleCheck representative to learn whether this field is required or optional. 
+        Type of personal identification. **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
 
         :return: The type of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformationPersonalIdentification.
         :rtype: str
@@ -96,17 +96,11 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInf
     def type(self, type):
         """
         Sets the type of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformationPersonalIdentification.
-        Type of personal identification.  **Important**: Contact your TeleCheck representative to learn whether this field is required or optional. 
+        Type of personal identification. **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
 
         :param type: The type of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformationPersonalIdentification.
         :type: str
         """
-        allowed_values = ["driver license"]
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"
-                .format(type, allowed_values)
-            )
 
         self._type = type
 
