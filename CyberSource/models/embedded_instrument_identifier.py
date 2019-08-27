@@ -36,7 +36,7 @@ class EmbeddedInstrumentIdentifier(object):
         'state': 'str',
         'id': 'str',
         'card': 'TmsV1InstrumentIdentifiersPost200ResponseCard',
-        'bank_account': 'TmsV1InstrumentIdentifiersPost200ResponseBankAccount',
+        'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'processing_information': 'TmsV1InstrumentIdentifiersPost200ResponseProcessingInformation',
         'metadata': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata'
     }
@@ -131,7 +131,7 @@ class EmbeddedInstrumentIdentifier(object):
     def state(self):
         """
         Gets the state of this EmbeddedInstrumentIdentifier.
-        'Current state of the token.'              Valid values: - ACTIVE - CLOSED 
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :return: The state of this EmbeddedInstrumentIdentifier.
         :rtype: str
@@ -142,7 +142,7 @@ class EmbeddedInstrumentIdentifier(object):
     def state(self, state):
         """
         Sets the state of this EmbeddedInstrumentIdentifier.
-        'Current state of the token.'              Valid values: - ACTIVE - CLOSED 
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :param state: The state of this EmbeddedInstrumentIdentifier.
         :type: str
@@ -204,7 +204,7 @@ class EmbeddedInstrumentIdentifier(object):
         Gets the bank_account of this EmbeddedInstrumentIdentifier.
 
         :return: The bank_account of this EmbeddedInstrumentIdentifier.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :rtype: Tmsv1instrumentidentifiersBankAccount
         """
         return self._bank_account
 
@@ -214,7 +214,7 @@ class EmbeddedInstrumentIdentifier(object):
         Sets the bank_account of this EmbeddedInstrumentIdentifier.
 
         :param bank_account: The bank_account of this EmbeddedInstrumentIdentifier.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :type: Tmsv1instrumentidentifiersBankAccount
         """
 
         self._bank_account = bank_account

@@ -32,32 +32,37 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
     """
     swagger_types = {
         'reason': 'str',
-        'previous_transaction_id': 'str'
+        'previous_transaction_id': 'str',
+        'original_authorized_amount': 'str'
     }
 
     attribute_map = {
         'reason': 'reason',
-        'previous_transaction_id': 'previousTransactionId'
+        'previous_transaction_id': 'previousTransactionId',
+        'original_authorized_amount': 'originalAuthorizedAmount'
     }
 
-    def __init__(self, reason=None, previous_transaction_id=None):
+    def __init__(self, reason=None, previous_transaction_id=None, original_authorized_amount=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction - a model defined in Swagger
         """
 
         self._reason = None
         self._previous_transaction_id = None
+        self._original_authorized_amount = None
 
         if reason is not None:
           self.reason = reason
         if previous_transaction_id is not None:
           self.previous_transaction_id = previous_transaction_id
+        if original_authorized_amount is not None:
+          self.original_authorized_amount = original_authorized_amount
 
     @property
     def reason(self):
         """
         Gets the reason of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
-        Reason for the merchant-initiated transaction or incremental authorization. Possible values: - `1`: Resubmission - `2`: Delayed charge - `3`: Reauthorization for split shipment - `4`: No show - `5`: Account top up This field is required only for the five kinds of transactions in the preceding list. This field is supported only for merchant-initiated transactions and incremental authorizations.  #### Visa Platform Connect The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 160-163 - Field: Message Reason Code  #### All Processors For details, see `subsequent_auth_reason` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Reason for the merchant-initiated transaction or incremental authorization. Possible values: - `1`: Resubmission - `2`: Delayed charge - `3`: Reauthorization for split shipment - `4`: No show - `5`: Account top up This field is required only for the five kinds of transactions in the preceding list. This field is supported only for merchant-initiated transactions and incremental authorizations.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 160-163 - Field: Message Reason Code  #### All Processors For details, see `subsequent_auth_reason` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The reason of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :rtype: str
@@ -68,7 +73,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
     def reason(self, reason):
         """
         Sets the reason of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
-        Reason for the merchant-initiated transaction or incremental authorization. Possible values: - `1`: Resubmission - `2`: Delayed charge - `3`: Reauthorization for split shipment - `4`: No show - `5`: Account top up This field is required only for the five kinds of transactions in the preceding list. This field is supported only for merchant-initiated transactions and incremental authorizations.  #### Visa Platform Connect The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 160-163 - Field: Message Reason Code  #### All Processors For details, see `subsequent_auth_reason` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Reason for the merchant-initiated transaction or incremental authorization. Possible values: - `1`: Resubmission - `2`: Delayed charge - `3`: Reauthorization for split shipment - `4`: No show - `5`: Account top up This field is required only for the five kinds of transactions in the preceding list. This field is supported only for merchant-initiated transactions and incremental authorizations.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 160-163 - Field: Message Reason Code  #### All Processors For details, see `subsequent_auth_reason` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param reason: The reason of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
@@ -82,7 +87,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
     def previous_transaction_id(self):
         """
         Gets the previous_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
-        Network transaction identifier that was returned in the payment response field _processorInformation.transactionID_ in the reply message for either the original merchant-initiated payment in the series or the previous merchant-initiated payment in the series.  If the current payment request includes a token instead of an account number, the following time limits apply for the value of this field: - For a **resubmission**, the transaction ID must be less than 14 days old. - For a **delayed charge** or **reauthorization**, the transaction ID must be less than 30 days old.  **NOTE**: The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on Visa Platform Connect. 
+        Network transaction identifier that was returned in the payment response field _processorInformation.transactionID_ in the reply message for either the original merchant-initiated payment in the series or the previous merchant-initiated payment in the series.  If the current payment request includes a token instead of an account number, the following time limits apply for the value of this field: - For a **resubmission**, the transaction ID must be less than 14 days old. - For a **delayed charge** or **reauthorization**, the transaction ID must be less than 30 days old.  **NOTE**: The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on CyberSource through VisaNet. 
 
         :return: The previous_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :rtype: str
@@ -93,7 +98,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
     def previous_transaction_id(self, previous_transaction_id):
         """
         Sets the previous_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
-        Network transaction identifier that was returned in the payment response field _processorInformation.transactionID_ in the reply message for either the original merchant-initiated payment in the series or the previous merchant-initiated payment in the series.  If the current payment request includes a token instead of an account number, the following time limits apply for the value of this field: - For a **resubmission**, the transaction ID must be less than 14 days old. - For a **delayed charge** or **reauthorization**, the transaction ID must be less than 30 days old.  **NOTE**: The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on Visa Platform Connect. 
+        Network transaction identifier that was returned in the payment response field _processorInformation.transactionID_ in the reply message for either the original merchant-initiated payment in the series or the previous merchant-initiated payment in the series.  If the current payment request includes a token instead of an account number, the following time limits apply for the value of this field: - For a **resubmission**, the transaction ID must be less than 14 days old. - For a **delayed charge** or **reauthorization**, the transaction ID must be less than 30 days old.  **NOTE**: The value for this field does not correspond to any data in the TC 33 capture file5. This field is supported only for Visa transactions on CyberSource through VisaNet. 
 
         :param previous_transaction_id: The previous_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
@@ -102,6 +107,31 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
             raise ValueError("Invalid value for `previous_transaction_id`, length must be less than or equal to `15`")
 
         self._previous_transaction_id = previous_transaction_id
+
+    @property
+    def original_authorized_amount(self):
+        """
+        Gets the original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        Amount of the original authorization.  This field is supported only for Apple Pay, Google Pay, and Samsung Pay transactions with Discover on FDC Nashville Global and Chase Paymentech.  See \"Recurring Payments,\" and \"Subsequent Authorizations,\" field description in the [Payment Network Tokenization Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/tokenization_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+
+        :return: The original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :rtype: str
+        """
+        return self._original_authorized_amount
+
+    @original_authorized_amount.setter
+    def original_authorized_amount(self, original_authorized_amount):
+        """
+        Sets the original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        Amount of the original authorization.  This field is supported only for Apple Pay, Google Pay, and Samsung Pay transactions with Discover on FDC Nashville Global and Chase Paymentech.  See \"Recurring Payments,\" and \"Subsequent Authorizations,\" field description in the [Payment Network Tokenization Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/tokenization_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+
+        :param original_authorized_amount: The original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :type: str
+        """
+        if original_authorized_amount is not None and len(original_authorized_amount) > 61:
+            raise ValueError("Invalid value for `original_authorized_amount`, length must be less than or equal to `61`")
+
+        self._original_authorized_amount = original_authorized_amount
 
     def to_dict(self):
         """

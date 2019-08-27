@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **str** | Mapped Electronic Verification response code for the customer’s email address.  For details, see &#x60;auth_ev_email&#x60; field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  | [optional] 
 **email_raw** | **str** | Raw Electronic Verification response code from the processor for the customer’s email address. | [optional] 
-**name** | **str** | The description for this field is not available.  | [optional] 
-**name_raw** | **str** | The description for this field is not available. | [optional] 
+**name** | **str** | Mapped Electronic Verification response code for the customer’s name.  | [optional] 
+**name_raw** | **str** | Raw Electronic Verification response code from the processor for the customer’s name.  | [optional] 
 **phone_number** | **str** | Mapped Electronic Verification response code for the customer’s phone number.  For details, see &#x60;auth_ev_phone_number&#x60; field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  | [optional] 
 **phone_number_raw** | **str** | Raw Electronic Verification response code from the processor for the customer’s phone number. | [optional] 
 **street** | **str** | Mapped Electronic Verification response code for the customer’s street address.  For details, see &#x60;auth_ev_street&#x60; field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  | [optional] 

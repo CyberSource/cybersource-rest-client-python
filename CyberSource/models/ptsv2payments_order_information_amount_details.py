@@ -35,6 +35,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'currency': 'str',
         'discount_amount': 'str',
         'duty_amount': 'str',
+        'gratuity_amount': 'str',
         'tax_amount': 'str',
         'national_tax_included': 'str',
         'tax_applied_after_discount': 'str',
@@ -60,6 +61,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'currency': 'currency',
         'discount_amount': 'discountAmount',
         'duty_amount': 'dutyAmount',
+        'gratuity_amount': 'gratuityAmount',
         'tax_amount': 'taxAmount',
         'national_tax_included': 'nationalTaxIncluded',
         'tax_applied_after_discount': 'taxAppliedAfterDiscount',
@@ -80,7 +82,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'original_currency': 'originalCurrency'
     }
 
-    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None):
+    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -89,6 +91,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         self._currency = None
         self._discount_amount = None
         self._duty_amount = None
+        self._gratuity_amount = None
         self._tax_amount = None
         self._national_tax_included = None
         self._tax_applied_after_discount = None
@@ -116,6 +119,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
           self.discount_amount = discount_amount
         if duty_amount is not None:
           self.duty_amount = duty_amount
+        if gratuity_amount is not None:
+          self.gratuity_amount = gratuity_amount
         if tax_amount is not None:
           self.tax_amount = tax_amount
         if national_tax_included is not None:
@@ -157,7 +162,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
 
         :return: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -168,7 +173,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
 
         :param total_amount: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
@@ -252,6 +257,31 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
             raise ValueError("Invalid value for `duty_amount`, length must be less than or equal to `15`")
 
         self._duty_amount = duty_amount
+
+    @property
+    def gratuity_amount(self):
+        """
+        Gets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :return: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._gratuity_amount
+
+    @gratuity_amount.setter
+    def gratuity_amount(self, gratuity_amount):
+        """
+        Sets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+        if gratuity_amount is not None and len(gratuity_amount) > 13:
+            raise ValueError("Invalid value for `gratuity_amount`, length must be less than or equal to `13`")
+
+        self._gratuity_amount = gratuity_amount
 
     @property
     def tax_amount(self):

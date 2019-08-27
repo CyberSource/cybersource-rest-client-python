@@ -35,7 +35,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         'product_name': 'str',
         'product_sku': 'str',
         'tax_amount': 'str',
-        'quantity': 'float',
+        'quantity': 'int',
         'unit_price': 'str',
         'fulfillment_type': 'str'
     }
@@ -185,7 +185,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
 
         :return: The quantity of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        :rtype: float
+        :rtype: int
         """
         return self._quantity
 
@@ -196,10 +196,10 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         For a payment or capture, this field is required when _productCode_ is not **default** or one of the values related to shipping and handling. 
 
         :param quantity: The quantity of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        :type: float
+        :type: int
         """
-        if quantity is not None and quantity > 9999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `9999999999`")
+        if quantity is not None and quantity > 999999999:
+            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
         if quantity is not None and quantity < 1:
             raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 

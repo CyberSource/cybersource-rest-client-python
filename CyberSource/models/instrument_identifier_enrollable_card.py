@@ -33,28 +33,33 @@ class InstrumentIdentifierEnrollableCard(object):
     swagger_types = {
         'type': 'str',
         'card': 'Tmsv1instrumentidentifiersCard',
+        'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'bill_to': 'Tmsv1instrumentidentifiersBillTo'
     }
 
     attribute_map = {
         'type': 'type',
         'card': 'card',
+        'bank_account': 'BankAccount',
         'bill_to': 'billTo'
     }
 
-    def __init__(self, type=None, card=None, bill_to=None):
+    def __init__(self, type=None, card=None, bank_account=None, bill_to=None):
         """
         InstrumentIdentifierEnrollableCard - a model defined in Swagger
         """
 
         self._type = None
         self._card = None
+        self._bank_account = None
         self._bill_to = None
 
         if type is not None:
           self.type = type
         if card is not None:
           self.card = card
+        if bank_account is not None:
+          self.bank_account = bank_account
         if bill_to is not None:
           self.bill_to = bill_to
 
@@ -101,6 +106,27 @@ class InstrumentIdentifierEnrollableCard(object):
         """
 
         self._card = card
+
+    @property
+    def bank_account(self):
+        """
+        Gets the bank_account of this InstrumentIdentifierEnrollableCard.
+
+        :return: The bank_account of this InstrumentIdentifierEnrollableCard.
+        :rtype: Tmsv1instrumentidentifiersBankAccount
+        """
+        return self._bank_account
+
+    @bank_account.setter
+    def bank_account(self, bank_account):
+        """
+        Sets the bank_account of this InstrumentIdentifierEnrollableCard.
+
+        :param bank_account: The bank_account of this InstrumentIdentifierEnrollableCard.
+        :type: Tmsv1instrumentidentifiersBankAccount
+        """
+
+        self._bank_account = bank_account
 
     @property
     def bill_to(self):

@@ -31,8 +31,8 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'capture_sequence_number': 'float',
-        'total_capture_count': 'float'
+        'capture_sequence_number': 'int',
+        'total_capture_count': 'int'
     }
 
     attribute_map = {
@@ -60,7 +60,7 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         Capture number when requesting multiple partial captures for one authorization. Used along with `totalCaptureCount` to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber_ = 2`, and   - `totalCaptureCount = 5` 
 
         :return: The capture_sequence_number of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
-        :rtype: float
+        :rtype: int
         """
         return self._capture_sequence_number
 
@@ -71,7 +71,7 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         Capture number when requesting multiple partial captures for one authorization. Used along with `totalCaptureCount` to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber_ = 2`, and   - `totalCaptureCount = 5` 
 
         :param capture_sequence_number: The capture_sequence_number of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
-        :type: float
+        :type: int
         """
         if capture_sequence_number is not None and capture_sequence_number > 99:
             raise ValueError("Invalid value for `capture_sequence_number`, must be a value less than or equal to `99`")
@@ -87,7 +87,7 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         Total number of captures when requesting multiple partial captures for one payment. Used along with `captureSequenceNumber` field to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber = 2`, and   - `totalCaptureCount = 5` 
 
         :return: The total_capture_count of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
-        :rtype: float
+        :rtype: int
         """
         return self._total_capture_count
 
@@ -98,7 +98,7 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         Total number of captures when requesting multiple partial captures for one payment. Used along with `captureSequenceNumber` field to track which capture is being processed.  For example, the second of five captures would be passed to CyberSource as:   - `captureSequenceNumber = 2`, and   - `totalCaptureCount = 5` 
 
         :param total_capture_count: The total_capture_count of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
-        :type: float
+        :type: int
         """
         if total_capture_count is not None and total_capture_count > 99:
             raise ValueError("Invalid value for `total_capture_count`, must be a value less than or equal to `99`")

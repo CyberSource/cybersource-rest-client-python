@@ -120,7 +120,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
     def prefix(self):
         """
         Gets the prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
-        The description for this field is not available.
+        Bank Identification Number (BIN). This is the initial four to six numbers on a credit card account number. 
 
         :return: The prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :rtype: str
@@ -131,7 +131,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
     def prefix(self, prefix):
         """
         Sets the prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
-        The description for this field is not available.
+        Bank Identification Number (BIN). This is the initial four to six numbers on a credit card account number. 
 
         :param prefix: The prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str

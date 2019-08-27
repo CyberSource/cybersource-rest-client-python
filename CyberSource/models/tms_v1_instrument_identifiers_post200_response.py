@@ -36,7 +36,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         'object': 'str',
         'state': 'str',
         'card': 'TmsV1InstrumentIdentifiersPost200ResponseCard',
-        'bank_account': 'TmsV1InstrumentIdentifiersPost200ResponseBankAccount',
+        'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'processing_information': 'TmsV1InstrumentIdentifiersPost200ResponseProcessingInformation',
         'metadata': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata'
     }
@@ -200,7 +200,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         Gets the bank_account of this TmsV1InstrumentIdentifiersPost200Response.
 
         :return: The bank_account of this TmsV1InstrumentIdentifiersPost200Response.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :rtype: Tmsv1instrumentidentifiersBankAccount
         """
         return self._bank_account
 
@@ -210,7 +210,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         Sets the bank_account of this TmsV1InstrumentIdentifiersPost200Response.
 
         :param bank_account: The bank_account of this TmsV1InstrumentIdentifiersPost200Response.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :type: Tmsv1instrumentidentifiersBankAccount
         """
 
         self._bank_account = bank_account

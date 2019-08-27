@@ -36,7 +36,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrume
         'state': 'str',
         'id': 'str',
         'card': 'TmsV1InstrumentIdentifiersPost200ResponseCard',
-        'bank_account': 'TmsV1InstrumentIdentifiersPost200ResponseBankAccount',
+        'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'processing_information': 'TmsV1InstrumentIdentifiersPost200ResponseProcessingInformation',
         'metadata': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata'
     }
@@ -131,7 +131,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrume
     def state(self):
         """
         Gets the state of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
-        'Current state of the token.'              Valid values: - ACTIVE - CLOSED 
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :return: The state of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
         :rtype: str
@@ -142,7 +142,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrume
     def state(self, state):
         """
         Sets the state of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
-        'Current state of the token.'              Valid values: - ACTIVE - CLOSED 
+        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
 
         :param state: The state of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
         :type: str
@@ -204,7 +204,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrume
         Gets the bank_account of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
 
         :return: The bank_account of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :rtype: Tmsv1instrumentidentifiersBankAccount
         """
         return self._bank_account
 
@@ -214,7 +214,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrume
         Sets the bank_account of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
 
         :param bank_account: The bank_account of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        :type: Tmsv1instrumentidentifiersBankAccount
         """
 
         self._bank_account = bank_account

@@ -1,11 +1,10 @@
-# InlineResponse400Fields
+# Tmsv1instrumentidentifiersBankAccount
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **str** | Path of the failed property | [optional] 
-**message** | **str** | Error description about validation failed field | [optional] 
-**localization_key** | **str** | Localized Key Name | [optional] 
+**number** | **str** | Checking account number. | [optional] 
+**routing_number** | **str** | Routing number. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

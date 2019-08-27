@@ -357,7 +357,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self):
         """
         Gets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :return: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -368,7 +368,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self, name):
         """
         Sets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -382,7 +382,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self):
         """
         Gets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available.
+        Raw Electronic Verification response code from the processor for the customer’s name. 
 
         :return: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -393,7 +393,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available.
+        Raw Electronic Verification response code from the processor for the customer’s name. 
 
         :param name_raw: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str

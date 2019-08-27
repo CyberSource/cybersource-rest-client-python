@@ -33,6 +33,9 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
     swagger_types = {
         'request_id': 'str',
         'interchange_per_item_fee': 'str',
+        'interchange_description': 'str',
+        'interchange_percentage': 'str',
+        'interchange_percentage_amount': 'str',
         'discount_percentage': 'str',
         'discount_amount': 'str',
         'discount_per_item_fee': 'str',
@@ -46,6 +49,9 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
     attribute_map = {
         'request_id': 'requestId',
         'interchange_per_item_fee': 'interchangePerItemFee',
+        'interchange_description': 'interchangeDescription',
+        'interchange_percentage': 'interchangePercentage',
+        'interchange_percentage_amount': 'interchangePercentageAmount',
         'discount_percentage': 'discountPercentage',
         'discount_amount': 'discountAmount',
         'discount_per_item_fee': 'discountPerItemFee',
@@ -56,13 +62,16 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         'funding_currency': 'fundingCurrency'
     }
 
-    def __init__(self, request_id=None, interchange_per_item_fee=None, discount_percentage=None, discount_amount=None, discount_per_item_fee=None, total_fee=None, fee_currency=None, dues_assessments=None, funding_amount=None, funding_currency=None):
+    def __init__(self, request_id=None, interchange_per_item_fee=None, interchange_description=None, interchange_percentage=None, interchange_percentage_amount=None, discount_percentage=None, discount_amount=None, discount_per_item_fee=None, total_fee=None, fee_currency=None, dues_assessments=None, funding_amount=None, funding_currency=None):
         """
         ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails - a model defined in Swagger
         """
 
         self._request_id = None
         self._interchange_per_item_fee = None
+        self._interchange_description = None
+        self._interchange_percentage = None
+        self._interchange_percentage_amount = None
         self._discount_percentage = None
         self._discount_amount = None
         self._discount_per_item_fee = None
@@ -76,6 +85,12 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
           self.request_id = request_id
         if interchange_per_item_fee is not None:
           self.interchange_per_item_fee = interchange_per_item_fee
+        if interchange_description is not None:
+          self.interchange_description = interchange_description
+        if interchange_percentage is not None:
+          self.interchange_percentage = interchange_percentage
+        if interchange_percentage_amount is not None:
+          self.interchange_percentage_amount = interchange_percentage_amount
         if discount_percentage is not None:
           self.discount_percentage = discount_percentage
         if discount_amount is not None:
@@ -140,6 +155,75 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         """
 
         self._interchange_per_item_fee = interchange_per_item_fee
+
+    @property
+    def interchange_description(self):
+        """
+        Gets the interchange_description of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Description
+
+        :return: The interchange_description of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :rtype: str
+        """
+        return self._interchange_description
+
+    @interchange_description.setter
+    def interchange_description(self, interchange_description):
+        """
+        Sets the interchange_description of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Description
+
+        :param interchange_description: The interchange_description of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :type: str
+        """
+
+        self._interchange_description = interchange_description
+
+    @property
+    def interchange_percentage(self):
+        """
+        Gets the interchange_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Percentage
+
+        :return: The interchange_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :rtype: str
+        """
+        return self._interchange_percentage
+
+    @interchange_percentage.setter
+    def interchange_percentage(self, interchange_percentage):
+        """
+        Sets the interchange_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Percentage
+
+        :param interchange_percentage: The interchange_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :type: str
+        """
+
+        self._interchange_percentage = interchange_percentage
+
+    @property
+    def interchange_percentage_amount(self):
+        """
+        Gets the interchange_percentage_amount of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Percentage Amount
+
+        :return: The interchange_percentage_amount of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :rtype: str
+        """
+        return self._interchange_percentage_amount
+
+    @interchange_percentage_amount.setter
+    def interchange_percentage_amount(self, interchange_percentage_amount):
+        """
+        Sets the interchange_percentage_amount of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        interchange Percentage Amount
+
+        :param interchange_percentage_amount: The interchange_percentage_amount of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
+        :type: str
+        """
+
+        self._interchange_percentage_amount = interchange_percentage_amount
 
     @property
     def discount_percentage(self):
