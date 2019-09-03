@@ -39,6 +39,7 @@ class Ptsv2creditsProcessingInformation(object):
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'purchase_level': 'str',
+        'industry_data_type': 'str',
         'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
         'bank_transfer_options': 'Ptsv2creditsProcessingInformationBankTransferOptions'
     }
@@ -52,11 +53,12 @@ class Ptsv2creditsProcessingInformation(object):
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
         'purchase_level': 'purchaseLevel',
+        'industry_data_type': 'industryDataType',
         'recurring_options': 'recurringOptions',
         'bank_transfer_options': 'bankTransferOptions'
     }
 
-    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, bank_transfer_options=None):
+    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, recurring_options=None, bank_transfer_options=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class Ptsv2creditsProcessingInformation(object):
         self._report_group = None
         self._visa_checkout_id = None
         self._purchase_level = None
+        self._industry_data_type = None
         self._recurring_options = None
         self._bank_transfer_options = None
 
@@ -88,6 +91,8 @@ class Ptsv2creditsProcessingInformation(object):
           self.visa_checkout_id = visa_checkout_id
         if purchase_level is not None:
           self.purchase_level = purchase_level
+        if industry_data_type is not None:
+          self.industry_data_type = industry_data_type
         if recurring_options is not None:
           self.recurring_options = recurring_options
         if bank_transfer_options is not None:
@@ -292,6 +297,31 @@ class Ptsv2creditsProcessingInformation(object):
             raise ValueError("Invalid value for `purchase_level`, length must be less than or equal to `1`")
 
         self._purchase_level = purchase_level
+
+    @property
+    def industry_data_type(self):
+        """
+        Gets the industry_data_type of this Ptsv2creditsProcessingInformation.
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+
+        :return: The industry_data_type of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._industry_data_type
+
+    @industry_data_type.setter
+    def industry_data_type(self, industry_data_type):
+        """
+        Sets the industry_data_type of this Ptsv2creditsProcessingInformation.
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+
+        :param industry_data_type: The industry_data_type of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+        if industry_data_type is not None and len(industry_data_type) > 10:
+            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `10`")
+
+        self._industry_data_type = industry_data_type
 
     @property
     def recurring_options(self):

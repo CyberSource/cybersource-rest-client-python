@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.tms_v1_instrument_identifiers_post200_response_bank_account import TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+from CyberSource.models.tmsv1instrumentidentifiers_bank_account import Tmsv1instrumentidentifiersBankAccount
 
 
-class TestTmsV1InstrumentIdentifiersPost200ResponseBankAccount(unittest.TestCase):
-    """ TmsV1InstrumentIdentifiersPost200ResponseBankAccount unit test stubs """
+class TestTmsv1instrumentidentifiersBankAccount(unittest.TestCase):
+    """ Tmsv1instrumentidentifiersBankAccount unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestTmsV1InstrumentIdentifiersPost200ResponseBankAccount(unittest.TestCase
     def tearDown(self):
         pass
 
-    def testTmsV1InstrumentIdentifiersPost200ResponseBankAccount(self):
+    def testTmsv1instrumentidentifiersBankAccount(self):
         """
-        Test TmsV1InstrumentIdentifiersPost200ResponseBankAccount
+        Test Tmsv1instrumentidentifiersBankAccount
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.tms_v1_instrument_identifiers_post200_response_bank_account.TmsV1InstrumentIdentifiersPost200ResponseBankAccount()
+        #model = CyberSource.models.tmsv1instrumentidentifiers_bank_account.Tmsv1instrumentidentifiersBankAccount()
         pass
 
 

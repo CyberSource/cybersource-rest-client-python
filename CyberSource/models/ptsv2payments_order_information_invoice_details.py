@@ -40,7 +40,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'taxable': 'bool',
         'vat_invoice_reference_number': 'str',
         'commodity_code': 'str',
-        'merchandise_code': 'float',
+        'merchandise_code': 'int',
         'transaction_advice_addendum': 'list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]',
         'reference_data_code': 'str',
         'reference_data_number': 'str'
@@ -332,7 +332,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         Identifier for the merchandise. Possible value:   - 1000: Gift card  This field is supported only for **American Express Direct**. 
 
         :return: The merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        :rtype: float
+        :rtype: int
         """
         return self._merchandise_code
 
@@ -343,7 +343,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         Identifier for the merchandise. Possible value:   - 1000: Gift card  This field is supported only for **American Express Direct**. 
 
         :param merchandise_code: The merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        :type: float
+        :type: int
         """
 
         self._merchandise_code = merchandise_code

@@ -19,24 +19,24 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.inline_response_400_fields import InlineResponse400Fields
+from CyberSource.apis.download_xsd_api import DownloadXSDApi
 
 
-class TestInlineResponse400Fields(unittest.TestCase):
-    """ InlineResponse400Fields unit test stubs """
+class TestDownloadXSDApi(unittest.TestCase):
+    """ DownloadXSDApi unit test stubs """
 
     def setUp(self):
-        pass
+        self.api = CyberSource.apis.download_xsd_api.DownloadXSDApi()
 
     def tearDown(self):
         pass
 
-    def testInlineResponse400Fields(self):
+    def test_get_xsdv2(self):
         """
-        Test InlineResponse400Fields
+        Test case for get_xsdv2
+
+        Used to download XSDs for reports
         """
-        # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.inline_response_400_fields.InlineResponse400Fields()
         pass
 
 

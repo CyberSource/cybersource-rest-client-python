@@ -31,31 +31,31 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'key': 'str',
+        'key_serial_number': 'str',
         'descriptor': 'str',
         'value': 'str',
         'encoding': 'str'
     }
 
     attribute_map = {
-        'key': 'key',
+        'key_serial_number': 'keySerialNumber',
         'descriptor': 'descriptor',
         'value': 'value',
         'encoding': 'encoding'
     }
 
-    def __init__(self, key=None, descriptor=None, value=None, encoding=None):
+    def __init__(self, key_serial_number=None, descriptor=None, value=None, encoding=None):
         """
         Ptsv2paymentsPaymentInformationFluidData - a model defined in Swagger
         """
 
-        self._key = None
+        self._key_serial_number = None
         self._descriptor = None
         self._value = None
         self._encoding = None
 
-        if key is not None:
-          self.key = key
+        if key_serial_number is not None:
+          self.key_serial_number = key_serial_number
         if descriptor is not None:
           self.descriptor = descriptor
         if value is not None:
@@ -64,27 +64,27 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
           self.encoding = encoding
 
     @property
-    def key(self):
+    def key_serial_number(self):
         """
-        Gets the key of this Ptsv2paymentsPaymentInformationFluidData.
+        Gets the key_serial_number of this Ptsv2paymentsPaymentInformationFluidData.
         The encoded or encrypted value that a payment solution returns for an authorization request. For details about the valid values for a key, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html) 
 
-        :return: The key of this Ptsv2paymentsPaymentInformationFluidData.
+        :return: The key_serial_number of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
         """
-        return self._key
+        return self._key_serial_number
 
-    @key.setter
-    def key(self, key):
+    @key_serial_number.setter
+    def key_serial_number(self, key_serial_number):
         """
-        Sets the key of this Ptsv2paymentsPaymentInformationFluidData.
+        Sets the key_serial_number of this Ptsv2paymentsPaymentInformationFluidData.
         The encoded or encrypted value that a payment solution returns for an authorization request. For details about the valid values for a key, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html) 
 
-        :param key: The key of this Ptsv2paymentsPaymentInformationFluidData.
+        :param key_serial_number: The key_serial_number of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
 
-        self._key = key
+        self._key_serial_number = key_serial_number
 
     @property
     def descriptor(self):

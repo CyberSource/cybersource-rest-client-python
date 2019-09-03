@@ -32,10 +32,10 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     """
     swagger_types = {
         'tags': 'str',
-        'cardholder_verification_method_used': 'float',
+        'cardholder_verification_method_used': 'int',
         'card_sequence_number': 'str',
         'fallback': 'bool',
-        'fallback_condition': 'float'
+        'fallback_condition': 'int'
     }
 
     attribute_map = {
@@ -100,7 +100,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         Method that was used to verify the cardholder's identity.  Possible values:  - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
 
         :return: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :rtype: float
+        :rtype: int
         """
         return self._cardholder_verification_method_used
 
@@ -111,7 +111,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         Method that was used to verify the cardholder's identity.  Possible values:  - **0**: No verification  - **1**: Signature  This field is supported only on **American Express Direct**. 
 
         :param cardholder_verification_method_used: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :type: float
+        :type: int
         """
 
         self._cardholder_verification_method_used = cardholder_verification_method_used
@@ -171,7 +171,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**.  **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field when the EMV terminal does not have any applications in common with the EMV card.  For details, see the `emv_request_fallback_condition` field description in the [Card-Present Processing Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :rtype: float
+        :rtype: int
         """
         return self._fallback_condition
 
@@ -182,7 +182,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - **1**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - **2**: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN**.  **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field when the EMV terminal does not have any applications in common with the EMV card.  For details, see the `emv_request_fallback_condition` field description in the [Card-Present Processing Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param fallback_condition: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :type: float
+        :type: int
         """
 
         self._fallback_condition = fallback_condition

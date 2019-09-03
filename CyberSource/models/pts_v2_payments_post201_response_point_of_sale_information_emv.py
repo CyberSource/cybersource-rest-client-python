@@ -31,22 +31,32 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'tags': 'str'
+        'tags': 'str',
+        'chip_validation_type': 'str',
+        'chip_validation_result': 'str'
     }
 
     attribute_map = {
-        'tags': 'tags'
+        'tags': 'tags',
+        'chip_validation_type': 'chipValidationType',
+        'chip_validation_result': 'chipValidationResult'
     }
 
-    def __init__(self, tags=None):
+    def __init__(self, tags=None, chip_validation_type=None, chip_validation_result=None):
         """
         PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv - a model defined in Swagger
         """
 
         self._tags = None
+        self._chip_validation_type = None
+        self._chip_validation_result = None
 
         if tags is not None:
           self.tags = tags
+        if chip_validation_type is not None:
+          self.chip_validation_type = chip_validation_type
+        if chip_validation_result is not None:
+          self.chip_validation_result = chip_validation_result
 
     @property
     def tags(self):
@@ -72,6 +82,56 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
             raise ValueError("Invalid value for `tags`, length must be less than or equal to `1998`")
 
         self._tags = tags
+
+    @property
+    def chip_validation_type(self):
+        """
+        Gets the chip_validation_type of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        Entity or service that provided the validation results returned in **chipValidationResult**.  Possible values:  - **02**: MasterCard on-behalf pre-validation service (The MasterCard authorization platform validated the M/Chip cryptogram before the authorization request reached the issuer.)  - **03**: MasterCard on-behalf stand-in service (The MasterCard authorization platform validated the M/Chip cryptogram because the issuer was not available.)  - **50**: Issuer  - **90**: Chip fall-back transaction downgrade process (The chip could not be read.)  This field is returned only for NFC payment network tokenization transactions with MasterCard.  **Note** No CyberSource through VisaNet acquirers support EMV at this time. 
+
+        :return: The chip_validation_type of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        :rtype: str
+        """
+        return self._chip_validation_type
+
+    @chip_validation_type.setter
+    def chip_validation_type(self, chip_validation_type):
+        """
+        Sets the chip_validation_type of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        Entity or service that provided the validation results returned in **chipValidationResult**.  Possible values:  - **02**: MasterCard on-behalf pre-validation service (The MasterCard authorization platform validated the M/Chip cryptogram before the authorization request reached the issuer.)  - **03**: MasterCard on-behalf stand-in service (The MasterCard authorization platform validated the M/Chip cryptogram because the issuer was not available.)  - **50**: Issuer  - **90**: Chip fall-back transaction downgrade process (The chip could not be read.)  This field is returned only for NFC payment network tokenization transactions with MasterCard.  **Note** No CyberSource through VisaNet acquirers support EMV at this time. 
+
+        :param chip_validation_type: The chip_validation_type of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        :type: str
+        """
+        if chip_validation_type is not None and len(chip_validation_type) > 2:
+            raise ValueError("Invalid value for `chip_validation_type`, length must be less than or equal to `2`")
+
+        self._chip_validation_type = chip_validation_type
+
+    @property
+    def chip_validation_result(self):
+        """
+        Gets the chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        Cryptogram validation results returned by the entity or service specified in **chipValidationType**.  Possible values: - **A**: Application cryptogram is valid, but the application transaction counter (ATC) is outside allowed range. (A large jump in ATC values may indicate data copying or other fraud.) - **C**: Chip validation was completed successfully. - **E**: Application cryptogram is valid but the ATC indicates possible replay fraud. - **F**: Format error in the chip data. - **G**: Application cryptogram is valid but is not a valid authorization request cryptogram (ARQC). - **I**: Application cryptogram is invalid. - **T**: Application cryptogram is valid but terminal verification results (TVR) or card verification results (CVR) are invalid. - **U**: Application cryptogram could not be validated because of a technical error.  This field is returned only for NFC payment network tokenization transactions with MasterCard.  **Note** No CyberSource through VisaNet acquirers support EMV at this time. 
+
+        :return: The chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        :rtype: str
+        """
+        return self._chip_validation_result
+
+    @chip_validation_result.setter
+    def chip_validation_result(self, chip_validation_result):
+        """
+        Sets the chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        Cryptogram validation results returned by the entity or service specified in **chipValidationType**.  Possible values: - **A**: Application cryptogram is valid, but the application transaction counter (ATC) is outside allowed range. (A large jump in ATC values may indicate data copying or other fraud.) - **C**: Chip validation was completed successfully. - **E**: Application cryptogram is valid but the ATC indicates possible replay fraud. - **F**: Format error in the chip data. - **G**: Application cryptogram is valid but is not a valid authorization request cryptogram (ARQC). - **I**: Application cryptogram is invalid. - **T**: Application cryptogram is valid but terminal verification results (TVR) or card verification results (CVR) are invalid. - **U**: Application cryptogram could not be validated because of a technical error.  This field is returned only for NFC payment network tokenization transactions with MasterCard.  **Note** No CyberSource through VisaNet acquirers support EMV at this time. 
+
+        :param chip_validation_result: The chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
+        :type: str
+        """
+        if chip_validation_result is not None and len(chip_validation_result) > 1:
+            raise ValueError("Invalid value for `chip_validation_result`, length must be less than or equal to `1`")
+
+        self._chip_validation_result = chip_validation_result
 
     def to_dict(self):
         """

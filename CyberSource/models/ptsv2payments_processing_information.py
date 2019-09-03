@@ -41,6 +41,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
+        'industry_data_type': 'str',
         'authorization_options': 'Ptsv2paymentsProcessingInformationAuthorizationOptions',
         'capture_options': 'Ptsv2paymentsProcessingInformationCaptureOptions',
         'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions',
@@ -58,13 +59,14 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'purchaseLevel',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
+        'industry_data_type': 'industryDataType',
         'authorization_options': 'authorizationOptions',
         'capture_options': 'captureOptions',
         'recurring_options': 'recurringOptions',
         'bank_transfer_options': 'bankTransferOptions'
     }
 
-    def __init__(self, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None):
+    def __init__(self, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -79,6 +81,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._purchase_level = None
         self._report_group = None
         self._visa_checkout_id = None
+        self._industry_data_type = None
         self._authorization_options = None
         self._capture_options = None
         self._recurring_options = None
@@ -104,6 +107,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.report_group = report_group
         if visa_checkout_id is not None:
           self.visa_checkout_id = visa_checkout_id
+        if industry_data_type is not None:
+          self.industry_data_type = industry_data_type
         if authorization_options is not None:
           self.authorization_options = authorization_options
         if capture_options is not None:
@@ -358,6 +363,31 @@ class Ptsv2paymentsProcessingInformation(object):
             raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
+
+    @property
+    def industry_data_type(self):
+        """
+        Gets the industry_data_type of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+
+        :return: The industry_data_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._industry_data_type
+
+    @industry_data_type.setter
+    def industry_data_type(self, industry_data_type):
+        """
+        Sets the industry_data_type of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+
+        :param industry_data_type: The industry_data_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+        if industry_data_type is not None and len(industry_data_type) > 10:
+            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `10`")
+
+        self._industry_data_type = industry_data_type
 
     @property
     def authorization_options(self):

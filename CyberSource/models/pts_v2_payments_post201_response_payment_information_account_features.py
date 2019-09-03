@@ -157,7 +157,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_status(self):
         """
         Gets the account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for Visa Platform Connect. 
+        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for CyberSource through VisaNet. 
 
         :return: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -168,7 +168,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def account_status(self, account_status):
         """
         Sets the account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for Visa Platform Connect. 
+        Possible values:   - `N`: Nonregulated  - `R`: Regulated  **Note** This field is returned only for CyberSource through VisaNet. 
 
         :param account_status: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -357,7 +357,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def group(self):
         """
         Gets the group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of commercial card. This field is supported only for Visa Platform Connect. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
+        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
 
         :return: The group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -368,7 +368,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def group(self, group):
         """
         Sets the group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of commercial card. This field is supported only for Visa Platform Connect. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
+        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
 
         :param group: The group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str

@@ -57,7 +57,7 @@ class TssV2TransactionsGet200ResponseRiskInformationProfile(object):
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseRiskInformationProfile.
-        The description for this field is not available.
+        The name of the profile. 
 
         :return: The name of this TssV2TransactionsGet200ResponseRiskInformationProfile.
         :rtype: str
@@ -68,7 +68,7 @@ class TssV2TransactionsGet200ResponseRiskInformationProfile(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseRiskInformationProfile.
-        The description for this field is not available.
+        The name of the profile. 
 
         :param name: The name of this TssV2TransactionsGet200ResponseRiskInformationProfile.
         :type: str
@@ -80,7 +80,7 @@ class TssV2TransactionsGet200ResponseRiskInformationProfile(object):
     def decision(self):
         """
         Gets the decision of this TssV2TransactionsGet200ResponseRiskInformationProfile.
-        The description for this field is not available.
+        Decision returned by the profile; this field contains one of these values: - ACCEPT - REJECT - REVIEW 
 
         :return: The decision of this TssV2TransactionsGet200ResponseRiskInformationProfile.
         :rtype: str
@@ -91,7 +91,7 @@ class TssV2TransactionsGet200ResponseRiskInformationProfile(object):
     def decision(self, decision):
         """
         Sets the decision of this TssV2TransactionsGet200ResponseRiskInformationProfile.
-        The description for this field is not available.
+        Decision returned by the profile; this field contains one of these values: - ACCEPT - REJECT - REVIEW 
 
         :param decision: The decision of this TssV2TransactionsGet200ResponseRiskInformationProfile.
         :type: str

@@ -31,27 +31,38 @@ class Link(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'href': 'str'
+        'href': 'str',
+        'title': 'str',
+        'method': 'str'
     }
 
     attribute_map = {
-        'href': 'href'
+        'href': 'href',
+        'title': 'title',
+        'method': 'method'
     }
 
-    def __init__(self, href=None):
+    def __init__(self, href=None, title=None, method=None):
         """
         Link - a model defined in Swagger
         """
 
         self._href = None
+        self._title = None
+        self._method = None
 
         if href is not None:
           self.href = href
+        if title is not None:
+          self.title = title
+        if method is not None:
+          self.method = method
 
     @property
     def href(self):
         """
         Gets the href of this Link.
+        URI of the linked resource.
 
         :return: The href of this Link.
         :rtype: str
@@ -62,12 +73,59 @@ class Link(object):
     def href(self, href):
         """
         Sets the href of this Link.
+        URI of the linked resource.
 
         :param href: The href of this Link.
         :type: str
         """
 
         self._href = href
+
+    @property
+    def title(self):
+        """
+        Gets the title of this Link.
+        Label of the linked resource.
+
+        :return: The title of this Link.
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """
+        Sets the title of this Link.
+        Label of the linked resource.
+
+        :param title: The title of this Link.
+        :type: str
+        """
+
+        self._title = title
+
+    @property
+    def method(self):
+        """
+        Gets the method of this Link.
+        HTTP method of the linked resource.
+
+        :return: The method of this Link.
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """
+        Sets the method of this Link.
+        HTTP method of the linked resource.
+
+        :param method: The method of this Link.
+        :type: str
+        """
+
+        self._method = method
 
     def to_dict(self):
         """

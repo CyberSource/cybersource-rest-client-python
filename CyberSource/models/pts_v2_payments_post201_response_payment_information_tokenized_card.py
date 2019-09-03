@@ -155,7 +155,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :return: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -166,7 +166,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :param assurance_level: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
@@ -230,7 +230,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self):
         """
         Gets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :return: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -241,7 +241,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **Visa Platform Connect** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
 
         :param requestor_id: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str

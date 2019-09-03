@@ -147,7 +147,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :return: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -158,7 +158,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available. 
+        Mapped Electronic Verification response code for the customer’s name. 
 
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -172,7 +172,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self):
         """
         Gets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available.
+        Raw Electronic Verification response code from the processor for the customer’s name. 
 
         :return: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -183,7 +183,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        The description for this field is not available.
+        Raw Electronic Verification response code from the processor for the customer’s name. 
 
         :param name_raw: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
