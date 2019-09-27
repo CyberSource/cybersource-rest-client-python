@@ -87,25 +87,28 @@ class ApiClient(object):
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
-	
-	# replace the underscore
-    def replace_underscore(self, d):
-        for oldkey, v in list(d.items()):
-            if isinstance(v, dict):
-                if re.findall('[^A-Za-z0-9]', oldkey):
-                    newkey = self.to_camel_case(oldkey)
-                    d[newkey] = d.pop(oldkey)
-                    self.replace_underscore(v)
-            else:
-                for oldkey, w in list(d.items()):
-                    if not isinstance(w, dict):
-                        if re.findall('[^A-Za-z0-9]', oldkey):
-                            newkey = self.to_camel_case(oldkey)
-                            d[newkey] = d.pop(oldkey)
-                    else:
-                        self.replace_underscore(w)
+    
+    # replace the underscore
+    def replace_underscore(self, dict_obj, deep=False):
+        assert type(dict_obj) == dict
+        converted_dict_obj = {}
+        for snake_case_k in dict_obj:
+            camel_case_k = re.sub('_([a-z])', lambda match: match.group(1).upper(), snake_case_k)
+            value = dict_obj[snake_case_k]
 
-        return d
+            if type(value) == dict and deep:
+                converted_dict_obj[camel_case_k] = self.replace_underscore(value, deep)
+            elif type(value) == list and deep:
+                converted_list_items = []
+                for item in value:
+                    if type(item) == str:
+                        converted_list_items.append(item)
+                    else:
+                        converted_list_items.append(self.replace_underscore(item, deep))
+                converted_dict_obj[camel_case_k] = converted_list_items
+            else:
+                converted_dict_obj[camel_case_k] = dict_obj[snake_case_k]
+        return converted_dict_obj
 
     # Converting the camelCaps
     def to_camel_case(self, snake_str):
@@ -113,8 +116,8 @@ class ApiClient(object):
 
         camel = title[0].lower() + title[1:]
         return camel
-		
-	# Setting Merchant Configuration
+        
+    # Setting Merchant Configuration
     def set_configuration(self,config):
         global mconfig
         mconfig = MerchantConfiguration()
@@ -168,18 +171,18 @@ class ApiClient(object):
 
 
         return encoded_digest
-		
-		
+        
+        
     # Adds query param to URL
     def set_query_params(self, path, query_param):
         if query_param:
             path += '?' + urlencode(query_param)
 
         return path
-		
-	
+        
     
-	
+    
+    
   
 
     def __call_api(self, resource_path, method,
@@ -376,8 +379,10 @@ class ApiClient(object):
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            request_body = self.replace_underscore(json.loads(body))
+            temp_body = body.replace("\"", "\"")
+            request_body = self.replace_underscore(json.loads(temp_body))
             body = json.dumps(request_body)
+            body = body.replace("companyTaxId", "companyTaxID")
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
             mconfig.request_target = query_param_path
