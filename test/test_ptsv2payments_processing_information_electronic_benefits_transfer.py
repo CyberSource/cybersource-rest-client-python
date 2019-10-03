@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.request_body import RequestBody
+from CyberSource.models.ptsv2payments_processing_information_electronic_benefits_transfer import Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer
 
 
-class TestRequestBody(unittest.TestCase):
-    """ RequestBody unit test stubs """
+class TestPtsv2paymentsProcessingInformationElectronicBenefitsTransfer(unittest.TestCase):
+    """ Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestRequestBody(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRequestBody(self):
+    def testPtsv2paymentsProcessingInformationElectronicBenefitsTransfer(self):
         """
-        Test RequestBody
+        Test Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.request_body.RequestBody()
+        #model = CyberSource.models.ptsv2payments_processing_information_electronic_benefits_transfer.Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer()
         pass
 
 

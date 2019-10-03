@@ -133,7 +133,7 @@ class CreditApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/pts/v2/credits/', 'POST',
+        return self.api_client.call_api(f'/pts/v2/credits', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

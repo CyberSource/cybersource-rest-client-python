@@ -41,7 +41,9 @@ class Ptsv2creditsProcessingInformation(object):
         'purchase_level': 'str',
         'industry_data_type': 'str',
         'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
-        'bank_transfer_options': 'Ptsv2creditsProcessingInformationBankTransferOptions'
+        'bank_transfer_options': 'Ptsv2creditsProcessingInformationBankTransferOptions',
+        'purchase_options': 'Ptsv2creditsProcessingInformationPurchaseOptions',
+        'electronic_benefits_transfer': 'Ptsv2creditsProcessingInformationElectronicBenefitsTransfer'
     }
 
     attribute_map = {
@@ -55,10 +57,12 @@ class Ptsv2creditsProcessingInformation(object):
         'purchase_level': 'purchaseLevel',
         'industry_data_type': 'industryDataType',
         'recurring_options': 'recurringOptions',
-        'bank_transfer_options': 'bankTransferOptions'
+        'bank_transfer_options': 'bankTransferOptions',
+        'purchase_options': 'purchaseOptions',
+        'electronic_benefits_transfer': 'electronicBenefitsTransfer'
     }
 
-    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, recurring_options=None, bank_transfer_options=None):
+    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
@@ -74,6 +78,8 @@ class Ptsv2creditsProcessingInformation(object):
         self._industry_data_type = None
         self._recurring_options = None
         self._bank_transfer_options = None
+        self._purchase_options = None
+        self._electronic_benefits_transfer = None
 
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
@@ -97,6 +103,10 @@ class Ptsv2creditsProcessingInformation(object):
           self.recurring_options = recurring_options
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
+        if purchase_options is not None:
+          self.purchase_options = purchase_options
+        if electronic_benefits_transfer is not None:
+          self.electronic_benefits_transfer = electronic_benefits_transfer
 
     @property
     def commerce_indicator(self):
@@ -364,6 +374,48 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._bank_transfer_options = bank_transfer_options
+
+    @property
+    def purchase_options(self):
+        """
+        Gets the purchase_options of this Ptsv2creditsProcessingInformation.
+
+        :return: The purchase_options of this Ptsv2creditsProcessingInformation.
+        :rtype: Ptsv2creditsProcessingInformationPurchaseOptions
+        """
+        return self._purchase_options
+
+    @purchase_options.setter
+    def purchase_options(self, purchase_options):
+        """
+        Sets the purchase_options of this Ptsv2creditsProcessingInformation.
+
+        :param purchase_options: The purchase_options of this Ptsv2creditsProcessingInformation.
+        :type: Ptsv2creditsProcessingInformationPurchaseOptions
+        """
+
+        self._purchase_options = purchase_options
+
+    @property
+    def electronic_benefits_transfer(self):
+        """
+        Gets the electronic_benefits_transfer of this Ptsv2creditsProcessingInformation.
+
+        :return: The electronic_benefits_transfer of this Ptsv2creditsProcessingInformation.
+        :rtype: Ptsv2creditsProcessingInformationElectronicBenefitsTransfer
+        """
+        return self._electronic_benefits_transfer
+
+    @electronic_benefits_transfer.setter
+    def electronic_benefits_transfer(self, electronic_benefits_transfer):
+        """
+        Sets the electronic_benefits_transfer of this Ptsv2creditsProcessingInformation.
+
+        :param electronic_benefits_transfer: The electronic_benefits_transfer of this Ptsv2creditsProcessingInformation.
+        :type: Ptsv2creditsProcessingInformationElectronicBenefitsTransfer
+        """
+
+        self._electronic_benefits_transfer = electronic_benefits_transfer
 
     def to_dict(self):
         """

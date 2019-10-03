@@ -31,32 +31,32 @@ class Links(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'InlineResponseDefaultLinksNext',
-        'documentation': 'list[InlineResponseDefaultLinksNext]',
-        'next': 'list[InlineResponseDefaultLinksNext]'
+        '_self': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf',
+        'ancestor': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf',
+        'successor': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf'
     }
 
     attribute_map = {
         '_self': 'self',
-        'documentation': 'documentation',
-        'next': 'next'
+        'ancestor': 'ancestor',
+        'successor': 'successor'
     }
 
-    def __init__(self, _self=None, documentation=None, next=None):
+    def __init__(self, _self=None, ancestor=None, successor=None):
         """
         Links - a model defined in Swagger
         """
 
         self.__self = None
-        self._documentation = None
-        self._next = None
+        self._ancestor = None
+        self._successor = None
 
         if _self is not None:
           self._self = _self
-        if documentation is not None:
-          self.documentation = documentation
-        if next is not None:
-          self.next = next
+        if ancestor is not None:
+          self.ancestor = ancestor
+        if successor is not None:
+          self.successor = successor
 
     @property
     def _self(self):
@@ -64,7 +64,7 @@ class Links(object):
         Gets the _self of this Links.
 
         :return: The _self of this Links.
-        :rtype: InlineResponseDefaultLinksNext
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
         return self.__self
 
@@ -74,52 +74,52 @@ class Links(object):
         Sets the _self of this Links.
 
         :param _self: The _self of this Links.
-        :type: InlineResponseDefaultLinksNext
+        :type: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
 
         self.__self = _self
 
     @property
-    def documentation(self):
+    def ancestor(self):
         """
-        Gets the documentation of this Links.
+        Gets the ancestor of this Links.
 
-        :return: The documentation of this Links.
-        :rtype: list[InlineResponseDefaultLinksNext]
+        :return: The ancestor of this Links.
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
-        return self._documentation
+        return self._ancestor
 
-    @documentation.setter
-    def documentation(self, documentation):
+    @ancestor.setter
+    def ancestor(self, ancestor):
         """
-        Sets the documentation of this Links.
+        Sets the ancestor of this Links.
 
-        :param documentation: The documentation of this Links.
-        :type: list[InlineResponseDefaultLinksNext]
+        :param ancestor: The ancestor of this Links.
+        :type: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
 
-        self._documentation = documentation
+        self._ancestor = ancestor
 
     @property
-    def next(self):
+    def successor(self):
         """
-        Gets the next of this Links.
+        Gets the successor of this Links.
 
-        :return: The next of this Links.
-        :rtype: list[InlineResponseDefaultLinksNext]
+        :return: The successor of this Links.
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
-        return self._next
+        return self._successor
 
-    @next.setter
-    def next(self, next):
+    @successor.setter
+    def successor(self, successor):
         """
-        Sets the next of this Links.
+        Sets the successor of this Links.
 
-        :param next: The next of this Links.
-        :type: list[InlineResponseDefaultLinksNext]
+        :param successor: The successor of this Links.
+        :type: TmsV1InstrumentIdentifiersPost200ResponseLinksSelf
         """
 
-        self._next = next
+        self._successor = successor
 
     def to_dict(self):
         """

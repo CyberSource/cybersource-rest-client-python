@@ -34,7 +34,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         'product_code': 'str',
         'product_name': 'str',
         'product_sku': 'str',
-        'quantity': 'float',
+        'quantity': 'int',
         'unit_price': 'str',
         'unit_of_measure': 'str',
         'total_amount': 'str',
@@ -225,7 +225,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         Number of units for this order.  The default is `1`. For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling.  When orderInformation.lineItems[].productCode is \"gift_card\", this is the total count of individual prepaid gift cards purchased. 
 
         :return: The quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        :rtype: float
+        :rtype: int
         """
         return self._quantity
 
@@ -236,10 +236,10 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         Number of units for this order.  The default is `1`. For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling.  When orderInformation.lineItems[].productCode is \"gift_card\", this is the total count of individual prepaid gift cards purchased. 
 
         :param quantity: The quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
-        :type: float
+        :type: int
         """
-        if quantity is not None and quantity > 9999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `9999999999`")
+        if quantity is not None and quantity > 999999999:
+            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
         if quantity is not None and quantity < 1:
             raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 

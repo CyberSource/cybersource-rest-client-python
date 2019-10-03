@@ -31,22 +31,27 @@ class VoidCaptureRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation'
+        'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation',
+        'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation'
     }
 
     attribute_map = {
-        'client_reference_information': 'clientReferenceInformation'
+        'client_reference_information': 'clientReferenceInformation',
+        'payment_information': 'paymentInformation'
     }
 
-    def __init__(self, client_reference_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None):
         """
         VoidCaptureRequest - a model defined in Swagger
         """
 
         self._client_reference_information = None
+        self._payment_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
+        if payment_information is not None:
+          self.payment_information = payment_information
 
     @property
     def client_reference_information(self):
@@ -68,6 +73,27 @@ class VoidCaptureRequest(object):
         """
 
         self._client_reference_information = client_reference_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this VoidCaptureRequest.
+
+        :return: The payment_information of this VoidCaptureRequest.
+        :rtype: Ptsv2paymentsidvoidsPaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this VoidCaptureRequest.
+
+        :param payment_information: The payment_information of this VoidCaptureRequest.
+        :type: Ptsv2paymentsidvoidsPaymentInformation
+        """
+
+        self._payment_information = payment_information
 
     def to_dict(self):
         """

@@ -33,16 +33,18 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
     swagger_types = {
         'card': 'Ptsv2paymentsidrefundsPaymentInformationCard',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
     }
 
     attribute_map = {
         'card': 'card',
         'bank': 'bank',
-        'customer': 'customer'
+        'customer': 'customer',
+        'payment_type': 'paymentType'
     }
 
-    def __init__(self, card=None, bank=None, customer=None):
+    def __init__(self, card=None, bank=None, customer=None, payment_type=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         self._card = None
         self._bank = None
         self._customer = None
+        self._payment_type = None
 
         if card is not None:
           self.card = card
@@ -57,6 +60,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.bank = bank
         if customer is not None:
           self.customer = customer
+        if payment_type is not None:
+          self.payment_type = payment_type
 
     @property
     def card(self):
@@ -120,6 +125,27 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._customer = customer
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param payment_type: The payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
 
     def to_dict(self):
         """

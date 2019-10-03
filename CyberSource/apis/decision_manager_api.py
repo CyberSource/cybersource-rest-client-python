@@ -133,7 +133,7 @@ class DecisionManagerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/risk/v1/decisions', 'POST',
+        return self.api_client.call_api(f'/risk/v1/decisions', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **create_subscription**
-> create_subscription(request_body, organization_id=organization_id)
+> create_subscription(create_report_subscription_request, organization_id=organization_id)
 
 Create Report Subscription for a report name by organization
 
@@ -27,12 +27,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
-request_body = CyberSource.RequestBody1() # RequestBody1 | Report subscription request payload
+create_report_subscription_request = CyberSource.CreateReportSubscriptionRequest() # CreateReportSubscriptionRequest | Report subscription request payload
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Create Report Subscription for a report name by organization
-    api_instance.create_subscription(request_body, organization_id=organization_id)
+    api_instance.create_subscription(create_report_subscription_request, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling ReportSubscriptionsApi->create_subscription: %s\n" % e)
 ```
@@ -41,7 +41,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_body** | [**RequestBody1**](RequestBody1.md)| Report subscription request payload | 
+ **create_report_subscription_request** | [**CreateReportSubscriptionRequest**](CreateReportSubscriptionRequest.md)| Report subscription request payload | 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type

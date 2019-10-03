@@ -142,7 +142,7 @@ class UserManagementApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/ums/v1/users', 'GET',
+        return self.api_client.call_api(f'/ums/v1/users', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

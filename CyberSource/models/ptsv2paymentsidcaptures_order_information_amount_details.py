@@ -49,7 +49,8 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
         'amex_additional_amounts': 'list[Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts]',
         'tax_details': 'list[Ptsv2paymentsOrderInformationAmountDetailsTaxDetails]',
         'service_fee_amount': 'str',
-        'original_currency': 'str'
+        'original_currency': 'str',
+        'cashback_amount': 'str'
     }
 
     attribute_map = {
@@ -71,10 +72,11 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
         'amex_additional_amounts': 'amexAdditionalAmounts',
         'tax_details': 'taxDetails',
         'service_fee_amount': 'serviceFeeAmount',
-        'original_currency': 'originalCurrency'
+        'original_currency': 'originalCurrency',
+        'cashback_amount': 'cashbackAmount'
     }
 
-    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_currency=None):
+    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_currency=None, cashback_amount=None):
         """
         Ptsv2paymentsidcapturesOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -98,6 +100,7 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
         self._tax_details = None
         self._service_fee_amount = None
         self._original_currency = None
+        self._cashback_amount = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -137,6 +140,8 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
           self.service_fee_amount = service_fee_amount
         if original_currency is not None:
           self.original_currency = original_currency
+        if cashback_amount is not None:
+          self.cashback_amount = cashback_amount
 
     @property
     def total_amount(self):
@@ -604,6 +609,31 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
             raise ValueError("Invalid value for `original_currency`, length must be less than or equal to `15`")
 
         self._original_currency = original_currency
+
+    @property
+    def cashback_amount(self):
+        """
+        Gets the cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
+        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+
+        :return: The cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._cashback_amount
+
+    @cashback_amount.setter
+    def cashback_amount(self, cashback_amount):
+        """
+        Sets the cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
+        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+
+        :param cashback_amount: The cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
+        :type: str
+        """
+        if cashback_amount is not None and len(cashback_amount) > 13:
+            raise ValueError("Invalid value for `cashback_amount`, length must be less than or equal to `13`")
+
+        self._cashback_amount = cashback_amount
 
     def to_dict(self):
         """

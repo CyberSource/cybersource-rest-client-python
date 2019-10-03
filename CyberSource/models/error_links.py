@@ -31,53 +31,53 @@ class ErrorLinks(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        '_self': 'InlineResponseDefaultLinksNext',
+        'next': 'list[InlineResponseDefaultLinksNext]',
         'documentation': 'list[InlineResponseDefaultLinksNext]',
-        'next': 'list[InlineResponseDefaultLinksNext]'
+        '_self': 'InlineResponseDefaultLinksNext'
     }
 
     attribute_map = {
-        '_self': 'self',
+        'next': 'next',
         'documentation': 'documentation',
-        'next': 'next'
+        '_self': 'self'
     }
 
-    def __init__(self, _self=None, documentation=None, next=None):
+    def __init__(self, next=None, documentation=None, _self=None):
         """
         ErrorLinks - a model defined in Swagger
         """
 
-        self.__self = None
-        self._documentation = None
         self._next = None
+        self._documentation = None
+        self.__self = None
 
-        if _self is not None:
-          self._self = _self
-        if documentation is not None:
-          self.documentation = documentation
         if next is not None:
           self.next = next
+        if documentation is not None:
+          self.documentation = documentation
+        if _self is not None:
+          self._self = _self
 
     @property
-    def _self(self):
+    def next(self):
         """
-        Gets the _self of this ErrorLinks.
+        Gets the next of this ErrorLinks.
 
-        :return: The _self of this ErrorLinks.
-        :rtype: InlineResponseDefaultLinksNext
+        :return: The next of this ErrorLinks.
+        :rtype: list[InlineResponseDefaultLinksNext]
         """
-        return self.__self
+        return self._next
 
-    @_self.setter
-    def _self(self, _self):
+    @next.setter
+    def next(self, next):
         """
-        Sets the _self of this ErrorLinks.
+        Sets the next of this ErrorLinks.
 
-        :param _self: The _self of this ErrorLinks.
-        :type: InlineResponseDefaultLinksNext
+        :param next: The next of this ErrorLinks.
+        :type: list[InlineResponseDefaultLinksNext]
         """
 
-        self.__self = _self
+        self._next = next
 
     @property
     def documentation(self):
@@ -101,25 +101,25 @@ class ErrorLinks(object):
         self._documentation = documentation
 
     @property
-    def next(self):
+    def _self(self):
         """
-        Gets the next of this ErrorLinks.
+        Gets the _self of this ErrorLinks.
 
-        :return: The next of this ErrorLinks.
-        :rtype: list[InlineResponseDefaultLinksNext]
+        :return: The _self of this ErrorLinks.
+        :rtype: InlineResponseDefaultLinksNext
         """
-        return self._next
+        return self.__self
 
-    @next.setter
-    def next(self, next):
+    @_self.setter
+    def _self(self, _self):
         """
-        Sets the next of this ErrorLinks.
+        Sets the _self of this ErrorLinks.
 
-        :param next: The next of this ErrorLinks.
-        :type: list[InlineResponseDefaultLinksNext]
+        :param _self: The _self of this ErrorLinks.
+        :type: InlineResponseDefaultLinksNext
         """
 
-        self._next = next
+        self.__self = _self
 
     def to_dict(self):
         """
