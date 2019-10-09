@@ -35,7 +35,8 @@ class Ptsv2paymentsPaymentInformation(object):
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
-        'bank': 'Ptsv2paymentsPaymentInformationBank'
+        'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'tokenized_card': 'tokenizedCard',
         'fluid_data': 'fluidData',
         'customer': 'customer',
-        'bank': 'bank'
+        'bank': 'bank',
+        'payment_type': 'paymentType'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._fluid_data = None
         self._customer = None
         self._bank = None
+        self._payment_type = None
 
         if card is not None:
           self.card = card
@@ -67,6 +70,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.customer = customer
         if bank is not None:
           self.bank = bank
+        if payment_type is not None:
+          self.payment_type = payment_type
 
     @property
     def card(self):
@@ -172,6 +177,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._bank = bank
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsPaymentInformation.
+
+        :return: The payment_type of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsPaymentInformation.
+
+        :param payment_type: The payment_type of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
 
     def to_dict(self):
         """

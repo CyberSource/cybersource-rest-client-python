@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.inline_response_400_1_fields import InlineResponse4001Fields
+from CyberSource.models.ptsv2credits_processing_information_purchase_options import Ptsv2creditsProcessingInformationPurchaseOptions
 
 
-class TestInlineResponse4001Fields(unittest.TestCase):
-    """ InlineResponse4001Fields unit test stubs """
+class TestPtsv2creditsProcessingInformationPurchaseOptions(unittest.TestCase):
+    """ Ptsv2creditsProcessingInformationPurchaseOptions unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestInlineResponse4001Fields(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineResponse4001Fields(self):
+    def testPtsv2creditsProcessingInformationPurchaseOptions(self):
         """
-        Test InlineResponse4001Fields
+        Test Ptsv2creditsProcessingInformationPurchaseOptions
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.inline_response_400_1_fields.InlineResponse4001Fields()
+        #model = CyberSource.models.ptsv2credits_processing_information_purchase_options.Ptsv2creditsProcessingInformationPurchaseOptions()
         pass
 
 

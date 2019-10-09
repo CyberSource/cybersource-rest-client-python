@@ -44,8 +44,8 @@ class DownloadDTDApi(object):
 
     def get_dtdv2(self, report_definition_name_version, **kwargs):
         """
-        Used to download DTDs for reports
-        Downloads DTDs for reports on no-auth.
+        Download DTD for report
+        Used to download DTDs for reports on no-auth.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -70,8 +70,8 @@ class DownloadDTDApi(object):
 
     def get_dtdv2_with_http_info(self, report_definition_name_version, **kwargs):
         """
-        Used to download DTDs for reports
-        Downloads DTDs for reports on no-auth.
+        Download DTD for report
+        Used to download DTDs for reports on no-auth.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -133,7 +133,7 @@ class DownloadDTDApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/dtds/{reportDefinitionNameVersion}', 'GET',
+        return self.api_client.call_api(f'/dtds/{reportDefinitionNameVersion}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

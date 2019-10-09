@@ -35,7 +35,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batch_details
 
-        Get transaction details for a given batch id 
+        Get transaction details for a given batch id
         """
         pass
 

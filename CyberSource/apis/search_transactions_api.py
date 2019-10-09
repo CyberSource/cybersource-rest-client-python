@@ -124,7 +124,7 @@ class SearchTransactionsApi(object):
             body_params = params['create_search_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*;charset=utf-8'])
+            select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
@@ -133,7 +133,7 @@ class SearchTransactionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/tss/v2/searches', 'POST',
+        return self.api_client.call_api(f'/tss/v2/searches', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -230,7 +230,7 @@ class SearchTransactionsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['*/*;charset=utf-8'])
+            select_header_accept(['*/*'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
@@ -239,7 +239,7 @@ class SearchTransactionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/tss/v2/searches/' + search_id, 'GET',
+        return self.api_client.call_api(f'/tss/v2/searches/{search_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **create_report**
-> create_report(request_body, organization_id=organization_id)
+> create_report(create_adhoc_report_request, organization_id=organization_id)
 
 Create Adhoc Report
 
@@ -26,12 +26,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportsApi()
-request_body = CyberSource.RequestBody() # RequestBody | Report subscription request payload
+create_adhoc_report_request = CyberSource.CreateAdhocReportRequest() # CreateAdhocReportRequest | Report subscription request payload
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Create Adhoc Report
-    api_instance.create_report(request_body, organization_id=organization_id)
+    api_instance.create_report(create_adhoc_report_request, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling ReportsApi->create_report: %s\n" % e)
 ```
@@ -40,7 +40,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_body** | [**RequestBody**](RequestBody.md)| Report subscription request payload | 
+ **create_adhoc_report_request** | [**CreateAdhocReportRequest**](CreateAdhocReportRequest.md)| Report subscription request payload | 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type

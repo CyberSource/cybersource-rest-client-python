@@ -140,7 +140,7 @@ class ReversalApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/pts/v2/payments/' + id + '/reversals', 'POST',
+        return self.api_client.call_api(f'/pts/v2/payments/{id}/reversals', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

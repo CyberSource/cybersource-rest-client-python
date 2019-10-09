@@ -31,69 +31,97 @@ class Error(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'response_status': 'InlineResponseDefaultResponseStatus',
-        'links': 'ErrorLinks'
+        'type': 'str',
+        'message': 'str',
+        'details': 'Tmsv1instrumentidentifiersDetails'
     }
 
     attribute_map = {
-        'response_status': 'responseStatus',
-        'links': '_links'
+        'type': 'type',
+        'message': 'message',
+        'details': 'details'
     }
 
-    def __init__(self, response_status=None, links=None):
+    def __init__(self, type=None, message=None, details=None):
         """
         Error - a model defined in Swagger
         """
 
-        self._response_status = None
-        self._links = None
+        self._type = None
+        self._message = None
+        self._details = None
 
-        if response_status is not None:
-          self.response_status = response_status
-        if links is not None:
-          self.links = links
-
-    @property
-    def response_status(self):
-        """
-        Gets the response_status of this Error.
-
-        :return: The response_status of this Error.
-        :rtype: InlineResponseDefaultResponseStatus
-        """
-        return self._response_status
-
-    @response_status.setter
-    def response_status(self, response_status):
-        """
-        Sets the response_status of this Error.
-
-        :param response_status: The response_status of this Error.
-        :type: InlineResponseDefaultResponseStatus
-        """
-
-        self._response_status = response_status
+        if type is not None:
+          self.type = type
+        if message is not None:
+          self.message = message
+        if details is not None:
+          self.details = details
 
     @property
-    def links(self):
+    def type(self):
         """
-        Gets the links of this Error.
+        Gets the type of this Error.
 
-        :return: The links of this Error.
-        :rtype: ErrorLinks
+        :return: The type of this Error.
+        :rtype: str
         """
-        return self._links
+        return self._type
 
-    @links.setter
-    def links(self, links):
+    @type.setter
+    def type(self, type):
         """
-        Sets the links of this Error.
+        Sets the type of this Error.
 
-        :param links: The links of this Error.
-        :type: ErrorLinks
+        :param type: The type of this Error.
+        :type: str
         """
 
-        self._links = links
+        self._type = type
+
+    @property
+    def message(self):
+        """
+        Gets the message of this Error.
+        The detailed message related to the type stated above.
+
+        :return: The message of this Error.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this Error.
+        The detailed message related to the type stated above.
+
+        :param message: The message of this Error.
+        :type: str
+        """
+
+        self._message = message
+
+    @property
+    def details(self):
+        """
+        Gets the details of this Error.
+
+        :return: The details of this Error.
+        :rtype: Tmsv1instrumentidentifiersDetails
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this Error.
+
+        :param details: The details of this Error.
+        :type: Tmsv1instrumentidentifiersDetails
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

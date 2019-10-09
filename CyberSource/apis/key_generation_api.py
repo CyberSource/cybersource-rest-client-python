@@ -133,7 +133,7 @@ class KeyGenerationApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/flex/v1/keys', 'POST',
+        return self.api_client.call_api(f'/flex/v1/keys', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -36,7 +36,7 @@ class ErrorBean(object):
         'localization_key': 'str',
         'correlation_id': 'str',
         'detail': 'str',
-        'fields': 'list[InlineResponse4001Fields]'
+        'fields': 'list[InlineResponse400Fields]'
     }
 
     attribute_map = {
@@ -197,7 +197,7 @@ class ErrorBean(object):
         Error fields List
 
         :return: The fields of this ErrorBean.
-        :rtype: list[InlineResponse4001Fields]
+        :rtype: list[InlineResponse400Fields]
         """
         return self._fields
 
@@ -208,7 +208,7 @@ class ErrorBean(object):
         Error fields List
 
         :param fields: The fields of this ErrorBean.
-        :type: list[InlineResponse4001Fields]
+        :type: list[InlineResponse400Fields]
         """
 
         self._fields = fields

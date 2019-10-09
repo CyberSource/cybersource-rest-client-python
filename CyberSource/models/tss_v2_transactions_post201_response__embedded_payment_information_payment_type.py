@@ -57,7 +57,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
     def name(self):
         """
         Gets the name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
 
         :return: The name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :rtype: str
@@ -68,7 +68,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
 
         :param name: The name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :type: str

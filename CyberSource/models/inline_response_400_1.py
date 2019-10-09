@@ -31,76 +31,59 @@ class InlineResponse4001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str',
+        'type': 'str',
         'message': 'str',
-        'localization_key': 'str',
-        'correlation_id': 'str',
-        'detail': 'str',
-        'fields': 'list[InlineResponse4001Fields]'
+        'details': 'Tmsv1instrumentidentifiersDetails'
     }
 
     attribute_map = {
-        'code': 'code',
+        'type': 'type',
         'message': 'message',
-        'localization_key': 'localizationKey',
-        'correlation_id': 'correlationId',
-        'detail': 'detail',
-        'fields': 'fields'
+        'details': 'details'
     }
 
-    def __init__(self, code=None, message=None, localization_key=None, correlation_id=None, detail=None, fields=None):
+    def __init__(self, type=None, message=None, details=None):
         """
         InlineResponse4001 - a model defined in Swagger
         """
 
-        self._code = None
+        self._type = None
         self._message = None
-        self._localization_key = None
-        self._correlation_id = None
-        self._detail = None
-        self._fields = None
+        self._details = None
 
-        self.code = code
-        self.message = message
-        if localization_key is not None:
-          self.localization_key = localization_key
-        if correlation_id is not None:
-          self.correlation_id = correlation_id
-        if detail is not None:
-          self.detail = detail
-        if fields is not None:
-          self.fields = fields
+        if type is not None:
+          self.type = type
+        if message is not None:
+          self.message = message
+        if details is not None:
+          self.details = details
 
     @property
-    def code(self):
+    def type(self):
         """
-        Gets the code of this InlineResponse4001.
-        Error code
+        Gets the type of this InlineResponse4001.
 
-        :return: The code of this InlineResponse4001.
+        :return: The type of this InlineResponse4001.
         :rtype: str
         """
-        return self._code
+        return self._type
 
-    @code.setter
-    def code(self, code):
+    @type.setter
+    def type(self, type):
         """
-        Sets the code of this InlineResponse4001.
-        Error code
+        Sets the type of this InlineResponse4001.
 
-        :param code: The code of this InlineResponse4001.
+        :param type: The type of this InlineResponse4001.
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
 
-        self._code = code
+        self._type = type
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4001.
-        Error message
+        The detailed message related to the type stated above.
 
         :return: The message of this InlineResponse4001.
         :rtype: str
@@ -111,107 +94,34 @@ class InlineResponse4001(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4001.
-        Error message
+        The detailed message related to the type stated above.
 
         :param message: The message of this InlineResponse4001.
         :type: str
         """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
 
         self._message = message
 
     @property
-    def localization_key(self):
+    def details(self):
         """
-        Gets the localization_key of this InlineResponse4001.
-        Localization Key Name
+        Gets the details of this InlineResponse4001.
 
-        :return: The localization_key of this InlineResponse4001.
-        :rtype: str
+        :return: The details of this InlineResponse4001.
+        :rtype: Tmsv1instrumentidentifiersDetails
         """
-        return self._localization_key
+        return self._details
 
-    @localization_key.setter
-    def localization_key(self, localization_key):
+    @details.setter
+    def details(self, details):
         """
-        Sets the localization_key of this InlineResponse4001.
-        Localization Key Name
+        Sets the details of this InlineResponse4001.
 
-        :param localization_key: The localization_key of this InlineResponse4001.
-        :type: str
+        :param details: The details of this InlineResponse4001.
+        :type: Tmsv1instrumentidentifiersDetails
         """
 
-        self._localization_key = localization_key
-
-    @property
-    def correlation_id(self):
-        """
-        Gets the correlation_id of this InlineResponse4001.
-        Correlation Id
-
-        :return: The correlation_id of this InlineResponse4001.
-        :rtype: str
-        """
-        return self._correlation_id
-
-    @correlation_id.setter
-    def correlation_id(self, correlation_id):
-        """
-        Sets the correlation_id of this InlineResponse4001.
-        Correlation Id
-
-        :param correlation_id: The correlation_id of this InlineResponse4001.
-        :type: str
-        """
-
-        self._correlation_id = correlation_id
-
-    @property
-    def detail(self):
-        """
-        Gets the detail of this InlineResponse4001.
-        Error Detail
-
-        :return: The detail of this InlineResponse4001.
-        :rtype: str
-        """
-        return self._detail
-
-    @detail.setter
-    def detail(self, detail):
-        """
-        Sets the detail of this InlineResponse4001.
-        Error Detail
-
-        :param detail: The detail of this InlineResponse4001.
-        :type: str
-        """
-
-        self._detail = detail
-
-    @property
-    def fields(self):
-        """
-        Gets the fields of this InlineResponse4001.
-        Error fields List
-
-        :return: The fields of this InlineResponse4001.
-        :rtype: list[InlineResponse4001Fields]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """
-        Sets the fields of this InlineResponse4001.
-        Error fields List
-
-        :param fields: The fields of this InlineResponse4001.
-        :type: list[InlineResponse4001Fields]
-        """
-
-        self._fields = fields
+        self._details = details
 
     def to_dict(self):
         """

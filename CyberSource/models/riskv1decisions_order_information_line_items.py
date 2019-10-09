@@ -32,7 +32,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     """
     swagger_types = {
         'unit_price': 'str',
-        'quantity': 'float',
+        'quantity': 'int',
         'product_sku': 'str',
         'product_risk': 'str',
         'product_name': 'str',
@@ -120,7 +120,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         Number of units for this order.  The default is `1`. For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling.  When orderInformation.lineItems[].productCode is \"gift_card\", this is the total count of individual prepaid gift cards purchased. 
 
         :return: The quantity of this Riskv1decisionsOrderInformationLineItems.
-        :rtype: float
+        :rtype: int
         """
         return self._quantity
 
@@ -131,10 +131,10 @@ class Riskv1decisionsOrderInformationLineItems(object):
         Number of units for this order.  The default is `1`. For an authorization or capture transaction (`processingOptions.capture` is set to `true` or `false`), this field is required when _orderInformation.lineItems[].productCode_ is not set to **default** or one of the other values that are related to shipping and/or handling.  When orderInformation.lineItems[].productCode is \"gift_card\", this is the total count of individual prepaid gift cards purchased. 
 
         :param quantity: The quantity of this Riskv1decisionsOrderInformationLineItems.
-        :type: float
+        :type: int
         """
-        if quantity is not None and quantity > 9999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `9999999999`")
+        if quantity is not None and quantity > 999999999:
+            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
         if quantity is not None and quantity < 1:
             raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 

@@ -72,7 +72,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
 
         :return: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -83,7 +83,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
 
         :param name: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -95,7 +95,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def sub_type_name(self):
         """
         Gets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
+        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
 
         :return: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -106,7 +106,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def sub_type_name(self, sub_type_name):
         """
         Sets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
+        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
 
         :param sub_type_name: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str

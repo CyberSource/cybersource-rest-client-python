@@ -42,7 +42,7 @@ class ReportsApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_report(self, request_body, **kwargs):
+    def create_report(self, create_adhoc_report_request, **kwargs):
         """
         Create Adhoc Report
         Create a one-time report. You must specify the type of report in reportDefinitionName. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation) 
@@ -52,11 +52,11 @@ class ReportsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_report(request_body, callback=callback_function)
+        >>> thread = api.create_report(create_adhoc_report_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody request_body: Report subscription request payload (required)
+        :param CreateAdhocReportRequest create_adhoc_report_request: Report subscription request payload (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
@@ -64,12 +64,12 @@ class ReportsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_report_with_http_info(request_body, **kwargs)
+            return self.create_report_with_http_info(create_adhoc_report_request, **kwargs)
         else:
-            (data) = self.create_report_with_http_info(request_body, **kwargs)
+            (data) = self.create_report_with_http_info(create_adhoc_report_request, **kwargs)
             return data
 
-    def create_report_with_http_info(self, request_body, **kwargs):
+    def create_report_with_http_info(self, create_adhoc_report_request, **kwargs):
         """
         Create Adhoc Report
         Create a one-time report. You must specify the type of report in reportDefinitionName. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation) 
@@ -79,18 +79,18 @@ class ReportsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_report_with_http_info(request_body, callback=callback_function)
+        >>> thread = api.create_report_with_http_info(create_adhoc_report_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody request_body: Report subscription request payload (required)
+        :param CreateAdhocReportRequest create_adhoc_report_request: Report subscription request payload (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['request_body', 'organization_id']
+        all_params = ['create_adhoc_report_request', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -105,9 +105,9 @@ class ReportsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'request_body' is set
-        if ('request_body' not in params) or (params['request_body'] is None):
-            raise ValueError("Missing the required parameter `request_body` when calling `create_report`")
+        # verify the required parameter 'create_adhoc_report_request' is set
+        if ('create_adhoc_report_request' not in params) or (params['create_adhoc_report_request'] is None):
+            raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
@@ -130,8 +130,8 @@ class ReportsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'request_body' in params:
-            body_params = params['request_body']
+        if 'create_adhoc_report_request' in params:
+            body_params = params['create_adhoc_report_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json'])
@@ -143,7 +143,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/reports', 'POST',
+        return self.api_client.call_api(f'/reporting/v3/reports', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -259,7 +259,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/reports/' + report_id, 'GET',
+        return self.api_client.call_api(f'/reporting/v3/reports/{report_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -409,7 +409,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/reports', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/reports', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

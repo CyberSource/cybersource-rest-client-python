@@ -89,7 +89,7 @@ class ApiClient(object):
         self.default_headers[header_name] = header_value
     
     # replace the underscore
-    def replace_underscore(self, dict_obj, deep=False):
+    def replace_underscore(self, dict_obj, deep=True):
         assert type(dict_obj) == dict
         converted_dict_obj = {}
         for snake_case_k in dict_obj:
@@ -379,7 +379,7 @@ class ApiClient(object):
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            temp_body = body.replace("\"", "\"")
+            temp_body = body.replace("\"_", "\"")
             request_body = self.replace_underscore(json.loads(temp_body))
             body = json.dumps(request_body)
             body = body.replace("companyTaxId", "companyTaxID")

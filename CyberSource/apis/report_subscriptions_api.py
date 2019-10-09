@@ -42,7 +42,7 @@ class ReportSubscriptionsApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_subscription(self, request_body, **kwargs):
+    def create_subscription(self, create_report_subscription_request, **kwargs):
         """
         Create Report Subscription for a report name by organization
         Create a report subscription for your organization. The report name must be unique. 
@@ -52,11 +52,11 @@ class ReportSubscriptionsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_subscription(request_body, callback=callback_function)
+        >>> thread = api.create_subscription(create_report_subscription_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param CreateReportSubscriptionRequest create_report_subscription_request: Report subscription request payload (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
@@ -64,12 +64,12 @@ class ReportSubscriptionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_subscription_with_http_info(request_body, **kwargs)
+            return self.create_subscription_with_http_info(create_report_subscription_request, **kwargs)
         else:
-            (data) = self.create_subscription_with_http_info(request_body, **kwargs)
+            (data) = self.create_subscription_with_http_info(create_report_subscription_request, **kwargs)
             return data
 
-    def create_subscription_with_http_info(self, request_body, **kwargs):
+    def create_subscription_with_http_info(self, create_report_subscription_request, **kwargs):
         """
         Create Report Subscription for a report name by organization
         Create a report subscription for your organization. The report name must be unique. 
@@ -79,18 +79,18 @@ class ReportSubscriptionsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_subscription_with_http_info(request_body, callback=callback_function)
+        >>> thread = api.create_subscription_with_http_info(create_report_subscription_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param RequestBody1 request_body: Report subscription request payload (required)
+        :param CreateReportSubscriptionRequest create_report_subscription_request: Report subscription request payload (required)
         :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['request_body', 'organization_id']
+        all_params = ['create_report_subscription_request', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -105,9 +105,9 @@ class ReportSubscriptionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'request_body' is set
-        if ('request_body' not in params) or (params['request_body'] is None):
-            raise ValueError("Missing the required parameter `request_body` when calling `create_subscription`")
+        # verify the required parameter 'create_report_subscription_request' is set
+        if ('create_report_subscription_request' not in params) or (params['create_report_subscription_request'] is None):
+            raise ValueError("Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, length must be less than or equal to `32`")
@@ -130,8 +130,8 @@ class ReportSubscriptionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'request_body' in params:
-            body_params = params['request_body']
+        if 'create_report_subscription_request' in params:
+            body_params = params['create_report_subscription_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json'])
@@ -143,7 +143,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-subscriptions', 'PUT',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -255,7 +255,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-subscriptions/' + report_name, 'DELETE',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{report_name}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -353,7 +353,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-subscriptions', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -465,7 +465,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api('/reporting/v3/report-subscriptions/' + report_name, 'GET',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{report_name}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
