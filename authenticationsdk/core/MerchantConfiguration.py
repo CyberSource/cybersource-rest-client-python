@@ -37,6 +37,7 @@ class MerchantConfiguration:
         self.key_file_name = None
         self.request_json_path_data = None
         self.log = None
+        self.solution_id = None
 
     def set_merchant_keyid(self, value):
         if not (value.get('merchant_keyid') is None):
@@ -122,6 +123,10 @@ class MerchantConfiguration:
         if not (value.get('key_file_name') is None):
             self.key_file_name = value['key_file_name']
 
+    def set_solution_id(self, value):
+        if not (value.get('solution_id') is None):
+            self.solution_id = value['solution_id']
+
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
 
@@ -141,6 +146,7 @@ class MerchantConfiguration:
         self.set_log_file_name(val)
         self.set_proxy_address(val)
         self.set_proxy_port(val)
+        self.set_solution_id(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
