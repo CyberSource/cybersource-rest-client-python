@@ -10,8 +10,14 @@ from __future__ import absolute_import
 # import apis into sdk package
 {{#apiInfo}}{{#apis}}from .apis.{{classVarName}} import {{classname}}
 {{/apis}}{{/apiInfo}}
+
+# import Utilities
+from .utilities.flex.token_verification import TokenVerification
+
 # import ApiClient
 from .api_client import ApiClient
+
+
 
 from .configuration import Configuration
 

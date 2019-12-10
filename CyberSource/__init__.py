@@ -492,9 +492,6 @@ from .apis.transaction_details_api import TransactionDetailsApi
 from .apis.user_management_api import UserManagementApi
 from .apis.void_api import VoidApi
 
-# import Utilities
-from .utilities.flex.token_verification import TokenVerification
-
 # import ApiClient
 from .api_client import ApiClient
 
