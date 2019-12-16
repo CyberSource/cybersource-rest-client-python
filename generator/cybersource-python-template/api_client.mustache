@@ -149,8 +149,8 @@ class ApiClient(object):
 
         header_params['v-c-client-id'] = self.client_id
 
-        if not mconfig.solution_id in (None, ''):
-            header_params['v-c-solution-id'] = mconfig.solution_id
+        # if not mconfig.solution_id in (None, ''):
+            # header_params['v-c-solution-id'] = mconfig.solution_id
 
         auth = Authorization()
         token = auth.get_token(mconfig, mconfig.get_time(), logger)
