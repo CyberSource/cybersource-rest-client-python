@@ -19,6 +19,7 @@ from .configuration import Configuration
 
 try:
     import urllib3
+    from urllib3 import ProxyManager, make_headers
 except ImportError:
     raise ImportError('Swagger python client requires urllib3.')
 
