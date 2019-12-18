@@ -128,6 +128,11 @@ class ApiClient(object):
         global mconfig
         mconfig = MerchantConfiguration()
         mconfig.set_merchantconfig(config)
+
+        # The below two lines are to set proxy details and if present reinitialize the REST object as a proxy manager
+        if Configuration().set_merchantproxyconfig(config):
+            self.rest_client = RESTClientObject() # Reinitialising REST object as a proxy manager instead of pool manager
+
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         mconfig.validate_merchant_details(config, mconfig)
         # Setting the Host by reading the Environment(SANDBOX/PRODUCTION) from Merchant Config
