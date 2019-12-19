@@ -32,26 +32,31 @@ class Riskv1decisionsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Riskv1decisionsPaymentInformationCard',
-        'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard'
+        'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard',
+        'bank': 'Riskv1decisionsPaymentInformationBank'
     }
 
     attribute_map = {
         'card': 'card',
-        'tokenized_card': 'tokenizedCard'
+        'tokenized_card': 'tokenizedCard',
+        'bank': 'bank'
     }
 
-    def __init__(self, card=None, tokenized_card=None):
+    def __init__(self, card=None, tokenized_card=None, bank=None):
         """
         Riskv1decisionsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._bank = None
 
         if card is not None:
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if bank is not None:
+          self.bank = bank
 
     @property
     def card(self):
@@ -94,6 +99,27 @@ class Riskv1decisionsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this Riskv1decisionsPaymentInformation.
+
+        :return: The bank of this Riskv1decisionsPaymentInformation.
+        :rtype: Riskv1decisionsPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this Riskv1decisionsPaymentInformation.
+
+        :param bank: The bank of this Riskv1decisionsPaymentInformation.
+        :type: Riskv1decisionsPaymentInformationBank
+        """
+
+        self._bank = bank
 
     def to_dict(self):
         """

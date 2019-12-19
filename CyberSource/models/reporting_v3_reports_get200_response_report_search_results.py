@@ -31,6 +31,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'link': 'ReportingV3ReportsGet200ResponseLink',
         'report_definition_id': 'str',
         'report_name': 'str',
         'report_mime_type': 'str',
@@ -49,6 +50,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     }
 
     attribute_map = {
+        'link': '_link',
         'report_definition_id': 'reportDefinitionId',
         'report_name': 'reportName',
         'report_mime_type': 'reportMimeType',
@@ -66,11 +68,12 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         'group_id': 'groupId'
     }
 
-    def __init__(self, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, status=None, report_start_time=None, report_end_time=None, timezone=None, report_id=None, organization_id=None, queued_time=None, report_generating_time=None, report_completed_time=None, subscription_type=None, group_id=None):
+    def __init__(self, link=None, report_definition_id=None, report_name=None, report_mime_type=None, report_frequency=None, status=None, report_start_time=None, report_end_time=None, timezone=None, report_id=None, organization_id=None, queued_time=None, report_generating_time=None, report_completed_time=None, subscription_type=None, group_id=None):
         """
         ReportingV3ReportsGet200ResponseReportSearchResults - a model defined in Swagger
         """
 
+        self._link = None
         self._report_definition_id = None
         self._report_name = None
         self._report_mime_type = None
@@ -87,6 +90,8 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         self._subscription_type = None
         self._group_id = None
 
+        if link is not None:
+          self.link = link
         if report_definition_id is not None:
           self.report_definition_id = report_definition_id
         if report_name is not None:
@@ -117,6 +122,27 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
           self.subscription_type = subscription_type
         if group_id is not None:
           self.group_id = group_id
+
+    @property
+    def link(self):
+        """
+        Gets the link of this ReportingV3ReportsGet200ResponseReportSearchResults.
+
+        :return: The link of this ReportingV3ReportsGet200ResponseReportSearchResults.
+        :rtype: ReportingV3ReportsGet200ResponseLink
+        """
+        return self._link
+
+    @link.setter
+    def link(self, link):
+        """
+        Sets the link of this ReportingV3ReportsGet200ResponseReportSearchResults.
+
+        :param link: The link of this ReportingV3ReportsGet200ResponseReportSearchResults.
+        :type: ReportingV3ReportsGet200ResponseLink
+        """
+
+        self._link = link
 
     @property
     def report_definition_id(self):
@@ -168,7 +194,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def report_mime_type(self):
         """
         Gets the report_mime_type of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Format of the report to get generated  Valid values: - application/xml - text/csv 
+        Format of the report to get generated Valid Values: - application/xml - text/csv 
 
         :return: The report_mime_type of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :rtype: str
@@ -179,7 +205,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def report_mime_type(self, report_mime_type):
         """
         Sets the report_mime_type of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Format of the report to get generated  Valid values: - application/xml - text/csv 
+        Format of the report to get generated Valid Values: - application/xml - text/csv 
 
         :param report_mime_type: The report_mime_type of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
@@ -191,7 +217,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Frequency of the report to get generated  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
+        Frequency of the report to get generated Valid Values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :return: The report_frequency of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :rtype: str
@@ -202,7 +228,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Frequency of the report to get generated  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
+        Frequency of the report to get generated Valid Values: - DAILY - WEEKLY - MONTHLY - ADHOC 
 
         :param report_frequency: The report_frequency of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
@@ -214,7 +240,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def status(self):
         """
         Gets the status of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Status of the report  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
+        Status of the report Valid Values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
 
         :return: The status of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :rtype: str
@@ -225,7 +251,7 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
     def status(self, status):
         """
         Sets the status of this ReportingV3ReportsGet200ResponseReportSearchResults.
-        Status of the report  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
+        Status of the report Valid Values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
 
         :param status: The status of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str

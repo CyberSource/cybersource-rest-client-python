@@ -108,7 +108,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard(obj
     def expiration_year(self):
         """
         Gets the expiration_year of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
-        Four-digit year in which the credit card expires. Format: `YYYY`. Possible values: `1900` through `2099`.  **FDC Nashville Global and FDMS South** You can send in 2 digits or 4 digits. When you send in 2 digits, they must be the last 2 digits of the year.  This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. For details, see [Relaxed Requirements for Address Data and Expiration Date.](https://www.cybersource.com/developers/integration_methods/relax_avs/).  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.' 
+        Four-digit year in which the credit card expires. Format: `YYYY`. Possible values: `1900` through `2099`.  **FDC Nashville Global and FDMS South** You can send in 2 digits or 4 digits. When you send in 2 digits, they must be the last 2 digits of the year.  This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. For details, see [Relaxed Requirements for Address Data and Expiration Date.](https://www.cybersource.com/developers/integration_methods/relax_avs/). **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.' 
 
         :return: The expiration_year of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
         :rtype: str
@@ -119,7 +119,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard(obj
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
-        Four-digit year in which the credit card expires. Format: `YYYY`. Possible values: `1900` through `2099`.  **FDC Nashville Global and FDMS South** You can send in 2 digits or 4 digits. When you send in 2 digits, they must be the last 2 digits of the year.  This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. For details, see [Relaxed Requirements for Address Data and Expiration Date.](https://www.cybersource.com/developers/integration_methods/relax_avs/).  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.' 
+        Four-digit year in which the credit card expires. Format: `YYYY`. Possible values: `1900` through `2099`.  **FDC Nashville Global and FDMS South** You can send in 2 digits or 4 digits. When you send in 2 digits, they must be the last 2 digits of the year.  This field is optional if your CyberSource account is configured for relaxed requirements for address data and expiration date. For details, see [Relaxed Requirements for Address Data and Expiration Date.](https://www.cybersource.com/developers/integration_methods/relax_avs/). **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.' 
 
         :param expiration_year: The expiration_year of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
         :type: str
@@ -187,7 +187,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard(obj
     def start_month(self):
         """
         Gets the start_month of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
-        Month of the start of the Maestro (UK Domestic) card validity period.  Format: `MM`. Possible values: `01` through `12`. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Format: `MM`. Possible values: `01` through `12`. 
 
         :return: The start_month of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
         :rtype: str
@@ -198,7 +198,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard(obj
     def start_month(self, start_month):
         """
         Sets the start_month of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
-        Month of the start of the Maestro (UK Domestic) card validity period.  Format: `MM`. Possible values: `01` through `12`. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Format: `MM`. Possible values: `01` through `12`. 
 
         :param start_month: The start_month of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard.
         :type: str

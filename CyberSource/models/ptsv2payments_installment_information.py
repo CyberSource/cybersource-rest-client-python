@@ -263,6 +263,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param first_installment_date: The first_installment_date of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+        if first_installment_date is not None and len(first_installment_date) > 6:
+            raise ValueError("Invalid value for `first_installment_date`, length must be less than or equal to `6`")
 
         self._first_installment_date = first_installment_date
 
@@ -286,6 +288,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param invoice_data: The invoice_data of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+        if invoice_data is not None and len(invoice_data) > 20:
+            raise ValueError("Invalid value for `invoice_data`, length must be less than or equal to `20`")
 
         self._invoice_data = invoice_data
 
@@ -309,6 +313,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+        if payment_type is not None and len(payment_type) > 1:
+            raise ValueError("Invalid value for `payment_type`, length must be less than or equal to `1`")
 
         self._payment_type = payment_type
 
@@ -332,6 +338,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param eligibility_inquiry: The eligibility_inquiry of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+        if eligibility_inquiry is not None and len(eligibility_inquiry) > 9:
+            raise ValueError("Invalid value for `eligibility_inquiry`, length must be less than or equal to `9`")
 
         self._eligibility_inquiry = eligibility_inquiry
 

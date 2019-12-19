@@ -130,7 +130,7 @@ end_time = '2013-10-20T19:20:30+01:00' # datetime | Valid report End Time in **I
 time_query_type = 'time_query_type_example' # str | Specify time you would like to search  Valid values: - reportTimeFrame - executedTime 
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 report_mime_type = 'report_mime_type_example' # str | Valid Report Format  Valid values: - application/xml - text/csv  (optional)
-report_frequency = 'report_frequency_example' # str | Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC  (optional)
+report_frequency = 'report_frequency_example' # str | Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC  (optional)
 report_name = 'report_name_example' # str | Valid Report Name (optional)
 report_definition_id = 56 # int | Valid Report Definition Id (optional)
 report_status = 'report_status_example' # str | Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA  (optional)
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
  **time_query_type** | **str**| Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  | 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
  **report_mime_type** | **str**| Valid Report Format  Valid values: - application/xml - text/csv  | [optional] 
- **report_frequency** | **str**| Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC  | [optional] 
+ **report_frequency** | **str**| Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC  | [optional] 
  **report_name** | **str**| Valid Report Name | [optional] 
  **report_definition_id** | **int**| Valid Report Definition Id | [optional] 
  **report_status** | **str**| Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA  | [optional] 

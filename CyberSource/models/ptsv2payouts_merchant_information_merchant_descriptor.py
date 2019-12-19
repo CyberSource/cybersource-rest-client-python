@@ -141,8 +141,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param country: The country of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -166,8 +164,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 3:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
 

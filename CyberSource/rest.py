@@ -28,6 +28,7 @@ from .configuration import Configuration
 
 try:
     import urllib3
+    from urllib3 import ProxyManager, make_headers
 except ImportError:
     raise ImportError('Swagger python client requires urllib3.')
 
@@ -90,6 +91,14 @@ class RESTClientObject(object):
 
         # https pool manager
         if proxy:
+            # proxy auth headers
+            proxy_username = Configuration().proxy_username
+            proxy_password = Configuration().proxy_password
+            proxy_auth_headers = None
+
+            if (proxy_username and proxy_password):
+                proxy_auth_headers = make_headers(proxy_basic_auth=proxy_username + ':' + proxy_password)
+
             self.pool_manager = urllib3.ProxyManager(
                 num_pools=pools_size,
                 maxsize=maxsize,
@@ -97,7 +106,8 @@ class RESTClientObject(object):
                 ca_certs=ca_certs,
                 cert_file=cert_file,
                 key_file=key_file,
-                proxy_url=proxy
+                proxy_url=proxy,
+                proxy_headers=proxy_auth_headers
             )
         else:
             self.pool_manager = urllib3.PoolManager(

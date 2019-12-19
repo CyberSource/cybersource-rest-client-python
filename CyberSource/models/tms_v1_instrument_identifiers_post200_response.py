@@ -36,6 +36,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         'object': 'str',
         'state': 'str',
         'card': 'TmsV1InstrumentIdentifiersPost200ResponseCard',
+        'issuer': 'TmsV1InstrumentIdentifiersPost200ResponseIssuer',
         'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'processing_information': 'TmsV1InstrumentIdentifiersPost200ResponseProcessingInformation',
         'metadata': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata'
@@ -47,12 +48,13 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         'object': 'object',
         'state': 'state',
         'card': 'card',
+        'issuer': 'issuer',
         'bank_account': 'bankAccount',
         'processing_information': 'processingInformation',
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, card=None, bank_account=None, processing_information=None, metadata=None):
+    def __init__(self, links=None, id=None, object=None, state=None, card=None, issuer=None, bank_account=None, processing_information=None, metadata=None):
         """
         TmsV1InstrumentIdentifiersPost200Response - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         self._object = None
         self._state = None
         self._card = None
+        self._issuer = None
         self._bank_account = None
         self._processing_information = None
         self._metadata = None
@@ -76,6 +79,8 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
           self.state = state
         if card is not None:
           self.card = card
+        if issuer is not None:
+          self.issuer = issuer
         if bank_account is not None:
           self.bank_account = bank_account
         if processing_information is not None:
@@ -193,6 +198,27 @@ class TmsV1InstrumentIdentifiersPost200Response(object):
         """
 
         self._card = card
+
+    @property
+    def issuer(self):
+        """
+        Gets the issuer of this TmsV1InstrumentIdentifiersPost200Response.
+
+        :return: The issuer of this TmsV1InstrumentIdentifiersPost200Response.
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseIssuer
+        """
+        return self._issuer
+
+    @issuer.setter
+    def issuer(self, issuer):
+        """
+        Sets the issuer of this TmsV1InstrumentIdentifiersPost200Response.
+
+        :param issuer: The issuer of this TmsV1InstrumentIdentifiersPost200Response.
+        :type: TmsV1InstrumentIdentifiersPost200ResponseIssuer
+        """
+
+        self._issuer = issuer
 
     @property
     def bank_account(self):

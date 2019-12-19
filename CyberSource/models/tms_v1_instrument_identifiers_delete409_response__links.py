@@ -31,7 +31,7 @@ class TmsV1InstrumentIdentifiersDelete409ResponseLinks(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_instruments': 'TmsV1InstrumentIdentifiersDelete409ResponseLinksPaymentInstruments'
+        'payment_instruments': 'TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class TmsV1InstrumentIdentifiersDelete409ResponseLinks(object):
         Gets the payment_instruments of this TmsV1InstrumentIdentifiersDelete409ResponseLinks.
 
         :return: The payment_instruments of this TmsV1InstrumentIdentifiersDelete409ResponseLinks.
-        :rtype: TmsV1InstrumentIdentifiersDelete409ResponseLinksPaymentInstruments
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments
         """
         return self._payment_instruments
 
@@ -64,7 +64,7 @@ class TmsV1InstrumentIdentifiersDelete409ResponseLinks(object):
         Sets the payment_instruments of this TmsV1InstrumentIdentifiersDelete409ResponseLinks.
 
         :param payment_instruments: The payment_instruments of this TmsV1InstrumentIdentifiersDelete409ResponseLinks.
-        :type: TmsV1InstrumentIdentifiersDelete409ResponseLinksPaymentInstruments
+        :type: TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments
         """
 
         self._payment_instruments = payment_instruments

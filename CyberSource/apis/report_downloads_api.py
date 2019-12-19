@@ -59,6 +59,7 @@ class ReportDownloadsApi(object):
         :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd  (required)
         :param str report_name: Name of the report to download (required)
         :param str organization_id: Valid Cybersource Organization Id
+        :param str report_time: Valid time on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Time Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example time format:**   - hh:mm:ss±hh:mm 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -87,12 +88,13 @@ class ReportDownloadsApi(object):
         :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd  (required)
         :param str report_name: Name of the report to download (required)
         :param str organization_id: Valid Cybersource Organization Id
+        :param str report_time: Valid time on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Time Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example time format:**   - hh:mm:ss±hh:mm 
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_date', 'report_name', 'organization_id']
+        all_params = ['report_date', 'report_name', 'organization_id', 'report_time']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -132,6 +134,8 @@ class ReportDownloadsApi(object):
             query_params.append(('reportDate', params['report_date']))
         if 'report_name' in params:
             query_params.append(('reportName', params['report_name']))
+        if 'report_time' in params:
+            query_params.append(('reportTime', params['report_time']))
 
         header_params = {}
 

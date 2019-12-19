@@ -17,6 +17,7 @@ import json
 import mimetypes
 import tempfile
 import threading
+import pkg_resources
 
 from datetime import date, datetime
 
@@ -79,6 +80,7 @@ class ApiClient(object):
         self.cookie = cookie
         # Set default User-Agent.
         self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.client_id = self.get_client_id()
 
     @property
     def user_agent(self):
@@ -96,7 +98,11 @@ class ApiClient(object):
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
-    
+
+    def get_client_id(self):
+        version = pkg_resources.require("cybersource-rest-client-python")[0].version
+        return "cybs-rest-sdk-python-" + version
+
     # replace the underscore
     def replace_underscore(self, dict_obj, deep=True):
         assert type(dict_obj) == dict
@@ -131,6 +137,11 @@ class ApiClient(object):
         global mconfig
         mconfig = MerchantConfiguration()
         mconfig.set_merchantconfig(config)
+
+        # The below two lines are to set proxy details and if present reinitialize the REST object as a proxy manager
+        if Configuration().set_merchantproxyconfig(config):
+            self.rest_client = RESTClientObject() # Reinitialising REST object as a proxy manager instead of pool manager
+
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         mconfig.validate_merchant_details(config, mconfig)
         # Setting the Host by reading the Environment(SANDBOX/PRODUCTION) from Merchant Config
@@ -149,6 +160,11 @@ class ApiClient(object):
             mconfig.request_json_path_data = body
 
         logger = mconfig.log
+
+        header_params['v-c-client-id'] = self.client_id
+
+        # if not mconfig.solution_id in (None, ''):
+            # header_params['v-c-solution-id'] = mconfig.solution_id
 
         auth = Authorization()
         token = auth.get_token(mconfig, mconfig.get_time(), logger)

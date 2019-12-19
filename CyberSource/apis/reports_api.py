@@ -293,7 +293,7 @@ class ReportsApi(object):
         :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
-        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
+        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC 
         :param str report_name: Valid Report Name
         :param int report_definition_id: Valid Report Definition Id
         :param str report_status: Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 
@@ -327,7 +327,7 @@ class ReportsApi(object):
         :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
         :param str organization_id: Valid Cybersource Organization Id
         :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
-        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC 
+        :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC 
         :param str report_name: Valid Report Name
         :param int report_definition_id: Valid Report Definition Id
         :param str report_status: Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA 

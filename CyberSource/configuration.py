@@ -222,3 +222,26 @@ class Configuration(object):
                "Version of the API: 0.0.1\n"\
                "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
+
+    # This method sets the proxy details
+    def set_merchantproxyconfig(self, val):
+       if val.get('use_proxy'):
+            if self.set_proxy(val):
+                self.set_proxy_username(val)
+                self.set_proxy_password(val)
+            else:
+                return False
+            return True
+
+    def set_proxy(self, value):
+        if not (value.get('proxy_address') is None or value.get('proxy_address') == '' or value.get('proxy_port') is None or value.get('proxy_port') == ''):
+            self.proxy = value['proxy_address'] + ':' + value['proxy_port']
+            return True
+
+    def set_proxy_username(self, value):
+        if not (value.get('proxy_username') is None):
+            self.proxy_username = value['proxy_username']
+
+    def set_proxy_password(self, value):
+        if not (value.get("proxy_password") is None):
+            self.proxy_password = value['proxy_password']

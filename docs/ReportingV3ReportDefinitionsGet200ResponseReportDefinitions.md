@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **report_defintion_name** | **str** |  | [optional] 
 **supported_formats** | **list[str]** |  | [optional] 
 **description** | **str** |  | [optional] 
+**default_settings** | [**ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings**](ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings.md) |  | [optional] 
+**subscription_type** | **str** | &#39;The subscription type for which report definition is required. By default the type will be CUSTOM.&#39; Valid Values: - CLASSIC - CUSTOM - STANDARD  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

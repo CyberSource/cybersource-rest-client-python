@@ -85,7 +85,7 @@ class PersonalIdentification(object):
     def type(self):
         """
         Gets the type of this PersonalIdentification.
-        Type of personal identification. **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
+        Type of personal identification.  **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
 
         :return: The type of this PersonalIdentification.
         :rtype: str
@@ -96,7 +96,7 @@ class PersonalIdentification(object):
     def type(self, type):
         """
         Sets the type of this PersonalIdentification.
-        Type of personal identification. **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
+        Type of personal identification.  **Important**: Contact your TeleCheck representative to learn whether this field is required or optional.  Valid values: - driver license 
 
         :param type: The type of this PersonalIdentification.
         :type: str

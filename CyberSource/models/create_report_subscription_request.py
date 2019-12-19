@@ -36,6 +36,7 @@ class CreateReportSubscriptionRequest(object):
         'report_fields': 'list[str]',
         'report_mime_type': 'str',
         'report_frequency': 'str',
+        'report_interval': 'str',
         'report_name': 'str',
         'timezone': 'str',
         'start_time': 'str',
@@ -51,6 +52,7 @@ class CreateReportSubscriptionRequest(object):
         'report_fields': 'reportFields',
         'report_mime_type': 'reportMimeType',
         'report_frequency': 'reportFrequency',
+        'report_interval': 'reportInterval',
         'report_name': 'reportName',
         'timezone': 'timezone',
         'start_time': 'startTime',
@@ -60,7 +62,7 @@ class CreateReportSubscriptionRequest(object):
         'group_name': 'groupName'
     }
 
-    def __init__(self, organization_id=None, report_definition_name=None, report_fields=None, report_mime_type=None, report_frequency=None, report_name=None, timezone=None, start_time=None, start_day=None, report_filters=None, report_preferences=None, group_name=None):
+    def __init__(self, organization_id=None, report_definition_name=None, report_fields=None, report_mime_type=None, report_frequency=None, report_interval=None, report_name=None, timezone=None, start_time=None, start_day=None, report_filters=None, report_preferences=None, group_name=None):
         """
         CreateReportSubscriptionRequest - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class CreateReportSubscriptionRequest(object):
         self._report_fields = None
         self._report_mime_type = None
         self._report_frequency = None
+        self._report_interval = None
         self._report_name = None
         self._timezone = None
         self._start_time = None
@@ -84,6 +87,8 @@ class CreateReportSubscriptionRequest(object):
         self.report_fields = report_fields
         self.report_mime_type = report_mime_type
         self.report_frequency = report_frequency
+        if report_interval is not None:
+          self.report_interval = report_interval
         self.report_name = report_name
         self.timezone = timezone
         self.start_time = start_time
@@ -204,7 +209,7 @@ class CreateReportSubscriptionRequest(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this CreateReportSubscriptionRequest.
-        'The frequency for which subscription is created.'  Valid values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'ADHOC' 
+        'The frequency for which subscription is created.'  Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
 
         :return: The report_frequency of this CreateReportSubscriptionRequest.
         :rtype: str
@@ -215,7 +220,7 @@ class CreateReportSubscriptionRequest(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this CreateReportSubscriptionRequest.
-        'The frequency for which subscription is created.'  Valid values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'ADHOC' 
+        'The frequency for which subscription is created.'  Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
 
         :param report_frequency: The report_frequency of this CreateReportSubscriptionRequest.
         :type: str
@@ -224,6 +229,31 @@ class CreateReportSubscriptionRequest(object):
             raise ValueError("Invalid value for `report_frequency`, must not be `None`")
 
         self._report_frequency = report_frequency
+
+    @property
+    def report_interval(self):
+        """
+        Gets the report_interval of this CreateReportSubscriptionRequest.
+        If the reportFrequency is User-defined, reportInterval should be in **ISO 8601 time format** Please refer the following link to know more about ISO 8601 format.[Rfc Time Format](https://en.wikipedia.org/wiki/ISO_8601#Durations)  **Example time format for 2 hours and 30 Mins:**   - PT2H30M **NOTE: Do not document reportInterval field in developer center** 
+
+        :return: The report_interval of this CreateReportSubscriptionRequest.
+        :rtype: str
+        """
+        return self._report_interval
+
+    @report_interval.setter
+    def report_interval(self, report_interval):
+        """
+        Sets the report_interval of this CreateReportSubscriptionRequest.
+        If the reportFrequency is User-defined, reportInterval should be in **ISO 8601 time format** Please refer the following link to know more about ISO 8601 format.[Rfc Time Format](https://en.wikipedia.org/wiki/ISO_8601#Durations)  **Example time format for 2 hours and 30 Mins:**   - PT2H30M **NOTE: Do not document reportInterval field in developer center** 
+
+        :param report_interval: The report_interval of this CreateReportSubscriptionRequest.
+        :type: str
+        """
+        if report_interval is not None and not re.search('^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$', report_interval):
+            raise ValueError("Invalid value for `report_interval`, must be a follow pattern or equal to `/^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$/`")
+
+        self._report_interval = report_interval
 
     @property
     def report_name(self):

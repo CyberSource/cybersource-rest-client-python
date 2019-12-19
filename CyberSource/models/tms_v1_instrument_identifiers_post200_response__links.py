@@ -32,27 +32,32 @@ class TmsV1InstrumentIdentifiersPost200ResponseLinks(object):
     """
     swagger_types = {
         '_self': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf',
+        'payment_instruments': 'TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments',
         'ancestor': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf',
         'successor': 'TmsV1InstrumentIdentifiersPost200ResponseLinksSelf'
     }
 
     attribute_map = {
         '_self': 'self',
+        'payment_instruments': 'paymentInstruments',
         'ancestor': 'ancestor',
         'successor': 'successor'
     }
 
-    def __init__(self, _self=None, ancestor=None, successor=None):
+    def __init__(self, _self=None, payment_instruments=None, ancestor=None, successor=None):
         """
         TmsV1InstrumentIdentifiersPost200ResponseLinks - a model defined in Swagger
         """
 
         self.__self = None
+        self._payment_instruments = None
         self._ancestor = None
         self._successor = None
 
         if _self is not None:
           self._self = _self
+        if payment_instruments is not None:
+          self.payment_instruments = payment_instruments
         if ancestor is not None:
           self.ancestor = ancestor
         if successor is not None:
@@ -78,6 +83,27 @@ class TmsV1InstrumentIdentifiersPost200ResponseLinks(object):
         """
 
         self.__self = _self
+
+    @property
+    def payment_instruments(self):
+        """
+        Gets the payment_instruments of this TmsV1InstrumentIdentifiersPost200ResponseLinks.
+
+        :return: The payment_instruments of this TmsV1InstrumentIdentifiersPost200ResponseLinks.
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments
+        """
+        return self._payment_instruments
+
+    @payment_instruments.setter
+    def payment_instruments(self, payment_instruments):
+        """
+        Sets the payment_instruments of this TmsV1InstrumentIdentifiersPost200ResponseLinks.
+
+        :param payment_instruments: The payment_instruments of this TmsV1InstrumentIdentifiersPost200ResponseLinks.
+        :type: TmsV1InstrumentIdentifiersPost200ResponseLinksPaymentInstruments
+        """
+
+        self._payment_instruments = payment_instruments
 
     @property
     def ancestor(self):

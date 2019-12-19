@@ -63,6 +63,14 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         pass
 
+    def test_reporting_v3_predefined_report_subscriptions_put(self):
+        """
+        Test case for reporting_v3_predefined_report_subscriptions_put
+
+        Create a Standard or Classic subscription
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

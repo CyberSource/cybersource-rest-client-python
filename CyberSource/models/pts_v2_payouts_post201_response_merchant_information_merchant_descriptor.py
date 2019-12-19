@@ -126,8 +126,6 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :param country: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 

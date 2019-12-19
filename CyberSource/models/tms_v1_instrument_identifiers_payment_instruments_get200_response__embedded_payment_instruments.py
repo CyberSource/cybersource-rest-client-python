@@ -31,7 +31,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'TmsV1InstrumentIdentifiersPost200ResponseLinks',
+        'links': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks',
         'id': 'str',
         'object': 'str',
         'state': 'str',
@@ -42,7 +42,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         'processing_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation',
         'merchant_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation',
         'meta_data': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata',
-        'instrument_identifier': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier'
+        'embedded': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded'
     }
 
     attribute_map = {
@@ -57,10 +57,10 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         'processing_information': 'processingInformation',
         'merchant_information': 'merchantInformation',
         'meta_data': 'metaData',
-        'instrument_identifier': 'instrumentIdentifier'
+        'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, meta_data=None, instrument_identifier=None):
+    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, meta_data=None, embedded=None):
         """
         TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments - a model defined in Swagger
         """
@@ -76,7 +76,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         self._processing_information = None
         self._merchant_information = None
         self._meta_data = None
-        self._instrument_identifier = None
+        self._embedded = None
 
         if links is not None:
           self.links = links
@@ -100,8 +100,8 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
           self.merchant_information = merchant_information
         if meta_data is not None:
           self.meta_data = meta_data
-        if instrument_identifier is not None:
-          self.instrument_identifier = instrument_identifier
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
     def links(self):
@@ -109,7 +109,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         Gets the links of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
 
         :return: The links of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinks
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks
         """
         return self._links
 
@@ -119,7 +119,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         Sets the links of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
 
         :param links: The links of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseLinks
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks
         """
 
         self._links = links
@@ -151,7 +151,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
     def object(self):
         """
         Gets the object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        'Describes type of token.'  Valid values: - paymentInstrument 
+        'Describes type of token.'  Valid values: - instrumentIdentifier 
 
         :return: The object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
         :rtype: str
@@ -162,7 +162,7 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
     def object(self, object):
         """
         Sets the object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        'Describes type of token.'  Valid values: - paymentInstrument 
+        'Describes type of token.'  Valid values: - instrumentIdentifier 
 
         :param object: The object of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
         :type: str
@@ -341,25 +341,25 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentI
         self._meta_data = meta_data
 
     @property
-    def instrument_identifier(self):
+    def embedded(self):
         """
-        Gets the instrument_identifier of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
+        Gets the embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
 
-        :return: The instrument_identifier of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
+        :return: The embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
+        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded
         """
-        return self._instrument_identifier
+        return self._embedded
 
-    @instrument_identifier.setter
-    def instrument_identifier(self, instrument_identifier):
+    @embedded.setter
+    def embedded(self, embedded):
         """
-        Sets the instrument_identifier of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
+        Sets the embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
 
-        :param instrument_identifier: The instrument_identifier of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
+        :param embedded: The embedded of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments.
+        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded
         """
 
-        self._instrument_identifier = instrument_identifier
+        self._embedded = embedded
 
     def to_dict(self):
         """
