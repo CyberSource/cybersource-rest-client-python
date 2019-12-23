@@ -117,7 +117,7 @@ class Riskv1authenticationsAcquirerInformation(object):
     def password(self):
         """
         Gets the password of this Riskv1authenticationsAcquirerInformation.
-        Registered password for the Visa directory server. For Mastercard, this value is always 12345678. 
+        Registered password for the Visa directory server. 
 
         :return: The password of this Riskv1authenticationsAcquirerInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class Riskv1authenticationsAcquirerInformation(object):
     def password(self, password):
         """
         Sets the password of this Riskv1authenticationsAcquirerInformation.
-        Registered password for the Visa directory server. For Mastercard, this value is always 12345678. 
+        Registered password for the Visa directory server. 
 
         :param password: The password of this Riskv1authenticationsAcquirerInformation.
         :type: str
