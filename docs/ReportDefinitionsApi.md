@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_resource_info_by_report_definition**
-> ReportingV3ReportDefinitionsNameGet200Response get_resource_info_by_report_definition(report_definition_name, organization_id=organization_id)
+> ReportingV3ReportDefinitionsNameGet200Response get_resource_info_by_report_definition(report_definition_name, subscription_type=subscription_type, report_mime_type=report_mime_type, organization_id=organization_id)
 
 Get report definition
 
@@ -26,11 +26,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportDefinitionsApi()
 report_definition_name = 'report_definition_name_example' # str | Name of the Report definition to retrieve
+subscription_type = 'subscription_type_example' # str | The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD  (optional)
+report_mime_type = 'report_mime_type_example' # str | The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv  (optional)
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Get report definition
-    api_response = api_instance.get_resource_info_by_report_definition(report_definition_name, organization_id=organization_id)
+    api_response = api_instance.get_resource_info_by_report_definition(report_definition_name, subscription_type=subscription_type, report_mime_type=report_mime_type, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportDefinitionsApi->get_resource_info_by_report_definition: %s\n" % e)
@@ -41,6 +43,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **report_definition_name** | **str**| Name of the Report definition to retrieve | 
+ **subscription_type** | **str**| The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD  | [optional] 
+ **report_mime_type** | **str**| The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv  | [optional] 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
@@ -59,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_resource_v2_info**
-> ReportingV3ReportDefinitionsGet200Response get_resource_v2_info(organization_id=organization_id)
+> ReportingV3ReportDefinitionsGet200Response get_resource_v2_info(subscription_type=subscription_type, organization_id=organization_id)
 
 Get reporting resource information
 
@@ -75,11 +79,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportDefinitionsApi()
+subscription_type = 'subscription_type_example' # str | Valid Values: - CLASSIC - CUSTOM - STANDARD  (optional)
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Get reporting resource information
-    api_response = api_instance.get_resource_v2_info(organization_id=organization_id)
+    api_response = api_instance.get_resource_v2_info(subscription_type=subscription_type, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportDefinitionsApi->get_resource_v2_info: %s\n" % e)
@@ -89,6 +94,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **subscription_type** | **str**| Valid Values: - CLASSIC - CUSTOM - STANDARD  | [optional] 
  **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type

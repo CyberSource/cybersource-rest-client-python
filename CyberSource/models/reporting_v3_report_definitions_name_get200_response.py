@@ -36,7 +36,9 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         'report_defintion_name': 'str',
         'attributes': 'list[ReportingV3ReportDefinitionsNameGet200ResponseAttributes]',
         'supported_formats': 'list[str]',
-        'description': 'str'
+        'description': 'str',
+        'default_settings': 'ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings',
+        'subscription_type': 'str'
     }
 
     attribute_map = {
@@ -45,10 +47,12 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         'report_defintion_name': 'reportDefintionName',
         'attributes': 'attributes',
         'supported_formats': 'supportedFormats',
-        'description': 'description'
+        'description': 'description',
+        'default_settings': 'defaultSettings',
+        'subscription_type': 'subscriptionType'
     }
 
-    def __init__(self, type=None, report_definition_id=None, report_defintion_name=None, attributes=None, supported_formats=None, description=None):
+    def __init__(self, type=None, report_definition_id=None, report_defintion_name=None, attributes=None, supported_formats=None, description=None, default_settings=None, subscription_type=None):
         """
         ReportingV3ReportDefinitionsNameGet200Response - a model defined in Swagger
         """
@@ -59,6 +63,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         self._attributes = None
         self._supported_formats = None
         self._description = None
+        self._default_settings = None
+        self._subscription_type = None
 
         if type is not None:
           self.type = type
@@ -72,6 +78,10 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
           self.supported_formats = supported_formats
         if description is not None:
           self.description = description
+        if default_settings is not None:
+          self.default_settings = default_settings
+        if subscription_type is not None:
+          self.subscription_type = subscription_type
 
     @property
     def type(self):
@@ -198,6 +208,50 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         """
 
         self._description = description
+
+    @property
+    def default_settings(self):
+        """
+        Gets the default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
+
+        :return: The default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
+        :rtype: ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+        """
+        return self._default_settings
+
+    @default_settings.setter
+    def default_settings(self, default_settings):
+        """
+        Sets the default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
+
+        :param default_settings: The default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
+        :type: ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
+        """
+
+        self._default_settings = default_settings
+
+    @property
+    def subscription_type(self):
+        """
+        Gets the subscription_type of this ReportingV3ReportDefinitionsNameGet200Response.
+        'The subscription type for which report definition is required. By default the type will be CUSTOM.' Valid Values: - 'CLASSIC' - 'CUSTOM' - 'STANDARD' 
+
+        :return: The subscription_type of this ReportingV3ReportDefinitionsNameGet200Response.
+        :rtype: str
+        """
+        return self._subscription_type
+
+    @subscription_type.setter
+    def subscription_type(self, subscription_type):
+        """
+        Sets the subscription_type of this ReportingV3ReportDefinitionsNameGet200Response.
+        'The subscription type for which report definition is required. By default the type will be CUSTOM.' Valid Values: - 'CLASSIC' - 'CUSTOM' - 'STANDARD' 
+
+        :param subscription_type: The subscription_type of this ReportingV3ReportDefinitionsNameGet200Response.
+        :type: str
+        """
+
+        self._subscription_type = subscription_type
 
     def to_dict(self):
         """

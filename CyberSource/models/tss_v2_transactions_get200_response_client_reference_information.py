@@ -97,7 +97,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_version(self):
         """
         Gets the application_version of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        Version of the CyberSource application or integration used for a transaction. 
 
         :return: The application_version of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :rtype: str
@@ -108,7 +108,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_version(self, application_version):
         """
         Sets the application_version of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        Version of the CyberSource application or integration used for a transaction. 
 
         :param application_version: The application_version of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
@@ -120,7 +120,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_name(self):
         """
         Gets the application_name of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :return: The application_name of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :rtype: str
@@ -131,7 +131,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_name(self, application_name):
         """
         Sets the application_name of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :param application_name: The application_name of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
@@ -143,7 +143,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_user(self):
         """
         Gets the application_user of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :return: The application_user of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :rtype: str
@@ -154,7 +154,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
     def application_user(self, application_user):
         """
         Sets the application_user of this TssV2TransactionsGet200ResponseClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :param application_user: The application_user of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str

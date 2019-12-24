@@ -121,7 +121,7 @@ class Tmsv1instrumentidentifiersCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Tmsv1instrumentidentifiersCard.
-        Card expiration year.  Format: `YYYY`. Possible values: `1900` through `2099`. 
+        Card expiration year. Format: `YYYY`. Possible values: `1900` through `2099`. 
 
         :return: The expiration_year of this Tmsv1instrumentidentifiersCard.
         :rtype: str
@@ -132,7 +132,7 @@ class Tmsv1instrumentidentifiersCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Tmsv1instrumentidentifiersCard.
-        Card expiration year.  Format: `YYYY`. Possible values: `1900` through `2099`. 
+        Card expiration year. Format: `YYYY`. Possible values: `1900` through `2099`. 
 
         :param expiration_year: The expiration_year of this Tmsv1instrumentidentifiersCard.
         :type: str

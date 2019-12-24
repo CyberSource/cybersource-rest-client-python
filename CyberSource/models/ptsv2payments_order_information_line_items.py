@@ -694,7 +694,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight(self):
         """
         Gets the weight of this Ptsv2paymentsOrderInformationLineItems.
-        Weight of the item. See Numbered Elements.
+        Weight of the item.  For details, see `weight_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The weight of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -705,7 +705,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight(self, weight):
         """
         Sets the weight of this Ptsv2paymentsOrderInformationLineItems.
-        Weight of the item. See Numbered Elements.
+        Weight of the item.  For details, see `weight_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param weight: The weight of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -719,7 +719,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight_identifier(self):
         """
         Gets the weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
-        Type of weight. See Numbered Elements.  Possible values: - B: Billed weight - N: Actual net weight 
+        Type of weight.  Possible values: - B: Billed weight - N: Actual net weight  For details, see `weight_identifier` offer-level field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -730,7 +730,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight_identifier(self, weight_identifier):
         """
         Sets the weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
-        Type of weight. See Numbered Elements.  Possible values: - B: Billed weight - N: Actual net weight 
+        Type of weight.  Possible values: - B: Billed weight - N: Actual net weight  For details, see `weight_identifier` offer-level field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param weight_identifier: The weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -744,7 +744,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight_unit(self):
         """
         Gets the weight_unit of this Ptsv2paymentsOrderInformationLineItems.
-        Code that specifies the unit of measurement for the weight amount. For example, OZ specifies ounce and LB specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  See Numbered Elements. 
+        Code that specifies the unit of measurement for the weight amount. For example, `OZ` specifies ounce and `LB` specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  For details, see `weight_unit_measurement` offer-level field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The weight_unit of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -755,7 +755,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def weight_unit(self, weight_unit):
         """
         Sets the weight_unit of this Ptsv2paymentsOrderInformationLineItems.
-        Code that specifies the unit of measurement for the weight amount. For example, OZ specifies ounce and LB specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  See Numbered Elements. 
+        Code that specifies the unit of measurement for the weight amount. For example, `OZ` specifies ounce and `LB` specifies pound. The possible values are defined by the ANSI Accredited Standards Committee (ASC).  For details, see `weight_unit_measurement` offer-level field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param weight_unit: The weight_unit of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
@@ -769,7 +769,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def reference_data_code(self):
         """
         Gets the reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
-        Code that identifies the value of the corresponding item_#_referenceData_#_number field. See Numbered Elements.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+        Code that identifies the value of the corresponding `orderInformation.lineItems[].referenceDataNumber` field.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For details, see `reference_data_#_code` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
         :rtype: str
@@ -780,7 +780,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
     def reference_data_code(self, reference_data_code):
         """
         Sets the reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
-        Code that identifies the value of the corresponding item_#_referenceData_#_number field. See Numbered Elements.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+        Code that identifies the value of the corresponding `orderInformation.lineItems[].referenceDataNumber` field.  Possible values: - AN: Client-defined asset code - MG: Manufacturer's part number - PO: Purchase order number - SK: Supplier stock keeping unit number - UP: Universal product code - VC: Supplier catalog number - VP: Vendor part number  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor.  For details, see `reference_data_#_code` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param reference_data_code: The reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str

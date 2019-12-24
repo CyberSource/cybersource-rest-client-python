@@ -87,7 +87,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_name(self):
         """
         Gets the application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :return: The application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :rtype: str
@@ -98,7 +98,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_name(self, application_name):
         """
         Sets the application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :param application_name: The application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
@@ -110,7 +110,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_user(self):
         """
         Gets the application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :return: The application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :rtype: str
@@ -121,7 +121,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_user(self, application_user):
         """
         Sets the application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :param application_user: The application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str

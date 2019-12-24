@@ -57,6 +57,8 @@ class ReportDefinitionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_definition_name: Name of the Report definition to retrieve (required)
+        :param str subscription_type: The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD 
+        :param str report_mime_type: The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv 
         :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportDefinitionsNameGet200Response
                  If the method is called asynchronously,
@@ -84,13 +86,15 @@ class ReportDefinitionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_definition_name: Name of the Report definition to retrieve (required)
+        :param str subscription_type: The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD 
+        :param str report_mime_type: The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv 
         :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportDefinitionsNameGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_definition_name', 'organization_id']
+        all_params = ['report_definition_name', 'subscription_type', 'report_mime_type', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -123,6 +127,10 @@ class ReportDefinitionsApi(object):
             path_params['reportDefinitionName'] = params['report_definition_name']
 
         query_params = []
+        if 'subscription_type' in params:
+            query_params.append(('subscriptionType', params['subscription_type']))
+        if 'report_mime_type' in params:
+            query_params.append(('reportMimeType', params['report_mime_type']))
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
 
@@ -172,6 +180,7 @@ class ReportDefinitionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str subscription_type: Valid Values: - CLASSIC - CUSTOM - STANDARD 
         :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportDefinitionsGet200Response
                  If the method is called asynchronously,
@@ -198,13 +207,14 @@ class ReportDefinitionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str subscription_type: Valid Values: - CLASSIC - CUSTOM - STANDARD 
         :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportDefinitionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['organization_id']
+        all_params = ['subscription_type', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -232,6 +242,8 @@ class ReportDefinitionsApi(object):
         path_params = {}
 
         query_params = []
+        if 'subscription_type' in params:
+            query_params.append(('subscriptionType', params['subscription_type']))
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
 

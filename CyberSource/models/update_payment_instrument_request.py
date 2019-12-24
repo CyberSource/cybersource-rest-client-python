@@ -31,10 +31,6 @@ class UpdatePaymentInstrumentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'TmsV1InstrumentIdentifiersPost200ResponseLinks',
-        'id': 'str',
-        'object': 'str',
-        'state': 'str',
         'bank_account': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount',
         'card': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard',
         'buyer_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation',
@@ -42,14 +38,10 @@ class UpdatePaymentInstrumentRequest(object):
         'processing_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation',
         'merchant_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation',
         'meta_data': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata',
-        'instrument_identifier': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier'
+        'instrument_identifier': 'Tmsv1paymentinstrumentsInstrumentIdentifier'
     }
 
     attribute_map = {
-        'links': '_links',
-        'id': 'id',
-        'object': 'object',
-        'state': 'state',
         'bank_account': 'bankAccount',
         'card': 'card',
         'buyer_information': 'buyerInformation',
@@ -60,15 +52,11 @@ class UpdatePaymentInstrumentRequest(object):
         'instrument_identifier': 'instrumentIdentifier'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, meta_data=None, instrument_identifier=None):
+    def __init__(self, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, meta_data=None, instrument_identifier=None):
         """
         UpdatePaymentInstrumentRequest - a model defined in Swagger
         """
 
-        self._links = None
-        self._id = None
-        self._object = None
-        self._state = None
         self._bank_account = None
         self._card = None
         self._buyer_information = None
@@ -78,14 +66,6 @@ class UpdatePaymentInstrumentRequest(object):
         self._meta_data = None
         self._instrument_identifier = None
 
-        if links is not None:
-          self.links = links
-        if id is not None:
-          self.id = id
-        if object is not None:
-          self.object = object
-        if state is not None:
-          self.state = state
         if bank_account is not None:
           self.bank_account = bank_account
         if card is not None:
@@ -102,96 +82,6 @@ class UpdatePaymentInstrumentRequest(object):
           self.meta_data = meta_data
         if instrument_identifier is not None:
           self.instrument_identifier = instrument_identifier
-
-    @property
-    def links(self):
-        """
-        Gets the links of this UpdatePaymentInstrumentRequest.
-
-        :return: The links of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseLinks
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this UpdatePaymentInstrumentRequest.
-
-        :param links: The links of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseLinks
-        """
-
-        self._links = links
-
-    @property
-    def id(self):
-        """
-        Gets the id of this UpdatePaymentInstrumentRequest.
-        Unique identification number assigned by CyberSource to the submitted request.
-
-        :return: The id of this UpdatePaymentInstrumentRequest.
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """
-        Sets the id of this UpdatePaymentInstrumentRequest.
-        Unique identification number assigned by CyberSource to the submitted request.
-
-        :param id: The id of this UpdatePaymentInstrumentRequest.
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def object(self):
-        """
-        Gets the object of this UpdatePaymentInstrumentRequest.
-        'Describes type of token.'  Valid values: - paymentInstrument 
-
-        :return: The object of this UpdatePaymentInstrumentRequest.
-        :rtype: str
-        """
-        return self._object
-
-    @object.setter
-    def object(self, object):
-        """
-        Sets the object of this UpdatePaymentInstrumentRequest.
-        'Describes type of token.'  Valid values: - paymentInstrument 
-
-        :param object: The object of this UpdatePaymentInstrumentRequest.
-        :type: str
-        """
-
-        self._object = object
-
-    @property
-    def state(self):
-        """
-        Gets the state of this UpdatePaymentInstrumentRequest.
-        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
-
-        :return: The state of this UpdatePaymentInstrumentRequest.
-        :rtype: str
-        """
-        return self._state
-
-    @state.setter
-    def state(self, state):
-        """
-        Sets the state of this UpdatePaymentInstrumentRequest.
-        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
-
-        :param state: The state of this UpdatePaymentInstrumentRequest.
-        :type: str
-        """
-
-        self._state = state
 
     @property
     def bank_account(self):
@@ -346,7 +236,7 @@ class UpdatePaymentInstrumentRequest(object):
         Gets the instrument_identifier of this UpdatePaymentInstrumentRequest.
 
         :return: The instrument_identifier of this UpdatePaymentInstrumentRequest.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
+        :rtype: Tmsv1paymentinstrumentsInstrumentIdentifier
         """
         return self._instrument_identifier
 
@@ -356,7 +246,7 @@ class UpdatePaymentInstrumentRequest(object):
         Sets the instrument_identifier of this UpdatePaymentInstrumentRequest.
 
         :param instrument_identifier: The instrument_identifier of this UpdatePaymentInstrumentRequest.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedInstrumentIdentifier
+        :type: Tmsv1paymentinstrumentsInstrumentIdentifier
         """
 
         self._instrument_identifier = instrument_identifier

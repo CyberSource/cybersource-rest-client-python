@@ -479,3 +479,119 @@ class ReportSubscriptionsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def reporting_v3_predefined_report_subscriptions_put(self, predefined_subscription_request_bean, **kwargs):
+        """
+        Create a Standard or Classic subscription
+        Create or update an already existing classic or standard subscription. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.reporting_v3_predefined_report_subscriptions_put(predefined_subscription_request_bean, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PredefinedSubscriptionRequestBean predefined_subscription_request_bean: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.reporting_v3_predefined_report_subscriptions_put_with_http_info(predefined_subscription_request_bean, **kwargs)
+        else:
+            (data) = self.reporting_v3_predefined_report_subscriptions_put_with_http_info(predefined_subscription_request_bean, **kwargs)
+            return data
+
+    def reporting_v3_predefined_report_subscriptions_put_with_http_info(self, predefined_subscription_request_bean, **kwargs):
+        """
+        Create a Standard or Classic subscription
+        Create or update an already existing classic or standard subscription. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.reporting_v3_predefined_report_subscriptions_put_with_http_info(predefined_subscription_request_bean, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PredefinedSubscriptionRequestBean predefined_subscription_request_bean: Report subscription request payload (required)
+        :param str organization_id: Valid Cybersource Organization Id
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['predefined_subscription_request_bean', 'organization_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method reporting_v3_predefined_report_subscriptions_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'predefined_subscription_request_bean' is set
+        if ('predefined_subscription_request_bean' not in params) or (params['predefined_subscription_request_bean'] is None):
+            raise ValueError("Missing the required parameter `predefined_subscription_request_bean` when calling `reporting_v3_predefined_report_subscriptions_put`")
+
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `reporting_v3_predefined_report_subscriptions_put`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `reporting_v3_predefined_report_subscriptions_put`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `reporting_v3_predefined_report_subscriptions_put`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'predefined_subscription_request_bean' in params:
+            body_params = params['predefined_subscription_request_bean']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/reporting/v3/predefined-report-subscriptions', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)

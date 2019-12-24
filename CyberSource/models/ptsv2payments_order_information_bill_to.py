@@ -48,6 +48,7 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'district': 'str',
         'building_number': 'str',
         'email': 'str',
+        'email_domain': 'str',
         'phone_number': 'str',
         'phone_type': 'str'
     }
@@ -70,11 +71,12 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'district': 'district',
         'building_number': 'buildingNumber',
         'email': 'email',
+        'email_domain': 'emailDomain',
         'phone_number': 'phoneNumber',
         'phone_type': 'phoneType'
     }
 
-    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, email=None, phone_number=None, phone_type=None):
+    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, email=None, email_domain=None, phone_number=None, phone_type=None):
         """
         Ptsv2paymentsOrderInformationBillTo - a model defined in Swagger
         """
@@ -96,6 +98,7 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         self._district = None
         self._building_number = None
         self._email = None
+        self._email_domain = None
         self._phone_number = None
         self._phone_type = None
 
@@ -133,6 +136,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
           self.building_number = building_number
         if email is not None:
           self.email = email
+        if email_domain is not None:
+          self.email_domain = email_domain
         if phone_number is not None:
           self.phone_number = phone_number
         if phone_type is not None:
@@ -562,6 +567,31 @@ class Ptsv2paymentsOrderInformationBillTo(object):
             raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
+
+    @property
+    def email_domain(self):
+        """
+        Gets the email_domain of this Ptsv2paymentsOrderInformationBillTo.
+        Email domain of the customer. The domain of the email address comprises all characters that follow the @ symbol, such as mail.example.com. For the Risk Update service, if the email address and the domain are sent in the request, the domain supersedes the email address. 
+
+        :return: The email_domain of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._email_domain
+
+    @email_domain.setter
+    def email_domain(self, email_domain):
+        """
+        Sets the email_domain of this Ptsv2paymentsOrderInformationBillTo.
+        Email domain of the customer. The domain of the email address comprises all characters that follow the @ symbol, such as mail.example.com. For the Risk Update service, if the email address and the domain are sent in the request, the domain supersedes the email address. 
+
+        :param email_domain: The email_domain of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+        if email_domain is not None and len(email_domain) > 100:
+            raise ValueError("Invalid value for `email_domain`, length must be less than or equal to `100`")
+
+        self._email_domain = email_domain
 
     @property
     def phone_number(self):

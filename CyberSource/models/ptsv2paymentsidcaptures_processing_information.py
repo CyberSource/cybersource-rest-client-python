@@ -247,7 +247,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
 
         :return: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -258,7 +258,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
 
         :param industry_data_type: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str

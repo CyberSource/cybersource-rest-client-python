@@ -36,7 +36,8 @@ class Riskv1decisionsOrderInformation(object):
         'ship_to': 'Riskv1decisionsOrderInformationShipTo',
         'returns_accepted': 'bool',
         'line_items': 'list[Riskv1decisionsOrderInformationLineItems]',
-        'bill_to': 'Riskv1decisionsOrderInformationBillTo'
+        'bill_to': 'Riskv1decisionsOrderInformationBillTo',
+        'address': 'Riskv1decisionsOrderInformationAddress'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Riskv1decisionsOrderInformation(object):
         'ship_to': 'shipTo',
         'returns_accepted': 'returnsAccepted',
         'line_items': 'lineItems',
-        'bill_to': 'billTo'
+        'bill_to': 'billTo',
+        'address': 'address'
     }
 
-    def __init__(self, amount_details=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None):
+    def __init__(self, amount_details=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, address=None):
         """
         Riskv1decisionsOrderInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Riskv1decisionsOrderInformation(object):
         self._returns_accepted = None
         self._line_items = None
         self._bill_to = None
+        self._address = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -72,6 +75,8 @@ class Riskv1decisionsOrderInformation(object):
           self.line_items = line_items
         if bill_to is not None:
           self.bill_to = bill_to
+        if address is not None:
+          self.address = address
 
     @property
     def amount_details(self):
@@ -202,6 +207,27 @@ class Riskv1decisionsOrderInformation(object):
         """
 
         self._bill_to = bill_to
+
+    @property
+    def address(self):
+        """
+        Gets the address of this Riskv1decisionsOrderInformation.
+
+        :return: The address of this Riskv1decisionsOrderInformation.
+        :rtype: Riskv1decisionsOrderInformationAddress
+        """
+        return self._address
+
+    @address.setter
+    def address(self, address):
+        """
+        Sets the address of this Riskv1decisionsOrderInformation.
+
+        :param address: The address of this Riskv1decisionsOrderInformation.
+        :type: Riskv1decisionsOrderInformationAddress
+        """
+
+        self._address = address
 
     def to_dict(self):
         """

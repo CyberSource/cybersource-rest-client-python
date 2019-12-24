@@ -261,7 +261,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{tokenId}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -380,7 +380,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{tokenId}', 'GET',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -506,7 +506,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{tokenId}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,

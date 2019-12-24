@@ -212,7 +212,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        Sub-merchant’s country. Use the two-character ISO Standard Country Codes.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  See \"Aggregator Support,\" page 101. 
+        Sub-merchant’s country. Use the two-character ISO Standard Country Codes.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  For details, see the `submerchant_country` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :return: The country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :rtype: str
@@ -223,7 +223,7 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
-        Sub-merchant’s country. Use the two-character ISO Standard Country Codes.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  See \"Aggregator Support,\" page 101. 
+        Sub-merchant’s country. Use the two-character ISO Standard Country Codes.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  For details, see the `submerchant_country` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
 
         :param country: The country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str

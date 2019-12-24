@@ -5,7 +5,8 @@ cd %~dp0
 REM Delete the previously generated SDK code
 
 rd /s /q ..\docs
-rd /s /q ..\CyberSource
+rd /s /q ..\CyberSource\apis
+rd /s /q ..\CyberSource\models
 rd /s /q ..\test
 
 REM Command to generate SDK
@@ -18,6 +19,10 @@ powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object {
 powershell -Command "(Get-Content ..\CyberSource\models\__init__.py) | ForEach-Object { $_ -replace 'from .error__links import ErrorLinks', 'from .error_links import ErrorLinks'} | Set-Content ..\CyberSource\models\__init__.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\report_subscriptions_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/report-subscriptions/{reportName}''', '''/reporting/v3/report-subscriptions/{report_name}'''} | Set-Content ..\CyberSource\apis\report_subscriptions_api.py"
+
+powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{tokenId}''', '''/tms/v1/instrumentidentifiers/{token_id}'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
+
+powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{tokenId}''', '''/tms/v1/paymentinstruments/{token_id}'''} | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\reports_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/reports/{reportId}''', '''/reporting/v3/reports/{report_id}'''} | Set-Content ..\CyberSource\apis\reports_api.py"
 

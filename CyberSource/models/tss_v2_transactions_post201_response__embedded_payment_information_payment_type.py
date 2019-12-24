@@ -31,56 +31,56 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
+        'type': 'str',
         'method': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
+        'type': 'type',
         'method': 'method'
     }
 
-    def __init__(self, name=None, method=None):
+    def __init__(self, type=None, method=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType - a model defined in Swagger
         """
 
-        self._name = None
+        self._type = None
         self._method = None
 
-        if name is not None:
-          self.name = name
+        if type is not None:
+          self.type = type
         if method is not None:
           self.method = method
 
     @property
-    def name(self):
+    def type(self):
         """
-        Gets the name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        Gets the type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
+        Indicates the payment type used in this payment transaction. Example: credit card, check
 
-        :return: The name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
+        :return: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :rtype: str
         """
-        return self._name
+        return self._type
 
-    @name.setter
-    def name(self, name):
+    @type.setter
+    def type(self, type):
         """
-        Sets the name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        Sets the type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
+        Indicates the payment type used in this payment transaction. Example: credit card, check
 
-        :param name: The name of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
+        :param type: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :type: str
         """
 
-        self._name = name
+        self._type = type
 
     @property
     def method(self):
         """
         Gets the method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
+        Indicates the payment method used in this payment transaction.
 
         :return: The method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :rtype: str
@@ -91,7 +91,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
     def method(self, method):
         """
         Sets the method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
+        Indicates the payment method used in this payment transaction.
 
         :param method: The method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :type: str

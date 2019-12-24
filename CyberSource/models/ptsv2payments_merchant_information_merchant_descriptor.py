@@ -38,7 +38,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'locality': 'str',
         'country': 'str',
         'postal_code': 'str',
-        'administrative_area': 'str'
+        'administrative_area': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
@@ -49,10 +50,11 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'locality': 'locality',
         'country': 'country',
         'postal_code': 'postalCode',
-        'administrative_area': 'administrativeArea'
+        'administrative_area': 'administrativeArea',
+        'url': 'url'
     }
 
-    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None):
+    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, url=None):
         """
         Ptsv2paymentsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -65,6 +67,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         self._country = None
         self._postal_code = None
         self._administrative_area = None
+        self._url = None
 
         if name is not None:
           self.name = name
@@ -82,6 +85,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
           self.postal_code = postal_code
         if administrative_area is not None:
           self.administrative_area = administrative_area
+        if url is not None:
+          self.url = url
 
     @property
     def name(self):
@@ -226,8 +231,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param country: The country of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -276,10 +279,33 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 3:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
+
+    @property
+    def url(self):
+        """
+        Gets the url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        Address of company's website provided by merchant 
+
+        :return: The url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """
+        Sets the url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        Address of company's website provided by merchant 
+
+        :param url: The url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+        if url is not None and len(url) > 255:
+            raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")
+
+        self._url = url
 
     def to_dict(self):
         """

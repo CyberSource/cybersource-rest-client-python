@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_subscription**](ReportSubscriptionsApi.md#delete_subscription) | **DELETE** /reporting/v3/report-subscriptions/{reportName} | Delete subscription of a report name by organization
 [**get_all_subscriptions**](ReportSubscriptionsApi.md#get_all_subscriptions) | **GET** /reporting/v3/report-subscriptions | Get all subscriptions
 [**get_subscription**](ReportSubscriptionsApi.md#get_subscription) | **GET** /reporting/v3/report-subscriptions/{reportName} | Get subscription for report name
+[**reporting_v3_predefined_report_subscriptions_put**](ReportSubscriptionsApi.md#reporting_v3_predefined_report_subscriptions_put) | **PUT** /reporting/v3/predefined-report-subscriptions | Create a Standard or Classic subscription
 
 
 # **create_subscription**
@@ -186,6 +187,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ReportingV3ReportSubscriptionsGet200ResponseSubscriptions**](ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/hal+json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reporting_v3_predefined_report_subscriptions_put**
+> reporting_v3_predefined_report_subscriptions_put(predefined_subscription_request_bean, organization_id=organization_id)
+
+Create a Standard or Classic subscription
+
+Create or update an already existing classic or standard subscription. 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.ReportSubscriptionsApi()
+predefined_subscription_request_bean = CyberSource.PredefinedSubscriptionRequestBean() # PredefinedSubscriptionRequestBean | Report subscription request payload
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+
+try: 
+    # Create a Standard or Classic subscription
+    api_instance.reporting_v3_predefined_report_subscriptions_put(predefined_subscription_request_bean, organization_id=organization_id)
+except ApiException as e:
+    print("Exception when calling ReportSubscriptionsApi->reporting_v3_predefined_report_subscriptions_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **predefined_subscription_request_bean** | [**PredefinedSubscriptionRequestBean**](PredefinedSubscriptionRequestBean.md)| Report subscription request payload | 
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

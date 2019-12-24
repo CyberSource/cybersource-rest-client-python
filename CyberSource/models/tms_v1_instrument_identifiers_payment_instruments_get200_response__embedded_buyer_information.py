@@ -33,33 +33,33 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInf
     swagger_types = {
         'company_tax_id': 'str',
         'currency': 'str',
-        'date_o_birth': 'str',
+        'date_of_birth': 'str',
         'personal_identification': 'list[TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformationPersonalIdentification]'
     }
 
     attribute_map = {
         'company_tax_id': 'companyTaxID',
         'currency': 'currency',
-        'date_o_birth': 'dateOBirth',
+        'date_of_birth': 'dateOfBirth',
         'personal_identification': 'personalIdentification'
     }
 
-    def __init__(self, company_tax_id=None, currency=None, date_o_birth=None, personal_identification=None):
+    def __init__(self, company_tax_id=None, currency=None, date_of_birth=None, personal_identification=None):
         """
         TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation - a model defined in Swagger
         """
 
         self._company_tax_id = None
         self._currency = None
-        self._date_o_birth = None
+        self._date_of_birth = None
         self._personal_identification = None
 
         if company_tax_id is not None:
           self.company_tax_id = company_tax_id
         if currency is not None:
           self.currency = currency
-        if date_o_birth is not None:
-          self.date_o_birth = date_o_birth
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
         if personal_identification is not None:
           self.personal_identification = personal_identification
 
@@ -116,31 +116,31 @@ class TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInf
         self._currency = currency
 
     @property
-    def date_o_birth(self):
+    def date_of_birth(self):
         """
-        Gets the date_o_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
+        Gets the date_of_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
         Date of birth of the customer.  Format: `YYYY-MM-DD` or `YYYYMMDD` 
 
-        :return: The date_o_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
+        :return: The date_of_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
         :rtype: str
         """
-        return self._date_o_birth
+        return self._date_of_birth
 
-    @date_o_birth.setter
-    def date_o_birth(self, date_o_birth):
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
         """
-        Sets the date_o_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
+        Sets the date_of_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
         Date of birth of the customer.  Format: `YYYY-MM-DD` or `YYYYMMDD` 
 
-        :param date_o_birth: The date_o_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
+        :param date_of_birth: The date_of_birth of this TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation.
         :type: str
         """
-        if date_o_birth is not None and len(date_o_birth) > 10:
-            raise ValueError("Invalid value for `date_o_birth`, length must be less than or equal to `10`")
-        if date_o_birth is not None and len(date_o_birth) < 8:
-            raise ValueError("Invalid value for `date_o_birth`, length must be greater than or equal to `8`")
+        if date_of_birth is not None and len(date_of_birth) > 10:
+            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `10`")
+        if date_of_birth is not None and len(date_of_birth) < 8:
+            raise ValueError("Invalid value for `date_of_birth`, length must be greater than or equal to `8`")
 
-        self._date_o_birth = date_o_birth
+        self._date_of_birth = date_of_birth
 
     @property
     def personal_identification(self):

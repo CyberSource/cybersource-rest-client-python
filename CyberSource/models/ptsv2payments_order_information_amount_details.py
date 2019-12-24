@@ -267,7 +267,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def gratuity_amount(self):
         """
         Gets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For details about partial authorizations, see \"Partial Authorizations\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :return: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -278,7 +278,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def gratuity_amount(self, gratuity_amount):
         """
         Sets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For details about partial authorizations, see \"Partial Authorizations\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
@@ -730,7 +730,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self):
         """
         Gets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value. 
 
         :return: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -741,7 +741,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self, cashback_amount):
         """
         Sets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value. 
 
         :param cashback_amount: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
