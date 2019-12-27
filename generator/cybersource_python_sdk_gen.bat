@@ -22,6 +22,8 @@ powershell -Command "(Get-Content ..\CyberSource\apis\report_subscriptions_api.p
 
 powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{tokenId}''', '''/tms/v1/instrumentidentifiers/{token_id}'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
 
+powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{tokenId}/paymentinstruments''', '''/tms/v1/instrumentidentifiers/{token_id}/paymentinstruments'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
+
 powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{tokenId}''', '''/tms/v1/paymentinstruments/{token_id}'''} | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\reports_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/reports/{reportId}''', '''/reporting/v3/reports/{report_id}'''} | Set-Content ..\CyberSource\apis\reports_api.py"
