@@ -35,7 +35,7 @@ class TestNetFundingsApi(unittest.TestCase):
         """
         Test case for get_net_funding_details
 
-        Get Netfunding information for an account or a merchant
+        Get Netfunding Information for an Account or a Merchant
         """
         pass
 

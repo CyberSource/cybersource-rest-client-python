@@ -82,7 +82,7 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
     def hashed_password(self):
         """
         Gets the hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
-        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
         :rtype: str
@@ -93,7 +93,7 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
     def hashed_password(self, hashed_password):
         """
         Sets the hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
-        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param hashed_password: The hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
         :type: str

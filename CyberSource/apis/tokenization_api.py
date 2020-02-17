@@ -44,7 +44,7 @@ class TokenizationApi(object):
 
     def tokenize(self, tokenize_request, **kwargs):
         """
-        Tokenize card
+        Tokenize Card
         Returns a token representing the supplied card details. The token replaces card data and can be used as the Subscription ID in the CyberSource Simple Order API or SCMP API. This is an unauthenticated call that you should initiate from your customer’s device or browser.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -70,7 +70,7 @@ class TokenizationApi(object):
 
     def tokenize_with_http_info(self, tokenize_request, **kwargs):
         """
-        Tokenize card
+        Tokenize Card
         Returns a token representing the supplied card details. The token replaces card data and can be used as the Subscription ID in the CyberSource Simple Order API or SCMP API. This is an unauthenticated call that you should initiate from your customer’s device or browser.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

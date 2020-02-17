@@ -36,7 +36,8 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
-        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
+        'initiation_channel': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'fluidData',
         'customer': 'customer',
         'bank': 'bank',
-        'payment_type': 'paymentType'
+        'payment_type': 'paymentType',
+        'initiation_channel': 'initiationChannel'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None, initiation_channel=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._customer = None
         self._bank = None
         self._payment_type = None
+        self._initiation_channel = None
 
         if card is not None:
           self.card = card
@@ -72,6 +75,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.bank = bank
         if payment_type is not None:
           self.payment_type = payment_type
+        if initiation_channel is not None:
+          self.initiation_channel = initiation_channel
 
     @property
     def card(self):
@@ -198,6 +203,31 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def initiation_channel(self):
+        """
+        Gets the initiation_channel of this Ptsv2paymentsPaymentInformation.
+        \"This tag contains a MesterCard defined code that provides information about the type of device used to initiate a non-card transaction. Valid values for this tag are: - 00 Card (default) - 01 Mobile network operator (MNO) controlled removal secure element (SIM or UICC) personalized for use with a mobile phone or smartphone> - 02 Key fob - 03  Watch - 04  Mobile tag - 05  Wristband - 06  Mobile phone case or sleeve - 07  Mobile phone or smartphone with a fixed, (non-removable), secure element controlled by the MNO, for example, code division multiple access (CDMA) - 08  Removable secure element not controlled by the MNO, for example, memory card personalized for use with a mobile phone or smartphone - 09 Mobile phonen or smartphone with a fixed, (non-removable), secure element not controlled by the MNO - 10 MNO controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - 11 Tablet or e-book with a fixed, (non-removable), secure element controlled by the MNO - 12 Removable secure element not controlled by the MNO, for example, memory card personalized for use with a tablet or e-book - 13 Table or e-book with fixed, (non-removable) secure element not controlled by the MNO - 14 - 99 = (Reserved for future use) 
+
+        :return: The initiation_channel of this Ptsv2paymentsPaymentInformation.
+        :rtype: str
+        """
+        return self._initiation_channel
+
+    @initiation_channel.setter
+    def initiation_channel(self, initiation_channel):
+        """
+        Sets the initiation_channel of this Ptsv2paymentsPaymentInformation.
+        \"This tag contains a MesterCard defined code that provides information about the type of device used to initiate a non-card transaction. Valid values for this tag are: - 00 Card (default) - 01 Mobile network operator (MNO) controlled removal secure element (SIM or UICC) personalized for use with a mobile phone or smartphone> - 02 Key fob - 03  Watch - 04  Mobile tag - 05  Wristband - 06  Mobile phone case or sleeve - 07  Mobile phone or smartphone with a fixed, (non-removable), secure element controlled by the MNO, for example, code division multiple access (CDMA) - 08  Removable secure element not controlled by the MNO, for example, memory card personalized for use with a mobile phone or smartphone - 09 Mobile phonen or smartphone with a fixed, (non-removable), secure element not controlled by the MNO - 10 MNO controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - 11 Tablet or e-book with a fixed, (non-removable), secure element controlled by the MNO - 12 Removable secure element not controlled by the MNO, for example, memory card personalized for use with a tablet or e-book - 13 Table or e-book with fixed, (non-removable) secure element not controlled by the MNO - 14 - 99 = (Reserved for future use) 
+
+        :param initiation_channel: The initiation_channel of this Ptsv2paymentsPaymentInformation.
+        :type: str
+        """
+        if initiation_channel is not None and len(initiation_channel) > 2:
+            raise ValueError("Invalid value for `initiation_channel`, length must be less than or equal to `2`")
+
+        self._initiation_channel = initiation_channel
 
     def to_dict(self):
         """

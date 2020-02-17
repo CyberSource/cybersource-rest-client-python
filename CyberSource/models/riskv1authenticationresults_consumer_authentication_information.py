@@ -31,139 +31,46 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'acs_rendering_type': 'str',
-        'acs_transaction_id': 'str',
         'authentication_transaction_id': 'str',
         'authentication_type': 'str',
-        'challenge_cancel_code': 'str',
         'effective_authentication_type': 'str',
-        'directory_server_error_code': 'str',
-        'directory_server_error_description': 'str',
-        'interaction_counter': 'str',
         'signed_pares_status_reason': 'str',
-        'sdk_transaction_id': 'str',
         'signed_pares': 'str',
-        'three_ds_server_transaction_id': 'str',
-        'white_list_status': 'str',
-        'white_list_status_source': 'str'
+        'white_list_status': 'str'
     }
 
     attribute_map = {
-        'acs_rendering_type': 'acsRenderingType',
-        'acs_transaction_id': 'acsTransactionId',
         'authentication_transaction_id': 'authenticationTransactionId',
         'authentication_type': 'authenticationType',
-        'challenge_cancel_code': 'challengeCancelCode',
         'effective_authentication_type': 'effectiveAuthenticationType',
-        'directory_server_error_code': 'directoryServerErrorCode',
-        'directory_server_error_description': 'directoryServerErrorDescription',
-        'interaction_counter': 'interactionCounter',
         'signed_pares_status_reason': 'signedParesStatusReason',
-        'sdk_transaction_id': 'sdkTransactionId',
         'signed_pares': 'signedPares',
-        'three_ds_server_transaction_id': 'threeDSServerTransactionId',
-        'white_list_status': 'whiteListStatus',
-        'white_list_status_source': 'whiteListStatusSource'
+        'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, authentication_transaction_id=None, authentication_type=None, challenge_cancel_code=None, effective_authentication_type=None, directory_server_error_code=None, directory_server_error_description=None, interaction_counter=None, signed_pares_status_reason=None, sdk_transaction_id=None, signed_pares=None, three_ds_server_transaction_id=None, white_list_status=None, white_list_status_source=None):
+    def __init__(self, authentication_transaction_id=None, authentication_type=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
         """
         Riskv1authenticationresultsConsumerAuthenticationInformation - a model defined in Swagger
         """
 
-        self._acs_rendering_type = None
-        self._acs_transaction_id = None
         self._authentication_transaction_id = None
         self._authentication_type = None
-        self._challenge_cancel_code = None
         self._effective_authentication_type = None
-        self._directory_server_error_code = None
-        self._directory_server_error_description = None
-        self._interaction_counter = None
         self._signed_pares_status_reason = None
-        self._sdk_transaction_id = None
         self._signed_pares = None
-        self._three_ds_server_transaction_id = None
         self._white_list_status = None
-        self._white_list_status_source = None
 
-        if acs_rendering_type is not None:
-          self.acs_rendering_type = acs_rendering_type
-        if acs_transaction_id is not None:
-          self.acs_transaction_id = acs_transaction_id
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
         if authentication_type is not None:
           self.authentication_type = authentication_type
-        if challenge_cancel_code is not None:
-          self.challenge_cancel_code = challenge_cancel_code
         if effective_authentication_type is not None:
           self.effective_authentication_type = effective_authentication_type
-        if directory_server_error_code is not None:
-          self.directory_server_error_code = directory_server_error_code
-        if directory_server_error_description is not None:
-          self.directory_server_error_description = directory_server_error_description
-        if interaction_counter is not None:
-          self.interaction_counter = interaction_counter
         if signed_pares_status_reason is not None:
           self.signed_pares_status_reason = signed_pares_status_reason
-        if sdk_transaction_id is not None:
-          self.sdk_transaction_id = sdk_transaction_id
         self.signed_pares = signed_pares
-        if three_ds_server_transaction_id is not None:
-          self.three_ds_server_transaction_id = three_ds_server_transaction_id
         if white_list_status is not None:
           self.white_list_status = white_list_status
-        if white_list_status_source is not None:
-          self.white_list_status_source = white_list_status_source
-
-    @property
-    def acs_rendering_type(self):
-        """
-        Gets the acs_rendering_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
-
-        :return: The acs_rendering_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._acs_rendering_type
-
-    @acs_rendering_type.setter
-    def acs_rendering_type(self, acs_rendering_type):
-        """
-        Sets the acs_rendering_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
-
-        :param acs_rendering_type: The acs_rendering_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._acs_rendering_type = acs_rendering_type
-
-    @property
-    def acs_transaction_id(self):
-        """
-        Gets the acs_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the ACS to identify a single transaction. 
-
-        :return: The acs_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._acs_transaction_id
-
-    @acs_transaction_id.setter
-    def acs_transaction_id(self, acs_transaction_id):
-        """
-        Sets the acs_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the ACS to identify a single transaction. 
-
-        :param acs_transaction_id: The acs_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
-            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
-
-        self._acs_transaction_id = acs_transaction_id
 
     @property
     def authentication_transaction_id(self):
@@ -216,31 +123,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._authentication_type = authentication_type
 
     @property
-    def challenge_cancel_code(self):
-        """
-        Gets the challenge_cancel_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
-
-        :return: The challenge_cancel_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._challenge_cancel_code
-
-    @challenge_cancel_code.setter
-    def challenge_cancel_code(self, challenge_cancel_code):
-        """
-        Sets the challenge_cancel_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
-
-        :param challenge_cancel_code: The challenge_cancel_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if challenge_cancel_code is not None and len(challenge_cancel_code) > 2:
-            raise ValueError("Invalid value for `challenge_cancel_code`, length must be less than or equal to `2`")
-
-        self._challenge_cancel_code = challenge_cancel_code
-
-    @property
     def effective_authentication_type(self):
         """
         Gets the effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
@@ -264,81 +146,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
 
         self._effective_authentication_type = effective_authentication_type
-
-    @property
-    def directory_server_error_code(self):
-        """
-        Gets the directory_server_error_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
-
-        :return: The directory_server_error_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._directory_server_error_code
-
-    @directory_server_error_code.setter
-    def directory_server_error_code(self, directory_server_error_code):
-        """
-        Sets the directory_server_error_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
-
-        :param directory_server_error_code: The directory_server_error_code of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if directory_server_error_code is not None and len(directory_server_error_code) > 3:
-            raise ValueError("Invalid value for `directory_server_error_code`, length must be less than or equal to `3`")
-
-        self._directory_server_error_code = directory_server_error_code
-
-    @property
-    def directory_server_error_description(self):
-        """
-        Gets the directory_server_error_description of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Directory server text and additional detail about the error for this transaction. 
-
-        :return: The directory_server_error_description of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._directory_server_error_description
-
-    @directory_server_error_description.setter
-    def directory_server_error_description(self, directory_server_error_description):
-        """
-        Sets the directory_server_error_description of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Directory server text and additional detail about the error for this transaction. 
-
-        :param directory_server_error_description: The directory_server_error_description of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
-            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
-
-        self._directory_server_error_description = directory_server_error_description
-
-    @property
-    def interaction_counter(self):
-        """
-        Gets the interaction_counter of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the number of authentication cycles attempted by the cardholder and is tracked by the Issuing Banks ACS.Example: if customer gets the challenge window and enter in their one time password and hit submit then that interaction counter should just be 1. When customer gets the challenge window and the bank asks if they want to have the one time password  sent to their phone or their email and they have to choose before going to the next screen to enter in their one time password then this interaction count would be 2. One for the selection of how they want the one time password delivered and another with them actually entering in the one time password and hitting the submit button. 
-
-        :return: The interaction_counter of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._interaction_counter
-
-    @interaction_counter.setter
-    def interaction_counter(self, interaction_counter):
-        """
-        Sets the interaction_counter of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the number of authentication cycles attempted by the cardholder and is tracked by the Issuing Banks ACS.Example: if customer gets the challenge window and enter in their one time password and hit submit then that interaction counter should just be 1. When customer gets the challenge window and the bank asks if they want to have the one time password  sent to their phone or their email and they have to choose before going to the next screen to enter in their one time password then this interaction count would be 2. One for the selection of how they want the one time password delivered and another with them actually entering in the one time password and hitting the submit button. 
-
-        :param interaction_counter: The interaction_counter of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if interaction_counter is not None and len(interaction_counter) > 2:
-            raise ValueError("Invalid value for `interaction_counter`, length must be less than or equal to `2`")
-
-        self._interaction_counter = interaction_counter
 
     @property
     def signed_pares_status_reason(self):
@@ -366,31 +173,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._signed_pares_status_reason = signed_pares_status_reason
 
     @property
-    def sdk_transaction_id(self):
-        """
-        Gets the sdk_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        SDK unique transaction identifier that is generated on each new transaction. 
-
-        :return: The sdk_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._sdk_transaction_id
-
-    @sdk_transaction_id.setter
-    def sdk_transaction_id(self, sdk_transaction_id):
-        """
-        Sets the sdk_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        SDK unique transaction identifier that is generated on each new transaction. 
-
-        :param sdk_transaction_id: The sdk_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
-            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
-
-        self._sdk_transaction_id = sdk_transaction_id
-
-    @property
     def signed_pares(self):
         """
         Gets the signed_pares of this Riskv1authenticationresultsConsumerAuthenticationInformation.
@@ -416,31 +198,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._signed_pares = signed_pares
 
     @property
-    def three_ds_server_transaction_id(self):
-        """
-        Gets the three_ds_server_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
-
-        :return: The three_ds_server_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._three_ds_server_transaction_id
-
-    @three_ds_server_transaction_id.setter
-    def three_ds_server_transaction_id(self, three_ds_server_transaction_id):
-        """
-        Sets the three_ds_server_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
-
-        :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
-
-        self._three_ds_server_transaction_id = three_ds_server_transaction_id
-
-    @property
     def white_list_status(self):
         """
         Gets the white_list_status of this Riskv1authenticationresultsConsumerAuthenticationInformation.
@@ -464,31 +221,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
-
-    @property
-    def white_list_status_source(self):
-        """
-        Gets the white_list_status_source of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
-
-        :return: The white_list_status_source of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._white_list_status_source
-
-    @white_list_status_source.setter
-    def white_list_status_source(self, white_list_status_source):
-        """
-        Sets the white_list_status_source of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
-
-        :param white_list_status_source: The white_list_status_source of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if white_list_status_source is not None and len(white_list_status_source) > 2:
-            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
-
-        self._white_list_status_source = white_list_status_source
 
     def to_dict(self):
         """

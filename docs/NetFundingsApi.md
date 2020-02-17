@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_net_funding_details**](NetFundingsApi.md#get_net_funding_details) | **GET** /reporting/v3/net-fundings | Get Netfunding information for an account or a merchant
+[**get_net_funding_details**](NetFundingsApi.md#get_net_funding_details) | **GET** /reporting/v3/net-fundings | Get Netfunding Information for an Account or a Merchant
 
 
 # **get_net_funding_details**
 > ReportingV3NetFundingsGet200Response get_net_funding_details(start_time, end_time, organization_id=organization_id, group_name=group_name)
 
-Get Netfunding information for an account or a merchant
+Get Netfunding Information for an Account or a Merchant
 
 Get Netfunding information for an account or a merchant.
 
@@ -30,7 +30,7 @@ organization_id = 'organization_id_example' # str | Valid Cybersource Organizati
 group_name = 'group_name_example' # str | Valid CyberSource Group Name. (optional)
 
 try: 
-    # Get Netfunding information for an account or a merchant
+    # Get Netfunding Information for an Account or a Merchant
     api_response = api_instance.get_net_funding_details(start_time, end_time, organization_id=organization_id, group_name=group_name)
     pprint(api_response)
 except ApiException as e:

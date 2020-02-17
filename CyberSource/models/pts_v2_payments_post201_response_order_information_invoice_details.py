@@ -31,22 +31,27 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'level3_transmission_status': 'bool'
+        'level3_transmission_status': 'bool',
+        'sales_slip_number': 'int'
     }
 
     attribute_map = {
-        'level3_transmission_status': 'level3TransmissionStatus'
+        'level3_transmission_status': 'level3TransmissionStatus',
+        'sales_slip_number': 'salesSlipNumber'
     }
 
-    def __init__(self, level3_transmission_status=None):
+    def __init__(self, level3_transmission_status=None, sales_slip_number=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails - a model defined in Swagger
         """
 
         self._level3_transmission_status = None
+        self._sales_slip_number = None
 
         if level3_transmission_status is not None:
           self.level3_transmission_status = level3_transmission_status
+        if sales_slip_number is not None:
+          self.sales_slip_number = sales_slip_number
 
     @property
     def level3_transmission_status(self):
@@ -70,6 +75,31 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
         """
 
         self._level3_transmission_status = level3_transmission_status
+
+    @property
+    def sales_slip_number(self):
+        """
+        Gets the sales_slip_number of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
+        Transaction identifier that CyberSource generates. You have the option of printing the sales slip number on the receipt. This field is supported only on Cybersource through Visanet and JCN gateway. 
+
+        :return: The sales_slip_number of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
+        :rtype: int
+        """
+        return self._sales_slip_number
+
+    @sales_slip_number.setter
+    def sales_slip_number(self, sales_slip_number):
+        """
+        Sets the sales_slip_number of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
+        Transaction identifier that CyberSource generates. You have the option of printing the sales slip number on the receipt. This field is supported only on Cybersource through Visanet and JCN gateway. 
+
+        :param sales_slip_number: The sales_slip_number of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
+        :type: int
+        """
+        if sales_slip_number is not None and sales_slip_number > 99999:
+            raise ValueError("Invalid value for `sales_slip_number`, must be a value less than or equal to `99999`")
+
+        self._sales_slip_number = sales_slip_number
 
     def to_dict(self):
         """

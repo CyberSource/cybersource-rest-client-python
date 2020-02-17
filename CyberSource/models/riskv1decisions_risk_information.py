@@ -32,31 +32,26 @@ class Riskv1decisionsRiskInformation(object):
     """
     swagger_types = {
         'profile': 'Riskv1decisionsRiskInformationProfile',
-        'event_type': 'str',
-        'marking_details': 'Riskv1decisionsRiskInformationMarkingDetails'
+        'event_type': 'str'
     }
 
     attribute_map = {
         'profile': 'profile',
-        'event_type': 'eventType',
-        'marking_details': 'markingDetails'
+        'event_type': 'eventType'
     }
 
-    def __init__(self, profile=None, event_type=None, marking_details=None):
+    def __init__(self, profile=None, event_type=None):
         """
         Riskv1decisionsRiskInformation - a model defined in Swagger
         """
 
         self._profile = None
         self._event_type = None
-        self._marking_details = None
 
         if profile is not None:
           self.profile = profile
         if event_type is not None:
           self.event_type = event_type
-        if marking_details is not None:
-          self.marking_details = marking_details
 
     @property
     def profile(self):
@@ -103,27 +98,6 @@ class Riskv1decisionsRiskInformation(object):
             raise ValueError("Invalid value for `event_type`, length must be less than or equal to `255`")
 
         self._event_type = event_type
-
-    @property
-    def marking_details(self):
-        """
-        Gets the marking_details of this Riskv1decisionsRiskInformation.
-
-        :return: The marking_details of this Riskv1decisionsRiskInformation.
-        :rtype: Riskv1decisionsRiskInformationMarkingDetails
-        """
-        return self._marking_details
-
-    @marking_details.setter
-    def marking_details(self, marking_details):
-        """
-        Sets the marking_details of this Riskv1decisionsRiskInformation.
-
-        :param marking_details: The marking_details of this Riskv1decisionsRiskInformation.
-        :type: Riskv1decisionsRiskInformationMarkingDetails
-        """
-
-        self._marking_details = marking_details
 
     def to_dict(self):
         """

@@ -31,89 +31,162 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
                             and the value is json key in definition.
     """
     swagger_types = {
+        'acs_rendering_type': 'str',
+        'acs_transaction_id': 'str',
         'acs_url': 'str',
         'authentication_path': 'str',
+        'authorization_payload': 'str',
         'authentication_transaction_id': 'str',
+        'cardholder_message': 'str',
         'cavv': 'str',
         'cavv_algorithm': 'str',
+        'challenge_cancel_code': 'str',
         'challenge_required': 'str',
+        'decoupled_authentication_indicator': 'str',
+        'directory_server_error_code': 'str',
+        'directory_server_error_description': 'str',
         'ecommerce_indicator': 'str',
         'eci': 'str',
         'eci_raw': 'str',
+        'effective_authentication_type': 'str',
+        'ivr': 'RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr',
+        'network_score': 'str',
         'pareq': 'str',
         'pares_status': 'str',
         'proof_xml': 'str',
         'proxy_pan': 'str',
+        'sdk_transaction_id': 'str',
+        'signed_pares_status_reason': 'str',
         'specification_version': 'str',
+        'step_up_url': 'str',
+        'three_ds_server_transaction_id': 'str',
         'ucaf_authentication_data': 'str',
         'ucaf_collection_indicator': 'float',
         'veres_enrolled': 'str',
-        'xid': 'str'
+        'white_list_status_source': 'str',
+        'xid': 'str',
+        'directory_server_transaction_id': 'str'
     }
 
     attribute_map = {
+        'acs_rendering_type': 'acsRenderingType',
+        'acs_transaction_id': 'acsTransactionId',
         'acs_url': 'acsUrl',
         'authentication_path': 'authenticationPath',
+        'authorization_payload': 'authorizationPayload',
         'authentication_transaction_id': 'authenticationTransactionId',
+        'cardholder_message': 'cardholderMessage',
         'cavv': 'cavv',
         'cavv_algorithm': 'cavvAlgorithm',
+        'challenge_cancel_code': 'challengeCancelCode',
         'challenge_required': 'challengeRequired',
+        'decoupled_authentication_indicator': 'decoupledAuthenticationIndicator',
+        'directory_server_error_code': 'directoryServerErrorCode',
+        'directory_server_error_description': 'directoryServerErrorDescription',
         'ecommerce_indicator': 'ecommerceIndicator',
         'eci': 'eci',
         'eci_raw': 'eciRaw',
+        'effective_authentication_type': 'effectiveAuthenticationType',
+        'ivr': 'ivr',
+        'network_score': 'networkScore',
         'pareq': 'pareq',
         'pares_status': 'paresStatus',
         'proof_xml': 'proofXml',
         'proxy_pan': 'proxyPan',
+        'sdk_transaction_id': 'sdkTransactionId',
+        'signed_pares_status_reason': 'signedParesStatusReason',
         'specification_version': 'specificationVersion',
+        'step_up_url': 'stepUpUrl',
+        'three_ds_server_transaction_id': 'threeDSServerTransactionId',
         'ucaf_authentication_data': 'ucafAuthenticationData',
         'ucaf_collection_indicator': 'ucafCollectionIndicator',
         'veres_enrolled': 'veresEnrolled',
-        'xid': 'xid'
+        'white_list_status_source': 'whiteListStatusSource',
+        'xid': 'xid',
+        'directory_server_transaction_id': 'directoryServerTransactionId'
     }
 
-    def __init__(self, acs_url=None, authentication_path=None, authentication_transaction_id=None, cavv=None, cavv_algorithm=None, challenge_required=None, ecommerce_indicator=None, eci=None, eci_raw=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, specification_version=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, xid=None):
+    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
         """
         RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
 
+        self._acs_rendering_type = None
+        self._acs_transaction_id = None
         self._acs_url = None
         self._authentication_path = None
+        self._authorization_payload = None
         self._authentication_transaction_id = None
+        self._cardholder_message = None
         self._cavv = None
         self._cavv_algorithm = None
+        self._challenge_cancel_code = None
         self._challenge_required = None
+        self._decoupled_authentication_indicator = None
+        self._directory_server_error_code = None
+        self._directory_server_error_description = None
         self._ecommerce_indicator = None
         self._eci = None
         self._eci_raw = None
+        self._effective_authentication_type = None
+        self._ivr = None
+        self._network_score = None
         self._pareq = None
         self._pares_status = None
         self._proof_xml = None
         self._proxy_pan = None
+        self._sdk_transaction_id = None
+        self._signed_pares_status_reason = None
         self._specification_version = None
+        self._step_up_url = None
+        self._three_ds_server_transaction_id = None
         self._ucaf_authentication_data = None
         self._ucaf_collection_indicator = None
         self._veres_enrolled = None
+        self._white_list_status_source = None
         self._xid = None
+        self._directory_server_transaction_id = None
 
+        if acs_rendering_type is not None:
+          self.acs_rendering_type = acs_rendering_type
+        if acs_transaction_id is not None:
+          self.acs_transaction_id = acs_transaction_id
         if acs_url is not None:
           self.acs_url = acs_url
         if authentication_path is not None:
           self.authentication_path = authentication_path
+        if authorization_payload is not None:
+          self.authorization_payload = authorization_payload
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
+        if cardholder_message is not None:
+          self.cardholder_message = cardholder_message
         if cavv is not None:
           self.cavv = cavv
         if cavv_algorithm is not None:
           self.cavv_algorithm = cavv_algorithm
+        if challenge_cancel_code is not None:
+          self.challenge_cancel_code = challenge_cancel_code
         if challenge_required is not None:
           self.challenge_required = challenge_required
+        if decoupled_authentication_indicator is not None:
+          self.decoupled_authentication_indicator = decoupled_authentication_indicator
+        if directory_server_error_code is not None:
+          self.directory_server_error_code = directory_server_error_code
+        if directory_server_error_description is not None:
+          self.directory_server_error_description = directory_server_error_description
         if ecommerce_indicator is not None:
           self.ecommerce_indicator = ecommerce_indicator
         if eci is not None:
           self.eci = eci
         if eci_raw is not None:
           self.eci_raw = eci_raw
+        if effective_authentication_type is not None:
+          self.effective_authentication_type = effective_authentication_type
+        if ivr is not None:
+          self.ivr = ivr
+        if network_score is not None:
+          self.network_score = network_score
         if pareq is not None:
           self.pareq = pareq
         if pares_status is not None:
@@ -122,16 +195,76 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
           self.proof_xml = proof_xml
         if proxy_pan is not None:
           self.proxy_pan = proxy_pan
+        if sdk_transaction_id is not None:
+          self.sdk_transaction_id = sdk_transaction_id
+        if signed_pares_status_reason is not None:
+          self.signed_pares_status_reason = signed_pares_status_reason
         if specification_version is not None:
           self.specification_version = specification_version
+        if step_up_url is not None:
+          self.step_up_url = step_up_url
+        if three_ds_server_transaction_id is not None:
+          self.three_ds_server_transaction_id = three_ds_server_transaction_id
         if ucaf_authentication_data is not None:
           self.ucaf_authentication_data = ucaf_authentication_data
         if ucaf_collection_indicator is not None:
           self.ucaf_collection_indicator = ucaf_collection_indicator
         if veres_enrolled is not None:
           self.veres_enrolled = veres_enrolled
+        if white_list_status_source is not None:
+          self.white_list_status_source = white_list_status_source
         if xid is not None:
           self.xid = xid
+        if directory_server_transaction_id is not None:
+          self.directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def acs_rendering_type(self):
+        """
+        Gets the acs_rendering_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
+
+        :return: The acs_rendering_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_rendering_type
+
+    @acs_rendering_type.setter
+    def acs_rendering_type(self, acs_rendering_type):
+        """
+        Sets the acs_rendering_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
+
+        :param acs_rendering_type: The acs_rendering_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_rendering_type = acs_rendering_type
+
+    @property
+    def acs_transaction_id(self):
+        """
+        Gets the acs_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction. 
+
+        :return: The acs_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_transaction_id
+
+    @acs_transaction_id.setter
+    def acs_transaction_id(self, acs_transaction_id):
+        """
+        Sets the acs_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction. 
+
+        :param acs_transaction_id: The acs_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
+            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
+
+        self._acs_transaction_id = acs_transaction_id
 
     @property
     def acs_url(self):
@@ -162,7 +295,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def authentication_path(self):
         """
         Gets the authentication_path of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :return: The authentication_path of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -173,13 +306,36 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def authentication_path(self, authentication_path):
         """
         Sets the authentication_path of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :param authentication_path: The authentication_path of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
 
         self._authentication_path = authentication_path
+
+    @property
+    def authorization_payload(self):
+        """
+        Gets the authorization_payload of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
+
+        :return: The authorization_payload of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authorization_payload
+
+    @authorization_payload.setter
+    def authorization_payload(self, authorization_payload):
+        """
+        Sets the authorization_payload of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
+
+        :param authorization_payload: The authorization_payload of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authorization_payload = authorization_payload
 
     @property
     def authentication_transaction_id(self):
@@ -205,6 +361,31 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
             raise ValueError("Invalid value for `authentication_transaction_id`, length must be less than or equal to `20`")
 
         self._authentication_transaction_id = authentication_transaction_id
+
+    @property
+    def cardholder_message(self):
+        """
+        Gets the cardholder_message of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
+
+        :return: The cardholder_message of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._cardholder_message
+
+    @cardholder_message.setter
+    def cardholder_message(self, cardholder_message):
+        """
+        Sets the cardholder_message of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
+
+        :param cardholder_message: The cardholder_message of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if cardholder_message is not None and len(cardholder_message) > 128:
+            raise ValueError("Invalid value for `cardholder_message`, length must be less than or equal to `128`")
+
+        self._cardholder_message = cardholder_message
 
     @property
     def cavv(self):
@@ -257,6 +438,31 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         self._cavv_algorithm = cavv_algorithm
 
     @property
+    def challenge_cancel_code(self):
+        """
+        Gets the challenge_cancel_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
+
+        :return: The challenge_cancel_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._challenge_cancel_code
+
+    @challenge_cancel_code.setter
+    def challenge_cancel_code(self, challenge_cancel_code):
+        """
+        Sets the challenge_cancel_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
+
+        :param challenge_cancel_code: The challenge_cancel_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if challenge_cancel_code is not None and len(challenge_cancel_code) > 2:
+            raise ValueError("Invalid value for `challenge_cancel_code`, length must be less than or equal to `2`")
+
+        self._challenge_cancel_code = challenge_cancel_code
+
+    @property
     def challenge_required(self):
         """
         Gets the challenge_required of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
@@ -280,6 +486,81 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
             raise ValueError("Invalid value for `challenge_required`, length must be less than or equal to `1`")
 
         self._challenge_required = challenge_required
+
+    @property
+    def decoupled_authentication_indicator(self):
+        """
+        Gets the decoupled_authentication_indicator of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Indicates whether the 3DS Requestor requests the ACS to utilize Decoupled Authentication and agrees to utilize Decoupled Authentication if the ACS confirms its use.  Possible Values:  Y - Decoupled Authentication is supported and preferred if challenge is necessary  N - Do not use Decoupled Authentication  **Default Value**: N 
+
+        :return: The decoupled_authentication_indicator of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._decoupled_authentication_indicator
+
+    @decoupled_authentication_indicator.setter
+    def decoupled_authentication_indicator(self, decoupled_authentication_indicator):
+        """
+        Sets the decoupled_authentication_indicator of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Indicates whether the 3DS Requestor requests the ACS to utilize Decoupled Authentication and agrees to utilize Decoupled Authentication if the ACS confirms its use.  Possible Values:  Y - Decoupled Authentication is supported and preferred if challenge is necessary  N - Do not use Decoupled Authentication  **Default Value**: N 
+
+        :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if decoupled_authentication_indicator is not None and len(decoupled_authentication_indicator) > 1:
+            raise ValueError("Invalid value for `decoupled_authentication_indicator`, length must be less than or equal to `1`")
+
+        self._decoupled_authentication_indicator = decoupled_authentication_indicator
+
+    @property
+    def directory_server_error_code(self):
+        """
+        Gets the directory_server_error_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The directory server error code indicating a problem with this transaction. 
+
+        :return: The directory_server_error_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_error_code
+
+    @directory_server_error_code.setter
+    def directory_server_error_code(self, directory_server_error_code):
+        """
+        Sets the directory_server_error_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The directory server error code indicating a problem with this transaction. 
+
+        :param directory_server_error_code: The directory_server_error_code of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_error_code is not None and len(directory_server_error_code) > 3:
+            raise ValueError("Invalid value for `directory_server_error_code`, length must be less than or equal to `3`")
+
+        self._directory_server_error_code = directory_server_error_code
+
+    @property
+    def directory_server_error_description(self):
+        """
+        Gets the directory_server_error_description of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Directory server text and additional detail about the error for this transaction. 
+
+        :return: The directory_server_error_description of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_error_description
+
+    @directory_server_error_description.setter
+    def directory_server_error_description(self, directory_server_error_description):
+        """
+        Sets the directory_server_error_description of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Directory server text and additional detail about the error for this transaction. 
+
+        :param directory_server_error_description: The directory_server_error_description of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
+            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
+
+        self._directory_server_error_description = directory_server_error_description
 
     @property
     def ecommerce_indicator(self):
@@ -353,6 +634,77 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         self._eci_raw = eci_raw
 
     @property
+    def effective_authentication_type(self):
+        """
+        Gets the effective_authentication_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
+
+        :return: The effective_authentication_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._effective_authentication_type
+
+    @effective_authentication_type.setter
+    def effective_authentication_type(self, effective_authentication_type):
+        """
+        Sets the effective_authentication_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
+
+        :param effective_authentication_type: The effective_authentication_type of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if effective_authentication_type is not None and len(effective_authentication_type) > 2:
+            raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
+
+        self._effective_authentication_type = effective_authentication_type
+
+    @property
+    def ivr(self):
+        """
+        Gets the ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+
+        :return: The ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr
+        """
+        return self._ivr
+
+    @ivr.setter
+    def ivr(self, ivr):
+        """
+        Sets the ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+
+        :param ivr: The ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr
+        """
+
+        self._ivr = ivr
+
+    @property
+    def network_score(self):
+        """
+        Gets the network_score of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The global score calculated by the CB scoring platform and returned to merchants. 
+
+        :return: The network_score of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._network_score
+
+    @network_score.setter
+    def network_score(self, network_score):
+        """
+        Sets the network_score of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The global score calculated by the CB scoring platform and returned to merchants. 
+
+        :param network_score: The network_score of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if network_score is not None and len(network_score) > 2:
+            raise ValueError("Invalid value for `network_score`, length must be less than or equal to `2`")
+
+        self._network_score = network_score
+
+    @property
     def pareq(self):
         """
         Gets the pareq of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
@@ -402,7 +754,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def proof_xml(self):
         """
         Gets the proof_xml of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Date and time of the enrollment check combined with the VEReq and VERes elements. If you ever need to show proof of enrollment checking, you may need to parse the string for the information required by the payment card company. The value can be very large. For details about possible values, see the `pa_enroll_proofxml` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) - For cards issued in the U.S. or Canada, Visa may require this data for specific merchant category codes. - For cards not issued in the U.S. or Canada, your bank may require this data as proof of enrollment checking for any payer authentication transaction that you re-present because of a chargeback. 
+        Date and time of the enrollment check combined with the VEReq and VERes elements. If you ever need to show proof of enrollment checking, you may need to parse the string for the information required by the payment card company. The value can be very large. For details about possible values, see the `pa_enroll_proofxml` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) - For cards issued in the U.S. or Canada, Visa may require this data for specific merchant category codes. - For cards not issued in the U.S. or Canada, your bank may require this data as proof of enrollment checking for any payer authentication transaction that you re-present because of a chargeback. 
 
         :return: The proof_xml of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -413,7 +765,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def proof_xml(self, proof_xml):
         """
         Sets the proof_xml of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Date and time of the enrollment check combined with the VEReq and VERes elements. If you ever need to show proof of enrollment checking, you may need to parse the string for the information required by the payment card company. The value can be very large. For details about possible values, see the `pa_enroll_proofxml` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) - For cards issued in the U.S. or Canada, Visa may require this data for specific merchant category codes. - For cards not issued in the U.S. or Canada, your bank may require this data as proof of enrollment checking for any payer authentication transaction that you re-present because of a chargeback. 
+        Date and time of the enrollment check combined with the VEReq and VERes elements. If you ever need to show proof of enrollment checking, you may need to parse the string for the information required by the payment card company. The value can be very large. For details about possible values, see the `pa_enroll_proofxml` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) - For cards issued in the U.S. or Canada, Visa may require this data for specific merchant category codes. - For cards not issued in the U.S. or Canada, your bank may require this data as proof of enrollment checking for any payer authentication transaction that you re-present because of a chargeback. 
 
         :param proof_xml: The proof_xml of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :type: str
@@ -445,6 +797,56 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         self._proxy_pan = proxy_pan
 
     @property
+    def sdk_transaction_id(self):
+        """
+        Gets the sdk_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        SDK unique transaction identifier that is generated on each new transaction. 
+
+        :return: The sdk_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._sdk_transaction_id
+
+    @sdk_transaction_id.setter
+    def sdk_transaction_id(self, sdk_transaction_id):
+        """
+        Sets the sdk_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        SDK unique transaction identifier that is generated on each new transaction. 
+
+        :param sdk_transaction_id: The sdk_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
+            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
+
+        self._sdk_transaction_id = sdk_transaction_id
+
+    @property
+    def signed_pares_status_reason(self):
+        """
+        Gets the signed_pares_status_reason of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Provides additional information as to why the PAResStatus has a specific value. 
+
+        :return: The signed_pares_status_reason of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._signed_pares_status_reason
+
+    @signed_pares_status_reason.setter
+    def signed_pares_status_reason(self, signed_pares_status_reason):
+        """
+        Sets the signed_pares_status_reason of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Provides additional information as to why the PAResStatus has a specific value. 
+
+        :param signed_pares_status_reason: The signed_pares_status_reason of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if signed_pares_status_reason is not None and len(signed_pares_status_reason) > 2:
+            raise ValueError("Invalid value for `signed_pares_status_reason`, length must be less than or equal to `2`")
+
+        self._signed_pares_status_reason = signed_pares_status_reason
+
+    @property
     def specification_version(self):
         """
         Gets the specification_version of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
@@ -466,6 +868,56 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         """
 
         self._specification_version = specification_version
+
+    @property
+    def step_up_url(self):
+        """
+        Gets the step_up_url of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The fully qualified URL that the merchant uses to post a form to the cardholder in order to complete the Consumer Authentication transaction for the Cardinal Cruise API integration. 
+
+        :return: The step_up_url of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._step_up_url
+
+    @step_up_url.setter
+    def step_up_url(self, step_up_url):
+        """
+        Sets the step_up_url of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The fully qualified URL that the merchant uses to post a form to the cardholder in order to complete the Consumer Authentication transaction for the Cardinal Cruise API integration. 
+
+        :param step_up_url: The step_up_url of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if step_up_url is not None and len(step_up_url) > 2048:
+            raise ValueError("Invalid value for `step_up_url`, length must be less than or equal to `2048`")
+
+        self._step_up_url = step_up_url
+
+    @property
+    def three_ds_server_transaction_id(self):
+        """
+        Gets the three_ds_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
+
+        :return: The three_ds_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._three_ds_server_transaction_id
+
+    @three_ds_server_transaction_id.setter
+    def three_ds_server_transaction_id(self, three_ds_server_transaction_id):
+        """
+        Sets the three_ds_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
+
+        :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
+            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
+
+        self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
     @property
     def ucaf_authentication_data(self):
@@ -517,7 +969,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def veres_enrolled(self):
         """
         Gets the veres_enrolled of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Result of the enrollment check. This field can contain one of these values: - `Y`: Card enrolled or can be enrolled; you must authenticate. Liability shift. - `N`: Card not enrolled; proceed with authorization. Liability shift. - `U`: Unable to authenticate regardless of the reason. No liability shift.  **Note** This field only applies to the Asia, Middle East, and Africa Gateway. If you are configured for this processor, you must send the value of this field in your authorization request.  The following value can be returned if you are using rules-based Payer Authentication: - `B`: Indicates that authentication was bypassed.  For details, see `pa_enroll_veres_enrolled` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Result of the enrollment check. This field can contain one of these values: - `Y`: Card enrolled or can be enrolled; you must authenticate. Liability shift. - `N`: Card not enrolled; proceed with authorization. Liability shift. - `U`: Unable to authenticate regardless of the reason. No liability shift.  **Note** This field only applies to the Asia, Middle East, and Africa Gateway. If you are configured for this processor, you must send the value of this field in your authorization request.  The following value can be returned if you are using rules-based Payer Authentication: - `B`: Indicates that authentication was bypassed.  For details, see `pa_enroll_veres_enrolled` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :return: The veres_enrolled of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -528,13 +980,38 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
     def veres_enrolled(self, veres_enrolled):
         """
         Sets the veres_enrolled of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        Result of the enrollment check. This field can contain one of these values: - `Y`: Card enrolled or can be enrolled; you must authenticate. Liability shift. - `N`: Card not enrolled; proceed with authorization. Liability shift. - `U`: Unable to authenticate regardless of the reason. No liability shift.  **Note** This field only applies to the Asia, Middle East, and Africa Gateway. If you are configured for this processor, you must send the value of this field in your authorization request.  The following value can be returned if you are using rules-based Payer Authentication: - `B`: Indicates that authentication was bypassed.  For details, see `pa_enroll_veres_enrolled` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Result of the enrollment check. This field can contain one of these values: - `Y`: Card enrolled or can be enrolled; you must authenticate. Liability shift. - `N`: Card not enrolled; proceed with authorization. Liability shift. - `U`: Unable to authenticate regardless of the reason. No liability shift.  **Note** This field only applies to the Asia, Middle East, and Africa Gateway. If you are configured for this processor, you must send the value of this field in your authorization request.  The following value can be returned if you are using rules-based Payer Authentication: - `B`: Indicates that authentication was bypassed.  For details, see `pa_enroll_veres_enrolled` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :param veres_enrolled: The veres_enrolled of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
 
         self._veres_enrolled = veres_enrolled
+
+    @property
+    def white_list_status_source(self):
+        """
+        Gets the white_list_status_source of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
+
+        :return: The white_list_status_source of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._white_list_status_source
+
+    @white_list_status_source.setter
+    def white_list_status_source(self, white_list_status_source):
+        """
+        Sets the white_list_status_source of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
+
+        :param white_list_status_source: The white_list_status_source of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if white_list_status_source is not None and len(white_list_status_source) > 2:
+            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
+
+        self._white_list_status_source = white_list_status_source
 
     @property
     def xid(self):
@@ -558,6 +1035,31 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         """
 
         self._xid = xid
+
+    @property
+    def directory_server_transaction_id(self):
+        """
+        Gets the directory_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
+
+        :return: The directory_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_transaction_id
+
+    @directory_server_transaction_id.setter
+    def directory_server_transaction_id(self, directory_server_transaction_id):
+        """
+        Sets the directory_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
+
+        :param directory_server_transaction_id: The directory_server_transaction_id of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
+            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
+
+        self._directory_server_transaction_id = directory_server_transaction_id
 
     def to_dict(self):
         """

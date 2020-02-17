@@ -33,6 +33,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
     swagger_types = {
         'card': 'Ptsv2paymentsidrefundsPaymentInformationCard',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
+        'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
     }
@@ -40,17 +42,21 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
     attribute_map = {
         'card': 'card',
         'bank': 'bank',
+        'tokenized_card': 'tokenizedCard',
+        'fluid_data': 'fluidData',
         'customer': 'customer',
         'payment_type': 'paymentType'
     }
 
-    def __init__(self, card=None, bank=None, customer=None, payment_type=None):
+    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_type=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._bank = None
+        self._tokenized_card = None
+        self._fluid_data = None
         self._customer = None
         self._payment_type = None
 
@@ -58,6 +64,10 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.card = card
         if bank is not None:
           self.bank = bank
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
+        if fluid_data is not None:
+          self.fluid_data = fluid_data
         if customer is not None:
           self.customer = customer
         if payment_type is not None:
@@ -104,6 +114,48 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._bank = bank
+
+    @property
+    def tokenized_card(self):
+        """
+        Gets the tokenized_card of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The tokenized_card of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationTokenizedCard
+        """
+        return self._tokenized_card
+
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
+        """
+        Sets the tokenized_card of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param tokenized_card: The tokenized_card of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationTokenizedCard
+        """
+
+        self._tokenized_card = tokenized_card
+
+    @property
+    def fluid_data(self):
+        """
+        Gets the fluid_data of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The fluid_data of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationFluidData
+        """
+        return self._fluid_data
+
+    @fluid_data.setter
+    def fluid_data(self, fluid_data):
+        """
+        Sets the fluid_data of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param fluid_data: The fluid_data of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationFluidData
+        """
+
+        self._fluid_data = fluid_data
 
     @property
     def customer(self):

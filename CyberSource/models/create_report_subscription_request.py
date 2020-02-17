@@ -209,7 +209,7 @@ class CreateReportSubscriptionRequest(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this CreateReportSubscriptionRequest.
-        'The frequency for which subscription is created.'  Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
+        'The frequency for which subscription is created.' **NOTE: Do not document USER_DEFINED Frequency field in developer center** Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
 
         :return: The report_frequency of this CreateReportSubscriptionRequest.
         :rtype: str
@@ -220,7 +220,7 @@ class CreateReportSubscriptionRequest(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this CreateReportSubscriptionRequest.
-        'The frequency for which subscription is created.'  Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
+        'The frequency for which subscription is created.' **NOTE: Do not document USER_DEFINED Frequency field in developer center** Valid Values:   - 'DAILY'   - 'WEEKLY'   - 'MONTHLY'   - 'USER_DEFINED' 
 
         :param report_frequency: The report_frequency of this CreateReportSubscriptionRequest.
         :type: str

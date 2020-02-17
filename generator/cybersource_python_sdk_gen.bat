@@ -41,26 +41,41 @@ REM powershell -Command "(Get-Content ..\CyberSource\apis\__init__.py) | ForEach
 
 REM powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .apis.download_dtd_api import DownloadDTDApi', ''} | ForEach-Object { $_ -replace 'from .apis.download_xsd_api import DownloadXSDApi', ''} | Set-Content ..\CyberSource\__init__.py"
 
- REM To Change the Long file names
+REM To Change the Long file names
+REM Change filenames in models\__init__.py
 powershell -Command "(Get-Content ..\CyberSource\models\__init__.py) | ForEach-Object { $_ -replace 'from .ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction import Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction', 'from .ptsv2payments_merchant_initiated_transaction import Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'} | Set-Content ..\CyberSource\models\__init__.py"
 
 powershell -Command "(Get-Content ..\CyberSource\models\__init__.py) | ForEach-Object { $_ -replace 'from .tms_v1_instrument_identifiers_post200_response_processing_information_authorization_options_initiator_merchant_initiated_transaction import TmsV1InstrumentIdentifiersPost200ResponseProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction', 'from .tmsv1instrumentidentifiers_post200_response_merchant_initiated_transaction import TmsV1InstrumentIdentifiersPost200ResponseProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'} | Set-Content ..\CyberSource\models\__init__.py"
 
+powershell -Command "(Get-Content ..\CyberSource\models\__init__.py) | ForEach-Object { $_ -replace 'from .risk_v1_authentication_exemptions_post201_response_consumer_authentication_information_strong_authentication import RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication', 'from .risk_v1_authentication_exemptions_post201_response_strong_authentication import RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication'} | Set-Content ..\CyberSource\models\__init__.py"
+
+REM Change filenames in __init__.py
 powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction import Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction', 'from .models.ptsv2payments_merchant_initiated_transaction import Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'} | Set-Content ..\CyberSource\__init__.py"
 
 powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.tms_v1_instrument_identifiers_post200_response_processing_information_authorization_options_initiator_merchant_initiated_transaction import TmsV1InstrumentIdentifiersPost200ResponseProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction', 'from .models.tmsv1instrumentidentifiers_post200_response_merchant_initiated_transaction import TmsV1InstrumentIdentifiersPost200ResponseProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'} | Set-Content ..\CyberSource\__init__.py"
 
+powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.risk_v1_authentication_exemptions_post201_response_consumer_authentication_information_strong_authentication import RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication', 'from .models.risk_v1_authentication_exemptions_post201_response_strong_authentication import RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication'} | Set-Content ..\CyberSource\__init__.py"
+
+REM Change filenames in models
 powershell -Command " rename-item -Path ..\CyberSource\models\ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction.py  -newname ptsv2payments_merchant_initiated_transaction.py"
 
 powershell -Command " rename-item -Path ..\CyberSource\models\tms_v1_instrument_identifiers_post200_response_processing_information_authorization_options_initiator_merchant_initiated_transaction.py   -newname tmsv1instrumentidentifiers_post200_response_merchant_initiated_transaction.py"
 
+powershell -Command " rename-item -Path ..\CyberSource\models\risk_v1_authentication_exemptions_post201_response_consumer_authentication_information_strong_authentication.py  -newname risk_v1_authentication_exemptions_post201_response_strong_authentication.py"
+
+REM Change filenames in test
 powershell -Command " rename-item -Path ..\test\test_ptsv2payments_processing_information_authorization_options_initiator_merchant_initiated_transaction.py   -newname test_ptsv2payments_merchant_initiated_transaction.py"
 
 powershell -Command " rename-item -Path ..\test\test_tms_v1_instrument_identifiers_post200_response_processing_information_authorization_options_initiator_merchant_initiated_transaction.py   -newname test_tmsv1instrumentidentifiers_post200_response_merchant_initiated_transaction.py"
 
+powershell -Command " rename-item -Path ..\test\test_risk_v1_authentication_exemptions_post201_response_consumer_authentication_information_strong_authentication.py   -newname test_risk_v1_authentication_exemptions_post201_response_strong_authentication.py"
+
+REM Change filenames in docs
 powershell -Command " rename-item -Path ..\docs\Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.md   -newname Ptsv2paymentsMerchantInitiatedTransaction.md"
 
 powershell -Command " rename-item -Path ..\docs\TmsV1InstrumentIdentifiersPost200ResponseProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.md  -newname Tmsv1instrumentidentifiersPost200ResponseMerchantInitiatedTransaction.md"
+
+powershell -Command " rename-item -Path ..\docs\RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.md   -newname RiskV1AuthenticationExemptionsPost201ResponseStrongAuthentication.md"
 
 git checkout ..\README.md
 

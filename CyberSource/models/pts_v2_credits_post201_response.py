@@ -41,7 +41,8 @@ class PtsV2CreditsPost201Response(object):
         'processing_information': 'PtsV2CreditsPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'payment_information': 'PtsV2CreditsPost201ResponsePaymentInformation',
-        'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation'
+        'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation',
+        'point_of_sale_information': 'PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class PtsV2CreditsPost201Response(object):
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processing_information=None, processor_information=None, payment_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, credit_amount_details=None, processing_information=None, processor_information=None, payment_information=None, order_information=None, point_of_sale_information=None):
         """
         PtsV2CreditsPost201Response - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class PtsV2CreditsPost201Response(object):
         self._processor_information = None
         self._payment_information = None
         self._order_information = None
+        self._point_of_sale_information = None
 
         if links is not None:
           self.links = links
@@ -97,6 +100,8 @@ class PtsV2CreditsPost201Response(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if point_of_sale_information is not None:
+          self.point_of_sale_information = point_of_sale_information
 
     @property
     def links(self):
@@ -123,7 +128,7 @@ class PtsV2CreditsPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2CreditsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :return: The id of this PtsV2CreditsPost201Response.
         :rtype: str
@@ -134,7 +139,7 @@ class PtsV2CreditsPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2CreditsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :param id: The id of this PtsV2CreditsPost201Response.
         :type: str
@@ -171,7 +176,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
 
         :return: The status of this PtsV2CreditsPost201Response.
         :rtype: str
@@ -182,7 +187,7 @@ class PtsV2CreditsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2CreditsPost201Response.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - COMPLETED (as in the case of PIN Debit Full Financial Credit) 
 
         :param status: The status of this PtsV2CreditsPost201Response.
         :type: str
@@ -340,6 +345,27 @@ class PtsV2CreditsPost201Response(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def point_of_sale_information(self):
+        """
+        Gets the point_of_sale_information of this PtsV2CreditsPost201Response.
+
+        :return: The point_of_sale_information of this PtsV2CreditsPost201Response.
+        :rtype: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
+        """
+        return self._point_of_sale_information
+
+    @point_of_sale_information.setter
+    def point_of_sale_information(self, point_of_sale_information):
+        """
+        Sets the point_of_sale_information of this PtsV2CreditsPost201Response.
+
+        :param point_of_sale_information: The point_of_sale_information of this PtsV2CreditsPost201Response.
+        :type: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
+        """
+
+        self._point_of_sale_information = point_of_sale_information
 
     def to_dict(self):
         """

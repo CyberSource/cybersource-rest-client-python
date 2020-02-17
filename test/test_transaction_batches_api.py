@@ -35,7 +35,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batch_details
 
-        Get transaction details for a given batch id
+        Get Transaction Details for a given Batch Id
         """
         pass
 
@@ -43,7 +43,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batch_id
 
-        Get individual batch file
+        Get Individual Batch File
         """
         pass
 
@@ -51,7 +51,7 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         Test case for get_transaction_batches
 
-        Get a list of batch files
+        Get a List of Batch Files
         """
         pass
 

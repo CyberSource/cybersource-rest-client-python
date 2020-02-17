@@ -32,26 +32,31 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     """
     swagger_types = {
         'emv': 'PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv',
-        'amex_capn_data': 'str'
+        'amex_capn_data': 'str',
+        'terminal_id': 'str'
     }
 
     attribute_map = {
         'emv': 'emv',
-        'amex_capn_data': 'amexCapnData'
+        'amex_capn_data': 'amexCapnData',
+        'terminal_id': 'terminalId'
     }
 
-    def __init__(self, emv=None, amex_capn_data=None):
+    def __init__(self, emv=None, amex_capn_data=None, terminal_id=None):
         """
         PtsV2PaymentsPost201ResponsePointOfSaleInformation - a model defined in Swagger
         """
 
         self._emv = None
         self._amex_capn_data = None
+        self._terminal_id = None
 
         if emv is not None:
           self.emv = emv
         if amex_capn_data is not None:
           self.amex_capn_data = amex_capn_data
+        if terminal_id is not None:
+          self.terminal_id = terminal_id
 
     @property
     def emv(self):
@@ -78,7 +83,7 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     def amex_capn_data(self):
         """
         Gets the amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :rtype: str
@@ -89,15 +94,40 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     def amex_capn_data(self, amex_capn_data):
         """
         Sets the amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param amex_capn_data: The amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 12:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `12`")
+        if amex_capn_data is not None and len(amex_capn_data) > 15:
+            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `15`")
 
         self._amex_capn_data = amex_capn_data
+
+    @property
+    def terminal_id(self):
+        """
+        Gets the terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
+
+        :return: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_id
+
+    @terminal_id.setter
+    def terminal_id(self, terminal_id):
+        """
+        Sets the terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
+
+        :param terminal_id: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :type: str
+        """
+        if terminal_id is not None and len(terminal_id) > 8:
+            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `8`")
+
+        self._terminal_id = terminal_id
 
     def to_dict(self):
         """

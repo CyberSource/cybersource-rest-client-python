@@ -78,7 +78,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBank(object):
     def corrected_routing_number(self):
         """
         Gets the corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
-        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_routing_number` or `ecp_credit_corrected_routing_number` reply field descriptions in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_routing_number` or `ecp_credit_corrected_routing_number` reply field descriptions in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
         :rtype: str
@@ -89,7 +89,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBank(object):
     def corrected_routing_number(self, corrected_routing_number):
         """
         Sets the corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
-        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_routing_number` or `ecp_credit_corrected_routing_number` reply field descriptions in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_routing_number` or `ecp_credit_corrected_routing_number` reply field descriptions in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param corrected_routing_number: The corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
         :type: str

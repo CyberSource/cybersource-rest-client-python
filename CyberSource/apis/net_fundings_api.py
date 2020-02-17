@@ -44,7 +44,7 @@ class NetFundingsApi(object):
 
     def get_net_funding_details(self, start_time, end_time, **kwargs):
         """
-        Get Netfunding information for an account or a merchant
+        Get Netfunding Information for an Account or a Merchant
         Get Netfunding information for an account or a merchant.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -73,7 +73,7 @@ class NetFundingsApi(object):
 
     def get_net_funding_details_with_http_info(self, start_time, end_time, **kwargs):
         """
-        Get Netfunding information for an account or a merchant
+        Get Netfunding Information for an Account or a Merchant
         Get Netfunding information for an account or a merchant.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

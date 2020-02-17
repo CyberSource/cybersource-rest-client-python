@@ -96,6 +96,7 @@ class RESTClientObject(object):
             proxy_password = Configuration().proxy_password
             proxy_auth_headers = None
 
+            
             if (proxy_username and proxy_password):
                 proxy_auth_headers = make_headers(proxy_basic_auth=proxy_username + ':' + proxy_password)
 

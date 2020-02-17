@@ -5,8 +5,8 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_report**](ReportsApi.md#create_report) | **POST** /reporting/v3/reports | Create Adhoc Report
-[**get_report_by_report_id**](ReportsApi.md#get_report_by_report_id) | **GET** /reporting/v3/reports/{reportId} | Get Report based on reportId
-[**search_reports**](ReportsApi.md#search_reports) | **GET** /reporting/v3/reports | Retrieve available reports
+[**get_report_by_report_id**](ReportsApi.md#get_report_by_report_id) | **GET** /reporting/v3/reports/{reportId} | Get Report Based on Report Id
+[**search_reports**](ReportsApi.md#search_reports) | **GET** /reporting/v3/reports | Retrieve Available Reports
 
 
 # **create_report**
@@ -61,7 +61,7 @@ No authorization required
 # **get_report_by_report_id**
 > ReportingV3ReportsIdGet200Response get_report_by_report_id(report_id, organization_id=organization_id)
 
-Get Report based on reportId
+Get Report Based on Report Id
 
 Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
 
@@ -79,7 +79,7 @@ report_id = 'report_id_example' # str | Valid Report Id
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Get Report based on reportId
+    # Get Report Based on Report Id
     api_response = api_instance.get_report_by_report_id(report_id, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
@@ -111,7 +111,7 @@ No authorization required
 # **search_reports**
 > ReportingV3ReportsGet200Response search_reports(start_time, end_time, time_query_type, organization_id=organization_id, report_mime_type=report_mime_type, report_frequency=report_frequency, report_name=report_name, report_definition_id=report_definition_id, report_status=report_status)
 
-Retrieve available reports
+Retrieve Available Reports
 
 Retrieve a list of the available reports to which you are subscribed. This will also give you the reportId value, which you can also use to download a report. 
 
@@ -136,7 +136,7 @@ report_definition_id = 56 # int | Valid Report Definition Id (optional)
 report_status = 'report_status_example' # str | Valid Report Status  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA  (optional)
 
 try: 
-    # Retrieve available reports
+    # Retrieve Available Reports
     api_response = api_instance.search_reports(start_time, end_time, time_query_type, organization_id=organization_id, report_mime_type=report_mime_type, report_frequency=report_frequency, report_name=report_name, report_definition_id=report_definition_id, report_status=report_status)
     pprint(api_response)
 except ApiException as e:

@@ -38,7 +38,9 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'veres_enrolled': 'str',
         'xid': 'str',
         'ucaf_authentication_data': 'str',
-        'ucaf_collection_indicator': 'str'
+        'strong_authentication': 'Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication',
+        'directory_server_transaction_id': 'str',
+        'pa_specification_version': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'veres_enrolled': 'veresEnrolled',
         'xid': 'xid',
         'ucaf_authentication_data': 'ucafAuthenticationData',
-        'ucaf_collection_indicator': 'ucafCollectionIndicator'
+        'strong_authentication': 'strongAuthentication',
+        'directory_server_transaction_id': 'directoryServerTransactionId',
+        'pa_specification_version': 'paSpecificationVersion'
     }
 
-    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_authentication_data=None, ucaf_collection_indicator=None):
+    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -64,7 +68,9 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._veres_enrolled = None
         self._xid = None
         self._ucaf_authentication_data = None
-        self._ucaf_collection_indicator = None
+        self._strong_authentication = None
+        self._directory_server_transaction_id = None
+        self._pa_specification_version = None
 
         if cavv is not None:
           self.cavv = cavv
@@ -80,8 +86,12 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.xid = xid
         if ucaf_authentication_data is not None:
           self.ucaf_authentication_data = ucaf_authentication_data
-        if ucaf_collection_indicator is not None:
-          self.ucaf_collection_indicator = ucaf_collection_indicator
+        if strong_authentication is not None:
+          self.strong_authentication = strong_authentication
+        if directory_server_transaction_id is not None:
+          self.directory_server_transaction_id = directory_server_transaction_id
+        if pa_specification_version is not None:
+          self.pa_specification_version = pa_specification_version
 
     @property
     def cavv(self):
@@ -137,7 +147,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self):
         """
         Gets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -148,7 +158,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param eci_raw: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -162,7 +172,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self):
         """
         Gets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -173,7 +183,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self, pares_status):
         """
         Sets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param pares_status: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -187,7 +197,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self):
         """
         Gets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -198,7 +208,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self, veres_enrolled):
         """
         Sets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param veres_enrolled: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -212,7 +222,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -223,7 +233,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param xid: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -237,7 +247,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self):
         """
         Gets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -248,7 +258,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self, ucaf_authentication_data):
         """
         Sets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param ucaf_authentication_data: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -259,29 +269,75 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._ucaf_authentication_data = ucaf_authentication_data
 
     @property
-    def ucaf_collection_indicator(self):
+    def strong_authentication(self):
         """
-        Gets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+        Gets the strong_authentication of this Ptsv2paymentsConsumerAuthenticationInformation.
 
-        :return: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :return: The strong_authentication of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication
+        """
+        return self._strong_authentication
+
+    @strong_authentication.setter
+    def strong_authentication(self, strong_authentication):
+        """
+        Sets the strong_authentication of this Ptsv2paymentsConsumerAuthenticationInformation.
+
+        :param strong_authentication: The strong_authentication of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication
+        """
+
+        self._strong_authentication = strong_authentication
+
+    @property
+    def directory_server_transaction_id(self):
+        """
+        Gets the directory_server_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
+
+        :return: The directory_server_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
         """
-        return self._ucaf_collection_indicator
+        return self._directory_server_transaction_id
 
-    @ucaf_collection_indicator.setter
-    def ucaf_collection_indicator(self, ucaf_collection_indicator):
+    @directory_server_transaction_id.setter
+    def directory_server_transaction_id(self, directory_server_transaction_id):
         """
-        Sets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+        Sets the directory_server_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
 
-        :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :param directory_server_transaction_id: The directory_server_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if ucaf_collection_indicator is not None and len(ucaf_collection_indicator) > 1:
-            raise ValueError("Invalid value for `ucaf_collection_indicator`, length must be less than or equal to `1`")
+        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
+            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
 
-        self._ucaf_collection_indicator = ucaf_collection_indicator
+        self._directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def pa_specification_version(self):
+        """
+        Gets the pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
+        This field contains 3DS version that was used for Secured Consumer Authentication (SCA). For example 3DS secure version 1.0.2 or 2.0.0 is used for Secured Consumer Authentication. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 113 , Field: MC AVV Verification—Program Protocol It will contain one of the following values: - `1` (3D Secure Version 1.0 (3DS 1.0)) - `2` (EMV 3-D Secure (3DS 2.0)) 
+
+        :return: The pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._pa_specification_version
+
+    @pa_specification_version.setter
+    def pa_specification_version(self, pa_specification_version):
+        """
+        Sets the pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
+        This field contains 3DS version that was used for Secured Consumer Authentication (SCA). For example 3DS secure version 1.0.2 or 2.0.0 is used for Secured Consumer Authentication. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 113 , Field: MC AVV Verification—Program Protocol It will contain one of the following values: - `1` (3D Secure Version 1.0 (3DS 1.0)) - `2` (EMV 3-D Secure (3DS 2.0)) 
+
+        :param pa_specification_version: The pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+        if pa_specification_version is not None and len(pa_specification_version) > 1:
+            raise ValueError("Invalid value for `pa_specification_version`, length must be less than or equal to `1`")
+
+        self._pa_specification_version = pa_specification_version
 
     def to_dict(self):
         """

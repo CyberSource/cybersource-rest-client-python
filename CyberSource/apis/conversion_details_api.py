@@ -44,7 +44,7 @@ class ConversionDetailsApi(object):
 
     def get_conversion_detail(self, start_time, end_time, **kwargs):
         """
-        Get conversion detail transactions
+        Get Conversion Detail Transactions
         Get conversion detail of transactions for a merchant.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -72,7 +72,7 @@ class ConversionDetailsApi(object):
 
     def get_conversion_detail_with_http_info(self, start_time, end_time, **kwargs):
         """
-        Get conversion detail transactions
+        Get Conversion Detail Transactions
         Get conversion detail of transactions for a merchant.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

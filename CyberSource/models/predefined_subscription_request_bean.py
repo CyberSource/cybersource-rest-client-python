@@ -201,7 +201,7 @@ class PredefinedSubscriptionRequestBean(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this PredefinedSubscriptionRequestBean.
-        'The frequency for which subscription is created. For Standard we can have DAILY, WEEKLY and MONTHLY. But for Classic we will have only DAILY.'  Valid Values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'USER_DEFINED' 
+        'The frequency for which subscription is created. For Standard we can have DAILY, WEEKLY and MONTHLY. But for Classic we will have only DAILY.' **NOTE: Do not document USER_DEFINED Frequency field in developer center** Valid Values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'USER_DEFINED' 
 
         :return: The report_frequency of this PredefinedSubscriptionRequestBean.
         :rtype: str
@@ -212,7 +212,7 @@ class PredefinedSubscriptionRequestBean(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this PredefinedSubscriptionRequestBean.
-        'The frequency for which subscription is created. For Standard we can have DAILY, WEEKLY and MONTHLY. But for Classic we will have only DAILY.'  Valid Values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'USER_DEFINED' 
+        'The frequency for which subscription is created. For Standard we can have DAILY, WEEKLY and MONTHLY. But for Classic we will have only DAILY.' **NOTE: Do not document USER_DEFINED Frequency field in developer center** Valid Values: - 'DAILY' - 'WEEKLY' - 'MONTHLY' - 'USER_DEFINED' 
 
         :param report_frequency: The report_frequency of this PredefinedSubscriptionRequestBean.
         :type: str

@@ -44,7 +44,7 @@ class PurchaseAndRefundDetailsApi(object):
 
     def get_purchase_and_refund_details(self, start_time, end_time, **kwargs):
         """
-        Get Purchase and Refund details
+        Get Purchase and Refund Details
         Download the Purchase and Refund Details report. This report report includes all purchases and refund transactions, as well as all activities related to transactions resulting in an adjustment to the net proceeds. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -77,7 +77,7 @@ class PurchaseAndRefundDetailsApi(object):
 
     def get_purchase_and_refund_details_with_http_info(self, start_time, end_time, **kwargs):
         """
-        Get Purchase and Refund details
+        Get Purchase and Refund Details
         Download the Purchase and Refund Details report. This report report includes all purchases and refund transactions, as well as all activities related to transactions resulting in an adjustment to the net proceeds. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

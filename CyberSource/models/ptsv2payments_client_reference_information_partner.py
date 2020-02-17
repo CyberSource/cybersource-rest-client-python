@@ -33,16 +33,18 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     swagger_types = {
         'original_transaction_id': 'str',
         'developer_id': 'str',
-        'solution_id': 'str'
+        'solution_id': 'str',
+        'third_party_certification_number': 'str'
     }
 
     attribute_map = {
         'original_transaction_id': 'originalTransactionId',
         'developer_id': 'developerId',
-        'solution_id': 'solutionId'
+        'solution_id': 'solutionId',
+        'third_party_certification_number': 'thirdPartyCertificationNumber'
     }
 
-    def __init__(self, original_transaction_id=None, developer_id=None, solution_id=None):
+    def __init__(self, original_transaction_id=None, developer_id=None, solution_id=None, third_party_certification_number=None):
         """
         Ptsv2paymentsClientReferenceInformationPartner - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         self._original_transaction_id = None
         self._developer_id = None
         self._solution_id = None
+        self._third_party_certification_number = None
 
         if original_transaction_id is not None:
           self.original_transaction_id = original_transaction_id
@@ -57,6 +60,8 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
           self.developer_id = developer_id
         if solution_id is not None:
           self.solution_id = solution_id
+        if third_party_certification_number is not None:
+          self.third_party_certification_number = third_party_certification_number
 
     @property
     def original_transaction_id(self):
@@ -132,6 +137,31 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
             raise ValueError("Invalid value for `solution_id`, length must be less than or equal to `8`")
 
         self._solution_id = solution_id
+
+    @property
+    def third_party_certification_number(self):
+        """
+        Gets the third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet. 
+
+        :return: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        :rtype: str
+        """
+        return self._third_party_certification_number
+
+    @third_party_certification_number.setter
+    def third_party_certification_number(self, third_party_certification_number):
+        """
+        Sets the third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet. 
+
+        :param third_party_certification_number: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        :type: str
+        """
+        if third_party_certification_number is not None and len(third_party_certification_number) > 12:
+            raise ValueError("Invalid value for `third_party_certification_number`, length must be less than or equal to `12`")
+
+        self._third_party_certification_number = third_party_certification_number
 
     def to_dict(self):
         """

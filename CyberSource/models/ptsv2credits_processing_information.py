@@ -40,10 +40,15 @@ class Ptsv2creditsProcessingInformation(object):
         'visa_checkout_id': 'str',
         'purchase_level': 'str',
         'industry_data_type': 'str',
+        'wallet_type': 'str',
+        'national_net_domestic_data': 'str',
+        'network_routing_order': 'str',
         'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
         'bank_transfer_options': 'Ptsv2creditsProcessingInformationBankTransferOptions',
         'purchase_options': 'Ptsv2creditsProcessingInformationPurchaseOptions',
-        'electronic_benefits_transfer': 'Ptsv2creditsProcessingInformationElectronicBenefitsTransfer'
+        'electronic_benefits_transfer': 'Ptsv2creditsProcessingInformationElectronicBenefitsTransfer',
+        'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
+        'japan_payment_options': 'Ptsv2creditsProcessingInformationJapanPaymentOptions'
     }
 
     attribute_map = {
@@ -56,13 +61,18 @@ class Ptsv2creditsProcessingInformation(object):
         'visa_checkout_id': 'visaCheckoutId',
         'purchase_level': 'purchaseLevel',
         'industry_data_type': 'industryDataType',
+        'wallet_type': 'walletType',
+        'national_net_domestic_data': 'nationalNetDomesticData',
+        'network_routing_order': 'networkRoutingOrder',
         'recurring_options': 'recurringOptions',
         'bank_transfer_options': 'bankTransferOptions',
         'purchase_options': 'purchaseOptions',
-        'electronic_benefits_transfer': 'electronicBenefitsTransfer'
+        'electronic_benefits_transfer': 'electronicBenefitsTransfer',
+        'loan_options': 'loanOptions',
+        'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None):
+    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
@@ -76,10 +86,15 @@ class Ptsv2creditsProcessingInformation(object):
         self._visa_checkout_id = None
         self._purchase_level = None
         self._industry_data_type = None
+        self._wallet_type = None
+        self._national_net_domestic_data = None
+        self._network_routing_order = None
         self._recurring_options = None
         self._bank_transfer_options = None
         self._purchase_options = None
         self._electronic_benefits_transfer = None
+        self._loan_options = None
+        self._japan_payment_options = None
 
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
@@ -99,6 +114,12 @@ class Ptsv2creditsProcessingInformation(object):
           self.purchase_level = purchase_level
         if industry_data_type is not None:
           self.industry_data_type = industry_data_type
+        if wallet_type is not None:
+          self.wallet_type = wallet_type
+        if national_net_domestic_data is not None:
+          self.national_net_domestic_data = national_net_domestic_data
+        if network_routing_order is not None:
+          self.network_routing_order = network_routing_order
         if recurring_options is not None:
           self.recurring_options = recurring_options
         if bank_transfer_options is not None:
@@ -107,12 +128,16 @@ class Ptsv2creditsProcessingInformation(object):
           self.purchase_options = purchase_options
         if electronic_benefits_transfer is not None:
           self.electronic_benefits_transfer = electronic_benefits_transfer
+        if loan_options is not None:
+          self.loan_options = loan_options
+        if japan_payment_options is not None:
+          self.japan_payment_options = japan_payment_options
 
     @property
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this Ptsv2creditsProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The commerce_indicator of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -123,7 +148,7 @@ class Ptsv2creditsProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this Ptsv2creditsProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param commerce_indicator: The commerce_indicator of this Ptsv2creditsProcessingInformation.
         :type: str
@@ -162,7 +187,7 @@ class Ptsv2creditsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2creditsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
 
         :return: The payment_solution of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -173,7 +198,7 @@ class Ptsv2creditsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2creditsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2creditsProcessingInformation.
         :type: str
@@ -212,7 +237,7 @@ class Ptsv2creditsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2creditsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The link_id of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -223,7 +248,7 @@ class Ptsv2creditsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2creditsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param link_id: The link_id of this Ptsv2creditsProcessingInformation.
         :type: str
@@ -237,7 +262,7 @@ class Ptsv2creditsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2creditsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The report_group of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -248,7 +273,7 @@ class Ptsv2creditsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2creditsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param report_group: The report_group of this Ptsv2creditsProcessingInformation.
         :type: str
@@ -262,7 +287,7 @@ class Ptsv2creditsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2creditsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
 
         :return: The visa_checkout_id of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -273,7 +298,7 @@ class Ptsv2creditsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2creditsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2creditsProcessingInformation.
         :type: str
@@ -312,7 +337,7 @@ class Ptsv2creditsProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2creditsProcessingInformation.
-        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` 
 
         :return: The industry_data_type of this Ptsv2creditsProcessingInformation.
         :rtype: str
@@ -323,15 +348,90 @@ class Ptsv2creditsProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2creditsProcessingInformation.
-        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` 
 
         :param industry_data_type: The industry_data_type of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if industry_data_type is not None and len(industry_data_type) > 10:
-            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `10`")
+        if industry_data_type is not None and len(industry_data_type) > 20:
+            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `20`")
 
         self._industry_data_type = industry_data_type
+
+    @property
+    def wallet_type(self):
+        """
+        Gets the wallet_type of this Ptsv2creditsProcessingInformation.
+        This field carries the wallet type in authorization requests and credit requests. Possible value are: - `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on Chase Paymentech Solutions and CyberSource through VisaNet. - `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a PayPass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on CyberSource through VisaNet. - `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on CyberSource through VisaNet. - `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on CyberSource through VisaNet. - `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on CyberSource through VisaNet. - `SDW`: Staged digital wallet. An issuer or operator created the wallet. This value is supported only for Masterpass transactions on Chase Paymentech Solutions. - `VCIND`: Visa Checkout payment. This value is supported only on CyberSource through VisaNet, FDC Compass, FDC Nashville Global, FDI Australia, and TSYS Acquiring Solutions. See Getting Started with Visa Checkout. For Visa Checkout transactions, the way CyberSource processes the value for this field depends on the processor. See the Visa Checkout section below. For all other values, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. Masterpass (101, 102, 103, 216, and 217): The Masterpass platform generates the wallet type value and passes it to you along with the customer’s checkout information.  Visa Checkout: This field is optional for Visa Checkout authorizations on FDI Australia. For all other processors, this field is required for Visa Checkout authorizations. For Visa Checkout transactions on the following processors, CyberSource sends the value that the processor expects for this field:FDC Compass,FDC Nashville Global,FDI Australia,TSYS Acquiring Solutions For all other processors, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. For incremental authorizations, this field is supported only for Mastercard and the supported values are 101 and 102. Payment card companies can introduce new values without notice. Your order management system should be able to process new values without problems.  CyberSource through VisaNet When the value for this field is 101, 102, 103, 216, or 217, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR6, Position: 88-90,  Field: Mastercard Wallet Identifier. When the value for this field is VCIND, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR8, Position: 72-76, Field: Agent Unique ID. 
+
+        :return: The wallet_type of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._wallet_type
+
+    @wallet_type.setter
+    def wallet_type(self, wallet_type):
+        """
+        Sets the wallet_type of this Ptsv2creditsProcessingInformation.
+        This field carries the wallet type in authorization requests and credit requests. Possible value are: - `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on Chase Paymentech Solutions and CyberSource through VisaNet. - `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a PayPass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on CyberSource through VisaNet. - `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on CyberSource through VisaNet. - `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on CyberSource through VisaNet. - `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on CyberSource through VisaNet. - `SDW`: Staged digital wallet. An issuer or operator created the wallet. This value is supported only for Masterpass transactions on Chase Paymentech Solutions. - `VCIND`: Visa Checkout payment. This value is supported only on CyberSource through VisaNet, FDC Compass, FDC Nashville Global, FDI Australia, and TSYS Acquiring Solutions. See Getting Started with Visa Checkout. For Visa Checkout transactions, the way CyberSource processes the value for this field depends on the processor. See the Visa Checkout section below. For all other values, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. Masterpass (101, 102, 103, 216, and 217): The Masterpass platform generates the wallet type value and passes it to you along with the customer’s checkout information.  Visa Checkout: This field is optional for Visa Checkout authorizations on FDI Australia. For all other processors, this field is required for Visa Checkout authorizations. For Visa Checkout transactions on the following processors, CyberSource sends the value that the processor expects for this field:FDC Compass,FDC Nashville Global,FDI Australia,TSYS Acquiring Solutions For all other processors, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. For incremental authorizations, this field is supported only for Mastercard and the supported values are 101 and 102. Payment card companies can introduce new values without notice. Your order management system should be able to process new values without problems.  CyberSource through VisaNet When the value for this field is 101, 102, 103, 216, or 217, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR6, Position: 88-90,  Field: Mastercard Wallet Identifier. When the value for this field is VCIND, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR8, Position: 72-76, Field: Agent Unique ID. 
+
+        :param wallet_type: The wallet_type of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+        if wallet_type is not None and len(wallet_type) > 5:
+            raise ValueError("Invalid value for `wallet_type`, length must be less than or equal to `5`")
+
+        self._wallet_type = wallet_type
+
+    @property
+    def national_net_domestic_data(self):
+        """
+        Gets the national_net_domestic_data of this Ptsv2creditsProcessingInformation.
+        Supplementary domestic transaction information provided by the acquirer for National Net Settlement Service (NNSS) transactions. NNSS is a settlement service that Visa provides. For transactions on CyberSource through VisaNet in countries that subscribe to NNSS: VisaNet clears transactions; VisaNet transfers funds to the acquirer after deducting processing fees and interchange fees. VisaNet settles transactions in the local pricing currency through a local financial institution. This field is supported only on CyberSource through VisaNet for domestic data in Colombia 
+
+        :return: The national_net_domestic_data of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._national_net_domestic_data
+
+    @national_net_domestic_data.setter
+    def national_net_domestic_data(self, national_net_domestic_data):
+        """
+        Sets the national_net_domestic_data of this Ptsv2creditsProcessingInformation.
+        Supplementary domestic transaction information provided by the acquirer for National Net Settlement Service (NNSS) transactions. NNSS is a settlement service that Visa provides. For transactions on CyberSource through VisaNet in countries that subscribe to NNSS: VisaNet clears transactions; VisaNet transfers funds to the acquirer after deducting processing fees and interchange fees. VisaNet settles transactions in the local pricing currency through a local financial institution. This field is supported only on CyberSource through VisaNet for domestic data in Colombia 
+
+        :param national_net_domestic_data: The national_net_domestic_data of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+        if national_net_domestic_data is not None and len(national_net_domestic_data) > 123:
+            raise ValueError("Invalid value for `national_net_domestic_data`, length must be less than or equal to `123`")
+
+        self._national_net_domestic_data = national_net_domestic_data
+
+    @property
+    def network_routing_order(self):
+        """
+        Gets the network_routing_order of this Ptsv2creditsProcessingInformation.
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities. 
+
+        :return: The network_routing_order of this Ptsv2creditsProcessingInformation.
+        :rtype: str
+        """
+        return self._network_routing_order
+
+    @network_routing_order.setter
+    def network_routing_order(self, network_routing_order):
+        """
+        Sets the network_routing_order of this Ptsv2creditsProcessingInformation.
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities. 
+
+        :param network_routing_order: The network_routing_order of this Ptsv2creditsProcessingInformation.
+        :type: str
+        """
+        if network_routing_order is not None and len(network_routing_order) > 30:
+            raise ValueError("Invalid value for `network_routing_order`, length must be less than or equal to `30`")
+
+        self._network_routing_order = network_routing_order
 
     @property
     def recurring_options(self):
@@ -416,6 +516,48 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._electronic_benefits_transfer = electronic_benefits_transfer
+
+    @property
+    def loan_options(self):
+        """
+        Gets the loan_options of this Ptsv2creditsProcessingInformation.
+
+        :return: The loan_options of this Ptsv2creditsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+        return self._loan_options
+
+    @loan_options.setter
+    def loan_options(self, loan_options):
+        """
+        Sets the loan_options of this Ptsv2creditsProcessingInformation.
+
+        :param loan_options: The loan_options of this Ptsv2creditsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+
+        self._loan_options = loan_options
+
+    @property
+    def japan_payment_options(self):
+        """
+        Gets the japan_payment_options of this Ptsv2creditsProcessingInformation.
+
+        :return: The japan_payment_options of this Ptsv2creditsProcessingInformation.
+        :rtype: Ptsv2creditsProcessingInformationJapanPaymentOptions
+        """
+        return self._japan_payment_options
+
+    @japan_payment_options.setter
+    def japan_payment_options(self, japan_payment_options):
+        """
+        Sets the japan_payment_options of this Ptsv2creditsProcessingInformation.
+
+        :param japan_payment_options: The japan_payment_options of this Ptsv2creditsProcessingInformation.
+        :type: Ptsv2creditsProcessingInformationJapanPaymentOptions
+        """
+
+        self._japan_payment_options = japan_payment_options
 
     def to_dict(self):
         """

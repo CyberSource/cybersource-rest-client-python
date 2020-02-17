@@ -32,26 +32,31 @@ class Riskv1authenticationexemptionsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Riskv1authenticationexemptionsPaymentInformationCard',
-        'tokenized_card': 'Riskv1authenticationexemptionsPaymentInformationTokenizedCard'
+        'tokenized_card': 'Riskv1authenticationexemptionsPaymentInformationTokenizedCard',
+        'fluid_data': 'Riskv1authenticationexemptionsPaymentInformationFluidData'
     }
 
     attribute_map = {
         'card': 'card',
-        'tokenized_card': 'tokenizedCard'
+        'tokenized_card': 'tokenizedCard',
+        'fluid_data': 'fluidData'
     }
 
-    def __init__(self, card=None, tokenized_card=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None):
         """
         Riskv1authenticationexemptionsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._fluid_data = None
 
         if card is not None:
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if fluid_data is not None:
+          self.fluid_data = fluid_data
 
     @property
     def card(self):
@@ -94,6 +99,27 @@ class Riskv1authenticationexemptionsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def fluid_data(self):
+        """
+        Gets the fluid_data of this Riskv1authenticationexemptionsPaymentInformation.
+
+        :return: The fluid_data of this Riskv1authenticationexemptionsPaymentInformation.
+        :rtype: Riskv1authenticationexemptionsPaymentInformationFluidData
+        """
+        return self._fluid_data
+
+    @fluid_data.setter
+    def fluid_data(self, fluid_data):
+        """
+        Sets the fluid_data of this Riskv1authenticationexemptionsPaymentInformation.
+
+        :param fluid_data: The fluid_data of this Riskv1authenticationexemptionsPaymentInformation.
+        :type: Riskv1authenticationexemptionsPaymentInformationFluidData
+        """
+
+        self._fluid_data = fluid_data
 
     def to_dict(self):
         """

@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_purchase_and_refund_details**](PurchaseAndRefundDetailsApi.md#get_purchase_and_refund_details) | **GET** /reporting/v3/purchase-refund-details | Get Purchase and Refund details
+[**get_purchase_and_refund_details**](PurchaseAndRefundDetailsApi.md#get_purchase_and_refund_details) | **GET** /reporting/v3/purchase-refund-details | Get Purchase and Refund Details
 
 
 # **get_purchase_and_refund_details**
 > ReportingV3PurchaseRefundDetailsGet200Response get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
 
-Get Purchase and Refund details
+Get Purchase and Refund Details
 
 Download the Purchase and Refund Details report. This report report includes all purchases and refund transactions, as well as all activities related to transactions resulting in an adjustment to the net proceeds. 
 
@@ -34,7 +34,7 @@ offset = 56 # int | Offset of the Purchase and Refund Results. (optional)
 limit = 2000 # int | Results count per page. Range(1-2000) (optional) (default to 2000)
 
 try: 
-    # Get Purchase and Refund details
+    # Get Purchase and Refund Details
     api_response = api_instance.get_purchase_and_refund_details(start_time, end_time, organization_id=organization_id, payment_subtype=payment_subtype, view_by=view_by, group_name=group_name, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:

@@ -44,7 +44,7 @@ class PaymentBatchSummariesApi(object):
 
     def get_payment_batch_summary(self, start_time, end_time, **kwargs):
         """
-        Get payment batch summary data
+        Get Payment Batch Summary Data
         Scope can be either account/merchant or reseller.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -75,7 +75,7 @@ class PaymentBatchSummariesApi(object):
 
     def get_payment_batch_summary_with_http_info(self, start_time, end_time, **kwargs):
         """
-        Get payment batch summary data
+        Get Payment Batch Summary Data
         Scope can be either account/merchant or reseller.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

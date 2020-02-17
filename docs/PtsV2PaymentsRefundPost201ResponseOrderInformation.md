@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invoice_details** | [**PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails**](PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.md) |  | [optional] 
+**invoice_details** | [**PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails**](PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

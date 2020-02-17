@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**download_report**](ReportDownloadsApi.md#download_report) | **GET** /reporting/v3/report-downloads | Download a report
+[**download_report**](ReportDownloadsApi.md#download_report) | **GET** /reporting/v3/report-downloads | Download a Report
 
 
 # **download_report**
 > download_report(report_date, report_name, organization_id=organization_id, report_time=report_time)
 
-Download a report
+Download a Report
 
 Download a report using the unique report name and date. 
 
@@ -30,7 +30,7 @@ organization_id = 'organization_id_example' # str | Valid Cybersource Organizati
 report_time = 'report_time_example' # str | Valid time on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Time Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example time format:**   - hh:mm:ss±hh:mm  (optional)
 
 try: 
-    # Download a report
+    # Download a Report
     api_instance.download_report(report_date, report_name, organization_id=organization_id, report_time=report_time)
 except ApiException as e:
     print("Exception when calling ReportDownloadsApi->download_report: %s\n" % e)

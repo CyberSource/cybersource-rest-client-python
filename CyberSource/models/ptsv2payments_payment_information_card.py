@@ -37,6 +37,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'type': 'str',
         'use_as': 'str',
         'source_account_type': 'str',
+        'source_account_type_details': 'str',
         'security_code': 'str',
         'security_code_indicator': 'str',
         'account_encoder_id': 'str',
@@ -53,6 +54,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'type': 'type',
         'use_as': 'useAs',
         'source_account_type': 'sourceAccountType',
+        'source_account_type_details': 'sourceAccountTypeDetails',
         'security_code': 'securityCode',
         'security_code_indicator': 'securityCodeIndicator',
         'account_encoder_id': 'accountEncoderId',
@@ -62,7 +64,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'product_name': 'productName'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, source_account_type_details=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None):
         """
         Ptsv2paymentsPaymentInformationCard - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         self._type = None
         self._use_as = None
         self._source_account_type = None
+        self._source_account_type_details = None
         self._security_code = None
         self._security_code_indicator = None
         self._account_encoder_id = None
@@ -93,6 +96,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
           self.use_as = use_as
         if source_account_type is not None:
           self.source_account_type = source_account_type
+        if source_account_type_details is not None:
+          self.source_account_type_details = source_account_type_details
         if security_code is not None:
           self.security_code = security_code
         if security_code_indicator is not None:
@@ -257,6 +262,31 @@ class Ptsv2paymentsPaymentInformationCard(object):
         self._source_account_type = source_account_type
 
     @property
+    def source_account_type_details(self):
+        """
+        Gets the source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+
+        :return: The source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._source_account_type_details
+
+    @source_account_type_details.setter
+    def source_account_type_details(self, source_account_type_details):
+        """
+        Sets the source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+
+        :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
+        :type: str
+        """
+        if source_account_type_details is not None and len(source_account_type_details) > 4:
+            raise ValueError("Invalid value for `source_account_type_details`, length must be less than or equal to `4`")
+
+        self._source_account_type_details = source_account_type_details
+
+    @property
     def security_code(self):
         """
         Gets the security_code of this Ptsv2paymentsPaymentInformationCard.
@@ -410,7 +440,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def product_name(self):
         """
         Gets the product_name of this Ptsv2paymentsPaymentInformationCard.
-        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
 
         :return: The product_name of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -421,7 +451,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def product_name(self, product_name):
         """
         Sets the product_name of this Ptsv2paymentsPaymentInformationCard.
-        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
 
         :param product_name: The product_name of this Ptsv2paymentsPaymentInformationCard.
         :type: str

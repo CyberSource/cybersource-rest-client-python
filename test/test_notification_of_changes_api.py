@@ -35,7 +35,7 @@ class TestNotificationOfChangesApi(unittest.TestCase):
         """
         Test case for get_notification_of_change_report
 
-        Get Notification Of Changes
+        Get Notification of Changes
         """
         pass
 

@@ -35,7 +35,7 @@ class TestSecureFileShareApi(unittest.TestCase):
         """
         Test case for get_file
 
-        Download a file with file identifier
+        Download a File with File Identifier
         """
         pass
 
@@ -43,7 +43,7 @@ class TestSecureFileShareApi(unittest.TestCase):
         """
         Test case for get_file_detail
 
-        Get list of files
+        Get List of Files
         """
         pass
 

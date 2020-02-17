@@ -42,6 +42,119 @@ class DecisionManagerApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
+    def add_negative(self, type, add_negative_list_request, **kwargs):
+        """
+        List Management
+        This call adds/deletes/converts the request information in the negative list.  Provide the list to be updated as the path parameter. This value can be 'postiive', 'negative' or 'review'. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.add_negative(type, add_negative_list_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str type: The list to be updated. It can be 'positive', 'negative' or 'review'. (required)
+        :param AddNegativeListRequest add_negative_list_request: (required)
+        :return: RiskV1UpdatePost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.add_negative_with_http_info(type, add_negative_list_request, **kwargs)
+        else:
+            (data) = self.add_negative_with_http_info(type, add_negative_list_request, **kwargs)
+            return data
+
+    def add_negative_with_http_info(self, type, add_negative_list_request, **kwargs):
+        """
+        List Management
+        This call adds/deletes/converts the request information in the negative list.  Provide the list to be updated as the path parameter. This value can be 'postiive', 'negative' or 'review'. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.add_negative_with_http_info(type, add_negative_list_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str type: The list to be updated. It can be 'positive', 'negative' or 'review'. (required)
+        :param AddNegativeListRequest add_negative_list_request: (required)
+        :return: RiskV1UpdatePost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['type', 'add_negative_list_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_negative" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'type' is set
+        if ('type' not in params) or (params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `add_negative`")
+        # verify the required parameter 'add_negative_list_request' is set
+        if ('add_negative_list_request' not in params) or (params['add_negative_list_request'] is None):
+            raise ValueError("Missing the required parameter `add_negative_list_request` when calling `add_negative`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'type' in params:
+            path_params['type'] = params['type']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'add_negative_list_request' in params:
+            body_params = params['add_negative_list_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/risk/v1/lists/{type}/entries', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RiskV1UpdatePost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def create_decision_manager_case(self, create_decision_manager_case_request, **kwargs):
         """
         Create Decision Manager Case
@@ -141,6 +254,119 @@ class DecisionManagerApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='RiskV1DecisionsPost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def fraud_update(self, id, fraud_marking_action_request, **kwargs):
+        """
+        Fraud Marking
+        This can be used to - 1. Add known fraudulent data to the fraud history 2. Remove data added to history with Transaction Marking Tool or by uploading chargeback files 3. Remove chargeback data from history that was automatically added. For detailed information, contact your Cybersource representative  Place the request ID of the transaction you want to mark as suspect (or remove from history) as the path parameter in this request. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.fraud_update(id, fraud_marking_action_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Request ID of the transaction that you want to mark as suspect or remove from history. (required)
+        :param FraudMarkingActionRequest fraud_marking_action_request: (required)
+        :return: RiskV1UpdatePost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.fraud_update_with_http_info(id, fraud_marking_action_request, **kwargs)
+        else:
+            (data) = self.fraud_update_with_http_info(id, fraud_marking_action_request, **kwargs)
+            return data
+
+    def fraud_update_with_http_info(self, id, fraud_marking_action_request, **kwargs):
+        """
+        Fraud Marking
+        This can be used to - 1. Add known fraudulent data to the fraud history 2. Remove data added to history with Transaction Marking Tool or by uploading chargeback files 3. Remove chargeback data from history that was automatically added. For detailed information, contact your Cybersource representative  Place the request ID of the transaction you want to mark as suspect (or remove from history) as the path parameter in this request. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.fraud_update_with_http_info(id, fraud_marking_action_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: Request ID of the transaction that you want to mark as suspect or remove from history. (required)
+        :param FraudMarkingActionRequest fraud_marking_action_request: (required)
+        :return: RiskV1UpdatePost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'fraud_marking_action_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fraud_update" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `fraud_update`")
+        # verify the required parameter 'fraud_marking_action_request' is set
+        if ('fraud_marking_action_request' not in params) or (params['fraud_marking_action_request'] is None):
+            raise ValueError("Missing the required parameter `fraud_marking_action_request` when calling `fraud_update`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'fraud_marking_action_request' in params:
+            body_params = params['fraud_marking_action_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/risk/v1/decisions/{id}/marking', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RiskV1UpdatePost201Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

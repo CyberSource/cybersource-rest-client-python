@@ -44,7 +44,7 @@ class SecureFileShareApi(object):
 
     def get_file(self, file_id, **kwargs):
         """
-        Download a file with file identifier
+        Download a File with File Identifier
         Download a file for the given file identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -71,7 +71,7 @@ class SecureFileShareApi(object):
 
     def get_file_with_http_info(self, file_id, **kwargs):
         """
-        Download a file with file identifier
+        Download a File with File Identifier
         Download a file for the given file identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -160,7 +160,7 @@ class SecureFileShareApi(object):
 
     def get_file_detail(self, start_date, end_date, **kwargs):
         """
-        Get list of files
+        Get List of Files
         Get list of files and it's information of them available inside the report directory
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -188,7 +188,7 @@ class SecureFileShareApi(object):
 
     def get_file_detail_with_http_info(self, start_date, end_date, **kwargs):
         """
-        Get list of files
+        Get List of Files
         Get list of files and it's information of them available inside the report directory
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

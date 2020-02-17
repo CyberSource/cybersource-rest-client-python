@@ -35,7 +35,7 @@ class TestTokenizationApi(unittest.TestCase):
         """
         Test case for tokenize
 
-        Tokenize card
+        Tokenize Card
         """
         pass
 

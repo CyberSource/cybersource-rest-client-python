@@ -67,7 +67,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_id(self):
         """
         Gets the terminal_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  **For Payouts**: This field is applicable for CtV. 
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
 
         :return: The terminal_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :rtype: str
@@ -78,7 +78,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_id(self, terminal_id):
         """
         Sets the terminal_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  **For Payouts**: This field is applicable for CtV. 
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
 
         :param terminal_id: The terminal_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
@@ -92,7 +92,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_serial_number(self):
         """
         Gets the terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :rtype: str
@@ -103,7 +103,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def terminal_serial_number(self, terminal_serial_number):
         """
         Sets the terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param terminal_serial_number: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
@@ -117,7 +117,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def device_id(self):
         """
         Gets the device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
     def device_id(self, device_id):
         """
         Sets the device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
-        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for specific CyberSource integrations. For details, see the `pos_device_id` field description in the [Card-Present Processing Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param device_id: The device_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str

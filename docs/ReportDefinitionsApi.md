@@ -4,14 +4,14 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_resource_info_by_report_definition**](ReportDefinitionsApi.md#get_resource_info_by_report_definition) | **GET** /reporting/v3/report-definitions/{reportDefinitionName} | Get report definition
-[**get_resource_v2_info**](ReportDefinitionsApi.md#get_resource_v2_info) | **GET** /reporting/v3/report-definitions | Get reporting resource information
+[**get_resource_info_by_report_definition**](ReportDefinitionsApi.md#get_resource_info_by_report_definition) | **GET** /reporting/v3/report-definitions/{reportDefinitionName} | Get Report Definition
+[**get_resource_v2_info**](ReportDefinitionsApi.md#get_resource_v2_info) | **GET** /reporting/v3/report-definitions | Get Reporting Resource Information
 
 
 # **get_resource_info_by_report_definition**
 > ReportingV3ReportDefinitionsNameGet200Response get_resource_info_by_report_definition(report_definition_name, subscription_type=subscription_type, report_mime_type=report_mime_type, organization_id=organization_id)
 
-Get report definition
+Get Report Definition
 
 View the attributes of an individual report type. For a list of values for reportDefinitionName, see the [Reporting Developer Guide](https://www.cybersource.com/developers/documentation/reporting_and_reconciliation/) 
 
@@ -31,7 +31,7 @@ report_mime_type = 'report_mime_type_example' # str | The format for which the r
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Get report definition
+    # Get Report Definition
     api_response = api_instance.get_resource_info_by_report_definition(report_definition_name, subscription_type=subscription_type, report_mime_type=report_mime_type, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
@@ -65,7 +65,7 @@ No authorization required
 # **get_resource_v2_info**
 > ReportingV3ReportDefinitionsGet200Response get_resource_v2_info(subscription_type=subscription_type, organization_id=organization_id)
 
-Get reporting resource information
+Get Reporting Resource Information
 
 View a list of supported reports and their attributes before subscribing to them. 
 
@@ -83,7 +83,7 @@ subscription_type = 'subscription_type_example' # str | Valid Values: - CLASSIC 
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Get reporting resource information
+    # Get Reporting Resource Information
     api_response = api_instance.get_resource_v2_info(subscription_type=subscription_type, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:

@@ -30,4 +30,5 @@ from .tokenization_api import TokenizationApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .user_management_api import UserManagementApi
+from .verification_api import VerificationApi
 from .void_api import VoidApi

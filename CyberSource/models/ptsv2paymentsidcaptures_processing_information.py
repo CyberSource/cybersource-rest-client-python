@@ -40,7 +40,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'industry_data_type': 'str',
         'issuer': 'Ptsv2paymentsIssuerInformation',
         'authorization_options': 'Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions',
-        'capture_options': 'Ptsv2paymentsidcapturesProcessingInformationCaptureOptions'
+        'capture_options': 'Ptsv2paymentsidcapturesProcessingInformationCaptureOptions',
+        'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'industry_data_type': 'industryDataType',
         'issuer': 'issuer',
         'authorization_options': 'authorizationOptions',
-        'capture_options': 'captureOptions'
+        'capture_options': 'captureOptions',
+        'loan_options': 'loanOptions'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None):
         """
         Ptsv2paymentsidcapturesProcessingInformation - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         self._issuer = None
         self._authorization_options = None
         self._capture_options = None
+        self._loan_options = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -92,12 +95,14 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
           self.authorization_options = authorization_options
         if capture_options is not None:
           self.capture_options = capture_options
+        if loan_options is not None:
+          self.loan_options = loan_options
 
     @property
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsidcapturesProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
 
         :return: The payment_solution of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -108,7 +113,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsidcapturesProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
@@ -147,7 +152,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The link_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -158,7 +163,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param link_id: The link_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
@@ -172,7 +177,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsidcapturesProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The report_group of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -183,7 +188,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsidcapturesProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param report_group: The report_group of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
@@ -197,7 +202,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -208,7 +213,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
@@ -247,7 +252,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` 
 
         :return: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -258,13 +263,13 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Flag that indicates whether the transaction includes airline or restaurant data.  To send the data in a transaction request to the processor, you must set this field to `airline` or `restaurant`.  **Note** If you do not set this field to one of the possible values, CyberSource does not send any data to the processor.  Possible Values: - `airline` - `restaurant` 
+        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` 
 
         :param industry_data_type: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
         """
-        if industry_data_type is not None and len(industry_data_type) > 10:
-            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `10`")
+        if industry_data_type is not None and len(industry_data_type) > 20:
+            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `20`")
 
         self._industry_data_type = industry_data_type
 
@@ -330,6 +335,27 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         """
 
         self._capture_options = capture_options
+
+    @property
+    def loan_options(self):
+        """
+        Gets the loan_options of this Ptsv2paymentsidcapturesProcessingInformation.
+
+        :return: The loan_options of this Ptsv2paymentsidcapturesProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+        return self._loan_options
+
+    @loan_options.setter
+    def loan_options(self, loan_options):
+        """
+        Sets the loan_options of this Ptsv2paymentsidcapturesProcessingInformation.
+
+        :param loan_options: The loan_options of this Ptsv2paymentsidcapturesProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+
+        self._loan_options = loan_options
 
     def to_dict(self):
         """

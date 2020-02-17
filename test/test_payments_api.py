@@ -39,6 +39,14 @@ class TestPaymentsApi(unittest.TestCase):
         """
         pass
 
+    def test_increment_auth(self):
+        """
+        Test case for increment_auth
+
+        Increment an Authorization
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
