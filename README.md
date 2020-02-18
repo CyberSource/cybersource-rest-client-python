@@ -4,7 +4,7 @@ The CyberSource Python client provides convenient access to the [CyberSource RES
 
 ## Requirements
 
-* Python 3.4 or later
+* Python 3.6 or later
 
 ## Installation
 
