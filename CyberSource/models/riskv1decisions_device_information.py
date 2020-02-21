@@ -33,7 +33,6 @@ class Riskv1decisionsDeviceInformation(object):
     swagger_types = {
         'cookies_accepted': 'str',
         'ip_address': 'str',
-        'network_ip_address': 'str',
         'host_name': 'str',
         'fingerprint_session_id': 'str',
         'http_browser_email': 'str',
@@ -43,21 +42,19 @@ class Riskv1decisionsDeviceInformation(object):
     attribute_map = {
         'cookies_accepted': 'cookiesAccepted',
         'ip_address': 'ipAddress',
-        'network_ip_address': 'networkIpAddress',
         'host_name': 'hostName',
         'fingerprint_session_id': 'fingerprintSessionId',
         'http_browser_email': 'httpBrowserEmail',
         'user_agent': 'userAgent'
     }
 
-    def __init__(self, cookies_accepted=None, ip_address=None, network_ip_address=None, host_name=None, fingerprint_session_id=None, http_browser_email=None, user_agent=None):
+    def __init__(self, cookies_accepted=None, ip_address=None, host_name=None, fingerprint_session_id=None, http_browser_email=None, user_agent=None):
         """
         Riskv1decisionsDeviceInformation - a model defined in Swagger
         """
 
         self._cookies_accepted = None
         self._ip_address = None
-        self._network_ip_address = None
         self._host_name = None
         self._fingerprint_session_id = None
         self._http_browser_email = None
@@ -67,8 +64,6 @@ class Riskv1decisionsDeviceInformation(object):
           self.cookies_accepted = cookies_accepted
         if ip_address is not None:
           self.ip_address = ip_address
-        if network_ip_address is not None:
-          self.network_ip_address = network_ip_address
         if host_name is not None:
           self.host_name = host_name
         if fingerprint_session_id is not None:
@@ -125,31 +120,6 @@ class Riskv1decisionsDeviceInformation(object):
             raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `48`")
 
         self._ip_address = ip_address
-
-    @property
-    def network_ip_address(self):
-        """
-        Gets the network_ip_address of this Riskv1decisionsDeviceInformation.
-        Network IP address of the customer (for example, 10.1.27). A network IP address includes up to 256 IP addresses. 
-
-        :return: The network_ip_address of this Riskv1decisionsDeviceInformation.
-        :rtype: str
-        """
-        return self._network_ip_address
-
-    @network_ip_address.setter
-    def network_ip_address(self, network_ip_address):
-        """
-        Sets the network_ip_address of this Riskv1decisionsDeviceInformation.
-        Network IP address of the customer (for example, 10.1.27). A network IP address includes up to 256 IP addresses. 
-
-        :param network_ip_address: The network_ip_address of this Riskv1decisionsDeviceInformation.
-        :type: str
-        """
-        if network_ip_address is not None and len(network_ip_address) > 11:
-            raise ValueError("Invalid value for `network_ip_address`, length must be less than or equal to `11`")
-
-        self._network_ip_address = network_ip_address
 
     @property
     def host_name(self):

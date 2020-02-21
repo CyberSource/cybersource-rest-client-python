@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
     def settlement_method(self):
         """
         Gets the settlement_method of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
-        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The settlement_method of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
     def settlement_method(self, settlement_method):
         """
         Sets the settlement_method of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
-        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param settlement_method: The settlement_method of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str
@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
     def fraud_screening_level(self):
         """
         Gets the fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
-        Level of fraud screening.  Possible values: - `1`: Validation — default if the field has not already been configured for your merchant ID - `2`: Verification  For a description of this feature and a list of supported processors, see \"Verification and Validation\" in the [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Level of fraud screening.  Possible values: - `1`: Validation — default if the field has not already been configured for your merchant ID - `2`: Verification  For a description of this feature and a list of supported processors, see \"Verification and Validation\" in the [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :return: The fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
     def fraud_screening_level(self, fraud_screening_level):
         """
         Sets the fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
-        Level of fraud screening.  Possible values: - `1`: Validation — default if the field has not already been configured for your merchant ID - `2`: Verification  For a description of this feature and a list of supported processors, see \"Verification and Validation\" in the [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Level of fraud screening.  Possible values: - `1`: Validation — default if the field has not already been configured for your merchant ID - `2`: Verification  For a description of this feature and a list of supported processors, see \"Verification and Validation\" in the [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :param fraud_screening_level: The fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str

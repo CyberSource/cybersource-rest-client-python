@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     swagger_types = {
         'additional_costs': 'str',
         'additional_costs_percentage': 'str',
+        'amount': 'str',
         'amount_funded': 'str',
         'amount_requested_percentage': 'str',
         'annual_financing_cost': 'str',
@@ -41,16 +42,27 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         'expenses_percentage': 'str',
         'fees': 'str',
         'fees_percentage': 'str',
+        'frequency': 'str',
         'insurance': 'str',
         'insurance_percentage': 'str',
+        'invoice_data': 'str',
         'monthly_interest_rate': 'str',
+        'plan_type': 'str',
+        'sequence': 'int',
         'taxes': 'str',
-        'taxes_percentage': 'str'
+        'taxes_percentage': 'str',
+        'total_amount': 'str',
+        'total_count': 'int',
+        'minimum_total_count': 'str',
+        'maximum_total_count': 'str',
+        'first_installment_amount': 'str',
+        'first_installment_date': 'str'
     }
 
     attribute_map = {
         'additional_costs': 'additionalCosts',
         'additional_costs_percentage': 'additionalCostsPercentage',
+        'amount': 'amount',
         'amount_funded': 'amountFunded',
         'amount_requested_percentage': 'amountRequestedPercentage',
         'annual_financing_cost': 'annualFinancingCost',
@@ -59,20 +71,31 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         'expenses_percentage': 'expensesPercentage',
         'fees': 'fees',
         'fees_percentage': 'feesPercentage',
+        'frequency': 'frequency',
         'insurance': 'insurance',
         'insurance_percentage': 'insurancePercentage',
+        'invoice_data': 'invoiceData',
         'monthly_interest_rate': 'monthlyInterestRate',
+        'plan_type': 'planType',
+        'sequence': 'sequence',
         'taxes': 'taxes',
-        'taxes_percentage': 'taxesPercentage'
+        'taxes_percentage': 'taxesPercentage',
+        'total_amount': 'totalAmount',
+        'total_count': 'totalCount',
+        'minimum_total_count': 'minimumTotalCount',
+        'maximum_total_count': 'maximumTotalCount',
+        'first_installment_amount': 'firstInstallmentAmount',
+        'first_installment_date': 'firstInstallmentDate'
     }
 
-    def __init__(self, additional_costs=None, additional_costs_percentage=None, amount_funded=None, amount_requested_percentage=None, annual_financing_cost=None, annual_interest_rate=None, expenses=None, expenses_percentage=None, fees=None, fees_percentage=None, insurance=None, insurance_percentage=None, monthly_interest_rate=None, taxes=None, taxes_percentage=None):
+    def __init__(self, additional_costs=None, additional_costs_percentage=None, amount=None, amount_funded=None, amount_requested_percentage=None, annual_financing_cost=None, annual_interest_rate=None, expenses=None, expenses_percentage=None, fees=None, fees_percentage=None, frequency=None, insurance=None, insurance_percentage=None, invoice_data=None, monthly_interest_rate=None, plan_type=None, sequence=None, taxes=None, taxes_percentage=None, total_amount=None, total_count=None, minimum_total_count=None, maximum_total_count=None, first_installment_amount=None, first_installment_date=None):
         """
         PtsV2PaymentsPost201ResponseInstallmentInformation - a model defined in Swagger
         """
 
         self._additional_costs = None
         self._additional_costs_percentage = None
+        self._amount = None
         self._amount_funded = None
         self._amount_requested_percentage = None
         self._annual_financing_cost = None
@@ -81,16 +104,28 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._expenses_percentage = None
         self._fees = None
         self._fees_percentage = None
+        self._frequency = None
         self._insurance = None
         self._insurance_percentage = None
+        self._invoice_data = None
         self._monthly_interest_rate = None
+        self._plan_type = None
+        self._sequence = None
         self._taxes = None
         self._taxes_percentage = None
+        self._total_amount = None
+        self._total_count = None
+        self._minimum_total_count = None
+        self._maximum_total_count = None
+        self._first_installment_amount = None
+        self._first_installment_date = None
 
         if additional_costs is not None:
           self.additional_costs = additional_costs
         if additional_costs_percentage is not None:
           self.additional_costs_percentage = additional_costs_percentage
+        if amount is not None:
+          self.amount = amount
         if amount_funded is not None:
           self.amount_funded = amount_funded
         if amount_requested_percentage is not None:
@@ -107,22 +142,42 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
           self.fees = fees
         if fees_percentage is not None:
           self.fees_percentage = fees_percentage
+        if frequency is not None:
+          self.frequency = frequency
         if insurance is not None:
           self.insurance = insurance
         if insurance_percentage is not None:
           self.insurance_percentage = insurance_percentage
+        if invoice_data is not None:
+          self.invoice_data = invoice_data
         if monthly_interest_rate is not None:
           self.monthly_interest_rate = monthly_interest_rate
+        if plan_type is not None:
+          self.plan_type = plan_type
+        if sequence is not None:
+          self.sequence = sequence
         if taxes is not None:
           self.taxes = taxes
         if taxes_percentage is not None:
           self.taxes_percentage = taxes_percentage
+        if total_amount is not None:
+          self.total_amount = total_amount
+        if total_count is not None:
+          self.total_count = total_count
+        if minimum_total_count is not None:
+          self.minimum_total_count = minimum_total_count
+        if maximum_total_count is not None:
+          self.maximum_total_count = maximum_total_count
+        if first_installment_amount is not None:
+          self.first_installment_amount = first_installment_amount
+        if first_installment_date is not None:
+          self.first_installment_date = first_installment_date
 
     @property
     def additional_costs(self):
         """
         Gets the additional_costs of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Additional costs charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 128-139 - Field: Total Other Costs 
+        Additional costs charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 128-139 - Field: Total Other Costs 
 
         :return: The additional_costs of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -133,7 +188,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def additional_costs(self, additional_costs):
         """
         Sets the additional_costs of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Additional costs charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 128-139 - Field: Total Other Costs 
+        Additional costs charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 128-139 - Field: Total Other Costs 
 
         :param additional_costs: The additional_costs of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -147,7 +202,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def additional_costs_percentage(self):
         """
         Gets the additional_costs_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Additional costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 140-143 - Field: Percent of Total Other Costs 
+        Additional costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 140-143 - Field: Percent of Total Other Costs 
 
         :return: The additional_costs_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -158,7 +213,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def additional_costs_percentage(self, additional_costs_percentage):
         """
         Sets the additional_costs_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Additional costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 140-143 - Field: Percent of Total Other Costs 
+        Additional costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 140-143 - Field: Percent of Total Other Costs 
 
         :param additional_costs_percentage: The additional_costs_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -169,10 +224,35 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._additional_costs_percentage = additional_costs_percentage
 
     @property
+    def amount(self):
+        """
+        Gets the amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Amount for the current installment payment.  This field is supported only for CyberSource through VisaNet.  For details, see `installment_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """
+        Sets the amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Amount for the current installment payment.  This field is supported only for CyberSource through VisaNet.  For details, see `installment_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param amount: The amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if amount is not None and len(amount) > 12:
+            raise ValueError("Invalid value for `amount`, length must be less than or equal to `12`")
+
+        self._amount = amount
+
+    @property
     def amount_funded(self):
         """
         Gets the amount_funded of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Amount funded.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 48-59 - Field: Total Amount Funded 
+        Amount funded.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 48-59 - Field: Total Amount Funded 
 
         :return: The amount_funded of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -183,7 +263,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def amount_funded(self, amount_funded):
         """
         Sets the amount_funded of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Amount funded.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 48-59 - Field: Total Amount Funded 
+        Amount funded.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 48-59 - Field: Total Amount Funded 
 
         :param amount_funded: The amount_funded of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -197,7 +277,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def amount_requested_percentage(self):
         """
         Gets the amount_requested_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Amount requested divided by the amount funded.  For example: - A value of 90.0 specifies 90%. - A value of 93.7 specifies 93.7%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 60-63 - Field: Percent of Amount Requested 
+        Amount requested divided by the amount funded.  For example: - A value of 90.0 specifies 90%. - A value of 93.7 specifies 93.7%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 60-63 - Field: Percent of Amount Requested 
 
         :return: The amount_requested_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -208,7 +288,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def amount_requested_percentage(self, amount_requested_percentage):
         """
         Sets the amount_requested_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Amount requested divided by the amount funded.  For example: - A value of 90.0 specifies 90%. - A value of 93.7 specifies 93.7%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 60-63 - Field: Percent of Amount Requested 
+        Amount requested divided by the amount funded.  For example: - A value of 90.0 specifies 90%. - A value of 93.7 specifies 93.7%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 60-63 - Field: Percent of Amount Requested 
 
         :param amount_requested_percentage: The amount_requested_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -222,7 +302,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def annual_financing_cost(self):
         """
         Gets the annual_financing_cost of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Annual cost of financing the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 158-164 - Field: Annual Total Cost of Financing 
+        Annual cost of financing the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 158-164 - Field: Annual Total Cost of Financing 
 
         :return: The annual_financing_cost of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -233,7 +313,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def annual_financing_cost(self, annual_financing_cost):
         """
         Sets the annual_financing_cost of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Annual cost of financing the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 158-164 - Field: Annual Total Cost of Financing 
+        Annual cost of financing the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 158-164 - Field: Annual Total Cost of Financing 
 
         :param annual_financing_cost: The annual_financing_cost of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -247,7 +327,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def annual_interest_rate(self):
         """
         Gets the annual_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Annual interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate 
+        Annual interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate 
 
         :return: The annual_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -258,7 +338,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def annual_interest_rate(self, annual_interest_rate):
         """
         Sets the annual_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Annual interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate 
+        Annual interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate 
 
         :param annual_interest_rate: The annual_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -272,7 +352,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def expenses(self):
         """
         Gets the expenses of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Expenses charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 64-75 - Field: Total Expenses 
+        Expenses charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 64-75 - Field: Total Expenses 
 
         :return: The expenses of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -283,7 +363,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def expenses(self, expenses):
         """
         Sets the expenses of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Expenses charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 64-75 - Field: Total Expenses 
+        Expenses charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 64-75 - Field: Total Expenses 
 
         :param expenses: The expenses of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -297,7 +377,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def expenses_percentage(self):
         """
         Gets the expenses_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Expenses divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 76-79 - Field: Percent of Total Expenses 
+        Expenses divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 76-79 - Field: Percent of Total Expenses 
 
         :return: The expenses_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -308,7 +388,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def expenses_percentage(self, expenses_percentage):
         """
         Sets the expenses_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Expenses divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 76-79 - Field: Percent of Total Expenses 
+        Expenses divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 76-79 - Field: Percent of Total Expenses 
 
         :param expenses_percentage: The expenses_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -322,7 +402,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def fees(self):
         """
         Gets the fees of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Fees charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 80-91 - Field: Total Fees 
+        Fees charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 80-91 - Field: Total Fees 
 
         :return: The fees of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -333,7 +413,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def fees(self, fees):
         """
         Sets the fees of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Fees charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 80-91 - Field: Total Fees 
+        Fees charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 80-91 - Field: Total Fees 
 
         :param fees: The fees of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -347,7 +427,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def fees_percentage(self):
         """
         Gets the fees_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Fees divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 92-95 - Field: Percent of Total Fees 
+        Fees divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 92-95 - Field: Percent of Total Fees 
 
         :return: The fees_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -358,7 +438,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def fees_percentage(self, fees_percentage):
         """
         Sets the fees_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Fees divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 92-95 - Field: Percent of Total Fees 
+        Fees divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 92-95 - Field: Percent of Total Fees 
 
         :param fees_percentage: The fees_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -369,10 +449,35 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._fees_percentage = fees_percentage
 
     @property
+    def frequency(self):
+        """
+        Gets the frequency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Frequency of the installment payments. When you do not include this field in a request for a Crediario installment payment, CyberSource sends a space character to the processor.  For details, see `installment_frequency` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for CyberSource through VisaNet. Possible values: - `B`: Biweekly - `M`: Monthly - `W`: Weekly  For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR9 - Position: 41 - Field: Installment Frequency  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The frequency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._frequency
+
+    @frequency.setter
+    def frequency(self, frequency):
+        """
+        Sets the frequency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Frequency of the installment payments. When you do not include this field in a request for a Crediario installment payment, CyberSource sends a space character to the processor.  For details, see `installment_frequency` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for CyberSource through VisaNet. Possible values: - `B`: Biweekly - `M`: Monthly - `W`: Weekly  For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR9 - Position: 41 - Field: Installment Frequency  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param frequency: The frequency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if frequency is not None and len(frequency) > 1:
+            raise ValueError("Invalid value for `frequency`, length must be less than or equal to `1`")
+
+        self._frequency = frequency
+
+    @property
     def insurance(self):
         """
         Gets the insurance of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Insurance charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 112-123 - Field: Total Insurance 
+        Insurance charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 112-123 - Field: Total Insurance 
 
         :return: The insurance of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -383,7 +488,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def insurance(self, insurance):
         """
         Sets the insurance of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Insurance charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 112-123 - Field: Total Insurance 
+        Insurance charged by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 112-123 - Field: Total Insurance 
 
         :param insurance: The insurance of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -397,7 +502,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def insurance_percentage(self):
         """
         Gets the insurance_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Insurance costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 124-127 - Field: Percent Of Total Insurance 
+        Insurance costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 124-127 - Field: Percent Of Total Insurance 
 
         :return: The insurance_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -408,7 +513,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def insurance_percentage(self, insurance_percentage):
         """
         Sets the insurance_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Insurance costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 124-127 - Field: Percent Of Total Insurance 
+        Insurance costs divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 124-127 - Field: Percent Of Total Insurance 
 
         :param insurance_percentage: The insurance_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -419,10 +524,35 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._insurance_percentage = insurance_percentage
 
     @property
+    def invoice_data(self):
+        """
+        Gets the invoice_data of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Invoice information that you want to provide to the issuer. This value is similar to a tracking number and is the same for all installment payments for one purchase.  This field is supported only for installment payments with Mastercard on CyberSource through VisaNet in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 51-70 - Field: Purchase Identification 
+
+        :return: The invoice_data of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._invoice_data
+
+    @invoice_data.setter
+    def invoice_data(self, invoice_data):
+        """
+        Sets the invoice_data of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Invoice information that you want to provide to the issuer. This value is similar to a tracking number and is the same for all installment payments for one purchase.  This field is supported only for installment payments with Mastercard on CyberSource through VisaNet in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 51-70 - Field: Purchase Identification 
+
+        :param invoice_data: The invoice_data of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if invoice_data is not None and len(invoice_data) > 20:
+            raise ValueError("Invalid value for `invoice_data`, length must be less than or equal to `20`")
+
+        self._invoice_data = invoice_data
+
+    @property
     def monthly_interest_rate(self):
         """
         Gets the monthly_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Monthly interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 144-150 - Field: Monthly Interest Rate 
+        Monthly interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 144-150 - Field: Monthly Interest Rate 
 
         :return: The monthly_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -433,7 +563,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def monthly_interest_rate(self, monthly_interest_rate):
         """
         Sets the monthly_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Monthly interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 144-150 - Field: Monthly Interest Rate 
+        Monthly interest rate.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 144-150 - Field: Monthly Interest Rate 
 
         :param monthly_interest_rate: The monthly_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -444,10 +574,60 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         self._monthly_interest_rate = monthly_interest_rate
 
     @property
+    def plan_type(self):
+        """
+        Gets the plan_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        #### American Express Direct, Cielo, and CyberSource Latin American Processing Flag that indicates the type of funding for the installment plan associated with the payment.  Possible values: - `1`: Merchant-funded installment plan - `2`: Issuer-funded installment plan If you do not include this field in the request, CyberSource uses the value in your CyberSource account.  To change the value in your CyberSource account, contact CyberSource Customer Service. For details, see `installment_plan_type` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet and American Express Defined code that indicates the type of installment plan for this transaction.  Contact American Express for: - Information about the kinds of installment plans that American Express provides - Values for this field  For installment payments with American Express in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR3 - Position: 5-6 - Field: Plan Type  * The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  #### CyberSource through VisaNet with Visa or Mastercard Flag indicating the type of funding for the installment plan associated with the payment. Possible values: - 1 or 01: Merchant-funded installment plan - 2 or 02: Issuer-funded installment plan - 43: Crediario installment plan—only with Visa in Brazil For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For installment payments with Visa in Brazil, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR1 - Position: 5-6 - Field: Installment Type  For all other kinds of installment payments, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR5 - Position: 39-40 - Field: Installment Plan Type (Issuer or Merchant) 
+
+        :return: The plan_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._plan_type
+
+    @plan_type.setter
+    def plan_type(self, plan_type):
+        """
+        Sets the plan_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        #### American Express Direct, Cielo, and CyberSource Latin American Processing Flag that indicates the type of funding for the installment plan associated with the payment.  Possible values: - `1`: Merchant-funded installment plan - `2`: Issuer-funded installment plan If you do not include this field in the request, CyberSource uses the value in your CyberSource account.  To change the value in your CyberSource account, contact CyberSource Customer Service. For details, see `installment_plan_type` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet and American Express Defined code that indicates the type of installment plan for this transaction.  Contact American Express for: - Information about the kinds of installment plans that American Express provides - Values for this field  For installment payments with American Express in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR3 - Position: 5-6 - Field: Plan Type  * The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  #### CyberSource through VisaNet with Visa or Mastercard Flag indicating the type of funding for the installment plan associated with the payment. Possible values: - 1 or 01: Merchant-funded installment plan - 2 or 02: Issuer-funded installment plan - 43: Crediario installment plan—only with Visa in Brazil For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For installment payments with Visa in Brazil, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR1 - Position: 5-6 - Field: Installment Type  For all other kinds of installment payments, the value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR5 - Position: 39-40 - Field: Installment Plan Type (Issuer or Merchant) 
+
+        :param plan_type: The plan_type of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if plan_type is not None and len(plan_type) > 1:
+            raise ValueError("Invalid value for `plan_type`, length must be less than or equal to `1`")
+
+        self._plan_type = plan_type
+
+    @property
+    def sequence(self):
+        """
+        Gets the sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Installment number when making payments in installments. Used along with `totalCount` to track which payment is being processed.  For example, the second of 5 payments would be passed to CyberSource as `sequence` = 2 and `totalCount` = 5.  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Chase Paymentech Solutions and FDC Compass This field is optional because this value is required in the merchant descriptors. For details, see \"Chase Paymentech Solutions Merchant Descriptors\" and \"FDC Compass Merchant Descriptors\" in the [Merchant Descriptors Using the SCMP API] (https://apps.cybersource.com/library/documentation/dev_guides/Merchant_Descriptors_SCMP_API/html/)  #### CyberSource through VisaNet When you do not include this field in a request for a Crediario installment payment, CyberSource sends a value of 0 to the processor.  For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR9 - Position: 38-40 - Field: Installment Payment Number  * The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+
+        :return: The sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: int
+        """
+        return self._sequence
+
+    @sequence.setter
+    def sequence(self, sequence):
+        """
+        Sets the sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Installment number when making payments in installments. Used along with `totalCount` to track which payment is being processed.  For example, the second of 5 payments would be passed to CyberSource as `sequence` = 2 and `totalCount` = 5.  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Chase Paymentech Solutions and FDC Compass This field is optional because this value is required in the merchant descriptors. For details, see \"Chase Paymentech Solutions Merchant Descriptors\" and \"FDC Compass Merchant Descriptors\" in the [Merchant Descriptors Using the SCMP API] (https://apps.cybersource.com/library/documentation/dev_guides/Merchant_Descriptors_SCMP_API/html/)  #### CyberSource through VisaNet When you do not include this field in a request for a Crediario installment payment, CyberSource sends a value of 0 to the processor.  For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR9 - Position: 38-40 - Field: Installment Payment Number  * The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+
+        :param sequence: The sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: int
+        """
+        if sequence is not None and sequence > 99:
+            raise ValueError("Invalid value for `sequence`, must be a value less than or equal to `99`")
+
+        self._sequence = sequence
+
+    @property
     def taxes(self):
         """
         Gets the taxes of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Taxes collected by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 96-107 - Field: Total Taxes 
+        Taxes collected by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 96-107 - Field: Total Taxes 
 
         :return: The taxes of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -458,7 +638,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def taxes(self, taxes):
         """
         Sets the taxes of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Taxes collected by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 96-107 - Field: Total Taxes 
+        Taxes collected by the issuer to fund the installment payments.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 96-107 - Field: Total Taxes 
 
         :param taxes: The taxes of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -472,7 +652,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def taxes_percentage(self):
         """
         Gets the taxes_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Taxes divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 108-111 - Field: Percent of Total Taxes 
+        Taxes divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 108-111 - Field: Percent of Total Taxes 
 
         :return: The taxes_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :rtype: str
@@ -483,7 +663,7 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
     def taxes_percentage(self, taxes_percentage):
         """
         Sets the taxes_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
-        Taxes divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 108-111 - Field: Percent of Total Taxes 
+        Taxes divided by the amount funded.  For example: - A value of 1.0 specifies 1%. - A value of 4.0 specifies 4%.  This field is included in the authorization reply for the Crediario eligibility request when the issuer approves the cardholder's request for Crediario installment payments in Brazil.  For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on **CyberSource through VisaNet**.  The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR9 - Position: 108-111 - Field: Percent of Total Taxes 
 
         :param taxes_percentage: The taxes_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
@@ -492,6 +672,152 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
             raise ValueError("Invalid value for `taxes_percentage`, length must be less than or equal to `4`")
 
         self._taxes_percentage = taxes_percentage
+
+    @property
+    def total_amount(self):
+        """
+        Gets the total_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Total amount of the loan that is being paid in installments. This field is supported only for CyberSource through VisaNet.  For details, see \"Installment Payments\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The total_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._total_amount
+
+    @total_amount.setter
+    def total_amount(self, total_amount):
+        """
+        Sets the total_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Total amount of the loan that is being paid in installments. This field is supported only for CyberSource through VisaNet.  For details, see \"Installment Payments\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param total_amount: The total_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if total_amount is not None and len(total_amount) > 12:
+            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `12`")
+
+        self._total_amount = total_amount
+
+    @property
+    def total_count(self):
+        """
+        Gets the total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Total number of installments when making payments in installments.  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Chase Paymentech Solutions and FDC Compass This field is optional because this value is required in the merchant descriptors.  For details, see \"Chase Paymentech Solutions Merchant Descriptors\" and \"FDC Compass Merchant Descriptors\" in the [Merchant Descriptors Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Merchant_Descriptors_SCMP_API/html/)  #### American Express Direct, Cielo, and Comercio Latino This value is the total number of installments you approved.  #### CyberSource Latin American Processing in Brazil This value is the total number of installments that you approved. The default is 1.  #### All Other Processors This value is used along with _sequence_ to track which payment is being processed.  For example, the second of 5 payments would be passed to CyberSource as _sequence_ = 2 and _totalCount_ = 5.  #### CyberSource through VisaNet For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR9 - Position: 23-25 - Field: Number of Installments  For installment payments with American Express in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR3 - Position: 7-8 - Field: Number of Installments  For installment payments with Visa in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR1 - Position: 7-8 - Field: Number of Installments  For all other kinds of installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR5 - Position: 20-22 - Field: Installment Total Count  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+
+        :return: The total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: int
+        """
+        return self._total_count
+
+    @total_count.setter
+    def total_count(self, total_count):
+        """
+        Sets the total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Total number of installments when making payments in installments.  For details, see \"Installment Payments\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Chase Paymentech Solutions and FDC Compass This field is optional because this value is required in the merchant descriptors.  For details, see \"Chase Paymentech Solutions Merchant Descriptors\" and \"FDC Compass Merchant Descriptors\" in the [Merchant Descriptors Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Merchant_Descriptors_SCMP_API/html/)  #### American Express Direct, Cielo, and Comercio Latino This value is the total number of installments you approved.  #### CyberSource Latin American Processing in Brazil This value is the total number of installments that you approved. The default is 1.  #### All Other Processors This value is used along with _sequence_ to track which payment is being processed.  For example, the second of 5 payments would be passed to CyberSource as _sequence_ = 2 and _totalCount_ = 5.  #### CyberSource through VisaNet For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR9 - Position: 23-25 - Field: Number of Installments  For installment payments with American Express in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR3 - Position: 7-8 - Field: Number of Installments  For installment payments with Visa in Brazil, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP07 TCR1 - Position: 7-8 - Field: Number of Installments  For all other kinds of installment payments, the value for this field corresponds to the following data in the TC 33 capture file*: - Record: CP01 TCR5 - Position: 20-22 - Field: Installment Total Count  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+
+        :param total_count: The total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: int
+        """
+        if total_count is not None and total_count > 99:
+            raise ValueError("Invalid value for `total_count`, must be a value less than or equal to `99`")
+
+        self._total_count = total_count
+
+    @property
+    def minimum_total_count(self):
+        """
+        Gets the minimum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        \"Minimum number of installments offered by the issuer for this purchase. The issuer provides this value when the first installment payment is successful. This field is supported for installment payments with Mastercard on CyberSource through VisaNet in all countries except Brazil, Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 75-76 - Field: Mastercard Minimum Number Of Installments 
+
+        :return: The minimum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._minimum_total_count
+
+    @minimum_total_count.setter
+    def minimum_total_count(self, minimum_total_count):
+        """
+        Sets the minimum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        \"Minimum number of installments offered by the issuer for this purchase. The issuer provides this value when the first installment payment is successful. This field is supported for installment payments with Mastercard on CyberSource through VisaNet in all countries except Brazil, Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 75-76 - Field: Mastercard Minimum Number Of Installments 
+
+        :param minimum_total_count: The minimum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._minimum_total_count = minimum_total_count
+
+    @property
+    def maximum_total_count(self):
+        """
+        Gets the maximum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Maximum number of installments offered by the issuer for this purchase. The issuer provides this value when the first installment payment is successful. This field is supported for installment payments with Mastercard on CyberSource through VisaNet in all countries except Brazil, Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR5 - Position: 77-78 - Field: Mastercard Maximum Number Of Installments 
+
+        :return: The maximum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._maximum_total_count
+
+    @maximum_total_count.setter
+    def maximum_total_count(self, maximum_total_count):
+        """
+        Sets the maximum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Maximum number of installments offered by the issuer for this purchase. The issuer provides this value when the first installment payment is successful. This field is supported for installment payments with Mastercard on CyberSource through VisaNet in all countries except Brazil, Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file1: - Record: CP01 TCR5 - Position: 77-78 - Field: Mastercard Maximum Number Of Installments 
+
+        :param maximum_total_count: The maximum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._maximum_total_count = maximum_total_count
+
+    @property
+    def first_installment_amount(self):
+        """
+        Gets the first_installment_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Amount of the first installment payment. The issuer provides this value when the first installment payment is successful. This field is supported for Mastercard installment payments on CyberSource through VisaNet in all countries except Brazil,Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 23-34 - Field: Amount of Each Installment 
+
+        :return: The first_installment_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._first_installment_amount
+
+    @first_installment_amount.setter
+    def first_installment_amount(self, first_installment_amount):
+        """
+        Sets the first_installment_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Amount of the first installment payment. The issuer provides this value when the first installment payment is successful. This field is supported for Mastercard installment payments on CyberSource through VisaNet in all countries except Brazil,Croatia, Georgia, and Greece. The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 23-34 - Field: Amount of Each Installment 
+
+        :param first_installment_amount: The first_installment_amount of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if first_installment_amount is not None and len(first_installment_amount) > 13:
+            raise ValueError("Invalid value for `first_installment_amount`, length must be less than or equal to `13`")
+
+        self._first_installment_amount = first_installment_amount
+
+    @property
+    def first_installment_date(self):
+        """
+        Gets the first_installment_date of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Date of the first installment payment. Format: YYMMDD. When you do not include this field, CyberSource sends a string of six zeros (000000) to the processor. For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR9 - Position: 42-47 - Field: Date of First Installment 
+
+        :return: The first_installment_date of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._first_installment_date
+
+    @first_installment_date.setter
+    def first_installment_date(self, first_installment_date):
+        """
+        Sets the first_installment_date of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        Date of the first installment payment. Format: YYMMDD. When you do not include this field, CyberSource sends a string of six zeros (000000) to the processor. For details, see \"Installment Payments on CyberSource through VisaNet\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  This field is supported only for Crediario installment payments in Brazil on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR9 - Position: 42-47 - Field: Date of First Installment 
+
+        :param first_installment_date: The first_installment_date of this PtsV2PaymentsPost201ResponseInstallmentInformation.
+        :type: str
+        """
+        if first_installment_date is not None and len(first_installment_date) > 6:
+            raise ValueError("Invalid value for `first_installment_date`, length must be less than or equal to `6`")
+
+        self._first_installment_date = first_installment_date
 
     def to_dict(self):
         """

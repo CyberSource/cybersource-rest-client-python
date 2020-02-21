@@ -4,14 +4,14 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_file**](SecureFileShareApi.md#get_file) | **GET** /sfs/v1/files/{fileId} | Download a file with file identifier
-[**get_file_detail**](SecureFileShareApi.md#get_file_detail) | **GET** /sfs/v1/file-details | Get list of files
+[**get_file**](SecureFileShareApi.md#get_file) | **GET** /sfs/v1/files/{fileId} | Download a File with File Identifier
+[**get_file_detail**](SecureFileShareApi.md#get_file_detail) | **GET** /sfs/v1/file-details | Get List of Files
 
 
 # **get_file**
 > get_file(file_id, organization_id=organization_id)
 
-Download a file with file identifier
+Download a File with File Identifier
 
 Download a file for the given file identifier
 
@@ -29,7 +29,7 @@ file_id = 'file_id_example' # str | Unique identifier for each file
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Download a file with file identifier
+    # Download a File with File Identifier
     api_instance.get_file(file_id, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling SecureFileShareApi->get_file: %s\n" % e)
@@ -60,7 +60,7 @@ No authorization required
 # **get_file_detail**
 > V1FileDetailsGet200Response get_file_detail(start_date, end_date, organization_id=organization_id)
 
-Get list of files
+Get List of Files
 
 Get list of files and it's information of them available inside the report directory
 
@@ -79,7 +79,7 @@ end_date = '2013-10-20' # date | Valid end date in **ISO 8601 format** Please re
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Get list of files
+    # Get List of Files
     api_response = api_instance.get_file_detail(start_date, end_date, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:

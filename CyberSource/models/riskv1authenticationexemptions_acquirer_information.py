@@ -52,7 +52,7 @@ class Riskv1authenticationexemptionsAcquirerInformation(object):
     def acquirer_bin(self):
         """
         Gets the acquirer_bin of this Riskv1authenticationexemptionsAcquirerInformation.
-        Acquirer bank ID number that corresponds to a certificate that Cybersource already has.This ID has this format. 4XXXXX for Visa and 5XXXXX for Mastercard. 
+        Acquirer bank ID number that  corresponds to a certificate that Cybersource already has.This ID has this format. 4XXXXX for Visa and 5XXXXX for Mastercard. 
 
         :return: The acquirer_bin of this Riskv1authenticationexemptionsAcquirerInformation.
         :rtype: str
@@ -63,7 +63,7 @@ class Riskv1authenticationexemptionsAcquirerInformation(object):
     def acquirer_bin(self, acquirer_bin):
         """
         Sets the acquirer_bin of this Riskv1authenticationexemptionsAcquirerInformation.
-        Acquirer bank ID number that corresponds to a certificate that Cybersource already has.This ID has this format. 4XXXXX for Visa and 5XXXXX for Mastercard. 
+        Acquirer bank ID number that  corresponds to a certificate that Cybersource already has.This ID has this format. 4XXXXX for Visa and 5XXXXX for Mastercard. 
 
         :param acquirer_bin: The acquirer_bin of this Riskv1authenticationexemptionsAcquirerInformation.
         :type: str

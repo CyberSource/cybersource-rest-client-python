@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def prefix(self):
         """
         Gets the prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :return: The prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def prefix(self, prefix):
         """
         Sets the prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :param prefix: The prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
@@ -107,7 +107,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def suffix(self):
         """
         Gets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :return: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -118,7 +118,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def suffix(self, suffix):
         """
         Sets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str

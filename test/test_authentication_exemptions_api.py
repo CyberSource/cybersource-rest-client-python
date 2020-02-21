@@ -35,7 +35,7 @@ class TestAuthenticationExemptionsApi(unittest.TestCase):
         """
         Test case for authentication_exemptions
 
-        Authentication exemptions service
+        Authentication Exemptions Service
         """
         pass
 

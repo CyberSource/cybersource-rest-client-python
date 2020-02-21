@@ -39,7 +39,8 @@ class PtsV2PaymentsRefundPost201Response(object):
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
         'refund_amount_details': 'PtsV2PaymentsRefundPost201ResponseRefundAmountDetails',
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
-        'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation'
+        'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation',
+        'point_of_sale_information': 'PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class PtsV2PaymentsRefundPost201Response(object):
         'client_reference_information': 'clientReferenceInformation',
         'refund_amount_details': 'refundAmountDetails',
         'processor_information': 'processorInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, refund_amount_details=None, processor_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, refund_amount_details=None, processor_information=None, order_information=None, point_of_sale_information=None):
         """
         PtsV2PaymentsRefundPost201Response - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         self._refund_amount_details = None
         self._processor_information = None
         self._order_information = None
+        self._point_of_sale_information = None
 
         if links is not None:
           self.links = links
@@ -87,6 +90,8 @@ class PtsV2PaymentsRefundPost201Response(object):
           self.processor_information = processor_information
         if order_information is not None:
           self.order_information = order_information
+        if point_of_sale_information is not None:
+          self.point_of_sale_information = point_of_sale_information
 
     @property
     def links(self):
@@ -113,7 +118,7 @@ class PtsV2PaymentsRefundPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2PaymentsRefundPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :return: The id of this PtsV2PaymentsRefundPost201Response.
         :rtype: str
@@ -124,7 +129,7 @@ class PtsV2PaymentsRefundPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2PaymentsRefundPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :param id: The id of this PtsV2PaymentsRefundPost201Response.
         :type: str
@@ -288,6 +293,27 @@ class PtsV2PaymentsRefundPost201Response(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def point_of_sale_information(self):
+        """
+        Gets the point_of_sale_information of this PtsV2PaymentsRefundPost201Response.
+
+        :return: The point_of_sale_information of this PtsV2PaymentsRefundPost201Response.
+        :rtype: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
+        """
+        return self._point_of_sale_information
+
+    @point_of_sale_information.setter
+    def point_of_sale_information(self, point_of_sale_information):
+        """
+        Sets the point_of_sale_information of this PtsV2PaymentsRefundPost201Response.
+
+        :param point_of_sale_information: The point_of_sale_information of this PtsV2PaymentsRefundPost201Response.
+        :type: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
+        """
+
+        self._point_of_sale_information = point_of_sale_information
 
     def to_dict(self):
         """

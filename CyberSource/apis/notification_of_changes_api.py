@@ -44,7 +44,7 @@ class NotificationOfChangesApi(object):
 
     def get_notification_of_change_report(self, start_time, end_time, **kwargs):
         """
-        Get Notification Of Changes
+        Get Notification of Changes
         Download the Notification of Change report. This report shows eCheck-related fields updated as a result of a response to an eCheck settlement transaction. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -71,7 +71,7 @@ class NotificationOfChangesApi(object):
 
     def get_notification_of_change_report_with_http_info(self, start_time, end_time, **kwargs):
         """
-        Get Notification Of Changes
+        Get Notification of Changes
         Download the Notification of Change report. This report shows eCheck-related fields updated as a result of a response to an eCheck settlement transaction. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

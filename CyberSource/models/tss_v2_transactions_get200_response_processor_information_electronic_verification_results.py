@@ -97,7 +97,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email(self):
         """
         Gets the email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -108,7 +108,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email(self, email):
         """
         Sets the email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param email: The email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -197,7 +197,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number(self):
         """
         Gets the phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -208,7 +208,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -247,7 +247,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street(self):
         """
         Gets the street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -258,7 +258,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street(self, street):
         """
         Sets the street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param street: The street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -297,7 +297,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code(self):
         """
         Gets the postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -308,7 +308,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param postal_code: The postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str

@@ -209,7 +209,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_frequency(self):
         """
         Gets the report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        'Report Frequency'   Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED 
+        'Report Frequency' **NOTE: Do not document USER_DEFINED Frequency field in developer center**  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED 
 
         :return: The report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :rtype: str
@@ -220,7 +220,7 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
     def report_frequency(self, report_frequency):
         """
         Sets the report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
-        'Report Frequency'   Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED 
+        'Report Frequency' **NOTE: Do not document USER_DEFINED Frequency field in developer center**  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED 
 
         :param report_frequency: The report_frequency of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str

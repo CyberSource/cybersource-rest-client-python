@@ -38,7 +38,9 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         'account_encoder_id': 'str',
         'issue_number': 'str',
         'start_month': 'str',
-        'start_year': 'str'
+        'start_year': 'str',
+        'source_account_type': 'str',
+        'source_account_type_details': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         'account_encoder_id': 'accountEncoderId',
         'issue_number': 'issueNumber',
         'start_month': 'startMonth',
-        'start_year': 'startYear'
+        'start_year': 'startYear',
+        'source_account_type': 'sourceAccountType',
+        'source_account_type_details': 'sourceAccountTypeDetails'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, source_account_type=None, source_account_type_details=None):
         """
         Ptsv2paymentsidrefundsPaymentInformationCard - a model defined in Swagger
         """
@@ -65,6 +69,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         self._issue_number = None
         self._start_month = None
         self._start_year = None
+        self._source_account_type = None
+        self._source_account_type_details = None
 
         if number is not None:
           self.number = number
@@ -82,6 +88,10 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
           self.start_month = start_month
         if start_year is not None:
           self.start_year = start_year
+        if source_account_type is not None:
+          self.source_account_type = source_account_type
+        if source_account_type_details is not None:
+          self.source_account_type_details = source_account_type_details
 
     @property
     def number(self):
@@ -280,6 +290,56 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
             raise ValueError("Invalid value for `start_year`, length must be less than or equal to `4`")
 
         self._start_year = start_year
+
+    @property
+    def source_account_type(self):
+        """
+        Gets the source_account_type of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  This field is required in the following cases:   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for CyberSource through VisaNet (CtV).      **Note** Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - `CHECKING`: Checking account  - `CREDIT`: Credit card account  - `SAVING`: Saving account  - `LINE_OF_CREDIT`: Line of credit or credit portion of combo card  - `PREPAID`: Prepaid card account or prepaid portion of combo card  - `UNIVERSAL`: Universal account 
+
+        :return: The source_account_type of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._source_account_type
+
+    @source_account_type.setter
+    def source_account_type(self, source_account_type):
+        """
+        Sets the source_account_type of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  This field is required in the following cases:   - Debit transactions on Cielo and Comercio Latino.   - Transactions with Brazilian-issued cards on CyberSource through VisaNet.   - Applicable only for CyberSource through VisaNet (CtV).      **Note** Combo cards in Brazil contain credit and debit functionality in a single card. Visa systems use a credit bank identification number (BIN) for this type of card. Using the BIN to determine whether a card is debit or credit can cause transactions with these cards to be processed incorrectly. CyberSource strongly recommends that you include this field for combo card transactions.  Possible values include the following.   - `CHECKING`: Checking account  - `CREDIT`: Credit card account  - `SAVING`: Saving account  - `LINE_OF_CREDIT`: Line of credit or credit portion of combo card  - `PREPAID`: Prepaid card account or prepaid portion of combo card  - `UNIVERSAL`: Universal account 
+
+        :param source_account_type: The source_account_type of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :type: str
+        """
+        if source_account_type is not None and len(source_account_type) > 20:
+            raise ValueError("Invalid value for `source_account_type`, length must be less than or equal to `20`")
+
+        self._source_account_type = source_account_type
+
+    @property
+    def source_account_type_details(self):
+        """
+        Gets the source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+
+        :return: The source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._source_account_type_details
+
+    @source_account_type_details.setter
+    def source_account_type_details(self, source_account_type_details):
+        """
+        Sets the source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+
+        :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :type: str
+        """
+        if source_account_type_details is not None and len(source_account_type_details) > 4:
+            raise ValueError("Invalid value for `source_account_type_details`, length must be less than or equal to `4`")
+
+        self._source_account_type_details = source_account_type_details
 
     def to_dict(self):
         """

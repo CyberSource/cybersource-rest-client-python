@@ -35,7 +35,7 @@ class TestReportDownloadsApi(unittest.TestCase):
         """
         Test case for download_report
 
-        Download a report
+        Download a Report
         """
         pass
 

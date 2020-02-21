@@ -81,6 +81,7 @@ class ApiClient(object):
         # Set default User-Agent.
         self.user_agent = 'Swagger-Codegen/1.0.0/python'
         self.client_id = self.get_client_id()
+        self.download_file_path = None
 
     @property
     def user_agent(self):
@@ -262,6 +263,8 @@ class ApiClient(object):
         # request url
         url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
         
+        if self.download_file_path is not None:
+            _preload_content = False        
 
         # perform request and return response
         response_data = self.request(method, url,
@@ -271,25 +274,36 @@ class ApiClient(object):
                                      _preload_content=_preload_content,
                                      _request_timeout=_request_timeout)
 
-        self.last_response = response_data
+        if self.download_file_path is None:
+            self.last_response = response_data
 
-        return_data = response_data
-        if _preload_content:
-            # deserialize response data
-            if response_type:
-                return_data = self.deserialize(response_data, response_type)
+            return_data = response_data
+            if _preload_content:
+                # deserialize response data
+                if response_type:
+                    return_data = self.deserialize(response_data, response_type)
+                else:
+                    return_data = None
+            
+            if callback:
+                if _return_http_data_only:
+                    callback(return_data)
+                else:
+                    callback((return_data, response_data.status, response_data.getheaders()))
+            elif _return_http_data_only:
+                return (return_data, response_data.status, response_data.data)
             else:
-                return_data = None
-
-        if callback:
-            if _return_http_data_only:
-                callback(return_data)
-            else:
-                callback((return_data, response_data.status, response_data.getheaders()))
-        elif _return_http_data_only:
-            return (return_data, response_data.status, response_data.data)
+                return (return_data, response_data.status, response_data.getheaders())
         else:
-            return (return_data, response_data.status, response_data.getheaders())
+            if response_data.status >= 200 and response_data.status <= 299:
+                fdst = open(self.download_file_path, 'w')
+                
+                for chunk in response_data.stream():
+                    fdst.writelines(chunk.decode('utf-8'))
+
+                fdst.close()
+            response_data.release_conn()
+            return (response_data.status, response_data.getheaders())
 
     def sanitize_for_serialization(self, obj):
         """
@@ -463,8 +477,8 @@ class ApiClient(object):
                                             response_type, auth_settings,
                                             callback, _return_http_data_only,
                                             collection_formats, _preload_content, _request_timeout))
-        thread.start()
-        return thread
+            thread.start()
+            return thread
 
     def request(self, method, url, query_params=None, headers=None,
                 post_params=None, body=None, _preload_content=True, _request_timeout=None):

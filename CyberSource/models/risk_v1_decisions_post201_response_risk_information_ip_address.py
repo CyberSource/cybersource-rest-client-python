@@ -35,7 +35,9 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
         'locality': 'str',
         'country': 'str',
         'administrative_area': 'str',
-        'routing_method': 'str'
+        'routing_method': 'str',
+        'carrier': 'str',
+        'organization': 'str'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
         'locality': 'locality',
         'country': 'country',
         'administrative_area': 'administrativeArea',
-        'routing_method': 'routingMethod'
+        'routing_method': 'routingMethod',
+        'carrier': 'carrier',
+        'organization': 'organization'
     }
 
-    def __init__(self, anonymizer_status=None, locality=None, country=None, administrative_area=None, routing_method=None):
+    def __init__(self, anonymizer_status=None, locality=None, country=None, administrative_area=None, routing_method=None, carrier=None, organization=None):
         """
         RiskV1DecisionsPost201ResponseRiskInformationIpAddress - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
         self._country = None
         self._administrative_area = None
         self._routing_method = None
+        self._carrier = None
+        self._organization = None
 
         if anonymizer_status is not None:
           self.anonymizer_status = anonymizer_status
@@ -67,6 +73,10 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
           self.administrative_area = administrative_area
         if routing_method is not None:
           self.routing_method = routing_method
+        if carrier is not None:
+          self.carrier = carrier
+        if organization is not None:
+          self.organization = organization
 
     @property
     def anonymizer_status(self):
@@ -192,6 +202,56 @@ class RiskV1DecisionsPost201ResponseRiskInformationIpAddress(object):
             raise ValueError("Invalid value for `routing_method`, length must be less than or equal to `255`")
 
         self._routing_method = routing_method
+
+    @property
+    def carrier(self):
+        """
+        Gets the carrier of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Provides the name of the organization that owns the ASN. The carrier is responsible for the traffic carried on the network or set of networks designated as an Autonomous System (AS) and identified by the ASN. While there are more than 27,000 active ASNs, there are fewer carriers, because a single carrier often manages several ASNs. 
+
+        :return: The carrier of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :rtype: str
+        """
+        return self._carrier
+
+    @carrier.setter
+    def carrier(self, carrier):
+        """
+        Sets the carrier of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        Provides the name of the organization that owns the ASN. The carrier is responsible for the traffic carried on the network or set of networks designated as an Autonomous System (AS) and identified by the ASN. While there are more than 27,000 active ASNs, there are fewer carriers, because a single carrier often manages several ASNs. 
+
+        :param carrier: The carrier of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :type: str
+        """
+        if carrier is not None and len(carrier) > 255:
+            raise ValueError("Invalid value for `carrier`, length must be less than or equal to `255`")
+
+        self._carrier = carrier
+
+    @property
+    def organization(self):
+        """
+        Gets the organization of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        The Registering Organization is the entity responsible for the actions and content associated with a given block of IP addresses. This is in contrast to the carrier, which is responsible for the routing of traffic for network blocks. Registering Organizations include many types of entities, including corporate, government, or educational entities, and ISPs managing the allocation and use of network blocks. 
+
+        :return: The organization of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :rtype: str
+        """
+        return self._organization
+
+    @organization.setter
+    def organization(self, organization):
+        """
+        Sets the organization of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        The Registering Organization is the entity responsible for the actions and content associated with a given block of IP addresses. This is in contrast to the carrier, which is responsible for the routing of traffic for network blocks. Registering Organizations include many types of entities, including corporate, government, or educational entities, and ISPs managing the allocation and use of network blocks. 
+
+        :param organization: The organization of this RiskV1DecisionsPost201ResponseRiskInformationIpAddress.
+        :type: str
+        """
+        if organization is not None and len(organization) > 255:
+            raise ValueError("Invalid value for `organization`, length must be less than or equal to `255`")
+
+        self._organization = organization
 
     def to_dict(self):
         """

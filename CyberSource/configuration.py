@@ -90,7 +90,6 @@ class Configuration(object):
         self.proxy = None
         self.proxy_username = None
         self.proxy_password = None
-        
         # Safe chars for path_param
         self.safe_chars_for_path_param = ''
 

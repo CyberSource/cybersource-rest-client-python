@@ -19,7 +19,7 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.error_links import ErrorLinks
+from CyberSource.models.error__links import ErrorLinks
 
 
 class TestErrorLinks(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestErrorLinks(unittest.TestCase):
         Test ErrorLinks
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.error_links.ErrorLinks()
+        #model = CyberSource.models.error__links.ErrorLinks()
         pass
 
 

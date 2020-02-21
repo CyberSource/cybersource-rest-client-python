@@ -62,7 +62,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def reversed_amount(self):
         """
         Gets the reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def reversed_amount(self, reversed_amount):
         """
         Sets the reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param reversed_amount: The reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str
@@ -87,7 +87,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def original_transaction_amount(self):
         """
         Gets the original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -98,7 +98,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def original_transaction_amount(self, original_transaction_amount):
         """
         Sets the original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param original_transaction_amount: The original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str
@@ -112,7 +112,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
 
         :return: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -123,7 +123,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
 
         :param currency: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str

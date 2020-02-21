@@ -35,7 +35,7 @@ class TestDownloadDTDApi(unittest.TestCase):
         """
         Test case for get_dtdv2
 
-        Download DTD for report
+        Download DTD for Report
         """
         pass
 

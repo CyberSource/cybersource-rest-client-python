@@ -44,7 +44,7 @@ class TssV2TransactionsPost201Response(object):
         'status': 'str',
         'submit_time_utc': 'str',
         'embedded': 'TssV2TransactionsPost201ResponseEmbedded',
-        'links': 'PtsV2PaymentsReversalsPost201ResponseLinks'
+        'links': 'PtsV2IncrementalAuthorizationPatch201ResponseLinks'
     }
 
     attribute_map = {
@@ -418,7 +418,7 @@ class TssV2TransactionsPost201Response(object):
         Gets the links of this TssV2TransactionsPost201Response.
 
         :return: The links of this TssV2TransactionsPost201Response.
-        :rtype: PtsV2PaymentsReversalsPost201ResponseLinks
+        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
         return self._links
 
@@ -428,7 +428,7 @@ class TssV2TransactionsPost201Response(object):
         Sets the links of this TssV2TransactionsPost201Response.
 
         :param links: The links of this TssV2TransactionsPost201Response.
-        :type: PtsV2PaymentsReversalsPost201ResponseLinks
+        :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
         self._links = links

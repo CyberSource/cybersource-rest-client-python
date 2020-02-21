@@ -52,7 +52,10 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'pin_block_encoding_format': 'int',
         'encrypted_pin': 'str',
         'encrypted_key_serial_number': 'str',
-        'partner_sdk_version': 'str'
+        'partner_sdk_version': 'str',
+        'emv_application_identifier_and_dedicated_file_name': 'str',
+        'terminal_compliance': 'str',
+        'is_dedicated_hardware_terminal': 'str'
     }
 
     attribute_map = {
@@ -77,10 +80,13 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'pin_block_encoding_format': 'pinBlockEncodingFormat',
         'encrypted_pin': 'encryptedPin',
         'encrypted_key_serial_number': 'encryptedKeySerialNumber',
-        'partner_sdk_version': 'partnerSdkVersion'
+        'partner_sdk_version': 'partnerSdkVersion',
+        'emv_application_identifier_and_dedicated_file_name': 'emvApplicationIdentifierAndDedicatedFileName',
+        'terminal_compliance': 'terminalCompliance',
+        'is_dedicated_hardware_terminal': 'isDedicatedHardwareTerminal'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, pin_entry_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, pin_entry_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -107,6 +113,9 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._encrypted_pin = None
         self._encrypted_key_serial_number = None
         self._partner_sdk_version = None
+        self._emv_application_identifier_and_dedicated_file_name = None
+        self._terminal_compliance = None
+        self._is_dedicated_hardware_terminal = None
 
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -152,12 +161,18 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.encrypted_key_serial_number = encrypted_key_serial_number
         if partner_sdk_version is not None:
           self.partner_sdk_version = partner_sdk_version
+        if emv_application_identifier_and_dedicated_file_name is not None:
+          self.emv_application_identifier_and_dedicated_file_name = emv_application_identifier_and_dedicated_file_name
+        if terminal_compliance is not None:
+          self.terminal_compliance = terminal_compliance
+        if is_dedicated_hardware_terminal is not None:
+          self.is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
 
     @property
     def terminal_id(self):
         """
         Gets the terminal_id of this Ptsv2paymentsPointOfSaleInformation.
-        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  **For Payouts**: This field is applicable for CtV. 
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
 
         :return: The terminal_id of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -168,7 +183,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_id(self, terminal_id):
         """
         Sets the terminal_id of this Ptsv2paymentsPointOfSaleInformation.
-        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  **For Payouts**: This field is applicable for CtV. 
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  For details, see the `terminal_id` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/)  **For Payouts**: This field is applicable for CtV. 
 
         :param terminal_id: The terminal_id of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
@@ -182,7 +197,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_serial_number(self):
         """
         Gets the terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
-        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -193,7 +208,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_serial_number(self, terminal_serial_number):
         """
         Sets the terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
-        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Terminal serial number assigned by the hardware manufacturer. This value is provided by the client software that is installed on the POS terminal.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX.  For details, see the `terminal_serial_number` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param terminal_serial_number: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
@@ -232,7 +247,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cat_level(self):
         """
         Gets the cat_level of this Ptsv2paymentsPointOfSaleInformation.
-        Type of cardholder-activated terminal. Possible values:   - 1: Automated dispensing machine  - 2: Self-service terminal  - 3: Limited amount terminal  - 4: In-flight commerce (IFC) terminal  - 5: Radio frequency device  - 6: Mobile acceptance terminal  - 7: Electronic cash register  - 8: E-commerce device at your location  - 9: Terminal or cash register that uses a dialup connection to connect to the transaction processing network  #### Chase Paymentech Solutions Only values 1, 2, and 3 are supported.  #### FDC Nashville Global Only values 7, 8, and 9 are supported.  #### GPN Only values 6, 7, 8, and 9 are supported.  #### TSYS Acquiring Solutions Only value 6 is supported. For details, see the `cat_level` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of cardholder-activated terminal. Possible values:   - 1: Automated dispensing machine  - 2: Self-service terminal  - 3: Limited amount terminal  - 4: In-flight commerce (IFC) terminal  - 5: Radio frequency device  - 6: Mobile acceptance terminal  - 7: Electronic cash register  - 8: E-commerce device at your location  - 9: Terminal or cash register that uses a dialup connection to connect to the transaction processing network  #### Chase Paymentech Solutions Only values 1, 2, and 3 are supported.  #### FDC Nashville Global Only values 7, 8, and 9 are supported.  #### GPN Only values 6, 7, 8, and 9 are supported.  #### TSYS Acquiring Solutions Only value 6 is supported. For details, see the `cat_level` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The cat_level of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: int
@@ -243,7 +258,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cat_level(self, cat_level):
         """
         Sets the cat_level of this Ptsv2paymentsPointOfSaleInformation.
-        Type of cardholder-activated terminal. Possible values:   - 1: Automated dispensing machine  - 2: Self-service terminal  - 3: Limited amount terminal  - 4: In-flight commerce (IFC) terminal  - 5: Radio frequency device  - 6: Mobile acceptance terminal  - 7: Electronic cash register  - 8: E-commerce device at your location  - 9: Terminal or cash register that uses a dialup connection to connect to the transaction processing network  #### Chase Paymentech Solutions Only values 1, 2, and 3 are supported.  #### FDC Nashville Global Only values 7, 8, and 9 are supported.  #### GPN Only values 6, 7, 8, and 9 are supported.  #### TSYS Acquiring Solutions Only value 6 is supported. For details, see the `cat_level` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of cardholder-activated terminal. Possible values:   - 1: Automated dispensing machine  - 2: Self-service terminal  - 3: Limited amount terminal  - 4: In-flight commerce (IFC) terminal  - 5: Radio frequency device  - 6: Mobile acceptance terminal  - 7: Electronic cash register  - 8: E-commerce device at your location  - 9: Terminal or cash register that uses a dialup connection to connect to the transaction processing network  #### Chase Paymentech Solutions Only values 1, 2, and 3 are supported.  #### FDC Nashville Global Only values 7, 8, and 9 are supported.  #### GPN Only values 6, 7, 8, and 9 are supported.  #### TSYS Acquiring Solutions Only value 6 is supported. For details, see the `cat_level` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param cat_level: The cat_level of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
@@ -259,7 +274,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def entry_mode(self):
         """
         Gets the entry_mode of this Ptsv2paymentsPointOfSaleInformation.
-        Method of entering credit card information into the POS terminal. Possible values:   - `contact`: Read from direct contact with chip card.  - `contactless`: Read from a contactless interface using chip data.  - `keyed`: Manually keyed into POS terminal.  - `msd`: Read from a contactless interface using magnetic stripe data (MSD).  - `swiped`: Read from credit card magnetic stripe.  The contact, contactless, and msd values are supported only for EMV transactions.  For details, see the `pos_entry_mode` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method of entering credit card information into the POS terminal. Possible values:   - `contact`: Read from direct contact with chip card.  - `contactless`: Read from a contactless interface using chip data.  - `keyed`: Manually keyed into POS terminal.  - `msd`: Read from a contactless interface using magnetic stripe data (MSD).  - `swiped`: Read from credit card magnetic stripe.  The contact, contactless, and msd values are supported only for EMV transactions.  For details, see the `pos_entry_mode` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The entry_mode of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -270,7 +285,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def entry_mode(self, entry_mode):
         """
         Sets the entry_mode of this Ptsv2paymentsPointOfSaleInformation.
-        Method of entering credit card information into the POS terminal. Possible values:   - `contact`: Read from direct contact with chip card.  - `contactless`: Read from a contactless interface using chip data.  - `keyed`: Manually keyed into POS terminal.  - `msd`: Read from a contactless interface using magnetic stripe data (MSD).  - `swiped`: Read from credit card magnetic stripe.  The contact, contactless, and msd values are supported only for EMV transactions.  For details, see the `pos_entry_mode` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method of entering credit card information into the POS terminal. Possible values:   - `contact`: Read from direct contact with chip card.  - `contactless`: Read from a contactless interface using chip data.  - `keyed`: Manually keyed into POS terminal.  - `msd`: Read from a contactless interface using magnetic stripe data (MSD).  - `swiped`: Read from credit card magnetic stripe.  The contact, contactless, and msd values are supported only for EMV transactions.  For details, see the `pos_entry_mode` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param entry_mode: The entry_mode of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
@@ -284,7 +299,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_capability(self):
         """
         Gets the terminal_capability of this Ptsv2paymentsPointOfSaleInformation.
-        POS terminal’s capability. Possible values:   - `1`: Terminal has a magnetic stripe reader only.  - `2`: Terminal has a magnetic stripe reader and manual entry capability.  - `3`: Terminal has manual entry capability only.  - `4`: Terminal can read chip cards.  - `5`: Terminal can read contactless chip cards.  The values of 4 and 5 are supported only for EMV transactions. * Applicable only for CTV for Payouts.  For processor-specific details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        POS terminal’s capability. Possible values:   - `1`: Terminal has a magnetic stripe reader only.  - `2`: Terminal has a magnetic stripe reader and manual entry capability.  - `3`: Terminal has manual entry capability only.  - `4`: Terminal can read chip cards.  - `5`: Terminal can read contactless chip cards.  The values of 4 and 5 are supported only for EMV transactions. * Applicable only for CTV for Payouts.  For processor-specific details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The terminal_capability of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: int
@@ -295,7 +310,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_capability(self, terminal_capability):
         """
         Sets the terminal_capability of this Ptsv2paymentsPointOfSaleInformation.
-        POS terminal’s capability. Possible values:   - `1`: Terminal has a magnetic stripe reader only.  - `2`: Terminal has a magnetic stripe reader and manual entry capability.  - `3`: Terminal has manual entry capability only.  - `4`: Terminal can read chip cards.  - `5`: Terminal can read contactless chip cards.  The values of 4 and 5 are supported only for EMV transactions. * Applicable only for CTV for Payouts.  For processor-specific details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        POS terminal’s capability. Possible values:   - `1`: Terminal has a magnetic stripe reader only.  - `2`: Terminal has a magnetic stripe reader and manual entry capability.  - `3`: Terminal has manual entry capability only.  - `4`: Terminal can read chip cards.  - `5`: Terminal can read contactless chip cards.  The values of 4 and 5 are supported only for EMV transactions. * Applicable only for CTV for Payouts.  For processor-specific details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param terminal_capability: The terminal_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
@@ -311,7 +326,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def pin_entry_capability(self):
         """
         Gets the pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        A one-digit code that identifies the capability of terminal to capture PINs.  This code does not necessarily mean that a PIN was entered or is included in this message.  POS terminal’s capability. Possible values: - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards.* - `5`: Terminal can read contactless chip cards.* * The values of 4 and 5 are supported only for EMV transactions.  For Payouts: This field is applicable for CtV.  For details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        A one-digit code that identifies the capability of terminal to capture PINs.  This code does not necessarily mean that a PIN was entered or is included in this message.  POS terminal’s capability. Possible values: - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards.* - `5`: Terminal can read contactless chip cards.* * The values of 4 and 5 are supported only for EMV transactions.  For Payouts: This field is applicable for CtV.  For details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :return: The pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: int
@@ -322,7 +337,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def pin_entry_capability(self, pin_entry_capability):
         """
         Sets the pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        A one-digit code that identifies the capability of terminal to capture PINs.  This code does not necessarily mean that a PIN was entered or is included in this message.  POS terminal’s capability. Possible values: - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards.* - `5`: Terminal can read contactless chip cards.* * The values of 4 and 5 are supported only for EMV transactions.  For Payouts: This field is applicable for CtV.  For details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        A one-digit code that identifies the capability of terminal to capture PINs.  This code does not necessarily mean that a PIN was entered or is included in this message.  POS terminal’s capability. Possible values: - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards.* - `5`: Terminal can read contactless chip cards.* * The values of 4 and 5 are supported only for EMV transactions.  For Payouts: This field is applicable for CtV.  For details, see the `terminal_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
 
         :param pin_entry_capability: The pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
@@ -384,7 +399,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def amex_capn_data(self):
         """
         Gets the amex_capn_data of this Ptsv2paymentsPointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The amex_capn_data of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -395,13 +410,13 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def amex_capn_data(self, amex_capn_data):
         """
         Sets the amex_capn_data of this Ptsv2paymentsPointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param amex_capn_data: The amex_capn_data of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 12:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `12`")
+        if amex_capn_data is not None and len(amex_capn_data) > 15:
+            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `15`")
 
         self._amex_capn_data = amex_capn_data
 
@@ -692,6 +707,81 @@ class Ptsv2paymentsPointOfSaleInformation(object):
             raise ValueError("Invalid value for `partner_sdk_version`, length must be less than or equal to `32`")
 
         self._partner_sdk_version = partner_sdk_version
+
+    @property
+    def emv_application_identifier_and_dedicated_file_name(self):
+        """
+        Gets the emv_application_identifier_and_dedicated_file_name of this Ptsv2paymentsPointOfSaleInformation.
+        This 32 byte length-maximum EBCDIC-K value is used to identify which chip application was performed between the terminal and the chip product. The included values are the Application Identifier (AID) and the Dedicated File (DF) name. It is available to early- or full-option VSDC issuers. Only single byte Katakana characters that can map to the EBCDIC-K table expected in the name. 
+
+        :return: The emv_application_identifier_and_dedicated_file_name of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._emv_application_identifier_and_dedicated_file_name
+
+    @emv_application_identifier_and_dedicated_file_name.setter
+    def emv_application_identifier_and_dedicated_file_name(self, emv_application_identifier_and_dedicated_file_name):
+        """
+        Sets the emv_application_identifier_and_dedicated_file_name of this Ptsv2paymentsPointOfSaleInformation.
+        This 32 byte length-maximum EBCDIC-K value is used to identify which chip application was performed between the terminal and the chip product. The included values are the Application Identifier (AID) and the Dedicated File (DF) name. It is available to early- or full-option VSDC issuers. Only single byte Katakana characters that can map to the EBCDIC-K table expected in the name. 
+
+        :param emv_application_identifier_and_dedicated_file_name: The emv_application_identifier_and_dedicated_file_name of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if emv_application_identifier_and_dedicated_file_name is not None and len(emv_application_identifier_and_dedicated_file_name) > 32:
+            raise ValueError("Invalid value for `emv_application_identifier_and_dedicated_file_name`, length must be less than or equal to `32`")
+
+        self._emv_application_identifier_and_dedicated_file_name = emv_application_identifier_and_dedicated_file_name
+
+    @property
+    def terminal_compliance(self):
+        """
+        Gets the terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
+        This tag contains indicators to determine if the terminal used for the transaction is compliant with new standards mandated by the Reserve Bank of India. The new standards are applicable to card-present domestic transactions for the country of India. This tag contains one of the following data values:  First byte (Position 1) : Terminal supports TLE - `1` (Not certified) - `2` (Certified)  Second byte (Position 2) : Terminal supports UKPT/DUKPT - `1` (Not certified) - `2` (Certified) 
+
+        :return: The terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_compliance
+
+    @terminal_compliance.setter
+    def terminal_compliance(self, terminal_compliance):
+        """
+        Sets the terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
+        This tag contains indicators to determine if the terminal used for the transaction is compliant with new standards mandated by the Reserve Bank of India. The new standards are applicable to card-present domestic transactions for the country of India. This tag contains one of the following data values:  First byte (Position 1) : Terminal supports TLE - `1` (Not certified) - `2` (Certified)  Second byte (Position 2) : Terminal supports UKPT/DUKPT - `1` (Not certified) - `2` (Certified) 
+
+        :param terminal_compliance: The terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if terminal_compliance is not None and len(terminal_compliance) > 2:
+            raise ValueError("Invalid value for `terminal_compliance`, length must be less than or equal to `2`")
+
+        self._terminal_compliance = terminal_compliance
+
+    @property
+    def is_dedicated_hardware_terminal(self):
+        """
+        Gets the is_dedicated_hardware_terminal of this Ptsv2paymentsPointOfSaleInformation.
+        This API will indicate mPOS device capability with one  of the following values. - 0: Dongle - 1: Phone or tablet 
+
+        :return: The is_dedicated_hardware_terminal of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._is_dedicated_hardware_terminal
+
+    @is_dedicated_hardware_terminal.setter
+    def is_dedicated_hardware_terminal(self, is_dedicated_hardware_terminal):
+        """
+        Sets the is_dedicated_hardware_terminal of this Ptsv2paymentsPointOfSaleInformation.
+        This API will indicate mPOS device capability with one  of the following values. - 0: Dongle - 1: Phone or tablet 
+
+        :param is_dedicated_hardware_terminal: The is_dedicated_hardware_terminal of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+        if is_dedicated_hardware_terminal is not None and len(is_dedicated_hardware_terminal) > 1:
+            raise ValueError("Invalid value for `is_dedicated_hardware_terminal`, length must be less than or equal to `1`")
+
+        self._is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
 
     def to_dict(self):
         """

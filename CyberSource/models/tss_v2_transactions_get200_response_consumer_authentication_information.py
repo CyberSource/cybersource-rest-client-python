@@ -67,7 +67,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def eci_raw(self):
         """
         Gets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -78,7 +78,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param eci_raw: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
@@ -117,7 +117,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param xid: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str

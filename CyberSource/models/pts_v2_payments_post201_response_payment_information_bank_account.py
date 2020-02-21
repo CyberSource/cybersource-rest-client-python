@@ -52,7 +52,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBankAccount(object):
     def corrected_account_number(self):
         """
         Gets the corrected_account_number of this PtsV2PaymentsPost201ResponsePaymentInformationBankAccount.
-        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_account_number` or `ecp_credit_corrected_account_number` field descriptions in [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_account_number` or `ecp_credit_corrected_account_number` field descriptions in [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The corrected_account_number of this PtsV2PaymentsPost201ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -63,7 +63,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBankAccount(object):
     def corrected_account_number(self, corrected_account_number):
         """
         Sets the corrected_account_number of this PtsV2PaymentsPost201ResponsePaymentInformationBankAccount.
-        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_account_number` or `ecp_credit_corrected_account_number` field descriptions in [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Corrected account number from the ACH verification service.  For details, see `ecp_debit_corrected_account_number` or `ecp_credit_corrected_account_number` field descriptions in [Electronic Check Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param corrected_account_number: The corrected_account_number of this PtsV2PaymentsPost201ResponsePaymentInformationBankAccount.
         :type: str

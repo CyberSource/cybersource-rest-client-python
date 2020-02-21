@@ -33,28 +33,33 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     swagger_types = {
         'country': 'str',
         'discretionary_data': 'str',
+        'country_specific_discretionary_data': 'str',
         'response_code': 'str'
     }
 
     attribute_map = {
         'country': 'country',
         'discretionary_data': 'discretionaryData',
+        'country_specific_discretionary_data': 'countrySpecificDiscretionaryData',
         'response_code': 'responseCode'
     }
 
-    def __init__(self, country=None, discretionary_data=None, response_code=None):
+    def __init__(self, country=None, discretionary_data=None, country_specific_discretionary_data=None, response_code=None):
         """
         PtsV2PaymentsPost201ResponseIssuerInformation - a model defined in Swagger
         """
 
         self._country = None
         self._discretionary_data = None
+        self._country_specific_discretionary_data = None
         self._response_code = None
 
         if country is not None:
           self.country = country
         if discretionary_data is not None:
           self.discretionary_data = discretionary_data
+        if country_specific_discretionary_data is not None:
+          self.country_specific_discretionary_data = country_specific_discretionary_data
         if response_code is not None:
           self.response_code = response_code
 
@@ -62,7 +67,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def country(self):
         """
         Gets the country of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        Country in which the card was issued. This information enables you to determine whether the card was issued domestically or internationally. Use the two-character ISO Standard Country Codes.  This field is supported for Visa, Mastercard, Discover, Diners Club, JCB, and Maestro (International) on Chase Paymentech Solutions.  For details, see `auth_card_issuer_country` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Country in which the card was issued. This information enables you to determine whether the card was issued domestically or internationally. Use the two-character ISO Standard Country Codes.  This field is supported for Visa, Mastercard, Discover, Diners Club, JCB, and Maestro (International) on Chase Paymentech Solutions.  For details, see `auth_card_issuer_country` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The country of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :rtype: str
@@ -73,7 +78,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def country(self, country):
         """
         Sets the country of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        Country in which the card was issued. This information enables you to determine whether the card was issued domestically or internationally. Use the two-character ISO Standard Country Codes.  This field is supported for Visa, Mastercard, Discover, Diners Club, JCB, and Maestro (International) on Chase Paymentech Solutions.  For details, see `auth_card_issuer_country` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Country in which the card was issued. This information enables you to determine whether the card was issued domestically or internationally. Use the two-character ISO Standard Country Codes.  This field is supported for Visa, Mastercard, Discover, Diners Club, JCB, and Maestro (International) on Chase Paymentech Solutions.  For details, see `auth_card_issuer_country` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param country: The country of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
@@ -87,7 +92,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def discretionary_data(self):
         """
         Gets the discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :rtype: str
@@ -98,7 +103,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def discretionary_data(self, discretionary_data):
         """
         Sets the discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param discretionary_data: The discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
@@ -107,6 +112,31 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
             raise ValueError("Invalid value for `discretionary_data`, length must be less than or equal to `255`")
 
         self._discretionary_data = discretionary_data
+
+    @property
+    def country_specific_discretionary_data(self):
+        """
+        Gets the country_specific_discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        Data defined by the issuer.  This national use field contains two subfields for information unique to the processing of Visa transactions by members in Japan. This subfield contains the Katakana text to be printed on the receipt. For details, see `jpo_issuer_message` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The country_specific_discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :rtype: str
+        """
+        return self._country_specific_discretionary_data
+
+    @country_specific_discretionary_data.setter
+    def country_specific_discretionary_data(self, country_specific_discretionary_data):
+        """
+        Sets the country_specific_discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        Data defined by the issuer.  This national use field contains two subfields for information unique to the processing of Visa transactions by members in Japan. This subfield contains the Katakana text to be printed on the receipt. For details, see `jpo_issuer_message` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param country_specific_discretionary_data: The country_specific_discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :type: str
+        """
+        if country_specific_discretionary_data is not None and len(country_specific_discretionary_data) > 140:
+            raise ValueError("Invalid value for `country_specific_discretionary_data`, length must be less than or equal to `140`")
+
+        self._country_specific_discretionary_data = country_specific_discretionary_data
 
     @property
     def response_code(self):

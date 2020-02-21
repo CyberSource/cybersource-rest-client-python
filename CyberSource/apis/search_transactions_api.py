@@ -44,7 +44,7 @@ class SearchTransactionsApi(object):
 
     def create_search(self, create_search_request, **kwargs):
         """
-        Create a search request
+        Create a Search Request
         Create a search request. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -70,7 +70,7 @@ class SearchTransactionsApi(object):
 
     def create_search_with_http_info(self, create_search_request, **kwargs):
         """
-        Create a search request
+        Create a Search Request
         Create a search request. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -150,7 +150,7 @@ class SearchTransactionsApi(object):
 
     def get_search(self, search_id, **kwargs):
         """
-        Get Search results
+        Get Search Results
         Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -176,7 +176,7 @@ class SearchTransactionsApi(object):
 
     def get_search_with_http_info(self, search_id, **kwargs):
         """
-        Get Search results
+        Get Search Results
         Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

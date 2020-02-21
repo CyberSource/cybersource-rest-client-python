@@ -82,7 +82,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def routing_number(self):
         """
         Gets the routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -93,7 +93,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def routing_number(self, routing_number):
         """
         Sets the routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param routing_number: The routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str

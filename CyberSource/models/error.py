@@ -31,97 +31,69 @@ class Error(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'message': 'str',
-        'details': 'Tmsv1instrumentidentifiersDetails'
+        'response_status': 'InlineResponseDefaultResponseStatus',
+        'links': 'ErrorLinks'
     }
 
     attribute_map = {
-        'type': 'type',
-        'message': 'message',
-        'details': 'details'
+        'response_status': 'responseStatus',
+        'links': '_links'
     }
 
-    def __init__(self, type=None, message=None, details=None):
+    def __init__(self, response_status=None, links=None):
         """
         Error - a model defined in Swagger
         """
 
-        self._type = None
-        self._message = None
-        self._details = None
+        self._response_status = None
+        self._links = None
 
-        if type is not None:
-          self.type = type
-        if message is not None:
-          self.message = message
-        if details is not None:
-          self.details = details
+        if response_status is not None:
+          self.response_status = response_status
+        if links is not None:
+          self.links = links
 
     @property
-    def type(self):
+    def response_status(self):
         """
-        Gets the type of this Error.
+        Gets the response_status of this Error.
 
-        :return: The type of this Error.
-        :rtype: str
+        :return: The response_status of this Error.
+        :rtype: InlineResponseDefaultResponseStatus
         """
-        return self._type
+        return self._response_status
 
-    @type.setter
-    def type(self, type):
+    @response_status.setter
+    def response_status(self, response_status):
         """
-        Sets the type of this Error.
+        Sets the response_status of this Error.
 
-        :param type: The type of this Error.
-        :type: str
+        :param response_status: The response_status of this Error.
+        :type: InlineResponseDefaultResponseStatus
         """
 
-        self._type = type
+        self._response_status = response_status
 
     @property
-    def message(self):
+    def links(self):
         """
-        Gets the message of this Error.
-        The detailed message related to the type stated above.
+        Gets the links of this Error.
 
-        :return: The message of this Error.
-        :rtype: str
+        :return: The links of this Error.
+        :rtype: ErrorLinks
         """
-        return self._message
+        return self._links
 
-    @message.setter
-    def message(self, message):
+    @links.setter
+    def links(self, links):
         """
-        Sets the message of this Error.
-        The detailed message related to the type stated above.
+        Sets the links of this Error.
 
-        :param message: The message of this Error.
-        :type: str
+        :param links: The links of this Error.
+        :type: ErrorLinks
         """
 
-        self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this Error.
-
-        :return: The details of this Error.
-        :rtype: Tmsv1instrumentidentifiersDetails
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this Error.
-
-        :param details: The details of this Error.
-        :type: Tmsv1instrumentidentifiersDetails
-        """
-
-        self._details = details
+        self._links = links
 
     def to_dict(self):
         """

@@ -31,7 +31,7 @@ class AuthenticationExemptionsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Ptsv2payoutsClientReferenceInformation',
+        'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
         'order_information': 'Riskv1authenticationexemptionsOrderInformation',
         'payment_information': 'Riskv1authenticationexemptionsPaymentInformation',
         'device_information': 'Riskv1authenticationexemptionsDeviceInformation',
@@ -79,7 +79,7 @@ class AuthenticationExemptionsRequest(object):
         Gets the client_reference_information of this AuthenticationExemptionsRequest.
 
         :return: The client_reference_information of this AuthenticationExemptionsRequest.
-        :rtype: Ptsv2payoutsClientReferenceInformation
+        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -89,7 +89,7 @@ class AuthenticationExemptionsRequest(object):
         Sets the client_reference_information of this AuthenticationExemptionsRequest.
 
         :param client_reference_information: The client_reference_information of this AuthenticationExemptionsRequest.
-        :type: Ptsv2payoutsClientReferenceInformation
+        :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

@@ -36,6 +36,7 @@ class EmbeddedInstrumentIdentifierResponse(object):
         'state': 'str',
         'id': 'str',
         'card': 'TmsV1InstrumentIdentifiersPost200ResponseCard',
+        'tokenized_card': 'TmsV1InstrumentIdentifiersPost200ResponseTokenizedCard',
         'bank_account': 'Tmsv1instrumentidentifiersBankAccount',
         'issuer': 'TmsV1InstrumentIdentifiersPost200ResponseIssuer',
         'processing_information': 'TmsV1InstrumentIdentifiersPost200ResponseProcessingInformation',
@@ -48,13 +49,14 @@ class EmbeddedInstrumentIdentifierResponse(object):
         'state': 'state',
         'id': 'id',
         'card': 'card',
+        'tokenized_card': 'tokenizedCard',
         'bank_account': 'bankAccount',
         'issuer': 'issuer',
         'processing_information': 'processingInformation',
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, object=None, state=None, id=None, card=None, bank_account=None, issuer=None, processing_information=None, metadata=None):
+    def __init__(self, links=None, object=None, state=None, id=None, card=None, tokenized_card=None, bank_account=None, issuer=None, processing_information=None, metadata=None):
         """
         EmbeddedInstrumentIdentifierResponse - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class EmbeddedInstrumentIdentifierResponse(object):
         self._state = None
         self._id = None
         self._card = None
+        self._tokenized_card = None
         self._bank_account = None
         self._issuer = None
         self._processing_information = None
@@ -79,6 +82,8 @@ class EmbeddedInstrumentIdentifierResponse(object):
           self.id = id
         if card is not None:
           self.card = card
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
         if bank_account is not None:
           self.bank_account = bank_account
         if issuer is not None:
@@ -202,6 +207,27 @@ class EmbeddedInstrumentIdentifierResponse(object):
         """
 
         self._card = card
+
+    @property
+    def tokenized_card(self):
+        """
+        Gets the tokenized_card of this EmbeddedInstrumentIdentifierResponse.
+
+        :return: The tokenized_card of this EmbeddedInstrumentIdentifierResponse.
+        :rtype: TmsV1InstrumentIdentifiersPost200ResponseTokenizedCard
+        """
+        return self._tokenized_card
+
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
+        """
+        Sets the tokenized_card of this EmbeddedInstrumentIdentifierResponse.
+
+        :param tokenized_card: The tokenized_card of this EmbeddedInstrumentIdentifierResponse.
+        :type: TmsV1InstrumentIdentifiersPost200ResponseTokenizedCard
+        """
+
+        self._tokenized_card = tokenized_card
 
     @property
     def bank_account(self):

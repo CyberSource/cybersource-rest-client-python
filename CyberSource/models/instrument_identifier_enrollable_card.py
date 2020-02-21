@@ -67,7 +67,7 @@ class InstrumentIdentifierEnrollableCard(object):
     def type(self):
         """
         Gets the type of this InstrumentIdentifierEnrollableCard.
-        Type of Card
+        Enrol card for a Network Token
 
         :return: The type of this InstrumentIdentifierEnrollableCard.
         :rtype: str
@@ -78,7 +78,7 @@ class InstrumentIdentifierEnrollableCard(object):
     def type(self, type):
         """
         Sets the type of this InstrumentIdentifierEnrollableCard.
-        Type of Card
+        Enrol card for a Network Token
 
         :param type: The type of this InstrumentIdentifierEnrollableCard.
         :type: str

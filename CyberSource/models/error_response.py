@@ -31,19 +31,69 @@ class ErrorResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        
+        'response_status': 'InlineResponseDefaultResponseStatus',
+        'links': 'InlineResponseDefaultLinks'
     }
 
     attribute_map = {
-        
+        'response_status': 'responseStatus',
+        'links': '_links'
     }
 
-    def __init__(self):
+    def __init__(self, response_status=None, links=None):
         """
         ErrorResponse - a model defined in Swagger
         """
 
+        self._response_status = None
+        self._links = None
 
+        if response_status is not None:
+          self.response_status = response_status
+        if links is not None:
+          self.links = links
+
+    @property
+    def response_status(self):
+        """
+        Gets the response_status of this ErrorResponse.
+
+        :return: The response_status of this ErrorResponse.
+        :rtype: InlineResponseDefaultResponseStatus
+        """
+        return self._response_status
+
+    @response_status.setter
+    def response_status(self, response_status):
+        """
+        Sets the response_status of this ErrorResponse.
+
+        :param response_status: The response_status of this ErrorResponse.
+        :type: InlineResponseDefaultResponseStatus
+        """
+
+        self._response_status = response_status
+
+    @property
+    def links(self):
+        """
+        Gets the links of this ErrorResponse.
+
+        :return: The links of this ErrorResponse.
+        :rtype: InlineResponseDefaultLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this ErrorResponse.
+
+        :param links: The links of this ErrorResponse.
+        :type: InlineResponseDefaultLinks
+        """
+
+        self._links = links
 
     def to_dict(self):
         """

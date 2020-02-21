@@ -44,7 +44,7 @@ class ReportDownloadsApi(object):
 
     def download_report(self, report_date, report_name, **kwargs):
         """
-        Download a report
+        Download a Report
         Download a report using the unique report name and date. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -73,7 +73,7 @@ class ReportDownloadsApi(object):
 
     def download_report_with_http_info(self, report_date, report_name, **kwargs):
         """
-        Download a report
+        Download a Report
         Download a report using the unique report name and date. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

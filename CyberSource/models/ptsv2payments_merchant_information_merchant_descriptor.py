@@ -39,6 +39,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'country': 'str',
         'postal_code': 'str',
         'administrative_area': 'str',
+        'phone': 'str',
         'url': 'str'
     }
 
@@ -51,10 +52,11 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'country': 'country',
         'postal_code': 'postalCode',
         'administrative_area': 'administrativeArea',
+        'phone': 'phone',
         'url': 'url'
     }
 
-    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, url=None):
+    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, phone=None, url=None):
         """
         Ptsv2paymentsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         self._country = None
         self._postal_code = None
         self._administrative_area = None
+        self._phone = None
         self._url = None
 
         if name is not None:
@@ -85,6 +88,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
           self.postal_code = postal_code
         if administrative_area is not None:
           self.administrative_area = administrative_area
+        if phone is not None:
+          self.phone = phone
         if url is not None:
           self.url = url
 
@@ -281,6 +286,31 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         """
 
         self._administrative_area = administrative_area
+
+    @property
+    def phone(self):
+        """
+        Gets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        Merchnat phone as contact information for CNP transactions 
+
+        :return: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._phone
+
+    @phone.setter
+    def phone(self, phone):
+        """
+        Sets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        Merchnat phone as contact information for CNP transactions 
+
+        :param phone: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+        if phone is not None and len(phone) > 13:
+            raise ValueError("Invalid value for `phone`, length must be less than or equal to `13`")
+
+        self._phone = phone
 
     @property
     def url(self):

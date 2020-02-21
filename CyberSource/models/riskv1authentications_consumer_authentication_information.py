@@ -33,37 +33,27 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
     swagger_types = {
         'strong_authentication': 'Riskv1authenticationsConsumerAuthenticationInformationStrongAuthentication',
         'authentication_type': 'str',
-        'acs_rendering_type': 'str',
-        'acs_transaction_id': 'str',
         'acs_window_size': 'str',
         'alternate_authentication_data': 'str',
         'alternate_authentication_date': 'str',
         'alternate_authentication_method': 'str',
         'authentication_date': 'str',
         'authentication_transaction_id': 'str',
-        'authorization_payload': 'str',
-        'cardholder_message': 'str',
         'challenge_cancel_code': 'str',
         'challenge_code': 'str',
-        'challenge_required': 'str',
         'challenge_status': 'str',
         'customer_card_alias': 'str',
         'decoupled_authentication_indicator': 'str',
         'decoupled_authentication_max_time': 'str',
         'default_card': 'bool',
         'device_channel': 'str',
-        'directory_server_error_code': 'str',
-        'directory_server_error_description': 'str',
-        'effective_authentication_type': 'str',
         'installment_total_count': 'int',
-        'ivr': 'Riskv1authenticationsConsumerAuthenticationInformationIvr',
         'merchant_fraud_rate': 'str',
         'marketing_opt_in': 'bool',
         'marketing_source': 'str',
         'mcc': 'str',
         'merchant_score': 'int',
         'message_category': 'str',
-        'network_score': 'str',
         'npa_code': 'str',
         'override_payment_method': 'str',
         'override_country_code': 'str',
@@ -77,50 +67,35 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         'requestor_name': 'str',
         'reference_id': 'str',
         'sdk_max_timeout': 'str',
-        'sdk_transaction_id': 'str',
         'secure_corporate_payment_indicator': 'str',
-        'signed_pares_status_reason': 'str',
-        'step_up_url': 'str',
-        'three_ds_server_transaction_id': 'str',
         'transaction_mode': 'str',
-        'white_list_status': 'str',
-        'white_list_status_source': 'str'
+        'white_list_status': 'str'
     }
 
     attribute_map = {
         'strong_authentication': 'strongAuthentication',
         'authentication_type': 'authenticationType',
-        'acs_rendering_type': 'acsRenderingType',
-        'acs_transaction_id': 'acsTransactionId',
         'acs_window_size': 'acsWindowSize',
         'alternate_authentication_data': 'alternateAuthenticationData',
         'alternate_authentication_date': 'alternateAuthenticationDate',
         'alternate_authentication_method': 'alternateAuthenticationMethod',
         'authentication_date': 'authenticationDate',
         'authentication_transaction_id': 'authenticationTransactionId',
-        'authorization_payload': 'authorizationPayload',
-        'cardholder_message': 'cardholderMessage',
         'challenge_cancel_code': 'challengeCancelCode',
         'challenge_code': 'challengeCode',
-        'challenge_required': 'challengeRequired',
         'challenge_status': 'challengeStatus',
         'customer_card_alias': 'customerCardAlias',
         'decoupled_authentication_indicator': 'decoupledAuthenticationIndicator',
         'decoupled_authentication_max_time': 'decoupledAuthenticationMaxTime',
         'default_card': 'defaultCard',
         'device_channel': 'deviceChannel',
-        'directory_server_error_code': 'directoryServerErrorCode',
-        'directory_server_error_description': 'directoryServerErrorDescription',
-        'effective_authentication_type': 'effectiveAuthenticationType',
         'installment_total_count': 'installmentTotalCount',
-        'ivr': 'ivr',
         'merchant_fraud_rate': 'merchantFraudRate',
         'marketing_opt_in': 'marketingOptIn',
         'marketing_source': 'marketingSource',
         'mcc': 'mcc',
         'merchant_score': 'merchantScore',
         'message_category': 'messageCategory',
-        'network_score': 'networkScore',
         'npa_code': 'npaCode',
         'override_payment_method': 'overridePaymentMethod',
         'override_country_code': 'overrideCountryCode',
@@ -134,54 +109,39 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         'requestor_name': 'requestorName',
         'reference_id': 'referenceId',
         'sdk_max_timeout': 'sdkMaxTimeout',
-        'sdk_transaction_id': 'sdkTransactionId',
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
-        'signed_pares_status_reason': 'signedParesStatusReason',
-        'step_up_url': 'stepUpUrl',
-        'three_ds_server_transaction_id': 'threeDSServerTransactionId',
         'transaction_mode': 'transactionMode',
-        'white_list_status': 'whiteListStatus',
-        'white_list_status_source': 'whiteListStatusSource'
+        'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, strong_authentication=None, authentication_type=None, acs_rendering_type=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, authorization_payload=None, cardholder_message=None, challenge_cancel_code=None, challenge_code=None, challenge_required=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, directory_server_error_code=None, directory_server_error_description=None, effective_authentication_type=None, installment_total_count=None, ivr=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, sdk_transaction_id=None, secure_corporate_payment_indicator=None, signed_pares_status_reason=None, step_up_url=None, three_ds_server_transaction_id=None, transaction_mode=None, white_list_status=None, white_list_status_source=None):
+    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None):
         """
         Riskv1authenticationsConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._strong_authentication = None
         self._authentication_type = None
-        self._acs_rendering_type = None
-        self._acs_transaction_id = None
         self._acs_window_size = None
         self._alternate_authentication_data = None
         self._alternate_authentication_date = None
         self._alternate_authentication_method = None
         self._authentication_date = None
         self._authentication_transaction_id = None
-        self._authorization_payload = None
-        self._cardholder_message = None
         self._challenge_cancel_code = None
         self._challenge_code = None
-        self._challenge_required = None
         self._challenge_status = None
         self._customer_card_alias = None
         self._decoupled_authentication_indicator = None
         self._decoupled_authentication_max_time = None
         self._default_card = None
         self._device_channel = None
-        self._directory_server_error_code = None
-        self._directory_server_error_description = None
-        self._effective_authentication_type = None
         self._installment_total_count = None
-        self._ivr = None
         self._merchant_fraud_rate = None
         self._marketing_opt_in = None
         self._marketing_source = None
         self._mcc = None
         self._merchant_score = None
         self._message_category = None
-        self._network_score = None
         self._npa_code = None
         self._override_payment_method = None
         self._override_country_code = None
@@ -195,23 +155,14 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         self._requestor_name = None
         self._reference_id = None
         self._sdk_max_timeout = None
-        self._sdk_transaction_id = None
         self._secure_corporate_payment_indicator = None
-        self._signed_pares_status_reason = None
-        self._step_up_url = None
-        self._three_ds_server_transaction_id = None
         self._transaction_mode = None
         self._white_list_status = None
-        self._white_list_status_source = None
 
         if strong_authentication is not None:
           self.strong_authentication = strong_authentication
         if authentication_type is not None:
           self.authentication_type = authentication_type
-        if acs_rendering_type is not None:
-          self.acs_rendering_type = acs_rendering_type
-        if acs_transaction_id is not None:
-          self.acs_transaction_id = acs_transaction_id
         if acs_window_size is not None:
           self.acs_window_size = acs_window_size
         if alternate_authentication_data is not None:
@@ -224,16 +175,10 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.authentication_date = authentication_date
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
-        if authorization_payload is not None:
-          self.authorization_payload = authorization_payload
-        if cardholder_message is not None:
-          self.cardholder_message = cardholder_message
         if challenge_cancel_code is not None:
           self.challenge_cancel_code = challenge_cancel_code
         if challenge_code is not None:
           self.challenge_code = challenge_code
-        if challenge_required is not None:
-          self.challenge_required = challenge_required
         if challenge_status is not None:
           self.challenge_status = challenge_status
         if customer_card_alias is not None:
@@ -246,16 +191,8 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.default_card = default_card
         if device_channel is not None:
           self.device_channel = device_channel
-        if directory_server_error_code is not None:
-          self.directory_server_error_code = directory_server_error_code
-        if directory_server_error_description is not None:
-          self.directory_server_error_description = directory_server_error_description
-        if effective_authentication_type is not None:
-          self.effective_authentication_type = effective_authentication_type
         if installment_total_count is not None:
           self.installment_total_count = installment_total_count
-        if ivr is not None:
-          self.ivr = ivr
         if merchant_fraud_rate is not None:
           self.merchant_fraud_rate = merchant_fraud_rate
         if marketing_opt_in is not None:
@@ -267,8 +204,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.merchant_score = merchant_score
         if message_category is not None:
           self.message_category = message_category
-        if network_score is not None:
-          self.network_score = network_score
         if npa_code is not None:
           self.npa_code = npa_code
         if override_payment_method is not None:
@@ -293,21 +228,11 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         self.reference_id = reference_id
         if sdk_max_timeout is not None:
           self.sdk_max_timeout = sdk_max_timeout
-        if sdk_transaction_id is not None:
-          self.sdk_transaction_id = sdk_transaction_id
         if secure_corporate_payment_indicator is not None:
           self.secure_corporate_payment_indicator = secure_corporate_payment_indicator
-        if signed_pares_status_reason is not None:
-          self.signed_pares_status_reason = signed_pares_status_reason
-        if step_up_url is not None:
-          self.step_up_url = step_up_url
-        if three_ds_server_transaction_id is not None:
-          self.three_ds_server_transaction_id = three_ds_server_transaction_id
         self.transaction_mode = transaction_mode
         if white_list_status is not None:
           self.white_list_status = white_list_status
-        if white_list_status_source is not None:
-          self.white_list_status_source = white_list_status_source
 
     @property
     def strong_authentication(self):
@@ -354,54 +279,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `authentication_type`, length must be less than or equal to `2`")
 
         self._authentication_type = authentication_type
-
-    @property
-    def acs_rendering_type(self):
-        """
-        Gets the acs_rendering_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
-
-        :return: The acs_rendering_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._acs_rendering_type
-
-    @acs_rendering_type.setter
-    def acs_rendering_type(self, acs_rendering_type):
-        """
-        Sets the acs_rendering_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
-
-        :param acs_rendering_type: The acs_rendering_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._acs_rendering_type = acs_rendering_type
-
-    @property
-    def acs_transaction_id(self):
-        """
-        Gets the acs_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the ACS to identify a single transaction. 
-
-        :return: The acs_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._acs_transaction_id
-
-    @acs_transaction_id.setter
-    def acs_transaction_id(self, acs_transaction_id):
-        """
-        Sets the acs_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the ACS to identify a single transaction. 
-
-        :param acs_transaction_id: The acs_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
-            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
-
-        self._acs_transaction_id = acs_transaction_id
 
     @property
     def acs_window_size(self):
@@ -552,54 +429,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
-    def authorization_payload(self):
-        """
-        Gets the authorization_payload of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
-
-        :return: The authorization_payload of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._authorization_payload
-
-    @authorization_payload.setter
-    def authorization_payload(self, authorization_payload):
-        """
-        Sets the authorization_payload of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
-
-        :param authorization_payload: The authorization_payload of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._authorization_payload = authorization_payload
-
-    @property
-    def cardholder_message(self):
-        """
-        Gets the cardholder_message of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
-
-        :return: The cardholder_message of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._cardholder_message
-
-    @cardholder_message.setter
-    def cardholder_message(self, cardholder_message):
-        """
-        Sets the cardholder_message of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
-
-        :param cardholder_message: The cardholder_message of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if cardholder_message is not None and len(cardholder_message) > 128:
-            raise ValueError("Invalid value for `cardholder_message`, length must be less than or equal to `128`")
-
-        self._cardholder_message = cardholder_message
-
-    @property
     def challenge_cancel_code(self):
         """
         Gets the challenge_cancel_code of this Riskv1authenticationsConsumerAuthenticationInformation.
@@ -646,31 +475,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         """
 
         self._challenge_code = challenge_code
-
-    @property
-    def challenge_required(self):
-        """
-        Gets the challenge_required of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Indicates whether a challenge is required in order to complete authentication. **Note** Regional mandates might determine that a challenge is required.  Possible values: - `Y`: Challenge required - `N`: Challenge not required **Note**  Used by the Hybrid integration. 
-
-        :return: The challenge_required of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._challenge_required
-
-    @challenge_required.setter
-    def challenge_required(self, challenge_required):
-        """
-        Sets the challenge_required of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Indicates whether a challenge is required in order to complete authentication. **Note** Regional mandates might determine that a challenge is required.  Possible values: - `Y`: Challenge required - `N`: Challenge not required **Note**  Used by the Hybrid integration. 
-
-        :param challenge_required: The challenge_required of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if challenge_required is not None and len(challenge_required) > 1:
-            raise ValueError("Invalid value for `challenge_required`, length must be less than or equal to `1`")
-
-        self._challenge_required = challenge_required
 
     @property
     def challenge_status(self):
@@ -821,81 +625,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         self._device_channel = device_channel
 
     @property
-    def directory_server_error_code(self):
-        """
-        Gets the directory_server_error_code of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
-
-        :return: The directory_server_error_code of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._directory_server_error_code
-
-    @directory_server_error_code.setter
-    def directory_server_error_code(self, directory_server_error_code):
-        """
-        Sets the directory_server_error_code of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
-
-        :param directory_server_error_code: The directory_server_error_code of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if directory_server_error_code is not None and len(directory_server_error_code) > 3:
-            raise ValueError("Invalid value for `directory_server_error_code`, length must be less than or equal to `3`")
-
-        self._directory_server_error_code = directory_server_error_code
-
-    @property
-    def directory_server_error_description(self):
-        """
-        Gets the directory_server_error_description of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Directory server text and additional detail about the error for this transaction. 
-
-        :return: The directory_server_error_description of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._directory_server_error_description
-
-    @directory_server_error_description.setter
-    def directory_server_error_description(self, directory_server_error_description):
-        """
-        Sets the directory_server_error_description of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Directory server text and additional detail about the error for this transaction. 
-
-        :param directory_server_error_description: The directory_server_error_description of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
-            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
-
-        self._directory_server_error_description = directory_server_error_description
-
-    @property
-    def effective_authentication_type(self):
-        """
-        Gets the effective_authentication_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
-
-        :return: The effective_authentication_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._effective_authentication_type
-
-    @effective_authentication_type.setter
-    def effective_authentication_type(self, effective_authentication_type):
-        """
-        Sets the effective_authentication_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
-
-        :param effective_authentication_type: The effective_authentication_type of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if effective_authentication_type is not None and len(effective_authentication_type) > 2:
-            raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
-
-        self._effective_authentication_type = effective_authentication_type
-
-    @property
     def installment_total_count(self):
         """
         Gets the installment_total_count of this Riskv1authenticationsConsumerAuthenticationInformation.
@@ -917,27 +646,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         """
 
         self._installment_total_count = installment_total_count
-
-    @property
-    def ivr(self):
-        """
-        Gets the ivr of this Riskv1authenticationsConsumerAuthenticationInformation.
-
-        :return: The ivr of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: Riskv1authenticationsConsumerAuthenticationInformationIvr
-        """
-        return self._ivr
-
-    @ivr.setter
-    def ivr(self, ivr):
-        """
-        Sets the ivr of this Riskv1authenticationsConsumerAuthenticationInformation.
-
-        :param ivr: The ivr of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: Riskv1authenticationsConsumerAuthenticationInformationIvr
-        """
-
-        self._ivr = ivr
 
     @property
     def merchant_fraud_rate(self):
@@ -1084,31 +792,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         """
 
         self._message_category = message_category
-
-    @property
-    def network_score(self):
-        """
-        Gets the network_score of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The global score calculated by the CB scoring platform and returned to merchants. 
-
-        :return: The network_score of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._network_score
-
-    @network_score.setter
-    def network_score(self, network_score):
-        """
-        Sets the network_score of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The global score calculated by the CB scoring platform and returned to merchants. 
-
-        :param network_score: The network_score of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if network_score is not None and len(network_score) > 2:
-            raise ValueError("Invalid value for `network_score`, length must be less than or equal to `2`")
-
-        self._network_score = network_score
 
     @property
     def npa_code(self):
@@ -1438,31 +1121,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         self._sdk_max_timeout = sdk_max_timeout
 
     @property
-    def sdk_transaction_id(self):
-        """
-        Gets the sdk_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        SDK unique transaction identifier that is generated on each new transaction. 
-
-        :return: The sdk_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._sdk_transaction_id
-
-    @sdk_transaction_id.setter
-    def sdk_transaction_id(self, sdk_transaction_id):
-        """
-        Sets the sdk_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        SDK unique transaction identifier that is generated on each new transaction. 
-
-        :param sdk_transaction_id: The sdk_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
-            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
-
-        self._sdk_transaction_id = sdk_transaction_id
-
-    @property
     def secure_corporate_payment_indicator(self):
         """
         Gets the secure_corporate_payment_indicator of this Riskv1authenticationsConsumerAuthenticationInformation.
@@ -1486,81 +1144,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `secure_corporate_payment_indicator`, length must be less than or equal to `1`")
 
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
-
-    @property
-    def signed_pares_status_reason(self):
-        """
-        Gets the signed_pares_status_reason of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Provides additional information as to why the PAResStatus has a specific value. 
-
-        :return: The signed_pares_status_reason of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._signed_pares_status_reason
-
-    @signed_pares_status_reason.setter
-    def signed_pares_status_reason(self, signed_pares_status_reason):
-        """
-        Sets the signed_pares_status_reason of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Provides additional information as to why the PAResStatus has a specific value. 
-
-        :param signed_pares_status_reason: The signed_pares_status_reason of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if signed_pares_status_reason is not None and len(signed_pares_status_reason) > 2:
-            raise ValueError("Invalid value for `signed_pares_status_reason`, length must be less than or equal to `2`")
-
-        self._signed_pares_status_reason = signed_pares_status_reason
-
-    @property
-    def step_up_url(self):
-        """
-        Gets the step_up_url of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The fully qualified URL that the merchant uses to post a form to the cardholder in order to complete the Consumer Authentication transaction for the Cardinal Cruise API integration. 
-
-        :return: The step_up_url of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._step_up_url
-
-    @step_up_url.setter
-    def step_up_url(self, step_up_url):
-        """
-        Sets the step_up_url of this Riskv1authenticationsConsumerAuthenticationInformation.
-        The fully qualified URL that the merchant uses to post a form to the cardholder in order to complete the Consumer Authentication transaction for the Cardinal Cruise API integration. 
-
-        :param step_up_url: The step_up_url of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if step_up_url is not None and len(step_up_url) > 2048:
-            raise ValueError("Invalid value for `step_up_url`, length must be less than or equal to `2048`")
-
-        self._step_up_url = step_up_url
-
-    @property
-    def three_ds_server_transaction_id(self):
-        """
-        Gets the three_ds_server_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
-
-        :return: The three_ds_server_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._three_ds_server_transaction_id
-
-    @three_ds_server_transaction_id.setter
-    def three_ds_server_transaction_id(self, three_ds_server_transaction_id):
-        """
-        Sets the three_ds_server_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
-
-        :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
-
-        self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
     @property
     def transaction_mode(self):
@@ -1611,31 +1194,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
-
-    @property
-    def white_list_status_source(self):
-        """
-        Gets the white_list_status_source of this Riskv1authenticationsConsumerAuthenticationInformation.
-        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
-
-        :return: The white_list_status_source of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._white_list_status_source
-
-    @white_list_status_source.setter
-    def white_list_status_source(self, white_list_status_source):
-        """
-        Sets the white_list_status_source of this Riskv1authenticationsConsumerAuthenticationInformation.
-        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
-
-        :param white_list_status_source: The white_list_status_source of this Riskv1authenticationsConsumerAuthenticationInformation.
-        :type: str
-        """
-        if white_list_status_source is not None and len(white_list_status_source) > 2:
-            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
-
-        self._white_list_status_source = white_list_status_source
 
     def to_dict(self):
         """

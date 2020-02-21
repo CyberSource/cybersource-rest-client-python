@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_conversion_detail**](ConversionDetailsApi.md#get_conversion_detail) | **GET** /reporting/v3/conversion-details | Get conversion detail transactions
+[**get_conversion_detail**](ConversionDetailsApi.md#get_conversion_detail) | **GET** /reporting/v3/conversion-details | Get Conversion Detail Transactions
 
 
 # **get_conversion_detail**
 > ReportingV3ConversionDetailsGet200Response get_conversion_detail(start_time, end_time, organization_id=organization_id)
 
-Get conversion detail transactions
+Get Conversion Detail Transactions
 
 Get conversion detail of transactions for a merchant.
 
@@ -29,7 +29,7 @@ end_time = '2013-10-20T19:20:30+01:00' # datetime | Valid report End Time in **I
 organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
-    # Get conversion detail transactions
+    # Get Conversion Detail Transactions
     api_response = api_instance.get_conversion_detail(start_time, end_time, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:

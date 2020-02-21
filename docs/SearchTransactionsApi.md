@@ -4,14 +4,14 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_search**](SearchTransactionsApi.md#create_search) | **POST** /tss/v2/searches | Create a search request
-[**get_search**](SearchTransactionsApi.md#get_search) | **GET** /tss/v2/searches/{searchId} | Get Search results
+[**create_search**](SearchTransactionsApi.md#create_search) | **POST** /tss/v2/searches | Create a Search Request
+[**get_search**](SearchTransactionsApi.md#get_search) | **GET** /tss/v2/searches/{searchId} | Get Search Results
 
 
 # **create_search**
 > TssV2TransactionsPost201Response create_search(create_search_request)
 
-Create a search request
+Create a Search Request
 
 Create a search request. 
 
@@ -28,7 +28,7 @@ api_instance = CyberSource.SearchTransactionsApi()
 create_search_request = CyberSource.CreateSearchRequest() # CreateSearchRequest | 
 
 try: 
-    # Create a search request
+    # Create a Search Request
     api_response = api_instance.create_search(create_search_request)
     pprint(api_response)
 except ApiException as e:
@@ -59,7 +59,7 @@ No authorization required
 # **get_search**
 > TssV2TransactionsPost201Response get_search(search_id)
 
-Get Search results
+Get Search Results
 
 Include the Search ID in the GET request to retrieve the search results.
 
@@ -76,7 +76,7 @@ api_instance = CyberSource.SearchTransactionsApi()
 search_id = 'search_id_example' # str | Search ID.
 
 try: 
-    # Get Search results
+    # Get Search Results
     api_response = api_instance.get_search(search_id)
     pprint(api_response)
 except ApiException as e:

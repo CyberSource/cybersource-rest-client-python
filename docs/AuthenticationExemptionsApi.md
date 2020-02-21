@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authentication_exemptions**](AuthenticationExemptionsApi.md#authentication_exemptions) | **POST** /risk/v1/authentication-exemptions | Authentication exemptions service
+[**authentication_exemptions**](AuthenticationExemptionsApi.md#authentication_exemptions) | **POST** /risk/v1/authentication-exemptions | Authentication Exemptions Service
 
 
 # **authentication_exemptions**
 > RiskV1AuthenticationExemptionsPost201Response authentication_exemptions(authentication_exemptions_request)
 
-Authentication exemptions service
+Authentication Exemptions Service
 
 A new CYBS branded service to connect to VISA’s REST API to enable Visa Transaction Advisor (VTA) as a standalone service for merchants to support PSD2/SCA adoption and exemptions processing startegy in Europe.VTA Provides intelligent risk data to merchants as inputs to their in-house fraud management tools for fraud mitigation on Visa transactions. 
 
@@ -27,7 +27,7 @@ api_instance = CyberSource.AuthenticationExemptionsApi()
 authentication_exemptions_request = CyberSource.AuthenticationExemptionsRequest() # AuthenticationExemptionsRequest | 
 
 try: 
-    # Authentication exemptions service
+    # Authentication Exemptions Service
     api_response = api_instance.authentication_exemptions(authentication_exemptions_request)
     pprint(api_response)
 except ApiException as e:

@@ -31,77 +31,180 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
                             and the value is json key in definition.
     """
     swagger_types = {
+        'acs_rendering_type': 'str',
+        'acs_transaction_id': 'str',
         'authentication_result': 'str',
         'authentication_status_msg': 'str',
+        'authorization_payload': 'str',
         'cavv': 'str',
         'cavv_algorithm': 'str',
+        'directory_server_error_code': 'str',
+        'directory_server_error_description': 'str',
         'indicator': 'str',
+        'interaction_counter': 'str',
         'eci': 'str',
         'eci_raw': 'str',
         'pares_status': 'str',
+        'sdk_transaction_id': 'str',
         'specification_version': 'str',
+        'three_ds_server_transaction_id': 'str',
         'ucaf_authentication_data': 'str',
         'ucaf_collection_indicator': 'float',
-        'xid': 'str'
+        'white_list_status': 'str',
+        'white_list_status_source': 'str',
+        'xid': 'str',
+        'directory_server_transaction_id': 'str'
     }
 
     attribute_map = {
+        'acs_rendering_type': 'acsRenderingType',
+        'acs_transaction_id': 'acsTransactionId',
         'authentication_result': 'authenticationResult',
         'authentication_status_msg': 'authenticationStatusMsg',
+        'authorization_payload': 'authorizationPayload',
         'cavv': 'cavv',
         'cavv_algorithm': 'cavvAlgorithm',
+        'directory_server_error_code': 'directoryServerErrorCode',
+        'directory_server_error_description': 'directoryServerErrorDescription',
         'indicator': 'indicator',
+        'interaction_counter': 'interactionCounter',
         'eci': 'eci',
         'eci_raw': 'eciRaw',
         'pares_status': 'paresStatus',
+        'sdk_transaction_id': 'sdkTransactionId',
         'specification_version': 'specificationVersion',
+        'three_ds_server_transaction_id': 'threeDSServerTransactionId',
         'ucaf_authentication_data': 'ucafAuthenticationData',
         'ucaf_collection_indicator': 'ucafCollectionIndicator',
-        'xid': 'xid'
+        'white_list_status': 'whiteListStatus',
+        'white_list_status_source': 'whiteListStatusSource',
+        'xid': 'xid',
+        'directory_server_transaction_id': 'directoryServerTransactionId'
     }
 
-    def __init__(self, authentication_result=None, authentication_status_msg=None, cavv=None, cavv_algorithm=None, indicator=None, eci=None, eci_raw=None, pares_status=None, specification_version=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, xid=None):
+    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, authentication_result=None, authentication_status_msg=None, authorization_payload=None, cavv=None, cavv_algorithm=None, directory_server_error_code=None, directory_server_error_description=None, indicator=None, interaction_counter=None, eci=None, eci_raw=None, pares_status=None, sdk_transaction_id=None, specification_version=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, white_list_status=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
         """
         RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
 
+        self._acs_rendering_type = None
+        self._acs_transaction_id = None
         self._authentication_result = None
         self._authentication_status_msg = None
+        self._authorization_payload = None
         self._cavv = None
         self._cavv_algorithm = None
+        self._directory_server_error_code = None
+        self._directory_server_error_description = None
         self._indicator = None
+        self._interaction_counter = None
         self._eci = None
         self._eci_raw = None
         self._pares_status = None
+        self._sdk_transaction_id = None
         self._specification_version = None
+        self._three_ds_server_transaction_id = None
         self._ucaf_authentication_data = None
         self._ucaf_collection_indicator = None
+        self._white_list_status = None
+        self._white_list_status_source = None
         self._xid = None
+        self._directory_server_transaction_id = None
 
+        if acs_rendering_type is not None:
+          self.acs_rendering_type = acs_rendering_type
+        if acs_transaction_id is not None:
+          self.acs_transaction_id = acs_transaction_id
         if authentication_result is not None:
           self.authentication_result = authentication_result
         if authentication_status_msg is not None:
           self.authentication_status_msg = authentication_status_msg
+        if authorization_payload is not None:
+          self.authorization_payload = authorization_payload
         if cavv is not None:
           self.cavv = cavv
         if cavv_algorithm is not None:
           self.cavv_algorithm = cavv_algorithm
+        if directory_server_error_code is not None:
+          self.directory_server_error_code = directory_server_error_code
+        if directory_server_error_description is not None:
+          self.directory_server_error_description = directory_server_error_description
         if indicator is not None:
           self.indicator = indicator
+        if interaction_counter is not None:
+          self.interaction_counter = interaction_counter
         if eci is not None:
           self.eci = eci
         if eci_raw is not None:
           self.eci_raw = eci_raw
         if pares_status is not None:
           self.pares_status = pares_status
+        if sdk_transaction_id is not None:
+          self.sdk_transaction_id = sdk_transaction_id
         if specification_version is not None:
           self.specification_version = specification_version
+        if three_ds_server_transaction_id is not None:
+          self.three_ds_server_transaction_id = three_ds_server_transaction_id
         if ucaf_authentication_data is not None:
           self.ucaf_authentication_data = ucaf_authentication_data
         if ucaf_collection_indicator is not None:
           self.ucaf_collection_indicator = ucaf_collection_indicator
+        if white_list_status is not None:
+          self.white_list_status = white_list_status
+        if white_list_status_source is not None:
+          self.white_list_status_source = white_list_status_source
         if xid is not None:
           self.xid = xid
+        if directory_server_transaction_id is not None:
+          self.directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def acs_rendering_type(self):
+        """
+        Gets the acs_rendering_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
+
+        :return: The acs_rendering_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_rendering_type
+
+    @acs_rendering_type.setter
+    def acs_rendering_type(self, acs_rendering_type):
+        """
+        Sets the acs_rendering_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Identifies the UI Type the ACS will use to complete the challenge. **NOTE**: Only available for App transactions using the Cardinal Mobile SDK. 
+
+        :param acs_rendering_type: The acs_rendering_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_rendering_type = acs_rendering_type
+
+    @property
+    def acs_transaction_id(self):
+        """
+        Gets the acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction. 
+
+        :return: The acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_transaction_id
+
+    @acs_transaction_id.setter
+    def acs_transaction_id(self, acs_transaction_id):
+        """
+        Sets the acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction. 
+
+        :param acs_transaction_id: The acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
+            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
+
+        self._acs_transaction_id = acs_transaction_id
 
     @property
     def authentication_result(self):
@@ -148,6 +251,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._authentication_status_msg = authentication_status_msg
+
+    @property
+    def authorization_payload(self):
+        """
+        Gets the authorization_payload of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
+
+        :return: The authorization_payload of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authorization_payload
+
+    @authorization_payload.setter
+    def authorization_payload(self, authorization_payload):
+        """
+        Sets the authorization_payload of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The Base64 encoded JSON Payload of CB specific Authorization Values returned in the challenge Flow 
+
+        :param authorization_payload: The authorization_payload of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authorization_payload = authorization_payload
 
     @property
     def cavv(self):
@@ -200,6 +326,56 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._cavv_algorithm = cavv_algorithm
 
     @property
+    def directory_server_error_code(self):
+        """
+        Gets the directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The directory server error code indicating a problem with this transaction. 
+
+        :return: The directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_error_code
+
+    @directory_server_error_code.setter
+    def directory_server_error_code(self, directory_server_error_code):
+        """
+        Sets the directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The directory server error code indicating a problem with this transaction. 
+
+        :param directory_server_error_code: The directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_error_code is not None and len(directory_server_error_code) > 3:
+            raise ValueError("Invalid value for `directory_server_error_code`, length must be less than or equal to `3`")
+
+        self._directory_server_error_code = directory_server_error_code
+
+    @property
+    def directory_server_error_description(self):
+        """
+        Gets the directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Directory server text and additional detail about the error for this transaction. 
+
+        :return: The directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_error_description
+
+    @directory_server_error_description.setter
+    def directory_server_error_description(self, directory_server_error_description):
+        """
+        Sets the directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Directory server text and additional detail about the error for this transaction. 
+
+        :param directory_server_error_description: The directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
+            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
+
+        self._directory_server_error_description = directory_server_error_description
+
+    @property
     def indicator(self):
         """
         Gets the indicator of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -221,6 +397,31 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._indicator = indicator
+
+    @property
+    def interaction_counter(self):
+        """
+        Gets the interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the number of authentication cycles attempted by the cardholder and is tracked by the Issuing Banks ACS.Example: if customer gets the challenge window and enter in their one time password and hit submit then that interaction counter should just be 1. When customer gets the challenge window and the bank asks if they want to have the one time password  sent to their phone or their email and they have to choose before going to the next screen to enter in their one time password then this interaction count would be 2. One for the selection of how they want the one time password delivered and another with them actually entering in the one time password and hitting the submit button. 
+
+        :return: The interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._interaction_counter
+
+    @interaction_counter.setter
+    def interaction_counter(self, interaction_counter):
+        """
+        Sets the interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the number of authentication cycles attempted by the cardholder and is tracked by the Issuing Banks ACS.Example: if customer gets the challenge window and enter in their one time password and hit submit then that interaction counter should just be 1. When customer gets the challenge window and the bank asks if they want to have the one time password  sent to their phone or their email and they have to choose before going to the next screen to enter in their one time password then this interaction count would be 2. One for the selection of how they want the one time password delivered and another with them actually entering in the one time password and hitting the submit button. 
+
+        :param interaction_counter: The interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if interaction_counter is not None and len(interaction_counter) > 2:
+            raise ValueError("Invalid value for `interaction_counter`, length must be less than or equal to `2`")
+
+        self._interaction_counter = interaction_counter
 
     @property
     def eci(self):
@@ -292,6 +493,31 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._pares_status = pares_status
 
     @property
+    def sdk_transaction_id(self):
+        """
+        Gets the sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        SDK unique transaction identifier that is generated on each new transaction. 
+
+        :return: The sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._sdk_transaction_id
+
+    @sdk_transaction_id.setter
+    def sdk_transaction_id(self, sdk_transaction_id):
+        """
+        Sets the sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        SDK unique transaction identifier that is generated on each new transaction. 
+
+        :param sdk_transaction_id: The sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
+            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
+
+        self._sdk_transaction_id = sdk_transaction_id
+
+    @property
     def specification_version(self):
         """
         Gets the specification_version of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -313,6 +539,31 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._specification_version = specification_version
+
+    @property
+    def three_ds_server_transaction_id(self):
+        """
+        Gets the three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
+
+        :return: The three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._three_ds_server_transaction_id
+
+    @three_ds_server_transaction_id.setter
+    def three_ds_server_transaction_id(self, three_ds_server_transaction_id):
+        """
+        Sets the three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the 3DS Server to identify a single transaction. 
+
+        :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
+            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
+
+        self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
     @property
     def ucaf_authentication_data(self):
@@ -361,6 +612,56 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
     @property
+    def white_list_status(self):
+        """
+        Gets the white_list_status of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Enables the communication of trusted beneficiary/whitelist status between the ACS, the DS and the 3DS Requestor.  Possible Values:  Y - 3DS Requestor is whitelisted by cardholder  N - 3DS Requestor is not whitelisted by cardholder 
+
+        :return: The white_list_status of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._white_list_status
+
+    @white_list_status.setter
+    def white_list_status(self, white_list_status):
+        """
+        Sets the white_list_status of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Enables the communication of trusted beneficiary/whitelist status between the ACS, the DS and the 3DS Requestor.  Possible Values:  Y - 3DS Requestor is whitelisted by cardholder  N - 3DS Requestor is not whitelisted by cardholder 
+
+        :param white_list_status: The white_list_status of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if white_list_status is not None and len(white_list_status) > 1:
+            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
+
+        self._white_list_status = white_list_status
+
+    @property
+    def white_list_status_source(self):
+        """
+        Gets the white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
+
+        :return: The white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._white_list_status_source
+
+    @white_list_status_source.setter
+    def white_list_status_source(self, white_list_status_source):
+        """
+        Sets the white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        This data element will be populated by the system setting Whitelist Status. Possible Values: 01 - 3DS/ Server/ 02 – DS/03 - ACS 
+
+        :param white_list_status_source: The white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if white_list_status_source is not None and len(white_list_status_source) > 2:
+            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
+
+        self._white_list_status_source = white_list_status_source
+
+    @property
     def xid(self):
         """
         Gets the xid of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -382,6 +683,31 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._xid = xid
+
+    @property
+    def directory_server_transaction_id(self):
+        """
+        Gets the directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
+
+        :return: The directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._directory_server_transaction_id
+
+    @directory_server_transaction_id.setter
+    def directory_server_transaction_id(self, directory_server_transaction_id):
+        """
+        Sets the directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        The Directory Server Transaction ID is generated by the Mastercard Directory Server during the authentication transaction and passed back to the merchant with the authentication results. For Cybersource Through Visanet Gateway: The value for this field corresponds to the following data in the TC 33 capture file3: Record: CP01 TCR7, Position: 114-149, Field: MC AVV Verification—Directory Server Transaction ID 
+
+        :param directory_server_transaction_id: The directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
+            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
+
+        self._directory_server_transaction_id = directory_server_transaction_id
 
     def to_dict(self):
         """
