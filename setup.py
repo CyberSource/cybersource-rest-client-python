@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.14"
+VERSION = "0.0.15"
 # To install the library, run the following
 #
 # python setup.py install
@@ -30,7 +30,7 @@ REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl",
             "jsonschema",
             "linecache2",
             "pbr",
-            "idna>=2.5,<2.9",
+            "idna>=2.5,<2.8",
             "ipaddress",
             "logger",
             "paramiko",
