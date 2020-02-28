@@ -422,6 +422,7 @@ class ApiClient(object):
             request_body = self.replace_underscore(json.loads(temp_body))
             body = json.dumps(request_body)
             body = body.replace("companyTaxId", "companyTaxID")
+            body = body.replace("productSku", "productSKU")
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
             mconfig.request_target = query_param_path
