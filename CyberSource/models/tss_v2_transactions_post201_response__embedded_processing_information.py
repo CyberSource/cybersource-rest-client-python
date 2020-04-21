@@ -32,26 +32,31 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
     """
     swagger_types = {
         'payment_solution': 'str',
-        'business_application_id': 'str'
+        'business_application_id': 'str',
+        'commerce_indicator': 'str'
     }
 
     attribute_map = {
         'payment_solution': 'paymentSolution',
-        'business_application_id': 'businessApplicationId'
+        'business_application_id': 'businessApplicationId',
+        'commerce_indicator': 'commerceIndicator'
     }
 
-    def __init__(self, payment_solution=None, business_application_id=None):
+    def __init__(self, payment_solution=None, business_application_id=None, commerce_indicator=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedProcessingInformation - a model defined in Swagger
         """
 
         self._payment_solution = None
         self._business_application_id = None
+        self._commerce_indicator = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if business_application_id is not None:
           self.business_application_id = business_application_id
+        if commerce_indicator is not None:
+          self.commerce_indicator = commerce_indicator
 
     @property
     def payment_solution(self):
@@ -100,6 +105,31 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         """
 
         self._business_application_id = business_application_id
+
+    @property
+    def commerce_indicator(self):
+        """
+        Gets the commerce_indicator of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
+        Type of transaction. Certain card associations use this information when determining discount rates to charge you. Required for Verified by Visa and MasterCard SecureCode transactions.      This field can contain one of these values:      * 5: `vbv` (Successful Verified by Visa transaction)     * 6: `spa` (MasterCard SecureCode transaction)     * 7: `internet` (default) (eCommerce order placed by     using a Web site)     * 8: `vbv_attempted` (Verified by Visa transaction     was attempted but not authenticated)     * E: `vbv_failure` (Depending on your payment     processor, you may receive this result if Visa’s     directory service is not available)     * F: `spa_failure` (MasterCard SecureCode     authentication failed)     * M: `moto` (Mail order or telephone order)     * P: `retail` (Point-of-sale transaction)     * R: `recurring` (Recurring transaction)     * S: `install` (Installment payment) 
+
+        :return: The commerce_indicator of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
+        :rtype: str
+        """
+        return self._commerce_indicator
+
+    @commerce_indicator.setter
+    def commerce_indicator(self, commerce_indicator):
+        """
+        Sets the commerce_indicator of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
+        Type of transaction. Certain card associations use this information when determining discount rates to charge you. Required for Verified by Visa and MasterCard SecureCode transactions.      This field can contain one of these values:      * 5: `vbv` (Successful Verified by Visa transaction)     * 6: `spa` (MasterCard SecureCode transaction)     * 7: `internet` (default) (eCommerce order placed by     using a Web site)     * 8: `vbv_attempted` (Verified by Visa transaction     was attempted but not authenticated)     * E: `vbv_failure` (Depending on your payment     processor, you may receive this result if Visa’s     directory service is not available)     * F: `spa_failure` (MasterCard SecureCode     authentication failed)     * M: `moto` (Mail order or telephone order)     * P: `retail` (Point-of-sale transaction)     * R: `recurring` (Recurring transaction)     * S: `install` (Installment payment) 
+
+        :param commerce_indicator: The commerce_indicator of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
+        :type: str
+        """
+        if commerce_indicator is not None and len(commerce_indicator) > 20:
+            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `20`")
+
+        self._commerce_indicator = commerce_indicator
 
     def to_dict(self):
         """

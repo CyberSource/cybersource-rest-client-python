@@ -31,7 +31,7 @@ class Riskv1decisionsRiskInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'profile': 'Riskv1decisionsRiskInformationProfile',
+        'profile': 'Ptsv2paymentsRiskInformationProfile',
         'event_type': 'str'
     }
 
@@ -59,7 +59,7 @@ class Riskv1decisionsRiskInformation(object):
         Gets the profile of this Riskv1decisionsRiskInformation.
 
         :return: The profile of this Riskv1decisionsRiskInformation.
-        :rtype: Riskv1decisionsRiskInformationProfile
+        :rtype: Ptsv2paymentsRiskInformationProfile
         """
         return self._profile
 
@@ -69,7 +69,7 @@ class Riskv1decisionsRiskInformation(object):
         Sets the profile of this Riskv1decisionsRiskInformation.
 
         :param profile: The profile of this Riskv1decisionsRiskInformation.
-        :type: Riskv1decisionsRiskInformationProfile
+        :type: Ptsv2paymentsRiskInformationProfile
         """
 
         self._profile = profile

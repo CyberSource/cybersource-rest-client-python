@@ -56,7 +56,12 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'weight_identifier': 'str',
         'weight_unit': 'str',
         'reference_data_code': 'str',
-        'reference_data_number': 'str'
+        'reference_data_number': 'str',
+        'product_description': 'str',
+        'gift_card_currency': 'int',
+        'shipping_destination_types': 'str',
+        'gift': 'bool',
+        'passenger': 'Ptsv2paymentsOrderInformationPassenger'
     }
 
     attribute_map = {
@@ -85,10 +90,15 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'weight_identifier': 'weightIdentifier',
         'weight_unit': 'weightUnit',
         'reference_data_code': 'referenceDataCode',
-        'reference_data_number': 'referenceDataNumber'
+        'reference_data_number': 'referenceDataNumber',
+        'product_description': 'productDescription',
+        'gift_card_currency': 'giftCardCurrency',
+        'shipping_destination_types': 'shippingDestinationTypes',
+        'gift': 'gift',
+        'passenger': 'passenger'
     }
 
-    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None):
+    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None, product_description=None, gift_card_currency=None, shipping_destination_types=None, gift=None, passenger=None):
         """
         Ptsv2paymentsOrderInformationLineItems - a model defined in Swagger
         """
@@ -119,6 +129,11 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         self._weight_unit = None
         self._reference_data_code = None
         self._reference_data_number = None
+        self._product_description = None
+        self._gift_card_currency = None
+        self._shipping_destination_types = None
+        self._gift = None
+        self._passenger = None
 
         if product_code is not None:
           self.product_code = product_code
@@ -172,6 +187,16 @@ class Ptsv2paymentsOrderInformationLineItems(object):
           self.reference_data_code = reference_data_code
         if reference_data_number is not None:
           self.reference_data_number = reference_data_number
+        if product_description is not None:
+          self.product_description = product_description
+        if gift_card_currency is not None:
+          self.gift_card_currency = gift_card_currency
+        if shipping_destination_types is not None:
+          self.shipping_destination_types = shipping_destination_types
+        if gift is not None:
+          self.gift = gift
+        if passenger is not None:
+          self.passenger = passenger
 
     @property
     def product_code(self):
@@ -814,6 +839,121 @@ class Ptsv2paymentsOrderInformationLineItems(object):
             raise ValueError("Invalid value for `reference_data_number`, length must be less than or equal to `30`")
 
         self._reference_data_number = reference_data_number
+
+    @property
+    def product_description(self):
+        """
+        Gets the product_description of this Ptsv2paymentsOrderInformationLineItems.
+        Brief description of item.
+
+        :return: The product_description of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._product_description
+
+    @product_description.setter
+    def product_description(self, product_description):
+        """
+        Sets the product_description of this Ptsv2paymentsOrderInformationLineItems.
+        Brief description of item.
+
+        :param product_description: The product_description of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._product_description = product_description
+
+    @property
+    def gift_card_currency(self):
+        """
+        Gets the gift_card_currency of this Ptsv2paymentsOrderInformationLineItems.
+        When `orderInformation.lineItems[].productCode` is \"gift_card\", this is the currency used for the gift card purchase.  For details, see `pa_gift_card_currency` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/Payer_Authentication_SCMP_API.pdf)  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
+
+        :return: The gift_card_currency of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: int
+        """
+        return self._gift_card_currency
+
+    @gift_card_currency.setter
+    def gift_card_currency(self, gift_card_currency):
+        """
+        Sets the gift_card_currency of this Ptsv2paymentsOrderInformationLineItems.
+        When `orderInformation.lineItems[].productCode` is \"gift_card\", this is the currency used for the gift card purchase.  For details, see `pa_gift_card_currency` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/Payer_Authentication_SCMP_API.pdf)  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
+
+        :param gift_card_currency: The gift_card_currency of this Ptsv2paymentsOrderInformationLineItems.
+        :type: int
+        """
+
+        self._gift_card_currency = gift_card_currency
+
+    @property
+    def shipping_destination_types(self):
+        """
+        Gets the shipping_destination_types of this Ptsv2paymentsOrderInformationLineItems.
+        Destination to where the item will be shipped. Example: Commercial, Residential, Store 
+
+        :return: The shipping_destination_types of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_destination_types
+
+    @shipping_destination_types.setter
+    def shipping_destination_types(self, shipping_destination_types):
+        """
+        Sets the shipping_destination_types of this Ptsv2paymentsOrderInformationLineItems.
+        Destination to where the item will be shipped. Example: Commercial, Residential, Store 
+
+        :param shipping_destination_types: The shipping_destination_types of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+        if shipping_destination_types is not None and len(shipping_destination_types) > 50:
+            raise ValueError("Invalid value for `shipping_destination_types`, length must be less than or equal to `50`")
+
+        self._shipping_destination_types = shipping_destination_types
+
+    @property
+    def gift(self):
+        """
+        Gets the gift of this Ptsv2paymentsOrderInformationLineItems.
+        This field is only used in DM service.  Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
+
+        :return: The gift of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: bool
+        """
+        return self._gift
+
+    @gift.setter
+    def gift(self, gift):
+        """
+        Sets the gift of this Ptsv2paymentsOrderInformationLineItems.
+        This field is only used in DM service.  Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
+
+        :param gift: The gift of this Ptsv2paymentsOrderInformationLineItems.
+        :type: bool
+        """
+
+        self._gift = gift
+
+    @property
+    def passenger(self):
+        """
+        Gets the passenger of this Ptsv2paymentsOrderInformationLineItems.
+
+        :return: The passenger of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: Ptsv2paymentsOrderInformationPassenger
+        """
+        return self._passenger
+
+    @passenger.setter
+    def passenger(self, passenger):
+        """
+        Sets the passenger of this Ptsv2paymentsOrderInformationLineItems.
+
+        :param passenger: The passenger of this Ptsv2paymentsOrderInformationLineItems.
+        :type: Ptsv2paymentsOrderInformationPassenger
+        """
+
+        self._passenger = passenger
 
     def to_dict(self):
         """

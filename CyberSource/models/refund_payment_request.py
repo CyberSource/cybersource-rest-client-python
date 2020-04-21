@@ -36,7 +36,7 @@ class RefundPaymentRequest(object):
         'payment_information': 'Ptsv2paymentsidrefundsPaymentInformation',
         'order_information': 'Ptsv2paymentsidrefundsOrderInformation',
         'buyer_information': 'Ptsv2paymentsidcapturesBuyerInformation',
-        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'device_information': 'Ptsv2paymentsidcapturesDeviceInformation',
         'merchant_information': 'Ptsv2paymentsidrefundsMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidrefundsPointOfSaleInformation',
@@ -214,7 +214,7 @@ class RefundPaymentRequest(object):
         Gets the device_information of this RefundPaymentRequest.
 
         :return: The device_information of this RefundPaymentRequest.
-        :rtype: Ptsv2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsidcapturesDeviceInformation
         """
         return self._device_information
 
@@ -224,7 +224,7 @@ class RefundPaymentRequest(object):
         Sets the device_information of this RefundPaymentRequest.
 
         :param device_information: The device_information of this RefundPaymentRequest.
-        :type: Ptsv2paymentsDeviceInformation
+        :type: Ptsv2paymentsidcapturesDeviceInformation
         """
 
         self._device_information = device_information

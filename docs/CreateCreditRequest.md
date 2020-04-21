@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **payment_information** | [**Ptsv2paymentsidrefundsPaymentInformation**](Ptsv2paymentsidrefundsPaymentInformation.md) |  | [optional] 
 **order_information** | [**Ptsv2paymentsidrefundsOrderInformation**](Ptsv2paymentsidrefundsOrderInformation.md) |  | [optional] 
 **buyer_information** | [**Ptsv2paymentsidcapturesBuyerInformation**](Ptsv2paymentsidcapturesBuyerInformation.md) |  | [optional] 
-**device_information** | [**Ptsv2paymentsDeviceInformation**](Ptsv2paymentsDeviceInformation.md) |  | [optional] 
+**device_information** | [**Ptsv2paymentsidcapturesDeviceInformation**](Ptsv2paymentsidcapturesDeviceInformation.md) |  | [optional] 
 **merchant_information** | [**Ptsv2paymentsidrefundsMerchantInformation**](Ptsv2paymentsidrefundsMerchantInformation.md) |  | [optional] 
 **aggregator_information** | [**Ptsv2paymentsidcapturesAggregatorInformation**](Ptsv2paymentsidcapturesAggregatorInformation.md) |  | [optional] 
 **point_of_sale_information** | [**Ptsv2paymentsPointOfSaleInformation**](Ptsv2paymentsPointOfSaleInformation.md) |  | [optional] 

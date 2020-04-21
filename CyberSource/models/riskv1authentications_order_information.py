@@ -31,13 +31,13 @@ class Riskv1authenticationsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'Riskv1decisionsOrderInformationAmountDetails',
+        'amount_details': 'Riskv1authenticationsOrderInformationAmountDetails',
         'pre_order': 'str',
         'pre_order_date': 'str',
         'reordered': 'bool',
         'ship_to': 'Riskv1authenticationsOrderInformationShipTo',
         'line_items': 'list[Riskv1authenticationsOrderInformationLineItems]',
-        'bill_to': 'Riskv1authenticationexemptionsOrderInformationBillTo',
+        'bill_to': 'Riskv1authenticationsOrderInformationBillTo',
         'total_offers_count': 'str'
     }
 
@@ -89,7 +89,7 @@ class Riskv1authenticationsOrderInformation(object):
         Gets the amount_details of this Riskv1authenticationsOrderInformation.
 
         :return: The amount_details of this Riskv1authenticationsOrderInformation.
-        :rtype: Riskv1decisionsOrderInformationAmountDetails
+        :rtype: Riskv1authenticationsOrderInformationAmountDetails
         """
         return self._amount_details
 
@@ -99,7 +99,7 @@ class Riskv1authenticationsOrderInformation(object):
         Sets the amount_details of this Riskv1authenticationsOrderInformation.
 
         :param amount_details: The amount_details of this Riskv1authenticationsOrderInformation.
-        :type: Riskv1decisionsOrderInformationAmountDetails
+        :type: Riskv1authenticationsOrderInformationAmountDetails
         """
 
         self._amount_details = amount_details
@@ -225,7 +225,7 @@ class Riskv1authenticationsOrderInformation(object):
         Gets the bill_to of this Riskv1authenticationsOrderInformation.
 
         :return: The bill_to of this Riskv1authenticationsOrderInformation.
-        :rtype: Riskv1authenticationexemptionsOrderInformationBillTo
+        :rtype: Riskv1authenticationsOrderInformationBillTo
         """
         return self._bill_to
 
@@ -235,7 +235,7 @@ class Riskv1authenticationsOrderInformation(object):
         Sets the bill_to of this Riskv1authenticationsOrderInformation.
 
         :param bill_to: The bill_to of this Riskv1authenticationsOrderInformation.
-        :type: Riskv1authenticationexemptionsOrderInformationBillTo
+        :type: Riskv1authenticationsOrderInformationBillTo
         """
 
         self._bill_to = bill_to

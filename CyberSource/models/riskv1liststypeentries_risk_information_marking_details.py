@@ -92,7 +92,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def reason(self):
         """
         Gets the reason of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Reason for adding the transaction to the negative list. This field can contain one of the following values: - fraud_chargeback: You have received a fraud-related chargeback for the transaction. - non_fraud_chargeback: You have received a non-fraudulent chargeback for the transaction. - suspected: You believe that you will probably receive a chargeback for the transaction. - creditback: You issued a refund to the customer to avoid a chargeback for the transaction. 
+        Reason for adding the transaction to the negative list. This field can contain one of the following values: - `fraud_chargeback:` You have received a fraud-related chargeback for the transaction. - `non_fraud_chargeback:` You have received a non-fraudulent chargeback for the transaction. - `suspected:` You believe that you will probably receive a chargeback for the transaction. - `creditback:` You issued a refund to the customer to avoid a chargeback for the transaction. 
 
         :return: The reason of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :rtype: str
@@ -103,7 +103,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def reason(self, reason):
         """
         Sets the reason of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Reason for adding the transaction to the negative list. This field can contain one of the following values: - fraud_chargeback: You have received a fraud-related chargeback for the transaction. - non_fraud_chargeback: You have received a non-fraudulent chargeback for the transaction. - suspected: You believe that you will probably receive a chargeback for the transaction. - creditback: You issued a refund to the customer to avoid a chargeback for the transaction. 
+        Reason for adding the transaction to the negative list. This field can contain one of the following values: - `fraud_chargeback:` You have received a fraud-related chargeback for the transaction. - `non_fraud_chargeback:` You have received a non-fraudulent chargeback for the transaction. - `suspected:` You believe that you will probably receive a chargeback for the transaction. - `creditback:` You issued a refund to the customer to avoid a chargeback for the transaction. 
 
         :param reason: The reason of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str
@@ -117,7 +117,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def record_name(self):
         """
         Gets the record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Name of the customer’s record entered in the list. For the positive list, it is required if action_ code=add_positive. If absent from the request, ics_risk_update creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, record_name, customer_firstname, and customer_lastname are optional. 
+        Name of the customer’s record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
 
         :return: The record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :rtype: str
@@ -128,7 +128,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def record_name(self, record_name):
         """
         Sets the record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Name of the customer’s record entered in the list. For the positive list, it is required if action_ code=add_positive. If absent from the request, ics_risk_update creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, record_name, customer_firstname, and customer_lastname are optional. 
+        Name of the customer’s record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
 
         :param record_name: The record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str

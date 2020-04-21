@@ -33,16 +33,22 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     swagger_types = {
         'code': 'str',
         'comments': 'str',
-        'partner': 'Ptsv2paymentsidreversalsClientReferenceInformationPartner'
+        'partner': 'Ptsv2paymentsidreversalsClientReferenceInformationPartner',
+        'application_name': 'str',
+        'application_version': 'str',
+        'application_user': 'str'
     }
 
     attribute_map = {
         'code': 'code',
         'comments': 'comments',
-        'partner': 'partner'
+        'partner': 'partner',
+        'application_name': 'applicationName',
+        'application_version': 'applicationVersion',
+        'application_user': 'applicationUser'
     }
 
-    def __init__(self, code=None, comments=None, partner=None):
+    def __init__(self, code=None, comments=None, partner=None, application_name=None, application_version=None, application_user=None):
         """
         Ptsv2paymentsidreversalsClientReferenceInformation - a model defined in Swagger
         """
@@ -50,6 +56,9 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         self._code = None
         self._comments = None
         self._partner = None
+        self._application_name = None
+        self._application_version = None
+        self._application_user = None
 
         if code is not None:
           self.code = code
@@ -57,6 +66,12 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
           self.comments = comments
         if partner is not None:
           self.partner = partner
+        if application_name is not None:
+          self.application_name = application_name
+        if application_version is not None:
+          self.application_version = application_version
+        if application_user is not None:
+          self.application_user = application_user
 
     @property
     def code(self):
@@ -126,6 +141,75 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         """
 
         self._partner = partner
+
+    @property
+    def application_name(self):
+        """
+        Gets the application_name of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
+
+        :return: The application_name of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._application_name
+
+    @application_name.setter
+    def application_name(self, application_name):
+        """
+        Sets the application_name of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
+
+        :param application_name: The application_name of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :type: str
+        """
+
+        self._application_name = application_name
+
+    @property
+    def application_version(self):
+        """
+        Gets the application_version of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        Version of the CyberSource application or integration used for a transaction. 
+
+        :return: The application_version of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._application_version
+
+    @application_version.setter
+    def application_version(self, application_version):
+        """
+        Sets the application_version of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        Version of the CyberSource application or integration used for a transaction. 
+
+        :param application_version: The application_version of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :type: str
+        """
+
+        self._application_version = application_version
+
+    @property
+    def application_user(self):
+        """
+        Gets the application_user of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
+
+        :return: The application_user of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._application_user
+
+    @application_user.setter
+    def application_user(self, application_user):
+        """
+        Sets the application_user of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
+
+        :param application_user: The application_user of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :type: str
+        """
+
+        self._application_user = application_user
 
     def to_dict(self):
         """

@@ -57,6 +57,7 @@ class KeyGenerationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param GeneratePublicKeyRequest generate_public_key_request: (required)
+        :param str format: Indicator to enable the receipt of the Keys response in Flex 11+ format (JWT) or legacy (parameter not required)
         :return: FlexV1KeysPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -83,12 +84,13 @@ class KeyGenerationApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param GeneratePublicKeyRequest generate_public_key_request: (required)
+        :param str format: Indicator to enable the receipt of the Keys response in Flex 11+ format (JWT) or legacy (parameter not required)
         :return: FlexV1KeysPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['generate_public_key_request']
+        all_params = ['generate_public_key_request', 'format']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -113,6 +115,8 @@ class KeyGenerationApi(object):
         path_params = {}
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))
 
         header_params = {}
 

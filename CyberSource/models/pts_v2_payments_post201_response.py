@@ -44,7 +44,9 @@ class PtsV2PaymentsPost201Response(object):
         'payment_information': 'PtsV2PaymentsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
-        'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation'
+        'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
+        'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
+        'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation'
     }
 
     attribute_map = {
@@ -61,10 +63,12 @@ class PtsV2PaymentsPost201Response(object):
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'installment_information': 'installmentInformation'
+        'installment_information': 'installmentInformation',
+        'risk_information': 'riskInformation',
+        'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -83,6 +87,8 @@ class PtsV2PaymentsPost201Response(object):
         self._order_information = None
         self._point_of_sale_information = None
         self._installment_information = None
+        self._risk_information = None
+        self._consumer_authentication_information = None
 
         if links is not None:
           self.links = links
@@ -112,6 +118,10 @@ class PtsV2PaymentsPost201Response(object):
           self.point_of_sale_information = point_of_sale_information
         if installment_information is not None:
           self.installment_information = installment_information
+        if risk_information is not None:
+          self.risk_information = risk_information
+        if consumer_authentication_information is not None:
+          self.consumer_authentication_information = consumer_authentication_information
 
     @property
     def links(self):
@@ -418,6 +428,48 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._installment_information = installment_information
+
+    @property
+    def risk_information(self):
+        """
+        Gets the risk_information of this PtsV2PaymentsPost201Response.
+
+        :return: The risk_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseRiskInformation
+        """
+        return self._risk_information
+
+    @risk_information.setter
+    def risk_information(self, risk_information):
+        """
+        Sets the risk_information of this PtsV2PaymentsPost201Response.
+
+        :param risk_information: The risk_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseRiskInformation
+        """
+
+        self._risk_information = risk_information
+
+    @property
+    def consumer_authentication_information(self):
+        """
+        Gets the consumer_authentication_information of this PtsV2PaymentsPost201Response.
+
+        :return: The consumer_authentication_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation
+        """
+        return self._consumer_authentication_information
+
+    @consumer_authentication_information.setter
+    def consumer_authentication_information(self, consumer_authentication_information):
+        """
+        Sets the consumer_authentication_information of this PtsV2PaymentsPost201Response.
+
+        :param consumer_authentication_information: The consumer_authentication_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation
+        """
+
+        self._consumer_authentication_information = consumer_authentication_information
 
     def to_dict(self):
         """

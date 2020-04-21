@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 
 # import apis into api package
-from .authentication_exemptions_api import AuthenticationExemptionsApi
 from .capture_api import CaptureApi
 from .conversion_details_api import ConversionDetailsApi
 from .credit_api import CreditApi
@@ -9,6 +8,8 @@ from .decision_manager_api import DecisionManagerApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .instrument_identifier_api import InstrumentIdentifierApi
+from .invoice_settings_api import InvoiceSettingsApi
+from .invoices_api import InvoicesApi
 from .key_generation_api import KeyGenerationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi

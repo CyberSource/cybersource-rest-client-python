@@ -36,7 +36,12 @@ class Ptsv2paymentsOrderInformation(object):
         'ship_to': 'Ptsv2paymentsOrderInformationShipTo',
         'line_items': 'list[Ptsv2paymentsOrderInformationLineItems]',
         'invoice_details': 'Ptsv2paymentsOrderInformationInvoiceDetails',
-        'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails'
+        'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails',
+        'returns_accepted': 'bool',
+        'pre_order': 'str',
+        'pre_order_date': 'str',
+        'reordered': 'bool',
+        'total_offers_count': 'str'
     }
 
     attribute_map = {
@@ -45,10 +50,15 @@ class Ptsv2paymentsOrderInformation(object):
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
         'invoice_details': 'invoiceDetails',
-        'shipping_details': 'shippingDetails'
+        'shipping_details': 'shippingDetails',
+        'returns_accepted': 'returnsAccepted',
+        'pre_order': 'preOrder',
+        'pre_order_date': 'preOrderDate',
+        'reordered': 'reordered',
+        'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
         """
         Ptsv2paymentsOrderInformation - a model defined in Swagger
         """
@@ -59,6 +69,11 @@ class Ptsv2paymentsOrderInformation(object):
         self._line_items = None
         self._invoice_details = None
         self._shipping_details = None
+        self._returns_accepted = None
+        self._pre_order = None
+        self._pre_order_date = None
+        self._reordered = None
+        self._total_offers_count = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -72,6 +87,16 @@ class Ptsv2paymentsOrderInformation(object):
           self.invoice_details = invoice_details
         if shipping_details is not None:
           self.shipping_details = shipping_details
+        if returns_accepted is not None:
+          self.returns_accepted = returns_accepted
+        if pre_order is not None:
+          self.pre_order = pre_order
+        if pre_order_date is not None:
+          self.pre_order_date = pre_order_date
+        if reordered is not None:
+          self.reordered = reordered
+        if total_offers_count is not None:
+          self.total_offers_count = total_offers_count
 
     @property
     def amount_details(self):
@@ -198,6 +223,125 @@ class Ptsv2paymentsOrderInformation(object):
         """
 
         self._shipping_details = shipping_details
+
+    @property
+    def returns_accepted(self):
+        """
+        Gets the returns_accepted of this Ptsv2paymentsOrderInformation.
+        This is only needed when you are requesting both payment and DM service at same time.  Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - true: Returns are accepted for this order. - false: Returns are not accepted for this order. 
+
+        :return: The returns_accepted of this Ptsv2paymentsOrderInformation.
+        :rtype: bool
+        """
+        return self._returns_accepted
+
+    @returns_accepted.setter
+    def returns_accepted(self, returns_accepted):
+        """
+        Sets the returns_accepted of this Ptsv2paymentsOrderInformation.
+        This is only needed when you are requesting both payment and DM service at same time.  Boolean that indicates whether returns are accepted for this order. This field can contain one of the following values: - true: Returns are accepted for this order. - false: Returns are not accepted for this order. 
+
+        :param returns_accepted: The returns_accepted of this Ptsv2paymentsOrderInformation.
+        :type: bool
+        """
+
+        self._returns_accepted = returns_accepted
+
+    @property
+    def pre_order(self):
+        """
+        Gets the pre_order of this Ptsv2paymentsOrderInformation.
+        Indicates whether cardholder is placing an order with a future availability or release date. This field can contain one of these values: - MERCHANDISE_AVAILABLE: Merchandise available - FUTURE_AVAILABILITY: Future availability 
+
+        :return: The pre_order of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._pre_order
+
+    @pre_order.setter
+    def pre_order(self, pre_order):
+        """
+        Sets the pre_order of this Ptsv2paymentsOrderInformation.
+        Indicates whether cardholder is placing an order with a future availability or release date. This field can contain one of these values: - MERCHANDISE_AVAILABLE: Merchandise available - FUTURE_AVAILABILITY: Future availability 
+
+        :param pre_order: The pre_order of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+
+        self._pre_order = pre_order
+
+    @property
+    def pre_order_date(self):
+        """
+        Gets the pre_order_date of this Ptsv2paymentsOrderInformation.
+        Expected date that a pre-ordered purchase will be available. Format: YYYYMMDD 
+
+        :return: The pre_order_date of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._pre_order_date
+
+    @pre_order_date.setter
+    def pre_order_date(self, pre_order_date):
+        """
+        Sets the pre_order_date of this Ptsv2paymentsOrderInformation.
+        Expected date that a pre-ordered purchase will be available. Format: YYYYMMDD 
+
+        :param pre_order_date: The pre_order_date of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+        if pre_order_date is not None and len(pre_order_date) > 10:
+            raise ValueError("Invalid value for `pre_order_date`, length must be less than or equal to `10`")
+
+        self._pre_order_date = pre_order_date
+
+    @property
+    def reordered(self):
+        """
+        Gets the reordered of this Ptsv2paymentsOrderInformation.
+        Indicates whether the cardholder is reordering previously purchased merchandise. This field can contain one of these values: - false: First time ordered - true: Reordered 
+
+        :return: The reordered of this Ptsv2paymentsOrderInformation.
+        :rtype: bool
+        """
+        return self._reordered
+
+    @reordered.setter
+    def reordered(self, reordered):
+        """
+        Sets the reordered of this Ptsv2paymentsOrderInformation.
+        Indicates whether the cardholder is reordering previously purchased merchandise. This field can contain one of these values: - false: First time ordered - true: Reordered 
+
+        :param reordered: The reordered of this Ptsv2paymentsOrderInformation.
+        :type: bool
+        """
+
+        self._reordered = reordered
+
+    @property
+    def total_offers_count(self):
+        """
+        Gets the total_offers_count of this Ptsv2paymentsOrderInformation.
+        Total number of articles/items in the order as a numeric decimal count. Possible values: 00 - 99 
+
+        :return: The total_offers_count of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._total_offers_count
+
+    @total_offers_count.setter
+    def total_offers_count(self, total_offers_count):
+        """
+        Sets the total_offers_count of this Ptsv2paymentsOrderInformation.
+        Total number of articles/items in the order as a numeric decimal count. Possible values: 00 - 99 
+
+        :param total_offers_count: The total_offers_count of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+        if total_offers_count is not None and len(total_offers_count) > 2:
+            raise ValueError("Invalid value for `total_offers_count`, length must be less than or equal to `2`")
+
+        self._total_offers_count = total_offers_count
 
     def to_dict(self):
         """

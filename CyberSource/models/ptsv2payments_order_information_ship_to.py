@@ -42,7 +42,10 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'district': 'str',
         'building_number': 'str',
         'phone_number': 'str',
-        'company': 'str'
+        'company': 'str',
+        'destination_types': 'str',
+        'destination_code': 'int',
+        'method': 'str'
     }
 
     attribute_map = {
@@ -57,10 +60,13 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'district': 'district',
         'building_number': 'buildingNumber',
         'phone_number': 'phoneNumber',
-        'company': 'company'
+        'company': 'company',
+        'destination_types': 'destinationTypes',
+        'destination_code': 'destinationCode',
+        'method': 'method'
     }
 
-    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, phone_number=None, company=None):
+    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, phone_number=None, company=None, destination_types=None, destination_code=None, method=None):
         """
         Ptsv2paymentsOrderInformationShipTo - a model defined in Swagger
         """
@@ -77,6 +83,9 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         self._building_number = None
         self._phone_number = None
         self._company = None
+        self._destination_types = None
+        self._destination_code = None
+        self._method = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -102,6 +111,12 @@ class Ptsv2paymentsOrderInformationShipTo(object):
           self.phone_number = phone_number
         if company is not None:
           self.company = company
+        if destination_types is not None:
+          self.destination_types = destination_types
+        if destination_code is not None:
+          self.destination_code = destination_code
+        if method is not None:
+          self.method = method
 
     @property
     def first_name(self):
@@ -402,6 +417,79 @@ class Ptsv2paymentsOrderInformationShipTo(object):
             raise ValueError("Invalid value for `company`, length must be less than or equal to `60`")
 
         self._company = company
+
+    @property
+    def destination_types(self):
+        """
+        Gets the destination_types of this Ptsv2paymentsOrderInformationShipTo.
+        Shipping destination of item. Example: Commercial, Residential, Store 
+
+        :return: The destination_types of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._destination_types
+
+    @destination_types.setter
+    def destination_types(self, destination_types):
+        """
+        Sets the destination_types of this Ptsv2paymentsOrderInformationShipTo.
+        Shipping destination of item. Example: Commercial, Residential, Store 
+
+        :param destination_types: The destination_types of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+        if destination_types is not None and len(destination_types) > 25:
+            raise ValueError("Invalid value for `destination_types`, length must be less than or equal to `25`")
+
+        self._destination_types = destination_types
+
+    @property
+    def destination_code(self):
+        """
+        Gets the destination_code of this Ptsv2paymentsOrderInformationShipTo.
+        Indicates destination chosen for the transaction. Possible values: - 01- Ship to cardholder billing address - 02- Ship to another verified address on file with merchant - 03- Ship to address that is different than billing address - 04- Ship to store (store address should be populated on request) - 05- Digital goods - 06- Travel and event tickets, not shipped - 07- Other 
+
+        :return: The destination_code of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: int
+        """
+        return self._destination_code
+
+    @destination_code.setter
+    def destination_code(self, destination_code):
+        """
+        Sets the destination_code of this Ptsv2paymentsOrderInformationShipTo.
+        Indicates destination chosen for the transaction. Possible values: - 01- Ship to cardholder billing address - 02- Ship to another verified address on file with merchant - 03- Ship to address that is different than billing address - 04- Ship to store (store address should be populated on request) - 05- Digital goods - 06- Travel and event tickets, not shipped - 07- Other 
+
+        :param destination_code: The destination_code of this Ptsv2paymentsOrderInformationShipTo.
+        :type: int
+        """
+
+        self._destination_code = destination_code
+
+    @property
+    def method(self):
+        """
+        Gets the method of this Ptsv2paymentsOrderInformationShipTo.
+        Shipping method for the product. Possible values: - lowcost: Lowest-cost service - sameday: Courier or same-day service - oneday: Next-day or overnight service - twoday: Two-day service - threeday: Three-day service - pickup: Store pick-up - other: Other shipping method - none: No shipping method because product is a service or subscription Required for American Express SafeKey (U.S.). 
+
+        :return: The method of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """
+        Sets the method of this Ptsv2paymentsOrderInformationShipTo.
+        Shipping method for the product. Possible values: - lowcost: Lowest-cost service - sameday: Courier or same-day service - oneday: Next-day or overnight service - twoday: Two-day service - threeday: Three-day service - pickup: Store pick-up - other: Other shipping method - none: No shipping method because product is a service or subscription Required for American Express SafeKey (U.S.). 
+
+        :param method: The method of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+        if method is not None and len(method) > 10:
+            raise ValueError("Invalid value for `method`, length must be less than or equal to `10`")
+
+        self._method = method
 
     def to_dict(self):
         """

@@ -34,7 +34,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'id': 'str',
         'submit_time_utc': 'str',
         'merchant_id': 'str',
-        'application_information': 'TssV2TransactionsGet200ResponseApplicationInformation',
+        'application_information': 'TssV2TransactionsPost201ResponseEmbeddedApplicationInformation',
         'buyer_information': 'TssV2TransactionsPost201ResponseEmbeddedBuyerInformation',
         'client_reference_information': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation',
         'consumer_authentication_information': 'TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation',
@@ -210,7 +210,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Gets the application_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :return: The application_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :rtype: TssV2TransactionsGet200ResponseApplicationInformation
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedApplicationInformation
         """
         return self._application_information
 
@@ -220,7 +220,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Sets the application_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :param application_information: The application_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :type: TssV2TransactionsGet200ResponseApplicationInformation
+        :type: TssV2TransactionsPost201ResponseEmbeddedApplicationInformation
         """
 
         self._application_information = application_information

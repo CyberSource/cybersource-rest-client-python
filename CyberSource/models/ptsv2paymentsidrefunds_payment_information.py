@@ -36,7 +36,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
-        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2paymentsidrefundsPaymentInformationPaymentType'
     }
 
     attribute_map = {
@@ -184,7 +184,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         Gets the payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
 
         :return: The payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
-        :rtype: Ptsv2paymentsPaymentInformationPaymentType
+        :rtype: Ptsv2paymentsidrefundsPaymentInformationPaymentType
         """
         return self._payment_type
 
@@ -194,7 +194,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         Sets the payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
 
         :param payment_type: The payment_type of this Ptsv2paymentsidrefundsPaymentInformation.
-        :type: Ptsv2paymentsPaymentInformationPaymentType
+        :type: Ptsv2paymentsidrefundsPaymentInformationPaymentType
         """
 
         self._payment_type = payment_type

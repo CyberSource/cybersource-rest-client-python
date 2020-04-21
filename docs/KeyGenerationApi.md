@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **generate_public_key**
-> FlexV1KeysPost200Response generate_public_key(generate_public_key_request)
+> FlexV1KeysPost200Response generate_public_key(generate_public_key_request, format=format)
 
 Generate Key
 
@@ -25,10 +25,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.KeyGenerationApi()
 generate_public_key_request = CyberSource.GeneratePublicKeyRequest() # GeneratePublicKeyRequest | 
+format = 'legacy' # str | Indicator to enable the receipt of the Keys response in Flex 11+ format (JWT) or legacy (parameter not required) (optional) (default to legacy)
 
 try: 
     # Generate Key
-    api_response = api_instance.generate_public_key(generate_public_key_request)
+    api_response = api_instance.generate_public_key(generate_public_key_request, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling KeyGenerationApi->generate_public_key: %s\n" % e)
@@ -39,6 +40,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **generate_public_key_request** | [**GeneratePublicKeyRequest**](GeneratePublicKeyRequest.md)|  | 
+ **format** | **str**| Indicator to enable the receipt of the Keys response in Flex 11+ format (JWT) or legacy (parameter not required) | [optional] [default to legacy]
 
 ### Return type
 

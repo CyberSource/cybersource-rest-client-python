@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for eCheck payment and this is equivalent to invoke ics_ecp_debit or ics_ecp_credit service) 
 
         :return: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for eCheck payment and this is equivalent to invoke ics_ecp_debit or ics_ecp_credit service) 
 
         :param name: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str

@@ -32,7 +32,7 @@ class Riskv1authenticationsDeviceInformation(object):
     """
     swagger_types = {
         'ip_address': 'str',
-        'raw_data': 'list[Riskv1authenticationsDeviceInformationRawData]',
+        'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
         'http_accept_browser_value': 'str',
         'http_accept_content': 'str',
         'http_browser_language': 'str',
@@ -134,7 +134,7 @@ class Riskv1authenticationsDeviceInformation(object):
         Gets the raw_data of this Riskv1authenticationsDeviceInformation.
 
         :return: The raw_data of this Riskv1authenticationsDeviceInformation.
-        :rtype: list[Riskv1authenticationsDeviceInformationRawData]
+        :rtype: list[Ptsv2paymentsDeviceInformationRawData]
         """
         return self._raw_data
 
@@ -144,7 +144,7 @@ class Riskv1authenticationsDeviceInformation(object):
         Sets the raw_data of this Riskv1authenticationsDeviceInformation.
 
         :param raw_data: The raw_data of this Riskv1authenticationsDeviceInformation.
-        :type: list[Riskv1authenticationsDeviceInformationRawData]
+        :type: list[Ptsv2paymentsDeviceInformationRawData]
         """
 
         self._raw_data = raw_data

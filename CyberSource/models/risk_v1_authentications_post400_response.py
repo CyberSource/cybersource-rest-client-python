@@ -95,7 +95,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def status(self):
         """
         Gets the status of this RiskV1AuthenticationsPost400Response.
-        The status for payerAuthentication 400 setup calls. Possible values are: - INVALID_REQUEST 
+        The status for payerAuthentication 201 enroll and validate calls. Value is: - AUTHENTICATION_FAILED 
 
         :return: The status of this RiskV1AuthenticationsPost400Response.
         :rtype: str
@@ -106,7 +106,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def status(self, status):
         """
         Sets the status of this RiskV1AuthenticationsPost400Response.
-        The status for payerAuthentication 400 setup calls. Possible values are: - INVALID_REQUEST 
+        The status for payerAuthentication 201 enroll and validate calls. Value is: - AUTHENTICATION_FAILED 
 
         :param status: The status of this RiskV1AuthenticationsPost400Response.
         :type: str
@@ -118,7 +118,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def reason(self):
         """
         Gets the reason of this RiskV1AuthenticationsPost400Response.
-        The reason of the status. 
+        The reason of the status. Value is Failed_Authentication. 
 
         :return: The reason of this RiskV1AuthenticationsPost400Response.
         :rtype: str
@@ -129,7 +129,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this RiskV1AuthenticationsPost400Response.
-        The reason of the status. 
+        The reason of the status. Value is Failed_Authentication. 
 
         :param reason: The reason of this RiskV1AuthenticationsPost400Response.
         :type: str
@@ -141,7 +141,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def message(self):
         """
         Gets the message of this RiskV1AuthenticationsPost400Response.
-        The message describing the reason of the status. Value is: - Encountered a Payer Authentication problem. Payer could not be setup. 
+        The message describing the reason of the status. Value is: - Encountered a Payer Authentication problem. Payer could not be authenticated. 
 
         :return: The message of this RiskV1AuthenticationsPost400Response.
         :rtype: str
@@ -152,7 +152,7 @@ class RiskV1AuthenticationsPost400Response(object):
     def message(self, message):
         """
         Sets the message of this RiskV1AuthenticationsPost400Response.
-        The message describing the reason of the status. Value is: - Encountered a Payer Authentication problem. Payer could not be setup. 
+        The message describing the reason of the status. Value is: - Encountered a Payer Authentication problem. Payer could not be authenticated. 
 
         :param message: The message of this RiskV1AuthenticationsPost400Response.
         :type: str

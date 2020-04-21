@@ -36,7 +36,7 @@ class RiskV1DecisionsPost201Response(object):
         'submit_time_utc': 'str',
         'submit_time_local': 'str',
         'status': 'str',
-        'risk_information': 'RiskV1DecisionsPost201ResponseRiskInformation',
+        'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'payment_information': 'RiskV1DecisionsPost201ResponsePaymentInformation',
         'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation'
     }
@@ -179,7 +179,7 @@ class RiskV1DecisionsPost201Response(object):
     def status(self):
         """
         Gets the status of this RiskV1DecisionsPost201Response.
-        The status of the submitted transaction.  Possible values:   - `ACCEPTED`   - `REJECTED`   - `PENDING_REVIEW` 
+        The status of the submitted transaction.  Possible values:   - `ACCEPTED`   - `REJECTED`   - `PENDING_REVIEW`   - `DECLINED`   - `CHALLENGE`   - `PENDING_AUTHENTICATION` 
 
         :return: The status of this RiskV1DecisionsPost201Response.
         :rtype: str
@@ -190,7 +190,7 @@ class RiskV1DecisionsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this RiskV1DecisionsPost201Response.
-        The status of the submitted transaction.  Possible values:   - `ACCEPTED`   - `REJECTED`   - `PENDING_REVIEW` 
+        The status of the submitted transaction.  Possible values:   - `ACCEPTED`   - `REJECTED`   - `PENDING_REVIEW`   - `DECLINED`   - `CHALLENGE`   - `PENDING_AUTHENTICATION` 
 
         :param status: The status of this RiskV1DecisionsPost201Response.
         :type: str
@@ -204,7 +204,7 @@ class RiskV1DecisionsPost201Response(object):
         Gets the risk_information of this RiskV1DecisionsPost201Response.
 
         :return: The risk_information of this RiskV1DecisionsPost201Response.
-        :rtype: RiskV1DecisionsPost201ResponseRiskInformation
+        :rtype: PtsV2PaymentsPost201ResponseRiskInformation
         """
         return self._risk_information
 
@@ -214,7 +214,7 @@ class RiskV1DecisionsPost201Response(object):
         Sets the risk_information of this RiskV1DecisionsPost201Response.
 
         :param risk_information: The risk_information of this RiskV1DecisionsPost201Response.
-        :type: RiskV1DecisionsPost201ResponseRiskInformation
+        :type: PtsV2PaymentsPost201ResponseRiskInformation
         """
 
         self._risk_information = risk_information

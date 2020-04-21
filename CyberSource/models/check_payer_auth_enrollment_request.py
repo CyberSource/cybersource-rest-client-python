@@ -31,15 +31,15 @@ class CheckPayerAuthEnrollmentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
+        'client_reference_information': 'Riskv1authenticationsClientReferenceInformation',
         'order_information': 'Riskv1authenticationsOrderInformation',
-        'payment_information': 'Riskv1authenticationexemptionsPaymentInformation',
-        'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
+        'payment_information': 'Riskv1authenticationsPaymentInformation',
+        'processing_information': 'Riskv1authenticationsProcessingInformation',
         'buyer_information': 'Riskv1authenticationsBuyerInformation',
         'device_information': 'Riskv1authenticationsDeviceInformation',
         'merchant_information': 'Riskv1authenticationsMerchantInformation',
-        'acquirer_information': 'Riskv1authenticationsAcquirerInformation',
-        'recurring_payment_information': 'Riskv1authenticationsRecurringPaymentInformation',
+        'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
+        'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
         'consumer_authentication_information': 'Riskv1authenticationsConsumerAuthenticationInformation',
         'risk_information': 'Riskv1authenticationsRiskInformation',
         'travel_information': 'Riskv1authenticationsTravelInformation',
@@ -114,7 +114,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsetupsClientReferenceInformation
+        :rtype: Riskv1authenticationsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -124,7 +124,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :param client_reference_information: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsetupsClientReferenceInformation
+        :type: Riskv1authenticationsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -156,7 +156,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the payment_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The payment_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationexemptionsPaymentInformation
+        :rtype: Riskv1authenticationsPaymentInformation
         """
         return self._payment_information
 
@@ -166,7 +166,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the payment_information of this CheckPayerAuthEnrollmentRequest.
 
         :param payment_information: The payment_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationexemptionsPaymentInformation
+        :type: Riskv1authenticationsPaymentInformation
         """
 
         self._payment_information = payment_information
@@ -177,7 +177,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the processing_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The processing_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsetupsProcessingInformation
+        :rtype: Riskv1authenticationsProcessingInformation
         """
         return self._processing_information
 
@@ -187,7 +187,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the processing_information of this CheckPayerAuthEnrollmentRequest.
 
         :param processing_information: The processing_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsetupsProcessingInformation
+        :type: Riskv1authenticationsProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -261,7 +261,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the acquirer_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The acquirer_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsAcquirerInformation
+        :rtype: Ptsv2paymentsAcquirerInformation
         """
         return self._acquirer_information
 
@@ -271,7 +271,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the acquirer_information of this CheckPayerAuthEnrollmentRequest.
 
         :param acquirer_information: The acquirer_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsAcquirerInformation
+        :type: Ptsv2paymentsAcquirerInformation
         """
 
         self._acquirer_information = acquirer_information
@@ -282,7 +282,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the recurring_payment_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The recurring_payment_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsRecurringPaymentInformation
+        :rtype: Ptsv2paymentsRecurringPaymentInformation
         """
         return self._recurring_payment_information
 
@@ -292,7 +292,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the recurring_payment_information of this CheckPayerAuthEnrollmentRequest.
 
         :param recurring_payment_information: The recurring_payment_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsRecurringPaymentInformation
+        :type: Ptsv2paymentsRecurringPaymentInformation
         """
 
         self._recurring_payment_information = recurring_payment_information
