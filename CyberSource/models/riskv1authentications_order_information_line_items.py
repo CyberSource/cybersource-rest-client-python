@@ -38,7 +38,7 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         'product_sku': 'str',
         'product_description': 'str',
         'product_name': 'str',
-        'passenger': 'Riskv1decisionsOrderInformationPassenger',
+        'passenger': 'Ptsv2paymentsOrderInformationPassenger',
         'shipping_destination_types': 'str',
         'tax_amount': 'str'
     }
@@ -273,7 +273,7 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         Gets the passenger of this Riskv1authenticationsOrderInformationLineItems.
 
         :return: The passenger of this Riskv1authenticationsOrderInformationLineItems.
-        :rtype: Riskv1decisionsOrderInformationPassenger
+        :rtype: Ptsv2paymentsOrderInformationPassenger
         """
         return self._passenger
 
@@ -283,7 +283,7 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         Sets the passenger of this Riskv1authenticationsOrderInformationLineItems.
 
         :param passenger: The passenger of this Riskv1authenticationsOrderInformationLineItems.
-        :type: Riskv1decisionsOrderInformationPassenger
+        :type: Ptsv2paymentsOrderInformationPassenger
         """
 
         self._passenger = passenger

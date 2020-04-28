@@ -39,14 +39,6 @@ class TestPayerAuthenticationApi(unittest.TestCase):
         """
         pass
 
-    def test_payer_auth_setup(self):
-        """
-        Test case for payer_auth_setup
-
-        Setup Payer Auth
-        """
-        pass
-
     def test_validate_authentication_results(self):
         """
         Test case for validate_authentication_results

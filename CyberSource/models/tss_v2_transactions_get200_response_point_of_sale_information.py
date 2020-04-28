@@ -32,26 +32,31 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
     """
     swagger_types = {
         'entry_mode': 'str',
-        'terminal_capability': 'int'
+        'terminal_capability': 'int',
+        'emv': 'Ptsv2paymentsidreversalsPointOfSaleInformationEmv'
     }
 
     attribute_map = {
         'entry_mode': 'entryMode',
-        'terminal_capability': 'terminalCapability'
+        'terminal_capability': 'terminalCapability',
+        'emv': 'emv'
     }
 
-    def __init__(self, entry_mode=None, terminal_capability=None):
+    def __init__(self, entry_mode=None, terminal_capability=None, emv=None):
         """
         TssV2TransactionsGet200ResponsePointOfSaleInformation - a model defined in Swagger
         """
 
         self._entry_mode = None
         self._terminal_capability = None
+        self._emv = None
 
         if entry_mode is not None:
           self.entry_mode = entry_mode
         if terminal_capability is not None:
           self.terminal_capability = terminal_capability
+        if emv is not None:
+          self.emv = emv
 
     @property
     def entry_mode(self):
@@ -104,6 +109,27 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
             raise ValueError("Invalid value for `terminal_capability`, must be a value greater than or equal to `1`")
 
         self._terminal_capability = terminal_capability
+
+    @property
+    def emv(self):
+        """
+        Gets the emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+
+        :return: The emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        """
+        return self._emv
+
+    @emv.setter
+    def emv(self, emv):
+        """
+        Sets the emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+
+        :param emv: The emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        """
+
+        self._emv = emv
 
     def to_dict(self):
         """

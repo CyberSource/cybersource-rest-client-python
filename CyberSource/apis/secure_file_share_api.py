@@ -175,6 +175,7 @@ class SecureFileShareApi(object):
         :param date start_date: Valid start date in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)   **Example date format:**   - yyyy-MM-dd  (required)
         :param date end_date: Valid end date in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)   **Example date format:**   - yyyy-MM-dd  (required)
         :param str organization_id: Valid Cybersource Organization Id
+        :param str name: **Tailored to searches for specific files with in given Date range** example : MyTransactionDetailreport.xml 
         :return: V1FileDetailsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -203,12 +204,13 @@ class SecureFileShareApi(object):
         :param date start_date: Valid start date in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)   **Example date format:**   - yyyy-MM-dd  (required)
         :param date end_date: Valid end date in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)   **Example date format:**   - yyyy-MM-dd  (required)
         :param str organization_id: Valid Cybersource Organization Id
+        :param str name: **Tailored to searches for specific files with in given Date range** example : MyTransactionDetailreport.xml 
         :return: V1FileDetailsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['start_date', 'end_date', 'organization_id']
+        all_params = ['start_date', 'end_date', 'organization_id', 'name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -236,6 +238,8 @@ class SecureFileShareApi(object):
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+        if 'name' in params and not re.search('[a-zA-Z0-9-_\\.]+', params['name']):
+            raise ValueError("Invalid value for parameter `name` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_\\.]+/`")
 
         collection_formats = {}
 
@@ -248,6 +252,8 @@ class SecureFileShareApi(object):
             query_params.append(('endDate', params['end_date']))
         if 'organization_id' in params:
             query_params.append(('organizationId', params['organization_id']))
+        if 'name' in params:
+            query_params.append(('name', params['name']))
 
         header_params = {}
 

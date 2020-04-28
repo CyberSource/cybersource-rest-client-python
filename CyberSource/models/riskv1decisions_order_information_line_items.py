@@ -39,7 +39,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'product_code': 'str',
         'gift': 'bool',
         'distributor_product_sku': 'str',
-        'passenger': 'Riskv1decisionsOrderInformationPassenger'
+        'passenger': 'Ptsv2paymentsOrderInformationPassenger'
     }
 
     attribute_map = {
@@ -244,7 +244,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def gift(self):
         """
         Gets the gift of this Riskv1decisionsOrderInformationLineItems.
-        Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
+        This field is only used in DM service.  Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
 
         :return: The gift of this Riskv1decisionsOrderInformationLineItems.
         :rtype: bool
@@ -255,7 +255,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def gift(self, gift):
         """
         Sets the gift of this Riskv1decisionsOrderInformationLineItems.
-        Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
+        This field is only used in DM service.  Determines whether to assign risk to the order if the billing and shipping addresses specify different cities, states, or countries. This field can contain one of the following values: - true: Orders are assigned only slight additional risk if billing and shipping addresses are different. - false: Orders are assigned higher additional risk if billing and shipping addresses are different. 
 
         :param gift: The gift of this Riskv1decisionsOrderInformationLineItems.
         :type: bool
@@ -294,7 +294,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         Gets the passenger of this Riskv1decisionsOrderInformationLineItems.
 
         :return: The passenger of this Riskv1decisionsOrderInformationLineItems.
-        :rtype: Riskv1decisionsOrderInformationPassenger
+        :rtype: Ptsv2paymentsOrderInformationPassenger
         """
         return self._passenger
 
@@ -304,7 +304,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
         Sets the passenger of this Riskv1decisionsOrderInformationLineItems.
 
         :param passenger: The passenger of this Riskv1decisionsOrderInformationLineItems.
-        :type: Riskv1decisionsOrderInformationPassenger
+        :type: Ptsv2paymentsOrderInformationPassenger
         """
 
         self._passenger = passenger

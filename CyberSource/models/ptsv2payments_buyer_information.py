@@ -36,7 +36,8 @@ class Ptsv2paymentsBuyerInformation(object):
         'vat_registration_number': 'str',
         'company_tax_id': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
-        'hashed_password': 'str'
+        'hashed_password': 'str',
+        'mobile_phone': 'int'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Ptsv2paymentsBuyerInformation(object):
         'vat_registration_number': 'vatRegistrationNumber',
         'company_tax_id': 'companyTaxId',
         'personal_identification': 'personalIdentification',
-        'hashed_password': 'hashedPassword'
+        'hashed_password': 'hashedPassword',
+        'mobile_phone': 'mobilePhone'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, mobile_phone=None):
         """
         Ptsv2paymentsBuyerInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Ptsv2paymentsBuyerInformation(object):
         self._company_tax_id = None
         self._personal_identification = None
         self._hashed_password = None
+        self._mobile_phone = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
@@ -72,6 +75,8 @@ class Ptsv2paymentsBuyerInformation(object):
           self.personal_identification = personal_identification
         if hashed_password is not None:
           self.hashed_password = hashed_password
+        if mobile_phone is not None:
+          self.mobile_phone = mobile_phone
 
     @property
     def merchant_customer_id(self):
@@ -218,6 +223,29 @@ class Ptsv2paymentsBuyerInformation(object):
             raise ValueError("Invalid value for `hashed_password`, length must be less than or equal to `100`")
 
         self._hashed_password = hashed_password
+
+    @property
+    def mobile_phone(self):
+        """
+        Gets the mobile_phone of this Ptsv2paymentsBuyerInformation.
+        Cardholder’s mobile phone number. **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :return: The mobile_phone of this Ptsv2paymentsBuyerInformation.
+        :rtype: int
+        """
+        return self._mobile_phone
+
+    @mobile_phone.setter
+    def mobile_phone(self, mobile_phone):
+        """
+        Sets the mobile_phone of this Ptsv2paymentsBuyerInformation.
+        Cardholder’s mobile phone number. **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :param mobile_phone: The mobile_phone of this Ptsv2paymentsBuyerInformation.
+        :type: int
+        """
+
+        self._mobile_phone = mobile_phone
 
     def to_dict(self):
         """

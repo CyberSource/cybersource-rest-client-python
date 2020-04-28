@@ -50,8 +50,7 @@ class Riskv1authenticationsBuyerInformation(object):
 
         if personal_identification is not None:
           self.personal_identification = personal_identification
-        if mobile_phone is not None:
-          self.mobile_phone = mobile_phone
+        self.mobile_phone = mobile_phone
 
     @property
     def personal_identification(self):
@@ -96,6 +95,8 @@ class Riskv1authenticationsBuyerInformation(object):
         :param mobile_phone: The mobile_phone of this Riskv1authenticationsBuyerInformation.
         :type: int
         """
+        if mobile_phone is None:
+            raise ValueError("Invalid value for `mobile_phone`, must not be `None`")
 
         self._mobile_phone = mobile_phone
 

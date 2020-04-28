@@ -46,7 +46,11 @@ class CreatePaymentRequest(object):
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'installment_information': 'Ptsv2paymentsInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
-        'promotion_information': 'Ptsv2paymentsPromotionInformation'
+        'promotion_information': 'Ptsv2paymentsPromotionInformation',
+        'token_information': 'Ptsv2paymentsTokenInformation',
+        'risk_information': 'Ptsv2paymentsRiskInformation',
+        'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
+        'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation'
     }
 
     attribute_map = {
@@ -65,10 +69,14 @@ class CreatePaymentRequest(object):
         'merchant_defined_information': 'merchantDefinedInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
-        'promotion_information': 'promotionInformation'
+        'promotion_information': 'promotionInformation',
+        'token_information': 'tokenInformation',
+        'risk_information': 'riskInformation',
+        'acquirer_information': 'acquirerInformation',
+        'recurring_payment_information': 'recurringPaymentInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None, token_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -89,6 +97,10 @@ class CreatePaymentRequest(object):
         self._installment_information = None
         self._travel_information = None
         self._promotion_information = None
+        self._token_information = None
+        self._risk_information = None
+        self._acquirer_information = None
+        self._recurring_payment_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -122,6 +134,14 @@ class CreatePaymentRequest(object):
           self.travel_information = travel_information
         if promotion_information is not None:
           self.promotion_information = promotion_information
+        if token_information is not None:
+          self.token_information = token_information
+        if risk_information is not None:
+          self.risk_information = risk_information
+        if acquirer_information is not None:
+          self.acquirer_information = acquirer_information
+        if recurring_payment_information is not None:
+          self.recurring_payment_information = recurring_payment_information
 
     @property
     def client_reference_information(self):
@@ -460,6 +480,90 @@ class CreatePaymentRequest(object):
         """
 
         self._promotion_information = promotion_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this CreatePaymentRequest.
+
+        :return: The token_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this CreatePaymentRequest.
+
+        :param token_information: The token_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsTokenInformation
+        """
+
+        self._token_information = token_information
+
+    @property
+    def risk_information(self):
+        """
+        Gets the risk_information of this CreatePaymentRequest.
+
+        :return: The risk_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsRiskInformation
+        """
+        return self._risk_information
+
+    @risk_information.setter
+    def risk_information(self, risk_information):
+        """
+        Sets the risk_information of this CreatePaymentRequest.
+
+        :param risk_information: The risk_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsRiskInformation
+        """
+
+        self._risk_information = risk_information
+
+    @property
+    def acquirer_information(self):
+        """
+        Gets the acquirer_information of this CreatePaymentRequest.
+
+        :return: The acquirer_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsAcquirerInformation
+        """
+        return self._acquirer_information
+
+    @acquirer_information.setter
+    def acquirer_information(self, acquirer_information):
+        """
+        Sets the acquirer_information of this CreatePaymentRequest.
+
+        :param acquirer_information: The acquirer_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsAcquirerInformation
+        """
+
+        self._acquirer_information = acquirer_information
+
+    @property
+    def recurring_payment_information(self):
+        """
+        Gets the recurring_payment_information of this CreatePaymentRequest.
+
+        :return: The recurring_payment_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsRecurringPaymentInformation
+        """
+        return self._recurring_payment_information
+
+    @recurring_payment_information.setter
+    def recurring_payment_information(self, recurring_payment_information):
+        """
+        Sets the recurring_payment_information of this CreatePaymentRequest.
+
+        :param recurring_payment_information: The recurring_payment_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsRecurringPaymentInformation
+        """
+
+        self._recurring_payment_information = recurring_payment_information
 
     def to_dict(self):
         """

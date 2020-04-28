@@ -35,7 +35,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         'risk_analysis_exemption_indicator': 'str',
         'trusted_merchant_exemption_indicator': 'str',
         'secure_corporate_payment_indicator': 'str',
-        'delegated_authentication_exemption_indicator': 'str'
+        'delegated_authentication_exemption_indicator': 'str',
+        'authentication_indicator': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         'risk_analysis_exemption_indicator': 'riskAnalysisExemptionIndicator',
         'trusted_merchant_exemption_indicator': 'trustedMerchantExemptionIndicator',
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
-        'delegated_authentication_exemption_indicator': 'delegatedAuthenticationExemptionIndicator'
+        'delegated_authentication_exemption_indicator': 'delegatedAuthenticationExemptionIndicator',
+        'authentication_indicator': 'authenticationIndicator'
     }
 
-    def __init__(self, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None):
+    def __init__(self, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None, authentication_indicator=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         self._trusted_merchant_exemption_indicator = None
         self._secure_corporate_payment_indicator = None
         self._delegated_authentication_exemption_indicator = None
+        self._authentication_indicator = None
 
         if low_value_exemption_indicator is not None:
           self.low_value_exemption_indicator = low_value_exemption_indicator
@@ -67,6 +70,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
           self.secure_corporate_payment_indicator = secure_corporate_payment_indicator
         if delegated_authentication_exemption_indicator is not None:
           self.delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
+        if authentication_indicator is not None:
+          self.authentication_indicator = authentication_indicator
 
     @property
     def low_value_exemption_indicator(self):
@@ -192,6 +197,31 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
             raise ValueError("Invalid value for `delegated_authentication_exemption_indicator`, length must be less than or equal to `1`")
 
         self._delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
+
+    @property
+    def authentication_indicator(self):
+        """
+        Gets the authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        Indicates the type of Authentication request  01 - Payment transaction  02 - Recurring transaction  03 - Installment transaction  04 - Add card  05 - Maintain card  06 - Cardholder verification as part of EMV token ID and V 
+
+        :return: The authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :rtype: str
+        """
+        return self._authentication_indicator
+
+    @authentication_indicator.setter
+    def authentication_indicator(self, authentication_indicator):
+        """
+        Sets the authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        Indicates the type of Authentication request  01 - Payment transaction  02 - Recurring transaction  03 - Installment transaction  04 - Add card  05 - Maintain card  06 - Cardholder verification as part of EMV token ID and V 
+
+        :param authentication_indicator: The authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :type: str
+        """
+        if authentication_indicator is not None and len(authentication_indicator) > 2:
+            raise ValueError("Invalid value for `authentication_indicator`, length must be less than or equal to `2`")
+
+        self._authentication_indicator = authentication_indicator
 
     def to_dict(self):
         """

@@ -36,7 +36,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
-        'void_amount_details': 'PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails'
+        'void_amount_details': 'PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails',
+        'processor_information': 'PtsV2PaymentsVoidsPost201ResponseProcessorInformation'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class PtsV2PaymentsVoidsPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'client_reference_information': 'clientReferenceInformation',
-        'void_amount_details': 'voidAmountDetails'
+        'void_amount_details': 'voidAmountDetails',
+        'processor_information': 'processorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, client_reference_information=None, void_amount_details=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, client_reference_information=None, void_amount_details=None, processor_information=None):
         """
         PtsV2PaymentsVoidsPost201Response - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
         self._status = None
         self._client_reference_information = None
         self._void_amount_details = None
+        self._processor_information = None
 
         if links is not None:
           self.links = links
@@ -72,6 +75,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
           self.client_reference_information = client_reference_information
         if void_amount_details is not None:
           self.void_amount_details = void_amount_details
+        if processor_information is not None:
+          self.processor_information = processor_information
 
     @property
     def links(self):
@@ -206,6 +211,27 @@ class PtsV2PaymentsVoidsPost201Response(object):
         """
 
         self._void_amount_details = void_amount_details
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this PtsV2PaymentsVoidsPost201Response.
+
+        :return: The processor_information of this PtsV2PaymentsVoidsPost201Response.
+        :rtype: PtsV2PaymentsVoidsPost201ResponseProcessorInformation
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this PtsV2PaymentsVoidsPost201Response.
+
+        :param processor_information: The processor_information of this PtsV2PaymentsVoidsPost201Response.
+        :type: PtsV2PaymentsVoidsPost201ResponseProcessorInformation
+        """
+
+        self._processor_information = processor_information
 
     def to_dict(self):
         """

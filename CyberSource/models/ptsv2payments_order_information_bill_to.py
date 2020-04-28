@@ -36,7 +36,7 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'middle_name': 'str',
         'name_suffix': 'str',
         'title': 'str',
-        'company': 'str',
+        'company': 'Ptsv2paymentsOrderInformationBillToCompany',
         'address1': 'str',
         'address2': 'str',
         'address3': 'str',
@@ -272,10 +272,9 @@ class Ptsv2paymentsOrderInformationBillTo(object):
     def company(self):
         """
         Gets the company of this Ptsv2paymentsOrderInformationBillTo.
-        Name of the customer’s company.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks. For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :return: The company of this Ptsv2paymentsOrderInformationBillTo.
-        :rtype: str
+        :rtype: Ptsv2paymentsOrderInformationBillToCompany
         """
         return self._company
 
@@ -283,13 +282,10 @@ class Ptsv2paymentsOrderInformationBillTo(object):
     def company(self, company):
         """
         Sets the company of this Ptsv2paymentsOrderInformationBillTo.
-        Name of the customer’s company.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks. For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
 
         :param company: The company of this Ptsv2paymentsOrderInformationBillTo.
-        :type: str
+        :type: Ptsv2paymentsOrderInformationBillToCompany
         """
-        if company is not None and len(company) > 60:
-            raise ValueError("Invalid value for `company`, length must be less than or equal to `60`")
 
         self._company = company
 

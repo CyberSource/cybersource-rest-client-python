@@ -31,52 +31,52 @@ class Ptsv2paymentsidOrderInformationAmountDetails(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'additonal_amount': 'str',
+        'additional_amount': 'str',
         'currency': 'str'
     }
 
     attribute_map = {
-        'additonal_amount': 'additonalAmount',
+        'additional_amount': 'additionalAmount',
         'currency': 'currency'
     }
 
-    def __init__(self, additonal_amount=None, currency=None):
+    def __init__(self, additional_amount=None, currency=None):
         """
         Ptsv2paymentsidOrderInformationAmountDetails - a model defined in Swagger
         """
 
-        self._additonal_amount = None
+        self._additional_amount = None
         self._currency = None
 
-        if additonal_amount is not None:
-          self.additonal_amount = additonal_amount
+        if additional_amount is not None:
+          self.additional_amount = additional_amount
         if currency is not None:
           self.currency = currency
 
     @property
-    def additonal_amount(self):
+    def additional_amount(self):
         """
-        Gets the additonal_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
+        Gets the additional_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
         Additional charges that have to be authorized against a lodging or auto-rental order. This value cannot be negative. You can include a decimal point (.), but no other special characters. 
 
-        :return: The additonal_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
+        :return: The additional_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
         :rtype: str
         """
-        return self._additonal_amount
+        return self._additional_amount
 
-    @additonal_amount.setter
-    def additonal_amount(self, additonal_amount):
+    @additional_amount.setter
+    def additional_amount(self, additional_amount):
         """
-        Sets the additonal_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
+        Sets the additional_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
         Additional charges that have to be authorized against a lodging or auto-rental order. This value cannot be negative. You can include a decimal point (.), but no other special characters. 
 
-        :param additonal_amount: The additonal_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
+        :param additional_amount: The additional_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
         :type: str
         """
-        if additonal_amount is not None and len(additonal_amount) > 19:
-            raise ValueError("Invalid value for `additonal_amount`, length must be less than or equal to `19`")
+        if additional_amount is not None and len(additional_amount) > 19:
+            raise ValueError("Invalid value for `additional_amount`, length must be less than or equal to `19`")
 
-        self._additonal_amount = additonal_amount
+        self._additional_amount = additional_amount
 
     @property
     def currency(self):

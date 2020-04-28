@@ -36,7 +36,6 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
-        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str'
     }
 
@@ -46,11 +45,10 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'fluidData',
         'customer': 'customer',
         'bank': 'bank',
-        'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None, initiation_channel=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, initiation_channel=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -60,7 +58,6 @@ class Ptsv2paymentsPaymentInformation(object):
         self._fluid_data = None
         self._customer = None
         self._bank = None
-        self._payment_type = None
         self._initiation_channel = None
 
         if card is not None:
@@ -73,8 +70,6 @@ class Ptsv2paymentsPaymentInformation(object):
           self.customer = customer
         if bank is not None:
           self.bank = bank
-        if payment_type is not None:
-          self.payment_type = payment_type
         if initiation_channel is not None:
           self.initiation_channel = initiation_channel
 
@@ -182,27 +177,6 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._bank = bank
-
-    @property
-    def payment_type(self):
-        """
-        Gets the payment_type of this Ptsv2paymentsPaymentInformation.
-
-        :return: The payment_type of this Ptsv2paymentsPaymentInformation.
-        :rtype: Ptsv2paymentsPaymentInformationPaymentType
-        """
-        return self._payment_type
-
-    @payment_type.setter
-    def payment_type(self, payment_type):
-        """
-        Sets the payment_type of this Ptsv2paymentsPaymentInformation.
-
-        :param payment_type: The payment_type of this Ptsv2paymentsPaymentInformation.
-        :type: Ptsv2paymentsPaymentInformationPaymentType
-        """
-
-        self._payment_type = payment_type
 
     @property
     def initiation_channel(self):

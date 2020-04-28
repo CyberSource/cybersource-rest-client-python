@@ -49,7 +49,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         'eci': 'str',
         'eci_raw': 'str',
         'effective_authentication_type': 'str',
-        'ivr': 'RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr',
+        'ivr': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr',
         'network_score': 'str',
         'pareq': 'str',
         'pares_status': 'str',
@@ -664,7 +664,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         Gets the ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
 
         :return: The ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        :rtype: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr
+        :rtype: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr
         """
         return self._ivr
 
@@ -674,7 +674,7 @@ class RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation(obje
         Sets the ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
 
         :param ivr: The ivr of this RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation.
-        :type: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformationIvr
+        :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr
         """
 
         self._ivr = ivr

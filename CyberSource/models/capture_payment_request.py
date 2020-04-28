@@ -36,7 +36,7 @@ class CapturePaymentRequest(object):
         'payment_information': 'Ptsv2paymentsidcapturesPaymentInformation',
         'order_information': 'Ptsv2paymentsidcapturesOrderInformation',
         'buyer_information': 'Ptsv2paymentsidcapturesBuyerInformation',
-        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'device_information': 'Ptsv2paymentsidcapturesDeviceInformation',
         'merchant_information': 'Ptsv2paymentsidcapturesMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
@@ -219,7 +219,7 @@ class CapturePaymentRequest(object):
         Gets the device_information of this CapturePaymentRequest.
 
         :return: The device_information of this CapturePaymentRequest.
-        :rtype: Ptsv2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsidcapturesDeviceInformation
         """
         return self._device_information
 
@@ -229,7 +229,7 @@ class CapturePaymentRequest(object):
         Sets the device_information of this CapturePaymentRequest.
 
         :param device_information: The device_information of this CapturePaymentRequest.
-        :type: Ptsv2paymentsDeviceInformation
+        :type: Ptsv2paymentsidcapturesDeviceInformation
         """
 
         self._device_information = device_information

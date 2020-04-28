@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     swagger_types = {
         'account_type': 'str',
         'account_status': 'str',
+        'balances': 'list[PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances]',
         'balance_amount': 'str',
         'balance_amount_type': 'str',
         'currency': 'str',
@@ -53,6 +54,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     attribute_map = {
         'account_type': 'accountType',
         'account_status': 'accountStatus',
+        'balances': 'balances',
         'balance_amount': 'balanceAmount',
         'balance_amount_type': 'balanceAmountType',
         'currency': 'currency',
@@ -70,13 +72,14 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         'regulated': 'regulated'
     }
 
-    def __init__(self, account_type=None, account_status=None, balance_amount=None, balance_amount_type=None, currency=None, balance_sign=None, affluence_indicator=None, category=None, commercial=None, group=None, health_care=None, payroll=None, level3_eligible=None, pinless_debit=None, signature_debit=None, prepaid=None, regulated=None):
+    def __init__(self, account_type=None, account_status=None, balances=None, balance_amount=None, balance_amount_type=None, currency=None, balance_sign=None, affluence_indicator=None, category=None, commercial=None, group=None, health_care=None, payroll=None, level3_eligible=None, pinless_debit=None, signature_debit=None, prepaid=None, regulated=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures - a model defined in Swagger
         """
 
         self._account_type = None
         self._account_status = None
+        self._balances = None
         self._balance_amount = None
         self._balance_amount_type = None
         self._currency = None
@@ -97,6 +100,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
           self.account_type = account_type
         if account_status is not None:
           self.account_status = account_status
+        if balances is not None:
+          self.balances = balances
         if balance_amount is not None:
           self.balance_amount = balance_amount
         if balance_amount_type is not None:
@@ -179,6 +184,29 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         self._account_status = account_status
 
     @property
+    def balances(self):
+        """
+        Gets the balances of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        This is an array of multiple balances information an issuer can return for a given card.
+
+        :return: The balances of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        :rtype: list[PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances]
+        """
+        return self._balances
+
+    @balances.setter
+    def balances(self, balances):
+        """
+        Sets the balances of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        This is an array of multiple balances information an issuer can return for a given card.
+
+        :param balances: The balances of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        :type: list[PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances]
+        """
+
+        self._balances = balances
+
+    @property
     def balance_amount(self):
         """
         Gets the balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
@@ -257,7 +285,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_sign(self):
         """
         Gets the balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **+**  - **-** 
+        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **positive**  - **negative** 
 
         :return: The balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -268,13 +296,13 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_sign(self, balance_sign):
         """
         Sets the balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **+**  - **-** 
+        Sign for the remaining balance on the account. Returned only when the processor returns this value. Possible values:  Possible values:  - **positive**  - **negative** 
 
         :param balance_sign: The balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if balance_sign is not None and len(balance_sign) > 1:
-            raise ValueError("Invalid value for `balance_sign`, length must be less than or equal to `1`")
+        if balance_sign is not None and len(balance_sign) > 8:
+            raise ValueError("Invalid value for `balance_sign`, length must be less than or equal to `8`")
 
         self._balance_sign = balance_sign
 

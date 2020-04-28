@@ -35,7 +35,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'commerce_indicator': 'str',
         'business_application_id': 'str',
         'authorization_options': 'TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions',
-        'bank_transfer_options': 'TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions'
+        'bank_transfer_options': 'TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions',
+        'japan_payment_options': 'TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'commerce_indicator': 'commerceIndicator',
         'business_application_id': 'businessApplicationId',
         'authorization_options': 'authorizationOptions',
-        'bank_transfer_options': 'bankTransferOptions'
+        'bank_transfer_options': 'bankTransferOptions',
+        'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, payment_solution=None, commerce_indicator=None, business_application_id=None, authorization_options=None, bank_transfer_options=None):
+    def __init__(self, payment_solution=None, commerce_indicator=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         self._business_application_id = None
         self._authorization_options = None
         self._bank_transfer_options = None
+        self._japan_payment_options = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -67,6 +70,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
           self.authorization_options = authorization_options
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
+        if japan_payment_options is not None:
+          self.japan_payment_options = japan_payment_options
 
     @property
     def payment_solution(self):
@@ -97,7 +102,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Type of transaction. Certain card associations use this information when determining discount rates to charge you. Required for Verified by Visa and MasterCard SecureCode transactions.      This field can contain one of these values:      * 5: `vbv` (Successful Verified by Visa transaction)     * 6: `spa` (MasterCard SecureCode transaction)     * 7: `internet` (default) (eCommerce order placed by     using a Web site)     * 8: `vbv_attempted` (Verified by Visa transaction     was attempted but not authenticated)     * E: `vbv_failure` (Depending on your payment     processor, you may receive this result if Visa’s     directory service is not available)     * F: `spa_failure` (MasterCard SecureCode     authentication failed)     * M: `moto` (Mail order or telephone order)     * P: `retail` (Point-of-sale transaction)     * R: `recurring` (Recurring transaction)     * S: `install` (Installment payment) 
 
         :return: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -108,7 +113,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed in \"Commerce Indicators\" section of [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Payouts OCT (Original Credit Transaction) Value for an OCT transaction: - `internet` For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Type of transaction. Certain card associations use this information when determining discount rates to charge you. Required for Verified by Visa and MasterCard SecureCode transactions.      This field can contain one of these values:      * 5: `vbv` (Successful Verified by Visa transaction)     * 6: `spa` (MasterCard SecureCode transaction)     * 7: `internet` (default) (eCommerce order placed by     using a Web site)     * 8: `vbv_attempted` (Verified by Visa transaction     was attempted but not authenticated)     * E: `vbv_failure` (Depending on your payment     processor, you may receive this result if Visa’s     directory service is not available)     * F: `spa_failure` (MasterCard SecureCode     authentication failed)     * M: `moto` (Mail order or telephone order)     * P: `retail` (Point-of-sale transaction)     * R: `recurring` (Recurring transaction)     * S: `install` (Installment payment) 
 
         :param commerce_indicator: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
@@ -182,6 +187,27 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         """
 
         self._bank_transfer_options = bank_transfer_options
+
+    @property
+    def japan_payment_options(self):
+        """
+        Gets the japan_payment_options of this TssV2TransactionsGet200ResponseProcessingInformation.
+
+        :return: The japan_payment_options of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions
+        """
+        return self._japan_payment_options
+
+    @japan_payment_options.setter
+    def japan_payment_options(self, japan_payment_options):
+        """
+        Sets the japan_payment_options of this TssV2TransactionsGet200ResponseProcessingInformation.
+
+        :param japan_payment_options: The japan_payment_options of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions
+        """
+
+        self._japan_payment_options = japan_payment_options
 
     def to_dict(self):
         """

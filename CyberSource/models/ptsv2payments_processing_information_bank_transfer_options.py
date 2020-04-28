@@ -40,7 +40,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         'customer_memo': 'str',
         'payment_category_code': 'str',
         'settlement_method': 'str',
-        'fraud_screening_level': 'str'
+        'fraud_screening_level': 'str',
+        'customer_present': 'str'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         'customer_memo': 'customerMemo',
         'payment_category_code': 'paymentCategoryCode',
         'settlement_method': 'settlementMethod',
-        'fraud_screening_level': 'fraudScreeningLevel'
+        'fraud_screening_level': 'fraudScreeningLevel',
+        'customer_present': 'customerPresent'
     }
 
-    def __init__(self, decline_avs_flags=None, sec_code=None, terminal_city=None, terminal_state=None, effective_date=None, partial_payment_id=None, customer_memo=None, payment_category_code=None, settlement_method=None, fraud_screening_level=None):
+    def __init__(self, decline_avs_flags=None, sec_code=None, terminal_city=None, terminal_state=None, effective_date=None, partial_payment_id=None, customer_memo=None, payment_category_code=None, settlement_method=None, fraud_screening_level=None, customer_present=None):
         """
         Ptsv2paymentsProcessingInformationBankTransferOptions - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         self._payment_category_code = None
         self._settlement_method = None
         self._fraud_screening_level = None
+        self._customer_present = None
 
         if decline_avs_flags is not None:
           self.decline_avs_flags = decline_avs_flags
@@ -92,6 +95,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
           self.settlement_method = settlement_method
         if fraud_screening_level is not None:
           self.fraud_screening_level = fraud_screening_level
+        if customer_present is not None:
+          self.customer_present = customer_present
 
     @property
     def decline_avs_flags(self):
@@ -342,6 +347,31 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
             raise ValueError("Invalid value for `fraud_screening_level`, length must be less than or equal to `1`")
 
         self._fraud_screening_level = fraud_screening_level
+
+    @property
+    def customer_present(self):
+        """
+        Gets the customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
+        Indicates whether a customer is physically present and whether the customer is enrolling in CyberSource Recurring Billing.  Possible values: - `1`: Customer is present and not enrolling. - `2`: Customer is not present and not enrolling. - `3`: Customer is present and enrolling. - `4`: Customer is not present and enrolling. 
+
+        :return: The customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
+        :rtype: str
+        """
+        return self._customer_present
+
+    @customer_present.setter
+    def customer_present(self, customer_present):
+        """
+        Sets the customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
+        Indicates whether a customer is physically present and whether the customer is enrolling in CyberSource Recurring Billing.  Possible values: - `1`: Customer is present and not enrolling. - `2`: Customer is not present and not enrolling. - `3`: Customer is present and enrolling. - `4`: Customer is not present and enrolling. 
+
+        :param customer_present: The customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
+        :type: str
+        """
+        if customer_present is not None and len(customer_present) > 1:
+            raise ValueError("Invalid value for `customer_present`, length must be less than or equal to `1`")
+
+        self._customer_present = customer_present
 
     def to_dict(self):
         """

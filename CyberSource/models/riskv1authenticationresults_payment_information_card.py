@@ -57,7 +57,8 @@ class Riskv1authenticationresultsPaymentInformationCard(object):
         self._expiration_year = None
         self._number = None
 
-        self.bin = bin
+        if bin is not None:
+          self.bin = bin
         self.type = type
         if expiration_month is not None:
           self.expiration_month = expiration_month
@@ -86,8 +87,6 @@ class Riskv1authenticationresultsPaymentInformationCard(object):
         :param bin: The bin of this Riskv1authenticationresultsPaymentInformationCard.
         :type: str
         """
-        if bin is None:
-            raise ValueError("Invalid value for `bin`, must not be `None`")
         if bin is not None and len(bin) > 6:
             raise ValueError("Invalid value for `bin`, length must be less than or equal to `6`")
 

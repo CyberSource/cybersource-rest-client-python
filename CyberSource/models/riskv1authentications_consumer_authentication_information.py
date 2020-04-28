@@ -199,7 +199,8 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.marketing_opt_in = marketing_opt_in
         if marketing_source is not None:
           self.marketing_source = marketing_source
-        self.mcc = mcc
+        if mcc is not None:
+          self.mcc = mcc
         if merchant_score is not None:
           self.merchant_score = merchant_score
         if message_category is not None:
@@ -208,7 +209,8 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.npa_code = npa_code
         if override_payment_method is not None:
           self.override_payment_method = override_payment_method
-        self.override_country_code = override_country_code
+        if override_country_code is not None:
+          self.override_country_code = override_country_code
         if prior_authentication_data is not None:
           self.prior_authentication_data = prior_authentication_data
         if prior_authentication_method is not None:
@@ -225,12 +227,14 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
           self.requestor_initiated_authentication_indicator = requestor_initiated_authentication_indicator
         if requestor_name is not None:
           self.requestor_name = requestor_name
-        self.reference_id = reference_id
+        if reference_id is not None:
+          self.reference_id = reference_id
         if sdk_max_timeout is not None:
           self.sdk_max_timeout = sdk_max_timeout
         if secure_corporate_payment_indicator is not None:
           self.secure_corporate_payment_indicator = secure_corporate_payment_indicator
-        self.transaction_mode = transaction_mode
+        if transaction_mode is not None:
+          self.transaction_mode = transaction_mode
         if white_list_status is not None:
           self.white_list_status = white_list_status
 
@@ -740,8 +744,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         :param mcc: The mcc of this Riskv1authenticationsConsumerAuthenticationInformation.
         :type: str
         """
-        if mcc is None:
-            raise ValueError("Invalid value for `mcc`, must not be `None`")
         if mcc is not None and len(mcc) > 4:
             raise ValueError("Invalid value for `mcc`, length must be less than or equal to `4`")
 
@@ -861,8 +863,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         :param override_country_code: The override_country_code of this Riskv1authenticationsConsumerAuthenticationInformation.
         :type: str
         """
-        if override_country_code is None:
-            raise ValueError("Invalid value for `override_country_code`, must not be `None`")
         if override_country_code is not None and len(override_country_code) > 2:
             raise ValueError("Invalid value for `override_country_code`, length must be less than or equal to `2`")
 
@@ -1088,8 +1088,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         :param reference_id: The reference_id of this Riskv1authenticationsConsumerAuthenticationInformation.
         :type: str
         """
-        if reference_id is None:
-            raise ValueError("Invalid value for `reference_id`, must not be `None`")
         if reference_id is not None and len(reference_id) > 50:
             raise ValueError("Invalid value for `reference_id`, length must be less than or equal to `50`")
 
@@ -1165,8 +1163,6 @@ class Riskv1authenticationsConsumerAuthenticationInformation(object):
         :param transaction_mode: The transaction_mode of this Riskv1authenticationsConsumerAuthenticationInformation.
         :type: str
         """
-        if transaction_mode is None:
-            raise ValueError("Invalid value for `transaction_mode`, must not be `None`")
 
         self._transaction_mode = transaction_mode
 
