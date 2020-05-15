@@ -36,11 +36,10 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         'submit_time_utc': 'str',
         'submit_time_local': 'str',
         'status': 'str',
-        'reason': 'str',
         'message': 'str',
         'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
         'export_compliance_information': 'RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation',
-        'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation'
+        'error_information': 'RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation'
     }
 
     attribute_map = {
@@ -49,14 +48,13 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'submit_time_local': 'submitTimeLocal',
         'status': 'status',
-        'reason': 'reason',
         'message': 'message',
         'client_reference_information': 'clientReferenceInformation',
         'export_compliance_information': 'exportComplianceInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, reason=None, message=None, client_reference_information=None, export_compliance_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, message=None, client_reference_information=None, export_compliance_information=None, error_information=None):
         """
         RiskV1ExportComplianceInquiriesPost201Response - a model defined in Swagger
         """
@@ -66,7 +64,6 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         self._submit_time_utc = None
         self._submit_time_local = None
         self._status = None
-        self._reason = None
         self._message = None
         self._client_reference_information = None
         self._export_compliance_information = None
@@ -82,8 +79,6 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
           self.submit_time_local = submit_time_local
         if status is not None:
           self.status = status
-        if reason is not None:
-          self.reason = reason
         if message is not None:
           self.message = message
         if client_reference_information is not None:
@@ -143,7 +138,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this RiskV1ExportComplianceInquiriesPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :return: The submit_time_utc of this RiskV1ExportComplianceInquiriesPost201Response.
         :rtype: str
@@ -154,7 +149,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this RiskV1ExportComplianceInquiriesPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :param submit_time_utc: The submit_time_utc of this RiskV1ExportComplianceInquiriesPost201Response.
         :type: str
@@ -207,29 +202,6 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         """
 
         self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this RiskV1ExportComplianceInquiriesPost201Response.
-        The reason of the status. Value can be   - CUSTOMER_WATCHLIST_MATCH   - ADDRESS_COUNTRY_WATCHLIST_MATCH   - EMAIL_COUNTRY_WATCHLIST_MATCH   - IP_COUNTRY_WATCHLIST_MATCH 
-
-        :return: The reason of this RiskV1ExportComplianceInquiriesPost201Response.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this RiskV1ExportComplianceInquiriesPost201Response.
-        The reason of the status. Value can be   - CUSTOMER_WATCHLIST_MATCH   - ADDRESS_COUNTRY_WATCHLIST_MATCH   - EMAIL_COUNTRY_WATCHLIST_MATCH   - IP_COUNTRY_WATCHLIST_MATCH 
-
-        :param reason: The reason of this RiskV1ExportComplianceInquiriesPost201Response.
-        :type: str
-        """
-
-        self._reason = reason
 
     @property
     def message(self):
@@ -302,7 +274,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Gets the error_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :return: The error_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :rtype: PtsV2PaymentsPost201ResponseErrorInformation
+        :rtype: RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation
         """
         return self._error_information
 
@@ -312,7 +284,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Sets the error_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :param error_information: The error_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :type: PtsV2PaymentsPost201ResponseErrorInformation
+        :type: RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation
         """
 
         self._error_information = error_information

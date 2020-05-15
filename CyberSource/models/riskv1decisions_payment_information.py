@@ -32,26 +32,41 @@ class Riskv1decisionsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Riskv1decisionsPaymentInformationCard',
-        'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard'
+        'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard',
+        'customer': 'Riskv1decisionsPaymentInformationCustomer',
+        'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'method': 'str'
     }
 
     attribute_map = {
         'card': 'card',
-        'tokenized_card': 'tokenizedCard'
+        'tokenized_card': 'tokenizedCard',
+        'customer': 'customer',
+        'bank': 'bank',
+        'method': 'method'
     }
 
-    def __init__(self, card=None, tokenized_card=None):
+    def __init__(self, card=None, tokenized_card=None, customer=None, bank=None, method=None):
         """
         Riskv1decisionsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._customer = None
+        self._bank = None
+        self._method = None
 
         if card is not None:
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if customer is not None:
+          self.customer = customer
+        if bank is not None:
+          self.bank = bank
+        if method is not None:
+          self.method = method
 
     @property
     def card(self):
@@ -94,6 +109,73 @@ class Riskv1decisionsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this Riskv1decisionsPaymentInformation.
+
+        :return: The customer of this Riskv1decisionsPaymentInformation.
+        :rtype: Riskv1decisionsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this Riskv1decisionsPaymentInformation.
+
+        :param customer: The customer of this Riskv1decisionsPaymentInformation.
+        :type: Riskv1decisionsPaymentInformationCustomer
+        """
+
+        self._customer = customer
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this Riskv1decisionsPaymentInformation.
+
+        :return: The bank of this Riskv1decisionsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this Riskv1decisionsPaymentInformation.
+
+        :param bank: The bank of this Riskv1decisionsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationBank
+        """
+
+        self._bank = bank
+
+    @property
+    def method(self):
+        """
+        Gets the method of this Riskv1decisionsPaymentInformation.
+        Method of payment used for the order. This field can contain one of the following values:   - `consumer` (default): Customer credit card   - `corporate`: Corporate credit card   - `debit`: Debit card, such as a Maestro (UK Domestic) card   - `cod`: Collect on delivery   - `check`: Electronic check   - `p2p`: Person-to-person payment   - `private1`: Private label credit card   - `other`: Other payment method 
+
+        :return: The method of this Riskv1decisionsPaymentInformation.
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """
+        Sets the method of this Riskv1decisionsPaymentInformation.
+        Method of payment used for the order. This field can contain one of the following values:   - `consumer` (default): Customer credit card   - `corporate`: Corporate credit card   - `debit`: Debit card, such as a Maestro (UK Domestic) card   - `cod`: Collect on delivery   - `check`: Electronic check   - `p2p`: Person-to-person payment   - `private1`: Private label credit card   - `other`: Other payment method 
+
+        :param method: The method of this Riskv1decisionsPaymentInformation.
+        :type: str
+        """
+        if method is not None and len(method) > 10:
+            raise ValueError("Invalid value for `method`, length must be less than or equal to `10`")
+
+        self._method = method
 
     def to_dict(self):
         """

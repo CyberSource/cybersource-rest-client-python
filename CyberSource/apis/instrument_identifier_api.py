@@ -231,8 +231,8 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 12:
+            raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `12`")
 
         collection_formats = {}
 
@@ -354,8 +354,8 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 12:
+            raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `12`")
         if 'offset' in params and params['offset'] < 0:
             raise ValueError("Invalid value for parameter `offset` when calling `get_all_payment_instruments`, must be a value greater than or equal to `0`")
         if 'limit' in params and params['limit'] > 100:
@@ -483,8 +483,8 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 12:
+            raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be greater than or equal to `12`")
 
         collection_formats = {}
 
@@ -607,8 +607,8 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_instrument_identifier`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 12:
+            raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be greater than or equal to `12`")
 
         collection_formats = {}
 

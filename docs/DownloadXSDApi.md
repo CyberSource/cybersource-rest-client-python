@@ -4,7 +4,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_xsdv2**](DownloadXSDApi.md#get_xsdv2) | **GET** /xsds/{reportDefinitionNameVersion} | Download XSD for Report
+[**get_xsdv2**](DownloadXSDApi.md#get_xsdv2) | **GET** /reporting/v3/xsds/{reportDefinitionNameVersion} | Download XSD for Report
 
 
 # **get_xsdv2**

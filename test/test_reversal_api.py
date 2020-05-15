@@ -43,7 +43,7 @@ class TestReversalApi(unittest.TestCase):
         """
         Test case for mit_reversal
 
-        Merchant Initiated Reversal
+        Timeout Reversal
         """
         pass
 

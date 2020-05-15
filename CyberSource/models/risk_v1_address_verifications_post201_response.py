@@ -36,11 +36,10 @@ class RiskV1AddressVerificationsPost201Response(object):
         'submit_time_utc': 'str',
         'submit_time_local': 'str',
         'status': 'str',
-        'reason': 'str',
         'message': 'str',
         'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
         'address_verification_information': 'RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation',
-        'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation'
+        'error_information': 'RiskV1AddressVerificationsPost201ResponseErrorInformation'
     }
 
     attribute_map = {
@@ -49,14 +48,13 @@ class RiskV1AddressVerificationsPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'submit_time_local': 'submitTimeLocal',
         'status': 'status',
-        'reason': 'reason',
         'message': 'message',
         'client_reference_information': 'clientReferenceInformation',
         'address_verification_information': 'addressVerificationInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, reason=None, message=None, client_reference_information=None, address_verification_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, message=None, client_reference_information=None, address_verification_information=None, error_information=None):
         """
         RiskV1AddressVerificationsPost201Response - a model defined in Swagger
         """
@@ -66,7 +64,6 @@ class RiskV1AddressVerificationsPost201Response(object):
         self._submit_time_utc = None
         self._submit_time_local = None
         self._status = None
-        self._reason = None
         self._message = None
         self._client_reference_information = None
         self._address_verification_information = None
@@ -82,8 +79,6 @@ class RiskV1AddressVerificationsPost201Response(object):
           self.submit_time_local = submit_time_local
         if status is not None:
           self.status = status
-        if reason is not None:
-          self.reason = reason
         if message is not None:
           self.message = message
         if client_reference_information is not None:
@@ -143,7 +138,7 @@ class RiskV1AddressVerificationsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this RiskV1AddressVerificationsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :return: The submit_time_utc of this RiskV1AddressVerificationsPost201Response.
         :rtype: str
@@ -154,7 +149,7 @@ class RiskV1AddressVerificationsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this RiskV1AddressVerificationsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :param submit_time_utc: The submit_time_utc of this RiskV1AddressVerificationsPost201Response.
         :type: str
@@ -207,29 +202,6 @@ class RiskV1AddressVerificationsPost201Response(object):
         """
 
         self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this RiskV1AddressVerificationsPost201Response.
-        The reason of the status. Value can be   - APARTMENT_NUMBER_NOT_FOUND   - INSUFFICIENT_ADDRESS_INFORMATION   - HOUSE_OR_BOX_NUMBER_NOT_FOUND   - MULTIPLE_ADDRESS_MATCHES   - BOX_NUMBER_NOT_FOUND   - ROUTE_SERVICE_NOT_FOUND   - STREET_NAME_NOT_FOUND   - POSTAL_CODE_NOT_FOUND   - UNVERIFIABLE_ADDRESS   - MULTIPLE_ADDRESS_MATCHES_INTERNATIONAL   - ADDRESS_MATCH_NOT_FOUND   - UNSUPPORTED_CHARACTER_SET 
-
-        :return: The reason of this RiskV1AddressVerificationsPost201Response.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this RiskV1AddressVerificationsPost201Response.
-        The reason of the status. Value can be   - APARTMENT_NUMBER_NOT_FOUND   - INSUFFICIENT_ADDRESS_INFORMATION   - HOUSE_OR_BOX_NUMBER_NOT_FOUND   - MULTIPLE_ADDRESS_MATCHES   - BOX_NUMBER_NOT_FOUND   - ROUTE_SERVICE_NOT_FOUND   - STREET_NAME_NOT_FOUND   - POSTAL_CODE_NOT_FOUND   - UNVERIFIABLE_ADDRESS   - MULTIPLE_ADDRESS_MATCHES_INTERNATIONAL   - ADDRESS_MATCH_NOT_FOUND   - UNSUPPORTED_CHARACTER_SET 
-
-        :param reason: The reason of this RiskV1AddressVerificationsPost201Response.
-        :type: str
-        """
-
-        self._reason = reason
 
     @property
     def message(self):
@@ -302,7 +274,7 @@ class RiskV1AddressVerificationsPost201Response(object):
         Gets the error_information of this RiskV1AddressVerificationsPost201Response.
 
         :return: The error_information of this RiskV1AddressVerificationsPost201Response.
-        :rtype: PtsV2PaymentsPost201ResponseErrorInformation
+        :rtype: RiskV1AddressVerificationsPost201ResponseErrorInformation
         """
         return self._error_information
 
@@ -312,7 +284,7 @@ class RiskV1AddressVerificationsPost201Response(object):
         Sets the error_information of this RiskV1AddressVerificationsPost201Response.
 
         :param error_information: The error_information of this RiskV1AddressVerificationsPost201Response.
-        :type: PtsV2PaymentsPost201ResponseErrorInformation
+        :type: RiskV1AddressVerificationsPost201ResponseErrorInformation
         """
 
         self._error_information = error_information

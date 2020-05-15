@@ -112,7 +112,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner(object):
     def third_party_certification_number(self):
         """
         Gets the third_party_certification_number of this Ptsv2paymentsidreversalsClientReferenceInformationPartner.
-        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet. 
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field. 
 
         :return: The third_party_certification_number of this Ptsv2paymentsidreversalsClientReferenceInformationPartner.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner(object):
     def third_party_certification_number(self, third_party_certification_number):
         """
         Sets the third_party_certification_number of this Ptsv2paymentsidreversalsClientReferenceInformationPartner.
-        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet. 
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field. 
 
         :param third_party_certification_number: The third_party_certification_number of this Ptsv2paymentsidreversalsClientReferenceInformationPartner.
         :type: str

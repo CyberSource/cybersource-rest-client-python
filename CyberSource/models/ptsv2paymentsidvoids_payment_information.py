@@ -31,7 +31,7 @@ class Ptsv2paymentsidvoidsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_type': 'Ptsv2paymentsidrefundsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class Ptsv2paymentsidvoidsPaymentInformation(object):
         Gets the payment_type of this Ptsv2paymentsidvoidsPaymentInformation.
 
         :return: The payment_type of this Ptsv2paymentsidvoidsPaymentInformation.
-        :rtype: Ptsv2paymentsidrefundsPaymentInformationPaymentType
+        :rtype: Ptsv2paymentsPaymentInformationPaymentType
         """
         return self._payment_type
 
@@ -64,7 +64,7 @@ class Ptsv2paymentsidvoidsPaymentInformation(object):
         Sets the payment_type of this Ptsv2paymentsidvoidsPaymentInformation.
 
         :param payment_type: The payment_type of this Ptsv2paymentsidvoidsPaymentInformation.
-        :type: Ptsv2paymentsidrefundsPaymentInformationPaymentType
+        :type: Ptsv2paymentsPaymentInformationPaymentType
         """
 
         self._payment_type = payment_type

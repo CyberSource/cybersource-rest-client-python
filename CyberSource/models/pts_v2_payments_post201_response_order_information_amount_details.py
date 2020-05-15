@@ -87,7 +87,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self):
         """
         Gets the authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :return: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -98,7 +98,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self, authorized_amount):
         """
         Sets the authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :param authorized_amount: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
@@ -112,7 +112,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. 
 
         :return: The currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -123,7 +123,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. 
 
         :param currency: The currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str

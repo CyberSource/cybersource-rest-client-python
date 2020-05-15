@@ -65,6 +65,9 @@ class ApiClient(object):
         'object': object,
     }
 
+    def set_user_defined_accept_header(self, user_defined_accept_header):
+        self.accept_header = user_defined_accept_header
+
     def __init__(self, host=None, header_name=None, header_value=None, cookie=None):
         """
         Constructor of the class.
@@ -219,6 +222,12 @@ class ApiClient(object):
                    _request_timeout=None):
 
         config = Configuration()
+
+        if (hasattr(self, 'accept_header')):
+            if (self.accept_header is not None):
+                default_accept_header = ', ' + header_params['Accept']
+                default_accept_header = self.accept_header + default_accept_header.replace(', ' + self.accept_header, '')
+                header_params['Accept'] = default_accept_header
 
         # header parameters
         header_params = header_params or {}

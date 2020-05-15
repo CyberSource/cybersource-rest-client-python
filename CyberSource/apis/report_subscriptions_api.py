@@ -289,6 +289,7 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Delete (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -315,12 +316,13 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Delete (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_name']
+        all_params = ['report_name', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -345,6 +347,12 @@ class ReportSubscriptionsApi(object):
             raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, length must be greater than or equal to `1`")
         if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
             raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
@@ -353,6 +361,8 @@ class ReportSubscriptionsApi(object):
             path_params['reportName'] = params['report_name']
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -400,6 +410,7 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportSubscriptionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -425,12 +436,13 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportSubscriptionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []
+        all_params = ['organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -446,11 +458,20 @@ class ReportSubscriptionsApi(object):
             params[key] = val
         del params['kwargs']
 
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -499,6 +520,7 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Retrieve (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportSubscriptionsGet200ResponseSubscriptions
                  If the method is called asynchronously,
                  returns the request thread.
@@ -525,12 +547,13 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Retrieve (required)
+        :param str organization_id: Valid Cybersource Organization Id
         :return: ReportingV3ReportSubscriptionsGet200ResponseSubscriptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_name']
+        all_params = ['report_name', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -555,6 +578,12 @@ class ReportSubscriptionsApi(object):
             raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, length must be greater than or equal to `1`")
         if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
             raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
@@ -563,6 +592,8 @@ class ReportSubscriptionsApi(object):
             path_params['reportName'] = params['report_name']
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 

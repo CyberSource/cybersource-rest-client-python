@@ -157,8 +157,8 @@ class ReversalApi(object):
 
     def mit_reversal(self, mit_reversal_request, **kwargs):
         """
-        Merchant Initiated Reversal
-        This is to reverse a previous payment that merchant does not receive a reply.
+        Timeout Reversal
+        This is to reverse a previous payment that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call and use same transactionId in this API request payload to reverse the payment.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -183,8 +183,8 @@ class ReversalApi(object):
 
     def mit_reversal_with_http_info(self, mit_reversal_request, **kwargs):
         """
-        Merchant Initiated Reversal
-        This is to reverse a previous payment that merchant does not receive a reply.
+        Timeout Reversal
+        This is to reverse a previous payment that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call and use same transactionId in this API request payload to reverse the payment.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

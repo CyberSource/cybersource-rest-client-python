@@ -37,10 +37,10 @@ class CheckPayerAuthEnrollmentRequest(object):
         'processing_information': 'Riskv1authenticationsProcessingInformation',
         'buyer_information': 'Riskv1authenticationsBuyerInformation',
         'device_information': 'Riskv1authenticationsDeviceInformation',
-        'merchant_information': 'Riskv1authenticationsMerchantInformation',
+        'merchant_information': 'Riskv1decisionsMerchantInformation',
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
-        'consumer_authentication_information': 'Riskv1authenticationsConsumerAuthenticationInformation',
+        'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
         'risk_information': 'Riskv1authenticationsRiskInformation',
         'travel_information': 'Riskv1authenticationsTravelInformation',
         'merchant_defined_information': 'list[Riskv1decisionsMerchantDefinedInformation]'
@@ -240,7 +240,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the merchant_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The merchant_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsMerchantInformation
+        :rtype: Riskv1decisionsMerchantInformation
         """
         return self._merchant_information
 
@@ -250,7 +250,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the merchant_information of this CheckPayerAuthEnrollmentRequest.
 
         :param merchant_information: The merchant_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsMerchantInformation
+        :type: Riskv1decisionsMerchantInformation
         """
 
         self._merchant_information = merchant_information
@@ -303,7 +303,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the consumer_authentication_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The consumer_authentication_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsConsumerAuthenticationInformation
+        :rtype: Riskv1decisionsConsumerAuthenticationInformation
         """
         return self._consumer_authentication_information
 
@@ -313,7 +313,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the consumer_authentication_information of this CheckPayerAuthEnrollmentRequest.
 
         :param consumer_authentication_information: The consumer_authentication_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsConsumerAuthenticationInformation
+        :type: Riskv1decisionsConsumerAuthenticationInformation
         """
 
         self._consumer_authentication_information = consumer_authentication_information

@@ -82,7 +82,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization**\\ Required field.  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization**\\ Required field.  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Ptsv2paymentsClientReferenceInformation.
         :type: str
@@ -107,7 +107,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self):
         """
         Gets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  For details, see \"Merchant-Initiated Reversals and Voids\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void**\\ Optional field. 
 
         :return: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -118,7 +118,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  For details, see \"Merchant-Initiated Reversals and Voids\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void**\\ Optional field. 
 
         :param transaction_id: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str

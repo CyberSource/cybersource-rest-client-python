@@ -35,7 +35,9 @@ class Riskv1decisionsTravelInformation(object):
         'complete_route': 'str',
         'departure_time': 'str',
         'journey_type': 'str',
-        'legs': 'list[Riskv1decisionsTravelInformationLegs]'
+        'legs': 'list[Riskv1decisionsTravelInformationLegs]',
+        'number_of_passengers': 'int',
+        'passengers': 'list[Riskv1decisionsTravelInformationPassengers]'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class Riskv1decisionsTravelInformation(object):
         'complete_route': 'completeRoute',
         'departure_time': 'departureTime',
         'journey_type': 'journeyType',
-        'legs': 'legs'
+        'legs': 'legs',
+        'number_of_passengers': 'numberOfPassengers',
+        'passengers': 'passengers'
     }
 
-    def __init__(self, actual_final_destination=None, complete_route=None, departure_time=None, journey_type=None, legs=None):
+    def __init__(self, actual_final_destination=None, complete_route=None, departure_time=None, journey_type=None, legs=None, number_of_passengers=None, passengers=None):
         """
         Riskv1decisionsTravelInformation - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class Riskv1decisionsTravelInformation(object):
         self._departure_time = None
         self._journey_type = None
         self._legs = None
+        self._number_of_passengers = None
+        self._passengers = None
 
         if actual_final_destination is not None:
           self.actual_final_destination = actual_final_destination
@@ -67,6 +73,10 @@ class Riskv1decisionsTravelInformation(object):
           self.journey_type = journey_type
         if legs is not None:
           self.legs = legs
+        if number_of_passengers is not None:
+          self.number_of_passengers = number_of_passengers
+        if passengers is not None:
+          self.passengers = passengers
 
     @property
     def actual_final_destination(self):
@@ -188,6 +198,50 @@ class Riskv1decisionsTravelInformation(object):
         """
 
         self._legs = legs
+
+    @property
+    def number_of_passengers(self):
+        """
+        Gets the number_of_passengers of this Riskv1decisionsTravelInformation.
+        Number of passengers for whom the ticket was issued. If you do not include this field in your request, CyberSource uses a default value of 1. Required for American Express SafeKey (U.S.) for travel-related requests. 
+
+        :return: The number_of_passengers of this Riskv1decisionsTravelInformation.
+        :rtype: int
+        """
+        return self._number_of_passengers
+
+    @number_of_passengers.setter
+    def number_of_passengers(self, number_of_passengers):
+        """
+        Sets the number_of_passengers of this Riskv1decisionsTravelInformation.
+        Number of passengers for whom the ticket was issued. If you do not include this field in your request, CyberSource uses a default value of 1. Required for American Express SafeKey (U.S.) for travel-related requests. 
+
+        :param number_of_passengers: The number_of_passengers of this Riskv1decisionsTravelInformation.
+        :type: int
+        """
+
+        self._number_of_passengers = number_of_passengers
+
+    @property
+    def passengers(self):
+        """
+        Gets the passengers of this Riskv1decisionsTravelInformation.
+
+        :return: The passengers of this Riskv1decisionsTravelInformation.
+        :rtype: list[Riskv1decisionsTravelInformationPassengers]
+        """
+        return self._passengers
+
+    @passengers.setter
+    def passengers(self, passengers):
+        """
+        Sets the passengers of this Riskv1decisionsTravelInformation.
+
+        :param passengers: The passengers of this Riskv1decisionsTravelInformation.
+        :type: list[Riskv1decisionsTravelInformationPassengers]
+        """
+
+        self._passengers = passengers
 
     def to_dict(self):
         """

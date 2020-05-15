@@ -5,7 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**auth_reversal**](ReversalApi.md#auth_reversal) | **POST** /pts/v2/payments/{id}/reversals | Process an Authorization Reversal
-[**mit_reversal**](ReversalApi.md#mit_reversal) | **POST** /pts/v2/reversals/ | Merchant Initiated Reversal
+[**mit_reversal**](ReversalApi.md#mit_reversal) | **POST** /pts/v2/reversals/ | Timeout Reversal
 
 
 # **auth_reversal**
@@ -61,9 +61,9 @@ No authorization required
 # **mit_reversal**
 > PtsV2PaymentsReversalsPost201Response mit_reversal(mit_reversal_request)
 
-Merchant Initiated Reversal
+Timeout Reversal
 
-This is to reverse a previous payment that merchant does not receive a reply.
+This is to reverse a previous payment that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call and use same transactionId in this API request payload to reverse the payment.
 
 ### Example 
 ```python
@@ -78,7 +78,7 @@ api_instance = CyberSource.ReversalApi()
 mit_reversal_request = CyberSource.MitReversalRequest() # MitReversalRequest | 
 
 try: 
-    # Merchant Initiated Reversal
+    # Timeout Reversal
     api_response = api_instance.mit_reversal(mit_reversal_request)
     pprint(api_response)
 except ApiException as e:

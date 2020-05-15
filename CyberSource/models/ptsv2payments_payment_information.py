@@ -36,6 +36,7 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str'
     }
 
@@ -45,10 +46,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'fluid_data': 'fluidData',
         'customer': 'customer',
         'bank': 'bank',
+        'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, initiation_channel=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None, initiation_channel=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._fluid_data = None
         self._customer = None
         self._bank = None
+        self._payment_type = None
         self._initiation_channel = None
 
         if card is not None:
@@ -70,6 +73,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.customer = customer
         if bank is not None:
           self.bank = bank
+        if payment_type is not None:
+          self.payment_type = payment_type
         if initiation_channel is not None:
           self.initiation_channel = initiation_channel
 
@@ -179,10 +184,31 @@ class Ptsv2paymentsPaymentInformation(object):
         self._bank = bank
 
     @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsPaymentInformation.
+
+        :return: The payment_type of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsPaymentInformation.
+
+        :param payment_type: The payment_type of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
+
+    @property
     def initiation_channel(self):
         """
         Gets the initiation_channel of this Ptsv2paymentsPaymentInformation.
-        \"This tag contains a MesterCard defined code that provides information about the type of device used to initiate a non-card transaction. Valid values for this tag are: - 00 Card (default) - 01 Mobile network operator (MNO) controlled removal secure element (SIM or UICC) personalized for use with a mobile phone or smartphone> - 02 Key fob - 03  Watch - 04  Mobile tag - 05  Wristband - 06  Mobile phone case or sleeve - 07  Mobile phone or smartphone with a fixed, (non-removable), secure element controlled by the MNO, for example, code division multiple access (CDMA) - 08  Removable secure element not controlled by the MNO, for example, memory card personalized for use with a mobile phone or smartphone - 09 Mobile phonen or smartphone with a fixed, (non-removable), secure element not controlled by the MNO - 10 MNO controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - 11 Tablet or e-book with a fixed, (non-removable), secure element controlled by the MNO - 12 Removable secure element not controlled by the MNO, for example, memory card personalized for use with a tablet or e-book - 13 Table or e-book with fixed, (non-removable) secure element not controlled by the MNO - 14 - 99 = (Reserved for future use) 
+        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization**\\ Optional field. 
 
         :return: The initiation_channel of this Ptsv2paymentsPaymentInformation.
         :rtype: str
@@ -193,7 +219,7 @@ class Ptsv2paymentsPaymentInformation(object):
     def initiation_channel(self, initiation_channel):
         """
         Sets the initiation_channel of this Ptsv2paymentsPaymentInformation.
-        \"This tag contains a MesterCard defined code that provides information about the type of device used to initiate a non-card transaction. Valid values for this tag are: - 00 Card (default) - 01 Mobile network operator (MNO) controlled removal secure element (SIM or UICC) personalized for use with a mobile phone or smartphone> - 02 Key fob - 03  Watch - 04  Mobile tag - 05  Wristband - 06  Mobile phone case or sleeve - 07  Mobile phone or smartphone with a fixed, (non-removable), secure element controlled by the MNO, for example, code division multiple access (CDMA) - 08  Removable secure element not controlled by the MNO, for example, memory card personalized for use with a mobile phone or smartphone - 09 Mobile phonen or smartphone with a fixed, (non-removable), secure element not controlled by the MNO - 10 MNO controlled removable secure element (SIM or UICC) personalized for use with a tablet or e-book - 11 Tablet or e-book with a fixed, (non-removable), secure element controlled by the MNO - 12 Removable secure element not controlled by the MNO, for example, memory card personalized for use with a tablet or e-book - 13 Table or e-book with fixed, (non-removable) secure element not controlled by the MNO - 14 - 99 = (Reserved for future use) 
+        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization**\\ Optional field. 
 
         :param initiation_channel: The initiation_channel of this Ptsv2paymentsPaymentInformation.
         :type: str

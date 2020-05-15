@@ -116,7 +116,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def date_to_capture(self):
         """
         Gets the date_to_capture of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Date on which you want the capture to occur. This field is supported only for CyberSource through VisaNet.\\ `Format: MMDD` 
+        Date on which you want the capture to occur. This field is supported only for CyberSource through VisaNet. Format: `MMDD`  #### Used by **Authorization** Optional field. 
 
         :return: The date_to_capture of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :rtype: str
@@ -127,7 +127,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     def date_to_capture(self, date_to_capture):
         """
         Sets the date_to_capture of this Ptsv2paymentsProcessingInformationCaptureOptions.
-        Date on which you want the capture to occur. This field is supported only for CyberSource through VisaNet.\\ `Format: MMDD` 
+        Date on which you want the capture to occur. This field is supported only for CyberSource through VisaNet. Format: `MMDD`  #### Used by **Authorization** Optional field. 
 
         :param date_to_capture: The date_to_capture of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :type: str

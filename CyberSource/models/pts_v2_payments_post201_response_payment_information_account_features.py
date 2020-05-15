@@ -210,7 +210,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_amount(self):
         """
         Gets the balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account. 
+        Remaining balance on the account.  Returned by authorization service. 
 
         :return: The balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -221,7 +221,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def balance_amount(self, balance_amount):
         """
         Sets the balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account. 
+        Remaining balance on the account.  Returned by authorization service. 
 
         :param balance_amount: The balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -260,7 +260,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `auth_account_balance_currency` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service. 
 
         :return: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -271,7 +271,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `auth_account_balance_currency` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service. 
 
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -335,7 +335,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def category(self):
         """
         Gets the category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes) For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
+        #### GPX Mastercard product ID associated with the primary account number (PAN). Returned by authorization service.  #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes) For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
 
         :return: The category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -346,7 +346,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def category(self, category):
         """
         Sets the category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes) For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
+        #### GPX Mastercard product ID associated with the primary account number (PAN). Returned by authorization service.  #### CyberSource through VisaNet Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, see the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes)  Data Length: String (3)  #### GPN Visa or Mastercard product ID that is associated with the primary account number (PAN). For descriptions of the Visa product IDs, seepag the Product ID table on the [Visa Request & Response Codes web page.](https://developer.visa.com/guides/request_response_codes) For descriptions of the Mastercard product IDs, see \"Product IDs\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Data Length: String (3)  #### Worldpay VAP **Important** Before using this field on Worldpay VAP, you must contact CyberSource Customer Support to have your account configured for this feature.  Type of card used in the transaction. The only possible value is: - `PREPAID`: Prepaid Card  Data Length: String (7)  #### RBS WorldPay Atlanta Type of card used in the transaction. Possible values: - `B`: Business Card - `O`: Noncommercial Card - `R`: Corporate Card - `S`: Purchase Card - `Blank`: Purchase card not supported  Data Length: String (1) 
 
         :param category: The category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -385,7 +385,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def group(self):
         """
         Gets the group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
+        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - `B`: Business card  - `R`: Corporate card  - `S`: Purchasing card  - `0`: Noncommercial card  Returned by authorization service. 
 
         :return: The group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -396,7 +396,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
     def group(self, group):
         """
         Sets the group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
-        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - **B**: Business card  - **R**: Corporate card  - **S**: Purchasing card  - **0**: Noncommercial card 
+        Type of commercial card. This field is supported only for CyberSource through VisaNet. Possible values:   - `B`: Business card  - `R`: Corporate card  - `S`: Purchasing card  - `0`: Noncommercial card  Returned by authorization service. 
 
         :param group: The group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str

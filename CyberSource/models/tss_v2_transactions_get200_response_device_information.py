@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :return: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :param ip_address: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str

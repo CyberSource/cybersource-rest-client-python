@@ -31,9 +31,9 @@ class Riskv1authenticationsTravelInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'legs': 'list[Riskv1authenticationsTravelInformationLegs]',
+        'legs': 'list[Riskv1decisionsTravelInformationLegs]',
         'number_of_passengers': 'int',
-        'passengers': 'list[Riskv1authenticationsTravelInformationPassengers]'
+        'passengers': 'list[Riskv1decisionsTravelInformationPassengers]'
     }
 
     attribute_map = {
@@ -64,7 +64,7 @@ class Riskv1authenticationsTravelInformation(object):
         Gets the legs of this Riskv1authenticationsTravelInformation.
 
         :return: The legs of this Riskv1authenticationsTravelInformation.
-        :rtype: list[Riskv1authenticationsTravelInformationLegs]
+        :rtype: list[Riskv1decisionsTravelInformationLegs]
         """
         return self._legs
 
@@ -74,7 +74,7 @@ class Riskv1authenticationsTravelInformation(object):
         Sets the legs of this Riskv1authenticationsTravelInformation.
 
         :param legs: The legs of this Riskv1authenticationsTravelInformation.
-        :type: list[Riskv1authenticationsTravelInformationLegs]
+        :type: list[Riskv1decisionsTravelInformationLegs]
         """
 
         self._legs = legs
@@ -108,7 +108,7 @@ class Riskv1authenticationsTravelInformation(object):
         Gets the passengers of this Riskv1authenticationsTravelInformation.
 
         :return: The passengers of this Riskv1authenticationsTravelInformation.
-        :rtype: list[Riskv1authenticationsTravelInformationPassengers]
+        :rtype: list[Riskv1decisionsTravelInformationPassengers]
         """
         return self._passengers
 
@@ -118,7 +118,7 @@ class Riskv1authenticationsTravelInformation(object):
         Sets the passengers of this Riskv1authenticationsTravelInformation.
 
         :param passengers: The passengers of this Riskv1authenticationsTravelInformation.
-        :type: list[Riskv1authenticationsTravelInformationPassengers]
+        :type: list[Riskv1decisionsTravelInformationPassengers]
         """
 
         self._passengers = passengers

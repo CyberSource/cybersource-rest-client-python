@@ -404,7 +404,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def extended_payment_code(self):
         """
         Gets the extended_payment_code of this Ptsv2paymentsTravelInformationTransitAirline.
-        Airline process identifier. This value is the airline’s three-digit IATA1 code which is used to process extended payment airline tickets.. 
+        The field is not currently supported. 
 
         :return: The extended_payment_code of this Ptsv2paymentsTravelInformationTransitAirline.
         :rtype: str
@@ -415,7 +415,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def extended_payment_code(self, extended_payment_code):
         """
         Sets the extended_payment_code of this Ptsv2paymentsTravelInformationTransitAirline.
-        Airline process identifier. This value is the airline’s three-digit IATA1 code which is used to process extended payment airline tickets.. 
+        The field is not currently supported. 
 
         :param extended_payment_code: The extended_payment_code of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
@@ -504,7 +504,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def document_number(self):
         """
         Gets the document_number of this Ptsv2paymentsTravelInformationTransitAirline.
-        Ticket number or a value that might be a booking reference number. 
+        The field is not currently supported. 
 
         :return: The document_number of this Ptsv2paymentsTravelInformationTransitAirline.
         :rtype: str
@@ -515,7 +515,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def document_number(self, document_number):
         """
         Sets the document_number of this Ptsv2paymentsTravelInformationTransitAirline.
-        Ticket number or a value that might be a booking reference number. 
+        The field is not currently supported. 
 
         :param document_number: The document_number of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
@@ -529,7 +529,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def document_number_of_parts(self):
         """
         Gets the document_number_of_parts of this Ptsv2paymentsTravelInformationTransitAirline.
-        Number of travel legs. Numbering for the travel legs: 0 to 3. 
+        The field is not currently supported. 
 
         :return: The document_number_of_parts of this Ptsv2paymentsTravelInformationTransitAirline.
         :rtype: int
@@ -540,7 +540,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def document_number_of_parts(self, document_number_of_parts):
         """
         Sets the document_number_of_parts of this Ptsv2paymentsTravelInformationTransitAirline.
-        Number of travel legs. Numbering for the travel legs: 0 to 3. 
+        The field is not currently supported. 
 
         :param document_number_of_parts: The document_number_of_parts of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: int
@@ -1071,7 +1071,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def reservation_type(self):
         """
         Gets the reservation_type of this Ptsv2paymentsTravelInformationTransitAirline.
-        Type of journey such as one way or round trip. 
+        The field is not currently supported. 
 
         :return: The reservation_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :rtype: str
@@ -1082,7 +1082,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def reservation_type(self, reservation_type):
         """
         Sets the reservation_type of this Ptsv2paymentsTravelInformationTransitAirline.
-        Type of journey such as one way or round trip. 
+        The field is not currently supported. 
 
         :param reservation_type: The reservation_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
