@@ -45,7 +45,7 @@ class RefundApi(object):
     def refund_capture(self, refund_capture_request, id, **kwargs):
         """
         Refund a Capture
-        Include the capture ID in the POST request to refund the captured amount. 
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call Include the capture ID in the POST request to refund the captured amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -72,7 +72,7 @@ class RefundApi(object):
     def refund_capture_with_http_info(self, refund_capture_request, id, **kwargs):
         """
         Refund a Capture
-        Include the capture ID in the POST request to refund the captured amount. 
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call Include the capture ID in the POST request to refund the captured amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -158,7 +158,7 @@ class RefundApi(object):
     def refund_payment(self, refund_payment_request, id, **kwargs):
         """
         Refund a Payment
-        Include the payment ID in the POST request to refund the payment amount. 
+        Refund a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call.  Include the payment ID in the POST request to refund the payment amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -185,7 +185,7 @@ class RefundApi(object):
     def refund_payment_with_http_info(self, refund_payment_request, id, **kwargs):
         """
         Refund a Payment
-        Include the payment ID in the POST request to refund the payment amount. 
+        Refund a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call.  Include the payment ID in the POST request to refund the payment amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

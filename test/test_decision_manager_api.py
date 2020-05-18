@@ -39,9 +39,9 @@ class TestDecisionManagerApi(unittest.TestCase):
         """
         pass
 
-    def test_create_decision_manager_case(self):
+    def test_create_bundled_decision_manager_case(self):
         """
-        Test case for create_decision_manager_case
+        Test case for create_bundled_decision_manager_case
 
         Create Decision Manager Case
         """

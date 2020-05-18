@@ -155,53 +155,53 @@ class DecisionManagerApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_decision_manager_case(self, create_decision_manager_case_request, **kwargs):
+    def create_bundled_decision_manager_case(self, create_bundled_decision_manager_case_request, **kwargs):
         """
         Create Decision Manager Case
-        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values. 
+        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_decision_manager_case(create_decision_manager_case_request, callback=callback_function)
+        >>> thread = api.create_bundled_decision_manager_case(create_bundled_decision_manager_case_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param CreateDecisionManagerCaseRequest create_decision_manager_case_request: (required)
+        :param CreateBundledDecisionManagerCaseRequest create_bundled_decision_manager_case_request: (required)
         :return: RiskV1DecisionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_decision_manager_case_with_http_info(create_decision_manager_case_request, **kwargs)
+            return self.create_bundled_decision_manager_case_with_http_info(create_bundled_decision_manager_case_request, **kwargs)
         else:
-            (data) = self.create_decision_manager_case_with_http_info(create_decision_manager_case_request, **kwargs)
+            (data) = self.create_bundled_decision_manager_case_with_http_info(create_bundled_decision_manager_case_request, **kwargs)
             return data
 
-    def create_decision_manager_case_with_http_info(self, create_decision_manager_case_request, **kwargs):
+    def create_bundled_decision_manager_case_with_http_info(self, create_bundled_decision_manager_case_request, **kwargs):
         """
         Create Decision Manager Case
-        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values. 
+        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_decision_manager_case_with_http_info(create_decision_manager_case_request, callback=callback_function)
+        >>> thread = api.create_bundled_decision_manager_case_with_http_info(create_bundled_decision_manager_case_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param CreateDecisionManagerCaseRequest create_decision_manager_case_request: (required)
+        :param CreateBundledDecisionManagerCaseRequest create_bundled_decision_manager_case_request: (required)
         :return: RiskV1DecisionsPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['create_decision_manager_case_request']
+        all_params = ['create_bundled_decision_manager_case_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -212,13 +212,13 @@ class DecisionManagerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_decision_manager_case" % key
+                    " to method create_bundled_decision_manager_case" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'create_decision_manager_case_request' is set
-        if ('create_decision_manager_case_request' not in params) or (params['create_decision_manager_case_request'] is None):
-            raise ValueError("Missing the required parameter `create_decision_manager_case_request` when calling `create_decision_manager_case`")
+        # verify the required parameter 'create_bundled_decision_manager_case_request' is set
+        if ('create_bundled_decision_manager_case_request' not in params) or (params['create_bundled_decision_manager_case_request'] is None):
+            raise ValueError("Missing the required parameter `create_bundled_decision_manager_case_request` when calling `create_bundled_decision_manager_case`")
 
 
         collection_formats = {}
@@ -233,8 +233,8 @@ class DecisionManagerApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_decision_manager_case_request' in params:
-            body_params = params['create_decision_manager_case_request']
+        if 'create_bundled_decision_manager_case_request' in params:
+            body_params = params['create_bundled_decision_manager_case_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])

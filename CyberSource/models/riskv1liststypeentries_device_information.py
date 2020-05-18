@@ -57,7 +57,7 @@ class Riskv1liststypeentriesDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this Riskv1liststypeentriesDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :return: The ip_address of this Riskv1liststypeentriesDeviceInformation.
         :rtype: str
@@ -68,7 +68,7 @@ class Riskv1liststypeentriesDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this Riskv1liststypeentriesDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :param ip_address: The ip_address of this Riskv1liststypeentriesDeviceInformation.
         :type: str

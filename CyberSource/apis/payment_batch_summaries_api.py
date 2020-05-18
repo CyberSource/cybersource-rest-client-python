@@ -157,7 +157,7 @@ class PaymentBatchSummariesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/hal+json'])
+            select_header_accept(['application/hal+json', 'text/csv', 'application/xml'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\

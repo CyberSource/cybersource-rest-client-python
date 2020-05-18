@@ -187,7 +187,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def auth_indicator(self):
         """
         Gets the auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. For details, see \"Final Authorization Indicator\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file5:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the `auth_indicator` field in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. For details, see \"Final Authorization Indicator\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the `auth_indicator` field in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
 
         :return: The auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -198,7 +198,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def auth_indicator(self, auth_indicator):
         """
         Sets the auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. For details, see \"Final Authorization Indicator\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file5:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the `auth_indicator` field in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support. For details, see \"Final Authorization Indicator\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file.  For processor-specific information, see the `auth_indicator` field in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
 
         :param auth_indicator: The auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -212,7 +212,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def partial_auth_indicator(self):
         """
         Gets the partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the `auth_partial_auth_indicator` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### CyberSource through VisaNet To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators  Possible values: - **true** Enable the transaction for partial authorization. - **false** Do not enable the transaction for partial authorization. 
+        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your account.  Possible values: - `true`: Enable the transaction for partial authorization. - `false`: Do not enable the transaction for partial authorization.  #### Used by **Authorization** Optional field.  #### CyberSource through VisaNet To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators 
 
         :return: The partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -223,7 +223,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def partial_auth_indicator(self, partial_auth_indicator):
         """
         Sets the partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your CyberSource account.  For processor-specific information, see the `auth_partial_auth_indicator` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### CyberSource through VisaNet To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators  Possible values: - **true** Enable the transaction for partial authorization. - **false** Do not enable the transaction for partial authorization. 
+        Flag that indicates whether the transaction is enabled for partial authorization or not. When your request includes this field, this value overrides the information in your account.  Possible values: - `true`: Enable the transaction for partial authorization. - `false`: Do not enable the transaction for partial authorization.  #### Used by **Authorization** Optional field.  #### CyberSource through VisaNet To set the default for this field, contact CyberSource Customer Support. The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR0 - Position: 164 - Field: Additional Authorization Indicators 
 
         :param partial_auth_indicator: The partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -235,7 +235,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def balance_inquiry(self):
         """
         Gets the balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to return balance information.  Possible values: - **true** - **false** 
+        Flag that indicates whether to return balance information.  Possible values: - `true`: Return balance information. - `false`: Do not return balance information.  #### Used by **Authorization** Required for a balance inquiry; otherwise, not used. 
 
         :return: The balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -246,7 +246,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def balance_inquiry(self, balance_inquiry):
         """
         Sets the balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to return balance information.  Possible values: - **true** - **false** 
+        Flag that indicates whether to return balance information.  Possible values: - `true`: Return balance information. - `false`: Do not return balance information.  #### Used by **Authorization** Required for a balance inquiry; otherwise, not used. 
 
         :param balance_inquiry: The balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -258,7 +258,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_avs_result(self):
         """
         Gets the ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run, even when the payment receives an AVS decline.  Possible values: - **true**  Ignore the results of AVS checking and run the capture service. - **false**  (default): If the authorization receives an AVS decline, do not run the capture service. 
+        Flag for a sale request that indicates whether to allow the capture service to run even when the authorization receives an AVS decline, as indicated by a reply flag value of DAVSNO.  Possible values: - `true`: Ignore the results of AVS checking and run the capture service. - `false` (default): If the authorization receives an AVS decline, do not run the capture service. When the value of this field is `true`, the list in the `processingInformation.authorizationOptions.declineAvsFlags` field is ignored.  #### Used by **Authorization** Optional field. String (3) 
 
         :return: The ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -269,7 +269,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_avs_result(self, ignore_avs_result):
         """
         Sets the ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run, even when the payment receives an AVS decline.  Possible values: - **true**  Ignore the results of AVS checking and run the capture service. - **false**  (default): If the authorization receives an AVS decline, do not run the capture service. 
+        Flag for a sale request that indicates whether to allow the capture service to run even when the authorization receives an AVS decline, as indicated by a reply flag value of DAVSNO.  Possible values: - `true`: Ignore the results of AVS checking and run the capture service. - `false` (default): If the authorization receives an AVS decline, do not run the capture service. When the value of this field is `true`, the list in the `processingInformation.authorizationOptions.declineAvsFlags` field is ignored.  #### Used by **Authorization** Optional field. String (3) 
 
         :param ignore_avs_result: The ignore_avs_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -304,7 +304,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_cv_result(self):
         """
         Gets the ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline.  Possible values: - **true**  Ignore the results of CVN checking and run the capture service. - **false**  (default) If the authorization receives a CVN decline, do not run the capture service. 
+        Flag for a sale request that indicates whether to allow the capture service to run even when the authorization receives a CVN decline, as indicated by an `processorInformation.cardVerification.resultCode` value of `D` or `N`. Possible values: - `true`: Ignore the results of CVN checking and run the capture service. - `false` (default): If the authorization receives a CVN decline, do not run the capture service.  #### Used by **Authorization** Optional field. 
 
         :return: The ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -315,7 +315,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def ignore_cv_result(self, ignore_cv_result):
         """
         Sets the ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether to allow the capture service to run even when the payment receives a CVN decline.  Possible values: - **true**  Ignore the results of CVN checking and run the capture service. - **false**  (default) If the authorization receives a CVN decline, do not run the capture service. 
+        Flag for a sale request that indicates whether to allow the capture service to run even when the authorization receives a CVN decline, as indicated by an `processorInformation.cardVerification.resultCode` value of `D` or `N`. Possible values: - `true`: Ignore the results of CVN checking and run the capture service. - `false` (default): If the authorization receives a CVN decline, do not run the capture service.  #### Used by **Authorization** Optional field. 
 
         :param ignore_cv_result: The ignore_cv_result of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
@@ -348,7 +348,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment(self):
         """
         Gets the bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates that this is a payment for a bill or for an existing contractual loan. For processor-specific details, see the `bill_payment` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Possible values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
+        Indicates payment for bill or payment towards existing contractual loan.  Possible values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment.  Optional field 
 
         :return: The bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: bool
@@ -359,7 +359,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment(self, bill_payment):
         """
         Sets the bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates that this is a payment for a bill or for an existing contractual loan. For processor-specific details, see the `bill_payment` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Possible values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
+        Indicates payment for bill or payment towards existing contractual loan.  Possible values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment.  Optional field 
 
         :param bill_payment: The bill_payment of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool

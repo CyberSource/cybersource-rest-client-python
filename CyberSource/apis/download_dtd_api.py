@@ -133,7 +133,7 @@ class DownloadDTDApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/dtds/{reportDefinitionNameVersion}', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/dtds/{reportDefinitionNameVersion}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

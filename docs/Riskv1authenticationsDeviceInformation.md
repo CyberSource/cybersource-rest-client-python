@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ip_address** | **str** | IP address of the customer.  | [optional] 
+**ip_address** | **str** | IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field.  | [optional] 
 **raw_data** | [**list[Ptsv2paymentsDeviceInformationRawData]**](Ptsv2paymentsDeviceInformationRawData.md) |  | [optional] 
 **http_accept_browser_value** | **str** | Value of the Accept header sent by the customer’s web browser. **Note** If the customer’s browser provides a value, you must include it in your request.  | [optional] 
 **http_accept_content** | **str** | The exact content of the HTTP accept header.  | [optional] 

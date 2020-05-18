@@ -45,7 +45,7 @@ class PaymentsApi(object):
     def create_payment(self, create_payment_request, **kwargs):
         """
         Process a Payment
-        Authorize the payment for the transaction. 
+        Authorize the payment for the transaction. Authorization can be requested with Capture, Decision Manager, Payer Authentication(3ds). Find more on [Authorization with Add-On Features page.] (https://developer.cybersource.com/api/authorization-add-ons.html) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -71,7 +71,7 @@ class PaymentsApi(object):
     def create_payment_with_http_info(self, create_payment_request, **kwargs):
         """
         Process a Payment
-        Authorize the payment for the transaction. 
+        Authorize the payment for the transaction. Authorization can be requested with Capture, Decision Manager, Payer Authentication(3ds). Find more on [Authorization with Add-On Features page.] (https://developer.cybersource.com/api/authorization-add-ons.html) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
-        AVS result code. 
+        AVS result code.  Returned by authorization service. 
 
         :return: The code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :rtype: str
@@ -68,7 +68,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
-        AVS result code. 
+        AVS result code.  Returned by authorization service. 
 
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str
@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
     def code_raw(self):
         """
         Gets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
-        AVS result code sent directly from the processor. Returned only when the processor returns this value. Important Do not use this field to evaluate the result of AVS. Use for debugging purposes only. 
+        AVS result code sent directly from the processor. Returned only when the processor returns this value. **Important** Do not use this field to evaluate the result of AVS. Use for debugging purposes only.  Returned by authorization service. 
 
         :return: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :rtype: str
@@ -93,7 +93,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
     def code_raw(self, code_raw):
         """
         Sets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
-        AVS result code sent directly from the processor. Returned only when the processor returns this value. Important Do not use this field to evaluate the result of AVS. Use for debugging purposes only. 
+        AVS result code sent directly from the processor. Returned only when the processor returns this value. **Important** Do not use this field to evaluate the result of AVS. Use for debugging purposes only.  Returned by authorization service. 
 
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str

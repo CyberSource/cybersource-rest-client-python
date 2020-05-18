@@ -35,7 +35,7 @@ class TestVoidApi(unittest.TestCase):
         """
         Test case for mit_void
 
-        Merchant Initiated Void
+        Timeout Void
         """
         pass
 

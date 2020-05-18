@@ -67,7 +67,7 @@ class InvoicingV2InvoicesAllGet502Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InvoicingV2InvoicesAllGet502Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :return: The submit_time_utc of this InvoicingV2InvoicesAllGet502Response.
         :rtype: str
@@ -78,7 +78,7 @@ class InvoicingV2InvoicesAllGet502Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InvoicingV2InvoicesAllGet502Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :param submit_time_utc: The submit_time_utc of this InvoicingV2InvoicesAllGet502Response.
         :type: str
@@ -113,7 +113,7 @@ class InvoicingV2InvoicesAllGet502Response(object):
     def reason(self):
         """
         Gets the reason of this InvoicingV2InvoicesAllGet502Response.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
 
         :return: The reason of this InvoicingV2InvoicesAllGet502Response.
         :rtype: str
@@ -124,7 +124,7 @@ class InvoicingV2InvoicesAllGet502Response(object):
     def reason(self, reason):
         """
         Sets the reason of this InvoicingV2InvoicesAllGet502Response.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT  - INVALID_OR_MISSING_CONFIG 
+        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
 
         :param reason: The reason of this InvoicingV2InvoicesAllGet502Response.
         :type: str

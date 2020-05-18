@@ -44,8 +44,8 @@ class VoidApi(object):
 
     def mit_void(self, mit_void_request, **kwargs):
         """
-        Merchant Initiated Void
-        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply.
+        Timeout Void
+        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -70,8 +70,8 @@ class VoidApi(object):
 
     def mit_void_with_http_info(self, mit_void_request, **kwargs):
         """
-        Merchant Initiated Void
-        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply.
+        Timeout Void
+        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -151,7 +151,7 @@ class VoidApi(object):
     def void_capture(self, void_capture_request, id, **kwargs):
         """
         Void a Capture
-        Include the capture ID in the POST request to cancel the capture.
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call.  Include the capture ID in the POST request to cancel the capture. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -178,7 +178,7 @@ class VoidApi(object):
     def void_capture_with_http_info(self, void_capture_request, id, **kwargs):
         """
         Void a Capture
-        Include the capture ID in the POST request to cancel the capture.
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call.  Include the capture ID in the POST request to cancel the capture. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -377,7 +377,7 @@ class VoidApi(object):
     def void_payment(self, void_payment_request, id, **kwargs):
         """
         Void a Payment
-        Include the payment ID in the POST request to cancel the payment.
+        Void a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call.  Include the payment ID in the POST request to cancel the payment. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -404,7 +404,7 @@ class VoidApi(object):
     def void_payment_with_http_info(self, void_payment_request, id, **kwargs):
         """
         Void a Payment
-        Include the payment ID in the POST request to cancel the payment.
+        Void a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call.  Include the payment ID in the POST request to cancel the payment. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

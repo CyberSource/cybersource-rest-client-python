@@ -35,7 +35,7 @@ class Riskv1authenticationsOrderInformation(object):
         'pre_order': 'str',
         'pre_order_date': 'str',
         'reordered': 'bool',
-        'ship_to': 'Riskv1authenticationsOrderInformationShipTo',
+        'ship_to': 'Riskv1decisionsOrderInformationShipTo',
         'line_items': 'list[Riskv1authenticationsOrderInformationLineItems]',
         'bill_to': 'Riskv1authenticationsOrderInformationBillTo',
         'total_offers_count': 'str'
@@ -181,7 +181,7 @@ class Riskv1authenticationsOrderInformation(object):
         Gets the ship_to of this Riskv1authenticationsOrderInformation.
 
         :return: The ship_to of this Riskv1authenticationsOrderInformation.
-        :rtype: Riskv1authenticationsOrderInformationShipTo
+        :rtype: Riskv1decisionsOrderInformationShipTo
         """
         return self._ship_to
 
@@ -191,7 +191,7 @@ class Riskv1authenticationsOrderInformation(object):
         Sets the ship_to of this Riskv1authenticationsOrderInformation.
 
         :param ship_to: The ship_to of this Riskv1authenticationsOrderInformation.
-        :type: Riskv1authenticationsOrderInformationShipTo
+        :type: Riskv1decisionsOrderInformationShipTo
         """
 
         self._ship_to = ship_to

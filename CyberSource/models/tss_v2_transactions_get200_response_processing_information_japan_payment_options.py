@@ -92,7 +92,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
     def terminal_id(self):
         """
         Gets the terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
-        This value is the 13-digit JCCA number.
+        Unique Japan Credit Card Association (JCCA) terminal identifier.  The difference between this field and the `pointOfSaleInformation.terminalID` field is that you can define `pointOfSaleInformation.terminalID`, but `processingInformation.japanPaymentOptions.terminalId` is defined by the JCCA and is used only in Japan.  This field is supported only on CyberSource through VisaNet and JCN Gateway.  Optional field. 
 
         :return: The terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :rtype: str
@@ -103,7 +103,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
     def terminal_id(self, terminal_id):
         """
         Sets the terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
-        This value is the 13-digit JCCA number.
+        Unique Japan Credit Card Association (JCCA) terminal identifier.  The difference between this field and the `pointOfSaleInformation.terminalID` field is that you can define `pointOfSaleInformation.terminalID`, but `processingInformation.japanPaymentOptions.terminalId` is defined by the JCCA and is used only in Japan.  This field is supported only on CyberSource through VisaNet and JCN Gateway.  Optional field. 
 
         :param terminal_id: The terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str

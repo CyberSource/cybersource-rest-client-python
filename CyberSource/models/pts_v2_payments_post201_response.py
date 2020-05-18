@@ -173,7 +173,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :return: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -184,7 +184,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :type: str
@@ -196,7 +196,7 @@ class PtsV2PaymentsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - AUTHORIZED_RISK_DECLINED  - PENDING_AUTHENTICATION  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -207,7 +207,7 @@ class PtsV2PaymentsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - AUTHORIZED_RISK_DECLINED  - PENDING_AUTHENTICATION  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PaymentsPost201Response.
         :type: str
@@ -219,7 +219,7 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :return: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -230,7 +230,7 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :param reconciliation_id: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :type: str

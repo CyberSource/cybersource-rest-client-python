@@ -32,36 +32,54 @@ class Riskv1decisionsOrderInformation(object):
     """
     swagger_types = {
         'amount_details': 'Riskv1decisionsOrderInformationAmountDetails',
+        'pre_order': 'str',
+        'pre_order_date': 'str',
+        'reordered': 'bool',
         'shipping_details': 'Riskv1decisionsOrderInformationShippingDetails',
         'ship_to': 'Riskv1decisionsOrderInformationShipTo',
         'returns_accepted': 'bool',
         'line_items': 'list[Riskv1decisionsOrderInformationLineItems]',
-        'bill_to': 'Riskv1decisionsOrderInformationBillTo'
+        'bill_to': 'Riskv1decisionsOrderInformationBillTo',
+        'total_offers_count': 'str'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
+        'pre_order': 'preOrder',
+        'pre_order_date': 'preOrderDate',
+        'reordered': 'reordered',
         'shipping_details': 'shippingDetails',
         'ship_to': 'shipTo',
         'returns_accepted': 'returnsAccepted',
         'line_items': 'lineItems',
-        'bill_to': 'billTo'
+        'bill_to': 'billTo',
+        'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None):
+    def __init__(self, amount_details=None, pre_order=None, pre_order_date=None, reordered=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, total_offers_count=None):
         """
         Riskv1decisionsOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
+        self._pre_order = None
+        self._pre_order_date = None
+        self._reordered = None
         self._shipping_details = None
         self._ship_to = None
         self._returns_accepted = None
         self._line_items = None
         self._bill_to = None
+        self._total_offers_count = None
 
         if amount_details is not None:
           self.amount_details = amount_details
+        if pre_order is not None:
+          self.pre_order = pre_order
+        if pre_order_date is not None:
+          self.pre_order_date = pre_order_date
+        if reordered is not None:
+          self.reordered = reordered
         if shipping_details is not None:
           self.shipping_details = shipping_details
         if ship_to is not None:
@@ -72,6 +90,8 @@ class Riskv1decisionsOrderInformation(object):
           self.line_items = line_items
         if bill_to is not None:
           self.bill_to = bill_to
+        if total_offers_count is not None:
+          self.total_offers_count = total_offers_count
 
     @property
     def amount_details(self):
@@ -93,6 +113,77 @@ class Riskv1decisionsOrderInformation(object):
         """
 
         self._amount_details = amount_details
+
+    @property
+    def pre_order(self):
+        """
+        Gets the pre_order of this Riskv1decisionsOrderInformation.
+        Indicates whether cardholder is placing an order with a future availability or release date. This field can contain one of these values: - MERCHANDISE_AVAILABLE: Merchandise available - FUTURE_AVAILABILITY: Future availability 
+
+        :return: The pre_order of this Riskv1decisionsOrderInformation.
+        :rtype: str
+        """
+        return self._pre_order
+
+    @pre_order.setter
+    def pre_order(self, pre_order):
+        """
+        Sets the pre_order of this Riskv1decisionsOrderInformation.
+        Indicates whether cardholder is placing an order with a future availability or release date. This field can contain one of these values: - MERCHANDISE_AVAILABLE: Merchandise available - FUTURE_AVAILABILITY: Future availability 
+
+        :param pre_order: The pre_order of this Riskv1decisionsOrderInformation.
+        :type: str
+        """
+
+        self._pre_order = pre_order
+
+    @property
+    def pre_order_date(self):
+        """
+        Gets the pre_order_date of this Riskv1decisionsOrderInformation.
+        Expected date that a pre-ordered purchase will be available. Format: YYYYMMDD 
+
+        :return: The pre_order_date of this Riskv1decisionsOrderInformation.
+        :rtype: str
+        """
+        return self._pre_order_date
+
+    @pre_order_date.setter
+    def pre_order_date(self, pre_order_date):
+        """
+        Sets the pre_order_date of this Riskv1decisionsOrderInformation.
+        Expected date that a pre-ordered purchase will be available. Format: YYYYMMDD 
+
+        :param pre_order_date: The pre_order_date of this Riskv1decisionsOrderInformation.
+        :type: str
+        """
+        if pre_order_date is not None and len(pre_order_date) > 10:
+            raise ValueError("Invalid value for `pre_order_date`, length must be less than or equal to `10`")
+
+        self._pre_order_date = pre_order_date
+
+    @property
+    def reordered(self):
+        """
+        Gets the reordered of this Riskv1decisionsOrderInformation.
+        Indicates whether the cardholder is reordering previously purchased merchandise. This field can contain one of these values: - false: First time ordered - true: Reordered 
+
+        :return: The reordered of this Riskv1decisionsOrderInformation.
+        :rtype: bool
+        """
+        return self._reordered
+
+    @reordered.setter
+    def reordered(self, reordered):
+        """
+        Sets the reordered of this Riskv1decisionsOrderInformation.
+        Indicates whether the cardholder is reordering previously purchased merchandise. This field can contain one of these values: - false: First time ordered - true: Reordered 
+
+        :param reordered: The reordered of this Riskv1decisionsOrderInformation.
+        :type: bool
+        """
+
+        self._reordered = reordered
 
     @property
     def shipping_details(self):
@@ -202,6 +293,31 @@ class Riskv1decisionsOrderInformation(object):
         """
 
         self._bill_to = bill_to
+
+    @property
+    def total_offers_count(self):
+        """
+        Gets the total_offers_count of this Riskv1decisionsOrderInformation.
+        Total number of articles/items in the order as a numeric decimal count. Possible values: 00 - 99 
+
+        :return: The total_offers_count of this Riskv1decisionsOrderInformation.
+        :rtype: str
+        """
+        return self._total_offers_count
+
+    @total_offers_count.setter
+    def total_offers_count(self, total_offers_count):
+        """
+        Sets the total_offers_count of this Riskv1decisionsOrderInformation.
+        Total number of articles/items in the order as a numeric decimal count. Possible values: 00 - 99 
+
+        :param total_offers_count: The total_offers_count of this Riskv1decisionsOrderInformation.
+        :type: str
+        """
+        if total_offers_count is not None and len(total_offers_count) > 2:
+            raise ValueError("Invalid value for `total_offers_count`, length must be less than or equal to `2`")
+
+        self._total_offers_count = total_offers_count
 
     def to_dict(self):
         """

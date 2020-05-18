@@ -44,8 +44,8 @@ class UserManagementApi(object):
 
     def get_users(self, **kwargs):
         """
-        Get User Information
-        This endpoint is to get all the user information depending on the filter criteria passed in the query.
+        Get User Information - Deprecated
+        This endpoint is deprecated. Please use the search end point.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -73,8 +73,8 @@ class UserManagementApi(object):
 
     def get_users_with_http_info(self, **kwargs):
         """
-        Get User Information
-        This endpoint is to get all the user information depending on the filter criteria passed in the query.
+        Get User Information - Deprecated
+        This endpoint is deprecated. Please use the search end point.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -36,12 +36,11 @@ class RiskV1AuthenticationsPost201Response(object):
         'submit_time_utc': 'str',
         'submit_time_local': 'str',
         'status': 'str',
-        'reason': 'str',
         'message': 'str',
         'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
-        'order_information': 'RiskV1AuthenticationsPost201ResponseOrderInformation',
-        'consumer_authentication_information': 'RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation',
-        'error_information': 'PtsV2PaymentsPost201ResponseErrorInformation'
+        'order_information': 'RiskV1DecisionsPost201ResponseOrderInformation',
+        'consumer_authentication_information': 'RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation',
+        'error_information': 'RiskV1AuthenticationsPost201ResponseErrorInformation'
     }
 
     attribute_map = {
@@ -50,7 +49,6 @@ class RiskV1AuthenticationsPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'submit_time_local': 'submitTimeLocal',
         'status': 'status',
-        'reason': 'reason',
         'message': 'message',
         'client_reference_information': 'clientReferenceInformation',
         'order_information': 'orderInformation',
@@ -58,7 +56,7 @@ class RiskV1AuthenticationsPost201Response(object):
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, reason=None, message=None, client_reference_information=None, order_information=None, consumer_authentication_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, message=None, client_reference_information=None, order_information=None, consumer_authentication_information=None, error_information=None):
         """
         RiskV1AuthenticationsPost201Response - a model defined in Swagger
         """
@@ -68,7 +66,6 @@ class RiskV1AuthenticationsPost201Response(object):
         self._submit_time_utc = None
         self._submit_time_local = None
         self._status = None
-        self._reason = None
         self._message = None
         self._client_reference_information = None
         self._order_information = None
@@ -85,8 +82,6 @@ class RiskV1AuthenticationsPost201Response(object):
           self.submit_time_local = submit_time_local
         if status is not None:
           self.status = status
-        if reason is not None:
-          self.reason = reason
         if message is not None:
           self.message = message
         if client_reference_information is not None:
@@ -148,7 +143,7 @@ class RiskV1AuthenticationsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this RiskV1AuthenticationsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :return: The submit_time_utc of this RiskV1AuthenticationsPost201Response.
         :rtype: str
@@ -159,7 +154,7 @@ class RiskV1AuthenticationsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this RiskV1AuthenticationsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
 
         :param submit_time_utc: The submit_time_utc of this RiskV1AuthenticationsPost201Response.
         :type: str
@@ -194,7 +189,7 @@ class RiskV1AuthenticationsPost201Response(object):
     def status(self):
         """
         Gets the status of this RiskV1AuthenticationsPost201Response.
-        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - AUTHENTICATION_SUCCESSFUL - PENDING_AUTHENTICATION 
+        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `INVALID_REQUEST` - `AUTHENTICATION_FAILED` 
 
         :return: The status of this RiskV1AuthenticationsPost201Response.
         :rtype: str
@@ -205,36 +200,13 @@ class RiskV1AuthenticationsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this RiskV1AuthenticationsPost201Response.
-        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - AUTHENTICATION_SUCCESSFUL - PENDING_AUTHENTICATION 
+        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `INVALID_REQUEST` - `AUTHENTICATION_FAILED` 
 
         :param status: The status of this RiskV1AuthenticationsPost201Response.
         :type: str
         """
 
         self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this RiskV1AuthenticationsPost201Response.
-        The reason of the status. Possible values are: - Authentication_Completed_Or_Skipped_Sucessfully - Pending_Authentication 
-
-        :return: The reason of this RiskV1AuthenticationsPost201Response.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this RiskV1AuthenticationsPost201Response.
-        The reason of the status. Possible values are: - Authentication_Completed_Or_Skipped_Sucessfully - Pending_Authentication 
-
-        :param reason: The reason of this RiskV1AuthenticationsPost201Response.
-        :type: str
-        """
-
-        self._reason = reason
 
     @property
     def message(self):
@@ -286,7 +258,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Gets the order_information of this RiskV1AuthenticationsPost201Response.
 
         :return: The order_information of this RiskV1AuthenticationsPost201Response.
-        :rtype: RiskV1AuthenticationsPost201ResponseOrderInformation
+        :rtype: RiskV1DecisionsPost201ResponseOrderInformation
         """
         return self._order_information
 
@@ -296,7 +268,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Sets the order_information of this RiskV1AuthenticationsPost201Response.
 
         :param order_information: The order_information of this RiskV1AuthenticationsPost201Response.
-        :type: RiskV1AuthenticationsPost201ResponseOrderInformation
+        :type: RiskV1DecisionsPost201ResponseOrderInformation
         """
 
         self._order_information = order_information
@@ -307,7 +279,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Gets the consumer_authentication_information of this RiskV1AuthenticationsPost201Response.
 
         :return: The consumer_authentication_information of this RiskV1AuthenticationsPost201Response.
-        :rtype: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation
+        :rtype: RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation
         """
         return self._consumer_authentication_information
 
@@ -317,7 +289,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Sets the consumer_authentication_information of this RiskV1AuthenticationsPost201Response.
 
         :param consumer_authentication_information: The consumer_authentication_information of this RiskV1AuthenticationsPost201Response.
-        :type: RiskV1AuthenticationsPost201ResponseConsumerAuthenticationInformation
+        :type: RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation
         """
 
         self._consumer_authentication_information = consumer_authentication_information
@@ -328,7 +300,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Gets the error_information of this RiskV1AuthenticationsPost201Response.
 
         :return: The error_information of this RiskV1AuthenticationsPost201Response.
-        :rtype: PtsV2PaymentsPost201ResponseErrorInformation
+        :rtype: RiskV1AuthenticationsPost201ResponseErrorInformation
         """
         return self._error_information
 
@@ -338,7 +310,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Sets the error_information of this RiskV1AuthenticationsPost201Response.
 
         :param error_information: The error_information of this RiskV1AuthenticationsPost201Response.
-        :type: PtsV2PaymentsPost201ResponseErrorInformation
+        :type: RiskV1AuthenticationsPost201ResponseErrorInformation
         """
 
         self._error_information = error_information

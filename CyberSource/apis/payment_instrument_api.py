@@ -231,8 +231,8 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 1:
+            raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -350,8 +350,8 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 1:
+            raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -474,8 +474,8 @@ class PaymentInstrumentApi(object):
             raise ValueError("Invalid value for parameter `profile_id` when calling `update_payment_instrument`, length must be greater than or equal to `36`")
         if 'token_id' in params and len(params['token_id']) > 32:
             raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 16:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be greater than or equal to `16`")
+        if 'token_id' in params and len(params['token_id']) < 1:
+            raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 

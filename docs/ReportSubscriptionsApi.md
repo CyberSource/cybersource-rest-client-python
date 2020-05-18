@@ -110,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_subscription**
-> delete_subscription(report_name)
+> delete_subscription(report_name, organization_id=organization_id)
 
 Delete Subscription of a Report Name by Organization
 
@@ -127,10 +127,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 report_name = 'report_name_example' # str | Name of the Report to Delete
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Delete Subscription of a Report Name by Organization
-    api_instance.delete_subscription(report_name)
+    api_instance.delete_subscription(report_name, organization_id=organization_id)
 except ApiException as e:
     print("Exception when calling ReportSubscriptionsApi->delete_subscription: %s\n" % e)
 ```
@@ -140,6 +141,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **report_name** | **str**| Name of the Report to Delete | 
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
 
@@ -157,7 +159,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_subscriptions**
-> ReportingV3ReportSubscriptionsGet200Response get_all_subscriptions()
+> ReportingV3ReportSubscriptionsGet200Response get_all_subscriptions(organization_id=organization_id)
 
 Get All Subscriptions
 
@@ -173,17 +175,21 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Get All Subscriptions
-    api_response = api_instance.get_all_subscriptions()
+    api_response = api_instance.get_all_subscriptions(organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportSubscriptionsApi->get_all_subscriptions: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
 
@@ -201,7 +207,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_subscription**
-> ReportingV3ReportSubscriptionsGet200ResponseSubscriptions get_subscription(report_name)
+> ReportingV3ReportSubscriptionsGet200ResponseSubscriptions get_subscription(report_name, organization_id=organization_id)
 
 Get Subscription for Report Name
 
@@ -218,10 +224,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 report_name = 'report_name_example' # str | Name of the Report to Retrieve
+organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
 
 try: 
     # Get Subscription for Report Name
-    api_response = api_instance.get_subscription(report_name)
+    api_response = api_instance.get_subscription(report_name, organization_id=organization_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportSubscriptionsApi->get_subscription: %s\n" % e)
@@ -232,6 +239,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **report_name** | **str**| Name of the Report to Retrieve | 
+ **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
 
 ### Return type
 

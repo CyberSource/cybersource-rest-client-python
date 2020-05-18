@@ -5,7 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_negative**](DecisionManagerApi.md#add_negative) | **POST** /risk/v1/lists/{type}/entries | List Management
-[**create_decision_manager_case**](DecisionManagerApi.md#create_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager Case
+[**create_bundled_decision_manager_case**](DecisionManagerApi.md#create_bundled_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager Case
 [**fraud_update**](DecisionManagerApi.md#fraud_update) | **POST** /risk/v1/decisions/{id}/marking | Fraud Marking
 
 
@@ -59,12 +59,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_decision_manager_case**
-> RiskV1DecisionsPost201Response create_decision_manager_case(create_decision_manager_case_request)
+# **create_bundled_decision_manager_case**
+> RiskV1DecisionsPost201Response create_bundled_decision_manager_case(create_bundled_decision_manager_case_request)
 
 Create Decision Manager Case
 
-This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values. 
+This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
 
 ### Example 
 ```python
@@ -76,21 +76,21 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.DecisionManagerApi()
-create_decision_manager_case_request = CyberSource.CreateDecisionManagerCaseRequest() # CreateDecisionManagerCaseRequest | 
+create_bundled_decision_manager_case_request = CyberSource.CreateBundledDecisionManagerCaseRequest() # CreateBundledDecisionManagerCaseRequest | 
 
 try: 
     # Create Decision Manager Case
-    api_response = api_instance.create_decision_manager_case(create_decision_manager_case_request)
+    api_response = api_instance.create_bundled_decision_manager_case(create_bundled_decision_manager_case_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DecisionManagerApi->create_decision_manager_case: %s\n" % e)
+    print("Exception when calling DecisionManagerApi->create_bundled_decision_manager_case: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_decision_manager_case_request** | [**CreateDecisionManagerCaseRequest**](CreateDecisionManagerCaseRequest.md)|  | 
+ **create_bundled_decision_manager_case_request** | [**CreateBundledDecisionManagerCaseRequest**](CreateBundledDecisionManagerCaseRequest.md)|  | 
 
 ### Return type
 

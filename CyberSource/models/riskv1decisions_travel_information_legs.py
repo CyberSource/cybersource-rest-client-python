@@ -33,30 +33,35 @@ class Riskv1decisionsTravelInformationLegs(object):
     swagger_types = {
         'origination': 'str',
         'destination': 'str',
-        'departure_date_time': 'str'
+        'carrier_code': 'str',
+        'departure_date': 'str'
     }
 
     attribute_map = {
         'origination': 'origination',
         'destination': 'destination',
-        'departure_date_time': 'departureDateTime'
+        'carrier_code': 'carrierCode',
+        'departure_date': 'departureDate'
     }
 
-    def __init__(self, origination=None, destination=None, departure_date_time=None):
+    def __init__(self, origination=None, destination=None, carrier_code=None, departure_date=None):
         """
         Riskv1decisionsTravelInformationLegs - a model defined in Swagger
         """
 
         self._origination = None
         self._destination = None
-        self._departure_date_time = None
+        self._carrier_code = None
+        self._departure_date = None
 
         if origination is not None:
           self.origination = origination
         if destination is not None:
           self.destination = destination
-        if departure_date_time is not None:
-          self.departure_date_time = departure_date_time
+        if carrier_code is not None:
+          self.carrier_code = carrier_code
+        if departure_date is not None:
+          self.departure_date = departure_date
 
     @property
     def origination(self):
@@ -109,29 +114,52 @@ class Riskv1decisionsTravelInformationLegs(object):
         self._destination = destination
 
     @property
-    def departure_date_time(self):
+    def carrier_code(self):
         """
-        Gets the departure_date_time of this Riskv1decisionsTravelInformationLegs.
-        Departure date and time for the each leg of the trip. Use one of the following formats: - `yyyy-MM-dd HH:mm z` - `yyyy-MM-dd hh:mm a z` - `yyyy-MM-dd hh:mma z`  Where:\\ `HH` = hour in 24-hour format\\ `hh` = hour in 12-hour format\\ `a` = am or pm (case insensitive)\\ `z` = time zone of the departing flight. For example, if the airline is based in city A, but the flight departs from city B, `z` is the time zone of city B at the time of departure.\\ **Important** For travel information, use GMT instead of UTC, or use the local time zone.  #### Examples  2011-03-20 11:30 PM PDT\\ 2011-03-20 11:30pm GMT\\ 2011-03-20 11:30pm GMT-05:00\\ Eastern Standard Time: GMT-05:00 or EST\\  **Note** When specifying an offset from GMT, the format must be exactly as specified in the example. Insert no spaces between the time zone and the offset. 
+        Gets the carrier_code of this Riskv1decisionsTravelInformationLegs.
+        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_carrier_code` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
 
-        :return: The departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        :return: The carrier_code of this Riskv1decisionsTravelInformationLegs.
         :rtype: str
         """
-        return self._departure_date_time
+        return self._carrier_code
 
-    @departure_date_time.setter
-    def departure_date_time(self, departure_date_time):
+    @carrier_code.setter
+    def carrier_code(self, carrier_code):
         """
-        Sets the departure_date_time of this Riskv1decisionsTravelInformationLegs.
-        Departure date and time for the each leg of the trip. Use one of the following formats: - `yyyy-MM-dd HH:mm z` - `yyyy-MM-dd hh:mm a z` - `yyyy-MM-dd hh:mma z`  Where:\\ `HH` = hour in 24-hour format\\ `hh` = hour in 12-hour format\\ `a` = am or pm (case insensitive)\\ `z` = time zone of the departing flight. For example, if the airline is based in city A, but the flight departs from city B, `z` is the time zone of city B at the time of departure.\\ **Important** For travel information, use GMT instead of UTC, or use the local time zone.  #### Examples  2011-03-20 11:30 PM PDT\\ 2011-03-20 11:30pm GMT\\ 2011-03-20 11:30pm GMT-05:00\\ Eastern Standard Time: GMT-05:00 or EST\\  **Note** When specifying an offset from GMT, the format must be exactly as specified in the example. Insert no spaces between the time zone and the offset. 
+        Sets the carrier_code of this Riskv1decisionsTravelInformationLegs.
+        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_carrier_code` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
 
-        :param departure_date_time: The departure_date_time of this Riskv1decisionsTravelInformationLegs.
+        :param carrier_code: The carrier_code of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-        if departure_date_time is not None and len(departure_date_time) > 25:
-            raise ValueError("Invalid value for `departure_date_time`, length must be less than or equal to `25`")
+        if carrier_code is not None and len(carrier_code) > 2:
+            raise ValueError("Invalid value for `carrier_code`, length must be less than or equal to `2`")
 
-        self._departure_date_time = departure_date_time
+        self._carrier_code = carrier_code
+
+    @property
+    def departure_date(self):
+        """
+        Gets the departure_date of this Riskv1decisionsTravelInformationLegs.
+        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_leg_departure_date` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+
+        :return: The departure_date of this Riskv1decisionsTravelInformationLegs.
+        :rtype: str
+        """
+        return self._departure_date
+
+    @departure_date.setter
+    def departure_date(self, departure_date):
+        """
+        Sets the departure_date of this Riskv1decisionsTravelInformationLegs.
+        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_leg_departure_date` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+
+        :param departure_date: The departure_date of this Riskv1decisionsTravelInformationLegs.
+        :type: str
+        """
+
+        self._departure_date = departure_date
 
     def to_dict(self):
         """

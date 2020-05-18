@@ -132,7 +132,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def product_sku(self):
         """
         Gets the product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product. For Payment and Capture APIs, this field is required when above `productCode` is not **default** or one of the values related to shipping and/or handling. 
 
         :return: The product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :rtype: str
@@ -143,7 +143,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def product_sku(self, product_sku):
         """
         Sets the product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product. For Payment and Capture APIs, this field is required when above `productCode` is not **default** or one of the values related to shipping and/or handling. 
 
         :param product_sku: The product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
