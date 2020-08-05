@@ -31,27 +31,11 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_instrument_identifier(self):
-        """
-        Test case for create_instrument_identifier
-
-        Create an Instrument Identifier
-        """
-        pass
-
     def test_delete_instrument_identifier(self):
         """
         Test case for delete_instrument_identifier
 
         Delete an Instrument Identifier
-        """
-        pass
-
-    def test_get_all_payment_instruments(self):
-        """
-        Test case for get_all_payment_instruments
-
-        Retrieve all Payment Instruments
         """
         pass
 
@@ -63,11 +47,27 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
         """
         pass
 
-    def test_update_instrument_identifier(self):
+    def test_get_instrument_identifier_payment_instruments_list(self):
         """
-        Test case for update_instrument_identifier
+        Test case for get_instrument_identifier_payment_instruments_list
 
-        Update a Instrument Identifier
+        List Payment Instruments for an Instrument Identifier
+        """
+        pass
+
+    def test_patch_instrument_identifier(self):
+        """
+        Test case for patch_instrument_identifier
+
+        Update an Instrument Identifier
+        """
+        pass
+
+    def test_post_instrument_identifier(self):
+        """
+        Test case for post_instrument_identifier
+
+        Create an Instrument Identifier
         """
         pass
 

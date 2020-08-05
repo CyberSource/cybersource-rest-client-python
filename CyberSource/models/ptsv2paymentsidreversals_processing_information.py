@@ -177,7 +177,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -188,7 +188,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str

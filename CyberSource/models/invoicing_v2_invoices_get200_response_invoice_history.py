@@ -32,7 +32,7 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
     """
     swagger_types = {
         'event': 'str',
-        'date': 'date',
+        'date': 'datetime',
         'transaction_details': 'InvoicingV2InvoicesGet200ResponseTransactionDetails'
     }
 
@@ -85,10 +85,10 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
     def date(self):
         """
         Gets the date of this InvoicingV2InvoicesGet200ResponseInvoiceHistory.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The date and time when the invoice event was triggered in ISO 8601 format. Format: YYYY-MM-DDThh:mm:ssZ 
 
         :return: The date of this InvoicingV2InvoicesGet200ResponseInvoiceHistory.
-        :rtype: date
+        :rtype: datetime
         """
         return self._date
 
@@ -96,10 +96,10 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
     def date(self, date):
         """
         Sets the date of this InvoicingV2InvoicesGet200ResponseInvoiceHistory.
-        The invoice due date. This field is required for creating an invoice. Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+        The date and time when the invoice event was triggered in ISO 8601 format. Format: YYYY-MM-DDThh:mm:ssZ 
 
         :param date: The date of this InvoicingV2InvoicesGet200ResponseInvoiceHistory.
-        :type: date
+        :type: datetime
         """
 
         self._date = date

@@ -42,7 +42,7 @@ class CreateCreditRequest(object):
         'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'installment_information': 'Ptsv2creditsInstallmentInformation',
-        'travel_information': 'Ptsv2paymentsidcapturesTravelInformation',
+        'travel_information': 'Ptsv2paymentsTravelInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation'
     }
 
@@ -347,7 +347,7 @@ class CreateCreditRequest(object):
         Gets the travel_information of this CreateCreditRequest.
 
         :return: The travel_information of this CreateCreditRequest.
-        :rtype: Ptsv2paymentsidcapturesTravelInformation
+        :rtype: Ptsv2paymentsTravelInformation
         """
         return self._travel_information
 
@@ -357,7 +357,7 @@ class CreateCreditRequest(object):
         Sets the travel_information of this CreateCreditRequest.
 
         :param travel_information: The travel_information of this CreateCreditRequest.
-        :type: Ptsv2paymentsidcapturesTravelInformation
+        :type: Ptsv2paymentsTravelInformation
         """
 
         self._travel_information = travel_information

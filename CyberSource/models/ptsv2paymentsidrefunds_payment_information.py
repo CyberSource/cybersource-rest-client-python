@@ -36,6 +36,10 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'Ptsv2paymentsPaymentInformationInstrumentIdentifier',
+        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
+        'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
     }
 
@@ -45,10 +49,14 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'tokenized_card': 'tokenizedCard',
         'fluid_data': 'fluidData',
         'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'shipping_address': 'shippingAddress',
+        'legacy_token': 'legacyToken',
         'payment_type': 'paymentType'
     }
 
-    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_type=None):
+    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
@@ -58,6 +66,10 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         self._tokenized_card = None
         self._fluid_data = None
         self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._shipping_address = None
+        self._legacy_token = None
         self._payment_type = None
 
         if card is not None:
@@ -70,6 +82,14 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.fluid_data = fluid_data
         if customer is not None:
           self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
+        if legacy_token is not None:
+          self.legacy_token = legacy_token
         if payment_type is not None:
           self.payment_type = payment_type
 
@@ -177,6 +197,90 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The payment_instrument of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The instrument_identifier of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The shipping_address of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param shipping_address: The shipping_address of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
+
+    @property
+    def legacy_token(self):
+        """
+        Gets the legacy_token of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The legacy_token of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationLegacyToken
+        """
+        return self._legacy_token
+
+    @legacy_token.setter
+    def legacy_token(self, legacy_token):
+        """
+        Sets the legacy_token of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param legacy_token: The legacy_token of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationLegacyToken
+        """
+
+        self._legacy_token = legacy_token
 
     @property
     def payment_type(self):

@@ -202,7 +202,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -213,7 +213,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
@@ -252,7 +252,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Indicates that the transaction includes airline data or restaurant data. Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit`  #### Card Present You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :return: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :rtype: str
@@ -263,7 +263,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
-        Indicates that the transaction includes airline data or restaurant data. Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit`  #### Card Present You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :param industry_data_type: The industry_data_type of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str

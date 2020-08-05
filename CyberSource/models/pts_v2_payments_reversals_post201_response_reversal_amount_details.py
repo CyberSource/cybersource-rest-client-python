@@ -62,7 +62,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def reversed_amount(self):
         """
         Gets the reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Total reversed amount.  Returned by authorization reversal. 
 
         :return: The reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def reversed_amount(self, reversed_amount):
         """
         Sets the reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Total reversed amount.  For details, see `auth_reversal_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Total reversed amount.  Returned by authorization reversal. 
 
         :param reversed_amount: The reversed_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str
@@ -87,7 +87,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def original_transaction_amount(self):
         """
         Gets the original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Amount of the original transaction.  Returned by authorization reversal and void. 
 
         :return: The original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -98,7 +98,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def original_transaction_amount(self, original_transaction_amount):
         """
         Sets the original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Amount of the original transaction.  For details, see `original_transaction_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Amount of the original transaction.  Returned by authorization reversal and void. 
 
         :param original_transaction_amount: The original_transaction_amount of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str
@@ -112,7 +112,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :return: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :rtype: str
@@ -123,7 +123,7 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
-        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :param currency: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str

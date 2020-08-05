@@ -207,12 +207,7 @@ class ApiClient(object):
         if query_param:
             path += '?' + urlencode(query_param)
 
-        return path
-        
-    
-    
-    
-  
+        return path  
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
@@ -432,6 +427,7 @@ class ApiClient(object):
             body = json.dumps(request_body)
             body = body.replace("companyTaxId", "companyTaxID")
             body = body.replace("productSku", "productSKU")
+            body = body.replace("secCode", "SECCode")
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
             mconfig.request_target = query_param_path

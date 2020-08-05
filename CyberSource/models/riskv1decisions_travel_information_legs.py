@@ -117,7 +117,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def carrier_code(self):
         """
         Gets the carrier_code of this Riskv1decisionsTravelInformationLegs.
-        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_carrier_code` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests. 
 
         :return: The carrier_code of this Riskv1decisionsTravelInformationLegs.
         :rtype: str
@@ -128,7 +128,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def carrier_code(self, carrier_code):
         """
         Sets the carrier_code of this Riskv1decisionsTravelInformationLegs.
-        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_carrier_code` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+        International Air Transport Association (IATA) code for the carrier for this leg of the trip. Required for each leg. Required for American Express SafeKey (U.S.) for travel-related requests. 
 
         :param carrier_code: The carrier_code of this Riskv1decisionsTravelInformationLegs.
         :type: str
@@ -142,7 +142,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def departure_date(self):
         """
         Gets the departure_date of this Riskv1decisionsTravelInformationLegs.
-        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_leg_departure_date` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests. 
 
         :return: The departure_date of this Riskv1decisionsTravelInformationLegs.
         :rtype: str
@@ -153,7 +153,7 @@ class Riskv1decisionsTravelInformationLegs(object):
     def departure_date(self, departure_date):
         """
         Sets the departure_date of this Riskv1decisionsTravelInformationLegs.
-        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests.  For details, see `airline_leg#_leg_departure_date` in [Airline Processing Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Airline_SCMP_API/Airline_SCMP_API.pdf) 
+        Departure date for the first leg of the trip. Format: YYYYMMDD. Required for American Express SafeKey (U.S.) for travel-related requests. 
 
         :param departure_date: The departure_date of this Riskv1decisionsTravelInformationLegs.
         :type: str

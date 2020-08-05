@@ -82,7 +82,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
-        IATA2 airline code. Format: English characters only. 
+        IATA2 airline code. Format: English characters only. Required for Mastercard; optional for all other card types. 
 
         :return: The code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
-        IATA2 airline code. Format: English characters only. 
+        IATA2 airline code. Format: English characters only. Required for Mastercard; optional for all other card types. 
 
         :param code: The code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
@@ -157,7 +157,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
-        City in which the transactionoccurred. If the name of the city exceeds 18 characters, use meaningful abbreviations. Format: English characters only 
+        City in which the transaction occurred. If the name of the city exceeds 18 characters, use meaningful abbreviations. Format: English characters only. Optional request field. 
 
         :return: The locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :rtype: str
@@ -168,7 +168,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
-        City in which the transactionoccurred. If the name of the city exceeds 18 characters, use meaningful abbreviations. Format: English characters only 
+        City in which the transaction occurred. If the name of the city exceeds 18 characters, use meaningful abbreviations. Format: English characters only. Optional request field. 
 
         :param locality: The locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str

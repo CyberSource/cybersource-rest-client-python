@@ -62,6 +62,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'prior_authentication_reference_id': 'str',
         'prior_authentication_time': 'str',
         'product_code': 'str',
+        'return_url': 'str',
         'requestor_id': 'str',
         'requestor_initiated_authentication_indicator': 'str',
         'requestor_name': 'str',
@@ -104,6 +105,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'prior_authentication_reference_id': 'priorAuthenticationReferenceId',
         'prior_authentication_time': 'priorAuthenticationTime',
         'product_code': 'productCode',
+        'return_url': 'returnUrl',
         'requestor_id': 'requestorId',
         'requestor_initiated_authentication_indicator': 'requestorInitiatedAuthenticationIndicator',
         'requestor_name': 'requestorName',
@@ -114,7 +116,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None):
+    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None):
         """
         Riskv1decisionsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -150,6 +152,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         self._prior_authentication_reference_id = None
         self._prior_authentication_time = None
         self._product_code = None
+        self._return_url = None
         self._requestor_id = None
         self._requestor_initiated_authentication_indicator = None
         self._requestor_name = None
@@ -221,6 +224,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.prior_authentication_time = prior_authentication_time
         if product_code is not None:
           self.product_code = product_code
+        if return_url is not None:
+          self.return_url = return_url
         if requestor_id is not None:
           self.requestor_id = requestor_id
         if requestor_initiated_authentication_indicator is not None:
@@ -847,7 +852,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def override_country_code(self):
         """
         Gets the override_country_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        Two-character ISO standard Country Codes. 
+        Two-character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).. 
 
         :return: The override_country_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :rtype: str
@@ -858,7 +863,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def override_country_code(self, override_country_code):
         """
         Sets the override_country_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        Two-character ISO standard Country Codes. 
+        Two-character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).. 
 
         :param override_country_code: The override_country_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
@@ -992,6 +997,31 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `product_code`, length must be less than or equal to `3`")
 
         self._product_code = product_code
+
+    @property
+    def return_url(self):
+        """
+        Gets the return_url of this Riskv1decisionsConsumerAuthenticationInformation.
+        The URL of the merchant’s return page. CyberSource adds this return URL to the step-up JWT and returns it in the response of the Payer Authentication enrollment call. The merchant's return URL page serves as a listening URL. Once the bank session completes, the merchant receives a POST to their URL. This response contains the completed bank session’s transactionId. The merchant’s return page should capture the transaction ID and send it in the Payer Authentication validation call. 
+
+        :return: The return_url of this Riskv1decisionsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._return_url
+
+    @return_url.setter
+    def return_url(self, return_url):
+        """
+        Sets the return_url of this Riskv1decisionsConsumerAuthenticationInformation.
+        The URL of the merchant’s return page. CyberSource adds this return URL to the step-up JWT and returns it in the response of the Payer Authentication enrollment call. The merchant's return URL page serves as a listening URL. Once the bank session completes, the merchant receives a POST to their URL. This response contains the completed bank session’s transactionId. The merchant’s return page should capture the transaction ID and send it in the Payer Authentication validation call. 
+
+        :param return_url: The return_url of this Riskv1decisionsConsumerAuthenticationInformation.
+        :type: str
+        """
+        if return_url is not None and len(return_url) > 2048:
+            raise ValueError("Invalid value for `return_url`, length must be less than or equal to `2048`")
+
+        self._return_url = return_url
 
     @property
     def requestor_id(self):

@@ -57,7 +57,7 @@ class Ptsv2paymentsTravelInformationAgency(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsTravelInformationAgency.
-        Code of travel agency that made the vehicle rental reservation. 
+        International Air Transport Association (IATA) code of travel agency that made the vehicle rental reservation. 
 
         :return: The code of this Ptsv2paymentsTravelInformationAgency.
         :rtype: str
@@ -68,7 +68,7 @@ class Ptsv2paymentsTravelInformationAgency(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsTravelInformationAgency.
-        Code of travel agency that made the vehicle rental reservation. 
+        International Air Transport Association (IATA) code of travel agency that made the vehicle rental reservation. 
 
         :param code: The code of this Ptsv2paymentsTravelInformationAgency.
         :type: str

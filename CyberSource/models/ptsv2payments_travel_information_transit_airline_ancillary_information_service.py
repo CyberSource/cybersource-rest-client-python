@@ -57,7 +57,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
     def category_code(self):
         """
         Gets the category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
-        Category code for the ancillary service that is provided. Obtain the codes from the International Air Transport Association (IATA). Note is either 0, 1, 2, or 3. Important This field is required in the U.S. in order for you to qualify for either the custom payment service (CPS) or the electronic interchange reimbursement fee (EIRF)program.
+        Category code for the ancillary service that is provided. Obtain the codes from the International Air Transport Association (IATA). **Note** `#` is either 0, 1, 2, or 3. **Important** This field is required in the U.S. in order for you to qualify for either the custom payment service (CPS) or the electronic interchange reimbursement fee (EIRF)program. Format: English characters only. Optional request field for ancillary services. 
 
         :return: The category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :rtype: str
@@ -68,7 +68,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
     def category_code(self, category_code):
         """
         Sets the category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
-        Category code for the ancillary service that is provided. Obtain the codes from the International Air Transport Association (IATA). Note is either 0, 1, 2, or 3. Important This field is required in the U.S. in order for you to qualify for either the custom payment service (CPS) or the electronic interchange reimbursement fee (EIRF)program.
+        Category code for the ancillary service that is provided. Obtain the codes from the International Air Transport Association (IATA). **Note** `#` is either 0, 1, 2, or 3. **Important** This field is required in the U.S. in order for you to qualify for either the custom payment service (CPS) or the electronic interchange reimbursement fee (EIRF)program. Format: English characters only. Optional request field for ancillary services. 
 
         :param category_code: The category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :type: str
@@ -82,7 +82,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
     def sub_category_code(self):
         """
         Gets the sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
-        Subcategory code for the ancillary service category. Obtain the codes from the International Air Transport Association (IATA). Note  is 0, 1, 2, or 3. Format  English characters only
+        Subcategory code for the ancillary service category. Obtain the codes from the International Air Transport Association (IATA). **Note** `#` is either 0, 1, 2, or 3. Format  English characters only. Optional request field for ancillary services. 
 
         :return: The sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
     def sub_category_code(self, sub_category_code):
         """
         Sets the sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
-        Subcategory code for the ancillary service category. Obtain the codes from the International Air Transport Association (IATA). Note  is 0, 1, 2, or 3. Format  English characters only
+        Subcategory code for the ancillary service category. Obtain the codes from the International Air Transport Association (IATA). **Note** `#` is either 0, 1, 2, or 3. Format  English characters only. Optional request field for ancillary services. 
 
         :param sub_category_code: The sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :type: str

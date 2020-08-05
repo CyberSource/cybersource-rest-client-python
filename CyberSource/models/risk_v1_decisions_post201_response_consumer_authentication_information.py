@@ -31,6 +31,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'access_token': 'str',
         'acs_rendering_type': 'str',
         'acs_transaction_id': 'str',
         'acs_url': 'str',
@@ -61,7 +62,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'step_up_url': 'str',
         'three_ds_server_transaction_id': 'str',
         'ucaf_authentication_data': 'str',
-        'ucaf_collection_indicator': 'float',
+        'ucaf_collection_indicator': 'str',
         'veres_enrolled': 'str',
         'white_list_status_source': 'str',
         'xid': 'str',
@@ -69,6 +70,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     }
 
     attribute_map = {
+        'access_token': 'accessToken',
         'acs_rendering_type': 'acsRenderingType',
         'acs_transaction_id': 'acsTransactionId',
         'acs_url': 'acsUrl',
@@ -106,11 +108,12 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'directory_server_transaction_id': 'directoryServerTransactionId'
     }
 
-    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
         """
         RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
 
+        self._access_token = None
         self._acs_rendering_type = None
         self._acs_transaction_id = None
         self._acs_url = None
@@ -147,6 +150,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         self._xid = None
         self._directory_server_transaction_id = None
 
+        if access_token is not None:
+          self.access_token = access_token
         if acs_rendering_type is not None:
           self.acs_rendering_type = acs_rendering_type
         if acs_transaction_id is not None:
@@ -217,6 +222,31 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
           self.xid = xid
         if directory_server_transaction_id is not None:
           self.directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def access_token(self):
+        """
+        Gets the access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+
+        :return: The access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._access_token
+
+    @access_token.setter
+    def access_token(self, access_token):
+        """
+        Sets the access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+
+        :param access_token: The access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+        if access_token is not None and len(access_token) > 2048:
+            raise ValueError("Invalid value for `access_token`, length must be less than or equal to `2048`")
+
+        self._access_token = access_token
 
     @property
     def acs_rendering_type(self):
@@ -949,7 +979,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         For enroll, Returned only for Mastercard transactions. Indicates that authentication is not required because the customer is not enrolled. Add the value of this field to the authorization field ucaf_collection_indicator. This field can contain these values: 0, 1.  For validate, Numeric electronic commerce indicator (ECI) returned only for Mastercard Identity Check transactions. The field is absent when authentication fails. You must send this value to your payment processor in the request for card authorization. This field contain one of these values: - `0`: Authentication data not collected, and customer authentication was not completed. - `1`: Authentication data not collected because customer authentication was not completed. - `2`: Authentication data collected because customer completed authentication. 
 
         :return: The ucaf_collection_indicator of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        :rtype: float
+        :rtype: str
         """
         return self._ucaf_collection_indicator
 
@@ -960,7 +990,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         For enroll, Returned only for Mastercard transactions. Indicates that authentication is not required because the customer is not enrolled. Add the value of this field to the authorization field ucaf_collection_indicator. This field can contain these values: 0, 1.  For validate, Numeric electronic commerce indicator (ECI) returned only for Mastercard Identity Check transactions. The field is absent when authentication fails. You must send this value to your payment processor in the request for card authorization. This field contain one of these values: - `0`: Authentication data not collected, and customer authentication was not completed. - `1`: Authentication data not collected because customer authentication was not completed. - `2`: Authentication data collected because customer completed authentication. 
 
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        :type: float
+        :type: str
         """
 
         self._ucaf_collection_indicator = ucaf_collection_indicator

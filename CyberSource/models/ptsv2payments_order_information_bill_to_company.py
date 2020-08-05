@@ -232,7 +232,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsOrderInformationBillToCompany.
-        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
+        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :return: The country of this Ptsv2paymentsOrderInformationBillToCompany.
         :rtype: str
@@ -243,7 +243,7 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsOrderInformationBillToCompany.
-        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
+        Country in the address of the company purchasing the product. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :param country: The country of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str

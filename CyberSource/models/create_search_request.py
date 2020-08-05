@@ -82,7 +82,7 @@ class CreateSearchRequest(object):
     def save(self):
         """
         Gets the save of this CreateSearchRequest.
-        save or not save.
+        Indicates whether or not you want to save this search request for future use. The options are:  * `true` * `false` (default value)  If set to `true`, this field returns `searchID` in the response. You can use this value to retrieve the details of the saved search. 
 
         :return: The save of this CreateSearchRequest.
         :rtype: bool
@@ -93,7 +93,7 @@ class CreateSearchRequest(object):
     def save(self, save):
         """
         Sets the save of this CreateSearchRequest.
-        save or not save.
+        Indicates whether or not you want to save this search request for future use. The options are:  * `true` * `false` (default value)  If set to `true`, this field returns `searchID` in the response. You can use this value to retrieve the details of the saved search. 
 
         :param save: The save of this CreateSearchRequest.
         :type: bool
@@ -105,7 +105,7 @@ class CreateSearchRequest(object):
     def name(self):
         """
         Gets the name of this CreateSearchRequest.
-        The description for this field is not available. 
+        Name of this search. When `save` is set to `true`, this search is saved with this name. 
 
         :return: The name of this CreateSearchRequest.
         :rtype: str
@@ -116,7 +116,7 @@ class CreateSearchRequest(object):
     def name(self, name):
         """
         Sets the name of this CreateSearchRequest.
-        The description for this field is not available. 
+        Name of this search. When `save` is set to `true`, this search is saved with this name. 
 
         :param name: The name of this CreateSearchRequest.
         :type: str
@@ -128,7 +128,7 @@ class CreateSearchRequest(object):
     def timezone(self):
         """
         Gets the timezone of this CreateSearchRequest.
-        Time Zone in ISO format.
+        Merchant’s time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
 
         :return: The timezone of this CreateSearchRequest.
         :rtype: str
@@ -139,7 +139,7 @@ class CreateSearchRequest(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this CreateSearchRequest.
-        Time Zone in ISO format.
+        Merchant’s time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
 
         :param timezone: The timezone of this CreateSearchRequest.
         :type: str
@@ -151,7 +151,7 @@ class CreateSearchRequest(object):
     def query(self):
         """
         Gets the query of this CreateSearchRequest.
-        transaction search query string.
+        String that contains the filters and variables for which you want to search. For information about supported field-filters and operators, see the [Query Filters]( https://developer.cybersource.com/api/developer-guides/dita-txn-search-details-rest-api-dev-guide-102718/txn_search_api/creating_txn_search_request.html) section of the Transaction Search Developer Guide. 
 
         :return: The query of this CreateSearchRequest.
         :rtype: str
@@ -162,7 +162,7 @@ class CreateSearchRequest(object):
     def query(self, query):
         """
         Sets the query of this CreateSearchRequest.
-        transaction search query string.
+        String that contains the filters and variables for which you want to search. For information about supported field-filters and operators, see the [Query Filters]( https://developer.cybersource.com/api/developer-guides/dita-txn-search-details-rest-api-dev-guide-102718/txn_search_api/creating_txn_search_request.html) section of the Transaction Search Developer Guide. 
 
         :param query: The query of this CreateSearchRequest.
         :type: str
@@ -174,7 +174,7 @@ class CreateSearchRequest(object):
     def offset(self):
         """
         Gets the offset of this CreateSearchRequest.
-        offset.
+        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
 
         :return: The offset of this CreateSearchRequest.
         :rtype: int
@@ -185,7 +185,7 @@ class CreateSearchRequest(object):
     def offset(self, offset):
         """
         Sets the offset of this CreateSearchRequest.
-        offset.
+        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
 
         :param offset: The offset of this CreateSearchRequest.
         :type: int
@@ -197,7 +197,7 @@ class CreateSearchRequest(object):
     def limit(self):
         """
         Gets the limit of this CreateSearchRequest.
-        Limit on number of results.
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2000. 
 
         :return: The limit of this CreateSearchRequest.
         :rtype: int
@@ -208,7 +208,7 @@ class CreateSearchRequest(object):
     def limit(self, limit):
         """
         Sets the limit of this CreateSearchRequest.
-        Limit on number of results.
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2000. 
 
         :param limit: The limit of this CreateSearchRequest.
         :type: int
@@ -220,7 +220,7 @@ class CreateSearchRequest(object):
     def sort(self):
         """
         Gets the sort of this CreateSearchRequest.
-        A comma separated list of the following form - fieldName1 asc or desc, fieldName2 asc or desc, etc.
+        A comma separated list of the following form:  `submitTimeUtc:desc` 
 
         :return: The sort of this CreateSearchRequest.
         :rtype: str
@@ -231,7 +231,7 @@ class CreateSearchRequest(object):
     def sort(self, sort):
         """
         Sets the sort of this CreateSearchRequest.
-        A comma separated list of the following form - fieldName1 asc or desc, fieldName2 asc or desc, etc.
+        A comma separated list of the following form:  `submitTimeUtc:desc` 
 
         :param sort: The sort of this CreateSearchRequest.
         :type: str

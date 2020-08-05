@@ -33,6 +33,7 @@ class Ptsv2paymentsTravelInformation(object):
     swagger_types = {
         'duration': 'str',
         'agency': 'Ptsv2paymentsTravelInformationAgency',
+        'auto_rental': 'Ptsv2paymentsTravelInformationAutoRental',
         'lodging': 'Ptsv2paymentsTravelInformationLodging',
         'transit': 'Ptsv2paymentsTravelInformationTransit'
     }
@@ -40,17 +41,19 @@ class Ptsv2paymentsTravelInformation(object):
     attribute_map = {
         'duration': 'duration',
         'agency': 'agency',
+        'auto_rental': 'autoRental',
         'lodging': 'lodging',
         'transit': 'transit'
     }
 
-    def __init__(self, duration=None, agency=None, lodging=None, transit=None):
+    def __init__(self, duration=None, agency=None, auto_rental=None, lodging=None, transit=None):
         """
         Ptsv2paymentsTravelInformation - a model defined in Swagger
         """
 
         self._duration = None
         self._agency = None
+        self._auto_rental = None
         self._lodging = None
         self._transit = None
 
@@ -58,6 +61,8 @@ class Ptsv2paymentsTravelInformation(object):
           self.duration = duration
         if agency is not None:
           self.agency = agency
+        if auto_rental is not None:
+          self.auto_rental = auto_rental
         if lodging is not None:
           self.lodging = lodging
         if transit is not None:
@@ -67,7 +72,7 @@ class Ptsv2paymentsTravelInformation(object):
     def duration(self):
         """
         Gets the duration of this Ptsv2paymentsTravelInformation.
-        Duration for which the vehicle was rented or lodge/hotel was booked. 
+        Duration of the auto rental or lodging rental.  #### Auto rental This field is supported for Visa, MasterCard, and American Express. **Important** If this field is not included when the `processingInformation.industryDataType` is auto rental, the transaction is declined. 
 
         :return: The duration of this Ptsv2paymentsTravelInformation.
         :rtype: str
@@ -78,7 +83,7 @@ class Ptsv2paymentsTravelInformation(object):
     def duration(self, duration):
         """
         Sets the duration of this Ptsv2paymentsTravelInformation.
-        Duration for which the vehicle was rented or lodge/hotel was booked. 
+        Duration of the auto rental or lodging rental.  #### Auto rental This field is supported for Visa, MasterCard, and American Express. **Important** If this field is not included when the `processingInformation.industryDataType` is auto rental, the transaction is declined. 
 
         :param duration: The duration of this Ptsv2paymentsTravelInformation.
         :type: str
@@ -108,6 +113,27 @@ class Ptsv2paymentsTravelInformation(object):
         """
 
         self._agency = agency
+
+    @property
+    def auto_rental(self):
+        """
+        Gets the auto_rental of this Ptsv2paymentsTravelInformation.
+
+        :return: The auto_rental of this Ptsv2paymentsTravelInformation.
+        :rtype: Ptsv2paymentsTravelInformationAutoRental
+        """
+        return self._auto_rental
+
+    @auto_rental.setter
+    def auto_rental(self, auto_rental):
+        """
+        Sets the auto_rental of this Ptsv2paymentsTravelInformation.
+
+        :param auto_rental: The auto_rental of this Ptsv2paymentsTravelInformation.
+        :type: Ptsv2paymentsTravelInformationAutoRental
+        """
+
+        self._auto_rental = auto_rental
 
     @property
     def lodging(self):

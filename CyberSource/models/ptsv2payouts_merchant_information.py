@@ -115,7 +115,7 @@ class Ptsv2payoutsMerchantInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2payoutsMerchantInformation.
-        Your government-assigned tax identification number.  For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :return: The vat_registration_number of this Ptsv2payoutsMerchantInformation.
         :rtype: str
@@ -126,7 +126,7 @@ class Ptsv2payoutsMerchantInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2payoutsMerchantInformation.
-        Your government-assigned tax identification number.  For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2payoutsMerchantInformation.
         :type: str

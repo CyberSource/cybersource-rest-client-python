@@ -98,8 +98,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :type: str
         """
-        if code_raw is not None and len(code_raw) > 2:
-            raise ValueError("Invalid value for `code_raw`, length must be less than or equal to `2`")
+        if code_raw is not None and len(code_raw) > 4:
+            raise ValueError("Invalid value for `code_raw`, length must be less than or equal to `4`")
 
         self._code_raw = code_raw
 

@@ -62,7 +62,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def name(self):
         """
         Gets the name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
+        Your merchant name.  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22.  #### PIN debit Your business name. This name is displayed on the cardholder’s statement. When you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters.  Optional field for PIN debit credit or PIN debit purchase requests.  #### Airline processing Your merchant name. This name is displayed on the cardholder’s statement. When you include more than one consecutive space, extra spaces are removed.  **Note** Some airline fee programs may require the original ticket number (ticket identifier) or the ancillary service description in positions 13 through 23 of this field.  **Important** This value must consist of English characters.  Required for captures and credits. 
 
         :return: The name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def name(self, name):
         """
         Sets the name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's name.  For more details about the merchant-related fields, see the `merchant_descriptor` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22. 
+        Your merchant name.  **Note** For Paymentech processor using Cybersource Payouts, the maximum data length is 22.  #### PIN debit Your business name. This name is displayed on the cardholder’s statement. When you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters.  Optional field for PIN debit credit or PIN debit purchase requests.  #### Airline processing Your merchant name. This name is displayed on the cardholder’s statement. When you include more than one consecutive space, extra spaces are removed.  **Note** Some airline fee programs may require the original ticket number (ticket identifier) or the ancillary service description in positions 13 through 23 of this field.  **Important** This value must consist of English characters.  Required for captures and credits. 
 
         :param name: The name of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
@@ -85,7 +85,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def locality(self):
         """
         Gets the locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's City.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_city` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's City.  #### PIN debit City for your business location. This value might be displayed on the cardholder’s statement.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters.  Optional field for PIN debit credit or PIN debit purchase requests. 
 
         :return: The locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -96,7 +96,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def locality(self, locality):
         """
         Sets the locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's City.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_city` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's City.  #### PIN debit City for your business location. This value might be displayed on the cardholder’s statement.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters.  Optional field for PIN debit credit or PIN debit purchase requests. 
 
         :param locality: The locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
@@ -110,7 +110,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def country(self):
         """
         Gets the country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's country.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_country` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's country.  #### PIN debit Country code for your business location. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) This value might be displayed on the cardholder’s statement.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters. **Note** If your business is located in the U.S. or Canada and you include this field in a request, you must also include `merchantInformation.merchantDescriptor.administrativeArea`.  Optional field for PIN debit credit or PIN debit purchase. 
 
         :return: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -121,7 +121,7 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
     def country(self, country):
         """
         Sets the country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
-        Merchant's country.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_country` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Merchant's country.  #### PIN debit Country code for your business location. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) This value might be displayed on the cardholder’s statement.  When you do not include this value in your PIN debit request, the merchant name from your account is used. **Important** This value must consist of English characters. **Note** If your business is located in the U.S. or Canada and you include this field in a request, you must also include `merchantInformation.merchantDescriptor.administrativeArea`.  Optional field for PIN debit credit or PIN debit purchase. 
 
         :param country: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str

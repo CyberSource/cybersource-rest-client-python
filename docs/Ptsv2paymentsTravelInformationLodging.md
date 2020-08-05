@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**check_in_date** | **str** | Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: MMDDYY. For best interchange rates, make sure it is a valid date.  | [optional] 
-**check_out_date** | **str** | Date on which the guest checked out. Format: MMDDYY. For best interchange rates, make sure it is a valid date.  | [optional] 
+**check_in_date** | **str** | Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: &#x60;MMDDYY&#x60;. For best interchange rates, make sure it is a valid date.  | [optional] 
+**check_out_date** | **str** | Date on which the guest checked out. Format: &#x60;MMDDYY&#x60;. For best interchange rates, make sure it is a valid date.  | [optional] 
 **room** | [**list[Ptsv2paymentsTravelInformationLodgingRoom]**](Ptsv2paymentsTravelInformationLodgingRoom.md) | The object containing the number of nights and the daily rate that applies for that no of nights.  | [optional] 
 **smoking_preference** | **str** | Smoking preference of the guest. Possible values: - &#x60;Y&#x60;: smoking room - &#x60;N&#x60;: non-smoking room  | [optional] 
 **number_of_rooms** | **int** | Number of rooms booked by the cardholder.  | [optional] 

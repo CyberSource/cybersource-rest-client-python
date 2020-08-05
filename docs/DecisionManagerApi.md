@@ -5,7 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_negative**](DecisionManagerApi.md#add_negative) | **POST** /risk/v1/lists/{type}/entries | List Management
-[**create_bundled_decision_manager_case**](DecisionManagerApi.md#create_bundled_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager Case
+[**create_bundled_decision_manager_case**](DecisionManagerApi.md#create_bundled_decision_manager_case) | **POST** /risk/v1/decisions | Create Decision Manager
 [**fraud_update**](DecisionManagerApi.md#fraud_update) | **POST** /risk/v1/decisions/{id}/marking | Fraud Marking
 
 
@@ -62,9 +62,9 @@ No authorization required
 # **create_bundled_decision_manager_case**
 > RiskV1DecisionsPost201Response create_bundled_decision_manager_case(create_bundled_decision_manager_case_request)
 
-Create Decision Manager Case
+Create Decision Manager
 
-This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
+Decision Manager can help you automate and streamline your fraud operations. Decision Manager will return a decision based on the request values.
 
 ### Example 
 ```python
@@ -79,7 +79,7 @@ api_instance = CyberSource.DecisionManagerApi()
 create_bundled_decision_manager_case_request = CyberSource.CreateBundledDecisionManagerCaseRequest() # CreateBundledDecisionManagerCaseRequest | 
 
 try: 
-    # Create Decision Manager Case
+    # Create Decision Manager
     api_response = api_instance.create_bundled_decision_manager_case(create_bundled_decision_manager_case_request)
     pprint(api_response)
 except ApiException as e:

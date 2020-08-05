@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def balance_amount(self):
         """
         Gets the balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account.  Returned by authorization service. 
+        Remaining balance on the account.  Returned by authorization service.  #### PIN debit Remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :return: The balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def balance_amount(self, balance_amount):
         """
         Sets the balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account.  Returned by authorization service. 
+        Remaining balance on the account.  Returned by authorization service.  #### PIN debit Remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :param balance_amount: The balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -87,7 +87,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def previous_balance_amount(self):
         """
         Gets the previous_balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account.  Returned by authorization service. 
+        Remaining balance on the account.  Returned by authorization service.  #### PIN debit Remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :return: The previous_balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -98,7 +98,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def previous_balance_amount(self, previous_balance_amount):
         """
         Sets the previous_balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Remaining balance on the account.  Returned by authorization service. 
+        Remaining balance on the account.  Returned by authorization service.  #### PIN debit Remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :param previous_balance_amount: The previous_balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
@@ -112,7 +112,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def currency(self):
         """
         Gets the currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service. 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service.  #### PIN debit Currency of the remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :return: The currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :rtype: str
@@ -123,7 +123,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
     def currency(self, currency):
         """
         Sets the currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
-        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service. 
+        Currency of the remaining balance on the account. For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  Returned by authorization service.  #### PIN debit Currency of the remaining balance on the prepaid card.  Returned by PIN debit purchase. 
 
         :param currency: The currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str

@@ -265,7 +265,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def source_account_type_details(self):
         """
         Gets the source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
-        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. 
 
         :return: The source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -276,7 +276,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def source_account_type_details(self, source_account_type_details):
         """
         Sets the source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
-        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. The value for this field corresponds to the following data in the TC 33 capture file5: Record: CP07 TCR0, Position: 44-47, Field: Account Accessed 
+        Type of account that is being used when the value for the override_payment_method field is line of credit (LI) or prepaid card (PP). Possible values for line of credit: - `AGRC`: Visa Agro Custeio - `AGRE`: Visa Agro Electron - `AGRI`: Visa Agro Investimento - `AGRO`: Visa Agro Possible values for prepaid card: - `VVA`: Visa Vale Alimentacao - `VVF`: Visa Vale Flex - `VVR`: Visa Vale Refeicao This field is supported only for combo card transactions in Brazil on CyberSource through VisaNet. 
 
         :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -440,7 +440,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def product_name(self):
         """
         Gets the product_name of this Ptsv2paymentsPaymentInformationCard.
-        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
 
         :return: The product_name of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -451,7 +451,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def product_name(self, product_name):
         """
         Sets the product_name of this Ptsv2paymentsPaymentInformationCard.
-        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet. For details, see `card_product_name` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
+        Name of the card product.  Possible value: - BNDES  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR4 - Position: 115-120 - Field: Brazil Country Data 
 
         :param product_name: The product_name of this Ptsv2paymentsPaymentInformationCard.
         :type: str

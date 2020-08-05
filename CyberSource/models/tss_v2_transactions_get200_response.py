@@ -167,7 +167,7 @@ class TssV2TransactionsGet200Response(object):
     def id(self):
         """
         Gets the id of this TssV2TransactionsGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :return: The id of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -178,7 +178,7 @@ class TssV2TransactionsGet200Response(object):
     def id(self, id):
         """
         Sets the id of this TssV2TransactionsGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :param id: The id of this TssV2TransactionsGet200Response.
         :type: str
@@ -192,7 +192,7 @@ class TssV2TransactionsGet200Response(object):
     def root_id(self):
         """
         Gets the root_id of this TssV2TransactionsGet200Response.
-        Payment Request Id
+        Contains the transaction identifier for the first transaction in the series of transactions. For example, you might send an authorization request for a payment, followed by a capture request for that payment, and then a refund request for that captured payment. Each of those requests, if successful, creates a resource that is assigned an identifier, which is returned in the response. The rootId identifies the first ID in the series, which in this case would be the ID of the original authorization.
 
         :return: The root_id of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -203,7 +203,7 @@ class TssV2TransactionsGet200Response(object):
     def root_id(self, root_id):
         """
         Sets the root_id of this TssV2TransactionsGet200Response.
-        Payment Request Id
+        Contains the transaction identifier for the first transaction in the series of transactions. For example, you might send an authorization request for a payment, followed by a capture request for that payment, and then a refund request for that captured payment. Each of those requests, if successful, creates a resource that is assigned an identifier, which is returned in the response. The rootId identifies the first ID in the series, which in this case would be the ID of the original authorization.
 
         :param root_id: The root_id of this TssV2TransactionsGet200Response.
         :type: str
@@ -217,7 +217,7 @@ class TssV2TransactionsGet200Response(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this TssV2TransactionsGet200Response.
-        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  ##### PIN debit Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :return: The reconciliation_id of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -228,7 +228,7 @@ class TssV2TransactionsGet200Response(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this TssV2TransactionsGet200Response.
-        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  ##### PIN debit Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :param reconciliation_id: The reconciliation_id of this TssV2TransactionsGet200Response.
         :type: str
@@ -288,7 +288,7 @@ class TssV2TransactionsGet200Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsGet200Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :return: The submit_time_utc of this TssV2TransactionsGet200Response.
         :rtype: str
@@ -299,7 +299,7 @@ class TssV2TransactionsGet200Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this TssV2TransactionsGet200Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsGet200Response.
         :type: str

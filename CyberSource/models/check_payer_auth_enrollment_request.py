@@ -31,10 +31,11 @@ class CheckPayerAuthEnrollmentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1authenticationsClientReferenceInformation',
+        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
         'order_information': 'Riskv1authenticationsOrderInformation',
         'payment_information': 'Riskv1authenticationsPaymentInformation',
-        'processing_information': 'Riskv1authenticationsProcessingInformation',
+        'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
+        'token_information': 'Riskv1authenticationsetupsTokenInformation',
         'buyer_information': 'Riskv1authenticationsBuyerInformation',
         'device_information': 'Riskv1authenticationsDeviceInformation',
         'merchant_information': 'Riskv1decisionsMerchantInformation',
@@ -51,6 +52,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
         'processing_information': 'processingInformation',
+        'token_information': 'tokenInformation',
         'buyer_information': 'buyerInformation',
         'device_information': 'deviceInformation',
         'merchant_information': 'merchantInformation',
@@ -62,7 +64,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         'merchant_defined_information': 'merchantDefinedInformation'
     }
 
-    def __init__(self, client_reference_information=None, order_information=None, payment_information=None, processing_information=None, buyer_information=None, device_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, risk_information=None, travel_information=None, merchant_defined_information=None):
+    def __init__(self, client_reference_information=None, order_information=None, payment_information=None, processing_information=None, token_information=None, buyer_information=None, device_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, risk_information=None, travel_information=None, merchant_defined_information=None):
         """
         CheckPayerAuthEnrollmentRequest - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         self._order_information = None
         self._payment_information = None
         self._processing_information = None
+        self._token_information = None
         self._buyer_information = None
         self._device_information = None
         self._merchant_information = None
@@ -89,6 +92,8 @@ class CheckPayerAuthEnrollmentRequest(object):
           self.payment_information = payment_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if token_information is not None:
+          self.token_information = token_information
         if buyer_information is not None:
           self.buyer_information = buyer_information
         if device_information is not None:
@@ -114,7 +119,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsClientReferenceInformation
+        :rtype: Riskv1authenticationsetupsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -124,7 +129,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :param client_reference_information: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsClientReferenceInformation
+        :type: Riskv1authenticationsetupsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -177,7 +182,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the processing_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The processing_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1authenticationsProcessingInformation
+        :rtype: Riskv1authenticationsetupsProcessingInformation
         """
         return self._processing_information
 
@@ -187,10 +192,31 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the processing_information of this CheckPayerAuthEnrollmentRequest.
 
         :param processing_information: The processing_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1authenticationsProcessingInformation
+        :type: Riskv1authenticationsetupsProcessingInformation
         """
 
         self._processing_information = processing_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this CheckPayerAuthEnrollmentRequest.
+
+        :return: The token_information of this CheckPayerAuthEnrollmentRequest.
+        :rtype: Riskv1authenticationsetupsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this CheckPayerAuthEnrollmentRequest.
+
+        :param token_information: The token_information of this CheckPayerAuthEnrollmentRequest.
+        :type: Riskv1authenticationsetupsTokenInformation
+        """
+
+        self._token_information = token_information
 
     @property
     def buyer_information(self):

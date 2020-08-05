@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**client_reference_information** | [**Riskv1authenticationsClientReferenceInformation**](Riskv1authenticationsClientReferenceInformation.md) |  | [optional] 
+**client_reference_information** | [**Riskv1authenticationsetupsClientReferenceInformation**](Riskv1authenticationsetupsClientReferenceInformation.md) |  | [optional] 
 **order_information** | [**Riskv1authenticationsOrderInformation**](Riskv1authenticationsOrderInformation.md) |  | [optional] 
 **payment_information** | [**Riskv1authenticationsPaymentInformation**](Riskv1authenticationsPaymentInformation.md) |  | [optional] 
-**processing_information** | [**Riskv1authenticationsProcessingInformation**](Riskv1authenticationsProcessingInformation.md) |  | [optional] 
+**processing_information** | [**Riskv1authenticationsetupsProcessingInformation**](Riskv1authenticationsetupsProcessingInformation.md) |  | [optional] 
+**token_information** | [**Riskv1authenticationsetupsTokenInformation**](Riskv1authenticationsetupsTokenInformation.md) |  | [optional] 
 **buyer_information** | [**Riskv1authenticationsBuyerInformation**](Riskv1authenticationsBuyerInformation.md) |  | [optional] 
 **device_information** | [**Riskv1authenticationsDeviceInformation**](Riskv1authenticationsDeviceInformation.md) |  | [optional] 
 **merchant_information** | [**Riskv1decisionsMerchantInformation**](Riskv1decisionsMerchantInformation.md) |  | [optional] 

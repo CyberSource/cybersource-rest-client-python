@@ -31,97 +31,43 @@ class InlineResponse400(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'message': 'str',
-        'details': 'Tmsv1instrumentidentifiersDetails'
+        'errors': 'list[InlineResponse400Errors]'
     }
 
     attribute_map = {
-        'type': 'type',
-        'message': 'message',
-        'details': 'details'
+        'errors': 'errors'
     }
 
-    def __init__(self, type=None, message=None, details=None):
+    def __init__(self, errors=None):
         """
         InlineResponse400 - a model defined in Swagger
         """
 
-        self._type = None
-        self._message = None
-        self._details = None
+        self._errors = None
 
-        if type is not None:
-          self.type = type
-        if message is not None:
-          self.message = message
-        if details is not None:
-          self.details = details
+        if errors is not None:
+          self.errors = errors
 
     @property
-    def type(self):
+    def errors(self):
         """
-        Gets the type of this InlineResponse400.
+        Gets the errors of this InlineResponse400.
 
-        :return: The type of this InlineResponse400.
-        :rtype: str
+        :return: The errors of this InlineResponse400.
+        :rtype: list[InlineResponse400Errors]
         """
-        return self._type
+        return self._errors
 
-    @type.setter
-    def type(self, type):
+    @errors.setter
+    def errors(self, errors):
         """
-        Sets the type of this InlineResponse400.
+        Sets the errors of this InlineResponse400.
 
-        :param type: The type of this InlineResponse400.
-        :type: str
-        """
-
-        self._type = type
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse400.
-        The detailed message related to the type stated above.
-
-        :return: The message of this InlineResponse400.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse400.
-        The detailed message related to the type stated above.
-
-        :param message: The message of this InlineResponse400.
-        :type: str
+        :param errors: The errors of this InlineResponse400.
+        :type: list[InlineResponse400Errors]
         """
 
-        self._message = message
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse400.
-
-        :return: The details of this InlineResponse400.
-        :rtype: Tmsv1instrumentidentifiersDetails
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse400.
-
-        :param details: The details of this InlineResponse400.
-        :type: Tmsv1instrumentidentifiersDetails
-        """
-
-        self._details = details
+        self._errors = errors
 
     def to_dict(self):
         """

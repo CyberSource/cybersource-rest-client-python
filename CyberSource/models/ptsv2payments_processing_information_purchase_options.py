@@ -57,7 +57,7 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
     def is_electronic_benefits_transfer(self):
         """
         Gets the is_electronic_benefits_transfer of this Ptsv2paymentsProcessingInformationPurchaseOptions.
-        Flag that indicates that this transaction is an EBT transaction.Possible values: - **true** - **false** 
+        Flag that indicates whether this transaction is an EBT transaction. Possible values: - `true` - `false`  #### PIN debit Required field for EBT and EBT voucher transactions that use PIN debit credit or PIN debit purchase; otherwise, not used. 
 
         :return: The is_electronic_benefits_transfer of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :rtype: bool
@@ -68,7 +68,7 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
     def is_electronic_benefits_transfer(self, is_electronic_benefits_transfer):
         """
         Sets the is_electronic_benefits_transfer of this Ptsv2paymentsProcessingInformationPurchaseOptions.
-        Flag that indicates that this transaction is an EBT transaction.Possible values: - **true** - **false** 
+        Flag that indicates whether this transaction is an EBT transaction. Possible values: - `true` - `false`  #### PIN debit Required field for EBT and EBT voucher transactions that use PIN debit credit or PIN debit purchase; otherwise, not used. 
 
         :param is_electronic_benefits_transfer: The is_electronic_benefits_transfer of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :type: bool
@@ -80,7 +80,7 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
-        This field is used in PIN Debit EBT transaction as a flag to identify EBT vouchers.Possible values: - `EBT_VOUCHER`: Indicates EBT voucher 
+        Flag that indicates an EBT voucher transaction. Possible value: - `EBT_VOUCHER`: Indicates the PIN debit transaction is an EBT voucher.  #### PIN debit Required field for EBT voucher transactions that use PIN debit purchase; otherwise, not used. 
 
         :return: The type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :rtype: str
@@ -91,7 +91,7 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
-        This field is used in PIN Debit EBT transaction as a flag to identify EBT vouchers.Possible values: - `EBT_VOUCHER`: Indicates EBT voucher 
+        Flag that indicates an EBT voucher transaction. Possible value: - `EBT_VOUCHER`: Indicates the PIN debit transaction is an EBT voucher.  #### PIN debit Required field for EBT voucher transactions that use PIN debit purchase; otherwise, not used. 
 
         :param type: The type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :type: str

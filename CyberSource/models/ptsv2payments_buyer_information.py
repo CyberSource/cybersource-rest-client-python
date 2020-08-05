@@ -132,7 +132,7 @@ class Ptsv2paymentsBuyerInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2paymentsBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :return: The vat_registration_number of this Ptsv2paymentsBuyerInformation.
         :rtype: str
@@ -143,7 +143,7 @@ class Ptsv2paymentsBuyerInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2paymentsBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsBuyerInformation.
         :type: str

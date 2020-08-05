@@ -31,22 +31,42 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank'
+        'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier',
+        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress'
     }
 
     attribute_map = {
-        'bank': 'bank'
+        'bank': 'bank',
+        'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'shipping_address': 'shippingAddress'
     }
 
-    def __init__(self, bank=None):
+    def __init__(self, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None):
         """
         PtsV2CreditsPost201ResponsePaymentInformation - a model defined in Swagger
         """
 
         self._bank = None
+        self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._shipping_address = None
 
         if bank is not None:
           self.bank = bank
+        if customer is not None:
+          self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
 
     @property
     def bank(self):
@@ -68,6 +88,90 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         """
 
         self._bank = bank
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :return: The customer of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :param customer: The customer of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationCustomer
+        """
+
+        self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :return: The payment_instrument of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :return: The instrument_identifier of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :return: The shipping_address of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this PtsV2CreditsPost201ResponsePaymentInformation.
+
+        :param shipping_address: The shipping_address of this PtsV2CreditsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
 
     def to_dict(self):
         """

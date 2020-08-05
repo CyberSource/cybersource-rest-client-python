@@ -85,7 +85,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
     def amount(self):
         """
         Gets the amount of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
-        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | |-----------|--------------------| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of Value Added Tax (VAT) included in the order. | | `other`     | Other tax. |  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | 
 
         :return: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -96,7 +96,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
-        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | |-----------|--------------------| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of Value Added Tax (VAT) included in the order. | | `other`     | Other tax. |  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax`, `vat_tax_amount` or `other_tax#_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | 
 
         :param amount: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
         :type: str

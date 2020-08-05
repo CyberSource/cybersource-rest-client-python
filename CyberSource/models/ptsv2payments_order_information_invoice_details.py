@@ -44,7 +44,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'transaction_advice_addendum': 'list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]',
         'reference_data_code': 'str',
         'reference_data_number': 'str',
-        'sales_slip_number': 'int'
+        'sales_slip_number': 'int',
+        'invoice_date': 'str'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'transaction_advice_addendum': 'transactionAdviceAddendum',
         'reference_data_code': 'referenceDataCode',
         'reference_data_number': 'referenceDataNumber',
-        'sales_slip_number': 'salesSlipNumber'
+        'sales_slip_number': 'salesSlipNumber',
+        'invoice_date': 'invoiceDate'
     }
 
-    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None, sales_slip_number=None):
+    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None, sales_slip_number=None, invoice_date=None):
         """
         Ptsv2paymentsOrderInformationInvoiceDetails - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         self._reference_data_code = None
         self._reference_data_number = None
         self._sales_slip_number = None
+        self._invoice_date = None
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
@@ -112,6 +115,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
           self.reference_data_number = reference_data_number
         if sales_slip_number is not None:
           self.sales_slip_number = sales_slip_number
+        if invoice_date is not None:
+          self.invoice_date = invoice_date
 
     @property
     def invoice_number(self):
@@ -448,6 +453,31 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
             raise ValueError("Invalid value for `sales_slip_number`, must be a value less than or equal to `99999`")
 
         self._sales_slip_number = sales_slip_number
+
+    @property
+    def invoice_date(self):
+        """
+        Gets the invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Date of the tax calculation. Use format YYYYMMDD. You can provide a date in the past if you are calculating tax for a refund and want to know what the tax was on the date the order was placed. You can provide a date in the future if you are calculating the tax for a future date, such as an upcoming tax holiday.  The default is the date, in Pacific time, that the bank receives the request. Keep this in mind if you are in a different time zone and want the tax calculated with the rates that are applicable on a specific date.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. 
+
+        :return: The invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._invoice_date
+
+    @invoice_date.setter
+    def invoice_date(self, invoice_date):
+        """
+        Sets the invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Date of the tax calculation. Use format YYYYMMDD. You can provide a date in the past if you are calculating tax for a refund and want to know what the tax was on the date the order was placed. You can provide a date in the future if you are calculating the tax for a future date, such as an upcoming tax holiday.  The default is the date, in Pacific time, that the bank receives the request. Keep this in mind if you are in a different time zone and want the tax calculated with the rates that are applicable on a specific date.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. 
+
+        :param invoice_date: The invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+        if invoice_date is not None and len(invoice_date) > 8:
+            raise ValueError("Invalid value for `invoice_date`, length must be less than or equal to `8`")
+
+        self._invoice_date = invoice_date
 
     def to_dict(self):
         """

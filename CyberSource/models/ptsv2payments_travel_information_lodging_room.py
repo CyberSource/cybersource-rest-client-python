@@ -82,7 +82,7 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
     def number_of_nights(self):
         """
         Gets the number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
-        Number of nights billed at the rate specified by lodging_daily_room_rate_1. 
+        Number of nights billed at the rate specified by `travelInformation.lodging.room[].dailyRate`. 
 
         :return: The number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
         :rtype: int
@@ -93,7 +93,7 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
     def number_of_nights(self, number_of_nights):
         """
         Sets the number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
-        Number of nights billed at the rate specified by lodging_daily_room_rate_1. 
+        Number of nights billed at the rate specified by `travelInformation.lodging.room[].dailyRate`. 
 
         :param number_of_nights: The number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
         :type: int

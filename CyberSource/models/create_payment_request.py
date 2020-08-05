@@ -46,6 +46,7 @@ class CreatePaymentRequest(object):
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'installment_information': 'Ptsv2paymentsInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
+        'health_care_information': 'Ptsv2paymentsHealthCareInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation',
         'token_information': 'Ptsv2paymentsTokenInformation',
         'risk_information': 'Ptsv2paymentsRiskInformation',
@@ -69,6 +70,7 @@ class CreatePaymentRequest(object):
         'merchant_defined_information': 'merchantDefinedInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
+        'health_care_information': 'healthCareInformation',
         'promotion_information': 'promotionInformation',
         'token_information': 'tokenInformation',
         'risk_information': 'riskInformation',
@@ -76,7 +78,7 @@ class CreatePaymentRequest(object):
         'recurring_payment_information': 'recurringPaymentInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None, token_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -96,6 +98,7 @@ class CreatePaymentRequest(object):
         self._merchant_defined_information = None
         self._installment_information = None
         self._travel_information = None
+        self._health_care_information = None
         self._promotion_information = None
         self._token_information = None
         self._risk_information = None
@@ -132,6 +135,8 @@ class CreatePaymentRequest(object):
           self.installment_information = installment_information
         if travel_information is not None:
           self.travel_information = travel_information
+        if health_care_information is not None:
+          self.health_care_information = health_care_information
         if promotion_information is not None:
           self.promotion_information = promotion_information
         if token_information is not None:
@@ -459,6 +464,27 @@ class CreatePaymentRequest(object):
         """
 
         self._travel_information = travel_information
+
+    @property
+    def health_care_information(self):
+        """
+        Gets the health_care_information of this CreatePaymentRequest.
+
+        :return: The health_care_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsHealthCareInformation
+        """
+        return self._health_care_information
+
+    @health_care_information.setter
+    def health_care_information(self, health_care_information):
+        """
+        Sets the health_care_information of this CreatePaymentRequest.
+
+        :param health_care_information: The health_care_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsHealthCareInformation
+        """
+
+        self._health_care_information = health_care_information
 
     @property
     def promotion_information(self):

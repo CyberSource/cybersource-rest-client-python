@@ -32,6 +32,7 @@ class Ptsv2paymentsProcessingInformation(object):
     """
     swagger_types = {
         'action_list': 'list[str]',
+        'action_token_types': 'list[str]',
         'capture': 'bool',
         'processor_id': 'str',
         'business_application_id': 'str',
@@ -60,6 +61,7 @@ class Ptsv2paymentsProcessingInformation(object):
 
     attribute_map = {
         'action_list': 'actionList',
+        'action_token_types': 'actionTokenTypes',
         'capture': 'capture',
         'processor_id': 'processorId',
         'business_application_id': 'businessApplicationId',
@@ -86,12 +88,13 @@ class Ptsv2paymentsProcessingInformation(object):
         'network_routing_order': 'networkRoutingOrder'
     }
 
-    def __init__(self, action_list=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None):
+    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
 
         self._action_list = None
+        self._action_token_types = None
         self._capture = None
         self._processor_id = None
         self._business_application_id = None
@@ -119,6 +122,8 @@ class Ptsv2paymentsProcessingInformation(object):
 
         if action_list is not None:
           self.action_list = action_list
+        if action_token_types is not None:
+          self.action_token_types = action_token_types
         if capture is not None:
           self.capture = capture
         if processor_id is not None:
@@ -172,7 +177,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION`: Use this when you want to check Risk Score along with your payment request.   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
 
         :return: The action_list of this Ptsv2paymentsProcessingInformation.
         :rtype: list[str]
@@ -183,13 +188,36 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION`: Use this when you want to check Risk Score along with your payment request.   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
 
         :param action_list: The action_list of this Ptsv2paymentsProcessingInformation.
         :type: list[str]
         """
 
         self._action_list = action_list
+
+    @property
+    def action_token_types(self):
+        """
+        Gets the action_token_types of this Ptsv2paymentsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :return: The action_token_types of this Ptsv2paymentsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_token_types
+
+    @action_token_types.setter
+    def action_token_types(self, action_token_types):
+        """
+        Sets the action_token_types of this Ptsv2paymentsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :param action_token_types: The action_token_types of this Ptsv2paymentsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_token_types = action_token_types
 
     @property
     def capture(self):
@@ -416,7 +444,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -427,7 +455,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -441,7 +469,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2paymentsProcessingInformation.
-        Indicates that the transaction includes airline data or restaurant data. Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit`  #### Card Present You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :return: The industry_data_type of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -452,7 +480,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2paymentsProcessingInformation.
-        Indicates that the transaction includes airline data or restaurant data. Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit`  #### Card Present You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :param industry_data_type: The industry_data_type of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -734,7 +762,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def network_routing_order(self):
         """
         Gets the network_routing_order of this Ptsv2paymentsProcessingInformation.
-        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities. 
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.  #### PIN debit Priority order of the networks through which he transaction will be routed. Set this value to a series of one-character network codes in your preferred order. This is a list of the network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  For example, if the Star network is your first preference and Pulse is your second preference, set this field to a value of `MH`.  When you do not include this value in your PIN debit request, the list of network codes from your account is used. **Note** This field is supported only for businesses located in the U.S.  Optional field for PIN debit credit or PIN debit purchase. 
 
         :return: The network_routing_order of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -745,7 +773,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def network_routing_order(self, network_routing_order):
         """
         Sets the network_routing_order of this Ptsv2paymentsProcessingInformation.
-        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities. 
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.  #### PIN debit Priority order of the networks through which he transaction will be routed. Set this value to a series of one-character network codes in your preferred order. This is a list of the network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  For example, if the Star network is your first preference and Pulse is your second preference, set this field to a value of `MH`.  When you do not include this value in your PIN debit request, the list of network codes from your account is used. **Note** This field is supported only for businesses located in the U.S.  Optional field for PIN debit credit or PIN debit purchase. 
 
         :param network_routing_order: The network_routing_order of this Ptsv2paymentsProcessingInformation.
         :type: str

@@ -133,7 +133,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
     def applicable_region(self):
         """
         Gets the applicable_region of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
-        Value can be - Canada - US - International. The values of errorCode and statusCode mean different things depending on the applicable region. Refer to the guide for more info. 
+        Value can be - Canada - US - International The values of errorCode and statusCode mean different things depending on the applicable region. Refer to the guide for more info. 
 
         :return: The applicable_region of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :rtype: str
@@ -144,7 +144,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
     def applicable_region(self, applicable_region):
         """
         Sets the applicable_region of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
-        Value can be - Canada - US - International. The values of errorCode and statusCode mean different things depending on the applicable region. Refer to the guide for more info. 
+        Value can be - Canada - US - International The values of errorCode and statusCode mean different things depending on the applicable region. Refer to the guide for more info. 
 
         :param applicable_region: The applicable_region of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str

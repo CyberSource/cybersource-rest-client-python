@@ -61,7 +61,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'step_up_url': 'str',
         'three_ds_server_transaction_id': 'str',
         'ucaf_authentication_data': 'str',
-        'ucaf_collection_indicator': 'float',
+        'ucaf_collection_indicator': 'str',
         'veres_enrolled': 'str',
         'white_list_status_source': 'str',
         'xid': 'str',
@@ -974,7 +974,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         For enroll, Returned only for Mastercard transactions. Indicates that authentication is not required because the customer is not enrolled. Add the value of this field to the authorization field ucaf_collection_indicator. This field can contain these values: 0, 1.  For validate, Numeric electronic commerce indicator (ECI) returned only for Mastercard Identity Check transactions. The field is absent when authentication fails. You must send this value to your payment processor in the request for card authorization. This field contain one of these values: - `0`: Authentication data not collected, and customer authentication was not completed. - `1`: Authentication data not collected because customer authentication was not completed. - `2`: Authentication data collected because customer completed authentication. 
 
         :return: The ucaf_collection_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        :rtype: float
+        :rtype: str
         """
         return self._ucaf_collection_indicator
 
@@ -985,7 +985,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         For enroll, Returned only for Mastercard transactions. Indicates that authentication is not required because the customer is not enrolled. Add the value of this field to the authorization field ucaf_collection_indicator. This field can contain these values: 0, 1.  For validate, Numeric electronic commerce indicator (ECI) returned only for Mastercard Identity Check transactions. The field is absent when authentication fails. You must send this value to your payment processor in the request for card authorization. This field contain one of these values: - `0`: Authentication data not collected, and customer authentication was not completed. - `1`: Authentication data not collected because customer authentication was not completed. - `2`: Authentication data collected because customer completed authentication. 
 
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        :type: float
+        :type: str
         """
 
         self._ucaf_collection_indicator = ucaf_collection_indicator

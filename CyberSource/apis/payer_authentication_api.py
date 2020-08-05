@@ -148,6 +148,112 @@ class PayerAuthenticationApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def payer_auth_setup(self, payer_auth_setup_request, **kwargs):
+        """
+        Setup Payer Auth
+        A new service for Merchants to get reference_id for Digital Wallets to use in place of BIN number in Cardinal. Set up file while authenticating with Cardinal. This service should be called by Merchant when payment instrument chosen or changes. This service has to be called before enrollment check.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.payer_auth_setup(payer_auth_setup_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PayerAuthSetupRequest payer_auth_setup_request: (required)
+        :return: RiskV1AuthenticationSetupsPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.payer_auth_setup_with_http_info(payer_auth_setup_request, **kwargs)
+        else:
+            (data) = self.payer_auth_setup_with_http_info(payer_auth_setup_request, **kwargs)
+            return data
+
+    def payer_auth_setup_with_http_info(self, payer_auth_setup_request, **kwargs):
+        """
+        Setup Payer Auth
+        A new service for Merchants to get reference_id for Digital Wallets to use in place of BIN number in Cardinal. Set up file while authenticating with Cardinal. This service should be called by Merchant when payment instrument chosen or changes. This service has to be called before enrollment check.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.payer_auth_setup_with_http_info(payer_auth_setup_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PayerAuthSetupRequest payer_auth_setup_request: (required)
+        :return: RiskV1AuthenticationSetupsPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['payer_auth_setup_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method payer_auth_setup" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'payer_auth_setup_request' is set
+        if ('payer_auth_setup_request' not in params) or (params['payer_auth_setup_request'] is None):
+            raise ValueError("Missing the required parameter `payer_auth_setup_request` when calling `payer_auth_setup`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'payer_auth_setup_request' in params:
+            body_params = params['payer_auth_setup_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/risk/v1/authentication-setups', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RiskV1AuthenticationSetupsPost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def validate_authentication_results(self, validate_request, **kwargs):
         """
         Validate Authentication Results
