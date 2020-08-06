@@ -34,6 +34,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'authentication_transaction_id': 'str',
         'authentication_type': 'str',
         'effective_authentication_type': 'str',
+        'response_access_token': 'str',
         'signed_pares_status_reason': 'str',
         'signed_pares': 'str',
         'white_list_status': 'str'
@@ -43,12 +44,13 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'authentication_transaction_id': 'authenticationTransactionId',
         'authentication_type': 'authenticationType',
         'effective_authentication_type': 'effectiveAuthenticationType',
+        'response_access_token': 'responseAccessToken',
         'signed_pares_status_reason': 'signedParesStatusReason',
         'signed_pares': 'signedPares',
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, authentication_transaction_id=None, authentication_type=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
+    def __init__(self, authentication_transaction_id=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
         """
         Riskv1authenticationresultsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._authentication_transaction_id = None
         self._authentication_type = None
         self._effective_authentication_type = None
+        self._response_access_token = None
         self._signed_pares_status_reason = None
         self._signed_pares = None
         self._white_list_status = None
@@ -66,6 +69,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
           self.authentication_type = authentication_type
         if effective_authentication_type is not None:
           self.effective_authentication_type = effective_authentication_type
+        if response_access_token is not None:
+          self.response_access_token = response_access_token
         if signed_pares_status_reason is not None:
           self.signed_pares_status_reason = signed_pares_status_reason
         self.signed_pares = signed_pares
@@ -146,6 +151,31 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
 
         self._effective_authentication_type = effective_authentication_type
+
+    @property
+    def response_access_token(self):
+        """
+        Gets the response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        A JWT returned by 3DS provider once the authentication is complete, required in cruise hybrid integration method when using CyberSource generated access token. 
+
+        :return: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._response_access_token
+
+    @response_access_token.setter
+    def response_access_token(self, response_access_token):
+        """
+        Sets the response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        A JWT returned by 3DS provider once the authentication is complete, required in cruise hybrid integration method when using CyberSource generated access token. 
+
+        :param response_access_token: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :type: str
+        """
+        if response_access_token is not None and len(response_access_token) > 2048:
+            raise ValueError("Invalid value for `response_access_token`, length must be less than or equal to `2048`")
+
+        self._response_access_token = response_access_token
 
     @property
     def signed_pares_status_reason(self):

@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network(self):
         """
         Gets the network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global. 
+        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global.  #### PIN debit Network that was used to route the transaction. This is the list of network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  Returned by PIN debit credit and PIN debit purchase. 
 
         :return: The network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network(self, network):
         """
         Sets the network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global. 
+        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global.  #### PIN debit Network that was used to route the transaction. This is the list of network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  Returned by PIN debit credit and PIN debit purchase. 
 
         :param network: The network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str

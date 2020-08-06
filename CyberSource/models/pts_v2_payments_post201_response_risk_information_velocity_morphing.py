@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
     def count(self):
         """
         Gets the count of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
-        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction.  For all possible values, see the `decision_velocity_morphing_#_count` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction. 
 
         :return: The count of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :rtype: int
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
     def count(self, count):
         """
         Sets the count of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
-        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction.  For all possible values, see the `decision_velocity_morphing_#_count` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Morphing count specified by the number #.  **Note** The count is not returned for the initial transaction. 
 
         :param count: The count of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :type: int

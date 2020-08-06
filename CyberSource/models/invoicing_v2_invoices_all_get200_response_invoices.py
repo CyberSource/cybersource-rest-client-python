@@ -98,7 +98,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
     def id(self):
         """
         Gets the id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :return: The id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :rtype: str
@@ -109,7 +109,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
     def id(self, id):
         """
         Sets the id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :param id: The id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: str

@@ -31,14 +31,6 @@ class TestPaymentInstrumentApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_payment_instrument(self):
-        """
-        Test case for create_payment_instrument
-
-        Create a Payment Instrument
-        """
-        pass
-
     def test_delete_payment_instrument(self):
         """
         Test case for delete_payment_instrument
@@ -55,11 +47,19 @@ class TestPaymentInstrumentApi(unittest.TestCase):
         """
         pass
 
-    def test_update_payment_instrument(self):
+    def test_patch_payment_instrument(self):
         """
-        Test case for update_payment_instrument
+        Test case for patch_payment_instrument
 
         Update a Payment Instrument
+        """
+        pass
+
+    def test_post_payment_instrument(self):
+        """
+        Test case for post_payment_instrument
+
+        Create a Payment Instrument
         """
         pass
 

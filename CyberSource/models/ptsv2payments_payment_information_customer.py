@@ -31,22 +31,27 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'customer_id': 'str'
+        'customer_id': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'customer_id': 'customerId'
+        'customer_id': 'customerId',
+        'id': 'id'
     }
 
-    def __init__(self, customer_id=None):
+    def __init__(self, customer_id=None, id=None):
         """
         Ptsv2paymentsPaymentInformationCustomer - a model defined in Swagger
         """
 
         self._customer_id = None
+        self._id = None
 
         if customer_id is not None:
           self.customer_id = customer_id
+        if id is not None:
+          self.id = id
 
     @property
     def customer_id(self):
@@ -70,6 +75,33 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
         """
 
         self._customer_id = customer_id
+
+    @property
+    def id(self):
+        """
+        Gets the id of this Ptsv2paymentsPaymentInformationCustomer.
+        Unique identifier for the Customer token used in the transaction. When you include this value in your request, many of the fields that are normally required for an authorization or credit become optional. 
+
+        :return: The id of this Ptsv2paymentsPaymentInformationCustomer.
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """
+        Sets the id of this Ptsv2paymentsPaymentInformationCustomer.
+        Unique identifier for the Customer token used in the transaction. When you include this value in your request, many of the fields that are normally required for an authorization or credit become optional. 
+
+        :param id: The id of this Ptsv2paymentsPaymentInformationCustomer.
+        :type: str
+        """
+        if id is not None and len(id) > 32:
+            raise ValueError("Invalid value for `id`, length must be less than or equal to `32`")
+        if id is not None and len(id) < 1:
+            raise ValueError("Invalid value for `id`, length must be greater than or equal to `1`")
+
+        self._id = id
 
     def to_dict(self):
         """

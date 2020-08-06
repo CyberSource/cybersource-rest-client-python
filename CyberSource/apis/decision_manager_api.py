@@ -157,8 +157,8 @@ class DecisionManagerApi(object):
 
     def create_bundled_decision_manager_case(self, create_bundled_decision_manager_case_request, **kwargs):
         """
-        Create Decision Manager Case
-        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
+        Create Decision Manager
+        Decision Manager can help you automate and streamline your fraud operations. Decision Manager will return a decision based on the request values.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -183,8 +183,8 @@ class DecisionManagerApi(object):
 
     def create_bundled_decision_manager_case_with_http_info(self, create_bundled_decision_manager_case_request, **kwargs):
         """
-        Create Decision Manager Case
-        This is the combined request to the Decision Manager Service for a transaction sent to Cybersource. Decision Manager will return a decision based on the request values.
+        Create Decision Manager
+        Decision Manager can help you automate and streamline your fraud operations. Decision Manager will return a decision based on the request values.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -45,6 +45,7 @@ class PtsV2PaymentsPost201Response(object):
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
         'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
+        'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation'
     }
@@ -64,11 +65,12 @@ class PtsV2PaymentsPost201Response(object):
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'installment_information': 'installmentInformation',
+        'token_information': 'tokenInformation',
         'risk_information': 'riskInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, risk_information=None, consumer_authentication_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -87,6 +89,7 @@ class PtsV2PaymentsPost201Response(object):
         self._order_information = None
         self._point_of_sale_information = None
         self._installment_information = None
+        self._token_information = None
         self._risk_information = None
         self._consumer_authentication_information = None
 
@@ -118,6 +121,8 @@ class PtsV2PaymentsPost201Response(object):
           self.point_of_sale_information = point_of_sale_information
         if installment_information is not None:
           self.installment_information = installment_information
+        if token_information is not None:
+          self.token_information = token_information
         if risk_information is not None:
           self.risk_information = risk_information
         if consumer_authentication_information is not None:
@@ -148,7 +153,7 @@ class PtsV2PaymentsPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :return: The id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -159,7 +164,7 @@ class PtsV2PaymentsPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :param id: The id of this PtsV2PaymentsPost201Response.
         :type: str
@@ -173,7 +178,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :return: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -184,7 +189,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :type: str
@@ -219,7 +224,7 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  ##### PIN debit Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :return: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -230,7 +235,7 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  #### Atos Positive string (6)  #### All other processors String (60) 
+        Reference number for the transaction. This value is not returned for all processors.  Returned by authorization service.  ##### PIN debit Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### Atos Positive string (6)  #### All other processors String (60) 
 
         :param reconciliation_id: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :type: str
@@ -428,6 +433,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._installment_information = installment_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this PtsV2PaymentsPost201Response.
+
+        :return: The token_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this PtsV2PaymentsPost201Response.
+
+        :param token_information: The token_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseTokenInformation
+        """
+
+        self._token_information = token_information
 
     @property
     def risk_information(self):

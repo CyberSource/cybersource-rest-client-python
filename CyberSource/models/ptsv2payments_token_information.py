@@ -32,26 +32,36 @@ class Ptsv2paymentsTokenInformation(object):
     """
     swagger_types = {
         'jti': 'str',
-        'transient_token_jwt': 'str'
+        'transient_token_jwt': 'str',
+        'payment_instrument': 'Ptsv2paymentsTokenInformationPaymentInstrument',
+        'shipping_address': 'Ptsv2paymentsTokenInformationShippingAddress'
     }
 
     attribute_map = {
         'jti': 'jti',
-        'transient_token_jwt': 'transientTokenJwt'
+        'transient_token_jwt': 'transientTokenJwt',
+        'payment_instrument': 'paymentInstrument',
+        'shipping_address': 'shippingAddress'
     }
 
-    def __init__(self, jti=None, transient_token_jwt=None):
+    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None):
         """
         Ptsv2paymentsTokenInformation - a model defined in Swagger
         """
 
         self._jti = None
         self._transient_token_jwt = None
+        self._payment_instrument = None
+        self._shipping_address = None
 
         if jti is not None:
           self.jti = jti
         if transient_token_jwt is not None:
           self.transient_token_jwt = transient_token_jwt
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
 
     @property
     def jti(self):
@@ -100,6 +110,48 @@ class Ptsv2paymentsTokenInformation(object):
         """
 
         self._transient_token_jwt = transient_token_jwt
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this Ptsv2paymentsTokenInformation.
+
+        :return: The payment_instrument of this Ptsv2paymentsTokenInformation.
+        :rtype: Ptsv2paymentsTokenInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this Ptsv2paymentsTokenInformation.
+
+        :param payment_instrument: The payment_instrument of this Ptsv2paymentsTokenInformation.
+        :type: Ptsv2paymentsTokenInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this Ptsv2paymentsTokenInformation.
+
+        :return: The shipping_address of this Ptsv2paymentsTokenInformation.
+        :rtype: Ptsv2paymentsTokenInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this Ptsv2paymentsTokenInformation.
+
+        :param shipping_address: The shipping_address of this Ptsv2paymentsTokenInformation.
+        :type: Ptsv2paymentsTokenInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
 
     def to_dict(self):
         """

@@ -31,18 +31,19 @@ class PaymentInstrument(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks',
+        'links': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks',
         'id': 'str',
         'object': 'str',
         'state': 'str',
-        'bank_account': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount',
-        'card': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard',
-        'buyer_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation',
-        'bill_to': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo',
-        'processing_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation',
-        'merchant_information': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation',
-        'meta_data': 'TmsV1InstrumentIdentifiersPost200ResponseMetadata',
-        'embedded': 'TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded'
+        'bank_account': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount',
+        'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
+        'buyer_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
+        'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo',
+        'processing_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation',
+        'merchant_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation',
+        'instrument_identifier': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
+        'metadata': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata',
+        'embedded': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded'
     }
 
     attribute_map = {
@@ -56,11 +57,12 @@ class PaymentInstrument(object):
         'bill_to': 'billTo',
         'processing_information': 'processingInformation',
         'merchant_information': 'merchantInformation',
-        'meta_data': 'metaData',
+        'instrument_identifier': 'instrumentIdentifier',
+        'metadata': 'metadata',
         'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, meta_data=None, embedded=None):
+    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, instrument_identifier=None, metadata=None, embedded=None):
         """
         PaymentInstrument - a model defined in Swagger
         """
@@ -75,7 +77,8 @@ class PaymentInstrument(object):
         self._bill_to = None
         self._processing_information = None
         self._merchant_information = None
-        self._meta_data = None
+        self._instrument_identifier = None
+        self._metadata = None
         self._embedded = None
 
         if links is not None:
@@ -98,8 +101,10 @@ class PaymentInstrument(object):
           self.processing_information = processing_information
         if merchant_information is not None:
           self.merchant_information = merchant_information
-        if meta_data is not None:
-          self.meta_data = meta_data
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if metadata is not None:
+          self.metadata = metadata
         if embedded is not None:
           self.embedded = embedded
 
@@ -109,7 +114,7 @@ class PaymentInstrument(object):
         Gets the links of this PaymentInstrument.
 
         :return: The links of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks
         """
         return self._links
 
@@ -119,7 +124,7 @@ class PaymentInstrument(object):
         Sets the links of this PaymentInstrument.
 
         :param links: The links of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedLinks
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks
         """
 
         self._links = links
@@ -128,7 +133,7 @@ class PaymentInstrument(object):
     def id(self):
         """
         Gets the id of this PaymentInstrument.
-        Unique identification number assigned by CyberSource to the submitted request.
+        The id of the Payment Instrument Token.
 
         :return: The id of this PaymentInstrument.
         :rtype: str
@@ -139,11 +144,15 @@ class PaymentInstrument(object):
     def id(self, id):
         """
         Sets the id of this PaymentInstrument.
-        Unique identification number assigned by CyberSource to the submitted request.
+        The id of the Payment Instrument Token.
 
         :param id: The id of this PaymentInstrument.
         :type: str
         """
+        if id is not None and len(id) > 32:
+            raise ValueError("Invalid value for `id`, length must be less than or equal to `32`")
+        if id is not None and len(id) < 1:
+            raise ValueError("Invalid value for `id`, length must be greater than or equal to `1`")
 
         self._id = id
 
@@ -151,7 +160,7 @@ class PaymentInstrument(object):
     def object(self):
         """
         Gets the object of this PaymentInstrument.
-        'Describes type of token.'  Valid values: - instrumentIdentifier 
+        The type of token.  Valid values: - paymentInstrument 
 
         :return: The object of this PaymentInstrument.
         :rtype: str
@@ -162,7 +171,7 @@ class PaymentInstrument(object):
     def object(self, object):
         """
         Sets the object of this PaymentInstrument.
-        'Describes type of token.'  Valid values: - instrumentIdentifier 
+        The type of token.  Valid values: - paymentInstrument 
 
         :param object: The object of this PaymentInstrument.
         :type: str
@@ -174,7 +183,7 @@ class PaymentInstrument(object):
     def state(self):
         """
         Gets the state of this PaymentInstrument.
-        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
+        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
 
         :return: The state of this PaymentInstrument.
         :rtype: str
@@ -185,7 +194,7 @@ class PaymentInstrument(object):
     def state(self, state):
         """
         Sets the state of this PaymentInstrument.
-        'Current state of the token.'  Valid values: - ACTIVE - CLOSED 
+        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
 
         :param state: The state of this PaymentInstrument.
         :type: str
@@ -199,7 +208,7 @@ class PaymentInstrument(object):
         Gets the bank_account of this PaymentInstrument.
 
         :return: The bank_account of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount
         """
         return self._bank_account
 
@@ -209,7 +218,7 @@ class PaymentInstrument(object):
         Sets the bank_account of this PaymentInstrument.
 
         :param bank_account: The bank_account of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBankAccount
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount
         """
 
         self._bank_account = bank_account
@@ -220,7 +229,7 @@ class PaymentInstrument(object):
         Gets the card of this PaymentInstrument.
 
         :return: The card of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentCard
         """
         return self._card
 
@@ -230,7 +239,7 @@ class PaymentInstrument(object):
         Sets the card of this PaymentInstrument.
 
         :param card: The card of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedCard
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentCard
         """
 
         self._card = card
@@ -241,7 +250,7 @@ class PaymentInstrument(object):
         Gets the buyer_information of this PaymentInstrument.
 
         :return: The buyer_information of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation
         """
         return self._buyer_information
 
@@ -251,7 +260,7 @@ class PaymentInstrument(object):
         Sets the buyer_information of this PaymentInstrument.
 
         :param buyer_information: The buyer_information of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBuyerInformation
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation
         """
 
         self._buyer_information = buyer_information
@@ -262,7 +271,7 @@ class PaymentInstrument(object):
         Gets the bill_to of this PaymentInstrument.
 
         :return: The bill_to of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
         """
         return self._bill_to
 
@@ -272,7 +281,7 @@ class PaymentInstrument(object):
         Sets the bill_to of this PaymentInstrument.
 
         :param bill_to: The bill_to of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedBillTo
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
         """
 
         self._bill_to = bill_to
@@ -283,7 +292,7 @@ class PaymentInstrument(object):
         Gets the processing_information of this PaymentInstrument.
 
         :return: The processing_information of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
         """
         return self._processing_information
 
@@ -293,7 +302,7 @@ class PaymentInstrument(object):
         Sets the processing_information of this PaymentInstrument.
 
         :param processing_information: The processing_information of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedProcessingInformation
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -304,7 +313,7 @@ class PaymentInstrument(object):
         Gets the merchant_information of this PaymentInstrument.
 
         :return: The merchant_information of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation
         """
         return self._merchant_information
 
@@ -314,31 +323,52 @@ class PaymentInstrument(object):
         Sets the merchant_information of this PaymentInstrument.
 
         :param merchant_information: The merchant_information of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedMerchantInformation
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation
         """
 
         self._merchant_information = merchant_information
 
     @property
-    def meta_data(self):
+    def instrument_identifier(self):
         """
-        Gets the meta_data of this PaymentInstrument.
+        Gets the instrument_identifier of this PaymentInstrument.
 
-        :return: The meta_data of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPost200ResponseMetadata
+        :return: The instrument_identifier of this PaymentInstrument.
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
         """
-        return self._meta_data
+        return self._instrument_identifier
 
-    @meta_data.setter
-    def meta_data(self, meta_data):
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
         """
-        Sets the meta_data of this PaymentInstrument.
+        Sets the instrument_identifier of this PaymentInstrument.
 
-        :param meta_data: The meta_data of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPost200ResponseMetadata
+        :param instrument_identifier: The instrument_identifier of this PaymentInstrument.
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
         """
 
-        self._meta_data = meta_data
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def metadata(self):
+        """
+        Gets the metadata of this PaymentInstrument.
+
+        :return: The metadata of this PaymentInstrument.
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """
+        Sets the metadata of this PaymentInstrument.
+
+        :param metadata: The metadata of this PaymentInstrument.
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata
+        """
+
+        self._metadata = metadata
 
     @property
     def embedded(self):
@@ -346,7 +376,7 @@ class PaymentInstrument(object):
         Gets the embedded of this PaymentInstrument.
 
         :return: The embedded of this PaymentInstrument.
-        :rtype: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded
+        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded
         """
         return self._embedded
 
@@ -356,7 +386,7 @@ class PaymentInstrument(object):
         Sets the embedded of this PaymentInstrument.
 
         :param embedded: The embedded of this PaymentInstrument.
-        :type: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedEmbedded
+        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded
         """
 
         self._embedded = embedded

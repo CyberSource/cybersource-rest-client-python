@@ -31,8 +31,8 @@ class ValidateRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1authenticationsClientReferenceInformation',
-        'processing_information': 'Riskv1authenticationsProcessingInformation',
+        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
+        'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
         'order_information': 'Riskv1authenticationresultsOrderInformation',
         'payment_information': 'Riskv1authenticationresultsPaymentInformation',
         'consumer_authentication_information': 'Riskv1authenticationresultsConsumerAuthenticationInformation'
@@ -74,7 +74,7 @@ class ValidateRequest(object):
         Gets the client_reference_information of this ValidateRequest.
 
         :return: The client_reference_information of this ValidateRequest.
-        :rtype: Riskv1authenticationsClientReferenceInformation
+        :rtype: Riskv1authenticationsetupsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -84,7 +84,7 @@ class ValidateRequest(object):
         Sets the client_reference_information of this ValidateRequest.
 
         :param client_reference_information: The client_reference_information of this ValidateRequest.
-        :type: Riskv1authenticationsClientReferenceInformation
+        :type: Riskv1authenticationsetupsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -95,7 +95,7 @@ class ValidateRequest(object):
         Gets the processing_information of this ValidateRequest.
 
         :return: The processing_information of this ValidateRequest.
-        :rtype: Riskv1authenticationsProcessingInformation
+        :rtype: Riskv1authenticationsetupsProcessingInformation
         """
         return self._processing_information
 
@@ -105,7 +105,7 @@ class ValidateRequest(object):
         Sets the processing_information of this ValidateRequest.
 
         :param processing_information: The processing_information of this ValidateRequest.
-        :type: Riskv1authenticationsProcessingInformation
+        :type: Riskv1authenticationsetupsProcessingInformation
         """
 
         self._processing_information = processing_information

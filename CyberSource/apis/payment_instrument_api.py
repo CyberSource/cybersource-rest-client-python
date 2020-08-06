@@ -42,53 +42,53 @@ class PaymentInstrumentApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_payment_instrument(self, profile_id, create_payment_instrument_request, **kwargs):
+    def delete_payment_instrument(self, payment_instrument_token_id, **kwargs):
         """
-        Create a Payment Instrument
+        Delete a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_payment_instrument(profile_id, create_payment_instrument_request, callback=callback_function)
+        >>> thread = api.delete_payment_instrument(payment_instrument_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, **kwargs)
+            return self.delete_payment_instrument_with_http_info(payment_instrument_token_id, **kwargs)
         else:
-            (data) = self.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, **kwargs)
+            (data) = self.delete_payment_instrument_with_http_info(payment_instrument_token_id, **kwargs)
             return data
 
-    def create_payment_instrument_with_http_info(self, profile_id, create_payment_instrument_request, **kwargs):
+    def delete_payment_instrument_with_http_info(self, payment_instrument_token_id, **kwargs):
         """
-        Create a Payment Instrument
+        Delete a Payment Instrument
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_payment_instrument_with_http_info(profile_id, create_payment_instrument_request, callback=callback_function)
+        >>> thread = api.delete_payment_instrument_with_http_info(payment_instrument_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param CreatePaymentInstrumentRequest create_payment_instrument_request: Specify the customer's payment details for card or bank account. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'create_payment_instrument_request']
+        all_params = ['payment_instrument_token_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -99,21 +99,381 @@ class PaymentInstrumentApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_payment_instrument" % key
+                    " to method delete_payment_instrument" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `create_payment_instrument`")
-        # verify the required parameter 'create_payment_instrument_request' is set
-        if ('create_payment_instrument_request' not in params) or (params['create_payment_instrument_request'] is None):
-            raise ValueError("Missing the required parameter `create_payment_instrument_request` when calling `create_payment_instrument`")
+        # verify the required parameter 'payment_instrument_token_id' is set
+        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `delete_payment_instrument`")
+
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `delete_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `delete_payment_instrument`, length must be greater than or equal to `1`")
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be greater than or equal to `36`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'payment_instrument_token_id' in params:
+            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_token_id}', 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_payment_instrument(self, payment_instrument_token_id, **kwargs):
+        """
+        Retrieve a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_payment_instrument(payment_instrument_token_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_payment_instrument_with_http_info(payment_instrument_token_id, **kwargs)
+        else:
+            (data) = self.get_payment_instrument_with_http_info(payment_instrument_token_id, **kwargs)
+            return data
+
+    def get_payment_instrument_with_http_info(self, payment_instrument_token_id, **kwargs):
+        """
+        Retrieve a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_payment_instrument_with_http_info(payment_instrument_token_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['payment_instrument_token_id', 'profile_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_payment_instrument" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'payment_instrument_token_id' is set
+        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `get_payment_instrument`")
+
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `get_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `get_payment_instrument`, length must be greater than or equal to `1`")
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be greater than or equal to `36`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'payment_instrument_token_id' in params:
+            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_token_id}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrument',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def patch_payment_instrument(self, payment_instrument_token_id, patch_payment_instrument_request, **kwargs):
+        """
+        Update a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_payment_instrument(payment_instrument_token_id, patch_payment_instrument_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param PatchPaymentInstrumentRequest patch_payment_instrument_request: (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str if_match: Contains an ETag value from a GET request to make the request conditional.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.patch_payment_instrument_with_http_info(payment_instrument_token_id, patch_payment_instrument_request, **kwargs)
+        else:
+            (data) = self.patch_payment_instrument_with_http_info(payment_instrument_token_id, patch_payment_instrument_request, **kwargs)
+            return data
+
+    def patch_payment_instrument_with_http_info(self, payment_instrument_token_id, patch_payment_instrument_request, **kwargs):
+        """
+        Update a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.patch_payment_instrument_with_http_info(payment_instrument_token_id, patch_payment_instrument_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param PatchPaymentInstrumentRequest patch_payment_instrument_request: (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str if_match: Contains an ETag value from a GET request to make the request conditional.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['payment_instrument_token_id', 'patch_payment_instrument_request', 'profile_id', 'if_match']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_payment_instrument" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'payment_instrument_token_id' is set
+        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `patch_payment_instrument`")
+        # verify the required parameter 'patch_payment_instrument_request' is set
+        if ('patch_payment_instrument_request' not in params) or (params['patch_payment_instrument_request'] is None):
+            raise ValueError("Missing the required parameter `patch_payment_instrument_request` when calling `patch_payment_instrument`")
+
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `patch_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `patch_payment_instrument`, length must be greater than or equal to `1`")
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_payment_instrument`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_payment_instrument`, length must be greater than or equal to `36`")
+        if 'if_match' in params and len(params['if_match']) > 32:
+            raise ValueError("Invalid value for parameter `if_match` when calling `patch_payment_instrument`, length must be less than or equal to `32`")
+        if 'if_match' in params and len(params['if_match']) < 1:
+            raise ValueError("Invalid value for parameter `if_match` when calling `patch_payment_instrument`, length must be greater than or equal to `1`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'payment_instrument_token_id' in params:
+            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+        if 'if_match' in params:
+            header_params['if-match'] = params['if_match']
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'patch_payment_instrument_request' in params:
+            body_params = params['patch_payment_instrument_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_token_id}', 'PATCH',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrument',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def post_payment_instrument(self, post_payment_instrument_request, **kwargs):
+        """
+        Create a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_payment_instrument(post_payment_instrument_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PostPaymentInstrumentRequest post_payment_instrument_request: (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_payment_instrument_with_http_info(post_payment_instrument_request, **kwargs)
+        else:
+            (data) = self.post_payment_instrument_with_http_info(post_payment_instrument_request, **kwargs)
+            return data
+
+    def post_payment_instrument_with_http_info(self, post_payment_instrument_request, **kwargs):
+        """
+        Create a Payment Instrument
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_payment_instrument_with_http_info(post_payment_instrument_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PostPaymentInstrumentRequest post_payment_instrument_request: (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['post_payment_instrument_request', 'profile_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_payment_instrument" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'post_payment_instrument_request' is set
+        if ('post_payment_instrument_request' not in params) or (params['post_payment_instrument_request'] is None):
+            raise ValueError("Missing the required parameter `post_payment_instrument_request` when calling `post_payment_instrument`")
 
         if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `create_payment_instrument`, length must be less than or equal to `36`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_payment_instrument`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `create_payment_instrument`, length must be greater than or equal to `36`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_payment_instrument`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -129,8 +489,8 @@ class PaymentInstrumentApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_payment_instrument_request' in params:
-            body_params = params['create_payment_instrument_request']
+        if 'post_payment_instrument_request' in params:
+            body_params = params['post_payment_instrument_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json;charset=utf-8'])
@@ -149,371 +509,7 @@ class PaymentInstrumentApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def delete_payment_instrument(self, profile_id, token_id, **kwargs):
-        """
-        Delete a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.delete_payment_instrument(profile_id, token_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.delete_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
-        else:
-            (data) = self.delete_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
-            return data
-
-    def delete_payment_instrument_with_http_info(self, profile_id, token_id, **kwargs):
-        """
-        Delete a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.delete_payment_instrument_with_http_info(profile_id, token_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['profile_id', 'token_id']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_payment_instrument" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `delete_payment_instrument`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `delete_payment_instrument`")
-
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_payment_instrument`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 1:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_payment_instrument`, length must be greater than or equal to `1`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
-
-        query_params = []
-
-        header_params = {}
-        if 'profile_id' in params:
-            header_params['profile-id'] = params['profile_id']
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'DELETE',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def get_payment_instrument(self, profile_id, token_id, **kwargs):
-        """
-        Retrieve a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_payment_instrument(profile_id, token_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
-        else:
-            (data) = self.get_payment_instrument_with_http_info(profile_id, token_id, **kwargs)
-            return data
-
-    def get_payment_instrument_with_http_info(self, profile_id, token_id, **kwargs):
-        """
-        Retrieve a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_payment_instrument_with_http_info(profile_id, token_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['profile_id', 'token_id']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_payment_instrument" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `get_payment_instrument`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `get_payment_instrument`")
-
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_payment_instrument`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 1:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_payment_instrument`, length must be greater than or equal to `1`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
-
-        query_params = []
-
-        header_params = {}
-        if 'profile_id' in params:
-            header_params['profile-id'] = params['profile_id']
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def update_payment_instrument(self, profile_id, token_id, update_payment_instrument_request, **kwargs):
-        """
-        Update a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.update_payment_instrument(profile_id, token_id, update_payment_instrument_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, **kwargs)
-        else:
-            (data) = self.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, **kwargs)
-            return data
-
-    def update_payment_instrument_with_http_info(self, profile_id, token_id, update_payment_instrument_request, **kwargs):
-        """
-        Update a Payment Instrument
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.update_payment_instrument_with_http_info(profile_id, token_id, update_payment_instrument_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of a Payment Instrument. (required)
-        :param UpdatePaymentInstrumentRequest update_payment_instrument_request: Specify the customer's payment details. (required)
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['profile_id', 'token_id', 'update_payment_instrument_request']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_payment_instrument" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `update_payment_instrument`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `update_payment_instrument`")
-        # verify the required parameter 'update_payment_instrument_request' is set
-        if ('update_payment_instrument_request' not in params) or (params['update_payment_instrument_request'] is None):
-            raise ValueError("Missing the required parameter `update_payment_instrument_request` when calling `update_payment_instrument`")
-
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `update_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `update_payment_instrument`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 1:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_payment_instrument`, length must be greater than or equal to `1`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
-
-        query_params = []
-
-        header_params = {}
-        if 'profile_id' in params:
-            header_params['profile-id'] = params['profile_id']
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'update_payment_instrument_request' in params:
-            body_params = params['update_payment_instrument_request']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{token_id}', 'PATCH',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200ResponseEmbeddedPaymentInstruments',
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrument',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

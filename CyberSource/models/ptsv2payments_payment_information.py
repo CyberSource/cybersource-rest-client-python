@@ -35,6 +35,10 @@ class Ptsv2paymentsPaymentInformation(object):
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'Ptsv2paymentsPaymentInformationInstrumentIdentifier',
+        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
+        'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str'
@@ -45,12 +49,16 @@ class Ptsv2paymentsPaymentInformation(object):
         'tokenized_card': 'tokenizedCard',
         'fluid_data': 'fluidData',
         'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'shipping_address': 'shippingAddress',
+        'legacy_token': 'legacyToken',
         'bank': 'bank',
         'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, bank=None, payment_type=None, initiation_channel=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -59,6 +67,10 @@ class Ptsv2paymentsPaymentInformation(object):
         self._tokenized_card = None
         self._fluid_data = None
         self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._shipping_address = None
+        self._legacy_token = None
         self._bank = None
         self._payment_type = None
         self._initiation_channel = None
@@ -71,6 +83,14 @@ class Ptsv2paymentsPaymentInformation(object):
           self.fluid_data = fluid_data
         if customer is not None:
           self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
+        if legacy_token is not None:
+          self.legacy_token = legacy_token
         if bank is not None:
           self.bank = bank
         if payment_type is not None:
@@ -163,6 +183,90 @@ class Ptsv2paymentsPaymentInformation(object):
         self._customer = customer
 
     @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this Ptsv2paymentsPaymentInformation.
+
+        :return: The payment_instrument of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this Ptsv2paymentsPaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this Ptsv2paymentsPaymentInformation.
+
+        :return: The instrument_identifier of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this Ptsv2paymentsPaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this Ptsv2paymentsPaymentInformation.
+
+        :return: The shipping_address of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this Ptsv2paymentsPaymentInformation.
+
+        :param shipping_address: The shipping_address of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
+
+    @property
+    def legacy_token(self):
+        """
+        Gets the legacy_token of this Ptsv2paymentsPaymentInformation.
+
+        :return: The legacy_token of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationLegacyToken
+        """
+        return self._legacy_token
+
+    @legacy_token.setter
+    def legacy_token(self, legacy_token):
+        """
+        Sets the legacy_token of this Ptsv2paymentsPaymentInformation.
+
+        :param legacy_token: The legacy_token of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationLegacyToken
+        """
+
+        self._legacy_token = legacy_token
+
+    @property
     def bank(self):
         """
         Gets the bank of this Ptsv2paymentsPaymentInformation.
@@ -208,7 +312,7 @@ class Ptsv2paymentsPaymentInformation(object):
     def initiation_channel(self):
         """
         Gets the initiation_channel of this Ptsv2paymentsPaymentInformation.
-        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization**\\ Optional field. 
+        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization** Optional field. 
 
         :return: The initiation_channel of this Ptsv2paymentsPaymentInformation.
         :rtype: str
@@ -219,7 +323,7 @@ class Ptsv2paymentsPaymentInformation(object):
     def initiation_channel(self, initiation_channel):
         """
         Sets the initiation_channel of this Ptsv2paymentsPaymentInformation.
-        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization**\\ Optional field. 
+        Mastercard-defined code that indicates how the account information was obtained.  - `00` (default): Card - `01`: Removable secure element that is personalized for use with a mobile phone and controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `02`: Key fob - `03`: Watch - `04`: Mobile tag - `05`: Wristband - `06`: Mobile phone case or sleeve - `07`: Mobile phone with a non-removable, secure element that is controlled by the wireless service provider; for example, code division multiple access (CDMA) - `08`: Removable secure element that is personalized for use with a mobile phone and not controlled by the wireless service provider; example: memory card - `09`: Mobile phone with a non-removable, secure element that is not controlled by the wireless service provider - `10`: Removable secure element that is personalized for use with a tablet or e-book and is controlled by the wireless service provider; examples: subscriber identity module (SIM), universal integrated circuit card (UICC) - `11`: Tablet or e-book with a non-removable, secure element that is controlled by the wireless service provider - `12`: Removable secure element that is personalized for use with a tablet or e-book and is not controlled by the wireless service provider - `13`: Tablet or e-book with a non-removable, secure element that is not controlled by the wireless service provider  This field is supported only for Mastercard on CyberSource through VisaNet.  #### Used by **Authorization** Optional field. 
 
         :param initiation_channel: The initiation_channel of this Ptsv2paymentsPaymentInformation.
         :type: str

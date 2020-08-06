@@ -42,122 +42,7 @@ class InstrumentIdentifierApi(object):
         self.api_client.set_configuration(merchant_config) 
 
 
-    def create_instrument_identifier(self, profile_id, create_instrument_identifier_request, **kwargs):
-        """
-        Create an Instrument Identifier
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_instrument_identifier(profile_id, create_instrument_identifier_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param CreateInstrumentIdentifierRequest create_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, **kwargs)
-        else:
-            (data) = self.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, **kwargs)
-            return data
-
-    def create_instrument_identifier_with_http_info(self, profile_id, create_instrument_identifier_request, **kwargs):
-        """
-        Create an Instrument Identifier
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.create_instrument_identifier_with_http_info(profile_id, create_instrument_identifier_request, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param CreateInstrumentIdentifierRequest create_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['profile_id', 'create_instrument_identifier_request']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_instrument_identifier" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `create_instrument_identifier`")
-        # verify the required parameter 'create_instrument_identifier_request' is set
-        if ('create_instrument_identifier_request' not in params) or (params['create_instrument_identifier_request'] is None):
-            raise ValueError("Missing the required parameter `create_instrument_identifier_request` when calling `create_instrument_identifier`")
-
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `create_instrument_identifier`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `create_instrument_identifier`, length must be greater than or equal to `36`")
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-        if 'profile_id' in params:
-            header_params['profile-id'] = params['profile_id']
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'create_instrument_identifier_request' in params:
-            body_params = params['create_instrument_identifier_request']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers', 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPost200Response',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def delete_instrument_identifier(self, profile_id, token_id, **kwargs):
+    def delete_instrument_identifier(self, instrument_identifier_token_id, **kwargs):
         """
         Delete an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -166,24 +51,24 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_instrument_identifier(profile_id, token_id, callback=callback_function)
+        >>> thread = api.delete_instrument_identifier(instrument_identifier_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
+            return self.delete_instrument_identifier_with_http_info(instrument_identifier_token_id, **kwargs)
         else:
-            (data) = self.delete_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
+            (data) = self.delete_instrument_identifier_with_http_info(instrument_identifier_token_id, **kwargs)
             return data
 
-    def delete_instrument_identifier_with_http_info(self, profile_id, token_id, **kwargs):
+    def delete_instrument_identifier_with_http_info(self, instrument_identifier_token_id, **kwargs):
         """
         Delete an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
@@ -192,18 +77,18 @@ class InstrumentIdentifierApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_instrument_identifier_with_http_info(profile_id, token_id, callback=callback_function)
+        >>> thread = api.delete_instrument_identifier_with_http_info(instrument_identifier_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'token_id']
+        all_params = ['instrument_identifier_token_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -218,27 +103,24 @@ class InstrumentIdentifierApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `delete_instrument_identifier`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `delete_instrument_identifier`")
+        # verify the required parameter 'instrument_identifier_token_id' is set
+        if ('instrument_identifier_token_id' not in params) or (params['instrument_identifier_token_id'] is None):
+            raise ValueError("Missing the required parameter `instrument_identifier_token_id` when calling `delete_instrument_identifier`")
 
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) < 12:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `12`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 12:
-            raise ValueError("Invalid value for parameter `token_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `12`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
+        if 'instrument_identifier_token_id' in params:
+            path_params['instrumentIdentifierTokenId'] = params['instrument_identifier_token_id']
 
         query_params = []
 
@@ -261,7 +143,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{token_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -276,57 +158,53 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_all_payment_instruments(self, profile_id, token_id, **kwargs):
+    def get_instrument_identifier(self, instrument_identifier_token_id, **kwargs):
         """
-        Retrieve all Payment Instruments
+        Retrieve an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_payment_instruments(profile_id, token_id, callback=callback_function)
+        >>> thread = api.get_instrument_identifier(instrument_identifier_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param int offset: Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0.
-        :param int limit: The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_all_payment_instruments_with_http_info(profile_id, token_id, **kwargs)
+            return self.get_instrument_identifier_with_http_info(instrument_identifier_token_id, **kwargs)
         else:
-            (data) = self.get_all_payment_instruments_with_http_info(profile_id, token_id, **kwargs)
+            (data) = self.get_instrument_identifier_with_http_info(instrument_identifier_token_id, **kwargs)
             return data
 
-    def get_all_payment_instruments_with_http_info(self, profile_id, token_id, **kwargs):
+    def get_instrument_identifier_with_http_info(self, instrument_identifier_token_id, **kwargs):
         """
-        Retrieve all Payment Instruments
+        Retrieve an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_payment_instruments_with_http_info(profile_id, token_id, callback=callback_function)
+        >>> thread = api.get_instrument_identifier_with_http_info(instrument_identifier_token_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param int offset: Starting Payment Instrument record in zero-based dataset that should be returned as the first object in the array. Default is 0.
-        :param int limit: The maximum number of Payment Instruments that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
-        :return: TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'token_id', 'offset', 'limit']
+        all_params = ['instrument_identifier_token_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -337,37 +215,154 @@ class InstrumentIdentifierApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_all_payment_instruments" % key
+                    " to method get_instrument_identifier" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `get_all_payment_instruments`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `get_all_payment_instruments`")
+        # verify the required parameter 'instrument_identifier_token_id' is set
+        if ('instrument_identifier_token_id' not in params) or (params['instrument_identifier_token_id'] is None):
+            raise ValueError("Missing the required parameter `instrument_identifier_token_id` when calling `get_instrument_identifier`")
 
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) < 12:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `get_instrument_identifier`, length must be greater than or equal to `12`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_all_payment_instruments`, length must be less than or equal to `36`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 12:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_all_payment_instruments`, length must be greater than or equal to `12`")
-        if 'offset' in params and params['offset'] < 0:
-            raise ValueError("Invalid value for parameter `offset` when calling `get_all_payment_instruments`, must be a value greater than or equal to `0`")
-        if 'limit' in params and params['limit'] > 100:
-            raise ValueError("Invalid value for parameter `limit` when calling `get_all_payment_instruments`, must be a value less than or equal to `100`")
-        if 'limit' in params and params['limit'] < 1:
-            raise ValueError("Invalid value for parameter `limit` when calling `get_all_payment_instruments`, must be a value greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
+        if 'instrument_identifier_token_id' in params:
+            path_params['instrumentIdentifierTokenId'] = params['instrument_identifier_token_id']
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_instrument_identifier_payment_instruments_list(self, instrument_identifier_token_id, **kwargs):
+        """
+        List Payment Instruments for an Instrument Identifier
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_instrument_identifier_payment_instruments_list(instrument_identifier_token_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
+        :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
+        :return: PaymentInstrumentListForCustomer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_instrument_identifier_payment_instruments_list_with_http_info(instrument_identifier_token_id, **kwargs)
+        else:
+            (data) = self.get_instrument_identifier_payment_instruments_list_with_http_info(instrument_identifier_token_id, **kwargs)
+            return data
+
+    def get_instrument_identifier_payment_instruments_list_with_http_info(self, instrument_identifier_token_id, **kwargs):
+        """
+        List Payment Instruments for an Instrument Identifier
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_instrument_identifier_payment_instruments_list_with_http_info(instrument_identifier_token_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
+        :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
+        :return: PaymentInstrumentListForCustomer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['instrument_identifier_token_id', 'profile_id', 'offset', 'limit']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_instrument_identifier_payment_instruments_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'instrument_identifier_token_id' is set
+        if ('instrument_identifier_token_id' not in params) or (params['instrument_identifier_token_id'] is None):
+            raise ValueError("Missing the required parameter `instrument_identifier_token_id` when calling `get_instrument_identifier_payment_instruments_list`")
+
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `32`")
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) < 12:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `12`")
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `36`")
+        if 'offset' in params and params['offset'] < 0:
+            raise ValueError("Invalid value for parameter `offset` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `0`")
+        if 'limit' in params and params['limit'] > 100:
+            raise ValueError("Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value less than or equal to `100`")
+        if 'limit' in params and params['limit'] < 1:
+            raise ValueError("Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `1`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'instrument_identifier_token_id' in params:
+            path_params['instrumentIdentifierTokenId'] = params['instrument_identifier_token_id']
 
         query_params = []
         if 'offset' in params:
@@ -394,14 +389,14 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{token_id}/paymentinstruments', 'GET',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}/paymentinstruments', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPaymentInstrumentsGet200Response',
+                                        response_type='PaymentInstrumentListForCustomer',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -409,53 +404,57 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_instrument_identifier(self, profile_id, token_id, **kwargs):
+    def patch_instrument_identifier(self, instrument_identifier_token_id, patch_instrument_identifier_request, **kwargs):
         """
-        Retrieve an Instrument Identifier
+        Update an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_instrument_identifier(profile_id, token_id, callback=callback_function)
+        >>> thread = api.patch_instrument_identifier(instrument_identifier_token_id, patch_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction ID to update. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str if_match: Contains an ETag value from a GET request to make the request conditional.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
+            return self.patch_instrument_identifier_with_http_info(instrument_identifier_token_id, patch_instrument_identifier_request, **kwargs)
         else:
-            (data) = self.get_instrument_identifier_with_http_info(profile_id, token_id, **kwargs)
+            (data) = self.patch_instrument_identifier_with_http_info(instrument_identifier_token_id, patch_instrument_identifier_request, **kwargs)
             return data
 
-    def get_instrument_identifier_with_http_info(self, profile_id, token_id, **kwargs):
+    def patch_instrument_identifier_with_http_info(self, instrument_identifier_token_id, patch_instrument_identifier_request, **kwargs):
         """
-        Retrieve an Instrument Identifier
+        Update an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_instrument_identifier_with_http_info(profile_id, token_id, callback=callback_function)
+        >>> thread = api.patch_instrument_identifier_with_http_info(instrument_identifier_token_id, patch_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction ID to update. (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str if_match: Contains an ETag value from a GET request to make the request conditional.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'token_id']
+        all_params = ['instrument_identifier_token_id', 'patch_instrument_identifier_request', 'profile_id', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -466,42 +465,50 @@ class InstrumentIdentifierApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_instrument_identifier" % key
+                    " to method patch_instrument_identifier" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `get_instrument_identifier`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `get_instrument_identifier`")
+        # verify the required parameter 'instrument_identifier_token_id' is set
+        if ('instrument_identifier_token_id' not in params) or (params['instrument_identifier_token_id'] is None):
+            raise ValueError("Missing the required parameter `instrument_identifier_token_id` when calling `patch_instrument_identifier`")
+        # verify the required parameter 'patch_instrument_identifier_request' is set
+        if ('patch_instrument_identifier_request' not in params) or (params['patch_instrument_identifier_request'] is None):
+            raise ValueError("Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
 
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) < 12:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `12`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 12:
-            raise ValueError("Invalid value for parameter `token_id` when calling `get_instrument_identifier`, length must be greater than or equal to `12`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `36`")
+        if 'if_match' in params and len(params['if_match']) > 32:
+            raise ValueError("Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
+        if 'if_match' in params and len(params['if_match']) < 1:
+            raise ValueError("Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
+        if 'instrument_identifier_token_id' in params:
+            path_params['instrumentIdentifierTokenId'] = params['instrument_identifier_token_id']
 
         query_params = []
 
         header_params = {}
         if 'profile_id' in params:
             header_params['profile-id'] = params['profile_id']
+        if 'if_match' in params:
+            header_params['if-match'] = params['if_match']
 
         form_params = []
         local_var_files = {}
 
         body_params = None
+        if 'patch_instrument_identifier_request' in params:
+            body_params = params['patch_instrument_identifier_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json;charset=utf-8'])
@@ -513,14 +520,14 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{token_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPost200Response',
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -528,55 +535,53 @@ class InstrumentIdentifierApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_instrument_identifier(self, profile_id, token_id, update_instrument_identifier_request, **kwargs):
+    def post_instrument_identifier(self, post_instrument_identifier_request, **kwargs):
         """
-        Update a Instrument Identifier
+        Create an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_instrument_identifier(profile_id, token_id, update_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.post_instrument_identifier(post_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param UpdateInstrumentIdentifierRequest update_instrument_identifier_request: Specify the previous transaction ID to update. (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
+        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, **kwargs)
+            return self.post_instrument_identifier_with_http_info(post_instrument_identifier_request, **kwargs)
         else:
-            (data) = self.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, **kwargs)
+            (data) = self.post_instrument_identifier_with_http_info(post_instrument_identifier_request, **kwargs)
             return data
 
-    def update_instrument_identifier_with_http_info(self, profile_id, token_id, update_instrument_identifier_request, **kwargs):
+    def post_instrument_identifier_with_http_info(self, post_instrument_identifier_request, **kwargs):
         """
-        Update a Instrument Identifier
+        Create an Instrument Identifier
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_instrument_identifier_with_http_info(profile_id, token_id, update_instrument_identifier_request, callback=callback_function)
+        >>> thread = api.post_instrument_identifier_with_http_info(post_instrument_identifier_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str profile_id: The id of a profile containing user specific TMS configuration. (required)
-        :param str token_id: The TokenId of an Instrument Identifier. (required)
-        :param UpdateInstrumentIdentifierRequest update_instrument_identifier_request: Specify the previous transaction ID to update. (required)
-        :return: TmsV1InstrumentIdentifiersPost200Response
+        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['profile_id', 'token_id', 'update_instrument_identifier_request']
+        all_params = ['post_instrument_identifier_request', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -587,34 +592,22 @@ class InstrumentIdentifierApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_instrument_identifier" % key
+                    " to method post_instrument_identifier" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'profile_id' is set
-        if ('profile_id' not in params) or (params['profile_id'] is None):
-            raise ValueError("Missing the required parameter `profile_id` when calling `update_instrument_identifier`")
-        # verify the required parameter 'token_id' is set
-        if ('token_id' not in params) or (params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `update_instrument_identifier`")
-        # verify the required parameter 'update_instrument_identifier_request' is set
-        if ('update_instrument_identifier_request' not in params) or (params['update_instrument_identifier_request'] is None):
-            raise ValueError("Missing the required parameter `update_instrument_identifier_request` when calling `update_instrument_identifier`")
+        # verify the required parameter 'post_instrument_identifier_request' is set
+        if ('post_instrument_identifier_request' not in params) or (params['post_instrument_identifier_request'] is None):
+            raise ValueError("Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
 
         if 'profile_id' in params and len(params['profile_id']) > 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `update_instrument_identifier`, length must be less than or equal to `36`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
-            raise ValueError("Invalid value for parameter `profile_id` when calling `update_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'token_id' in params and len(params['token_id']) > 32:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 12:
-            raise ValueError("Invalid value for parameter `token_id` when calling `update_instrument_identifier`, length must be greater than or equal to `12`")
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'token_id' in params:
-            path_params['tokenId'] = params['token_id']
 
         query_params = []
 
@@ -626,8 +619,8 @@ class InstrumentIdentifierApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'update_instrument_identifier_request' in params:
-            body_params = params['update_instrument_identifier_request']
+        if 'post_instrument_identifier_request' in params:
+            body_params = params['post_instrument_identifier_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json;charset=utf-8'])
@@ -639,14 +632,14 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{token_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='TmsV1InstrumentIdentifiersPost200Response',
+                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -32,7 +32,7 @@ class TokenizeParameters(object):
     """
     swagger_types = {
         'key_id': 'str',
-        'card_info': 'Flexv1tokensCardInfo'
+        'card_info': 'TokenizeParametersCardInfo'
     }
 
     attribute_map = {
@@ -83,7 +83,7 @@ class TokenizeParameters(object):
         Gets the card_info of this TokenizeParameters.
 
         :return: The card_info of this TokenizeParameters.
-        :rtype: Flexv1tokensCardInfo
+        :rtype: TokenizeParametersCardInfo
         """
         return self._card_info
 
@@ -93,7 +93,7 @@ class TokenizeParameters(object):
         Sets the card_info of this TokenizeParameters.
 
         :param card_info: The card_info of this TokenizeParameters.
-        :type: Flexv1tokensCardInfo
+        :type: TokenizeParametersCardInfo
         """
 
         self._card_info = card_info

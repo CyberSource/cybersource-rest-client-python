@@ -137,7 +137,7 @@ class Ptsv2paymentsOrderInformationPassenger(object):
     def phone(self):
         """
         Gets the phone of this Ptsv2paymentsOrderInformationPassenger.
-        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
+        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :return: The phone of this Ptsv2paymentsOrderInformationPassenger.
         :rtype: str
@@ -148,7 +148,7 @@ class Ptsv2paymentsOrderInformationPassenger(object):
     def phone(self, phone):
         """
         Sets the phone of this Ptsv2paymentsOrderInformationPassenger.
-        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf) 
+        Passenger's phone number. If the order is from outside the U.S., CyberSource recommends that you include the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). 
 
         :param phone: The phone of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
@@ -262,7 +262,7 @@ class Ptsv2paymentsOrderInformationPassenger(object):
     def nationality(self):
         """
         Gets the nationality of this Ptsv2paymentsOrderInformationPassenger.
-        Passenger's nationality country. Use the two character ISO Standard Country Codes.
+        Passenger's nationality country. Use the two character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).
 
         :return: The nationality of this Ptsv2paymentsOrderInformationPassenger.
         :rtype: str
@@ -273,7 +273,7 @@ class Ptsv2paymentsOrderInformationPassenger(object):
     def nationality(self, nationality):
         """
         Sets the nationality of this Ptsv2paymentsOrderInformationPassenger.
-        Passenger's nationality country. Use the two character ISO Standard Country Codes.
+        Passenger's nationality country. Use the two character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).
 
         :param nationality: The nationality of this Ptsv2paymentsOrderInformationPassenger.
         :type: str

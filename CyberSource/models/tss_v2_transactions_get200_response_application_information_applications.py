@@ -38,7 +38,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         'r_flag': 'str',
         'reconciliation_id': 'str',
         'r_message': 'str',
-        'return_code': 'str'
+        'return_code': 'int'
     }
 
     attribute_map = {
@@ -251,7 +251,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         The description for this field is not available.
 
         :return: The return_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        :rtype: str
+        :rtype: int
         """
         return self._return_code
 
@@ -262,7 +262,7 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         The description for this field is not available.
 
         :param return_code: The return_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
-        :type: str
+        :type: int
         """
 
         self._return_code = return_code

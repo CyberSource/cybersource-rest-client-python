@@ -31,16 +31,14 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'status': 'str',
         'reason_code': 'str',
         'r_code': 'str',
         'r_flag': 'str',
-        'applications': 'list[TssV2TransactionsGet200ResponseApplicationInformationApplications]',
-        'return_code': 'str'
+        'applications': 'list[TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications]',
+        'return_code': 'int'
     }
 
     attribute_map = {
-        'status': 'status',
         'reason_code': 'reasonCode',
         'r_code': 'rCode',
         'r_flag': 'rFlag',
@@ -48,20 +46,17 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         'return_code': 'returnCode'
     }
 
-    def __init__(self, status=None, reason_code=None, r_code=None, r_flag=None, applications=None, return_code=None):
+    def __init__(self, reason_code=None, r_code=None, r_flag=None, applications=None, return_code=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedApplicationInformation - a model defined in Swagger
         """
 
-        self._status = None
         self._reason_code = None
         self._r_code = None
         self._r_flag = None
         self._applications = None
         self._return_code = None
 
-        if status is not None:
-          self.status = status
         if reason_code is not None:
           self.reason_code = reason_code
         if r_code is not None:
@@ -72,29 +67,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
           self.applications = applications
         if return_code is not None:
           self.return_code = return_code
-
-    @property
-    def status(self):
-        """
-        Gets the status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        The status of the submitted transaction.
-
-        :return: The status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        The status of the submitted transaction.
-
-        :param status: The status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :type: str
-        """
-
-        self._status = status
 
     @property
     def reason_code(self):
@@ -123,7 +95,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
     def r_code(self):
         """
         Gets the r_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :return: The r_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :rtype: str
@@ -134,7 +106,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
     def r_code(self, r_code):
         """
         Sets the r_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :param r_code: The r_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :type: str
@@ -146,7 +118,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
     def r_flag(self):
         """
         Gets the r_flag of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        One-word description of the result of the application. 
 
         :return: The r_flag of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :rtype: str
@@ -157,7 +129,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
     def r_flag(self, r_flag):
         """
         Sets the r_flag of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        One-word description of the result of the application. 
 
         :param r_flag: The r_flag of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :type: str
@@ -171,7 +143,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         Gets the applications of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
 
         :return: The applications of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :rtype: list[TssV2TransactionsGet200ResponseApplicationInformationApplications]
+        :rtype: list[TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications]
         """
         return self._applications
 
@@ -181,7 +153,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         Sets the applications of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
 
         :param applications: The applications of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :type: list[TssV2TransactionsGet200ResponseApplicationInformationApplications]
+        :type: list[TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications]
         """
 
         self._applications = applications
@@ -193,7 +165,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         The description for this field is not available.
 
         :return: The return_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :rtype: str
+        :rtype: int
         """
         return self._return_code
 
@@ -204,7 +176,7 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         The description for this field is not available.
 
         :param return_code: The return_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
-        :type: str
+        :type: int
         """
 
         self._return_code = return_code

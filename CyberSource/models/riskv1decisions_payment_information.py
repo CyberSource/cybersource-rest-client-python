@@ -33,7 +33,7 @@ class Riskv1decisionsPaymentInformation(object):
     swagger_types = {
         'card': 'Riskv1decisionsPaymentInformationCard',
         'tokenized_card': 'Riskv1decisionsPaymentInformationTokenizedCard',
-        'customer': 'Riskv1decisionsPaymentInformationCustomer',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
         'method': 'str'
     }
@@ -116,7 +116,7 @@ class Riskv1decisionsPaymentInformation(object):
         Gets the customer of this Riskv1decisionsPaymentInformation.
 
         :return: The customer of this Riskv1decisionsPaymentInformation.
-        :rtype: Riskv1decisionsPaymentInformationCustomer
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
         """
         return self._customer
 
@@ -126,7 +126,7 @@ class Riskv1decisionsPaymentInformation(object):
         Sets the customer of this Riskv1decisionsPaymentInformation.
 
         :param customer: The customer of this Riskv1decisionsPaymentInformation.
-        :type: Riskv1decisionsPaymentInformationCustomer
+        :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
         self._customer = customer

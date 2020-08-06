@@ -313,7 +313,7 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada. 
+        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :return: The administrative_area of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -324,7 +324,7 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada. 
+        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :param administrative_area: The administrative_area of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -338,7 +338,7 @@ class Ptsv2payoutsSenderInformation(object):
     def country_code(self):
         """
         Gets the country_code of this Ptsv2payoutsSenderInformation.
-        Country of sender. Use the ISO Standard Country Codes. * CTV (3) 
+        Country of sender. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). * CTV (3) 
 
         :return: The country_code of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -349,7 +349,7 @@ class Ptsv2payoutsSenderInformation(object):
     def country_code(self, country_code):
         """
         Sets the country_code of this Ptsv2payoutsSenderInformation.
-        Country of sender. Use the ISO Standard Country Codes. * CTV (3) 
+        Country of sender. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). * CTV (3) 
 
         :param country_code: The country_code of this Ptsv2payoutsSenderInformation.
         :type: str

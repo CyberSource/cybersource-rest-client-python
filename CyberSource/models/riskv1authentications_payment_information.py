@@ -33,16 +33,18 @@ class Riskv1authenticationsPaymentInformation(object):
     swagger_types = {
         'card': 'Riskv1authenticationsPaymentInformationCard',
         'tokenized_card': 'Riskv1authenticationsPaymentInformationTokenizedCard',
-        'fluid_data': 'Riskv1authenticationsPaymentInformationFluidData'
+        'fluid_data': 'Riskv1authenticationsetupsPaymentInformationFluidData',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
     }
 
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
-        'fluid_data': 'fluidData'
+        'fluid_data': 'fluidData',
+        'customer': 'customer'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None):
         """
         Riskv1authenticationsPaymentInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Riskv1authenticationsPaymentInformation(object):
         self._card = None
         self._tokenized_card = None
         self._fluid_data = None
+        self._customer = None
 
         if card is not None:
           self.card = card
@@ -57,6 +60,8 @@ class Riskv1authenticationsPaymentInformation(object):
           self.tokenized_card = tokenized_card
         if fluid_data is not None:
           self.fluid_data = fluid_data
+        if customer is not None:
+          self.customer = customer
 
     @property
     def card(self):
@@ -106,7 +111,7 @@ class Riskv1authenticationsPaymentInformation(object):
         Gets the fluid_data of this Riskv1authenticationsPaymentInformation.
 
         :return: The fluid_data of this Riskv1authenticationsPaymentInformation.
-        :rtype: Riskv1authenticationsPaymentInformationFluidData
+        :rtype: Riskv1authenticationsetupsPaymentInformationFluidData
         """
         return self._fluid_data
 
@@ -116,10 +121,31 @@ class Riskv1authenticationsPaymentInformation(object):
         Sets the fluid_data of this Riskv1authenticationsPaymentInformation.
 
         :param fluid_data: The fluid_data of this Riskv1authenticationsPaymentInformation.
-        :type: Riskv1authenticationsPaymentInformationFluidData
+        :type: Riskv1authenticationsetupsPaymentInformationFluidData
         """
 
         self._fluid_data = fluid_data
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this Riskv1authenticationsPaymentInformation.
+
+        :return: The customer of this Riskv1authenticationsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this Riskv1authenticationsPaymentInformation.
+
+        :param customer: The customer of this Riskv1authenticationsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationCustomer
+        """
+
+        self._customer = customer
 
     def to_dict(self):
         """

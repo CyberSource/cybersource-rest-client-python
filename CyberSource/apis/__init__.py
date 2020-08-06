@@ -1,9 +1,13 @@
 from __future__ import absolute_import
 
 # import apis into api package
+from .asymmetric_key_management_api import AsymmetricKeyManagementApi
 from .capture_api import CaptureApi
 from .conversion_details_api import ConversionDetailsApi
 from .credit_api import CreditApi
+from .customer_api import CustomerApi
+from .customer_payment_instrument_api import CustomerPaymentInstrumentApi
+from .customer_shipping_address_api import CustomerShippingAddressApi
 from .decision_manager_api import DecisionManagerApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
@@ -27,7 +31,8 @@ from .reports_api import ReportsApi
 from .reversal_api import ReversalApi
 from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
-from .tokenization_api import TokenizationApi
+from .symmetric_key_management_api import SymmetricKeyManagementApi
+from .taxes_api import TaxesApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .user_management_api import UserManagementApi

@@ -82,7 +82,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsClientReferenceInformation.
-        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization**\\ Required field.  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsClientReferenceInformation.
-        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization**\\ Required field.  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Ptsv2paymentsClientReferenceInformation.
         :type: str
@@ -107,7 +107,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self):
         """
         Gets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void**\\ Optional field. 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void** Optional field.  #### PIN Debit For a PIN debit reversal, your request must include a request ID or a merchant transaction identifier.  Optional field for PIN debit purchase or credit requests. 
 
         :return: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :rtype: str
@@ -118,7 +118,7 @@ class Ptsv2paymentsClientReferenceInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this Ptsv2paymentsClientReferenceInformation.
-        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void**\\ Optional field. 
+        Identifier that you assign to the transaction.  **Note** Use this field only if you want to support merchant-initiated reversal and void operations.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, and Void** Optional field.  #### PIN Debit For a PIN debit reversal, your request must include a request ID or a merchant transaction identifier.  Optional field for PIN debit purchase or credit requests. 
 
         :param transaction_id: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str

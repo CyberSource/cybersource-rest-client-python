@@ -43,7 +43,7 @@ class TestDecisionManagerApi(unittest.TestCase):
         """
         Test case for create_bundled_decision_manager_case
 
-        Create Decision Manager Case
+        Create Decision Manager
         """
         pass
 

@@ -108,7 +108,7 @@ class InvoicingV2InvoicesGet200Response(object):
     def id(self):
         """
         Gets the id of this InvoicingV2InvoicesGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :return: The id of this InvoicingV2InvoicesGet200Response.
         :rtype: str
@@ -119,7 +119,7 @@ class InvoicingV2InvoicesGet200Response(object):
     def id(self, id):
         """
         Sets the id of this InvoicingV2InvoicesGet200Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
+        An unique identification number to identify the submitted request. It is also appended to the endpoint of the resource.  On incremental authorizations, this value with be the same as the identification number returned in the original authorization response.  #### PIN debit Returned for all PIN debit services. 
 
         :param id: The id of this InvoicingV2InvoicesGet200Response.
         :type: str
@@ -133,7 +133,7 @@ class InvoicingV2InvoicesGet200Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InvoicingV2InvoicesGet200Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :return: The submit_time_utc of this InvoicingV2InvoicesGet200Response.
         :rtype: str
@@ -144,7 +144,7 @@ class InvoicingV2InvoicesGet200Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InvoicingV2InvoicesGet200Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by authorization service.  #### PIN debit Time when the PIN debit credit, PIN debit purchase or PIN debit reversal was requested.  Returned by PIN debit credit, PIN debit purchase or PIN debit reversal. 
 
         :param submit_time_utc: The submit_time_utc of this InvoicingV2InvoicesGet200Response.
         :type: str

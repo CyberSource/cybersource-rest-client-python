@@ -147,7 +147,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def carrier_code(self):
         """
         Gets the carrier_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Carrier Code: IATA1 code for the carrier for this leg of the trip. 
+        IATA code for the carrier for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The carrier_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -158,7 +158,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def carrier_code(self, carrier_code):
         """
         Sets the carrier_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Carrier Code: IATA1 code for the carrier for this leg of the trip. 
+        IATA code for the carrier for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param carrier_code: The carrier_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -172,7 +172,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def flight_number(self):
         """
         Gets the flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Flight number for this leg of the trip. 
+        Flight number for this leg of the trip. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :return: The flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -183,7 +183,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def flight_number(self, flight_number):
         """
         Sets the flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Flight number for this leg of the trip. 
+        Flight number for this leg of the trip. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :param flight_number: The flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -197,7 +197,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def originating_airport_code(self):
         """
         Gets the originating_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the originating airport for this leg of the trip. 
+        IATA code for the originating airport for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The originating_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -208,7 +208,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def originating_airport_code(self, originating_airport_code):
         """
         Sets the originating_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the originating airport for this leg of the trip. 
+        IATA code for the originating airport for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param originating_airport_code: The originating_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -222,7 +222,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def _class(self):
         """
         Gets the _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the class of service for this leg of the trip. 
+        IATA code for the class of service for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -233,7 +233,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def _class(self, _class):
         """
         Sets the _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the class of service for this leg of the trip. 
+        IATA code for the class of service for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param _class: The _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -247,7 +247,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def stopover_indicator(self):
         """
         Gets the stopover_indicator of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Code that indicates whether a stopover is allowed on this leg of the trip. Possible Values: O(capital letter \"O\"): stopover allowed.  X(capital letter \"X\"): Stopover not allowed. 
+        Code that indicates whether a stopover is allowed on this leg of the trip. Possible values: - `O` (capital letter “O”) (default): Stopover allowed - `X` (capital letter “X”): Stopover not allowed Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The stopover_indicator of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: int
@@ -258,7 +258,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def stopover_indicator(self, stopover_indicator):
         """
         Sets the stopover_indicator of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Code that indicates whether a stopover is allowed on this leg of the trip. Possible Values: O(capital letter \"O\"): stopover allowed.  X(capital letter \"X\"): Stopover not allowed. 
+        Code that indicates whether a stopover is allowed on this leg of the trip. Possible values: - `O` (capital letter “O”) (default): Stopover allowed - `X` (capital letter “X”): Stopover not allowed Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param stopover_indicator: The stopover_indicator of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: int
@@ -270,7 +270,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_date(self):
         """
         Gets the departure_date of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Departure date for the first leg of the trip. Format: YYYYMMDD. 
+        Departure date for the first leg of the trip. Format: `YYYYMMDD`. Format: English characters only. Optional request field for travel legs. 
 
         :return: The departure_date of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: int
@@ -281,7 +281,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_date(self, departure_date):
         """
         Sets the departure_date of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Departure date for the first leg of the trip. Format: YYYYMMDD. 
+        Departure date for the first leg of the trip. Format: `YYYYMMDD`. Format: English characters only. Optional request field for travel legs. 
 
         :param departure_date: The departure_date of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: int
@@ -293,7 +293,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def destination_airport_code(self):
         """
         Gets the destination_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the destination airport for this leg of the trip. 
+        IATA code for the destination airport for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The destination_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -304,7 +304,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def destination_airport_code(self, destination_airport_code):
         """
         Sets the destination_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        IATA1 code for the destination airport for this leg of the trip. 
+        IATA code for the destination airport for this leg of the trip. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param destination_airport_code: The destination_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -318,7 +318,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def fare_basis(self):
         """
         Gets the fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Code for the fare basis for this leg of the trip. The fare basis is assigned by the carriers and indicates a particular ticket type, such as business class or discounted/nonrefundable. 
+        Code for the fare basis for this leg of the trip. The fare basis is assigned by the carriers and indicates a particular ticket type, such as business class or discounted/nonrefundable. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Format: English characters only. Optional request field for travel legs.auto_rental_regular_mileage_cost 
 
         :return: The fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -329,7 +329,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def fare_basis(self, fare_basis):
         """
         Sets the fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Code for the fare basis for this leg of the trip. The fare basis is assigned by the carriers and indicates a particular ticket type, such as business class or discounted/nonrefundable. 
+        Code for the fare basis for this leg of the trip. The fare basis is assigned by the carriers and indicates a particular ticket type, such as business class or discounted/nonrefundable. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Format: English characters only. Optional request field for travel legs.auto_rental_regular_mileage_cost 
 
         :param fare_basis: The fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -368,7 +368,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def conjunction_ticket(self):
         """
         Gets the conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Ticket that contains additional coupons for this leg of the trip on an itinerary that has more than four segments. 
+        Ticket that contains additional coupons for this leg of the trip on an itinerary that has more than four segments. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -379,7 +379,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def conjunction_ticket(self, conjunction_ticket):
         """
         Sets the conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Ticket that contains additional coupons for this leg of the trip on an itinerary that has more than four segments. 
+        Ticket that contains additional coupons for this leg of the trip on an itinerary that has more than four segments. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param conjunction_ticket: The conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -393,7 +393,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def exchange_ticket_number(self):
         """
         Gets the exchange_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        New ticket number that is issued when the ticket is exchanged for this leg of the trip. 
+        New ticket number that is issued when the ticket is exchanged for this leg of the trip. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :return: The exchange_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -404,7 +404,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def exchange_ticket_number(self, exchange_ticket_number):
         """
         Sets the exchange_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        New ticket number that is issued when the ticket is exchanged for this leg of the trip. 
+        New ticket number that is issued when the ticket is exchanged for this leg of the trip. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :param exchange_ticket_number: The exchange_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -418,7 +418,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def coupon_number(self):
         """
         Gets the coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Each leg on the ticket requires a separate coupon, and each coupon is identified by the coupon number. 
+        Coupon number. Each leg on the ticket requires a separate coupon, and each coupon is identified by the coupon number. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -429,7 +429,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def coupon_number(self, coupon_number):
         """
         Sets the coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Each leg on the ticket requires a separate coupon, and each coupon is identified by the coupon number. 
+        Coupon number. Each leg on the ticket requires a separate coupon, and each coupon is identified by the coupon number. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param coupon_number: The coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -443,7 +443,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_time(self):
         """
         Gets the departure_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be 00-23 and the minutes must be 00-59 
+        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59`. Format: English characters only. Optional request field for travel legs. 
 
         :return: The departure_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: int
@@ -454,7 +454,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_time(self, departure_time):
         """
         Sets the departure_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be 00-23 and the minutes must be 00-59 
+        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59`. Format: English characters only. Optional request field for travel legs. 
 
         :param departure_time: The departure_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: int
@@ -466,7 +466,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_time_meridian(self):
         """
         Gets the departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        AM or PM for the departure time. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m 
+        AM or PM for the departure time. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -477,7 +477,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def departure_time_meridian(self, departure_time_meridian):
         """
         Sets the departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        AM or PM for the departure time. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m 
+        AM or PM for the departure time. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param departure_time_meridian: The departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -491,7 +491,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def arrival_time(self):
         """
         Gets the arrival_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Time of arrival for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be 00-23 and the minutes must be 00-59 
+        Time of arrival for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59` Format: English characters only. Optional request field for travel legs. 
 
         :return: The arrival_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: int
@@ -502,7 +502,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def arrival_time(self, arrival_time):
         """
         Sets the arrival_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Time of arrival for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be 00-23 and the minutes must be 00-59 
+        Time of arrival for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59` Format: English characters only. Optional request field for travel legs. 
 
         :param arrival_time: The arrival_time of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: int
@@ -514,7 +514,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def arrival_time_meridian(self):
         """
         Gets the arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        AM or PM for the arrival time for this leg of the trip. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m. Format: English characters only 
+        AM or PM for the arrival time for this leg of the trip. Possible values: - `A`: 12:00 midnight to 11:59 a.m. - `P`: 12:00 noon to 11:59 p.m. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :return: The arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -525,7 +525,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def arrival_time_meridian(self, arrival_time_meridian):
         """
         Sets the arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        AM or PM for the arrival time for this leg of the trip. Possible values: - A: 12:00 midnight to 11:59 a.m. - P: 12:00 noon to 11:59 p.m. Format: English characters only 
+        AM or PM for the arrival time for this leg of the trip. Possible values: - `A`: 12:00 midnight to 11:59 a.m. - `P`: 12:00 noon to 11:59 p.m. Format: English characters only. Restricted string data type that indicates a sequence of letters, numbers, and spaces; special characters are not included. Optional request field for travel legs. 
 
         :param arrival_time_meridian: The arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -539,7 +539,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def endorsements_restrictions(self):
         """
         Gets the endorsements_restrictions of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Notes or notations about endorsements and restrictions for this leg of the trip. Endorsements can be notations added by the travel agency, including mandatory government required notations such as value added tax. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable tic. 
+        Notes or notations about endorsements and restrictions for this leg of the trip. Endorsements can be notations added by the travel agency, including mandatory government-required notations such as value added tax. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :return: The endorsements_restrictions of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -550,7 +550,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def endorsements_restrictions(self, endorsements_restrictions):
         """
         Sets the endorsements_restrictions of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Notes or notations about endorsements and restrictions for this leg of the trip. Endorsements can be notations added by the travel agency, including mandatory government required notations such as value added tax. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable tic. 
+        Notes or notations about endorsements and restrictions for this leg of the trip. Endorsements can be notations added by the travel agency, including mandatory government-required notations such as value added tax. Restrictions are limitations for the ticket based on the type of fare, such as a nonrefundable ticket or a 3-day minimum stay. Format: English characters only. Optional request field for travel legs. 
 
         :param endorsements_restrictions: The endorsements_restrictions of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -564,7 +564,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def total_fare_amount(self):
         """
         Gets the total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Total fare for this leg of the trip. 
+        Total fare for this leg of the trip. Format: English characters only. Optional request field for travel legs. 
 
         :return: The total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -575,7 +575,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def total_fare_amount(self, total_fare_amount):
         """
         Sets the total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Total fare for this leg of the trip. 
+        Total fare for this leg of the trip. Format: English characters only. Optional request field for travel legs. 
 
         :param total_fare_amount: The total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -589,7 +589,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def fee_amount(self):
         """
         Gets the fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Fee for this leg of the trip, such as an airport fee or country fee. 
+        Fee for this leg of the trip, such as an airport fee or country fee. Format: English characters only. Optional request field for travel legs. 
 
         :return: The fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -600,7 +600,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def fee_amount(self, fee_amount):
         """
         Sets the fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Fee for this leg of the trip, such as an airport fee or country fee. 
+        Fee for this leg of the trip, such as an airport fee or country fee. Format: English characters only. Optional request field for travel legs. 
 
         :param fee_amount: The fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
@@ -614,7 +614,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Tax for this leg of the trip 
+        Tax for this leg of the trip. Format: English characters only. Optional request field for travel legs. 
 
         :return: The tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :rtype: str
@@ -625,7 +625,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
-        Tax for this leg of the trip 
+        Tax for this leg of the trip. Format: English characters only. Optional request field for travel legs. 
 
         :param tax_amount: The tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str

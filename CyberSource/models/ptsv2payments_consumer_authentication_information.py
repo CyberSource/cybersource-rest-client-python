@@ -37,6 +37,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'pares_status': 'str',
         'veres_enrolled': 'str',
         'xid': 'str',
+        'ucaf_collection_indicator': 'str',
         'ucaf_authentication_data': 'str',
         'strong_authentication': 'Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication',
         'directory_server_transaction_id': 'str',
@@ -91,6 +92,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'pares_status': 'paresStatus',
         'veres_enrolled': 'veresEnrolled',
         'xid': 'xid',
+        'ucaf_collection_indicator': 'ucafCollectionIndicator',
         'ucaf_authentication_data': 'ucafAuthenticationData',
         'strong_authentication': 'strongAuthentication',
         'directory_server_transaction_id': 'directoryServerTransactionId',
@@ -138,7 +140,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares': 'signedPares'
     }
 
-    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
+    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -149,6 +151,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._pares_status = None
         self._veres_enrolled = None
         self._xid = None
+        self._ucaf_collection_indicator = None
         self._ucaf_authentication_data = None
         self._strong_authentication = None
         self._directory_server_transaction_id = None
@@ -207,6 +210,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.veres_enrolled = veres_enrolled
         if xid is not None:
           self.xid = xid
+        if ucaf_collection_indicator is not None:
+          self.ucaf_collection_indicator = ucaf_collection_indicator
         if ucaf_authentication_data is not None:
           self.ucaf_authentication_data = ucaf_authentication_data
         if strong_authentication is not None:
@@ -447,6 +452,31 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
             raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
+
+    @property
+    def ucaf_collection_indicator(self):
+        """
+        Gets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+
+        :return: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._ucaf_collection_indicator
+
+    @ucaf_collection_indicator.setter
+    def ucaf_collection_indicator(self, ucaf_collection_indicator):
+        """
+        Sets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+
+        :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+        if ucaf_collection_indicator is not None and len(ucaf_collection_indicator) > 1:
+            raise ValueError("Invalid value for `ucaf_collection_indicator`, length must be less than or equal to `1`")
+
+        self._ucaf_collection_indicator = ucaf_collection_indicator
 
     @property
     def ucaf_authentication_data(self):
@@ -1132,7 +1162,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def override_country_code(self):
         """
         Gets the override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Two-character ISO standard Country Codes. 
+        Two-character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).. 
 
         :return: The override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -1143,7 +1173,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def override_country_code(self, override_country_code):
         """
         Sets the override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Two-character ISO standard Country Codes. 
+        Two-character [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).. 
 
         :param override_country_code: The override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str

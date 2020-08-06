@@ -257,7 +257,7 @@ class Ptsv2paymentsTravelInformationLodging(object):
     def check_in_date(self):
         """
         Gets the check_in_date of this Ptsv2paymentsTravelInformationLodging.
-        Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: MMDDYY. For best interchange rates, make sure it is a valid date. 
+        Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: `MMDDYY`. For best interchange rates, make sure it is a valid date. 
 
         :return: The check_in_date of this Ptsv2paymentsTravelInformationLodging.
         :rtype: str
@@ -268,7 +268,7 @@ class Ptsv2paymentsTravelInformationLodging(object):
     def check_in_date(self, check_in_date):
         """
         Sets the check_in_date of this Ptsv2paymentsTravelInformationLodging.
-        Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: MMDDYY. For best interchange rates, make sure it is a valid date. 
+        Date on which the guest checked in. In the case of a no-show or a reservation, the scheduled arrival date. Format: `MMDDYY`. For best interchange rates, make sure it is a valid date. 
 
         :param check_in_date: The check_in_date of this Ptsv2paymentsTravelInformationLodging.
         :type: str
@@ -282,7 +282,7 @@ class Ptsv2paymentsTravelInformationLodging(object):
     def check_out_date(self):
         """
         Gets the check_out_date of this Ptsv2paymentsTravelInformationLodging.
-        Date on which the guest checked out. Format: MMDDYY. For best interchange rates, make sure it is a valid date. 
+        Date on which the guest checked out. Format: `MMDDYY`. For best interchange rates, make sure it is a valid date. 
 
         :return: The check_out_date of this Ptsv2paymentsTravelInformationLodging.
         :rtype: str
@@ -293,7 +293,7 @@ class Ptsv2paymentsTravelInformationLodging(object):
     def check_out_date(self, check_out_date):
         """
         Sets the check_out_date of this Ptsv2paymentsTravelInformationLodging.
-        Date on which the guest checked out. Format: MMDDYY. For best interchange rates, make sure it is a valid date. 
+        Date on which the guest checked out. Format: `MMDDYY`. For best interchange rates, make sure it is a valid date. 
 
         :param check_out_date: The check_out_date of this Ptsv2paymentsTravelInformationLodging.
         :type: str
