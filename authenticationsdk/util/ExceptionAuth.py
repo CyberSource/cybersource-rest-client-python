@@ -6,7 +6,7 @@ def log_exception(logger, message, mconfig):
         print(message)
         print("Error: Check Log file for more details.")
         logger.exception(message)
-    sys.exit(1)
+    raise Exception(message)
 
 
 
@@ -16,7 +16,7 @@ def validate_merchant_details_log(logger, message, mconfig):
         print(message)
         print("Error: Check Log file for more details.")
         logger.error(message)
-    sys.exit(1)
+    raise Exception(message)
 
 
 
