@@ -1,6 +1,5 @@
 # coding: utf-8
 
-import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
@@ -12,62 +11,36 @@ VERSION = "0.0.19"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3", "six", "certifi", "DateTime", "Naked", "PyJWT", "PyNaCl", "PyYAML",
-            "asn1crypto",
-            "bcrypt",
-            "certifi",
-            "cffi",
-            "chardet",
-            "extras",
-            "fixtures",
-            "configparser",
-            "crypto",
-            "cryptography",
-            "enum34",
-            "funcsigs",
-            "nose",
-            "coverage",
-            "jsonschema",
-            "linecache2",
-            "pbr",
-            "idna>=2.5,<2.8",
-            "ipaddress",
-            "logger",
-            "paramiko",
-            "pip",
-            "pyOpenSSL",
-            "pyasn1",
-            "pycparser",
-            "pycryptodome",
-            "pycryptodomex",
-            "pypi",
-            "python-mimeparse",
-            "python-subunit",
-            "python-toolbox",
-            "pytz",
-            "requests",
-            "rsa",
-            "setuptools",
-            "shellescape",
-            "six",
-            "typing",
-            "testtools",
-            "traceback2",
-            "wheel",
-            "x509",
-            "zope.interface",]
-
 setup(
     name=NAME,
     version=VERSION,
     description="SDK for the CyberSource REST API",
     author_email="developer@cybersource.com",
-    url="",
+    url="https://github.com/CyberSource/cybersource-rest-client-python",
     keywords=["Payments API", "CyberSource"],
-    install_requires=REQUIRES,
+    install_requires=[
+        "certifi>=14.05.14",
+        "pycryptodome>=3.8.2",
+        "PyJWT>=1.6.4",
+        "pyOpenSSL>=18.0.0",
+        "python_dateutil>=2.5.3",
+        "setuptools>=21.0.0",
+        "six>=1.10",
+        "urllib3>=1.15.1",
+    ],
     packages=find_packages(),
     include_package_data=True,
-    long_description="""\
-    CyberSource REST API
-    """
+    long_description="CyberSource REST API",
+    classifiers=[
+        'Intended Audience :: Developers',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ]
 )
