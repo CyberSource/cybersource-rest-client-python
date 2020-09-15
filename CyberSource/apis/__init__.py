@@ -33,6 +33,7 @@ from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
 from .symmetric_key_management_api import SymmetricKeyManagementApi
 from .taxes_api import TaxesApi
+from .tokenization_api import TokenizationApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .user_management_api import UserManagementApi

@@ -57,7 +57,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSharedSecretKeysRequest create_shared_secret_keys_request: (required)
-        :return: InlineResponse201
+        :return: KmsV2KeysSymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSharedSecretKeysRequest create_shared_secret_keys_request: (required)
-        :return: InlineResponse201
+        :return: KmsV2KeysSymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -140,7 +140,7 @@ class SymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse201',
+                                        response_type='KmsV2KeysSymPost201Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -163,7 +163,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param DeleteBulkSymmetricKeysRequest delete_bulk_symmetric_keys_request: (required)
-        :return: InlineResponse2001
+        :return: KmsV2KeysSymDeletesPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -189,7 +189,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param DeleteBulkSymmetricKeysRequest delete_bulk_symmetric_keys_request: (required)
-        :return: InlineResponse2001
+        :return: KmsV2KeysSymDeletesPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -246,7 +246,7 @@ class SymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2001',
+                                        response_type='KmsV2KeysSymDeletesPost200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -269,7 +269,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str key_id: Key ID.  (required)
-        :return: InlineResponse200
+        :return: KmsV2KeysSymGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -295,7 +295,7 @@ class SymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str key_id: Key ID.  (required)
-        :return: InlineResponse200
+        :return: KmsV2KeysSymGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -352,7 +352,7 @@ class SymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse200',
+                                        response_type='KmsV2KeysSymGet200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

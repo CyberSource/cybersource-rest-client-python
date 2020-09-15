@@ -57,7 +57,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateP12KeysRequest create_p12_keys_request: (required)
-        :return: InlineResponse2011
+        :return: KmsV2KeysAsymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -83,7 +83,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateP12KeysRequest create_p12_keys_request: (required)
-        :return: InlineResponse2011
+        :return: KmsV2KeysAsymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -140,7 +140,7 @@ class AsymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2011',
+                                        response_type='KmsV2KeysAsymPost201Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -163,7 +163,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param DeleteBulkP12KeysRequest delete_bulk_p12_keys_request: (required)
-        :return: InlineResponse2003
+        :return: KmsV2KeysAsymDeletesPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -189,7 +189,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param DeleteBulkP12KeysRequest delete_bulk_p12_keys_request: (required)
-        :return: InlineResponse2003
+        :return: KmsV2KeysAsymDeletesPost200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -246,7 +246,7 @@ class AsymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2003',
+                                        response_type='KmsV2KeysAsymDeletesPost200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -269,7 +269,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str key_id: Key ID.  (required)
-        :return: InlineResponse2002
+        :return: KmsV2KeysAsymGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -295,7 +295,7 @@ class AsymmetricKeyManagementApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str key_id: Key ID.  (required)
-        :return: InlineResponse2002
+        :return: KmsV2KeysAsymGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -352,7 +352,7 @@ class AsymmetricKeyManagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2002',
+                                        response_type='KmsV2KeysAsymGet200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
