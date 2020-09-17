@@ -127,7 +127,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_category_code(self):
         """
         Gets the response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :return: The response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :rtype: str
@@ -138,13 +138,13 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_category_code(self, response_category_code):
         """
         Sets the response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :param response_category_code: The response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_category_code is not None and len(response_category_code) > 32:
-            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `32`")
+        if response_category_code is not None and len(response_category_code) > 36:
+            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `36`")
 
         self._response_category_code = response_category_code
 

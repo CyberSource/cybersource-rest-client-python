@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **create_v2_shared_secret_keys**
-> InlineResponse201 create_v2_shared_secret_keys(create_shared_secret_keys_request)
+> KmsV2KeysSymPost201Response create_v2_shared_secret_keys(create_shared_secret_keys_request)
 
 Create Shared-Secret Keys
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**KmsV2KeysSymPost201Response**](KmsV2KeysSymPost201Response.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_bulk_symmetric_keys**
-> InlineResponse2001 delete_bulk_symmetric_keys(delete_bulk_symmetric_keys_request)
+> KmsV2KeysSymDeletesPost200Response delete_bulk_symmetric_keys(delete_bulk_symmetric_keys_request)
 
 Delete one or more Symmetric keys
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**KmsV2KeysSymDeletesPost200Response**](KmsV2KeysSymDeletesPost200Response.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_key_details**
-> InlineResponse200 get_key_details(key_id)
+> KmsV2KeysSymGet200Response get_key_details(key_id)
 
 Retrieves shared secret key details
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**KmsV2KeysSymGet200Response**](KmsV2KeysSymGet200Response.md)
 
 ### Authorization
 
