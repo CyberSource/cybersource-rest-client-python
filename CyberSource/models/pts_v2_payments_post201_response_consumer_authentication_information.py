@@ -557,8 +557,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_error_code: The directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_error_code is not None and len(directory_server_error_code) > 3:
-            raise ValueError("Invalid value for `directory_server_error_code`, length must be less than or equal to `3`")
 
         self._directory_server_error_code = directory_server_error_code
 

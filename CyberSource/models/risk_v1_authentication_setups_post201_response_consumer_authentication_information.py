@@ -78,8 +78,6 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :param access_token: The access_token of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if access_token is not None and len(access_token) > 2048:
-            raise ValueError("Invalid value for `access_token`, length must be less than or equal to `2048`")
 
         self._access_token = access_token
 
