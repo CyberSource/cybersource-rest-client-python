@@ -172,8 +172,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param response_access_token: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if response_access_token is not None and len(response_access_token) > 2048:
-            raise ValueError("Invalid value for `response_access_token`, length must be less than or equal to `2048`")
 
         self._response_access_token = response_access_token
 
