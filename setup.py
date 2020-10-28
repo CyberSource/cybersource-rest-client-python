@@ -1,5 +1,6 @@
 # coding: utf-8
 
+import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
@@ -19,14 +20,16 @@ setup(
     url="https://github.com/CyberSource/cybersource-rest-client-python",
     keywords=["Payments API", "CyberSource"],
     install_requires=[
-        "certifi>=14.05.14",
-        "pycryptodome>=3.8.2",
-        "PyJWT>=1.6.4",
-        "pyOpenSSL>=18.0.0",
-        "python_dateutil>=2.5.3",
-        "setuptools>=21.0.0",
-        "six>=1.10",
-        "urllib3>=1.15.1",
+        "certifi",
+        "pycryptodome",
+        "PyJWT",
+        "pyOpenSSL==18.0.0",
+        "DateTime",
+        "setuptools",
+        "six",
+        "urllib3",
+        "crypto",
+        "cryptography==2.6",
     ],
     packages=find_packages(),
     include_package_data=True,
