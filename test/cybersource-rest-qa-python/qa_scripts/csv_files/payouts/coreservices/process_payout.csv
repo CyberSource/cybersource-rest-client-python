@@ -1,0 +1,3 @@
+testCaseId,cleintRefInfoCode,businessAppId,amount,message
+CPPay_01,33557799,FD,100.00,Success
+CPPay_02,67859,MD,DGH25,Fails due to invalid amount
