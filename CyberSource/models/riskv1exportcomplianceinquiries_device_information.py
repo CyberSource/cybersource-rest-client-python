@@ -73,8 +73,8 @@ class Riskv1exportcomplianceinquiriesDeviceInformation(object):
         :param ip_address: The ip_address of this Riskv1exportcomplianceinquiriesDeviceInformation.
         :type: str
         """
-        if ip_address is not None and len(ip_address) > 48:
-            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `48`")
+        if ip_address is not None and len(ip_address) > 45:
+            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `45`")
 
         self._ip_address = ip_address
 

@@ -37,7 +37,8 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'enable_reminders': 'bool',
         'header_style': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle',
         'delivery_language': 'str',
-        'default_currency_code': 'str'
+        'default_currency_code': 'str',
+        'payer_authentication3_ds_version': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'enable_reminders': 'enableReminders',
         'header_style': 'headerStyle',
         'delivery_language': 'deliveryLanguage',
-        'default_currency_code': 'defaultCurrencyCode'
+        'default_currency_code': 'defaultCurrencyCode',
+        'payer_authentication3_ds_version': 'payerAuthentication3DSVersion'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=None):
         """
         InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         self._header_style = None
         self._delivery_language = None
         self._default_currency_code = None
+        self._payer_authentication3_ds_version = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -77,6 +80,8 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
           self.delivery_language = delivery_language
         if default_currency_code is not None:
           self.default_currency_code = default_currency_code
+        if payer_authentication3_ds_version is not None:
+          self.payer_authentication3_ds_version = payer_authentication3_ds_version
 
     @property
     def merchant_logo(self):
@@ -246,6 +251,31 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
             raise ValueError("Invalid value for `default_currency_code`, length must be less than or equal to `3`")
 
         self._default_currency_code = default_currency_code
+
+    @property
+    def payer_authentication3_ds_version(self):
+        """
+        Gets the payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        The 3D Secure payer authentication version or status for a merchant's invoice payments. Possible values are: - `1` - `2` - `None` - `Disabled` 
+
+        :return: The payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: str
+        """
+        return self._payer_authentication3_ds_version
+
+    @payer_authentication3_ds_version.setter
+    def payer_authentication3_ds_version(self, payer_authentication3_ds_version):
+        """
+        Sets the payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        The 3D Secure payer authentication version or status for a merchant's invoice payments. Possible values are: - `1` - `2` - `None` - `Disabled` 
+
+        :param payer_authentication3_ds_version: The payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: str
+        """
+        if payer_authentication3_ds_version is not None and len(payer_authentication3_ds_version) > 8:
+            raise ValueError("Invalid value for `payer_authentication3_ds_version`, length must be less than or equal to `8`")
+
+        self._payer_authentication3_ds_version = payer_authentication3_ds_version
 
     def to_dict(self):
         """

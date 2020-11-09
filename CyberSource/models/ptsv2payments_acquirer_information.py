@@ -83,8 +83,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param acquirer_bin: The acquirer_bin of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-        if acquirer_bin is not None and len(acquirer_bin) > 6:
-            raise ValueError("Invalid value for `acquirer_bin`, length must be less than or equal to `6`")
 
         self._acquirer_bin = acquirer_bin
 

@@ -34,6 +34,7 @@ class PostPaymentInstrumentRequest(object):
         'links': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks',
         'id': 'str',
         'object': 'str',
+        'default': 'bool',
         'state': 'str',
         'bank_account': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount',
         'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
@@ -50,6 +51,7 @@ class PostPaymentInstrumentRequest(object):
         'links': '_links',
         'id': 'id',
         'object': 'object',
+        'default': 'default',
         'state': 'state',
         'bank_account': 'bankAccount',
         'card': 'card',
@@ -62,7 +64,7 @@ class PostPaymentInstrumentRequest(object):
         'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, instrument_identifier=None, metadata=None, embedded=None):
+    def __init__(self, links=None, id=None, object=None, default=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, instrument_identifier=None, metadata=None, embedded=None):
         """
         PostPaymentInstrumentRequest - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class PostPaymentInstrumentRequest(object):
         self._links = None
         self._id = None
         self._object = None
+        self._default = None
         self._state = None
         self._bank_account = None
         self._card = None
@@ -87,6 +90,8 @@ class PostPaymentInstrumentRequest(object):
           self.id = id
         if object is not None:
           self.object = object
+        if default is not None:
+          self.default = default
         if state is not None:
           self.state = state
         if bank_account is not None:
@@ -178,6 +183,29 @@ class PostPaymentInstrumentRequest(object):
         """
 
         self._object = object
+
+    @property
+    def default(self):
+        """
+        Gets the default of this PostPaymentInstrumentRequest.
+        Flag that indicates whether customer payment instrument is the dafault. Valid values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
+
+        :return: The default of this PostPaymentInstrumentRequest.
+        :rtype: bool
+        """
+        return self._default
+
+    @default.setter
+    def default(self, default):
+        """
+        Sets the default of this PostPaymentInstrumentRequest.
+        Flag that indicates whether customer payment instrument is the dafault. Valid values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
+
+        :param default: The default of this PostPaymentInstrumentRequest.
+        :type: bool
+        """
+
+        self._default = default
 
     @property
     def state(self):

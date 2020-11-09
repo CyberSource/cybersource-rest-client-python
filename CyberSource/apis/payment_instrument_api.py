@@ -408,6 +408,7 @@ class PaymentInstrumentApi(object):
     def post_payment_instrument(self, post_payment_instrument_request, **kwargs):
         """
         Create a Payment Instrument
+        Include an existing TMS Instrument Identifier id in the request body. * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -434,6 +435,7 @@ class PaymentInstrumentApi(object):
     def post_payment_instrument_with_http_info(self, post_payment_instrument_request, **kwargs):
         """
         Create a Payment Instrument
+        Include an existing TMS Instrument Identifier id in the request body. * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

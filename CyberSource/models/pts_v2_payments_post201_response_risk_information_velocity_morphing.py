@@ -110,7 +110,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
     def information_code(self):
         """
         Gets the information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
-        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** >  
 
         :return: The information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :rtype: str
@@ -121,7 +121,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
     def information_code(self, information_code):
         """
         Sets the information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
-        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Identifier that CyberSource assigned to the velocity rule specified by the number #.  For all possible values, see the `decision_velocity_morphing_#_info_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** >  
 
         :param information_code: The information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :type: str

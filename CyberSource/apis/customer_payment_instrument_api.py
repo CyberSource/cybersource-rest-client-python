@@ -571,6 +571,7 @@ class CustomerPaymentInstrumentApi(object):
     def post_customer_payment_instrument(self, customer_token_id, post_customer_payment_instrument_request, **kwargs):
         """
         Create a Customer Payment Instrument
+        Include an existing TMS Customer & Instrument Identifier token id in the request. * A Customer token can be created by calling: **POST */tms/v2/customers*** * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -598,6 +599,7 @@ class CustomerPaymentInstrumentApi(object):
     def post_customer_payment_instrument_with_http_info(self, customer_token_id, post_customer_payment_instrument_request, **kwargs):
         """
         Create a Customer Payment Instrument
+        Include an existing TMS Customer & Instrument Identifier token id in the request. * A Customer token can be created by calling: **POST */tms/v2/customers*** * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -329,7 +329,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
     def directory_server_error_code(self):
         """
         Gets the directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :return: The directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -340,7 +340,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
     def directory_server_error_code(self, directory_server_error_code):
         """
         Sets the directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :param directory_server_error_code: The directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str

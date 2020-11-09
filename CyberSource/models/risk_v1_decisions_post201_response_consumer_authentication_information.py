@@ -227,7 +227,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     def access_token(self):
         """
         Gets the access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
 
         :return: The access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -238,7 +238,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     def access_token(self, access_token):
         """
         Sets the access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
 
         :param access_token: The access_token of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
@@ -544,7 +544,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     def directory_server_error_code(self):
         """
         Gets the directory_server_error_code of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :return: The directory_server_error_code of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -555,7 +555,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     def directory_server_error_code(self, directory_server_error_code):
         """
         Sets the directory_server_error_code of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :param directory_server_error_code: The directory_server_error_code of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str

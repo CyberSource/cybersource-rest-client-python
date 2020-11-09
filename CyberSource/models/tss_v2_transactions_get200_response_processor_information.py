@@ -32,6 +32,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     """
     swagger_types = {
         'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor',
+        'multi_processor_routing': 'list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
         'response_id': 'str',
@@ -48,6 +49,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
 
     attribute_map = {
         'processor': 'processor',
+        'multi_processor_routing': 'multiProcessorRouting',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
         'response_id': 'responseId',
@@ -62,12 +64,13 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'response_code_source': 'responseCodeSource'
     }
 
-    def __init__(self, processor=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._processor = None
+        self._multi_processor_routing = None
         self._transaction_id = None
         self._network_transaction_id = None
         self._response_id = None
@@ -83,6 +86,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
 
         if processor is not None:
           self.processor = processor
+        if multi_processor_routing is not None:
+          self.multi_processor_routing = multi_processor_routing
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
@@ -128,6 +133,29 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._processor = processor
+
+    @property
+    def multi_processor_routing(self):
+        """
+        Gets the multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        An array of object that contains the list of acquirer response codes & reasons if a transaction is routed to multiple acquirers.
+
+        :return: The multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]
+        """
+        return self._multi_processor_routing
+
+    @multi_processor_routing.setter
+    def multi_processor_routing(self, multi_processor_routing):
+        """
+        Sets the multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        An array of object that contains the list of acquirer response codes & reasons if a transaction is routed to multiple acquirers.
+
+        :param multi_processor_routing: The multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]
+        """
+
+        self._multi_processor_routing = multi_processor_routing
 
     @property
     def transaction_id(self):

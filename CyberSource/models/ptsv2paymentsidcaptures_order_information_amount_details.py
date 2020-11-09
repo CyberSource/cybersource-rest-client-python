@@ -247,7 +247,7 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
     def gratuity_amount(self):
         """
         Gets the gratuity_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  #### Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants. Allowed only when industryDatatype=restaurant. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet when card is present. 
 
         :return: The gratuity_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
         :rtype: str
@@ -258,7 +258,7 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
     def gratuity_amount(self, gratuity_amount):
         """
         Sets the gratuity_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  #### Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants. Allowed only when industryDatatype=restaurant. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet when card is present. 
 
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
         :type: str
