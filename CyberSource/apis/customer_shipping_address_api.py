@@ -571,6 +571,7 @@ class CustomerShippingAddressApi(object):
     def post_customer_shipping_address(self, customer_token_id, post_customer_shipping_address_request, **kwargs):
         """
         Create a Customer Shipping Address
+        Include an existing TMS Customer token id in the request URI. * A Customer token can be created by calling: **POST */tms/v2/customers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -598,6 +599,7 @@ class CustomerShippingAddressApi(object):
     def post_customer_shipping_address_with_http_info(self, customer_token_id, post_customer_shipping_address_request, **kwargs):
         """
         Create a Customer Shipping Address
+        Include an existing TMS Customer token id in the request URI. * A Customer token can be created by calling: **POST */tms/v2/customers*** 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

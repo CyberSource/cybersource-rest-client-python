@@ -62,7 +62,7 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
     def access_token(self):
         """
         Gets the access_token of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
-        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
 
         :return: The access_token of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
     def access_token(self, access_token):
         """
         Sets the access_token of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
-        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. 
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
 
         :param access_token: The access_token of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :type: str

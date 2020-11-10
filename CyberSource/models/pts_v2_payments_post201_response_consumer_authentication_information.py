@@ -541,7 +541,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def directory_server_error_code(self):
         """
         Gets the directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :return: The directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -552,7 +552,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def directory_server_error_code(self, directory_server_error_code):
         """
         Sets the directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        The directory server error code indicating a problem with this transaction. 
+        The directory server error code indicating a problem with this transaction. Note - Max Length of this field is typically 3 characters. 
 
         :param directory_server_error_code: The directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str

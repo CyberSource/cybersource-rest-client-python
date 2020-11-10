@@ -162,6 +162,8 @@ No authorization required
 
 Create a Payment Instrument
 
+Include an existing TMS Instrument Identifier id in the request body. * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
+
 ### Example 
 ```python
 from __future__ import print_function

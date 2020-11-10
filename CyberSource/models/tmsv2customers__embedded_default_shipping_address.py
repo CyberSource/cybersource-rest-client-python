@@ -33,6 +33,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     swagger_types = {
         'links': 'Tmsv2customersEmbeddedDefaultShippingAddressLinks',
         'id': 'str',
+        'default': 'bool',
         'ship_to': 'Tmsv2customersEmbeddedDefaultShippingAddressShipTo',
         'metadata': 'Tmsv2customersEmbeddedDefaultShippingAddressMetadata'
     }
@@ -40,17 +41,19 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     attribute_map = {
         'links': '_links',
         'id': 'id',
+        'default': 'default',
         'ship_to': 'shipTo',
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, id=None, ship_to=None, metadata=None):
+    def __init__(self, links=None, id=None, default=None, ship_to=None, metadata=None):
         """
         Tmsv2customersEmbeddedDefaultShippingAddress - a model defined in Swagger
         """
 
         self._links = None
         self._id = None
+        self._default = None
         self._ship_to = None
         self._metadata = None
 
@@ -58,6 +61,8 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
           self.links = links
         if id is not None:
           self.id = id
+        if default is not None:
+          self.default = default
         if ship_to is not None:
           self.ship_to = ship_to
         if metadata is not None:
@@ -110,6 +115,29 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
             raise ValueError("Invalid value for `id`, length must be greater than or equal to `1`")
 
         self._id = id
+
+    @property
+    def default(self):
+        """
+        Gets the default of this Tmsv2customersEmbeddedDefaultShippingAddress.
+        Flag that indicates whether customer shipping address is the dafault. Valid values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
+
+        :return: The default of this Tmsv2customersEmbeddedDefaultShippingAddress.
+        :rtype: bool
+        """
+        return self._default
+
+    @default.setter
+    def default(self, default):
+        """
+        Sets the default of this Tmsv2customersEmbeddedDefaultShippingAddress.
+        Flag that indicates whether customer shipping address is the dafault. Valid values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
+
+        :param default: The default of this Tmsv2customersEmbeddedDefaultShippingAddress.
+        :type: bool
+        """
+
+        self._default = default
 
     @property
     def ship_to(self):

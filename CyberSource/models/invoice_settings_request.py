@@ -31,7 +31,7 @@ class InvoiceSettingsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'invoice_settings_information': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation'
+        'invoice_settings_information': 'Invoicingv2invoiceSettingsInvoiceSettingsInformation'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class InvoiceSettingsRequest(object):
         Gets the invoice_settings_information of this InvoiceSettingsRequest.
 
         :return: The invoice_settings_information of this InvoiceSettingsRequest.
-        :rtype: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation
+        :rtype: Invoicingv2invoiceSettingsInvoiceSettingsInformation
         """
         return self._invoice_settings_information
 
@@ -64,7 +64,7 @@ class InvoiceSettingsRequest(object):
         Sets the invoice_settings_information of this InvoiceSettingsRequest.
 
         :param invoice_settings_information: The invoice_settings_information of this InvoiceSettingsRequest.
-        :type: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation
+        :type: Invoicingv2invoiceSettingsInvoiceSettingsInformation
         """
 
         self._invoice_settings_information = invoice_settings_information

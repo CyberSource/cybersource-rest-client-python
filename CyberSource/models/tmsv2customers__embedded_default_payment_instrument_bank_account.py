@@ -68,8 +68,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount(object):
         :param type: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount.
         :type: str
         """
-        # if type is not None and len(type) > 1:
-            # raise ValueError("Invalid value for `type`, length must be less than or equal to `1`")
+        if type is not None and len(type) > 18:
+            raise ValueError("Invalid value for `type`, length must be less than or equal to `18`")
 
         self._type = type
 
