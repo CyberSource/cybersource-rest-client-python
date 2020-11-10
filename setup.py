@@ -29,7 +29,7 @@ setup(
         "six",
         "urllib3",
         "crypto",
-        "cryptography==2.6",
+        "cryptography==3.2",
     ],
     packages=find_packages(),
     include_package_data=True,

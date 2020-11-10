@@ -7,4 +7,4 @@ setuptools
 six
 urllib3
 crypto
-cryptography==2.6
+cryptography==3.2
