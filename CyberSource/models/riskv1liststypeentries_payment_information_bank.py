@@ -83,8 +83,6 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param account_number: The account_number of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
-        if account_number is not None and len(account_number) > 30:
-            raise ValueError("Invalid value for `account_number`, length must be less than or equal to `30`")
 
         self._account_number = account_number
 
@@ -108,8 +106,6 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param code: The code of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
-        if code is not None and len(code) > 15:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `15`")
 
         self._code = code
 
@@ -133,8 +129,6 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param country: The country of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -158,8 +152,6 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param iban: The iban of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
-        if iban is not None and len(iban) > 30:
-            raise ValueError("Invalid value for `iban`, length must be less than or equal to `30`")
 
         self._iban = iban
 

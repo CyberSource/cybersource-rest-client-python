@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         :param xid: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str
         """
-        if xid is not None and len(xid) > 40:
-            raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
 
@@ -126,8 +124,6 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         :param eci_raw: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str
         """
-        if eci_raw is not None and len(eci_raw) > 2:
-            raise ValueError("Invalid value for `eci_raw`, length must be less than or equal to `2`")
 
         self._eci_raw = eci_raw
 

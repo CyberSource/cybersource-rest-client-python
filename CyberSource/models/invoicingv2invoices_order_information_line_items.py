@@ -83,8 +83,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -108,8 +106,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param product_name: The product_name of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -160,8 +156,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 

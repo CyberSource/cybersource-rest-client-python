@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
         :param settlement_method: The settlement_method of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str
         """
-        if settlement_method is not None and len(settlement_method) > 1:
-            raise ValueError("Invalid value for `settlement_method`, length must be less than or equal to `1`")
 
         self._settlement_method = settlement_method
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
         :param fraud_screening_level: The fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str
         """
-        if fraud_screening_level is not None and len(fraud_screening_level) > 1:
-            raise ValueError("Invalid value for `fraud_screening_level`, length must be less than or equal to `1`")
 
         self._fraud_screening_level = fraud_screening_level
 

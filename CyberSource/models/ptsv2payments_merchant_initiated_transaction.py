@@ -78,8 +78,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :param reason: The reason of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
-        if reason is not None and len(reason) > 1:
-            raise ValueError("Invalid value for `reason`, length must be less than or equal to `1`")
 
         self._reason = reason
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :param previous_transaction_id: The previous_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
-        if previous_transaction_id is not None and len(previous_transaction_id) > 15:
-            raise ValueError("Invalid value for `previous_transaction_id`, length must be less than or equal to `15`")
 
         self._previous_transaction_id = previous_transaction_id
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :param original_authorized_amount: The original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
-        if original_authorized_amount is not None and len(original_authorized_amount) > 61:
-            raise ValueError("Invalid value for `original_authorized_amount`, length must be less than or equal to `61`")
 
         self._original_authorized_amount = original_authorized_amount
 

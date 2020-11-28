@@ -96,8 +96,6 @@ class Ptsv2paymentsDeviceInformationRawData(object):
         :param provider: The provider of this Ptsv2paymentsDeviceInformationRawData.
         :type: str
         """
-        if provider is not None and len(provider) > 32:
-            raise ValueError("Invalid value for `provider`, length must be less than or equal to `32`")
 
         self._provider = provider
 

@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy(obj
         :param administrative_area: The administrative_area of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 20:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `20`")
 
         self._administrative_area = administrative_area
 

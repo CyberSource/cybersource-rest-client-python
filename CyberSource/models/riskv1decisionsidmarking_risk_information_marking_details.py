@@ -83,8 +83,6 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :param notes: The notes of this Riskv1decisionsidmarkingRiskInformationMarkingDetails.
         :type: str
         """
-        if notes is not None and len(notes) > 120:
-            raise ValueError("Invalid value for `notes`, length must be less than or equal to `120`")
 
         self._notes = notes
 
@@ -108,8 +106,6 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :param reason: The reason of this Riskv1decisionsidmarkingRiskInformationMarkingDetails.
         :type: str
         """
-        if reason is not None and len(reason) > 25:
-            raise ValueError("Invalid value for `reason`, length must be less than or equal to `25`")
 
         self._reason = reason
 

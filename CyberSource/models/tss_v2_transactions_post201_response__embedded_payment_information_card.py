@@ -101,8 +101,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :param prefix: The prefix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :type: str
         """
-        if prefix is not None and len(prefix) > 6:
-            raise ValueError("Invalid value for `prefix`, length must be less than or equal to `6`")
 
         self._prefix = prefix
 

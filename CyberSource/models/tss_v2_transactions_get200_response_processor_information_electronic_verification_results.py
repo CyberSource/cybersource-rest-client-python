@@ -113,8 +113,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param email: The email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if email is not None and len(email) > 1:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `1`")
 
         self._email = email
 
@@ -138,8 +136,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param email_raw: The email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if email_raw is not None and len(email_raw) > 1:
-            raise ValueError("Invalid value for `email_raw`, length must be less than or equal to `1`")
 
         self._email_raw = email_raw
 
@@ -163,8 +159,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -188,8 +182,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param name_raw: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if name_raw is not None and len(name_raw) > 30:
-            raise ValueError("Invalid value for `name_raw`, length must be less than or equal to `30`")
 
         self._name_raw = name_raw
 
@@ -213,8 +205,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 1:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `1`")
 
         self._phone_number = phone_number
 
@@ -238,8 +228,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param phone_number_raw: The phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if phone_number_raw is not None and len(phone_number_raw) > 1:
-            raise ValueError("Invalid value for `phone_number_raw`, length must be less than or equal to `1`")
 
         self._phone_number_raw = phone_number_raw
 
@@ -263,8 +251,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param street: The street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if street is not None and len(street) > 1:
-            raise ValueError("Invalid value for `street`, length must be less than or equal to `1`")
 
         self._street = street
 
@@ -288,8 +274,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param street_raw: The street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if street_raw is not None and len(street_raw) > 1:
-            raise ValueError("Invalid value for `street_raw`, length must be less than or equal to `1`")
 
         self._street_raw = street_raw
 
@@ -313,8 +297,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param postal_code: The postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 1:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `1`")
 
         self._postal_code = postal_code
 
@@ -338,8 +320,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param postal_code_raw: The postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if postal_code_raw is not None and len(postal_code_raw) > 1:
-            raise ValueError("Invalid value for `postal_code_raw`, length must be less than or equal to `1`")
 
         self._postal_code_raw = postal_code_raw
 

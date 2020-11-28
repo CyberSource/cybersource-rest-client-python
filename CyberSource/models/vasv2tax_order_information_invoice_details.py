@@ -68,8 +68,6 @@ class Vasv2taxOrderInformationInvoiceDetails(object):
         :param invoice_date: The invoice_date of this Vasv2taxOrderInformationInvoiceDetails.
         :type: str
         """
-        if invoice_date is not None and len(invoice_date) > 8:
-            raise ValueError("Invalid value for `invoice_date`, length must be less than or equal to `8`")
 
         self._invoice_date = invoice_date
 

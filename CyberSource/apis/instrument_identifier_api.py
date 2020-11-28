@@ -548,7 +548,7 @@ class InstrumentIdentifierApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
+        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
@@ -574,7 +574,7 @@ class InstrumentIdentifierApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Please specify either a Card, Bank Account or Enrollable Card (required)
+        :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
@@ -640,6 +640,129 @@ class InstrumentIdentifierApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def post_instrument_identifier_enrollment(self, instrument_identifier_token_id, post_instrument_identifier_enrollment_request, **kwargs):
+        """
+        Enroll an Instrument Identifier for Network Tokenization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_instrument_identifier_enrollment(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param PostInstrumentIdentifierEnrollmentRequest post_instrument_identifier_enrollment_request: Specify Enrollable Card details (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_instrument_identifier_enrollment_with_http_info(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, **kwargs)
+        else:
+            (data) = self.post_instrument_identifier_enrollment_with_http_info(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, **kwargs)
+            return data
+
+    def post_instrument_identifier_enrollment_with_http_info(self, instrument_identifier_token_id, post_instrument_identifier_enrollment_request, **kwargs):
+        """
+        Enroll an Instrument Identifier for Network Tokenization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_instrument_identifier_enrollment_with_http_info(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_token_id: The TokenId of a Instrument Identifier. (required)
+        :param PostInstrumentIdentifierEnrollmentRequest post_instrument_identifier_enrollment_request: Specify Enrollable Card details (required)
+        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['instrument_identifier_token_id', 'post_instrument_identifier_enrollment_request', 'profile_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_instrument_identifier_enrollment" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'instrument_identifier_token_id' is set
+        if ('instrument_identifier_token_id' not in params) or (params['instrument_identifier_token_id'] is None):
+            raise ValueError("Missing the required parameter `instrument_identifier_token_id` when calling `post_instrument_identifier_enrollment`")
+        # verify the required parameter 'post_instrument_identifier_enrollment_request' is set
+        if ('post_instrument_identifier_enrollment_request' not in params) or (params['post_instrument_identifier_enrollment_request'] is None):
+            raise ValueError("Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
+
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) > 32:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `32`")
+        if 'instrument_identifier_token_id' in params and len(params['instrument_identifier_token_id']) < 12:
+            raise ValueError("Invalid value for parameter `instrument_identifier_token_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `12`")
+        if 'profile_id' in params and len(params['profile_id']) > 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `36`")
+        if 'profile_id' in params and len(params['profile_id']) < 36:
+            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `36`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'instrument_identifier_token_id' in params:
+            path_params['instrumentIdentifierTokenId'] = params['instrument_identifier_token_id']
+
+        query_params = []
+
+        header_params = {}
+        if 'profile_id' in params:
+            header_params['profile-id'] = params['profile_id']
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'post_instrument_identifier_enrollment_request' in params:
+            body_params = params['post_instrument_identifier_enrollment_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}/enrollment', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

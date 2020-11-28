@@ -113,8 +113,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param number: The number of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if number is not None and len(number) > 20:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `20`")
 
         self._number = number
 
@@ -138,8 +136,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -163,8 +159,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -211,8 +205,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param cryptogram: The cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if cryptogram is not None and len(cryptogram) > 40:
-            raise ValueError("Invalid value for `cryptogram`, length must be less than or equal to `40`")
 
         self._cryptogram = cryptogram
 
@@ -236,8 +228,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param requestor_id: The requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 11:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `11`")
 
         self._requestor_id = requestor_id
 
@@ -261,8 +251,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param transaction_type: The transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if transaction_type is not None and len(transaction_type) > 1:
-            raise ValueError("Invalid value for `transaction_type`, length must be less than or equal to `1`")
 
         self._transaction_type = transaction_type
 
@@ -286,8 +274,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param assurance_level: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if assurance_level is not None and len(assurance_level) > 2:
-            raise ValueError("Invalid value for `assurance_level`, length must be less than or equal to `2`")
 
         self._assurance_level = assurance_level
 
@@ -311,8 +297,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param storage_method: The storage_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if storage_method is not None and len(storage_method) > 3:
-            raise ValueError("Invalid value for `storage_method`, length must be less than or equal to `3`")
 
         self._storage_method = storage_method
 
@@ -336,8 +320,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-        if security_code is not None and len(security_code) > 4:
-            raise ValueError("Invalid value for `security_code`, length must be less than or equal to `4`")
 
         self._security_code = security_code
 

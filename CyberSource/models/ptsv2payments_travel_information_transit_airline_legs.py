@@ -163,8 +163,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param carrier_code: The carrier_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if carrier_code is not None and len(carrier_code) > 4:
-            raise ValueError("Invalid value for `carrier_code`, length must be less than or equal to `4`")
 
         self._carrier_code = carrier_code
 
@@ -188,8 +186,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param flight_number: The flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if flight_number is not None and len(flight_number) > 6:
-            raise ValueError("Invalid value for `flight_number`, length must be less than or equal to `6`")
 
         self._flight_number = flight_number
 
@@ -213,8 +209,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param originating_airport_code: The originating_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if originating_airport_code is not None and len(originating_airport_code) > 5:
-            raise ValueError("Invalid value for `originating_airport_code`, length must be less than or equal to `5`")
 
         self._originating_airport_code = originating_airport_code
 
@@ -238,8 +232,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param _class: The _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if _class is not None and len(_class) > 3:
-            raise ValueError("Invalid value for `_class`, length must be less than or equal to `3`")
 
         self.__class = _class
 
@@ -309,8 +301,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param destination_airport_code: The destination_airport_code of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if destination_airport_code is not None and len(destination_airport_code) > 3:
-            raise ValueError("Invalid value for `destination_airport_code`, length must be less than or equal to `3`")
 
         self._destination_airport_code = destination_airport_code
 
@@ -334,8 +324,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param fare_basis: The fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if fare_basis is not None and len(fare_basis) > 15:
-            raise ValueError("Invalid value for `fare_basis`, length must be less than or equal to `15`")
 
         self._fare_basis = fare_basis
 
@@ -359,8 +347,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param depart_tax_amount: The depart_tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if depart_tax_amount is not None and len(depart_tax_amount) > 12:
-            raise ValueError("Invalid value for `depart_tax_amount`, length must be less than or equal to `12`")
 
         self._depart_tax_amount = depart_tax_amount
 
@@ -384,8 +370,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param conjunction_ticket: The conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if conjunction_ticket is not None and len(conjunction_ticket) > 25:
-            raise ValueError("Invalid value for `conjunction_ticket`, length must be less than or equal to `25`")
 
         self._conjunction_ticket = conjunction_ticket
 
@@ -409,8 +393,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param exchange_ticket_number: The exchange_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if exchange_ticket_number is not None and len(exchange_ticket_number) > 25:
-            raise ValueError("Invalid value for `exchange_ticket_number`, length must be less than or equal to `25`")
 
         self._exchange_ticket_number = exchange_ticket_number
 
@@ -434,8 +416,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param coupon_number: The coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if coupon_number is not None and len(coupon_number) > 1:
-            raise ValueError("Invalid value for `coupon_number`, length must be less than or equal to `1`")
 
         self._coupon_number = coupon_number
 
@@ -482,8 +462,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param departure_time_meridian: The departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if departure_time_meridian is not None and len(departure_time_meridian) > 1:
-            raise ValueError("Invalid value for `departure_time_meridian`, length must be less than or equal to `1`")
 
         self._departure_time_meridian = departure_time_meridian
 
@@ -530,8 +508,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param arrival_time_meridian: The arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if arrival_time_meridian is not None and len(arrival_time_meridian) > 1:
-            raise ValueError("Invalid value for `arrival_time_meridian`, length must be less than or equal to `1`")
 
         self._arrival_time_meridian = arrival_time_meridian
 
@@ -555,8 +531,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param endorsements_restrictions: The endorsements_restrictions of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if endorsements_restrictions is not None and len(endorsements_restrictions) > 20:
-            raise ValueError("Invalid value for `endorsements_restrictions`, length must be less than or equal to `20`")
 
         self._endorsements_restrictions = endorsements_restrictions
 
@@ -580,8 +554,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param total_fare_amount: The total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if total_fare_amount is not None and len(total_fare_amount) > 15:
-            raise ValueError("Invalid value for `total_fare_amount`, length must be less than or equal to `15`")
 
         self._total_fare_amount = total_fare_amount
 
@@ -605,8 +577,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param fee_amount: The fee_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if fee_amount is not None and len(fee_amount) > 12:
-            raise ValueError("Invalid value for `fee_amount`, length must be less than or equal to `12`")
 
         self._fee_amount = fee_amount
 
@@ -630,8 +600,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 12:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `12`")
 
         self._tax_amount = tax_amount
 

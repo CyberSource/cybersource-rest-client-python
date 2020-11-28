@@ -188,8 +188,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_id: The terminal_id of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 8:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `8`")
 
         self._terminal_id = terminal_id
 
@@ -213,8 +211,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_serial_number: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if terminal_serial_number is not None and len(terminal_serial_number) > 32:
-            raise ValueError("Invalid value for `terminal_serial_number`, length must be less than or equal to `32`")
 
         self._terminal_serial_number = terminal_serial_number
 
@@ -238,8 +234,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param lane_number: The lane_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if lane_number is not None and len(lane_number) > 8:
-            raise ValueError("Invalid value for `lane_number`, length must be less than or equal to `8`")
 
         self._lane_number = lane_number
 
@@ -290,8 +284,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param entry_mode: The entry_mode of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if entry_mode is not None and len(entry_mode) > 11:
-            raise ValueError("Invalid value for `entry_mode`, length must be less than or equal to `11`")
 
         self._entry_mode = entry_mode
 
@@ -369,8 +361,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param operating_environment: The operating_environment of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if operating_environment is not None and len(operating_environment) > 1:
-            raise ValueError("Invalid value for `operating_environment`, length must be less than or equal to `1`")
 
         self._operating_environment = operating_environment
 
@@ -415,8 +405,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param amex_capn_data: The amex_capn_data of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 15:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `15`")
 
         self._amex_capn_data = amex_capn_data
 
@@ -463,8 +451,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param store_and_forward_indicator: The store_and_forward_indicator of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if store_and_forward_indicator is not None and len(store_and_forward_indicator) > 1:
-            raise ValueError("Invalid value for `store_and_forward_indicator`, length must be less than or equal to `1`")
 
         self._store_and_forward_indicator = store_and_forward_indicator
 
@@ -530,8 +516,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_card_capture_capability: The terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if terminal_card_capture_capability is not None and len(terminal_card_capture_capability) > 1:
-            raise ValueError("Invalid value for `terminal_card_capture_capability`, length must be less than or equal to `1`")
 
         self._terminal_card_capture_capability = terminal_card_capture_capability
 
@@ -555,8 +539,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_output_capability: The terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if terminal_output_capability is not None and len(terminal_output_capability) > 1:
-            raise ValueError("Invalid value for `terminal_output_capability`, length must be less than or equal to `1`")
 
         self._terminal_output_capability = terminal_output_capability
 
@@ -603,8 +585,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param device_id: The device_id of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if device_id is not None and len(device_id) > 32:
-            raise ValueError("Invalid value for `device_id`, length must be less than or equal to `32`")
 
         self._device_id = device_id
 
@@ -653,8 +633,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param encrypted_pin: The encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if encrypted_pin is not None and len(encrypted_pin) > 16:
-            raise ValueError("Invalid value for `encrypted_pin`, length must be less than or equal to `16`")
 
         self._encrypted_pin = encrypted_pin
 
@@ -678,8 +656,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param encrypted_key_serial_number: The encrypted_key_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if encrypted_key_serial_number is not None and len(encrypted_key_serial_number) > 20:
-            raise ValueError("Invalid value for `encrypted_key_serial_number`, length must be less than or equal to `20`")
 
         self._encrypted_key_serial_number = encrypted_key_serial_number
 
@@ -703,8 +679,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param partner_sdk_version: The partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if partner_sdk_version is not None and len(partner_sdk_version) > 32:
-            raise ValueError("Invalid value for `partner_sdk_version`, length must be less than or equal to `32`")
 
         self._partner_sdk_version = partner_sdk_version
 
@@ -728,8 +702,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param emv_application_identifier_and_dedicated_file_name: The emv_application_identifier_and_dedicated_file_name of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if emv_application_identifier_and_dedicated_file_name is not None and len(emv_application_identifier_and_dedicated_file_name) > 32:
-            raise ValueError("Invalid value for `emv_application_identifier_and_dedicated_file_name`, length must be less than or equal to `32`")
 
         self._emv_application_identifier_and_dedicated_file_name = emv_application_identifier_and_dedicated_file_name
 
@@ -753,8 +725,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_compliance: The terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if terminal_compliance is not None and len(terminal_compliance) > 2:
-            raise ValueError("Invalid value for `terminal_compliance`, length must be less than or equal to `2`")
 
         self._terminal_compliance = terminal_compliance
 
@@ -778,8 +748,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param is_dedicated_hardware_terminal: The is_dedicated_hardware_terminal of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
-        if is_dedicated_hardware_terminal is not None and len(is_dedicated_hardware_terminal) > 1:
-            raise ValueError("Invalid value for `is_dedicated_hardware_terminal`, length must be less than or equal to `1`")
 
         self._is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
 

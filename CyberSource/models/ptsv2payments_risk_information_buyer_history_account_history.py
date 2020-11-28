@@ -96,8 +96,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory(object):
         :param shipping_address_usage_date: The shipping_address_usage_date of this Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory.
         :type: str
         """
-        if shipping_address_usage_date is not None and len(shipping_address_usage_date) > 10:
-            raise ValueError("Invalid value for `shipping_address_usage_date`, length must be less than or equal to `10`")
 
         self._shipping_address_usage_date = shipping_address_usage_date
 

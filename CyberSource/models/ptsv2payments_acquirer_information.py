@@ -106,8 +106,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param country: The country of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -131,8 +129,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param password: The password of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-        if password is not None and len(password) > 8:
-            raise ValueError("Invalid value for `password`, length must be less than or equal to `8`")
 
         self._password = password
 
@@ -156,8 +152,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param merchant_id: The merchant_id of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-        if merchant_id is not None and len(merchant_id) > 15:
-            raise ValueError("Invalid value for `merchant_id`, length must be less than or equal to `15`")
 
         self._merchant_id = merchant_id
 

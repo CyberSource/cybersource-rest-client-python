@@ -78,8 +78,6 @@ class Ptsv2paymentsidcapturesAggregatorInformation(object):
         :param aggregator_id: The aggregator_id of this Ptsv2paymentsidcapturesAggregatorInformation.
         :type: str
         """
-        if aggregator_id is not None and len(aggregator_id) > 20:
-            raise ValueError("Invalid value for `aggregator_id`, length must be less than or equal to `20`")
 
         self._aggregator_id = aggregator_id
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsidcapturesAggregatorInformation(object):
         :param name: The name of this Ptsv2paymentsidcapturesAggregatorInformation.
         :type: str
         """
-        if name is not None and len(name) > 37:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `37`")
 
         self._name = name
 

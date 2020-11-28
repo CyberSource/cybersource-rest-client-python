@@ -83,8 +83,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param payment_method: The payment_method of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if payment_method is not None and len(payment_method) > 2:
-            raise ValueError("Invalid value for `payment_method`, length must be less than or equal to `2`")
 
         self._payment_method = payment_method
 
@@ -108,8 +106,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param terminal_id: The terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 13:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `13`")
 
         self._terminal_id = terminal_id
 
@@ -133,8 +129,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param business_name: The business_name of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if business_name is not None and len(business_name) > 25:
-            raise ValueError("Invalid value for `business_name`, length must be less than or equal to `25`")
 
         self._business_name = business_name
 
@@ -158,8 +152,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param business_name_katakana: The business_name_katakana of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if business_name_katakana is not None and len(business_name_katakana) > 25:
-            raise ValueError("Invalid value for `business_name_katakana`, length must be less than or equal to `25`")
 
         self._business_name_katakana = business_name_katakana
 

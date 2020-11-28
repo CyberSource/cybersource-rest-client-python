@@ -74,8 +74,6 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
         """
         if currency is None:
             raise ValueError("Invalid value for `currency`, must not be `None`")
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -99,8 +97,6 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Riskv1decisionsOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 

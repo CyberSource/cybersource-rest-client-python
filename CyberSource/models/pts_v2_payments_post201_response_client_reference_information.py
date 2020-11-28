@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
         :param code: The code of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
         :param submit_local_date_time: The submit_local_date_time of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
         :type: str
         """
-        if submit_local_date_time is not None and len(submit_local_date_time) > 14:
-            raise ValueError("Invalid value for `submit_local_date_time`, length must be less than or equal to `14`")
 
         self._submit_local_date_time = submit_local_date_time
 

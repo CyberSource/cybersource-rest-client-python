@@ -107,8 +107,6 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -132,8 +130,6 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -157,8 +153,6 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
         :param number: The number of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
         :type: str
         """
-        if number is not None and len(number) > 20:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `20`")
 
         self._number = number
 

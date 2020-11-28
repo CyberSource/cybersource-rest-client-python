@@ -73,8 +73,6 @@ class InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -98,8 +96,6 @@ class InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

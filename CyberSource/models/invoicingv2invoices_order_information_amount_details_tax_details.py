@@ -101,8 +101,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
         :param amount: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 
@@ -126,8 +124,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
         :param rate: The rate of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if rate is not None and len(rate) > 6:
-            raise ValueError("Invalid value for `rate`, length must be less than or equal to `6`")
 
         self._rate = rate
 

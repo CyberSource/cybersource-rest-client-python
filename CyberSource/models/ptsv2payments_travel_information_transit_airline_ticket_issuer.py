@@ -98,8 +98,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param code: The code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if code is not None and len(code) > 4:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `4`")
 
         self._code = code
 
@@ -123,8 +121,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param name: The name of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if name is not None and len(name) > 20:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `20`")
 
         self._name = name
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param address: The address of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if address is not None and len(address) > 16:
-            raise ValueError("Invalid value for `address`, length must be less than or equal to `16`")
 
         self._address = address
 
@@ -173,8 +167,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param locality: The locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if locality is not None and len(locality) > 18:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `18`")
 
         self._locality = locality
 
@@ -198,8 +190,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 18:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `18`")
 
         self._administrative_area = administrative_area
 
@@ -223,8 +213,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param postal_code: The postal_code of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 15:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `15`")
 
         self._postal_code = postal_code
 
@@ -248,8 +236,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param country: The country of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
-        if country is not None and len(country) > 18:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `18`")
 
         self._country = country
 

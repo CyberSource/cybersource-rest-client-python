@@ -84,8 +84,6 @@ class Riskv1authenticationsetupsPaymentInformationFluidData(object):
         """
         if value is None:
             raise ValueError("Invalid value for `value`, must not be `None`")
-        if value is not None and len(value) > 3072:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `3072`")
 
         self._value = value
 
@@ -132,8 +130,6 @@ class Riskv1authenticationsetupsPaymentInformationFluidData(object):
         :param descriptor: The descriptor of this Riskv1authenticationsetupsPaymentInformationFluidData.
         :type: str
         """
-        if descriptor is not None and len(descriptor) > 128:
-            raise ValueError("Invalid value for `descriptor`, length must be less than or equal to `128`")
 
         self._descriptor = descriptor
 
@@ -157,8 +153,6 @@ class Riskv1authenticationsetupsPaymentInformationFluidData(object):
         :param encoding: The encoding of this Riskv1authenticationsetupsPaymentInformationFluidData.
         :type: str
         """
-        if encoding is not None and len(encoding) > 6:
-            raise ValueError("Invalid value for `encoding`, length must be less than or equal to `6`")
 
         self._encoding = encoding
 

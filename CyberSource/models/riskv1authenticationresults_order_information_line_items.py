@@ -79,8 +79,6 @@ class Riskv1authenticationresultsOrderInformationLineItems(object):
         """
         if unit_price is None:
             raise ValueError("Invalid value for `unit_price`, must not be `None`")
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -131,8 +129,6 @@ class Riskv1authenticationresultsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Riskv1authenticationresultsOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 

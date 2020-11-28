@@ -133,8 +133,6 @@ class TssV2TransactionsPost201Response(object):
         :param search_id: The search_id of this TssV2TransactionsPost201Response.
         :type: str
         """
-        if search_id is not None and len(search_id) > 60:
-            raise ValueError("Invalid value for `search_id`, length must be less than or equal to `60`")
 
         self._search_id = search_id
 

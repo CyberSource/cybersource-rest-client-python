@@ -68,8 +68,6 @@ class PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions(object
         :param settlement_method: The settlement_method of this PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str
         """
-        if settlement_method is not None and len(settlement_method) > 1:
-            raise ValueError("Invalid value for `settlement_method`, length must be less than or equal to `1`")
 
         self._settlement_method = settlement_method
 

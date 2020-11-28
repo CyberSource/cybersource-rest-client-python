@@ -73,10 +73,6 @@ class Ptsv2payoutsSenderInformationAccount(object):
         :param funds_source: The funds_source of this Ptsv2payoutsSenderInformationAccount.
         :type: str
         """
-        if funds_source is not None and len(funds_source) > 2:
-            raise ValueError("Invalid value for `funds_source`, length must be less than or equal to `2`")
-        if funds_source is not None and len(funds_source) < 2:
-            raise ValueError("Invalid value for `funds_source`, length must be greater than or equal to `2`")
 
         self._funds_source = funds_source
 
@@ -100,8 +96,6 @@ class Ptsv2payoutsSenderInformationAccount(object):
         :param number: The number of this Ptsv2payoutsSenderInformationAccount.
         :type: str
         """
-        if number is not None and len(number) > 34:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `34`")
 
         self._number = number
 

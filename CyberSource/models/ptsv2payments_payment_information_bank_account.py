@@ -88,8 +88,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-        if type is not None and len(type) > 1:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `1`")
 
         self._type = type
 
@@ -113,8 +111,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param number: The number of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-        if number is not None and len(number) > 17:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `17`")
 
         self._number = number
 
@@ -138,8 +134,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param encoder_id: The encoder_id of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-        if encoder_id is not None and len(encoder_id) > 3:
-            raise ValueError("Invalid value for `encoder_id`, length must be less than or equal to `3`")
 
         self._encoder_id = encoder_id
 
@@ -163,8 +157,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param check_number: The check_number of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-        if check_number is not None and len(check_number) > 8:
-            raise ValueError("Invalid value for `check_number`, length must be less than or equal to `8`")
 
         self._check_number = check_number
 
@@ -188,8 +180,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param check_image_reference_number: The check_image_reference_number of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-        if check_image_reference_number is not None and len(check_image_reference_number) > 32:
-            raise ValueError("Invalid value for `check_image_reference_number`, length must be less than or equal to `32`")
 
         self._check_image_reference_number = check_image_reference_number
 

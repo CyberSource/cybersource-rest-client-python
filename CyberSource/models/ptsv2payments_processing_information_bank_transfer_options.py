@@ -118,8 +118,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param decline_avs_flags: The decline_avs_flags of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if decline_avs_flags is not None and len(decline_avs_flags) > 15:
-            raise ValueError("Invalid value for `decline_avs_flags`, length must be less than or equal to `15`")
 
         self._decline_avs_flags = decline_avs_flags
 
@@ -143,8 +141,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param sec_code: The sec_code of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if sec_code is not None and len(sec_code) > 3:
-            raise ValueError("Invalid value for `sec_code`, length must be less than or equal to `3`")
 
         self._sec_code = sec_code
 
@@ -168,8 +164,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param terminal_city: The terminal_city of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_city is not None and len(terminal_city) > 4:
-            raise ValueError("Invalid value for `terminal_city`, length must be less than or equal to `4`")
 
         self._terminal_city = terminal_city
 
@@ -193,8 +187,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param terminal_state: The terminal_state of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_state is not None and len(terminal_state) > 2:
-            raise ValueError("Invalid value for `terminal_state`, length must be less than or equal to `2`")
 
         self._terminal_state = terminal_state
 
@@ -218,8 +210,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param effective_date: The effective_date of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if effective_date is not None and len(effective_date) > 8:
-            raise ValueError("Invalid value for `effective_date`, length must be less than or equal to `8`")
 
         self._effective_date = effective_date
 
@@ -243,8 +233,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param partial_payment_id: The partial_payment_id of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if partial_payment_id is not None and len(partial_payment_id) > 25:
-            raise ValueError("Invalid value for `partial_payment_id`, length must be less than or equal to `25`")
 
         self._partial_payment_id = partial_payment_id
 
@@ -268,8 +256,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param customer_memo: The customer_memo of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if customer_memo is not None and len(customer_memo) > 80:
-            raise ValueError("Invalid value for `customer_memo`, length must be less than or equal to `80`")
 
         self._customer_memo = customer_memo
 
@@ -293,8 +279,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param payment_category_code: The payment_category_code of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if payment_category_code is not None and len(payment_category_code) > 1:
-            raise ValueError("Invalid value for `payment_category_code`, length must be less than or equal to `1`")
 
         self._payment_category_code = payment_category_code
 
@@ -318,8 +302,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param settlement_method: The settlement_method of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if settlement_method is not None and len(settlement_method) > 1:
-            raise ValueError("Invalid value for `settlement_method`, length must be less than or equal to `1`")
 
         self._settlement_method = settlement_method
 
@@ -343,8 +325,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param fraud_screening_level: The fraud_screening_level of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if fraud_screening_level is not None and len(fraud_screening_level) > 1:
-            raise ValueError("Invalid value for `fraud_screening_level`, length must be less than or equal to `1`")
 
         self._fraud_screening_level = fraud_screening_level
 
@@ -368,8 +348,6 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param customer_present: The customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if customer_present is not None and len(customer_present) > 1:
-            raise ValueError("Invalid value for `customer_present`, length must be less than or equal to `1`")
 
         self._customer_present = customer_present
 

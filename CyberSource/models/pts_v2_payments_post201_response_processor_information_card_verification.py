@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
         :param result_code: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
         """
-        if result_code is not None and len(result_code) > 1:
-            raise ValueError("Invalid value for `result_code`, length must be less than or equal to `1`")
 
         self._result_code = result_code
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
         :param result_code_raw: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
         """
-        if result_code_raw is not None and len(result_code_raw) > 10:
-            raise ValueError("Invalid value for `result_code_raw`, length must be less than or equal to `10`")
 
         self._result_code_raw = result_code_raw
 

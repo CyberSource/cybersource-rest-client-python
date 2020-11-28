@@ -68,8 +68,6 @@ class Riskv1decisionsConsumerAuthenticationInformationStrongAuthentication(objec
         :param authentication_indicator: The authentication_indicator of this Riskv1decisionsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if authentication_indicator is not None and len(authentication_indicator) > 2:
-            raise ValueError("Invalid value for `authentication_indicator`, length must be less than or equal to `2`")
 
         self._authentication_indicator = authentication_indicator
 

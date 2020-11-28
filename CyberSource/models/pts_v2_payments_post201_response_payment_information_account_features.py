@@ -153,8 +153,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param account_type: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if account_type is not None and len(account_type) > 2:
-            raise ValueError("Invalid value for `account_type`, length must be less than or equal to `2`")
 
         self._account_type = account_type
 
@@ -178,8 +176,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param account_status: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if account_status is not None and len(account_status) > 1:
-            raise ValueError("Invalid value for `account_status`, length must be less than or equal to `1`")
 
         self._account_status = account_status
 
@@ -226,8 +222,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param balance_amount: The balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if balance_amount is not None and len(balance_amount) > 12:
-            raise ValueError("Invalid value for `balance_amount`, length must be less than or equal to `12`")
 
         self._balance_amount = balance_amount
 
@@ -251,8 +245,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param balance_amount_type: The balance_amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if balance_amount_type is not None and len(balance_amount_type) > 2:
-            raise ValueError("Invalid value for `balance_amount_type`, length must be less than or equal to `2`")
 
         self._balance_amount_type = balance_amount_type
 
@@ -276,8 +268,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if currency is not None and len(currency) > 5:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `5`")
 
         self._currency = currency
 
@@ -301,8 +291,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param balance_sign: The balance_sign of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if balance_sign is not None and len(balance_sign) > 8:
-            raise ValueError("Invalid value for `balance_sign`, length must be less than or equal to `8`")
 
         self._balance_sign = balance_sign
 
@@ -326,8 +314,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param affluence_indicator: The affluence_indicator of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if affluence_indicator is not None and len(affluence_indicator) > 13:
-            raise ValueError("Invalid value for `affluence_indicator`, length must be less than or equal to `13`")
 
         self._affluence_indicator = affluence_indicator
 
@@ -351,8 +337,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param category: The category of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if category is not None and len(category) > 7:
-            raise ValueError("Invalid value for `category`, length must be less than or equal to `7`")
 
         self._category = category
 
@@ -376,8 +360,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param commercial: The commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if commercial is not None and len(commercial) > 1:
-            raise ValueError("Invalid value for `commercial`, length must be less than or equal to `1`")
 
         self._commercial = commercial
 
@@ -401,8 +383,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param group: The group of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if group is not None and len(group) > 1:
-            raise ValueError("Invalid value for `group`, length must be less than or equal to `1`")
 
         self._group = group
 
@@ -426,8 +406,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param health_care: The health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if health_care is not None and len(health_care) > 1:
-            raise ValueError("Invalid value for `health_care`, length must be less than or equal to `1`")
 
         self._health_care = health_care
 
@@ -451,8 +429,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param payroll: The payroll of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if payroll is not None and len(payroll) > 1:
-            raise ValueError("Invalid value for `payroll`, length must be less than or equal to `1`")
 
         self._payroll = payroll
 
@@ -476,8 +452,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param level3_eligible: The level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if level3_eligible is not None and len(level3_eligible) > 1:
-            raise ValueError("Invalid value for `level3_eligible`, length must be less than or equal to `1`")
 
         self._level3_eligible = level3_eligible
 
@@ -501,8 +475,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param pinless_debit: The pinless_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if pinless_debit is not None and len(pinless_debit) > 1:
-            raise ValueError("Invalid value for `pinless_debit`, length must be less than or equal to `1`")
 
         self._pinless_debit = pinless_debit
 
@@ -526,8 +498,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param signature_debit: The signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if signature_debit is not None and len(signature_debit) > 1:
-            raise ValueError("Invalid value for `signature_debit`, length must be less than or equal to `1`")
 
         self._signature_debit = signature_debit
 
@@ -551,8 +521,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param prepaid: The prepaid of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if prepaid is not None and len(prepaid) > 1:
-            raise ValueError("Invalid value for `prepaid`, length must be less than or equal to `1`")
 
         self._prepaid = prepaid
 
@@ -576,8 +544,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param regulated: The regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if regulated is not None and len(regulated) > 1:
-            raise ValueError("Invalid value for `regulated`, length must be less than or equal to `1`")
 
         self._regulated = regulated
 

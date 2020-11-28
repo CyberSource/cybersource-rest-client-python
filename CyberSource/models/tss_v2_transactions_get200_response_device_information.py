@@ -78,8 +78,6 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :param ip_address: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
         """
-        if ip_address is not None and len(ip_address) > 45:
-            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `45`")
 
         self._ip_address = ip_address
 
@@ -103,8 +101,6 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :param host_name: The host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
         """
-        if host_name is not None and len(host_name) > 60:
-            raise ValueError("Invalid value for `host_name`, length must be less than or equal to `60`")
 
         self._host_name = host_name
 

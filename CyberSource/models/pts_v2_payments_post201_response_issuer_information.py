@@ -83,8 +83,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param country: The country of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-        if country is not None and len(country) > 3:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `3`")
 
         self._country = country
 
@@ -108,8 +106,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param discretionary_data: The discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-        if discretionary_data is not None and len(discretionary_data) > 255:
-            raise ValueError("Invalid value for `discretionary_data`, length must be less than or equal to `255`")
 
         self._discretionary_data = discretionary_data
 
@@ -133,8 +129,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param country_specific_discretionary_data: The country_specific_discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-        if country_specific_discretionary_data is not None and len(country_specific_discretionary_data) > 140:
-            raise ValueError("Invalid value for `country_specific_discretionary_data`, length must be less than or equal to `140`")
 
         self._country_specific_discretionary_data = country_specific_discretionary_data
 
@@ -158,8 +152,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 6:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `6`")
 
         self._response_code = response_code
 

@@ -121,8 +121,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 
@@ -146,8 +144,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param rate: The rate of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if rate is not None and len(rate) > 6:
-            raise ValueError("Invalid value for `rate`, length must be less than or equal to `6`")
 
         self._rate = rate
 
@@ -171,8 +167,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if code is not None and len(code) > 4:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `4`")
 
         self._code = code
 
@@ -196,8 +190,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param tax_id: The tax_id of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if tax_id is not None and len(tax_id) > 15:
-            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
 
         self._tax_id = tax_id
 
@@ -244,8 +236,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param exemption_code: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-        if exemption_code is not None and len(exemption_code) > 1:
-            raise ValueError("Invalid value for `exemption_code`, length must be less than or equal to `1`")
 
         self._exemption_code = exemption_code
 

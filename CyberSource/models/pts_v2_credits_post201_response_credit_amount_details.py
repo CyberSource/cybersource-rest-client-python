@@ -73,8 +73,6 @@ class PtsV2CreditsPost201ResponseCreditAmountDetails(object):
         :param credit_amount: The credit_amount of this PtsV2CreditsPost201ResponseCreditAmountDetails.
         :type: str
         """
-        if credit_amount is not None and len(credit_amount) > 15:
-            raise ValueError("Invalid value for `credit_amount`, length must be less than or equal to `15`")
 
         self._credit_amount = credit_amount
 
@@ -98,8 +96,6 @@ class PtsV2CreditsPost201ResponseCreditAmountDetails(object):
         :param currency: The currency of this PtsV2CreditsPost201ResponseCreditAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

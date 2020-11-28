@@ -103,8 +103,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -128,8 +126,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param currency: The currency of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -153,8 +149,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param discount_amount: The discount_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: str
         """
-        if discount_amount is not None and len(discount_amount) > 15:
-            raise ValueError("Invalid value for `discount_amount`, length must be less than or equal to `15`")
 
         self._discount_amount = discount_amount
 

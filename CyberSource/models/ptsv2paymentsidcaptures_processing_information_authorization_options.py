@@ -78,8 +78,6 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :param auth_type: The auth_type of this Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions.
         :type: str
         """
-        if auth_type is not None and len(auth_type) > 15:
-            raise ValueError("Invalid value for `auth_type`, length must be less than or equal to `15`")
 
         self._auth_type = auth_type
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :param verbal_auth_code: The verbal_auth_code of this Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions.
         :type: str
         """
-        if verbal_auth_code is not None and len(verbal_auth_code) > 7:
-            raise ValueError("Invalid value for `verbal_auth_code`, length must be less than or equal to `7`")
 
         self._verbal_auth_code = verbal_auth_code
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :param verbal_auth_transaction_id: The verbal_auth_transaction_id of this Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions.
         :type: str
         """
-        if verbal_auth_transaction_id is not None and len(verbal_auth_transaction_id) > 15:
-            raise ValueError("Invalid value for `verbal_auth_transaction_id`, length must be less than or equal to `15`")
 
         self._verbal_auth_transaction_id = verbal_auth_transaction_id
 

@@ -78,8 +78,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :param country: The country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 

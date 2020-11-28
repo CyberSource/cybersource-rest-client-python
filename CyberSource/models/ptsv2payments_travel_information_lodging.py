@@ -273,8 +273,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param check_in_date: The check_in_date of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if check_in_date is not None and len(check_in_date) > 6:
-            raise ValueError("Invalid value for `check_in_date`, length must be less than or equal to `6`")
 
         self._check_in_date = check_in_date
 
@@ -298,8 +296,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param check_out_date: The check_out_date of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if check_out_date is not None and len(check_out_date) > 6:
-            raise ValueError("Invalid value for `check_out_date`, length must be less than or equal to `6`")
 
         self._check_out_date = check_out_date
 
@@ -346,8 +342,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param smoking_preference: The smoking_preference of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if smoking_preference is not None and len(smoking_preference) > 1:
-            raise ValueError("Invalid value for `smoking_preference`, length must be less than or equal to `1`")
 
         self._smoking_preference = smoking_preference
 
@@ -425,8 +419,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_bed_type: The room_bed_type of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_bed_type is not None and len(room_bed_type) > 12:
-            raise ValueError("Invalid value for `room_bed_type`, length must be less than or equal to `12`")
 
         self._room_bed_type = room_bed_type
 
@@ -450,8 +442,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_tax_type: The room_tax_type of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_tax_type is not None and len(room_tax_type) > 10:
-            raise ValueError("Invalid value for `room_tax_type`, length must be less than or equal to `10`")
 
         self._room_tax_type = room_tax_type
 
@@ -475,8 +465,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_rate_type: The room_rate_type of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_rate_type is not None and len(room_rate_type) > 12:
-            raise ValueError("Invalid value for `room_rate_type`, length must be less than or equal to `12`")
 
         self._room_rate_type = room_rate_type
 
@@ -500,8 +488,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param guest_name: The guest_name of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if guest_name is not None and len(guest_name) > 40:
-            raise ValueError("Invalid value for `guest_name`, length must be less than or equal to `40`")
 
         self._guest_name = guest_name
 
@@ -525,8 +511,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param customer_service_phone_number: The customer_service_phone_number of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if customer_service_phone_number is not None and len(customer_service_phone_number) > 17:
-            raise ValueError("Invalid value for `customer_service_phone_number`, length must be less than or equal to `17`")
 
         self._customer_service_phone_number = customer_service_phone_number
 
@@ -550,8 +534,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param corporate_client_code: The corporate_client_code of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if corporate_client_code is not None and len(corporate_client_code) > 17:
-            raise ValueError("Invalid value for `corporate_client_code`, length must be less than or equal to `17`")
 
         self._corporate_client_code = corporate_client_code
 
@@ -575,8 +557,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param additional_discount_amount: The additional_discount_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if additional_discount_amount is not None and len(additional_discount_amount) > 12:
-            raise ValueError("Invalid value for `additional_discount_amount`, length must be less than or equal to `12`")
 
         self._additional_discount_amount = additional_discount_amount
 
@@ -600,8 +580,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_location: The room_location of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_location is not None and len(room_location) > 10:
-            raise ValueError("Invalid value for `room_location`, length must be less than or equal to `10`")
 
         self._room_location = room_location
 
@@ -625,8 +603,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param special_program_code: The special_program_code of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if special_program_code is not None and len(special_program_code) > 1:
-            raise ValueError("Invalid value for `special_program_code`, length must be less than or equal to `1`")
 
         self._special_program_code = special_program_code
 
@@ -650,8 +626,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param total_tax_amount: The total_tax_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if total_tax_amount is not None and len(total_tax_amount) > 12:
-            raise ValueError("Invalid value for `total_tax_amount`, length must be less than or equal to `12`")
 
         self._total_tax_amount = total_tax_amount
 
@@ -675,8 +649,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param prepaid_cost: The prepaid_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if prepaid_cost is not None and len(prepaid_cost) > 12:
-            raise ValueError("Invalid value for `prepaid_cost`, length must be less than or equal to `12`")
 
         self._prepaid_cost = prepaid_cost
 
@@ -700,8 +672,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param food_and_beverage_cost: The food_and_beverage_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if food_and_beverage_cost is not None and len(food_and_beverage_cost) > 12:
-            raise ValueError("Invalid value for `food_and_beverage_cost`, length must be less than or equal to `12`")
 
         self._food_and_beverage_cost = food_and_beverage_cost
 
@@ -725,8 +695,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_tax_amount: The room_tax_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_tax_amount is not None and len(room_tax_amount) > 12:
-            raise ValueError("Invalid value for `room_tax_amount`, length must be less than or equal to `12`")
 
         self._room_tax_amount = room_tax_amount
 
@@ -750,8 +718,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param adjustment_amount: The adjustment_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if adjustment_amount is not None and len(adjustment_amount) > 12:
-            raise ValueError("Invalid value for `adjustment_amount`, length must be less than or equal to `12`")
 
         self._adjustment_amount = adjustment_amount
 
@@ -775,8 +741,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param phone_cost: The phone_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if phone_cost is not None and len(phone_cost) > 12:
-            raise ValueError("Invalid value for `phone_cost`, length must be less than or equal to `12`")
 
         self._phone_cost = phone_cost
 
@@ -800,8 +764,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param restaurant_cost: The restaurant_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if restaurant_cost is not None and len(restaurant_cost) > 12:
-            raise ValueError("Invalid value for `restaurant_cost`, length must be less than or equal to `12`")
 
         self._restaurant_cost = restaurant_cost
 
@@ -825,8 +787,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_service_cost: The room_service_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if room_service_cost is not None and len(room_service_cost) > 12:
-            raise ValueError("Invalid value for `room_service_cost`, length must be less than or equal to `12`")
 
         self._room_service_cost = room_service_cost
 
@@ -850,8 +810,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param mini_bar_cost: The mini_bar_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if mini_bar_cost is not None and len(mini_bar_cost) > 12:
-            raise ValueError("Invalid value for `mini_bar_cost`, length must be less than or equal to `12`")
 
         self._mini_bar_cost = mini_bar_cost
 
@@ -875,8 +833,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param laundry_cost: The laundry_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if laundry_cost is not None and len(laundry_cost) > 12:
-            raise ValueError("Invalid value for `laundry_cost`, length must be less than or equal to `12`")
 
         self._laundry_cost = laundry_cost
 
@@ -900,8 +856,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param miscellaneous_cost: The miscellaneous_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if miscellaneous_cost is not None and len(miscellaneous_cost) > 12:
-            raise ValueError("Invalid value for `miscellaneous_cost`, length must be less than or equal to `12`")
 
         self._miscellaneous_cost = miscellaneous_cost
 
@@ -925,8 +879,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param gift_shop_cost: The gift_shop_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if gift_shop_cost is not None and len(gift_shop_cost) > 12:
-            raise ValueError("Invalid value for `gift_shop_cost`, length must be less than or equal to `12`")
 
         self._gift_shop_cost = gift_shop_cost
 
@@ -950,8 +902,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param movie_cost: The movie_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if movie_cost is not None and len(movie_cost) > 12:
-            raise ValueError("Invalid value for `movie_cost`, length must be less than or equal to `12`")
 
         self._movie_cost = movie_cost
 
@@ -975,8 +925,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param health_club_cost: The health_club_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if health_club_cost is not None and len(health_club_cost) > 12:
-            raise ValueError("Invalid value for `health_club_cost`, length must be less than or equal to `12`")
 
         self._health_club_cost = health_club_cost
 
@@ -1000,8 +948,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param valet_parking_cost: The valet_parking_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if valet_parking_cost is not None and len(valet_parking_cost) > 12:
-            raise ValueError("Invalid value for `valet_parking_cost`, length must be less than or equal to `12`")
 
         self._valet_parking_cost = valet_parking_cost
 
@@ -1025,8 +971,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param cash_disbursement_cost: The cash_disbursement_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if cash_disbursement_cost is not None and len(cash_disbursement_cost) > 12:
-            raise ValueError("Invalid value for `cash_disbursement_cost`, length must be less than or equal to `12`")
 
         self._cash_disbursement_cost = cash_disbursement_cost
 
@@ -1050,8 +994,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param non_room_cost: The non_room_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if non_room_cost is not None and len(non_room_cost) > 12:
-            raise ValueError("Invalid value for `non_room_cost`, length must be less than or equal to `12`")
 
         self._non_room_cost = non_room_cost
 
@@ -1075,8 +1017,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param business_center_cost: The business_center_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if business_center_cost is not None and len(business_center_cost) > 12:
-            raise ValueError("Invalid value for `business_center_cost`, length must be less than or equal to `12`")
 
         self._business_center_cost = business_center_cost
 
@@ -1100,8 +1040,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param lounge_bar_cost: The lounge_bar_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if lounge_bar_cost is not None and len(lounge_bar_cost) > 12:
-            raise ValueError("Invalid value for `lounge_bar_cost`, length must be less than or equal to `12`")
 
         self._lounge_bar_cost = lounge_bar_cost
 
@@ -1125,8 +1063,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param transportation_cost: The transportation_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if transportation_cost is not None and len(transportation_cost) > 12:
-            raise ValueError("Invalid value for `transportation_cost`, length must be less than or equal to `12`")
 
         self._transportation_cost = transportation_cost
 
@@ -1150,8 +1086,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if gratuity_amount is not None and len(gratuity_amount) > 12:
-            raise ValueError("Invalid value for `gratuity_amount`, length must be less than or equal to `12`")
 
         self._gratuity_amount = gratuity_amount
 
@@ -1175,8 +1109,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param conference_room_cost: The conference_room_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if conference_room_cost is not None and len(conference_room_cost) > 12:
-            raise ValueError("Invalid value for `conference_room_cost`, length must be less than or equal to `12`")
 
         self._conference_room_cost = conference_room_cost
 
@@ -1200,8 +1132,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param audio_visual_cost: The audio_visual_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if audio_visual_cost is not None and len(audio_visual_cost) > 12:
-            raise ValueError("Invalid value for `audio_visual_cost`, length must be less than or equal to `12`")
 
         self._audio_visual_cost = audio_visual_cost
 
@@ -1225,8 +1155,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param banquest_cost: The banquest_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if banquest_cost is not None and len(banquest_cost) > 12:
-            raise ValueError("Invalid value for `banquest_cost`, length must be less than or equal to `12`")
 
         self._banquest_cost = banquest_cost
 
@@ -1250,8 +1178,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param non_room_tax_amount: The non_room_tax_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if non_room_tax_amount is not None and len(non_room_tax_amount) > 12:
-            raise ValueError("Invalid value for `non_room_tax_amount`, length must be less than or equal to `12`")
 
         self._non_room_tax_amount = non_room_tax_amount
 
@@ -1275,8 +1201,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param early_check_out_cost: The early_check_out_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if early_check_out_cost is not None and len(early_check_out_cost) > 12:
-            raise ValueError("Invalid value for `early_check_out_cost`, length must be less than or equal to `12`")
 
         self._early_check_out_cost = early_check_out_cost
 
@@ -1300,8 +1224,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param internet_access_cost: The internet_access_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-        if internet_access_cost is not None and len(internet_access_cost) > 12:
-            raise ValueError("Invalid value for `internet_access_cost`, length must be less than or equal to `12`")
 
         self._internet_access_cost = internet_access_cost
 

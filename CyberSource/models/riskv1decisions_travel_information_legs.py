@@ -83,8 +83,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :param origination: The origination of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-        if origination is not None and len(origination) > 3:
-            raise ValueError("Invalid value for `origination`, length must be less than or equal to `3`")
 
         self._origination = origination
 
@@ -108,8 +106,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :param destination: The destination of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-        if destination is not None and len(destination) > 3:
-            raise ValueError("Invalid value for `destination`, length must be less than or equal to `3`")
 
         self._destination = destination
 
@@ -133,8 +129,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :param carrier_code: The carrier_code of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-        if carrier_code is not None and len(carrier_code) > 2:
-            raise ValueError("Invalid value for `carrier_code`, length must be less than or equal to `2`")
 
         self._carrier_code = carrier_code
 

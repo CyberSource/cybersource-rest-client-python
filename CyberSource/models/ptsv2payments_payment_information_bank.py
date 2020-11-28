@@ -94,8 +94,6 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :param routing_number: The routing_number of this Ptsv2paymentsPaymentInformationBank.
         :type: str
         """
-        if routing_number is not None and len(routing_number) > 9:
-            raise ValueError("Invalid value for `routing_number`, length must be less than or equal to `9`")
 
         self._routing_number = routing_number
 

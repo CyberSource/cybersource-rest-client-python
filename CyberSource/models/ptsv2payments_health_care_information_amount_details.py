@@ -73,8 +73,6 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
         :param amount_type: The amount_type of this Ptsv2paymentsHealthCareInformationAmountDetails.
         :type: str
         """
-        if amount_type is not None and len(amount_type) > 35:
-            raise ValueError("Invalid value for `amount_type`, length must be less than or equal to `35`")
 
         self._amount_type = amount_type
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
         :param amount: The amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 

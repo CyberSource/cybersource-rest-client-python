@@ -73,8 +73,6 @@ class Ptsv2creditsProcessingInformationJapanPaymentOptions(object):
         :param payment_method: The payment_method of this Ptsv2creditsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if payment_method is not None and len(payment_method) > 2:
-            raise ValueError("Invalid value for `payment_method`, length must be less than or equal to `2`")
 
         self._payment_method = payment_method
 

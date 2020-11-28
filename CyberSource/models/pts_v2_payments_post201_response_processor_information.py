@@ -198,8 +198,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param auth_indicator: The auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if auth_indicator is not None and len(auth_indicator) > 1:
-            raise ValueError("Invalid value for `auth_indicator`, length must be less than or equal to `1`")
 
         self._auth_indicator = auth_indicator
 
@@ -246,8 +244,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 50:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `50`")
 
         self._transaction_id = transaction_id
 
@@ -317,8 +313,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -342,8 +336,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_code_source: The response_code_source of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code_source is not None and len(response_code_source) > 1:
-            raise ValueError("Invalid value for `response_code_source`, length must be less than or equal to `1`")
 
         self._response_code_source = response_code_source
 
@@ -367,8 +359,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_details: The response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_details is not None and len(response_details) > 255:
-            raise ValueError("Invalid value for `response_details`, length must be less than or equal to `255`")
 
         self._response_details = response_details
 
@@ -392,8 +382,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_category_code: The response_category_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_category_code is not None and len(response_category_code) > 36:
-            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `36`")
 
         self._response_category_code = response_category_code
 
@@ -417,8 +405,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if forwarded_acquirer_code is not None and len(forwarded_acquirer_code) > 32:
-            raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -589,8 +575,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param system_trace_audit_number: The system_trace_audit_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if system_trace_audit_number is not None and len(system_trace_audit_number) > 6:
-            raise ValueError("Invalid value for `system_trace_audit_number`, length must be less than or equal to `6`")
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -614,8 +598,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param payment_account_reference_number: The payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if payment_account_reference_number is not None and len(payment_account_reference_number) > 32:
-            raise ValueError("Invalid value for `payment_account_reference_number`, length must be less than or equal to `32`")
 
         self._payment_account_reference_number = payment_account_reference_number
 
@@ -639,8 +621,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param transaction_integrity_code: The transaction_integrity_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_integrity_code is not None and len(transaction_integrity_code) > 2:
-            raise ValueError("Invalid value for `transaction_integrity_code`, length must be less than or equal to `2`")
 
         self._transaction_integrity_code = transaction_integrity_code
 
@@ -664,8 +644,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param amex_verbal_auth_reference_number: The amex_verbal_auth_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if amex_verbal_auth_reference_number is not None and len(amex_verbal_auth_reference_number) > 6:
-            raise ValueError("Invalid value for `amex_verbal_auth_reference_number`, length must be less than or equal to `6`")
 
         self._amex_verbal_auth_reference_number = amex_verbal_auth_reference_number
 
@@ -689,8 +667,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_service_code: The master_card_service_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_code is not None and len(master_card_service_code) > 2:
-            raise ValueError("Invalid value for `master_card_service_code`, length must be less than or equal to `2`")
 
         self._master_card_service_code = master_card_service_code
 
@@ -714,8 +690,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_reply_code is not None and len(master_card_service_reply_code) > 1:
-            raise ValueError("Invalid value for `master_card_service_reply_code`, length must be less than or equal to `1`")
 
         self._master_card_service_reply_code = master_card_service_reply_code
 
@@ -739,8 +713,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_authentication_type: The master_card_authentication_type of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_authentication_type is not None and len(master_card_authentication_type) > 1:
-            raise ValueError("Invalid value for `master_card_authentication_type`, length must be less than or equal to `1`")
 
         self._master_card_authentication_type = master_card_authentication_type
 
@@ -764,8 +736,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -810,8 +780,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param merchant_number: The merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if merchant_number is not None and len(merchant_number) > 15:
-            raise ValueError("Invalid value for `merchant_number`, length must be less than or equal to `15`")
 
         self._merchant_number = merchant_number
 

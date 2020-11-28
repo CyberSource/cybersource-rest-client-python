@@ -83,8 +83,6 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param locality: The locality of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -108,8 +106,6 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param administrative_area: The administrative_area of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -133,8 +129,6 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param postal_code: The postal_code of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -158,8 +152,6 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param country: The country of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 

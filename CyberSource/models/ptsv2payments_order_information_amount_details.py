@@ -188,8 +188,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -213,8 +211,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -238,8 +234,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param discount_amount: The discount_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if discount_amount is not None and len(discount_amount) > 15:
-            raise ValueError("Invalid value for `discount_amount`, length must be less than or equal to `15`")
 
         self._discount_amount = discount_amount
 
@@ -263,8 +257,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param duty_amount: The duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if duty_amount is not None and len(duty_amount) > 15:
-            raise ValueError("Invalid value for `duty_amount`, length must be less than or equal to `15`")
 
         self._duty_amount = duty_amount
 
@@ -288,8 +280,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if gratuity_amount is not None and len(gratuity_amount) > 13:
-            raise ValueError("Invalid value for `gratuity_amount`, length must be less than or equal to `13`")
 
         self._gratuity_amount = gratuity_amount
 
@@ -313,8 +303,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 12:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `12`")
 
         self._tax_amount = tax_amount
 
@@ -338,8 +326,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param national_tax_included: The national_tax_included of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if national_tax_included is not None and len(national_tax_included) > 1:
-            raise ValueError("Invalid value for `national_tax_included`, length must be less than or equal to `1`")
 
         self._national_tax_included = national_tax_included
 
@@ -363,8 +349,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_applied_after_discount: The tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_applied_after_discount is not None and len(tax_applied_after_discount) > 1:
-            raise ValueError("Invalid value for `tax_applied_after_discount`, length must be less than or equal to `1`")
 
         self._tax_applied_after_discount = tax_applied_after_discount
 
@@ -388,8 +372,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_applied_level: The tax_applied_level of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_applied_level is not None and len(tax_applied_level) > 1:
-            raise ValueError("Invalid value for `tax_applied_level`, length must be less than or equal to `1`")
 
         self._tax_applied_level = tax_applied_level
 
@@ -413,8 +395,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_type_code is not None and len(tax_type_code) > 3:
-            raise ValueError("Invalid value for `tax_type_code`, length must be less than or equal to `3`")
 
         self._tax_type_code = tax_type_code
 
@@ -438,8 +418,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param freight_amount: The freight_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if freight_amount is not None and len(freight_amount) > 13:
-            raise ValueError("Invalid value for `freight_amount`, length must be less than or equal to `13`")
 
         self._freight_amount = freight_amount
 
@@ -463,8 +441,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param foreign_amount: The foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if foreign_amount is not None and len(foreign_amount) > 15:
-            raise ValueError("Invalid value for `foreign_amount`, length must be less than or equal to `15`")
 
         self._foreign_amount = foreign_amount
 
@@ -488,8 +464,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param foreign_currency: The foreign_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if foreign_currency is not None and len(foreign_currency) > 5:
-            raise ValueError("Invalid value for `foreign_currency`, length must be less than or equal to `5`")
 
         self._foreign_currency = foreign_currency
 
@@ -513,8 +487,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param exchange_rate: The exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if exchange_rate is not None and len(exchange_rate) > 13:
-            raise ValueError("Invalid value for `exchange_rate`, length must be less than or equal to `13`")
 
         self._exchange_rate = exchange_rate
 
@@ -538,8 +510,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param exchange_rate_time_stamp: The exchange_rate_time_stamp of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if exchange_rate_time_stamp is not None and len(exchange_rate_time_stamp) > 14:
-            raise ValueError("Invalid value for `exchange_rate_time_stamp`, length must be less than or equal to `14`")
 
         self._exchange_rate_time_stamp = exchange_rate_time_stamp
 
@@ -584,8 +554,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param settlement_amount: The settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_amount is not None and len(settlement_amount) > 12:
-            raise ValueError("Invalid value for `settlement_amount`, length must be less than or equal to `12`")
 
         self._settlement_amount = settlement_amount
 
@@ -609,8 +577,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_currency is not None and len(settlement_currency) > 3:
-            raise ValueError("Invalid value for `settlement_currency`, length must be less than or equal to `3`")
 
         self._settlement_currency = settlement_currency
 
@@ -676,8 +642,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param service_fee_amount: The service_fee_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if service_fee_amount is not None and len(service_fee_amount) > 15:
-            raise ValueError("Invalid value for `service_fee_amount`, length must be less than or equal to `15`")
 
         self._service_fee_amount = service_fee_amount
 
@@ -701,8 +665,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param original_amount: The original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if original_amount is not None and len(original_amount) > 15:
-            raise ValueError("Invalid value for `original_amount`, length must be less than or equal to `15`")
 
         self._original_amount = original_amount
 
@@ -726,8 +688,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param original_currency: The original_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if original_currency is not None and len(original_currency) > 15:
-            raise ValueError("Invalid value for `original_currency`, length must be less than or equal to `15`")
 
         self._original_currency = original_currency
 
@@ -751,8 +711,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param cashback_amount: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if cashback_amount is not None and len(cashback_amount) > 13:
-            raise ValueError("Invalid value for `cashback_amount`, length must be less than or equal to `13`")
 
         self._cashback_amount = cashback_amount
 

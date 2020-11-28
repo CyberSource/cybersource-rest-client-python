@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :param tags: The tags of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
         :type: str
         """
-        if tags is not None and len(tags) > 1998:
-            raise ValueError("Invalid value for `tags`, length must be less than or equal to `1998`")
 
         self._tags = tags
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :param chip_validation_type: The chip_validation_type of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
         :type: str
         """
-        if chip_validation_type is not None and len(chip_validation_type) > 2:
-            raise ValueError("Invalid value for `chip_validation_type`, length must be less than or equal to `2`")
 
         self._chip_validation_type = chip_validation_type
 
@@ -128,8 +124,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :param chip_validation_result: The chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
         :type: str
         """
-        if chip_validation_result is not None and len(chip_validation_result) > 1:
-            raise ValueError("Invalid value for `chip_validation_result`, length must be less than or equal to `1`")
 
         self._chip_validation_result = chip_validation_result
 

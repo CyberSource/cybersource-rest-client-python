@@ -83,8 +83,6 @@ class Ptsv2paymentsTokenInformation(object):
         :param jti: The jti of this Ptsv2paymentsTokenInformation.
         :type: str
         """
-        if jti is not None and len(jti) > 64:
-            raise ValueError("Invalid value for `jti`, length must be less than or equal to `64`")
 
         self._jti = jti
 

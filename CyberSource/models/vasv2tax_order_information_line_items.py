@@ -133,8 +133,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -158,8 +156,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param product_code: The product_code of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 
@@ -210,8 +206,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param product_name: The product_name of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -235,8 +229,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -260,8 +252,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 
@@ -327,8 +317,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param ship_from_country: The ship_from_country of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if ship_from_country is not None and len(ship_from_country) > 2:
-            raise ValueError("Invalid value for `ship_from_country`, length must be less than or equal to `2`")
 
         self._ship_from_country = ship_from_country
 
@@ -352,8 +340,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param ship_from_administrative_area: The ship_from_administrative_area of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if ship_from_administrative_area is not None and len(ship_from_administrative_area) > 2:
-            raise ValueError("Invalid value for `ship_from_administrative_area`, length must be less than or equal to `2`")
 
         self._ship_from_administrative_area = ship_from_administrative_area
 
@@ -377,8 +363,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param ship_from_locality: The ship_from_locality of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if ship_from_locality is not None and len(ship_from_locality) > 50:
-            raise ValueError("Invalid value for `ship_from_locality`, length must be less than or equal to `50`")
 
         self._ship_from_locality = ship_from_locality
 
@@ -402,8 +386,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param ship_from_postal_code: The ship_from_postal_code of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if ship_from_postal_code is not None and len(ship_from_postal_code) > 10:
-            raise ValueError("Invalid value for `ship_from_postal_code`, length must be less than or equal to `10`")
 
         self._ship_from_postal_code = ship_from_postal_code
 
@@ -427,8 +409,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param buyer_vat_registration_number: The buyer_vat_registration_number of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if buyer_vat_registration_number is not None and len(buyer_vat_registration_number) > 25:
-            raise ValueError("Invalid value for `buyer_vat_registration_number`, length must be less than or equal to `25`")
 
         self._buyer_vat_registration_number = buyer_vat_registration_number
 
@@ -452,8 +432,6 @@ class Vasv2taxOrderInformationLineItems(object):
         :param seller_vat_registration_number: The seller_vat_registration_number of this Vasv2taxOrderInformationLineItems.
         :type: str
         """
-        if seller_vat_registration_number is not None and len(seller_vat_registration_number) > 25:
-            raise ValueError("Invalid value for `seller_vat_registration_number`, length must be less than or equal to `25`")
 
         self._seller_vat_registration_number = seller_vat_registration_number
 

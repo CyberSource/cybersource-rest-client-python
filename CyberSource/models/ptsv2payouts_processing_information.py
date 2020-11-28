@@ -88,8 +88,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param business_application_id: The business_application_id of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if business_application_id is not None and len(business_application_id) > 2:
-            raise ValueError("Invalid value for `business_application_id`, length must be less than or equal to `2`")
 
         self._business_application_id = business_application_id
 
@@ -113,8 +111,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param network_routing_order: The network_routing_order of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if network_routing_order is not None and len(network_routing_order) > 30:
-            raise ValueError("Invalid value for `network_routing_order`, length must be less than or equal to `30`")
 
         self._network_routing_order = network_routing_order
 
@@ -138,8 +134,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 13:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `13`")
 
         self._commerce_indicator = commerce_indicator
 
@@ -163,8 +157,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 

@@ -73,8 +73,6 @@ class Riskv1decisionsTravelInformationPassengers(object):
         :param first_name: The first_name of this Riskv1decisionsTravelInformationPassengers.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -98,8 +96,6 @@ class Riskv1decisionsTravelInformationPassengers(object):
         :param last_name: The last_name of this Riskv1decisionsTravelInformationPassengers.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 

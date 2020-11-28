@@ -112,8 +112,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param total_amount: The total_amount of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 13:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `13`")
 
         self._total_amount = total_amount
 
@@ -139,8 +137,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         """
         if unit_price is None:
             raise ValueError("Invalid value for `unit_price`, must not be `None`")
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -214,8 +210,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -262,8 +256,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param product_name: The product_name of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -308,8 +300,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_destination_types: The shipping_destination_types of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if shipping_destination_types is not None and len(shipping_destination_types) > 50:
-            raise ValueError("Invalid value for `shipping_destination_types`, length must be less than or equal to `50`")
 
         self._shipping_destination_types = shipping_destination_types
 
@@ -333,8 +323,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 

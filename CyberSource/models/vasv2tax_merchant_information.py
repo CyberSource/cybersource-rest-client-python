@@ -68,8 +68,6 @@ class Vasv2taxMerchantInformation(object):
         :param vat_registration_number: The vat_registration_number of this Vasv2taxMerchantInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 21:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `21`")
 
         self._vat_registration_number = vat_registration_number
 

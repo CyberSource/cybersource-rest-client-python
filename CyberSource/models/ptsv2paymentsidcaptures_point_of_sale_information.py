@@ -94,8 +94,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation(object):
         :param amex_capn_data: The amex_capn_data of this Ptsv2paymentsidcapturesPointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 15:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `15`")
 
         self._amex_capn_data = amex_capn_data
 

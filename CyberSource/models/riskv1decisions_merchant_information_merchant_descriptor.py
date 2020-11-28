@@ -96,8 +96,6 @@ class Riskv1decisionsMerchantInformationMerchantDescriptor(object):
         :param url: The url of this Riskv1decisionsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if url is not None and len(url) > 255:
-            raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")
 
         self._url = url
 

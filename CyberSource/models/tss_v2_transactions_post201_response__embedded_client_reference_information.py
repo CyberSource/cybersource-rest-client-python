@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         :param code: The code of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 

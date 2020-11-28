@@ -98,8 +98,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param anonymizer_status: The anonymizer_status of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if anonymizer_status is not None and len(anonymizer_status) > 255:
-            raise ValueError("Invalid value for `anonymizer_status`, length must be less than or equal to `255`")
 
         self._anonymizer_status = anonymizer_status
 
@@ -123,8 +121,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param locality: The locality of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if locality is not None and len(locality) > 255:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `255`")
 
         self._locality = locality
 
@@ -148,8 +144,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param country: The country of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if country is not None and len(country) > 255:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `255`")
 
         self._country = country
 
@@ -173,8 +167,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param administrative_area: The administrative_area of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 255:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `255`")
 
         self._administrative_area = administrative_area
 
@@ -198,8 +190,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param routing_method: The routing_method of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if routing_method is not None and len(routing_method) > 255:
-            raise ValueError("Invalid value for `routing_method`, length must be less than or equal to `255`")
 
         self._routing_method = routing_method
 
@@ -223,8 +213,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param carrier: The carrier of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if carrier is not None and len(carrier) > 255:
-            raise ValueError("Invalid value for `carrier`, length must be less than or equal to `255`")
 
         self._carrier = carrier
 
@@ -248,8 +236,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param organization: The organization of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
-        if organization is not None and len(organization) > 255:
-            raise ValueError("Invalid value for `organization`, length must be less than or equal to `255`")
 
         self._organization = organization
 

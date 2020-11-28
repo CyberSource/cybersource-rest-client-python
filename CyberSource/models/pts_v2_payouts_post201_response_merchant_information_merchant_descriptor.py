@@ -101,8 +101,6 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :param locality: The locality of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if locality is not None and len(locality) > 13:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `13`")
 
         self._locality = locality
 

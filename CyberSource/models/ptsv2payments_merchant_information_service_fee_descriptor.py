@@ -78,8 +78,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :param name: The name of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
         """
-        if name is not None and len(name) > 22:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `22`")
 
         self._name = name
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :param contact: The contact of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
         """
-        if contact is not None and len(contact) > 11:
-            raise ValueError("Invalid value for `contact`, length must be less than or equal to `11`")
 
         self._contact = contact
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :param state: The state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
         """
-        if state is not None and len(state) > 20:
-            raise ValueError("Invalid value for `state`, length must be less than or equal to `20`")
 
         self._state = state
 

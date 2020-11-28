@@ -172,8 +172,6 @@ class Riskv1decisionsPaymentInformation(object):
         :param method: The method of this Riskv1decisionsPaymentInformation.
         :type: str
         """
-        if method is not None and len(method) > 10:
-            raise ValueError("Invalid value for `method`, length must be less than or equal to `10`")
 
         self._method = method
 

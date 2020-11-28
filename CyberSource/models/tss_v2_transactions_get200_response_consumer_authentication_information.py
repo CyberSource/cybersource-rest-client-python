@@ -83,8 +83,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param eci_raw: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if eci_raw is not None and len(eci_raw) > 2:
-            raise ValueError("Invalid value for `eci_raw`, length must be less than or equal to `2`")
 
         self._eci_raw = eci_raw
 
@@ -108,8 +106,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv is not None and len(cavv) > 40:
-            raise ValueError("Invalid value for `cavv`, length must be less than or equal to `40`")
 
         self._cavv = cavv
 
@@ -133,8 +129,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param xid: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if xid is not None and len(xid) > 40:
-            raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
 

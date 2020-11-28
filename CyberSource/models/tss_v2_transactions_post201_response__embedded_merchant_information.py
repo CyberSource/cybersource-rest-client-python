@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedMerchantInformation(object):
         :param reseller_id: The reseller_id of this TssV2TransactionsPost201ResponseEmbeddedMerchantInformation.
         :type: str
         """
-        if reseller_id is not None and len(reseller_id) > 26:
-            raise ValueError("Invalid value for `reseller_id`, length must be less than or equal to `26`")
 
         self._reseller_id = reseller_id
 

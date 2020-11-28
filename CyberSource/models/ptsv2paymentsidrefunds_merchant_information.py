@@ -134,8 +134,6 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsidrefundsMerchantInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 21:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `21`")
 
         self._vat_registration_number = vat_registration_number
 
@@ -159,8 +157,6 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsidrefundsMerchantInformation.
         :type: str
         """
-        if card_acceptor_reference_number is not None and len(card_acceptor_reference_number) > 25:
-            raise ValueError("Invalid value for `card_acceptor_reference_number`, length must be less than or equal to `25`")
 
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
@@ -184,8 +180,6 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :param tax_id: The tax_id of this Ptsv2paymentsidrefundsMerchantInformation.
         :type: str
         """
-        if tax_id is not None and len(tax_id) > 15:
-            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
 
         self._tax_id = tax_id
 

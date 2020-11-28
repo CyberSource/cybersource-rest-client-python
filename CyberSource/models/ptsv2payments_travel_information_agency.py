@@ -73,8 +73,6 @@ class Ptsv2paymentsTravelInformationAgency(object):
         :param code: The code of this Ptsv2paymentsTravelInformationAgency.
         :type: str
         """
-        if code is not None and len(code) > 8:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `8`")
 
         self._code = code
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsTravelInformationAgency(object):
         :param name: The name of this Ptsv2paymentsTravelInformationAgency.
         :type: str
         """
-        if name is not None and len(name) > 25:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `25`")
 
         self._name = name
 

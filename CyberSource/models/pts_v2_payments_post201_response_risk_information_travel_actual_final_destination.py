@@ -83,8 +83,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination(ob
         :param country: The country of this PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination.
         :type: str
         """
-        if country is not None and len(country) > 90:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `90`")
 
         self._country = country
 
@@ -108,8 +106,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination(ob
         :param locality: The locality of this PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination.
         :type: str
         """
-        if locality is not None and len(locality) > 90:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `90`")
 
         self._locality = locality
 
@@ -133,8 +129,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination(ob
         :param latitude: The latitude of this PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination.
         :type: str
         """
-        if latitude is not None and len(latitude) > 10:
-            raise ValueError("Invalid value for `latitude`, length must be less than or equal to `10`")
 
         self._latitude = latitude
 
@@ -158,8 +152,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination(ob
         :param longitude: The longitude of this PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination.
         :type: str
         """
-        if longitude is not None and len(longitude) > 10:
-            raise ValueError("Invalid value for `longitude`, length must be less than or equal to `10`")
 
         self._longitude = longitude
 

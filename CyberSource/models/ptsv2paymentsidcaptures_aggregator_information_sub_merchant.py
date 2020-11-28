@@ -108,8 +108,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param name: The name of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if name is not None and len(name) > 37:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `37`")
 
         self._name = name
 
@@ -133,8 +131,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param address1: The address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if address1 is not None and len(address1) > 38:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `38`")
 
         self._address1 = address1
 
@@ -158,8 +154,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param locality: The locality of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if locality is not None and len(locality) > 21:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `21`")
 
         self._locality = locality
 
@@ -183,8 +177,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 3:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
 
@@ -208,8 +200,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param postal_code: The postal_code of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 15:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `15`")
 
         self._postal_code = postal_code
 
@@ -233,8 +223,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param country: The country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if country is not None and len(country) > 3:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `3`")
 
         self._country = country
 
@@ -258,8 +246,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param email: The email of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if email is not None and len(email) > 40:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `40`")
 
         self._email = email
 
@@ -283,8 +269,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param phone_number: The phone_number of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 20:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `20`")
 
         self._phone_number = phone_number
 
@@ -308,8 +292,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param id: The id of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-        if id is not None and len(id) > 20:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `20`")
 
         self._id = id
 

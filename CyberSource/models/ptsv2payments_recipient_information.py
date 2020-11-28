@@ -78,8 +78,6 @@ class Ptsv2paymentsRecipientInformation(object):
         :param account_id: The account_id of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
-        if account_id is not None and len(account_id) > 10:
-            raise ValueError("Invalid value for `account_id`, length must be less than or equal to `10`")
 
         self._account_id = account_id
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
-        if last_name is not None and len(last_name) > 6:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `6`")
 
         self._last_name = last_name
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsRecipientInformation(object):
         :param postal_code: The postal_code of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 6:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `6`")
 
         self._postal_code = postal_code
 

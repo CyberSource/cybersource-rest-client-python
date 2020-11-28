@@ -103,8 +103,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param merchant_logo: The merchant_logo of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if merchant_logo is not None and len(merchant_logo) > 10000000:
-            raise ValueError("Invalid value for `merchant_logo`, length must be less than or equal to `10000000`")
 
         self._merchant_logo = merchant_logo
 
@@ -128,8 +126,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param merchant_display_name: The merchant_display_name of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if merchant_display_name is not None and len(merchant_display_name) > 100:
-            raise ValueError("Invalid value for `merchant_display_name`, length must be less than or equal to `100`")
 
         self._merchant_display_name = merchant_display_name
 
@@ -153,8 +149,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param custom_email_message: The custom_email_message of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if custom_email_message is not None and len(custom_email_message) > 2000:
-            raise ValueError("Invalid value for `custom_email_message`, length must be less than or equal to `2000`")
 
         self._custom_email_message = custom_email_message
 
@@ -222,8 +216,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param delivery_language: The delivery_language of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if delivery_language is not None and len(delivery_language) > 6:
-            raise ValueError("Invalid value for `delivery_language`, length must be less than or equal to `6`")
 
         self._delivery_language = delivery_language
 
@@ -247,8 +239,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param default_currency_code: The default_currency_code of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if default_currency_code is not None and len(default_currency_code) > 3:
-            raise ValueError("Invalid value for `default_currency_code`, length must be less than or equal to `3`")
 
         self._default_currency_code = default_currency_code
 
@@ -272,8 +262,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param payer_authentication_in_invoicing: The payer_authentication_in_invoicing of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-        if payer_authentication_in_invoicing is not None and len(payer_authentication_in_invoicing) > 7:
-            raise ValueError("Invalid value for `payer_authentication_in_invoicing`, length must be less than or equal to `7`")
 
         self._payer_authentication_in_invoicing = payer_authentication_in_invoicing
 

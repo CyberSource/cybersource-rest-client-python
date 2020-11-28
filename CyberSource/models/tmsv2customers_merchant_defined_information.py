@@ -96,8 +96,6 @@ class Tmsv2customersMerchantDefinedInformation(object):
         :param value: The value of this Tmsv2customersMerchantDefinedInformation.
         :type: str
         """
-        if value is not None and len(value) > 100:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `100`")
 
         self._value = value
 

@@ -147,8 +147,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param pre_order_date: The pre_order_date of this Riskv1authenticationsOrderInformation.
         :type: str
         """
-        if pre_order_date is not None and len(pre_order_date) > 10:
-            raise ValueError("Invalid value for `pre_order_date`, length must be less than or equal to `10`")
 
         self._pre_order_date = pre_order_date
 
@@ -260,8 +258,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param total_offers_count: The total_offers_count of this Riskv1authenticationsOrderInformation.
         :type: str
         """
-        if total_offers_count is not None and len(total_offers_count) > 2:
-            raise ValueError("Invalid value for `total_offers_count`, length must be less than or equal to `2`")
 
         self._total_offers_count = total_offers_count
 

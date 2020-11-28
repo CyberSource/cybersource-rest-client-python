@@ -68,8 +68,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum(objec
         :param data: The data of this Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum.
         :type: str
         """
-        if data is not None and len(data) > 40:
-            raise ValueError("Invalid value for `data`, length must be less than or equal to `40`")
 
         self._data = data
 

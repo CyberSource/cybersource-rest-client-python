@@ -68,8 +68,6 @@ class Riskv1authenticationsetupsPaymentInformationCustomer(object):
         :param customer_id: The customer_id of this Riskv1authenticationsetupsPaymentInformationCustomer.
         :type: str
         """
-        if customer_id is not None and len(customer_id) < 16:
-            raise ValueError("Invalid value for `customer_id`, length must be greater than or equal to `16`")
 
         self._customer_id = customer_id
 

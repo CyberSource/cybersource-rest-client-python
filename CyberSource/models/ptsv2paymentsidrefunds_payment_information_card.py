@@ -113,8 +113,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param number: The number of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if number is not None and len(number) > 20:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `20`")
 
         self._number = number
 
@@ -138,8 +136,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -163,8 +159,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param expiration_year: The expiration_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -211,8 +205,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param account_encoder_id: The account_encoder_id of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if account_encoder_id is not None and len(account_encoder_id) > 3:
-            raise ValueError("Invalid value for `account_encoder_id`, length must be less than or equal to `3`")
 
         self._account_encoder_id = account_encoder_id
 
@@ -236,8 +228,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param issue_number: The issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if issue_number is not None and len(issue_number) > 5:
-            raise ValueError("Invalid value for `issue_number`, length must be less than or equal to `5`")
 
         self._issue_number = issue_number
 
@@ -261,8 +251,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param start_month: The start_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if start_month is not None and len(start_month) > 2:
-            raise ValueError("Invalid value for `start_month`, length must be less than or equal to `2`")
 
         self._start_month = start_month
 
@@ -286,8 +274,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param start_year: The start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if start_year is not None and len(start_year) > 4:
-            raise ValueError("Invalid value for `start_year`, length must be less than or equal to `4`")
 
         self._start_year = start_year
 
@@ -311,8 +297,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param source_account_type: The source_account_type of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if source_account_type is not None and len(source_account_type) > 20:
-            raise ValueError("Invalid value for `source_account_type`, length must be less than or equal to `20`")
 
         self._source_account_type = source_account_type
 
@@ -336,8 +320,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
-        if source_account_type_details is not None and len(source_account_type_details) > 4:
-            raise ValueError("Invalid value for `source_account_type_details`, length must be less than or equal to `4`")
 
         self._source_account_type_details = source_account_type_details
 

@@ -114,8 +114,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :param id: The id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

@@ -99,8 +99,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
         :param model_used: The model_used of this PtsV2PaymentsPost201ResponseRiskInformationScore.
         :type: str
         """
-        if model_used is not None and len(model_used) > 255:
-            raise ValueError("Invalid value for `model_used`, length must be less than or equal to `255`")
 
         self._model_used = model_used
 
@@ -124,8 +122,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
         :param result: The result of this PtsV2PaymentsPost201ResponseRiskInformationScore.
         :type: str
         """
-        if result is not None and len(result) > 255:
-            raise ValueError("Invalid value for `result`, length must be less than or equal to `255`")
 
         self._result = result
 

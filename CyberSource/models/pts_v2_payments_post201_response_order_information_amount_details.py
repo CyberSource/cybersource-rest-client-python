@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 15:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `15`")
 
         self._total_amount = total_amount
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param authorized_amount: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if authorized_amount is not None and len(authorized_amount) > 15:
-            raise ValueError("Invalid value for `authorized_amount`, length must be less than or equal to `15`")
 
         self._authorized_amount = authorized_amount
 
@@ -128,8 +124,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

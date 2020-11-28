@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :param true_ipaddress: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if true_ipaddress is not None and len(true_ipaddress) > 255:
-            raise ValueError("Invalid value for `true_ipaddress`, length must be less than or equal to `255`")
 
         self._true_ipaddress = true_ipaddress
 
@@ -103,8 +101,6 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :param hash: The hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if hash is not None and len(hash) > 255:
-            raise ValueError("Invalid value for `hash`, length must be less than or equal to `255`")
 
         self._hash = hash
 
@@ -128,8 +124,6 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :param smart_id: The smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if smart_id is not None and len(smart_id) > 255:
-            raise ValueError("Invalid value for `smart_id`, length must be less than or equal to `255`")
 
         self._smart_id = smart_id
 

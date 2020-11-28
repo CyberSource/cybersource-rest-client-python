@@ -68,8 +68,6 @@ class PtsV2PaymentsReversalsPost201ResponseIssuerInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsReversalsPost201ResponseIssuerInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 6:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `6`")
 
         self._response_code = response_code
 

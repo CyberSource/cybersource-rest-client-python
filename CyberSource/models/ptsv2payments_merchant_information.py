@@ -134,8 +134,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param sales_organization_id: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if sales_organization_id is not None and len(sales_organization_id) > 11:
-            raise ValueError("Invalid value for `sales_organization_id`, length must be less than or equal to `11`")
 
         self._sales_organization_id = sales_organization_id
 
@@ -209,8 +207,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param tax_id: The tax_id of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if tax_id is not None and len(tax_id) > 15:
-            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
 
         self._tax_id = tax_id
 
@@ -234,8 +230,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 21:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `21`")
 
         self._vat_registration_number = vat_registration_number
 
@@ -259,8 +253,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if card_acceptor_reference_number is not None and len(card_acceptor_reference_number) > 25:
-            raise ValueError("Invalid value for `card_acceptor_reference_number`, length must be less than or equal to `25`")
 
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
@@ -284,8 +276,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param transaction_local_date_time: The transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if transaction_local_date_time is not None and len(transaction_local_date_time) > 14:
-            raise ValueError("Invalid value for `transaction_local_date_time`, length must be less than or equal to `14`")
 
         self._transaction_local_date_time = transaction_local_date_time
 
@@ -330,8 +320,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param merchant_name: The merchant_name of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if merchant_name is not None and len(merchant_name) > 25:
-            raise ValueError("Invalid value for `merchant_name`, length must be less than or equal to `25`")
 
         self._merchant_name = merchant_name
 

@@ -83,8 +83,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param original_transaction_id: The original_transaction_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if original_transaction_id is not None and len(original_transaction_id) > 32:
-            raise ValueError("Invalid value for `original_transaction_id`, length must be less than or equal to `32`")
 
         self._original_transaction_id = original_transaction_id
 
@@ -108,8 +106,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param developer_id: The developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if developer_id is not None and len(developer_id) > 8:
-            raise ValueError("Invalid value for `developer_id`, length must be less than or equal to `8`")
 
         self._developer_id = developer_id
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param solution_id: The solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if solution_id is not None and len(solution_id) > 8:
-            raise ValueError("Invalid value for `solution_id`, length must be less than or equal to `8`")
 
         self._solution_id = solution_id
 
@@ -158,8 +152,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param third_party_certification_number: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if third_party_certification_number is not None and len(third_party_certification_number) > 12:
-            raise ValueError("Invalid value for `third_party_certification_number`, length must be less than or equal to `12`")
 
         self._third_party_certification_number = third_party_certification_number
 

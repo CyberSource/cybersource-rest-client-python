@@ -73,8 +73,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param with_apartment: The with_apartment of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddressAddress1.
         :type: str
         """
-        if with_apartment is not None and len(with_apartment) > 255:
-            raise ValueError("Invalid value for `with_apartment`, length must be less than or equal to `255`")
 
         self._with_apartment = with_apartment
 
@@ -98,8 +96,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param without_apartment: The without_apartment of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddressAddress1.
         :type: str
         """
-        if without_apartment is not None and len(without_apartment) > 255:
-            raise ValueError("Invalid value for `without_apartment`, length must be less than or equal to `255`")
 
         self._without_apartment = without_apartment
 

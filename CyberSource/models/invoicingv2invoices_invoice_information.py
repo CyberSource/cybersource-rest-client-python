@@ -116,8 +116,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :param description: The description of this Invoicingv2invoicesInvoiceInformation.
         :type: str
         """
-        if description is not None and len(description) > 2000:
-            raise ValueError("Invalid value for `description`, length must be less than or equal to `2000`")
 
         self._description = description
 

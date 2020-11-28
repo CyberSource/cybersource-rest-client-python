@@ -88,8 +88,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Riskv1decisionsBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -113,8 +111,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param username: The username of this Riskv1decisionsBuyerInformation.
         :type: str
         """
-        if username is not None and len(username) > 255:
-            raise ValueError("Invalid value for `username`, length must be less than or equal to `255`")
 
         self._username = username
 
@@ -138,8 +134,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param hashed_password: The hashed_password of this Riskv1decisionsBuyerInformation.
         :type: str
         """
-        if hashed_password is not None and len(hashed_password) > 100:
-            raise ValueError("Invalid value for `hashed_password`, length must be less than or equal to `100`")
 
         self._hashed_password = hashed_password
 
@@ -163,8 +157,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param date_of_birth: The date_of_birth of this Riskv1decisionsBuyerInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 

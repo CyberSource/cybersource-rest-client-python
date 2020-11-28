@@ -101,8 +101,6 @@ class Ptsv2paymentsBuyerInformationPersonalIdentification(object):
         :param id: The id of this Ptsv2paymentsBuyerInformationPersonalIdentification.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

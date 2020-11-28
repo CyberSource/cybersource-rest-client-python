@@ -71,6 +71,14 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
         """
         pass
 
+    def test_post_instrument_identifier_enrollment(self):
+        """
+        Test case for post_instrument_identifier_enrollment
+
+        Enroll an Instrument Identifier for Network Tokenization
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

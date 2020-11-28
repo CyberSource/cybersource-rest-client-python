@@ -68,8 +68,6 @@ class Ptsv2paymentsPaymentInformationLegacyToken(object):
         :param id: The id of this Ptsv2paymentsPaymentInformationLegacyToken.
         :type: str
         """
-        if id is not None and len(id) < 16:
-            raise ValueError("Invalid value for `id`, length must be greater than or equal to `16`")
 
         self._id = id
 

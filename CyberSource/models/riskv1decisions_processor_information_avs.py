@@ -68,8 +68,6 @@ class Riskv1decisionsProcessorInformationAvs(object):
         :param code: The code of this Riskv1decisionsProcessorInformationAvs.
         :type: str
         """
-        if code is not None and len(code) > 3:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `3`")
 
         self._code = code
 

@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str
         """
-        if code is not None and len(code) > 1:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `1`")
 
         self._code = code
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str
         """
-        if code_raw is not None and len(code_raw) > 10:
-            raise ValueError("Invalid value for `code_raw`, length must be less than or equal to `10`")
 
         self._code_raw = code_raw
 

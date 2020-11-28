@@ -96,8 +96,6 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
         :param type: The type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :type: str
         """
-        if type is not None and len(type) > 6:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `6`")
 
         self._type = type
 

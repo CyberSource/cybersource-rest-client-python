@@ -103,8 +103,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param payment_method: The payment_method of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if payment_method is not None and len(payment_method) > 2:
-            raise ValueError("Invalid value for `payment_method`, length must be less than or equal to `2`")
 
         self._payment_method = payment_method
 
@@ -151,8 +149,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param terminal_id: The terminal_id of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 13:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `13`")
 
         self._terminal_id = terminal_id
 
@@ -176,8 +172,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param first_billing_month: The first_billing_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if first_billing_month is not None and len(first_billing_month) > 2:
-            raise ValueError("Invalid value for `first_billing_month`, length must be less than or equal to `2`")
 
         self._first_billing_month = first_billing_month
 
@@ -201,8 +195,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param business_name: The business_name of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if business_name is not None and len(business_name) > 25:
-            raise ValueError("Invalid value for `business_name`, length must be less than or equal to `25`")
 
         self._business_name = business_name
 
@@ -226,8 +218,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param business_name_katakana: The business_name_katakana of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if business_name_katakana is not None and len(business_name_katakana) > 25:
-            raise ValueError("Invalid value for `business_name_katakana`, length must be less than or equal to `25`")
 
         self._business_name_katakana = business_name_katakana
 
@@ -251,8 +241,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param jis2_track_data: The jis2_track_data of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if jis2_track_data is not None and len(jis2_track_data) > 69:
-            raise ValueError("Invalid value for `jis2_track_data`, length must be less than or equal to `69`")
 
         self._jis2_track_data = jis2_track_data
 
@@ -276,8 +264,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param business_name_alpha_numeric: The business_name_alpha_numeric of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-        if business_name_alpha_numeric is not None and len(business_name_alpha_numeric) > 25:
-            raise ValueError("Invalid value for `business_name_alpha_numeric`, length must be less than or equal to `25`")
 
         self._business_name_alpha_numeric = business_name_alpha_numeric
 

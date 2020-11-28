@@ -96,8 +96,6 @@ class InvoicingV2InvoicesGet200ResponseTransactionDetails(object):
         :param amount: The amount of this InvoicingV2InvoicesGet200ResponseTransactionDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 19:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `19`")
 
         self._amount = amount
 

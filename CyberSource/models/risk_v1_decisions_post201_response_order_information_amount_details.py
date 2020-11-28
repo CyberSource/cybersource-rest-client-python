@@ -68,8 +68,6 @@ class RiskV1DecisionsPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this RiskV1DecisionsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

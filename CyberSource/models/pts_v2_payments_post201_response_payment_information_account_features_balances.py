@@ -83,8 +83,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param account_type: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-        if account_type is not None and len(account_type) > 2:
-            raise ValueError("Invalid value for `account_type`, length must be less than or equal to `2`")
 
         self._account_type = account_type
 
@@ -108,8 +106,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param amount: The amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 
@@ -133,8 +129,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param amount_type: The amount_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-        if amount_type is not None and len(amount_type) > 2:
-            raise ValueError("Invalid value for `amount_type`, length must be less than or equal to `2`")
 
         self._amount_type = amount_type
 
@@ -158,8 +152,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

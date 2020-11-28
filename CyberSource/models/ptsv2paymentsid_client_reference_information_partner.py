@@ -78,8 +78,6 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :param original_transaction_id: The original_transaction_id of this Ptsv2paymentsidClientReferenceInformationPartner.
         :type: str
         """
-        if original_transaction_id is not None and len(original_transaction_id) > 32:
-            raise ValueError("Invalid value for `original_transaction_id`, length must be less than or equal to `32`")
 
         self._original_transaction_id = original_transaction_id
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :param developer_id: The developer_id of this Ptsv2paymentsidClientReferenceInformationPartner.
         :type: str
         """
-        if developer_id is not None and len(developer_id) > 8:
-            raise ValueError("Invalid value for `developer_id`, length must be less than or equal to `8`")
 
         self._developer_id = developer_id
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :param solution_id: The solution_id of this Ptsv2paymentsidClientReferenceInformationPartner.
         :type: str
         """
-        if solution_id is not None and len(solution_id) > 8:
-            raise ValueError("Invalid value for `solution_id`, length must be less than or equal to `8`")
 
         self._solution_id = solution_id
 

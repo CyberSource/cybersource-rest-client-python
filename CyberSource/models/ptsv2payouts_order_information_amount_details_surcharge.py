@@ -68,8 +68,6 @@ class Ptsv2payoutsOrderInformationAmountDetailsSurcharge(object):
         :param amount: The amount of this Ptsv2payoutsOrderInformationAmountDetailsSurcharge.
         :type: str
         """
-        if amount is not None and len(amount) > 15:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `15`")
 
         self._amount = amount
 

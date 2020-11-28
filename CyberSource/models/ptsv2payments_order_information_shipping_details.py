@@ -101,8 +101,6 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         :param shipping_method: The shipping_method of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: str
         """
-        if shipping_method is not None and len(shipping_method) > 10:
-            raise ValueError("Invalid value for `shipping_method`, length must be less than or equal to `10`")
 
         self._shipping_method = shipping_method
 
@@ -126,8 +124,6 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         :param ship_from_postal_code: The ship_from_postal_code of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_postal_code is not None and len(ship_from_postal_code) > 10:
-            raise ValueError("Invalid value for `ship_from_postal_code`, length must be less than or equal to `10`")
 
         self._ship_from_postal_code = ship_from_postal_code
 

@@ -98,8 +98,6 @@ class Vasv2taxTaxInformation(object):
         :param reporting_date: The reporting_date of this Vasv2taxTaxInformation.
         :type: str
         """
-        if reporting_date is not None and len(reporting_date) > 8:
-            raise ValueError("Invalid value for `reporting_date`, length must be less than or equal to `8`")
 
         self._reporting_date = reporting_date
 
@@ -123,8 +121,6 @@ class Vasv2taxTaxInformation(object):
         :param date_override_reason: The date_override_reason of this Vasv2taxTaxInformation.
         :type: str
         """
-        if date_override_reason is not None and len(date_override_reason) > 50:
-            raise ValueError("Invalid value for `date_override_reason`, length must be less than or equal to `50`")
 
         self._date_override_reason = date_override_reason
 

@@ -121,8 +121,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param encryption_key: The encryption_key of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
-        if encryption_key is not None and len(encryption_key) > 16:
-            raise ValueError("Invalid value for `encryption_key`, length must be less than or equal to `16`")
 
         self._encryption_key = encryption_key
 
@@ -169,8 +167,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param encryption_type: The encryption_type of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
-        if encryption_type is not None and len(encryption_type) > 20:
-            raise ValueError("Invalid value for `encryption_type`, length must be less than or equal to `20`")
 
         self._encryption_type = encryption_type
 
@@ -194,8 +190,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param label: The label of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
-        if label is not None and len(label) > 20:
-            raise ValueError("Invalid value for `label`, length must be less than or equal to `20`")
 
         self._label = label
 
@@ -219,8 +213,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param prompt: The prompt of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
-        if prompt is not None and len(prompt) > 80:
-            raise ValueError("Invalid value for `prompt`, length must be less than or equal to `80`")
 
         self._prompt = prompt
 
@@ -244,8 +236,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param status_message: The status_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
-        if status_message is not None and len(status_message) > 80:
-            raise ValueError("Invalid value for `status_message`, length must be less than or equal to `80`")
 
         self._status_message = status_message
 

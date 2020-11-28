@@ -96,8 +96,6 @@ class VasV2TaxVoid200ResponseVoidAmountDetails(object):
         :param currency: The currency of this VasV2TaxVoid200ResponseVoidAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

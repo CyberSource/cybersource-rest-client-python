@@ -78,8 +78,6 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param end_date: The end_date of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
-        if end_date is not None and len(end_date) > 10:
-            raise ValueError("Invalid value for `end_date`, length must be less than or equal to `10`")
 
         self._end_date = end_date
 
@@ -126,8 +124,6 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param original_purchase_date: The original_purchase_date of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
-        if original_purchase_date is not None and len(original_purchase_date) > 17:
-            raise ValueError("Invalid value for `original_purchase_date`, length must be less than or equal to `17`")
 
         self._original_purchase_date = original_purchase_date
 

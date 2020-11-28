@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :param name: The name of this PtsV2PaymentsPost201ResponseRiskInformationProfile.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :param desination_queue: The desination_queue of this PtsV2PaymentsPost201ResponseRiskInformationProfile.
         :type: str
         """
-        if desination_queue is not None and len(desination_queue) > 255:
-            raise ValueError("Invalid value for `desination_queue`, length must be less than or equal to `255`")
 
         self._desination_queue = desination_queue
 
@@ -128,8 +124,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :param selector_rule: The selector_rule of this PtsV2PaymentsPost201ResponseRiskInformationProfile.
         :type: str
         """
-        if selector_rule is not None and len(selector_rule) > 255:
-            raise ValueError("Invalid value for `selector_rule`, length must be less than or equal to `255`")
 
         self._selector_rule = selector_rule
 

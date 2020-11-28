@@ -296,8 +296,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param customer_name: The customer_name of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if customer_name is not None and len(customer_name) > 40:
-            raise ValueError("Invalid value for `customer_name`, length must be less than or equal to `40`")
 
         self._customer_name = customer_name
 
@@ -321,8 +319,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param vehicle_class: The vehicle_class of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if vehicle_class is not None and len(vehicle_class) > 4:
-            raise ValueError("Invalid value for `vehicle_class`, length must be less than or equal to `4`")
 
         self._vehicle_class = vehicle_class
 
@@ -346,8 +342,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param distance_travelled: The distance_travelled of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if distance_travelled is not None and len(distance_travelled) > 5:
-            raise ValueError("Invalid value for `distance_travelled`, length must be less than or equal to `5`")
 
         self._distance_travelled = distance_travelled
 
@@ -371,8 +365,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param distance_unit: The distance_unit of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if distance_unit is not None and len(distance_unit) > 1:
-            raise ValueError("Invalid value for `distance_unit`, length must be less than or equal to `1`")
 
         self._distance_unit = distance_unit
 
@@ -396,8 +388,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param return_date_time: The return_date_time of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if return_date_time is not None and len(return_date_time) > 21:
-            raise ValueError("Invalid value for `return_date_time`, length must be less than or equal to `21`")
 
         self._return_date_time = return_date_time
 
@@ -421,8 +411,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param rental_date_time: The rental_date_time of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if rental_date_time is not None and len(rental_date_time) > 21:
-            raise ValueError("Invalid value for `rental_date_time`, length must be less than or equal to `21`")
 
         self._rental_date_time = rental_date_time
 
@@ -446,8 +434,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param max_free_distance: The max_free_distance of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if max_free_distance is not None and len(max_free_distance) > 4:
-            raise ValueError("Invalid value for `max_free_distance`, length must be less than or equal to `4`")
 
         self._max_free_distance = max_free_distance
 
@@ -494,8 +480,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param program_code: The program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if program_code is not None and len(program_code) > 2:
-            raise ValueError("Invalid value for `program_code`, length must be less than or equal to `2`")
 
         self._program_code = program_code
 
@@ -561,8 +545,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param agreement_number: The agreement_number of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if agreement_number is not None and len(agreement_number) > 25:
-            raise ValueError("Invalid value for `agreement_number`, length must be less than or equal to `25`")
 
         self._agreement_number = agreement_number
 
@@ -586,8 +568,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param odometer_reading: The odometer_reading of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if odometer_reading is not None and len(odometer_reading) > 8:
-            raise ValueError("Invalid value for `odometer_reading`, length must be less than or equal to `8`")
 
         self._odometer_reading = odometer_reading
 
@@ -611,8 +591,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param vehicle_identification_number: The vehicle_identification_number of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if vehicle_identification_number is not None and len(vehicle_identification_number) > 20:
-            raise ValueError("Invalid value for `vehicle_identification_number`, length must be less than or equal to `20`")
 
         self._vehicle_identification_number = vehicle_identification_number
 
@@ -636,8 +614,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param company_id: The company_id of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if company_id is not None and len(company_id) > 12:
-            raise ValueError("Invalid value for `company_id`, length must be less than or equal to `12`")
 
         self._company_id = company_id
 
@@ -661,8 +637,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param number_of_additional_drivers: The number_of_additional_drivers of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if number_of_additional_drivers is not None and len(number_of_additional_drivers) > 1:
-            raise ValueError("Invalid value for `number_of_additional_drivers`, length must be less than or equal to `1`")
 
         self._number_of_additional_drivers = number_of_additional_drivers
 
@@ -686,8 +660,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param driver_age: The driver_age of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if driver_age is not None and len(driver_age) > 3:
-            raise ValueError("Invalid value for `driver_age`, length must be less than or equal to `3`")
 
         self._driver_age = driver_age
 
@@ -711,8 +683,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param special_program_code: The special_program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if special_program_code is not None and len(special_program_code) > 2:
-            raise ValueError("Invalid value for `special_program_code`, length must be less than or equal to `2`")
 
         self._special_program_code = special_program_code
 
@@ -736,8 +706,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param vehicle_make: The vehicle_make of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if vehicle_make is not None and len(vehicle_make) > 10:
-            raise ValueError("Invalid value for `vehicle_make`, length must be less than or equal to `10`")
 
         self._vehicle_make = vehicle_make
 
@@ -761,8 +729,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param vehicle_model: The vehicle_model of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if vehicle_model is not None and len(vehicle_model) > 10:
-            raise ValueError("Invalid value for `vehicle_model`, length must be less than or equal to `10`")
 
         self._vehicle_model = vehicle_model
 
@@ -786,8 +752,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param time_period: The time_period of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if time_period is not None and len(time_period) > 7:
-            raise ValueError("Invalid value for `time_period`, length must be less than or equal to `7`")
 
         self._time_period = time_period
 
@@ -811,8 +775,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param commodity_code: The commodity_code of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if commodity_code is not None and len(commodity_code) > 15:
-            raise ValueError("Invalid value for `commodity_code`, length must be less than or equal to `15`")
 
         self._commodity_code = commodity_code
 
@@ -836,8 +798,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param customer_service_phone_number: The customer_service_phone_number of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if customer_service_phone_number is not None and len(customer_service_phone_number) > 17:
-            raise ValueError("Invalid value for `customer_service_phone_number`, length must be less than or equal to `17`")
 
         self._customer_service_phone_number = customer_service_phone_number
 
@@ -882,8 +842,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param insurance_amount: The insurance_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if insurance_amount is not None and len(insurance_amount) > 12:
-            raise ValueError("Invalid value for `insurance_amount`, length must be less than or equal to `12`")
 
         self._insurance_amount = insurance_amount
 
@@ -907,8 +865,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param one_way_drop_off_amount: The one_way_drop_off_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if one_way_drop_off_amount is not None and len(one_way_drop_off_amount) > 12:
-            raise ValueError("Invalid value for `one_way_drop_off_amount`, length must be less than or equal to `12`")
 
         self._one_way_drop_off_amount = one_way_drop_off_amount
 
@@ -932,8 +888,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param adjusted_amount_indicator: The adjusted_amount_indicator of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if adjusted_amount_indicator is not None and len(adjusted_amount_indicator) > 1:
-            raise ValueError("Invalid value for `adjusted_amount_indicator`, length must be less than or equal to `1`")
 
         self._adjusted_amount_indicator = adjusted_amount_indicator
 
@@ -957,8 +911,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param adjusted_amount: The adjusted_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if adjusted_amount is not None and len(adjusted_amount) > 12:
-            raise ValueError("Invalid value for `adjusted_amount`, length must be less than or equal to `12`")
 
         self._adjusted_amount = adjusted_amount
 
@@ -982,8 +934,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param fuel_charges: The fuel_charges of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if fuel_charges is not None and len(fuel_charges) > 12:
-            raise ValueError("Invalid value for `fuel_charges`, length must be less than or equal to `12`")
 
         self._fuel_charges = fuel_charges
 
@@ -1007,8 +957,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param weekly_rental_rate: The weekly_rental_rate of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if weekly_rental_rate is not None and len(weekly_rental_rate) > 12:
-            raise ValueError("Invalid value for `weekly_rental_rate`, length must be less than or equal to `12`")
 
         self._weekly_rental_rate = weekly_rental_rate
 
@@ -1032,8 +980,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param daily_rental_rate: The daily_rental_rate of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if daily_rental_rate is not None and len(daily_rental_rate) > 12:
-            raise ValueError("Invalid value for `daily_rental_rate`, length must be less than or equal to `12`")
 
         self._daily_rental_rate = daily_rental_rate
 
@@ -1057,8 +1003,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param rate_per_mile: The rate_per_mile of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if rate_per_mile is not None and len(rate_per_mile) > 12:
-            raise ValueError("Invalid value for `rate_per_mile`, length must be less than or equal to `12`")
 
         self._rate_per_mile = rate_per_mile
 
@@ -1082,8 +1026,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param mileage_charge: The mileage_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if mileage_charge is not None and len(mileage_charge) > 12:
-            raise ValueError("Invalid value for `mileage_charge`, length must be less than or equal to `12`")
 
         self._mileage_charge = mileage_charge
 
@@ -1107,8 +1049,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param extra_mileage_charge: The extra_mileage_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if extra_mileage_charge is not None and len(extra_mileage_charge) > 12:
-            raise ValueError("Invalid value for `extra_mileage_charge`, length must be less than or equal to `12`")
 
         self._extra_mileage_charge = extra_mileage_charge
 
@@ -1132,8 +1072,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param late_fee_amount: The late_fee_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if late_fee_amount is not None and len(late_fee_amount) > 12:
-            raise ValueError("Invalid value for `late_fee_amount`, length must be less than or equal to `12`")
 
         self._late_fee_amount = late_fee_amount
 
@@ -1157,8 +1095,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param towing_charge: The towing_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if towing_charge is not None and len(towing_charge) > 4:
-            raise ValueError("Invalid value for `towing_charge`, length must be less than or equal to `4`")
 
         self._towing_charge = towing_charge
 
@@ -1182,8 +1118,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param extra_charge: The extra_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if extra_charge is not None and len(extra_charge) > 12:
-            raise ValueError("Invalid value for `extra_charge`, length must be less than or equal to `12`")
 
         self._extra_charge = extra_charge
 
@@ -1207,8 +1141,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param gps_charge: The gps_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if gps_charge is not None and len(gps_charge) > 12:
-            raise ValueError("Invalid value for `gps_charge`, length must be less than or equal to `12`")
 
         self._gps_charge = gps_charge
 
@@ -1232,8 +1164,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param phone_charge: The phone_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if phone_charge is not None and len(phone_charge) > 12:
-            raise ValueError("Invalid value for `phone_charge`, length must be less than or equal to `12`")
 
         self._phone_charge = phone_charge
 
@@ -1257,8 +1187,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param parking_violation_charge: The parking_violation_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if parking_violation_charge is not None and len(parking_violation_charge) > 12:
-            raise ValueError("Invalid value for `parking_violation_charge`, length must be less than or equal to `12`")
 
         self._parking_violation_charge = parking_violation_charge
 
@@ -1282,8 +1210,6 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param other_charges: The other_charges of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
-        if other_charges is not None and len(other_charges) > 12:
-            raise ValueError("Invalid value for `other_charges`, length must be less than or equal to `12`")
 
         self._other_charges = other_charges
 

@@ -73,8 +73,6 @@ class Ptsv2paymentsMerchantDefinedInformation(object):
         :param key: The key of this Ptsv2paymentsMerchantDefinedInformation.
         :type: str
         """
-        if key is not None and len(key) > 50:
-            raise ValueError("Invalid value for `key`, length must be less than or equal to `50`")
 
         self._key = key
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsMerchantDefinedInformation(object):
         :param value: The value of this Ptsv2paymentsMerchantDefinedInformation.
         :type: str
         """
-        if value is not None and len(value) > 255:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `255`")
 
         self._value = value
 

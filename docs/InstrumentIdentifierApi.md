@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_instrument_identifier_payment_instruments_list**](InstrumentIdentifierApi.md#get_instrument_identifier_payment_instruments_list) | **GET** /tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments | List Payment Instruments for an Instrument Identifier
 [**patch_instrument_identifier**](InstrumentIdentifierApi.md#patch_instrument_identifier) | **PATCH** /tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId} | Update an Instrument Identifier
 [**post_instrument_identifier**](InstrumentIdentifierApi.md#post_instrument_identifier) | **POST** /tms/v1/instrumentidentifiers | Create an Instrument Identifier
+[**post_instrument_identifier_enrollment**](InstrumentIdentifierApi.md#post_instrument_identifier_enrollment) | **POST** /tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment | Enroll an Instrument Identifier for Network Tokenization
 
 
 # **delete_instrument_identifier**
@@ -225,7 +226,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.InstrumentIdentifierApi()
-post_instrument_identifier_request = CyberSource.PostInstrumentIdentifierRequest() # PostInstrumentIdentifierRequest | Please specify either a Card, Bank Account or Enrollable Card
+post_instrument_identifier_request = CyberSource.PostInstrumentIdentifierRequest() # PostInstrumentIdentifierRequest | Specify either a Card, Bank Account or Enrollable Card
 profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration. (optional)
 
 try: 
@@ -240,12 +241,61 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_instrument_identifier_request** | [**PostInstrumentIdentifierRequest**](PostInstrumentIdentifierRequest.md)| Please specify either a Card, Bank Account or Enrollable Card | 
+ **post_instrument_identifier_request** | [**PostInstrumentIdentifierRequest**](PostInstrumentIdentifierRequest.md)| Specify either a Card, Bank Account or Enrollable Card | 
  **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | [optional] 
 
 ### Return type
 
 [**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_instrument_identifier_enrollment**
+> post_instrument_identifier_enrollment(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, profile_id=profile_id)
+
+Enroll an Instrument Identifier for Network Tokenization
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.InstrumentIdentifierApi()
+instrument_identifier_token_id = 'instrument_identifier_token_id_example' # str | The TokenId of a Instrument Identifier.
+post_instrument_identifier_enrollment_request = CyberSource.PostInstrumentIdentifierEnrollmentRequest() # PostInstrumentIdentifierEnrollmentRequest | Specify Enrollable Card details
+profile_id = 'profile_id_example' # str | The id of a profile containing user specific TMS configuration. (optional)
+
+try: 
+    # Enroll an Instrument Identifier for Network Tokenization
+    api_instance.post_instrument_identifier_enrollment(instrument_identifier_token_id, post_instrument_identifier_enrollment_request, profile_id=profile_id)
+except ApiException as e:
+    print("Exception when calling InstrumentIdentifierApi->post_instrument_identifier_enrollment: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instrument_identifier_token_id** | **str**| The TokenId of a Instrument Identifier. | 
+ **post_instrument_identifier_enrollment_request** | [**PostInstrumentIdentifierEnrollmentRequest**](PostInstrumentIdentifierEnrollmentRequest.md)| Specify Enrollable Card details | 
+ **profile_id** | **str**| The id of a profile containing user specific TMS configuration. | [optional] 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

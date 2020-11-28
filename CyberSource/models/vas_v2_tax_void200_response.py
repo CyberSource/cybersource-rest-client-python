@@ -88,8 +88,6 @@ class VasV2TaxVoid200Response(object):
         :param id: The id of this VasV2TaxVoid200Response.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

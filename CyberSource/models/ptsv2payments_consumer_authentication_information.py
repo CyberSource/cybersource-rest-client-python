@@ -323,8 +323,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv is not None and len(cavv) > 40:
-            raise ValueError("Invalid value for `cavv`, length must be less than or equal to `40`")
 
         self._cavv = cavv
 
@@ -348,8 +346,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param cavv_algorithm: The cavv_algorithm of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv_algorithm is not None and len(cavv_algorithm) > 1:
-            raise ValueError("Invalid value for `cavv_algorithm`, length must be less than or equal to `1`")
 
         self._cavv_algorithm = cavv_algorithm
 
@@ -373,8 +369,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param eci_raw: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if eci_raw is not None and len(eci_raw) > 2:
-            raise ValueError("Invalid value for `eci_raw`, length must be less than or equal to `2`")
 
         self._eci_raw = eci_raw
 
@@ -398,8 +392,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param pares_status: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if pares_status is not None and len(pares_status) > 1:
-            raise ValueError("Invalid value for `pares_status`, length must be less than or equal to `1`")
 
         self._pares_status = pares_status
 
@@ -423,8 +415,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param veres_enrolled: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if veres_enrolled is not None and len(veres_enrolled) > 1:
-            raise ValueError("Invalid value for `veres_enrolled`, length must be less than or equal to `1`")
 
         self._veres_enrolled = veres_enrolled
 
@@ -448,8 +438,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param xid: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if xid is not None and len(xid) > 40:
-            raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
 
@@ -473,8 +461,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if ucaf_collection_indicator is not None and len(ucaf_collection_indicator) > 1:
-            raise ValueError("Invalid value for `ucaf_collection_indicator`, length must be less than or equal to `1`")
 
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
@@ -498,8 +484,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param ucaf_authentication_data: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if ucaf_authentication_data is not None and len(ucaf_authentication_data) > 32:
-            raise ValueError("Invalid value for `ucaf_authentication_data`, length must be less than or equal to `32`")
 
         self._ucaf_authentication_data = ucaf_authentication_data
 
@@ -544,8 +528,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param directory_server_transaction_id: The directory_server_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
 
         self._directory_server_transaction_id = directory_server_transaction_id
 
@@ -569,8 +551,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param pa_specification_version: The pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if pa_specification_version is not None and len(pa_specification_version) > 1:
-            raise ValueError("Invalid value for `pa_specification_version`, length must be less than or equal to `1`")
 
         self._pa_specification_version = pa_specification_version
 
@@ -594,8 +574,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param authentication_type: The authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_type is not None and len(authentication_type) > 2:
-            raise ValueError("Invalid value for `authentication_type`, length must be less than or equal to `2`")
 
         self._authentication_type = authentication_type
 
@@ -619,8 +597,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param acs_window_size: The acs_window_size of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if acs_window_size is not None and len(acs_window_size) > 2:
-            raise ValueError("Invalid value for `acs_window_size`, length must be less than or equal to `2`")
 
         self._acs_window_size = acs_window_size
 
@@ -644,8 +620,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param alternate_authentication_data: The alternate_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if alternate_authentication_data is not None and len(alternate_authentication_data) > 2048:
-            raise ValueError("Invalid value for `alternate_authentication_data`, length must be less than or equal to `2048`")
 
         self._alternate_authentication_data = alternate_authentication_data
 
@@ -669,8 +643,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param alternate_authentication_date: The alternate_authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if alternate_authentication_date is not None and len(alternate_authentication_date) > 14:
-            raise ValueError("Invalid value for `alternate_authentication_date`, length must be less than or equal to `14`")
 
         self._alternate_authentication_date = alternate_authentication_date
 
@@ -717,8 +689,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param authentication_date: The authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_date is not None and len(authentication_date) > 14:
-            raise ValueError("Invalid value for `authentication_date`, length must be less than or equal to `14`")
 
         self._authentication_date = authentication_date
 
@@ -742,8 +712,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_transaction_id is not None and len(authentication_transaction_id) > 20:
-            raise ValueError("Invalid value for `authentication_transaction_id`, length must be less than or equal to `20`")
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -767,8 +735,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_cancel_code is not None and len(challenge_cancel_code) > 2:
-            raise ValueError("Invalid value for `challenge_cancel_code`, length must be less than or equal to `2`")
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -815,8 +781,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param challenge_status: The challenge_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_status is not None and len(challenge_status) > 2:
-            raise ValueError("Invalid value for `challenge_status`, length must be less than or equal to `2`")
 
         self._challenge_status = challenge_status
 
@@ -840,8 +804,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param customer_card_alias: The customer_card_alias of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if customer_card_alias is not None and len(customer_card_alias) > 128:
-            raise ValueError("Invalid value for `customer_card_alias`, length must be less than or equal to `128`")
 
         self._customer_card_alias = customer_card_alias
 
@@ -865,8 +827,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if decoupled_authentication_indicator is not None and len(decoupled_authentication_indicator) > 1:
-            raise ValueError("Invalid value for `decoupled_authentication_indicator`, length must be less than or equal to `1`")
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -890,8 +850,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_max_time: The decoupled_authentication_max_time of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if decoupled_authentication_max_time is not None and len(decoupled_authentication_max_time) > 5:
-            raise ValueError("Invalid value for `decoupled_authentication_max_time`, length must be less than or equal to `5`")
 
         self._decoupled_authentication_max_time = decoupled_authentication_max_time
 
@@ -938,8 +896,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param device_channel: The device_channel of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if device_channel is not None and len(device_channel) > 10:
-            raise ValueError("Invalid value for `device_channel`, length must be less than or equal to `10`")
 
         self._device_channel = device_channel
 
@@ -986,8 +942,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param merchant_fraud_rate: The merchant_fraud_rate of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if merchant_fraud_rate is not None and len(merchant_fraud_rate) > 2:
-            raise ValueError("Invalid value for `merchant_fraud_rate`, length must be less than or equal to `2`")
 
         self._merchant_fraud_rate = merchant_fraud_rate
 
@@ -1034,8 +988,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param marketing_source: The marketing_source of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if marketing_source is not None and len(marketing_source) > 40:
-            raise ValueError("Invalid value for `marketing_source`, length must be less than or equal to `40`")
 
         self._marketing_source = marketing_source
 
@@ -1059,8 +1011,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param mcc: The mcc of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if mcc is not None and len(mcc) > 4:
-            raise ValueError("Invalid value for `mcc`, length must be less than or equal to `4`")
 
         self._mcc = mcc
 
@@ -1130,8 +1080,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param npa_code: The npa_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if npa_code is not None and len(npa_code) > 2:
-            raise ValueError("Invalid value for `npa_code`, length must be less than or equal to `2`")
 
         self._npa_code = npa_code
 
@@ -1178,8 +1126,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param override_country_code: The override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if override_country_code is not None and len(override_country_code) > 2:
-            raise ValueError("Invalid value for `override_country_code`, length must be less than or equal to `2`")
 
         self._override_country_code = override_country_code
 
@@ -1203,8 +1149,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_data: The prior_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_data is not None and len(prior_authentication_data) > 2048:
-            raise ValueError("Invalid value for `prior_authentication_data`, length must be less than or equal to `2048`")
 
         self._prior_authentication_data = prior_authentication_data
 
@@ -1228,8 +1172,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_method: The prior_authentication_method of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_method is not None and len(prior_authentication_method) > 2:
-            raise ValueError("Invalid value for `prior_authentication_method`, length must be less than or equal to `2`")
 
         self._prior_authentication_method = prior_authentication_method
 
@@ -1253,8 +1195,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_reference_id: The prior_authentication_reference_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_reference_id is not None and len(prior_authentication_reference_id) > 36:
-            raise ValueError("Invalid value for `prior_authentication_reference_id`, length must be less than or equal to `36`")
 
         self._prior_authentication_reference_id = prior_authentication_reference_id
 
@@ -1278,8 +1218,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_time: The prior_authentication_time of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_time is not None and len(prior_authentication_time) > 12:
-            raise ValueError("Invalid value for `prior_authentication_time`, length must be less than or equal to `12`")
 
         self._prior_authentication_time = prior_authentication_time
 
@@ -1303,8 +1241,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param product_code: The product_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if product_code is not None and len(product_code) > 3:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `3`")
 
         self._product_code = product_code
 
@@ -1328,8 +1264,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param requestor_id: The requestor_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 35:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `35`")
 
         self._requestor_id = requestor_id
 
@@ -1353,8 +1287,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param requestor_initiated_authentication_indicator: The requestor_initiated_authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_initiated_authentication_indicator is not None and len(requestor_initiated_authentication_indicator) > 2:
-            raise ValueError("Invalid value for `requestor_initiated_authentication_indicator`, length must be less than or equal to `2`")
 
         self._requestor_initiated_authentication_indicator = requestor_initiated_authentication_indicator
 
@@ -1378,8 +1310,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param requestor_name: The requestor_name of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_name is not None and len(requestor_name) > 40:
-            raise ValueError("Invalid value for `requestor_name`, length must be less than or equal to `40`")
 
         self._requestor_name = requestor_name
 
@@ -1403,8 +1333,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param reference_id: The reference_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if reference_id is not None and len(reference_id) > 50:
-            raise ValueError("Invalid value for `reference_id`, length must be less than or equal to `50`")
 
         self._reference_id = reference_id
 
@@ -1428,8 +1356,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param sdk_max_timeout: The sdk_max_timeout of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if sdk_max_timeout is not None and len(sdk_max_timeout) > 2:
-            raise ValueError("Invalid value for `sdk_max_timeout`, length must be less than or equal to `2`")
 
         self._sdk_max_timeout = sdk_max_timeout
 
@@ -1453,8 +1379,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param secure_corporate_payment_indicator: The secure_corporate_payment_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if secure_corporate_payment_indicator is not None and len(secure_corporate_payment_indicator) > 1:
-            raise ValueError("Invalid value for `secure_corporate_payment_indicator`, length must be less than or equal to `1`")
 
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
@@ -1501,8 +1425,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status is not None and len(white_list_status) > 1:
-            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
 
@@ -1526,8 +1448,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param effective_authentication_type: The effective_authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if effective_authentication_type is not None and len(effective_authentication_type) > 2:
-            raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
 
         self._effective_authentication_type = effective_authentication_type
 
@@ -1551,8 +1471,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param signed_pares_status_reason: The signed_pares_status_reason of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-        if signed_pares_status_reason is not None and len(signed_pares_status_reason) > 2:
-            raise ValueError("Invalid value for `signed_pares_status_reason`, length must be less than or equal to `2`")
 
         self._signed_pares_status_reason = signed_pares_status_reason
 

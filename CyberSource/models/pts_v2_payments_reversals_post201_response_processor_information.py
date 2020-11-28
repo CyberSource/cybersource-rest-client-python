@@ -93,8 +93,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 18:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `18`")
 
         self._transaction_id = transaction_id
 
@@ -118,8 +116,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -143,8 +139,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param response_category_code: The response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_category_code is not None and len(response_category_code) > 36:
-            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `36`")
 
         self._response_category_code = response_category_code
 
@@ -168,8 +162,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if forwarded_acquirer_code is not None and len(forwarded_acquirer_code) > 32:
-            raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -193,8 +185,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param master_card_service_code: The master_card_service_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_code is not None and len(master_card_service_code) > 2:
-            raise ValueError("Invalid value for `master_card_service_code`, length must be less than or equal to `2`")
 
         self._master_card_service_code = master_card_service_code
 
@@ -218,8 +208,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_reply_code is not None and len(master_card_service_reply_code) > 1:
-            raise ValueError("Invalid value for `master_card_service_reply_code`, length must be less than or equal to `1`")
 
         self._master_card_service_reply_code = master_card_service_reply_code
 

@@ -132,8 +132,6 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         :param date_to_capture: The date_to_capture of this Ptsv2paymentsProcessingInformationCaptureOptions.
         :type: str
         """
-        if date_to_capture is not None and len(date_to_capture) > 4:
-            raise ValueError("Invalid value for `date_to_capture`, length must be less than or equal to `4`")
 
         self._date_to_capture = date_to_capture
 

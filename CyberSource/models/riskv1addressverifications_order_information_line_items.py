@@ -94,8 +94,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         """
         if unit_price is None:
             raise ValueError("Invalid value for `unit_price`, must not be `None`")
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -146,8 +144,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -171,8 +167,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_risk: The product_risk of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if product_risk is not None and len(product_risk) > 6:
-            raise ValueError("Invalid value for `product_risk`, length must be less than or equal to `6`")
 
         self._product_risk = product_risk
 
@@ -196,8 +190,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_name: The product_name of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -221,8 +213,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_code: The product_code of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 

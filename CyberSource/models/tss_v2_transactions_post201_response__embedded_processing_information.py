@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :param payment_solution: The payment_solution of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -126,8 +124,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 20:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `20`")
 
         self._commerce_indicator = commerce_indicator
 

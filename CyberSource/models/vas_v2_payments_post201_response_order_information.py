@@ -93,8 +93,6 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param exempt_amount: The exempt_amount of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: str
         """
-        if exempt_amount is not None and len(exempt_amount) > 15:
-            raise ValueError("Invalid value for `exempt_amount`, length must be less than or equal to `15`")
 
         self._exempt_amount = exempt_amount
 
@@ -118,8 +116,6 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param taxable_amount: The taxable_amount of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: str
         """
-        if taxable_amount is not None and len(taxable_amount) > 15:
-            raise ValueError("Invalid value for `taxable_amount`, length must be less than or equal to `15`")
 
         self._taxable_amount = taxable_amount
 
@@ -143,8 +139,6 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param tax_amount: The tax_amount of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 

@@ -98,8 +98,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param prefix: The prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if prefix is not None and len(prefix) > 6:
-            raise ValueError("Invalid value for `prefix`, length must be less than or equal to `6`")
 
         self._prefix = prefix
 
@@ -123,8 +121,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if suffix is not None and len(suffix) > 4:
-            raise ValueError("Invalid value for `suffix`, length must be less than or equal to `4`")
 
         self._suffix = suffix
 
@@ -171,8 +167,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param assurance_level: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if assurance_level is not None and len(assurance_level) > 2:
-            raise ValueError("Invalid value for `assurance_level`, length must be less than or equal to `2`")
 
         self._assurance_level = assurance_level
 
@@ -196,8 +190,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -221,8 +213,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -246,8 +236,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param requestor_id: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 11:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `11`")
 
         self._requestor_id = requestor_id
 

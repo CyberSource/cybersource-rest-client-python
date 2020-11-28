@@ -98,8 +98,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param country: The country of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -123,8 +121,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -148,8 +144,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param locality: The locality of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -173,8 +167,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -198,8 +190,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param address1: The address1 of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -223,8 +213,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param address2: The address2 of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -248,8 +236,6 @@ class Vasv2taxOrderInformationShipTo(object):
         :param address3: The address3 of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
-        if address3 is not None and len(address3) > 60:
-            raise ValueError("Invalid value for `address3`, length must be less than or equal to `60`")
 
         self._address3 = address3
 

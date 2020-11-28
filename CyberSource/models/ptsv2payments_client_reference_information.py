@@ -98,8 +98,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param code: The code of this Ptsv2paymentsClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 
@@ -123,8 +121,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param transaction_id: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 30:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `30`")
 
         self._transaction_id = transaction_id
 

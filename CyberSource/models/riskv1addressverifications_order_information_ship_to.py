@@ -103,8 +103,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         """
         if address1 is None:
             raise ValueError("Invalid value for `address1`, must not be `None`")
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -128,8 +126,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address2: The address2 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -153,8 +149,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address3: The address3 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if address3 is not None and len(address3) > 60:
-            raise ValueError("Invalid value for `address3`, length must be less than or equal to `60`")
 
         self._address3 = address3
 
@@ -178,8 +172,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address4: The address4 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if address4 is not None and len(address4) > 60:
-            raise ValueError("Invalid value for `address4`, length must be less than or equal to `60`")
 
         self._address4 = address4
 
@@ -203,8 +195,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -230,8 +220,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         """
         if country is None:
             raise ValueError("Invalid value for `country`, must not be `None`")
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -255,8 +243,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param locality: The locality of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -280,8 +266,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 

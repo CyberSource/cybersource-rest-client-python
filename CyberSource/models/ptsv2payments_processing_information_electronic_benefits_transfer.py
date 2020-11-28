@@ -73,8 +73,6 @@ class Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer(object):
         :param category: The category of this Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer.
         :type: str
         """
-        if category is not None and len(category) > 4:
-            raise ValueError("Invalid value for `category`, length must be less than or equal to `4`")
 
         self._category = category
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer(object):
         :param voucher_serial_number: The voucher_serial_number of this Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer.
         :type: str
         """
-        if voucher_serial_number is not None and len(voucher_serial_number) > 15:
-            raise ValueError("Invalid value for `voucher_serial_number`, length must be less than or equal to `15`")
 
         self._voucher_serial_number = voucher_serial_number
 

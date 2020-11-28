@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBankAccount(object):
         :param corrected_account_number: The corrected_account_number of this PtsV2PaymentsPost201ResponsePaymentInformationBankAccount.
         :type: str
         """
-        if corrected_account_number is not None and len(corrected_account_number) > 17:
-            raise ValueError("Invalid value for `corrected_account_number`, length must be less than or equal to `17`")
 
         self._corrected_account_number = corrected_account_number
 

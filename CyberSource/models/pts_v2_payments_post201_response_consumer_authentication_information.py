@@ -286,8 +286,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_transaction_id: The acs_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
-            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
 
         self._acs_transaction_id = acs_transaction_id
 
@@ -311,8 +309,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_url: The acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if acs_url is not None and len(acs_url) > 2048:
-            raise ValueError("Invalid value for `acs_url`, length must be less than or equal to `2048`")
 
         self._acs_url = acs_url
 
@@ -382,8 +378,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_transaction_id is not None and len(authentication_transaction_id) > 20:
-            raise ValueError("Invalid value for `authentication_transaction_id`, length must be less than or equal to `20`")
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -407,8 +401,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param cardholder_message: The cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cardholder_message is not None and len(cardholder_message) > 128:
-            raise ValueError("Invalid value for `cardholder_message`, length must be less than or equal to `128`")
 
         self._cardholder_message = cardholder_message
 
@@ -432,8 +424,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv is not None and len(cavv) > 255:
-            raise ValueError("Invalid value for `cavv`, length must be less than or equal to `255`")
 
         self._cavv = cavv
 
@@ -457,8 +447,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param cavv_algorithm: The cavv_algorithm of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv_algorithm is not None and len(cavv_algorithm) > 1:
-            raise ValueError("Invalid value for `cavv_algorithm`, length must be less than or equal to `1`")
 
         self._cavv_algorithm = cavv_algorithm
 
@@ -482,8 +470,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_cancel_code is not None and len(challenge_cancel_code) > 2:
-            raise ValueError("Invalid value for `challenge_cancel_code`, length must be less than or equal to `2`")
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -507,8 +493,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param challenge_required: The challenge_required of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_required is not None and len(challenge_required) > 1:
-            raise ValueError("Invalid value for `challenge_required`, length must be less than or equal to `1`")
 
         self._challenge_required = challenge_required
 
@@ -532,8 +516,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if decoupled_authentication_indicator is not None and len(decoupled_authentication_indicator) > 1:
-            raise ValueError("Invalid value for `decoupled_authentication_indicator`, length must be less than or equal to `1`")
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -580,8 +562,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_error_description: The directory_server_error_description of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
-            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
 
         self._directory_server_error_description = directory_server_error_description
 
@@ -605,8 +585,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param ecommerce_indicator: The ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if ecommerce_indicator is not None and len(ecommerce_indicator) > 255:
-            raise ValueError("Invalid value for `ecommerce_indicator`, length must be less than or equal to `255`")
 
         self._ecommerce_indicator = ecommerce_indicator
 
@@ -676,8 +654,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param effective_authentication_type: The effective_authentication_type of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if effective_authentication_type is not None and len(effective_authentication_type) > 2:
-            raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
 
         self._effective_authentication_type = effective_authentication_type
 
@@ -722,8 +698,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param network_score: The network_score of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if network_score is not None and len(network_score) > 2:
-            raise ValueError("Invalid value for `network_score`, length must be less than or equal to `2`")
 
         self._network_score = network_score
 
@@ -839,8 +813,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param sdk_transaction_id: The sdk_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
-            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
 
         self._sdk_transaction_id = sdk_transaction_id
 
@@ -864,8 +836,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param signed_pares_status_reason: The signed_pares_status_reason of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if signed_pares_status_reason is not None and len(signed_pares_status_reason) > 2:
-            raise ValueError("Invalid value for `signed_pares_status_reason`, length must be less than or equal to `2`")
 
         self._signed_pares_status_reason = signed_pares_status_reason
 
@@ -912,8 +882,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param step_up_url: The step_up_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if step_up_url is not None and len(step_up_url) > 2048:
-            raise ValueError("Invalid value for `step_up_url`, length must be less than or equal to `2048`")
 
         self._step_up_url = step_up_url
 
@@ -937,8 +905,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
 
         self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
@@ -1031,8 +997,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param white_list_status_source: The white_list_status_source of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status_source is not None and len(white_list_status_source) > 2:
-            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
 
         self._white_list_status_source = white_list_status_source
 
@@ -1079,8 +1043,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_transaction_id: The directory_server_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
 
         self._directory_server_transaction_id = directory_server_transaction_id
 
@@ -1173,8 +1135,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param interaction_counter: The interaction_counter of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if interaction_counter is not None and len(interaction_counter) > 2:
-            raise ValueError("Invalid value for `interaction_counter`, length must be less than or equal to `2`")
 
         self._interaction_counter = interaction_counter
 
@@ -1198,8 +1158,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status is not None and len(white_list_status) > 1:
-            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
 

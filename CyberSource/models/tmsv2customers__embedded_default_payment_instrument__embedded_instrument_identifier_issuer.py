@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
         :param payment_account_reference: The payment_account_reference of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierIssuer.
         :type: str
         """
-        if payment_account_reference is not None and len(payment_account_reference) > 32:
-            raise ValueError("Invalid value for `payment_account_reference`, length must be less than or equal to `32`")
 
         self._payment_account_reference = payment_account_reference
 

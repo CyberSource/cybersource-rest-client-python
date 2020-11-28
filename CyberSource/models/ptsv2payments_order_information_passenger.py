@@ -103,8 +103,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param type: The type of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if type is not None and len(type) > 32:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `32`")
 
         self._type = type
 
@@ -128,8 +126,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param status: The status of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if status is not None and len(status) > 32:
-            raise ValueError("Invalid value for `status`, length must be less than or equal to `32`")
 
         self._status = status
 
@@ -153,8 +149,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param phone: The phone of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if phone is not None and len(phone) > 15:
-            raise ValueError("Invalid value for `phone`, length must be less than or equal to `15`")
 
         self._phone = phone
 
@@ -178,8 +172,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param first_name: The first_name of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -203,8 +195,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param last_name: The last_name of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -228,8 +218,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param id: The id of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if id is not None and len(id) > 40:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `40`")
 
         self._id = id
 
@@ -253,8 +241,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param email: The email of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 
@@ -278,8 +264,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param nationality: The nationality of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-        if nationality is not None and len(nationality) > 2:
-            raise ValueError("Invalid value for `nationality`, length must be less than or equal to `2`")
 
         self._nationality = nationality
 

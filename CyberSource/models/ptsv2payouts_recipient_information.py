@@ -113,8 +113,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param first_name: The first_name of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if first_name is not None and len(first_name) > 35:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `35`")
 
         self._first_name = first_name
 
@@ -138,8 +136,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if middle_initial is not None and len(middle_initial) > 1:
-            raise ValueError("Invalid value for `middle_initial`, length must be less than or equal to `1`")
 
         self._middle_initial = middle_initial
 
@@ -163,8 +159,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if last_name is not None and len(last_name) > 35:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `35`")
 
         self._last_name = last_name
 
@@ -188,8 +182,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param address1: The address1 of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if address1 is not None and len(address1) > 50:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `50`")
 
         self._address1 = address1
 
@@ -213,8 +205,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param locality: The locality of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if locality is not None and len(locality) > 25:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `25`")
 
         self._locality = locality
 
@@ -238,8 +228,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 3:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
 
@@ -263,8 +251,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param country: The country of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -288,8 +274,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param postal_code: The postal_code of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -313,8 +297,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param phone_number: The phone_number of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 20:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `20`")
 
         self._phone_number = phone_number
 
@@ -338,10 +320,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
-        if date_of_birth is not None and len(date_of_birth) < 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be greater than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 

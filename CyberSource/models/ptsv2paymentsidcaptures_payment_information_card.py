@@ -73,8 +73,6 @@ class Ptsv2paymentsidcapturesPaymentInformationCard(object):
         :param source_account_type: The source_account_type of this Ptsv2paymentsidcapturesPaymentInformationCard.
         :type: str
         """
-        if source_account_type is not None and len(source_account_type) > 20:
-            raise ValueError("Invalid value for `source_account_type`, length must be less than or equal to `20`")
 
         self._source_account_type = source_account_type
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsidcapturesPaymentInformationCard(object):
         :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsidcapturesPaymentInformationCard.
         :type: str
         """
-        if source_account_type_details is not None and len(source_account_type_details) > 4:
-            raise ValueError("Invalid value for `source_account_type_details`, length must be less than or equal to `4`")
 
         self._source_account_type_details = source_account_type_details
 

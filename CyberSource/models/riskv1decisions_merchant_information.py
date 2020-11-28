@@ -94,8 +94,6 @@ class Riskv1decisionsMerchantInformation(object):
         :param merchant_name: The merchant_name of this Riskv1decisionsMerchantInformation.
         :type: str
         """
-        if merchant_name is not None and len(merchant_name) > 25:
-            raise ValueError("Invalid value for `merchant_name`, length must be less than or equal to `25`")
 
         self._merchant_name = merchant_name
 

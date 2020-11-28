@@ -103,8 +103,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param expiration_month: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -128,8 +126,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param expiration_year: The expiration_year of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -176,8 +172,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param issue_number: The issue_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
-        if issue_number is not None and len(issue_number) > 2:
-            raise ValueError("Invalid value for `issue_number`, length must be less than or equal to `2`")
 
         self._issue_number = issue_number
 
@@ -201,8 +195,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param start_month: The start_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
-        if start_month is not None and len(start_month) > 2:
-            raise ValueError("Invalid value for `start_month`, length must be less than or equal to `2`")
 
         self._start_month = start_month
 
@@ -226,8 +218,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param start_year: The start_year of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
-        if start_year is not None and len(start_year) > 4:
-            raise ValueError("Invalid value for `start_year`, length must be less than or equal to `4`")
 
         self._start_year = start_year
 

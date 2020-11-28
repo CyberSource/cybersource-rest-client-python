@@ -78,8 +78,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformationWeights(object):
         :param address: The address of this Riskv1exportcomplianceinquiriesExportComplianceInformationWeights.
         :type: str
         """
-        if address is not None and len(address) > 6:
-            raise ValueError("Invalid value for `address`, length must be less than or equal to `6`")
 
         self._address = address
 
@@ -103,8 +101,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformationWeights(object):
         :param company: The company of this Riskv1exportcomplianceinquiriesExportComplianceInformationWeights.
         :type: str
         """
-        if company is not None and len(company) > 6:
-            raise ValueError("Invalid value for `company`, length must be less than or equal to `6`")
 
         self._company = company
 
@@ -128,8 +124,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformationWeights(object):
         :param name: The name of this Riskv1exportcomplianceinquiriesExportComplianceInformationWeights.
         :type: str
         """
-        if name is not None and len(name) > 6:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `6`")
 
         self._name = name
 

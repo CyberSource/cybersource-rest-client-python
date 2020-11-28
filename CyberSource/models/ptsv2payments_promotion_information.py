@@ -73,8 +73,6 @@ class Ptsv2paymentsPromotionInformation(object):
         :param additional_code: The additional_code of this Ptsv2paymentsPromotionInformation.
         :type: str
         """
-        if additional_code is not None and len(additional_code) > 12:
-            raise ValueError("Invalid value for `additional_code`, length must be less than or equal to `12`")
 
         self._additional_code = additional_code
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsPromotionInformation(object):
         :param code: The code of this Ptsv2paymentsPromotionInformation.
         :type: str
         """
-        if code is not None and len(code) > 12:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `12`")
 
         self._code = code
 

@@ -98,8 +98,6 @@ class Riskv1decisionsTravelInformation(object):
         :param actual_final_destination: The actual_final_destination of this Riskv1decisionsTravelInformation.
         :type: str
         """
-        if actual_final_destination is not None and len(actual_final_destination) > 3:
-            raise ValueError("Invalid value for `actual_final_destination`, length must be less than or equal to `3`")
 
         self._actual_final_destination = actual_final_destination
 
@@ -123,8 +121,6 @@ class Riskv1decisionsTravelInformation(object):
         :param complete_route: The complete_route of this Riskv1decisionsTravelInformation.
         :type: str
         """
-        if complete_route is not None and len(complete_route) > 255:
-            raise ValueError("Invalid value for `complete_route`, length must be less than or equal to `255`")
 
         self._complete_route = complete_route
 
@@ -148,8 +144,6 @@ class Riskv1decisionsTravelInformation(object):
         :param departure_time: The departure_time of this Riskv1decisionsTravelInformation.
         :type: str
         """
-        if departure_time is not None and len(departure_time) > 25:
-            raise ValueError("Invalid value for `departure_time`, length must be less than or equal to `25`")
 
         self._departure_time = departure_time
 
@@ -173,8 +167,6 @@ class Riskv1decisionsTravelInformation(object):
         :param journey_type: The journey_type of this Riskv1decisionsTravelInformation.
         :type: str
         """
-        if journey_type is not None and len(journey_type) > 32:
-            raise ValueError("Invalid value for `journey_type`, length must be less than or equal to `32`")
 
         self._journey_type = journey_type
 

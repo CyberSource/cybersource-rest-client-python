@@ -138,8 +138,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param first_name: The first_name of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -163,8 +161,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param last_name: The last_name of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -188,8 +184,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param address1: The address1 of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -213,8 +207,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param address2: The address2 of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -238,8 +230,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param locality: The locality of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -263,8 +253,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -288,8 +276,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -313,8 +299,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param country: The country of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -338,8 +322,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param district: The district of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if district is not None and len(district) > 50:
-            raise ValueError("Invalid value for `district`, length must be less than or equal to `50`")
 
         self._district = district
 
@@ -363,8 +345,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param building_number: The building_number of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if building_number is not None and len(building_number) > 15:
-            raise ValueError("Invalid value for `building_number`, length must be less than or equal to `15`")
 
         self._building_number = building_number
 
@@ -388,8 +368,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param phone_number: The phone_number of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 15:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `15`")
 
         self._phone_number = phone_number
 
@@ -413,8 +391,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param company: The company of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if company is not None and len(company) > 60:
-            raise ValueError("Invalid value for `company`, length must be less than or equal to `60`")
 
         self._company = company
 
@@ -438,8 +414,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param destination_types: The destination_types of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if destination_types is not None and len(destination_types) > 25:
-            raise ValueError("Invalid value for `destination_types`, length must be less than or equal to `25`")
 
         self._destination_types = destination_types
 
@@ -486,8 +460,6 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         :param method: The method of this Ptsv2paymentsOrderInformationShipTo.
         :type: str
         """
-        if method is not None and len(method) > 10:
-            raise ValueError("Invalid value for `method`, length must be less than or equal to `10`")
 
         self._method = method
 

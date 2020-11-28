@@ -134,8 +134,6 @@ class PtsV2IncrementalAuthorizationPatch201Response(object):
         :param id: The id of this PtsV2IncrementalAuthorizationPatch201Response.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 
@@ -205,8 +203,6 @@ class PtsV2IncrementalAuthorizationPatch201Response(object):
         :param reconciliation_id: The reconciliation_id of this PtsV2IncrementalAuthorizationPatch201Response.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 

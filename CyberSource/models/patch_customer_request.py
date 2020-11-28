@@ -134,10 +134,6 @@ class PatchCustomerRequest(object):
         :param id: The id of this PatchCustomerRequest.
         :type: str
         """
-        if id is not None and len(id) > 32:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `32`")
-        if id is not None and len(id) < 1:
-            raise ValueError("Invalid value for `id`, length must be greater than or equal to `1`")
 
         self._id = id
 

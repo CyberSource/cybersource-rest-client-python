@@ -98,8 +98,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_code: The product_code of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 
@@ -123,8 +121,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_name: The product_name of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -148,8 +144,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_sku: The product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -173,8 +167,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 
@@ -225,8 +217,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param unit_price: The unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
