@@ -103,8 +103,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param address_type: The address_type of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
-        if address_type is not None and len(address_type) > 255:
-            raise ValueError("Invalid value for `address_type`, length must be less than or equal to `255`")
 
         self._address_type = address_type
 
@@ -149,8 +147,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param applicable_region: The applicable_region of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
-        if applicable_region is not None and len(applicable_region) > 255:
-            raise ValueError("Invalid value for `applicable_region`, length must be less than or equal to `255`")
 
         self._applicable_region = applicable_region
 
@@ -174,8 +170,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param error_code: The error_code of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
-        if error_code is not None and len(error_code) > 255:
-            raise ValueError("Invalid value for `error_code`, length must be less than or equal to `255`")
 
         self._error_code = error_code
 
@@ -199,8 +193,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param status_code: The status_code of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
-        if status_code is not None and len(status_code) > 255:
-            raise ValueError("Invalid value for `status_code`, length must be less than or equal to `255`")
 
         self._status_code = status_code
 
@@ -224,8 +216,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param care_of: The care_of of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
-        if care_of is not None and len(care_of) > 255:
-            raise ValueError("Invalid value for `care_of`, length must be less than or equal to `255`")
 
         self._care_of = care_of
 

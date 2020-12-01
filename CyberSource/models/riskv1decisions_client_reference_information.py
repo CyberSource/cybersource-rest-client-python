@@ -73,8 +73,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param code: The code of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 
@@ -98,8 +96,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param comments: The comments of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-        if comments is not None and len(comments) > 255:
-            raise ValueError("Invalid value for `comments`, length must be less than or equal to `255`")
 
         self._comments = comments
 

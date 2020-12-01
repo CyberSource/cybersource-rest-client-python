@@ -68,8 +68,6 @@ class Ptsv2paymentsidTravelInformation(object):
         :param duration: The duration of this Ptsv2paymentsidTravelInformation.
         :type: str
         """
-        if duration is not None and len(duration) > 2:
-            raise ValueError("Invalid value for `duration`, length must be less than or equal to `2`")
 
         self._duration = duration
 

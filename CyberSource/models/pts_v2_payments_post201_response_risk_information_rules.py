@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationRules(object):
         :param name: The name of this PtsV2PaymentsPost201ResponseRiskInformationRules.
         :type: str
         """
-        if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
 
         self._name = name
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationRules(object):
         :param decision: The decision of this PtsV2PaymentsPost201ResponseRiskInformationRules.
         :type: str
         """
-        if decision is not None and len(decision) > 255:
-            raise ValueError("Invalid value for `decision`, length must be less than or equal to `255`")
 
         self._decision = decision
 

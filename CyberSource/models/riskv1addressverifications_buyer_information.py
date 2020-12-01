@@ -68,8 +68,6 @@ class Riskv1addressverificationsBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Riskv1addressverificationsBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 

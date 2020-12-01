@@ -78,8 +78,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :param indicator: The indicator of this Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion.
         :type: str
         """
-        if indicator is not None and len(indicator) > 1:
-            raise ValueError("Invalid value for `indicator`, length must be less than or equal to `1`")
 
         self._indicator = indicator
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :param id: The id of this Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

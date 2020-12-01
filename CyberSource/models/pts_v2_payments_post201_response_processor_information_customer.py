@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCustomer(object):
         :param personal_id_result: The personal_id_result of this PtsV2PaymentsPost201ResponseProcessorInformationCustomer.
         :type: str
         """
-        if personal_id_result is not None and len(personal_id_result) > 1:
-            raise ValueError("Invalid value for `personal_id_result`, length must be less than or equal to `1`")
 
         self._personal_id_result = personal_id_result
 

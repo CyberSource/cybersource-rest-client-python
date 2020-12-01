@@ -73,8 +73,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
         :param category_code: The category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :type: str
         """
-        if category_code is not None and len(category_code) > 4:
-            raise ValueError("Invalid value for `category_code`, length must be less than or equal to `4`")
 
         self._category_code = category_code
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
         :param sub_category_code: The sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :type: str
         """
-        if sub_category_code is not None and len(sub_category_code) > 4:
-            raise ValueError("Invalid value for `sub_category_code`, length must be less than or equal to `4`")
 
         self._sub_category_code = sub_category_code
 

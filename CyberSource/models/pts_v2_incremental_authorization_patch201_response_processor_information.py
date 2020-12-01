@@ -116,8 +116,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 50:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `50`")
 
         self._transaction_id = transaction_id
 
@@ -141,8 +139,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -166,8 +162,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param system_trace_audit_number: The system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-        if system_trace_audit_number is not None and len(system_trace_audit_number) > 6:
-            raise ValueError("Invalid value for `system_trace_audit_number`, length must be less than or equal to `6`")
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -191,8 +185,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param response_details: The response_details of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-        if response_details is not None and len(response_details) > 255:
-            raise ValueError("Invalid value for `response_details`, length must be less than or equal to `255`")
 
         self._response_details = response_details
 

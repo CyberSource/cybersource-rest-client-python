@@ -73,8 +73,6 @@ class VasV2PaymentsPost201ResponseOrderInformationTaxDetails(object):
         :param type: The type of this VasV2PaymentsPost201ResponseOrderInformationTaxDetails.
         :type: str
         """
-        if type is not None and len(type) > 15:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `15`")
 
         self._type = type
 
@@ -98,8 +96,6 @@ class VasV2PaymentsPost201ResponseOrderInformationTaxDetails(object):
         :param amount: The amount of this VasV2PaymentsPost201ResponseOrderInformationTaxDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 15:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `15`")
 
         self._amount = amount
 

@@ -78,8 +78,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
         :param id: The id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

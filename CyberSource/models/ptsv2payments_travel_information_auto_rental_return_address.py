@@ -88,8 +88,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param city: The city of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-        if city is not None and len(city) > 25:
-            raise ValueError("Invalid value for `city`, length must be less than or equal to `25`")
 
         self._city = city
 
@@ -113,8 +111,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param state: The state of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-        if state is not None and len(state) > 3:
-            raise ValueError("Invalid value for `state`, length must be less than or equal to `3`")
 
         self._state = state
 
@@ -138,8 +134,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param country: The country of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-        if country is not None and len(country) > 3:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `3`")
 
         self._country = country
 
@@ -163,8 +157,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param location_id: The location_id of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-        if location_id is not None and len(location_id) > 10:
-            raise ValueError("Invalid value for `location_id`, length must be less than or equal to `10`")
 
         self._location_id = location_id
 
@@ -188,8 +180,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param location: The location of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-        if location is not None and len(location) > 38:
-            raise ValueError("Invalid value for `location`, length must be less than or equal to `38`")
 
         self._location = location
 

@@ -128,8 +128,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param request_id: The request_id of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-        if request_id is not None and len(request_id) > 26:
-            raise ValueError("Invalid value for `request_id`, length must be less than or equal to `26`")
 
         self._request_id = request_id
 

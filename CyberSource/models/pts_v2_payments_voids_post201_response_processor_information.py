@@ -68,8 +68,6 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 

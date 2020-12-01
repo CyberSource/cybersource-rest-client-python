@@ -78,8 +78,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :param country: The country of this Riskv1exportcomplianceinquiriesOrderInformationShipTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -103,8 +101,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :param first_name: The first_name of this Riskv1exportcomplianceinquiriesOrderInformationShipTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -128,8 +124,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :param last_name: The last_name of this Riskv1exportcomplianceinquiriesOrderInformationShipTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 

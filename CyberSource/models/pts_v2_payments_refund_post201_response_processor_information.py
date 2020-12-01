@@ -88,8 +88,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 18:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `18`")
 
         self._transaction_id = transaction_id
 
@@ -113,8 +111,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-        if forwarded_acquirer_code is not None and len(forwarded_acquirer_code) > 32:
-            raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -138,8 +134,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param merchant_number: The merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-        if merchant_number is not None and len(merchant_number) > 15:
-            raise ValueError("Invalid value for `merchant_number`, length must be less than or equal to `15`")
 
         self._merchant_number = merchant_number
 
@@ -163,8 +157,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 

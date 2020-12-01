@@ -201,8 +201,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param acs_transaction_id: The acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if acs_transaction_id is not None and len(acs_transaction_id) > 36:
-            raise ValueError("Invalid value for `acs_transaction_id`, length must be less than or equal to `36`")
 
         self._acs_transaction_id = acs_transaction_id
 
@@ -295,8 +293,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param cavv: The cavv of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv is not None and len(cavv) > 255:
-            raise ValueError("Invalid value for `cavv`, length must be less than or equal to `255`")
 
         self._cavv = cavv
 
@@ -320,8 +316,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param cavv_algorithm: The cavv_algorithm of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv_algorithm is not None and len(cavv_algorithm) > 1:
-            raise ValueError("Invalid value for `cavv_algorithm`, length must be less than or equal to `1`")
 
         self._cavv_algorithm = cavv_algorithm
 
@@ -368,8 +362,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param directory_server_error_description: The directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_error_description is not None and len(directory_server_error_description) > 4096:
-            raise ValueError("Invalid value for `directory_server_error_description`, length must be less than or equal to `4096`")
 
         self._directory_server_error_description = directory_server_error_description
 
@@ -416,8 +408,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param interaction_counter: The interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if interaction_counter is not None and len(interaction_counter) > 2:
-            raise ValueError("Invalid value for `interaction_counter`, length must be less than or equal to `2`")
 
         self._interaction_counter = interaction_counter
 
@@ -510,8 +500,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param sdk_transaction_id: The sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if sdk_transaction_id is not None and len(sdk_transaction_id) > 36:
-            raise ValueError("Invalid value for `sdk_transaction_id`, length must be less than or equal to `36`")
 
         self._sdk_transaction_id = sdk_transaction_id
 
@@ -558,8 +546,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if three_ds_server_transaction_id is not None and len(three_ds_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `three_ds_server_transaction_id`, length must be less than or equal to `36`")
 
         self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
@@ -629,8 +615,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param white_list_status: The white_list_status of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status is not None and len(white_list_status) > 1:
-            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
 
@@ -654,8 +638,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param white_list_status_source: The white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status_source is not None and len(white_list_status_source) > 2:
-            raise ValueError("Invalid value for `white_list_status_source`, length must be less than or equal to `2`")
 
         self._white_list_status_source = white_list_status_source
 
@@ -702,8 +684,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param directory_server_transaction_id: The directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if directory_server_transaction_id is not None and len(directory_server_transaction_id) > 36:
-            raise ValueError("Invalid value for `directory_server_transaction_id`, length must be less than or equal to `36`")
 
         self._directory_server_transaction_id = directory_server_transaction_id
 

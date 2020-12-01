@@ -73,8 +73,6 @@ class Ptsv2paymentsProcessingInformationLoanOptions(object):
         :param type: The type of this Ptsv2paymentsProcessingInformationLoanOptions.
         :type: str
         """
-        if type is not None and len(type) > 20:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `20`")
 
         self._type = type
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsProcessingInformationLoanOptions(object):
         :param asset_type: The asset_type of this Ptsv2paymentsProcessingInformationLoanOptions.
         :type: str
         """
-        if asset_type is not None and len(asset_type) > 1:
-            raise ValueError("Invalid value for `asset_type`, length must be less than or equal to `1`")
 
         self._asset_type = asset_type
 

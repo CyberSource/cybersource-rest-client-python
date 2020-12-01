@@ -78,8 +78,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :param approval_code: The approval_code of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
         :type: str
         """
-        if approval_code is not None and len(approval_code) > 6:
-            raise ValueError("Invalid value for `approval_code`, length must be less than or equal to `6`")
 
         self._approval_code = approval_code
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :param reason_code: The reason_code of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
         :type: str
         """
-        if reason_code is not None and len(reason_code) > 50:
-            raise ValueError("Invalid value for `reason_code`, length must be less than or equal to `50`")
 
         self._reason_code = reason_code
 
@@ -128,8 +124,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :param reversal_submitted: The reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
         :type: str
         """
-        if reversal_submitted is not None and len(reversal_submitted) > 1:
-            raise ValueError("Invalid value for `reversal_submitted`, length must be less than or equal to `1`")
 
         self._reversal_submitted = reversal_submitted
 

@@ -73,8 +73,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBar
         :param value: The value of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBarCode.
         :type: str
         """
-        if value is not None and len(value) > 255:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `255`")
 
         self._value = value
 

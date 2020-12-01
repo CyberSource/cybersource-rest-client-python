@@ -83,8 +83,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -108,8 +106,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -133,8 +129,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param settlement_amount: The settlement_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_amount is not None and len(settlement_amount) > 12:
-            raise ValueError("Invalid value for `settlement_amount`, length must be less than or equal to `12`")
 
         self._settlement_amount = settlement_amount
 
@@ -158,8 +152,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_currency is not None and len(settlement_currency) > 3:
-            raise ValueError("Invalid value for `settlement_currency`, length must be less than or equal to `3`")
 
         self._settlement_currency = settlement_currency
 

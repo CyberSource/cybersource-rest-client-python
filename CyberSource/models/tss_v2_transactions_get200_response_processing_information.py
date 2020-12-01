@@ -77,7 +77,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction.  
 
         :return: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -88,13 +88,11 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction.  
 
         :param payment_solution: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -118,8 +116,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 20:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `20`")
 
         self._commerce_indicator = commerce_indicator
 

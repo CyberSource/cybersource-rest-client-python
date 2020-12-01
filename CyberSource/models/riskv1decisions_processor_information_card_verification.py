@@ -68,8 +68,6 @@ class Riskv1decisionsProcessorInformationCardVerification(object):
         :param result_code: The result_code of this Riskv1decisionsProcessorInformationCardVerification.
         :type: str
         """
-        if result_code is not None and len(result_code) > 1:
-            raise ValueError("Invalid value for `result_code`, length must be less than or equal to `1`")
 
         self._result_code = result_code
 

@@ -97,8 +97,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_transaction_id is not None and len(authentication_transaction_id) > 20:
-            raise ValueError("Invalid value for `authentication_transaction_id`, length must be less than or equal to `20`")
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -122,8 +120,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param authentication_type: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_type is not None and len(authentication_type) > 2:
-            raise ValueError("Invalid value for `authentication_type`, length must be less than or equal to `2`")
 
         self._authentication_type = authentication_type
 
@@ -147,8 +143,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param effective_authentication_type: The effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if effective_authentication_type is not None and len(effective_authentication_type) > 2:
-            raise ValueError("Invalid value for `effective_authentication_type`, length must be less than or equal to `2`")
 
         self._effective_authentication_type = effective_authentication_type
 
@@ -195,8 +189,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param signed_pares_status_reason: The signed_pares_status_reason of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if signed_pares_status_reason is not None and len(signed_pares_status_reason) > 2:
-            raise ValueError("Invalid value for `signed_pares_status_reason`, length must be less than or equal to `2`")
 
         self._signed_pares_status_reason = signed_pares_status_reason
 
@@ -245,8 +237,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status is not None and len(white_list_status) > 1:
-            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
 

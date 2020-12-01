@@ -88,8 +88,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :param tags: The tags of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: str
         """
-        if tags is not None and len(tags) > 1998:
-            raise ValueError("Invalid value for `tags`, length must be less than or equal to `1998`")
 
         self._tags = tags
 
@@ -136,8 +134,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :param card_sequence_number: The card_sequence_number of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: str
         """
-        if card_sequence_number is not None and len(card_sequence_number) > 3:
-            raise ValueError("Invalid value for `card_sequence_number`, length must be less than or equal to `3`")
 
         self._card_sequence_number = card_sequence_number
 

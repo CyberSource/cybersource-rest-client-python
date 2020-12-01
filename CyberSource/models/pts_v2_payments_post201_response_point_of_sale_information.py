@@ -99,8 +99,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         :param amex_capn_data: The amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 15:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `15`")
 
         self._amex_capn_data = amex_capn_data
 
@@ -124,8 +122,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         :param terminal_id: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 8:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `8`")
 
         self._terminal_id = terminal_id
 

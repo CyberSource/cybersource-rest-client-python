@@ -68,8 +68,6 @@ class Riskv1liststypeentriesOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1liststypeentriesOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 

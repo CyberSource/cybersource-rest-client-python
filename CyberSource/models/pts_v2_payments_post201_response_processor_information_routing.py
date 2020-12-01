@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :param network: The network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
         """
-        if network is not None and len(network) > 1:
-            raise ValueError("Invalid value for `network`, length must be less than or equal to `1`")
 
         self._network = network
 
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :param network_name: The network_name of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
         """
-        if network_name is not None and len(network_name) > 10:
-            raise ValueError("Invalid value for `network_name`, length must be less than or equal to `10`")
 
         self._network_name = network_name
 
@@ -128,8 +124,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :param customer_signature_required: The customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
         """
-        if customer_signature_required is not None and len(customer_signature_required) > 1:
-            raise ValueError("Invalid value for `customer_signature_required`, length must be less than or equal to `1`")
 
         self._customer_signature_required = customer_signature_required
 

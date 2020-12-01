@@ -284,8 +284,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param authentication_type: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_type is not None and len(authentication_type) > 2:
-            raise ValueError("Invalid value for `authentication_type`, length must be less than or equal to `2`")
 
         self._authentication_type = authentication_type
 
@@ -309,8 +307,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param acs_window_size: The acs_window_size of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if acs_window_size is not None and len(acs_window_size) > 2:
-            raise ValueError("Invalid value for `acs_window_size`, length must be less than or equal to `2`")
 
         self._acs_window_size = acs_window_size
 
@@ -334,8 +330,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param alternate_authentication_data: The alternate_authentication_data of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if alternate_authentication_data is not None and len(alternate_authentication_data) > 2048:
-            raise ValueError("Invalid value for `alternate_authentication_data`, length must be less than or equal to `2048`")
 
         self._alternate_authentication_data = alternate_authentication_data
 
@@ -359,8 +353,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param alternate_authentication_date: The alternate_authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if alternate_authentication_date is not None and len(alternate_authentication_date) > 14:
-            raise ValueError("Invalid value for `alternate_authentication_date`, length must be less than or equal to `14`")
 
         self._alternate_authentication_date = alternate_authentication_date
 
@@ -407,8 +399,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param authentication_date: The authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_date is not None and len(authentication_date) > 14:
-            raise ValueError("Invalid value for `authentication_date`, length must be less than or equal to `14`")
 
         self._authentication_date = authentication_date
 
@@ -432,8 +422,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if authentication_transaction_id is not None and len(authentication_transaction_id) > 20:
-            raise ValueError("Invalid value for `authentication_transaction_id`, length must be less than or equal to `20`")
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -457,8 +445,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_cancel_code is not None and len(challenge_cancel_code) > 2:
-            raise ValueError("Invalid value for `challenge_cancel_code`, length must be less than or equal to `2`")
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -505,8 +491,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param challenge_status: The challenge_status of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if challenge_status is not None and len(challenge_status) > 2:
-            raise ValueError("Invalid value for `challenge_status`, length must be less than or equal to `2`")
 
         self._challenge_status = challenge_status
 
@@ -530,8 +514,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param customer_card_alias: The customer_card_alias of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if customer_card_alias is not None and len(customer_card_alias) > 128:
-            raise ValueError("Invalid value for `customer_card_alias`, length must be less than or equal to `128`")
 
         self._customer_card_alias = customer_card_alias
 
@@ -555,8 +537,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if decoupled_authentication_indicator is not None and len(decoupled_authentication_indicator) > 1:
-            raise ValueError("Invalid value for `decoupled_authentication_indicator`, length must be less than or equal to `1`")
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -580,8 +560,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_max_time: The decoupled_authentication_max_time of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if decoupled_authentication_max_time is not None and len(decoupled_authentication_max_time) > 5:
-            raise ValueError("Invalid value for `decoupled_authentication_max_time`, length must be less than or equal to `5`")
 
         self._decoupled_authentication_max_time = decoupled_authentication_max_time
 
@@ -628,8 +606,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param device_channel: The device_channel of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if device_channel is not None and len(device_channel) > 10:
-            raise ValueError("Invalid value for `device_channel`, length must be less than or equal to `10`")
 
         self._device_channel = device_channel
 
@@ -676,8 +652,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param merchant_fraud_rate: The merchant_fraud_rate of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if merchant_fraud_rate is not None and len(merchant_fraud_rate) > 2:
-            raise ValueError("Invalid value for `merchant_fraud_rate`, length must be less than or equal to `2`")
 
         self._merchant_fraud_rate = merchant_fraud_rate
 
@@ -724,8 +698,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param marketing_source: The marketing_source of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if marketing_source is not None and len(marketing_source) > 40:
-            raise ValueError("Invalid value for `marketing_source`, length must be less than or equal to `40`")
 
         self._marketing_source = marketing_source
 
@@ -749,8 +721,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param mcc: The mcc of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if mcc is not None and len(mcc) > 4:
-            raise ValueError("Invalid value for `mcc`, length must be less than or equal to `4`")
 
         self._mcc = mcc
 
@@ -820,8 +790,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param npa_code: The npa_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if npa_code is not None and len(npa_code) > 2:
-            raise ValueError("Invalid value for `npa_code`, length must be less than or equal to `2`")
 
         self._npa_code = npa_code
 
@@ -868,8 +836,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param override_country_code: The override_country_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if override_country_code is not None and len(override_country_code) > 2:
-            raise ValueError("Invalid value for `override_country_code`, length must be less than or equal to `2`")
 
         self._override_country_code = override_country_code
 
@@ -893,8 +859,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_data: The prior_authentication_data of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_data is not None and len(prior_authentication_data) > 2048:
-            raise ValueError("Invalid value for `prior_authentication_data`, length must be less than or equal to `2048`")
 
         self._prior_authentication_data = prior_authentication_data
 
@@ -918,8 +882,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_method: The prior_authentication_method of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_method is not None and len(prior_authentication_method) > 2:
-            raise ValueError("Invalid value for `prior_authentication_method`, length must be less than or equal to `2`")
 
         self._prior_authentication_method = prior_authentication_method
 
@@ -943,8 +905,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_reference_id: The prior_authentication_reference_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_reference_id is not None and len(prior_authentication_reference_id) > 36:
-            raise ValueError("Invalid value for `prior_authentication_reference_id`, length must be less than or equal to `36`")
 
         self._prior_authentication_reference_id = prior_authentication_reference_id
 
@@ -968,8 +928,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_time: The prior_authentication_time of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if prior_authentication_time is not None and len(prior_authentication_time) > 12:
-            raise ValueError("Invalid value for `prior_authentication_time`, length must be less than or equal to `12`")
 
         self._prior_authentication_time = prior_authentication_time
 
@@ -993,8 +951,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param product_code: The product_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if product_code is not None and len(product_code) > 3:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `3`")
 
         self._product_code = product_code
 
@@ -1018,8 +974,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param return_url: The return_url of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if return_url is not None and len(return_url) > 2048:
-            raise ValueError("Invalid value for `return_url`, length must be less than or equal to `2048`")
 
         self._return_url = return_url
 
@@ -1043,8 +997,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param requestor_id: The requestor_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 35:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `35`")
 
         self._requestor_id = requestor_id
 
@@ -1068,8 +1020,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param requestor_initiated_authentication_indicator: The requestor_initiated_authentication_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_initiated_authentication_indicator is not None and len(requestor_initiated_authentication_indicator) > 2:
-            raise ValueError("Invalid value for `requestor_initiated_authentication_indicator`, length must be less than or equal to `2`")
 
         self._requestor_initiated_authentication_indicator = requestor_initiated_authentication_indicator
 
@@ -1093,8 +1043,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param requestor_name: The requestor_name of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if requestor_name is not None and len(requestor_name) > 40:
-            raise ValueError("Invalid value for `requestor_name`, length must be less than or equal to `40`")
 
         self._requestor_name = requestor_name
 
@@ -1118,8 +1066,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param reference_id: The reference_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if reference_id is not None and len(reference_id) > 50:
-            raise ValueError("Invalid value for `reference_id`, length must be less than or equal to `50`")
 
         self._reference_id = reference_id
 
@@ -1143,8 +1089,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param sdk_max_timeout: The sdk_max_timeout of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if sdk_max_timeout is not None and len(sdk_max_timeout) > 2:
-            raise ValueError("Invalid value for `sdk_max_timeout`, length must be less than or equal to `2`")
 
         self._sdk_max_timeout = sdk_max_timeout
 
@@ -1168,8 +1112,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param secure_corporate_payment_indicator: The secure_corporate_payment_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if secure_corporate_payment_indicator is not None and len(secure_corporate_payment_indicator) > 1:
-            raise ValueError("Invalid value for `secure_corporate_payment_indicator`, length must be less than or equal to `1`")
 
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
@@ -1216,8 +1158,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
-        if white_list_status is not None and len(white_list_status) > 1:
-            raise ValueError("Invalid value for `white_list_status`, length must be less than or equal to `1`")
 
         self._white_list_status = white_list_status
 

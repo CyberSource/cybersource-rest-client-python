@@ -73,8 +73,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderSt
         :param font_color: The font_color of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle.
         :type: str
         """
-        if font_color is not None and len(font_color) > 7:
-            raise ValueError("Invalid value for `font_color`, length must be less than or equal to `7`")
         if font_color is not None and not re.search('^#(?:[0-9a-fA-F]{3}){1,2}$', font_color):
             raise ValueError("Invalid value for `font_color`, must be a follow pattern or equal to `/^#(?:[0-9a-fA-F]{3}){1,2}$/`")
 
@@ -100,8 +98,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderSt
         :param background_color: The background_color of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle.
         :type: str
         """
-        if background_color is not None and len(background_color) > 7:
-            raise ValueError("Invalid value for `background_color`, length must be less than or equal to `7`")
         if background_color is not None and not re.search('^#(?:[0-9a-fA-F]{3}){1,2}$', background_color):
             raise ValueError("Invalid value for `background_color`, must be a follow pattern or equal to `/^#(?:[0-9a-fA-F]{3}){1,2}$/`")
 

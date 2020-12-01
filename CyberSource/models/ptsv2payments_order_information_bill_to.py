@@ -163,8 +163,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param first_name: The first_name of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -188,8 +186,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param last_name: The last_name of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -213,8 +209,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param middle_name: The middle_name of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if middle_name is not None and len(middle_name) > 60:
-            raise ValueError("Invalid value for `middle_name`, length must be less than or equal to `60`")
 
         self._middle_name = middle_name
 
@@ -238,8 +232,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param name_suffix: The name_suffix of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if name_suffix is not None and len(name_suffix) > 60:
-            raise ValueError("Invalid value for `name_suffix`, length must be less than or equal to `60`")
 
         self._name_suffix = name_suffix
 
@@ -263,8 +255,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param title: The title of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if title is not None and len(title) > 60:
-            raise ValueError("Invalid value for `title`, length must be less than or equal to `60`")
 
         self._title = title
 
@@ -309,8 +299,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address1: The address1 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -334,8 +322,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address2: The address2 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -359,8 +345,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address3: The address3 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if address3 is not None and len(address3) > 60:
-            raise ValueError("Invalid value for `address3`, length must be less than or equal to `60`")
 
         self._address3 = address3
 
@@ -384,8 +368,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address4: The address4 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if address4 is not None and len(address4) > 60:
-            raise ValueError("Invalid value for `address4`, length must be less than or equal to `60`")
 
         self._address4 = address4
 
@@ -409,8 +391,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param locality: The locality of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -434,8 +414,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 20:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `20`")
 
         self._administrative_area = administrative_area
 
@@ -459,8 +437,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -484,8 +460,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param country: The country of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -509,8 +483,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param district: The district of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if district is not None and len(district) > 50:
-            raise ValueError("Invalid value for `district`, length must be less than or equal to `50`")
 
         self._district = district
 
@@ -534,8 +506,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param building_number: The building_number of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if building_number is not None and len(building_number) > 256:
-            raise ValueError("Invalid value for `building_number`, length must be less than or equal to `256`")
 
         self._building_number = building_number
 
@@ -559,8 +529,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param email: The email of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 
@@ -584,8 +552,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param email_domain: The email_domain of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if email_domain is not None and len(email_domain) > 100:
-            raise ValueError("Invalid value for `email_domain`, length must be less than or equal to `100`")
 
         self._email_domain = email_domain
 
@@ -609,8 +575,6 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 15:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `15`")
 
         self._phone_number = phone_number
 

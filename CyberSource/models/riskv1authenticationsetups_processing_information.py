@@ -73,8 +73,6 @@ class Riskv1authenticationsetupsProcessingInformation(object):
         :param payment_solution: The payment_solution of this Riskv1authenticationsetupsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -98,8 +96,6 @@ class Riskv1authenticationsetupsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Riskv1authenticationsetupsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 

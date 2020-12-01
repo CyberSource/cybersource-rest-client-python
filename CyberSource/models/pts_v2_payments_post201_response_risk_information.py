@@ -220,8 +220,6 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :param local_time: The local_time of this PtsV2PaymentsPost201ResponseRiskInformation.
         :type: str
         """
-        if local_time is not None and len(local_time) > 255:
-            raise ValueError("Invalid value for `local_time`, length must be less than or equal to `255`")
 
         self._local_time = local_time
 

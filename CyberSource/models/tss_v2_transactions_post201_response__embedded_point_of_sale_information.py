@@ -83,8 +83,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :param terminal_id: The terminal_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 8:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `8`")
 
         self._terminal_id = terminal_id
 
@@ -108,8 +106,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :param terminal_serial_number: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
         """
-        if terminal_serial_number is not None and len(terminal_serial_number) > 32:
-            raise ValueError("Invalid value for `terminal_serial_number`, length must be less than or equal to `32`")
 
         self._terminal_serial_number = terminal_serial_number
 

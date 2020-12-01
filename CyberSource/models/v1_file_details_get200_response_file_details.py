@@ -37,7 +37,7 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         'last_modified_time': 'datetime',
         'date': 'date',
         'mime_type': 'str',
-        'size': 'int'
+        'size': 'float'
     }
 
     attribute_map = {
@@ -223,7 +223,7 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         Size of the file in bytes
 
         :return: The size of this V1FileDetailsGet200ResponseFileDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._size
 
@@ -234,7 +234,7 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         Size of the file in bytes
 
         :param size: The size of this V1FileDetailsGet200ResponseFileDetails.
-        :type: int
+        :type: float
         """
 
         self._size = size

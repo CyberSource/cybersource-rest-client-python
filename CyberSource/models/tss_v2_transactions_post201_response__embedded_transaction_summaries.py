@@ -153,8 +153,6 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param id: The id of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 

@@ -83,8 +83,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param acquirer_merchant_id: The acquirer_merchant_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-        if acquirer_merchant_id is not None and len(acquirer_merchant_id) > 15:
-            raise ValueError("Invalid value for `acquirer_merchant_id`, length must be less than or equal to `15`")
 
         self._acquirer_merchant_id = acquirer_merchant_id
 
@@ -108,8 +106,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param acquirer_bin: The acquirer_bin of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-        if acquirer_bin is not None and len(acquirer_bin) > 11:
-            raise ValueError("Invalid value for `acquirer_bin`, length must be less than or equal to `11`")
 
         self._acquirer_bin = acquirer_bin
 
@@ -133,8 +129,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param retrieval_reference_number: The retrieval_reference_number of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-        if retrieval_reference_number is not None and len(retrieval_reference_number) > 12:
-            raise ValueError("Invalid value for `retrieval_reference_number`, length must be less than or equal to `12`")
 
         self._retrieval_reference_number = retrieval_reference_number
 
@@ -158,8 +152,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param account_funding_reference_id: The account_funding_reference_id of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-        if account_funding_reference_id is not None and len(account_funding_reference_id) > 15:
-            raise ValueError("Invalid value for `account_funding_reference_id`, length must be less than or equal to `15`")
 
         self._account_funding_reference_id = account_funding_reference_id
 

@@ -93,8 +93,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param payment_solution: The payment_solution of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -118,8 +116,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -143,8 +139,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param link_id: The link_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if link_id is not None and len(link_id) > 26:
-            raise ValueError("Invalid value for `link_id`, length must be less than or equal to `26`")
 
         self._link_id = link_id
 
@@ -168,8 +162,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param report_group: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if report_group is not None and len(report_group) > 25:
-            raise ValueError("Invalid value for `report_group`, length must be less than or equal to `25`")
 
         self._report_group = report_group
 
@@ -193,8 +185,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 

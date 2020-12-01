@@ -88,8 +88,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param first_name: The first_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -113,8 +111,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param last_name: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -138,8 +134,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param email: The email of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 
@@ -163,8 +157,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param country: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -188,8 +180,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param phone_number: The phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 15:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `15`")
 
         self._phone_number = phone_number
 

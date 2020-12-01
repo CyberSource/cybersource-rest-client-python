@@ -120,8 +120,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         """
         if address1 is None:
             raise ValueError("Invalid value for `address1`, must not be `None`")
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -145,8 +143,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address2: The address2 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -170,8 +166,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address3: The address3 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if address3 is not None and len(address3) > 60:
-            raise ValueError("Invalid value for `address3`, length must be less than or equal to `60`")
 
         self._address3 = address3
 
@@ -195,8 +189,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address4: The address4 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if address4 is not None and len(address4) > 60:
-            raise ValueError("Invalid value for `address4`, length must be less than or equal to `60`")
 
         self._address4 = address4
 
@@ -220,8 +212,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 20:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `20`")
 
         self._administrative_area = administrative_area
 
@@ -247,8 +237,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         """
         if country is None:
             raise ValueError("Invalid value for `country`, must not be `None`")
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -274,8 +262,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         """
         if locality is None:
             raise ValueError("Invalid value for `locality`, must not be `None`")
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -301,8 +287,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         """
         if postal_code is None:
             raise ValueError("Invalid value for `postal_code`, must not be `None`")
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -347,8 +331,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param first_name: The first_name of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -372,8 +354,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param last_name: The last_name of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -399,8 +379,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 

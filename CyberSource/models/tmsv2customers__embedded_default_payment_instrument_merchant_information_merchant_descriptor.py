@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformationMerchantD
         :param alternate_name: The alternate_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if alternate_name is not None and len(alternate_name) > 13:
-            raise ValueError("Invalid value for `alternate_name`, length must be less than or equal to `13`")
 
         self._alternate_name = alternate_name
 

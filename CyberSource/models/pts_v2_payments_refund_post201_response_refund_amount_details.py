@@ -73,8 +73,6 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         :param refund_amount: The refund_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
         :type: str
         """
-        if refund_amount is not None and len(refund_amount) > 15:
-            raise ValueError("Invalid value for `refund_amount`, length must be less than or equal to `15`")
 
         self._refund_amount = refund_amount
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

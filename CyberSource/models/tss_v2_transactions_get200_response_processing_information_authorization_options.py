@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :param auth_type: The auth_type of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :type: str
         """
-        if auth_type is not None and len(auth_type) > 15:
-            raise ValueError("Invalid value for `auth_type`, length must be less than or equal to `15`")
 
         self._auth_type = auth_type
 

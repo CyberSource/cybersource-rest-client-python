@@ -73,8 +73,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformationEmv(object):
         :param tags: The tags of this Ptsv2paymentsidcapturesPointOfSaleInformationEmv.
         :type: str
         """
-        if tags is not None and len(tags) > 1998:
-            raise ValueError("Invalid value for `tags`, length must be less than or equal to `1998`")
 
         self._tags = tags
 

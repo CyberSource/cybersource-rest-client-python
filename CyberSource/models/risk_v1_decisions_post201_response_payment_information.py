@@ -88,8 +88,6 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param bin_country: The bin_country of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
-        if bin_country is not None and len(bin_country) > 255:
-            raise ValueError("Invalid value for `bin_country`, length must be less than or equal to `255`")
 
         self._bin_country = bin_country
 
@@ -113,8 +111,6 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param account_type: The account_type of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
-        if account_type is not None and len(account_type) > 255:
-            raise ValueError("Invalid value for `account_type`, length must be less than or equal to `255`")
 
         self._account_type = account_type
 
@@ -138,8 +134,6 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param issuer: The issuer of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
-        if issuer is not None and len(issuer) > 255:
-            raise ValueError("Invalid value for `issuer`, length must be less than or equal to `255`")
 
         self._issuer = issuer
 
@@ -163,8 +157,6 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param scheme: The scheme of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
-        if scheme is not None and len(scheme) > 255:
-            raise ValueError("Invalid value for `scheme`, length must be less than or equal to `255`")
 
         self._scheme = scheme
 
@@ -188,8 +180,6 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param bin: The bin of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
-        if bin is not None and len(bin) > 255:
-            raise ValueError("Invalid value for `bin`, length must be less than or equal to `255`")
 
         self._bin = bin
 

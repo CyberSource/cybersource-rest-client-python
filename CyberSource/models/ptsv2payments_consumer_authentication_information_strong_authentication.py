@@ -93,8 +93,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param low_value_exemption_indicator: The low_value_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if low_value_exemption_indicator is not None and len(low_value_exemption_indicator) > 1:
-            raise ValueError("Invalid value for `low_value_exemption_indicator`, length must be less than or equal to `1`")
 
         self._low_value_exemption_indicator = low_value_exemption_indicator
 
@@ -118,8 +116,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param risk_analysis_exemption_indicator: The risk_analysis_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if risk_analysis_exemption_indicator is not None and len(risk_analysis_exemption_indicator) > 1:
-            raise ValueError("Invalid value for `risk_analysis_exemption_indicator`, length must be less than or equal to `1`")
 
         self._risk_analysis_exemption_indicator = risk_analysis_exemption_indicator
 
@@ -143,8 +139,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param trusted_merchant_exemption_indicator: The trusted_merchant_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if trusted_merchant_exemption_indicator is not None and len(trusted_merchant_exemption_indicator) > 1:
-            raise ValueError("Invalid value for `trusted_merchant_exemption_indicator`, length must be less than or equal to `1`")
 
         self._trusted_merchant_exemption_indicator = trusted_merchant_exemption_indicator
 
@@ -168,8 +162,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param secure_corporate_payment_indicator: The secure_corporate_payment_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if secure_corporate_payment_indicator is not None and len(secure_corporate_payment_indicator) > 1:
-            raise ValueError("Invalid value for `secure_corporate_payment_indicator`, length must be less than or equal to `1`")
 
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
@@ -193,8 +185,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param delegated_authentication_exemption_indicator: The delegated_authentication_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if delegated_authentication_exemption_indicator is not None and len(delegated_authentication_exemption_indicator) > 1:
-            raise ValueError("Invalid value for `delegated_authentication_exemption_indicator`, length must be less than or equal to `1`")
 
         self._delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
 
@@ -218,8 +208,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param authentication_indicator: The authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
-        if authentication_indicator is not None and len(authentication_indicator) > 2:
-            raise ValueError("Invalid value for `authentication_indicator`, length must be less than or equal to `2`")
 
         self._authentication_indicator = authentication_indicator
 

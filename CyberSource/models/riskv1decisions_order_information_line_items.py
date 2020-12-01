@@ -133,8 +133,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param total_amount: The total_amount of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 13:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `13`")
 
         self._total_amount = total_amount
 
@@ -158,8 +156,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -233,8 +229,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -258,8 +252,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_risk: The product_risk of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if product_risk is not None and len(product_risk) > 6:
-            raise ValueError("Invalid value for `product_risk`, length must be less than or equal to `6`")
 
         self._product_risk = product_risk
 
@@ -306,8 +298,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_name: The product_name of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -331,8 +321,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_code: The product_code of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 
@@ -379,8 +367,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param distributor_product_sku: The distributor_product_sku of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if distributor_product_sku is not None and len(distributor_product_sku) > 15:
-            raise ValueError("Invalid value for `distributor_product_sku`, length must be less than or equal to `15`")
 
         self._distributor_product_sku = distributor_product_sku
 
@@ -425,8 +411,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param shipping_destination_types: The shipping_destination_types of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if shipping_destination_types is not None and len(shipping_destination_types) > 50:
-            raise ValueError("Invalid value for `shipping_destination_types`, length must be less than or equal to `50`")
 
         self._shipping_destination_types = shipping_destination_types
 
@@ -450,8 +434,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 

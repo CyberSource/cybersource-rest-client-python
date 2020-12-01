@@ -94,8 +94,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBank(object):
         :param corrected_routing_number: The corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
         :type: str
         """
-        if corrected_routing_number is not None and len(corrected_routing_number) > 9:
-            raise ValueError("Invalid value for `corrected_routing_number`, length must be less than or equal to `9`")
 
         self._corrected_routing_number = corrected_routing_number
 

@@ -68,8 +68,6 @@ class Tmsv2customersClientReferenceInformation(object):
         :param code: The code of this Tmsv2customersClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 

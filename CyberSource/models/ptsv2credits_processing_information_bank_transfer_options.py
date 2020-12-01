@@ -98,8 +98,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param customer_memo: The customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if customer_memo is not None and len(customer_memo) > 80:
-            raise ValueError("Invalid value for `customer_memo`, length must be less than or equal to `80`")
 
         self._customer_memo = customer_memo
 
@@ -123,8 +121,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param sec_code: The sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if sec_code is not None and len(sec_code) > 3:
-            raise ValueError("Invalid value for `sec_code`, length must be less than or equal to `3`")
 
         self._sec_code = sec_code
 
@@ -148,8 +144,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param terminal_city: The terminal_city of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_city is not None and len(terminal_city) > 4:
-            raise ValueError("Invalid value for `terminal_city`, length must be less than or equal to `4`")
 
         self._terminal_city = terminal_city
 
@@ -173,8 +167,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param terminal_state: The terminal_state of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_state is not None and len(terminal_state) > 2:
-            raise ValueError("Invalid value for `terminal_state`, length must be less than or equal to `2`")
 
         self._terminal_state = terminal_state
 
@@ -198,8 +190,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param effective_date: The effective_date of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if effective_date is not None and len(effective_date) > 8:
-            raise ValueError("Invalid value for `effective_date`, length must be less than or equal to `8`")
 
         self._effective_date = effective_date
 
@@ -223,8 +213,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param partial_payment_id: The partial_payment_id of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if partial_payment_id is not None and len(partial_payment_id) > 25:
-            raise ValueError("Invalid value for `partial_payment_id`, length must be less than or equal to `25`")
 
         self._partial_payment_id = partial_payment_id
 
@@ -248,8 +236,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param settlement_method: The settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if settlement_method is not None and len(settlement_method) > 1:
-            raise ValueError("Invalid value for `settlement_method`, length must be less than or equal to `1`")
 
         self._settlement_method = settlement_method
 

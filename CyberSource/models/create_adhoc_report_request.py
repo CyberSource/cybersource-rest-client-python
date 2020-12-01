@@ -141,10 +141,6 @@ class CreateAdhocReportRequest(object):
         :param report_definition_name: The report_definition_name of this CreateAdhocReportRequest.
         :type: str
         """
-        if report_definition_name is not None and len(report_definition_name) > 80:
-            raise ValueError("Invalid value for `report_definition_name`, length must be less than or equal to `80`")
-        if report_definition_name is not None and len(report_definition_name) < 1:
-            raise ValueError("Invalid value for `report_definition_name`, length must be greater than or equal to `1`")
         if report_definition_name is not None and not re.search('[a-zA-Z0-9-]+', report_definition_name):
             raise ValueError("Invalid value for `report_definition_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-]+/`")
 
@@ -216,10 +212,6 @@ class CreateAdhocReportRequest(object):
         :param report_name: The report_name of this CreateAdhocReportRequest.
         :type: str
         """
-        if report_name is not None and len(report_name) > 128:
-            raise ValueError("Invalid value for `report_name`, length must be less than or equal to `128`")
-        if report_name is not None and len(report_name) < 1:
-            raise ValueError("Invalid value for `report_name`, length must be greater than or equal to `1`")
         if report_name is not None and not re.search('[a-zA-Z0-9-_ ]+', report_name):
             raise ValueError("Invalid value for `report_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
 

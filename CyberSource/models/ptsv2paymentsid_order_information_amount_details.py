@@ -73,8 +73,6 @@ class Ptsv2paymentsidOrderInformationAmountDetails(object):
         :param additional_amount: The additional_amount of this Ptsv2paymentsidOrderInformationAmountDetails.
         :type: str
         """
-        if additional_amount is not None and len(additional_amount) > 19:
-            raise ValueError("Invalid value for `additional_amount`, length must be less than or equal to `19`")
 
         self._additional_amount = additional_amount
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsidOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentsidOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

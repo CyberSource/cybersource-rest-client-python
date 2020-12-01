@@ -93,8 +93,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -118,8 +116,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -143,8 +139,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 12:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `12`")
 
         self._tax_amount = tax_amount
 
@@ -168,8 +162,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param authorized_amount: The authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if authorized_amount is not None and len(authorized_amount) > 15:
-            raise ValueError("Invalid value for `authorized_amount`, length must be less than or equal to `15`")
 
         self._authorized_amount = authorized_amount
 
@@ -193,8 +185,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param settlement_amount: The settlement_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_amount is not None and len(settlement_amount) > 12:
-            raise ValueError("Invalid value for `settlement_amount`, length must be less than or equal to `12`")
 
         self._settlement_amount = settlement_amount
 
@@ -218,8 +208,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_currency is not None and len(settlement_currency) > 3:
-            raise ValueError("Invalid value for `settlement_currency`, length must be less than or equal to `3`")
 
         self._settlement_currency = settlement_currency
 

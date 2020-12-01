@@ -68,8 +68,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponsePaymentInformationAccountFeat
         :param category: The category of this PtsV2IncrementalAuthorizationPatch201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if category is not None and len(category) > 7:
-            raise ValueError("Invalid value for `category`, length must be less than or equal to `7`")
 
         self._category = category
 

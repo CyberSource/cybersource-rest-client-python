@@ -83,8 +83,6 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_locality: The ship_from_locality of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_locality is not None and len(ship_from_locality) > 50:
-            raise ValueError("Invalid value for `ship_from_locality`, length must be less than or equal to `50`")
 
         self._ship_from_locality = ship_from_locality
 
@@ -108,8 +106,6 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_country: The ship_from_country of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_country is not None and len(ship_from_country) > 2:
-            raise ValueError("Invalid value for `ship_from_country`, length must be less than or equal to `2`")
 
         self._ship_from_country = ship_from_country
 
@@ -133,8 +129,6 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_postal_code: The ship_from_postal_code of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_postal_code is not None and len(ship_from_postal_code) > 10:
-            raise ValueError("Invalid value for `ship_from_postal_code`, length must be less than or equal to `10`")
 
         self._ship_from_postal_code = ship_from_postal_code
 
@@ -158,8 +152,6 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_administrative_area: The ship_from_administrative_area of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_administrative_area is not None and len(ship_from_administrative_area) > 2:
-            raise ValueError("Invalid value for `ship_from_administrative_area`, length must be less than or equal to `2`")
 
         self._ship_from_administrative_area = ship_from_administrative_area
 

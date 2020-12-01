@@ -73,8 +73,6 @@ class Tmsv2customersObjectInformation(object):
         :param title: The title of this Tmsv2customersObjectInformation.
         :type: str
         """
-        if title is not None and len(title) > 60:
-            raise ValueError("Invalid value for `title`, length must be less than or equal to `60`")
 
         self._title = title
 
@@ -98,8 +96,6 @@ class Tmsv2customersObjectInformation(object):
         :param comment: The comment of this Tmsv2customersObjectInformation.
         :type: str
         """
-        if comment is not None and len(comment) > 150:
-            raise ValueError("Invalid value for `comment`, length must be less than or equal to `150`")
 
         self._comment = comment
 

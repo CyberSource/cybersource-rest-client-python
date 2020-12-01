@@ -116,8 +116,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param locality: The locality of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if locality is not None and len(locality) > 13:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `13`")
 
         self._locality = locality
 
@@ -187,8 +185,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param postal_code: The postal_code of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 14:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `14`")
 
         self._postal_code = postal_code
 
@@ -212,8 +208,6 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param contact: The contact of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if contact is not None and len(contact) > 14:
-            raise ValueError("Invalid value for `contact`, length must be less than or equal to `14`")
 
         self._contact = contact
 

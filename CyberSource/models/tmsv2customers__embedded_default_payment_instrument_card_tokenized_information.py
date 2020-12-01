@@ -73,8 +73,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
         :param requestor_id: The requestor_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 11:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `11`")
 
         self._requestor_id = requestor_id
 
@@ -98,8 +96,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
         :param transaction_type: The transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :type: str
         """
-        if transaction_type is not None and len(transaction_type) > 1:
-            raise ValueError("Invalid value for `transaction_type`, length must be less than or equal to `1`")
 
         self._transaction_type = transaction_type
 

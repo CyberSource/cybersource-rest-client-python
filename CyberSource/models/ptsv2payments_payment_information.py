@@ -328,8 +328,6 @@ class Ptsv2paymentsPaymentInformation(object):
         :param initiation_channel: The initiation_channel of this Ptsv2paymentsPaymentInformation.
         :type: str
         """
-        if initiation_channel is not None and len(initiation_channel) > 2:
-            raise ValueError("Invalid value for `initiation_channel`, length must be less than or equal to `2`")
 
         self._initiation_channel = initiation_channel
 

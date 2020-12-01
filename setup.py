@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.22"
+VERSION = "0.0.23"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,13 +23,13 @@ setup(
         "certifi",
         "pycryptodome",
         "PyJWT",
-        "pyOpenSSL==18.0.0",
+        "pyOpenSSL",
         "DateTime",
         "setuptools",
         "six",
-        "urllib3",
+        "urllib3==1.25.11",
         "crypto",
-        "cryptography==2.6",
+        "cryptography",
     ],
     packages=find_packages(),
     include_package_data=True,

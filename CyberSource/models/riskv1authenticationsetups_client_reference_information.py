@@ -69,8 +69,6 @@ class Riskv1authenticationsetupsClientReferenceInformation(object):
         """
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 

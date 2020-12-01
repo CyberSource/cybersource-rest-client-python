@@ -133,8 +133,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param reference_number: The reference_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if reference_number is not None and len(reference_number) > 19:
-            raise ValueError("Invalid value for `reference_number`, length must be less than or equal to `19`")
 
         self._reference_number = reference_number
 
@@ -179,8 +177,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param first_name: The first_name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if first_name is not None and len(first_name) > 35:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `35`")
 
         self._first_name = first_name
 
@@ -204,8 +200,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if middle_initial is not None and len(middle_initial) > 1:
-            raise ValueError("Invalid value for `middle_initial`, length must be less than or equal to `1`")
 
         self._middle_initial = middle_initial
 
@@ -229,8 +223,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if last_name is not None and len(last_name) > 35:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `35`")
 
         self._last_name = last_name
 
@@ -254,8 +246,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param name: The name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if name is not None and len(name) > 24:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `24`")
 
         self._name = name
 
@@ -279,8 +269,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param address1: The address1 of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if address1 is not None and len(address1) > 50:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `50`")
 
         self._address1 = address1
 
@@ -304,8 +292,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param locality: The locality of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if locality is not None and len(locality) > 25:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `25`")
 
         self._locality = locality
 
@@ -329,8 +315,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -354,8 +338,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param country_code: The country_code of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if country_code is not None and len(country_code) > 2:
-            raise ValueError("Invalid value for `country_code`, length must be less than or equal to `2`")
 
         self._country_code = country_code
 
@@ -379,8 +361,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param postal_code: The postal_code of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -404,8 +384,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param phone_number: The phone_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 20:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `20`")
 
         self._phone_number = phone_number
 
@@ -429,10 +407,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
-        if date_of_birth is not None and len(date_of_birth) < 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be greater than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 
@@ -456,8 +430,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 13:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `13`")
 
         self._vat_registration_number = vat_registration_number
 

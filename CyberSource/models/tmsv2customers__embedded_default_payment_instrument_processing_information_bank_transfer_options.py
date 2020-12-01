@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformationBankTra
         :param sec_code: The sec_code of this Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformationBankTransferOptions.
         :type: str
         """
-        if sec_code is not None and len(sec_code) > 3:
-            raise ValueError("Invalid value for `sec_code`, length must be less than or equal to `3`")
 
         self._sec_code = sec_code
 

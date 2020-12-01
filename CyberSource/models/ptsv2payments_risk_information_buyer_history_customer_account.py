@@ -93,8 +93,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param last_change_date: The last_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
-        if last_change_date is not None and len(last_change_date) > 10:
-            raise ValueError("Invalid value for `last_change_date`, length must be less than or equal to `10`")
 
         self._last_change_date = last_change_date
 
@@ -187,8 +185,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param create_date: The create_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
-        if create_date is not None and len(create_date) > 10:
-            raise ValueError("Invalid value for `create_date`, length must be less than or equal to `10`")
 
         self._create_date = create_date
 
@@ -212,8 +208,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param password_change_date: The password_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
-        if password_change_date is not None and len(password_change_date) > 10:
-            raise ValueError("Invalid value for `password_change_date`, length must be less than or equal to `10`")
 
         self._password_change_date = password_change_date
 

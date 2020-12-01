@@ -73,8 +73,6 @@ class Riskv1decisionsMerchantDefinedInformation(object):
         :param key: The key of this Riskv1decisionsMerchantDefinedInformation.
         :type: str
         """
-        if key is not None and len(key) > 255:
-            raise ValueError("Invalid value for `key`, length must be less than or equal to `255`")
 
         self._key = key
 
@@ -98,8 +96,6 @@ class Riskv1decisionsMerchantDefinedInformation(object):
         :param value: The value of this Riskv1decisionsMerchantDefinedInformation.
         :type: str
         """
-        if value is not None and len(value) > 255:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `255`")
 
         self._value = value
 

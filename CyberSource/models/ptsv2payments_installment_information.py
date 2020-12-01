@@ -128,8 +128,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param amount: The amount of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if amount is not None and len(amount) > 12:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `12`")
 
         self._amount = amount
 
@@ -153,8 +151,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param frequency: The frequency of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if frequency is not None and len(frequency) > 1:
-            raise ValueError("Invalid value for `frequency`, length must be less than or equal to `1`")
 
         self._frequency = frequency
 
@@ -178,8 +174,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param plan_type: The plan_type of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if plan_type is not None and len(plan_type) > 1:
-            raise ValueError("Invalid value for `plan_type`, length must be less than or equal to `1`")
 
         self._plan_type = plan_type
 
@@ -228,8 +222,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param total_amount: The total_amount of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 12:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `12`")
 
         self._total_amount = total_amount
 
@@ -278,8 +270,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param first_installment_date: The first_installment_date of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if first_installment_date is not None and len(first_installment_date) > 6:
-            raise ValueError("Invalid value for `first_installment_date`, length must be less than or equal to `6`")
 
         self._first_installment_date = first_installment_date
 
@@ -303,8 +293,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param invoice_data: The invoice_data of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if invoice_data is not None and len(invoice_data) > 20:
-            raise ValueError("Invalid value for `invoice_data`, length must be less than or equal to `20`")
 
         self._invoice_data = invoice_data
 
@@ -328,8 +316,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if payment_type is not None and len(payment_type) > 1:
-            raise ValueError("Invalid value for `payment_type`, length must be less than or equal to `1`")
 
         self._payment_type = payment_type
 
@@ -353,8 +339,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param eligibility_inquiry: The eligibility_inquiry of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if eligibility_inquiry is not None and len(eligibility_inquiry) > 9:
-            raise ValueError("Invalid value for `eligibility_inquiry`, length must be less than or equal to `9`")
 
         self._eligibility_inquiry = eligibility_inquiry
 
@@ -401,8 +385,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param grace_period_duration_type: The grace_period_duration_type of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if grace_period_duration_type is not None and len(grace_period_duration_type) > 1:
-            raise ValueError("Invalid value for `grace_period_duration_type`, length must be less than or equal to `1`")
 
         self._grace_period_duration_type = grace_period_duration_type
 
@@ -426,8 +408,6 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param first_installment_amount: The first_installment_amount of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
-        if first_installment_amount is not None and len(first_installment_amount) > 13:
-            raise ValueError("Invalid value for `first_installment_amount`, length must be less than or equal to `13`")
 
         self._first_installment_amount = first_installment_amount
 

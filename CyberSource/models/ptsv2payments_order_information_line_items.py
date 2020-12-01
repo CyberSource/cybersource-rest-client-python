@@ -218,8 +218,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param product_code: The product_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 
@@ -243,8 +241,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param product_name: The product_name of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -268,8 +264,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -320,8 +314,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 
@@ -345,8 +337,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param unit_of_measure: The unit_of_measure of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if unit_of_measure is not None and len(unit_of_measure) > 12:
-            raise ValueError("Invalid value for `unit_of_measure`, length must be less than or equal to `12`")
 
         self._unit_of_measure = unit_of_measure
 
@@ -370,8 +360,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param total_amount: The total_amount of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 13:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `13`")
 
         self._total_amount = total_amount
 
@@ -395,8 +383,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 
@@ -420,8 +406,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param tax_rate: The tax_rate of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if tax_rate is not None and len(tax_rate) > 7:
-            raise ValueError("Invalid value for `tax_rate`, length must be less than or equal to `7`")
 
         self._tax_rate = tax_rate
 
@@ -445,8 +429,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param tax_applied_after_discount: The tax_applied_after_discount of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if tax_applied_after_discount is not None and len(tax_applied_after_discount) > 1:
-            raise ValueError("Invalid value for `tax_applied_after_discount`, length must be less than or equal to `1`")
 
         self._tax_applied_after_discount = tax_applied_after_discount
 
@@ -470,8 +452,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param tax_status_indicator: The tax_status_indicator of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if tax_status_indicator is not None and len(tax_status_indicator) > 1:
-            raise ValueError("Invalid value for `tax_status_indicator`, length must be less than or equal to `1`")
 
         self._tax_status_indicator = tax_status_indicator
 
@@ -495,8 +475,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if tax_type_code is not None and len(tax_type_code) > 4:
-            raise ValueError("Invalid value for `tax_type_code`, length must be less than or equal to `4`")
 
         self._tax_type_code = tax_type_code
 
@@ -543,8 +521,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param type_of_supply: The type_of_supply of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if type_of_supply is not None and len(type_of_supply) > 2:
-            raise ValueError("Invalid value for `type_of_supply`, length must be less than or equal to `2`")
 
         self._type_of_supply = type_of_supply
 
@@ -568,8 +544,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param commodity_code: The commodity_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if commodity_code is not None and len(commodity_code) > 15:
-            raise ValueError("Invalid value for `commodity_code`, length must be less than or equal to `15`")
 
         self._commodity_code = commodity_code
 
@@ -593,8 +567,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param discount_amount: The discount_amount of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if discount_amount is not None and len(discount_amount) > 13:
-            raise ValueError("Invalid value for `discount_amount`, length must be less than or equal to `13`")
 
         self._discount_amount = discount_amount
 
@@ -641,8 +613,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param discount_rate: The discount_rate of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if discount_rate is not None and len(discount_rate) > 6:
-            raise ValueError("Invalid value for `discount_rate`, length must be less than or equal to `6`")
 
         self._discount_rate = discount_rate
 
@@ -666,8 +636,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param invoice_number: The invoice_number of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if invoice_number is not None and len(invoice_number) > 23:
-            raise ValueError("Invalid value for `invoice_number`, length must be less than or equal to `23`")
 
         self._invoice_number = invoice_number
 
@@ -735,8 +703,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param weight: The weight of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if weight is not None and len(weight) > 9:
-            raise ValueError("Invalid value for `weight`, length must be less than or equal to `9`")
 
         self._weight = weight
 
@@ -760,8 +726,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param weight_identifier: The weight_identifier of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if weight_identifier is not None and len(weight_identifier) > 1:
-            raise ValueError("Invalid value for `weight_identifier`, length must be less than or equal to `1`")
 
         self._weight_identifier = weight_identifier
 
@@ -785,8 +749,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param weight_unit: The weight_unit of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if weight_unit is not None and len(weight_unit) > 2:
-            raise ValueError("Invalid value for `weight_unit`, length must be less than or equal to `2`")
 
         self._weight_unit = weight_unit
 
@@ -810,8 +772,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param reference_data_code: The reference_data_code of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if reference_data_code is not None and len(reference_data_code) > 2:
-            raise ValueError("Invalid value for `reference_data_code`, length must be less than or equal to `2`")
 
         self._reference_data_code = reference_data_code
 
@@ -835,8 +795,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param reference_data_number: The reference_data_number of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if reference_data_number is not None and len(reference_data_number) > 30:
-            raise ValueError("Invalid value for `reference_data_number`, length must be less than or equal to `30`")
 
         self._reference_data_number = reference_data_number
 
@@ -906,8 +864,6 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         :param shipping_destination_types: The shipping_destination_types of this Ptsv2paymentsOrderInformationLineItems.
         :type: str
         """
-        if shipping_destination_types is not None and len(shipping_destination_types) > 50:
-            raise ValueError("Invalid value for `shipping_destination_types`, length must be less than or equal to `50`")
 
         self._shipping_destination_types = shipping_destination_types
 

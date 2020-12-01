@@ -101,8 +101,6 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :param reference_id: The reference_id of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if reference_id is not None and len(reference_id) > 50:
-            raise ValueError("Invalid value for `reference_id`, length must be less than or equal to `50`")
 
         self._reference_id = reference_id
 
@@ -126,8 +124,6 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :param device_data_collection_url: The device_data_collection_url of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if device_data_collection_url is not None and len(device_data_collection_url) > 100:
-            raise ValueError("Invalid value for `device_data_collection_url`, length must be less than or equal to `100`")
 
         self._device_data_collection_url = device_data_collection_url
 

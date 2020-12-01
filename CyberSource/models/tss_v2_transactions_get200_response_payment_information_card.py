@@ -136,8 +136,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param prefix: The prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if prefix is not None and len(prefix) > 6:
-            raise ValueError("Invalid value for `prefix`, length must be less than or equal to `6`")
 
         self._prefix = prefix
 
@@ -161,8 +159,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param expiration_month: The expiration_month of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -186,8 +182,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param expiration_year: The expiration_year of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -211,8 +205,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param start_month: The start_month of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if start_month is not None and len(start_month) > 2:
-            raise ValueError("Invalid value for `start_month`, length must be less than or equal to `2`")
 
         self._start_month = start_month
 
@@ -236,8 +228,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param start_year: The start_year of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if start_year is not None and len(start_year) > 4:
-            raise ValueError("Invalid value for `start_year`, length must be less than or equal to `4`")
 
         self._start_year = start_year
 
@@ -261,8 +251,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param issue_number: The issue_number of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if issue_number is not None and len(issue_number) > 5:
-            raise ValueError("Invalid value for `issue_number`, length must be less than or equal to `5`")
 
         self._issue_number = issue_number
 
@@ -309,8 +297,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param account_encoder_id: The account_encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if account_encoder_id is not None and len(account_encoder_id) > 3:
-            raise ValueError("Invalid value for `account_encoder_id`, length must be less than or equal to `3`")
 
         self._account_encoder_id = account_encoder_id
 
@@ -334,8 +320,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param use_as: The use_as of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
-        if use_as is not None and len(use_as) > 20:
-            raise ValueError("Invalid value for `use_as`, length must be less than or equal to `20`")
 
         self._use_as = use_as
 

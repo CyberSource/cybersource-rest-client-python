@@ -98,8 +98,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param city: The city of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if city is not None and len(city) > 25:
-            raise ValueError("Invalid value for `city`, length must be less than or equal to `25`")
 
         self._city = city
 
@@ -123,8 +121,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param state: The state of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if state is not None and len(state) > 3:
-            raise ValueError("Invalid value for `state`, length must be less than or equal to `3`")
 
         self._state = state
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param country: The country of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if country is not None and len(country) > 3:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `3`")
 
         self._country = country
 
@@ -173,8 +167,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param location_id: The location_id of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if location_id is not None and len(location_id) > 10:
-            raise ValueError("Invalid value for `location_id`, length must be less than or equal to `10`")
 
         self._location_id = location_id
 
@@ -198,8 +190,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param address1: The address1 of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if address1 is not None and len(address1) > 13:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `13`")
 
         self._address1 = address1
 
@@ -223,8 +213,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param address2: The address2 of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if address2 is not None and len(address2) > 13:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `13`")
 
         self._address2 = address2
 
@@ -248,8 +236,6 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         :param location: The location of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
         :type: str
         """
-        if location is not None and len(location) > 38:
-            raise ValueError("Invalid value for `location`, length must be less than or equal to `38`")
 
         self._location = location
 

@@ -101,8 +101,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
         :param field_name: The field_name of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :type: str
         """
-        if field_name is not None and len(field_name) > 255:
-            raise ValueError("Invalid value for `field_name`, length must be less than or equal to `255`")
 
         self._field_name = field_name
 
@@ -126,8 +124,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
         :param information_code: The information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :type: str
         """
-        if information_code is not None and len(information_code) > 255:
-            raise ValueError("Invalid value for `information_code`, length must be less than or equal to `255`")
 
         self._information_code = information_code
 

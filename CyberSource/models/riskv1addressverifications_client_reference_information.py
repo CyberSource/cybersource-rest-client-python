@@ -74,8 +74,6 @@ class Riskv1addressverificationsClientReferenceInformation(object):
         """
         if code is None:
             raise ValueError("Invalid value for `code`, must not be `None`")
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 
@@ -99,8 +97,6 @@ class Riskv1addressverificationsClientReferenceInformation(object):
         :param comments: The comments of this Riskv1addressverificationsClientReferenceInformation.
         :type: str
         """
-        if comments is not None and len(comments) > 255:
-            raise ValueError("Invalid value for `comments`, length must be less than or equal to `255`")
 
         self._comments = comments
 

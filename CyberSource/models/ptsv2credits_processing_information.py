@@ -153,8 +153,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 20:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `20`")
 
         self._commerce_indicator = commerce_indicator
 
@@ -178,8 +176,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param processor_id: The processor_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if processor_id is not None and len(processor_id) > 3:
-            raise ValueError("Invalid value for `processor_id`, length must be less than or equal to `3`")
 
         self._processor_id = processor_id
 
@@ -203,8 +199,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param payment_solution: The payment_solution of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -228,8 +222,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -253,8 +245,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param link_id: The link_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if link_id is not None and len(link_id) > 26:
-            raise ValueError("Invalid value for `link_id`, length must be less than or equal to `26`")
 
         self._link_id = link_id
 
@@ -278,8 +268,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param report_group: The report_group of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if report_group is not None and len(report_group) > 25:
-            raise ValueError("Invalid value for `report_group`, length must be less than or equal to `25`")
 
         self._report_group = report_group
 
@@ -303,8 +291,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 
@@ -328,8 +314,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param purchase_level: The purchase_level of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if purchase_level is not None and len(purchase_level) > 1:
-            raise ValueError("Invalid value for `purchase_level`, length must be less than or equal to `1`")
 
         self._purchase_level = purchase_level
 
@@ -353,8 +337,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param industry_data_type: The industry_data_type of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if industry_data_type is not None and len(industry_data_type) > 20:
-            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `20`")
 
         self._industry_data_type = industry_data_type
 
@@ -378,8 +360,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param wallet_type: The wallet_type of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if wallet_type is not None and len(wallet_type) > 5:
-            raise ValueError("Invalid value for `wallet_type`, length must be less than or equal to `5`")
 
         self._wallet_type = wallet_type
 
@@ -403,8 +383,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param national_net_domestic_data: The national_net_domestic_data of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if national_net_domestic_data is not None and len(national_net_domestic_data) > 123:
-            raise ValueError("Invalid value for `national_net_domestic_data`, length must be less than or equal to `123`")
 
         self._national_net_domestic_data = national_net_domestic_data
 
@@ -428,8 +406,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param network_routing_order: The network_routing_order of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-        if network_routing_order is not None and len(network_routing_order) > 30:
-            raise ValueError("Invalid value for `network_routing_order`, length must be less than or equal to `30`")
 
         self._network_routing_order = network_routing_order
 

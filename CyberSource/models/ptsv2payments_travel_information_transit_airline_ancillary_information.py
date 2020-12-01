@@ -88,8 +88,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param ticket_number: The ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: str
         """
-        if ticket_number is not None and len(ticket_number) > 15:
-            raise ValueError("Invalid value for `ticket_number`, length must be less than or equal to `15`")
 
         self._ticket_number = ticket_number
 
@@ -113,8 +111,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param passenger_name: The passenger_name of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: str
         """
-        if passenger_name is not None and len(passenger_name) > 20:
-            raise ValueError("Invalid value for `passenger_name`, length must be less than or equal to `20`")
 
         self._passenger_name = passenger_name
 
@@ -138,8 +134,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param connected_ticket_number: The connected_ticket_number of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: str
         """
-        if connected_ticket_number is not None and len(connected_ticket_number) > 15:
-            raise ValueError("Invalid value for `connected_ticket_number`, length must be less than or equal to `15`")
 
         self._connected_ticket_number = connected_ticket_number
 
@@ -163,8 +157,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param credit_reason_indicator: The credit_reason_indicator of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: str
         """
-        if credit_reason_indicator is not None and len(credit_reason_indicator) > 15:
-            raise ValueError("Invalid value for `credit_reason_indicator`, length must be less than or equal to `15`")
 
         self._credit_reason_indicator = credit_reason_indicator
 

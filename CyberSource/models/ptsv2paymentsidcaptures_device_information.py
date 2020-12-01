@@ -78,8 +78,6 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :param host_name: The host_name of this Ptsv2paymentsidcapturesDeviceInformation.
         :type: str
         """
-        if host_name is not None and len(host_name) > 60:
-            raise ValueError("Invalid value for `host_name`, length must be less than or equal to `60`")
 
         self._host_name = host_name
 
@@ -103,8 +101,6 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :param ip_address: The ip_address of this Ptsv2paymentsidcapturesDeviceInformation.
         :type: str
         """
-        if ip_address is not None and len(ip_address) > 45:
-            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `45`")
 
         self._ip_address = ip_address
 
@@ -128,8 +124,6 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :param user_agent: The user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
         :type: str
         """
-        if user_agent is not None and len(user_agent) > 40:
-            raise ValueError("Invalid value for `user_agent`, length must be less than or equal to `40`")
 
         self._user_agent = user_agent
 

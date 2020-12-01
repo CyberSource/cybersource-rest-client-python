@@ -83,8 +83,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -108,8 +106,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :param response_code: The response_code of this TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 

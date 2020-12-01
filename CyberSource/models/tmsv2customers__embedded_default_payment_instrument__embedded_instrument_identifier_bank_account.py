@@ -73,8 +73,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
         :param number: The number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount.
         :type: str
         """
-        if number is not None and len(number) > 17:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `17`")
 
         self._number = number
 

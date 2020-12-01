@@ -73,8 +73,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
         :type: str
         """
-        if code is not None and len(code) > 3:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `3`")
 
         self._code = code
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
         :type: str
         """
-        if amount is not None and len(amount) > 12:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `12`")
 
         self._amount = amount
 

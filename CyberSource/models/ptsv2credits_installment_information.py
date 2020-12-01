@@ -68,8 +68,6 @@ class Ptsv2creditsInstallmentInformation(object):
         :param plan_type: The plan_type of this Ptsv2creditsInstallmentInformation.
         :type: str
         """
-        if plan_type is not None and len(plan_type) > 1:
-            raise ValueError("Invalid value for `plan_type`, length must be less than or equal to `1`")
 
         self._plan_type = plan_type
 

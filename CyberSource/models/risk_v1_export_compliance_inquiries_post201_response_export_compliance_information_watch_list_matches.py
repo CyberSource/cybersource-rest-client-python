@@ -106,8 +106,6 @@ class RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformationW
         :param sanction_list: The sanction_list of this RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformationWatchListMatches.
         :type: str
         """
-        if sanction_list is not None and len(sanction_list) > 255:
-            raise ValueError("Invalid value for `sanction_list`, length must be less than or equal to `255`")
 
         self._sanction_list = sanction_list
 

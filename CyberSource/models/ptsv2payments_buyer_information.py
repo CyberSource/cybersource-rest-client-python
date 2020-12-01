@@ -98,8 +98,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -123,8 +121,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 20:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `20`")
 
         self._vat_registration_number = vat_registration_number
 
@@ -173,8 +167,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param company_tax_id: The company_tax_id of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if company_tax_id is not None and len(company_tax_id) > 9:
-            raise ValueError("Invalid value for `company_tax_id`, length must be less than or equal to `9`")
 
         self._company_tax_id = company_tax_id
 
@@ -219,8 +211,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param hashed_password: The hashed_password of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if hashed_password is not None and len(hashed_password) > 100:
-            raise ValueError("Invalid value for `hashed_password`, length must be less than or equal to `100`")
 
         self._hashed_password = hashed_password
 

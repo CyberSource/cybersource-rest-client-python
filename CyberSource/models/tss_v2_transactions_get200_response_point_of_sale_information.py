@@ -83,8 +83,6 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :param terminal_id: The terminal_id of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
         :type: str
         """
-        if terminal_id is not None and len(terminal_id) > 8:
-            raise ValueError("Invalid value for `terminal_id`, length must be less than or equal to `8`")
 
         self._terminal_id = terminal_id
 
@@ -108,8 +106,6 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :param entry_mode: The entry_mode of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
         :type: str
         """
-        if entry_mode is not None and len(entry_mode) > 11:
-            raise ValueError("Invalid value for `entry_mode`, length must be less than or equal to `11`")
 
         self._entry_mode = entry_mode
 

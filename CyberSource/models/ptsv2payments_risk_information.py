@@ -99,8 +99,6 @@ class Ptsv2paymentsRiskInformation(object):
         :param event_type: The event_type of this Ptsv2paymentsRiskInformation.
         :type: str
         """
-        if event_type is not None and len(event_type) > 255:
-            raise ValueError("Invalid value for `event_type`, length must be less than or equal to `255`")
 
         self._event_type = event_type
 

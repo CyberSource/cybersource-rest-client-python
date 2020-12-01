@@ -73,8 +73,6 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
         :param daily_rate: The daily_rate of this Ptsv2paymentsTravelInformationLodgingRoom.
         :type: str
         """
-        if daily_rate is not None and len(daily_rate) > 8:
-            raise ValueError("Invalid value for `daily_rate`, length must be less than or equal to `8`")
 
         self._daily_rate = daily_rate
 

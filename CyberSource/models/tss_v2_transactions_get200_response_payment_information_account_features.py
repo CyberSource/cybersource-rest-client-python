@@ -78,8 +78,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :param balance_amount: The balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if balance_amount is not None and len(balance_amount) > 12:
-            raise ValueError("Invalid value for `balance_amount`, length must be less than or equal to `12`")
 
         self._balance_amount = balance_amount
 
@@ -103,8 +101,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :param previous_balance_amount: The previous_balance_amount of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if previous_balance_amount is not None and len(previous_balance_amount) > 12:
-            raise ValueError("Invalid value for `previous_balance_amount`, length must be less than or equal to `12`")
 
         self._previous_balance_amount = previous_balance_amount
 
@@ -128,8 +124,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :param currency: The currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-        if currency is not None and len(currency) > 5:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `5`")
 
         self._currency = currency
 

@@ -68,8 +68,6 @@ class Ptsv2paymentsidMerchantInformation(object):
         :param transaction_local_date_time: The transaction_local_date_time of this Ptsv2paymentsidMerchantInformation.
         :type: str
         """
-        if transaction_local_date_time is not None and len(transaction_local_date_time) > 14:
-            raise ValueError("Invalid value for `transaction_local_date_time`, length must be less than or equal to `14`")
 
         self._transaction_local_date_time = transaction_local_date_time
 

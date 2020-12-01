@@ -93,8 +93,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param amount: The amount of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 
@@ -118,8 +116,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param rate: The rate of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-        if rate is not None and len(rate) > 6:
-            raise ValueError("Invalid value for `rate`, length must be less than or equal to `6`")
 
         self._rate = rate
 
@@ -166,8 +162,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param exemption_code: The exemption_code of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-        if exemption_code is not None and len(exemption_code) > 1:
-            raise ValueError("Invalid value for `exemption_code`, length must be less than or equal to `1`")
 
         self._exemption_code = exemption_code
 
@@ -191,8 +185,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param tax_type: The tax_type of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-        if tax_type is not None and len(tax_type) > 10:
-            raise ValueError("Invalid value for `tax_type`, length must be less than or equal to `10`")
 
         self._tax_type = tax_type
 
@@ -216,8 +208,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param tax_summary: The tax_summary of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-        if tax_summary is not None and len(tax_summary) > 12:
-            raise ValueError("Invalid value for `tax_summary`, length must be less than or equal to `12`")
 
         self._tax_summary = tax_summary
 

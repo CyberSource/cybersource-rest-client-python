@@ -108,8 +108,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param type: The type of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if type is not None and len(type) > 15:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `15`")
 
         self._type = type
 
@@ -133,8 +131,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param tax_name: The tax_name of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if tax_name is not None and len(tax_name) > 15:
-            raise ValueError("Invalid value for `tax_name`, length must be less than or equal to `15`")
 
         self._tax_name = tax_name
 
@@ -158,8 +154,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param tax_amount: The tax_amount of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 
@@ -183,8 +177,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param taxable: The taxable of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if taxable is not None and len(taxable) > 15:
-            raise ValueError("Invalid value for `taxable`, length must be less than or equal to `15`")
 
         self._taxable = taxable
 
@@ -231,8 +223,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param code: The code of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if code is not None and len(code) > 15:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `15`")
 
         self._code = code
 
@@ -256,8 +246,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param rate: The rate of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if rate is not None and len(rate) > 15:
-            raise ValueError("Invalid value for `rate`, length must be less than or equal to `15`")
 
         self._rate = rate
 
@@ -281,8 +269,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param region: The region of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if region is not None and len(region) > 15:
-            raise ValueError("Invalid value for `region`, length must be less than or equal to `15`")
 
         self._region = region
 
@@ -306,8 +292,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param country: The country of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-        if country is not None and len(country) > 15:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `15`")
 
         self._country = country
 

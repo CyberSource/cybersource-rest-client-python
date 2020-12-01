@@ -73,8 +73,6 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this TssV2TransactionsGet200ResponseBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -98,8 +96,6 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
         :param hashed_password: The hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
         :type: str
         """
-        if hashed_password is not None and len(hashed_password) > 100:
-            raise ValueError("Invalid value for `hashed_password`, length must be less than or equal to `100`")
 
         self._hashed_password = hashed_password
 

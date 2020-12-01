@@ -1,6 +1,6 @@
 cd %~dp0
 
-@echo off
+REM @echo off
 
 REM Delete the previously generated SDK code
 
@@ -47,6 +47,8 @@ powershell -Command "(Get-Content ..\CyberSource\apis\customer_payment_instrumen
 powershell -Command "(Get-Content ..\CyberSource\apis\symmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-sym/{keyId}''', '''/kms/v2/keys-sym/{key_id}'''} | Set-Content ..\CyberSource\apis\symmetric_key_management_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\asymmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-asym/{keyId}''', '''/kms/v2/keys-asym/{key_id}'''} | Set-Content ..\CyberSource\apis\asymmetric_key_management_api.py"
+
+powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}/enrollment'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
 
 powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''application/json', 'select_header_content_type([''*/*'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
 
@@ -103,6 +105,6 @@ REM powershell -Command " rename-item -Path ..\docs\RiskV1AuthenticationExemptio
 
 git checkout ..\README.md
 
-git checkout ..\setup.py
+REM git checkout ..\setup.py
 
 pause

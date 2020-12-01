@@ -73,8 +73,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
         :param amount: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
         :type: str
         """
-        if amount is not None and len(amount) > 13:
-            raise ValueError("Invalid value for `amount`, length must be less than or equal to `13`")
 
         self._amount = amount
 

@@ -93,8 +93,6 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :param code: The code of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 

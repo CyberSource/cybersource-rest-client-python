@@ -108,8 +108,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if address1 is None:
             raise ValueError("Invalid value for `address1`, must not be `None`")
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -133,8 +131,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param address2: The address2 of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if address2 is not None and len(address2) > 60:
-            raise ValueError("Invalid value for `address2`, length must be less than or equal to `60`")
 
         self._address2 = address2
 
@@ -160,8 +156,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if administrative_area is None:
             raise ValueError("Invalid value for `administrative_area`, must not be `None`")
-        if administrative_area is not None and len(administrative_area) > 20:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `20`")
 
         self._administrative_area = administrative_area
 
@@ -187,8 +181,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if country is None:
             raise ValueError("Invalid value for `country`, must not be `None`")
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -212,8 +204,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param locality: The locality of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if locality is not None and len(locality) > 50:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `50`")
 
         self._locality = locality
 
@@ -239,8 +229,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if first_name is None:
             raise ValueError("Invalid value for `first_name`, must not be `None`")
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -266,8 +254,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if last_name is None:
             raise ValueError("Invalid value for `last_name`, must not be `None`")
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -291,8 +277,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 15:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `15`")
 
         self._phone_number = phone_number
 
@@ -318,8 +302,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 
@@ -345,8 +327,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
         if postal_code is None:
             raise ValueError("Invalid value for `postal_code`, must not be `None`")
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 

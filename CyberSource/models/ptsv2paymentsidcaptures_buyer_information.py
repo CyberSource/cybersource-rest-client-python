@@ -73,8 +73,6 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -98,8 +96,6 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 20:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `20`")
 
         self._vat_registration_number = vat_registration_number
 

@@ -68,8 +68,6 @@ class Ptsv2paymentsRiskInformationProfile(object):
         :param name: The name of this Ptsv2paymentsRiskInformationProfile.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 

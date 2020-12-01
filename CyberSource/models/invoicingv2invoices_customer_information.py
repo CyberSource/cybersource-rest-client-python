@@ -73,8 +73,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :param name: The name of this Invoicingv2invoicesCustomerInformation.
         :type: str
         """
-        if name is not None and len(name) > 100:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `100`")
 
         self._name = name
 
@@ -98,8 +96,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :param email: The email of this Invoicingv2invoicesCustomerInformation.
         :type: str
         """
-        if email is not None and len(email) > 255:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `255`")
 
         self._email = email
 

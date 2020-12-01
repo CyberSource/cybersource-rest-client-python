@@ -68,8 +68,6 @@ class Ptsv2paymentsIssuerInformation(object):
         :param discretionary_data: The discretionary_data of this Ptsv2paymentsIssuerInformation.
         :type: str
         """
-        if discretionary_data is not None and len(discretionary_data) > 255:
-            raise ValueError("Invalid value for `discretionary_data`, length must be less than or equal to `255`")
 
         self._discretionary_data = discretionary_data
 

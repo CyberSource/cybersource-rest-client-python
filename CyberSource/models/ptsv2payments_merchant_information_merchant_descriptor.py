@@ -136,8 +136,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param alternate_name: The alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if alternate_name is not None and len(alternate_name) > 13:
-            raise ValueError("Invalid value for `alternate_name`, length must be less than or equal to `13`")
 
         self._alternate_name = alternate_name
 
@@ -161,8 +159,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param contact: The contact of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if contact is not None and len(contact) > 14:
-            raise ValueError("Invalid value for `contact`, length must be less than or equal to `14`")
 
         self._contact = contact
 
@@ -186,8 +182,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param address1: The address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -211,8 +205,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param locality: The locality of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if locality is not None and len(locality) > 13:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `13`")
 
         self._locality = locality
 
@@ -259,8 +251,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param postal_code: The postal_code of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 14:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `14`")
 
         self._postal_code = postal_code
 
@@ -307,8 +297,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param phone: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if phone is not None and len(phone) > 13:
-            raise ValueError("Invalid value for `phone`, length must be less than or equal to `13`")
 
         self._phone = phone
 
@@ -332,8 +320,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param url: The url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-        if url is not None and len(url) > 255:
-            raise ValueError("Invalid value for `url`, length must be less than or equal to `255`")
 
         self._url = url
 

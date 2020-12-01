@@ -108,8 +108,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -133,8 +131,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -158,8 +154,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param balance_amount: The balance_amount of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if balance_amount is not None and len(balance_amount) > 12:
-            raise ValueError("Invalid value for `balance_amount`, length must be less than or equal to `12`")
 
         self._balance_amount = balance_amount
 
@@ -183,8 +177,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param discount_amount: The discount_amount of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if discount_amount is not None and len(discount_amount) > 15:
-            raise ValueError("Invalid value for `discount_amount`, length must be less than or equal to `15`")
 
         self._discount_amount = discount_amount
 

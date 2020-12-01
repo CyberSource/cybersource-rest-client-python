@@ -78,8 +78,6 @@ class Riskv1liststypeentriesPaymentInformationCard(object):
         :param number: The number of this Riskv1liststypeentriesPaymentInformationCard.
         :type: str
         """
-        if number is not None and len(number) > 20:
-            raise ValueError("Invalid value for `number`, length must be less than or equal to `20`")
 
         self._number = number
 
@@ -126,8 +124,6 @@ class Riskv1liststypeentriesPaymentInformationCard(object):
         :param bin: The bin of this Riskv1liststypeentriesPaymentInformationCard.
         :type: str
         """
-        if bin is not None and len(bin) > 6:
-            raise ValueError("Invalid value for `bin`, length must be less than or equal to `6`")
 
         self._bin = bin
 
