@@ -15,6 +15,8 @@ class MerchantConfiguration:
         self.merchant_keyid = None
         self.merchant_secretkey = None
         self.merchant_id = None
+        self.use_metakey = None
+        self.portfolio_id = None
         self.host_name = None
         self.url = None
         self.request_host = None
@@ -72,6 +74,16 @@ class MerchantConfiguration:
     def set_merchant_id(self, value):
         if not (value.get('merchantid') is None):
             self.merchant_id = value['merchantid']
+
+    def set_use_metakey(self, value):
+        if not (value.get('use_metakey') is None):
+            self.use_metakey = value['use_metakey']
+        else:
+            self.use_metakey = False
+    
+    def set_portfolio_id(self, value):
+        if not (value.get('portfolio_id') is None):
+            self.portfolio_id = value['portfolio_id']
 
     def set_enable_log(self, value):
 
@@ -144,6 +156,8 @@ class MerchantConfiguration:
         self.set_key_file_name(val)
         self.set_merchant_keyid(val)
         self.set_merchant_secretkey(val)
+        self.set_use_metakey(val)
+        self.set_portfolio_id(val)
         self.set_run_environment(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
@@ -209,6 +223,10 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
                                                                          GlobalLabelParameters.LOG_DIRECTORY_INCORRECT_MESSAGE,
                                                                          mconfig)
+
+
+        if self.use_metakey and (self.portfolio_id is None or self.portfolio_id == ""):
+            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger, GlobalLabelParameters.PORTFOLIO_ID_REQ, mconfig)
 
         # This process ensures that merchant_keyid and merchant_secretkey are mandatory in case of HTTP
         # And displays warning if key alias ,key_password,key_filepath,keyfilename are not present when

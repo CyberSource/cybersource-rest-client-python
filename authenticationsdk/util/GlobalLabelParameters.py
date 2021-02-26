@@ -68,6 +68,7 @@ class GlobalLabelParameters:
     AUTHENTICATION_REQ = "AuthenticationType is Mandatory"
     MERCHANT_KEY_ID_REQ = "MerchantKeyId is Mandatory"
     MERCHANT_SECRET_KEY_REQ = " MerchantSecretKey is Mandatory"
+    PORTFOLIO_ID_REQ = " Portfolio ID is Mandatory"
     KEY_PASSWORD_EMPTY = "KeyPassword Empty/None. Assigining merchantID value"
     INVALID_KEY_PASSWORD = "KeyPassword Invalid. Assigining merchantID value"
     KEY_DIRECTORY_EMPTY = "KeysDirectory not provided. Using Default Path:"
