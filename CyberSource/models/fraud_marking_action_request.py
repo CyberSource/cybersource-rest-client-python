@@ -31,22 +31,27 @@ class FraudMarkingActionRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'risk_information': 'Riskv1decisionsidmarkingRiskInformation'
+        'risk_information': 'Riskv1decisionsidmarkingRiskInformation',
+        'client_reference_information': 'Riskv1decisionsClientReferenceInformation'
     }
 
     attribute_map = {
-        'risk_information': 'riskInformation'
+        'risk_information': 'riskInformation',
+        'client_reference_information': 'clientReferenceInformation'
     }
 
-    def __init__(self, risk_information=None):
+    def __init__(self, risk_information=None, client_reference_information=None):
         """
         FraudMarkingActionRequest - a model defined in Swagger
         """
 
         self._risk_information = None
+        self._client_reference_information = None
 
         if risk_information is not None:
           self.risk_information = risk_information
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
 
     @property
     def risk_information(self):
@@ -68,6 +73,27 @@ class FraudMarkingActionRequest(object):
         """
 
         self._risk_information = risk_information
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this FraudMarkingActionRequest.
+
+        :return: The client_reference_information of this FraudMarkingActionRequest.
+        :rtype: Riskv1decisionsClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this FraudMarkingActionRequest.
+
+        :param client_reference_information: The client_reference_information of this FraudMarkingActionRequest.
+        :type: Riskv1decisionsClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     def to_dict(self):
         """

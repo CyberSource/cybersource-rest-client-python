@@ -37,7 +37,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         'submit_time_local': 'str',
         'status': 'str',
         'message': 'str',
-        'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
+        'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'export_compliance_information': 'RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation',
         'error_information': 'RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation'
     }
@@ -230,7 +230,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Gets the client_reference_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :return: The client_reference_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :rtype: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -240,7 +240,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Sets the client_reference_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :param client_reference_information: The client_reference_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

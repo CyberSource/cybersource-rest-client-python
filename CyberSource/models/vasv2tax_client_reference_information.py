@@ -32,7 +32,7 @@ class Vasv2taxClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
-        'partner': 'Vasv2taxClientReferenceInformationPartner',
+        'partner': 'Riskv1decisionsClientReferenceInformationPartner',
         'comments': 'str'
     }
 
@@ -87,7 +87,7 @@ class Vasv2taxClientReferenceInformation(object):
         Gets the partner of this Vasv2taxClientReferenceInformation.
 
         :return: The partner of this Vasv2taxClientReferenceInformation.
-        :rtype: Vasv2taxClientReferenceInformationPartner
+        :rtype: Riskv1decisionsClientReferenceInformationPartner
         """
         return self._partner
 
@@ -97,7 +97,7 @@ class Vasv2taxClientReferenceInformation(object):
         Sets the partner of this Vasv2taxClientReferenceInformation.
 
         :param partner: The partner of this Vasv2taxClientReferenceInformation.
-        :type: Vasv2taxClientReferenceInformationPartner
+        :type: Riskv1decisionsClientReferenceInformationPartner
         """
 
         self._partner = partner

@@ -32,26 +32,30 @@ class Riskv1decisionsClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
-        'comments': 'str'
+        'comments': 'str',
+        'partner': 'Riskv1decisionsClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
-        'comments': 'comments'
+        'comments': 'comments',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, comments=None):
+    def __init__(self, code=None, comments=None, partner=None):
         """
         Riskv1decisionsClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
         self._comments = None
+        self._partner = None
 
-        if code is not None:
-          self.code = code
+        self.code = code
         if comments is not None:
           self.comments = comments
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
@@ -73,6 +77,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param code: The code of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")
 
         self._code = code
 
@@ -98,6 +104,27 @@ class Riskv1decisionsClientReferenceInformation(object):
         """
 
         self._comments = comments
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this Riskv1decisionsClientReferenceInformation.
+
+        :return: The partner of this Riskv1decisionsClientReferenceInformation.
+        :rtype: Riskv1decisionsClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this Riskv1decisionsClientReferenceInformation.
+
+        :param partner: The partner of this Riskv1decisionsClientReferenceInformation.
+        :type: Riskv1decisionsClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

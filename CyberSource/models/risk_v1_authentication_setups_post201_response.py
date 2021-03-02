@@ -36,6 +36,7 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'consumer_authentication_information': 'RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation',
+        'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'error_information': 'RiskV1AuthenticationSetupsPost201ResponseErrorInformation'
     }
 
@@ -45,10 +46,11 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
+        'client_reference_information': 'clientReferenceInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, consumer_authentication_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, consumer_authentication_information=None, client_reference_information=None, error_information=None):
         """
         RiskV1AuthenticationSetupsPost201Response - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         self._submit_time_utc = None
         self._status = None
         self._consumer_authentication_information = None
+        self._client_reference_information = None
         self._error_information = None
 
         if links is not None:
@@ -70,6 +73,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
           self.status = status
         if consumer_authentication_information is not None:
           self.consumer_authentication_information = consumer_authentication_information
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
         if error_information is not None:
           self.error_information = error_information
 
@@ -183,6 +188,27 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         """
 
         self._consumer_authentication_information = consumer_authentication_information
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this RiskV1AuthenticationSetupsPost201Response.
+
+        :return: The client_reference_information of this RiskV1AuthenticationSetupsPost201Response.
+        :rtype: RiskV1DecisionsPost201ResponseClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this RiskV1AuthenticationSetupsPost201Response.
+
+        :param client_reference_information: The client_reference_information of this RiskV1AuthenticationSetupsPost201Response.
+        :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     @property
     def error_information(self):

@@ -31,7 +31,7 @@ class VerifyCustomerAddressRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1addressverificationsClientReferenceInformation',
+        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
         'order_information': 'Riskv1addressverificationsOrderInformation',
         'buyer_information': 'Riskv1addressverificationsBuyerInformation'
     }
@@ -64,7 +64,7 @@ class VerifyCustomerAddressRequest(object):
         Gets the client_reference_information of this VerifyCustomerAddressRequest.
 
         :return: The client_reference_information of this VerifyCustomerAddressRequest.
-        :rtype: Riskv1addressverificationsClientReferenceInformation
+        :rtype: Riskv1decisionsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -74,7 +74,7 @@ class VerifyCustomerAddressRequest(object):
         Sets the client_reference_information of this VerifyCustomerAddressRequest.
 
         :param client_reference_information: The client_reference_information of this VerifyCustomerAddressRequest.
-        :type: Riskv1addressverificationsClientReferenceInformation
+        :type: Riskv1decisionsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

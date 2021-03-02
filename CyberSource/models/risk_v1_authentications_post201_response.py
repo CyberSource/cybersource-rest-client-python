@@ -37,7 +37,7 @@ class RiskV1AuthenticationsPost201Response(object):
         'submit_time_local': 'str',
         'status': 'str',
         'message': 'str',
-        'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
+        'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'order_information': 'RiskV1DecisionsPost201ResponseOrderInformation',
         'consumer_authentication_information': 'RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation',
         'error_information': 'RiskV1AuthenticationsPost201ResponseErrorInformation'
@@ -235,7 +235,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Gets the client_reference_information of this RiskV1AuthenticationsPost201Response.
 
         :return: The client_reference_information of this RiskV1AuthenticationsPost201Response.
-        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :rtype: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -245,7 +245,7 @@ class RiskV1AuthenticationsPost201Response(object):
         Sets the client_reference_information of this RiskV1AuthenticationsPost201Response.
 
         :param client_reference_information: The client_reference_information of this RiskV1AuthenticationsPost201Response.
-        :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
