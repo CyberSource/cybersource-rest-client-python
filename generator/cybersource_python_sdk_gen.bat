@@ -1,6 +1,6 @@
 cd %~dp0
 
-REM @echo off
+@echo off
 
 REM Delete the previously generated SDK code
 
@@ -105,6 +105,6 @@ REM powershell -Command " rename-item -Path ..\docs\RiskV1AuthenticationExemptio
 
 git checkout ..\README.md
 
-REM git checkout ..\setup.py
+git checkout ..\setup.py
 
 pause

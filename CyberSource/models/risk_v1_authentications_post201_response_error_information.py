@@ -62,7 +62,7 @@ class RiskV1AuthenticationsPost201ResponseErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this RiskV1AuthenticationsPost201ResponseErrorInformation.
-        The reason of the status. Possible values are: - `INVALID_MERCHANT_CONFIGURATION` - `PENDING_AUTHENTICATION` - `AUTHENTICATION_FAILED` 
+        The reason of the status. Possible values are: - `INVALID_MERCHANT_CONFIGURATION` - `CONSUMER_AUTHENTICATION_REQUIRED` - `CONSUMER_AUTHENTICATION_FAILED` - `AUTHENTICATION_FAILED` 
 
         :return: The reason of this RiskV1AuthenticationsPost201ResponseErrorInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class RiskV1AuthenticationsPost201ResponseErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this RiskV1AuthenticationsPost201ResponseErrorInformation.
-        The reason of the status. Possible values are: - `INVALID_MERCHANT_CONFIGURATION` - `PENDING_AUTHENTICATION` - `AUTHENTICATION_FAILED` 
+        The reason of the status. Possible values are: - `INVALID_MERCHANT_CONFIGURATION` - `CONSUMER_AUTHENTICATION_REQUIRED` - `CONSUMER_AUTHENTICATION_FAILED` - `AUTHENTICATION_FAILED` 
 
         :param reason: The reason of this RiskV1AuthenticationsPost201ResponseErrorInformation.
         :type: str

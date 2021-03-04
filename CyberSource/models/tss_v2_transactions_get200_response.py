@@ -45,6 +45,7 @@ class TssV2TransactionsGet200Response(object):
         'error_information': 'TssV2TransactionsGet200ResponseErrorInformation',
         'installment_information': 'TssV2TransactionsGet200ResponseInstallmentInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
+        'health_care_information': 'Ptsv2paymentsHealthCareInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsGet200ResponseMerchantInformation',
         'order_information': 'TssV2TransactionsGet200ResponseOrderInformation',
@@ -72,6 +73,7 @@ class TssV2TransactionsGet200Response(object):
         'error_information': 'errorInformation',
         'installment_information': 'installmentInformation',
         'fraud_marking_information': 'fraudMarkingInformation',
+        'health_care_information': 'healthCareInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
         'merchant_information': 'merchantInformation',
         'order_information': 'orderInformation',
@@ -84,7 +86,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, status=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, status=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -103,6 +105,7 @@ class TssV2TransactionsGet200Response(object):
         self._error_information = None
         self._installment_information = None
         self._fraud_marking_information = None
+        self._health_care_information = None
         self._merchant_defined_information = None
         self._merchant_information = None
         self._order_information = None
@@ -142,6 +145,8 @@ class TssV2TransactionsGet200Response(object):
           self.installment_information = installment_information
         if fraud_marking_information is not None:
           self.fraud_marking_information = fraud_marking_information
+        if health_care_information is not None:
+          self.health_care_information = health_care_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
         if merchant_information is not None:
@@ -468,6 +473,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._fraud_marking_information = fraud_marking_information
+
+    @property
+    def health_care_information(self):
+        """
+        Gets the health_care_information of this TssV2TransactionsGet200Response.
+
+        :return: The health_care_information of this TssV2TransactionsGet200Response.
+        :rtype: Ptsv2paymentsHealthCareInformation
+        """
+        return self._health_care_information
+
+    @health_care_information.setter
+    def health_care_information(self, health_care_information):
+        """
+        Sets the health_care_information of this TssV2TransactionsGet200Response.
+
+        :param health_care_information: The health_care_information of this TssV2TransactionsGet200Response.
+        :type: Ptsv2paymentsHealthCareInformation
+        """
+
+        self._health_care_information = health_care_information
 
     @property
     def merchant_defined_information(self):

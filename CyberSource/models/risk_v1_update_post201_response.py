@@ -32,7 +32,7 @@ class RiskV1UpdatePost201Response(object):
     """
     swagger_types = {
         'links': 'PtsV2IncrementalAuthorizationPatch201ResponseLinks',
-        'client_reference_informaton': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
+        'client_reference_informaton': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'id': 'str',
         'status': 'str',
         'submit_time_utc': 'str'
@@ -95,7 +95,7 @@ class RiskV1UpdatePost201Response(object):
         Gets the client_reference_informaton of this RiskV1UpdatePost201Response.
 
         :return: The client_reference_informaton of this RiskV1UpdatePost201Response.
-        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :rtype: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
         return self._client_reference_informaton
 
@@ -105,7 +105,7 @@ class RiskV1UpdatePost201Response(object):
         Sets the client_reference_informaton of this RiskV1UpdatePost201Response.
 
         :param client_reference_informaton: The client_reference_informaton of this RiskV1UpdatePost201Response.
-        :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
+        :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
 
         self._client_reference_informaton = client_reference_informaton

@@ -57,7 +57,7 @@ class Authorization:
                     logger.info(GlobalLabelParameters.DATE + ":   " + date_time)
                     logger.info(GlobalLabelParameters.HOST + ":   " + mconfig.request_host)
                     # Logging the Digest when Request_type_method is Post
-                    logger.info("Authorization Bearer:     " + sig_token_jwt.decode("utf-8"))
+                    logger.info("Authorization Bearer:     " + sig_token_jwt.encode("utf-8").decode("utf-8"))
                 return sig_token_jwt
             else:
                 raise ApiException(1, GlobalLabelParameters.AUTH_ERROR)

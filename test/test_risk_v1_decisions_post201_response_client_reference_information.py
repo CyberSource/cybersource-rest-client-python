@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.riskv1authenticationsetups_client_reference_information import Riskv1authenticationsetupsClientReferenceInformation
+from CyberSource.models.risk_v1_decisions_post201_response_client_reference_information import RiskV1DecisionsPost201ResponseClientReferenceInformation
 
 
-class TestRiskv1authenticationsetupsClientReferenceInformation(unittest.TestCase):
-    """ Riskv1authenticationsetupsClientReferenceInformation unit test stubs """
+class TestRiskV1DecisionsPost201ResponseClientReferenceInformation(unittest.TestCase):
+    """ RiskV1DecisionsPost201ResponseClientReferenceInformation unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestRiskv1authenticationsetupsClientReferenceInformation(unittest.TestCase
     def tearDown(self):
         pass
 
-    def testRiskv1authenticationsetupsClientReferenceInformation(self):
+    def testRiskV1DecisionsPost201ResponseClientReferenceInformation(self):
         """
-        Test Riskv1authenticationsetupsClientReferenceInformation
+        Test RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.riskv1authenticationsetups_client_reference_information.Riskv1authenticationsetupsClientReferenceInformation()
+        #model = CyberSource.models.risk_v1_decisions_post201_response_client_reference_information.RiskV1DecisionsPost201ResponseClientReferenceInformation()
         pass
 
 

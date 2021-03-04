@@ -31,7 +31,7 @@ class ValidateExportComplianceRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1addressverificationsClientReferenceInformation',
+        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
         'order_information': 'Riskv1exportcomplianceinquiriesOrderInformation',
         'buyer_information': 'Riskv1addressverificationsBuyerInformation',
         'device_information': 'Riskv1exportcomplianceinquiriesDeviceInformation',
@@ -74,7 +74,7 @@ class ValidateExportComplianceRequest(object):
         Gets the client_reference_information of this ValidateExportComplianceRequest.
 
         :return: The client_reference_information of this ValidateExportComplianceRequest.
-        :rtype: Riskv1addressverificationsClientReferenceInformation
+        :rtype: Riskv1decisionsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -84,7 +84,7 @@ class ValidateExportComplianceRequest(object):
         Sets the client_reference_information of this ValidateExportComplianceRequest.
 
         :param client_reference_information: The client_reference_information of this ValidateExportComplianceRequest.
-        :type: Riskv1addressverificationsClientReferenceInformation
+        :type: Riskv1decisionsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

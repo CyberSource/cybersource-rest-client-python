@@ -34,6 +34,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         'velocity': 'list[str]',
         'address': 'list[str]',
         'customer_list': 'list[str]',
+        'device_behavior': 'list[str]',
         'identity_change': 'list[str]',
         'internet': 'list[str]',
         'phone': 'list[str]',
@@ -45,6 +46,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         'velocity': 'velocity',
         'address': 'address',
         'customer_list': 'customerList',
+        'device_behavior': 'deviceBehavior',
         'identity_change': 'identityChange',
         'internet': 'internet',
         'phone': 'phone',
@@ -52,7 +54,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         'global_velocity': 'globalVelocity'
     }
 
-    def __init__(self, velocity=None, address=None, customer_list=None, identity_change=None, internet=None, phone=None, suspicious=None, global_velocity=None):
+    def __init__(self, velocity=None, address=None, customer_list=None, device_behavior=None, identity_change=None, internet=None, phone=None, suspicious=None, global_velocity=None):
         """
         PtsV2PaymentsPost201ResponseRiskInformationInfoCodes - a model defined in Swagger
         """
@@ -60,6 +62,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         self._velocity = None
         self._address = None
         self._customer_list = None
+        self._device_behavior = None
         self._identity_change = None
         self._internet = None
         self._phone = None
@@ -72,6 +75,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
           self.address = address
         if customer_list is not None:
           self.customer_list = customer_list
+        if device_behavior is not None:
+          self.device_behavior = device_behavior
         if identity_change is not None:
           self.identity_change = identity_change
         if internet is not None:
@@ -87,7 +92,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def velocity(self):
         """
         Gets the velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules.  Returned by Decision Manager service. 
+        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules. 
 
         :return: The velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -98,7 +103,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def velocity(self, velocity):
         """
         Sets the velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules.  Returned by Decision Manager service. 
+        List of information codes triggered by the order. These information codes were generated when you created the order and product velocity rules and are returned so that you can associate them with the rules. 
 
         :param velocity: The velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -110,7 +115,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def address(self):
         """
         Gets the address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses.  Returned by scoring service. 
+        Indicates a mismatch between the customer’s billing and shipping addresses. 
 
         :return: The address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -121,7 +126,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def address(self, address):
         """
         Sets the address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses.  Returned by scoring service. 
+        Indicates a mismatch between the customer’s billing and shipping addresses. 
 
         :param address: The address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -133,7 +138,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def customer_list(self):
         """
         Gets the customer_list of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that customer information is associated with transactions that are either on the negative or the positive list.  Returned by scoring service. 
+        Indicates that customer information is associated with transactions that are either on the negative or the positive list. 
 
         :return: The customer_list of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -144,7 +149,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def customer_list(self, customer_list):
         """
         Sets the customer_list of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that customer information is associated with transactions that are either on the negative or the positive list.  Returned by scoring service. 
+        Indicates that customer information is associated with transactions that are either on the negative or the positive list. 
 
         :param customer_list: The customer_list of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -153,10 +158,33 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         self._customer_list = customer_list
 
     @property
+    def device_behavior(self):
+        """
+        Gets the device_behavior of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
+        Indicates the device behavior information code(s) returned from device fingerprinting. 
+
+        :return: The device_behavior of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
+        :rtype: list[str]
+        """
+        return self._device_behavior
+
+    @device_behavior.setter
+    def device_behavior(self, device_behavior):
+        """
+        Sets the device_behavior of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
+        Indicates the device behavior information code(s) returned from device fingerprinting. 
+
+        :param device_behavior: The device_behavior of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
+        :type: list[str]
+        """
+
+        self._device_behavior = device_behavior
+
+    @property
     def identity_change(self):
         """
         Gets the identity_change of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^).  Returned by scoring service. 
+        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. 
 
         :return: The identity_change of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -167,7 +195,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def identity_change(self, identity_change):
         """
         Sets the identity_change of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. This field can contain one or more information codes, separated by carets (^).  Returned by scoring service. 
+        Indicates excessive identity changes. The threshold is variable depending on the identity elements being compared. 
 
         :param identity_change: The identity_change of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -179,7 +207,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self):
         """
         Gets the internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address.  Returned by scoring service. 
+        Indicates a problem with the customer’s email address, IP address, or billing address. 
 
         :return: The internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -190,7 +218,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self, internet):
         """
         Sets the internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address.  Returned by scoring service. 
+        Indicates a problem with the customer’s email address, IP address, or billing address. 
 
         :param internet: The internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -202,7 +230,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self):
         """
         Gets the phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number.  Returned by scoring service. 
+        Indicates a problem with the customer’s phone number. 
 
         :return: The phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -213,7 +241,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self, phone):
         """
         Sets the phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number.  Returned by scoring service. 
+        Indicates a problem with the customer’s phone number. 
 
         :param phone: The phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -225,7 +253,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def suspicious(self):
         """
         Gets the suspicious of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer provided potentially suspicious information.  Returned by scoring service. 
+        Indicates that the customer provided potentially suspicious information. 
 
         :return: The suspicious of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -236,7 +264,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def suspicious(self, suspicious):
         """
         Sets the suspicious of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer provided potentially suspicious information.  Returned by scoring service. 
+        Indicates that the customer provided potentially suspicious information. 
 
         :param suspicious: The suspicious of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -248,7 +276,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def global_velocity(self):
         """
         Gets the global_velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer has a high purchase frequency.  Returned by scoring service. 
+        Indicates that the customer has a high purchase frequency. 
 
         :return: The global_velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -259,7 +287,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def global_velocity(self, global_velocity):
         """
         Sets the global_velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates that the customer has a high purchase frequency.  Returned by scoring service. 
+        Indicates that the customer has a high purchase frequency. 
 
         :param global_velocity: The global_velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]

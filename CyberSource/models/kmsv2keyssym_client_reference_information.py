@@ -33,7 +33,7 @@ class Kmsv2keyssymClientReferenceInformation(object):
     swagger_types = {
         'code': 'str',
         'comments': 'str',
-        'partner': 'Vasv2taxClientReferenceInformationPartner'
+        'partner': 'Riskv1decisionsClientReferenceInformationPartner'
     }
 
     attribute_map = {
@@ -110,7 +110,7 @@ class Kmsv2keyssymClientReferenceInformation(object):
         Gets the partner of this Kmsv2keyssymClientReferenceInformation.
 
         :return: The partner of this Kmsv2keyssymClientReferenceInformation.
-        :rtype: Vasv2taxClientReferenceInformationPartner
+        :rtype: Riskv1decisionsClientReferenceInformationPartner
         """
         return self._partner
 
@@ -120,7 +120,7 @@ class Kmsv2keyssymClientReferenceInformation(object):
         Sets the partner of this Kmsv2keyssymClientReferenceInformation.
 
         :param partner: The partner of this Kmsv2keyssymClientReferenceInformation.
-        :type: Vasv2taxClientReferenceInformationPartner
+        :type: Riskv1decisionsClientReferenceInformationPartner
         """
 
         self._partner = partner

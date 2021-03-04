@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.vasv2tax_client_reference_information_partner import Vasv2taxClientReferenceInformationPartner
+from CyberSource.models.riskv1decisions_client_reference_information_partner import Riskv1decisionsClientReferenceInformationPartner
 
 
-class TestVasv2taxClientReferenceInformationPartner(unittest.TestCase):
-    """ Vasv2taxClientReferenceInformationPartner unit test stubs """
+class TestRiskv1decisionsClientReferenceInformationPartner(unittest.TestCase):
+    """ Riskv1decisionsClientReferenceInformationPartner unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestVasv2taxClientReferenceInformationPartner(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testVasv2taxClientReferenceInformationPartner(self):
+    def testRiskv1decisionsClientReferenceInformationPartner(self):
         """
-        Test Vasv2taxClientReferenceInformationPartner
+        Test Riskv1decisionsClientReferenceInformationPartner
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.vasv2tax_client_reference_information_partner.Vasv2taxClientReferenceInformationPartner()
+        #model = CyberSource.models.riskv1decisions_client_reference_information_partner.Riskv1decisionsClientReferenceInformationPartner()
         pass
 
 

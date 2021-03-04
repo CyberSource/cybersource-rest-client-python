@@ -31,6 +31,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'industry_data_type': 'str',
         'payment_solution': 'str',
         'commerce_indicator': 'str',
         'business_application_id': 'str',
@@ -40,6 +41,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     }
 
     attribute_map = {
+        'industry_data_type': 'industryDataType',
         'payment_solution': 'paymentSolution',
         'commerce_indicator': 'commerceIndicator',
         'business_application_id': 'businessApplicationId',
@@ -48,11 +50,12 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, payment_solution=None, commerce_indicator=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
+    def __init__(self, industry_data_type=None, payment_solution=None, commerce_indicator=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformation - a model defined in Swagger
         """
 
+        self._industry_data_type = None
         self._payment_solution = None
         self._commerce_indicator = None
         self._business_application_id = None
@@ -60,6 +63,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         self._bank_transfer_options = None
         self._japan_payment_options = None
 
+        if industry_data_type is not None:
+          self.industry_data_type = industry_data_type
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if commerce_indicator is not None:
@@ -72,6 +77,29 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
           self.bank_transfer_options = bank_transfer_options
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
+
+    @property
+    def industry_data_type(self):
+        """
+        Gets the industry_data_type of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :return: The industry_data_type of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._industry_data_type
+
+    @industry_data_type.setter
+    def industry_data_type(self, industry_data_type):
+        """
+        Sets the industry_data_type of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :param industry_data_type: The industry_data_type of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._industry_data_type = industry_data_type
 
     @property
     def payment_solution(self):
