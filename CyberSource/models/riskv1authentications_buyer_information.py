@@ -31,26 +31,54 @@ class Riskv1authenticationsBuyerInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'merchant_customer_id': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
         'mobile_phone': 'int'
     }
 
     attribute_map = {
+        'merchant_customer_id': 'merchantCustomerId',
         'personal_identification': 'personalIdentification',
         'mobile_phone': 'mobilePhone'
     }
 
-    def __init__(self, personal_identification=None, mobile_phone=None):
+    def __init__(self, merchant_customer_id=None, personal_identification=None, mobile_phone=None):
         """
         Riskv1authenticationsBuyerInformation - a model defined in Swagger
         """
 
+        self._merchant_customer_id = None
         self._personal_identification = None
         self._mobile_phone = None
 
+        if merchant_customer_id is not None:
+          self.merchant_customer_id = merchant_customer_id
         if personal_identification is not None:
           self.personal_identification = personal_identification
         self.mobile_phone = mobile_phone
+
+    @property
+    def merchant_customer_id(self):
+        """
+        Gets the merchant_customer_id of this Riskv1authenticationsBuyerInformation.
+        Your identifier for the customer.  When a subscription or customer profile is being created, the maximum length for this field for most processors is 30. Otherwise, the maximum length is 100.  #### Comercio Latino For recurring payments in Mexico, the value is the customer’s contract number. Note Before you request the authorization, you must inform the issuer of the customer contract numbers that will be used for recurring transactions.  #### Worldpay VAP For a follow-on credit with Worldpay VAP, CyberSource checks the following locations, in the order given, for a customer account ID value and uses the first value it finds: 1. `customer_account_id` value in the follow-on credit request 2. Customer account ID value that was used for the capture that is being credited 3. Customer account ID value that was used for the original authorization If a customer account ID value cannot be found in any of these locations, then no value is used.  For processor-specific information, see the `customer_account_id` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :return: The merchant_customer_id of this Riskv1authenticationsBuyerInformation.
+        :rtype: str
+        """
+        return self._merchant_customer_id
+
+    @merchant_customer_id.setter
+    def merchant_customer_id(self, merchant_customer_id):
+        """
+        Sets the merchant_customer_id of this Riskv1authenticationsBuyerInformation.
+        Your identifier for the customer.  When a subscription or customer profile is being created, the maximum length for this field for most processors is 30. Otherwise, the maximum length is 100.  #### Comercio Latino For recurring payments in Mexico, the value is the customer’s contract number. Note Before you request the authorization, you must inform the issuer of the customer contract numbers that will be used for recurring transactions.  #### Worldpay VAP For a follow-on credit with Worldpay VAP, CyberSource checks the following locations, in the order given, for a customer account ID value and uses the first value it finds: 1. `customer_account_id` value in the follow-on credit request 2. Customer account ID value that was used for the capture that is being credited 3. Customer account ID value that was used for the original authorization If a customer account ID value cannot be found in any of these locations, then no value is used.  For processor-specific information, see the `customer_account_id` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :param merchant_customer_id: The merchant_customer_id of this Riskv1authenticationsBuyerInformation.
+        :type: str
+        """
+
+        self._merchant_customer_id = merchant_customer_id
 
     @property
     def personal_identification(self):

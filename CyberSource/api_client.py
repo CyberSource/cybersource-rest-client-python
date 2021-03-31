@@ -188,7 +188,7 @@ class ApiClient(object):
             header_params["Signature"] = token
         elif mconfig.authentication_type.upper() == GlobalLabelParameters.JWT:
 
-            token = "Bearer " + token.decode("utf-8")
+            token = "Bearer " + token
             header_params['Authorization'] = str(token)
         
 
