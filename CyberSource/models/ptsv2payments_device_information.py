@@ -35,6 +35,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'ip_address': 'str',
         'user_agent': 'str',
         'fingerprint_session_id': 'str',
+        'use_raw_fingerprint_session_id': 'bool',
         'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
         'http_accept_browser_value': 'str',
         'http_accept_content': 'str',
@@ -54,6 +55,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'ip_address': 'ipAddress',
         'user_agent': 'userAgent',
         'fingerprint_session_id': 'fingerprintSessionId',
+        'use_raw_fingerprint_session_id': 'useRawFingerprintSessionId',
         'raw_data': 'rawData',
         'http_accept_browser_value': 'httpAcceptBrowserValue',
         'http_accept_content': 'httpAcceptContent',
@@ -68,7 +70,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent_browser_value': 'userAgentBrowserValue'
     }
 
-    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
+    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
         """
         Ptsv2paymentsDeviceInformation - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class Ptsv2paymentsDeviceInformation(object):
         self._ip_address = None
         self._user_agent = None
         self._fingerprint_session_id = None
+        self._use_raw_fingerprint_session_id = None
         self._raw_data = None
         self._http_accept_browser_value = None
         self._http_accept_content = None
@@ -98,6 +101,8 @@ class Ptsv2paymentsDeviceInformation(object):
           self.user_agent = user_agent
         if fingerprint_session_id is not None:
           self.fingerprint_session_id = fingerprint_session_id
+        if use_raw_fingerprint_session_id is not None:
+          self.use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
         if raw_data is not None:
           self.raw_data = raw_data
         if http_accept_browser_value is not None:
@@ -214,6 +219,29 @@ class Ptsv2paymentsDeviceInformation(object):
         """
 
         self._fingerprint_session_id = fingerprint_session_id
+
+    @property
+    def use_raw_fingerprint_session_id(self):
+        """
+        Gets the use_raw_fingerprint_session_id of this Ptsv2paymentsDeviceInformation.
+        Boolean that indicates whether request contains the device fingerprint information. Values: - `true`: Use raw fingerprintSessionId when looking up device details. - `false` (default): Use merchant id + fingerprintSessionId as the session id for Device detail collection. 
+
+        :return: The use_raw_fingerprint_session_id of this Ptsv2paymentsDeviceInformation.
+        :rtype: bool
+        """
+        return self._use_raw_fingerprint_session_id
+
+    @use_raw_fingerprint_session_id.setter
+    def use_raw_fingerprint_session_id(self, use_raw_fingerprint_session_id):
+        """
+        Sets the use_raw_fingerprint_session_id of this Ptsv2paymentsDeviceInformation.
+        Boolean that indicates whether request contains the device fingerprint information. Values: - `true`: Use raw fingerprintSessionId when looking up device details. - `false` (default): Use merchant id + fingerprintSessionId as the session id for Device detail collection. 
+
+        :param use_raw_fingerprint_session_id: The use_raw_fingerprint_session_id of this Ptsv2paymentsDeviceInformation.
+        :type: bool
+        """
+
+        self._use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
 
     @property
     def raw_data(self):

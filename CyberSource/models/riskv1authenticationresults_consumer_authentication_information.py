@@ -73,7 +73,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
           self.response_access_token = response_access_token
         if signed_pares_status_reason is not None:
           self.signed_pares_status_reason = signed_pares_status_reason
-        self.signed_pares = signed_pares
+        if signed_pares is not None:
+          self.signed_pares = signed_pares
         if white_list_status is not None:
           self.white_list_status = white_list_status
 
@@ -212,8 +213,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param signed_pares: The signed_pares of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
-        if signed_pares is None:
-            raise ValueError("Invalid value for `signed_pares`, must not be `None`")
 
         self._signed_pares = signed_pares
 

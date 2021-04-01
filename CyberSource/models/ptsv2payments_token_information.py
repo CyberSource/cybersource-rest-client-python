@@ -34,17 +34,19 @@ class Ptsv2paymentsTokenInformation(object):
         'jti': 'str',
         'transient_token_jwt': 'str',
         'payment_instrument': 'Ptsv2paymentsTokenInformationPaymentInstrument',
-        'shipping_address': 'Ptsv2paymentsTokenInformationShippingAddress'
+        'shipping_address': 'Ptsv2paymentsTokenInformationShippingAddress',
+        'network_token_option': 'str'
     }
 
     attribute_map = {
         'jti': 'jti',
         'transient_token_jwt': 'transientTokenJwt',
         'payment_instrument': 'paymentInstrument',
-        'shipping_address': 'shippingAddress'
+        'shipping_address': 'shippingAddress',
+        'network_token_option': 'networkTokenOption'
     }
 
-    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None):
+    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None, network_token_option=None):
         """
         Ptsv2paymentsTokenInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2paymentsTokenInformation(object):
         self._transient_token_jwt = None
         self._payment_instrument = None
         self._shipping_address = None
+        self._network_token_option = None
 
         if jti is not None:
           self.jti = jti
@@ -62,6 +65,8 @@ class Ptsv2paymentsTokenInformation(object):
           self.payment_instrument = payment_instrument
         if shipping_address is not None:
           self.shipping_address = shipping_address
+        if network_token_option is not None:
+          self.network_token_option = network_token_option
 
     @property
     def jti(self):
@@ -150,6 +155,29 @@ class Ptsv2paymentsTokenInformation(object):
         """
 
         self._shipping_address = shipping_address
+
+    @property
+    def network_token_option(self):
+        """
+        Gets the network_token_option of this Ptsv2paymentsTokenInformation.
+        Indicates whether a payment network token associated with a TMS token should be used for authorization. This field can contain one of following values:  - `ignore`: Use a tokenized card number for an authorization, even if the TMS token has an associated payment network token. - `prefer`: (Default) Use an associated payment network token for an authorization if the TMS token has one; otherwise, use the tokenized card number. 
+
+        :return: The network_token_option of this Ptsv2paymentsTokenInformation.
+        :rtype: str
+        """
+        return self._network_token_option
+
+    @network_token_option.setter
+    def network_token_option(self, network_token_option):
+        """
+        Sets the network_token_option of this Ptsv2paymentsTokenInformation.
+        Indicates whether a payment network token associated with a TMS token should be used for authorization. This field can contain one of following values:  - `ignore`: Use a tokenized card number for an authorization, even if the TMS token has an associated payment network token. - `prefer`: (Default) Use an associated payment network token for an authorization if the TMS token has one; otherwise, use the tokenized card number. 
+
+        :param network_token_option: The network_token_option of this Ptsv2paymentsTokenInformation.
+        :type: str
+        """
+
+        self._network_token_option = network_token_option
 
     def to_dict(self):
         """
