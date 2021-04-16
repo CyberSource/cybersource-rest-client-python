@@ -268,7 +268,7 @@ class ApiClient(object):
         url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
         
         if self.download_file_path is not None:
-            _preload_content = False        
+            _preload_content = False
 
         # perform request and return response
         response_data = self.request(method, url,
@@ -300,10 +300,10 @@ class ApiClient(object):
                 return (return_data, response_data.status, response_data.getheaders())
         else:
             if response_data.status >= 200 and response_data.status <= 299:
-                fdst = open(self.download_file_path, 'w')
+                fdst = open(self.download_file_path, 'wb')
                 
-                for chunk in response_data.stream():
-                    fdst.writelines(chunk.decode('utf-8'))
+                for chunk in response_data.stream(65536*32, True):
+                    fdst.write(chunk)
 
                 fdst.close()
             response_data.release_conn()
