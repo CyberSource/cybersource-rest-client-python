@@ -269,6 +269,7 @@ class ApiClient(object):
         
         if self.download_file_path is not None:
             _preload_content = False
+            _request_timeout = 3000
 
         # perform request and return response
         response_data = self.request(method, url,
@@ -300,9 +301,10 @@ class ApiClient(object):
                 return (return_data, response_data.status, response_data.getheaders())
         else:
             if response_data.status >= 200 and response_data.status <= 299:
+                print(response_data.getheaders())
                 fdst = open(self.download_file_path, 'wb')
                 
-                for chunk in response_data.stream(65536*32, True):
+                for chunk in response_data.stream(65536*153, False):
                     fdst.write(chunk)
 
                 fdst.close()
