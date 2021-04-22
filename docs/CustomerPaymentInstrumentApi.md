@@ -111,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_customer_payment_instruments_list**
-> PaymentInstrumentListForCustomer get_customer_payment_instruments_list(customer_token_id, profile_id=profile_id, offset=offset, limit=limit)
+> PaymentInstrumentList get_customer_payment_instruments_list(customer_token_id, profile_id=profile_id, offset=offset, limit=limit)
 
 List Payment Instruments for a Customer
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentInstrumentListForCustomer**](PaymentInstrumentListForCustomer.md)
+[**PaymentInstrumentList**](PaymentInstrumentList.md)
 
 ### Authorization
 

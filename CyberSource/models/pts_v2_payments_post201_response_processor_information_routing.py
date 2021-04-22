@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network(self):
         """
         Gets the network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global.  #### PIN debit Network that was used to route the transaction. This is the list of network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  Returned by PIN debit credit and PIN debit purchase. 
+        PIN Debit Services: Contains the ID of the debit network to which the transaction was routed.  | Code | Network | | --- | --- | | 0000 | Priority Routing or Generic File Update | | 0002 | Visa programs, Private Label and non-Visa Authorization Gateway Services | | 0003 | Interlink | | 0004 | Plus | | 0008 | Star | | 0009 | Pulse| | 0010 | Star | | 0011 | Star | | 0012 | Star (primary network ID) | | 0013 | AFFN | | 0015 | Star | | 0016 | Maestro | | 0017 | Pulse (primary network ID) | | 0018 | NYCE (primary network ID) | | 0019 | Pulse | | 0020 | Accel | | 0023 | NETS | | 0024 | CU24 | | 0025 | Alaska Option | | 0027 | NYCE | | 0028 | Shazam | | 0029 | EBT POS |  FDC Nashville Global authorization service:  Indicates whether the transaction was routed to a credit network, a debit network, or the STAR signature debit network. - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network 
 
         :return: The network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network(self, network):
         """
         Sets the network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether the transaction was routed on a credit network, a debit network, or the STAR signature debit network.  Possible values: - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network  This field is supported only on FDC Nashville Global.  #### PIN debit Network that was used to route the transaction. This is the list of network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  Returned by PIN debit credit and PIN debit purchase. 
+        PIN Debit Services: Contains the ID of the debit network to which the transaction was routed.  | Code | Network | | --- | --- | | 0000 | Priority Routing or Generic File Update | | 0002 | Visa programs, Private Label and non-Visa Authorization Gateway Services | | 0003 | Interlink | | 0004 | Plus | | 0008 | Star | | 0009 | Pulse| | 0010 | Star | | 0011 | Star | | 0012 | Star (primary network ID) | | 0013 | AFFN | | 0015 | Star | | 0016 | Maestro | | 0017 | Pulse (primary network ID) | | 0018 | NYCE (primary network ID) | | 0019 | Pulse | | 0020 | Accel | | 0023 | NETS | | 0024 | CU24 | | 0025 | Alaska Option | | 0027 | NYCE | | 0028 | Shazam | | 0029 | EBT POS |  FDC Nashville Global authorization service:  Indicates whether the transaction was routed to a credit network, a debit network, or the STAR signature debit network. - `C`: Credit network - `D`: Debit network (without signature) - `S`: STAR signature debit network 
 
         :param network: The network of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
@@ -85,7 +85,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network_name(self):
         """
         Gets the network_name of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Name of the network on which the transaction was routed.  This reply field is supported only on FDC Nashville Global. 
+        Name of the network to which the transaction was routed. 
 
         :return: The network_name of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :rtype: str
@@ -96,7 +96,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def network_name(self, network_name):
         """
         Sets the network_name of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Name of the network on which the transaction was routed.  This reply field is supported only on FDC Nashville Global. 
+        Name of the network to which the transaction was routed. 
 
         :param network_name: The network_name of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
@@ -108,7 +108,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def customer_signature_required(self):
         """
         Gets the customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether you need to obtain the cardholder's signature.  Possible values: - `Y`: You need to obtain the cardholder's signature. - `N`: You do not need to obtain the cardholder's signature.  This field is supported only on FDC Nashville Global. 
+        Indicates whether you need to obtain the cardholder's signature.  Possible values: - `Y`: You need to obtain the cardholder's signature. - `N`: You do not need to obtain the cardholder's signature. 
 
         :return: The customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :rtype: str
@@ -119,7 +119,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
     def customer_signature_required(self, customer_signature_required):
         """
         Sets the customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
-        Indicates whether you need to obtain the cardholder's signature.  Possible values: - `Y`: You need to obtain the cardholder's signature. - `N`: You do not need to obtain the cardholder's signature.  This field is supported only on FDC Nashville Global. 
+        Indicates whether you need to obtain the cardholder's signature.  Possible values: - `Y`: You need to obtain the cardholder's signature. - `N`: You do not need to obtain the cardholder's signature. 
 
         :param customer_signature_required: The customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str

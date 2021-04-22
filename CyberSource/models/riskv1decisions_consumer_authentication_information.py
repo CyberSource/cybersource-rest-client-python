@@ -383,7 +383,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_date(self):
         """
         Gets the authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
-        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider. 
+        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. Format: YYYYMMDDHHMMSS 
 
         :return: The authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
         :rtype: str
@@ -394,7 +394,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_date(self, authentication_date):
         """
         Sets the authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
-        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider. 
+        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. Format: YYYYMMDDHHMMSS 
 
         :param authentication_date: The authentication_date of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str

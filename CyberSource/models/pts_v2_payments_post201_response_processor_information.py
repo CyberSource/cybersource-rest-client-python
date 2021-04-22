@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     swagger_types = {
         'auth_indicator': 'str',
         'approval_code': 'str',
+        'card_reference_data': 'str',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
         'provider_transaction_id': 'str',
@@ -63,6 +64,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     attribute_map = {
         'auth_indicator': 'authIndicator',
         'approval_code': 'approvalCode',
+        'card_reference_data': 'cardReferenceData',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
         'provider_transaction_id': 'providerTransactionId',
@@ -90,13 +92,14 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'merchant_number': 'merchantNumber'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, transaction_id=None, network_transaction_id=None, provider_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, provider_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._auth_indicator = None
         self._approval_code = None
+        self._card_reference_data = None
         self._transaction_id = None
         self._network_transaction_id = None
         self._provider_transaction_id = None
@@ -127,6 +130,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.auth_indicator = auth_indicator
         if approval_code is not None:
           self.approval_code = approval_code
+        if card_reference_data is not None:
+          self.card_reference_data = card_reference_data
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
@@ -223,6 +228,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._approval_code = approval_code
+
+    @property
+    def card_reference_data(self):
+        """
+        Gets the card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The Scheme reference data is a variable length data element up to a maximum of 56 characters. It may be sent by the acquirer in the  authorisation response message, and by the terminal (unchanged) in subsequent authorisation request messages associated with the same  transaction. This field is used by Streamline and HSBC UK only, at present. 
+
+        :return: The card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._card_reference_data
+
+    @card_reference_data.setter
+    def card_reference_data(self, card_reference_data):
+        """
+        Sets the card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The Scheme reference data is a variable length data element up to a maximum of 56 characters. It may be sent by the acquirer in the  authorisation response message, and by the terminal (unchanged) in subsequent authorisation request messages associated with the same  transaction. This field is used by Streamline and HSBC UK only, at present. 
+
+        :param card_reference_data: The card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._card_reference_data = card_reference_data
 
     @property
     def transaction_id(self):

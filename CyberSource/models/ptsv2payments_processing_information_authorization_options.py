@@ -44,7 +44,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'bill_payment': 'bool',
         'bill_payment_type': 'str',
         'redemption_inquiry': 'bool',
-        'transit_transaction_type': 'str',
+        'transportation_mode': 'str',
         'aggregated_auth_indicator': 'str',
         'debt_recovery_indicator': 'str',
         'deferred_auth_indicator': 'bool'
@@ -64,13 +64,13 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'bill_payment': 'billPayment',
         'bill_payment_type': 'billPaymentType',
         'redemption_inquiry': 'redemptionInquiry',
-        'transit_transaction_type': 'transitTransactionType',
+        'transportation_mode': 'transportationMode',
         'aggregated_auth_indicator': 'aggregatedAuthIndicator',
         'debt_recovery_indicator': 'debtRecoveryIndicator',
         'deferred_auth_indicator': 'deferredAuthIndicator'
     }
 
-    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transit_transaction_type=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
+    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -88,7 +88,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._bill_payment = None
         self._bill_payment_type = None
         self._redemption_inquiry = None
-        self._transit_transaction_type = None
+        self._transportation_mode = None
         self._aggregated_auth_indicator = None
         self._debt_recovery_indicator = None
         self._deferred_auth_indicator = None
@@ -119,8 +119,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.bill_payment_type = bill_payment_type
         if redemption_inquiry is not None:
           self.redemption_inquiry = redemption_inquiry
-        if transit_transaction_type is not None:
-          self.transit_transaction_type = transit_transaction_type
+        if transportation_mode is not None:
+          self.transportation_mode = transportation_mode
         if aggregated_auth_indicator is not None:
           self.aggregated_auth_indicator = aggregated_auth_indicator
         if debt_recovery_indicator is not None:
@@ -426,27 +426,27 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._redemption_inquiry = redemption_inquiry
 
     @property
-    def transit_transaction_type(self):
+    def transportation_mode(self):
         """
-        Gets the transit_transaction_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Gets the transportation_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         Type of transportation mode :  Possible Values: - 00 = Unknown - 01 = Urban bus - 02 = Interurban bus - 03=Lighttrainmasstransit(Underground Metro LTR) - 04 = Train - 05 = Commuter train - 06 = Water-borne vehicle - 07 = Toll - 08 = Parking - 09 = Taxi - 10 = High-speed train - 11 = Rural bus - 12 = Express commuter train - 13 = Para transit - 14 = Self drive vehicle - 15 = Coach - 16 = Locomotive - 17 = Powered motor coach - 18 = Trailer - 19 = Regional train - 20 = Inter-city - 21 = Funicular train - 22 = Cable car 
 
-        :return: The transit_transaction_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :return: The transportation_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
         """
-        return self._transit_transaction_type
+        return self._transportation_mode
 
-    @transit_transaction_type.setter
-    def transit_transaction_type(self, transit_transaction_type):
+    @transportation_mode.setter
+    def transportation_mode(self, transportation_mode):
         """
-        Sets the transit_transaction_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Sets the transportation_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         Type of transportation mode :  Possible Values: - 00 = Unknown - 01 = Urban bus - 02 = Interurban bus - 03=Lighttrainmasstransit(Underground Metro LTR) - 04 = Train - 05 = Commuter train - 06 = Water-borne vehicle - 07 = Toll - 08 = Parking - 09 = Taxi - 10 = High-speed train - 11 = Rural bus - 12 = Express commuter train - 13 = Para transit - 14 = Self drive vehicle - 15 = Coach - 16 = Locomotive - 17 = Powered motor coach - 18 = Trailer - 19 = Regional train - 20 = Inter-city - 21 = Funicular train - 22 = Cable car 
 
-        :param transit_transaction_type: The transit_transaction_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :param transportation_mode: The transportation_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
 
-        self._transit_transaction_type = transit_transaction_type
+        self._transportation_mode = transportation_mode
 
     @property
     def aggregated_auth_indicator(self):
