@@ -43,6 +43,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'directory_server_transaction_id': 'str',
         'pa_specification_version': 'str',
         'authentication_type': 'str',
+        'acs_transaction_id': 'str',
         'acs_window_size': 'str',
         'alternate_authentication_data': 'str',
         'alternate_authentication_date': 'str',
@@ -64,6 +65,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'mcc': 'str',
         'merchant_score': 'int',
         'message_category': 'str',
+        'network_score': 'str',
         'npa_code': 'str',
         'override_payment_method': 'str',
         'override_country_code': 'str',
@@ -98,6 +100,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'directory_server_transaction_id': 'directoryServerTransactionId',
         'pa_specification_version': 'paSpecificationVersion',
         'authentication_type': 'authenticationType',
+        'acs_transaction_id': 'acsTransactionId',
         'acs_window_size': 'acsWindowSize',
         'alternate_authentication_data': 'alternateAuthenticationData',
         'alternate_authentication_date': 'alternateAuthenticationDate',
@@ -119,6 +122,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'mcc': 'mcc',
         'merchant_score': 'merchantScore',
         'message_category': 'messageCategory',
+        'network_score': 'networkScore',
         'npa_code': 'npaCode',
         'override_payment_method': 'overridePaymentMethod',
         'override_country_code': 'overrideCountryCode',
@@ -140,7 +144,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares': 'signedPares'
     }
 
-    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
+    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -157,6 +161,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._directory_server_transaction_id = None
         self._pa_specification_version = None
         self._authentication_type = None
+        self._acs_transaction_id = None
         self._acs_window_size = None
         self._alternate_authentication_data = None
         self._alternate_authentication_date = None
@@ -178,6 +183,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._mcc = None
         self._merchant_score = None
         self._message_category = None
+        self._network_score = None
         self._npa_code = None
         self._override_payment_method = None
         self._override_country_code = None
@@ -222,6 +228,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.pa_specification_version = pa_specification_version
         if authentication_type is not None:
           self.authentication_type = authentication_type
+        if acs_transaction_id is not None:
+          self.acs_transaction_id = acs_transaction_id
         if acs_window_size is not None:
           self.acs_window_size = acs_window_size
         if alternate_authentication_data is not None:
@@ -264,6 +272,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.merchant_score = merchant_score
         if message_category is not None:
           self.message_category = message_category
+        if network_score is not None:
+          self.network_score = network_score
         if npa_code is not None:
           self.npa_code = npa_code
         if override_payment_method is not None:
@@ -578,6 +588,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._authentication_type = authentication_type
 
     @property
+    def acs_transaction_id(self):
+        """
+        Gets the acs_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. 
+
+        :return: The acs_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_transaction_id
+
+    @acs_transaction_id.setter
+    def acs_transaction_id(self, acs_transaction_id):
+        """
+        Sets the acs_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Unique transaction identifier assigned by the ACS to identify a single transaction.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. 
+
+        :param acs_transaction_id: The acs_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_transaction_id = acs_transaction_id
+
+    @property
     def acs_window_size(self):
         """
         Gets the acs_window_size of this Ptsv2paymentsConsumerAuthenticationInformation.
@@ -673,7 +706,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_date(self):
         """
         Gets the authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
-        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider. 
+        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. Format: YYYYMMDDHHMMSS 
 
         :return: The authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -684,7 +717,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_date(self, authentication_date):
         """
         Sets the authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
-        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider. 
+        The date/time of the authentication at the 3DS servers. RISK update authorization service in auth request payload with value returned in `consumerAuthenticationInformation.alternateAuthenticationData` if merchant calls via CYBS or field can be provided by merchant in authorization request if calling an external 3DS provider.  This field is supported for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. Format: YYYYMMDDHHMMSS 
 
         :param authentication_date: The authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -1059,6 +1092,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._message_category = message_category
+
+    @property
+    def network_score(self):
+        """
+        Gets the network_score of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The global score calculated by the CB scoring platform and returned to merchants.  Possible values:  - '00' - '99'  When you request the payer authentication and authorization services separately, get the value for this field from the pa_network_score reply field.         This field is supported only for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. 
+
+        :return: The network_score of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._network_score
+
+    @network_score.setter
+    def network_score(self, network_score):
+        """
+        Sets the network_score of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The global score calculated by the CB scoring platform and returned to merchants.  Possible values:  - '00' - '99'  When you request the payer authentication and authorization services separately, get the value for this field from the pa_network_score reply field.         This field is supported only for Cartes Bancaires Fast'R transactions on Credit Mutuel-CIC. 
+
+        :param network_score: The network_score of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._network_score = network_score
 
     @property
     def npa_code(self):

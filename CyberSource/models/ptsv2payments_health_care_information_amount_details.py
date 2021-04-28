@@ -80,7 +80,7 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
     def amount(self):
         """
         Gets the amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
-        Total Amount that has been spent on transit healthcare. This is 13 byte field including sign. If the amount is positive, then it is a debit for the customer. If the amount is negative, then it is a credit for the customer. 
+        Total Amount that has been spent on the corresponding amountType. This is 13 byte field including sign. If the amount is positive, then it is a debit for the customer. If the amount is negative, then it is a credit for the customer. 
 
         :return: The amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
         :rtype: str
@@ -91,7 +91,7 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
-        Total Amount that has been spent on transit healthcare. This is 13 byte field including sign. If the amount is positive, then it is a debit for the customer. If the amount is negative, then it is a credit for the customer. 
+        Total Amount that has been spent on the corresponding amountType. This is 13 byte field including sign. If the amount is positive, then it is a debit for the customer. If the amount is negative, then it is a credit for the customer. 
 
         :param amount: The amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
         :type: str

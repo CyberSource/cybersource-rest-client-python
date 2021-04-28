@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier_payment_instruments_list**
-> PaymentInstrumentListForCustomer get_instrument_identifier_payment_instruments_list(instrument_identifier_token_id, profile_id=profile_id, offset=offset, limit=limit)
+> PaymentInstrumentList get_instrument_identifier_payment_instruments_list(instrument_identifier_token_id, profile_id=profile_id, offset=offset, limit=limit)
 
 List Payment Instruments for an Instrument Identifier
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentInstrumentListForCustomer**](PaymentInstrumentListForCustomer.md)
+[**PaymentInstrumentList**](PaymentInstrumentList.md)
 
 ### Authorization
 

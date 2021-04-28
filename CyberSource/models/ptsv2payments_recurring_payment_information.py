@@ -33,30 +33,40 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
     swagger_types = {
         'end_date': 'str',
         'frequency': 'int',
-        'original_purchase_date': 'str'
+        'number_of_payments': 'int',
+        'original_purchase_date': 'str',
+        'sequence_number': 'int'
     }
 
     attribute_map = {
         'end_date': 'endDate',
         'frequency': 'frequency',
-        'original_purchase_date': 'originalPurchaseDate'
+        'number_of_payments': 'numberOfPayments',
+        'original_purchase_date': 'originalPurchaseDate',
+        'sequence_number': 'sequenceNumber'
     }
 
-    def __init__(self, end_date=None, frequency=None, original_purchase_date=None):
+    def __init__(self, end_date=None, frequency=None, number_of_payments=None, original_purchase_date=None, sequence_number=None):
         """
         Ptsv2paymentsRecurringPaymentInformation - a model defined in Swagger
         """
 
         self._end_date = None
         self._frequency = None
+        self._number_of_payments = None
         self._original_purchase_date = None
+        self._sequence_number = None
 
         if end_date is not None:
           self.end_date = end_date
         if frequency is not None:
           self.frequency = frequency
+        if number_of_payments is not None:
+          self.number_of_payments = number_of_payments
         if original_purchase_date is not None:
           self.original_purchase_date = original_purchase_date
+        if sequence_number is not None:
+          self.sequence_number = sequence_number
 
     @property
     def end_date(self):
@@ -105,6 +115,29 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         self._frequency = frequency
 
     @property
+    def number_of_payments(self):
+        """
+        Gets the number_of_payments of this Ptsv2paymentsRecurringPaymentInformation.
+        Total number of payments for the duration of the recurring subscription. 
+
+        :return: The number_of_payments of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: int
+        """
+        return self._number_of_payments
+
+    @number_of_payments.setter
+    def number_of_payments(self, number_of_payments):
+        """
+        Sets the number_of_payments of this Ptsv2paymentsRecurringPaymentInformation.
+        Total number of payments for the duration of the recurring subscription. 
+
+        :param number_of_payments: The number_of_payments of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: int
+        """
+
+        self._number_of_payments = number_of_payments
+
+    @property
     def original_purchase_date(self):
         """
         Gets the original_purchase_date of this Ptsv2paymentsRecurringPaymentInformation.
@@ -126,6 +159,29 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         """
 
         self._original_purchase_date = original_purchase_date
+
+    @property
+    def sequence_number(self):
+        """
+        Gets the sequence_number of this Ptsv2paymentsRecurringPaymentInformation.
+        This field is mandatory for Cartes Bancaires recurring transactions on Credit Mutuel-CIC.       This field records recurring sequence, e.g. 1st for initial,  2 for subsequent, 3 etc 
+
+        :return: The sequence_number of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: int
+        """
+        return self._sequence_number
+
+    @sequence_number.setter
+    def sequence_number(self, sequence_number):
+        """
+        Sets the sequence_number of this Ptsv2paymentsRecurringPaymentInformation.
+        This field is mandatory for Cartes Bancaires recurring transactions on Credit Mutuel-CIC.       This field records recurring sequence, e.g. 1st for initial,  2 for subsequent, 3 etc 
+
+        :param sequence_number: The sequence_number of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: int
+        """
+
+        self._sequence_number = sequence_number
 
     def to_dict(self):
         """

@@ -291,7 +291,7 @@ class InstrumentIdentifierApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
-        :return: PaymentInstrumentListForCustomer
+        :return: PaymentInstrumentList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -319,7 +319,7 @@ class InstrumentIdentifierApi(object):
         :param str profile_id: The id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
-        :return: PaymentInstrumentListForCustomer
+        :return: PaymentInstrumentList
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -396,7 +396,7 @@ class InstrumentIdentifierApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PaymentInstrumentListForCustomer',
+                                        response_type='PaymentInstrumentList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
