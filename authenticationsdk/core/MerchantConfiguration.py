@@ -116,18 +116,8 @@ class MerchantConfiguration:
     # setting up hostname based on the run environment value
     def set_request_host(self, value):
         if not (value.get("run_environment") is None):
-            if self.run_environment.lower() == GlobalLabelParameters.SANBOX_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.SANBOX_URL
-            elif self.run_environment.lower() == GlobalLabelParameters.PRODUCTION_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.PRODUCTION_URL
-            elif self.run_environment.lower() == GlobalLabelParameters.BOA_SANDBOX_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.BOA_SANDBOX_URL
-            elif self.run_environment.lower() == GlobalLabelParameters.BOA_PRODUCTION_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.BOA_PRODUCTION_URL
-            elif self.run_environment.lower() == GlobalLabelParameters.IDC_SANDBOX_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.IDC_SANDBOX_URL
-            elif self.run_environment.lower() == GlobalLabelParameters.IDC_PRODUCTION_RUN_ENVIRONMENT.lower():
-                self.request_host = GlobalLabelParameters.IDC_PRODUCTION_URL
+            if self.run_environment.upper() in GlobalLabelParameters.OLD_RUN_ENVIRONMENT_CONSTANTS:
+                raise AttributeError(GlobalLabelParameters.DEPRECATED_RUN_ENVIRONMENT)
             else:
                 self.request_host = self.run_environment
 
