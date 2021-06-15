@@ -59,7 +59,7 @@ class RESTResponse(io.IOBase):
 
 class RESTClientObject(object):
 
-    def __init__(self, pools_size=4, maxsize=4):
+    def __init__(self, rconfig = None, pools_size=4, maxsize=4):
         # urllib3.PoolManager will pass all kw parameters to connectionpool
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680
@@ -67,33 +67,39 @@ class RESTClientObject(object):
         # ca_certs vs cert_file vs key_file
         # http://stackoverflow.com/a/23957365/2985775
 
+        if rconfig is None:
+            rconfig = Configuration()
+
         # cert_reqs
-        if Configuration().verify_ssl:
+        if rconfig.verify_ssl:
             cert_reqs = ssl.CERT_REQUIRED
         else:
             cert_reqs = ssl.CERT_NONE
 
         # ca_certs
-        if Configuration().ssl_ca_cert:
-            ca_certs = Configuration().ssl_ca_cert
+        if rconfig.ssl_ca_cert:
+            ca_certs = rconfig.ssl_ca_cert
         else:
             # if not set certificate file, use Mozilla's root certificates.
             ca_certs = certifi.where()
 
         # cert_file
-        cert_file = Configuration().cert_file
+        cert_file = rconfig.cert_file
 
         # key file
-        key_file = Configuration().key_file
+        key_file = rconfig.key_file
+
+        # key pass
+        key_password = rconfig.key_password
 
         # proxy
-        proxy = Configuration().proxy
+        proxy = rconfig.proxy
 
         # https pool manager
         if proxy:
             # proxy auth headers
-            proxy_username = Configuration().proxy_username
-            proxy_password = Configuration().proxy_password
+            proxy_username = rconfig.proxy_username
+            proxy_password = rconfig.proxy_password
             proxy_auth_headers = None
 
             
@@ -107,6 +113,7 @@ class RESTClientObject(object):
                 ca_certs=ca_certs,
                 cert_file=cert_file,
                 key_file=key_file,
+                key_password=key_password,
                 proxy_url=proxy,
                 proxy_headers=proxy_auth_headers
             )
@@ -117,6 +124,7 @@ class RESTClientObject(object):
                 cert_reqs=cert_reqs,
                 ca_certs=ca_certs,
                 cert_file=cert_file,
+                key_password=key_password,
                 key_file=key_file
             )
 
@@ -140,7 +148,7 @@ class RESTClientObject(object):
         method = method.upper()
         assert method in ['GET', 'HEAD', 'DELETE', 'POST', 'PUT', 'PATCH', 'OPTIONS']
 
-        if post_params and body:
+        if post_params and body and not headers['Content-Type'] == 'application/x-www-form-urlencoded':
             raise ValueError(
                 "body parameter cannot be used with post_params parameter."
             )

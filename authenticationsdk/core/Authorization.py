@@ -1,5 +1,6 @@
 from authenticationsdk.http.HTTPSignatureToken import *
 from authenticationsdk.jwt.Token import *
+from authenticationsdk.oauth.OAuthToken import *
 from authenticationsdk.core.ExceptionHandling import *
 import authenticationsdk.util.ExceptionAuth
 
@@ -59,6 +60,12 @@ class Authorization:
                     # Logging the Digest when Request_type_method is Post
                     logger.info("Authorization Bearer:     " + sig_token_jwt.encode("utf-8").decode("utf-8"))
                 return sig_token_jwt
+            elif authentication_type.upper() == GlobalLabelParameters.OAUTH.upper():
+                token = OAuthToken()
+                token.oauth_token(mconfig)
+                o_auth_token = token.get_token() 
+                logger.info("Authorization Bearer:     " + o_auth_token.encode("utf-8").decode("utf-8"))
+                return o_auth_token
             else:
                 raise ApiException(1, GlobalLabelParameters.AUTH_ERROR)
         except ApiException as e:

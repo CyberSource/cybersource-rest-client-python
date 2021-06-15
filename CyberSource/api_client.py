@@ -107,6 +107,15 @@ class ApiClient(object):
         version = pkg_resources.require("cybersource-rest-client-python")[0].version
         return "cybs-rest-sdk-python-" + version
 
+    def remove_first_underscore(self, dict_obj):
+        converted_dict_obj = {}
+        dict_obj = json.loads(dict_obj)
+        for i in dict_obj:
+            new_key = str(i)[1:]
+            val = dict_obj[i]
+            converted_dict_obj[new_key] = val
+        return converted_dict_obj
+
     # replace the underscore
     def replace_underscore(self, dict_obj, deep=True):
         assert type(dict_obj) == dict
@@ -141,10 +150,14 @@ class ApiClient(object):
         global mconfig
         mconfig = MerchantConfiguration()
         mconfig.set_merchantconfig(config)
+        rconfig = Configuration()
 
-        # The below two lines are to set proxy details and if present reinitialize the REST object as a proxy manager
-        if Configuration().set_merchantproxyconfig(config):
-            self.rest_client = RESTClientObject() # Reinitialising REST object as a proxy manager instead of pool manager
+        set_client_cert = rconfig.set_merchantclientcert(config)
+        set_proxy = rconfig.set_merchantproxyconfig(config)
+
+        # The below two lines are to set proxy details, client cert details and if present reinitialize the REST object as a proxy manager
+        if set_client_cert or set_proxy:
+            self.rest_client = RESTClientObject(rconfig) # Reinitialising REST object as a proxy manager instead of pool manager
 
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         mconfig.validate_merchant_details(config, mconfig)
@@ -187,6 +200,10 @@ class ApiClient(object):
 
             header_params["Signature"] = token
         elif mconfig.authentication_type.upper() == GlobalLabelParameters.JWT:
+
+            token = "Bearer " + token
+            header_params['Authorization'] = str(token)
+        elif mconfig.authentication_type.upper() == GlobalLabelParameters.OAUTH:
 
             token = "Bearer " + token
             header_params['Authorization'] = str(token)
@@ -252,6 +269,7 @@ class ApiClient(object):
 
         # post parameters
         if post_params or files:
+            post_params = self.remove_first_underscore(post_params)
             post_params = self.prepare_post_parameters(post_params, files)
             post_params = self.sanitize_for_serialization(post_params)
             post_params = self.parameters_to_tuples(post_params,
@@ -423,6 +441,10 @@ class ApiClient(object):
                  response_type=None, auth_settings=None, callback=None,
                  _return_http_data_only=None, collection_formats=None, _preload_content=True,
                  _request_timeout=None):
+        
+        if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
+            post_params = body
+
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             temp_body = body.replace("\"_", "\"")
             request_body = self.replace_underscore(json.loads(temp_body))
@@ -435,7 +457,10 @@ class ApiClient(object):
             mconfig.request_target = query_param_path
         else:
             mconfig.request_target = resource_path
-        self.call_authentication_header(method, header_params, body)
+        
+        if mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
+            self.call_authentication_header(method, header_params, body)
+
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
         To make an async request, define a function for callback.
@@ -561,6 +586,8 @@ class ApiClient(object):
         new_params = []
         if collection_formats is None:
             collection_formats = {}
+        if isinstance(params, str):
+            params = json.loads(params)
         for k, v in iteritems(params) if isinstance(params, dict) else params:
             if k in collection_formats:
                 collection_format = collection_formats[k]

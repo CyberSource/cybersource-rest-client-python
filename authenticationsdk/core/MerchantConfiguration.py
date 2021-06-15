@@ -27,6 +27,15 @@ class MerchantConfiguration:
         self.run_environment = None
         self.key_alias = None
         self.key_password = None
+        self.enable_client_cert = None
+        self.client_cert_dir = None
+        self.ssl_client_cert = None
+        self.private_key = None
+        self.ssl_key_password = None
+        self.client_id = None
+        self.client_secret = None
+        self.access_token = None
+        self.refresh_token = None
         self.response_code = None
         self.response_message = None
         self.v_c_correlation_id = None
@@ -137,6 +146,45 @@ class MerchantConfiguration:
         if not (value.get('solution_id') is None):
             self.solution_id = value['solution_id']
 
+    def set_enable_client_cert(self, value):
+        if not (value.get('enable_client_cert') is None):
+            self.enable_client_cert = value['enable_client_cert']
+        else:
+            self.enable_client_cert = False
+    
+    def set_client_cert_dir(self, value):
+        if not (value.get('client_cert_dir') is None):
+            self.client_cert_dir = value['client_cert_dir']
+
+    def set_ssl_client_cert(self, value):
+        if not (value.get('ssl_client_cert') is None):
+            self.ssl_client_cert = value['ssl_client_cert']
+
+    def set_private_key(self, value):
+        if not (value.get('private_key') is None):
+            self.private_key = value['private_key']
+
+    def set_ssl_key_password(self, value):
+        if not (value.get('ssl_key_password') is None):
+            self.ssl_key_password = value['ssl_key_password']
+
+    def set_client_id(self, value):
+        if not (value.get('client_id') is None):
+            self.client_id = value['client_id']
+
+    def set_client_secret(self, value):
+        if not (value.get('client_secret') is None):
+            self.client_secret = value['client_secret']
+
+    def set_access_token(self, value):
+        if not (value.get('access_token') is None):
+            self.access_token = value['access_token']
+
+    def set_refresh_token(self, value):
+        if not (value.get('refresh_token') is None):
+            self.refresh_token = value['refresh_token']
+
+
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
 
@@ -158,7 +206,15 @@ class MerchantConfiguration:
         self.set_log_file_name(val)
         self.set_proxy_address(val)
         self.set_proxy_port(val)
-        self.set_solution_id(val)
+        self.set_enable_client_cert(val)
+        self.set_client_cert_dir(val)
+        self.set_ssl_client_cert(val)
+        self.set_ssl_key_password(val)
+        self.set_private_key(val)
+        self.set_client_id(val)
+        self.set_client_secret(val)
+        self.set_access_token(val)
+        self.set_refresh_token(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -173,11 +229,7 @@ class MerchantConfiguration:
         logger = authenticationsdk.logger.Log.setup_logger(mconfig)
         mconfig.log = logger
         if self.enable_log is True:
-            logger.info("START> ======================================= ")
-        if self.merchant_id is None or self.merchant_id == "":
-            authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
-                                                                               GlobalLabelParameters.MERCHANTID_REQ,
-                                                                               mconfig)
+            logger.info("START> ======================================= ")       
 
         if self.authentication_type is None or self.authentication_type == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
@@ -218,12 +270,33 @@ class MerchantConfiguration:
         if self.use_metakey and (self.portfolio_id is None or self.portfolio_id == ""):
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger, GlobalLabelParameters.PORTFOLIO_ID_REQ, mconfig)
 
+        if self.enable_client_cert is not None and self.enable_client_cert:
+            if self.client_cert_dir is None or self.client_cert_dir == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.CLIENT_CERT_DIR_EMPTY,
+                                                                               mconfig)
+            
+            if self.ssl_client_cert is None or self.ssl_client_cert == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.SSL_CLIENT_CERT_EMPTY,
+                                                                               mconfig)
+            
+            if self.private_key is None or self.private_key == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.PRIVATE_KEY_EMPTY,
+                                                                               mconfig)
+
         # This process ensures that merchant_keyid and merchant_secretkey are mandatory in case of HTTP
         # And displays warning if key alias ,key_password,key_filepath,keyfilename are not present when
         # the method is JWT
 
         if type(self.authentication_type) == str:
             if self.authentication_type.lower() == GlobalLabelParameters.HTTP.lower():
+                if self.merchant_id is None or self.merchant_id == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.MERCHANTID_REQ,
+                                                                               mconfig)
+                
                 if self.merchant_keyid is None or self.merchant_keyid == "":
                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
                                                                                        GlobalLabelParameters.MERCHANT_KEY_ID_REQ,
@@ -235,6 +308,11 @@ class MerchantConfiguration:
                                                                                        mconfig)
 
             elif self.authentication_type.lower() == GlobalLabelParameters.JWT.lower():
+                if self.merchant_id is None or self.merchant_id == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.MERCHANTID_REQ,
+                                                                               mconfig)
+                
                 if self.key_alias is None or self.key_alias == "":
                     self.key_alias = self.merchant_id
                     authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
@@ -264,6 +342,28 @@ class MerchantConfiguration:
                     authenticationsdk.util.ExceptionAuth.validate_default_values(logger,
                                                                                  GlobalLabelParameters.KEY_FILE_EMPTY,
                                                                                  mconfig)
+
+            elif self.authentication_type.lower() == GlobalLabelParameters.OAUTH.lower():                
+                if self.access_token is None or self.access_token == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.ACCESS_TOKEN_EMPTY,
+                                                                               mconfig)
+            
+                if self.ssl_client_cert is None or self.ssl_client_cert == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.REFRESH_TOKEN_EMPTY,
+                                                                               mconfig)
+            
+            elif self.authentication_type.lower() == GlobalLabelParameters.MUTUAL_AUTH.lower():                
+                if self.client_id is None or self.client_id == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.CLIENT_ID_EMPTY,
+                                                                               mconfig)
+            
+                if self.client_secret is None or self.client_secret == "":
+                    authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
+                                                                               GlobalLabelParameters.CLIENT_SECRET_EMPTY,
+                                                                               mconfig)
         else:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,

@@ -17,6 +17,8 @@ class GlobalLabelParameters:
     REQUEST_TARGET = "(request-target)"
     PUBLIC_KEY = "x5c"
     JWT = "JWT"
+    OAUTH = "OAUTH"
+    MUTUAL_AUTH = "MUTUAL_AUTH"
     DATE = "Date"
     HOST = "Host"
     SIGNATURE = "Signature"
@@ -61,6 +63,15 @@ class GlobalLabelParameters:
     KEY_PASSWORD_EMPTY = "KeyPassword Empty/None. Assigining merchantID value"
     INVALID_KEY_PASSWORD = "KeyPassword Invalid. Assigining merchantID value"
     KEY_DIRECTORY_EMPTY = "KeysDirectory not provided. Using Default Path:"
+    ENABLE_CLIENT_CERT_EMPTY = 'Enable Clientcert is Empty/Null.'
+    CLIENT_CERT_DIR_EMPTY = 'Client Cert Directory is Empty/Null'
+    SSL_CLIENT_CERT_EMPTY = 'SSL Client Cert is Empty/Null'
+    PRIVATE_KEY_EMPTY = 'Private Key is Empty/Null'
+    SSL_KEY_PASSWORD_EMPTY = 'SSL Key Password is Empty/Null'
+    CLIENT_ID_EMPTY = 'Client Id is Empty/Null'
+    CLIENT_SECRET_EMPTY = 'Client Secret is Empty/Null'
+    ACCESS_TOKEN_EMPTY = 'AccessToken is Empty/Null'
+    REFRESH_TOKEN_EMPTY = 'RefreshToken is Empty/Null'
     REQUEST_JSON_EMPTY = "RequestJsonPath not provided"
     INVALID_REQUEST_TYPE_METHOD = "Entered Request Type should be (GET/POST/PUT/PATCH)"
     RUN_ENVIRONMENT_EMPTY = "RunEnvironment Is Mandatory."
