@@ -8,6 +8,7 @@ import urllib3
 
 import sys
 import logging
+import os
 
 from six import iteritems
 from six.moves import http_client as httplib
@@ -79,6 +80,8 @@ class Configuration(object):
         self.cert_file = None
         # client key file
         self.key_file = None
+        # client key file password
+        self.key_password = None
 
         # Proxy URL
         self.proxy = None
@@ -254,6 +257,15 @@ class Configuration(object):
             else:
                 return False
             return True
+    
+    def set_merchantclientcert(self, val):
+        if val.get('enable_client_cert'):
+            self.cert_file = os.path.join(val.get('client_cert_dir'), val.get('ssl_client_cert'))
+            self.key_file = os.path.join(val.get('client_cert_dir'), val.get('private_key'))
+            self.key_password = val.get('ssl_key_password')
+            return True
+        else:
+            return False
 
     def set_proxy(self, value):
         if not (value.get('proxy_address') is None or value.get('proxy_address') == '' or value.get('proxy_port') is None or value.get('proxy_port') == ''):

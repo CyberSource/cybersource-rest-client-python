@@ -17,6 +17,8 @@ class GlobalLabelParameters:
     REQUEST_TARGET = "(request-target)"
     PUBLIC_KEY = "x5c"
     JWT = "JWT"
+    OAUTH = "OAUTH"
+    MUTUAL_AUTH = "MUTUAL_AUTH"
     DATE = "Date"
     HOST = "Host"
     SIGNATURE = "Signature"
@@ -40,18 +42,7 @@ class GlobalLabelParameters:
     CYBS_FILE_NAME = 'config_params'
     KEY_ID = "keyid=\""
     LOG_FILE_NAME_DEFAULT = "cybs"
-    SANBOX_URL = "apitest.cybersource.com"
-    PRODUCTION_URL = "api.cybersource.com"
-    SANBOX_RUN_ENVIRONMENT = "CyberSource.Environment.SANDBOX"
-    PRODUCTION_RUN_ENVIRONMENT = "CyberSource.Environment.PRODUCTION"
-    BOA_SANDBOX_URL = "apitest.merchant-services.bankofamerica.com"
-    BOA_PRODUCTION_URL = "api.merchant-services.bankofamerica.com"
-    BOA_SANDBOX_RUN_ENVIRONMENT = "BankofAmerica.Environment.SANDBOX"
-    BOA_PRODUCTION_RUN_ENVIRONMENT = "BankofAmerica.Environment.PRODUCTION"
-    IDC_SANDBOX_URL = "apitest.cybersource.com"
-    IDC_PRODUCTION_URL = "api.in.cybersource.com"
-    IDC_SANDBOX_RUN_ENVIRONMENT = "CyberSource.in.Environment.SANDBOX"
-    IDC_PRODUCTION_RUN_ENVIRONMENT = "CyberSource.in.Environment.PRODUCTION"
+    OLD_RUN_ENVIRONMENT_CONSTANTS = ["CYBERSOURCE.ENVIRONMENT.SANDBOX", "CYBERSOURCE.ENVIRONMENT.PRODUCTION", "CYBERSOURCE.IN.ENVIRONMENT.SANDBOX", "CYBERSOURCE.IN.ENVIRONMENT.PRODUCTION"]
     HIDE_MERCHANT_CONFIG_PROPS = "merchantid,merchant_secretkey,merchant_keyid,key_alias,key_password"
     PROXY_PREFIX = "https"
     FILE_NOT_FOUND = "File not found. Check path/filename entered. Entered path/filename : "
@@ -72,6 +63,15 @@ class GlobalLabelParameters:
     KEY_PASSWORD_EMPTY = "KeyPassword Empty/None. Assigining merchantID value"
     INVALID_KEY_PASSWORD = "KeyPassword Invalid. Assigining merchantID value"
     KEY_DIRECTORY_EMPTY = "KeysDirectory not provided. Using Default Path:"
+    ENABLE_CLIENT_CERT_EMPTY = 'Enable Clientcert is Empty/Null.'
+    CLIENT_CERT_DIR_EMPTY = 'Client Cert Directory is Empty/Null'
+    SSL_CLIENT_CERT_EMPTY = 'SSL Client Cert is Empty/Null'
+    PRIVATE_KEY_EMPTY = 'Private Key is Empty/Null'
+    SSL_KEY_PASSWORD_EMPTY = 'SSL Key Password is Empty/Null'
+    CLIENT_ID_EMPTY = 'Client Id is Empty/Null'
+    CLIENT_SECRET_EMPTY = 'Client Secret is Empty/Null'
+    ACCESS_TOKEN_EMPTY = 'AccessToken is Empty/Null'
+    REFRESH_TOKEN_EMPTY = 'RefreshToken is Empty/Null'
     REQUEST_JSON_EMPTY = "RequestJsonPath not provided"
     INVALID_REQUEST_TYPE_METHOD = "Entered Request Type should be (GET/POST/PUT/PATCH)"
     RUN_ENVIRONMENT_EMPTY = "RunEnvironment Is Mandatory."
@@ -88,3 +88,4 @@ class GlobalLabelParameters:
     LOG_DIRECTORY_DEFAULT_MESSAGE = "Log Directory value Empty/None.Using Default Value"
     LOG_DIRECTORY_INCORRECT_MESSAGE = "Log Directory value Incorrect.Using Default Value"
     INVALID_CYBS_PATH = "The Cybs.Json Path Provided Is Incorrect"
+    DEPRECATED_RUN_ENVIRONMENT = "The value provided for this field `RunEnvironment` has been deprecated and will not be used anymore.\n\nPlease refer to the README file [ https://github.com/CyberSource/cybersource-rest-samples-node/blob/master/README.md ] for information about the new values that are accepted."
