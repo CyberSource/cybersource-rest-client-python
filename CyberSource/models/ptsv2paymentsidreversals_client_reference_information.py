@@ -32,6 +32,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
+        'paused_request_id': 'str',
         'comments': 'str',
         'partner': 'Ptsv2paymentsidreversalsClientReferenceInformationPartner',
         'application_name': 'str',
@@ -41,6 +42,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
 
     attribute_map = {
         'code': 'code',
+        'paused_request_id': 'pausedRequestId',
         'comments': 'comments',
         'partner': 'partner',
         'application_name': 'applicationName',
@@ -48,12 +50,13 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         'application_user': 'applicationUser'
     }
 
-    def __init__(self, code=None, comments=None, partner=None, application_name=None, application_version=None, application_user=None):
+    def __init__(self, code=None, paused_request_id=None, comments=None, partner=None, application_name=None, application_version=None, application_user=None):
         """
         Ptsv2paymentsidreversalsClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
+        self._paused_request_id = None
         self._comments = None
         self._partner = None
         self._application_name = None
@@ -62,6 +65,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
 
         if code is not None:
           self.code = code
+        if paused_request_id is not None:
+          self.paused_request_id = paused_request_id
         if comments is not None:
           self.comments = comments
         if partner is not None:
@@ -95,6 +100,29 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         """
 
         self._code = code
+
+    @property
+    def paused_request_id(self):
+        """
+        Gets the paused_request_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :return: The paused_request_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._paused_request_id
+
+    @paused_request_id.setter
+    def paused_request_id(self, paused_request_id):
+        """
+        Sets the paused_request_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :param paused_request_id: The paused_request_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
+        :type: str
+        """
+
+        self._paused_request_id = paused_request_id
 
     @property
     def comments(self):

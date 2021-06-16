@@ -33,16 +33,18 @@ class Riskv1decisionsRiskInformation(object):
     swagger_types = {
         'profile': 'Ptsv2paymentsRiskInformationProfile',
         'event_type': 'str',
-        'buyer_history': 'Ptsv2paymentsRiskInformationBuyerHistory'
+        'buyer_history': 'Ptsv2paymentsRiskInformationBuyerHistory',
+        'auxiliary_data': 'list[Ptsv2paymentsRiskInformationAuxiliaryData]'
     }
 
     attribute_map = {
         'profile': 'profile',
         'event_type': 'eventType',
-        'buyer_history': 'buyerHistory'
+        'buyer_history': 'buyerHistory',
+        'auxiliary_data': 'auxiliaryData'
     }
 
-    def __init__(self, profile=None, event_type=None, buyer_history=None):
+    def __init__(self, profile=None, event_type=None, buyer_history=None, auxiliary_data=None):
         """
         Riskv1decisionsRiskInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Riskv1decisionsRiskInformation(object):
         self._profile = None
         self._event_type = None
         self._buyer_history = None
+        self._auxiliary_data = None
 
         if profile is not None:
           self.profile = profile
@@ -57,6 +60,8 @@ class Riskv1decisionsRiskInformation(object):
           self.event_type = event_type
         if buyer_history is not None:
           self.buyer_history = buyer_history
+        if auxiliary_data is not None:
+          self.auxiliary_data = auxiliary_data
 
     @property
     def profile(self):
@@ -122,6 +127,27 @@ class Riskv1decisionsRiskInformation(object):
         """
 
         self._buyer_history = buyer_history
+
+    @property
+    def auxiliary_data(self):
+        """
+        Gets the auxiliary_data of this Riskv1decisionsRiskInformation.
+
+        :return: The auxiliary_data of this Riskv1decisionsRiskInformation.
+        :rtype: list[Ptsv2paymentsRiskInformationAuxiliaryData]
+        """
+        return self._auxiliary_data
+
+    @auxiliary_data.setter
+    def auxiliary_data(self, auxiliary_data):
+        """
+        Sets the auxiliary_data of this Riskv1decisionsRiskInformation.
+
+        :param auxiliary_data: The auxiliary_data of this Riskv1decisionsRiskInformation.
+        :type: list[Ptsv2paymentsRiskInformationAuxiliaryData]
+        """
+
+        self._auxiliary_data = auxiliary_data
 
     def to_dict(self):
         """

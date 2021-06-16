@@ -56,7 +56,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'japan_payment_options': 'Ptsv2paymentsProcessingInformationJapanPaymentOptions',
         'mobile_remote_payment_type': 'str',
         'extended_credit_total_count': 'str',
-        'network_routing_order': 'str'
+        'network_routing_order': 'str',
+        'pay_by_points_indicator': 'bool'
     }
 
     attribute_map = {
@@ -85,10 +86,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'japan_payment_options': 'japanPaymentOptions',
         'mobile_remote_payment_type': 'mobileRemotePaymentType',
         'extended_credit_total_count': 'extendedCreditTotalCount',
-        'network_routing_order': 'networkRoutingOrder'
+        'network_routing_order': 'networkRoutingOrder',
+        'pay_by_points_indicator': 'payByPointsIndicator'
     }
 
-    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None):
+    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -119,6 +121,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._mobile_remote_payment_type = None
         self._extended_credit_total_count = None
         self._network_routing_order = None
+        self._pay_by_points_indicator = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -172,6 +175,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.extended_credit_total_count = extended_credit_total_count
         if network_routing_order is not None:
           self.network_routing_order = network_routing_order
+        if pay_by_points_indicator is not None:
+          self.pay_by_points_indicator = pay_by_points_indicator
 
     @property
     def action_list(self):
@@ -315,7 +320,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token. 
 
         :return: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -326,7 +331,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -754,6 +759,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._network_routing_order = network_routing_order
+
+    @property
+    def pay_by_points_indicator(self):
+        """
+        Gets the pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates if the transaction is pay by points transaction true: Transaction uses loyalty points false: Transaction does not use loyalty points Default: false 
+
+        :return: The pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._pay_by_points_indicator
+
+    @pay_by_points_indicator.setter
+    def pay_by_points_indicator(self, pay_by_points_indicator):
+        """
+        Sets the pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates if the transaction is pay by points transaction true: Transaction uses loyalty points false: Transaction does not use loyalty points Default: false 
+
+        :param pay_by_points_indicator: The pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._pay_by_points_indicator = pay_by_points_indicator
 
     def to_dict(self):
         """

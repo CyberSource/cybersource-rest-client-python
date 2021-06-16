@@ -33,7 +33,7 @@ class AddNegativeListRequest(object):
     swagger_types = {
         'order_information': 'Riskv1liststypeentriesOrderInformation',
         'payment_information': 'Riskv1liststypeentriesPaymentInformation',
-        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
+        'client_reference_information': 'Riskv1liststypeentriesClientReferenceInformation',
         'device_information': 'Riskv1liststypeentriesDeviceInformation',
         'risk_information': 'Riskv1liststypeentriesRiskInformation',
         'buyer_information': 'Riskv1liststypeentriesBuyerInformation'
@@ -121,7 +121,7 @@ class AddNegativeListRequest(object):
         Gets the client_reference_information of this AddNegativeListRequest.
 
         :return: The client_reference_information of this AddNegativeListRequest.
-        :rtype: Riskv1decisionsClientReferenceInformation
+        :rtype: Riskv1liststypeentriesClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -131,7 +131,7 @@ class AddNegativeListRequest(object):
         Sets the client_reference_information of this AddNegativeListRequest.
 
         :param client_reference_information: The client_reference_information of this AddNegativeListRequest.
-        :type: Riskv1decisionsClientReferenceInformation
+        :type: Riskv1liststypeentriesClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

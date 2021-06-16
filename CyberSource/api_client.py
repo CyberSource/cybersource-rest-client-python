@@ -106,7 +106,7 @@ class ApiClient(object):
     def get_client_id(self):
         version = pkg_resources.require("cybersource-rest-client-python")[0].version
         return "cybs-rest-sdk-python-" + version
-
+    
     def remove_first_underscore(self, dict_obj):
         converted_dict_obj = {}
         dict_obj = json.loads(dict_obj)
@@ -286,7 +286,7 @@ class ApiClient(object):
         url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
         
         if self.download_file_path is not None:
-            _preload_content = False
+            _preload_content = False        
             _request_timeout = 3000
 
         # perform request and return response
@@ -444,7 +444,7 @@ class ApiClient(object):
         
         if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
             post_params = body
-
+        
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
             temp_body = body.replace("\"_", "\"")
             request_body = self.replace_underscore(json.loads(temp_body))
@@ -460,7 +460,7 @@ class ApiClient(object):
         
         if mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
             self.call_authentication_header(method, header_params, body)
-
+        
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
         To make an async request, define a function for callback.

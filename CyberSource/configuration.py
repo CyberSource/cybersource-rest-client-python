@@ -247,7 +247,6 @@ class Configuration(object):
         else:
             return False
 
-
     def set_proxy(self, value):
         if not (value.get('proxy_address') is None or value.get('proxy_address') == '' or value.get('proxy_port') is None or value.get('proxy_port') == ''):
             self.proxy = value['proxy_address'] + ':' + value['proxy_port']

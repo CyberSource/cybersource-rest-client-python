@@ -32,7 +32,7 @@ class FraudMarkingActionRequest(object):
     """
     swagger_types = {
         'risk_information': 'Riskv1decisionsidmarkingRiskInformation',
-        'client_reference_information': 'Riskv1decisionsClientReferenceInformation'
+        'client_reference_information': 'Riskv1liststypeentriesClientReferenceInformation'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class FraudMarkingActionRequest(object):
         Gets the client_reference_information of this FraudMarkingActionRequest.
 
         :return: The client_reference_information of this FraudMarkingActionRequest.
-        :rtype: Riskv1decisionsClientReferenceInformation
+        :rtype: Riskv1liststypeentriesClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -90,7 +90,7 @@ class FraudMarkingActionRequest(object):
         Sets the client_reference_information of this FraudMarkingActionRequest.
 
         :param client_reference_information: The client_reference_information of this FraudMarkingActionRequest.
-        :type: Riskv1decisionsClientReferenceInformation
+        :type: Riskv1liststypeentriesClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

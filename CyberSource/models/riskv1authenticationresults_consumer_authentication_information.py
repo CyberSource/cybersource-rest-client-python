@@ -151,7 +151,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     def response_access_token(self):
         """
         Gets the response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        A JWT returned by 3DS provider once the authentication is complete, required in cruise hybrid integration method when using CyberSource generated access token. Note - Max Length of this field is 2048 characters. 
+        JWT returned by the 3D Secure provider when the authentication is complete. Required for Hybrid integration if you use the Cybersource-generated access token. Note: Max. length of this field is 2048 characters. 
 
         :return: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :rtype: str
@@ -162,7 +162,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     def response_access_token(self, response_access_token):
         """
         Sets the response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        A JWT returned by 3DS provider once the authentication is complete, required in cruise hybrid integration method when using CyberSource generated access token. Note - Max Length of this field is 2048 characters. 
+        JWT returned by the 3D Secure provider when the authentication is complete. Required for Hybrid integration if you use the Cybersource-generated access token. Note: Max. length of this field is 2048 characters. 
 
         :param response_access_token: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
