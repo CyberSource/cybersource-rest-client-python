@@ -43,6 +43,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'directory_server_transaction_id': 'str',
         'pa_specification_version': 'str',
         'authentication_type': 'str',
+        'response_access_token': 'str',
         'acs_transaction_id': 'str',
         'acs_window_size': 'str',
         'alternate_authentication_data': 'str',
@@ -74,6 +75,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'prior_authentication_reference_id': 'str',
         'prior_authentication_time': 'str',
         'product_code': 'str',
+        'return_url': 'str',
         'requestor_id': 'str',
         'requestor_initiated_authentication_indicator': 'str',
         'requestor_name': 'str',
@@ -100,6 +102,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'directory_server_transaction_id': 'directoryServerTransactionId',
         'pa_specification_version': 'paSpecificationVersion',
         'authentication_type': 'authenticationType',
+        'response_access_token': 'responseAccessToken',
         'acs_transaction_id': 'acsTransactionId',
         'acs_window_size': 'acsWindowSize',
         'alternate_authentication_data': 'alternateAuthenticationData',
@@ -131,6 +134,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'prior_authentication_reference_id': 'priorAuthenticationReferenceId',
         'prior_authentication_time': 'priorAuthenticationTime',
         'product_code': 'productCode',
+        'return_url': 'returnUrl',
         'requestor_id': 'requestorId',
         'requestor_initiated_authentication_indicator': 'requestorInitiatedAuthenticationIndicator',
         'requestor_name': 'requestorName',
@@ -144,7 +148,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares': 'signedPares'
     }
 
-    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
+    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -161,6 +165,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._directory_server_transaction_id = None
         self._pa_specification_version = None
         self._authentication_type = None
+        self._response_access_token = None
         self._acs_transaction_id = None
         self._acs_window_size = None
         self._alternate_authentication_data = None
@@ -192,6 +197,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._prior_authentication_reference_id = None
         self._prior_authentication_time = None
         self._product_code = None
+        self._return_url = None
         self._requestor_id = None
         self._requestor_initiated_authentication_indicator = None
         self._requestor_name = None
@@ -228,6 +234,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.pa_specification_version = pa_specification_version
         if authentication_type is not None:
           self.authentication_type = authentication_type
+        if response_access_token is not None:
+          self.response_access_token = response_access_token
         if acs_transaction_id is not None:
           self.acs_transaction_id = acs_transaction_id
         if acs_window_size is not None:
@@ -290,6 +298,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.prior_authentication_time = prior_authentication_time
         if product_code is not None:
           self.product_code = product_code
+        if return_url is not None:
+          self.return_url = return_url
         if requestor_id is not None:
           self.requestor_id = requestor_id
         if requestor_initiated_authentication_indicator is not None:
@@ -586,6 +596,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._authentication_type = authentication_type
+
+    @property
+    def response_access_token(self):
+        """
+        Gets the response_access_token of this Ptsv2paymentsConsumerAuthenticationInformation.
+        JWT returned by the 3D Secure provider when the authentication is complete. Required for Hybrid integration if you use the Cybersource-generated access token. Note: Max. length of this field is 2048 characters. 
+
+        :return: The response_access_token of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._response_access_token
+
+    @response_access_token.setter
+    def response_access_token(self, response_access_token):
+        """
+        Sets the response_access_token of this Ptsv2paymentsConsumerAuthenticationInformation.
+        JWT returned by the 3D Secure provider when the authentication is complete. Required for Hybrid integration if you use the Cybersource-generated access token. Note: Max. length of this field is 2048 characters. 
+
+        :param response_access_token: The response_access_token of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._response_access_token = response_access_token
 
     @property
     def acs_transaction_id(self):
@@ -1299,6 +1332,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._product_code = product_code
+
+    @property
+    def return_url(self):
+        """
+        Gets the return_url of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The URL of the merchant’s return page. CyberSource adds this return URL to the step-up JWT and returns it in the response of the Payer Authentication enrollment call. The merchant's return URL page serves as a listening URL. Once the bank session completes, the merchant receives a POST to their URL. This response contains the completed bank session’s transactionId. The merchant’s return page should capture the transaction ID and send it in the Payer Authentication validation call. 
+
+        :return: The return_url of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._return_url
+
+    @return_url.setter
+    def return_url(self, return_url):
+        """
+        Sets the return_url of this Ptsv2paymentsConsumerAuthenticationInformation.
+        The URL of the merchant’s return page. CyberSource adds this return URL to the step-up JWT and returns it in the response of the Payer Authentication enrollment call. The merchant's return URL page serves as a listening URL. Once the bank session completes, the merchant receives a POST to their URL. This response contains the completed bank session’s transactionId. The merchant’s return page should capture the transaction ID and send it in the Payer Authentication validation call. 
+
+        :param return_url: The return_url of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._return_url = return_url
 
     @property
     def requestor_id(self):

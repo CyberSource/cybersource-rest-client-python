@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 
 # import apis into api package
+from .o_auth_api import OAuthApi
 from .asymmetric_key_management_api import AsymmetricKeyManagementApi
 from .capture_api import CaptureApi
 from .conversion_details_api import ConversionDetailsApi

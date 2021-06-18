@@ -32,26 +32,31 @@ class Riskv1decisionsClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
+        'paused_request_id': 'str',
         'comments': 'str',
         'partner': 'Riskv1decisionsClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
+        'paused_request_id': 'pausedRequestId',
         'comments': 'comments',
         'partner': 'partner'
     }
 
-    def __init__(self, code=None, comments=None, partner=None):
+    def __init__(self, code=None, paused_request_id=None, comments=None, partner=None):
         """
         Riskv1decisionsClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
+        self._paused_request_id = None
         self._comments = None
         self._partner = None
 
         self.code = code
+        if paused_request_id is not None:
+          self.paused_request_id = paused_request_id
         if comments is not None:
           self.comments = comments
         if partner is not None:
@@ -81,6 +86,29 @@ class Riskv1decisionsClientReferenceInformation(object):
             raise ValueError("Invalid value for `code`, must not be `None`")
 
         self._code = code
+
+    @property
+    def paused_request_id(self):
+        """
+        Gets the paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :return: The paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._paused_request_id
+
+    @paused_request_id.setter
+    def paused_request_id(self, paused_request_id):
+        """
+        Sets the paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :param paused_request_id: The paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        :type: str
+        """
+
+        self._paused_request_id = paused_request_id
 
     @property
     def comments(self):

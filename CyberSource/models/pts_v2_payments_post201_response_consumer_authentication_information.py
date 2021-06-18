@@ -31,6 +31,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'access_token': 'str',
         'acs_rendering_type': 'str',
         'acs_transaction_id': 'str',
         'acs_url': 'str',
@@ -74,6 +75,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     }
 
     attribute_map = {
+        'access_token': 'accessToken',
         'acs_rendering_type': 'acsRenderingType',
         'acs_transaction_id': 'acsTransactionId',
         'acs_url': 'acsUrl',
@@ -116,11 +118,12 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
 
+        self._access_token = None
         self._acs_rendering_type = None
         self._acs_transaction_id = None
         self._acs_url = None
@@ -162,6 +165,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         self._interaction_counter = None
         self._white_list_status = None
 
+        if access_token is not None:
+          self.access_token = access_token
         if acs_rendering_type is not None:
           self.acs_rendering_type = acs_rendering_type
         if acs_transaction_id is not None:
@@ -242,6 +247,29 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
           self.interaction_counter = interaction_counter
         if white_list_status is not None:
           self.white_list_status = white_list_status
+
+    @property
+    def access_token(self):
+        """
+        Gets the access_token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
+
+        :return: The access_token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._access_token
+
+    @access_token.setter
+    def access_token(self, access_token):
+        """
+        Sets the access_token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        JSON Web Token (JWT) used to authenticate the consumer with the authentication provider, such as, CardinalCommerce or Rupay. Note - Max Length of this field is 2048 characters. 
+
+        :param access_token: The access_token of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._access_token = access_token
 
     @property
     def acs_rendering_type(self):
