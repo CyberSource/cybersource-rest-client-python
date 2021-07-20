@@ -41,6 +41,7 @@ class PtsV2PaymentsPost201Response(object):
         'processing_information': 'PtsV2PaymentsPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsPost201ResponseProcessorInformation',
         'issuer_information': 'PtsV2PaymentsPost201ResponseIssuerInformation',
+        'payment_account_information': 'PtsV2PaymentsPost201ResponsePaymentAccountInformation',
         'payment_information': 'PtsV2PaymentsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
@@ -61,6 +62,7 @@ class PtsV2PaymentsPost201Response(object):
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'issuer_information': 'issuerInformation',
+        'payment_account_information': 'paymentAccountInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
@@ -70,7 +72,7 @@ class PtsV2PaymentsPost201Response(object):
         'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, risk_information=None, consumer_authentication_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class PtsV2PaymentsPost201Response(object):
         self._processing_information = None
         self._processor_information = None
         self._issuer_information = None
+        self._payment_account_information = None
         self._payment_information = None
         self._order_information = None
         self._point_of_sale_information = None
@@ -113,6 +116,8 @@ class PtsV2PaymentsPost201Response(object):
           self.processor_information = processor_information
         if issuer_information is not None:
           self.issuer_information = issuer_information
+        if payment_account_information is not None:
+          self.payment_account_information = payment_account_information
         if payment_information is not None:
           self.payment_information = payment_information
         if order_information is not None:
@@ -345,6 +350,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._issuer_information = issuer_information
+
+    @property
+    def payment_account_information(self):
+        """
+        Gets the payment_account_information of this PtsV2PaymentsPost201Response.
+
+        :return: The payment_account_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformation
+        """
+        return self._payment_account_information
+
+    @payment_account_information.setter
+    def payment_account_information(self, payment_account_information):
+        """
+        Sets the payment_account_information of this PtsV2PaymentsPost201Response.
+
+        :param payment_account_information: The payment_account_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformation
+        """
+
+        self._payment_account_information = payment_account_information
 
     @property
     def payment_information(self):

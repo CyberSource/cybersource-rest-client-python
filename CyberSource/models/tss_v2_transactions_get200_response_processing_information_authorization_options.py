@@ -31,22 +31,27 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auth_type': 'str'
+        'auth_type': 'str',
+        'initiator': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator'
     }
 
     attribute_map = {
-        'auth_type': 'authType'
+        'auth_type': 'authType',
+        'initiator': 'initiator'
     }
 
-    def __init__(self, auth_type=None):
+    def __init__(self, auth_type=None, initiator=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._auth_type = None
+        self._initiator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
+        if initiator is not None:
+          self.initiator = initiator
 
     @property
     def auth_type(self):
@@ -70,6 +75,27 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         """
 
         self._auth_type = auth_type
+
+    @property
+    def initiator(self):
+        """
+        Gets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+
+        :return: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        """
+        return self._initiator
+
+    @initiator.setter
+    def initiator(self, initiator):
+        """
+        Sets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+
+        :param initiator: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        """
+
+        self._initiator = initiator
 
     def to_dict(self):
         """

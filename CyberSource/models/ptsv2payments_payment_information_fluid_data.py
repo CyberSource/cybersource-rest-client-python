@@ -90,7 +90,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self):
         """
         Gets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=`  **Note**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor.  #### Used by **Authorization and Standalone Credits** Required for authorizations and standalone credits that use Bluefin PCI P2PE.  #### Card Present processing Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. Base64 format only. The value for Cybersource P2PE decryption is as follows: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` if `paymentInformation.fluidData.encoding` is \"HEX\" `4649443D454D562E5041594D454E542E415049` if `paymentInformation.fluidData.encoding` is \"base64\" 
+        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= Note: For other payment solutions, the value may be specific to the terminal or device initiatinf the payment. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits.  Card Present processing: Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. paymentInformation.fluidData.encoding must be \"Base64\".  The value for Cybersource P2PE decryption depends on the encoding method used and identified in encoding field. If paymentInformation.fluidData.encoding is `Base64`, the value is: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` If paymentInformation.fluidData.encoding is `HEX`, the value is: `4649443D454D562E5041594D454E542E41504` 
 
         :return: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -101,7 +101,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self, descriptor):
         """
         Sets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=`  **Note**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor.  #### Used by **Authorization and Standalone Credits** Required for authorizations and standalone credits that use Bluefin PCI P2PE.  #### Card Present processing Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. Base64 format only. The value for Cybersource P2PE decryption is as follows: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` if `paymentInformation.fluidData.encoding` is \"HEX\" `4649443D454D562E5041594D454E542E415049` if `paymentInformation.fluidData.encoding` is \"base64\" 
+        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= Note: For other payment solutions, the value may be specific to the terminal or device initiatinf the payment. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits.  Card Present processing: Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. paymentInformation.fluidData.encoding must be \"Base64\".  The value for Cybersource P2PE decryption depends on the encoding method used and identified in encoding field. If paymentInformation.fluidData.encoding is `Base64`, the value is: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` If paymentInformation.fluidData.encoding is `HEX`, the value is: `4649443D454D562E5041594D454E542E41504` 
 
         :param descriptor: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
@@ -113,7 +113,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self):
         """
         Gets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  #### Used by **Authorization and Standalone Credits** Required for authorizations and standalone credits that use Bluefin PCI P2PE.  #### Card Present processing This field represents the encrypted Bluefin PCI P2PE payment data. Obtain the encrypted payment data from a Bluefin-supported device. 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution used by the merchant. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits that use a Cybersource suppored Point-to-Point encryption method. Card Present processing This field represents the encrypted payment data generated by the payment terminal/device. 
 
         :return: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -124,7 +124,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self, value):
         """
         Sets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  #### Used by **Authorization and Standalone Credits** Required for authorizations and standalone credits that use Bluefin PCI P2PE.  #### Card Present processing This field represents the encrypted Bluefin PCI P2PE payment data. Obtain the encrypted payment data from a Bluefin-supported device. 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution used by the merchant. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits that use a Cybersource suppored Point-to-Point encryption method. Card Present processing This field represents the encrypted payment data generated by the payment terminal/device. 
 
         :param value: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
@@ -136,7 +136,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self):
         """
         Gets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Valid value: Base64 
+        Encoding method used to encrypt the payment data. Valid values: `Base64`, `HEX` 
 
         :return: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -147,7 +147,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self, encoding):
         """
         Sets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Valid value: Base64 
+        Encoding method used to encrypt the payment data. Valid values: `Base64`, `HEX` 
 
         :param encoding: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
