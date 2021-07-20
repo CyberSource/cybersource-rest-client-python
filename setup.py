@@ -27,7 +27,7 @@ setup(
         "DateTime",
         "setuptools",
         "six",
-        "urllib3==1.25.11",
+        "urllib3==1.26.5",
         "crypto",
         "cryptography",
     ],
