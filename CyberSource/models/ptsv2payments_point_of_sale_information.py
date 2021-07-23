@@ -37,7 +37,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'cat_level': 'int',
         'entry_mode': 'str',
         'terminal_capability': 'int',
-        'pin_entry_capability': 'int',
         'operating_environment': 'str',
         'emv': 'Ptsv2paymentsPointOfSaleInformationEmv',
         'amex_capn_data': 'str',
@@ -55,7 +54,9 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'partner_sdk_version': 'str',
         'emv_application_identifier_and_dedicated_file_name': 'str',
         'terminal_compliance': 'str',
-        'is_dedicated_hardware_terminal': 'str'
+        'is_dedicated_hardware_terminal': 'str',
+        'terminal_model': 'str',
+        'terminal_make': 'str'
     }
 
     attribute_map = {
@@ -65,7 +66,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'cat_level': 'catLevel',
         'entry_mode': 'entryMode',
         'terminal_capability': 'terminalCapability',
-        'pin_entry_capability': 'pinEntryCapability',
         'operating_environment': 'operatingEnvironment',
         'emv': 'emv',
         'amex_capn_data': 'amexCapnData',
@@ -83,10 +83,12 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'partner_sdk_version': 'partnerSdkVersion',
         'emv_application_identifier_and_dedicated_file_name': 'emvApplicationIdentifierAndDedicatedFileName',
         'terminal_compliance': 'terminalCompliance',
-        'is_dedicated_hardware_terminal': 'isDedicatedHardwareTerminal'
+        'is_dedicated_hardware_terminal': 'isDedicatedHardwareTerminal',
+        'terminal_model': 'terminalModel',
+        'terminal_make': 'terminalMake'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, pin_entry_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -97,7 +99,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._cat_level = None
         self._entry_mode = None
         self._terminal_capability = None
-        self._pin_entry_capability = None
         self._operating_environment = None
         self._emv = None
         self._amex_capn_data = None
@@ -116,6 +117,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._emv_application_identifier_and_dedicated_file_name = None
         self._terminal_compliance = None
         self._is_dedicated_hardware_terminal = None
+        self._terminal_model = None
+        self._terminal_make = None
 
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -129,8 +132,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.entry_mode = entry_mode
         if terminal_capability is not None:
           self.terminal_capability = terminal_capability
-        if pin_entry_capability is not None:
-          self.pin_entry_capability = pin_entry_capability
         if operating_environment is not None:
           self.operating_environment = operating_environment
         if emv is not None:
@@ -167,6 +168,10 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.terminal_compliance = terminal_compliance
         if is_dedicated_hardware_terminal is not None:
           self.is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
+        if terminal_model is not None:
+          self.terminal_model = terminal_model
+        if terminal_make is not None:
+          self.terminal_make = terminal_make
 
     @property
     def terminal_id(self):
@@ -313,33 +318,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
             raise ValueError("Invalid value for `terminal_capability`, must be a value greater than or equal to `1`")
 
         self._terminal_capability = terminal_capability
-
-    @property
-    def pin_entry_capability(self):
-        """
-        Gets the pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        A one-digit code that identifies the capability of terminal to capture PINs. This code does not necessarily mean that a PIN was entered or is included in this message. For Payouts: This field is applicable for CtV. For details, see the `terminal_pin_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
-
-        :return: The pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        :rtype: int
-        """
-        return self._pin_entry_capability
-
-    @pin_entry_capability.setter
-    def pin_entry_capability(self, pin_entry_capability):
-        """
-        Sets the pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        A one-digit code that identifies the capability of terminal to capture PINs. This code does not necessarily mean that a PIN was entered or is included in this message. For Payouts: This field is applicable for CtV. For details, see the `terminal_pin_capability` field description in [Card-Present Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/) 
-
-        :param pin_entry_capability: The pin_entry_capability of this Ptsv2paymentsPointOfSaleInformation.
-        :type: int
-        """
-        if pin_entry_capability is not None and pin_entry_capability > 1:
-            raise ValueError("Invalid value for `pin_entry_capability`, must be a value less than or equal to `1`")
-        if pin_entry_capability is not None and pin_entry_capability < 1:
-            raise ValueError("Invalid value for `pin_entry_capability`, must be a value greater than or equal to `1`")
-
-        self._pin_entry_capability = pin_entry_capability
 
     @property
     def operating_environment(self):
@@ -750,6 +728,52 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
+
+    @property
+    def terminal_model(self):
+        """
+        Gets the terminal_model of this Ptsv2paymentsPointOfSaleInformation.
+        This is the model name of the reader which is used to accept the payment. Possible values:  - E3555  - P400  - A920 
+
+        :return: The terminal_model of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_model
+
+    @terminal_model.setter
+    def terminal_model(self, terminal_model):
+        """
+        Sets the terminal_model of this Ptsv2paymentsPointOfSaleInformation.
+        This is the model name of the reader which is used to accept the payment. Possible values:  - E3555  - P400  - A920 
+
+        :param terminal_model: The terminal_model of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._terminal_model = terminal_model
+
+    @property
+    def terminal_make(self):
+        """
+        Gets the terminal_make of this Ptsv2paymentsPointOfSaleInformation.
+        This is the manufacturer name of the reader which is used to accept the payment. Possible values:  - PAX  - Verifone  - Ingenico 
+
+        :return: The terminal_make of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_make
+
+    @terminal_make.setter
+    def terminal_make(self, terminal_make):
+        """
+        Sets the terminal_make of this Ptsv2paymentsPointOfSaleInformation.
+        This is the manufacturer name of the reader which is used to accept the payment. Possible values:  - PAX  - Verifone  - Ingenico 
+
+        :param terminal_make: The terminal_make of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._terminal_make = terminal_make
 
     def to_dict(self):
         """

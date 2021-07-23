@@ -31,7 +31,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'PtsV2PaymentsPost201ResponsePaymentInformationCard',
+        'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
         'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
         'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
         'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank',
@@ -114,7 +114,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Gets the card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :return: The card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationCard
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
         return self._card
 
@@ -124,7 +124,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Sets the card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :param card: The card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :type: PtsV2PaymentsPost201ResponsePaymentInformationCard
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
 
         self._card = card
