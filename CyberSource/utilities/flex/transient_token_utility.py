@@ -2,7 +2,7 @@ from . import base64
 from . import json
 
 
-class TransientTokenGenerator:
+class TransientTokenUtility:
     def __init__(self):
         pass
 
@@ -13,7 +13,6 @@ class TransientTokenGenerator:
             data = base64.b64decode(encoded_string)
             transient_model = json.load(data)
             return transient_model
-
-        return none;    
+        return none;  
 
 
