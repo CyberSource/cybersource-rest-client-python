@@ -113,7 +113,7 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self):
         """
         Gets the settlement_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :return: The settlement_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -124,7 +124,7 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :param settlement_amount: The settlement_amount of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
@@ -136,7 +136,7 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
     def settlement_currency(self):
         """
         Gets the settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :return: The settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -147,7 +147,7 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
     def settlement_currency(self, settlement_currency):
         """
         Sets the settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :param settlement_currency: The settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
