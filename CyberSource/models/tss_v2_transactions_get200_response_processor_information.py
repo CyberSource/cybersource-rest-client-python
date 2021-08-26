@@ -36,7 +36,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'transaction_id': 'str',
         'network_transaction_id': 'str',
         'response_id': 'str',
-        'provider_transaction_id': 'str',
         'approval_code': 'str',
         'response_code': 'str',
         'avs': 'PtsV2PaymentsPost201ResponseProcessorInformationAvs',
@@ -53,7 +52,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
         'response_id': 'responseId',
-        'provider_transaction_id': 'providerTransactionId',
         'approval_code': 'approvalCode',
         'response_code': 'responseCode',
         'avs': 'avs',
@@ -64,7 +62,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'response_code_source': 'responseCodeSource'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -74,7 +72,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._transaction_id = None
         self._network_transaction_id = None
         self._response_id = None
-        self._provider_transaction_id = None
         self._approval_code = None
         self._response_code = None
         self._avs = None
@@ -94,8 +91,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.network_transaction_id = network_transaction_id
         if response_id is not None:
           self.response_id = response_id
-        if provider_transaction_id is not None:
-          self.provider_transaction_id = provider_transaction_id
         if approval_code is not None:
           self.approval_code = approval_code
         if response_code is not None:
@@ -184,7 +179,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :return: The network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -195,7 +190,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :param network_transaction_id: The network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
@@ -225,29 +220,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._response_id = response_id
-
-    @property
-    def provider_transaction_id(self):
-        """
-        Gets the provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :return: The provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: str
-        """
-        return self._provider_transaction_id
-
-    @provider_transaction_id.setter
-    def provider_transaction_id(self, provider_transaction_id):
-        """
-        Sets the provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :param provider_transaction_id: The provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: str
-        """
-
-        self._provider_transaction_id = provider_transaction_id
 
     @property
     def approval_code(self):

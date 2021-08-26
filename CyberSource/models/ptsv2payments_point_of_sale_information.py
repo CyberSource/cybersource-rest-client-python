@@ -436,6 +436,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cardholder_verification_method(self):
         """
         Gets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+        Complete list of cardholder verification methods (CVMs) supported by the terminal. Optional field. Possible values: - `PIN` - `Signature`  **EXAMPLE**: [\"PIN\",\"Signature\"]  **NOTE**: You can submit one of the values or both of the above in a request.  For authorizations and credits, this field is only supported on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :return: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: list[str]
@@ -446,6 +447,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cardholder_verification_method(self, cardholder_verification_method):
         """
         Sets the cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
+        Complete list of cardholder verification methods (CVMs) supported by the terminal. Optional field. Possible values: - `PIN` - `Signature`  **EXAMPLE**: [\"PIN\",\"Signature\"]  **NOTE**: You can submit one of the values or both of the above in a request.  For authorizations and credits, this field is only supported on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :param cardholder_verification_method: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
         :type: list[str]
@@ -457,6 +459,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_input_capability(self):
         """
         Gets the terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Complete list of card input methods supported by the terminal.  Possible values: - `Keyed`: Terminal can accept card data that is entered manually. - `Swiped`: Terminal can accept card data from a magnetic stripe reader. - `Contact`: Terminal can accept card data in EMV contact mode (\"dipping a card\"). - `Contactless`: Terminal can accept card data in EMV contactless mode (\"tapping a card\"). - `BarCode`: Terminal can read bar codes. - `QRcode`: Terminal can read or scan QR codes. - `OCR`: Terminal can perform optical character recognition (OCT) on the card.  **EXAMPLE**: [\"Keyed\",\"Swiped\",\"Contact\",\"Contactless\"]  #### Used by **Authorization and Credit** Optional. This field is supported only by client software that is installed on your POS terminals for the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :return: The terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: list[str]
@@ -467,6 +470,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_input_capability(self, terminal_input_capability):
         """
         Sets the terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
+        Complete list of card input methods supported by the terminal.  Possible values: - `Keyed`: Terminal can accept card data that is entered manually. - `Swiped`: Terminal can accept card data from a magnetic stripe reader. - `Contact`: Terminal can accept card data in EMV contact mode (\"dipping a card\"). - `Contactless`: Terminal can accept card data in EMV contactless mode (\"tapping a card\"). - `BarCode`: Terminal can read bar codes. - `QRcode`: Terminal can read or scan QR codes. - `OCR`: Terminal can perform optical character recognition (OCT) on the card.  **EXAMPLE**: [\"Keyed\",\"Swiped\",\"Contact\",\"Contactless\"]  #### Used by **Authorization and Credit** Optional. This field is supported only by client software that is installed on your POS terminals for the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :param terminal_input_capability: The terminal_input_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: list[str]

@@ -105,7 +105,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction.  
+        Type of digital payment solution for the transaction. 
 
         :return: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -116,7 +116,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of digital payment solution for the transaction.  
+        Type of digital payment solution for the transaction. 
 
         :param payment_solution: The payment_solution of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
@@ -128,7 +128,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional. Only `internet`, `moto`, `install`, `recurring`, and `recurring_internet` are valid values.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Other Types of Transactions See Appendix I, \"Commerce Indicators,\" on page 441.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
 
         :return: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :rtype: str
@@ -139,7 +139,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional. Only `internet`, `moto`, `install`, `recurring`, and `recurring_internet` are valid values.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Other Types of Transactions See Appendix I, \"Commerce Indicators,\" on page 441.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
 
         :param commerce_indicator: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
