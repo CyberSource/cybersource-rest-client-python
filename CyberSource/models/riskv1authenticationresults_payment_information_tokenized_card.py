@@ -54,7 +54,8 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
         self._expiration_year = None
         self._number = None
 
-        self.type = type
+        if type is not None:
+          self.type = type
         if expiration_month is not None:
           self.expiration_month = expiration_month
         if expiration_year is not None:
@@ -82,8 +83,6 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
         :param type: The type of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
 
         self._type = type
 
