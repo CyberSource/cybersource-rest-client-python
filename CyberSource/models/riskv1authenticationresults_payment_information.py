@@ -33,7 +33,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
     swagger_types = {
         'card': 'Riskv1authenticationresultsPaymentInformationCard',
         'tokenized_card': 'Riskv1authenticationresultsPaymentInformationTokenizedCard',
-        'fluid_data': 'Riskv1authenticationsetupsPaymentInformationFluidData',
+        'fluid_data': 'Riskv1authenticationresultsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer'
     }
 
@@ -111,7 +111,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
         Gets the fluid_data of this Riskv1authenticationresultsPaymentInformation.
 
         :return: The fluid_data of this Riskv1authenticationresultsPaymentInformation.
-        :rtype: Riskv1authenticationsetupsPaymentInformationFluidData
+        :rtype: Riskv1authenticationresultsPaymentInformationFluidData
         """
         return self._fluid_data
 
@@ -121,7 +121,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
         Sets the fluid_data of this Riskv1authenticationresultsPaymentInformation.
 
         :param fluid_data: The fluid_data of this Riskv1authenticationresultsPaymentInformation.
-        :type: Riskv1authenticationsetupsPaymentInformationFluidData
+        :type: Riskv1authenticationresultsPaymentInformationFluidData
         """
 
         self._fluid_data = fluid_data

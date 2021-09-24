@@ -31,7 +31,7 @@ class Riskv1authenticationresultsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'Riskv1authenticationsOrderInformationAmountDetails',
+        'amount_details': 'Riskv1authenticationresultsOrderInformationAmountDetails',
         'line_items': 'list[Riskv1authenticationresultsOrderInformationLineItems]'
     }
 
@@ -59,7 +59,7 @@ class Riskv1authenticationresultsOrderInformation(object):
         Gets the amount_details of this Riskv1authenticationresultsOrderInformation.
 
         :return: The amount_details of this Riskv1authenticationresultsOrderInformation.
-        :rtype: Riskv1authenticationsOrderInformationAmountDetails
+        :rtype: Riskv1authenticationresultsOrderInformationAmountDetails
         """
         return self._amount_details
 
@@ -69,7 +69,7 @@ class Riskv1authenticationresultsOrderInformation(object):
         Sets the amount_details of this Riskv1authenticationresultsOrderInformation.
 
         :param amount_details: The amount_details of this Riskv1authenticationresultsOrderInformation.
-        :type: Riskv1authenticationsOrderInformationAmountDetails
+        :type: Riskv1authenticationresultsOrderInformationAmountDetails
         """
 
         self._amount_details = amount_details
