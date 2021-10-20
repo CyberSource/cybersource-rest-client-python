@@ -78,6 +78,9 @@ class GlobalLabelParameters:
     DEFAULT_LOG_FILE_NAME = "Log File Name Empty/None.Using Default Value"
     DEFAULT_ENABLE_LOG = True
     DEFAULT_MAXIMUM_SIZE = 10487560
+    DEFAULT_LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
+    DEFAULT_LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    DEFAULT_LOG_LEVEL = "info"
     DEFAULT_TIMEOUT = 1000
     DEFAULT_LOG_DIRECTORY =os.path.join(os.getcwd(),"Logs")
     DEFAULT_PROXY_ADDRESS = "userproxy.visa.com"
