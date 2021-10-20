@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class OAuthApi(object):
@@ -40,6 +41,7 @@ class OAuthApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
         self.api_client.set_configuration(merchant_config) 
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
 
     def create_access_token(self, create_access_token_request, **kwargs):
@@ -62,6 +64,10 @@ class OAuthApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_access_token` STARTED")
+        
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_access_token_with_http_info(create_access_token_request, **kwargs)
@@ -107,13 +113,21 @@ class OAuthApi(object):
         del params['kwargs']
         # verify the required parameter 'create_access_token_request' is set
         if ('create_access_token_request' not in params) or (params['create_access_token_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_access_token_request` when calling `create_access_token`")            
             raise ValueError("Missing the required parameter `create_access_token_request` when calling `create_access_token`")
 
         if 'v_c_client_correlation_id' in params and len(params['v_c_client_correlation_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, length must be less than or equal to `36`")
         if 'v_c_client_correlation_id' in params and len(params['v_c_client_correlation_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, length must be greater than or equal to `36`")
         if 'v_c_client_correlation_id' in params and not re.search('^[A-Za-z0-9\\.\\-_:]+$', params['v_c_client_correlation_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, must conform to the pattern `/^[A-Za-z0-9\\.\\-_:]+$/`")
             raise ValueError("Invalid value for parameter `v_c_client_correlation_id` when calling `create_access_token`, must conform to the pattern `/^[A-Za-z0-9\\.\\-_:]+$/`")
 
         collection_formats = {}
