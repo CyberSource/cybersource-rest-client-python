@@ -24,7 +24,7 @@ class TestBasicFunction(unittest.TestCase):
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -35,7 +35,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "GET"
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
         self.merchant_config.validate_merchant_details(MockData.HTTP_DEFAULT_VALUES, self.merchant_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
@@ -47,7 +47,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "GET"
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
         self.merchant_config.validate_merchant_details(MockData.JWT_VALUES_FOR_PRODUCTION,
                                                        self.merchant_config)
 
@@ -59,7 +59,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "POST"
         self.merchant_config.request_target = "/pts/v2/payments"
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
         
         self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
@@ -72,7 +72,7 @@ class TestBasicFunction(unittest.TestCase):
 
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
         
         self.merchant_config.request_json_path_data = json.dumps(MockData.TRR_DATA)
 
@@ -85,7 +85,7 @@ class TestBasicFunction(unittest.TestCase):
 
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest/5246387105766473203529"
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -96,7 +96,7 @@ class TestBasicFunction(unittest.TestCase):
         self.get_id = "5246387105766473203529"
         self.merchant_config.request_target = "/pts/v2/payments/" + self.get_id
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
@@ -106,7 +106,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "POST"
         self.merchant_config.request_target = "/pts/v2/payments/5246387105766473203529"
         
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
 
         self.merchant_config.request_json_path_data = json.dumps(MockData.REQUEST_DATA)
 
@@ -119,7 +119,7 @@ class TestBasicFunction(unittest.TestCase):
 
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest"
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
         
         self.merchant_config.request_json_path_data =json.dumps(MockData.TRR_DATA)
 
@@ -131,7 +131,7 @@ class TestBasicFunction(unittest.TestCase):
         self.merchant_config.request_type_method = "DELETE"
         self.merchant_config.request_target = "/reporting/v2/reportSubscriptions/TRRReport?organizationId=testrest/5246387105766473203529"
 
-        self.logger = LogFactory.Log.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.merchant_config.log_config)
 
         self.assertIsNotNone(self.func.get_token(self.merchant_config, self.date, self.logger))
 
