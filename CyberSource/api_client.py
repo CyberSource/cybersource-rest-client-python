@@ -147,49 +147,49 @@ class ApiClient(object):
         
     # Setting Merchant Configuration
     def set_configuration(self,config):
-        global mconfig
-        mconfig = MerchantConfiguration()
-        mconfig.set_merchantconfig(config)
+        self.mconfig = MerchantConfiguration()
+        self.mconfig.set_merchantconfig(config)
         rconfig = Configuration()
+
+        # To reinitialize with logging config
+        self.rest_client = RESTClientObject(log_config=self.mconfig.log_config)
 
         set_client_cert = rconfig.set_merchantclientcert(config)
         set_proxy = rconfig.set_merchantproxyconfig(config)
 
         # The below two lines are to set proxy details, client cert details and if present reinitialize the REST object as a proxy manager
         if set_client_cert or set_proxy:
-            self.rest_client = RESTClientObject(rconfig) # Reinitialising REST object as a proxy manager instead of pool manager
+            self.rest_client = RESTClientObject(rconfig, self.mconfig.log_config) # Reinitialising REST object as a proxy manager instead of pool manager
 
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
-        mconfig.validate_merchant_details(config, mconfig)
+        self.mconfig.validate_merchant_details(config)
         # Setting the Host by reading the Environment(SANDBOX/PRODUCTION) from Merchant Config
-        self.host = mconfig.request_host
+        self.host = self.mconfig.request_host
 
     # Calling the authentication header
     def call_authentication_header(self, method, header_params, body):
         
-        time = mconfig.get_time()
+        time = self.mconfig.get_time()
 
-        mconfig.request_type_method = method
+        self.mconfig.request_type_method = method
         
 
         
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            mconfig.request_json_path_data = body
-
-        logger = mconfig.log
+            self.mconfig.request_json_path_data = body
 
         header_params['v-c-client-id'] = self.client_id
 
-        # if not mconfig.solution_id in (None, ''):
-            # header_params['v-c-solution-id'] = mconfig.solution_id
+        # if not self.mconfig.solution_id in (None, ''):
+            # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(mconfig, mconfig.get_time(), logger)
-        if mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
+        token = auth.get_token(self.mconfig, self.mconfig.get_time())
+        if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
-            header_params['v-c-merchant-id'] = mconfig.merchant_id
+            header_params['v-c-merchant-id'] = self.mconfig.merchant_id
             header_params["Date"] = time
-            header_params["Host"] = mconfig.request_host
+            header_params["Host"] = self.mconfig.request_host
             header_params["User-Agent"] = GlobalLabelParameters.USER_AGENT_VALUE
             if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
                 
@@ -199,15 +199,15 @@ class ApiClient(object):
                     GlobalLabelParameters.DIGEST] = GlobalLabelParameters.DIGEST_PREFIX + digest_header.decode("utf-8")
 
             header_params["Signature"] = token
-        elif mconfig.authentication_type.upper() == GlobalLabelParameters.JWT:
+        elif self.mconfig.authentication_type.upper() == GlobalLabelParameters.JWT:
 
             token = "Bearer " + token
             header_params['Authorization'] = str(token)
-        elif mconfig.authentication_type.upper() == GlobalLabelParameters.OAUTH:
+        elif self.mconfig.authentication_type.upper() == GlobalLabelParameters.OAUTH:
 
             token = "Bearer " + token
             header_params['Authorization'] = str(token)
-        
+                
 
     #  Set the digest
     def set_digest(self, body):
@@ -454,11 +454,11 @@ class ApiClient(object):
             body = body.replace("secCode", "SECCode")
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
-            mconfig.request_target = query_param_path
+            self.mconfig.request_target = query_param_path
         else:
-            mconfig.request_target = resource_path
+            self.mconfig.request_target = resource_path
         
-        if mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
+        if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
             self.call_authentication_header(method, header_params, body)
         
         """
