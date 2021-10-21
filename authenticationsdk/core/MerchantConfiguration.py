@@ -39,21 +39,13 @@ class MerchantConfiguration:
         self.refresh_token = None
         self.response_code = None
         self.response_message = None
-        self.v_c_correlation_id = None
-        self.enable_log = None
-        self.maximum_size = None
-        self.log_directory = None
-        self.log_file_name = None
+        self.v_c_correlation_id = None        
         self.proxy_address = None
         self.proxy_port = None
         self.key_file_name = None
         self.request_json_path_data = None        
         self.solution_id = None
         self.log_config = None
-        self.log_level = None
-        self.log_format = None
-        self.log_date_format = None
-        self.enable_masking = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
     def set_merchant_keyid(self, value):
@@ -67,12 +59,6 @@ class MerchantConfiguration:
     def set_key_file_path(self, value):
         if not (value.get('keys_directory') is None):
             self.key_file_path = value['keys_directory']
-
-    def set_log_file_name(self, value):
-        if not (value.get('log_file_name') is None or value.get('log_file_name') == ""):
-            self.log_file_name = value['log_file_name']
-        else:
-            self.log_file_name = GlobalLabelParameters.LOG_FILE_NAME_DEFAULT
 
     def set_key_alias(self, value):
         if not (value.get('key_alias') is None):
@@ -99,30 +85,6 @@ class MerchantConfiguration:
     def set_portfolio_id(self, value):
         if not (value.get('portfolio_id') is None):
             self.portfolio_id = value['portfolio_id']
-
-    def set_enable_log(self, value):
-
-        if not (value.get('enable_log') == "" or value.get('enable_log') is None):
-            self.enable_log = value['enable_log']
-        else:
-            self.enable_log = GlobalLabelParameters.DEFAULT_ENABLE_LOG
-
-    def set_maximum_size(self, value):
-
-        if not (value.get('log_maximum_size') == "" or value.get('log_maximum_size') is None):
-            self.maximum_size = value['log_maximum_size']
-        else:
-            self.maximum_size = GlobalLabelParameters.DEFAULT_MAXIMUM_SIZE  # 10 MB = 10485760 bytes
-
-    def set_log_directory(self, value):
-
-        if not (value.get('log_directory') == "" or value.get('log_directory') is None):
-            if os.path.exists(value['log_directory']) or os.path.isdir(value['log_directory']):
-                self.log_directory = value['log_directory']
-            else:
-                self.log_directory = GlobalLabelParameters.DEFAULT_LOG_DIRECTORY
-        else:
-            self.log_directory = GlobalLabelParameters.DEFAULT_LOG_DIRECTORY
 
     def set_run_environment(self, value):
         if not (value.get('run_environment') is None):
@@ -190,40 +152,10 @@ class MerchantConfiguration:
         if not (value.get('refresh_token') is None):
             self.refresh_token = value['refresh_token']
 
-    def set_log_level(self, value):
-        if not (value.get('log_level') is None):
-            self.log_level = value['log_level']
-        else:
-            self.log_level = GlobalLabelParameters.DEFAULT_LOG_LEVEL
-
-    def set_enable_masking(self, value):
-        if not (value.get('enable_masking') is None):
-            self.enable_masking = value['enable_masking']
-        else:
-            self.enable_masking = True
-
-    def set_log_format(self, value):
-        if not (value.get('log_format') is None):
-            self.log_format = value['log_format']
-        else:
-            self.log_format = GlobalLabelParameters.DEFAULT_LOG_FORMAT
-
-    def set_log_date_format(self, value):
-        if not (value.get('log_date_format') is None):
-            self.log_date_format = value['log_date_format']
-        else:
-            self.log_date_format = GlobalLabelParameters.DEFAULT_LOG_DATE_FORMAT
-
-    def set_log_configuration(self):
+    def set_log_configuration(self, value):
         self.log_config = LogConfiguration()
-        self.log_config.set_enable_log(self.enable_log)
-        self.log_config.set_log_folder(self.log_directory)
-        self.log_config.set_log_file_name(self.log_file_name)
-        self.log_config.set_log_max_size(self.maximum_size)
-        self.log_config.set_log_level(self.log_level)
-        self.log_config.set_enable_masking(self.enable_masking)
-        self.log_config.set_log_format(self.log_format)
-        self.log_config.set_log_date_format(self.log_date_format)
+        if not (value.get('log_config') is None):
+            self.log_config = value['log_config']
 
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
@@ -240,11 +172,7 @@ class MerchantConfiguration:
         self.set_run_environment(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
-        self.set_enable_log(val)
-        self.set_maximum_size(val)
-        self.set_log_directory(val)
         self.set_request_host(val)
-        self.set_log_file_name(val)
         self.set_proxy_address(val)
         self.set_proxy_port(val)
         self.set_enable_client_cert(val)
@@ -256,11 +184,7 @@ class MerchantConfiguration:
         self.set_client_secret(val)
         self.set_access_token(val)
         self.set_refresh_token(val)
-        self.set_enable_masking(val)
-        self.set_log_date_format(val)
-        self.set_log_format(val)
-        self.set_log_level(val)
-        self.set_log_configuration()
+        self.set_log_configuration(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -285,32 +209,6 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.RUN_ENVIRONMENT_EMPTY,
                                                                                self.log_config)
-
-        # Fallback for missing values
-        if details.get('enable_log') is None or details.get('enable_log') == "":
-            authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                         GlobalLabelParameters.ENABLE_LOG_DEFAULT_MESSAGE,
-                                                                         self.log_config)
-
-        if details.get('log_maximum_size') is None or details.get('log_maximum_size') == "":
-            authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                         GlobalLabelParameters.LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE,
-                                                                         self.log_config)
-        if details.get('log_file_name') is None or details.get('log_file_name') == "":
-            authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                         GlobalLabelParameters.DEFAULT_LOG_FILE_NAME,
-                                                                         self.log_config)
-
-        if details.get('log_directory') is None or details.get('log_directory') == "":
-            authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                         GlobalLabelParameters.LOG_DIRECTORY_DEFAULT_MESSAGE,
-                                                                         self.log_config)
-        elif not (os.path.exists(details.get('log_directory')) or os.path.isdir(details.get('log_directory'))):
-
-            authenticationsdk.util.ExceptionAuth.validate_default_values(self.logger,
-                                                                         GlobalLabelParameters.LOG_DIRECTORY_INCORRECT_MESSAGE,
-                                                                         self.log_config)
-
 
         if self.use_metakey and (self.portfolio_id is None or self.portfolio_id == ""):
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger, GlobalLabelParameters.PORTFOLIO_ID_REQ, self.log_config)

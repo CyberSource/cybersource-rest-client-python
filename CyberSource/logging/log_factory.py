@@ -2,7 +2,8 @@ import logging
 from datetime import datetime
 import os
 from logging.handlers import RotatingFileHandler
-from CyberSource.logging.log_configuration import LogConfiguration
+from .log_configuration import LogConfiguration
+from .sensitive_formatter import SensitiveFormatter
 
 
 def setup_logger(className, log_config = None):
@@ -14,7 +15,7 @@ def setup_logger(className, log_config = None):
         log_level = log_config.log_level.upper()
         logger.setLevel(log_level)
 
-        log_folder = log_config.log_folder
+        log_folder = log_config.log_directory
         log_file_name = log_config.log_file_name
 
         if not os.path.exists(log_folder):
@@ -22,15 +23,17 @@ def setup_logger(className, log_config = None):
 
         file_name = os.path.join(log_folder , log_file_name) + ".log"
 
-        # create console handler and set level to debug
-        handler = RotatingFileHandler(filename = file_name, maxBytes=log_config.log_max_size, backupCount=10)
+        # create console handler and set level
+        handler = RotatingFileHandler(filename = file_name, maxBytes=log_config.log_maximum_size, backupCount=10)
         handler.setLevel(log_level)
 
-        # create formatter
-        formatter = logging.Formatter(log_config.log_format, log_config.log_date_format)
-
-        # add formatter to ch
-        handler.setFormatter(formatter)
+        if log_config.enable_masking:
+            # add formatter to ch
+            handler.setFormatter(SensitiveFormatter(log_config.log_format))
+        else:
+            # create formatter
+            formatter = logging.Formatter(log_config.log_format, log_config.log_date_format)
+            handler.setFormatter(formatter)
 
         # add ch to logger
         logger.addHandler(handler)
