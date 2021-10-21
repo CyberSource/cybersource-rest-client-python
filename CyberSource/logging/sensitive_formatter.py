@@ -10,7 +10,7 @@ class SensitiveFormatter(logging.Formatter):
         s = re.sub(r'"expirationMonth":"[0-1][0-9]"', r'"expirationMonth":"xxxx"', s)
         s = re.sub(r'"expirationYear":"2[0-9][0-9][0-9]"', r'"expirationYear":"xxxx"', s)
         s = re.sub(r'"routingNumber":"[0-9]+"', r'"routingNumber":"xxxxx"', s)
-        s = re.sub(r'"email":"[a-z0-9!#$%&*+\/=?^_`{|}~-]+(?:.[a-z0-9!#$%&*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"', r'"email":"xxxxx"', s)
+        s = re.sub(r'"email":"[a-z0-9!#$.%&*+\/=?^_`{|}~-]+(?:.[a-z0-9.!#$%&*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"', r'"email":"xxxxx"', s)
         s = re.sub(r'"firstName":"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"firstName":"xxxxxx"', s)
         s = re.sub(r'"lastName":"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"lastName":"xxxxxx"', s)
         s = re.sub(r'"phoneNumber":"(\\+[0-9]{1,2})?\\([0-9]{3}\\)?[.-]?[0-9]{3}[ .-]?[0-9]{4}"', r'"phoneNumber":"xxxxxx"', s)

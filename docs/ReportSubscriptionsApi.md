@@ -29,7 +29,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 predefined_subscription_request_bean = CyberSource.PredefinedSubscriptionRequestBean() # PredefinedSubscriptionRequestBean | Report subscription request payload
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Create a Standard or Classic Subscription
@@ -43,7 +43,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **predefined_subscription_request_bean** | [**PredefinedSubscriptionRequestBean**](PredefinedSubscriptionRequestBean.md)| Report subscription request payload | 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 
@@ -78,7 +78,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 create_report_subscription_request = CyberSource.CreateReportSubscriptionRequest() # CreateReportSubscriptionRequest | Report subscription request payload
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Create Report Subscription for a Report Name by Organization
@@ -92,7 +92,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_report_subscription_request** | [**CreateReportSubscriptionRequest**](CreateReportSubscriptionRequest.md)| Report subscription request payload | 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 
@@ -127,7 +127,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 report_name = 'report_name_example' # str | Name of the Report to Delete
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Delete Subscription of a Report Name by Organization
@@ -141,7 +141,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **report_name** | **str**| Name of the Report to Delete | 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 
@@ -175,7 +175,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Get All Subscriptions
@@ -189,7 +189,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 
@@ -224,7 +224,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportSubscriptionsApi()
 report_name = 'report_name_example' # str | Name of the Report to Retrieve
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Get Subscription for Report Name
@@ -239,7 +239,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **report_name** | **str**| Name of the Report to Retrieve | 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 

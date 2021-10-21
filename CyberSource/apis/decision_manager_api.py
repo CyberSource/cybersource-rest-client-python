@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class DecisionManagerApi(object):
@@ -39,7 +40,9 @@ class DecisionManagerApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def add_negative(self, type, add_negative_list_request, **kwargs):
@@ -62,6 +65,10 @@ class DecisionManagerApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `add_negative` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.add_negative_with_http_info(type, add_negative_list_request, **kwargs)
@@ -107,9 +114,13 @@ class DecisionManagerApi(object):
         del params['kwargs']
         # verify the required parameter 'type' is set
         if ('type' not in params) or (params['type'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `type` when calling `add_negative`")
             raise ValueError("Missing the required parameter `type` when calling `add_negative`")
         # verify the required parameter 'add_negative_list_request' is set
         if ('add_negative_list_request' not in params) or (params['add_negative_list_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `add_negative_list_request` when calling `add_negative`")
             raise ValueError("Missing the required parameter `add_negative_list_request` when calling `add_negative`")
 
 
@@ -174,6 +185,10 @@ class DecisionManagerApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_bundled_decision_manager_case` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_bundled_decision_manager_case_with_http_info(create_bundled_decision_manager_case_request, **kwargs)
@@ -218,6 +233,8 @@ class DecisionManagerApi(object):
         del params['kwargs']
         # verify the required parameter 'create_bundled_decision_manager_case_request' is set
         if ('create_bundled_decision_manager_case_request' not in params) or (params['create_bundled_decision_manager_case_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_bundled_decision_manager_case_request` when calling `create_bundled_decision_manager_case`")
             raise ValueError("Missing the required parameter `create_bundled_decision_manager_case_request` when calling `create_bundled_decision_manager_case`")
 
 
@@ -281,6 +298,10 @@ class DecisionManagerApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `fraud_update` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.fraud_update_with_http_info(id, fraud_marking_action_request, **kwargs)
@@ -326,9 +347,13 @@ class DecisionManagerApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `fraud_update`")
             raise ValueError("Missing the required parameter `id` when calling `fraud_update`")
         # verify the required parameter 'fraud_marking_action_request' is set
         if ('fraud_marking_action_request' not in params) or (params['fraud_marking_action_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `fraud_marking_action_request` when calling `fraud_update`")
             raise ValueError("Missing the required parameter `fraud_marking_action_request` when calling `fraud_update`")
 
 

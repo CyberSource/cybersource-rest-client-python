@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class SecureFileShareApi(object):
@@ -39,7 +40,9 @@ class SecureFileShareApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_file(self, file_id, **kwargs):
@@ -62,6 +65,10 @@ class SecureFileShareApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_file` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_file_with_http_info(file_id, **kwargs)
@@ -107,13 +114,21 @@ class SecureFileShareApi(object):
         del params['kwargs']
         # verify the required parameter 'file_id' is set
         if ('file_id' not in params) or (params['file_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `file_id` when calling `get_file`")
             raise ValueError("Missing the required parameter `file_id` when calling `get_file`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
@@ -180,6 +195,10 @@ class SecureFileShareApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_file_detail` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_file_detail_with_http_info(start_date, end_date, **kwargs)
@@ -227,18 +246,30 @@ class SecureFileShareApi(object):
         del params['kwargs']
         # verify the required parameter 'start_date' is set
         if ('start_date' not in params) or (params['start_date'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `start_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `start_date` when calling `get_file_detail`")
         # verify the required parameter 'end_date' is set
         if ('end_date' not in params) or (params['end_date'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `end_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `end_date` when calling `get_file_detail`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
         if 'name' in params and not re.search('[a-zA-Z0-9-_\\.]+', params['name']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `name` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_\\.]+/`")
             raise ValueError("Invalid value for parameter `name` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_\\.]+/`")
 
         collection_formats = {}

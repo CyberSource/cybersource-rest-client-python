@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class ReportsApi(object):
@@ -39,7 +40,9 @@ class ReportsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def create_report(self, create_adhoc_report_request, **kwargs):
@@ -57,11 +60,15 @@ class ReportsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateAdhocReportRequest create_adhoc_report_request: Report subscription request payload (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_report` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_report_with_http_info(create_adhoc_report_request, **kwargs)
@@ -84,7 +91,7 @@ class ReportsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateAdhocReportRequest create_adhoc_report_request: Report subscription request payload (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -107,13 +114,21 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_adhoc_report_request' is set
         if ('create_adhoc_report_request' not in params) or (params['create_adhoc_report_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
             raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
@@ -173,11 +188,15 @@ class ReportsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_id: Valid Report Id (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportsIdGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_report_by_report_id` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_report_by_report_id_with_http_info(report_id, **kwargs)
@@ -200,7 +219,7 @@ class ReportsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_id: Valid Report Id (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportsIdGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -223,13 +242,21 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_id' is set
         if ('report_id' not in params) or (params['report_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
             raise ValueError("Missing the required parameter `report_id` when calling `get_report_by_report_id`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
@@ -291,7 +318,7 @@ class ReportsApi(object):
         :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
         :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC 
         :param str report_name: Valid Report Name
@@ -301,6 +328,10 @@ class ReportsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `search_reports` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.search_reports_with_http_info(start_time, end_time, time_query_type, **kwargs)
@@ -325,7 +356,7 @@ class ReportsApi(object):
         :param datetime start_time: Valid report Start Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param datetime end_time: Valid report End Time in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**   - yyyy-MM-dd'T'HH:mm:ss.SSSZ (e.g. 2018-01-01T00:00:00.000Z)  (required)
         :param str time_query_type: Specify time you would like to search  Valid values: - reportTimeFrame - executedTime  (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :param str report_mime_type: Valid Report Format  Valid values: - application/xml - text/csv 
         :param str report_frequency: Valid Report Frequency  Valid values: - DAILY - WEEKLY - MONTHLY - USER_DEFINED - ADHOC 
         :param str report_name: Valid Report Name
@@ -353,19 +384,31 @@ class ReportsApi(object):
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `search_reports`")
             raise ValueError("Missing the required parameter `start_time` when calling `search_reports`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `search_reports`")
             raise ValueError("Missing the required parameter `end_time` when calling `search_reports`")
         # verify the required parameter 'time_query_type' is set
         if ('time_query_type' not in params) or (params['time_query_type'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
             raise ValueError("Missing the required parameter `time_query_type` when calling `search_reports`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}

@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class InvoiceSettingsApi(object):
@@ -39,7 +40,9 @@ class InvoiceSettingsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_invoice_settings(self, **kwargs):
@@ -60,6 +63,10 @@ class InvoiceSettingsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_invoice_settings` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_invoice_settings_with_http_info(**kwargs)
@@ -159,6 +166,10 @@ class InvoiceSettingsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `update_invoice_settings` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.update_invoice_settings_with_http_info(invoice_settings_request, **kwargs)
@@ -203,6 +214,8 @@ class InvoiceSettingsApi(object):
         del params['kwargs']
         # verify the required parameter 'invoice_settings_request' is set
         if ('invoice_settings_request' not in params) or (params['invoice_settings_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
             raise ValueError("Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
 
 

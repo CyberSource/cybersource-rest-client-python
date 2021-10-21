@@ -159,7 +159,7 @@ class ApiClient(object):
 
         # The below two lines are to set proxy details, client cert details and if present reinitialize the REST object as a proxy manager
         if set_client_cert or set_proxy:
-            self.rest_client = RESTClientObject(rconfig, self.mconfig.log_config) # Reinitialising REST object as a proxy manager instead of pool manager
+            self.rest_client = RESTClientObject(rconfig, log_config=self.mconfig.log_config) # Reinitialising REST object as a proxy manager instead of pool manager
 
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         self.mconfig.validate_merchant_details(config)

@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class PaymentsApi(object):
@@ -39,7 +40,9 @@ class PaymentsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def create_payment(self, create_payment_request, **kwargs):
@@ -61,6 +64,10 @@ class PaymentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_payment` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_payment_with_http_info(create_payment_request, **kwargs)
@@ -105,6 +112,8 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_payment_request' is set
         if ('create_payment_request' not in params) or (params['create_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_payment_request` when calling `create_payment`")
             raise ValueError("Missing the required parameter `create_payment_request` when calling `create_payment`")
 
 
@@ -168,6 +177,10 @@ class PaymentsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `increment_auth` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.increment_auth_with_http_info(id, increment_auth_request, **kwargs)
@@ -213,9 +226,13 @@ class PaymentsApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `increment_auth`")
             raise ValueError("Missing the required parameter `id` when calling `increment_auth`")
         # verify the required parameter 'increment_auth_request' is set
         if ('increment_auth_request' not in params) or (params['increment_auth_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `increment_auth_request` when calling `increment_auth`")
             raise ValueError("Missing the required parameter `increment_auth_request` when calling `increment_auth`")
 
 

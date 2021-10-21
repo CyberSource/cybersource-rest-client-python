@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class VerificationApi(object):
@@ -39,7 +40,9 @@ class VerificationApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def validate_export_compliance(self, validate_export_compliance_request, **kwargs):
@@ -61,6 +64,10 @@ class VerificationApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `validate_export_compliance` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.validate_export_compliance_with_http_info(validate_export_compliance_request, **kwargs)
@@ -105,6 +112,8 @@ class VerificationApi(object):
         del params['kwargs']
         # verify the required parameter 'validate_export_compliance_request' is set
         if ('validate_export_compliance_request' not in params) or (params['validate_export_compliance_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `validate_export_compliance_request` when calling `validate_export_compliance`")
             raise ValueError("Missing the required parameter `validate_export_compliance_request` when calling `validate_export_compliance`")
 
 
@@ -167,6 +176,10 @@ class VerificationApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `verify_customer_address` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.verify_customer_address_with_http_info(verify_customer_address_request, **kwargs)
@@ -211,6 +224,8 @@ class VerificationApi(object):
         del params['kwargs']
         # verify the required parameter 'verify_customer_address_request' is set
         if ('verify_customer_address_request' not in params) or (params['verify_customer_address_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `verify_customer_address_request` when calling `verify_customer_address`")
             raise ValueError("Missing the required parameter `verify_customer_address_request` when calling `verify_customer_address`")
 
 

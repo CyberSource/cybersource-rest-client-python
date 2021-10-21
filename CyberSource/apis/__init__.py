@@ -4,6 +4,8 @@ from __future__ import absolute_import
 from .o_auth_api import OAuthApi
 from .asymmetric_key_management_api import AsymmetricKeyManagementApi
 from .capture_api import CaptureApi
+from .chargeback_details_api import ChargebackDetailsApi
+from .chargeback_summaries_api import ChargebackSummariesApi
 from .conversion_details_api import ConversionDetailsApi
 from .credit_api import CreditApi
 from .customer_api import CustomerApi
@@ -13,6 +15,7 @@ from .decision_manager_api import DecisionManagerApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .instrument_identifier_api import InstrumentIdentifierApi
+from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
 from .key_generation_api import KeyGenerationApi
@@ -29,6 +32,8 @@ from .report_definitions_api import ReportDefinitionsApi
 from .report_downloads_api import ReportDownloadsApi
 from .report_subscriptions_api import ReportSubscriptionsApi
 from .reports_api import ReportsApi
+from .retrieval_details_api import RetrievalDetailsApi
+from .retrieval_summaries_api import RetrievalSummariesApi
 from .reversal_api import ReversalApi
 from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi

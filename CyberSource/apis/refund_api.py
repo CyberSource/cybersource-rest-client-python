@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class RefundApi(object):
@@ -39,7 +40,9 @@ class RefundApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def refund_capture(self, refund_capture_request, id, **kwargs):
@@ -62,6 +65,10 @@ class RefundApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `refund_capture` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.refund_capture_with_http_info(refund_capture_request, id, **kwargs)
@@ -107,9 +114,13 @@ class RefundApi(object):
         del params['kwargs']
         # verify the required parameter 'refund_capture_request' is set
         if ('refund_capture_request' not in params) or (params['refund_capture_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `refund_capture_request` when calling `refund_capture`")
             raise ValueError("Missing the required parameter `refund_capture_request` when calling `refund_capture`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refund_capture`")
             raise ValueError("Missing the required parameter `id` when calling `refund_capture`")
 
 
@@ -175,6 +186,10 @@ class RefundApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `refund_payment` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.refund_payment_with_http_info(refund_payment_request, id, **kwargs)
@@ -220,9 +235,13 @@ class RefundApi(object):
         del params['kwargs']
         # verify the required parameter 'refund_payment_request' is set
         if ('refund_payment_request' not in params) or (params['refund_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `refund_payment_request` when calling `refund_payment`")
             raise ValueError("Missing the required parameter `refund_payment_request` when calling `refund_payment`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refund_payment`")
             raise ValueError("Missing the required parameter `id` when calling `refund_payment`")
 
 

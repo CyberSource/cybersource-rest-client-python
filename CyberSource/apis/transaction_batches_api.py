@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class TransactionBatchesApi(object):
@@ -39,7 +40,9 @@ class TransactionBatchesApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_transaction_batch_details(self, id, **kwargs):
@@ -63,6 +66,10 @@ class TransactionBatchesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_transaction_batch_details` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_transaction_batch_details_with_http_info(id, **kwargs)
@@ -109,6 +116,8 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_details`")
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_details`")
 
 
@@ -175,6 +184,10 @@ class TransactionBatchesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_transaction_batch_id` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_transaction_batch_id_with_http_info(id, **kwargs)
@@ -219,6 +232,8 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_id`")
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_id`")
 
 
@@ -282,6 +297,10 @@ class TransactionBatchesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_transaction_batches` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_transaction_batches_with_http_info(start_time, end_time, **kwargs)
@@ -327,9 +346,13 @@ class TransactionBatchesApi(object):
         del params['kwargs']
         # verify the required parameter 'start_time' is set
         if ('start_time' not in params) or (params['start_time'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `start_time` when calling `get_transaction_batches`")
             raise ValueError("Missing the required parameter `start_time` when calling `get_transaction_batches`")
         # verify the required parameter 'end_time' is set
         if ('end_time' not in params) or (params['end_time'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_transaction_batches`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_transaction_batches`")
 
 

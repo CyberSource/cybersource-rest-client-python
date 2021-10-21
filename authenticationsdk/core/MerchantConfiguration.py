@@ -194,7 +194,7 @@ class MerchantConfiguration:
         return format_date_time(stamp)
 
     # This validates the Merchant details
-    def validate_merchant_details(self, details):
+    def validate_merchant_details(self, details, mconfig = None):
         # verify Mandatory Properties
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.log_config)
         if self.log_config.enable_log is True:
