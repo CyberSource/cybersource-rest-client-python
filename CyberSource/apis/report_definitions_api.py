@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class ReportDefinitionsApi(object):
@@ -39,7 +40,9 @@ class ReportDefinitionsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_resource_info_by_report_definition(self, report_definition_name, **kwargs):
@@ -59,11 +62,15 @@ class ReportDefinitionsApi(object):
         :param str report_definition_name: Name of the Report definition to retrieve (required)
         :param str subscription_type: The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD 
         :param str report_mime_type: The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv 
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportDefinitionsNameGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_resource_info_by_report_definition` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_resource_info_by_report_definition_with_http_info(report_definition_name, **kwargs)
@@ -88,7 +95,7 @@ class ReportDefinitionsApi(object):
         :param str report_definition_name: Name of the Report definition to retrieve (required)
         :param str subscription_type: The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD 
         :param str report_mime_type: The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv 
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportDefinitionsNameGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -111,13 +118,21 @@ class ReportDefinitionsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_definition_name' is set
         if ('report_definition_name' not in params) or (params['report_definition_name'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
             raise ValueError("Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_info_by_report_definition`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
@@ -181,11 +196,15 @@ class ReportDefinitionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str subscription_type: Valid Values: - CLASSIC - CUSTOM - STANDARD 
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportDefinitionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_resource_v2_info` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_resource_v2_info_with_http_info(**kwargs)
@@ -208,7 +227,7 @@ class ReportDefinitionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str subscription_type: Valid Values: - CLASSIC - CUSTOM - STANDARD 
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportDefinitionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -231,10 +250,16 @@ class ReportDefinitionsApi(object):
         del params['kwargs']
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_resource_v2_info`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}

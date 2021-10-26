@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class CustomerShippingAddressApi(object):
@@ -39,7 +40,9 @@ class CustomerShippingAddressApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def delete_customer_shipping_address(self, customer_token_id, shipping_address_token_id, **kwargs):
@@ -62,6 +65,10 @@ class CustomerShippingAddressApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `delete_customer_shipping_address` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.delete_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
@@ -107,22 +114,38 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_token_id' is set
         if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `delete_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_token_id` when calling `delete_customer_shipping_address`")
         # verify the required parameter 'shipping_address_token_id' is set
         if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`")
 
         if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
         if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `36`")
 
         collection_formats = {}
@@ -189,6 +212,10 @@ class CustomerShippingAddressApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_customer_shipping_address` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
@@ -234,22 +261,38 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_token_id' is set
         if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_shipping_address`")
         # verify the required parameter 'shipping_address_token_id' is set
         if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `get_customer_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `get_customer_shipping_address`")
 
         if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
         if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_address`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_shipping_address`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `36`")
 
         collection_formats = {}
@@ -317,6 +360,10 @@ class CustomerShippingAddressApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_customer_shipping_addresses_list` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_customer_shipping_addresses_list_with_http_info(customer_token_id, **kwargs)
@@ -363,21 +410,37 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_token_id' is set
         if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`")
             raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`")
 
         if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
         if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `36`")
         if 'offset' in params and params['offset'] < 0:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `offset` when calling `get_customer_shipping_addresses_list`, must be a value greater than or equal to `0`")
             raise ValueError("Invalid value for parameter `offset` when calling `get_customer_shipping_addresses_list`, must be a value greater than or equal to `0`")
         if 'limit' in params and params['limit'] > 100:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_customer_shipping_addresses_list`, must be a value less than or equal to `100`")
             raise ValueError("Invalid value for parameter `limit` when calling `get_customer_shipping_addresses_list`, must be a value less than or equal to `100`")
         if 'limit' in params and params['limit'] < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_customer_shipping_addresses_list`, must be a value greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `limit` when calling `get_customer_shipping_addresses_list`, must be a value greater than or equal to `1`")
 
         collection_formats = {}
@@ -448,6 +511,10 @@ class CustomerShippingAddressApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `patch_customers_shipping_address` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.patch_customers_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, **kwargs)
@@ -495,29 +562,51 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_token_id' is set
         if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `customer_token_id` when calling `patch_customers_shipping_address`")
         # verify the required parameter 'shipping_address_token_id' is set
         if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`")
         # verify the required parameter 'patch_customer_shipping_address_request' is set
         if ('patch_customer_shipping_address_request' not in params) or (params['patch_customer_shipping_address_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
 
         if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
         if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
         if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `36`")
         if 'if_match' in params and len(params['if_match']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `if_match` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
         if 'if_match' in params and len(params['if_match']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `if_match` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
 
         collection_formats = {}
@@ -589,6 +678,10 @@ class CustomerShippingAddressApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `post_customer_shipping_address` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.post_customer_shipping_address_with_http_info(customer_token_id, post_customer_shipping_address_request, **kwargs)
@@ -635,18 +728,30 @@ class CustomerShippingAddressApi(object):
         del params['kwargs']
         # verify the required parameter 'customer_token_id' is set
         if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `post_customer_shipping_address`")
             raise ValueError("Missing the required parameter `customer_token_id` when calling `post_customer_shipping_address`")
         # verify the required parameter 'post_customer_shipping_address_request' is set
         if ('post_customer_shipping_address_request' not in params) or (params['post_customer_shipping_address_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
             raise ValueError("Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
 
         if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
         if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_shipping_address`, length must be less than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer_shipping_address`, length must be less than or equal to `36`")
         if 'profile_id' in params and len(params['profile_id']) < 36:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `36`")
             raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `36`")
 
         collection_formats = {}

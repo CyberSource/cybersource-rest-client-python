@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class InvoicesApi(object):
@@ -39,7 +40,9 @@ class InvoicesApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def create_invoice(self, create_invoice_request, **kwargs):
@@ -61,6 +64,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_invoice` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_invoice_with_http_info(create_invoice_request, **kwargs)
@@ -105,6 +112,8 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'create_invoice_request' is set
         if ('create_invoice_request' not in params) or (params['create_invoice_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_invoice_request` when calling `create_invoice`")
             raise ValueError("Missing the required parameter `create_invoice_request` when calling `create_invoice`")
 
 
@@ -169,6 +178,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_all_invoices` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_all_invoices_with_http_info(offset, limit, **kwargs)
@@ -215,9 +228,13 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'offset' is set
         if ('offset' not in params) or (params['offset'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `offset` when calling `get_all_invoices`")
             raise ValueError("Missing the required parameter `offset` when calling `get_all_invoices`")
         # verify the required parameter 'limit' is set
         if ('limit' not in params) or (params['limit'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `limit` when calling `get_all_invoices`")
             raise ValueError("Missing the required parameter `limit` when calling `get_all_invoices`")
 
 
@@ -284,6 +301,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_invoice` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_invoice_with_http_info(id, **kwargs)
@@ -328,6 +349,8 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_invoice`")
             raise ValueError("Missing the required parameter `id` when calling `get_invoice`")
 
 
@@ -390,6 +413,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `perform_cancel_action` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.perform_cancel_action_with_http_info(id, **kwargs)
@@ -434,6 +461,8 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `perform_cancel_action`")
             raise ValueError("Missing the required parameter `id` when calling `perform_cancel_action`")
 
 
@@ -496,6 +525,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `perform_send_action` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.perform_send_action_with_http_info(id, **kwargs)
@@ -540,6 +573,8 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `perform_send_action`")
             raise ValueError("Missing the required parameter `id` when calling `perform_send_action`")
 
 
@@ -603,6 +638,10 @@ class InvoicesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `update_invoice` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.update_invoice_with_http_info(id, update_invoice_request, **kwargs)
@@ -648,9 +687,13 @@ class InvoicesApi(object):
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_invoice`")
             raise ValueError("Missing the required parameter `id` when calling `update_invoice`")
         # verify the required parameter 'update_invoice_request' is set
         if ('update_invoice_request' not in params) or (params['update_invoice_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `update_invoice_request` when calling `update_invoice`")
             raise ValueError("Missing the required parameter `update_invoice_request` when calling `update_invoice`")
 
 

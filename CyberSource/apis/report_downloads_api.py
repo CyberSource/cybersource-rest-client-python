@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class ReportDownloadsApi(object):
@@ -39,7 +40,9 @@ class ReportDownloadsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def download_report(self, report_date, report_name, **kwargs):
@@ -58,11 +61,15 @@ class ReportDownloadsApi(object):
             for asynchronous request. (optional)
         :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**  yyyy-mm-dd For reports that span multiple days, this value would be the end date of the report in the time zone of the report subscription. Example 1: If your report start date is 2020-03-06 and the end date is 2020-03-09, the reportDate passed in the query is 2020-03-09. Example 2: If your report runs from midnight to midnight on 2020-03-09, the reportDate passed in the query is 2020-03-10  (required)
         :param str report_name: Name of the report to download (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `download_report` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.download_report_with_http_info(report_date, report_name, **kwargs)
@@ -86,7 +93,7 @@ class ReportDownloadsApi(object):
             for asynchronous request. (optional)
         :param date report_date: Valid date on which to download the report in **ISO 8601 format** Please refer the following link to know more about ISO 8601 format.[Rfc Date Format](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14)  **Example date format:**  yyyy-mm-dd For reports that span multiple days, this value would be the end date of the report in the time zone of the report subscription. Example 1: If your report start date is 2020-03-06 and the end date is 2020-03-09, the reportDate passed in the query is 2020-03-09. Example 2: If your report runs from midnight to midnight on 2020-03-09, the reportDate passed in the query is 2020-03-10  (required)
         :param str report_name: Name of the report to download (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -109,16 +116,26 @@ class ReportDownloadsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_date' is set
         if ('report_date' not in params) or (params['report_date'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_date` when calling `download_report`")
             raise ValueError("Missing the required parameter `report_date` when calling `download_report`")
         # verify the required parameter 'report_name' is set
         if ('report_name' not in params) or (params['report_name'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `download_report`")
             raise ValueError("Missing the required parameter `report_name` when calling `download_report`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `download_report`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `download_report`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `download_report`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `download_report`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `download_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `download_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}

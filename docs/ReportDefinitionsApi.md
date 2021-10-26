@@ -28,7 +28,7 @@ api_instance = CyberSource.ReportDefinitionsApi()
 report_definition_name = 'report_definition_name_example' # str | Name of the Report definition to retrieve
 subscription_type = 'subscription_type_example' # str | The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD  (optional)
 report_mime_type = 'report_mime_type_example' # str | The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv  (optional)
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Get Report Definition
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
  **report_definition_name** | **str**| Name of the Report definition to retrieve | 
  **subscription_type** | **str**| The subscription type for which report definition is required. By default the type will be CUSTOM. Valid Values: - CLASSIC - CUSTOM - STANDARD  | [optional] 
  **report_mime_type** | **str**| The format for which the report definition is required. By default the value will be CSV. Valid Values: - application/xml - text/csv  | [optional] 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 
@@ -80,7 +80,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ReportDefinitionsApi()
 subscription_type = 'subscription_type_example' # str | Valid Values: - CLASSIC - CUSTOM - STANDARD  (optional)
-organization_id = 'organization_id_example' # str | Valid Cybersource Organization Id (optional)
+organization_id = 'organization_id_example' # str | Valid Organization Id (optional)
 
 try: 
     # Get Reporting Resource Information
@@ -95,7 +95,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_type** | **str**| Valid Values: - CLASSIC - CUSTOM - STANDARD  | [optional] 
- **organization_id** | **str**| Valid Cybersource Organization Id | [optional] 
+ **organization_id** | **str**| Valid Organization Id | [optional] 
 
 ### Return type
 

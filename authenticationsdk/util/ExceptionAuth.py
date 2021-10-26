@@ -1,8 +1,8 @@
 import sys
 
 
-def log_exception(logger, message, mconfig):
-    if mconfig.enable_log is True:
+def log_exception(logger, message, log_config):
+    if log_config.enable_log is True:
         print(message)
         print("Error: Check Log file for more details.")
         logger.exception(message)
@@ -10,9 +10,9 @@ def log_exception(logger, message, mconfig):
 
 
 
-def validate_merchant_details_log(logger, message, mconfig):
+def validate_merchant_details_log(logger, message, log_config):
 
-    if mconfig.enable_log is True:
+    if log_config.enable_log is True:
         print(message)
         print("Error: Check Log file for more details.")
         logger.error(message)
@@ -21,8 +21,8 @@ def validate_merchant_details_log(logger, message, mconfig):
 
 
 
-def validate_default_values(logger, message, mconfig):
-    if mconfig.enable_log is True:
+def validate_default_values(logger, message, log_config):
+    if log_config.enable_log is True:
         print(message)
         logger.warning(message)
 

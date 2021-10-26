@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class SymmetricKeyManagementApi(object):
@@ -39,7 +40,9 @@ class SymmetricKeyManagementApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def create_v2_shared_secret_keys(self, create_shared_secret_keys_request, **kwargs):
@@ -61,6 +64,10 @@ class SymmetricKeyManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_v2_shared_secret_keys` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_v2_shared_secret_keys_with_http_info(create_shared_secret_keys_request, **kwargs)
@@ -105,6 +112,8 @@ class SymmetricKeyManagementApi(object):
         del params['kwargs']
         # verify the required parameter 'create_shared_secret_keys_request' is set
         if ('create_shared_secret_keys_request' not in params) or (params['create_shared_secret_keys_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_shared_secret_keys_request` when calling `create_v2_shared_secret_keys`")
             raise ValueError("Missing the required parameter `create_shared_secret_keys_request` when calling `create_v2_shared_secret_keys`")
 
 
@@ -167,6 +176,10 @@ class SymmetricKeyManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `delete_bulk_symmetric_keys` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.delete_bulk_symmetric_keys_with_http_info(delete_bulk_symmetric_keys_request, **kwargs)
@@ -211,6 +224,8 @@ class SymmetricKeyManagementApi(object):
         del params['kwargs']
         # verify the required parameter 'delete_bulk_symmetric_keys_request' is set
         if ('delete_bulk_symmetric_keys_request' not in params) or (params['delete_bulk_symmetric_keys_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `delete_bulk_symmetric_keys_request` when calling `delete_bulk_symmetric_keys`")
             raise ValueError("Missing the required parameter `delete_bulk_symmetric_keys_request` when calling `delete_bulk_symmetric_keys`")
 
 
@@ -273,6 +288,10 @@ class SymmetricKeyManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_key_details` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_key_details_with_http_info(key_id, **kwargs)
@@ -317,6 +336,8 @@ class SymmetricKeyManagementApi(object):
         del params['kwargs']
         # verify the required parameter 'key_id' is set
         if ('key_id' not in params) or (params['key_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `get_key_details`")
             raise ValueError("Missing the required parameter `key_id` when calling `get_key_details`")
 
 
