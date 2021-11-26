@@ -33,13 +33,14 @@ except ImportError:
     raise ImportError('Swagger python client requires urllib3.')
 
 
+
 class RESTResponse(io.IOBase):
 
     def __init__(self, resp):
         self.urllib3_response = resp
         self.status = resp.status
         self.reason = resp.reason
-        self.data = resp.data        
+        self.data = resp.data
 
     def getheaders(self):
         """

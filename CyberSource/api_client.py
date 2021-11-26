@@ -207,7 +207,7 @@ class ApiClient(object):
 
             token = "Bearer " + token
             header_params['Authorization'] = str(token)
-                
+        
 
     #  Set the digest
     def set_digest(self, body):
