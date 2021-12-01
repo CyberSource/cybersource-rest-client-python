@@ -47,6 +47,7 @@ class PtsV2PaymentsPost201Response(object):
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
         'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
         'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
+        'buyer_information': 'PtsV2PaymentsPost201ResponseBuyerInformation',
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation'
     }
@@ -68,11 +69,12 @@ class PtsV2PaymentsPost201Response(object):
         'point_of_sale_information': 'pointOfSaleInformation',
         'installment_information': 'installmentInformation',
         'token_information': 'tokenInformation',
+        'buyer_information': 'buyerInformation',
         'risk_information': 'riskInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, risk_information=None, consumer_authentication_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -93,6 +95,7 @@ class PtsV2PaymentsPost201Response(object):
         self._point_of_sale_information = None
         self._installment_information = None
         self._token_information = None
+        self._buyer_information = None
         self._risk_information = None
         self._consumer_authentication_information = None
 
@@ -128,6 +131,8 @@ class PtsV2PaymentsPost201Response(object):
           self.installment_information = installment_information
         if token_information is not None:
           self.token_information = token_information
+        if buyer_information is not None:
+          self.buyer_information = buyer_information
         if risk_information is not None:
           self.risk_information = risk_information
         if consumer_authentication_information is not None:
@@ -476,6 +481,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._token_information = token_information
+
+    @property
+    def buyer_information(self):
+        """
+        Gets the buyer_information of this PtsV2PaymentsPost201Response.
+
+        :return: The buyer_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseBuyerInformation
+        """
+        return self._buyer_information
+
+    @buyer_information.setter
+    def buyer_information(self, buyer_information):
+        """
+        Sets the buyer_information of this PtsV2PaymentsPost201Response.
+
+        :param buyer_information: The buyer_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseBuyerInformation
+        """
+
+        self._buyer_information = buyer_information
 
     @property
     def risk_information(self):

@@ -39,11 +39,11 @@ class MerchantConfiguration:
         self.refresh_token = None
         self.response_code = None
         self.response_message = None
-        self.v_c_correlation_id = None        
+        self.v_c_correlation_id = None
         self.proxy_address = None
         self.proxy_port = None
         self.key_file_name = None
-        self.request_json_path_data = None        
+        self.request_json_path_data = None
         self.solution_id = None
         self.log_config = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
@@ -154,9 +154,9 @@ class MerchantConfiguration:
 
     def set_log_configuration(self, value):
         self.log_config = LogConfiguration()
+
         if not (value.get('log_config') is None):
             self.log_config = value['log_config']
-
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
@@ -198,7 +198,7 @@ class MerchantConfiguration:
         # verify Mandatory Properties
         self.logger = LogFactory.setup_logger(self.__class__.__name__, self.log_config)
         if self.log_config.enable_log is True:
-            self.logger.info("START> ======================================= ")       
+            self.logger.info("START> ======================================= ")
 
         if self.authentication_type is None or self.authentication_type == "":
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,

@@ -36,6 +36,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         'trusted_merchant_exemption_indicator': 'str',
         'secure_corporate_payment_indicator': 'str',
         'delegated_authentication_exemption_indicator': 'str',
+        'outage_exemption_indicator': 'str',
         'authentication_indicator': 'str'
     }
 
@@ -45,10 +46,11 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         'trusted_merchant_exemption_indicator': 'trustedMerchantExemptionIndicator',
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
         'delegated_authentication_exemption_indicator': 'delegatedAuthenticationExemptionIndicator',
+        'outage_exemption_indicator': 'outageExemptionIndicator',
         'authentication_indicator': 'authenticationIndicator'
     }
 
-    def __init__(self, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None, authentication_indicator=None):
+    def __init__(self, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None, outage_exemption_indicator=None, authentication_indicator=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         self._trusted_merchant_exemption_indicator = None
         self._secure_corporate_payment_indicator = None
         self._delegated_authentication_exemption_indicator = None
+        self._outage_exemption_indicator = None
         self._authentication_indicator = None
 
         if low_value_exemption_indicator is not None:
@@ -70,6 +73,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
           self.secure_corporate_payment_indicator = secure_corporate_payment_indicator
         if delegated_authentication_exemption_indicator is not None:
           self.delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
+        if outage_exemption_indicator is not None:
+          self.outage_exemption_indicator = outage_exemption_indicator
         if authentication_indicator is not None:
           self.authentication_indicator = authentication_indicator
 
@@ -187,6 +192,29 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         """
 
         self._delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
+
+    @property
+    def outage_exemption_indicator(self):
+        """
+        Gets the outage_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        This field will contain the outage exemption indicator with one of the following values: Possible values: - `0`  (Outage Authentication exemption does not apply to the transaction) - `1` (Outage exempt from SCA as authentication could not be done due to outage) 
+
+        :return: The outage_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :rtype: str
+        """
+        return self._outage_exemption_indicator
+
+    @outage_exemption_indicator.setter
+    def outage_exemption_indicator(self, outage_exemption_indicator):
+        """
+        Sets the outage_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        This field will contain the outage exemption indicator with one of the following values: Possible values: - `0`  (Outage Authentication exemption does not apply to the transaction) - `1` (Outage exempt from SCA as authentication could not be done due to outage) 
+
+        :param outage_exemption_indicator: The outage_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :type: str
+        """
+
+        self._outage_exemption_indicator = outage_exemption_indicator
 
     @property
     def authentication_indicator(self):

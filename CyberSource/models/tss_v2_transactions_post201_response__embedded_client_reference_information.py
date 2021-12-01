@@ -33,16 +33,18 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     swagger_types = {
         'code': 'str',
         'application_name': 'str',
-        'application_user': 'str'
+        'application_user': 'str',
+        'partner': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
         'application_name': 'applicationName',
-        'application_user': 'applicationUser'
+        'application_user': 'applicationUser',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, application_name=None, application_user=None):
+    def __init__(self, code=None, application_name=None, application_user=None, partner=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         self._code = None
         self._application_name = None
         self._application_user = None
+        self._partner = None
 
         if code is not None:
           self.code = code
@@ -57,6 +60,8 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
           self.application_name = application_name
         if application_user is not None:
           self.application_user = application_user
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
@@ -126,6 +131,27 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         """
 
         self._application_user = application_user
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+
+        :return: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+
+        :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+        :type: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

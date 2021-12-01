@@ -57,7 +57,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'master_card_authentication_type': 'str',
         'name': 'str',
         'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting',
-        'merchant_number': 'str'
+        'merchant_number': 'str',
+        'retrieval_reference_number': 'str'
     }
 
     attribute_map = {
@@ -87,10 +88,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'master_card_authentication_type': 'masterCardAuthenticationType',
         'name': 'name',
         'routing': 'routing',
-        'merchant_number': 'merchantNumber'
+        'merchant_number': 'merchantNumber',
+        'retrieval_reference_number': 'retrievalReferenceNumber'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -122,6 +124,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._name = None
         self._routing = None
         self._merchant_number = None
+        self._retrieval_reference_number = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -177,6 +180,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.routing = routing
         if merchant_number is not None:
           self.merchant_number = merchant_number
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
 
     @property
     def auth_indicator(self):
@@ -782,6 +787,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._merchant_number = merchant_number
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :return: The retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
 
     def to_dict(self):
         """

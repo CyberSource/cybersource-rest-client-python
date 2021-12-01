@@ -35,6 +35,7 @@ class Ptsv2payoutsSenderInformation(object):
         'account': 'Ptsv2payoutsSenderInformationAccount',
         'first_name': 'str',
         'middle_initial': 'str',
+        'middle_name': 'str',
         'last_name': 'str',
         'name': 'str',
         'address1': 'str',
@@ -52,6 +53,7 @@ class Ptsv2payoutsSenderInformation(object):
         'account': 'account',
         'first_name': 'firstName',
         'middle_initial': 'middleInitial',
+        'middle_name': 'middleName',
         'last_name': 'lastName',
         'name': 'name',
         'address1': 'address1',
@@ -64,7 +66,7 @@ class Ptsv2payoutsSenderInformation(object):
         'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None):
+    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None):
         """
         Ptsv2payoutsSenderInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2payoutsSenderInformation(object):
         self._account = None
         self._first_name = None
         self._middle_initial = None
+        self._middle_name = None
         self._last_name = None
         self._name = None
         self._address1 = None
@@ -92,6 +95,8 @@ class Ptsv2payoutsSenderInformation(object):
           self.first_name = first_name
         if middle_initial is not None:
           self.middle_initial = middle_initial
+        if middle_name is not None:
+          self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
         if name is not None:
@@ -202,6 +207,29 @@ class Ptsv2payoutsSenderInformation(object):
         """
 
         self._middle_initial = middle_initial
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2payoutsSenderInformation.
+        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :return: The middle_name of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2payoutsSenderInformation.
+        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :param middle_name: The middle_name of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def last_name(self):

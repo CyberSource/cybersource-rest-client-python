@@ -51,6 +51,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'eci_raw': 'str',
         'effective_authentication_type': 'str',
         'ivr': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr',
+        'strong_authentication': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication',
         'network_score': 'str',
         'pareq': 'str',
         'pares_status': 'str',
@@ -95,6 +96,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'eci_raw': 'eciRaw',
         'effective_authentication_type': 'effectiveAuthenticationType',
         'ivr': 'ivr',
+        'strong_authentication': 'strongAuthentication',
         'network_score': 'networkScore',
         'pareq': 'pareq',
         'pares_status': 'paresStatus',
@@ -118,7 +120,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, strong_authentication=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -143,6 +145,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         self._eci_raw = None
         self._effective_authentication_type = None
         self._ivr = None
+        self._strong_authentication = None
         self._network_score = None
         self._pareq = None
         self._pares_status = None
@@ -205,6 +208,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
           self.effective_authentication_type = effective_authentication_type
         if ivr is not None:
           self.ivr = ivr
+        if strong_authentication is not None:
+          self.strong_authentication = strong_authentication
         if network_score is not None:
           self.network_score = network_score
         if pareq is not None:
@@ -705,6 +710,27 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         """
 
         self._ivr = ivr
+
+    @property
+    def strong_authentication(self):
+        """
+        Gets the strong_authentication of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+
+        :return: The strong_authentication of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication
+        """
+        return self._strong_authentication
+
+    @strong_authentication.setter
+    def strong_authentication(self, strong_authentication):
+        """
+        Sets the strong_authentication of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+
+        :param strong_authentication: The strong_authentication of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication
+        """
+
+        self._strong_authentication = strong_authentication
 
     @property
     def network_score(self):

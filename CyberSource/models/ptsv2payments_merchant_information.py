@@ -32,6 +32,7 @@ class Ptsv2paymentsMerchantInformation(object):
     """
     swagger_types = {
         'merchant_descriptor': 'Ptsv2paymentsMerchantInformationMerchantDescriptor',
+        'domain_name': 'str',
         'sales_organization_id': 'str',
         'category_code': 'int',
         'category_code_domestic': 'int',
@@ -45,6 +46,7 @@ class Ptsv2paymentsMerchantInformation(object):
 
     attribute_map = {
         'merchant_descriptor': 'merchantDescriptor',
+        'domain_name': 'domainName',
         'sales_organization_id': 'salesOrganizationId',
         'category_code': 'categoryCode',
         'category_code_domestic': 'categoryCodeDomestic',
@@ -56,12 +58,13 @@ class Ptsv2paymentsMerchantInformation(object):
         'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, merchant_name=None):
+    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, merchant_name=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
 
         self._merchant_descriptor = None
+        self._domain_name = None
         self._sales_organization_id = None
         self._category_code = None
         self._category_code_domestic = None
@@ -74,6 +77,8 @@ class Ptsv2paymentsMerchantInformation(object):
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
+        if domain_name is not None:
+          self.domain_name = domain_name
         if sales_organization_id is not None:
           self.sales_organization_id = sales_organization_id
         if category_code is not None:
@@ -113,6 +118,29 @@ class Ptsv2paymentsMerchantInformation(object):
         """
 
         self._merchant_descriptor = merchant_descriptor
+
+    @property
+    def domain_name(self):
+        """
+        Gets the domain_name of this Ptsv2paymentsMerchantInformation.
+        This field will contain either the merchant url or the reverse domain as per the requirement for DSRP Format 3. This might vary transaction to transaction and might not be static. Merchant needs to have access to send this value for all DSRP program. 
+
+        :return: The domain_name of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._domain_name
+
+    @domain_name.setter
+    def domain_name(self, domain_name):
+        """
+        Sets the domain_name of this Ptsv2paymentsMerchantInformation.
+        This field will contain either the merchant url or the reverse domain as per the requirement for DSRP Format 3. This might vary transaction to transaction and might not be static. Merchant needs to have access to send this value for all DSRP program. 
+
+        :param domain_name: The domain_name of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._domain_name = domain_name
 
     @property
     def sales_organization_id(self):
