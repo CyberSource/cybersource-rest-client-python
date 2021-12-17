@@ -33,28 +33,33 @@ class Ptsv2paymentsRecipientInformation(object):
     swagger_types = {
         'account_id': 'str',
         'last_name': 'str',
+        'middle_name': 'str',
         'postal_code': 'str'
     }
 
     attribute_map = {
         'account_id': 'accountId',
         'last_name': 'lastName',
+        'middle_name': 'middleName',
         'postal_code': 'postalCode'
     }
 
-    def __init__(self, account_id=None, last_name=None, postal_code=None):
+    def __init__(self, account_id=None, last_name=None, middle_name=None, postal_code=None):
         """
         Ptsv2paymentsRecipientInformation - a model defined in Swagger
         """
 
         self._account_id = None
         self._last_name = None
+        self._middle_name = None
         self._postal_code = None
 
         if account_id is not None:
           self.account_id = account_id
         if last_name is not None:
           self.last_name = last_name
+        if middle_name is not None:
+          self.middle_name = middle_name
         if postal_code is not None:
           self.postal_code = postal_code
 
@@ -103,6 +108,29 @@ class Ptsv2paymentsRecipientInformation(object):
         """
 
         self._last_name = last_name
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2paymentsRecipientInformation.
+        Recipient’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_middlename` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The middle_name of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2paymentsRecipientInformation.
+        Recipient’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_middlename` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param middle_name: The middle_name of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def postal_code(self):

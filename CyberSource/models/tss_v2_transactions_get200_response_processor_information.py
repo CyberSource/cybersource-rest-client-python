@@ -35,6 +35,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'multi_processor_routing': 'list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
+        'retrieval_reference_number': 'str',
         'response_id': 'str',
         'approval_code': 'str',
         'response_code': 'str',
@@ -51,6 +52,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'multi_processor_routing': 'multiProcessorRouting',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
+        'retrieval_reference_number': 'retrievalReferenceNumber',
         'response_id': 'responseId',
         'approval_code': 'approvalCode',
         'response_code': 'responseCode',
@@ -62,7 +64,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'response_code_source': 'responseCodeSource'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._multi_processor_routing = None
         self._transaction_id = None
         self._network_transaction_id = None
+        self._retrieval_reference_number = None
         self._response_id = None
         self._approval_code = None
         self._response_code = None
@@ -89,6 +92,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
           self.network_transaction_id = network_transaction_id
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
         if response_id is not None:
           self.response_id = response_id
         if approval_code is not None:
@@ -197,6 +202,29 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._network_transaction_id = network_transaction_id
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :return: The retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
 
     @property
     def response_id(self):

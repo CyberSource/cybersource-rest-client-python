@@ -107,4 +107,25 @@ git checkout ..\README.md
 
 git checkout ..\setup.py
 
+git checkout ..\CyberSource\apis\o_auth_api.py
+git checkout ..\CyberSource\models\access_token_response.py
+git checkout ..\CyberSource\models\bad_request_error.py
+git checkout ..\CyberSource\models\create_access_token_request.py
+git checkout ..\CyberSource\models\resource_not_found_error.py
+git checkout ..\CyberSource\models\unauthorized_client_error.py
+
+git checkout ..\docs\OAuthApi.md
+git checkout ..\docs\AccessTokenResponse.md
+git checkout ..\docs\BadRequestError.md
+git checkout ..\docs\CreateAccessTokenRequest.md
+git checkout ..\docs\ResourceNotFoundError.md
+git checkout ..\docs\UnauthorizedClientError.md
+
+git checkout ..\test\test_o_auth_api.py
+git checkout ..\test\test_access_token_response.py
+git checkout ..\test\test_bad_request_error.py
+git checkout ..\test\test_create_access_token_request.py
+git checkout ..\test\test_resource_not_found_error.py
+git checkout ..\test\test_unauthorized_client_error.py
+
 pause

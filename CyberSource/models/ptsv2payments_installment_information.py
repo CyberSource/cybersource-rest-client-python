@@ -43,7 +43,9 @@ class Ptsv2paymentsInstallmentInformation(object):
         'eligibility_inquiry': 'str',
         'grace_period_duration': 'str',
         'grace_period_duration_type': 'str',
-        'first_installment_amount': 'str'
+        'first_installment_amount': 'str',
+        'validation_indicator': 'str',
+        'identifier': 'str'
     }
 
     attribute_map = {
@@ -59,10 +61,12 @@ class Ptsv2paymentsInstallmentInformation(object):
         'eligibility_inquiry': 'eligibilityInquiry',
         'grace_period_duration': 'gracePeriodDuration',
         'grace_period_duration_type': 'gracePeriodDurationType',
-        'first_installment_amount': 'firstInstallmentAmount'
+        'first_installment_amount': 'firstInstallmentAmount',
+        'validation_indicator': 'validationIndicator',
+        'identifier': 'identifier'
     }
 
-    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None):
+    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None, validation_indicator=None, identifier=None):
         """
         Ptsv2paymentsInstallmentInformation - a model defined in Swagger
         """
@@ -80,6 +84,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         self._grace_period_duration = None
         self._grace_period_duration_type = None
         self._first_installment_amount = None
+        self._validation_indicator = None
+        self._identifier = None
 
         if amount is not None:
           self.amount = amount
@@ -107,6 +113,10 @@ class Ptsv2paymentsInstallmentInformation(object):
           self.grace_period_duration_type = grace_period_duration_type
         if first_installment_amount is not None:
           self.first_installment_amount = first_installment_amount
+        if validation_indicator is not None:
+          self.validation_indicator = validation_indicator
+        if identifier is not None:
+          self.identifier = identifier
 
     @property
     def amount(self):
@@ -410,6 +420,52 @@ class Ptsv2paymentsInstallmentInformation(object):
         """
 
         self._first_installment_amount = first_installment_amount
+
+    @property
+    def validation_indicator(self):
+        """
+        Gets the validation_indicator of this Ptsv2paymentsInstallmentInformation.
+        Standing Instruction/Installment validation indicator. - '1': Prevalidated - '2': Not Validated 
+
+        :return: The validation_indicator of this Ptsv2paymentsInstallmentInformation.
+        :rtype: str
+        """
+        return self._validation_indicator
+
+    @validation_indicator.setter
+    def validation_indicator(self, validation_indicator):
+        """
+        Sets the validation_indicator of this Ptsv2paymentsInstallmentInformation.
+        Standing Instruction/Installment validation indicator. - '1': Prevalidated - '2': Not Validated 
+
+        :param validation_indicator: The validation_indicator of this Ptsv2paymentsInstallmentInformation.
+        :type: str
+        """
+
+        self._validation_indicator = validation_indicator
+
+    @property
+    def identifier(self):
+        """
+        Gets the identifier of this Ptsv2paymentsInstallmentInformation.
+        Standing Instruction/Installment identifier. 
+
+        :return: The identifier of this Ptsv2paymentsInstallmentInformation.
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """
+        Sets the identifier of this Ptsv2paymentsInstallmentInformation.
+        Standing Instruction/Installment identifier. 
+
+        :param identifier: The identifier of this Ptsv2paymentsInstallmentInformation.
+        :type: str
+        """
+
+        self._identifier = identifier
 
     def to_dict(self):
         """

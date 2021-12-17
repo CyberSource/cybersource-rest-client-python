@@ -35,7 +35,9 @@ class Ptsv2payoutsProcessingInformation(object):
         'network_routing_order': 'str',
         'commerce_indicator': 'str',
         'reconciliation_id': 'str',
-        'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions'
+        'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions',
+        'transaction_reason': 'str',
+        'purpose_of_payment': 'str'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class Ptsv2payoutsProcessingInformation(object):
         'network_routing_order': 'networkRoutingOrder',
         'commerce_indicator': 'commerceIndicator',
         'reconciliation_id': 'reconciliationId',
-        'payouts_options': 'payoutsOptions'
+        'payouts_options': 'payoutsOptions',
+        'transaction_reason': 'transactionReason',
+        'purpose_of_payment': 'purposeOfPayment'
     }
 
-    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None):
+    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None):
         """
         Ptsv2payoutsProcessingInformation - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class Ptsv2payoutsProcessingInformation(object):
         self._commerce_indicator = None
         self._reconciliation_id = None
         self._payouts_options = None
+        self._transaction_reason = None
+        self._purpose_of_payment = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -67,6 +73,10 @@ class Ptsv2payoutsProcessingInformation(object):
           self.reconciliation_id = reconciliation_id
         if payouts_options is not None:
           self.payouts_options = payouts_options
+        if transaction_reason is not None:
+          self.transaction_reason = transaction_reason
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
 
     @property
     def business_application_id(self):
@@ -180,6 +190,52 @@ class Ptsv2payoutsProcessingInformation(object):
         """
 
         self._payouts_options = payouts_options
+
+    @property
+    def transaction_reason(self):
+        """
+        Gets the transaction_reason of this Ptsv2payoutsProcessingInformation.
+        Transaction reason code. 
+
+        :return: The transaction_reason of this Ptsv2payoutsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_reason
+
+    @transaction_reason.setter
+    def transaction_reason(self, transaction_reason):
+        """
+        Sets the transaction_reason of this Ptsv2payoutsProcessingInformation.
+        Transaction reason code. 
+
+        :param transaction_reason: The transaction_reason of this Ptsv2payoutsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_reason = transaction_reason
+
+    @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :return: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :param purpose_of_payment: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
 
     def to_dict(self):
         """
