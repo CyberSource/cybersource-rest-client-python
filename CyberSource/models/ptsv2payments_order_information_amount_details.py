@@ -32,6 +32,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
+        'sub_total_amount': 'str',
         'currency': 'str',
         'discount_amount': 'str',
         'duty_amount': 'str',
@@ -60,6 +61,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
 
     attribute_map = {
         'total_amount': 'totalAmount',
+        'sub_total_amount': 'subTotalAmount',
         'currency': 'currency',
         'discount_amount': 'discountAmount',
         'duty_amount': 'dutyAmount',
@@ -86,12 +88,13 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'currency_conversion': 'currencyConversion'
     }
 
-    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None):
+    def __init__(self, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
+        self._sub_total_amount = None
         self._currency = None
         self._discount_amount = None
         self._duty_amount = None
@@ -119,6 +122,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
 
         if total_amount is not None:
           self.total_amount = total_amount
+        if sub_total_amount is not None:
+          self.sub_total_amount = sub_total_amount
         if currency is not None:
           self.currency = currency
         if discount_amount is not None:
@@ -190,6 +195,29 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         """
 
         self._total_amount = total_amount
+
+    @property
+    def sub_total_amount(self):
+        """
+        Gets the sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Subtotal amount of all the items.This amount (which is the value of all items in the cart, not including the additional amounts such as tax, shipping, etc.) cannot change after a sessions request. When there is a change to any of the additional amounts, this field should be resent in the order request. When the sub total amount changes, you must initiate a new transaction starting with a sessions request. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. This value can not be changed after a sessions request. 
+
+        :return: The sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._sub_total_amount
+
+    @sub_total_amount.setter
+    def sub_total_amount(self, sub_total_amount):
+        """
+        Sets the sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Subtotal amount of all the items.This amount (which is the value of all items in the cart, not including the additional amounts such as tax, shipping, etc.) cannot change after a sessions request. When there is a change to any of the additional amounts, this field should be resent in the order request. When the sub total amount changes, you must initiate a new transaction starting with a sessions request. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. This value can not be changed after a sessions request. 
+
+        :param sub_total_amount: The sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._sub_total_amount = sub_total_amount
 
     @property
     def currency(self):

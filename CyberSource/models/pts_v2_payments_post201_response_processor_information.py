@@ -58,7 +58,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'name': 'str',
         'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting',
         'merchant_number': 'str',
-        'retrieval_reference_number': 'str'
+        'retrieval_reference_number': 'str',
+        'payment_url': 'str',
+        'complete_url': 'str'
     }
 
     attribute_map = {
@@ -89,10 +91,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'name': 'name',
         'routing': 'routing',
         'merchant_number': 'merchantNumber',
-        'retrieval_reference_number': 'retrievalReferenceNumber'
+        'retrieval_reference_number': 'retrievalReferenceNumber',
+        'payment_url': 'paymentUrl',
+        'complete_url': 'completeUrl'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -125,6 +129,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._routing = None
         self._merchant_number = None
         self._retrieval_reference_number = None
+        self._payment_url = None
+        self._complete_url = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -182,6 +188,10 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.merchant_number = merchant_number
         if retrieval_reference_number is not None:
           self.retrieval_reference_number = retrieval_reference_number
+        if payment_url is not None:
+          self.payment_url = payment_url
+        if complete_url is not None:
+          self.complete_url = complete_url
 
     @property
     def auth_indicator(self):
@@ -810,6 +820,52 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._retrieval_reference_number = retrieval_reference_number
+
+    @property
+    def payment_url(self):
+        """
+        Gets the payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :return: The payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._payment_url
+
+    @payment_url.setter
+    def payment_url(self, payment_url):
+        """
+        Sets the payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :param payment_url: The payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._payment_url = payment_url
+
+    @property
+    def complete_url(self):
+        """
+        Gets the complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The redirect URL for forwarding the consumer to complete page.  This redirect needed by PSP to track browser information of consumer. PSP then redirect consumer to merchant success URL. 
+
+        :return: The complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._complete_url
+
+    @complete_url.setter
+    def complete_url(self, complete_url):
+        """
+        Sets the complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The redirect URL for forwarding the consumer to complete page.  This redirect needed by PSP to track browser information of consumer. PSP then redirect consumer to merchant success URL. 
+
+        :param complete_url: The complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._complete_url = complete_url
 
     def to_dict(self):
         """

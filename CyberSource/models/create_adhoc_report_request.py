@@ -39,7 +39,7 @@ class CreateAdhocReportRequest(object):
         'timezone': 'str',
         'report_start_time': 'datetime',
         'report_end_time': 'datetime',
-        'report_filters': 'dict(str, list[str])',
+        'report_filters': 'Reportingv3reportsReportFilters',
         'report_preferences': 'Reportingv3reportsReportPreferences',
         'group_name': 'str'
     }
@@ -290,10 +290,9 @@ class CreateAdhocReportRequest(object):
     def report_filters(self):
         """
         Gets the report_filters of this CreateAdhocReportRequest.
-        List of filters to apply
 
         :return: The report_filters of this CreateAdhocReportRequest.
-        :rtype: dict(str, list[str])
+        :rtype: Reportingv3reportsReportFilters
         """
         return self._report_filters
 
@@ -301,10 +300,9 @@ class CreateAdhocReportRequest(object):
     def report_filters(self, report_filters):
         """
         Sets the report_filters of this CreateAdhocReportRequest.
-        List of filters to apply
 
         :param report_filters: The report_filters of this CreateAdhocReportRequest.
-        :type: dict(str, list[str])
+        :type: Reportingv3reportsReportFilters
         """
 
         self._report_filters = report_filters

@@ -32,26 +32,31 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
-        'currency': 'str'
+        'currency': 'str',
+        'processor_transaction_fee': 'str'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
-        'currency': 'currency'
+        'currency': 'currency',
+        'processor_transaction_fee': 'processorTransactionFee'
     }
 
-    def __init__(self, total_amount=None, currency=None):
+    def __init__(self, total_amount=None, currency=None, processor_transaction_fee=None):
         """
         PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
         self._currency = None
+        self._processor_transaction_fee = None
 
         if total_amount is not None:
           self.total_amount = total_amount
         if currency is not None:
           self.currency = currency
+        if processor_transaction_fee is not None:
+          self.processor_transaction_fee = processor_transaction_fee
 
     @property
     def total_amount(self):
@@ -98,6 +103,29 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
         """
 
         self._currency = currency
+
+    @property
+    def processor_transaction_fee(self):
+        """
+        Gets the processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        The fee decided by the PSP/Processor per transaction.
+
+        :return: The processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._processor_transaction_fee
+
+    @processor_transaction_fee.setter
+    def processor_transaction_fee(self, processor_transaction_fee):
+        """
+        Sets the processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        The fee decided by the PSP/Processor per transaction.
+
+        :param processor_transaction_fee: The processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._processor_transaction_fee = processor_transaction_fee
 
     def to_dict(self):
         """

@@ -41,7 +41,8 @@ class Ptsv2paymentsPaymentInformation(object):
         'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
-        'initiation_channel': 'str'
+        'initiation_channel': 'str',
+        'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'legacy_token': 'legacyToken',
         'bank': 'bank',
         'payment_type': 'paymentType',
-        'initiation_channel': 'initiationChannel'
+        'initiation_channel': 'initiationChannel',
+        'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None):
+    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None, e_wallet=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._bank = None
         self._payment_type = None
         self._initiation_channel = None
+        self._e_wallet = None
 
         if card is not None:
           self.card = card
@@ -97,6 +100,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.payment_type = payment_type
         if initiation_channel is not None:
           self.initiation_channel = initiation_channel
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
 
     @property
     def card(self):
@@ -330,6 +335,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._initiation_channel = initiation_channel
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this Ptsv2paymentsPaymentInformation.
+
+        :return: The e_wallet of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this Ptsv2paymentsPaymentInformation.
+
+        :param e_wallet: The e_wallet of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     def to_dict(self):
         """

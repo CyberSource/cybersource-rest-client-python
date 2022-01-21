@@ -5,9 +5,15 @@
 from __future__ import absolute_import
 
 # import models into sdk package
+from .models.access_token_response import AccessTokenResponse
+from .models.bad_request_error import BadRequestError
+from .models.create_access_token_request import CreateAccessTokenRequest
+from .models.resource_not_found_error import ResourceNotFoundError
+from .models.unauthorized_client_error import UnauthorizedClientError
 {{#models}}{{#model}}from .models.{{classFilename}} import {{classname}}
 {{/model}}{{/models}}
 # import apis into sdk package
+from .apis.o_auth_api import OAuthApi
 {{#apiInfo}}{{#apis}}from .apis.{{classVarName}} import {{classname}}
 {{/apis}}{{/apiInfo}}
 

@@ -36,7 +36,8 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'tax_amount': 'str',
         'authorized_amount': 'str',
         'settlement_amount': 'str',
-        'settlement_currency': 'str'
+        'settlement_currency': 'str',
+        'surcharge': 'Ptsv2paymentsOrderInformationAmountDetailsSurcharge'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'tax_amount': 'taxAmount',
         'authorized_amount': 'authorizedAmount',
         'settlement_amount': 'settlementAmount',
-        'settlement_currency': 'settlementCurrency'
+        'settlement_currency': 'settlementCurrency',
+        'surcharge': 'surcharge'
     }
 
-    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None):
+    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None, surcharge=None):
         """
         TssV2TransactionsGet200ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         self._authorized_amount = None
         self._settlement_amount = None
         self._settlement_currency = None
+        self._surcharge = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -72,6 +75,8 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
           self.settlement_amount = settlement_amount
         if settlement_currency is not None:
           self.settlement_currency = settlement_currency
+        if surcharge is not None:
+          self.surcharge = surcharge
 
     @property
     def total_amount(self):
@@ -210,6 +215,27 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         """
 
         self._settlement_currency = settlement_currency
+
+    @property
+    def surcharge(self):
+        """
+        Gets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+
+        :return: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :rtype: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        """
+        return self._surcharge
+
+    @surcharge.setter
+    def surcharge(self, surcharge):
+        """
+        Sets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+
+        :param surcharge: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :type: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        """
+
+        self._surcharge = surcharge
 
     def to_dict(self):
         """
