@@ -36,6 +36,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent': 'str',
         'fingerprint_session_id': 'str',
         'use_raw_fingerprint_session_id': 'bool',
+        'device_type': 'str',
         'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
         'http_accept_browser_value': 'str',
         'http_accept_content': 'str',
@@ -56,6 +57,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent': 'userAgent',
         'fingerprint_session_id': 'fingerprintSessionId',
         'use_raw_fingerprint_session_id': 'useRawFingerprintSessionId',
+        'device_type': 'deviceType',
         'raw_data': 'rawData',
         'http_accept_browser_value': 'httpAcceptBrowserValue',
         'http_accept_content': 'httpAcceptContent',
@@ -70,7 +72,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent_browser_value': 'userAgentBrowserValue'
     }
 
-    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
+    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, device_type=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
         """
         Ptsv2paymentsDeviceInformation - a model defined in Swagger
         """
@@ -80,6 +82,7 @@ class Ptsv2paymentsDeviceInformation(object):
         self._user_agent = None
         self._fingerprint_session_id = None
         self._use_raw_fingerprint_session_id = None
+        self._device_type = None
         self._raw_data = None
         self._http_accept_browser_value = None
         self._http_accept_content = None
@@ -103,6 +106,8 @@ class Ptsv2paymentsDeviceInformation(object):
           self.fingerprint_session_id = fingerprint_session_id
         if use_raw_fingerprint_session_id is not None:
           self.use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
+        if device_type is not None:
+          self.device_type = device_type
         if raw_data is not None:
           self.raw_data = raw_data
         if http_accept_browser_value is not None:
@@ -242,6 +247,29 @@ class Ptsv2paymentsDeviceInformation(object):
         """
 
         self._use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
+
+    @property
+    def device_type(self):
+        """
+        Gets the device_type of this Ptsv2paymentsDeviceInformation.
+        The device type at the client side.
+
+        :return: The device_type of this Ptsv2paymentsDeviceInformation.
+        :rtype: str
+        """
+        return self._device_type
+
+    @device_type.setter
+    def device_type(self, device_type):
+        """
+        Sets the device_type of this Ptsv2paymentsDeviceInformation.
+        The device type at the client side.
+
+        :param device_type: The device_type of this Ptsv2paymentsDeviceInformation.
+        :type: str
+        """
+
+        self._device_type = device_type
 
     @property
     def raw_data(self):

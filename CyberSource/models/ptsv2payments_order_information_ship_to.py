@@ -31,7 +31,9 @@ class Ptsv2paymentsOrderInformationShipTo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'title': 'str',
         'first_name': 'str',
+        'middle_name': 'str',
         'last_name': 'str',
         'address1': 'str',
         'address2': 'str',
@@ -49,7 +51,9 @@ class Ptsv2paymentsOrderInformationShipTo(object):
     }
 
     attribute_map = {
+        'title': 'title',
         'first_name': 'firstName',
+        'middle_name': 'middleName',
         'last_name': 'lastName',
         'address1': 'address1',
         'address2': 'address2',
@@ -66,12 +70,14 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'method': 'method'
     }
 
-    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, phone_number=None, company=None, destination_types=None, destination_code=None, method=None):
+    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, phone_number=None, company=None, destination_types=None, destination_code=None, method=None):
         """
         Ptsv2paymentsOrderInformationShipTo - a model defined in Swagger
         """
 
+        self._title = None
         self._first_name = None
+        self._middle_name = None
         self._last_name = None
         self._address1 = None
         self._address2 = None
@@ -87,8 +93,12 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         self._destination_code = None
         self._method = None
 
+        if title is not None:
+          self.title = title
         if first_name is not None:
           self.first_name = first_name
+        if middle_name is not None:
+          self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
         if address1 is not None:
@@ -119,6 +129,29 @@ class Ptsv2paymentsOrderInformationShipTo(object):
           self.method = method
 
     @property
+    def title(self):
+        """
+        Gets the title of this Ptsv2paymentsOrderInformationShipTo.
+        The title of the person receiving the product.
+
+        :return: The title of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """
+        Sets the title of this Ptsv2paymentsOrderInformationShipTo.
+        The title of the person receiving the product.
+
+        :param title: The title of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._title = title
+
+    @property
     def first_name(self):
         """
         Gets the first_name of this Ptsv2paymentsOrderInformationShipTo.
@@ -140,6 +173,29 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         """
 
         self._first_name = first_name
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2paymentsOrderInformationShipTo.
+        Middle name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
+
+        :return: The middle_name of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2paymentsOrderInformationShipTo.
+        Middle name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
+
+        :param middle_name: The middle_name of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def last_name(self):

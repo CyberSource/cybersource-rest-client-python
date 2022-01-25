@@ -31,6 +31,7 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'transaction_type': 'str',
         'type': 'str',
         'expiration_month': 'str',
         'expiration_year': 'str',
@@ -38,22 +39,26 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
     }
 
     attribute_map = {
+        'transaction_type': 'transactionType',
         'type': 'type',
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
         'number': 'number'
     }
 
-    def __init__(self, type=None, expiration_month=None, expiration_year=None, number=None):
+    def __init__(self, transaction_type=None, type=None, expiration_month=None, expiration_year=None, number=None):
         """
         Riskv1authenticationresultsPaymentInformationTokenizedCard - a model defined in Swagger
         """
 
+        self._transaction_type = None
         self._type = None
         self._expiration_month = None
         self._expiration_year = None
         self._number = None
 
+        if transaction_type is not None:
+          self.transaction_type = transaction_type
         if type is not None:
           self.type = type
         if expiration_month is not None:
@@ -62,6 +67,29 @@ class Riskv1authenticationresultsPaymentInformationTokenizedCard(object):
           self.expiration_year = expiration_year
         if number is not None:
           self.number = number
+
+    @property
+    def transaction_type(self):
+        """
+        Gets the transaction_type of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+
+        :return: The transaction_type of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._transaction_type
+
+    @transaction_type.setter
+    def transaction_type(self, transaction_type):
+        """
+        Sets the transaction_type of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+
+        :param transaction_type: The transaction_type of this Riskv1authenticationresultsPaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._transaction_type = transaction_type
 
     @property
     def type(self):

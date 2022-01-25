@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **timezone** | **str** | Timezone of the report | [optional] 
 **report_start_time** | **datetime** | Start time of the report | [optional] 
 **report_end_time** | **datetime** | End time of the report | [optional] 
-**report_filters** | **dict(str, list[str])** | List of filters to apply | [optional] 
+**report_filters** | [**Reportingv3reportsReportFilters**](Reportingv3reportsReportFilters.md) |  | [optional] 
 **report_preferences** | [**Reportingv3reportsReportPreferences**](Reportingv3reportsReportPreferences.md) |  | [optional] 
 **group_name** | **str** | Specifies the group name | [optional] 
 

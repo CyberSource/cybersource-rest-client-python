@@ -32,7 +32,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Ptsv2paymentsidrefundsPaymentInformationCard',
-        'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'bank': 'Ptsv2paymentsidrefundsPaymentInformationBank',
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
@@ -40,7 +40,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'instrument_identifier': 'Ptsv2paymentsPaymentInformationInstrumentIdentifier',
         'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
         'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
-        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
+        'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'instrument_identifier': 'instrumentIdentifier',
         'shipping_address': 'shippingAddress',
         'legacy_token': 'legacyToken',
-        'payment_type': 'paymentType'
+        'payment_type': 'paymentType',
+        'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None):
+    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None, e_wallet=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         self._shipping_address = None
         self._legacy_token = None
         self._payment_type = None
+        self._e_wallet = None
 
         if card is not None:
           self.card = card
@@ -92,6 +95,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.legacy_token = legacy_token
         if payment_type is not None:
           self.payment_type = payment_type
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
 
     @property
     def card(self):
@@ -120,7 +125,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         Gets the bank of this Ptsv2paymentsidrefundsPaymentInformation.
 
         :return: The bank of this Ptsv2paymentsidrefundsPaymentInformation.
-        :rtype: Ptsv2paymentsPaymentInformationBank
+        :rtype: Ptsv2paymentsidrefundsPaymentInformationBank
         """
         return self._bank
 
@@ -130,7 +135,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         Sets the bank of this Ptsv2paymentsidrefundsPaymentInformation.
 
         :param bank: The bank of this Ptsv2paymentsidrefundsPaymentInformation.
-        :type: Ptsv2paymentsPaymentInformationBank
+        :type: Ptsv2paymentsidrefundsPaymentInformationBank
         """
 
         self._bank = bank
@@ -302,6 +307,27 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The e_wallet of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param e_wallet: The e_wallet of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     def to_dict(self):
         """

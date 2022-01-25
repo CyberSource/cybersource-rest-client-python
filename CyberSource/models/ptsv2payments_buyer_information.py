@@ -37,6 +37,8 @@ class Ptsv2paymentsBuyerInformation(object):
         'company_tax_id': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
         'hashed_password': 'str',
+        'gender': 'str',
+        'language': 'str',
         'mobile_phone': 'int'
     }
 
@@ -47,10 +49,12 @@ class Ptsv2paymentsBuyerInformation(object):
         'company_tax_id': 'companyTaxId',
         'personal_identification': 'personalIdentification',
         'hashed_password': 'hashedPassword',
+        'gender': 'gender',
+        'language': 'language',
         'mobile_phone': 'mobilePhone'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, mobile_phone=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, mobile_phone=None):
         """
         Ptsv2paymentsBuyerInformation - a model defined in Swagger
         """
@@ -61,6 +65,8 @@ class Ptsv2paymentsBuyerInformation(object):
         self._company_tax_id = None
         self._personal_identification = None
         self._hashed_password = None
+        self._gender = None
+        self._language = None
         self._mobile_phone = None
 
         if merchant_customer_id is not None:
@@ -75,6 +81,10 @@ class Ptsv2paymentsBuyerInformation(object):
           self.personal_identification = personal_identification
         if hashed_password is not None:
           self.hashed_password = hashed_password
+        if gender is not None:
+          self.gender = gender
+        if language is not None:
+          self.language = language
         if mobile_phone is not None:
           self.mobile_phone = mobile_phone
 
@@ -213,6 +223,52 @@ class Ptsv2paymentsBuyerInformation(object):
         """
 
         self._hashed_password = hashed_password
+
+    @property
+    def gender(self):
+        """
+        Gets the gender of this Ptsv2paymentsBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :return: The gender of this Ptsv2paymentsBuyerInformation.
+        :rtype: str
+        """
+        return self._gender
+
+    @gender.setter
+    def gender(self, gender):
+        """
+        Sets the gender of this Ptsv2paymentsBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :param gender: The gender of this Ptsv2paymentsBuyerInformation.
+        :type: str
+        """
+
+        self._gender = gender
+
+    @property
+    def language(self):
+        """
+        Gets the language of this Ptsv2paymentsBuyerInformation.
+        language setting of the user
+
+        :return: The language of this Ptsv2paymentsBuyerInformation.
+        :rtype: str
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """
+        Sets the language of this Ptsv2paymentsBuyerInformation.
+        language setting of the user
+
+        :param language: The language of this Ptsv2paymentsBuyerInformation.
+        :type: str
+        """
+
+        self._language = language
 
     @property
     def mobile_phone(self):
