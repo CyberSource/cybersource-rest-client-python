@@ -72,7 +72,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def first_name(self):
         """
         Gets the first_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        First name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
 
         :return: The first_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -83,13 +83,11 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First name of the recipient.  **Processor specific maximum length**  - Litle: 25 - All other processors: 60 
+        First name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
 
         :param first_name: The first_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
         """
-        if first_name is not None and len(first_name) > 60:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `60`")
 
         self._first_name = first_name
 
@@ -97,7 +95,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def last_name(self):
         """
         Gets the last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
 
         :return: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -108,13 +106,11 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Last name of the recipient.  **Processor-specific maximum length**  - Litle: 25 - All other processors: 60 
+        Last name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
 
         :param last_name: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
         """
-        if last_name is not None and len(last_name) > 60:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `60`")
 
         self._last_name = last_name
 
@@ -122,7 +118,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def address1(self):
         """
         Gets the address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First line of the shipping address.
+        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :return: The address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -133,13 +129,11 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def address1(self, address1):
         """
         Sets the address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First line of the shipping address.
+        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :param address1: The address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
         """
-        if address1 is not None and len(address1) > 60:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `60`")
 
         self._address1 = address1
 
@@ -147,7 +141,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two-character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :return: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -158,13 +152,11 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two-character ISO Standard Country Codes.
+        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :param country: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -188,8 +180,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
         :param phone_number: The phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 15:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `15`")
 
         self._phone_number = phone_number
 

@@ -33,16 +33,18 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     swagger_types = {
         'original_transaction_id': 'str',
         'developer_id': 'str',
-        'solution_id': 'str'
+        'solution_id': 'str',
+        'third_party_certification_number': 'str'
     }
 
     attribute_map = {
         'original_transaction_id': 'originalTransactionId',
         'developer_id': 'developerId',
-        'solution_id': 'solutionId'
+        'solution_id': 'solutionId',
+        'third_party_certification_number': 'thirdPartyCertificationNumber'
     }
 
-    def __init__(self, original_transaction_id=None, developer_id=None, solution_id=None):
+    def __init__(self, original_transaction_id=None, developer_id=None, solution_id=None, third_party_certification_number=None):
         """
         Ptsv2paymentsClientReferenceInformationPartner - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         self._original_transaction_id = None
         self._developer_id = None
         self._solution_id = None
+        self._third_party_certification_number = None
 
         if original_transaction_id is not None:
           self.original_transaction_id = original_transaction_id
@@ -57,12 +60,14 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
           self.developer_id = developer_id
         if solution_id is not None:
           self.solution_id = solution_id
+        if third_party_certification_number is not None:
+          self.third_party_certification_number = third_party_certification_number
 
     @property
     def original_transaction_id(self):
         """
         Gets the original_transaction_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Value that links the previous transaction to the current follow-on request. This value is assigned by the client software that is installed on the POS terminal, which makes it available to the terminal’s software and to CyberSource. Therefore, you can use this value to reconcile transactions between CyberSource and the terminal’s software.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+        Value that links the previous transaction to the current follow-on request. This value is assigned by the client software that is installed on the POS terminal, which makes it available to the terminal’s software and to CyberSource. Therefore, you can use this value to reconcile transactions between CyberSource and the terminal’s software.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. 
 
         :return: The original_transaction_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :rtype: str
@@ -73,13 +78,11 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def original_transaction_id(self, original_transaction_id):
         """
         Sets the original_transaction_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Value that links the previous transaction to the current follow-on request. This value is assigned by the client software that is installed on the POS terminal, which makes it available to the terminal’s software and to CyberSource. Therefore, you can use this value to reconcile transactions between CyberSource and the terminal’s software.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on American Express Direct, FDC Nashville Global, and SIX. 
+        Value that links the previous transaction to the current follow-on request. This value is assigned by the client software that is installed on the POS terminal, which makes it available to the terminal’s software and to CyberSource. Therefore, you can use this value to reconcile transactions between CyberSource and the terminal’s software.  CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. 
 
         :param original_transaction_id: The original_transaction_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if original_transaction_id is not None and len(original_transaction_id) > 32:
-            raise ValueError("Invalid value for `original_transaction_id`, length must be less than or equal to `32`")
 
         self._original_transaction_id = original_transaction_id
 
@@ -103,8 +106,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param developer_id: The developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if developer_id is not None and len(developer_id) > 8:
-            raise ValueError("Invalid value for `developer_id`, length must be less than or equal to `8`")
 
         self._developer_id = developer_id
 
@@ -112,7 +113,7 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def solution_id(self):
         """
         Gets the solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
+        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a solutionId of 999 in reports, the solutionId that was submitted is incorrect. 
 
         :return: The solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :rtype: str
@@ -123,15 +124,36 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
     def solution_id(self, solution_id):
         """
         Sets the solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
-        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a partner ID of 999 in reports, the partner ID that was submitted is incorrect. 
+        Identifier for the partner that is integrated to CyberSource.  Send this value in all requests that are sent through the partner solution. CyberSource assigns the ID to the partner.  **Note** When you see a solutionId of 999 in reports, the solutionId that was submitted is incorrect. 
 
         :param solution_id: The solution_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-        if solution_id is not None and len(solution_id) > 8:
-            raise ValueError("Invalid value for `solution_id`, length must be less than or equal to `8`")
 
         self._solution_id = solution_id
+
+    @property
+    def third_party_certification_number(self):
+        """
+        Gets the third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field.  #### PIN debit Required field for PIN debit credit, PIN debit purchase, or PIN debit reversal request. 
+
+        :return: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        :rtype: str
+        """
+        return self._third_party_certification_number
+
+    @third_party_certification_number.setter
+    def third_party_certification_number(self, third_party_certification_number):
+        """
+        Sets the third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field.  #### PIN debit Required field for PIN debit credit, PIN debit purchase, or PIN debit reversal request. 
+
+        :param third_party_certification_number: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
+        :type: str
+        """
+
+        self._third_party_certification_number = third_party_certification_number
 
     def to_dict(self):
         """

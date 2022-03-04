@@ -31,22 +31,27 @@ class PtsV2CreditsPost201ResponseProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bank_transfer_options': 'PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions'
+        'bank_transfer_options': 'PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions',
+        'enhanced_data_enabled': 'bool'
     }
 
     attribute_map = {
-        'bank_transfer_options': 'bankTransferOptions'
+        'bank_transfer_options': 'bankTransferOptions',
+        'enhanced_data_enabled': 'enhancedDataEnabled'
     }
 
-    def __init__(self, bank_transfer_options=None):
+    def __init__(self, bank_transfer_options=None, enhanced_data_enabled=None):
         """
         PtsV2CreditsPost201ResponseProcessingInformation - a model defined in Swagger
         """
 
         self._bank_transfer_options = None
+        self._enhanced_data_enabled = None
 
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
+        if enhanced_data_enabled is not None:
+          self.enhanced_data_enabled = enhanced_data_enabled
 
     @property
     def bank_transfer_options(self):
@@ -68,6 +73,29 @@ class PtsV2CreditsPost201ResponseProcessingInformation(object):
         """
 
         self._bank_transfer_options = bank_transfer_options
+
+    @property
+    def enhanced_data_enabled(self):
+        """
+        Gets the enhanced_data_enabled of this PtsV2CreditsPost201ResponseProcessingInformation.
+        The possible values for the reply field are: - `true` : the airline data was included in the request to the processor. - `false` : the airline data was not included in the request to the processor.  Returned by authorization, capture, or credit services. 
+
+        :return: The enhanced_data_enabled of this PtsV2CreditsPost201ResponseProcessingInformation.
+        :rtype: bool
+        """
+        return self._enhanced_data_enabled
+
+    @enhanced_data_enabled.setter
+    def enhanced_data_enabled(self, enhanced_data_enabled):
+        """
+        Sets the enhanced_data_enabled of this PtsV2CreditsPost201ResponseProcessingInformation.
+        The possible values for the reply field are: - `true` : the airline data was included in the request to the processor. - `false` : the airline data was not included in the request to the processor.  Returned by authorization, capture, or credit services. 
+
+        :param enhanced_data_enabled: The enhanced_data_enabled of this PtsV2CreditsPost201ResponseProcessingInformation.
+        :type: bool
+        """
+
+        self._enhanced_data_enabled = enhanced_data_enabled
 
     def to_dict(self):
         """

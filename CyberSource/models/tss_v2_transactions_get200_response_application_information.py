@@ -118,7 +118,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_code(self):
         """
         Gets the r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :return: The r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :rtype: str
@@ -129,7 +129,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_code(self, r_code):
         """
         Sets the r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
-        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful.  For details, see `auth_rcode` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Indicates whether the service request was successful. Possible values:  - `-1`: An error occurred. - `0`: The request was declined. - `1`: The request was successful. 
 
         :param r_code: The r_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str
@@ -141,7 +141,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_flag(self):
         """
         Gets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
-        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        One-word description of the result of the application. 
 
         :return: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
         :rtype: str
@@ -152,7 +152,7 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
     def r_flag(self, r_flag):
         """
         Sets the r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
-        One-word description of the result of the application.  For details, see `auth_rflag` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        One-word description of the result of the application. 
 
         :param r_flag: The r_flag of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str

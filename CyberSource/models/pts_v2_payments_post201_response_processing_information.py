@@ -31,22 +31,32 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bank_transfer_options': 'PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions'
+        'bank_transfer_options': 'PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions',
+        'payment_solution': 'str',
+        'enhanced_data_enabled': 'bool'
     }
 
     attribute_map = {
-        'bank_transfer_options': 'bankTransferOptions'
+        'bank_transfer_options': 'bankTransferOptions',
+        'payment_solution': 'paymentSolution',
+        'enhanced_data_enabled': 'enhancedDataEnabled'
     }
 
-    def __init__(self, bank_transfer_options=None):
+    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None):
         """
         PtsV2PaymentsPost201ResponseProcessingInformation - a model defined in Swagger
         """
 
         self._bank_transfer_options = None
+        self._payment_solution = None
+        self._enhanced_data_enabled = None
 
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
+        if payment_solution is not None:
+          self.payment_solution = payment_solution
+        if enhanced_data_enabled is not None:
+          self.enhanced_data_enabled = enhanced_data_enabled
 
     @property
     def bank_transfer_options(self):
@@ -68,6 +78,52 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         """
 
         self._bank_transfer_options = bank_transfer_options
+
+    @property
+    def payment_solution(self):
+        """
+        Gets the payment_solution of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
+
+        :return: The payment_solution of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_solution
+
+    @payment_solution.setter
+    def payment_solution(self, payment_solution):
+        """
+        Sets the payment_solution of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
+
+        :param payment_solution: The payment_solution of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._payment_solution = payment_solution
+
+    @property
+    def enhanced_data_enabled(self):
+        """
+        Gets the enhanced_data_enabled of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        The possible values for the reply field are: - `true` : the airline data was included in the request to the processor. - `false` : the airline data was not included in the request to the processor.  Returned by authorization, capture, or credit services. 
+
+        :return: The enhanced_data_enabled of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: bool
+        """
+        return self._enhanced_data_enabled
+
+    @enhanced_data_enabled.setter
+    def enhanced_data_enabled(self, enhanced_data_enabled):
+        """
+        Sets the enhanced_data_enabled of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        The possible values for the reply field are: - `true` : the airline data was included in the request to the processor. - `false` : the airline data was not included in the request to the processor.  Returned by authorization, capture, or credit services. 
+
+        :param enhanced_data_enabled: The enhanced_data_enabled of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: bool
+        """
+
+        self._enhanced_data_enabled = enhanced_data_enabled
 
     def to_dict(self):
         """

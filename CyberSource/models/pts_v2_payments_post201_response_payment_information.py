@@ -31,20 +31,38 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'PtsV2PaymentsPost201ResponsePaymentInformationCard',
+        'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
         'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
         'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
-        'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank'
+        'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank',
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier',
+        'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
+        'scheme': 'str',
+        'bin': 'str',
+        'account_type': 'str',
+        'issuer': 'str',
+        'bin_country': 'str'
     }
 
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
         'account_features': 'accountFeatures',
-        'bank': 'bank'
+        'bank': 'bank',
+        'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'shipping_address': 'shippingAddress',
+        'scheme': 'scheme',
+        'bin': 'bin',
+        'account_type': 'accountType',
+        'issuer': 'issuer',
+        'bin_country': 'binCountry'
     }
 
-    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None):
+    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, scheme=None, bin=None, account_type=None, issuer=None, bin_country=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformation - a model defined in Swagger
         """
@@ -53,6 +71,15 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         self._tokenized_card = None
         self._account_features = None
         self._bank = None
+        self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._shipping_address = None
+        self._scheme = None
+        self._bin = None
+        self._account_type = None
+        self._issuer = None
+        self._bin_country = None
 
         if card is not None:
           self.card = card
@@ -62,6 +89,24 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
           self.account_features = account_features
         if bank is not None:
           self.bank = bank
+        if customer is not None:
+          self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
+        if scheme is not None:
+          self.scheme = scheme
+        if bin is not None:
+          self.bin = bin
+        if account_type is not None:
+          self.account_type = account_type
+        if issuer is not None:
+          self.issuer = issuer
+        if bin_country is not None:
+          self.bin_country = bin_country
 
     @property
     def card(self):
@@ -69,7 +114,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Gets the card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :return: The card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationCard
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
         return self._card
 
@@ -79,7 +124,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         Sets the card of this PtsV2PaymentsPost201ResponsePaymentInformation.
 
         :param card: The card of this PtsV2PaymentsPost201ResponsePaymentInformation.
-        :type: PtsV2PaymentsPost201ResponsePaymentInformationCard
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
 
         self._card = card
@@ -146,6 +191,205 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         """
 
         self._bank = bank
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The customer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param customer: The customer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationCustomer
+        """
+
+        self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The payment_instrument of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The instrument_identifier of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The shipping_address of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param shipping_address: The shipping_address of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
+
+    @property
+    def scheme(self):
+        """
+        Gets the scheme of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Subtype of card account. This field can contain one of the following values: - Maestro International - Maestro UK Domestic - MasterCard Credit - MasterCard Debit - Visa Credit - Visa Debit - Visa Electron  **Note** Additional values may be present.  For all possible values, see the `score_card_scheme` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The scheme of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: str
+        """
+        return self._scheme
+
+    @scheme.setter
+    def scheme(self, scheme):
+        """
+        Sets the scheme of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Subtype of card account. This field can contain one of the following values: - Maestro International - Maestro UK Domestic - MasterCard Credit - MasterCard Debit - Visa Credit - Visa Debit - Visa Electron  **Note** Additional values may be present.  For all possible values, see the `score_card_scheme` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param scheme: The scheme of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: str
+        """
+
+        self._scheme = scheme
+
+    @property
+    def bin(self):
+        """
+        Gets the bin of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Credit card BIN (the first six digits of the credit card).Derived either from the `cc_bin` request field or from the first six characters of the `customer_cc_num` field.  For all possible values, see the `score_cc_bin` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The bin of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: str
+        """
+        return self._bin
+
+    @bin.setter
+    def bin(self, bin):
+        """
+        Sets the bin of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Credit card BIN (the first six digits of the credit card).Derived either from the `cc_bin` request field or from the first six characters of the `customer_cc_num` field.  For all possible values, see the `score_cc_bin` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param bin: The bin of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: str
+        """
+
+        self._bin = bin
+
+    @property
+    def account_type(self):
+        """
+        Gets the account_type of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Type of payment card account. This field can refer to a credit card, debit card, or prepaid card account type.  For all possible values, see the `score_card_account_type` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: str
+        """
+        return self._account_type
+
+    @account_type.setter
+    def account_type(self, account_type):
+        """
+        Sets the account_type of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Type of payment card account. This field can refer to a credit card, debit card, or prepaid card account type.  For all possible values, see the `score_card_account_type` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param account_type: The account_type of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: str
+        """
+
+        self._account_type = account_type
+
+    @property
+    def issuer(self):
+        """
+        Gets the issuer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Name of the bank or entity that issued the card account.  For all possible values, see the `score_card_issuer` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The issuer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: str
+        """
+        return self._issuer
+
+    @issuer.setter
+    def issuer(self, issuer):
+        """
+        Sets the issuer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Name of the bank or entity that issued the card account.  For all possible values, see the `score_card_issuer` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param issuer: The issuer of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: str
+        """
+
+        self._issuer = issuer
+
+    @property
+    def bin_country(self):
+        """
+        Gets the bin_country of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Country (two-digit country code) associated with the BIN of the customer’s card used for the payment. Returned if the information is available. Use this field for additional information when reviewing orders. This information is also displayed in the details page of the CyberSource Business Center.  For all possible values, see the `bin_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The bin_country of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: str
+        """
+        return self._bin_country
+
+    @bin_country.setter
+    def bin_country(self, bin_country):
+        """
+        Sets the bin_country of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        Country (two-digit country code) associated with the BIN of the customer’s card used for the payment. Returned if the information is available. Use this field for additional information when reviewing orders. This information is also displayed in the details page of the CyberSource Business Center.  For all possible values, see the `bin_country` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param bin_country: The bin_country of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: str
+        """
+
+        self._bin_country = bin_country
 
     def to_dict(self):
         """

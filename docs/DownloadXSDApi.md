@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_xsdv2**](DownloadXSDApi.md#get_xsdv2) | **GET** /xsds/{reportDefinitionNameVersion} | Download XSD for report
+[**get_xsdv2**](DownloadXSDApi.md#get_xsdv2) | **GET** /reporting/v3/xsds/{reportDefinitionNameVersion} | Download XSD for Report
 
 
 # **get_xsdv2**
 > get_xsdv2(report_definition_name_version)
 
-Download XSD for report
+Download XSD for Report
 
 Used to download XSDs for reports on no-auth.
 
@@ -27,7 +27,7 @@ api_instance = CyberSource.DownloadXSDApi()
 report_definition_name_version = 'report_definition_name_version_example' # str | Name and version of XSD file to download. Some XSDs only have one version. In that case version name is not needed. Some example values are DecisionManagerDetailReport, DecisionManagerTypes
 
 try: 
-    # Download XSD for report
+    # Download XSD for Report
     api_instance.get_xsdv2(report_definition_name_version)
 except ApiException as e:
     print("Exception when calling DownloadXSDApi->get_xsdv2: %s\n" % e)

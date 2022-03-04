@@ -32,6 +32,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
+        'sub_total_amount': 'str',
         'currency': 'str',
         'discount_amount': 'str',
         'duty_amount': 'str',
@@ -54,11 +55,13 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'service_fee_amount': 'str',
         'original_amount': 'str',
         'original_currency': 'str',
-        'cashback_amount': 'str'
+        'cashback_amount': 'str',
+        'currency_conversion': 'Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
+        'sub_total_amount': 'subTotalAmount',
         'currency': 'currency',
         'discount_amount': 'discountAmount',
         'duty_amount': 'dutyAmount',
@@ -81,15 +84,17 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'service_fee_amount': 'serviceFeeAmount',
         'original_amount': 'originalAmount',
         'original_currency': 'originalCurrency',
-        'cashback_amount': 'cashbackAmount'
+        'cashback_amount': 'cashbackAmount',
+        'currency_conversion': 'currencyConversion'
     }
 
-    def __init__(self, total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None):
+    def __init__(self, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
+        self._sub_total_amount = None
         self._currency = None
         self._discount_amount = None
         self._duty_amount = None
@@ -113,9 +118,12 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         self._original_amount = None
         self._original_currency = None
         self._cashback_amount = None
+        self._currency_conversion = None
 
         if total_amount is not None:
           self.total_amount = total_amount
+        if sub_total_amount is not None:
+          self.sub_total_amount = sub_total_amount
         if currency is not None:
           self.currency = currency
         if discount_amount is not None:
@@ -162,12 +170,14 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
           self.original_currency = original_currency
         if cashback_amount is not None:
           self.cashback_amount = cashback_amount
+        if currency_conversion is not None:
+          self.currency_conversion = currency_conversion
 
     @property
     def total_amount(self):
         """
         Gets the total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### DCC for First Data Not used. 
 
         :return: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -178,21 +188,42 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### DCC for First Data Not used. 
 
         :param total_amount: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
+
+    @property
+    def sub_total_amount(self):
+        """
+        Gets the sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Subtotal amount of all the items.This amount (which is the value of all items in the cart, not including the additional amounts such as tax, shipping, etc.) cannot change after a sessions request. When there is a change to any of the additional amounts, this field should be resent in the order request. When the sub total amount changes, you must initiate a new transaction starting with a sessions request. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. This value can not be changed after a sessions request. 
+
+        :return: The sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._sub_total_amount
+
+    @sub_total_amount.setter
+    def sub_total_amount(self, sub_total_amount):
+        """
+        Sets the sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Subtotal amount of all the items.This amount (which is the value of all items in the cart, not including the additional amounts such as tax, shipping, etc.) cannot change after a sessions request. When there is a change to any of the additional amounts, this field should be resent in the order request. When the sub total amount changes, you must initiate a new transaction starting with a sessions request. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. This value can not be changed after a sessions request. 
+
+        :param sub_total_amount: The sub_total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._sub_total_amount = sub_total_amount
 
     @property
     def currency(self):
         """
         Gets the currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :return: The currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -203,13 +234,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :param currency: The currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -217,7 +246,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def discount_amount(self):
         """
         Gets the discount_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total discount amount applied to the order.  For processor-specific information, see the order_discount_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total discount amount applied to the order. 
 
         :return: The discount_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -228,13 +257,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def discount_amount(self, discount_amount):
         """
         Sets the discount_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total discount amount applied to the order.  For processor-specific information, see the order_discount_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total discount amount applied to the order. 
 
         :param discount_amount: The discount_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if discount_amount is not None and len(discount_amount) > 15:
-            raise ValueError("Invalid value for `discount_amount`, length must be less than or equal to `15`")
 
         self._discount_amount = discount_amount
 
@@ -242,7 +269,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def duty_amount(self):
         """
         Gets the duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total charges for any import or export duties included in the order.  For processor-specific information, see the duty_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total charges for any import or export duties included in the order. 
 
         :return: The duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -253,13 +280,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def duty_amount(self, duty_amount):
         """
         Sets the duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total charges for any import or export duties included in the order.  For processor-specific information, see the duty_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total charges for any import or export duties included in the order. 
 
         :param duty_amount: The duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if duty_amount is not None and len(duty_amount) > 15:
-            raise ValueError("Invalid value for `duty_amount`, length must be less than or equal to `15`")
 
         self._duty_amount = duty_amount
 
@@ -267,7 +292,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def gratuity_amount(self):
         """
         Gets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants. Allowed only when industryDatatype=restaurant. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet when card is present. 
 
         :return: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -278,13 +303,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def gratuity_amount(self, gratuity_amount):
         """
         Sets the gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Gratuity or tip amount for restaurants when the card is present. Allowed only when `industryDatatype=restaurant`. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  For information about partial authorizations, see Credit Card Services Using the SCMP API.  Restaurant data is supported only on CyberSource through VisaNet. 
+        Gratuity or tip amount for restaurants. Allowed only when industryDatatype=restaurant. When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.  Used by **Capture** Optional field.  #### CyberSource through VisaNet Restaurant data is supported only on CyberSource through VisaNet when card is present. 
 
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if gratuity_amount is not None and len(gratuity_amount) > 13:
-            raise ValueError("Invalid value for `gratuity_amount`, length must be less than or equal to `13`")
 
         self._gratuity_amount = gratuity_amount
 
@@ -292,7 +315,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total tax amount for all the items in the order.  For processor-specific information, see the total_tax_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total tax amount for all the items in the order. 
 
         :return: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -303,13 +326,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Total tax amount for all the items in the order.  For processor-specific information, see the total_tax_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total tax amount for all the items in the order. 
 
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 12:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `12`")
 
         self._tax_amount = tax_amount
 
@@ -317,7 +338,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def national_tax_included(self):
         """
         Gets the national_tax_included of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates whether a national tax is included in the order total.  Possible values:   - **0**: national tax not included  - **1**: national tax included  For processor-specific information, see the national_tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates whether a national tax is included in the order total.  Possible values:   - **0**: national tax not included  - **1**: national tax included 
 
         :return: The national_tax_included of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -328,13 +349,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def national_tax_included(self, national_tax_included):
         """
         Sets the national_tax_included of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates whether a national tax is included in the order total.  Possible values:   - **0**: national tax not included  - **1**: national tax included  For processor-specific information, see the national_tax_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates whether a national tax is included in the order total.  Possible values:   - **0**: national tax not included  - **1**: national tax included 
 
         :param national_tax_included: The national_tax_included of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if national_tax_included is not None and len(national_tax_included) > 1:
-            raise ValueError("Invalid value for `national_tax_included`, length must be less than or equal to `1`")
 
         self._national_tax_included = national_tax_included
 
@@ -342,7 +361,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_applied_after_discount(self):
         """
         Gets the tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total  For processor-specific information, see the order_discount_management_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total 
 
         :return: The tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -353,13 +372,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_applied_after_discount(self, tax_applied_after_discount):
         """
         Sets the tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total  For processor-specific information, see the order_discount_management_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates how the merchant manages discounts.  Possible values:   - **0**: no invoice level discount included  - **1**: tax calculated on the postdiscount invoice total  - **2**: tax calculated on the prediscount invoice total 
 
         :param tax_applied_after_discount: The tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_applied_after_discount is not None and len(tax_applied_after_discount) > 1:
-            raise ValueError("Invalid value for `tax_applied_after_discount`, length must be less than or equal to `1`")
 
         self._tax_applied_after_discount = tax_applied_after_discount
 
@@ -367,7 +384,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_applied_level(self):
         """
         Gets the tax_applied_level of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction  For processor-specific information, see the tax_management_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction 
 
         :return: The tax_applied_level of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -378,13 +395,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_applied_level(self, tax_applied_level):
         """
         Sets the tax_applied_level of this Ptsv2paymentsOrderInformationAmountDetails.
-        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction  For processor-specific information, see the tax_management_indicator field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Flag that indicates how you calculate tax.  Possible values:   - **0**: net prices with tax calculated at line item level  - **1**: net prices with tax calculated at invoice level  - **2**: gross prices with tax provided at line item level  - **3**: gross prices with tax provided at invoice level  - **4**: no tax applies on the invoice for the transaction 
 
         :param tax_applied_level: The tax_applied_level of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_applied_level is not None and len(tax_applied_level) > 1:
-            raise ValueError("Invalid value for `tax_applied_level`, length must be less than or equal to `1`")
 
         self._tax_applied_level = tax_applied_level
 
@@ -392,7 +407,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_type_code(self):
         """
         Gets the tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
-        For tax amounts that can be categorized as one tax type.  This field contains the tax type code that corresponds to the entry in the _lineItems.taxAmount_ field.  Possible values:   - **056**: sales tax (U.S only)  - **TX~**: all taxes (Canada only)   Note ~ = space.  For processor-specific information, see the total_tax_type_code field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        For tax amounts that can be categorized as one tax type.  This field contains the tax type code that corresponds to the entry in the _lineItems.taxAmount_ field.  Possible values:   - **056**: sales tax (U.S only)  - **TX~**: all taxes (Canada only)   Note ~ = space. 
 
         :return: The tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -403,13 +418,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def tax_type_code(self, tax_type_code):
         """
         Sets the tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
-        For tax amounts that can be categorized as one tax type.  This field contains the tax type code that corresponds to the entry in the _lineItems.taxAmount_ field.  Possible values:   - **056**: sales tax (U.S only)  - **TX~**: all taxes (Canada only)   Note ~ = space.  For processor-specific information, see the total_tax_type_code field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        For tax amounts that can be categorized as one tax type.  This field contains the tax type code that corresponds to the entry in the _lineItems.taxAmount_ field.  Possible values:   - **056**: sales tax (U.S only)  - **TX~**: all taxes (Canada only)   Note ~ = space. 
 
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if tax_type_code is not None and len(tax_type_code) > 3:
-            raise ValueError("Invalid value for `tax_type_code`, length must be less than or equal to `3`")
 
         self._tax_type_code = tax_type_code
 
@@ -433,8 +446,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param freight_amount: The freight_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if freight_amount is not None and len(freight_amount) > 13:
-            raise ValueError("Invalid value for `freight_amount`, length must be less than or equal to `13`")
 
         self._freight_amount = freight_amount
 
@@ -442,7 +453,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def foreign_amount(self):
         """
         Gets the foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -453,13 +464,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def foreign_amount(self, foreign_amount):
         """
         Sets the foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param foreign_amount: The foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if foreign_amount is not None and len(foreign_amount) > 15:
-            raise ValueError("Invalid value for `foreign_amount`, length must be less than or equal to `15`")
 
         self._foreign_amount = foreign_amount
 
@@ -467,7 +476,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def foreign_currency(self):
         """
         Gets the foreign_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Set this field to the converted amount that was returned by the DCC provider. 
 
         :return: The foreign_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -478,13 +487,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def foreign_currency(self, foreign_currency):
         """
         Sets the foreign_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Set this field to the converted amount that was returned by the DCC provider. 
 
         :param foreign_currency: The foreign_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if foreign_currency is not None and len(foreign_currency) > 5:
-            raise ValueError("Invalid value for `foreign_currency`, length must be less than or equal to `5`")
 
         self._foreign_currency = foreign_currency
 
@@ -492,7 +499,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def exchange_rate(self):
         """
         Gets the exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
-        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf)  For processor-specific information, see the `exchange_rate` request-level field description in [Credit Card Services Using the SCMP API Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf) 
 
         :return: The exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -503,13 +510,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def exchange_rate(self, exchange_rate):
         """
         Sets the exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
-        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf)  For processor-specific information, see the `exchange_rate` request-level field description in [Credit Card Services Using the SCMP API Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf) 
 
         :param exchange_rate: The exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if exchange_rate is not None and len(exchange_rate) > 13:
-            raise ValueError("Invalid value for `exchange_rate`, length must be less than or equal to `13`")
 
         self._exchange_rate = exchange_rate
 
@@ -517,7 +522,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def exchange_rate_time_stamp(self):
         """
         Gets the exchange_rate_time_stamp of this Ptsv2paymentsOrderInformationAmountDetails.
-        Time stamp for the exchange rate. This value is returned by the DCC service.  Format: `YYYYMMDD~HH:MM`  where ~ denotes a space.  For processor-specific information, see the `exchange_rate_timestamp` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Time stamp for the exchange rate. This value is returned by the DCC service.  Format: `YYYYMMDD~HH:MM`  where ~ denotes a space. 
 
         :return: The exchange_rate_time_stamp of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -528,13 +533,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def exchange_rate_time_stamp(self, exchange_rate_time_stamp):
         """
         Sets the exchange_rate_time_stamp of this Ptsv2paymentsOrderInformationAmountDetails.
-        Time stamp for the exchange rate. This value is returned by the DCC service.  Format: `YYYYMMDD~HH:MM`  where ~ denotes a space.  For processor-specific information, see the `exchange_rate_timestamp` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Time stamp for the exchange rate. This value is returned by the DCC service.  Format: `YYYYMMDD~HH:MM`  where ~ denotes a space. 
 
         :param exchange_rate_time_stamp: The exchange_rate_time_stamp of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if exchange_rate_time_stamp is not None and len(exchange_rate_time_stamp) > 14:
-            raise ValueError("Invalid value for `exchange_rate_time_stamp`, length must be less than or equal to `14`")
 
         self._exchange_rate_time_stamp = exchange_rate_time_stamp
 
@@ -563,7 +566,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_amount(self):
         """
         Gets the settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :return: The settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -574,13 +577,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :param settlement_amount: The settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_amount is not None and len(settlement_amount) > 12:
-            raise ValueError("Invalid value for `settlement_amount`, length must be less than or equal to `12`")
 
         self._settlement_amount = settlement_amount
 
@@ -588,7 +589,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_currency(self):
         """
         Gets the settlement_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :return: The settlement_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -599,13 +600,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_currency(self, settlement_currency):
         """
         Sets the settlement_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :param settlement_currency: The settlement_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_currency is not None and len(settlement_currency) > 3:
-            raise ValueError("Invalid value for `settlement_currency`, length must be less than or equal to `3`")
 
         self._settlement_currency = settlement_currency
 
@@ -671,8 +670,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param service_fee_amount: The service_fee_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if service_fee_amount is not None and len(service_fee_amount) > 15:
-            raise ValueError("Invalid value for `service_fee_amount`, length must be less than or equal to `15`")
 
         self._service_fee_amount = service_fee_amount
 
@@ -680,7 +677,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def original_amount(self):
         """
         Gets the original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places.  For details, see the `original_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
 
         :return: The original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -691,13 +688,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def original_amount(self, original_amount):
         """
         Sets the original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places.  For details, see the `original_amount` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
 
         :param original_amount: The original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if original_amount is not None and len(original_amount) > 15:
-            raise ValueError("Invalid value for `original_amount`, length must be less than or equal to `15`")
 
         self._original_amount = original_amount
 
@@ -705,7 +700,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def original_currency(self):
         """
         Gets the original_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `original_currency` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For details about converting a foreign cardholder’s purchase from your local pricing currency to the cardholder’s billing currency, see the [Dynamic Currency Conversion with a Third Party Provider Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
 
         :return: The original_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -716,13 +711,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def original_currency(self, original_currency):
         """
         Sets the original_currency of this Ptsv2paymentsOrderInformationAmountDetails.
-        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details, see `original_currency` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For details about converting a foreign cardholder’s purchase from your local pricing currency to the cardholder’s billing currency, see the [Dynamic Currency Conversion with a Third Party Provider Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
 
         :param original_currency: The original_currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if original_currency is not None and len(original_currency) > 15:
-            raise ValueError("Invalid value for `original_currency`, length must be less than or equal to `15`")
 
         self._original_currency = original_currency
 
@@ -730,7 +723,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self):
         """
         Gets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Required field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :return: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -741,15 +734,34 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self, cashback_amount):
         """
         Sets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount requested by the customer. If a cashback amount is included in the request, it must be included in the orderInformation.amountDetails.totalAmount value. 
+        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Required field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :param cashback_amount: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-        if cashback_amount is not None and len(cashback_amount) > 13:
-            raise ValueError("Invalid value for `cashback_amount`, length must be less than or equal to `13`")
 
         self._cashback_amount = cashback_amount
+
+    @property
+    def currency_conversion(self):
+        """
+        Gets the currency_conversion of this Ptsv2paymentsOrderInformationAmountDetails.
+
+        :return: The currency_conversion of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion
+        """
+        return self._currency_conversion
+
+    @currency_conversion.setter
+    def currency_conversion(self, currency_conversion):
+        """
+        Sets the currency_conversion of this Ptsv2paymentsOrderInformationAmountDetails.
+
+        :param currency_conversion: The currency_conversion of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion
+        """
+
+        self._currency_conversion = currency_conversion
 
     def to_dict(self):
         """

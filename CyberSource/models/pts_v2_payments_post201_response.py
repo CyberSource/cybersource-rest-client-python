@@ -41,10 +41,15 @@ class PtsV2PaymentsPost201Response(object):
         'processing_information': 'PtsV2PaymentsPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsPost201ResponseProcessorInformation',
         'issuer_information': 'PtsV2PaymentsPost201ResponseIssuerInformation',
+        'payment_account_information': 'PtsV2PaymentsPost201ResponsePaymentAccountInformation',
         'payment_information': 'PtsV2PaymentsPost201ResponsePaymentInformation',
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
-        'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation'
+        'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
+        'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
+        'buyer_information': 'PtsV2PaymentsPost201ResponseBuyerInformation',
+        'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
+        'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation'
     }
 
     attribute_map = {
@@ -58,13 +63,18 @@ class PtsV2PaymentsPost201Response(object):
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'issuer_information': 'issuerInformation',
+        'payment_account_information': 'paymentAccountInformation',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'installment_information': 'installmentInformation'
+        'installment_information': 'installmentInformation',
+        'token_information': 'tokenInformation',
+        'buyer_information': 'buyerInformation',
+        'risk_information': 'riskInformation',
+        'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -79,10 +89,15 @@ class PtsV2PaymentsPost201Response(object):
         self._processing_information = None
         self._processor_information = None
         self._issuer_information = None
+        self._payment_account_information = None
         self._payment_information = None
         self._order_information = None
         self._point_of_sale_information = None
         self._installment_information = None
+        self._token_information = None
+        self._buyer_information = None
+        self._risk_information = None
+        self._consumer_authentication_information = None
 
         if links is not None:
           self.links = links
@@ -104,6 +119,8 @@ class PtsV2PaymentsPost201Response(object):
           self.processor_information = processor_information
         if issuer_information is not None:
           self.issuer_information = issuer_information
+        if payment_account_information is not None:
+          self.payment_account_information = payment_account_information
         if payment_information is not None:
           self.payment_information = payment_information
         if order_information is not None:
@@ -112,6 +129,14 @@ class PtsV2PaymentsPost201Response(object):
           self.point_of_sale_information = point_of_sale_information
         if installment_information is not None:
           self.installment_information = installment_information
+        if token_information is not None:
+          self.token_information = token_information
+        if buyer_information is not None:
+          self.buyer_information = buyer_information
+        if risk_information is not None:
+          self.risk_information = risk_information
+        if consumer_authentication_information is not None:
+          self.consumer_authentication_information = consumer_authentication_information
 
     @property
     def links(self):
@@ -138,7 +163,7 @@ class PtsV2PaymentsPost201Response(object):
     def id(self):
         """
         Gets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number generated by Cybersource to identify the submitted request. Returned by all services. It is also appended to the endpoint of the resource. On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :return: The id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -149,13 +174,11 @@ class PtsV2PaymentsPost201Response(object):
     def id(self, id):
         """
         Sets the id of this PtsV2PaymentsPost201Response.
-        An unique identification number assigned by CyberSource to identify the submitted request. It is also appended to the endpoint of the resource.
+        An unique identification number generated by Cybersource to identify the submitted request. Returned by all services. It is also appended to the endpoint of the resource. On incremental authorizations, this value with be the same as the identification number returned in the original authorization response. 
 
         :param id: The id of this PtsV2PaymentsPost201Response.
         :type: str
         """
-        if id is not None and len(id) > 26:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `26`")
 
         self._id = id
 
@@ -163,7 +186,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
         :return: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -174,7 +197,7 @@ class PtsV2PaymentsPost201Response(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this PtsV2PaymentsPost201Response.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :type: str
@@ -186,7 +209,7 @@ class PtsV2PaymentsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - AUTHORIZED_RISK_DECLINED  - PENDING_AUTHENTICATION  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :return: The status of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -197,7 +220,7 @@ class PtsV2PaymentsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost201Response.
-        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
+        The status of the submitted transaction.  Possible values:  - AUTHORIZED  - PARTIAL_AUTHORIZED  - AUTHORIZED_PENDING_REVIEW  - AUTHORIZED_RISK_DECLINED  - PENDING_AUTHENTICATION  - PENDING_REVIEW  - DECLINED  - INVALID_REQUEST 
 
         :param status: The status of this PtsV2PaymentsPost201Response.
         :type: str
@@ -209,7 +232,7 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self):
         """
         Gets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Reference number for the transaction. Depending on how your Cybersource account is configured, this value could either be provided in the API request or generated by CyberSource. The actual value used in the request to the processor is provided back to you by Cybersource in the response. 
 
         :return: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :rtype: str
@@ -220,13 +243,11 @@ class PtsV2PaymentsPost201Response(object):
     def reconciliation_id(self, reconciliation_id):
         """
         Sets the reconciliation_id of this PtsV2PaymentsPost201Response.
-        The reconciliation id for the submitted transaction. This value is not returned for all processors. 
+        Reference number for the transaction. Depending on how your Cybersource account is configured, this value could either be provided in the API request or generated by CyberSource. The actual value used in the request to the processor is provided back to you by Cybersource in the response. 
 
         :param reconciliation_id: The reconciliation_id of this PtsV2PaymentsPost201Response.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -336,6 +357,27 @@ class PtsV2PaymentsPost201Response(object):
         self._issuer_information = issuer_information
 
     @property
+    def payment_account_information(self):
+        """
+        Gets the payment_account_information of this PtsV2PaymentsPost201Response.
+
+        :return: The payment_account_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentAccountInformation
+        """
+        return self._payment_account_information
+
+    @payment_account_information.setter
+    def payment_account_information(self, payment_account_information):
+        """
+        Sets the payment_account_information of this PtsV2PaymentsPost201Response.
+
+        :param payment_account_information: The payment_account_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponsePaymentAccountInformation
+        """
+
+        self._payment_account_information = payment_account_information
+
+    @property
     def payment_information(self):
         """
         Gets the payment_information of this PtsV2PaymentsPost201Response.
@@ -418,6 +460,90 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._installment_information = installment_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this PtsV2PaymentsPost201Response.
+
+        :return: The token_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this PtsV2PaymentsPost201Response.
+
+        :param token_information: The token_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseTokenInformation
+        """
+
+        self._token_information = token_information
+
+    @property
+    def buyer_information(self):
+        """
+        Gets the buyer_information of this PtsV2PaymentsPost201Response.
+
+        :return: The buyer_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseBuyerInformation
+        """
+        return self._buyer_information
+
+    @buyer_information.setter
+    def buyer_information(self, buyer_information):
+        """
+        Sets the buyer_information of this PtsV2PaymentsPost201Response.
+
+        :param buyer_information: The buyer_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseBuyerInformation
+        """
+
+        self._buyer_information = buyer_information
+
+    @property
+    def risk_information(self):
+        """
+        Gets the risk_information of this PtsV2PaymentsPost201Response.
+
+        :return: The risk_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseRiskInformation
+        """
+        return self._risk_information
+
+    @risk_information.setter
+    def risk_information(self, risk_information):
+        """
+        Sets the risk_information of this PtsV2PaymentsPost201Response.
+
+        :param risk_information: The risk_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseRiskInformation
+        """
+
+        self._risk_information = risk_information
+
+    @property
+    def consumer_authentication_information(self):
+        """
+        Gets the consumer_authentication_information of this PtsV2PaymentsPost201Response.
+
+        :return: The consumer_authentication_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation
+        """
+        return self._consumer_authentication_information
+
+    @consumer_authentication_information.setter
+    def consumer_authentication_information(self, consumer_authentication_information):
+        """
+        Sets the consumer_authentication_information of this PtsV2PaymentsPost201Response.
+
+        :param consumer_authentication_information: The consumer_authentication_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation
+        """
+
+        self._consumer_authentication_information = consumer_authentication_information
 
     def to_dict(self):
         """

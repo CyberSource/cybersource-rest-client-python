@@ -37,7 +37,8 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'purchase_level': 'str',
-        'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions'
+        'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
+        'industry_data_type': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
         'purchase_level': 'purchaseLevel',
-        'recurring_options': 'recurringOptions'
+        'recurring_options': 'recurringOptions',
+        'industry_data_type': 'industryDataType'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None):
         """
         Ptsv2paymentsidrefundsProcessingInformation - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         self._visa_checkout_id = None
         self._purchase_level = None
         self._recurring_options = None
+        self._industry_data_type = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -77,12 +80,14 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
           self.purchase_level = purchase_level
         if recurring_options is not None:
           self.recurring_options = recurring_options
+        if industry_data_type is not None:
+          self.industry_data_type = industry_data_type
 
     @property
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :return: The payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -93,13 +98,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -123,8 +126,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -132,7 +133,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The link_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -143,13 +144,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param link_id: The link_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if link_id is not None and len(link_id) > 26:
-            raise ValueError("Invalid value for `link_id`, length must be less than or equal to `26`")
 
         self._link_id = link_id
 
@@ -157,7 +156,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsidrefundsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The report_group of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -168,13 +167,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsidrefundsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param report_group: The report_group of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if report_group is not None and len(report_group) > 25:
-            raise ValueError("Invalid value for `report_group`, length must be less than or equal to `25`")
 
         self._report_group = report_group
 
@@ -182,7 +179,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :rtype: str
@@ -193,13 +190,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 
@@ -223,8 +218,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param purchase_level: The purchase_level of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-        if purchase_level is not None and len(purchase_level) > 1:
-            raise ValueError("Invalid value for `purchase_level`, length must be less than or equal to `1`")
 
         self._purchase_level = purchase_level
 
@@ -248,6 +241,29 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         """
 
         self._recurring_options = recurring_options
+
+    @property
+    def industry_data_type(self):
+        """
+        Gets the industry_data_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :return: The industry_data_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: str
+        """
+        return self._industry_data_type
+
+    @industry_data_type.setter
+    def industry_data_type(self, industry_data_type):
+        """
+        Sets the industry_data_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
+
+        :param industry_data_type: The industry_data_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: str
+        """
+
+        self._industry_data_type = industry_data_type
 
     def to_dict(self):
         """

@@ -4,15 +4,15 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_users**](UserManagementApi.md#get_users) | **GET** /ums/v1/users | Get user information
+[**get_users**](UserManagementApi.md#get_users) | **GET** /ums/v1/users | Get User Information - Deprecated
 
 
 # **get_users**
 > UmsV1UsersGet200Response get_users(organization_id=organization_id, user_name=user_name, permission_id=permission_id, role_id=role_id)
 
-Get user information
+Get User Information - Deprecated
 
-This endpoint is to get all the user information depending on the filter criteria passed in the query.
+This endpoint is deprecated. Please use the search end point.
 
 ### Example 
 ```python
@@ -30,7 +30,7 @@ permission_id = 'permission_id_example' # str | permission that you are trying t
 role_id = 'role_id_example' # str | role of the user you are trying to search on. (optional)
 
 try: 
-    # Get user information
+    # Get User Information - Deprecated
     api_response = api_instance.get_users(organization_id=organization_id, user_name=user_name, permission_id=permission_id, role_id=role_id)
     pprint(api_response)
 except ApiException as e:

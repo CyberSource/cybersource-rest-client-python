@@ -31,7 +31,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'invoice_details': 'PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails'
+        'invoice_details': 'PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformation(object):
         Gets the invoice_details of this PtsV2PaymentsRefundPost201ResponseOrderInformation.
 
         :return: The invoice_details of this PtsV2PaymentsRefundPost201ResponseOrderInformation.
-        :rtype: PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails
+        :rtype: PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails
         """
         return self._invoice_details
 
@@ -64,7 +64,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformation(object):
         Sets the invoice_details of this PtsV2PaymentsRefundPost201ResponseOrderInformation.
 
         :param invoice_details: The invoice_details of this PtsV2PaymentsRefundPost201ResponseOrderInformation.
-        :type: PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails
+        :type: PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails
         """
 
         self._invoice_details = invoice_details

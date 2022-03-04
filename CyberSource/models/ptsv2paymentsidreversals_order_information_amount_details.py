@@ -68,8 +68,6 @@ class Ptsv2paymentsidreversalsOrderInformationAmountDetails(object):
         :param service_fee_amount: The service_fee_amount of this Ptsv2paymentsidreversalsOrderInformationAmountDetails.
         :type: str
         """
-        if service_fee_amount is not None and len(service_fee_amount) > 15:
-            raise ValueError("Invalid value for `service_fee_amount`, length must be less than or equal to `15`")
 
         self._service_fee_amount = service_fee_amount
 

@@ -31,6 +31,8 @@ class Ptsv2paymentsProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'action_list': 'list[str]',
+        'action_token_types': 'list[str]',
         'capture': 'bool',
         'processor_id': 'str',
         'business_application_id': 'str',
@@ -47,10 +49,20 @@ class Ptsv2paymentsProcessingInformation(object):
         'recurring_options': 'Ptsv2paymentsProcessingInformationRecurringOptions',
         'bank_transfer_options': 'Ptsv2paymentsProcessingInformationBankTransferOptions',
         'purchase_options': 'Ptsv2paymentsProcessingInformationPurchaseOptions',
-        'electronic_benefits_transfer': 'Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer'
+        'electronic_benefits_transfer': 'Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer',
+        'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
+        'wallet_type': 'str',
+        'national_net_domestic_data': 'str',
+        'japan_payment_options': 'Ptsv2paymentsProcessingInformationJapanPaymentOptions',
+        'mobile_remote_payment_type': 'str',
+        'extended_credit_total_count': 'str',
+        'network_routing_order': 'str',
+        'pay_by_points_indicator': 'bool'
     }
 
     attribute_map = {
+        'action_list': 'actionList',
+        'action_token_types': 'actionTokenTypes',
         'capture': 'capture',
         'processor_id': 'processorId',
         'business_application_id': 'businessApplicationId',
@@ -67,14 +79,24 @@ class Ptsv2paymentsProcessingInformation(object):
         'recurring_options': 'recurringOptions',
         'bank_transfer_options': 'bankTransferOptions',
         'purchase_options': 'purchaseOptions',
-        'electronic_benefits_transfer': 'electronicBenefitsTransfer'
+        'electronic_benefits_transfer': 'electronicBenefitsTransfer',
+        'loan_options': 'loanOptions',
+        'wallet_type': 'walletType',
+        'national_net_domestic_data': 'nationalNetDomesticData',
+        'japan_payment_options': 'japanPaymentOptions',
+        'mobile_remote_payment_type': 'mobileRemotePaymentType',
+        'extended_credit_total_count': 'extendedCreditTotalCount',
+        'network_routing_order': 'networkRoutingOrder',
+        'pay_by_points_indicator': 'payByPointsIndicator'
     }
 
-    def __init__(self, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None):
+    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
 
+        self._action_list = None
+        self._action_token_types = None
         self._capture = None
         self._processor_id = None
         self._business_application_id = None
@@ -92,7 +114,19 @@ class Ptsv2paymentsProcessingInformation(object):
         self._bank_transfer_options = None
         self._purchase_options = None
         self._electronic_benefits_transfer = None
+        self._loan_options = None
+        self._wallet_type = None
+        self._national_net_domestic_data = None
+        self._japan_payment_options = None
+        self._mobile_remote_payment_type = None
+        self._extended_credit_total_count = None
+        self._network_routing_order = None
+        self._pay_by_points_indicator = None
 
+        if action_list is not None:
+          self.action_list = action_list
+        if action_token_types is not None:
+          self.action_token_types = action_token_types
         if capture is not None:
           self.capture = capture
         if processor_id is not None:
@@ -127,12 +161,74 @@ class Ptsv2paymentsProcessingInformation(object):
           self.purchase_options = purchase_options
         if electronic_benefits_transfer is not None:
           self.electronic_benefits_transfer = electronic_benefits_transfer
+        if loan_options is not None:
+          self.loan_options = loan_options
+        if wallet_type is not None:
+          self.wallet_type = wallet_type
+        if national_net_domestic_data is not None:
+          self.national_net_domestic_data = national_net_domestic_data
+        if japan_payment_options is not None:
+          self.japan_payment_options = japan_payment_options
+        if mobile_remote_payment_type is not None:
+          self.mobile_remote_payment_type = mobile_remote_payment_type
+        if extended_credit_total_count is not None:
+          self.extended_credit_total_count = extended_credit_total_count
+        if network_routing_order is not None:
+          self.network_routing_order = network_routing_order
+        if pay_by_points_indicator is not None:
+          self.pay_by_points_indicator = pay_by_points_indicator
+
+    @property
+    def action_list(self):
+        """
+        Gets the action_list of this Ptsv2paymentsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+
+        :return: The action_list of this Ptsv2paymentsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_list
+
+    @action_list.setter
+    def action_list(self, action_list):
+        """
+        Sets the action_list of this Ptsv2paymentsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+
+        :param action_list: The action_list of this Ptsv2paymentsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_list = action_list
+
+    @property
+    def action_token_types(self):
+        """
+        Gets the action_token_types of this Ptsv2paymentsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :return: The action_token_types of this Ptsv2paymentsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_token_types
+
+    @action_token_types.setter
+    def action_token_types(self, action_token_types):
+        """
+        Sets the action_token_types of this Ptsv2paymentsProcessingInformation.
+        CyberSource tokens types you are performing a create on. If not supplied the default token type for the merchants token vault will be used.  Valid values: - customer - paymentInstrument - instrumentIdentifier - shippingAddress 
+
+        :param action_token_types: The action_token_types of this Ptsv2paymentsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_token_types = action_token_types
 
     @property
     def capture(self):
         """
         Gets the capture of this Ptsv2paymentsProcessingInformation.
-        Flag that specifies whether to also include capture service in the submitted request or not.  Possible values: - **true** - **false** (default). 
+        Indicates whether to also include a capture  in the submitted authorization request or not.  Possible values: - `true`: Include a capture with an authorization request. - `false`: (default) Do not include a capture with an authorization request.  #### Used by **Authorization and Capture** Optional field. 
 
         :return: The capture of this Ptsv2paymentsProcessingInformation.
         :rtype: bool
@@ -143,7 +239,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def capture(self, capture):
         """
         Sets the capture of this Ptsv2paymentsProcessingInformation.
-        Flag that specifies whether to also include capture service in the submitted request or not.  Possible values: - **true** - **false** (default). 
+        Indicates whether to also include a capture  in the submitted authorization request or not.  Possible values: - `true`: Include a capture with an authorization request. - `false`: (default) Do not include a capture with an authorization request.  #### Used by **Authorization and Capture** Optional field. 
 
         :param capture: The capture of this Ptsv2paymentsProcessingInformation.
         :type: bool
@@ -171,8 +267,6 @@ class Ptsv2paymentsProcessingInformation(object):
         :param processor_id: The processor_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if processor_id is not None and len(processor_id) > 3:
-            raise ValueError("Invalid value for `processor_id`, length must be less than or equal to `3`")
 
         self._processor_id = processor_id
 
@@ -203,7 +297,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this Ptsv2paymentsProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates. When you omit this field for **Ingenico ePayments**, the processor uses the default transaction type they have on file for you instead of the default value listed here. 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
 
         :return: The commerce_indicator of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -214,13 +308,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this Ptsv2paymentsProcessingInformation.
-        Type of transaction. Some payment card companies use this information when determining discount rates. When you omit this field for **Ingenico ePayments**, the processor uses the default transaction type they have on file for you instead of the default value listed here. 
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
 
         :param commerce_indicator: The commerce_indicator of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 20:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `20`")
 
         self._commerce_indicator = commerce_indicator
 
@@ -228,7 +320,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :return: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -239,13 +331,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -269,8 +359,6 @@ class Ptsv2paymentsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -278,7 +366,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The link_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -289,13 +377,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param link_id: The link_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if link_id is not None and len(link_id) > 26:
-            raise ValueError("Invalid value for `link_id`, length must be less than or equal to `26`")
 
         self._link_id = link_id
 
@@ -319,8 +405,6 @@ class Ptsv2paymentsProcessingInformation(object):
         :param purchase_level: The purchase_level of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if purchase_level is not None and len(purchase_level) > 1:
-            raise ValueError("Invalid value for `purchase_level`, length must be less than or equal to `1`")
 
         self._purchase_level = purchase_level
 
@@ -328,7 +412,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The report_group of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -339,13 +423,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param report_group: The report_group of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if report_group is not None and len(report_group) > 25:
-            raise ValueError("Invalid value for `report_group`, length must be less than or equal to `25`")
 
         self._report_group = report_group
 
@@ -353,7 +435,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -364,13 +446,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 
@@ -378,7 +458,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def industry_data_type(self):
         """
         Gets the industry_data_type of this Ptsv2paymentsProcessingInformation.
-        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :return: The industry_data_type of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -389,13 +469,11 @@ class Ptsv2paymentsProcessingInformation(object):
     def industry_data_type(self, industry_data_type):
         """
         Sets the industry_data_type of this Ptsv2paymentsProcessingInformation.
-        Flag that indicates that the transaction includes airline data or restaurant data.  This field must be set to `airline` in order for airline data to be sent to the processor.  For example, if this field is not set to airline or is not included in the request, CyberSource does not send airline data to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor.  When this field is not set to restaurant or is not included in the request, CyberSource does not send restaurant data to the processor.  Possible Values:  - **airline** - **restaurant** 
+        Indicates that the transaction includes industry-specific data.  Possible Values: - `airline` - `restaurant` - `lodging` - `auto_rental` - `transit` - `healthcare_medical` - `healthcare_transit` - `transit`  #### Card Present, Airlines and Auto Rental You must set this field to `airline` in order for airline data to be sent to the processor. For example, if this field is not set to `airline` or is not included in the request, no airline data is sent to the processor.  You must set this field to `restaurant` in order for restaurant data to be sent to the processor. When this field is not set to `restaurant` or is not included in the request, no restaurant data is sent to the processor.  You must set this field to `auto_rental` in order for auto rental data to be sent to the processor. For example, if this field is not set to `auto_rental` or is not included in the request, no auto rental data is sent to the processor.  Restaurant data is supported only on CyberSource through VisaNet. 
 
         :param industry_data_type: The industry_data_type of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
-        if industry_data_type is not None and len(industry_data_type) > 10:
-            raise ValueError("Invalid value for `industry_data_type`, length must be less than or equal to `10`")
 
         self._industry_data_type = industry_data_type
 
@@ -524,6 +602,186 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._electronic_benefits_transfer = electronic_benefits_transfer
+
+    @property
+    def loan_options(self):
+        """
+        Gets the loan_options of this Ptsv2paymentsProcessingInformation.
+
+        :return: The loan_options of this Ptsv2paymentsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+        return self._loan_options
+
+    @loan_options.setter
+    def loan_options(self, loan_options):
+        """
+        Sets the loan_options of this Ptsv2paymentsProcessingInformation.
+
+        :param loan_options: The loan_options of this Ptsv2paymentsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationLoanOptions
+        """
+
+        self._loan_options = loan_options
+
+    @property
+    def wallet_type(self):
+        """
+        Gets the wallet_type of this Ptsv2paymentsProcessingInformation.
+        This field carries the wallet type in authorization requests and credit requests. Possible value are: - `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on Chase Paymentech Solutions and CyberSource through VisaNet. - `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a PayPass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on CyberSource through VisaNet. - `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on CyberSource through VisaNet. - `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on CyberSource through VisaNet. - `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on CyberSource through VisaNet. - `SDW`: Staged digital wallet. An issuer or operator created the wallet. This value is supported only for Masterpass transactions on Chase Paymentech Solutions. - `VCIND`: Visa Checkout payment. This value is supported only on CyberSource through VisaNet, FDC Compass, FDC Nashville Global, FDI Australia, and TSYS Acquiring Solutions. See Getting Started with Visa Checkout. For Visa Checkout transactions, the way CyberSource processes the value for this field depends on the processor. See the Visa Checkout section below. For all other values, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. Masterpass (101, 102, 103, 216, and 217): The Masterpass platform generates the wallet type value and passes it to you along with the customer’s checkout information.  Visa Checkout: This field is optional for Visa Checkout authorizations on FDI Australia. For all other processors, this field is required for Visa Checkout authorizations. For Visa Checkout transactions on the following processors, CyberSource sends the value that the processor expects for this field:FDC Compass,FDC Nashville Global,FDI Australia,TSYS Acquiring Solutions For all other processors, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. For incremental authorizations, this field is supported only for Mastercard and the supported values are 101 and 102. Payment card companies can introduce new values without notice. Your order management system should be able to process new values without problems.  CyberSource through VisaNet When the value for this field is 101, 102, 103, 216, or 217, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR6, Position: 88-90,  Field: Mastercard Wallet Identifier. When the value for this field is VCIND, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR8, Position: 72-76, Field: Agent Unique ID. 
+
+        :return: The wallet_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._wallet_type
+
+    @wallet_type.setter
+    def wallet_type(self, wallet_type):
+        """
+        Sets the wallet_type of this Ptsv2paymentsProcessingInformation.
+        This field carries the wallet type in authorization requests and credit requests. Possible value are: - `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on Chase Paymentech Solutions and CyberSource through VisaNet. - `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a PayPass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on CyberSource through VisaNet. - `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on CyberSource through VisaNet. - `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on CyberSource through VisaNet. - `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on CyberSource through VisaNet. - `SDW`: Staged digital wallet. An issuer or operator created the wallet. This value is supported only for Masterpass transactions on Chase Paymentech Solutions. - `VCIND`: Visa Checkout payment. This value is supported only on CyberSource through VisaNet, FDC Compass, FDC Nashville Global, FDI Australia, and TSYS Acquiring Solutions. See Getting Started with Visa Checkout. For Visa Checkout transactions, the way CyberSource processes the value for this field depends on the processor. See the Visa Checkout section below. For all other values, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. Masterpass (101, 102, 103, 216, and 217): The Masterpass platform generates the wallet type value and passes it to you along with the customer’s checkout information.  Visa Checkout: This field is optional for Visa Checkout authorizations on FDI Australia. For all other processors, this field is required for Visa Checkout authorizations. For Visa Checkout transactions on the following processors, CyberSource sends the value that the processor expects for this field:FDC Compass,FDC Nashville Global,FDI Australia,TSYS Acquiring Solutions For all other processors, this field is a passthrough; therefore, CyberSource does not verify the value or modify it in any way before sending it to the processor. For incremental authorizations, this field is supported only for Mastercard and the supported values are 101 and 102. Payment card companies can introduce new values without notice. Your order management system should be able to process new values without problems.  CyberSource through VisaNet When the value for this field is 101, 102, 103, 216, or 217, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR6, Position: 88-90,  Field: Mastercard Wallet Identifier. When the value for this field is VCIND, it corresponds to the following data in the TC 33 capture file5: Record: CP01 TCR8, Position: 72-76, Field: Agent Unique ID. 
+
+        :param wallet_type: The wallet_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._wallet_type = wallet_type
+
+    @property
+    def national_net_domestic_data(self):
+        """
+        Gets the national_net_domestic_data of this Ptsv2paymentsProcessingInformation.
+        Supplementary domestic transaction information provided by the acquirer for National Net Settlement Service (NNSS) transactions. NNSS is a settlement service that Visa provides. For transactions on CyberSource through VisaNet in countries that subscribe to NNSS: VisaNet clears transactions; VisaNet transfers funds to the acquirer after deducting processing fees and interchange fees. VisaNet settles transactions in the local pricing currency through a local financial institution. This field is supported only on CyberSource through VisaNet for domestic data in Colombia 
+
+        :return: The national_net_domestic_data of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._national_net_domestic_data
+
+    @national_net_domestic_data.setter
+    def national_net_domestic_data(self, national_net_domestic_data):
+        """
+        Sets the national_net_domestic_data of this Ptsv2paymentsProcessingInformation.
+        Supplementary domestic transaction information provided by the acquirer for National Net Settlement Service (NNSS) transactions. NNSS is a settlement service that Visa provides. For transactions on CyberSource through VisaNet in countries that subscribe to NNSS: VisaNet clears transactions; VisaNet transfers funds to the acquirer after deducting processing fees and interchange fees. VisaNet settles transactions in the local pricing currency through a local financial institution. This field is supported only on CyberSource through VisaNet for domestic data in Colombia 
+
+        :param national_net_domestic_data: The national_net_domestic_data of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._national_net_domestic_data = national_net_domestic_data
+
+    @property
+    def japan_payment_options(self):
+        """
+        Gets the japan_payment_options of this Ptsv2paymentsProcessingInformation.
+
+        :return: The japan_payment_options of this Ptsv2paymentsProcessingInformation.
+        :rtype: Ptsv2paymentsProcessingInformationJapanPaymentOptions
+        """
+        return self._japan_payment_options
+
+    @japan_payment_options.setter
+    def japan_payment_options(self, japan_payment_options):
+        """
+        Sets the japan_payment_options of this Ptsv2paymentsProcessingInformation.
+
+        :param japan_payment_options: The japan_payment_options of this Ptsv2paymentsProcessingInformation.
+        :type: Ptsv2paymentsProcessingInformationJapanPaymentOptions
+        """
+
+        self._japan_payment_options = japan_payment_options
+
+    @property
+    def mobile_remote_payment_type(self):
+        """
+        Gets the mobile_remote_payment_type of this Ptsv2paymentsProcessingInformation.
+        Type of payment initiated from a cardholder's mobile device. Possible values: - `1` :  Consumer-initiated remote purchase, face-to-face - `2` :  Consumer-initiated remote purchase, e-commerce - `3` :  Consumer-initiated remote purchase, mail order / telephone order - `4` :  Consumer-initiated bill pay - `5` :  Consumer-initiated top up - `6` :  Consumer-initiated cash out - `7` :  ATM triggered or agent-initiated cash out - `8` :  Merchant-initiated remote purchase, face-to-face - `9` :  Merchant-initiated remote purchase, e-commerce  This field is supported only for Mastercard transactions on CyberSource through VisaNet.  Optional field.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 94 - Field: Mastercard Mobile Remote Payment Program Indicator  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
+
+        :return: The mobile_remote_payment_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._mobile_remote_payment_type
+
+    @mobile_remote_payment_type.setter
+    def mobile_remote_payment_type(self, mobile_remote_payment_type):
+        """
+        Sets the mobile_remote_payment_type of this Ptsv2paymentsProcessingInformation.
+        Type of payment initiated from a cardholder's mobile device. Possible values: - `1` :  Consumer-initiated remote purchase, face-to-face - `2` :  Consumer-initiated remote purchase, e-commerce - `3` :  Consumer-initiated remote purchase, mail order / telephone order - `4` :  Consumer-initiated bill pay - `5` :  Consumer-initiated top up - `6` :  Consumer-initiated cash out - `7` :  ATM triggered or agent-initiated cash out - `8` :  Merchant-initiated remote purchase, face-to-face - `9` :  Merchant-initiated remote purchase, e-commerce  This field is supported only for Mastercard transactions on CyberSource through VisaNet.  Optional field.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 94 - Field: Mastercard Mobile Remote Payment Program Indicator  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
+
+        :param mobile_remote_payment_type: The mobile_remote_payment_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._mobile_remote_payment_type = mobile_remote_payment_type
+
+    @property
+    def extended_credit_total_count(self):
+        """
+        Gets the extended_credit_total_count of this Ptsv2paymentsProcessingInformation.
+        A private national-use field submitted by acquirers and issuers in South Africa for South Africa-domestic (intra-country) authorizations and financial requests. Values for this field are 00 through 99. 
+
+        :return: The extended_credit_total_count of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._extended_credit_total_count
+
+    @extended_credit_total_count.setter
+    def extended_credit_total_count(self, extended_credit_total_count):
+        """
+        Sets the extended_credit_total_count of this Ptsv2paymentsProcessingInformation.
+        A private national-use field submitted by acquirers and issuers in South Africa for South Africa-domestic (intra-country) authorizations and financial requests. Values for this field are 00 through 99. 
+
+        :param extended_credit_total_count: The extended_credit_total_count of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._extended_credit_total_count = extended_credit_total_count
+
+    @property
+    def network_routing_order(self):
+        """
+        Gets the network_routing_order of this Ptsv2paymentsProcessingInformation.
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.  #### PIN debit Priority order of the networks through which he transaction will be routed. Set this value to a series of one-character network codes in your preferred order. This is a list of the network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  For example, if the Star network is your first preference and Pulse is your second preference, set this field to a value of `MH`.  When you do not include this value in your PIN debit request, the list of network codes from your account is used. **Note** This field is supported only for businesses located in the U.S.  Optional field for PIN debit credit or PIN debit purchase. 
+
+        :return: The network_routing_order of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._network_routing_order
+
+    @network_routing_order.setter
+    def network_routing_order(self, network_routing_order):
+        """
+        Sets the network_routing_order of this Ptsv2paymentsProcessingInformation.
+        On PIN Debit Gateways: This U.S.-only field is optionally used by  participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference. If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.  #### PIN debit Priority order of the networks through which he transaction will be routed. Set this value to a series of one-character network codes in your preferred order. This is a list of the network codes:  | Network | Code | | --- | --- | | Accel | E | | AFFN | U | | Alaska Option | 3 | | CU24 | C | | Interlink | G | | Maestro | 8 | | NETS | P | | NYCE | F | | Pulse | H | | Shazam | 7 | | Star | M | | Visa | V |  For example, if the Star network is your first preference and Pulse is your second preference, set this field to a value of `MH`.  When you do not include this value in your PIN debit request, the list of network codes from your account is used. **Note** This field is supported only for businesses located in the U.S.  Optional field for PIN debit credit or PIN debit purchase. 
+
+        :param network_routing_order: The network_routing_order of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._network_routing_order = network_routing_order
+
+    @property
+    def pay_by_points_indicator(self):
+        """
+        Gets the pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates if the transaction is pay by points transaction true: Transaction uses loyalty points false: Transaction does not use loyalty points Default: false 
+
+        :return: The pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._pay_by_points_indicator
+
+    @pay_by_points_indicator.setter
+    def pay_by_points_indicator(self, pay_by_points_indicator):
+        """
+        Sets the pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates if the transaction is pay by points transaction true: Transaction uses loyalty points false: Transaction does not use loyalty points Default: false 
+
+        :param pay_by_points_indicator: The pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._pay_by_points_indicator = pay_by_points_indicator
 
     def to_dict(self):
         """

@@ -3,11 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**link** | [**ReportingV3ReportsGet200ResponseLink**](ReportingV3ReportsGet200ResponseLink.md) |  | [optional] 
 **report_definition_id** | **str** | Unique Report Identifier of each report type | [optional] 
 **report_name** | **str** | Name of the report specified by merchant while creating the report | [optional] 
-**report_mime_type** | **str** | Format of the report to get generated  Valid values: - application/xml - text/csv  | [optional] 
-**report_frequency** | **str** | Frequency of the report to get generated  Valid values: - DAILY - WEEKLY - MONTHLY - ADHOC  | [optional] 
-**status** | **str** | Status of the report  Valid values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA  | [optional] 
+**report_mime_type** | **str** | Format of the report to get generated Valid Values: - application/xml - text/csv  | [optional] 
+**report_frequency** | **str** | Frequency of the report to get generated Valid Values: - DAILY - WEEKLY - MONTHLY - ADHOC  | [optional] 
+**status** | **str** | Status of the report Valid Values: - COMPLETED - PENDING - QUEUED - RUNNING - ERROR - NO_DATA  | [optional] 
 **report_start_time** | **datetime** | Specifies the report start time in ISO 8601 format | [optional] 
 **report_end_time** | **datetime** | Specifies the report end time in ISO 8601 format | [optional] 
 **timezone** | **str** | Time Zone | [optional] 

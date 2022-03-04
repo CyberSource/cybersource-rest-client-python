@@ -33,16 +33,24 @@ class PtsV2PaymentsPost201ResponseLinks(object):
     swagger_types = {
         '_self': 'PtsV2PaymentsPost201ResponseLinksSelf',
         'reversal': 'PtsV2PaymentsPost201ResponseLinksSelf',
-        'capture': 'PtsV2PaymentsPost201ResponseLinksSelf'
+        'capture': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'customer': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'payment_instrument': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'shipping_address': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponseLinksSelf'
     }
 
     attribute_map = {
         '_self': 'self',
         'reversal': 'reversal',
-        'capture': 'capture'
+        'capture': 'capture',
+        'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'shipping_address': 'shippingAddress',
+        'instrument_identifier': 'instrumentIdentifier'
     }
 
-    def __init__(self, _self=None, reversal=None, capture=None):
+    def __init__(self, _self=None, reversal=None, capture=None, customer=None, payment_instrument=None, shipping_address=None, instrument_identifier=None):
         """
         PtsV2PaymentsPost201ResponseLinks - a model defined in Swagger
         """
@@ -50,6 +58,10 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         self.__self = None
         self._reversal = None
         self._capture = None
+        self._customer = None
+        self._payment_instrument = None
+        self._shipping_address = None
+        self._instrument_identifier = None
 
         if _self is not None:
           self._self = _self
@@ -57,6 +69,14 @@ class PtsV2PaymentsPost201ResponseLinks(object):
           self.reversal = reversal
         if capture is not None:
           self.capture = capture
+        if customer is not None:
+          self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
 
     @property
     def _self(self):
@@ -120,6 +140,90 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         """
 
         self._capture = capture
+
+    @property
+    def customer(self):
+        """
+        Gets the customer of this PtsV2PaymentsPost201ResponseLinks.
+
+        :return: The customer of this PtsV2PaymentsPost201ResponseLinks.
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+        return self._customer
+
+    @customer.setter
+    def customer(self, customer):
+        """
+        Sets the customer of this PtsV2PaymentsPost201ResponseLinks.
+
+        :param customer: The customer of this PtsV2PaymentsPost201ResponseLinks.
+        :type: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+
+        self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this PtsV2PaymentsPost201ResponseLinks.
+
+        :return: The payment_instrument of this PtsV2PaymentsPost201ResponseLinks.
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this PtsV2PaymentsPost201ResponseLinks.
+
+        :param payment_instrument: The payment_instrument of this PtsV2PaymentsPost201ResponseLinks.
+        :type: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this PtsV2PaymentsPost201ResponseLinks.
+
+        :return: The shipping_address of this PtsV2PaymentsPost201ResponseLinks.
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this PtsV2PaymentsPost201ResponseLinks.
+
+        :param shipping_address: The shipping_address of this PtsV2PaymentsPost201ResponseLinks.
+        :type: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+
+        self._shipping_address = shipping_address
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this PtsV2PaymentsPost201ResponseLinks.
+
+        :return: The instrument_identifier of this PtsV2PaymentsPost201ResponseLinks.
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this PtsV2PaymentsPost201ResponseLinks.
+
+        :param instrument_identifier: The instrument_identifier of this PtsV2PaymentsPost201ResponseLinks.
+        :type: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+
+        self._instrument_identifier = instrument_identifier
 
     def to_dict(self):
         """

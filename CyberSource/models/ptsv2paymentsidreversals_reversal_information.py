@@ -78,7 +78,7 @@ class Ptsv2paymentsidreversalsReversalInformation(object):
     def reason(self):
         """
         Gets the reason of this Ptsv2paymentsidreversalsReversalInformation.
-        Reason for the authorization reversal. Possible value:   - `34`: Suspected fraud  CyberSource ignores this field for processors that do not support this value.  For details, see `auth_reversal_reason` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Reason for the authorization reversal. Possible value:   - `34`: Suspected fraud  This field is ignored for processors that do not support this value.  Returned by authorization reversal. 
 
         :return: The reason of this Ptsv2paymentsidreversalsReversalInformation.
         :rtype: str
@@ -89,7 +89,7 @@ class Ptsv2paymentsidreversalsReversalInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this Ptsv2paymentsidreversalsReversalInformation.
-        Reason for the authorization reversal. Possible value:   - `34`: Suspected fraud  CyberSource ignores this field for processors that do not support this value.  For details, see `auth_reversal_reason` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Reason for the authorization reversal. Possible value:   - `34`: Suspected fraud  This field is ignored for processors that do not support this value.  Returned by authorization reversal. 
 
         :param reason: The reason of this Ptsv2paymentsidreversalsReversalInformation.
         :type: str

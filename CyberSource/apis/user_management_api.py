@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class UserManagementApi(object):
@@ -39,13 +40,15 @@ class UserManagementApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_users(self, **kwargs):
         """
-        Get user information
-        This endpoint is to get all the user information depending on the filter criteria passed in the query.
+        Get User Information - Deprecated
+        This endpoint is deprecated. Please use the search end point.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -64,6 +67,10 @@ class UserManagementApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_users` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_users_with_http_info(**kwargs)
@@ -73,8 +80,8 @@ class UserManagementApi(object):
 
     def get_users_with_http_info(self, **kwargs):
         """
-        Get user information
-        This endpoint is to get all the user information depending on the filter criteria passed in the query.
+        Get User Information - Deprecated
+        This endpoint is deprecated. Please use the search end point.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

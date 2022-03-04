@@ -34,17 +34,19 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         'eci_raw': 'str',
         'cavv': 'str',
         'xid': 'str',
-        'transaction_id': 'str'
+        'transaction_id': 'str',
+        'strong_authentication': 'TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuthentication'
     }
 
     attribute_map = {
         'eci_raw': 'eciRaw',
         'cavv': 'cavv',
         'xid': 'xid',
-        'transaction_id': 'transactionId'
+        'transaction_id': 'transactionId',
+        'strong_authentication': 'strongAuthentication'
     }
 
-    def __init__(self, eci_raw=None, cavv=None, xid=None, transaction_id=None):
+    def __init__(self, eci_raw=None, cavv=None, xid=None, transaction_id=None, strong_authentication=None):
         """
         TssV2TransactionsGet200ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         self._cavv = None
         self._xid = None
         self._transaction_id = None
+        self._strong_authentication = None
 
         if eci_raw is not None:
           self.eci_raw = eci_raw
@@ -62,12 +65,14 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
           self.xid = xid
         if transaction_id is not None:
           self.transaction_id = transaction_id
+        if strong_authentication is not None:
+          self.strong_authentication = strong_authentication
 
     @property
     def eci_raw(self):
         """
         Gets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -78,13 +83,11 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param eci_raw: The eci_raw of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if eci_raw is not None and len(eci_raw) > 2:
-            raise ValueError("Invalid value for `eci_raw`, length must be less than or equal to `2`")
 
         self._eci_raw = eci_raw
 
@@ -108,8 +111,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if cavv is not None and len(cavv) > 40:
-            raise ValueError("Invalid value for `cavv`, length must be less than or equal to `40`")
 
         self._cavv = cavv
 
@@ -117,7 +118,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -128,13 +129,11 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param xid: The xid of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
-        if xid is not None and len(xid) > 40:
-            raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
 
@@ -160,6 +159,27 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def strong_authentication(self):
+        """
+        Gets the strong_authentication of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
+
+        :return: The strong_authentication of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
+        :rtype: TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuthentication
+        """
+        return self._strong_authentication
+
+    @strong_authentication.setter
+    def strong_authentication(self, strong_authentication):
+        """
+        Sets the strong_authentication of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
+
+        :param strong_authentication: The strong_authentication of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
+        :type: TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuthentication
+        """
+
+        self._strong_authentication = strong_authentication
 
     def to_dict(self):
         """

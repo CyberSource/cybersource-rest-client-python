@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
-        Mapped response code for Visa Secure and American Express SafeKey.  For processor-specific details, see `auth_cavv_response_code` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped response code for Visa Secure and American Express SafeKey. 
 
         :return: The code of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
         :rtype: str
@@ -68,13 +68,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
-        Mapped response code for Visa Secure and American Express SafeKey.  For processor-specific details, see `auth_cavv_response_code` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped response code for Visa Secure and American Express SafeKey. 
 
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
         :type: str
         """
-        if code is not None and len(code) > 3:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `3`")
 
         self._code = code
 
@@ -82,7 +80,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
     def code_raw(self):
         """
         Gets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
-        Raw response code sent directly from the processor for Visa Secure and American Express SafeKey:  For processor-specific details, see `auth_cavv_response_code_raw` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw response code sent directly from the processor for Visa Secure and American Express SafeKey: 
 
         :return: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
         :rtype: str
@@ -93,13 +91,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
     def code_raw(self, code_raw):
         """
         Sets the code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
-        Raw response code sent directly from the processor for Visa Secure and American Express SafeKey:  For processor-specific details, see `auth_cavv_response_code_raw` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Raw response code sent directly from the processor for Visa Secure and American Express SafeKey: 
 
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
         :type: str
         """
-        if code_raw is not None and len(code_raw) > 3:
-            raise ValueError("Invalid value for `code_raw`, length must be less than or equal to `3`")
 
         self._code_raw = code_raw
 

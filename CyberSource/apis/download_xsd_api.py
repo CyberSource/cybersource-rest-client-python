@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class DownloadXSDApi(object):
@@ -39,12 +40,14 @@ class DownloadXSDApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def get_xsdv2(self, report_definition_name_version, **kwargs):
         """
-        Download XSD for report
+        Download XSD for Report
         Used to download XSDs for reports on no-auth.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -61,6 +64,10 @@ class DownloadXSDApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_xsdv2` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_xsdv2_with_http_info(report_definition_name_version, **kwargs)
@@ -70,7 +77,7 @@ class DownloadXSDApi(object):
 
     def get_xsdv2_with_http_info(self, report_definition_name_version, **kwargs):
         """
-        Download XSD for report
+        Download XSD for Report
         Used to download XSDs for reports on no-auth.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -105,6 +112,8 @@ class DownloadXSDApi(object):
         del params['kwargs']
         # verify the required parameter 'report_definition_name_version' is set
         if ('report_definition_name_version' not in params) or (params['report_definition_name_version'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_definition_name_version` when calling `get_xsdv2`")
             raise ValueError("Missing the required parameter `report_definition_name_version` when calling `get_xsdv2`")
 
 
@@ -133,7 +142,7 @@ class DownloadXSDApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/xsds/{reportDefinitionNameVersion}', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/xsds/{reportDefinitionNameVersion}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

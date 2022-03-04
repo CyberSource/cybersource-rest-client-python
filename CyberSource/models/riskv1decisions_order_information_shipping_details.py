@@ -96,8 +96,6 @@ class Riskv1decisionsOrderInformationShippingDetails(object):
         :param shipping_method: The shipping_method of this Riskv1decisionsOrderInformationShippingDetails.
         :type: str
         """
-        if shipping_method is not None and len(shipping_method) > 10:
-            raise ValueError("Invalid value for `shipping_method`, length must be less than or equal to `10`")
 
         self._shipping_method = shipping_method
 

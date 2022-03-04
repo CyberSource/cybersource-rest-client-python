@@ -43,7 +43,10 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'merchandise_code': 'int',
         'transaction_advice_addendum': 'list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]',
         'reference_data_code': 'str',
-        'reference_data_number': 'str'
+        'reference_data_number': 'str',
+        'sales_slip_number': 'int',
+        'invoice_date': 'str',
+        'cost_center': 'str'
     }
 
     attribute_map = {
@@ -59,10 +62,13 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'merchandise_code': 'merchandiseCode',
         'transaction_advice_addendum': 'transactionAdviceAddendum',
         'reference_data_code': 'referenceDataCode',
-        'reference_data_number': 'referenceDataNumber'
+        'reference_data_number': 'referenceDataNumber',
+        'sales_slip_number': 'salesSlipNumber',
+        'invoice_date': 'invoiceDate',
+        'cost_center': 'costCenter'
     }
 
-    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None):
+    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None, sales_slip_number=None, invoice_date=None, cost_center=None):
         """
         Ptsv2paymentsOrderInformationInvoiceDetails - a model defined in Swagger
         """
@@ -80,6 +86,9 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         self._transaction_advice_addendum = None
         self._reference_data_code = None
         self._reference_data_number = None
+        self._sales_slip_number = None
+        self._invoice_date = None
+        self._cost_center = None
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
@@ -107,6 +116,12 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
           self.reference_data_code = reference_data_code
         if reference_data_number is not None:
           self.reference_data_number = reference_data_number
+        if sales_slip_number is not None:
+          self.sales_slip_number = sales_slip_number
+        if invoice_date is not None:
+          self.invoice_date = invoice_date
+        if cost_center is not None:
+          self.cost_center = cost_center
 
     @property
     def invoice_number(self):
@@ -197,8 +212,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param purchase_order_number: The purchase_order_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_order_number is not None and len(purchase_order_number) > 25:
-            raise ValueError("Invalid value for `purchase_order_number`, length must be less than or equal to `25`")
 
         self._purchase_order_number = purchase_order_number
 
@@ -222,8 +235,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param purchase_order_date: The purchase_order_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_order_date is not None and len(purchase_order_date) > 10:
-            raise ValueError("Invalid value for `purchase_order_date`, length must be less than or equal to `10`")
 
         self._purchase_order_date = purchase_order_date
 
@@ -247,8 +258,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param purchase_contact_name: The purchase_contact_name of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_contact_name is not None and len(purchase_contact_name) > 36:
-            raise ValueError("Invalid value for `purchase_contact_name`, length must be less than or equal to `36`")
 
         self._purchase_contact_name = purchase_contact_name
 
@@ -295,8 +304,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param vat_invoice_reference_number: The vat_invoice_reference_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if vat_invoice_reference_number is not None and len(vat_invoice_reference_number) > 15:
-            raise ValueError("Invalid value for `vat_invoice_reference_number`, length must be less than or equal to `15`")
 
         self._vat_invoice_reference_number = vat_invoice_reference_number
 
@@ -320,8 +327,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param commodity_code: The commodity_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if commodity_code is not None and len(commodity_code) > 4:
-            raise ValueError("Invalid value for `commodity_code`, length must be less than or equal to `4`")
 
         self._commodity_code = commodity_code
 
@@ -329,7 +334,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def merchandise_code(self):
         """
         Gets the merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Identifier for the merchandise. Possible value:   - 1000: Gift card  This field is supported only for **American Express Direct**. 
+        Identifier for the merchandise. This field is supported only on the processors listed in this field description.  #### American Express Direct Possible value: - 1000: Gift card  #### CyberSource through VisaNet This value must be right justified. In Japan, this value is called a _goods code_.  #### JCN Gateway This value must be right justified. In Japan, this value is called a _goods code_. 
 
         :return: The merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :rtype: int
@@ -340,7 +345,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def merchandise_code(self, merchandise_code):
         """
         Sets the merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Identifier for the merchandise. Possible value:   - 1000: Gift card  This field is supported only for **American Express Direct**. 
+        Identifier for the merchandise. This field is supported only on the processors listed in this field description.  #### American Express Direct Possible value: - 1000: Gift card  #### CyberSource through VisaNet This value must be right justified. In Japan, this value is called a _goods code_.  #### JCN Gateway This value must be right justified. In Japan, this value is called a _goods code_. 
 
         :param merchandise_code: The merchandise_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: int
@@ -373,7 +378,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def reference_data_code(self):
         """
         Gets the reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Code that identifies the value of the `referenceDataNumber` field.  For the possible values, see \"Reference Data Codes\" in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+        Code that identifies the value of the `referenceDataNumber` field.  For the possible values, see \"Reference Data Codes\" in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/).  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
 
         :return: The reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :rtype: str
@@ -384,13 +389,11 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
     def reference_data_code(self, reference_data_code):
         """
         Sets the reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
-        Code that identifies the value of the `referenceDataNumber` field.  For the possible values, see \"Reference Data Codes\" in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
+        Code that identifies the value of the `referenceDataNumber` field.  For the possible values, see \"Reference Data Codes\" in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/).  This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. 
 
         :param reference_data_code: The reference_data_code of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if reference_data_code is not None and len(reference_data_code) > 3:
-            raise ValueError("Invalid value for `reference_data_code`, length must be less than or equal to `3`")
 
         self._reference_data_code = reference_data_code
 
@@ -414,10 +417,79 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param reference_data_number: The reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-        if reference_data_number is not None and len(reference_data_number) > 30:
-            raise ValueError("Invalid value for `reference_data_number`, length must be less than or equal to `30`")
 
         self._reference_data_number = reference_data_number
+
+    @property
+    def sales_slip_number(self):
+        """
+        Gets the sales_slip_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Transaction identifier that is generated. You have the option of printing the sales slip number on the receipt. This field is supported only on Cybersource through Visanet and JCN gateway.  Optional field.  #### Card Present processing message If you included this field in the request, the returned value is the value that you sent in the request. If you did not include this field in the request, the system generated this value for you.  The difference between this reply field and the `processorInformation.systemTraceAuditNumber` field is that the system generates the system trace audit number (STAN), and you must print the receipt number on the receipt; whereas you can generate the sales slip number, and you can choose to print the sales slip number on the receipt. 
+
+        :return: The sales_slip_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: int
+        """
+        return self._sales_slip_number
+
+    @sales_slip_number.setter
+    def sales_slip_number(self, sales_slip_number):
+        """
+        Sets the sales_slip_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Transaction identifier that is generated. You have the option of printing the sales slip number on the receipt. This field is supported only on Cybersource through Visanet and JCN gateway.  Optional field.  #### Card Present processing message If you included this field in the request, the returned value is the value that you sent in the request. If you did not include this field in the request, the system generated this value for you.  The difference between this reply field and the `processorInformation.systemTraceAuditNumber` field is that the system generates the system trace audit number (STAN), and you must print the receipt number on the receipt; whereas you can generate the sales slip number, and you can choose to print the sales slip number on the receipt. 
+
+        :param sales_slip_number: The sales_slip_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: int
+        """
+        if sales_slip_number is not None and sales_slip_number > 99999:
+            raise ValueError("Invalid value for `sales_slip_number`, must be a value less than or equal to `99999`")
+
+        self._sales_slip_number = sales_slip_number
+
+    @property
+    def invoice_date(self):
+        """
+        Gets the invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Date of the tax calculation. Use format YYYYMMDD. You can provide a date in the past if you are calculating tax for a refund and want to know what the tax was on the date the order was placed. You can provide a date in the future if you are calculating the tax for a future date, such as an upcoming tax holiday.  The default is the date, in Pacific time, that the bank receives the request. Keep this in mind if you are in a different time zone and want the tax calculated with the rates that are applicable on a specific date.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. 
+
+        :return: The invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._invoice_date
+
+    @invoice_date.setter
+    def invoice_date(self, invoice_date):
+        """
+        Sets the invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Date of the tax calculation. Use format YYYYMMDD. You can provide a date in the past if you are calculating tax for a refund and want to know what the tax was on the date the order was placed. You can provide a date in the future if you are calculating the tax for a future date, such as an upcoming tax holiday.  The default is the date, in Pacific time, that the bank receives the request. Keep this in mind if you are in a different time zone and want the tax calculated with the rates that are applicable on a specific date.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. 
+
+        :param invoice_date: The invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+
+        self._invoice_date = invoice_date
+
+    @property
+    def cost_center(self):
+        """
+        Gets the cost_center of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Cost centre of the merchant
+
+        :return: The cost_center of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._cost_center
+
+    @cost_center.setter
+    def cost_center(self, cost_center):
+        """
+        Sets the cost_center of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Cost centre of the merchant
+
+        :param cost_center: The cost_center of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+
+        self._cost_center = cost_center
 
     def to_dict(self):
         """

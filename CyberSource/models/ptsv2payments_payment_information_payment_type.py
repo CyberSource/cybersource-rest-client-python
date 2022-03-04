@@ -62,7 +62,7 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
     def name(self):
         """
         Gets the name of this Ptsv2paymentsPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for all eCheck payment transactions - ECP Debit, ECP Follow-on Credit, ECP StandAlone Credit) 
 
         :return: The name of this Ptsv2paymentsPaymentInformationPaymentType.
         :rtype: str
@@ -73,7 +73,7 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsPaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for all eCheck payment transactions - ECP Debit, ECP Follow-on Credit, ECP StandAlone Credit) 
 
         :param name: The name of this Ptsv2paymentsPaymentInformationPaymentType.
         :type: str
@@ -85,7 +85,7 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
     def sub_type_name(self):
         """
         Gets the sub_type_name of this Ptsv2paymentsPaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
+        Detailed information about the Payment Type. Possible values: - `DEBIT`: Use this value to indicate a PIN debit transaction.  Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
 
         :return: The sub_type_name of this Ptsv2paymentsPaymentInformationPaymentType.
         :rtype: str
@@ -96,7 +96,7 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
     def sub_type_name(self, sub_type_name):
         """
         Sets the sub_type_name of this Ptsv2paymentsPaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
+        Detailed information about the Payment Type. Possible values: - `DEBIT`: Use this value to indicate a PIN debit transaction.  Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. 
 
         :param sub_type_name: The sub_type_name of this Ptsv2paymentsPaymentInformationPaymentType.
         :type: str

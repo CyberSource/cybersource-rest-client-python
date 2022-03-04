@@ -31,187 +31,43 @@ class InlineResponse400(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str',
-        'message': 'str',
-        'localization_key': 'str',
-        'correlation_id': 'str',
-        'detail': 'str',
-        'fields': 'list[InlineResponse400Fields]'
+        'errors': 'list[InlineResponse400Errors]'
     }
 
     attribute_map = {
-        'code': 'code',
-        'message': 'message',
-        'localization_key': 'localizationKey',
-        'correlation_id': 'correlationId',
-        'detail': 'detail',
-        'fields': 'fields'
+        'errors': 'errors'
     }
 
-    def __init__(self, code=None, message=None, localization_key=None, correlation_id=None, detail=None, fields=None):
+    def __init__(self, errors=None):
         """
         InlineResponse400 - a model defined in Swagger
         """
 
-        self._code = None
-        self._message = None
-        self._localization_key = None
-        self._correlation_id = None
-        self._detail = None
-        self._fields = None
+        self._errors = None
 
-        self.code = code
-        self.message = message
-        if localization_key is not None:
-          self.localization_key = localization_key
-        if correlation_id is not None:
-          self.correlation_id = correlation_id
-        if detail is not None:
-          self.detail = detail
-        if fields is not None:
-          self.fields = fields
+        if errors is not None:
+          self.errors = errors
 
     @property
-    def code(self):
+    def errors(self):
         """
-        Gets the code of this InlineResponse400.
-        Error code
+        Gets the errors of this InlineResponse400.
 
-        :return: The code of this InlineResponse400.
-        :rtype: str
+        :return: The errors of this InlineResponse400.
+        :rtype: list[InlineResponse400Errors]
         """
-        return self._code
+        return self._errors
 
-    @code.setter
-    def code(self, code):
+    @errors.setter
+    def errors(self, errors):
         """
-        Sets the code of this InlineResponse400.
-        Error code
+        Sets the errors of this InlineResponse400.
 
-        :param code: The code of this InlineResponse400.
-        :type: str
-        """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
-
-        self._code = code
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse400.
-        Error message
-
-        :return: The message of this InlineResponse400.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse400.
-        Error message
-
-        :param message: The message of this InlineResponse400.
-        :type: str
-        """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
-
-        self._message = message
-
-    @property
-    def localization_key(self):
-        """
-        Gets the localization_key of this InlineResponse400.
-        Localization Key Name
-
-        :return: The localization_key of this InlineResponse400.
-        :rtype: str
-        """
-        return self._localization_key
-
-    @localization_key.setter
-    def localization_key(self, localization_key):
-        """
-        Sets the localization_key of this InlineResponse400.
-        Localization Key Name
-
-        :param localization_key: The localization_key of this InlineResponse400.
-        :type: str
+        :param errors: The errors of this InlineResponse400.
+        :type: list[InlineResponse400Errors]
         """
 
-        self._localization_key = localization_key
-
-    @property
-    def correlation_id(self):
-        """
-        Gets the correlation_id of this InlineResponse400.
-        Correlation Id
-
-        :return: The correlation_id of this InlineResponse400.
-        :rtype: str
-        """
-        return self._correlation_id
-
-    @correlation_id.setter
-    def correlation_id(self, correlation_id):
-        """
-        Sets the correlation_id of this InlineResponse400.
-        Correlation Id
-
-        :param correlation_id: The correlation_id of this InlineResponse400.
-        :type: str
-        """
-
-        self._correlation_id = correlation_id
-
-    @property
-    def detail(self):
-        """
-        Gets the detail of this InlineResponse400.
-        Error Detail
-
-        :return: The detail of this InlineResponse400.
-        :rtype: str
-        """
-        return self._detail
-
-    @detail.setter
-    def detail(self, detail):
-        """
-        Sets the detail of this InlineResponse400.
-        Error Detail
-
-        :param detail: The detail of this InlineResponse400.
-        :type: str
-        """
-
-        self._detail = detail
-
-    @property
-    def fields(self):
-        """
-        Gets the fields of this InlineResponse400.
-        Error fields List
-
-        :return: The fields of this InlineResponse400.
-        :rtype: list[InlineResponse400Fields]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """
-        Sets the fields of this InlineResponse400.
-        Error fields List
-
-        :param fields: The fields of this InlineResponse400.
-        :type: list[InlineResponse400Fields]
-        """
-
-        self._fields = fields
+        self._errors = errors
 
     def to_dict(self):
         """

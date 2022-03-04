@@ -144,8 +144,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :param check_number: The check_number of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
-        if check_number is not None and len(check_number) > 8:
-            raise ValueError("Invalid value for `check_number`, length must be less than or equal to `8`")
 
         self._check_number = check_number
 
@@ -169,8 +167,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
-        if type is not None and len(type) > 1:
-            raise ValueError("Invalid value for `type`, length must be less than or equal to `1`")
 
         self._type = type
 
@@ -224,7 +220,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self):
         """
         Gets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -235,13 +231,11 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self, encoder_id):
         """
         Sets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the bank that provided the customer’s encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param encoder_id: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
-        if encoder_id is not None and len(encoder_id) > 3:
-            raise ValueError("Invalid value for `encoder_id`, length must be less than or equal to `3`")
 
         self._encoder_id = encoder_id
 

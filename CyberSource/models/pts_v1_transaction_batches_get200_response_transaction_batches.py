@@ -98,10 +98,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param id: The id of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
-        if id is not None and len(id) > 8:
-            raise ValueError("Invalid value for `id`, length must be less than or equal to `8`")
-        if id is not None and len(id) < 1:
-            raise ValueError("Invalid value for `id`, length must be greater than or equal to `1`")
         if id is not None and not re.search('^[a-zA-Z0-9_+-]*$', id):
             raise ValueError("Invalid value for `id`, must be a follow pattern or equal to `/^[a-zA-Z0-9_+-]*$/`")
 

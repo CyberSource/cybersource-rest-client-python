@@ -43,7 +43,7 @@ class TestReportsApi(unittest.TestCase):
         """
         Test case for get_report_by_report_id
 
-        Get Report based on reportId
+        Get Report Based on Report Id
         """
         pass
 
@@ -51,7 +51,7 @@ class TestReportsApi(unittest.TestCase):
         """
         Test case for search_reports
 
-        Retrieve available reports
+        Retrieve Available Reports
         """
         pass
 

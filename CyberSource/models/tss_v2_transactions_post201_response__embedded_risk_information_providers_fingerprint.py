@@ -62,7 +62,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self):
         """
         Gets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
+        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :return: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -73,13 +73,11 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self, true_ipaddress):
         """
         Sets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in [CyberSource Decision Manager Device Fingerprinting Guide.](https://www.cybersource.com/developers/documentation/fraud_management) 
+        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :param true_ipaddress: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if true_ipaddress is not None and len(true_ipaddress) > 255:
-            raise ValueError("Invalid value for `true_ipaddress`, length must be less than or equal to `255`")
 
         self._true_ipaddress = true_ipaddress
 
@@ -87,7 +85,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def hash(self):
         """
         Gets the hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _CyberSource Decision Manager Device Fingerprinting Guide_on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link) 
+        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :return: The hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -98,13 +96,11 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def hash(self, hash):
         """
         Sets the hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _CyberSource Decision Manager Device Fingerprinting Guide_on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link) 
+        The unique identifier of the device that is returned in the `riskInformation.providers.fingerprint.device_fingerprint_hash` API reply field.  NOTE: For details about the value of this field, see the `decision_provider_#_field_#_value` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).  For more details about this field, see the `device_fingerprint_hash` field description in the _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :param hash: The hash of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if hash is not None and len(hash) > 255:
-            raise ValueError("Invalid value for `hash`, length must be less than or equal to `255`")
 
         self._hash = hash
 
@@ -128,8 +124,6 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :param smart_id: The smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
-        if smart_id is not None and len(smart_id) > 255:
-            raise ValueError("Invalid value for `smart_id`, length must be less than or equal to `255`")
 
         self._smart_id = smart_id
 

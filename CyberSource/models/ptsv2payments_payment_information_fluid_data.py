@@ -90,7 +90,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self):
         """
         Gets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        The identifier for a payment solution, which is sending the encrypted payment data to CyberSource for decryption. Valid values: - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=` **NOTE**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor.  For details about the list of payment solution identifiers, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html).  For details about the encrypted payment data, see the `encrypted_payment_descriptor` field description in the [Card-Present Processing Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= Note: For other payment solutions, the value may be specific to the terminal or device initiatinf the payment. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits.  Card Present processing: Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. paymentInformation.fluidData.encoding must be `Base64`. The value for Cybersource P2PE decryption depends on the encoding method used and identified in encoding field. If paymentInformation.fluidData.encoding is `Base64`, the value is: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` If paymentInformation.fluidData.encoding is `HEX`, the value is: `4649443D454D562E5041594D454E542E41504` 
 
         :return: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -101,13 +101,11 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def descriptor(self, descriptor):
         """
         Sets the descriptor of this Ptsv2paymentsPaymentInformationFluidData.
-        The identifier for a payment solution, which is sending the encrypted payment data to CyberSource for decryption. Valid values: - Samsung Pay: `RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ=` **NOTE**: For other payment solutions, the value may be specific to the customer's mobile device. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor.  For details about the list of payment solution identifiers, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html).  For details about the encrypted payment data, see the `encrypted_payment_descriptor` field description in the [Card-Present Processing Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/Retail_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        The identifier for a payment solution, which is sending the encrypted payment data for decryption. Valid values: Samsung Pay: RklEPUNPTU1PTi5TQU1TVU5HLklOQVBQLlBBWU1FTlQ= Note: For other payment solutions, the value may be specific to the terminal or device initiatinf the payment. For example, the descriptor for a Bluefin payment encryption would be a device-generated descriptor. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits.  Card Present processing: Format of the encrypted payment data. The value for Bluefin PCI P2PE is `Ymx1ZWZpbg==`. paymentInformation.fluidData.encoding must be `Base64`. The value for Cybersource P2PE decryption depends on the encoding method used and identified in encoding field. If paymentInformation.fluidData.encoding is `Base64`, the value is: `RklEPUVNVi5QQVlNRU5ULkFQSQ==` If paymentInformation.fluidData.encoding is `HEX`, the value is: `4649443D454D562E5041594D454E542E41504` 
 
         :param descriptor: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
-        if descriptor is not None and len(descriptor) > 128:
-            raise ValueError("Invalid value for `descriptor`, length must be less than or equal to `128`")
 
         self._descriptor = descriptor
 
@@ -115,7 +113,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self):
         """
         Gets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  For details, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html) for the specific payment- solution entry. 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution used by the merchant. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits that use a Cybersource suppored Point-to-Point encryption method. Card Present processing This field represents the encrypted payment data generated by the payment terminal/device. 
 
         :return: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -126,13 +124,11 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def value(self, value):
         """
         Sets the value of this Ptsv2paymentsPaymentInformationFluidData.
-        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution a merchant uses.  For details, see [Creating an Online Authorization](https://developer.cybersource.com/api/developer-guides/dita-payments/CreatingOnlineAuth.html) for the specific payment- solution entry. 
+        Represents the encrypted payment data BLOB. The entry for this field is dependent on the payment solution used by the merchant. Used by Authorization and Standalone Credits. Required for authorizations and standalone credits that use a Cybersource suppored Point-to-Point encryption method. Card Present processing This field represents the encrypted payment data generated by the payment terminal/device. 
 
         :param value: The value of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
-        if value is not None and len(value) > 3072:
-            raise ValueError("Invalid value for `value`, length must be less than or equal to `3072`")
 
         self._value = value
 
@@ -140,7 +136,7 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self):
         """
         Gets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Valid value: Base64 
+        Encoding method used to encrypt the payment data. Valid values: `Base64`, `HEX` If no value is provided, `Base64` is taken as the default value. And the `Base64` descriptor is used for paymentInformation.fluidData.encoding 
 
         :return: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :rtype: str
@@ -151,13 +147,11 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
     def encoding(self, encoding):
         """
         Sets the encoding of this Ptsv2paymentsPaymentInformationFluidData.
-        Encoding method used to encrypt the payment data.  Valid value: Base64 
+        Encoding method used to encrypt the payment data. Valid values: `Base64`, `HEX` If no value is provided, `Base64` is taken as the default value. And the `Base64` descriptor is used for paymentInformation.fluidData.encoding 
 
         :param encoding: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
-        if encoding is not None and len(encoding) > 6:
-            raise ValueError("Invalid value for `encoding`, length must be less than or equal to `6`")
 
         self._encoding = encoding
 

@@ -62,7 +62,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self):
         """
         Gets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :return: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -73,13 +73,11 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def ip_address(self, ip_address):
         """
         Sets the ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
-        IP address of the customer. 
+        IP address of the customer.  #### Used by **Authorization, Capture, and Credit** Optional field. 
 
         :param ip_address: The ip_address of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
         """
-        if ip_address is not None and len(ip_address) > 48:
-            raise ValueError("Invalid value for `ip_address`, length must be less than or equal to `48`")
 
         self._ip_address = ip_address
 
@@ -103,8 +101,6 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :param host_name: The host_name of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
         """
-        if host_name is not None and len(host_name) > 60:
-            raise ValueError("Invalid value for `host_name`, length must be less than or equal to `60`")
 
         self._host_name = host_name
 

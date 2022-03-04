@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class VoidApi(object):
@@ -39,13 +40,127 @@ class VoidApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
+
+
+    def mit_void(self, mit_void_request, **kwargs):
+        """
+        Timeout Void
+        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.mit_void(mit_void_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param MitVoidRequest mit_void_request: (required)
+        :return: PtsV2PaymentsVoidsPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `mit_void` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.mit_void_with_http_info(mit_void_request, **kwargs)
+        else:
+            (data) = self.mit_void_with_http_info(mit_void_request, **kwargs)
+            return data
+
+    def mit_void_with_http_info(self, mit_void_request, **kwargs):
+        """
+        Timeout Void
+        This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.mit_void_with_http_info(mit_void_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param MitVoidRequest mit_void_request: (required)
+        :return: PtsV2PaymentsVoidsPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['mit_void_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method mit_void" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'mit_void_request' is set
+        if ('mit_void_request' not in params) or (params['mit_void_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `mit_void_request` when calling `mit_void`")
+            raise ValueError("Missing the required parameter `mit_void_request` when calling `mit_void`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'mit_void_request' in params:
+            body_params = params['mit_void_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v2/voids/', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PtsV2PaymentsVoidsPost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
 
     def void_capture(self, void_capture_request, id, **kwargs):
         """
         Void a Capture
-        Include the capture ID in the POST request to cancel the capture.
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call. Include the capture ID in the POST request to cancel the capture. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -62,6 +177,10 @@ class VoidApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `void_capture` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.void_capture_with_http_info(void_capture_request, id, **kwargs)
@@ -72,7 +191,7 @@ class VoidApi(object):
     def void_capture_with_http_info(self, void_capture_request, id, **kwargs):
         """
         Void a Capture
-        Include the capture ID in the POST request to cancel the capture.
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call. Include the capture ID in the POST request to cancel the capture. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -107,9 +226,13 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_capture_request' is set
         if ('void_capture_request' not in params) or (params['void_capture_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `void_capture_request` when calling `void_capture`")
             raise ValueError("Missing the required parameter `void_capture_request` when calling `void_capture`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_capture`")
             raise ValueError("Missing the required parameter `id` when calling `void_capture`")
 
 
@@ -175,6 +298,10 @@ class VoidApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `void_credit` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.void_credit_with_http_info(void_credit_request, id, **kwargs)
@@ -220,9 +347,13 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_credit_request' is set
         if ('void_credit_request' not in params) or (params['void_credit_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `void_credit_request` when calling `void_credit`")
             raise ValueError("Missing the required parameter `void_credit_request` when calling `void_credit`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_credit`")
             raise ValueError("Missing the required parameter `id` when calling `void_credit`")
 
 
@@ -271,7 +402,7 @@ class VoidApi(object):
     def void_payment(self, void_payment_request, id, **kwargs):
         """
         Void a Payment
-        Include the payment ID in the POST request to cancel the payment.
+        Void a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call. Include the payment ID in the POST request to cancel the payment. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -288,6 +419,10 @@ class VoidApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `void_payment` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.void_payment_with_http_info(void_payment_request, id, **kwargs)
@@ -298,7 +433,7 @@ class VoidApi(object):
     def void_payment_with_http_info(self, void_payment_request, id, **kwargs):
         """
         Void a Payment
-        Include the payment ID in the POST request to cancel the payment.
+        Void a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call. Include the payment ID in the POST request to cancel the payment. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -333,9 +468,13 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_payment_request' is set
         if ('void_payment_request' not in params) or (params['void_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `void_payment_request` when calling `void_payment`")
             raise ValueError("Missing the required parameter `void_payment_request` when calling `void_payment`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_payment`")
             raise ValueError("Missing the required parameter `id` when calling `void_payment`")
 
 
@@ -401,6 +540,10 @@ class VoidApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `void_refund` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.void_refund_with_http_info(void_refund_request, id, **kwargs)
@@ -446,9 +589,13 @@ class VoidApi(object):
         del params['kwargs']
         # verify the required parameter 'void_refund_request' is set
         if ('void_refund_request' not in params) or (params['void_refund_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `void_refund_request` when calling `void_refund`")
             raise ValueError("Missing the required parameter `void_refund_request` when calling `void_refund`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_refund`")
             raise ValueError("Missing the required parameter `id` when calling `void_refund`")
 
 

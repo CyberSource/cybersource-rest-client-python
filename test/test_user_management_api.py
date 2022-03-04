@@ -35,7 +35,7 @@ class TestUserManagementApi(unittest.TestCase):
         """
         Test case for get_users
 
-        Get user information
+        Get User Information - Deprecated
         """
         pass
 

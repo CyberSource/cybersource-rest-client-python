@@ -35,7 +35,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         'ship_to': 'TssV2TransactionsGet200ResponseOrderInformationShipTo',
         'line_items': 'list[TssV2TransactionsGet200ResponseOrderInformationLineItems]',
         'amount_details': 'TssV2TransactionsGet200ResponseOrderInformationAmountDetails',
-        'shipping_details': 'TssV2TransactionsGet200ResponseOrderInformationShippingDetails'
+        'shipping_details': 'TssV2TransactionsGet200ResponseOrderInformationShippingDetails',
+        'invoice_details': 'TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         'ship_to': 'shipTo',
         'line_items': 'lineItems',
         'amount_details': 'amountDetails',
-        'shipping_details': 'shippingDetails'
+        'shipping_details': 'shippingDetails',
+        'invoice_details': 'invoiceDetails'
     }
 
-    def __init__(self, bill_to=None, ship_to=None, line_items=None, amount_details=None, shipping_details=None):
+    def __init__(self, bill_to=None, ship_to=None, line_items=None, amount_details=None, shipping_details=None, invoice_details=None):
         """
         TssV2TransactionsGet200ResponseOrderInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         self._line_items = None
         self._amount_details = None
         self._shipping_details = None
+        self._invoice_details = None
 
         if bill_to is not None:
           self.bill_to = bill_to
@@ -67,6 +70,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
           self.amount_details = amount_details
         if shipping_details is not None:
           self.shipping_details = shipping_details
+        if invoice_details is not None:
+          self.invoice_details = invoice_details
 
     @property
     def bill_to(self):
@@ -174,6 +179,27 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         """
 
         self._shipping_details = shipping_details
+
+    @property
+    def invoice_details(self):
+        """
+        Gets the invoice_details of this TssV2TransactionsGet200ResponseOrderInformation.
+
+        :return: The invoice_details of this TssV2TransactionsGet200ResponseOrderInformation.
+        :rtype: TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails
+        """
+        return self._invoice_details
+
+    @invoice_details.setter
+    def invoice_details(self, invoice_details):
+        """
+        Sets the invoice_details of this TssV2TransactionsGet200ResponseOrderInformation.
+
+        :param invoice_details: The invoice_details of this TssV2TransactionsGet200ResponseOrderInformation.
+        :type: TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails
+        """
+
+        self._invoice_details = invoice_details
 
     def to_dict(self):
         """

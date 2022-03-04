@@ -98,8 +98,6 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param purchase_order_number: The purchase_order_number of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_order_number is not None and len(purchase_order_number) > 25:
-            raise ValueError("Invalid value for `purchase_order_number`, length must be less than or equal to `25`")
 
         self._purchase_order_number = purchase_order_number
 
@@ -123,8 +121,6 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param purchase_order_date: The purchase_order_date of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_order_date is not None and len(purchase_order_date) > 10:
-            raise ValueError("Invalid value for `purchase_order_date`, length must be less than or equal to `10`")
 
         self._purchase_order_date = purchase_order_date
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param purchase_contact_name: The purchase_contact_name of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
-        if purchase_contact_name is not None and len(purchase_contact_name) > 36:
-            raise ValueError("Invalid value for `purchase_contact_name`, length must be less than or equal to `36`")
 
         self._purchase_contact_name = purchase_contact_name
 
@@ -196,8 +190,6 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param vat_invoice_reference_number: The vat_invoice_reference_number of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
-        if vat_invoice_reference_number is not None and len(vat_invoice_reference_number) > 15:
-            raise ValueError("Invalid value for `vat_invoice_reference_number`, length must be less than or equal to `15`")
 
         self._vat_invoice_reference_number = vat_invoice_reference_number
 
@@ -221,8 +213,6 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param commodity_code: The commodity_code of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
-        if commodity_code is not None and len(commodity_code) > 4:
-            raise ValueError("Invalid value for `commodity_code`, length must be less than or equal to `4`")
 
         self._commodity_code = commodity_code
 

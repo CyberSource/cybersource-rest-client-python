@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount you requested for the payment or capture.  This value is returned for partial authorizations. 
+        Amount you requested for the payment or capture.  This value is returned for partial authorizations. This field is also returned on incremental authorizations will contain the aggregated amount from the original authorizations and all the incremental authorizations. 
 
         :return: The total_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -73,13 +73,11 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount you requested for the payment or capture.  This value is returned for partial authorizations. 
+        Amount you requested for the payment or capture.  This value is returned for partial authorizations. This field is also returned on incremental authorizations will contain the aggregated amount from the original authorizations and all the incremental authorizations. 
 
         :param total_amount: The total_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 15:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `15`")
 
         self._total_amount = total_amount
 
@@ -87,7 +85,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self):
         """
         Gets the authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### PIN debit Amount of the purchase.  Returned by PIN debit purchase.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :return: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -98,13 +96,11 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self, authorized_amount):
         """
         Sets the authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### PIN debit Amount of the purchase.  Returned by PIN debit purchase.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :param authorized_amount: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if authorized_amount is not None and len(authorized_amount) > 15:
-            raise ValueError("Invalid value for `authorized_amount`, length must be less than or equal to `15`")
 
         self._authorized_amount = authorized_amount
 
@@ -112,7 +108,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :return: The currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -123,13 +119,11 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :param currency: The currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

@@ -32,26 +32,31 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
-        'currency': 'str'
+        'currency': 'str',
+        'processor_transaction_fee': 'str'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
-        'currency': 'currency'
+        'currency': 'currency',
+        'processor_transaction_fee': 'processorTransactionFee'
     }
 
-    def __init__(self, total_amount=None, currency=None):
+    def __init__(self, total_amount=None, currency=None, processor_transaction_fee=None):
         """
         PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
         self._currency = None
+        self._processor_transaction_fee = None
 
         if total_amount is not None:
           self.total_amount = total_amount
         if currency is not None:
           self.currency = currency
+        if processor_transaction_fee is not None:
+          self.processor_transaction_fee = processor_transaction_fee
 
     @property
     def total_amount(self):
@@ -73,8 +78,6 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 15:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `15`")
 
         self._total_amount = total_amount
 
@@ -82,7 +85,7 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :return: The currency of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -93,15 +96,36 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :param currency: The currency of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
+
+    @property
+    def processor_transaction_fee(self):
+        """
+        Gets the processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        The fee decided by the PSP/Processor per transaction.
+
+        :return: The processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._processor_transaction_fee
+
+    @processor_transaction_fee.setter
+    def processor_transaction_fee(self, processor_transaction_fee):
+        """
+        Sets the processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        The fee decided by the PSP/Processor per transaction.
+
+        :param processor_transaction_fee: The processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._processor_transaction_fee = processor_transaction_fee
 
     def to_dict(self):
         """

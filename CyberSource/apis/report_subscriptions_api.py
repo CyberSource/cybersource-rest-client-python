@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class ReportSubscriptionsApi(object):
@@ -39,12 +40,142 @@ class ReportSubscriptionsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
 
+
+
+    def create_standard_or_classic_subscription(self, predefined_subscription_request_bean, **kwargs):
+        """
+        Create a Standard or Classic Subscription
+        Create or update an already existing classic or standard subscription. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_standard_or_classic_subscription(predefined_subscription_request_bean, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PredefinedSubscriptionRequestBean predefined_subscription_request_bean: Report subscription request payload (required)
+        :param str organization_id: Valid Organization Id
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_standard_or_classic_subscription` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_standard_or_classic_subscription_with_http_info(predefined_subscription_request_bean, **kwargs)
+        else:
+            (data) = self.create_standard_or_classic_subscription_with_http_info(predefined_subscription_request_bean, **kwargs)
+            return data
+
+    def create_standard_or_classic_subscription_with_http_info(self, predefined_subscription_request_bean, **kwargs):
+        """
+        Create a Standard or Classic Subscription
+        Create or update an already existing classic or standard subscription. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_standard_or_classic_subscription_with_http_info(predefined_subscription_request_bean, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PredefinedSubscriptionRequestBean predefined_subscription_request_bean: Report subscription request payload (required)
+        :param str organization_id: Valid Organization Id
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['predefined_subscription_request_bean', 'organization_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_standard_or_classic_subscription" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'predefined_subscription_request_bean' is set
+        if ('predefined_subscription_request_bean' not in params) or (params['predefined_subscription_request_bean'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `predefined_subscription_request_bean` when calling `create_standard_or_classic_subscription`")
+            raise ValueError("Missing the required parameter `predefined_subscription_request_bean` when calling `create_standard_or_classic_subscription`")
+
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'predefined_subscription_request_bean' in params:
+            body_params = params['predefined_subscription_request_bean']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/reporting/v3/predefined-report-subscriptions', 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
 
     def create_subscription(self, create_report_subscription_request, **kwargs):
         """
-        Create Report Subscription for a report name by organization
+        Create Report Subscription for a Report Name by Organization
         Create a report subscription for your organization. The report name must be unique. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -57,11 +188,15 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateReportSubscriptionRequest create_report_subscription_request: Report subscription request payload (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_subscription` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_subscription_with_http_info(create_report_subscription_request, **kwargs)
@@ -71,7 +206,7 @@ class ReportSubscriptionsApi(object):
 
     def create_subscription_with_http_info(self, create_report_subscription_request, **kwargs):
         """
-        Create Report Subscription for a report name by organization
+        Create Report Subscription for a Report Name by Organization
         Create a report subscription for your organization. The report name must be unique. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -84,7 +219,7 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateReportSubscriptionRequest create_report_subscription_request: Report subscription request payload (required)
-        :param str organization_id: Valid Cybersource Organization Id
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -107,13 +242,21 @@ class ReportSubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_report_subscription_request' is set
         if ('create_report_subscription_request' not in params) or (params['create_report_subscription_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
             raise ValueError("Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
 
         if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_subscription`, length must be less than or equal to `32`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, length must be less than or equal to `32`")
         if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_subscription`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
@@ -160,7 +303,7 @@ class ReportSubscriptionsApi(object):
 
     def delete_subscription(self, report_name, **kwargs):
         """
-        Delete subscription of a report name by organization
+        Delete Subscription of a Report Name by Organization
         Delete a report subscription for your organization. You must know the unique name of the report you want to delete. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -173,10 +316,15 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Delete (required)
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `delete_subscription` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.delete_subscription_with_http_info(report_name, **kwargs)
@@ -186,7 +334,7 @@ class ReportSubscriptionsApi(object):
 
     def delete_subscription_with_http_info(self, report_name, **kwargs):
         """
-        Delete subscription of a report name by organization
+        Delete Subscription of a Report Name by Organization
         Delete a report subscription for your organization. You must know the unique name of the report you want to delete. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -199,12 +347,13 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Delete (required)
+        :param str organization_id: Valid Organization Id
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_name']
+        all_params = ['report_name', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -221,14 +370,34 @@ class ReportSubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_name' is set
         if ('report_name' not in params) or (params['report_name'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `delete_subscription`")
             raise ValueError("Missing the required parameter `report_name` when calling `delete_subscription`")
 
         if 'report_name' in params and len(params['report_name']) > 80:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `delete_subscription`, length must be less than or equal to `80`")
             raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, length must be less than or equal to `80`")
         if 'report_name' in params and len(params['report_name']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `delete_subscription`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, length must be greater than or equal to `1`")
         if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
             raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
@@ -237,6 +406,8 @@ class ReportSubscriptionsApi(object):
             path_params['reportName'] = params['report_name']
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -272,7 +443,7 @@ class ReportSubscriptionsApi(object):
 
     def get_all_subscriptions(self, **kwargs):
         """
-        Get all subscriptions
+        Get All Subscriptions
         View a summary of all report subscriptions. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -284,10 +455,15 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportSubscriptionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_all_subscriptions` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_all_subscriptions_with_http_info(**kwargs)
@@ -297,7 +473,7 @@ class ReportSubscriptionsApi(object):
 
     def get_all_subscriptions_with_http_info(self, **kwargs):
         """
-        Get all subscriptions
+        Get All Subscriptions
         View a summary of all report subscriptions. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -309,12 +485,13 @@ class ReportSubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportSubscriptionsGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []
+        all_params = ['organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -330,11 +507,26 @@ class ReportSubscriptionsApi(object):
             params[key] = val
         del params['kwargs']
 
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 
@@ -370,7 +562,7 @@ class ReportSubscriptionsApi(object):
 
     def get_subscription(self, report_name, **kwargs):
         """
-        Get subscription for report name
+        Get Subscription for Report Name
         View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -383,10 +575,15 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Retrieve (required)
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportSubscriptionsGet200ResponseSubscriptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_subscription` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_subscription_with_http_info(report_name, **kwargs)
@@ -396,7 +593,7 @@ class ReportSubscriptionsApi(object):
 
     def get_subscription_with_http_info(self, report_name, **kwargs):
         """
-        Get subscription for report name
+        Get Subscription for Report Name
         View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -409,12 +606,13 @@ class ReportSubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str report_name: Name of the Report to Retrieve (required)
+        :param str organization_id: Valid Organization Id
         :return: ReportingV3ReportSubscriptionsGet200ResponseSubscriptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['report_name']
+        all_params = ['report_name', 'organization_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -431,14 +629,34 @@ class ReportSubscriptionsApi(object):
         del params['kwargs']
         # verify the required parameter 'report_name' is set
         if ('report_name' not in params) or (params['report_name'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `get_subscription`")
             raise ValueError("Missing the required parameter `report_name` when calling `get_subscription`")
 
         if 'report_name' in params and len(params['report_name']) > 80:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `get_subscription`, length must be less than or equal to `80`")
             raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, length must be less than or equal to `80`")
         if 'report_name' in params and len(params['report_name']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `get_subscription`, length must be greater than or equal to `1`")
             raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, length must be greater than or equal to `1`")
         if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
             raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
+        if 'organization_id' in params and len(params['organization_id']) > 32:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_subscription`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, length must be less than or equal to `32`")
+        if 'organization_id' in params and len(params['organization_id']) < 1:
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_subscription`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, length must be greater than or equal to `1`")
+        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
@@ -447,6 +665,8 @@ class ReportSubscriptionsApi(object):
             path_params['reportName'] = params['report_name']
 
         query_params = []
+        if 'organization_id' in params:
+            query_params.append(('organizationId', params['organization_id']))
 
         header_params = {}
 

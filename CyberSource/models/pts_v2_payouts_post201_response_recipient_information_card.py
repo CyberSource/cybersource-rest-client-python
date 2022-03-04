@@ -57,7 +57,7 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
     def balance(self):
         """
         Gets the balance of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
-        This field shows the available balance in the prepaid account.  Acquirers always receive the available balance in the transaction currency. 
+        This field shows the available balance in the prepaid account. Acquirers always receive the available balance in the transaction currency. 
 
         :return: The balance of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :rtype: str
@@ -68,13 +68,11 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
     def balance(self, balance):
         """
         Sets the balance of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
-        This field shows the available balance in the prepaid account.  Acquirers always receive the available balance in the transaction currency. 
+        This field shows the available balance in the prepaid account. Acquirers always receive the available balance in the transaction currency. 
 
         :param balance: The balance of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :type: str
         """
-        if balance is not None and len(balance) > 12:
-            raise ValueError("Invalid value for `balance`, length must be less than or equal to `12`")
 
         self._balance = balance
 
@@ -98,8 +96,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
         :param currency: The currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 

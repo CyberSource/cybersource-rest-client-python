@@ -36,12 +36,14 @@ class CapturePaymentRequest(object):
         'payment_information': 'Ptsv2paymentsidcapturesPaymentInformation',
         'order_information': 'Ptsv2paymentsidcapturesOrderInformation',
         'buyer_information': 'Ptsv2paymentsidcapturesBuyerInformation',
-        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'device_information': 'Ptsv2paymentsidcapturesDeviceInformation',
         'merchant_information': 'Ptsv2paymentsidcapturesMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
-        'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation'
+        'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation',
+        'travel_information': 'Ptsv2paymentsTravelInformation',
+        'promotion_information': 'Ptsv2paymentsPromotionInformation'
     }
 
     attribute_map = {
@@ -55,10 +57,12 @@ class CapturePaymentRequest(object):
         'aggregator_information': 'aggregatorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
-        'installment_information': 'installmentInformation'
+        'installment_information': 'installmentInformation',
+        'travel_information': 'travelInformation',
+        'promotion_information': 'promotionInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None):
         """
         CapturePaymentRequest - a model defined in Swagger
         """
@@ -74,6 +78,8 @@ class CapturePaymentRequest(object):
         self._point_of_sale_information = None
         self._merchant_defined_information = None
         self._installment_information = None
+        self._travel_information = None
+        self._promotion_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -97,6 +103,10 @@ class CapturePaymentRequest(object):
           self.merchant_defined_information = merchant_defined_information
         if installment_information is not None:
           self.installment_information = installment_information
+        if travel_information is not None:
+          self.travel_information = travel_information
+        if promotion_information is not None:
+          self.promotion_information = promotion_information
 
     @property
     def client_reference_information(self):
@@ -209,7 +219,7 @@ class CapturePaymentRequest(object):
         Gets the device_information of this CapturePaymentRequest.
 
         :return: The device_information of this CapturePaymentRequest.
-        :rtype: Ptsv2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsidcapturesDeviceInformation
         """
         return self._device_information
 
@@ -219,7 +229,7 @@ class CapturePaymentRequest(object):
         Sets the device_information of this CapturePaymentRequest.
 
         :param device_information: The device_information of this CapturePaymentRequest.
-        :type: Ptsv2paymentsDeviceInformation
+        :type: Ptsv2paymentsidcapturesDeviceInformation
         """
 
         self._device_information = device_information
@@ -330,6 +340,48 @@ class CapturePaymentRequest(object):
         """
 
         self._installment_information = installment_information
+
+    @property
+    def travel_information(self):
+        """
+        Gets the travel_information of this CapturePaymentRequest.
+
+        :return: The travel_information of this CapturePaymentRequest.
+        :rtype: Ptsv2paymentsTravelInformation
+        """
+        return self._travel_information
+
+    @travel_information.setter
+    def travel_information(self, travel_information):
+        """
+        Sets the travel_information of this CapturePaymentRequest.
+
+        :param travel_information: The travel_information of this CapturePaymentRequest.
+        :type: Ptsv2paymentsTravelInformation
+        """
+
+        self._travel_information = travel_information
+
+    @property
+    def promotion_information(self):
+        """
+        Gets the promotion_information of this CapturePaymentRequest.
+
+        :return: The promotion_information of this CapturePaymentRequest.
+        :rtype: Ptsv2paymentsPromotionInformation
+        """
+        return self._promotion_information
+
+    @promotion_information.setter
+    def promotion_information(self, promotion_information):
+        """
+        Sets the promotion_information of this CapturePaymentRequest.
+
+        :param promotion_information: The promotion_information of this CapturePaymentRequest.
+        :type: Ptsv2paymentsPromotionInformation
+        """
+
+        self._promotion_information = promotion_information
 
     def to_dict(self):
         """

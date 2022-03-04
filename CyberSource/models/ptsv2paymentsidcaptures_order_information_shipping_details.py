@@ -68,8 +68,6 @@ class Ptsv2paymentsidcapturesOrderInformationShippingDetails(object):
         :param ship_from_postal_code: The ship_from_postal_code of this Ptsv2paymentsidcapturesOrderInformationShippingDetails.
         :type: str
         """
-        if ship_from_postal_code is not None and len(ship_from_postal_code) > 10:
-            raise ValueError("Invalid value for `ship_from_postal_code`, length must be less than or equal to `10`")
 
         self._ship_from_postal_code = ship_from_postal_code
 

@@ -93,8 +93,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 18:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `18`")
 
         self._transaction_id = transaction_id
 
@@ -102,7 +100,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_code(self):
         """
         Gets the response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :return: The response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :rtype: str
@@ -113,13 +111,11 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_code(self, response_code):
         """
         Sets the response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :param response_code: The response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -127,7 +123,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_category_code(self):
         """
         Gets the response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :return: The response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :rtype: str
@@ -138,13 +134,11 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     def response_category_code(self, response_category_code):
         """
         Sets the response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :param response_category_code: The response_category_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_category_code is not None and len(response_category_code) > 32:
-            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `32`")
 
         self._response_category_code = response_category_code
 
@@ -168,8 +162,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if forwarded_acquirer_code is not None and len(forwarded_acquirer_code) > 32:
-            raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -193,8 +185,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param master_card_service_code: The master_card_service_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_code is not None and len(master_card_service_code) > 2:
-            raise ValueError("Invalid value for `master_card_service_code`, length must be less than or equal to `2`")
 
         self._master_card_service_code = master_card_service_code
 
@@ -218,8 +208,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_reply_code is not None and len(master_card_service_reply_code) > 1:
-            raise ValueError("Invalid value for `master_card_service_reply_code`, length must be less than or equal to `1`")
 
         self._master_card_service_reply_code = master_card_service_reply_code
 

@@ -35,7 +35,7 @@ class TestConversionDetailsApi(unittest.TestCase):
         """
         Test case for get_conversion_detail
 
-        Get conversion detail transactions
+        Get Conversion Detail Transactions
         """
         pass
 

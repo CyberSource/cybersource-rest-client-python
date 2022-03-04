@@ -35,7 +35,9 @@ class Ptsv2payoutsProcessingInformation(object):
         'network_routing_order': 'str',
         'commerce_indicator': 'str',
         'reconciliation_id': 'str',
-        'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions'
+        'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions',
+        'transaction_reason': 'str',
+        'purpose_of_payment': 'str'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class Ptsv2payoutsProcessingInformation(object):
         'network_routing_order': 'networkRoutingOrder',
         'commerce_indicator': 'commerceIndicator',
         'reconciliation_id': 'reconciliationId',
-        'payouts_options': 'payoutsOptions'
+        'payouts_options': 'payoutsOptions',
+        'transaction_reason': 'transactionReason',
+        'purpose_of_payment': 'purposeOfPayment'
     }
 
-    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None):
+    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None):
         """
         Ptsv2payoutsProcessingInformation - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class Ptsv2payoutsProcessingInformation(object):
         self._commerce_indicator = None
         self._reconciliation_id = None
         self._payouts_options = None
+        self._transaction_reason = None
+        self._purpose_of_payment = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -67,6 +73,10 @@ class Ptsv2payoutsProcessingInformation(object):
           self.reconciliation_id = reconciliation_id
         if payouts_options is not None:
           self.payouts_options = payouts_options
+        if transaction_reason is not None:
+          self.transaction_reason = transaction_reason
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
 
     @property
     def business_application_id(self):
@@ -88,8 +98,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param business_application_id: The business_application_id of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if business_application_id is not None and len(business_application_id) > 2:
-            raise ValueError("Invalid value for `business_application_id`, length must be less than or equal to `2`")
 
         self._business_application_id = business_application_id
 
@@ -97,7 +105,7 @@ class Ptsv2payoutsProcessingInformation(object):
     def network_routing_order(self):
         """
         Gets the network_routing_order of this Ptsv2payoutsProcessingInformation.
-        This field is optionally used by Push Payments Gateway participants (merchants and acquirers) to get the attributes for specified networks only. The networks specified in this field must be a subset of the information provided during program enrollment. Refer to Sharing Group Code/Network Routing Order. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service.  VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the network routing order. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference.  If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.   See https://developer.visa.com/request_response_codes#network_id_and_sharing_group_code , under section 'Network ID and Sharing Group Code' on the left panel for available values 
+        This field is optionally used by Push Payments Gateway participants (merchants and acquirers) to get the attributes for specified networks only. The networks specified in this field must be a subset of the information provided during program enrollment. Refer to Sharing Group Code/Network Routing Order. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service.  VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the network routing order. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference.  If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.   For details, see the `network_order` field description in [BIN Lookup Service Using the SCMP API.](http://apps.cybersource.com/library/documentation/BIN_Lookup/BIN_Lookup_SCMP_API/html/) 
 
         :return: The network_routing_order of this Ptsv2payoutsProcessingInformation.
         :rtype: str
@@ -108,13 +116,11 @@ class Ptsv2payoutsProcessingInformation(object):
     def network_routing_order(self, network_routing_order):
         """
         Sets the network_routing_order of this Ptsv2payoutsProcessingInformation.
-        This field is optionally used by Push Payments Gateway participants (merchants and acquirers) to get the attributes for specified networks only. The networks specified in this field must be a subset of the information provided during program enrollment. Refer to Sharing Group Code/Network Routing Order. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service.  VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the network routing order. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference.  If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.   See https://developer.visa.com/request_response_codes#network_id_and_sharing_group_code , under section 'Network ID and Sharing Group Code' on the left panel for available values 
+        This field is optionally used by Push Payments Gateway participants (merchants and acquirers) to get the attributes for specified networks only. The networks specified in this field must be a subset of the information provided during program enrollment. Refer to Sharing Group Code/Network Routing Order. Note: Supported only in US for domestic transactions involving Push Payments Gateway Service.  VisaNet checks to determine if there are issuer routing preferences for any of the networks specified by the network routing order. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on the issuer’s preference.  If an issuer preference exists for more than one of the specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on the acquirer’s routing priorities.   For details, see the `network_order` field description in [BIN Lookup Service Using the SCMP API.](http://apps.cybersource.com/library/documentation/BIN_Lookup/BIN_Lookup_SCMP_API/html/) 
 
         :param network_routing_order: The network_routing_order of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if network_routing_order is not None and len(network_routing_order) > 30:
-            raise ValueError("Invalid value for `network_routing_order`, length must be less than or equal to `30`")
 
         self._network_routing_order = network_routing_order
 
@@ -122,7 +128,7 @@ class Ptsv2payoutsProcessingInformation(object):
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this Ptsv2payoutsProcessingInformation.
-        Type of transaction.  Some payment card companies use this information when determining discount rates. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed here.  For details, see the `e_commerce_indicator` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Possible value for Payouts: - internet  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_.  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of transaction.  Value for an OCT transaction: - `internet`  For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/) 
 
         :return: The commerce_indicator of this Ptsv2payoutsProcessingInformation.
         :rtype: str
@@ -133,13 +139,11 @@ class Ptsv2payoutsProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this Ptsv2payoutsProcessingInformation.
-        Type of transaction.  Some payment card companies use this information when determining discount rates. When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value listed here.  For details, see the `e_commerce_indicator` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  Possible value for Payouts: - internet  #### Ingenico ePayments Ingenico ePayments was previously called _Global Collect_.  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Other Types of Transactions For details, see \"Commerce Indicators\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Type of transaction.  Value for an OCT transaction: - `internet`  For details, see the `e_commerce_indicator` field description in [Payouts Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/payouts_SCMP/html/) 
 
         :param commerce_indicator: The commerce_indicator of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if commerce_indicator is not None and len(commerce_indicator) > 13:
-            raise ValueError("Invalid value for `commerce_indicator`, length must be less than or equal to `13`")
 
         self._commerce_indicator = commerce_indicator
 
@@ -163,8 +167,6 @@ class Ptsv2payoutsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -188,6 +190,52 @@ class Ptsv2payoutsProcessingInformation(object):
         """
 
         self._payouts_options = payouts_options
+
+    @property
+    def transaction_reason(self):
+        """
+        Gets the transaction_reason of this Ptsv2payoutsProcessingInformation.
+        Transaction reason code. 
+
+        :return: The transaction_reason of this Ptsv2payoutsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_reason
+
+    @transaction_reason.setter
+    def transaction_reason(self, transaction_reason):
+        """
+        Sets the transaction_reason of this Ptsv2payoutsProcessingInformation.
+        Transaction reason code. 
+
+        :param transaction_reason: The transaction_reason of this Ptsv2payoutsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_reason = transaction_reason
+
+    @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :return: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :param purpose_of_payment: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
 
     def to_dict(self):
         """

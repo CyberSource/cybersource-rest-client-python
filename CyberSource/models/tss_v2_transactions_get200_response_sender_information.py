@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseSenderInformation(object):
         :param reference_number: The reference_number of this TssV2TransactionsGet200ResponseSenderInformation.
         :type: str
         """
-        if reference_number is not None and len(reference_number) > 19:
-            raise ValueError("Invalid value for `reference_number`, length must be less than or equal to `19`")
 
         self._reference_number = reference_number
 

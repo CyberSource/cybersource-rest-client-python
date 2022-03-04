@@ -33,9 +33,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     swagger_types = {
         'auth_indicator': 'str',
         'approval_code': 'str',
+        'card_reference_data': 'str',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
-        'provider_transaction_id': 'str',
         'response_code': 'str',
         'response_code_source': 'str',
         'response_details': 'str',
@@ -52,21 +52,23 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'payment_account_reference_number': 'str',
         'transaction_integrity_code': 'str',
         'amex_verbal_auth_reference_number': 'str',
-        'sales_slip_number': 'int',
         'master_card_service_code': 'str',
         'master_card_service_reply_code': 'str',
         'master_card_authentication_type': 'str',
         'name': 'str',
         'routing': 'PtsV2PaymentsPost201ResponseProcessorInformationRouting',
-        'merchant_number': 'str'
+        'merchant_number': 'str',
+        'retrieval_reference_number': 'str',
+        'payment_url': 'str',
+        'complete_url': 'str'
     }
 
     attribute_map = {
         'auth_indicator': 'authIndicator',
         'approval_code': 'approvalCode',
+        'card_reference_data': 'cardReferenceData',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
-        'provider_transaction_id': 'providerTransactionId',
         'response_code': 'responseCode',
         'response_code_source': 'responseCodeSource',
         'response_details': 'responseDetails',
@@ -83,25 +85,27 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'payment_account_reference_number': 'paymentAccountReferenceNumber',
         'transaction_integrity_code': 'transactionIntegrityCode',
         'amex_verbal_auth_reference_number': 'amexVerbalAuthReferenceNumber',
-        'sales_slip_number': 'salesSlipNumber',
         'master_card_service_code': 'masterCardServiceCode',
         'master_card_service_reply_code': 'masterCardServiceReplyCode',
         'master_card_authentication_type': 'masterCardAuthenticationType',
         'name': 'name',
         'routing': 'routing',
-        'merchant_number': 'merchantNumber'
+        'merchant_number': 'merchantNumber',
+        'retrieval_reference_number': 'retrievalReferenceNumber',
+        'payment_url': 'paymentUrl',
+        'complete_url': 'completeUrl'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, transaction_id=None, network_transaction_id=None, provider_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, sales_slip_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._auth_indicator = None
         self._approval_code = None
+        self._card_reference_data = None
         self._transaction_id = None
         self._network_transaction_id = None
-        self._provider_transaction_id = None
         self._response_code = None
         self._response_code_source = None
         self._response_details = None
@@ -118,24 +122,26 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._payment_account_reference_number = None
         self._transaction_integrity_code = None
         self._amex_verbal_auth_reference_number = None
-        self._sales_slip_number = None
         self._master_card_service_code = None
         self._master_card_service_reply_code = None
         self._master_card_authentication_type = None
         self._name = None
         self._routing = None
         self._merchant_number = None
+        self._retrieval_reference_number = None
+        self._payment_url = None
+        self._complete_url = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
         if approval_code is not None:
           self.approval_code = approval_code
+        if card_reference_data is not None:
+          self.card_reference_data = card_reference_data
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
           self.network_transaction_id = network_transaction_id
-        if provider_transaction_id is not None:
-          self.provider_transaction_id = provider_transaction_id
         if response_code is not None:
           self.response_code = response_code
         if response_code_source is not None:
@@ -168,8 +174,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.transaction_integrity_code = transaction_integrity_code
         if amex_verbal_auth_reference_number is not None:
           self.amex_verbal_auth_reference_number = amex_verbal_auth_reference_number
-        if sales_slip_number is not None:
-          self.sales_slip_number = sales_slip_number
         if master_card_service_code is not None:
           self.master_card_service_code = master_card_service_code
         if master_card_service_reply_code is not None:
@@ -182,12 +186,18 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.routing = routing
         if merchant_number is not None:
           self.merchant_number = merchant_number
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
+        if payment_url is not None:
+          self.payment_url = payment_url
+        if complete_url is not None:
+          self.complete_url = complete_url
 
     @property
     def auth_indicator(self):
         """
         Gets the auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that specifies the purpose of the authorization.  Possible values:  - `0`: Preauthorization  - `1`: Final authorization 
 
         :return: The auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -198,13 +208,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def auth_indicator(self, auth_indicator):
         """
         Sets the auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  For processor-specific information, see the auth_indicator field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Flag that specifies the purpose of the authorization.  Possible values:  - `0`: Preauthorization  - `1`: Final authorization 
 
         :param auth_indicator: The auth_indicator of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if auth_indicator is not None and len(auth_indicator) > 1:
-            raise ValueError("Invalid value for `auth_indicator`, length must be less than or equal to `1`")
 
         self._auth_indicator = auth_indicator
 
@@ -212,7 +220,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def approval_code(self):
         """
         Gets the approval_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Authorization code. Returned only when the processor returns this value. 
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
 
         :return: The approval_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -223,7 +231,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def approval_code(self, approval_code):
         """
         Sets the approval_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Authorization code. Returned only when the processor returns this value. 
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
 
         :param approval_code: The approval_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -232,10 +240,33 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._approval_code = approval_code
 
     @property
+    def card_reference_data(self):
+        """
+        Gets the card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The Scheme reference data is a variable length data element up to a maximum of 56 characters. It may be sent by the acquirer in the authorisation response message, and by the terminal (unchanged) in subsequent authorisation request messages associated with the same transaction. This field is used by Streamline and HSBC UK only, at present. 
+
+        :return: The card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._card_reference_data
+
+    @card_reference_data.setter
+    def card_reference_data(self, card_reference_data):
+        """
+        Sets the card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The Scheme reference data is a variable length data element up to a maximum of 56 characters. It may be sent by the acquirer in the authorisation response message, and by the terminal (unchanged) in subsequent authorisation request messages associated with the same transaction. This field is used by Streamline and HSBC UK only, at present. 
+
+        :param card_reference_data: The card_reference_data of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._card_reference_data = card_reference_data
+
+    @property
     def transaction_id(self):
         """
         Gets the transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  Returned by the authorization service.  #### PIN debit Transaction identifier generated by the processor.  Returned by PIN debit credit.  #### GPX Processor transaction ID.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Moneris This value identifies the transaction on a host system. It contains the following information: - Terminal used to process the transaction - Shift during which the transaction took place - Batch number - Transaction number within the batch You must store this value. If you give the customer a receipt, display this value on the receipt.  **Example** For the value 66012345001069003: - Terminal ID = 66012345 - Shift number = 001 - Batch number = 069 - Transaction number = 003 
 
         :return: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -246,13 +277,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  Returned by the authorization service.  #### PIN debit Transaction identifier generated by the processor.  Returned by PIN debit credit.  #### GPX Processor transaction ID.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Moneris This value identifies the transaction on a host system. It contains the following information: - Terminal used to process the transaction - Shift during which the transaction took place - Batch number - Transaction number within the batch You must store this value. If you give the customer a receipt, display this value on the receipt.  **Example** For the value 66012345001069003: - Terminal ID = 66012345 - Shift number = 001 - Batch number = 069 - Transaction number = 003 
 
         :param transaction_id: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 50:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `50`")
 
         self._transaction_id = transaction_id
 
@@ -260,7 +289,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :return: The network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -271,7 +300,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -280,33 +309,10 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._network_transaction_id = network_transaction_id
 
     @property
-    def provider_transaction_id(self):
-        """
-        Gets the provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :return: The provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :rtype: str
-        """
-        return self._provider_transaction_id
-
-    @provider_transaction_id.setter
-    def provider_transaction_id(self, provider_transaction_id):
-        """
-        Sets the provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :param provider_transaction_id: The provider_transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :type: str
-        """
-
-        self._provider_transaction_id = provider_transaction_id
-
-    @property
     def response_code(self):
         """
         Gets the response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :return: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -317,13 +323,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_code(self, response_code):
         """
         Sets the response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :param response_code: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -347,8 +351,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_code_source: The response_code_source of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_code_source is not None and len(response_code_source) > 1:
-            raise ValueError("Invalid value for `response_code_source`, length must be less than or equal to `1`")
 
         self._response_code_source = response_code_source
 
@@ -372,8 +374,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_details: The response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_details is not None and len(response_details) > 255:
-            raise ValueError("Invalid value for `response_details`, length must be less than or equal to `255`")
 
         self._response_details = response_details
 
@@ -381,7 +381,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_category_code(self):
         """
         Gets the response_category_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :return: The response_category_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -392,13 +392,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_category_code(self, response_category_code):
         """
         Sets the response_category_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Processor-defined response category code. The associated detail error code is in the `responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  **Maximum length for processors**:   - Comercio Latino: 32  - All other processors: 3 
+        Processor-defined response category code. The associated detail error code is in the `processorInformation.responseCode` or `issuerInformation.responseCode` field of the service you requested.  This field is supported only for:   - Japanese issuers  - Domestic transactions in Japan  - Comercio Latino—processor transaction ID required for troubleshooting  #### Maximum length for processors   - Comercio Latino: 36  - All other processors: 3 
 
         :param response_category_code: The response_category_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if response_category_code is not None and len(response_category_code) > 32:
-            raise ValueError("Invalid value for `response_category_code`, length must be less than or equal to `32`")
 
         self._response_category_code = response_category_code
 
@@ -422,8 +420,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if forwarded_acquirer_code is not None and len(forwarded_acquirer_code) > 32:
-            raise ValueError("Invalid value for `forwarded_acquirer_code`, length must be less than or equal to `32`")
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -578,7 +574,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt.  For details, see `receipt_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
 
         :return: The system_trace_audit_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -589,13 +585,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt.  For details, see `receipt_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if system_trace_audit_number is not None and len(system_trace_audit_number) > 6:
-            raise ValueError("Invalid value for `system_trace_audit_number`, length must be less than or equal to `6`")
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -603,7 +597,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def payment_account_reference_number(self):
         """
         Gets the payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. 
+        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. This reply field is returned only for CyberSource through VisaNet.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR8 - Position: 79-110 - Field: Payment Account Reference  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
 
         :return: The payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -614,13 +608,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def payment_account_reference_number(self, payment_account_reference_number):
         """
         Sets the payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. 
+        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. This reply field is returned only for CyberSource through VisaNet.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR8 - Position: 79-110 - Field: Payment Account Reference  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
 
         :param payment_account_reference_number: The payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if payment_account_reference_number is not None and len(payment_account_reference_number) > 32:
-            raise ValueError("Invalid value for `payment_account_reference_number`, length must be less than or equal to `32`")
 
         self._payment_account_reference_number = payment_account_reference_number
 
@@ -644,8 +636,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param transaction_integrity_code: The transaction_integrity_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_integrity_code is not None and len(transaction_integrity_code) > 2:
-            raise ValueError("Invalid value for `transaction_integrity_code`, length must be less than or equal to `2`")
 
         self._transaction_integrity_code = transaction_integrity_code
 
@@ -669,35 +659,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param amex_verbal_auth_reference_number: The amex_verbal_auth_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if amex_verbal_auth_reference_number is not None and len(amex_verbal_auth_reference_number) > 6:
-            raise ValueError("Invalid value for `amex_verbal_auth_reference_number`, length must be less than or equal to `6`")
 
         self._amex_verbal_auth_reference_number = amex_verbal_auth_reference_number
-
-    @property
-    def sales_slip_number(self):
-        """
-        Gets the sales_slip_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Transaction identifier that CyberSource generates. You have the option of printing the sales slip number on the receipt.  This field is supported only for **JCN Gateway**. 
-
-        :return: The sales_slip_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :rtype: int
-        """
-        return self._sales_slip_number
-
-    @sales_slip_number.setter
-    def sales_slip_number(self, sales_slip_number):
-        """
-        Sets the sales_slip_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Transaction identifier that CyberSource generates. You have the option of printing the sales slip number on the receipt.  This field is supported only for **JCN Gateway**. 
-
-        :param sales_slip_number: The sales_slip_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        :type: int
-        """
-        if sales_slip_number is not None and sales_slip_number > 99999:
-            raise ValueError("Invalid value for `sales_slip_number`, must be a value less than or equal to `99999`")
-
-        self._sales_slip_number = sales_slip_number
 
     @property
     def master_card_service_code(self):
@@ -719,8 +682,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_service_code: The master_card_service_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_code is not None and len(master_card_service_code) > 2:
-            raise ValueError("Invalid value for `master_card_service_code`, length must be less than or equal to `2`")
 
         self._master_card_service_code = master_card_service_code
 
@@ -744,8 +705,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_service_reply_code is not None and len(master_card_service_reply_code) > 1:
-            raise ValueError("Invalid value for `master_card_service_reply_code`, length must be less than or equal to `1`")
 
         self._master_card_service_reply_code = master_card_service_reply_code
 
@@ -769,8 +728,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_authentication_type: The master_card_authentication_type of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if master_card_authentication_type is not None and len(master_card_authentication_type) > 1:
-            raise ValueError("Invalid value for `master_card_authentication_type`, length must be less than or equal to `1`")
 
         self._master_card_authentication_type = master_card_authentication_type
 
@@ -794,8 +751,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -824,7 +779,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def merchant_number(self):
         """
         Gets the merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+        Identifier that was assigned to you by your acquirer. This value must be printed on the receipt.  #### Returned by Authorizations and Credits.  This reply field is only supported by merchants who have installed client software on their POS terminals and use these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :return: The merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -835,15 +790,82 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def merchant_number(self, merchant_number):
         """
         Sets the merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        Identifier that was assigned to you by your acquirer.  This value must be printed on the receipt.  This field is supported only on **American Express Direct**, **FDC Nashville Global**, and **SIX**. 
+        Identifier that was assigned to you by your acquirer. This value must be printed on the receipt.  #### Returned by Authorizations and Credits.  This reply field is only supported by merchants who have installed client software on their POS terminals and use these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX 
 
         :param merchant_number: The merchant_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-        if merchant_number is not None and len(merchant_number) > 15:
-            raise ValueError("Invalid value for `merchant_number`, length must be less than or equal to `15`")
 
         self._merchant_number = merchant_number
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :return: The retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
+
+    @property
+    def payment_url(self):
+        """
+        Gets the payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :return: The payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._payment_url
+
+    @payment_url.setter
+    def payment_url(self, payment_url):
+        """
+        Sets the payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Direct the customer to this URL to complete the payment.
+
+        :param payment_url: The payment_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._payment_url = payment_url
+
+    @property
+    def complete_url(self):
+        """
+        Gets the complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The redirect URL for forwarding the consumer to complete page.  This redirect needed by PSP to track browser information of consumer. PSP then redirect consumer to merchant success URL. 
+
+        :return: The complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._complete_url
+
+    @complete_url.setter
+    def complete_url(self, complete_url):
+        """
+        Sets the complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The redirect URL for forwarding the consumer to complete page.  This redirect needed by PSP to track browser information of consumer. PSP then redirect consumer to merchant success URL. 
+
+        :param complete_url: The complete_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._complete_url = complete_url
 
     def to_dict(self):
         """
