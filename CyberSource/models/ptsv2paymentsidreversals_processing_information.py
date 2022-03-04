@@ -77,7 +77,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsidreversalsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :return: The payment_solution of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -88,13 +88,11 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsidreversalsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if payment_solution is not None and len(payment_solution) > 12:
-            raise ValueError("Invalid value for `payment_solution`, length must be less than or equal to `12`")
 
         self._payment_solution = payment_solution
 
@@ -118,8 +116,6 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if reconciliation_id is not None and len(reconciliation_id) > 60:
-            raise ValueError("Invalid value for `reconciliation_id`, length must be less than or equal to `60`")
 
         self._reconciliation_id = reconciliation_id
 
@@ -127,7 +123,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The link_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -138,13 +134,11 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param link_id: The link_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if link_id is not None and len(link_id) > 26:
-            raise ValueError("Invalid value for `link_id`, length must be less than or equal to `26`")
 
         self._link_id = link_id
 
@@ -152,7 +146,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsidreversalsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -163,13 +157,11 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsidreversalsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param report_group: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if report_group is not None and len(report_group) > 25:
-            raise ValueError("Invalid value for `report_group`, length must be less than or equal to `25`")
 
         self._report_group = report_group
 
@@ -177,7 +169,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def visa_checkout_id(self):
         """
         Gets the visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :return: The visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -188,13 +180,11 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def visa_checkout_id(self, visa_checkout_id):
         """
         Sets the visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field.  For details, see the `vc_order_id` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for the **Visa Checkout** order. Visa Checkout provides a unique order ID for every transaction in the Visa Checkout **callID** field. 
 
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
-        if visa_checkout_id is not None and len(visa_checkout_id) > 48:
-            raise ValueError("Invalid value for `visa_checkout_id`, length must be less than or equal to `48`")
 
         self._visa_checkout_id = visa_checkout_id
 

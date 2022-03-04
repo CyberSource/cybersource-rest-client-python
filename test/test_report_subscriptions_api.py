@@ -31,11 +31,19 @@ class TestReportSubscriptionsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_standard_or_classic_subscription(self):
+        """
+        Test case for create_standard_or_classic_subscription
+
+        Create a Standard or Classic Subscription
+        """
+        pass
+
     def test_create_subscription(self):
         """
         Test case for create_subscription
 
-        Create Report Subscription for a report name by organization
+        Create Report Subscription for a Report Name by Organization
         """
         pass
 
@@ -43,7 +51,7 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         Test case for delete_subscription
 
-        Delete subscription of a report name by organization
+        Delete Subscription of a Report Name by Organization
         """
         pass
 
@@ -51,7 +59,7 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         Test case for get_all_subscriptions
 
-        Get all subscriptions
+        Get All Subscriptions
         """
         pass
 
@@ -59,7 +67,7 @@ class TestReportSubscriptionsApi(unittest.TestCase):
         """
         Test case for get_subscription
 
-        Get subscription for report name
+        Get Subscription for Report Name
         """
         pass
 

@@ -35,7 +35,7 @@ class TestSearchTransactionsApi(unittest.TestCase):
         """
         Test case for create_search
 
-        Create a search request
+        Create a Search Request
         """
         pass
 
@@ -43,7 +43,7 @@ class TestSearchTransactionsApi(unittest.TestCase):
         """
         Test case for get_search
 
-        Get Search results
+        Get Search Results
         """
         pass
 

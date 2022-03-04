@@ -98,8 +98,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param customer_memo: The customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if customer_memo is not None and len(customer_memo) > 80:
-            raise ValueError("Invalid value for `customer_memo`, length must be less than or equal to `80`")
 
         self._customer_memo = customer_memo
 
@@ -107,7 +105,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def sec_code(self):
         """
         Gets the sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Specifies the authorization method for the transaction.  #### TeleCheck Accepts only the following values: - `ARC`: account receivable conversion - `CCD`: corporate cash disbursement - `POP`: point of purchase conversion - `PPD`: prearranged payment and deposit entry - `TEL`: telephone-initiated entry - `WEB`: internet-initiated entry  For details, see `ecp_sec_code` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Specifies the authorization method for the transaction.  #### TeleCheck Accepts only the following values: - `ARC`: account receivable conversion - `CCD`: corporate cash disbursement - `POP`: point of purchase conversion - `PPD`: prearranged payment and deposit entry - `TEL`: telephone-initiated entry - `WEB`: internet-initiated entry  For details, see `ecp_sec_code` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :rtype: str
@@ -118,13 +116,11 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def sec_code(self, sec_code):
         """
         Sets the sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Specifies the authorization method for the transaction.  #### TeleCheck Accepts only the following values: - `ARC`: account receivable conversion - `CCD`: corporate cash disbursement - `POP`: point of purchase conversion - `PPD`: prearranged payment and deposit entry - `TEL`: telephone-initiated entry - `WEB`: internet-initiated entry  For details, see `ecp_sec_code` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Specifies the authorization method for the transaction.  #### TeleCheck Accepts only the following values: - `ARC`: account receivable conversion - `CCD`: corporate cash disbursement - `POP`: point of purchase conversion - `PPD`: prearranged payment and deposit entry - `TEL`: telephone-initiated entry - `WEB`: internet-initiated entry  For details, see `ecp_sec_code` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param sec_code: The sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if sec_code is not None and len(sec_code) > 3:
-            raise ValueError("Invalid value for `sec_code`, length must be less than or equal to `3`")
 
         self._sec_code = sec_code
 
@@ -148,8 +144,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param terminal_city: The terminal_city of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_city is not None and len(terminal_city) > 4:
-            raise ValueError("Invalid value for `terminal_city`, length must be less than or equal to `4`")
 
         self._terminal_city = terminal_city
 
@@ -173,8 +167,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param terminal_state: The terminal_state of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if terminal_state is not None and len(terminal_state) > 2:
-            raise ValueError("Invalid value for `terminal_state`, length must be less than or equal to `2`")
 
         self._terminal_state = terminal_state
 
@@ -198,8 +190,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param effective_date: The effective_date of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if effective_date is not None and len(effective_date) > 8:
-            raise ValueError("Invalid value for `effective_date`, length must be less than or equal to `8`")
 
         self._effective_date = effective_date
 
@@ -207,7 +197,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def partial_payment_id(self):
         """
         Gets the partial_payment_id of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Identifier for a partial payment or partial credit.  The value for each debit request or credit request must be unique within the scope of the order. For details, see `partial_payment_id` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for a partial payment or partial credit.  The value for each debit request or credit request must be unique within the scope of the order. For details, see `partial_payment_id` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The partial_payment_id of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :rtype: str
@@ -218,13 +208,11 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def partial_payment_id(self, partial_payment_id):
         """
         Sets the partial_payment_id of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Identifier for a partial payment or partial credit.  The value for each debit request or credit request must be unique within the scope of the order. For details, see `partial_payment_id` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Identifier for a partial payment or partial credit.  The value for each debit request or credit request must be unique within the scope of the order. For details, see `partial_payment_id` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param partial_payment_id: The partial_payment_id of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if partial_payment_id is not None and len(partial_payment_id) > 25:
-            raise ValueError("Invalid value for `partial_payment_id`, length must be less than or equal to `25`")
 
         self._partial_payment_id = partial_payment_id
 
@@ -232,7 +220,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def settlement_method(self):
         """
         Gets the settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :return: The settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :rtype: str
@@ -243,13 +231,11 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def settlement_method(self, settlement_method):
         """
         Sets the settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Method used for settlement.  Possible values: - `A`: Automated Clearing House (default for credits and for transactions using Canadian dollars) - `F`: Facsimile draft (U.S. dollars only) - `B`: Best possible (U.S. dollars only) (default if the field has not already been configured for your merchant ID)  For details, see `ecp_settlement_method` field description for credit cars and `ecp_debit_settlement_method` for debit cards in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
 
         :param settlement_method: The settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
-        if settlement_method is not None and len(settlement_method) > 1:
-            raise ValueError("Invalid value for `settlement_method`, length must be less than or equal to `1`")
 
         self._settlement_method = settlement_method
 

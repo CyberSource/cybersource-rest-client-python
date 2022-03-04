@@ -32,26 +32,31 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
     """
     swagger_types = {
         'amount_details': 'PtsV2PaymentsPost201ResponseOrderInformationAmountDetails',
-        'invoice_details': 'PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails'
+        'invoice_details': 'PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails',
+        'reward_points_details': 'PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
-        'invoice_details': 'invoiceDetails'
+        'invoice_details': 'invoiceDetails',
+        'reward_points_details': 'rewardPointsDetails'
     }
 
-    def __init__(self, amount_details=None, invoice_details=None):
+    def __init__(self, amount_details=None, invoice_details=None, reward_points_details=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
         self._invoice_details = None
+        self._reward_points_details = None
 
         if amount_details is not None:
           self.amount_details = amount_details
         if invoice_details is not None:
           self.invoice_details = invoice_details
+        if reward_points_details is not None:
+          self.reward_points_details = reward_points_details
 
     @property
     def amount_details(self):
@@ -94,6 +99,27 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         """
 
         self._invoice_details = invoice_details
+
+    @property
+    def reward_points_details(self):
+        """
+        Gets the reward_points_details of this PtsV2PaymentsPost201ResponseOrderInformation.
+
+        :return: The reward_points_details of this PtsV2PaymentsPost201ResponseOrderInformation.
+        :rtype: PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails
+        """
+        return self._reward_points_details
+
+    @reward_points_details.setter
+    def reward_points_details(self, reward_points_details):
+        """
+        Sets the reward_points_details of this PtsV2PaymentsPost201ResponseOrderInformation.
+
+        :param reward_points_details: The reward_points_details of this PtsV2PaymentsPost201ResponseOrderInformation.
+        :type: PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails
+        """
+
+        self._reward_points_details = reward_points_details
 
     def to_dict(self):
         """

@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAchVerification(object):
     def result_code(self):
         """
         Gets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
-        Results from the ACH verification service. For details about this service and the possible values for the results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Results from the ACH verification service. For details about this service and the possible values for the results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :return: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
         :rtype: str
@@ -68,13 +68,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAchVerification(object):
     def result_code(self, result_code):
         """
         Sets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
-        Results from the ACH verification service. For details about this service and the possible values for the results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Results from the ACH verification service. For details about this service and the possible values for the results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :param result_code: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
         :type: str
         """
-        if result_code is not None and len(result_code) > 2:
-            raise ValueError("Invalid value for `result_code`, length must be less than or equal to `2`")
 
         self._result_code = result_code
 
@@ -82,7 +80,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAchVerification(object):
     def result_code_raw(self):
         """
         Gets the result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
-        Raw results from the ACH verification service. For details about this service and the possible values for the raw results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Raw results from the ACH verification service. For details about this service and the possible values for the raw results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :return: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
         :rtype: str
@@ -93,13 +91,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAchVerification(object):
     def result_code_raw(self, result_code_raw):
         """
         Sets the result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
-        Raw results from the ACH verification service. For details about this service and the possible values for the raw results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). 
+        Raw results from the ACH verification service. For details about this service and the possible values for the raw results, see \"ACH Verification\" and \"Verification Codes\" in the [Electronic Check Services Using the SCMP API](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/). 
 
         :param result_code_raw: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAchVerification.
         :type: str
         """
-        if result_code_raw is not None and len(result_code_raw) > 10:
-            raise ValueError("Invalid value for `result_code_raw`, length must be less than or equal to `10`")
 
         self._result_code_raw = result_code_raw
 

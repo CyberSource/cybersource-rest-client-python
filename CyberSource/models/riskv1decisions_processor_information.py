@@ -31,22 +31,27 @@ class Riskv1decisionsProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'avs': 'Riskv1decisionsProcessorInformationAvs'
+        'avs': 'Riskv1decisionsProcessorInformationAvs',
+        'card_verification': 'Riskv1decisionsProcessorInformationCardVerification'
     }
 
     attribute_map = {
-        'avs': 'avs'
+        'avs': 'avs',
+        'card_verification': 'cardVerification'
     }
 
-    def __init__(self, avs=None):
+    def __init__(self, avs=None, card_verification=None):
         """
         Riskv1decisionsProcessorInformation - a model defined in Swagger
         """
 
         self._avs = None
+        self._card_verification = None
 
         if avs is not None:
           self.avs = avs
+        if card_verification is not None:
+          self.card_verification = card_verification
 
     @property
     def avs(self):
@@ -68,6 +73,27 @@ class Riskv1decisionsProcessorInformation(object):
         """
 
         self._avs = avs
+
+    @property
+    def card_verification(self):
+        """
+        Gets the card_verification of this Riskv1decisionsProcessorInformation.
+
+        :return: The card_verification of this Riskv1decisionsProcessorInformation.
+        :rtype: Riskv1decisionsProcessorInformationCardVerification
+        """
+        return self._card_verification
+
+    @card_verification.setter
+    def card_verification(self, card_verification):
+        """
+        Sets the card_verification of this Riskv1decisionsProcessorInformation.
+
+        :param card_verification: The card_verification of this Riskv1decisionsProcessorInformation.
+        :type: Riskv1decisionsProcessorInformationCardVerification
+        """
+
+        self._card_verification = card_verification
 
     def to_dict(self):
         """

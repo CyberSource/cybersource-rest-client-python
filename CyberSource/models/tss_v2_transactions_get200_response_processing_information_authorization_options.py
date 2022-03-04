@@ -31,28 +31,33 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
                             and the value is json key in definition.
     """
     swagger_types = {
-        'auth_type': 'str'
+        'auth_type': 'str',
+        'initiator': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator'
     }
 
     attribute_map = {
-        'auth_type': 'authType'
+        'auth_type': 'authType',
+        'initiator': 'initiator'
     }
 
-    def __init__(self, auth_type=None):
+    def __init__(self, auth_type=None, initiator=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._auth_type = None
+        self._initiator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
+        if initiator is not None:
+          self.initiator = initiator
 
     @property
     def auth_type(self):
         """
         Gets the auth_type of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        Authorization type. Possible values:   - `AUTOCAPTURE`: automatic capture.  - `STANDARDCAPTURE`: standard capture.  - `VERBAL`: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  #### Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing Set this field to `AUTOCAPTURE` and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to `STANDARDCAPTURE` and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see the `auth_type` field description in [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Forced Capture Set this field to `VERBAL` and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system.  For more information, see \"Forced Captures\" in [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  #### Verbal Authorization Set this field to `VERBAL` and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations\" in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html).  For processor-specific information, see the `auth_type` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization type. Possible values:   - `AUTOCAPTURE`: automatic capture.  - `STANDARDCAPTURE`: standard capture.  - `VERBAL`: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  #### Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing Set this field to `AUTOCAPTURE` and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to `STANDARDCAPTURE` and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see the `auth_type` field description in [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Forced Capture Set this field to `VERBAL` and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system.  #### Verbal Authorization Set this field to `VERBAL` and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations\" in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
 
         :return: The auth_type of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -63,15 +68,34 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
     def auth_type(self, auth_type):
         """
         Sets the auth_type of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        Authorization type. Possible values:   - `AUTOCAPTURE`: automatic capture.  - `STANDARDCAPTURE`: standard capture.  - `VERBAL`: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  #### Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing Set this field to `AUTOCAPTURE` and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to `STANDARDCAPTURE` and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see the `auth_type` field description in [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### Forced Capture Set this field to `VERBAL` and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system.  For more information, see \"Forced Captures\" in [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  #### Verbal Authorization Set this field to `VERBAL` and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations\" in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html).  For processor-specific information, see the `auth_type` field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Authorization type. Possible values:   - `AUTOCAPTURE`: automatic capture.  - `STANDARDCAPTURE`: standard capture.  - `VERBAL`: forced capture. Include it in the payment request for a forced capture. Include it in the capture request for a verbal payment.  #### Asia, Middle East, and Africa Gateway; Cielo; Comercio Latino; and CyberSource Latin American Processing Set this field to `AUTOCAPTURE` and include it in a bundled request to indicate that you are requesting an automatic capture. If your account is configured to enable automatic captures, set this field to `STANDARDCAPTURE` and include it in a standard authorization or bundled request to indicate that you are overriding an automatic capture. For more information, see the `auth_type` field description in [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Forced Capture Set this field to `VERBAL` and include it in the authorization request to indicate that you are performing a forced capture; therefore, you receive the authorization code outside the CyberSource system.  #### Verbal Authorization Set this field to `VERBAL` and include it in the capture request to indicate that the request is for a verbal authorization. For more information, see \"Verbal Authorizations\" in [Credit Card Services Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html). 
 
         :param auth_type: The auth_type of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :type: str
         """
-        if auth_type is not None and len(auth_type) > 15:
-            raise ValueError("Invalid value for `auth_type`, length must be less than or equal to `15`")
 
         self._auth_type = auth_type
+
+    @property
+    def initiator(self):
+        """
+        Gets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+
+        :return: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        """
+        return self._initiator
+
+    @initiator.setter
+    def initiator(self, initiator):
+        """
+        Sets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+
+        :param initiator: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        """
+
+        self._initiator = initiator
 
     def to_dict(self):
         """

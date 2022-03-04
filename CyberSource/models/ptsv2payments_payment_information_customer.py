@@ -31,28 +31,33 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'customer_id': 'str'
+        'customer_id': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'customer_id': 'customerId'
+        'customer_id': 'customerId',
+        'id': 'id'
     }
 
-    def __init__(self, customer_id=None):
+    def __init__(self, customer_id=None, id=None):
         """
         Ptsv2paymentsPaymentInformationCustomer - a model defined in Swagger
         """
 
         self._customer_id = None
+        self._id = None
 
         if customer_id is not None:
           self.customer_id = customer_id
+        if id is not None:
+          self.id = id
 
     @property
     def customer_id(self):
         """
         Gets the customer_id of this Ptsv2paymentsPaymentInformationCustomer.
-        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  For details, see the `subscription_id` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  For details, see the `subscription_id` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The customer_id of this Ptsv2paymentsPaymentInformationCustomer.
         :rtype: str
@@ -63,13 +68,36 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
     def customer_id(self, customer_id):
         """
         Sets the customer_id of this Ptsv2paymentsPaymentInformationCustomer.
-        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  For details, see the `subscription_id` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Unique identifier for the customer's card and billing information.  When you use Payment Tokenization or Recurring Billing and you include this value in your request, many of the fields that are normally required for an authorization or credit become optional.  **NOTE** When you use Payment Tokenization or Recurring Billing, the value for the Customer ID is actually the Cybersource payment token for a customer. This token stores information such as the consumer’s card number so it can be applied towards bill payments, recurring payments, or one-time payments. By using this token in a payment API request, the merchant doesn't need to pass in data such as the card number or expiration date in the request itself.  For details, see the `subscription_id` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param customer_id: The customer_id of this Ptsv2paymentsPaymentInformationCustomer.
         :type: str
         """
 
         self._customer_id = customer_id
+
+    @property
+    def id(self):
+        """
+        Gets the id of this Ptsv2paymentsPaymentInformationCustomer.
+        Unique identifier for the Customer token used in the transaction. When you include this value in your request, many of the fields that are normally required for an authorization or credit become optional. 
+
+        :return: The id of this Ptsv2paymentsPaymentInformationCustomer.
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """
+        Sets the id of this Ptsv2paymentsPaymentInformationCustomer.
+        Unique identifier for the Customer token used in the transaction. When you include this value in your request, many of the fields that are normally required for an authorization or credit become optional. 
+
+        :param id: The id of this Ptsv2paymentsPaymentInformationCustomer.
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """

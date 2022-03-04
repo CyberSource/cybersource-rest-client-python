@@ -107,7 +107,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def code(self):
         """
         Gets the code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name.  For details, see `auth_ev_name` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s name.  For details, see `auth_ev_name` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -118,13 +118,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def code(self, code):
         """
         Sets the code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name.  For details, see `auth_ev_name` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s name.  For details, see `auth_ev_name` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param code: The code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if code is not None and len(code) > 1:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `1`")
 
         self._code = code
 
@@ -148,8 +146,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if code_raw is not None and len(code_raw) > 1:
-            raise ValueError("Invalid value for `code_raw`, length must be less than or equal to `1`")
 
         self._code_raw = code_raw
 
@@ -157,7 +153,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def email(self):
         """
         Gets the email of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The email of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -168,13 +164,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def email(self, email):
         """
         Sets the email of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param email: The email of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if email is not None and len(email) > 1:
-            raise ValueError("Invalid value for `email`, length must be less than or equal to `1`")
 
         self._email = email
 
@@ -198,8 +192,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param email_raw: The email_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if email_raw is not None and len(email_raw) > 1:
-            raise ValueError("Invalid value for `email_raw`, length must be less than or equal to `1`")
 
         self._email_raw = email_raw
 
@@ -207,7 +199,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def phone_number(self):
         """
         Gets the phone_number of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The phone_number of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -218,13 +210,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param phone_number: The phone_number of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 1:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `1`")
 
         self._phone_number = phone_number
 
@@ -248,8 +238,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param phone_number_raw: The phone_number_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if phone_number_raw is not None and len(phone_number_raw) > 1:
-            raise ValueError("Invalid value for `phone_number_raw`, length must be less than or equal to `1`")
 
         self._phone_number_raw = phone_number_raw
 
@@ -257,7 +245,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def postal_code(self):
         """
         Gets the postal_code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The postal_code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -268,13 +256,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param postal_code: The postal_code of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 1:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `1`")
 
         self._postal_code = postal_code
 
@@ -298,8 +284,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param postal_code_raw: The postal_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if postal_code_raw is not None and len(postal_code_raw) > 1:
-            raise ValueError("Invalid value for `postal_code_raw`, length must be less than or equal to `1`")
 
         self._postal_code_raw = postal_code_raw
 
@@ -307,7 +291,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def street(self):
         """
         Gets the street of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The street of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -318,13 +302,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def street(self, street):
         """
         Sets the street of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param street: The street of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if street is not None and len(street) > 1:
-            raise ValueError("Invalid value for `street`, length must be less than or equal to `1`")
 
         self._street = street
 
@@ -348,8 +330,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param street_raw: The street_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if street_raw is not None and len(street_raw) > 1:
-            raise ValueError("Invalid value for `street_raw`, length must be less than or equal to `1`")
 
         self._street_raw = street_raw
 
@@ -373,8 +353,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 
@@ -398,8 +376,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param name_raw: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-        if name_raw is not None and len(name_raw) > 30:
-            raise ValueError("Invalid value for `name_raw`, length must be less than or equal to `30`")
 
         self._name_raw = name_raw
 

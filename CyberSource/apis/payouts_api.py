@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class PayoutsApi(object):
@@ -39,7 +40,9 @@ class PayoutsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def oct_create_payment(self, oct_create_payment_request, **kwargs):
@@ -61,6 +64,10 @@ class PayoutsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `oct_create_payment` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.oct_create_payment_with_http_info(oct_create_payment_request, **kwargs)
@@ -105,6 +112,8 @@ class PayoutsApi(object):
         del params['kwargs']
         # verify the required parameter 'oct_create_payment_request' is set
         if ('oct_create_payment_request' not in params) or (params['oct_create_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `oct_create_payment_request` when calling `oct_create_payment`")
             raise ValueError("Missing the required parameter `oct_create_payment_request` when calling `oct_create_payment`")
 
 

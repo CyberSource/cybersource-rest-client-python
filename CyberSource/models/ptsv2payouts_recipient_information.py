@@ -33,6 +33,7 @@ class Ptsv2payoutsRecipientInformation(object):
     swagger_types = {
         'first_name': 'str',
         'middle_initial': 'str',
+        'middle_name': 'str',
         'last_name': 'str',
         'address1': 'str',
         'locality': 'str',
@@ -46,6 +47,7 @@ class Ptsv2payoutsRecipientInformation(object):
     attribute_map = {
         'first_name': 'firstName',
         'middle_initial': 'middleInitial',
+        'middle_name': 'middleName',
         'last_name': 'lastName',
         'address1': 'address1',
         'locality': 'locality',
@@ -56,13 +58,14 @@ class Ptsv2payoutsRecipientInformation(object):
         'date_of_birth': 'dateOfBirth'
     }
 
-    def __init__(self, first_name=None, middle_initial=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None, date_of_birth=None):
+    def __init__(self, first_name=None, middle_initial=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None, date_of_birth=None):
         """
         Ptsv2payoutsRecipientInformation - a model defined in Swagger
         """
 
         self._first_name = None
         self._middle_initial = None
+        self._middle_name = None
         self._last_name = None
         self._address1 = None
         self._locality = None
@@ -76,6 +79,8 @@ class Ptsv2payoutsRecipientInformation(object):
           self.first_name = first_name
         if middle_initial is not None:
           self.middle_initial = middle_initial
+        if middle_name is not None:
+          self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
         if address1 is not None:
@@ -113,8 +118,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param first_name: The first_name of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if first_name is not None and len(first_name) > 35:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `35`")
 
         self._first_name = first_name
 
@@ -138,10 +141,31 @@ class Ptsv2payoutsRecipientInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if middle_initial is not None and len(middle_initial) > 1:
-            raise ValueError("Invalid value for `middle_initial`, length must be less than or equal to `1`")
 
         self._middle_initial = middle_initial
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2payoutsRecipientInformation.
+        Recipient’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :return: The middle_name of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2payoutsRecipientInformation.
+        Recipient’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :param middle_name: The middle_name of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def last_name(self):
@@ -163,8 +187,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if last_name is not None and len(last_name) > 35:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `35`")
 
         self._last_name = last_name
 
@@ -188,8 +210,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param address1: The address1 of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if address1 is not None and len(address1) > 50:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `50`")
 
         self._address1 = address1
 
@@ -213,8 +233,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param locality: The locality of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if locality is not None and len(locality) > 25:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `25`")
 
         self._locality = locality
 
@@ -238,8 +256,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 3:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `3`")
 
         self._administrative_area = administrative_area
 
@@ -263,8 +279,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param country: The country of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if country is not None and len(country) > 2:
-            raise ValueError("Invalid value for `country`, length must be less than or equal to `2`")
 
         self._country = country
 
@@ -288,8 +302,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param postal_code: The postal_code of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -313,8 +325,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param phone_number: The phone_number of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 20:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `20`")
 
         self._phone_number = phone_number
 
@@ -338,10 +348,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
-        if date_of_birth is not None and len(date_of_birth) < 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be greater than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 

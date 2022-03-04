@@ -83,7 +83,10 @@ class GetSignatureParameter:
         # This method adds the v-c-merchant-id header
         signature_list.append(GlobalLabelParameters.MERCHANT_ID)
         signature_list.append(": ")
-        signature_list.append(str(merchant_id))
+        if self.merchant_config_sigparam.use_metakey:
+            signature_list.append(str(self.merchant_config_sigparam.portfolio_id))
+        else:
+            signature_list.append(str(merchant_id))
         sig_value = "".join(signature_list)
 
 

@@ -31,21 +31,26 @@ class GeneratePublicKeyRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'encryption_type': 'str'
+        'encryption_type': 'str',
+        'target_origin': 'str'
     }
 
     attribute_map = {
-        'encryption_type': 'encryptionType'
+        'encryption_type': 'encryptionType',
+        'target_origin': 'targetOrigin'
     }
 
-    def __init__(self, encryption_type=None):
+    def __init__(self, encryption_type=None, target_origin=None):
         """
         GeneratePublicKeyRequest - a model defined in Swagger
         """
 
         self._encryption_type = None
+        self._target_origin = None
 
         self.encryption_type = encryption_type
+        if target_origin is not None:
+          self.target_origin = target_origin
 
     @property
     def encryption_type(self):
@@ -71,6 +76,29 @@ class GeneratePublicKeyRequest(object):
             raise ValueError("Invalid value for `encryption_type`, must not be `None`")
 
         self._encryption_type = encryption_type
+
+    @property
+    def target_origin(self):
+        """
+        Gets the target_origin of this GeneratePublicKeyRequest.
+        The merchant origin (e.g. https://example.com) used to integrate with Flex API. Required to comply with CORS and CSP standards.
+
+        :return: The target_origin of this GeneratePublicKeyRequest.
+        :rtype: str
+        """
+        return self._target_origin
+
+    @target_origin.setter
+    def target_origin(self, target_origin):
+        """
+        Sets the target_origin of this GeneratePublicKeyRequest.
+        The merchant origin (e.g. https://example.com) used to integrate with Flex API. Required to comply with CORS and CSP standards.
+
+        :param target_origin: The target_origin of this GeneratePublicKeyRequest.
+        :type: str
+        """
+
+        self._target_origin = target_origin
 
     def to_dict(self):
         """

@@ -31,22 +31,27 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'card': 'Ptsv2paymentsidcapturesPaymentInformationCard'
     }
 
     attribute_map = {
-        'customer': 'customer'
+        'customer': 'customer',
+        'card': 'card'
     }
 
-    def __init__(self, customer=None):
+    def __init__(self, customer=None, card=None):
         """
         Ptsv2paymentsidcapturesPaymentInformation - a model defined in Swagger
         """
 
         self._customer = None
+        self._card = None
 
         if customer is not None:
           self.customer = customer
+        if card is not None:
+          self.card = card
 
     @property
     def customer(self):
@@ -68,6 +73,27 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
         """
 
         self._customer = customer
+
+    @property
+    def card(self):
+        """
+        Gets the card of this Ptsv2paymentsidcapturesPaymentInformation.
+
+        :return: The card of this Ptsv2paymentsidcapturesPaymentInformation.
+        :rtype: Ptsv2paymentsidcapturesPaymentInformationCard
+        """
+        return self._card
+
+    @card.setter
+    def card(self, card):
+        """
+        Sets the card of this Ptsv2paymentsidcapturesPaymentInformation.
+
+        :param card: The card of this Ptsv2paymentsidcapturesPaymentInformation.
+        :type: Ptsv2paymentsidcapturesPaymentInformationCard
+        """
+
+        self._card = card
 
     def to_dict(self):
         """

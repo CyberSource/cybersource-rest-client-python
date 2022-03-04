@@ -98,8 +98,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_code: The product_code of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_code is not None and len(product_code) > 255:
-            raise ValueError("Invalid value for `product_code`, length must be less than or equal to `255`")
 
         self._product_code = product_code
 
@@ -123,8 +121,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_name: The product_name of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_name is not None and len(product_name) > 255:
-            raise ValueError("Invalid value for `product_name`, length must be less than or equal to `255`")
 
         self._product_name = product_name
 
@@ -132,7 +128,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def product_sku(self):
         """
         Gets the product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product. For Payment and Capture APIs, this field is required when above `productCode` is not **default** or one of the values related to shipping and/or handling. 
 
         :return: The product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :rtype: str
@@ -143,13 +139,11 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def product_sku(self, product_sku):
         """
         Sets the product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Identification code for the product. For PAYMENT and CAPTURE API, this field is required when above _productCode_ is not **default** or one of the values related to shipping and/or handling. 
+        Identification code for the product. For Payment and Capture APIs, this field is required when above `productCode` is not **default** or one of the values related to shipping and/or handling. 
 
         :param product_sku: The product_sku of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if product_sku is not None and len(product_sku) > 255:
-            raise ValueError("Invalid value for `product_sku`, length must be less than or equal to `255`")
 
         self._product_sku = product_sku
 
@@ -157,7 +151,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
 
         :return: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :rtype: str
@@ -168,13 +162,11 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
 
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 15:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `15`")
 
         self._tax_amount = tax_amount
 
@@ -225,8 +217,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param unit_price: The unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
-        if unit_price is not None and len(unit_price) > 15:
-            raise ValueError("Invalid value for `unit_price`, length must be less than or equal to `15`")
 
         self._unit_price = unit_price
 

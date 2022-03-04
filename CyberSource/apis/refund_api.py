@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class RefundApi(object):
@@ -39,13 +40,15 @@ class RefundApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def refund_capture(self, refund_capture_request, id, **kwargs):
         """
         Refund a Capture
-        Include the capture ID in the POST request to refund the captured amount. 
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call. Include the capture ID in the POST request to refund the captured amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -62,6 +65,10 @@ class RefundApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `refund_capture` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.refund_capture_with_http_info(refund_capture_request, id, **kwargs)
@@ -72,7 +79,7 @@ class RefundApi(object):
     def refund_capture_with_http_info(self, refund_capture_request, id, **kwargs):
         """
         Refund a Capture
-        Include the capture ID in the POST request to refund the captured amount. 
+        Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call. Include the capture ID in the POST request to refund the captured amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -107,9 +114,13 @@ class RefundApi(object):
         del params['kwargs']
         # verify the required parameter 'refund_capture_request' is set
         if ('refund_capture_request' not in params) or (params['refund_capture_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `refund_capture_request` when calling `refund_capture`")
             raise ValueError("Missing the required parameter `refund_capture_request` when calling `refund_capture`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refund_capture`")
             raise ValueError("Missing the required parameter `id` when calling `refund_capture`")
 
 
@@ -158,7 +169,7 @@ class RefundApi(object):
     def refund_payment(self, refund_payment_request, id, **kwargs):
         """
         Refund a Payment
-        Include the payment ID in the POST request to refund the payment amount. 
+        Refund a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call. Include the payment ID in the POST request to refund the payment amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -175,6 +186,10 @@ class RefundApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `refund_payment` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.refund_payment_with_http_info(refund_payment_request, id, **kwargs)
@@ -185,7 +200,7 @@ class RefundApi(object):
     def refund_payment_with_http_info(self, refund_payment_request, id, **kwargs):
         """
         Refund a Payment
-        Include the payment ID in the POST request to refund the payment amount. 
+        Refund a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call. Include the payment ID in the POST request to refund the payment amount. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -220,9 +235,13 @@ class RefundApi(object):
         del params['kwargs']
         # verify the required parameter 'refund_payment_request' is set
         if ('refund_payment_request' not in params) or (params['refund_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `refund_payment_request` when calling `refund_payment`")
             raise ValueError("Missing the required parameter `refund_payment_request` when calling `refund_payment`")
         # verify the required parameter 'id' is set
         if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refund_payment`")
             raise ValueError("Missing the required parameter `id` when calling `refund_payment`")
 
 

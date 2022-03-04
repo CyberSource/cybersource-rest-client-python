@@ -32,32 +32,37 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     """
     swagger_types = {
         'xid': 'str',
-        'transaction_id': 'str'
+        'transaction_id': 'str',
+        'eci_raw': 'str'
     }
 
     attribute_map = {
         'xid': 'xid',
-        'transaction_id': 'transactionId'
+        'transaction_id': 'transactionId',
+        'eci_raw': 'eciRaw'
     }
 
-    def __init__(self, xid=None, transaction_id=None):
+    def __init__(self, xid=None, transaction_id=None, eci_raw=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._xid = None
         self._transaction_id = None
+        self._eci_raw = None
 
         if xid is not None:
           self.xid = xid
         if transaction_id is not None:
           self.transaction_id = transaction_id
+        if eci_raw is not None:
+          self.eci_raw = eci_raw
 
     @property
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :rtype: str
@@ -68,13 +73,11 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param xid: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str
         """
-        if xid is not None and len(xid) > 40:
-            raise ValueError("Invalid value for `xid`, length must be less than or equal to `40`")
 
         self._xid = xid
 
@@ -100,6 +103,29 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def eci_raw(self):
+        """
+        Gets the eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._eci_raw
+
+    @eci_raw.setter
+    def eci_raw(self, eci_raw):
+        """
+        Sets the eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
+        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param eci_raw: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._eci_raw = eci_raw
 
     def to_dict(self):
         """

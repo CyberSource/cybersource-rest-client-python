@@ -32,26 +32,31 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     """
     swagger_types = {
         'emv': 'PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv',
-        'amex_capn_data': 'str'
+        'amex_capn_data': 'str',
+        'terminal_id': 'str'
     }
 
     attribute_map = {
         'emv': 'emv',
-        'amex_capn_data': 'amexCapnData'
+        'amex_capn_data': 'amexCapnData',
+        'terminal_id': 'terminalId'
     }
 
-    def __init__(self, emv=None, amex_capn_data=None):
+    def __init__(self, emv=None, amex_capn_data=None, terminal_id=None):
         """
         PtsV2PaymentsPost201ResponsePointOfSaleInformation - a model defined in Swagger
         """
 
         self._emv = None
         self._amex_capn_data = None
+        self._terminal_id = None
 
         if emv is not None:
           self.emv = emv
         if amex_capn_data is not None:
           self.amex_capn_data = amex_capn_data
+        if terminal_id is not None:
+          self.terminal_id = terminal_id
 
     @property
     def emv(self):
@@ -78,7 +83,7 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     def amex_capn_data(self):
         """
         Gets the amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :rtype: str
@@ -89,15 +94,36 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
     def amex_capn_data(self, amex_capn_data):
         """
         Sets the amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
-        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Point-of-sale details for the transaction. This value is returned only for **American Express Direct**. CyberSource generates this value, which consists of a series of codes that identify terminal capability, security data, and specific conditions present at the time the transaction occurred. To comply with the CAPN requirements, this value must be included in all subsequent follow-on requests, such as captures and follow-on credits.  When you perform authorizations, captures, and credits through CyberSource, CyberSource passes this value from the authorization service to the subsequent services for you. However, when you perform authorizations through CyberSource and perform subsequent services through other financial institutions, you must ensure that your requests for captures and credits include this value.  For details, see `auth_pos_data` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param amex_capn_data: The amex_capn_data of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :type: str
         """
-        if amex_capn_data is not None and len(amex_capn_data) > 12:
-            raise ValueError("Invalid value for `amex_capn_data`, length must be less than or equal to `12`")
 
         self._amex_capn_data = amex_capn_data
+
+    @property
+    def terminal_id(self):
+        """
+        Gets the terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### CyberSource through VisaNet A list of all possible values is stored in your CyberSource account. If terminal ID validation is enabled for your CyberSource account, the value you send for this field is validated against the list each time you include the field in a request. To enable or disable terminal ID validation, contact CyberSource Customer Support.  When you do not include this field in a request, CyberSource uses the default value that is defined in your CyberSource account.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  #### For Payouts This field is applicable for CyberSource through VisaNet.  #### GPX Identifier for the terminal at your retail location. A list of all possible values is stored in your account. If terminal ID validation is enabled for your account, the value you send for this field is validated against the list each time you include the field in a request. To enable or disable terminal ID validation, contact customer support.  When you do not include this field in a request, the default value that is defined in your account is used.  Optional for authorizations.  #### Used by **Authorization** Optional for the following processors. When you do not include this field in a request, the default value that is defined in your account is used.   - American Express Direct   - Credit Mutuel-CIC   - FDC Nashville Global   - SIX - Chase Paymentech Solutions: Optional field. If you include this field in your request, you must also include `pointOfSaleInformation.catLevel`. - FDMS Nashville: The default value that is defined in your account is used. - GPX - OmniPay Direct: Optional field.  For the following processors, this field is not used. - GPN - JCN Gateway - RBS WorldPay Atlanta - TSYS Acquiring Solutions - Worldpay VAP  #### Card Present reply Terminal identifier assigned by the acquirer. This value must be printed on the receipt. 
+
+        :return: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_id
+
+    @terminal_id.setter
+    def terminal_id(self, terminal_id):
+        """
+        Sets the terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        Identifier for the terminal at your retail location. You can define this value yourself, but consult the processor for requirements.  #### CyberSource through VisaNet A list of all possible values is stored in your CyberSource account. If terminal ID validation is enabled for your CyberSource account, the value you send for this field is validated against the list each time you include the field in a request. To enable or disable terminal ID validation, contact CyberSource Customer Support.  When you do not include this field in a request, CyberSource uses the default value that is defined in your CyberSource account.  #### FDC Nashville Global To have your account configured to support this field, contact CyberSource Customer Support. This value must be a value that FDC Nashville Global issued to you.  #### For Payouts This field is applicable for CyberSource through VisaNet.  #### GPX Identifier for the terminal at your retail location. A list of all possible values is stored in your account. If terminal ID validation is enabled for your account, the value you send for this field is validated against the list each time you include the field in a request. To enable or disable terminal ID validation, contact customer support.  When you do not include this field in a request, the default value that is defined in your account is used.  Optional for authorizations.  #### Used by **Authorization** Optional for the following processors. When you do not include this field in a request, the default value that is defined in your account is used.   - American Express Direct   - Credit Mutuel-CIC   - FDC Nashville Global   - SIX - Chase Paymentech Solutions: Optional field. If you include this field in your request, you must also include `pointOfSaleInformation.catLevel`. - FDMS Nashville: The default value that is defined in your account is used. - GPX - OmniPay Direct: Optional field.  For the following processors, this field is not used. - GPN - JCN Gateway - RBS WorldPay Atlanta - TSYS Acquiring Solutions - Worldpay VAP  #### Card Present reply Terminal identifier assigned by the acquirer. This value must be printed on the receipt. 
+
+        :param terminal_id: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
+        :type: str
+        """
+
+        self._terminal_id = terminal_id
 
     def to_dict(self):
         """

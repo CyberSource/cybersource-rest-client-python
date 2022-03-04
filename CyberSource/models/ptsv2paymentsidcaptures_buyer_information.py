@@ -73,8 +73,6 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -82,7 +80,7 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :return: The vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
         :rtype: str
@@ -93,13 +91,11 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 20:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `20`")
 
         self._vat_registration_number = vat_registration_number
 

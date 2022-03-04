@@ -35,7 +35,7 @@ class TestPurchaseAndRefundDetailsApi(unittest.TestCase):
         """
         Test case for get_purchase_and_refund_details
 
-        Get Purchase and Refund details
+        Get Purchase and Refund Details
         """
         pass
 

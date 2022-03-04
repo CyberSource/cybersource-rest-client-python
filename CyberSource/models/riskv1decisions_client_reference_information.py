@@ -32,32 +32,41 @@ class Riskv1decisionsClientReferenceInformation(object):
     """
     swagger_types = {
         'code': 'str',
-        'comments': 'str'
+        'paused_request_id': 'str',
+        'comments': 'str',
+        'partner': 'Riskv1decisionsClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
-        'comments': 'comments'
+        'paused_request_id': 'pausedRequestId',
+        'comments': 'comments',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, comments=None):
+    def __init__(self, code=None, paused_request_id=None, comments=None, partner=None):
         """
         Riskv1decisionsClientReferenceInformation - a model defined in Swagger
         """
 
         self._code = None
+        self._paused_request_id = None
         self._comments = None
+        self._partner = None
 
-        if code is not None:
-          self.code = code
+        self.code = code
+        if paused_request_id is not None:
+          self.paused_request_id = paused_request_id
         if comments is not None:
           self.comments = comments
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
         """
         Gets the code of this Riskv1decisionsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Riskv1decisionsClientReferenceInformation.
         :rtype: str
@@ -68,21 +77,44 @@ class Riskv1decisionsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Riskv1decisionsClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")
 
         self._code = code
+
+    @property
+    def paused_request_id(self):
+        """
+        Gets the paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :return: The paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        :rtype: str
+        """
+        return self._paused_request_id
+
+    @paused_request_id.setter
+    def paused_request_id(self, paused_request_id):
+        """
+        Sets the paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        Used to resume a transaction that was paused for an order modification rule to allow for payer authentication to complete. To resume and continue with the authorization/decision service flow, call the services and include the request id from the prior decision call. 
+
+        :param paused_request_id: The paused_request_id of this Riskv1decisionsClientReferenceInformation.
+        :type: str
+        """
+
+        self._paused_request_id = paused_request_id
 
     @property
     def comments(self):
         """
         Gets the comments of this Riskv1decisionsClientReferenceInformation.
-        Brief description of the order or any comment you wish to add to the order.
+        Brief description of the order or any comment you wish to add to the order. 
 
         :return: The comments of this Riskv1decisionsClientReferenceInformation.
         :rtype: str
@@ -93,15 +125,34 @@ class Riskv1decisionsClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Riskv1decisionsClientReferenceInformation.
-        Brief description of the order or any comment you wish to add to the order.
+        Brief description of the order or any comment you wish to add to the order. 
 
         :param comments: The comments of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-        if comments is not None and len(comments) > 255:
-            raise ValueError("Invalid value for `comments`, length must be less than or equal to `255`")
 
         self._comments = comments
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this Riskv1decisionsClientReferenceInformation.
+
+        :return: The partner of this Riskv1decisionsClientReferenceInformation.
+        :rtype: Riskv1decisionsClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this Riskv1decisionsClientReferenceInformation.
+
+        :param partner: The partner of this Riskv1decisionsClientReferenceInformation.
+        :type: Riskv1decisionsClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

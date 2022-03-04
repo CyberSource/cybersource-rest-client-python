@@ -68,8 +68,6 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 18:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `18`")
 
         self._transaction_id = transaction_id
 

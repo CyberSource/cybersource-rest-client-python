@@ -4,18 +4,67 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**mit_void**](VoidApi.md#mit_void) | **POST** /pts/v2/voids/ | Timeout Void
 [**void_capture**](VoidApi.md#void_capture) | **POST** /pts/v2/captures/{id}/voids | Void a Capture
 [**void_credit**](VoidApi.md#void_credit) | **POST** /pts/v2/credits/{id}/voids | Void a Credit
 [**void_payment**](VoidApi.md#void_payment) | **POST** /pts/v2/payments/{id}/voids | Void a Payment
 [**void_refund**](VoidApi.md#void_refund) | **POST** /pts/v2/refunds/{id}/voids | Void a Refund
 
 
+# **mit_void**
+> PtsV2PaymentsVoidsPost201Response mit_void(mit_void_request)
+
+Timeout Void
+
+This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.VoidApi()
+mit_void_request = CyberSource.MitVoidRequest() # MitVoidRequest | 
+
+try: 
+    # Timeout Void
+    api_response = api_instance.mit_void(mit_void_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling VoidApi->mit_void: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **mit_void_request** | [**MitVoidRequest**](MitVoidRequest.md)|  | 
+
+### Return type
+
+[**PtsV2PaymentsVoidsPost201Response**](PtsV2PaymentsVoidsPost201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **void_capture**
 > PtsV2PaymentsVoidsPost201Response void_capture(void_capture_request, id)
 
 Void a Capture
 
-Include the capture ID in the POST request to cancel the capture.
+Refund a capture API is only used, if you have requested Capture independenlty using [/pts/v2/payments/{id}/captures](https://developer.cybersource.com/api-reference-assets/index.html#payments_capture) API call. Include the capture ID in the POST request to cancel the capture. 
 
 ### Example 
 ```python
@@ -115,7 +164,7 @@ No authorization required
 
 Void a Payment
 
-Include the payment ID in the POST request to cancel the payment.
+Void a Payment API is only used, if you have requested Authorization and Capture together in [/pts/v2/payments](https://developer.cybersource.com/api-reference-assets/index.html#payments_payments) API call. Include the payment ID in the POST request to cancel the payment. 
 
 ### Example 
 ```python

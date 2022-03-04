@@ -36,7 +36,10 @@ class Ptsv2paymentsBuyerInformation(object):
         'vat_registration_number': 'str',
         'company_tax_id': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
-        'hashed_password': 'str'
+        'hashed_password': 'str',
+        'gender': 'str',
+        'language': 'str',
+        'mobile_phone': 'int'
     }
 
     attribute_map = {
@@ -45,10 +48,13 @@ class Ptsv2paymentsBuyerInformation(object):
         'vat_registration_number': 'vatRegistrationNumber',
         'company_tax_id': 'companyTaxId',
         'personal_identification': 'personalIdentification',
-        'hashed_password': 'hashedPassword'
+        'hashed_password': 'hashedPassword',
+        'gender': 'gender',
+        'language': 'language',
+        'mobile_phone': 'mobilePhone'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, mobile_phone=None):
         """
         Ptsv2paymentsBuyerInformation - a model defined in Swagger
         """
@@ -59,6 +65,9 @@ class Ptsv2paymentsBuyerInformation(object):
         self._company_tax_id = None
         self._personal_identification = None
         self._hashed_password = None
+        self._gender = None
+        self._language = None
+        self._mobile_phone = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
@@ -72,6 +81,12 @@ class Ptsv2paymentsBuyerInformation(object):
           self.personal_identification = personal_identification
         if hashed_password is not None:
           self.hashed_password = hashed_password
+        if gender is not None:
+          self.gender = gender
+        if language is not None:
+          self.language = language
+        if mobile_phone is not None:
+          self.mobile_phone = mobile_phone
 
     @property
     def merchant_customer_id(self):
@@ -93,8 +108,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if merchant_customer_id is not None and len(merchant_customer_id) > 100:
-            raise ValueError("Invalid value for `merchant_customer_id`, length must be less than or equal to `100`")
 
         self._merchant_customer_id = merchant_customer_id
 
@@ -102,7 +115,7 @@ class Ptsv2paymentsBuyerInformation(object):
     def date_of_birth(self):
         """
         Gets the date_of_birth of this Ptsv2paymentsBuyerInformation.
-        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The date_of_birth of this Ptsv2paymentsBuyerInformation.
         :rtype: str
@@ -113,13 +126,11 @@ class Ptsv2paymentsBuyerInformation(object):
     def date_of_birth(self, date_of_birth):
         """
         Sets the date_of_birth of this Ptsv2paymentsBuyerInformation.
-        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param date_of_birth: The date_of_birth of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 
@@ -127,7 +138,7 @@ class Ptsv2paymentsBuyerInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2paymentsBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :return: The vat_registration_number of this Ptsv2paymentsBuyerInformation.
         :rtype: str
@@ -138,13 +149,11 @@ class Ptsv2paymentsBuyerInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2paymentsBuyerInformation.
-        Customer’s government-assigned tax identification number.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Customer’s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 20:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `20`")
 
         self._vat_registration_number = vat_registration_number
 
@@ -168,8 +177,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param company_tax_id: The company_tax_id of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if company_tax_id is not None and len(company_tax_id) > 9:
-            raise ValueError("Invalid value for `company_tax_id`, length must be less than or equal to `9`")
 
         self._company_tax_id = company_tax_id
 
@@ -198,7 +205,7 @@ class Ptsv2paymentsBuyerInformation(object):
     def hashed_password(self):
         """
         Gets the hashed_password of this Ptsv2paymentsBuyerInformation.
-        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The hashed_password of this Ptsv2paymentsBuyerInformation.
         :rtype: str
@@ -209,15 +216,82 @@ class Ptsv2paymentsBuyerInformation(object):
     def hashed_password(self, hashed_password):
         """
         Sets the hashed_password of this Ptsv2paymentsBuyerInformation.
-        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in [Decision Manager Developer Guide Using the SCMP API.](https://www.cybersource.com/developers/documentation/fraud_management/) 
+        The merchant's password that CyberSource hashes and stores as a hashed password.  For details about this field, see the `customer_password` field description in _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param hashed_password: The hashed_password of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-        if hashed_password is not None and len(hashed_password) > 100:
-            raise ValueError("Invalid value for `hashed_password`, length must be less than or equal to `100`")
 
         self._hashed_password = hashed_password
+
+    @property
+    def gender(self):
+        """
+        Gets the gender of this Ptsv2paymentsBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :return: The gender of this Ptsv2paymentsBuyerInformation.
+        :rtype: str
+        """
+        return self._gender
+
+    @gender.setter
+    def gender(self, gender):
+        """
+        Sets the gender of this Ptsv2paymentsBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :param gender: The gender of this Ptsv2paymentsBuyerInformation.
+        :type: str
+        """
+
+        self._gender = gender
+
+    @property
+    def language(self):
+        """
+        Gets the language of this Ptsv2paymentsBuyerInformation.
+        language setting of the user
+
+        :return: The language of this Ptsv2paymentsBuyerInformation.
+        :rtype: str
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """
+        Sets the language of this Ptsv2paymentsBuyerInformation.
+        language setting of the user
+
+        :param language: The language of this Ptsv2paymentsBuyerInformation.
+        :type: str
+        """
+
+        self._language = language
+
+    @property
+    def mobile_phone(self):
+        """
+        Gets the mobile_phone of this Ptsv2paymentsBuyerInformation.
+        Cardholder’s mobile phone number. **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :return: The mobile_phone of this Ptsv2paymentsBuyerInformation.
+        :rtype: int
+        """
+        return self._mobile_phone
+
+    @mobile_phone.setter
+    def mobile_phone(self, mobile_phone):
+        """
+        Sets the mobile_phone of this Ptsv2paymentsBuyerInformation.
+        Cardholder’s mobile phone number. **Important** Required for Visa Secure transactions in Brazil. Do not use this request field for any other types of transactions. 
+
+        :param mobile_phone: The mobile_phone of this Ptsv2paymentsBuyerInformation.
+        :type: int
+        """
+
+        self._mobile_phone = mobile_phone
 
     def to_dict(self):
         """

@@ -82,7 +82,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def prefix(self):
         """
         Gets the prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :return: The prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -93,13 +93,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def prefix(self, prefix):
         """
         Sets the prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        First six digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_prefix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :param prefix: The prefix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if prefix is not None and len(prefix) > 6:
-            raise ValueError("Invalid value for `prefix`, length must be less than or equal to `6`")
 
         self._prefix = prefix
 
@@ -107,7 +105,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def suffix(self):
         """
         Gets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :return: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -118,13 +116,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def suffix(self, suffix):
         """
         Sets the suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Last four digits of token. CyberSource includes this field in the reply message when it decrypts the payment blob for the tokenized transaction.  For details, see `token_suffix` field description in [Google Pay Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Google_Pay_SCMP_API/html/) 
 
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if suffix is not None and len(suffix) > 4:
-            raise ValueError("Invalid value for `suffix`, length must be less than or equal to `4`")
 
         self._suffix = suffix
 
@@ -132,7 +128,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def type(self):
         """
         Gets the type of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Three-digit value that indicates the card type.  Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover - 005: Diners Club - 007: JCB - 024: Maestro (UK Domestic) - 039 Encoded account number - 042: Maestro (International)  For the complete list of possible values, see `card_type` field description in the [Credit Card Services Using the SCMP API Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
 
         :return: The type of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -143,7 +139,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def type(self, type):
         """
         Sets the type of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Three-digit value that indicates the card type.  Type of card to authorize. - 001 Visa - 002 Mastercard - 003 Amex - 004 Discover - 005: Diners Club - 007: JCB - 024: Maestro (UK Domestic) - 039 Encoded account number - 042: Maestro (International)  For the complete list of possible values, see `card_type` field description in the [Credit Card Services Using the SCMP API Guide.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
 
         :param type: The type of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
@@ -155,7 +151,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
 
         :return: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -166,13 +162,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
 
         :param assurance_level: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if assurance_level is not None and len(assurance_level) > 2:
-            raise ValueError("Invalid value for `assurance_level`, length must be less than or equal to `2`")
 
         self._assurance_level = assurance_level
 
@@ -196,8 +190,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_month is not None and len(expiration_month) > 2:
-            raise ValueError("Invalid value for `expiration_month`, length must be less than or equal to `2`")
 
         self._expiration_month = expiration_month
 
@@ -221,8 +213,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if expiration_year is not None and len(expiration_year) > 4:
-            raise ValueError("Invalid value for `expiration_year`, length must be less than or equal to `4`")
 
         self._expiration_year = expiration_year
 
@@ -230,7 +220,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self):
         """
         Gets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :return: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -241,13 +231,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :param requestor_id: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
-        if requestor_id is not None and len(requestor_id) > 11:
-            raise ValueError("Invalid value for `requestor_id`, length must be less than or equal to `11`")
 
         self._requestor_id = requestor_id
 

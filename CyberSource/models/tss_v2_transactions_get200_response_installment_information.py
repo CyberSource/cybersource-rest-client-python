@@ -31,22 +31,27 @@ class TssV2TransactionsGet200ResponseInstallmentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'number_of_installments': 'str'
+        'number_of_installments': 'str',
+        'identifier': 'str'
     }
 
     attribute_map = {
-        'number_of_installments': 'numberOfInstallments'
+        'number_of_installments': 'numberOfInstallments',
+        'identifier': 'identifier'
     }
 
-    def __init__(self, number_of_installments=None):
+    def __init__(self, number_of_installments=None, identifier=None):
         """
         TssV2TransactionsGet200ResponseInstallmentInformation - a model defined in Swagger
         """
 
         self._number_of_installments = None
+        self._identifier = None
 
         if number_of_installments is not None:
           self.number_of_installments = number_of_installments
+        if identifier is not None:
+          self.identifier = identifier
 
     @property
     def number_of_installments(self):
@@ -70,6 +75,29 @@ class TssV2TransactionsGet200ResponseInstallmentInformation(object):
         """
 
         self._number_of_installments = number_of_installments
+
+    @property
+    def identifier(self):
+        """
+        Gets the identifier of this TssV2TransactionsGet200ResponseInstallmentInformation.
+        Standing Instruction/Installment identifier. 
+
+        :return: The identifier of this TssV2TransactionsGet200ResponseInstallmentInformation.
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """
+        Sets the identifier of this TssV2TransactionsGet200ResponseInstallmentInformation.
+        Standing Instruction/Installment identifier. 
+
+        :param identifier: The identifier of this TssV2TransactionsGet200ResponseInstallmentInformation.
+        :type: str
+        """
+
+        self._identifier = identifier
 
     def to_dict(self):
         """

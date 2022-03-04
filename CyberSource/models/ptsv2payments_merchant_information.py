@@ -32,6 +32,7 @@ class Ptsv2paymentsMerchantInformation(object):
     """
     swagger_types = {
         'merchant_descriptor': 'Ptsv2paymentsMerchantInformationMerchantDescriptor',
+        'domain_name': 'str',
         'sales_organization_id': 'str',
         'category_code': 'int',
         'category_code_domestic': 'int',
@@ -39,11 +40,16 @@ class Ptsv2paymentsMerchantInformation(object):
         'vat_registration_number': 'str',
         'card_acceptor_reference_number': 'str',
         'transaction_local_date_time': 'str',
-        'service_fee_descriptor': 'Ptsv2paymentsMerchantInformationServiceFeeDescriptor'
+        'service_fee_descriptor': 'Ptsv2paymentsMerchantInformationServiceFeeDescriptor',
+        'cancel_url': 'str',
+        'success_url': 'str',
+        'failure_url': 'str',
+        'merchant_name': 'str'
     }
 
     attribute_map = {
         'merchant_descriptor': 'merchantDescriptor',
+        'domain_name': 'domainName',
         'sales_organization_id': 'salesOrganizationId',
         'category_code': 'categoryCode',
         'category_code_domestic': 'categoryCodeDomestic',
@@ -51,15 +57,20 @@ class Ptsv2paymentsMerchantInformation(object):
         'vat_registration_number': 'vatRegistrationNumber',
         'card_acceptor_reference_number': 'cardAcceptorReferenceNumber',
         'transaction_local_date_time': 'transactionLocalDateTime',
-        'service_fee_descriptor': 'serviceFeeDescriptor'
+        'service_fee_descriptor': 'serviceFeeDescriptor',
+        'cancel_url': 'cancelUrl',
+        'success_url': 'successUrl',
+        'failure_url': 'failureUrl',
+        'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None):
+    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, merchant_name=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
 
         self._merchant_descriptor = None
+        self._domain_name = None
         self._sales_organization_id = None
         self._category_code = None
         self._category_code_domestic = None
@@ -68,9 +79,15 @@ class Ptsv2paymentsMerchantInformation(object):
         self._card_acceptor_reference_number = None
         self._transaction_local_date_time = None
         self._service_fee_descriptor = None
+        self._cancel_url = None
+        self._success_url = None
+        self._failure_url = None
+        self._merchant_name = None
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
+        if domain_name is not None:
+          self.domain_name = domain_name
         if sales_organization_id is not None:
           self.sales_organization_id = sales_organization_id
         if category_code is not None:
@@ -87,6 +104,14 @@ class Ptsv2paymentsMerchantInformation(object):
           self.transaction_local_date_time = transaction_local_date_time
         if service_fee_descriptor is not None:
           self.service_fee_descriptor = service_fee_descriptor
+        if cancel_url is not None:
+          self.cancel_url = cancel_url
+        if success_url is not None:
+          self.success_url = success_url
+        if failure_url is not None:
+          self.failure_url = failure_url
+        if merchant_name is not None:
+          self.merchant_name = merchant_name
 
     @property
     def merchant_descriptor(self):
@@ -110,6 +135,29 @@ class Ptsv2paymentsMerchantInformation(object):
         self._merchant_descriptor = merchant_descriptor
 
     @property
+    def domain_name(self):
+        """
+        Gets the domain_name of this Ptsv2paymentsMerchantInformation.
+        This field will contain either the merchant url or the reverse domain as per the requirement for DSRP Format 3. This might vary transaction to transaction and might not be static. Merchant needs to have access to send this value for all DSRP program. 
+
+        :return: The domain_name of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._domain_name
+
+    @domain_name.setter
+    def domain_name(self, domain_name):
+        """
+        Sets the domain_name of this Ptsv2paymentsMerchantInformation.
+        This field will contain either the merchant url or the reverse domain as per the requirement for DSRP Format 3. This might vary transaction to transaction and might not be static. Merchant needs to have access to send this value for all DSRP program. 
+
+        :param domain_name: The domain_name of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._domain_name = domain_name
+
+    @property
     def sales_organization_id(self):
         """
         Gets the sales_organization_id of this Ptsv2paymentsMerchantInformation.
@@ -129,8 +177,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param sales_organization_id: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if sales_organization_id is not None and len(sales_organization_id) > 11:
-            raise ValueError("Invalid value for `sales_organization_id`, length must be less than or equal to `11`")
 
         self._sales_organization_id = sales_organization_id
 
@@ -188,7 +234,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def tax_id(self):
         """
         Gets the tax_id of this Ptsv2paymentsMerchantInformation.
-        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The tax_id of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -199,13 +245,11 @@ class Ptsv2paymentsMerchantInformation(object):
     def tax_id(self, tax_id):
         """
         Sets the tax_id of this Ptsv2paymentsMerchantInformation.
-        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param tax_id: The tax_id of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if tax_id is not None and len(tax_id) > 15:
-            raise ValueError("Invalid value for `tax_id`, length must be less than or equal to `15`")
 
         self._tax_id = tax_id
 
@@ -213,7 +257,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2paymentsMerchantInformation.
-        Your government-assigned tax identification number.  For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :return: The vat_registration_number of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -224,13 +268,11 @@ class Ptsv2paymentsMerchantInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2paymentsMerchantInformation.
-        Your government-assigned tax identification number.  For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 21:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `21`")
 
         self._vat_registration_number = vat_registration_number
 
@@ -254,8 +296,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if card_acceptor_reference_number is not None and len(card_acceptor_reference_number) > 25:
-            raise ValueError("Invalid value for `card_acceptor_reference_number`, length must be less than or equal to `25`")
 
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
@@ -263,7 +303,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def transaction_local_date_time(self):
         """
         Gets the transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
-        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the `transaction_local_date_time` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  Format: `YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds   For processor-specific information, see the `transaction_local_date_time` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Date and time at your physical location.  Format: `YYYYMMDDhhmmss`, where:  - `YYYY` = year  - `MM` = month  - `DD` = day  - `hh` = hour  - `mm` = minutes  - `ss` = seconds  #### Used by **Authorization** Required for these processors: - American Express Direct                                                                                                                                                                                                                                                                                                                         - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - SIX  Optional for all other processors. 
 
         :return: The transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -274,13 +314,11 @@ class Ptsv2paymentsMerchantInformation(object):
     def transaction_local_date_time(self, transaction_local_date_time):
         """
         Sets the transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
-        Local date and time at your physical location. Include both the date and time in this field or leave it blank. This field is supported only for **CyberSource through VisaNet**.  For processor-specific information, see the `transaction_local_date_time` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  Format: `YYYYMMDDhhmmss`, where:   - YYYY = year  - MM = month  - DD = day  - hh = hour  - mm = minutes  - ss = seconds   For processor-specific information, see the `transaction_local_date_time` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Date and time at your physical location.  Format: `YYYYMMDDhhmmss`, where:  - `YYYY` = year  - `MM` = month  - `DD` = day  - `hh` = hour  - `mm` = minutes  - `ss` = seconds  #### Used by **Authorization** Required for these processors: - American Express Direct                                                                                                                                                                                                                                                                                                                         - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - SIX  Optional for all other processors. 
 
         :param transaction_local_date_time: The transaction_local_date_time of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-        if transaction_local_date_time is not None and len(transaction_local_date_time) > 14:
-            raise ValueError("Invalid value for `transaction_local_date_time`, length must be less than or equal to `14`")
 
         self._transaction_local_date_time = transaction_local_date_time
 
@@ -304,6 +342,98 @@ class Ptsv2paymentsMerchantInformation(object):
         """
 
         self._service_fee_descriptor = service_fee_descriptor
+
+    @property
+    def cancel_url(self):
+        """
+        Gets the cancel_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :return: The cancel_url of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._cancel_url
+
+    @cancel_url.setter
+    def cancel_url(self, cancel_url):
+        """
+        Sets the cancel_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :param cancel_url: The cancel_url of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._cancel_url = cancel_url
+
+    @property
+    def success_url(self):
+        """
+        Gets the success_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :return: The success_url of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._success_url
+
+    @success_url.setter
+    def success_url(self, success_url):
+        """
+        Sets the success_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :param success_url: The success_url of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._success_url = success_url
+
+    @property
+    def failure_url(self):
+        """
+        Gets the failure_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :return: The failure_url of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._failure_url
+
+    @failure_url.setter
+    def failure_url(self, failure_url):
+        """
+        Sets the failure_url of this Ptsv2paymentsMerchantInformation.
+        customer would be redirected to this url based on the decision of the transaction
+
+        :param failure_url: The failure_url of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._failure_url = failure_url
+
+    @property
+    def merchant_name(self):
+        """
+        Gets the merchant_name of this Ptsv2paymentsMerchantInformation.
+        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
+
+        :return: The merchant_name of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._merchant_name
+
+    @merchant_name.setter
+    def merchant_name(self, merchant_name):
+        """
+        Sets the merchant_name of this Ptsv2paymentsMerchantInformation.
+        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
+
+        :param merchant_name: The merchant_name of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._merchant_name = merchant_name
 
     def to_dict(self):
         """

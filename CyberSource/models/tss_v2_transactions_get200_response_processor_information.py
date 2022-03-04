@@ -32,14 +32,15 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     """
     swagger_types = {
         'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor',
+        'multi_processor_routing': 'list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]',
         'transaction_id': 'str',
         'network_transaction_id': 'str',
+        'retrieval_reference_number': 'str',
         'response_id': 'str',
-        'provider_transaction_id': 'str',
         'approval_code': 'str',
         'response_code': 'str',
         'avs': 'PtsV2PaymentsPost201ResponseProcessorInformationAvs',
-        'card_verification': 'Riskv1decisionsCardVerification',
+        'card_verification': 'Riskv1decisionsProcessorInformationCardVerification',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
         'system_trace_audit_number': 'str',
@@ -48,10 +49,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
 
     attribute_map = {
         'processor': 'processor',
+        'multi_processor_routing': 'multiProcessorRouting',
         'transaction_id': 'transactionId',
         'network_transaction_id': 'networkTransactionId',
+        'retrieval_reference_number': 'retrievalReferenceNumber',
         'response_id': 'responseId',
-        'provider_transaction_id': 'providerTransactionId',
         'approval_code': 'approvalCode',
         'response_code': 'responseCode',
         'avs': 'avs',
@@ -62,16 +64,17 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'response_code_source': 'responseCodeSource'
     }
 
-    def __init__(self, processor=None, transaction_id=None, network_transaction_id=None, response_id=None, provider_transaction_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._processor = None
+        self._multi_processor_routing = None
         self._transaction_id = None
         self._network_transaction_id = None
+        self._retrieval_reference_number = None
         self._response_id = None
-        self._provider_transaction_id = None
         self._approval_code = None
         self._response_code = None
         self._avs = None
@@ -83,14 +86,16 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
 
         if processor is not None:
           self.processor = processor
+        if multi_processor_routing is not None:
+          self.multi_processor_routing = multi_processor_routing
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
           self.network_transaction_id = network_transaction_id
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
         if response_id is not None:
           self.response_id = response_id
-        if provider_transaction_id is not None:
-          self.provider_transaction_id = provider_transaction_id
         if approval_code is not None:
           self.approval_code = approval_code
         if response_code is not None:
@@ -130,10 +135,33 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._processor = processor
 
     @property
+    def multi_processor_routing(self):
+        """
+        Gets the multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        An array of object that contains the list of acquirer response codes & reasons if a transaction is routed to multiple acquirers.
+
+        :return: The multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]
+        """
+        return self._multi_processor_routing
+
+    @multi_processor_routing.setter
+    def multi_processor_routing(self, multi_processor_routing):
+        """
+        Sets the multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        An array of object that contains the list of acquirer response codes & reasons if a transaction is routed to multiple acquirers.
+
+        :param multi_processor_routing: The multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]
+        """
+
+        self._multi_processor_routing = multi_processor_routing
+
+    @property
     def transaction_id(self):
         """
         Gets the transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  Returned by the authorization service.  #### PIN debit Transaction identifier generated by the processor.  Returned by PIN debit credit.  #### GPX Processor transaction ID.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Moneris This value identifies the transaction on a host system. It contains the following information: - Terminal used to process the transaction - Shift during which the transaction took place - Batch number - Transaction number within the batch You must store this value. If you give the customer a receipt, display this value on the receipt.  **Example** For the value 66012345001069003: - Terminal ID = 66012345 - Shift number = 001 - Batch number = 069 - Transaction number = 003 
 
         :return: The transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -144,13 +172,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def transaction_id(self, transaction_id):
         """
         Sets the transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Network transaction identifier (TID). You can use this value to identify a specific transaction when you are discussing the transaction with your processor. Not all processors provide this value.  Returned by the authorization service.  #### PIN debit Transaction identifier generated by the processor.  Returned by PIN debit credit.  #### GPX Processor transaction ID.  #### Cielo For Cielo, this value is the non-sequential unit (NSU) and is supported for all transactions. The value is generated by Cielo or the issuing bank.  #### Comercio Latino For Comercio Latino, this value is the proof of sale or non-sequential unit (NSU) number generated by the acquirers Cielo and Rede, or the issuing bank.  #### CyberSource through VisaNet and GPN For details about this value for CyberSource through VisaNet and GPN, see \"Network Transaction Identifiers\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Moneris This value identifies the transaction on a host system. It contains the following information: - Terminal used to process the transaction - Shift during which the transaction took place - Batch number - Transaction number within the batch You must store this value. If you give the customer a receipt, display this value on the receipt.  **Example** For the value 66012345001069003: - Terminal ID = 66012345 - Shift number = 001 - Batch number = 069 - Transaction number = 003 
 
         :param transaction_id: The transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
-        if transaction_id is not None and len(transaction_id) > 50:
-            raise ValueError("Invalid value for `transaction_id`, length must be less than or equal to `50`")
 
         self._transaction_id = transaction_id
 
@@ -158,7 +184,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def network_transaction_id(self):
         """
         Gets the network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :return: The network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -169,13 +195,36 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def network_transaction_id(self, network_transaction_id):
         """
         Sets the network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
+        Same value as `processorInformation.transactionId`
 
         :param network_transaction_id: The network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
 
         self._network_transaction_id = network_transaction_id
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :return: The retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
 
     @property
     def response_id(self):
@@ -201,33 +250,10 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._response_id = response_id
 
     @property
-    def provider_transaction_id(self):
-        """
-        Gets the provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :return: The provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: str
-        """
-        return self._provider_transaction_id
-
-    @provider_transaction_id.setter
-    def provider_transaction_id(self, provider_transaction_id):
-        """
-        Sets the provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        The description for this field is not available.
-
-        :param provider_transaction_id: The provider_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: str
-        """
-
-        self._provider_transaction_id = provider_transaction_id
-
-    @property
     def approval_code(self):
         """
         Gets the approval_code of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Authorization code. Returned only when the processor returns this value. 
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
 
         :return: The approval_code of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -238,7 +264,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def approval_code(self, approval_code):
         """
         Sets the approval_code of this TssV2TransactionsGet200ResponseProcessorInformation.
-        Authorization code. Returned only when the processor returns this value. 
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
 
         :param approval_code: The approval_code of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
@@ -250,7 +276,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def response_code(self):
         """
         Gets the response_code of this TssV2TransactionsGet200ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :return: The response_code of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -261,13 +287,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def response_code(self, response_code):
         """
         Sets the response_code of this TssV2TransactionsGet200ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `responseCategoryCode` field. 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
 
         :param response_code: The response_code of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
-        if response_code is not None and len(response_code) > 10:
-            raise ValueError("Invalid value for `response_code`, length must be less than or equal to `10`")
 
         self._response_code = response_code
 
@@ -298,7 +322,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Gets the card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :return: The card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :rtype: Riskv1decisionsCardVerification
+        :rtype: Riskv1decisionsProcessorInformationCardVerification
         """
         return self._card_verification
 
@@ -308,7 +332,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         Sets the card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
 
         :param card_verification: The card_verification of this TssV2TransactionsGet200ResponseProcessorInformation.
-        :type: Riskv1decisionsCardVerification
+        :type: Riskv1decisionsProcessorInformationCardVerification
         """
 
         self._card_verification = card_verification
@@ -359,7 +383,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt.  For details, see `receipt_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
 
         :return: The system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
         :rtype: str
@@ -370,13 +394,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt.  For details, see `receipt_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
-        if system_trace_audit_number is not None and len(system_trace_audit_number) > 6:
-            raise ValueError("Invalid value for `system_trace_audit_number`, length must be less than or equal to `6`")
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -400,8 +422,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param response_code_source: The response_code_source of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
-        if response_code_source is not None and len(response_code_source) > 1:
-            raise ValueError("Invalid value for `response_code_source`, length must be less than or equal to `1`")
 
         self._response_code_source = response_code_source
 

@@ -32,7 +32,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType',
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'customer': 'Riskv1authenticationsetupsPaymentInformationCustomer',
         'card': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard'
     }
 
@@ -85,7 +85,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Gets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :return: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        :rtype: Riskv1authenticationsetupsPaymentInformationCustomer
         """
         return self._customer
 
@@ -95,7 +95,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Sets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :param customer: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :type: Ptsv2paymentsPaymentInformationCustomer
+        :type: Riskv1authenticationsetupsPaymentInformationCustomer
         """
 
         self._customer = customer

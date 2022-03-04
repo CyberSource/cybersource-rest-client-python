@@ -35,7 +35,7 @@ class TestDownloadXSDApi(unittest.TestCase):
         """
         Test case for get_xsdv2
 
-        Download XSD for report
+        Download XSD for Report
         """
         pass
 

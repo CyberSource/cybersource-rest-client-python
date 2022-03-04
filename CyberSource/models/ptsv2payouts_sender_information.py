@@ -35,6 +35,7 @@ class Ptsv2payoutsSenderInformation(object):
         'account': 'Ptsv2payoutsSenderInformationAccount',
         'first_name': 'str',
         'middle_initial': 'str',
+        'middle_name': 'str',
         'last_name': 'str',
         'name': 'str',
         'address1': 'str',
@@ -52,6 +53,7 @@ class Ptsv2payoutsSenderInformation(object):
         'account': 'account',
         'first_name': 'firstName',
         'middle_initial': 'middleInitial',
+        'middle_name': 'middleName',
         'last_name': 'lastName',
         'name': 'name',
         'address1': 'address1',
@@ -64,7 +66,7 @@ class Ptsv2payoutsSenderInformation(object):
         'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None):
+    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None):
         """
         Ptsv2payoutsSenderInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2payoutsSenderInformation(object):
         self._account = None
         self._first_name = None
         self._middle_initial = None
+        self._middle_name = None
         self._last_name = None
         self._name = None
         self._address1 = None
@@ -92,6 +95,8 @@ class Ptsv2payoutsSenderInformation(object):
           self.first_name = first_name
         if middle_initial is not None:
           self.middle_initial = middle_initial
+        if middle_name is not None:
+          self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
         if name is not None:
@@ -133,8 +138,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param reference_number: The reference_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if reference_number is not None and len(reference_number) > 19:
-            raise ValueError("Invalid value for `reference_number`, length must be less than or equal to `19`")
 
         self._reference_number = reference_number
 
@@ -179,8 +182,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param first_name: The first_name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if first_name is not None and len(first_name) > 35:
-            raise ValueError("Invalid value for `first_name`, length must be less than or equal to `35`")
 
         self._first_name = first_name
 
@@ -204,10 +205,31 @@ class Ptsv2payoutsSenderInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if middle_initial is not None and len(middle_initial) > 1:
-            raise ValueError("Invalid value for `middle_initial`, length must be less than or equal to `1`")
 
         self._middle_initial = middle_initial
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2payoutsSenderInformation.
+        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :return: The middle_name of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2payoutsSenderInformation.
+        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+
+        :param middle_name: The middle_name of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def last_name(self):
@@ -229,8 +251,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if last_name is not None and len(last_name) > 35:
-            raise ValueError("Invalid value for `last_name`, length must be less than or equal to `35`")
 
         self._last_name = last_name
 
@@ -254,8 +274,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param name: The name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if name is not None and len(name) > 24:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `24`")
 
         self._name = name
 
@@ -279,8 +297,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param address1: The address1 of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if address1 is not None and len(address1) > 50:
-            raise ValueError("Invalid value for `address1`, length must be less than or equal to `50`")
 
         self._address1 = address1
 
@@ -304,8 +320,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param locality: The locality of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if locality is not None and len(locality) > 25:
-            raise ValueError("Invalid value for `locality`, length must be less than or equal to `25`")
 
         self._locality = locality
 
@@ -313,7 +327,7 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada. 
+        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :return: The administrative_area of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -324,13 +338,11 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada. 
+        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :param administrative_area: The administrative_area of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if administrative_area is not None and len(administrative_area) > 2:
-            raise ValueError("Invalid value for `administrative_area`, length must be less than or equal to `2`")
 
         self._administrative_area = administrative_area
 
@@ -338,7 +350,7 @@ class Ptsv2payoutsSenderInformation(object):
     def country_code(self):
         """
         Gets the country_code of this Ptsv2payoutsSenderInformation.
-        Country of sender. Use the ISO Standard Country Codes. * CTV (3) 
+        Country of sender. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). * CTV (3) 
 
         :return: The country_code of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -349,13 +361,11 @@ class Ptsv2payoutsSenderInformation(object):
     def country_code(self, country_code):
         """
         Sets the country_code of this Ptsv2payoutsSenderInformation.
-        Country of sender. Use the ISO Standard Country Codes. * CTV (3) 
+        Country of sender. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf). * CTV (3) 
 
         :param country_code: The country_code of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if country_code is not None and len(country_code) > 2:
-            raise ValueError("Invalid value for `country_code`, length must be less than or equal to `2`")
 
         self._country_code = country_code
 
@@ -379,8 +389,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param postal_code: The postal_code of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if postal_code is not None and len(postal_code) > 10:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `10`")
 
         self._postal_code = postal_code
 
@@ -404,8 +412,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param phone_number: The phone_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if phone_number is not None and len(phone_number) > 20:
-            raise ValueError("Invalid value for `phone_number`, length must be less than or equal to `20`")
 
         self._phone_number = phone_number
 
@@ -429,10 +435,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if date_of_birth is not None and len(date_of_birth) > 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be less than or equal to `8`")
-        if date_of_birth is not None and len(date_of_birth) < 8:
-            raise ValueError("Invalid value for `date_of_birth`, length must be greater than or equal to `8`")
 
         self._date_of_birth = date_of_birth
 
@@ -456,8 +458,6 @@ class Ptsv2payoutsSenderInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
-        if vat_registration_number is not None and len(vat_registration_number) > 13:
-            raise ValueError("Invalid value for `vat_registration_number`, length must be less than or equal to `13`")
 
         self._vat_registration_number = vat_registration_number
 

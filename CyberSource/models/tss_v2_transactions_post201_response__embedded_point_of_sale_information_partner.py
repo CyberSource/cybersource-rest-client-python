@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner(obje
         :param original_transaction_id: The original_transaction_id of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner.
         :type: str
         """
-        if original_transaction_id is not None and len(original_transaction_id) > 32:
-            raise ValueError("Invalid value for `original_transaction_id`, length must be less than or equal to `32`")
 
         self._original_transaction_id = original_transaction_id
 

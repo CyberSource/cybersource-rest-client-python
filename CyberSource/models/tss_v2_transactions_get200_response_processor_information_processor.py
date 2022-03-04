@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationProcessor(object):
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationProcessor.
         :type: str
         """
-        if name is not None and len(name) > 30:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `30`")
 
         self._name = name
 

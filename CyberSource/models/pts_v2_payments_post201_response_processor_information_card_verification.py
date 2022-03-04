@@ -57,7 +57,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self):
         """
         Gets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :rtype: str
@@ -68,13 +68,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
     def result_code(self, result_code):
         """
         Sets the result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param result_code: The result_code of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
         """
-        if result_code is not None and len(result_code) > 1:
-            raise ValueError("Invalid value for `result_code`, length must be less than or equal to `1`")
 
         self._result_code = result_code
 
@@ -98,8 +96,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
         :param result_code_raw: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
         """
-        if result_code_raw is not None and len(result_code_raw) > 10:
-            raise ValueError("Invalid value for `result_code_raw`, length must be less than or equal to `10`")
 
         self._result_code_raw = result_code_raw
 

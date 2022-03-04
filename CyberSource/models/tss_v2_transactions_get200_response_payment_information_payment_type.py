@@ -32,47 +32,37 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     """
     swagger_types = {
         'name': 'str',
-        'sub_type_name': 'str',
-        'funding_source': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource',
-        'method': 'str',
-        'authentication_method': 'str'
+        'type': 'str',
+        'method': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'sub_type_name': 'subTypeName',
-        'funding_source': 'fundingSource',
-        'method': 'method',
-        'authentication_method': 'authenticationMethod'
+        'type': 'type',
+        'method': 'method'
     }
 
-    def __init__(self, name=None, sub_type_name=None, funding_source=None, method=None, authentication_method=None):
+    def __init__(self, name=None, type=None, method=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformationPaymentType - a model defined in Swagger
         """
 
         self._name = None
-        self._sub_type_name = None
-        self._funding_source = None
+        self._type = None
         self._method = None
-        self._authentication_method = None
 
         if name is not None:
           self.name = name
-        if sub_type_name is not None:
-          self.sub_type_name = sub_type_name
-        if funding_source is not None:
-          self.funding_source = funding_source
+        if type is not None:
+          self.type = type
         if method is not None:
           self.method = method
-        if authentication_method is not None:
-          self.authentication_method = authentication_method
 
     @property
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for all eCheck payment transactions - ECP Debit, ECP Follow-on Credit, ECP StandAlone Credit) 
 
         :return: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -83,7 +73,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) 
+        A Payment Type is an agreed means for a payee to receive legal tender from a payer. The way one pays for a commercial financial transaction. Examples: Card, Bank Transfer, Digital, Direct Debit. Possible values: - `CARD` (use this for a PIN debit transaction) - `CHECK` (use this for all eCheck payment transactions - ECP Debit, ECP Follow-on Credit, ECP StandAlone Credit) 
 
         :param name: The name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
@@ -92,54 +82,33 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         self._name = name
 
     @property
-    def sub_type_name(self):
+    def type(self):
         """
-        Gets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
+        Gets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        Indicates the payment type used in this payment transaction. Example: credit card, check
 
-        :return: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :return: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
         """
-        return self._sub_type_name
+        return self._type
 
-    @sub_type_name.setter
-    def sub_type_name(self, sub_type_name):
+    @type.setter
+    def type(self, type):
         """
-        Sets the sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        SubType Name is detail information about Payment Type. Examples: For Card, if Credit or Debit or PrePaid. For Bank Transfer, if Online Bank Transfer or Wire Transfers. - `DEBIT` (use this for a PIN debit transaction) 
+        Sets the type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        Indicates the payment type used in this payment transaction. Example: credit card, check
 
-        :param sub_type_name: The sub_type_name of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
+        :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
         """
 
-        self._sub_type_name = sub_type_name
-
-    @property
-    def funding_source(self):
-        """
-        Gets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-
-        :return: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :rtype: TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource
-        """
-        return self._funding_source
-
-    @funding_source.setter
-    def funding_source(self, funding_source):
-        """
-        Sets the funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-
-        :param funding_source: The funding_source of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :type: TssV2TransactionsGet200ResponsePaymentInformationPaymentTypeFundingSource
-        """
-
-        self._funding_source = funding_source
+        self._type = type
 
     @property
     def method(self):
         """
         Gets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
+        Indicates the payment method used in this payment transaction.
 
         :return: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :rtype: str
@@ -150,36 +119,13 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
     def method(self, method):
         """
         Sets the method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal
+        Indicates the payment method used in this payment transaction.
 
         :param method: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
         """
 
         self._method = method
-
-    @property
-    def authentication_method(self):
-        """
-        Gets the authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type Authentication Method is the means used to verify that the presenter of the Payment Type credential is an authorized user of the Payment Instrument. Examples: 3DSecure – Verified by Visa, 3DSecure – MasteCard Secure Code 
-
-        :return: The authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :rtype: str
-        """
-        return self._authentication_method
-
-    @authentication_method.setter
-    def authentication_method(self, authentication_method):
-        """
-        Sets the authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        A Payment Type Authentication Method is the means used to verify that the presenter of the Payment Type credential is an authorized user of the Payment Instrument. Examples: 3DSecure – Verified by Visa, 3DSecure – MasteCard Secure Code 
-
-        :param authentication_method: The authentication_method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
-        :type: str
-        """
-
-        self._authentication_method = authentication_method
 
     def to_dict(self):
         """

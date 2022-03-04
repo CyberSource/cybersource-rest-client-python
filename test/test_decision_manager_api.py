@@ -31,11 +31,27 @@ class TestDecisionManagerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_decision_manager_case(self):
+    def test_add_negative(self):
         """
-        Test case for create_decision_manager_case
+        Test case for add_negative
 
-        Create Decision Manager Case
+        List Management
+        """
+        pass
+
+    def test_create_bundled_decision_manager_case(self):
+        """
+        Test case for create_bundled_decision_manager_case
+
+        Create Decision Manager
+        """
+        pass
+
+    def test_fraud_update(self):
+        """
+        Test case for fraud_update
+
+        Fraud Marking
         """
         pass
 

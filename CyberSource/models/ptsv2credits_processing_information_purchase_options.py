@@ -52,7 +52,7 @@ class Ptsv2creditsProcessingInformationPurchaseOptions(object):
     def is_electronic_benefits_transfer(self):
         """
         Gets the is_electronic_benefits_transfer of this Ptsv2creditsProcessingInformationPurchaseOptions.
-        Flag that indicates that this transaction is an EBT transaction.Possible values: - **true** - **false** 
+        Flag that indicates whether this transaction is an EBT transaction. Possible values: - `true` - `false`  #### PIN debit Required field for EBT and EBT voucher transactions that use PIN debit credit or PIN debit purchase; otherwise, not used. 
 
         :return: The is_electronic_benefits_transfer of this Ptsv2creditsProcessingInformationPurchaseOptions.
         :rtype: bool
@@ -63,7 +63,7 @@ class Ptsv2creditsProcessingInformationPurchaseOptions(object):
     def is_electronic_benefits_transfer(self, is_electronic_benefits_transfer):
         """
         Sets the is_electronic_benefits_transfer of this Ptsv2creditsProcessingInformationPurchaseOptions.
-        Flag that indicates that this transaction is an EBT transaction.Possible values: - **true** - **false** 
+        Flag that indicates whether this transaction is an EBT transaction. Possible values: - `true` - `false`  #### PIN debit Required field for EBT and EBT voucher transactions that use PIN debit credit or PIN debit purchase; otherwise, not used. 
 
         :param is_electronic_benefits_transfer: The is_electronic_benefits_transfer of this Ptsv2creditsProcessingInformationPurchaseOptions.
         :type: bool

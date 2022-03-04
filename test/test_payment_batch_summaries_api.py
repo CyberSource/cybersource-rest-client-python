@@ -35,7 +35,7 @@ class TestPaymentBatchSummariesApi(unittest.TestCase):
         """
         Test case for get_payment_batch_summary
 
-        Get payment batch summary data
+        Get Payment Batch Summary Data
         """
         pass
 

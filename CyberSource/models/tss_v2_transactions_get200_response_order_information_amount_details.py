@@ -36,7 +36,8 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'tax_amount': 'str',
         'authorized_amount': 'str',
         'settlement_amount': 'str',
-        'settlement_currency': 'str'
+        'settlement_currency': 'str',
+        'surcharge': 'Ptsv2paymentsOrderInformationAmountDetailsSurcharge'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'tax_amount': 'taxAmount',
         'authorized_amount': 'authorizedAmount',
         'settlement_amount': 'settlementAmount',
-        'settlement_currency': 'settlementCurrency'
+        'settlement_currency': 'settlementCurrency',
+        'surcharge': 'surcharge'
     }
 
-    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None):
+    def __init__(self, total_amount=None, currency=None, tax_amount=None, authorized_amount=None, settlement_amount=None, settlement_currency=None, surcharge=None):
         """
         TssV2TransactionsGet200ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         self._authorized_amount = None
         self._settlement_amount = None
         self._settlement_currency = None
+        self._surcharge = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -72,12 +75,14 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
           self.settlement_amount = settlement_amount
         if settlement_currency is not None:
           self.settlement_currency = settlement_currency
+        if surcharge is not None:
+          self.surcharge = surcharge
 
     @property
     def total_amount(self):
         """
         Gets the total_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### DCC for First Data Not used. 
 
         :return: The total_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -88,13 +93,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### DCC for First Data Not used.  #### Invoicing Grand total for the order, this is required for creating a new invoice. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths. For details, see: - \"Authorization Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Capture Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/). - \"Credit Information for Specific Processors\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen. For details, see \"Zero Amount Authorizations,\" \"Credit Information for Specific Processors\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request. For details, see `grand_total_amount` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in \"Authorization Information for Specific Processors\" of the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### DCC for First Data Not used. 
 
         :param total_amount: The total_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is not None and len(total_amount) > 19:
-            raise ValueError("Invalid value for `total_amount`, length must be less than or equal to `19`")
 
         self._total_amount = total_amount
 
@@ -102,7 +105,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :return: The currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -113,13 +116,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Currency used for the order. Use the three-character I[ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  For details about currency as used in partial authorizations, see \"Features for Debit Cards and Prepaid Cards\" in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf). 
+        Currency used for the order. Use the three-character [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf)  #### Used by **Authorization** Required field.  **Authorization Reversal** For an authorization reversal (`reversalInformation`) or a capture (`processingOptions.capture` is set to `true`), you must use the same currency that you used in your payment authorization request.  #### PIN Debit Currency for the amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf). Returned by PIN debit purchase.  For PIN debit reversal requests, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing. For the possible values, see the [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf).  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit.  #### DCC for First Data Your local currency. For details, see the `currency` field description in [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf).  #### Tax Calculation Required for international tax and value added tax only. Optional for U.S. and Canadian taxes. Your local currency. 
 
         :param currency: The currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is not None and len(currency) > 3:
-            raise ValueError("Invalid value for `currency`, length must be less than or equal to `3`")
 
         self._currency = currency
 
@@ -127,7 +128,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Total tax amount for all the items in the order.  For processor-specific information, see the total_tax_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total tax amount for all the items in the order. 
 
         :return: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -138,13 +139,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Total tax amount for all the items in the order.  For processor-specific information, see the total_tax_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total tax amount for all the items in the order. 
 
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if tax_amount is not None and len(tax_amount) > 12:
-            raise ValueError("Invalid value for `tax_amount`, length must be less than or equal to `12`")
 
         self._tax_amount = tax_amount
 
@@ -152,7 +151,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self):
         """
         Gets the authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### PIN debit Amount of the purchase.  Returned by PIN debit purchase.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :return: The authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -163,13 +162,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def authorized_amount(self, authorized_amount):
         """
         Sets the authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        Amount that was authorized. 
+        Amount that was authorized.  Returned by authorization service.  #### PIN debit Amount of the purchase.  Returned by PIN debit purchase.  #### FDMS South If you accept IDR or CLP currencies, see the entry for FDMS South in Merchant Descriptors Using the SCMP API. 
 
         :param authorized_amount: The authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if authorized_amount is not None and len(authorized_amount) > 15:
-            raise ValueError("Invalid value for `authorized_amount`, length must be less than or equal to `15`")
 
         self._authorized_amount = authorized_amount
 
@@ -177,7 +174,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self):
         """
         Gets the settlement_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :return: The settlement_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -188,13 +185,11 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
 
         :param settlement_amount: The settlement_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_amount is not None and len(settlement_amount) > 12:
-            raise ValueError("Invalid value for `settlement_amount`, length must be less than or equal to `12`")
 
         self._settlement_amount = settlement_amount
 
@@ -202,7 +197,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def settlement_currency(self):
         """
         Gets the settlement_currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :return: The settlement_currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -213,15 +208,34 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
     def settlement_currency(self, settlement_currency):
         """
         Sets the settlement_currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. 
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :param settlement_currency: The settlement_currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if settlement_currency is not None and len(settlement_currency) > 3:
-            raise ValueError("Invalid value for `settlement_currency`, length must be less than or equal to `3`")
 
         self._settlement_currency = settlement_currency
+
+    @property
+    def surcharge(self):
+        """
+        Gets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+
+        :return: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :rtype: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        """
+        return self._surcharge
+
+    @surcharge.setter
+    def surcharge(self, surcharge):
+        """
+        Sets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+
+        :param surcharge: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
+        :type: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        """
+
+        self._surcharge = surcharge
 
     def to_dict(self):
         """

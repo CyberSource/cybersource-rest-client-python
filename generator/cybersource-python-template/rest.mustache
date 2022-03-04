@@ -8,7 +8,7 @@ import io
 import json
 import ssl
 import certifi
-import logging
+import CyberSource.logging.log_factory as LogFactory
 import re
 
 # python 2 and python 3 compatibility library
@@ -19,11 +19,10 @@ from .configuration import Configuration
 
 try:
     import urllib3
+    from urllib3 import ProxyManager, make_headers
 except ImportError:
     raise ImportError('Swagger python client requires urllib3.')
 
-
-logger = logging.getLogger(__name__)
 
 
 class RESTResponse(io.IOBase):
@@ -49,7 +48,7 @@ class RESTResponse(io.IOBase):
 
 class RESTClientObject(object):
 
-    def __init__(self, pools_size=4, maxsize=4):
+    def __init__(self, rconfig = None, pools_size=4, maxsize=4, log_config = None):
         # urllib3.PoolManager will pass all kw parameters to connectionpool
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680
@@ -57,30 +56,51 @@ class RESTClientObject(object):
         # ca_certs vs cert_file vs key_file
         # http://stackoverflow.com/a/23957365/2985775
 
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, log_config)
+        if log_config is not None:
+            self.enable_log = log_config.enable_log
+        else:
+            self.enable_log = False
+
+        if rconfig is None:
+            rconfig = Configuration()
+
         # cert_reqs
-        if Configuration().verify_ssl:
+        if rconfig.verify_ssl:
             cert_reqs = ssl.CERT_REQUIRED
         else:
             cert_reqs = ssl.CERT_NONE
 
         # ca_certs
-        if Configuration().ssl_ca_cert:
-            ca_certs = Configuration().ssl_ca_cert
+        if rconfig.ssl_ca_cert:
+            ca_certs = rconfig.ssl_ca_cert
         else:
             # if not set certificate file, use Mozilla's root certificates.
             ca_certs = certifi.where()
 
         # cert_file
-        cert_file = Configuration().cert_file
+        cert_file = rconfig.cert_file
 
         # key file
-        key_file = Configuration().key_file
+        key_file = rconfig.key_file
+
+        # key pass
+        key_password = rconfig.key_password
 
         # proxy
-        proxy = Configuration().proxy
+        proxy = rconfig.proxy
 
         # https pool manager
         if proxy:
+            # proxy auth headers
+            proxy_username = rconfig.proxy_username
+            proxy_password = rconfig.proxy_password
+            proxy_auth_headers = None
+
+            
+            if (proxy_username and proxy_password):
+                proxy_auth_headers = make_headers(proxy_basic_auth=proxy_username + ':' + proxy_password)
+
             self.pool_manager = urllib3.ProxyManager(
                 num_pools=pools_size,
                 maxsize=maxsize,
@@ -88,7 +108,9 @@ class RESTClientObject(object):
                 ca_certs=ca_certs,
                 cert_file=cert_file,
                 key_file=key_file,
-                proxy_url=proxy
+                key_password=key_password,
+                proxy_url=proxy,
+                proxy_headers=proxy_auth_headers
             )
         else:
             self.pool_manager = urllib3.PoolManager(
@@ -97,7 +119,8 @@ class RESTClientObject(object):
                 cert_reqs=cert_reqs,
                 ca_certs=ca_certs,
                 cert_file=cert_file,
-                key_file=key_file
+                key_file=key_file,
+                key_password=key_password
             )
 
 
@@ -120,7 +143,7 @@ class RESTClientObject(object):
         method = method.upper()
         assert method in ['GET', 'HEAD', 'DELETE', 'POST', 'PUT', 'PATCH', 'OPTIONS']
 
-        if post_params and body:
+        if post_params and body and not headers['Content-Type'] == 'application/x-www-form-urlencoded':
             raise ValueError(
                 "body parameter cannot be used with post_params parameter."
             )
@@ -201,10 +224,11 @@ class RESTClientObject(object):
             # In the python 3, the response.data is bytes.
             # we need to decode it to string.
             if PY3:
-                r.data = r.data.decode('utf8')
+                r.data = r.data.decode('utf-8')
 
             # log response body
-            logger.debug("response body: %s", r.data)
+            if self.enable_log:
+                self.logger.debug("response body: %s", r.data)
 
         if not 200 <= r.status <= 299:
             raise ApiException(http_resp=r)

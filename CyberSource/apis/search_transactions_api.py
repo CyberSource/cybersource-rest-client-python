@@ -22,6 +22,7 @@ from six import iteritems
 
 from ..configuration import Configuration
 from ..api_client import ApiClient
+import CyberSource.logging.log_factory as LogFactory
 
 
 class SearchTransactionsApi(object):
@@ -39,12 +40,14 @@ class SearchTransactionsApi(object):
             if not config.api_client:
                 config.api_client = ApiClient()
             self.api_client = config.api_client
-        self.api_client.set_configuration(merchant_config) 
+        self.api_client.set_configuration(merchant_config)
+        self.logger = LogFactory.setup_logger(self.__class__.__name__, self.api_client.mconfig.log_config)
+
 
 
     def create_search(self, create_search_request, **kwargs):
         """
-        Create a search request
+        Create a Search Request
         Create a search request. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -61,6 +64,10 @@ class SearchTransactionsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_search` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.create_search_with_http_info(create_search_request, **kwargs)
@@ -70,7 +77,7 @@ class SearchTransactionsApi(object):
 
     def create_search_with_http_info(self, create_search_request, **kwargs):
         """
-        Create a search request
+        Create a Search Request
         Create a search request. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -105,6 +112,8 @@ class SearchTransactionsApi(object):
         del params['kwargs']
         # verify the required parameter 'create_search_request' is set
         if ('create_search_request' not in params) or (params['create_search_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_search_request` when calling `create_search`")
             raise ValueError("Missing the required parameter `create_search_request` when calling `create_search`")
 
 
@@ -150,7 +159,7 @@ class SearchTransactionsApi(object):
 
     def get_search(self, search_id, **kwargs):
         """
-        Get Search results
+        Get Search Results
         Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -167,6 +176,10 @@ class SearchTransactionsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_search` STARTED")
+
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
             return self.get_search_with_http_info(search_id, **kwargs)
@@ -176,7 +189,7 @@ class SearchTransactionsApi(object):
 
     def get_search_with_http_info(self, search_id, **kwargs):
         """
-        Get Search results
+        Get Search Results
         Include the Search ID in the GET request to retrieve the search results.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -211,6 +224,8 @@ class SearchTransactionsApi(object):
         del params['kwargs']
         # verify the required parameter 'search_id' is set
         if ('search_id' not in params) or (params['search_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `search_id` when calling `get_search`")
             raise ValueError("Missing the required parameter `search_id` when calling `get_search`")
 
 

@@ -33,16 +33,18 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     swagger_types = {
         'code': 'str',
         'application_name': 'str',
-        'application_user': 'str'
+        'application_user': 'str',
+        'partner': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner'
     }
 
     attribute_map = {
         'code': 'code',
         'application_name': 'applicationName',
-        'application_user': 'applicationUser'
+        'application_user': 'applicationUser',
+        'partner': 'partner'
     }
 
-    def __init__(self, code=None, application_name=None, application_user=None):
+    def __init__(self, code=None, application_name=None, application_user=None, partner=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         self._code = None
         self._application_name = None
         self._application_user = None
+        self._partner = None
 
         if code is not None:
           self.code = code
@@ -57,12 +60,14 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
           self.application_name = application_name
         if application_user is not None:
           self.application_user = application_user
+        if partner is not None:
+          self.partner = partner
 
     @property
     def code(self):
         """
         Gets the code of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :rtype: str
@@ -73,13 +78,11 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def code(self, code):
         """
         Sets the code of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        Client-generated order reference or tracking number. CyberSource recommends that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  For information about tracking orders, see \"Tracking and Reconciling Your Orders\" in [Getting Started with CyberSource Advanced for the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Getting_Started_SCMP/html/wwhelp/wwhimpl/js/html/wwhelp.htm)  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
         """
-        if code is not None and len(code) > 50:
-            raise ValueError("Invalid value for `code`, length must be less than or equal to `50`")
 
         self._code = code
 
@@ -87,7 +90,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_name(self):
         """
         Gets the application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :return: The application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :rtype: str
@@ -98,7 +101,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_name(self, application_name):
         """
         Sets the application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The application name of client which is used to submit the request.
+        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :param application_name: The application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
@@ -110,7 +113,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_user(self):
         """
         Gets the application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :return: The application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :rtype: str
@@ -121,13 +124,34 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
     def application_user(self, application_user):
         """
         Sets the application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        The description for this field is not available.
+        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :param application_user: The application_user of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
         """
 
         self._application_user = application_user
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+
+        :return: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+
+        :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
+        :type: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     def to_dict(self):
         """

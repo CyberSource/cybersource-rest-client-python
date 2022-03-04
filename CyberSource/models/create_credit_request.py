@@ -36,11 +36,14 @@ class CreateCreditRequest(object):
         'payment_information': 'Ptsv2paymentsidrefundsPaymentInformation',
         'order_information': 'Ptsv2paymentsidrefundsOrderInformation',
         'buyer_information': 'Ptsv2paymentsidcapturesBuyerInformation',
-        'device_information': 'Ptsv2paymentsDeviceInformation',
+        'device_information': 'Ptsv2paymentsidcapturesDeviceInformation',
         'merchant_information': 'Ptsv2paymentsidrefundsMerchantInformation',
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
-        'point_of_sale_information': 'Ptsv2creditsPointOfSaleInformation',
-        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]'
+        'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
+        'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
+        'installment_information': 'Ptsv2creditsInstallmentInformation',
+        'travel_information': 'Ptsv2paymentsTravelInformation',
+        'promotion_information': 'Ptsv2paymentsPromotionInformation'
     }
 
     attribute_map = {
@@ -53,10 +56,13 @@ class CreateCreditRequest(object):
         'merchant_information': 'merchantInformation',
         'aggregator_information': 'aggregatorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'merchant_defined_information': 'merchantDefinedInformation'
+        'merchant_defined_information': 'merchantDefinedInformation',
+        'installment_information': 'installmentInformation',
+        'travel_information': 'travelInformation',
+        'promotion_information': 'promotionInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None):
         """
         CreateCreditRequest - a model defined in Swagger
         """
@@ -71,6 +77,9 @@ class CreateCreditRequest(object):
         self._aggregator_information = None
         self._point_of_sale_information = None
         self._merchant_defined_information = None
+        self._installment_information = None
+        self._travel_information = None
+        self._promotion_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -92,6 +101,12 @@ class CreateCreditRequest(object):
           self.point_of_sale_information = point_of_sale_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if installment_information is not None:
+          self.installment_information = installment_information
+        if travel_information is not None:
+          self.travel_information = travel_information
+        if promotion_information is not None:
+          self.promotion_information = promotion_information
 
     @property
     def client_reference_information(self):
@@ -204,7 +219,7 @@ class CreateCreditRequest(object):
         Gets the device_information of this CreateCreditRequest.
 
         :return: The device_information of this CreateCreditRequest.
-        :rtype: Ptsv2paymentsDeviceInformation
+        :rtype: Ptsv2paymentsidcapturesDeviceInformation
         """
         return self._device_information
 
@@ -214,7 +229,7 @@ class CreateCreditRequest(object):
         Sets the device_information of this CreateCreditRequest.
 
         :param device_information: The device_information of this CreateCreditRequest.
-        :type: Ptsv2paymentsDeviceInformation
+        :type: Ptsv2paymentsidcapturesDeviceInformation
         """
 
         self._device_information = device_information
@@ -267,7 +282,7 @@ class CreateCreditRequest(object):
         Gets the point_of_sale_information of this CreateCreditRequest.
 
         :return: The point_of_sale_information of this CreateCreditRequest.
-        :rtype: Ptsv2creditsPointOfSaleInformation
+        :rtype: Ptsv2paymentsPointOfSaleInformation
         """
         return self._point_of_sale_information
 
@@ -277,7 +292,7 @@ class CreateCreditRequest(object):
         Sets the point_of_sale_information of this CreateCreditRequest.
 
         :param point_of_sale_information: The point_of_sale_information of this CreateCreditRequest.
-        :type: Ptsv2creditsPointOfSaleInformation
+        :type: Ptsv2paymentsPointOfSaleInformation
         """
 
         self._point_of_sale_information = point_of_sale_information
@@ -304,6 +319,69 @@ class CreateCreditRequest(object):
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def installment_information(self):
+        """
+        Gets the installment_information of this CreateCreditRequest.
+
+        :return: The installment_information of this CreateCreditRequest.
+        :rtype: Ptsv2creditsInstallmentInformation
+        """
+        return self._installment_information
+
+    @installment_information.setter
+    def installment_information(self, installment_information):
+        """
+        Sets the installment_information of this CreateCreditRequest.
+
+        :param installment_information: The installment_information of this CreateCreditRequest.
+        :type: Ptsv2creditsInstallmentInformation
+        """
+
+        self._installment_information = installment_information
+
+    @property
+    def travel_information(self):
+        """
+        Gets the travel_information of this CreateCreditRequest.
+
+        :return: The travel_information of this CreateCreditRequest.
+        :rtype: Ptsv2paymentsTravelInformation
+        """
+        return self._travel_information
+
+    @travel_information.setter
+    def travel_information(self, travel_information):
+        """
+        Sets the travel_information of this CreateCreditRequest.
+
+        :param travel_information: The travel_information of this CreateCreditRequest.
+        :type: Ptsv2paymentsTravelInformation
+        """
+
+        self._travel_information = travel_information
+
+    @property
+    def promotion_information(self):
+        """
+        Gets the promotion_information of this CreateCreditRequest.
+
+        :return: The promotion_information of this CreateCreditRequest.
+        :rtype: Ptsv2paymentsPromotionInformation
+        """
+        return self._promotion_information
+
+    @promotion_information.setter
+    def promotion_information(self, promotion_information):
+        """
+        Sets the promotion_information of this CreateCreditRequest.
+
+        :param promotion_information: The promotion_information of this CreateCreditRequest.
+        :type: Ptsv2paymentsPromotionInformation
+        """
+
+        self._promotion_information = promotion_information
 
     def to_dict(self):
         """

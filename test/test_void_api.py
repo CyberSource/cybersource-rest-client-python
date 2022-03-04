@@ -31,6 +31,14 @@ class TestVoidApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_mit_void(self):
+        """
+        Test case for mit_void
+
+        Timeout Void
+        """
+        pass
+
     def test_void_capture(self):
         """
         Test case for void_capture

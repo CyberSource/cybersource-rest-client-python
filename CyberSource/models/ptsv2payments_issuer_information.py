@@ -52,7 +52,7 @@ class Ptsv2paymentsIssuerInformation(object):
     def discretionary_data(self):
         """
         Gets the discretionary_data of this Ptsv2paymentsIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The discretionary_data of this Ptsv2paymentsIssuerInformation.
         :rtype: str
@@ -63,13 +63,11 @@ class Ptsv2paymentsIssuerInformation(object):
     def discretionary_data(self, discretionary_data):
         """
         Sets the discretionary_data of this Ptsv2paymentsIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param discretionary_data: The discretionary_data of this Ptsv2paymentsIssuerInformation.
         :type: str
         """
-        if discretionary_data is not None and len(discretionary_data) > 255:
-            raise ValueError("Invalid value for `discretionary_data`, length must be less than or equal to `255`")
 
         self._discretionary_data = discretionary_data
 

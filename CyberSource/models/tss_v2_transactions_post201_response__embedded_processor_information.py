@@ -31,22 +31,27 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor'
+        'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor',
+        'approval_code': 'str'
     }
 
     attribute_map = {
-        'processor': 'processor'
+        'processor': 'processor',
+        'approval_code': 'approvalCode'
     }
 
-    def __init__(self, processor=None):
+    def __init__(self, processor=None, approval_code=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedProcessorInformation - a model defined in Swagger
         """
 
         self._processor = None
+        self._approval_code = None
 
         if processor is not None:
           self.processor = processor
+        if approval_code is not None:
+          self.approval_code = approval_code
 
     @property
     def processor(self):
@@ -68,6 +73,29 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         """
 
         self._processor = processor
+
+    @property
+    def approval_code(self):
+        """
+        Gets the approval_code of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
+
+        :return: The approval_code of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :rtype: str
+        """
+        return self._approval_code
+
+    @approval_code.setter
+    def approval_code(self, approval_code):
+        """
+        Sets the approval_code of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
+
+        :param approval_code: The approval_code of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :type: str
+        """
+
+        self._approval_code = approval_code
 
     def to_dict(self):
         """
