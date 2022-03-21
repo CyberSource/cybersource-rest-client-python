@@ -35,6 +35,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         'application_version': 'str',
         'application_name': 'str',
         'application_user': 'str',
+        'partner': 'TssV2TransactionsGet200ResponseClientReferenceInformationPartner',
         'comments': 'str'
     }
 
@@ -43,10 +44,11 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         'application_version': 'applicationVersion',
         'application_name': 'applicationName',
         'application_user': 'applicationUser',
+        'partner': 'partner',
         'comments': 'comments'
     }
 
-    def __init__(self, code=None, application_version=None, application_name=None, application_user=None, comments=None):
+    def __init__(self, code=None, application_version=None, application_name=None, application_user=None, partner=None, comments=None):
         """
         TssV2TransactionsGet200ResponseClientReferenceInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         self._application_version = None
         self._application_name = None
         self._application_user = None
+        self._partner = None
         self._comments = None
 
         if code is not None:
@@ -65,6 +68,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
           self.application_name = application_name
         if application_user is not None:
           self.application_user = application_user
+        if partner is not None:
+          self.partner = partner
         if comments is not None:
           self.comments = comments
 
@@ -159,6 +164,27 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         """
 
         self._application_user = application_user
+
+    @property
+    def partner(self):
+        """
+        Gets the partner of this TssV2TransactionsGet200ResponseClientReferenceInformation.
+
+        :return: The partner of this TssV2TransactionsGet200ResponseClientReferenceInformation.
+        :rtype: TssV2TransactionsGet200ResponseClientReferenceInformationPartner
+        """
+        return self._partner
+
+    @partner.setter
+    def partner(self, partner):
+        """
+        Sets the partner of this TssV2TransactionsGet200ResponseClientReferenceInformation.
+
+        :param partner: The partner of this TssV2TransactionsGet200ResponseClientReferenceInformation.
+        :type: TssV2TransactionsGet200ResponseClientReferenceInformationPartner
+        """
+
+        self._partner = partner
 
     @property
     def comments(self):

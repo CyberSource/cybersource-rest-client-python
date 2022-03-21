@@ -281,7 +281,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def phone(self):
         """
         Gets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        Merchnat phone as contact information for CNP transactions 
+        Merchant phone as contact information for CNP transactions 
 
         :return: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -292,7 +292,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def phone(self, phone):
         """
         Sets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        Merchnat phone as contact information for CNP transactions 
+        Merchant phone as contact information for CNP transactions 
 
         :param phone: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str

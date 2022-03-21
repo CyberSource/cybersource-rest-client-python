@@ -31,6 +31,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'approval_code': 'str',
         'transaction_id': 'str',
         'forwarded_acquirer_code': 'str',
         'merchant_number': 'str',
@@ -39,6 +40,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
     }
 
     attribute_map = {
+        'approval_code': 'approvalCode',
         'transaction_id': 'transactionId',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'merchant_number': 'merchantNumber',
@@ -46,17 +48,20 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'ach_verification': 'achVerification'
     }
 
-    def __init__(self, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
+        self._approval_code = None
         self._transaction_id = None
         self._forwarded_acquirer_code = None
         self._merchant_number = None
         self._response_code = None
         self._ach_verification = None
 
+        if approval_code is not None:
+          self.approval_code = approval_code
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if forwarded_acquirer_code is not None:
@@ -67,6 +72,29 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.response_code = response_code
         if ach_verification is not None:
           self.ach_verification = ach_verification
+
+    @property
+    def approval_code(self):
+        """
+        Gets the approval_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
+
+        :return: The approval_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._approval_code
+
+    @approval_code.setter
+    def approval_code(self, approval_code):
+        """
+        Sets the approval_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Authorization code. Returned only when the processor returns this value.  The length of this value depends on your processor.  Returned by authorization service.  #### PIN debit Authorization code that is returned by the processor.  Returned by PIN debit credit.  #### Elavon Encrypted Account Number Program The returned value is OFFLINE.  #### TSYS Acquiring Solutions The returned value for a successful zero amount authorization is 000000. 
+
+        :param approval_code: The approval_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._approval_code = approval_code
 
     @property
     def transaction_id(self):
