@@ -34,7 +34,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         'code': 'str',
         'application_name': 'str',
         'application_user': 'str',
-        'partner': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner'
+        'partner': 'TssV2TransactionsGet200ResponseClientReferenceInformationPartner'
     }
 
     attribute_map = {
@@ -138,7 +138,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         Gets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
 
         :return: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        :rtype: TssV2TransactionsGet200ResponseClientReferenceInformationPartner
         """
         return self._partner
 
@@ -148,7 +148,7 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         Sets the partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
 
         :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
-        :type: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
+        :type: TssV2TransactionsGet200ResponseClientReferenceInformationPartner
         """
 
         self._partner = partner

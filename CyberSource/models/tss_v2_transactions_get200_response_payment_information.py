@@ -32,11 +32,14 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsGet200ResponsePaymentInformationPaymentType',
-        'customer': 'Riskv1authenticationsetupsPaymentInformationCustomer',
+        'customer': 'TssV2TransactionsGet200ResponsePaymentInformationCustomer',
         'card': 'TssV2TransactionsGet200ResponsePaymentInformationCard',
         'invoice': 'TssV2TransactionsGet200ResponsePaymentInformationInvoice',
         'bank': 'TssV2TransactionsGet200ResponsePaymentInformationBank',
-        'account_features': 'TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures'
+        'account_features': 'TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures',
+        'payment_instrument': 'PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
+        'instrument_identifier': 'TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier',
+        'shipping_address': 'PtsV2PaymentsPost201ResponseTokenInformationShippingAddress'
     }
 
     attribute_map = {
@@ -45,10 +48,13 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         'card': 'card',
         'invoice': 'invoice',
         'bank': 'bank',
-        'account_features': 'accountFeatures'
+        'account_features': 'accountFeatures',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'shipping_address': 'shippingAddress'
     }
 
-    def __init__(self, payment_type=None, customer=None, card=None, invoice=None, bank=None, account_features=None):
+    def __init__(self, payment_type=None, customer=None, card=None, invoice=None, bank=None, account_features=None, payment_instrument=None, instrument_identifier=None, shipping_address=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformation - a model defined in Swagger
         """
@@ -59,6 +65,9 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         self._invoice = None
         self._bank = None
         self._account_features = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._shipping_address = None
 
         if payment_type is not None:
           self.payment_type = payment_type
@@ -72,6 +81,12 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
           self.bank = bank
         if account_features is not None:
           self.account_features = account_features
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if shipping_address is not None:
+          self.shipping_address = shipping_address
 
     @property
     def payment_type(self):
@@ -100,7 +115,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Gets the customer of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :return: The customer of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :rtype: Riskv1authenticationsetupsPaymentInformationCustomer
+        :rtype: TssV2TransactionsGet200ResponsePaymentInformationCustomer
         """
         return self._customer
 
@@ -110,7 +125,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         Sets the customer of this TssV2TransactionsGet200ResponsePaymentInformation.
 
         :param customer: The customer of this TssV2TransactionsGet200ResponsePaymentInformation.
-        :type: Riskv1authenticationsetupsPaymentInformationCustomer
+        :type: TssV2TransactionsGet200ResponsePaymentInformationCustomer
         """
 
         self._customer = customer
@@ -198,6 +213,69 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         """
 
         self._account_features = account_features
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :return: The payment_instrument of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :return: The instrument_identifier of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :rtype: TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :type: TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def shipping_address(self):
+        """
+        Gets the shipping_address of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :return: The shipping_address of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponseTokenInformationShippingAddress
+        """
+        return self._shipping_address
+
+    @shipping_address.setter
+    def shipping_address(self, shipping_address):
+        """
+        Sets the shipping_address of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :param shipping_address: The shipping_address of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponseTokenInformationShippingAddress
+        """
+
+        self._shipping_address = shipping_address
 
     def to_dict(self):
         """

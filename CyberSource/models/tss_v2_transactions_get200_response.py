@@ -35,7 +35,6 @@ class TssV2TransactionsGet200Response(object):
         'root_id': 'str',
         'reconciliation_id': 'str',
         'merchant_id': 'str',
-        'status': 'str',
         'submit_time_utc': 'str',
         'application_information': 'TssV2TransactionsGet200ResponseApplicationInformation',
         'buyer_information': 'TssV2TransactionsGet200ResponseBuyerInformation',
@@ -55,6 +54,7 @@ class TssV2TransactionsGet200Response(object):
         'point_of_sale_information': 'TssV2TransactionsGet200ResponsePointOfSaleInformation',
         'risk_information': 'TssV2TransactionsGet200ResponseRiskInformation',
         'sender_information': 'TssV2TransactionsGet200ResponseSenderInformation',
+        'token_information': 'TssV2TransactionsGet200ResponseTokenInformation',
         'links': 'TssV2TransactionsGet200ResponseLinks'
     }
 
@@ -63,7 +63,6 @@ class TssV2TransactionsGet200Response(object):
         'root_id': 'rootId',
         'reconciliation_id': 'reconciliationId',
         'merchant_id': 'merchantId',
-        'status': 'status',
         'submit_time_utc': 'submitTimeUTC',
         'application_information': 'applicationInformation',
         'buyer_information': 'buyerInformation',
@@ -83,10 +82,11 @@ class TssV2TransactionsGet200Response(object):
         'point_of_sale_information': 'pointOfSaleInformation',
         'risk_information': 'riskInformation',
         'sender_information': 'senderInformation',
+        'token_information': 'tokenInformation',
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, status=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -95,7 +95,6 @@ class TssV2TransactionsGet200Response(object):
         self._root_id = None
         self._reconciliation_id = None
         self._merchant_id = None
-        self._status = None
         self._submit_time_utc = None
         self._application_information = None
         self._buyer_information = None
@@ -115,6 +114,7 @@ class TssV2TransactionsGet200Response(object):
         self._point_of_sale_information = None
         self._risk_information = None
         self._sender_information = None
+        self._token_information = None
         self._links = None
 
         if id is not None:
@@ -125,8 +125,6 @@ class TssV2TransactionsGet200Response(object):
           self.reconciliation_id = reconciliation_id
         if merchant_id is not None:
           self.merchant_id = merchant_id
-        if status is not None:
-          self.status = status
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if application_information is not None:
@@ -165,6 +163,8 @@ class TssV2TransactionsGet200Response(object):
           self.risk_information = risk_information
         if sender_information is not None:
           self.sender_information = sender_information
+        if token_information is not None:
+          self.token_information = token_information
         if links is not None:
           self.links = links
 
@@ -259,29 +259,6 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._merchant_id = merchant_id
-
-    @property
-    def status(self):
-        """
-        Gets the status of this TssV2TransactionsGet200Response.
-        The status of the submitted transaction.
-
-        :return: The status of this TssV2TransactionsGet200Response.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this TssV2TransactionsGet200Response.
-        The status of the submitted transaction.
-
-        :param status: The status of this TssV2TransactionsGet200Response.
-        :type: str
-        """
-
-        self._status = status
 
     @property
     def submit_time_utc(self):
@@ -685,6 +662,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._sender_information = sender_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this TssV2TransactionsGet200Response.
+
+        :return: The token_information of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this TssV2TransactionsGet200Response.
+
+        :param token_information: The token_information of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseTokenInformation
+        """
+
+        self._token_information = token_information
 
     @property
     def links(self):
