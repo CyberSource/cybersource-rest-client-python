@@ -5,6 +5,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_v2_shared_secret_keys**](SymmetricKeyManagementApi.md#create_v2_shared_secret_keys) | **POST** /kms/v2/keys-sym | Create Shared-Secret Keys
+[**create_v2_shared_secret_keys_verifi**](SymmetricKeyManagementApi.md#create_v2_shared_secret_keys_verifi) | **POST** /kms/v2/keys-sym/verifi | Create Shared-Secret Keys as per verifi spec
 [**delete_bulk_symmetric_keys**](SymmetricKeyManagementApi.md#delete_bulk_symmetric_keys) | **POST** /kms/v2/keys-sym/deletes | Delete one or more Symmetric keys
 [**get_key_details**](SymmetricKeyManagementApi.md#get_key_details) | **GET** /kms/v2/keys-sym/{keyId} | Retrieves shared secret key details
 
@@ -41,6 +42,56 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_shared_secret_keys_request** | [**CreateSharedSecretKeysRequest**](CreateSharedSecretKeysRequest.md)|  | 
+
+### Return type
+
+[**KmsV2KeysSymPost201Response**](KmsV2KeysSymPost201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_v2_shared_secret_keys_verifi**
+> KmsV2KeysSymPost201Response create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_request)
+
+Create Shared-Secret Keys as per verifi spec
+
+Create one or more Shared-Secret Keys as per Verifi spec with 32 chars, store digest algo during key generation. 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.SymmetricKeyManagementApi()
+v_ic_domain = 'v_ic_domain_example' # str | domain
+create_shared_secret_keys_request = CyberSource.CreateSharedSecretKeysRequest1() # CreateSharedSecretKeysRequest1 | 
+
+try: 
+    # Create Shared-Secret Keys as per verifi spec
+    api_response = api_instance.create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SymmetricKeyManagementApi->create_v2_shared_secret_keys_verifi: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **v_ic_domain** | **str**| domain | 
+ **create_shared_secret_keys_request** | [**CreateSharedSecretKeysRequest1**](CreateSharedSecretKeysRequest1.md)|  | 
 
 ### Return type
 

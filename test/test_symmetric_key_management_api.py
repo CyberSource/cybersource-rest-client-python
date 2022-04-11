@@ -39,6 +39,14 @@ class TestSymmetricKeyManagementApi(unittest.TestCase):
         """
         pass
 
+    def test_create_v2_shared_secret_keys_verifi(self):
+        """
+        Test case for create_v2_shared_secret_keys_verifi
+
+        Create Shared-Secret Keys as per verifi spec
+        """
+        pass
+
     def test_delete_bulk_symmetric_keys(self):
         """
         Test case for delete_bulk_symmetric_keys
