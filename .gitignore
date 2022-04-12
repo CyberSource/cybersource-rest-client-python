@@ -62,5 +62,3 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-.swagger-codegen/VERSION
-.swagger-codegen-ignore

@@ -157,7 +157,7 @@ class SymmetricKeyManagementApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_v2_shared_secret_keys_verifi(self, v_ic_domain, create_shared_secret_keys_request, **kwargs):
+    def create_v2_shared_secret_keys_verifi(self, v_ic_domain, create_shared_secret_keys_verifi_request, **kwargs):
         """
         Create Shared-Secret Keys as per verifi spec
         Create one or more Shared-Secret Keys as per Verifi spec with 32 chars, store digest algo during key generation. 
@@ -167,12 +167,12 @@ class SymmetricKeyManagementApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_request, callback=callback_function)
+        >>> thread = api.create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_verifi_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str v_ic_domain: domain (required)
-        :param CreateSharedSecretKeysRequest1 create_shared_secret_keys_request: (required)
+        :param CreateSharedSecretKeysVerifiRequest create_shared_secret_keys_verifi_request: (required)
         :return: KmsV2KeysSymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -183,12 +183,12 @@ class SymmetricKeyManagementApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_request, **kwargs)
+            return self.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_verifi_request, **kwargs)
         else:
-            (data) = self.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_request, **kwargs)
+            (data) = self.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_verifi_request, **kwargs)
             return data
 
-    def create_v2_shared_secret_keys_verifi_with_http_info(self, v_ic_domain, create_shared_secret_keys_request, **kwargs):
+    def create_v2_shared_secret_keys_verifi_with_http_info(self, v_ic_domain, create_shared_secret_keys_verifi_request, **kwargs):
         """
         Create Shared-Secret Keys as per verifi spec
         Create one or more Shared-Secret Keys as per Verifi spec with 32 chars, store digest algo during key generation. 
@@ -198,18 +198,18 @@ class SymmetricKeyManagementApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_request, callback=callback_function)
+        >>> thread = api.create_v2_shared_secret_keys_verifi_with_http_info(v_ic_domain, create_shared_secret_keys_verifi_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str v_ic_domain: domain (required)
-        :param CreateSharedSecretKeysRequest1 create_shared_secret_keys_request: (required)
+        :param CreateSharedSecretKeysVerifiRequest create_shared_secret_keys_verifi_request: (required)
         :return: KmsV2KeysSymPost201Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['v_ic_domain', 'create_shared_secret_keys_request']
+        all_params = ['v_ic_domain', 'create_shared_secret_keys_verifi_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -229,11 +229,11 @@ class SymmetricKeyManagementApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `v_ic_domain` when calling `create_v2_shared_secret_keys_verifi`")
             raise ValueError("Missing the required parameter `v_ic_domain` when calling `create_v2_shared_secret_keys_verifi`")
-        # verify the required parameter 'create_shared_secret_keys_request' is set
-        if ('create_shared_secret_keys_request' not in params) or (params['create_shared_secret_keys_request'] is None):
+        # verify the required parameter 'create_shared_secret_keys_verifi_request' is set
+        if ('create_shared_secret_keys_verifi_request' not in params) or (params['create_shared_secret_keys_verifi_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `create_shared_secret_keys_request` when calling `create_v2_shared_secret_keys_verifi`")
-            raise ValueError("Missing the required parameter `create_shared_secret_keys_request` when calling `create_v2_shared_secret_keys_verifi`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_shared_secret_keys_verifi_request` when calling `create_v2_shared_secret_keys_verifi`")
+            raise ValueError("Missing the required parameter `create_shared_secret_keys_verifi_request` when calling `create_v2_shared_secret_keys_verifi`")
 
 
         collection_formats = {}
@@ -250,8 +250,8 @@ class SymmetricKeyManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_shared_secret_keys_request' in params:
-            body_params = params['create_shared_secret_keys_request']
+        if 'create_shared_secret_keys_verifi_request' in params:
+            body_params = params['create_shared_secret_keys_verifi_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])

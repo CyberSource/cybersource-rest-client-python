@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_v2_shared_secret_keys_verifi**
-> KmsV2KeysSymPost201Response create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_request)
+> KmsV2KeysSymPost201Response create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_verifi_request)
 
 Create Shared-Secret Keys as per verifi spec
 
@@ -76,11 +76,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SymmetricKeyManagementApi()
 v_ic_domain = 'v_ic_domain_example' # str | domain
-create_shared_secret_keys_request = CyberSource.CreateSharedSecretKeysRequest1() # CreateSharedSecretKeysRequest1 | 
+create_shared_secret_keys_verifi_request = CyberSource.CreateSharedSecretKeysVerifiRequest() # CreateSharedSecretKeysVerifiRequest | 
 
 try: 
     # Create Shared-Secret Keys as per verifi spec
-    api_response = api_instance.create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_request)
+    api_response = api_instance.create_v2_shared_secret_keys_verifi(v_ic_domain, create_shared_secret_keys_verifi_request)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SymmetricKeyManagementApi->create_v2_shared_secret_keys_verifi: %s\n" % e)
@@ -91,7 +91,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **v_ic_domain** | **str**| domain | 
- **create_shared_secret_keys_request** | [**CreateSharedSecretKeysRequest1**](CreateSharedSecretKeysRequest1.md)|  | 
+ **create_shared_secret_keys_verifi_request** | [**CreateSharedSecretKeysVerifiRequest**](CreateSharedSecretKeysVerifiRequest.md)|  | 
 
 ### Return type
 
