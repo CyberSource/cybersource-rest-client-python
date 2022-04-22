@@ -32,6 +32,7 @@ from .models.create_payment_request import CreatePaymentRequest
 from .models.create_report_subscription_request import CreateReportSubscriptionRequest
 from .models.create_search_request import CreateSearchRequest
 from .models.create_shared_secret_keys_request import CreateSharedSecretKeysRequest
+from .models.create_shared_secret_keys_verifi_request import CreateSharedSecretKeysVerifiRequest
 from .models.delete_bulk_p12_keys_request import DeleteBulkP12KeysRequest
 from .models.delete_bulk_symmetric_keys_request import DeleteBulkSymmetricKeysRequest
 from .models.flex_v1_keys_post200_response import FlexV1KeysPost200Response
@@ -103,6 +104,7 @@ from .models.kmsv2keysasym_key_information import Kmsv2keysasymKeyInformation
 from .models.kmsv2keyssym_client_reference_information import Kmsv2keyssymClientReferenceInformation
 from .models.kmsv2keyssym_key_information import Kmsv2keyssymKeyInformation
 from .models.kmsv2keyssymdeletes_key_information import Kmsv2keyssymdeletesKeyInformation
+from .models.kmsv2keyssymverifi_key_information import Kmsv2keyssymverifiKeyInformation
 from .models.mit_reversal_request import MitReversalRequest
 from .models.mit_void_request import MitVoidRequest
 from .models.oct_create_payment_request import OctCreatePaymentRequest
