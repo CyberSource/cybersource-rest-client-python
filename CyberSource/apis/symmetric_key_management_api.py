@@ -476,6 +476,8 @@ class SymmetricKeyManagementApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/hal+json;charset=utf-8'])

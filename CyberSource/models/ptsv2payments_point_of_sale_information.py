@@ -56,7 +56,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'terminal_compliance': 'str',
         'is_dedicated_hardware_terminal': 'str',
         'terminal_model': 'str',
-        'terminal_make': 'str'
+        'terminal_make': 'str',
+        'service_code': 'str'
     }
 
     attribute_map = {
@@ -85,10 +86,11 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'terminal_compliance': 'terminalCompliance',
         'is_dedicated_hardware_terminal': 'isDedicatedHardwareTerminal',
         'terminal_model': 'terminalModel',
-        'terminal_make': 'terminalMake'
+        'terminal_make': 'terminalMake',
+        'service_code': 'serviceCode'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -119,6 +121,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._is_dedicated_hardware_terminal = None
         self._terminal_model = None
         self._terminal_make = None
+        self._service_code = None
 
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -172,6 +175,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.terminal_model = terminal_model
         if terminal_make is not None:
           self.terminal_make = terminal_make
+        if service_code is not None:
+          self.service_code = service_code
 
     @property
     def terminal_id(self):
@@ -778,6 +783,29 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._terminal_make = terminal_make
+
+    @property
+    def service_code(self):
+        """
+        Gets the service_code of this Ptsv2paymentsPointOfSaleInformation.
+        #### Visa Platform Connect Mastercard service code that is included in the track data. You can extract the service code from the track data and provide it in this API field. This field is supported only for Mastercard on Visa Platform Connect. 
+
+        :return: The service_code of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._service_code
+
+    @service_code.setter
+    def service_code(self, service_code):
+        """
+        Sets the service_code of this Ptsv2paymentsPointOfSaleInformation.
+        #### Visa Platform Connect Mastercard service code that is included in the track data. You can extract the service code from the track data and provide it in this API field. This field is supported only for Mastercard on Visa Platform Connect. 
+
+        :param service_code: The service_code of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._service_code = service_code
 
     def to_dict(self):
         """

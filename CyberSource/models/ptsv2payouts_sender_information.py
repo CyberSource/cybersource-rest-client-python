@@ -45,7 +45,10 @@ class Ptsv2payoutsSenderInformation(object):
         'postal_code': 'str',
         'phone_number': 'str',
         'date_of_birth': 'str',
-        'vat_registration_number': 'str'
+        'vat_registration_number': 'str',
+        'personal_id_type': 'str',
+        'type': 'str',
+        'identification_number': 'str'
     }
 
     attribute_map = {
@@ -63,10 +66,13 @@ class Ptsv2payoutsSenderInformation(object):
         'postal_code': 'postalCode',
         'phone_number': 'phoneNumber',
         'date_of_birth': 'dateOfBirth',
-        'vat_registration_number': 'vatRegistrationNumber'
+        'vat_registration_number': 'vatRegistrationNumber',
+        'personal_id_type': 'personalIdType',
+        'type': 'type',
+        'identification_number': 'identificationNumber'
     }
 
-    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None):
+    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None, personal_id_type=None, type=None, identification_number=None):
         """
         Ptsv2payoutsSenderInformation - a model defined in Swagger
         """
@@ -86,6 +92,9 @@ class Ptsv2payoutsSenderInformation(object):
         self._phone_number = None
         self._date_of_birth = None
         self._vat_registration_number = None
+        self._personal_id_type = None
+        self._type = None
+        self._identification_number = None
 
         if reference_number is not None:
           self.reference_number = reference_number
@@ -117,6 +126,12 @@ class Ptsv2payoutsSenderInformation(object):
           self.date_of_birth = date_of_birth
         if vat_registration_number is not None:
           self.vat_registration_number = vat_registration_number
+        if personal_id_type is not None:
+          self.personal_id_type = personal_id_type
+        if type is not None:
+          self.type = type
+        if identification_number is not None:
+          self.identification_number = identification_number
 
     @property
     def reference_number(self):
@@ -460,6 +475,75 @@ class Ptsv2payoutsSenderInformation(object):
         """
 
         self._vat_registration_number = vat_registration_number
+
+    @property
+    def personal_id_type(self):
+        """
+        Gets the personal_id_type of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will contain the type of sender identification. The valid values are: • BTHD (Date of birth) • CUID (Customer identification (unspecified)) • NTID (National identification) • PASN (Passport number) • DRLN (Driver license) • TXIN (Tax identification) • CPNY (Company registration number) • PRXY (Proxy identification) • SSNB (Social security number) • ARNB (Alien registration number) • LAWE (Law enforcement identification) • MILI (Military identification) • TRVL (Travel identification (non-passport)) • EMAL (Email) • PHON (Phone number) 
+
+        :return: The personal_id_type of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._personal_id_type
+
+    @personal_id_type.setter
+    def personal_id_type(self, personal_id_type):
+        """
+        Sets the personal_id_type of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will contain the type of sender identification. The valid values are: • BTHD (Date of birth) • CUID (Customer identification (unspecified)) • NTID (National identification) • PASN (Passport number) • DRLN (Driver license) • TXIN (Tax identification) • CPNY (Company registration number) • PRXY (Proxy identification) • SSNB (Social security number) • ARNB (Alien registration number) • LAWE (Law enforcement identification) • MILI (Military identification) • TRVL (Travel identification (non-passport)) • EMAL (Email) • PHON (Phone number) 
+
+        :param personal_id_type: The personal_id_type of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._personal_id_type = personal_id_type
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: • B (Business) • I (Individual) 
+
+        :return: The type of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: • B (Business) • I (Individual) 
+
+        :param type: The type of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def identification_number(self):
+        """
+        Gets the identification_number of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will contain an acquirer-populated value associated with the API : senderInformation.personalIdType which will identify the personal ID type of the sender. 
+
+        :return: The identification_number of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._identification_number
+
+    @identification_number.setter
+    def identification_number(self, identification_number):
+        """
+        Sets the identification_number of this Ptsv2payoutsSenderInformation.
+        #### Visa Platform Connect This tag will contain an acquirer-populated value associated with the API : senderInformation.personalIdType which will identify the personal ID type of the sender. 
+
+        :param identification_number: The identification_number of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._identification_number = identification_number
 
     def to_dict(self):
         """

@@ -35,7 +35,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         'expiration_month': 'str',
         'expiration_year': 'str',
         'type': 'str',
-        'prefix': 'str'
+        'prefix': 'str',
+        'hashed_number': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
         'type': 'type',
-        'prefix': 'prefix'
+        'prefix': 'prefix',
+        'hashed_number': 'hashedNumber'
     }
 
-    def __init__(self, suffix=None, expiration_month=None, expiration_year=None, type=None, prefix=None):
+    def __init__(self, suffix=None, expiration_month=None, expiration_year=None, type=None, prefix=None, hashed_number=None):
         """
         PtsV2PaymentsPost201ResponsePaymentAccountInformationCard - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         self._expiration_year = None
         self._type = None
         self._prefix = None
+        self._hashed_number = None
 
         if suffix is not None:
           self.suffix = suffix
@@ -67,6 +70,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
           self.type = type
         if prefix is not None:
           self.prefix = prefix
+        if hashed_number is not None:
+          self.hashed_number = hashed_number
 
     @property
     def suffix(self):
@@ -182,6 +187,29 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         """
 
         self._prefix = prefix
+
+    @property
+    def hashed_number(self):
+        """
+        Gets the hashed_number of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
+        #### Visa Platform Connect This API field will contain the SHA 256 hashed value of PAN. 
+
+        :return: The hashed_number of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
+        :rtype: str
+        """
+        return self._hashed_number
+
+    @hashed_number.setter
+    def hashed_number(self, hashed_number):
+        """
+        Sets the hashed_number of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
+        #### Visa Platform Connect This API field will contain the SHA 256 hashed value of PAN. 
+
+        :param hashed_number: The hashed_number of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
+        :type: str
+        """
+
+        self._hashed_number = hashed_number
 
     def to_dict(self):
         """

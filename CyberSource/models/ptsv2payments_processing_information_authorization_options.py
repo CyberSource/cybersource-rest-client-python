@@ -32,6 +32,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     """
     swagger_types = {
         'auth_type': 'str',
+        'pan_return_indicator': 'str',
         'verbal_auth_code': 'str',
         'verbal_auth_transaction_id': 'str',
         'auth_indicator': 'str',
@@ -52,6 +53,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
 
     attribute_map = {
         'auth_type': 'authType',
+        'pan_return_indicator': 'panReturnIndicator',
         'verbal_auth_code': 'verbalAuthCode',
         'verbal_auth_transaction_id': 'verbalAuthTransactionId',
         'auth_indicator': 'authIndicator',
@@ -70,12 +72,13 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'deferred_auth_indicator': 'deferredAuthIndicator'
     }
 
-    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._auth_type = None
+        self._pan_return_indicator = None
         self._verbal_auth_code = None
         self._verbal_auth_transaction_id = None
         self._auth_indicator = None
@@ -95,6 +98,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
 
         if auth_type is not None:
           self.auth_type = auth_type
+        if pan_return_indicator is not None:
+          self.pan_return_indicator = pan_return_indicator
         if verbal_auth_code is not None:
           self.verbal_auth_code = verbal_auth_code
         if verbal_auth_transaction_id is not None:
@@ -150,6 +155,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._auth_type = auth_type
+
+    @property
+    def pan_return_indicator(self):
+        """
+        Gets the pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect The field contains the PAN translation indicator for American Express Contactless Transaction. Valid value is   1- Expresspay Translation, PAN request 2- Expresspay Translation, PAN and Expiry date request 
+
+        :return: The pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._pan_return_indicator
+
+    @pan_return_indicator.setter
+    def pan_return_indicator(self, pan_return_indicator):
+        """
+        Sets the pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect The field contains the PAN translation indicator for American Express Contactless Transaction. Valid value is   1- Expresspay Translation, PAN request 2- Expresspay Translation, PAN and Expiry date request 
+
+        :param pan_return_indicator: The pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._pan_return_indicator = pan_return_indicator
 
     @property
     def verbal_auth_code(self):
