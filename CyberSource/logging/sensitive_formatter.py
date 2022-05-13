@@ -20,6 +20,7 @@ class SensitiveFormatter(logging.Formatter):
         s = re.sub(r'keyid="[-.A-Za-z0-9+/= ]+"', r'keyid="xxxxxxxx"', s)
 
         # masking cardNumber
+        s.replace(" ", "")
         pats = re.findall(r'"cardNumber":"[0-9]+"', s)
         if len(pats) > 0:
             pat = pats[0]
