@@ -28,7 +28,6 @@ setup(
         "setuptools",
         "six",
         "urllib3==1.26.5",
-        "crypto",
         "cryptography",
     ],
     packages=find_packages(),
