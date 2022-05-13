@@ -23,22 +23,36 @@ class SensitiveFormatter(logging.Formatter):
         pats = re.findall(r'"cardNumber":"[0-9]+"', s)
         if len(pats) > 0:
             pat = pats[0]
-            pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
+            pat = re.sub(r'[0-9](?=.*.{4})', r'x', pat)
             s = re.sub(r'"cardNumber":"[0-9]+"', pat, s)
         
         # masking number
         pats = re.findall(r'"number":"[0-9]+"', s)
         if len(pats) > 0:
             pat = pats[0]
-            pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
+            pat = re.sub(r'[0-9](?=.*.{4})', r'x', pat)
             s = re.sub(r'"number":"[0-9]+"', pat, s)
         
         # masking account
         pats = re.findall(r'"account":"[0-9]+"', s)
         if len(pats) > 0:
             pat = pats[0]
-            pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
+            pat = re.sub(r'[0-9](?=.*.{4})', r'x', pat)
             s = re.sub(r'"account":"[0-9]+"', pat, s)
+            
+        # masking prefix
+        pats = re.findall(r'"prefix":"[0-9]+"', s)
+        if len(pats) > 0:
+            pat = pats[0]
+            pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
+            s = re.sub(r'"prefix":"[0-9]+"', pat, s)
+            
+        # masking bin
+        pats = re.findall(r'"bin":"[0-9]+"', s)
+        if len(pats) > 0:
+            pat = pats[0]
+            pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
+            s = re.sub(r'"bin":"[0-9]+"', pat, s)
 
         return s
 
