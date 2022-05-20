@@ -46,7 +46,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'reference_data_number': 'str',
         'sales_slip_number': 'int',
         'invoice_date': 'str',
-        'cost_center': 'str'
+        'cost_center': 'str',
+        'issuer_message': 'str'
     }
 
     attribute_map = {
@@ -65,10 +66,11 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         'reference_data_number': 'referenceDataNumber',
         'sales_slip_number': 'salesSlipNumber',
         'invoice_date': 'invoiceDate',
-        'cost_center': 'costCenter'
+        'cost_center': 'costCenter',
+        'issuer_message': 'issuerMessage'
     }
 
-    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None, sales_slip_number=None, invoice_date=None, cost_center=None):
+    def __init__(self, invoice_number=None, barcode_number=None, expiration_date=None, purchase_order_number=None, purchase_order_date=None, purchase_contact_name=None, taxable=None, vat_invoice_reference_number=None, commodity_code=None, merchandise_code=None, transaction_advice_addendum=None, reference_data_code=None, reference_data_number=None, sales_slip_number=None, invoice_date=None, cost_center=None, issuer_message=None):
         """
         Ptsv2paymentsOrderInformationInvoiceDetails - a model defined in Swagger
         """
@@ -89,6 +91,7 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         self._sales_slip_number = None
         self._invoice_date = None
         self._cost_center = None
+        self._issuer_message = None
 
         if invoice_number is not None:
           self.invoice_number = invoice_number
@@ -122,6 +125,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
           self.invoice_date = invoice_date
         if cost_center is not None:
           self.cost_center = cost_center
+        if issuer_message is not None:
+          self.issuer_message = issuer_message
 
     @property
     def invoice_number(self):
@@ -490,6 +495,29 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         """
 
         self._cost_center = cost_center
+
+    @property
+    def issuer_message(self):
+        """
+        Gets the issuer_message of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Text message from the issuer. If you give the customer a receipt, display this value on the receipt.
+
+        :return: The issuer_message of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :rtype: str
+        """
+        return self._issuer_message
+
+    @issuer_message.setter
+    def issuer_message(self, issuer_message):
+        """
+        Sets the issuer_message of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        Text message from the issuer. If you give the customer a receipt, display this value on the receipt.
+
+        :param issuer_message: The issuer_message of this Ptsv2paymentsOrderInformationInvoiceDetails.
+        :type: str
+        """
+
+        self._issuer_message = issuer_message
 
     def to_dict(self):
         """

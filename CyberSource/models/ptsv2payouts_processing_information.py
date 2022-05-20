@@ -37,7 +37,8 @@ class Ptsv2payoutsProcessingInformation(object):
         'reconciliation_id': 'str',
         'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions',
         'transaction_reason': 'str',
-        'purpose_of_payment': 'str'
+        'purpose_of_payment': 'str',
+        'funding_options': 'Ptsv2payoutsProcessingInformationFundingOptions'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class Ptsv2payoutsProcessingInformation(object):
         'reconciliation_id': 'reconciliationId',
         'payouts_options': 'payoutsOptions',
         'transaction_reason': 'transactionReason',
-        'purpose_of_payment': 'purposeOfPayment'
+        'purpose_of_payment': 'purposeOfPayment',
+        'funding_options': 'fundingOptions'
     }
 
-    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None):
+    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None, funding_options=None):
         """
         Ptsv2payoutsProcessingInformation - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class Ptsv2payoutsProcessingInformation(object):
         self._payouts_options = None
         self._transaction_reason = None
         self._purpose_of_payment = None
+        self._funding_options = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -77,6 +80,8 @@ class Ptsv2payoutsProcessingInformation(object):
           self.transaction_reason = transaction_reason
         if purpose_of_payment is not None:
           self.purpose_of_payment = purpose_of_payment
+        if funding_options is not None:
+          self.funding_options = funding_options
 
     @property
     def business_application_id(self):
@@ -236,6 +241,27 @@ class Ptsv2payoutsProcessingInformation(object):
         """
 
         self._purpose_of_payment = purpose_of_payment
+
+    @property
+    def funding_options(self):
+        """
+        Gets the funding_options of this Ptsv2payoutsProcessingInformation.
+
+        :return: The funding_options of this Ptsv2payoutsProcessingInformation.
+        :rtype: Ptsv2payoutsProcessingInformationFundingOptions
+        """
+        return self._funding_options
+
+    @funding_options.setter
+    def funding_options(self, funding_options):
+        """
+        Sets the funding_options of this Ptsv2payoutsProcessingInformation.
+
+        :param funding_options: The funding_options of this Ptsv2payoutsProcessingInformation.
+        :type: Ptsv2payoutsProcessingInformationFundingOptions
+        """
+
+        self._funding_options = funding_options
 
     def to_dict(self):
         """

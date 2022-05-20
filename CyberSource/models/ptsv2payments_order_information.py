@@ -38,6 +38,7 @@ class Ptsv2paymentsOrderInformation(object):
         'invoice_details': 'Ptsv2paymentsOrderInformationInvoiceDetails',
         'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails',
         'returns_accepted': 'bool',
+        'is_cryptocurrency_purchase': 'str',
         'pre_order': 'str',
         'pre_order_date': 'str',
         'reordered': 'bool',
@@ -52,13 +53,14 @@ class Ptsv2paymentsOrderInformation(object):
         'invoice_details': 'invoiceDetails',
         'shipping_details': 'shippingDetails',
         'returns_accepted': 'returnsAccepted',
+        'is_cryptocurrency_purchase': 'isCryptocurrencyPurchase',
         'pre_order': 'preOrder',
         'pre_order_date': 'preOrderDate',
         'reordered': 'reordered',
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, is_cryptocurrency_purchase=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
         """
         Ptsv2paymentsOrderInformation - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class Ptsv2paymentsOrderInformation(object):
         self._invoice_details = None
         self._shipping_details = None
         self._returns_accepted = None
+        self._is_cryptocurrency_purchase = None
         self._pre_order = None
         self._pre_order_date = None
         self._reordered = None
@@ -89,6 +92,8 @@ class Ptsv2paymentsOrderInformation(object):
           self.shipping_details = shipping_details
         if returns_accepted is not None:
           self.returns_accepted = returns_accepted
+        if is_cryptocurrency_purchase is not None:
+          self.is_cryptocurrency_purchase = is_cryptocurrency_purchase
         if pre_order is not None:
           self.pre_order = pre_order
         if pre_order_date is not None:
@@ -246,6 +251,29 @@ class Ptsv2paymentsOrderInformation(object):
         """
 
         self._returns_accepted = returns_accepted
+
+    @property
+    def is_cryptocurrency_purchase(self):
+        """
+        Gets the is_cryptocurrency_purchase of this Ptsv2paymentsOrderInformation.
+        #### Visa Platform Connect : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. Additional values to add : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. valid values are - Y/y, true - N/n, false 
+
+        :return: The is_cryptocurrency_purchase of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._is_cryptocurrency_purchase
+
+    @is_cryptocurrency_purchase.setter
+    def is_cryptocurrency_purchase(self, is_cryptocurrency_purchase):
+        """
+        Sets the is_cryptocurrency_purchase of this Ptsv2paymentsOrderInformation.
+        #### Visa Platform Connect : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. Additional values to add : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. valid values are - Y/y, true - N/n, false 
+
+        :param is_cryptocurrency_purchase: The is_cryptocurrency_purchase of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+
+        self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
 
     @property
     def pre_order(self):

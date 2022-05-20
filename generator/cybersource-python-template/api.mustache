@@ -220,6 +220,10 @@ class {{classname}}(object):
         if '{{paramName}}' in params:
             body_params = params['{{paramName}}']
 {{/bodyParam}}
+{{^bodyParam}}
+        if '{{httpMethod}}' in ('POST'):
+            body_params = '{}'
+{{/bodyParam}}
         {{#hasProduces}}
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\

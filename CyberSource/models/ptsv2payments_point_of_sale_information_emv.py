@@ -35,7 +35,8 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         'cardholder_verification_method_used': 'int',
         'card_sequence_number': 'str',
         'fallback': 'bool',
-        'fallback_condition': 'int'
+        'fallback_condition': 'int',
+        'is_repeat': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         'cardholder_verification_method_used': 'cardholderVerificationMethodUsed',
         'card_sequence_number': 'cardSequenceNumber',
         'fallback': 'fallback',
-        'fallback_condition': 'fallbackCondition'
+        'fallback_condition': 'fallbackCondition',
+        'is_repeat': 'isRepeat'
     }
 
-    def __init__(self, tags=None, cardholder_verification_method_used=None, card_sequence_number=None, fallback=False, fallback_condition=None):
+    def __init__(self, tags=None, cardholder_verification_method_used=None, card_sequence_number=None, fallback=None, fallback_condition=None, is_repeat=None):
         """
         Ptsv2paymentsPointOfSaleInformationEmv - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         self._card_sequence_number = None
         self._fallback = None
         self._fallback_condition = None
+        self._is_repeat = None
 
         if tags is not None:
           self.tags = tags
@@ -67,6 +70,8 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
           self.fallback = fallback
         if fallback_condition is not None:
           self.fallback_condition = fallback_condition
+        if is_repeat is not None:
+          self.is_repeat = is_repeat
 
     @property
     def tags(self):
@@ -164,7 +169,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback_condition(self):
         """
         Gets the fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - `1`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - `2`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN** and **JCN Gateway**.  **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field  when the EMV terminal does not have any applications in common with the EMV card. 
+        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - `1`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the     EMV terminal either used information from a successful chip read or it was not a chip transaction.  - `2`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the     EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN** and **JCN Gateway**. **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field when the EMV terminal does not have any applications in common with the EMV card. 
 
         :return: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
         :rtype: int
@@ -175,13 +180,36 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def fallback_condition(self, fallback_condition):
         """
         Sets the fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
-        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - `1`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal either used information from a successful chip read or it was not a chip transaction.  - `2`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the       EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN** and **JCN Gateway**.  **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field  when the EMV terminal does not have any applications in common with the EMV card. 
+        Reason for the EMV fallback transaction. An EMV fallback transaction occurs when an EMV transaction fails for one of these reasons:   - Technical failure: the EMV terminal or EMV card cannot read and process chip data.  - Empty candidate list failure: the EMV terminal does not have any applications in common with the EMV card.    EMV terminals are coded to determine whether the terminal and EMV card have any applications in common.    EMV terminals provide this information to you.  Possible values:   - `1`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the     EMV terminal either used information from a successful chip read or it was not a chip transaction.  - `2`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the     EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.  This field is supported only on **GPN** and **JCN Gateway**. **NOTE**: This field is required when an EMV transaction fails for a technical reason. Do not include this field when the EMV terminal does not have any applications in common with the EMV card. 
 
         :param fallback_condition: The fallback_condition of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: int
         """
 
         self._fallback_condition = fallback_condition
+
+    @property
+    def is_repeat(self):
+        """
+        Gets the is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
+        #### Visa Platform Connect Value 1  indicates this transaction is intentionally duplicated  The field contains value “1” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
+
+        :return: The is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
+        :rtype: str
+        """
+        return self._is_repeat
+
+    @is_repeat.setter
+    def is_repeat(self, is_repeat):
+        """
+        Sets the is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
+        #### Visa Platform Connect Value 1  indicates this transaction is intentionally duplicated  The field contains value “1” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
+
+        :param is_repeat: The is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
+        :type: str
+        """
+
+        self._is_repeat = is_repeat
 
     def to_dict(self):
         """
