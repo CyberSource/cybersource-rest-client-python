@@ -35,6 +35,8 @@ class Riskv1authenticationsPaymentInformationTokenizedCard(object):
         'type': 'str',
         'expiration_month': 'str',
         'expiration_year': 'str',
+        'cryptogram': 'str',
+        'security_code': 'str',
         'number': 'str'
     }
 
@@ -43,10 +45,12 @@ class Riskv1authenticationsPaymentInformationTokenizedCard(object):
         'type': 'type',
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
+        'cryptogram': 'cryptogram',
+        'security_code': 'securityCode',
         'number': 'number'
     }
 
-    def __init__(self, transaction_type=None, type=None, expiration_month=None, expiration_year=None, number=None):
+    def __init__(self, transaction_type=None, type=None, expiration_month=None, expiration_year=None, cryptogram=None, security_code=None, number=None):
         """
         Riskv1authenticationsPaymentInformationTokenizedCard - a model defined in Swagger
         """
@@ -55,20 +59,23 @@ class Riskv1authenticationsPaymentInformationTokenizedCard(object):
         self._type = None
         self._expiration_month = None
         self._expiration_year = None
+        self._cryptogram = None
+        self._security_code = None
         self._number = None
 
-        if transaction_type is not None:
-          self.transaction_type = transaction_type
+        self.transaction_type = transaction_type
         self.type = type
         self.expiration_month = expiration_month
         self.expiration_year = expiration_year
+        self.cryptogram = cryptogram
+        self.security_code = security_code
         self.number = number
 
     @property
     def transaction_type(self):
         """
         Gets the transaction_type of this Riskv1authenticationsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :return: The transaction_type of this Riskv1authenticationsPaymentInformationTokenizedCard.
         :rtype: str
@@ -79,11 +86,13 @@ class Riskv1authenticationsPaymentInformationTokenizedCard(object):
     def transaction_type(self, transaction_type):
         """
         Sets the transaction_type of this Riskv1authenticationsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :param transaction_type: The transaction_type of this Riskv1authenticationsPaymentInformationTokenizedCard.
         :type: str
         """
+        if transaction_type is None:
+            raise ValueError("Invalid value for `transaction_type`, must not be `None`")
 
         self._transaction_type = transaction_type
 
@@ -161,6 +170,56 @@ class Riskv1authenticationsPaymentInformationTokenizedCard(object):
             raise ValueError("Invalid value for `expiration_year`, must not be `None`")
 
         self._expiration_year = expiration_year
+
+    @property
+    def cryptogram(self):
+        """
+        Gets the cryptogram of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        This field contains token information.
+
+        :return: The cryptogram of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._cryptogram
+
+    @cryptogram.setter
+    def cryptogram(self, cryptogram):
+        """
+        Sets the cryptogram of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        This field contains token information.
+
+        :param cryptogram: The cryptogram of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        :type: str
+        """
+        if cryptogram is None:
+            raise ValueError("Invalid value for `cryptogram`, must not be `None`")
+
+        self._cryptogram = cryptogram
+
+    @property
+    def security_code(self):
+        """
+        Gets the security_code of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator=recurring**. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The security_code of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._security_code
+
+    @security_code.setter
+    def security_code(self, security_code):
+        """
+        Sets the security_code of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        Card Verification Number (CVN).  #### Ingenico ePayments Do not include this field when **commerceIndicator=recurring**. **Note** Ingenico ePayments was previously called _Global Collect_.  For details, see `customer_cc_cv_number` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param security_code: The security_code of this Riskv1authenticationsPaymentInformationTokenizedCard.
+        :type: str
+        """
+        if security_code is None:
+            raise ValueError("Invalid value for `security_code`, must not be `None`")
+
+        self._security_code = security_code
 
     @property
     def number(self):

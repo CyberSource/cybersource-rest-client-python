@@ -31,7 +31,7 @@ class Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'stored_credential_used': 'str'
+        'stored_credential_used': 'bool'
     }
 
     attribute_map = {
@@ -52,10 +52,10 @@ class Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator(object):
     def stored_credential_used(self):
         """
         Gets the stored_credential_used of this Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator.
-        Indicates to an issuing bank whether a merchant-initiated transaction came from a card that was already stored on file.  Possible values: - **Y** means the merchant-initiated transaction came from a card that was already stored on file. - **N**  means the merchant-initiated transaction came from a card that was not stored on file. 
+        Indicates to an issuing bank whether a merchant-initiated transaction came from a card that was already stored on file.  Possible values: - **true** means the merchant-initiated transaction came from a card that was already stored on file. - **false**  means the merchant-initiated transaction came from a card that was not stored on file. 
 
         :return: The stored_credential_used of this Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator.
-        :rtype: str
+        :rtype: bool
         """
         return self._stored_credential_used
 
@@ -63,10 +63,10 @@ class Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator(object):
     def stored_credential_used(self, stored_credential_used):
         """
         Sets the stored_credential_used of this Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator.
-        Indicates to an issuing bank whether a merchant-initiated transaction came from a card that was already stored on file.  Possible values: - **Y** means the merchant-initiated transaction came from a card that was already stored on file. - **N**  means the merchant-initiated transaction came from a card that was not stored on file. 
+        Indicates to an issuing bank whether a merchant-initiated transaction came from a card that was already stored on file.  Possible values: - **true** means the merchant-initiated transaction came from a card that was already stored on file. - **false**  means the merchant-initiated transaction came from a card that was not stored on file. 
 
         :param stored_credential_used: The stored_credential_used of this Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator.
-        :type: str
+        :type: bool
         """
 
         self._stored_credential_used = stored_credential_used

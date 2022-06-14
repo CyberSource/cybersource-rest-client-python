@@ -36,7 +36,7 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         'card_sequence_number': 'str',
         'fallback': 'bool',
         'fallback_condition': 'int',
-        'is_repeat': 'str'
+        'is_repeat': 'bool'
     }
 
     attribute_map = {
@@ -192,10 +192,10 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def is_repeat(self):
         """
         Gets the is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
-        #### Visa Platform Connect Value 1  indicates this transaction is intentionally duplicated  The field contains value “1” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
+        #### Visa Platform Connect Value “true” indicates this transaction is intentionally duplicated . The field contains value “true” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
 
         :return: The is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :rtype: str
+        :rtype: bool
         """
         return self._is_repeat
 
@@ -203,10 +203,10 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
     def is_repeat(self, is_repeat):
         """
         Sets the is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
-        #### Visa Platform Connect Value 1  indicates this transaction is intentionally duplicated  The field contains value “1” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
+        #### Visa Platform Connect Value “true” indicates this transaction is intentionally duplicated . The field contains value “true” which indicates that merchant has intentionally duplicated single tap transaction. Merchant is intentionally sending a duplicate auth request for a single tap txn because the issuer requested a PIN. 
 
         :param is_repeat: The is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
-        :type: str
+        :type: bool
         """
 
         self._is_repeat = is_repeat

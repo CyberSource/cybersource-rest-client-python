@@ -57,7 +57,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'mobile_remote_payment_type': 'str',
         'extended_credit_total_count': 'str',
         'network_routing_order': 'str',
-        'pay_by_points_indicator': 'bool'
+        'pay_by_points_indicator': 'bool',
+        'is_return_auth_record_enabled': 'bool'
     }
 
     attribute_map = {
@@ -87,10 +88,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'mobile_remote_payment_type': 'mobileRemotePaymentType',
         'extended_credit_total_count': 'extendedCreditTotalCount',
         'network_routing_order': 'networkRoutingOrder',
-        'pay_by_points_indicator': 'payByPointsIndicator'
+        'pay_by_points_indicator': 'payByPointsIndicator',
+        'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled'
     }
 
-    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None):
+    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -122,6 +124,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._extended_credit_total_count = None
         self._network_routing_order = None
         self._pay_by_points_indicator = None
+        self._is_return_auth_record_enabled = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -177,6 +180,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.network_routing_order = network_routing_order
         if pay_by_points_indicator is not None:
           self.pay_by_points_indicator = pay_by_points_indicator
+        if is_return_auth_record_enabled is not None:
+          self.is_return_auth_record_enabled = is_return_auth_record_enabled
 
     @property
     def action_list(self):
@@ -782,6 +787,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._pay_by_points_indicator = pay_by_points_indicator
+
+    @property
+    def is_return_auth_record_enabled(self):
+        """
+        Gets the is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates the functionality we are having for merchants for which auth is done through Cybersource but settlement is done by themselves. true: functionality is supported. Processor should send raw processor auth response to Merchant. false: functionality is not supported. Default: false 
+
+        :return: The is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._is_return_auth_record_enabled
+
+    @is_return_auth_record_enabled.setter
+    def is_return_auth_record_enabled(self, is_return_auth_record_enabled):
+        """
+        Sets the is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates the functionality we are having for merchants for which auth is done through Cybersource but settlement is done by themselves. true: functionality is supported. Processor should send raw processor auth response to Merchant. false: functionality is not supported. Default: false 
+
+        :param is_return_auth_record_enabled: The is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._is_return_auth_record_enabled = is_return_auth_record_enabled
 
     def to_dict(self):
         """

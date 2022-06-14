@@ -40,7 +40,8 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'transaction_type': 'str',
         'assurance_level': 'str',
         'storage_method': 'str',
-        'security_code': 'str'
+        'security_code': 'str',
+        'security_code_indicator': 'str'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'transaction_type': 'transactionType',
         'assurance_level': 'assuranceLevel',
         'storage_method': 'storageMethod',
-        'security_code': 'securityCode'
+        'security_code': 'securityCode',
+        'security_code_indicator': 'securityCodeIndicator'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None, security_code_indicator=None):
         """
         Ptsv2paymentsPaymentInformationTokenizedCard - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         self._assurance_level = None
         self._storage_method = None
         self._security_code = None
+        self._security_code_indicator = None
 
         if number is not None:
           self.number = number
@@ -92,6 +95,8 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
           self.storage_method = storage_method
         if security_code is not None:
           self.security_code = security_code
+        if security_code_indicator is not None:
+          self.security_code_indicator = security_code_indicator
 
     @property
     def number(self):
@@ -189,7 +194,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def cryptogram(self):
         """
         Gets the cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        This field is used internally.
+        This field contains token information.
 
         :return: The cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -200,7 +205,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def cryptogram(self, cryptogram):
         """
         Sets the cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        This field is used internally.
+        This field contains token information.
 
         :param cryptogram: The cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -235,7 +240,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def transaction_type(self):
         """
         Gets the transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :return: The transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -246,7 +251,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def transaction_type(self, transaction_type):
         """
         Sets the transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :param transaction_type: The transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -322,6 +327,29 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         """
 
         self._security_code = security_code
+
+    @property
+    def security_code_indicator(self):
+        """
+        Gets the security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Indicates whether a CVN code was sent. Possible values:   - `0` (default): CVN service not requested. This default value is used when you do not include      `securityCode` field in the request.  - `1` (default): CVN service requested and supported. This default value is used when you include      `securityCode` field in the request.  - `2`: CVN on credit card is illegible.  - `9`: CVN was not imprinted on credit card.  #### FDMS Nashville Required for American Express cards; otherwise, optional.  #### TSYS Acquiring Solutions Optional if `pointOfSaleInformation.entryMode=keyed`; otherwise, not used.  #### All other processors Optional. 
+
+        :return: The security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._security_code_indicator
+
+    @security_code_indicator.setter
+    def security_code_indicator(self, security_code_indicator):
+        """
+        Sets the security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Indicates whether a CVN code was sent. Possible values:   - `0` (default): CVN service not requested. This default value is used when you do not include      `securityCode` field in the request.  - `1` (default): CVN service requested and supported. This default value is used when you include      `securityCode` field in the request.  - `2`: CVN on credit card is illegible.  - `9`: CVN was not imprinted on credit card.  #### FDMS Nashville Required for American Express cards; otherwise, optional.  #### TSYS Acquiring Solutions Optional if `pointOfSaleInformation.entryMode=keyed`; otherwise, not used.  #### All other processors Optional. 
+
+        :param security_code_indicator: The security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._security_code_indicator = security_code_indicator
 
     def to_dict(self):
         """

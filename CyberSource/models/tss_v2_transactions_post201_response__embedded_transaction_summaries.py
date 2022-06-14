@@ -38,7 +38,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'buyer_information': 'TssV2TransactionsPost201ResponseEmbeddedBuyerInformation',
         'client_reference_information': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation',
         'consumer_authentication_information': 'TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation',
-        'device_information': 'TssV2TransactionsPost201ResponseEmbeddedDeviceInformation',
+        'device_information': 'Riskv1authenticationresultsDeviceInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsPost201ResponseEmbeddedMerchantInformation',
@@ -292,7 +292,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Gets the device_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :return: The device_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedDeviceInformation
+        :rtype: Riskv1authenticationresultsDeviceInformation
         """
         return self._device_information
 
@@ -302,7 +302,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Sets the device_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :param device_information: The device_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :type: TssV2TransactionsPost201ResponseEmbeddedDeviceInformation
+        :type: Riskv1authenticationresultsDeviceInformation
         """
 
         self._device_information = device_information

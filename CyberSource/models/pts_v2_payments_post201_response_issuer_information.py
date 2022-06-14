@@ -34,17 +34,19 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         'country': 'str',
         'discretionary_data': 'str',
         'country_specific_discretionary_data': 'str',
-        'response_code': 'str'
+        'response_code': 'str',
+        'response_raw': 'str'
     }
 
     attribute_map = {
         'country': 'country',
         'discretionary_data': 'discretionaryData',
         'country_specific_discretionary_data': 'countrySpecificDiscretionaryData',
-        'response_code': 'responseCode'
+        'response_code': 'responseCode',
+        'response_raw': 'responseRaw'
     }
 
-    def __init__(self, country=None, discretionary_data=None, country_specific_discretionary_data=None, response_code=None):
+    def __init__(self, country=None, discretionary_data=None, country_specific_discretionary_data=None, response_code=None, response_raw=None):
         """
         PtsV2PaymentsPost201ResponseIssuerInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         self._discretionary_data = None
         self._country_specific_discretionary_data = None
         self._response_code = None
+        self._response_raw = None
 
         if country is not None:
           self.country = country
@@ -62,6 +65,8 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
           self.country_specific_discretionary_data = country_specific_discretionary_data
         if response_code is not None:
           self.response_code = response_code
+        if response_raw is not None:
+          self.response_raw = response_raw
 
     @property
     def country(self):
@@ -154,6 +159,29 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         """
 
         self._response_code = response_code
+
+    @property
+    def response_raw(self):
+        """
+        Gets the response_raw of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        issuerInformation.responseRaw is the raw processor auth response returned to merchant in CYBS auth response if auth request includes \"processingInformation.isReturnAuthRecordEnabled=true\".  If supported by the gateway code, it is available to merchants who auth through CYBS and run their own settlement processing. 
+
+        :return: The response_raw of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :rtype: str
+        """
+        return self._response_raw
+
+    @response_raw.setter
+    def response_raw(self, response_raw):
+        """
+        Sets the response_raw of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        issuerInformation.responseRaw is the raw processor auth response returned to merchant in CYBS auth response if auth request includes \"processingInformation.isReturnAuthRecordEnabled=true\".  If supported by the gateway code, it is available to merchants who auth through CYBS and run their own settlement processing. 
+
+        :param response_raw: The response_raw of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :type: str
+        """
+
+        self._response_raw = response_raw
 
     def to_dict(self):
         """
