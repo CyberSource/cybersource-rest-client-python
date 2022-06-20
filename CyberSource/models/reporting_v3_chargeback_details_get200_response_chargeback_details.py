@@ -52,7 +52,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         'reason_code': 'str',
         'representment_cp_time': 'datetime',
         'applications': 'str',
-        'event_requested_time': 'datetime'
+        'event_requested_time': 'datetime',
+        'pre_dispute_flag': 'str'
     }
 
     attribute_map = {
@@ -77,10 +78,11 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         'reason_code': 'reasonCode',
         'representment_cp_time': 'representmentCPTime',
         'applications': 'applications',
-        'event_requested_time': 'eventRequestedTime'
+        'event_requested_time': 'eventRequestedTime',
+        'pre_dispute_flag': 'preDisputeFlag'
     }
 
-    def __init__(self, processor_merchant_id=None, merchant_name=None, transaction_reference_number=None, merchant_reference_number=None, nature_of_dispute=None, alert_type=None, amount=None, sign=None, action=None, card_type=None, original_settlement_time=None, tracking_number=None, currency_code=None, request_id=None, response_due_time=None, time=None, action_description=None, customer_id=None, reason_code=None, representment_cp_time=None, applications=None, event_requested_time=None):
+    def __init__(self, processor_merchant_id=None, merchant_name=None, transaction_reference_number=None, merchant_reference_number=None, nature_of_dispute=None, alert_type=None, amount=None, sign=None, action=None, card_type=None, original_settlement_time=None, tracking_number=None, currency_code=None, request_id=None, response_due_time=None, time=None, action_description=None, customer_id=None, reason_code=None, representment_cp_time=None, applications=None, event_requested_time=None, pre_dispute_flag=None):
         """
         ReportingV3ChargebackDetailsGet200ResponseChargebackDetails - a model defined in Swagger
         """
@@ -107,6 +109,7 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         self._representment_cp_time = None
         self._applications = None
         self._event_requested_time = None
+        self._pre_dispute_flag = None
 
         if processor_merchant_id is not None:
           self.processor_merchant_id = processor_merchant_id
@@ -152,6 +155,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
           self.applications = applications
         if event_requested_time is not None:
           self.event_requested_time = event_requested_time
+        if pre_dispute_flag is not None:
+          self.pre_dispute_flag = pre_dispute_flag
 
     @property
     def processor_merchant_id(self):
@@ -658,6 +663,29 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         """
 
         self._event_requested_time = event_requested_time
+
+    @property
+    def pre_dispute_flag(self):
+        """
+        Gets the pre_dispute_flag of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
+        Pre Dispute Flag
+
+        :return: The pre_dispute_flag of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
+        :rtype: str
+        """
+        return self._pre_dispute_flag
+
+    @pre_dispute_flag.setter
+    def pre_dispute_flag(self, pre_dispute_flag):
+        """
+        Sets the pre_dispute_flag of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
+        Pre Dispute Flag
+
+        :param pre_dispute_flag: The pre_dispute_flag of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
+        :type: str
+        """
+
+        self._pre_dispute_flag = pre_dispute_flag
 
     def to_dict(self):
         """

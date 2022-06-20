@@ -43,6 +43,7 @@ class PtsV2PaymentsPost201Response(object):
         'issuer_information': 'PtsV2PaymentsPost201ResponseIssuerInformation',
         'payment_account_information': 'PtsV2PaymentsPost201ResponsePaymentAccountInformation',
         'payment_information': 'PtsV2PaymentsPost201ResponsePaymentInformation',
+        'payment_insights_information': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformation',
         'order_information': 'PtsV2PaymentsPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsPost201ResponsePointOfSaleInformation',
         'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
@@ -65,6 +66,7 @@ class PtsV2PaymentsPost201Response(object):
         'issuer_information': 'issuerInformation',
         'payment_account_information': 'paymentAccountInformation',
         'payment_information': 'paymentInformation',
+        'payment_insights_information': 'paymentInsightsInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'installment_information': 'installmentInformation',
@@ -74,7 +76,7 @@ class PtsV2PaymentsPost201Response(object):
         'consumer_authentication_information': 'consumerAuthenticationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -91,6 +93,7 @@ class PtsV2PaymentsPost201Response(object):
         self._issuer_information = None
         self._payment_account_information = None
         self._payment_information = None
+        self._payment_insights_information = None
         self._order_information = None
         self._point_of_sale_information = None
         self._installment_information = None
@@ -123,6 +126,8 @@ class PtsV2PaymentsPost201Response(object):
           self.payment_account_information = payment_account_information
         if payment_information is not None:
           self.payment_information = payment_information
+        if payment_insights_information is not None:
+          self.payment_insights_information = payment_insights_information
         if order_information is not None:
           self.order_information = order_information
         if point_of_sale_information is not None:
@@ -397,6 +402,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._payment_information = payment_information
+
+    @property
+    def payment_insights_information(self):
+        """
+        Gets the payment_insights_information of this PtsV2PaymentsPost201Response.
+
+        :return: The payment_insights_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
+        """
+        return self._payment_insights_information
+
+    @payment_insights_information.setter
+    def payment_insights_information(self, payment_insights_information):
+        """
+        Sets the payment_insights_information of this PtsV2PaymentsPost201Response.
+
+        :param payment_insights_information: The payment_insights_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
+        """
+
+        self._payment_insights_information = payment_insights_information
 
     @property
     def order_information(self):

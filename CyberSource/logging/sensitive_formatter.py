@@ -20,66 +20,66 @@ class SensitiveFormatter(logging.Formatter):
         s = re.sub(r'keyid="[-.A-Za-z0-9+/= ]+"', r'keyid="xxxxxxxx"', s)
 
         # masking cardNumber
-        matches = re.search(r'"cardNumber":"((\s*[0-9]\s*)+)"', s)
+        matches = re.search(r'"cardNumber":"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
         if matches:
             matchedString= matches.group(0)            
             matchString= matchedString.replace(" ","")
+            matchString= matchString.replace("-","")
             pats = re.findall(r'"cardNumber":"[0-9]+"', matchString)
             if len(pats) > 0:
                 pat = pats[0]
-                pat.replace(" ", "")
                 pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
                 replaceString = re.sub(r'"cardNumber":"[0-9]+"', pat, matchString)
                 s=s.replace(matchedString,replaceString)
         
         # masking number
-        matches = re.search(r'"number":"((\s*[0-9]\s*)+)"', s)
+        matches = re.search(r'"number":"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
         if matches:
             matchedString= matches.group(0)
             matchString= matchedString.replace(" ","")
+            matchString= matchString.replace("-","")
             pats = re.findall(r'"number":"[0-9]+"', matchString)
             if len(pats) > 0:
                 pat = pats[0]
-                pat.replace(" ", "")
                 pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
                 replaceString = re.sub(r'"number":"[0-9]+"', pat, matchString)
                 s=s.replace(matchedString,replaceString)
         
         # masking account
-        matches = re.search(r'"account":"((\s*[0-9]\s*)+)"', s)
+        matches = re.search(r'"account":"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
         if matches:
             matchedString= matches.group(0)
             matchString= matchedString.replace(" ","")
+            matchString= matchString.replace("-","")
             pats = re.findall(r'"account":"[0-9]+"', matchString)
             if len(pats) > 0:
                 pat = pats[0]
-                pat.replace(" ", "")
                 pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
                 replaceString = re.sub(r'"account":"[0-9]+"', pat, matchString)
                 s=s.replace(matchedString,replaceString)
             
         # masking prefix
-        matches = re.search(r'"prefix":"((\s*[0-9]\s*)+)"', s)
+        matches = re.search(r'"prefix":"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
         if matches:
             matchedString= matches.group(0)
             matchString= matchedString.replace(" ","")
+            matchString= matchString.replace("-","")
             pats = re.findall(r'"prefix":"[0-9]+"', matchString)
             if len(pats) > 0:
                 pat = pats[0]
-                pat.replace(" ", "")
                 pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
                 replaceString = re.sub(r'"prefix":"[0-9]+"', pat, matchString)
                 s=s.replace(matchedString,replaceString)
                 
         # masking bin
-        matches = re.search(r'"bin":"((\s*[0-9]\s*)+)"', s)
+        matches = re.search(r'"bin":"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
         if matches:
             matchedString= matches.group(0)
             matchString= matchedString.replace(" ","")
+            matchString= matchString.replace("-","")
             pats = re.findall(r'"bin":"[0-9]+"', matchString)
             if len(pats) > 0:
                 pat = pats[0]
-                pat.replace(" ", "")
                 pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
                 replaceString = re.sub(r'"bin":"[0-9]+"', pat, matchString)
                 s=s.replace(matchedString,replaceString)

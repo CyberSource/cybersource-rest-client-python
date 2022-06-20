@@ -32,6 +32,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     """
     swagger_types = {
         'authentication_transaction_id': 'str',
+        'authentication_transaction_context': 'str',
+        'otp_token': 'str',
         'authentication_type': 'str',
         'effective_authentication_type': 'str',
         'response_access_token': 'str',
@@ -42,6 +44,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
 
     attribute_map = {
         'authentication_transaction_id': 'authenticationTransactionId',
+        'authentication_transaction_context': 'authenticationTransactionContext',
+        'otp_token': 'otpToken',
         'authentication_type': 'authenticationType',
         'effective_authentication_type': 'effectiveAuthenticationType',
         'response_access_token': 'responseAccessToken',
@@ -50,12 +54,14 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, authentication_transaction_id=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
+    def __init__(self, authentication_transaction_id=None, authentication_transaction_context=None, otp_token=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
         """
         Riskv1authenticationresultsConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._authentication_transaction_id = None
+        self._authentication_transaction_context = None
+        self._otp_token = None
         self._authentication_type = None
         self._effective_authentication_type = None
         self._response_access_token = None
@@ -65,6 +71,10 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
 
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
+        if authentication_transaction_context is not None:
+          self.authentication_transaction_context = authentication_transaction_context
+        if otp_token is not None:
+          self.otp_token = otp_token
         if authentication_type is not None:
           self.authentication_type = authentication_type
         if effective_authentication_type is not None:
@@ -82,7 +92,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self):
         """
         Gets the authentication_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :return: The authentication_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :rtype: str
@@ -93,7 +103,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self, authentication_transaction_id):
         """
         Sets the authentication_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :param authentication_transaction_id: The authentication_transaction_id of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
@@ -102,10 +112,56 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
+    def authentication_transaction_context(self):
+        """
+        Gets the authentication_transaction_context of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        Authentication transaction context is used as a unique identifier to link enroll and validate call. 
+
+        :return: The authentication_transaction_context of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_transaction_context
+
+    @authentication_transaction_context.setter
+    def authentication_transaction_context(self, authentication_transaction_context):
+        """
+        Sets the authentication_transaction_context of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        Authentication transaction context is used as a unique identifier to link enroll and validate call. 
+
+        :param authentication_transaction_context: The authentication_transaction_context of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_transaction_context = authentication_transaction_context
+
+    @property
+    def otp_token(self):
+        """
+        Gets the otp_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        OTP entered by the card holder. 
+
+        :return: The otp_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._otp_token
+
+    @otp_token.setter
+    def otp_token(self, otp_token):
+        """
+        Sets the otp_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        OTP entered by the card holder. 
+
+        :param otp_token: The otp_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._otp_token = otp_token
+
+    @property
     def authentication_type(self):
         """
         Gets the authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :return: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :rtype: str
@@ -116,7 +172,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
     def authentication_type(self, authentication_type):
         """
         Sets the authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :param authentication_type: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str

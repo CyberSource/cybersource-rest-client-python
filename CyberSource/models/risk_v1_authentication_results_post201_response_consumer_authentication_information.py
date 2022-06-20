@@ -35,6 +35,9 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'acs_transaction_id': 'str',
         'authentication_result': 'str',
         'authentication_status_msg': 'str',
+        'authentication_transaction_id': 'str',
+        'authentication_transaction_context_id': 'str',
+        'transaction_token': 'str',
         'authorization_payload': 'str',
         'cavv': 'str',
         'cavv_algorithm': 'str',
@@ -61,6 +64,9 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'acs_transaction_id': 'acsTransactionId',
         'authentication_result': 'authenticationResult',
         'authentication_status_msg': 'authenticationStatusMsg',
+        'authentication_transaction_id': 'authenticationTransactionId',
+        'authentication_transaction_context_id': 'authenticationTransactionContextId',
+        'transaction_token': 'transactionToken',
         'authorization_payload': 'authorizationPayload',
         'cavv': 'cavv',
         'cavv_algorithm': 'cavvAlgorithm',
@@ -82,7 +88,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'directory_server_transaction_id': 'directoryServerTransactionId'
     }
 
-    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, authentication_result=None, authentication_status_msg=None, authorization_payload=None, cavv=None, cavv_algorithm=None, directory_server_error_code=None, directory_server_error_description=None, indicator=None, interaction_counter=None, eci=None, eci_raw=None, pares_status=None, sdk_transaction_id=None, specification_version=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, white_list_status=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
+    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, authentication_result=None, authentication_status_msg=None, authentication_transaction_id=None, authentication_transaction_context_id=None, transaction_token=None, authorization_payload=None, cavv=None, cavv_algorithm=None, directory_server_error_code=None, directory_server_error_description=None, indicator=None, interaction_counter=None, eci=None, eci_raw=None, pares_status=None, sdk_transaction_id=None, specification_version=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, white_list_status=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
         """
         RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -91,6 +97,9 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._acs_transaction_id = None
         self._authentication_result = None
         self._authentication_status_msg = None
+        self._authentication_transaction_id = None
+        self._authentication_transaction_context_id = None
+        self._transaction_token = None
         self._authorization_payload = None
         self._cavv = None
         self._cavv_algorithm = None
@@ -119,6 +128,12 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
           self.authentication_result = authentication_result
         if authentication_status_msg is not None:
           self.authentication_status_msg = authentication_status_msg
+        if authentication_transaction_id is not None:
+          self.authentication_transaction_id = authentication_transaction_id
+        if authentication_transaction_context_id is not None:
+          self.authentication_transaction_context_id = authentication_transaction_context_id
+        if transaction_token is not None:
+          self.transaction_token = transaction_token
         if authorization_payload is not None:
           self.authorization_payload = authorization_payload
         if cavv is not None:
@@ -249,6 +264,75 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._authentication_status_msg = authentication_status_msg
+
+    @property
+    def authentication_transaction_id(self):
+        """
+        Gets the authentication_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
+
+        :return: The authentication_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_transaction_id
+
+    @authentication_transaction_id.setter
+    def authentication_transaction_id(self, authentication_transaction_id):
+        """
+        Sets the authentication_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
+
+        :param authentication_transaction_id: The authentication_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_transaction_id = authentication_transaction_id
+
+    @property
+    def authentication_transaction_context_id(self):
+        """
+        Gets the authentication_transaction_context_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier passed to link the validation and authorization calls. 
+
+        :return: The authentication_transaction_context_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_transaction_context_id
+
+    @authentication_transaction_context_id.setter
+    def authentication_transaction_context_id(self, authentication_transaction_context_id):
+        """
+        Sets the authentication_transaction_context_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier passed to link the validation and authorization calls. 
+
+        :param authentication_transaction_context_id: The authentication_transaction_context_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_transaction_context_id = authentication_transaction_context_id
+
+    @property
+    def transaction_token(self):
+        """
+        Gets the transaction_token of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Web based token used to authenticate consumer with Rupay authentication provider. 
+
+        :return: The transaction_token of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._transaction_token
+
+    @transaction_token.setter
+    def transaction_token(self, transaction_token):
+        """
+        Sets the transaction_token of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Web based token used to authenticate consumer with Rupay authentication provider. 
+
+        :param transaction_token: The transaction_token of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._transaction_token = transaction_token
 
     @property
     def authorization_payload(self):

@@ -32,17 +32,19 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType',
-        'customer': 'Riskv1authenticationsetupsPaymentInformationCustomer',
-        'card': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard'
+        'customer': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer',
+        'card': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard',
+        'bank': 'TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank'
     }
 
     attribute_map = {
         'payment_type': 'paymentType',
         'customer': 'customer',
-        'card': 'card'
+        'card': 'card',
+        'bank': 'bank'
     }
 
-    def __init__(self, payment_type=None, customer=None, card=None):
+    def __init__(self, payment_type=None, customer=None, card=None, bank=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedPaymentInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         self._payment_type = None
         self._customer = None
         self._card = None
+        self._bank = None
 
         if payment_type is not None:
           self.payment_type = payment_type
@@ -57,6 +60,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
           self.customer = customer
         if card is not None:
           self.card = card
+        if bank is not None:
+          self.bank = bank
 
     @property
     def payment_type(self):
@@ -85,7 +90,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Gets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :return: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :rtype: Riskv1authenticationsetupsPaymentInformationCustomer
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer
         """
         return self._customer
 
@@ -95,7 +100,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         Sets the customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
 
         :param customer: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
-        :type: Riskv1authenticationsetupsPaymentInformationCustomer
+        :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer
         """
 
         self._customer = customer
@@ -120,6 +125,27 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         """
 
         self._card = card
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+
+        :return: The bank of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+
+        :param bank: The bank of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
+        :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank
+        """
+
+        self._bank = bank
 
     def to_dict(self):
         """

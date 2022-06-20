@@ -44,7 +44,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'issue_number': 'str',
         'start_month': 'str',
         'start_year': 'str',
-        'product_name': 'str'
+        'product_name': 'str',
+        'type_selection_indicator': 'str'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'issue_number': 'issueNumber',
         'start_month': 'startMonth',
         'start_year': 'startYear',
-        'product_name': 'productName'
+        'product_name': 'productName',
+        'type_selection_indicator': 'typeSelectionIndicator'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, source_account_type_details=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, source_account_type_details=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None, type_selection_indicator=None):
         """
         Ptsv2paymentsPaymentInformationCard - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         self._start_month = None
         self._start_year = None
         self._product_name = None
+        self._type_selection_indicator = None
 
         if number is not None:
           self.number = number
@@ -112,6 +115,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
           self.start_year = start_year
         if product_name is not None:
           self.product_name = product_name
+        if type_selection_indicator is not None:
+          self.type_selection_indicator = type_selection_indicator
 
     @property
     def number(self):
@@ -434,6 +439,29 @@ class Ptsv2paymentsPaymentInformationCard(object):
         """
 
         self._product_name = product_name
+
+    @property
+    def type_selection_indicator(self):
+        """
+        Gets the type_selection_indicator of this Ptsv2paymentsPaymentInformationCard.
+        Flag that identifies how the card type was selected.  Possible values: - 0: Card type was selected based on default acquirer settings. - 1: Customer selected the card type. 
+
+        :return: The type_selection_indicator of this Ptsv2paymentsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._type_selection_indicator
+
+    @type_selection_indicator.setter
+    def type_selection_indicator(self, type_selection_indicator):
+        """
+        Sets the type_selection_indicator of this Ptsv2paymentsPaymentInformationCard.
+        Flag that identifies how the card type was selected.  Possible values: - 0: Card type was selected based on default acquirer settings. - 1: Customer selected the card type. 
+
+        :param type_selection_indicator: The type_selection_indicator of this Ptsv2paymentsPaymentInformationCard.
+        :type: str
+        """
+
+        self._type_selection_indicator = type_selection_indicator
 
     def to_dict(self):
         """

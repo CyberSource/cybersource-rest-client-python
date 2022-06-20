@@ -32,7 +32,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
     """
     swagger_types = {
         'auth_type': 'str',
-        'initiator': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator'
+        'initiator': 'TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator'
     }
 
     attribute_map = {
@@ -82,7 +82,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         Gets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
 
         :return: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        :rtype: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        :rtype: TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator
         """
         return self._initiator
 
@@ -92,7 +92,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         Sets the initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
 
         :param initiator: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
+        :type: TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator
         """
 
         self._initiator = initiator

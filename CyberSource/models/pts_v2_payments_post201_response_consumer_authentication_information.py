@@ -395,7 +395,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self):
         """
         Gets the authentication_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. 
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
 
         :return: The authentication_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -406,7 +406,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self, authentication_transaction_id):
         """
         Sets the authentication_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. 
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
 
         :param authentication_transaction_id: The authentication_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
