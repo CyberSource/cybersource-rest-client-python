@@ -36,7 +36,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'forwarded_acquirer_code': 'str',
         'merchant_number': 'str',
         'response_code': 'str',
-        'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification'
+        'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
+        'network_transaction_id': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'merchant_number': 'merchantNumber',
         'response_code': 'responseCode',
-        'ach_verification': 'achVerification'
+        'ach_verification': 'achVerification',
+        'network_transaction_id': 'networkTransactionId'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         self._merchant_number = None
         self._response_code = None
         self._ach_verification = None
+        self._network_transaction_id = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -72,6 +75,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.response_code = response_code
         if ach_verification is not None:
           self.ach_verification = ach_verification
+        if network_transaction_id is not None:
+          self.network_transaction_id = network_transaction_id
 
     @property
     def approval_code(self):
@@ -208,6 +213,29 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         """
 
         self._ach_verification = ach_verification
+
+    @property
+    def network_transaction_id(self):
+        """
+        Gets the network_transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :return: The network_transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._network_transaction_id
+
+    @network_transaction_id.setter
+    def network_transaction_id(self, network_transaction_id):
+        """
+        Sets the network_transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._network_transaction_id = network_transaction_id
 
     def to_dict(self):
         """

@@ -50,8 +50,9 @@ powershell -Command "(Get-Content ..\CyberSource\apis\asymmetric_key_management_
 
 powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_token_id}/enrollment'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''application/json', 'select_header_content_type([''*/*'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
+powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''\*_\/_\*;charset=utf-8', 'select_header_content_type([''*/*;charset=utf-8'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
 
+powershell -Command "(Get-Content ..\docs\SecureFileShareApi.md) | ForEach-Object { $_ -replace '\*\*Content-Type\*\*: \*_\/_\*;charset=utf-8', '**Content-Type**: */*;charset=utf-8'} | Set-Content ..\docs\SecureFileShareApi.md"
 
 REM powershell -Command "(Get-Content ..\CyberSource\apis\__init__.py) | ForEach-Object { $_ -replace 'from .download_dtd_api import DownloadDTDApi', ''} | ForEach-Object { $_ -replace 'from .download_xsd_api import DownloadXSDApi', ''} | Set-Content ..\CyberSource\apis\__init__.py"
 
