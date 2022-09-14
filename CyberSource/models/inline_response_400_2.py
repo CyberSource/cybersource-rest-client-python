@@ -34,17 +34,19 @@ class InlineResponse4002(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'reason': 'str',
-        'message': 'str'
+        'message': 'str',
+        'status_code': 'str'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reason': 'reason',
-        'message': 'message'
+        'message': 'message',
+        'status_code': 'statusCode'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, status_code=None):
         """
         InlineResponse4002 - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class InlineResponse4002(object):
         self._status = None
         self._reason = None
         self._message = None
+        self._status_code = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -62,6 +65,8 @@ class InlineResponse4002(object):
           self.reason = reason
         if message is not None:
           self.message = message
+        if status_code is not None:
+          self.status_code = status_code
 
     @property
     def submit_time_utc(self):
@@ -113,7 +118,7 @@ class InlineResponse4002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD 
 
         :return: The reason of this InlineResponse4002.
         :rtype: str
@@ -124,7 +129,7 @@ class InlineResponse4002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD 
 
         :param reason: The reason of this InlineResponse4002.
         :type: str
@@ -154,6 +159,29 @@ class InlineResponse4002(object):
         """
 
         self._message = message
+
+    @property
+    def status_code(self):
+        """
+        Gets the status_code of this InlineResponse4002.
+        HTTP status code of the submitted request.  Possible values:  - 500 
+
+        :return: The status_code of this InlineResponse4002.
+        :rtype: str
+        """
+        return self._status_code
+
+    @status_code.setter
+    def status_code(self, status_code):
+        """
+        Sets the status_code of this InlineResponse4002.
+        HTTP status code of the submitted request.  Possible values:  - 500 
+
+        :param status_code: The status_code of this InlineResponse4002.
+        :type: str
+        """
+
+        self._status_code = status_code
 
     def to_dict(self):
         """

@@ -33,6 +33,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     swagger_types = {
         'terminal_id': 'str',
         'terminal_serial_number': 'str',
+        'cardholder_verification_method_used': 'int',
         'lane_number': 'str',
         'cat_level': 'int',
         'entry_mode': 'str',
@@ -63,6 +64,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     attribute_map = {
         'terminal_id': 'terminalId',
         'terminal_serial_number': 'terminalSerialNumber',
+        'cardholder_verification_method_used': 'cardholderVerificationMethodUsed',
         'lane_number': 'laneNumber',
         'cat_level': 'catLevel',
         'entry_mode': 'entryMode',
@@ -90,13 +92,14 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'service_code': 'serviceCode'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
 
         self._terminal_id = None
         self._terminal_serial_number = None
+        self._cardholder_verification_method_used = None
         self._lane_number = None
         self._cat_level = None
         self._entry_mode = None
@@ -127,6 +130,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.terminal_id = terminal_id
         if terminal_serial_number is not None:
           self.terminal_serial_number = terminal_serial_number
+        if cardholder_verification_method_used is not None:
+          self.cardholder_verification_method_used = cardholder_verification_method_used
         if lane_number is not None:
           self.lane_number = lane_number
         if cat_level is not None:
@@ -223,6 +228,29 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._terminal_serial_number = terminal_serial_number
+
+    @property
+    def cardholder_verification_method_used(self):
+        """
+        Gets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+
+        :return: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: int
+        """
+        return self._cardholder_verification_method_used
+
+    @cardholder_verification_method_used.setter
+    def cardholder_verification_method_used(self, cardholder_verification_method_used):
+        """
+        Sets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+
+        :param cardholder_verification_method_used: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
+        :type: int
+        """
+
+        self._cardholder_verification_method_used = cardholder_verification_method_used
 
     @property
     def lane_number(self):

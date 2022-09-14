@@ -39,7 +39,8 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         'account_features': 'TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures',
         'payment_instrument': 'PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
         'instrument_identifier': 'TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier',
-        'shipping_address': 'PtsV2PaymentsPost201ResponseTokenInformationShippingAddress'
+        'shipping_address': 'PtsV2PaymentsPost201ResponseTokenInformationShippingAddress',
+        'fluid_data': 'TssV2TransactionsGet200ResponsePaymentInformationFluidData'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         'account_features': 'accountFeatures',
         'payment_instrument': 'paymentInstrument',
         'instrument_identifier': 'instrumentIdentifier',
-        'shipping_address': 'shippingAddress'
+        'shipping_address': 'shippingAddress',
+        'fluid_data': 'fluidData'
     }
 
-    def __init__(self, payment_type=None, customer=None, card=None, invoice=None, bank=None, account_features=None, payment_instrument=None, instrument_identifier=None, shipping_address=None):
+    def __init__(self, payment_type=None, customer=None, card=None, invoice=None, bank=None, account_features=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, fluid_data=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformation - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         self._payment_instrument = None
         self._instrument_identifier = None
         self._shipping_address = None
+        self._fluid_data = None
 
         if payment_type is not None:
           self.payment_type = payment_type
@@ -87,6 +90,8 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
           self.instrument_identifier = instrument_identifier
         if shipping_address is not None:
           self.shipping_address = shipping_address
+        if fluid_data is not None:
+          self.fluid_data = fluid_data
 
     @property
     def payment_type(self):
@@ -276,6 +281,27 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         """
 
         self._shipping_address = shipping_address
+
+    @property
+    def fluid_data(self):
+        """
+        Gets the fluid_data of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :return: The fluid_data of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :rtype: TssV2TransactionsGet200ResponsePaymentInformationFluidData
+        """
+        return self._fluid_data
+
+    @fluid_data.setter
+    def fluid_data(self, fluid_data):
+        """
+        Sets the fluid_data of this TssV2TransactionsGet200ResponsePaymentInformation.
+
+        :param fluid_data: The fluid_data of this TssV2TransactionsGet200ResponsePaymentInformation.
+        :type: TssV2TransactionsGet200ResponsePaymentInformationFluidData
+        """
+
+        self._fluid_data = fluid_data
 
     def to_dict(self):
         """

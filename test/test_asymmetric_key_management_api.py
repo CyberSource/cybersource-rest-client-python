@@ -35,7 +35,7 @@ class TestAsymmetricKeyManagementApi(unittest.TestCase):
         """
         Test case for create_p12_keys
 
-        Create one or more PKCS#12 keys
+        Create one or more PKCS12 keys
         """
         pass
 
@@ -43,7 +43,7 @@ class TestAsymmetricKeyManagementApi(unittest.TestCase):
         """
         Test case for delete_bulk_p12_keys
 
-        Delete one or more PKCS#12 keys
+        Delete one or more PKCS12 keys
         """
         pass
 
@@ -51,7 +51,7 @@ class TestAsymmetricKeyManagementApi(unittest.TestCase):
         """
         Test case for get_p12_key_details
 
-        Retrieves PKCS#12 key details
+        Retrieves PKCS12 key details
         """
         pass
 
