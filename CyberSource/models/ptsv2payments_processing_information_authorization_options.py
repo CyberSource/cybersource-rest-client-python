@@ -48,7 +48,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'transportation_mode': 'str',
         'aggregated_auth_indicator': 'str',
         'debt_recovery_indicator': 'str',
-        'deferred_auth_indicator': 'bool'
+        'deferred_auth_indicator': 'bool',
+        'cash_advance_indicator': 'bool'
     }
 
     attribute_map = {
@@ -69,10 +70,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'transportation_mode': 'transportationMode',
         'aggregated_auth_indicator': 'aggregatedAuthIndicator',
         'debt_recovery_indicator': 'debtRecoveryIndicator',
-        'deferred_auth_indicator': 'deferredAuthIndicator'
+        'deferred_auth_indicator': 'deferredAuthIndicator',
+        'cash_advance_indicator': 'cashAdvanceIndicator'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -95,6 +97,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._aggregated_auth_indicator = None
         self._debt_recovery_indicator = None
         self._deferred_auth_indicator = None
+        self._cash_advance_indicator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -132,6 +135,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.debt_recovery_indicator = debt_recovery_indicator
         if deferred_auth_indicator is not None:
           self.deferred_auth_indicator = deferred_auth_indicator
+        if cash_advance_indicator is not None:
+          self.cash_advance_indicator = cash_advance_indicator
 
     @property
     def auth_type(self):
@@ -544,6 +549,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._deferred_auth_indicator = deferred_auth_indicator
+
+    @property
+    def cash_advance_indicator(self):
+        """
+        Gets the cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field enables the merchant to indicate that a given transaction is Cash Advance.  Cash advance or Cash disbursement functionality allows a merchant to dispense cash at a point of sale. It provides the ability of a POS system to act like an ATM. These terminals are typically seen in bank branches where customers can use their card and withdraw cash or at merchant locations where ATMs are sparse.  Possible values:   - `true` (Cash advance is supported)   - `false` (default: cash advance is not supported) 
+
+        :return: The cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._cash_advance_indicator
+
+    @cash_advance_indicator.setter
+    def cash_advance_indicator(self, cash_advance_indicator):
+        """
+        Sets the cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field enables the merchant to indicate that a given transaction is Cash Advance.  Cash advance or Cash disbursement functionality allows a merchant to dispense cash at a point of sale. It provides the ability of a POS system to act like an ATM. These terminals are typically seen in bank branches where customers can use their card and withdraw cash or at merchant locations where ATMs are sparse.  Possible values:   - `true` (Cash advance is supported)   - `false` (default: cash advance is not supported) 
+
+        :param cash_advance_indicator: The cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._cash_advance_indicator = cash_advance_indicator
 
     def to_dict(self):
         """

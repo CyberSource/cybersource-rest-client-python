@@ -37,10 +37,12 @@ class Ptsv2paymentsProcessingInformation(object):
         'processor_id': 'str',
         'business_application_id': 'str',
         'commerce_indicator': 'str',
+        'commerce_indicator_label': 'str',
         'payment_solution': 'str',
         'reconciliation_id': 'str',
         'link_id': 'str',
         'purchase_level': 'str',
+        'payment_id': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'industry_data_type': 'str',
@@ -68,10 +70,12 @@ class Ptsv2paymentsProcessingInformation(object):
         'processor_id': 'processorId',
         'business_application_id': 'businessApplicationId',
         'commerce_indicator': 'commerceIndicator',
+        'commerce_indicator_label': 'commerceIndicatorLabel',
         'payment_solution': 'paymentSolution',
         'reconciliation_id': 'reconciliationId',
         'link_id': 'linkId',
         'purchase_level': 'purchaseLevel',
+        'payment_id': 'paymentId',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
         'industry_data_type': 'industryDataType',
@@ -92,7 +96,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled'
     }
 
-    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
+    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -103,10 +107,12 @@ class Ptsv2paymentsProcessingInformation(object):
         self._processor_id = None
         self._business_application_id = None
         self._commerce_indicator = None
+        self._commerce_indicator_label = None
         self._payment_solution = None
         self._reconciliation_id = None
         self._link_id = None
         self._purchase_level = None
+        self._payment_id = None
         self._report_group = None
         self._visa_checkout_id = None
         self._industry_data_type = None
@@ -138,6 +144,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.business_application_id = business_application_id
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
+        if commerce_indicator_label is not None:
+          self.commerce_indicator_label = commerce_indicator_label
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if reconciliation_id is not None:
@@ -146,6 +154,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.link_id = link_id
         if purchase_level is not None:
           self.purchase_level = purchase_level
+        if payment_id is not None:
+          self.payment_id = payment_id
         if report_group is not None:
           self.report_group = report_group
         if visa_checkout_id is not None:
@@ -322,6 +332,29 @@ class Ptsv2paymentsProcessingInformation(object):
         self._commerce_indicator = commerce_indicator
 
     @property
+    def commerce_indicator_label(self):
+        """
+        Gets the commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :return: The commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._commerce_indicator_label
+
+    @commerce_indicator_label.setter
+    def commerce_indicator_label(self, commerce_indicator_label):
+        """
+        Sets the commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :param commerce_indicator_label: The commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._commerce_indicator_label = commerce_indicator_label
+
+    @property
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
@@ -412,6 +445,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._purchase_level = purchase_level
+
+    @property
+    def payment_id(self):
+        """
+        Gets the payment_id of this Ptsv2paymentsProcessingInformation.
+        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+
+        :return: The payment_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_id
+
+    @payment_id.setter
+    def payment_id(self, payment_id):
+        """
+        Sets the payment_id of this Ptsv2paymentsProcessingInformation.
+        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+
+        :param payment_id: The payment_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._payment_id = payment_id
 
     @property
     def report_group(self):

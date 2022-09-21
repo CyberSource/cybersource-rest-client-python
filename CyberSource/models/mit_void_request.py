@@ -33,16 +33,18 @@ class MitVoidRequest(object):
     swagger_types = {
         'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
         'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation',
-        'order_information': 'Ptsv2paymentsidvoidsOrderInformation'
+        'order_information': 'Ptsv2paymentsidvoidsOrderInformation',
+        'processing_information': 'Ptsv2voidsProcessingInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'processing_information': 'processingInformation'
     }
 
-    def __init__(self, client_reference_information=None, payment_information=None, order_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, processing_information=None):
         """
         MitVoidRequest - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class MitVoidRequest(object):
         self._client_reference_information = None
         self._payment_information = None
         self._order_information = None
+        self._processing_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -57,6 +60,8 @@ class MitVoidRequest(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if processing_information is not None:
+          self.processing_information = processing_information
 
     @property
     def client_reference_information(self):
@@ -120,6 +125,27 @@ class MitVoidRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this MitVoidRequest.
+
+        :return: The processing_information of this MitVoidRequest.
+        :rtype: Ptsv2voidsProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this MitVoidRequest.
+
+        :param processing_information: The processing_information of this MitVoidRequest.
+        :type: Ptsv2voidsProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     def to_dict(self):
         """

@@ -34,6 +34,7 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         'terminal_id': 'str',
         'entry_mode': 'str',
         'terminal_capability': 'int',
+        'cardholder_verification_method_used': 'int',
         'emv': 'Ptsv2paymentsidreversalsPointOfSaleInformationEmv'
     }
 
@@ -41,10 +42,11 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         'terminal_id': 'terminalId',
         'entry_mode': 'entryMode',
         'terminal_capability': 'terminalCapability',
+        'cardholder_verification_method_used': 'cardholderVerificationMethodUsed',
         'emv': 'emv'
     }
 
-    def __init__(self, terminal_id=None, entry_mode=None, terminal_capability=None, emv=None):
+    def __init__(self, terminal_id=None, entry_mode=None, terminal_capability=None, cardholder_verification_method_used=None, emv=None):
         """
         TssV2TransactionsGet200ResponsePointOfSaleInformation - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         self._terminal_id = None
         self._entry_mode = None
         self._terminal_capability = None
+        self._cardholder_verification_method_used = None
         self._emv = None
 
         if terminal_id is not None:
@@ -60,6 +63,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
           self.entry_mode = entry_mode
         if terminal_capability is not None:
           self.terminal_capability = terminal_capability
+        if cardholder_verification_method_used is not None:
+          self.cardholder_verification_method_used = cardholder_verification_method_used
         if emv is not None:
           self.emv = emv
 
@@ -135,6 +140,29 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
             raise ValueError("Invalid value for `terminal_capability`, must be a value greater than or equal to `1`")
 
         self._terminal_capability = terminal_capability
+
+    @property
+    def cardholder_verification_method_used(self):
+        """
+        Gets the cardholder_verification_method_used of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+
+        :return: The cardholder_verification_method_used of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        :rtype: int
+        """
+        return self._cardholder_verification_method_used
+
+    @cardholder_verification_method_used.setter
+    def cardholder_verification_method_used(self, cardholder_verification_method_used):
+        """
+        Sets the cardholder_verification_method_used of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+
+        :param cardholder_verification_method_used: The cardholder_verification_method_used of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
+        :type: int
+        """
+
+        self._cardholder_verification_method_used = cardholder_verification_method_used
 
     @property
     def emv(self):

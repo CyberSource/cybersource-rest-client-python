@@ -31,22 +31,27 @@ class TssV2TransactionsGet200ResponseClientReferenceInformationPartner(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'solution_id': 'str'
+        'solution_id': 'str',
+        'third_party_certification_number': 'str'
     }
 
     attribute_map = {
-        'solution_id': 'solutionId'
+        'solution_id': 'solutionId',
+        'third_party_certification_number': 'thirdPartyCertificationNumber'
     }
 
-    def __init__(self, solution_id=None):
+    def __init__(self, solution_id=None, third_party_certification_number=None):
         """
         TssV2TransactionsGet200ResponseClientReferenceInformationPartner - a model defined in Swagger
         """
 
         self._solution_id = None
+        self._third_party_certification_number = None
 
         if solution_id is not None:
           self.solution_id = solution_id
+        if third_party_certification_number is not None:
+          self.third_party_certification_number = third_party_certification_number
 
     @property
     def solution_id(self):
@@ -70,6 +75,29 @@ class TssV2TransactionsGet200ResponseClientReferenceInformationPartner(object):
         """
 
         self._solution_id = solution_id
+
+    @property
+    def third_party_certification_number(self):
+        """
+        Gets the third_party_certification_number of this TssV2TransactionsGet200ResponseClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field.  #### PIN debit Required field for PIN debit credit, PIN debit purchase, or PIN debit reversal request. 
+
+        :return: The third_party_certification_number of this TssV2TransactionsGet200ResponseClientReferenceInformationPartner.
+        :rtype: str
+        """
+        return self._third_party_certification_number
+
+    @third_party_certification_number.setter
+    def third_party_certification_number(self, third_party_certification_number):
+        """
+        Sets the third_party_certification_number of this TssV2TransactionsGet200ResponseClientReferenceInformationPartner.
+        Value that identifies the application vendor and application version for a third party gateway. CyberSource provides you with this value during testing and validation. This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization, Authorization Reversal, Capture, Credit, Incremental Authorization, and Void** Optional field.  #### PIN debit Required field for PIN debit credit, PIN debit purchase, or PIN debit reversal request. 
+
+        :param third_party_certification_number: The third_party_certification_number of this TssV2TransactionsGet200ResponseClientReferenceInformationPartner.
+        :type: str
+        """
+
+        self._third_party_certification_number = third_party_certification_number
 
     def to_dict(self):
         """

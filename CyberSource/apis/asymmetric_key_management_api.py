@@ -47,8 +47,8 @@ class AsymmetricKeyManagementApi(object):
 
     def create_p12_keys(self, create_p12_keys_request, **kwargs):
         """
-        Create one or more PKCS#12 keys
-        'Create one or more PKCS#12 keys' 
+        Create one or more PKCS12 keys
+        'Create one or more PKCS12 keys' 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -77,8 +77,8 @@ class AsymmetricKeyManagementApi(object):
 
     def create_p12_keys_with_http_info(self, create_p12_keys_request, **kwargs):
         """
-        Create one or more PKCS#12 keys
-        'Create one or more PKCS#12 keys' 
+        Create one or more PKCS12 keys
+        'Create one or more PKCS12 keys' 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -159,8 +159,8 @@ class AsymmetricKeyManagementApi(object):
 
     def delete_bulk_p12_keys(self, delete_bulk_p12_keys_request, **kwargs):
         """
-        Delete one or more PKCS#12 keys
-        'Delete one or more PKCS#12 keys' 
+        Delete one or more PKCS12 keys
+        'Delete one or more PKCS12 keys' 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -189,8 +189,8 @@ class AsymmetricKeyManagementApi(object):
 
     def delete_bulk_p12_keys_with_http_info(self, delete_bulk_p12_keys_request, **kwargs):
         """
-        Delete one or more PKCS#12 keys
-        'Delete one or more PKCS#12 keys' 
+        Delete one or more PKCS12 keys
+        'Delete one or more PKCS12 keys' 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -271,7 +271,7 @@ class AsymmetricKeyManagementApi(object):
 
     def get_p12_key_details(self, key_id, **kwargs):
         """
-        Retrieves PKCS#12 key details
+        Retrieves PKCS12 key details
         Retrieves keys details by providing the key id.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -301,7 +301,7 @@ class AsymmetricKeyManagementApi(object):
 
     def get_p12_key_details_with_http_info(self, key_id, **kwargs):
         """
-        Retrieves PKCS#12 key details
+        Retrieves PKCS12 key details
         Retrieves keys details by providing the key id.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **organization_id** | **str** | Merchant Id  | [optional] 
+**external_organization_id** | **str** | Payworks MerchantId for given organizationId.  | [optional] 
 **reference_number** | **str** | Reference number is a unique identifier provided by the client along with the organization Id. This is an optional field provided solely for the client’s convenience. If client specifies value for this field in the request, it is expected to be available in the response.  | [optional] 
 **key_id** | **str** | Key Serial Number  | [optional] 
 **key** | **str** | value of the key  | [optional] 
