@@ -538,7 +538,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_output_capability(self):
         """
         Gets the terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
-        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. 
+        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display - 5: Merchant terminal supports purchase only approvals  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX - VisaNet  Optional field. 
 
         :return: The terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: str
@@ -549,7 +549,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_output_capability(self, terminal_output_capability):
         """
         Sets the terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
-        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. 
+        Indicates whether the terminal can print or display messages.  Possible values: - 1: Neither - 2: Print only - 3: Display only - 4: Print and display - 5: Merchant terminal supports purchase only approvals  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX - VisaNet  Optional field. 
 
         :param terminal_output_capability: The terminal_output_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: str

@@ -416,7 +416,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self):
         """
         Gets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :return: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -427,7 +427,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self, bill_payment_type):
         """
         Sets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :param bill_payment_type: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
