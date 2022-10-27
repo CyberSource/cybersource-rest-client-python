@@ -62,3 +62,8 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+.swagger-codegen-ignore
+.travis.yml
+.swagger-codegen
+git_push.sh
