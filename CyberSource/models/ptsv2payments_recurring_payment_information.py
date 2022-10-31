@@ -35,7 +35,13 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         'frequency': 'int',
         'number_of_payments': 'int',
         'original_purchase_date': 'str',
-        'sequence_number': 'int'
+        'sequence_number': 'int',
+        'type': 'str',
+        'occurrence': 'str',
+        'validation_indicator': 'str',
+        'amount_type': 'str',
+        'maximum_amount': 'str',
+        'reference_number': 'str'
     }
 
     attribute_map = {
@@ -43,10 +49,16 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         'frequency': 'frequency',
         'number_of_payments': 'numberOfPayments',
         'original_purchase_date': 'originalPurchaseDate',
-        'sequence_number': 'sequenceNumber'
+        'sequence_number': 'sequenceNumber',
+        'type': 'type',
+        'occurrence': 'occurrence',
+        'validation_indicator': 'validationIndicator',
+        'amount_type': 'amountType',
+        'maximum_amount': 'maximumAmount',
+        'reference_number': 'referenceNumber'
     }
 
-    def __init__(self, end_date=None, frequency=None, number_of_payments=None, original_purchase_date=None, sequence_number=None):
+    def __init__(self, end_date=None, frequency=None, number_of_payments=None, original_purchase_date=None, sequence_number=None, type=None, occurrence=None, validation_indicator=None, amount_type=None, maximum_amount=None, reference_number=None):
         """
         Ptsv2paymentsRecurringPaymentInformation - a model defined in Swagger
         """
@@ -56,6 +68,12 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         self._number_of_payments = None
         self._original_purchase_date = None
         self._sequence_number = None
+        self._type = None
+        self._occurrence = None
+        self._validation_indicator = None
+        self._amount_type = None
+        self._maximum_amount = None
+        self._reference_number = None
 
         if end_date is not None:
           self.end_date = end_date
@@ -67,6 +85,18 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
           self.original_purchase_date = original_purchase_date
         if sequence_number is not None:
           self.sequence_number = sequence_number
+        if type is not None:
+          self.type = type
+        if occurrence is not None:
+          self.occurrence = occurrence
+        if validation_indicator is not None:
+          self.validation_indicator = validation_indicator
+        if amount_type is not None:
+          self.amount_type = amount_type
+        if maximum_amount is not None:
+          self.maximum_amount = maximum_amount
+        if reference_number is not None:
+          self.reference_number = reference_number
 
     @property
     def end_date(self):
@@ -182,6 +212,144 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         """
 
         self._sequence_number = sequence_number
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv2paymentsRecurringPaymentInformation.
+        This contains the type of recurring payment. Valid Values : 1 - Registration/First transaction 2 - Subsequent transaction 3 - Modification 4 - Cancellation 
+
+        :return: The type of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv2paymentsRecurringPaymentInformation.
+        This contains the type of recurring payment. Valid Values : 1 - Registration/First transaction 2 - Subsequent transaction 3 - Modification 4 - Cancellation 
+
+        :param type: The type of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def occurrence(self):
+        """
+        Gets the occurrence of this Ptsv2paymentsRecurringPaymentInformation.
+        This value indicates how often a recurring payment occurs. Valid Values : • 01 (Daily) • 02 (Twice weekly) • 03 (Weekly) • 04 (Ten days) • 05 (Fortnightly) • 06 (Monthly) • 07 (Every two months) • 08 (Trimester) • 09 (Quarterly) • 10 (Twice yearly) • 11 (Annually) • 12 (Unscheduled) 
+
+        :return: The occurrence of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._occurrence
+
+    @occurrence.setter
+    def occurrence(self, occurrence):
+        """
+        Sets the occurrence of this Ptsv2paymentsRecurringPaymentInformation.
+        This value indicates how often a recurring payment occurs. Valid Values : • 01 (Daily) • 02 (Twice weekly) • 03 (Weekly) • 04 (Ten days) • 05 (Fortnightly) • 06 (Monthly) • 07 (Every two months) • 08 (Trimester) • 09 (Quarterly) • 10 (Twice yearly) • 11 (Annually) • 12 (Unscheduled) 
+
+        :param occurrence: The occurrence of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._occurrence = occurrence
+
+    @property
+    def validation_indicator(self):
+        """
+        Gets the validation_indicator of this Ptsv2paymentsRecurringPaymentInformation.
+        This tag will contain a value that indicates whether or not the recurring payment transaction has been validated. Valid values : 0- Not validated 1- Validated 
+
+        :return: The validation_indicator of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._validation_indicator
+
+    @validation_indicator.setter
+    def validation_indicator(self, validation_indicator):
+        """
+        Sets the validation_indicator of this Ptsv2paymentsRecurringPaymentInformation.
+        This tag will contain a value that indicates whether or not the recurring payment transaction has been validated. Valid values : 0- Not validated 1- Validated 
+
+        :param validation_indicator: The validation_indicator of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._validation_indicator = validation_indicator
+
+    @property
+    def amount_type(self):
+        """
+        Gets the amount_type of this Ptsv2paymentsRecurringPaymentInformation.
+        Indicates recurring amount type agreed by the cardholder Valid Values : 1- Fixed amount recurring payment 2- Recurring payment with maximum amount 
+
+        :return: The amount_type of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._amount_type
+
+    @amount_type.setter
+    def amount_type(self, amount_type):
+        """
+        Sets the amount_type of this Ptsv2paymentsRecurringPaymentInformation.
+        Indicates recurring amount type agreed by the cardholder Valid Values : 1- Fixed amount recurring payment 2- Recurring payment with maximum amount 
+
+        :param amount_type: The amount_type of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._amount_type = amount_type
+
+    @property
+    def maximum_amount(self):
+        """
+        Gets the maximum_amount of this Ptsv2paymentsRecurringPaymentInformation.
+        This API field will contain the maximum amount agreed to by the cardholder. The currency of this amount will be specified in Field 49—Currency Code,Transaction. 
+
+        :return: The maximum_amount of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._maximum_amount
+
+    @maximum_amount.setter
+    def maximum_amount(self, maximum_amount):
+        """
+        Sets the maximum_amount of this Ptsv2paymentsRecurringPaymentInformation.
+        This API field will contain the maximum amount agreed to by the cardholder. The currency of this amount will be specified in Field 49—Currency Code,Transaction. 
+
+        :param maximum_amount: The maximum_amount of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._maximum_amount = maximum_amount
+
+    @property
+    def reference_number(self):
+        """
+        Gets the reference_number of this Ptsv2paymentsRecurringPaymentInformation.
+        This will contain a unique reference number for the recurring payment transaction. 
+
+        :return: The reference_number of this Ptsv2paymentsRecurringPaymentInformation.
+        :rtype: str
+        """
+        return self._reference_number
+
+    @reference_number.setter
+    def reference_number(self, reference_number):
+        """
+        Sets the reference_number of this Ptsv2paymentsRecurringPaymentInformation.
+        This will contain a unique reference number for the recurring payment transaction. 
+
+        :param reference_number: The reference_number of this Ptsv2paymentsRecurringPaymentInformation.
+        :type: str
+        """
+
+        self._reference_number = reference_number
 
     def to_dict(self):
         """

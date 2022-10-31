@@ -41,7 +41,8 @@ class PtsV2PayoutsPost201Response(object):
         'merchant_information': 'PtsV2PayoutsPost201ResponseMerchantInformation',
         'order_information': 'PtsV2PayoutsPost201ResponseOrderInformation',
         'processor_information': 'PtsV2PayoutsPost201ResponseProcessorInformation',
-        'recipient_information': 'PtsV2PayoutsPost201ResponseRecipientInformation'
+        'recipient_information': 'PtsV2PayoutsPost201ResponseRecipientInformation',
+        'issuer_information': 'PtsV2PayoutsPost201ResponseIssuerInformation'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class PtsV2PayoutsPost201Response(object):
         'merchant_information': 'merchantInformation',
         'order_information': 'orderInformation',
         'processor_information': 'processorInformation',
-        'recipient_information': 'recipientInformation'
+        'recipient_information': 'recipientInformation',
+        'issuer_information': 'issuerInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None, issuer_information=None):
         """
         PtsV2PayoutsPost201Response - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class PtsV2PayoutsPost201Response(object):
         self._order_information = None
         self._processor_information = None
         self._recipient_information = None
+        self._issuer_information = None
 
         if links is not None:
           self.links = links
@@ -97,6 +100,8 @@ class PtsV2PayoutsPost201Response(object):
           self.processor_information = processor_information
         if recipient_information is not None:
           self.recipient_information = recipient_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
 
     @property
     def links(self):
@@ -336,6 +341,27 @@ class PtsV2PayoutsPost201Response(object):
         """
 
         self._recipient_information = recipient_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this PtsV2PayoutsPost201Response.
+
+        :return: The issuer_information of this PtsV2PayoutsPost201Response.
+        :rtype: PtsV2PayoutsPost201ResponseIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this PtsV2PayoutsPost201Response.
+
+        :param issuer_information: The issuer_information of this PtsV2PayoutsPost201Response.
+        :type: PtsV2PayoutsPost201ResponseIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     def to_dict(self):
         """

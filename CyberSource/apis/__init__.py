@@ -14,6 +14,7 @@ from .customer_shipping_address_api import CustomerShippingAddressApi
 from .decision_manager_api import DecisionManagerApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
+from .emv_tag_details_api import EMVTagDetailsApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .invoice_settings_api import InvoiceSettingsApi
@@ -42,6 +43,8 @@ from .taxes_api import TaxesApi
 from .tokenization_api import TokenizationApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
+from .transient_token_data_api import TransientTokenDataApi
+from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextApi
 from .user_management_api import UserManagementApi
 from .user_management_search_api import UserManagementSearchApi
 from .verification_api import VerificationApi
