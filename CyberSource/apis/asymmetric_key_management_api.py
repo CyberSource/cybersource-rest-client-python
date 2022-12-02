@@ -382,3 +382,124 @@ class AsymmetricKeyManagementApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def update_asym_key(self, key_id, update_asym_keys_request, **kwargs):
+        """
+        Activate or De-activate Asymmetric Key
+        Activate or De-activate Asymmetric Key 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_asym_key(key_id, update_asym_keys_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str key_id: Key ID.  (required)
+        :param UpdateAsymKeysRequest update_asym_keys_request: (required)
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `update_asym_key` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_asym_key_with_http_info(key_id, update_asym_keys_request, **kwargs)
+        else:
+            (data) = self.update_asym_key_with_http_info(key_id, update_asym_keys_request, **kwargs)
+            return data
+
+    def update_asym_key_with_http_info(self, key_id, update_asym_keys_request, **kwargs):
+        """
+        Activate or De-activate Asymmetric Key
+        Activate or De-activate Asymmetric Key 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_asym_key_with_http_info(key_id, update_asym_keys_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str key_id: Key ID.  (required)
+        :param UpdateAsymKeysRequest update_asym_keys_request: (required)
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['key_id', 'update_asym_keys_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_asym_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'key_id' is set
+        if ('key_id' not in params) or (params['key_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `update_asym_key`")
+            raise ValueError("Missing the required parameter `key_id` when calling `update_asym_key`")
+        # verify the required parameter 'update_asym_keys_request' is set
+        if ('update_asym_keys_request' not in params) or (params['update_asym_keys_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `update_asym_keys_request` when calling `update_asym_key`")
+            raise ValueError("Missing the required parameter `update_asym_keys_request` when calling `update_asym_key`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'key_id' in params:
+            path_params['keyId'] = params['key_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'update_asym_keys_request' in params:
+            body_params = params['update_asym_keys_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/kms/v2/keys-asym/{key_id}', 'PATCH',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='object',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)

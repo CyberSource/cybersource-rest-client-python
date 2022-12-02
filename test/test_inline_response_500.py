@@ -19,11 +19,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.inline_response_400_3_details import InlineResponse4003Details
+from CyberSource.models.inline_response_500 import InlineResponse500
 
 
-class TestInlineResponse4003Details(unittest.TestCase):
-    """ InlineResponse4003Details unit test stubs """
+class TestInlineResponse500(unittest.TestCase):
+    """ InlineResponse500 unit test stubs """
 
     def setUp(self):
         pass
@@ -31,12 +31,12 @@ class TestInlineResponse4003Details(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInlineResponse4003Details(self):
+    def testInlineResponse500(self):
         """
-        Test InlineResponse4003Details
+        Test InlineResponse500
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.inline_response_400_3_details.InlineResponse4003Details()
+        #model = CyberSource.models.inline_response_500.InlineResponse500()
         pass
 
 

@@ -52,7 +52,7 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
     def name(self):
         """
         Gets the name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
 
         :return: The name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :rtype: str
@@ -63,7 +63,7 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
 
         :param name: The name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :type: str

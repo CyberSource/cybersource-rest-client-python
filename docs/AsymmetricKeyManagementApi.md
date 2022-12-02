@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_p12_keys**](AsymmetricKeyManagementApi.md#create_p12_keys) | **POST** /kms/v2/keys-asym | Create one or more PKCS12 keys
 [**delete_bulk_p12_keys**](AsymmetricKeyManagementApi.md#delete_bulk_p12_keys) | **POST** /kms/v2/keys-asym/deletes | Delete one or more PKCS12 keys
 [**get_p12_key_details**](AsymmetricKeyManagementApi.md#get_p12_key_details) | **GET** /kms/v2/keys-asym/{keyId} | Retrieves PKCS12 key details
+[**update_asym_key**](AsymmetricKeyManagementApi.md#update_asym_key) | **PATCH** /kms/v2/keys-asym/{keyId} | Activate or De-activate Asymmetric Key
 
 
 # **create_p12_keys**
@@ -141,6 +142,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**KmsV2KeysAsymGet200Response**](KmsV2KeysAsymGet200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_asym_key**
+> object update_asym_key(key_id, update_asym_keys_request)
+
+Activate or De-activate Asymmetric Key
+
+Activate or De-activate Asymmetric Key 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.AsymmetricKeyManagementApi()
+key_id = 'key_id_example' # str | Key ID. 
+update_asym_keys_request = CyberSource.UpdateAsymKeysRequest() # UpdateAsymKeysRequest | 
+
+try: 
+    # Activate or De-activate Asymmetric Key
+    api_response = api_instance.update_asym_key(key_id, update_asym_keys_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AsymmetricKeyManagementApi->update_asym_key: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key_id** | **str**| Key ID.  | 
+ **update_asym_keys_request** | [**UpdateAsymKeysRequest**](UpdateAsymKeysRequest.md)|  | 
+
+### Return type
+
+**object**
 
 ### Authorization
 

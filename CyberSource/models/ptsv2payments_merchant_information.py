@@ -416,7 +416,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def merchant_name(self):
         """
         Gets the merchant_name of this Ptsv2paymentsMerchantInformation.
-        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
+        Use this field only if you are requesting payment with Payer Authentication service together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
 
         :return: The merchant_name of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -427,7 +427,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def merchant_name(self, merchant_name):
         """
         Sets the merchant_name of this Ptsv2paymentsMerchantInformation.
-        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
+        Use this field only if you are requesting payment with Payer Authentication service together.  Your company’s name as you want it to appear to the customer in the issuing bank’s authentication form. This value overrides the value specified by your merchant bank. 
 
         :param merchant_name: The merchant_name of this Ptsv2paymentsMerchantInformation.
         :type: str
