@@ -1,10 +1,10 @@
-# InlineResponse4003Details
+# UpdatePGPKeysRequest
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location** | **str** |  | [optional] 
-**message** | **str** |  | [optional] 
+**status** | **str** | Status can be active/inactive | 
+**organization_id** | **str** | Organization Id | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

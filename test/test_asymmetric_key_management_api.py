@@ -55,6 +55,14 @@ class TestAsymmetricKeyManagementApi(unittest.TestCase):
         """
         pass
 
+    def test_update_asym_key(self):
+        """
+        Test case for update_asym_key
+
+        Activate or De-activate Asymmetric Key
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
