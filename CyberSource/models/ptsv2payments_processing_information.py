@@ -32,6 +32,7 @@ class Ptsv2paymentsProcessingInformation(object):
     """
     swagger_types = {
         'action_list': 'list[str]',
+        'enable_escrow_option': 'bool',
         'action_token_types': 'list[str]',
         'capture': 'bool',
         'processor_id': 'str',
@@ -65,6 +66,7 @@ class Ptsv2paymentsProcessingInformation(object):
 
     attribute_map = {
         'action_list': 'actionList',
+        'enable_escrow_option': 'enableEscrowOption',
         'action_token_types': 'actionTokenTypes',
         'capture': 'capture',
         'processor_id': 'processorId',
@@ -96,12 +98,13 @@ class Ptsv2paymentsProcessingInformation(object):
         'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled'
     }
 
-    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
 
         self._action_list = None
+        self._enable_escrow_option = None
         self._action_token_types = None
         self._capture = None
         self._processor_id = None
@@ -134,6 +137,8 @@ class Ptsv2paymentsProcessingInformation(object):
 
         if action_list is not None:
           self.action_list = action_list
+        if enable_escrow_option is not None:
+          self.enable_escrow_option = enable_escrow_option
         if action_token_types is not None:
           self.action_token_types = action_token_types
         if capture is not None:
@@ -197,7 +202,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested. 
 
         :return: The action_list of this Ptsv2paymentsProcessingInformation.
         :rtype: list[str]
@@ -208,13 +213,36 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested. 
 
         :param action_list: The action_list of this Ptsv2paymentsProcessingInformation.
         :type: list[str]
         """
 
         self._action_list = action_list
+
+    @property
+    def enable_escrow_option(self):
+        """
+        Gets the enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        Indicates whether to use the customer’s escrow agreement. Possible values: - `true`: yes, use the customer’s escrow agreement. - `false`: no, do not use the customer’s escrow agreement.  
+
+        :return: The enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._enable_escrow_option
+
+    @enable_escrow_option.setter
+    def enable_escrow_option(self, enable_escrow_option):
+        """
+        Sets the enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        Indicates whether to use the customer’s escrow agreement. Possible values: - `true`: yes, use the customer’s escrow agreement. - `false`: no, do not use the customer’s escrow agreement.  
+
+        :param enable_escrow_option: The enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._enable_escrow_option = enable_escrow_option
 
     @property
     def action_token_types(self):

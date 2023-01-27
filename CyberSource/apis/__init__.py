@@ -32,6 +32,7 @@ from .payment_instrument_api import PaymentInstrumentApi
 from .payments_api import PaymentsApi
 from .payouts_api import PayoutsApi
 from .purchase_and_refund_details_api import PurchaseAndRefundDetailsApi
+from .push_funds_api import PushFundsApi
 from .refund_api import RefundApi
 from .report_definitions_api import ReportDefinitionsApi
 from .report_downloads_api import ReportDownloadsApi

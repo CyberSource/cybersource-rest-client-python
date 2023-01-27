@@ -31,7 +31,7 @@ class RefundCaptureRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
+        'client_reference_information': 'Ptsv2paymentsidrefundsClientReferenceInformation',
         'processing_information': 'Ptsv2paymentsidrefundsProcessingInformation',
         'payment_information': 'Ptsv2paymentsidrefundsPaymentInformation',
         'order_information': 'Ptsv2paymentsidrefundsOrderInformation',
@@ -109,7 +109,7 @@ class RefundCaptureRequest(object):
         Gets the client_reference_information of this RefundCaptureRequest.
 
         :return: The client_reference_information of this RefundCaptureRequest.
-        :rtype: Ptsv2paymentsClientReferenceInformation
+        :rtype: Ptsv2paymentsidrefundsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -119,7 +119,7 @@ class RefundCaptureRequest(object):
         Sets the client_reference_information of this RefundCaptureRequest.
 
         :param client_reference_information: The client_reference_information of this RefundCaptureRequest.
-        :type: Ptsv2paymentsClientReferenceInformation
+        :type: Ptsv2paymentsidrefundsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

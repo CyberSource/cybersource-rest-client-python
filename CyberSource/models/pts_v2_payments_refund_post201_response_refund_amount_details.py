@@ -32,24 +32,29 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
     """
     swagger_types = {
         'refund_amount': 'str',
+        'credit_amount': 'str',
         'currency': 'str'
     }
 
     attribute_map = {
         'refund_amount': 'refundAmount',
+        'credit_amount': 'creditAmount',
         'currency': 'currency'
     }
 
-    def __init__(self, refund_amount=None, currency=None):
+    def __init__(self, refund_amount=None, credit_amount=None, currency=None):
         """
         PtsV2PaymentsRefundPost201ResponseRefundAmountDetails - a model defined in Swagger
         """
 
         self._refund_amount = None
+        self._credit_amount = None
         self._currency = None
 
         if refund_amount is not None:
           self.refund_amount = refund_amount
+        if credit_amount is not None:
+          self.credit_amount = credit_amount
         if currency is not None:
           self.currency = currency
 
@@ -75,6 +80,29 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         """
 
         self._refund_amount = refund_amount
+
+    @property
+    def credit_amount(self):
+        """
+        Gets the credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
+        Amount that was credited to the cardholder’s account.  Returned by PIN debit credit. 
+
+        :return: The credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
+        :rtype: str
+        """
+        return self._credit_amount
+
+    @credit_amount.setter
+    def credit_amount(self, credit_amount):
+        """
+        Sets the credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
+        Amount that was credited to the cardholder’s account.  Returned by PIN debit credit. 
+
+        :param credit_amount: The credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
+        :type: str
+        """
+
+        self._credit_amount = credit_amount
 
     @property
     def currency(self):

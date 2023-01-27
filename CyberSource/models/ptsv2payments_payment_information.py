@@ -31,6 +31,8 @@ class Ptsv2paymentsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'intent': 'str',
+        'country_code': 'str',
         'card': 'Ptsv2paymentsPaymentInformationCard',
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
@@ -46,6 +48,8 @@ class Ptsv2paymentsPaymentInformation(object):
     }
 
     attribute_map = {
+        'intent': 'intent',
+        'country_code': 'countryCode',
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
         'fluid_data': 'fluidData',
@@ -60,11 +64,13 @@ class Ptsv2paymentsPaymentInformation(object):
         'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None, e_wallet=None):
+    def __init__(self, intent=None, country_code=None, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None, e_wallet=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
 
+        self._intent = None
+        self._country_code = None
         self._card = None
         self._tokenized_card = None
         self._fluid_data = None
@@ -78,6 +84,10 @@ class Ptsv2paymentsPaymentInformation(object):
         self._initiation_channel = None
         self._e_wallet = None
 
+        if intent is not None:
+          self.intent = intent
+        if country_code is not None:
+          self.country_code = country_code
         if card is not None:
           self.card = card
         if tokenized_card is not None:
@@ -102,6 +112,52 @@ class Ptsv2paymentsPaymentInformation(object):
           self.initiation_channel = initiation_channel
         if e_wallet is not None:
           self.e_wallet = e_wallet
+
+    @property
+    def intent(self):
+        """
+        Gets the intent of this Ptsv2paymentsPaymentInformation.
+        Intent. 
+
+        :return: The intent of this Ptsv2paymentsPaymentInformation.
+        :rtype: str
+        """
+        return self._intent
+
+    @intent.setter
+    def intent(self, intent):
+        """
+        Sets the intent of this Ptsv2paymentsPaymentInformation.
+        Intent. 
+
+        :param intent: The intent of this Ptsv2paymentsPaymentInformation.
+        :type: str
+        """
+
+        self._intent = intent
+
+    @property
+    def country_code(self):
+        """
+        Gets the country_code of this Ptsv2paymentsPaymentInformation.
+        Country code. 
+
+        :return: The country_code of this Ptsv2paymentsPaymentInformation.
+        :rtype: str
+        """
+        return self._country_code
+
+    @country_code.setter
+    def country_code(self, country_code):
+        """
+        Sets the country_code of this Ptsv2paymentsPaymentInformation.
+        Country code. 
+
+        :param country_code: The country_code of this Ptsv2paymentsPaymentInformation.
+        :type: str
+        """
+
+        self._country_code = country_code
 
     @property
     def card(self):

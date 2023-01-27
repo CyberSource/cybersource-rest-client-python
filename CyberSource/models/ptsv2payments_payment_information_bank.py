@@ -34,17 +34,19 @@ class Ptsv2paymentsPaymentInformationBank(object):
         'account': 'Ptsv2paymentsPaymentInformationBankAccount',
         'routing_number': 'str',
         'iban': 'str',
-        'swift_code': 'str'
+        'swift_code': 'str',
+        'code': 'str'
     }
 
     attribute_map = {
         'account': 'account',
         'routing_number': 'routingNumber',
         'iban': 'iban',
-        'swift_code': 'swiftCode'
+        'swift_code': 'swiftCode',
+        'code': 'code'
     }
 
-    def __init__(self, account=None, routing_number=None, iban=None, swift_code=None):
+    def __init__(self, account=None, routing_number=None, iban=None, swift_code=None, code=None):
         """
         Ptsv2paymentsPaymentInformationBank - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2paymentsPaymentInformationBank(object):
         self._routing_number = None
         self._iban = None
         self._swift_code = None
+        self._code = None
 
         if account is not None:
           self.account = account
@@ -62,6 +65,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
           self.iban = iban
         if swift_code is not None:
           self.swift_code = swift_code
+        if code is not None:
+          self.code = code
 
     @property
     def account(self):
@@ -152,6 +157,29 @@ class Ptsv2paymentsPaymentInformationBank(object):
         """
 
         self._swift_code = swift_code
+
+    @property
+    def code(self):
+        """
+        Gets the code of this Ptsv2paymentsPaymentInformationBank.
+        Bank code of the consumer’s account 
+
+        :return: The code of this Ptsv2paymentsPaymentInformationBank.
+        :rtype: str
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """
+        Sets the code of this Ptsv2paymentsPaymentInformationBank.
+        Bank code of the consumer’s account 
+
+        :param code: The code of this Ptsv2paymentsPaymentInformationBank.
+        :type: str
+        """
+
+        self._code = code
 
     def to_dict(self):
         """

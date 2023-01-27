@@ -82,7 +82,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Indicates the type of tax data for the _taxDetails_ object.  Possible values:  - `alternate` - `local` - `national` - `vat` - `other`  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Indicates the type of tax data for the _taxDetails_ object.  Possible values:  - `alternate` - `local` - `national` - `vat` - `other` - `green`  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
 
         :return: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Indicates the type of tax data for the _taxDetails_ object.  Possible values:  - `alternate` - `local` - `national` - `vat` - `other`  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Indicates the type of tax data for the _taxDetails_ object.  Possible values:  - `alternate` - `local` - `national` - `vat` - `other` - `green`  For processor-specific details, see the `alternate_tax_amount`, `local_tax`, `national_tax` or `vat_tax_amount` field descriptions in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
 
         :param type: The type of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
@@ -105,7 +105,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self):
         """
         Gets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | | `green`     | Green tax amount for Korean Processing. | 
 
         :return: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :rtype: str
@@ -116,7 +116,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
     def amount(self, amount):
         """
         Sets the amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
-        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | 
+        Indicates the amount of tax based on the `type` field as described in the table below:  | type      | type description | | ------------- |:-------------:| | `alternate` | Total amount of alternate tax for the order. | | `local`     | Sales tax for the order. | | `national`  | National tax for the order. | | `vat`       | Total amount of value added tax (VAT) included in the order. | | `other`     | Other tax. | | `green`     | Green tax amount for Korean Processing. | 
 
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str

@@ -277,3 +277,124 @@ class PaymentsApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def refresh_payment_status(self, id, refresh_payment_status_request, **kwargs):
+        """
+        Check a Payment Status
+        Checks and updates the payment status 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.refresh_payment_status(id, refresh_payment_status_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: The payment id whose status needs to be checked and updated. (required)
+        :param RefreshPaymentStatusRequest refresh_payment_status_request: (required)
+        :return: PtsV2PaymentsPost201Response1
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `refresh_payment_status` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.refresh_payment_status_with_http_info(id, refresh_payment_status_request, **kwargs)
+        else:
+            (data) = self.refresh_payment_status_with_http_info(id, refresh_payment_status_request, **kwargs)
+            return data
+
+    def refresh_payment_status_with_http_info(self, id, refresh_payment_status_request, **kwargs):
+        """
+        Check a Payment Status
+        Checks and updates the payment status 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.refresh_payment_status_with_http_info(id, refresh_payment_status_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str id: The payment id whose status needs to be checked and updated. (required)
+        :param RefreshPaymentStatusRequest refresh_payment_status_request: (required)
+        :return: PtsV2PaymentsPost201Response1
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'refresh_payment_status_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method refresh_payment_status" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refresh_payment_status`")
+            raise ValueError("Missing the required parameter `id` when calling `refresh_payment_status`")
+        # verify the required parameter 'refresh_payment_status_request' is set
+        if ('refresh_payment_status_request' not in params) or (params['refresh_payment_status_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
+            raise ValueError("Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'refresh_payment_status_request' in params:
+            body_params = params['refresh_payment_status_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v2/refresh-payment-status/{id}', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PtsV2PaymentsPost201Response1',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)

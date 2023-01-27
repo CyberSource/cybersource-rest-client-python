@@ -40,7 +40,9 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         'start_month': 'str',
         'start_year': 'str',
         'source_account_type': 'str',
-        'source_account_type_details': 'str'
+        'source_account_type_details': 'str',
+        'security_code': 'str',
+        'use_as': 'str'
     }
 
     attribute_map = {
@@ -53,10 +55,12 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         'start_month': 'startMonth',
         'start_year': 'startYear',
         'source_account_type': 'sourceAccountType',
-        'source_account_type_details': 'sourceAccountTypeDetails'
+        'source_account_type_details': 'sourceAccountTypeDetails',
+        'security_code': 'securityCode',
+        'use_as': 'useAs'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, source_account_type=None, source_account_type_details=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, source_account_type=None, source_account_type_details=None, security_code=None, use_as=None):
         """
         Ptsv2paymentsidrefundsPaymentInformationCard - a model defined in Swagger
         """
@@ -71,6 +75,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         self._start_year = None
         self._source_account_type = None
         self._source_account_type_details = None
+        self._security_code = None
+        self._use_as = None
 
         if number is not None:
           self.number = number
@@ -92,6 +98,10 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
           self.source_account_type = source_account_type
         if source_account_type_details is not None:
           self.source_account_type_details = source_account_type_details
+        if security_code is not None:
+          self.security_code = security_code
+        if use_as is not None:
+          self.use_as = use_as
 
     @property
     def number(self):
@@ -322,6 +332,52 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         """
 
         self._source_account_type_details = source_account_type_details
+
+    @property
+    def security_code(self):
+        """
+        Gets the security_code of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Card Verification Number.  #### FDMS Nashville Required for American Express or if swiped; otherwise, optional.  #### Ingenico ePayments Do not include this field when `commerceIndicator=recurring`. **Note** Ingenico ePayments was previously called _Global Collect_.  #### TSYS Acquiring Solutions Optional if pointOfSaleInformation.entryMode=keyed; otherwise, not used.  #### GPX Optional.  #### All other processors: Optional. 
+
+        :return: The security_code of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._security_code
+
+    @security_code.setter
+    def security_code(self, security_code):
+        """
+        Sets the security_code of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Card Verification Number.  #### FDMS Nashville Required for American Express or if swiped; otherwise, optional.  #### Ingenico ePayments Do not include this field when `commerceIndicator=recurring`. **Note** Ingenico ePayments was previously called _Global Collect_.  #### TSYS Acquiring Solutions Optional if pointOfSaleInformation.entryMode=keyed; otherwise, not used.  #### GPX Optional.  #### All other processors: Optional. 
+
+        :param security_code: The security_code of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :type: str
+        """
+
+        self._security_code = security_code
+
+    @property
+    def use_as(self):
+        """
+        Gets the use_as of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  Possible values:   - C: Credit transaction  - D: Debit transaction  This field is supported only for all card Types on Visa Platform Connect.  This field is required for:  - Debit transactions on Cielo and Comercio Latino.  - Transactions with Brazilian-issued cards on CyberSource through VisaNet.  **Note** The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 51 - Field: Combination Card Transaction Identifier 
+
+        :return: The use_as of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._use_as
+
+    @use_as.setter
+    def use_as(self, use_as):
+        """
+        Sets the use_as of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  Possible values:   - C: Credit transaction  - D: Debit transaction  This field is supported only for all card Types on Visa Platform Connect.  This field is required for:  - Debit transactions on Cielo and Comercio Latino.  - Transactions with Brazilian-issued cards on CyberSource through VisaNet.  **Note** The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 51 - Field: Combination Card Transaction Identifier 
+
+        :param use_as: The use_as of this Ptsv2paymentsidrefundsPaymentInformationCard.
+        :type: str
+        """
+
+        self._use_as = use_as
 
     def to_dict(self):
         """

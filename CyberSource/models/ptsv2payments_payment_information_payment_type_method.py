@@ -31,28 +31,33 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str'
+        'name': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'type': 'type'
     }
 
-    def __init__(self, name=None):
+    def __init__(self, name=None, type=None):
         """
         Ptsv2paymentsPaymentInformationPaymentTypeMethod - a model defined in Swagger
         """
 
         self._name = None
+        self._type = None
 
         if name is not None:
           self.name = name
+        if type is not None:
+          self.type = type
 
     @property
     def name(self):
         """
         Gets the name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
 
         :return: The name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :rtype: str
@@ -63,13 +68,36 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data 
+        A Payment Type is enabled through a Method. Examples: Visa, Master Card, ApplePay, iDeal, 7Eleven, alfamart, etc  For Japan Payment Processing Valid Values: - 1 Banking Data - 2 Authorization Data  #### Via KCP - `KCP` : Local Card, Bank Transfer and Carrier Billing. - `PAYCO` - `KAKAOPAY` - `NAVERPAY` 
 
         :param name: The name of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :type: str
         """
 
         self._name = name
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
+        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant’s site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
+
+        :return: The type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
+        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant’s site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
+
+        :param type: The type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """
