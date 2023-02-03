@@ -26,6 +26,7 @@ class MerchantConfiguration:
         self.authentication_type = None
         self.key_file_path = None
         self.run_environment = None
+        self.IntermediateHost = None
         self.key_alias = None
         self.key_password = None
         self.enable_client_cert = None
@@ -85,6 +86,10 @@ class MerchantConfiguration:
     def set_portfolio_id(self, value):
         if not (value.get('portfolio_id') is None):
             self.portfolio_id = value['portfolio_id']
+
+    def set_IntermediateHost(self, value):
+        if not (value.get('IntermediateHost') is None):
+            self.IntermediateHost = value['IntermediateHost']
 
     def set_run_environment(self, value):
         if not (value.get('run_environment') is None):
@@ -170,6 +175,7 @@ class MerchantConfiguration:
         self.set_use_metakey(val)
         self.set_portfolio_id(val)
         self.set_run_environment(val)
+        self.set_IntermediateHost(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
         self.set_request_host(val)
