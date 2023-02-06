@@ -44,6 +44,7 @@ class Ptsv2paymentsMerchantInformation(object):
         'cancel_url': 'str',
         'success_url': 'str',
         'failure_url': 'str',
+        'return_url': 'str',
         'merchant_name': 'str'
     }
 
@@ -61,10 +62,11 @@ class Ptsv2paymentsMerchantInformation(object):
         'cancel_url': 'cancelUrl',
         'success_url': 'successUrl',
         'failure_url': 'failureUrl',
+        'return_url': 'returnUrl',
         'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, merchant_name=None):
+    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, return_url=None, merchant_name=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
@@ -82,6 +84,7 @@ class Ptsv2paymentsMerchantInformation(object):
         self._cancel_url = None
         self._success_url = None
         self._failure_url = None
+        self._return_url = None
         self._merchant_name = None
 
         if merchant_descriptor is not None:
@@ -110,6 +113,8 @@ class Ptsv2paymentsMerchantInformation(object):
           self.success_url = success_url
         if failure_url is not None:
           self.failure_url = failure_url
+        if return_url is not None:
+          self.return_url = return_url
         if merchant_name is not None:
           self.merchant_name = merchant_name
 
@@ -411,6 +416,29 @@ class Ptsv2paymentsMerchantInformation(object):
         """
 
         self._failure_url = failure_url
+
+    @property
+    def return_url(self):
+        """
+        Gets the return_url of this Ptsv2paymentsMerchantInformation.
+        URL for displaying payment results to the consumer (notifications) after the transaction is processed. Usually this URL belongs to merchant and its behavior is defined by merchant 
+
+        :return: The return_url of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._return_url
+
+    @return_url.setter
+    def return_url(self, return_url):
+        """
+        Sets the return_url of this Ptsv2paymentsMerchantInformation.
+        URL for displaying payment results to the consumer (notifications) after the transaction is processed. Usually this URL belongs to merchant and its behavior is defined by merchant 
+
+        :param return_url: The return_url of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._return_url = return_url
 
     @property
     def merchant_name(self):

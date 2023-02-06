@@ -47,6 +47,14 @@ class TestPaymentsApi(unittest.TestCase):
         """
         pass
 
+    def test_refresh_payment_status(self):
+        """
+        Test case for refresh_payment_status
+
+        Check a Payment Status
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

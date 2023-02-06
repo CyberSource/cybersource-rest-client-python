@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_payment**](PaymentsApi.md#create_payment) | **POST** /pts/v2/payments | Process a Payment
 [**increment_auth**](PaymentsApi.md#increment_auth) | **PATCH** /pts/v2/payments/{id} | Increment an Authorization
+[**refresh_payment_status**](PaymentsApi.md#refresh_payment_status) | **POST** /pts/v2/refresh-payment-status/{id} | Check a Payment Status
 
 
 # **create_payment**
@@ -94,6 +95,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PtsV2IncrementalAuthorizationPatch201Response**](PtsV2IncrementalAuthorizationPatch201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/hal+json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **refresh_payment_status**
+> PtsV2PaymentsPost201Response1 refresh_payment_status(id, refresh_payment_status_request)
+
+Check a Payment Status
+
+Checks and updates the payment status 
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.PaymentsApi()
+id = 'id_example' # str | The payment id whose status needs to be checked and updated.
+refresh_payment_status_request = CyberSource.RefreshPaymentStatusRequest() # RefreshPaymentStatusRequest | 
+
+try: 
+    # Check a Payment Status
+    api_response = api_instance.refresh_payment_status(id, refresh_payment_status_request)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PaymentsApi->refresh_payment_status: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The payment id whose status needs to be checked and updated. | 
+ **refresh_payment_status_request** | [**RefreshPaymentStatusRequest**](RefreshPaymentStatusRequest.md)|  | 
+
+### Return type
+
+[**PtsV2PaymentsPost201Response1**](PtsV2PaymentsPost201Response1.md)
 
 ### Authorization
 

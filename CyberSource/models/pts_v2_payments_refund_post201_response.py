@@ -36,7 +36,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'reconciliation_id': 'str',
-        'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
+        'client_reference_information': 'PtsV2PaymentsRefundPost201ResponseClientReferenceInformation',
         'refund_amount_details': 'PtsV2PaymentsRefundPost201ResponseRefundAmountDetails',
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation',
@@ -212,7 +212,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         Gets the client_reference_information of this PtsV2PaymentsRefundPost201Response.
 
         :return: The client_reference_information of this PtsV2PaymentsRefundPost201Response.
-        :rtype: PtsV2PaymentsPost201ResponseClientReferenceInformation
+        :rtype: PtsV2PaymentsRefundPost201ResponseClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -222,7 +222,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         Sets the client_reference_information of this PtsV2PaymentsRefundPost201Response.
 
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsRefundPost201Response.
-        :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
+        :type: PtsV2PaymentsRefundPost201ResponseClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

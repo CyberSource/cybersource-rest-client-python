@@ -31,52 +31,68 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'title': 'str',
         'first_name': 'str',
+        'middle_name': 'str',
         'last_name': 'str',
         'company': 'Ptsv2paymentsOrderInformationBillToCompany',
         'address1': 'str',
         'address2': 'str',
         'locality': 'str',
+        'district': 'str',
         'administrative_area': 'str',
         'postal_code': 'str',
+        'county': 'str',
         'country': 'str',
         'email': 'str',
         'phone_number': 'str'
     }
 
     attribute_map = {
+        'title': 'title',
         'first_name': 'firstName',
+        'middle_name': 'middleName',
         'last_name': 'lastName',
         'company': 'company',
         'address1': 'address1',
         'address2': 'address2',
         'locality': 'locality',
+        'district': 'district',
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
+        'county': 'county',
         'country': 'country',
         'email': 'email',
         'phone_number': 'phoneNumber'
     }
 
-    def __init__(self, first_name=None, last_name=None, company=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, email=None, phone_number=None):
+    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, company=None, address1=None, address2=None, locality=None, district=None, administrative_area=None, postal_code=None, county=None, country=None, email=None, phone_number=None):
         """
         Ptsv2paymentsidcapturesOrderInformationBillTo - a model defined in Swagger
         """
 
+        self._title = None
         self._first_name = None
+        self._middle_name = None
         self._last_name = None
         self._company = None
         self._address1 = None
         self._address2 = None
         self._locality = None
+        self._district = None
         self._administrative_area = None
         self._postal_code = None
+        self._county = None
         self._country = None
         self._email = None
         self._phone_number = None
 
+        if title is not None:
+          self.title = title
         if first_name is not None:
           self.first_name = first_name
+        if middle_name is not None:
+          self.middle_name = middle_name
         if last_name is not None:
           self.last_name = last_name
         if company is not None:
@@ -87,16 +103,43 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
           self.address2 = address2
         if locality is not None:
           self.locality = locality
+        if district is not None:
+          self.district = district
         if administrative_area is not None:
           self.administrative_area = administrative_area
         if postal_code is not None:
           self.postal_code = postal_code
+        if county is not None:
+          self.county = county
         if country is not None:
           self.country = country
         if email is not None:
           self.email = email
         if phone_number is not None:
           self.phone_number = phone_number
+
+    @property
+    def title(self):
+        """
+        Gets the title of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Title. 
+
+        :return: The title of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """
+        Sets the title of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Title. 
+
+        :param title: The title of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :type: str
+        """
+
+        self._title = title
 
     @property
     def first_name(self):
@@ -120,6 +163,29 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         """
 
         self._first_name = first_name
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Customer’s middle name. 
+
+        :return: The middle_name of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Customer’s middle name. 
+
+        :param middle_name: The middle_name of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def last_name(self):
@@ -235,6 +301,29 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         self._locality = locality
 
     @property
+    def district(self):
+        """
+        Gets the district of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality. This field is available only on **Cielo**. 
+
+        :return: The district of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._district
+
+    @district.setter
+    def district(self, district):
+        """
+        Sets the district of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality. This field is available only on **Cielo**. 
+
+        :param district: The district of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :type: str
+        """
+
+        self._district = district
+
+    @property
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2paymentsidcapturesOrderInformationBillTo.
@@ -279,6 +368,29 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         """
 
         self._postal_code = postal_code
+
+    @property
+    def county(self):
+        """
+        Gets the county of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        U.S. county if available.
+
+        :return: The county of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._county
+
+    @county.setter
+    def county(self, county):
+        """
+        Sets the county of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        U.S. county if available.
+
+        :param county: The county of this Ptsv2paymentsidcapturesOrderInformationBillTo.
+        :type: str
+        """
+
+        self._county = county
 
     @property
     def country(self):
