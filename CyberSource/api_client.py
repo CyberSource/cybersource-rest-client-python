@@ -295,6 +295,21 @@ class ApiClient(object):
             _preload_content = False        
             _request_timeout = 3000
 
+        # add client additional headers and override the previous one except signature header
+        if(self.mconfig.default_headers):
+            signVal=None
+            authVal=None
+            if "Signature" in header_params:
+                signVal= header_params['Signature']
+            if "Authorization" in header_params:
+                authVal= header_params['Authorization']
+            
+            header_params.update(self.mconfig.default_headers)
+            if(signVal is not None):
+                header_params['Signature']=signVal
+            if(authVal is not None):
+                header_params['Authorization']=authVal
+
         # perform request and return response
         response_data = self.request(method, url,
                                      query_params=query_params,
