@@ -75,7 +75,7 @@ class TestInstrumentIdentifierApi(unittest.TestCase):
         """
         Test case for post_instrument_identifier_enrollment
 
-        Enroll an Instrument Identifier for Network Tokenization
+        Enroll an Instrument Identifier for Payment Network Token
         """
         pass
 

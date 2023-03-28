@@ -93,7 +93,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     def id(self):
         """
         Gets the id of this Tmsv2customersEmbeddedDefaultShippingAddress.
-        The id of the Shipping Address Token.
+        The Id of the Shipping Address Token.
 
         :return: The id of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :rtype: str
@@ -104,7 +104,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     def id(self, id):
         """
         Sets the id of this Tmsv2customersEmbeddedDefaultShippingAddress.
-        The id of the Shipping Address Token.
+        The Id of the Shipping Address Token.
 
         :param id: The id of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :type: str
@@ -116,7 +116,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     def default(self):
         """
         Gets the default of this Tmsv2customersEmbeddedDefaultShippingAddress.
-        Flag that indicates whether customer shipping address is the dafault. Valid values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
+        Flag that indicates whether customer shipping address is the dafault. Possible Values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
 
         :return: The default of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :rtype: bool
@@ -127,7 +127,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
     def default(self, default):
         """
         Sets the default of this Tmsv2customersEmbeddedDefaultShippingAddress.
-        Flag that indicates whether customer shipping address is the dafault. Valid values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
+        Flag that indicates whether customer shipping address is the dafault. Possible Values:  - `true`: Shipping Address is customer's default.  - `false`: Shipping Address is not customer's default. 
 
         :param default: The default of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :type: bool

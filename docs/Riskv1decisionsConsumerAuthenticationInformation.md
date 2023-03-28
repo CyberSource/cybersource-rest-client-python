@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **secure_corporate_payment_indicator** | **str** | Indicates dedicated payment processes and procedures were used, potential secure corporate payment exemption applies. Possible Values : 0/1  | [optional] 
 **transaction_mode** | **str** | Transaction mode identifier. Identifies the channel from which the transaction originates. Possible values:  - &#x60;M&#x60;: MOTO (Mail Order Telephone Order) - &#x60;R&#x60;: Retail - &#x60;S&#x60;: eCommerce - &#x60;P&#x60;: Mobile Device - &#x60;T&#x60;: Tablet  | [optional] 
 **white_list_status** | **str** | Enables the communication of trusted beneficiary/whitelist status between the ACS, the DS and the 3DS Requestor.  Possible Values:  Y - 3DS Requestor is whitelisted by cardholder  N - 3DS Requestor is not whitelisted by cardholder  | [optional] 
+**score_request** | **int** | Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

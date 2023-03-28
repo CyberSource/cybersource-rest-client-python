@@ -445,8 +445,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param sales_slip_number: The sales_slip_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: int
         """
-        if sales_slip_number is not None and sales_slip_number > 99999:
-            raise ValueError("Invalid value for `sales_slip_number`, must be a value less than or equal to `99999`")
 
         self._sales_slip_number = sales_slip_number
 

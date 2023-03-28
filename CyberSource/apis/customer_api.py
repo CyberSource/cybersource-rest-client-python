@@ -45,21 +45,22 @@ class CustomerApi(object):
 
 
 
-    def delete_customer(self, customer_token_id, **kwargs):
+    def delete_customer(self, customer_id, **kwargs):
         """
         Delete a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customer**<br>Your system can use this API to delete a complete Customer.<br>When a Customer is deleted all associated Payment Instruments & Shipping Addresses are deleted.<br>Any Instrument Identifiers representing the card number will also be deleted if they are not associated with any other Payment Instruments.<br>Note: Individual [Payment Instruments](#token-management_customer-payment-instrument_delete-a-customer-payment-instrument) or [Shipping Addresses](#token-management_customer-shipping-address_delete-a-customer-shipping-address) can be deleted via their own dedicated API resources. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer(customer_token_id, callback=callback_function)
+        >>> thread = api.delete_customer(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,32 +71,33 @@ class CustomerApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_customer_with_http_info(customer_token_id, **kwargs)
+            return self.delete_customer_with_http_info(customer_id, **kwargs)
         else:
-            (data) = self.delete_customer_with_http_info(customer_token_id, **kwargs)
+            (data) = self.delete_customer_with_http_info(customer_id, **kwargs)
             return data
 
-    def delete_customer_with_http_info(self, customer_token_id, **kwargs):
+    def delete_customer_with_http_info(self, customer_id, **kwargs):
         """
         Delete a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customer**<br>Your system can use this API to delete a complete Customer.<br>When a Customer is deleted all associated Payment Instruments & Shipping Addresses are deleted.<br>Any Instrument Identifiers representing the card number will also be deleted if they are not associated with any other Payment Instruments.<br>Note: Individual [Payment Instruments](#token-management_customer-payment-instrument_delete-a-customer-payment-instrument) or [Shipping Addresses](#token-management_customer-shipping-address_delete-a-customer-shipping-address) can be deleted via their own dedicated API resources. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer_with_http_info(customer_token_id, callback=callback_function)
+        >>> thread = api.delete_customer_with_http_info(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'profile_id']
+        all_params = ['customer_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -110,20 +112,20 @@ class CustomerApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `delete_customer`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `delete_customer`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer`, length must be less than or equal to `36`")
@@ -136,8 +138,8 @@ class CustomerApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
 
@@ -162,7 +164,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -177,21 +179,22 @@ class CustomerApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_customer(self, customer_token_id, **kwargs):
+    def get_customer(self, customer_id, **kwargs):
         """
         Retrieve a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.<br><br>**Retrieving a Customer**<br>When your customer signs into their account, your system can use this API to retrieve the Customers default Payment Instrument and Shipping Address.<br>**Note: the actual card data will be masked.**<br>If your customer wants to see other available Payment Instruments, your system can [retrieve all Payment Instruments](#token-management_customer-payment-instrument_list-payment-instruments-for-a-customer) associated with the Customer.<br>The same applies to [Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer).|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers**<br>To perform a payment with the Customers default details specify the [Customer Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-token-id_liveconsole-tab-request-body).<br>To perform a payment with a particular Payment Instrument or Shipping Address <br>specify the [Payment Instrument or Shipping Address Ids in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -202,32 +205,33 @@ class CustomerApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_customer_with_http_info(customer_token_id, **kwargs)
+            return self.get_customer_with_http_info(customer_id, **kwargs)
         else:
-            (data) = self.get_customer_with_http_info(customer_token_id, **kwargs)
+            (data) = self.get_customer_with_http_info(customer_id, **kwargs)
             return data
 
-    def get_customer_with_http_info(self, customer_token_id, **kwargs):
+    def get_customer_with_http_info(self, customer_id, **kwargs):
         """
         Retrieve a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.<br><br>**Retrieving a Customer**<br>When your customer signs into their account, your system can use this API to retrieve the Customers default Payment Instrument and Shipping Address.<br>**Note: the actual card data will be masked.**<br>If your customer wants to see other available Payment Instruments, your system can [retrieve all Payment Instruments](#token-management_customer-payment-instrument_list-payment-instruments-for-a-customer) associated with the Customer.<br>The same applies to [Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer).|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers**<br>To perform a payment with the Customers default details specify the [Customer Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-token-id_liveconsole-tab-request-body).<br>To perform a payment with a particular Payment Instrument or Shipping Address <br>specify the [Payment Instrument or Shipping Address Ids in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_with_http_info(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer_with_http_info(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'profile_id']
+        all_params = ['customer_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -242,20 +246,20 @@ class CustomerApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `get_customer`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer`, length must be less than or equal to `36`")
@@ -268,8 +272,8 @@ class CustomerApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
 
@@ -294,7 +298,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -309,22 +313,23 @@ class CustomerApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_customer(self, customer_token_id, patch_customer_request, **kwargs):
+    def patch_customer(self, customer_id, patch_customer_request, **kwargs):
         """
         Update a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customer**<br>Your system can use this API to update a Customers details including selecting a  [default Payment Instrument](#token-management_customer_update-a-customer_samplerequests-dropdown_update-customers-default-payment-instrument_liveconsole-tab-request-body) or [default Shipping Address](#token-management_customer_update-a-customer_samplerequests-dropdown_update-customers-default-shipping-address_liveconsole-tab-request-body) for use in payments.<br>Note: Updating a Customers [Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument) or [Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address) details is performed using their own dedicated API resources. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customer(customer_token_id, patch_customer_request, callback=callback_function)
+        >>> thread = api.patch_customer(customer_id, patch_customer_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PatchCustomerRequest patch_customer_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
@@ -336,34 +341,35 @@ class CustomerApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_customer_with_http_info(customer_token_id, patch_customer_request, **kwargs)
+            return self.patch_customer_with_http_info(customer_id, patch_customer_request, **kwargs)
         else:
-            (data) = self.patch_customer_with_http_info(customer_token_id, patch_customer_request, **kwargs)
+            (data) = self.patch_customer_with_http_info(customer_id, patch_customer_request, **kwargs)
             return data
 
-    def patch_customer_with_http_info(self, customer_token_id, patch_customer_request, **kwargs):
+    def patch_customer_with_http_info(self, customer_id, patch_customer_request, **kwargs):
         """
         Update a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customer**<br>Your system can use this API to update a Customers details including selecting a  [default Payment Instrument](#token-management_customer_update-a-customer_samplerequests-dropdown_update-customers-default-payment-instrument_liveconsole-tab-request-body) or [default Shipping Address](#token-management_customer_update-a-customer_samplerequests-dropdown_update-customers-default-shipping-address_liveconsole-tab-request-body) for use in payments.<br>Note: Updating a Customers [Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument) or [Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address) details is performed using their own dedicated API resources. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customer_with_http_info(customer_token_id, patch_customer_request, callback=callback_function)
+        >>> thread = api.patch_customer_with_http_info(customer_id, patch_customer_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PatchCustomerRequest patch_customer_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'patch_customer_request', 'profile_id', 'if_match']
+        all_params = ['customer_id', 'patch_customer_request', 'profile_id', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -378,25 +384,25 @@ class CustomerApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `patch_customer`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `patch_customer`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `patch_customer`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `patch_customer`")
         # verify the required parameter 'patch_customer_request' is set
         if ('patch_customer_request' not in params) or (params['patch_customer_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_request` when calling `patch_customer`")
             raise ValueError("Missing the required parameter `patch_customer_request` when calling `patch_customer`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customer`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customer`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customer`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customer`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customer`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customer`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customer`, length must be less than or equal to `36`")
@@ -417,8 +423,8 @@ class CustomerApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
 
@@ -445,7 +451,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -463,6 +469,7 @@ class CustomerApi(object):
     def post_customer(self, post_customer_request, **kwargs):
         """
         Create a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.<br><br>**Creating a Customer**<br>It is recommended you [create a Customer via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-with-customer-token-creation_liveconsole-tab-request-body), this can be for a zero amount.<br>The Customer will be created with a Payment Instrument and Shipping Address.<br>You can also [add additional Payment Instruments to a Customer via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body).<br>In Europe: You should perform Payer Authentication alongside the Authorization.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers**<br>To perform a payment with the Customers default details specify the [Customer Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-token-id_liveconsole-tab-request-body).<br>To perform a payment with a particular Payment Instrument or Shipping Address <br>specify the [Payment Instrument or Shipping Address Ids in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -474,7 +481,7 @@ class CustomerApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostCustomerRequest post_customer_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -493,6 +500,7 @@ class CustomerApi(object):
     def post_customer_with_http_info(self, post_customer_request, **kwargs):
         """
         Create a Customer
+        |  |  |  | | --- | --- | --- | |**Customers**<br>A Customer represents your tokenized customer information.<br>You should associate the Customer Id with the customer account on your systems.<br>A Customer can have one or more [Payment Instruments](#token-management_customer-payment-instrument_create-a-customer-payment-instrumentl) or [Shipping Addresses](#token-management_customer-shipping-address_create-a-customer-shipping-address) with one allocated as the Customers default.<br><br>**Creating a Customer**<br>It is recommended you [create a Customer via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-with-customer-token-creation_liveconsole-tab-request-body), this can be for a zero amount.<br>The Customer will be created with a Payment Instrument and Shipping Address.<br>You can also [add additional Payment Instruments to a Customer via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body).<br>In Europe: You should perform Payer Authentication alongside the Authorization.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers**<br>To perform a payment with the Customers default details specify the [Customer Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-token-id_liveconsole-tab-request-body).<br>To perform a payment with a particular Payment Instrument or Shipping Address <br>specify the [Payment Instrument or Shipping Address Ids in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -504,7 +512,7 @@ class CustomerApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostCustomerRequest post_customer_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: TmsV2CustomersResponse
                  If the method is called asynchronously,
                  returns the request thread.

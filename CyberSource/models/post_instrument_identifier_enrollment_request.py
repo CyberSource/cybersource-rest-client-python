@@ -128,7 +128,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def id(self):
         """
         Gets the id of this PostInstrumentIdentifierEnrollmentRequest.
-        The id of the Instrument Identifier Token. 
+        The Id of the Instrument Identifier Token. 
 
         :return: The id of this PostInstrumentIdentifierEnrollmentRequest.
         :rtype: str
@@ -139,7 +139,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def id(self, id):
         """
         Sets the id of this PostInstrumentIdentifierEnrollmentRequest.
-        The id of the Instrument Identifier Token. 
+        The Id of the Instrument Identifier Token. 
 
         :param id: The id of this PostInstrumentIdentifierEnrollmentRequest.
         :type: str
@@ -151,7 +151,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def object(self):
         """
         Gets the object of this PostInstrumentIdentifierEnrollmentRequest.
-        The type of token.  Valid values: - instrumentIdentifier 
+        The type.  Possible Values: - instrumentIdentifier 
 
         :return: The object of this PostInstrumentIdentifierEnrollmentRequest.
         :rtype: str
@@ -162,7 +162,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def object(self, object):
         """
         Sets the object of this PostInstrumentIdentifierEnrollmentRequest.
-        The type of token.  Valid values: - instrumentIdentifier 
+        The type.  Possible Values: - instrumentIdentifier 
 
         :param object: The object of this PostInstrumentIdentifierEnrollmentRequest.
         :type: str
@@ -174,7 +174,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def state(self):
         """
         Gets the state of this PostInstrumentIdentifierEnrollmentRequest.
-        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
+        Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed. 
 
         :return: The state of this PostInstrumentIdentifierEnrollmentRequest.
         :rtype: str
@@ -185,7 +185,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def state(self, state):
         """
         Sets the state of this PostInstrumentIdentifierEnrollmentRequest.
-        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
+        Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed. 
 
         :param state: The state of this PostInstrumentIdentifierEnrollmentRequest.
         :type: str
@@ -197,7 +197,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def type(self):
         """
         Gets the type of this PostInstrumentIdentifierEnrollmentRequest.
-        The type of Instrument Identifier. Valid values: - enrollable card 
+        The type of Instrument Identifier. Possible Values: - enrollable card 
 
         :return: The type of this PostInstrumentIdentifierEnrollmentRequest.
         :rtype: str
@@ -208,7 +208,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
     def type(self, type):
         """
         Sets the type of this PostInstrumentIdentifierEnrollmentRequest.
-        The type of Instrument Identifier. Valid values: - enrollable card 
+        The type of Instrument Identifier. Possible Values: - enrollable card 
 
         :param type: The type of this PostInstrumentIdentifierEnrollmentRequest.
         :type: str

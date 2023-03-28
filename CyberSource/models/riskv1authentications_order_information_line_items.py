@@ -40,7 +40,17 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         'product_name': 'str',
         'passenger': 'Ptsv2paymentsOrderInformationPassenger',
         'shipping_destination_types': 'str',
-        'tax_amount': 'str'
+        'tax_amount': 'str',
+        'shipping_address1': 'str',
+        'shipping_address2': 'str',
+        'shipping_city': 'str',
+        'shipping_country_code': 'str',
+        'shipping_first_name': 'str',
+        'shipping_last_name': 'str',
+        'shipping_middle_name': 'str',
+        'shipping_phone': 'int',
+        'shipping_postal_code': 'int',
+        'shipping_state': 'str'
     }
 
     attribute_map = {
@@ -53,10 +63,20 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         'product_name': 'productName',
         'passenger': 'passenger',
         'shipping_destination_types': 'shippingDestinationTypes',
-        'tax_amount': 'taxAmount'
+        'tax_amount': 'taxAmount',
+        'shipping_address1': 'shippingAddress1',
+        'shipping_address2': 'shippingAddress2',
+        'shipping_city': 'shippingCity',
+        'shipping_country_code': 'shippingCountryCode',
+        'shipping_first_name': 'shippingFirstName',
+        'shipping_last_name': 'shippingLastName',
+        'shipping_middle_name': 'shippingMiddleName',
+        'shipping_phone': 'shippingPhone',
+        'shipping_postal_code': 'shippingPostalCode',
+        'shipping_state': 'shippingState'
     }
 
-    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_description=None, product_name=None, passenger=None, shipping_destination_types=None, tax_amount=None):
+    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_description=None, product_name=None, passenger=None, shipping_destination_types=None, tax_amount=None, shipping_address1=None, shipping_address2=None, shipping_city=None, shipping_country_code=None, shipping_first_name=None, shipping_last_name=None, shipping_middle_name=None, shipping_phone=None, shipping_postal_code=None, shipping_state=None):
         """
         Riskv1authenticationsOrderInformationLineItems - a model defined in Swagger
         """
@@ -71,6 +91,16 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         self._passenger = None
         self._shipping_destination_types = None
         self._tax_amount = None
+        self._shipping_address1 = None
+        self._shipping_address2 = None
+        self._shipping_city = None
+        self._shipping_country_code = None
+        self._shipping_first_name = None
+        self._shipping_last_name = None
+        self._shipping_middle_name = None
+        self._shipping_phone = None
+        self._shipping_postal_code = None
+        self._shipping_state = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -91,6 +121,26 @@ class Riskv1authenticationsOrderInformationLineItems(object):
           self.shipping_destination_types = shipping_destination_types
         if tax_amount is not None:
           self.tax_amount = tax_amount
+        if shipping_address1 is not None:
+          self.shipping_address1 = shipping_address1
+        if shipping_address2 is not None:
+          self.shipping_address2 = shipping_address2
+        if shipping_city is not None:
+          self.shipping_city = shipping_city
+        if shipping_country_code is not None:
+          self.shipping_country_code = shipping_country_code
+        if shipping_first_name is not None:
+          self.shipping_first_name = shipping_first_name
+        if shipping_last_name is not None:
+          self.shipping_last_name = shipping_last_name
+        if shipping_middle_name is not None:
+          self.shipping_middle_name = shipping_middle_name
+        if shipping_phone is not None:
+          self.shipping_phone = shipping_phone
+        if shipping_postal_code is not None:
+          self.shipping_postal_code = shipping_postal_code
+        if shipping_state is not None:
+          self.shipping_state = shipping_state
 
     @property
     def total_amount(self):
@@ -160,10 +210,6 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param quantity: The quantity of this Riskv1authenticationsOrderInformationLineItems.
         :type: int
         """
-        if quantity is not None and quantity > 999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
-        if quantity is not None and quantity < 1:
-            raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 
         self._quantity = quantity
 
@@ -325,6 +371,236 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         """
 
         self._tax_amount = tax_amount
+
+    @property
+    def shipping_address1(self):
+        """
+        Gets the shipping_address1 of this Riskv1authenticationsOrderInformationLineItems.
+        Address where item will be shipped
+
+        :return: The shipping_address1 of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_address1
+
+    @shipping_address1.setter
+    def shipping_address1(self, shipping_address1):
+        """
+        Sets the shipping_address1 of this Riskv1authenticationsOrderInformationLineItems.
+        Address where item will be shipped
+
+        :param shipping_address1: The shipping_address1 of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_address1 = shipping_address1
+
+    @property
+    def shipping_address2(self):
+        """
+        Gets the shipping_address2 of this Riskv1authenticationsOrderInformationLineItems.
+        Address where item will be shipped
+
+        :return: The shipping_address2 of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_address2
+
+    @shipping_address2.setter
+    def shipping_address2(self, shipping_address2):
+        """
+        Sets the shipping_address2 of this Riskv1authenticationsOrderInformationLineItems.
+        Address where item will be shipped
+
+        :param shipping_address2: The shipping_address2 of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_address2 = shipping_address2
+
+    @property
+    def shipping_city(self):
+        """
+        Gets the shipping_city of this Riskv1authenticationsOrderInformationLineItems.
+        City where item will be shipped
+
+        :return: The shipping_city of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_city
+
+    @shipping_city.setter
+    def shipping_city(self, shipping_city):
+        """
+        Sets the shipping_city of this Riskv1authenticationsOrderInformationLineItems.
+        City where item will be shipped
+
+        :param shipping_city: The shipping_city of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_city = shipping_city
+
+    @property
+    def shipping_country_code(self):
+        """
+        Gets the shipping_country_code of this Riskv1authenticationsOrderInformationLineItems.
+        Country where item will be shipped
+
+        :return: The shipping_country_code of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_country_code
+
+    @shipping_country_code.setter
+    def shipping_country_code(self, shipping_country_code):
+        """
+        Sets the shipping_country_code of this Riskv1authenticationsOrderInformationLineItems.
+        Country where item will be shipped
+
+        :param shipping_country_code: The shipping_country_code of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_country_code = shipping_country_code
+
+    @property
+    def shipping_first_name(self):
+        """
+        Gets the shipping_first_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's first name
+
+        :return: The shipping_first_name of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_first_name
+
+    @shipping_first_name.setter
+    def shipping_first_name(self, shipping_first_name):
+        """
+        Sets the shipping_first_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's first name
+
+        :param shipping_first_name: The shipping_first_name of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_first_name = shipping_first_name
+
+    @property
+    def shipping_last_name(self):
+        """
+        Gets the shipping_last_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's last name
+
+        :return: The shipping_last_name of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_last_name
+
+    @shipping_last_name.setter
+    def shipping_last_name(self, shipping_last_name):
+        """
+        Sets the shipping_last_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's last name
+
+        :param shipping_last_name: The shipping_last_name of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_last_name = shipping_last_name
+
+    @property
+    def shipping_middle_name(self):
+        """
+        Gets the shipping_middle_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's middle name
+
+        :return: The shipping_middle_name of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_middle_name
+
+    @shipping_middle_name.setter
+    def shipping_middle_name(self, shipping_middle_name):
+        """
+        Sets the shipping_middle_name of this Riskv1authenticationsOrderInformationLineItems.
+        Customer's middle name
+
+        :param shipping_middle_name: The shipping_middle_name of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_middle_name = shipping_middle_name
+
+    @property
+    def shipping_phone(self):
+        """
+        Gets the shipping_phone of this Riskv1authenticationsOrderInformationLineItems.
+        Phone number where item will be shipped
+
+        :return: The shipping_phone of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: int
+        """
+        return self._shipping_phone
+
+    @shipping_phone.setter
+    def shipping_phone(self, shipping_phone):
+        """
+        Sets the shipping_phone of this Riskv1authenticationsOrderInformationLineItems.
+        Phone number where item will be shipped
+
+        :param shipping_phone: The shipping_phone of this Riskv1authenticationsOrderInformationLineItems.
+        :type: int
+        """
+
+        self._shipping_phone = shipping_phone
+
+    @property
+    def shipping_postal_code(self):
+        """
+        Gets the shipping_postal_code of this Riskv1authenticationsOrderInformationLineItems.
+        Postal code where item will be shipped
+
+        :return: The shipping_postal_code of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: int
+        """
+        return self._shipping_postal_code
+
+    @shipping_postal_code.setter
+    def shipping_postal_code(self, shipping_postal_code):
+        """
+        Sets the shipping_postal_code of this Riskv1authenticationsOrderInformationLineItems.
+        Postal code where item will be shipped
+
+        :param shipping_postal_code: The shipping_postal_code of this Riskv1authenticationsOrderInformationLineItems.
+        :type: int
+        """
+
+        self._shipping_postal_code = shipping_postal_code
+
+    @property
+    def shipping_state(self):
+        """
+        Gets the shipping_state of this Riskv1authenticationsOrderInformationLineItems.
+        State where item will be shipped
+
+        :return: The shipping_state of this Riskv1authenticationsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._shipping_state
+
+    @shipping_state.setter
+    def shipping_state(self, shipping_state):
+        """
+        Sets the shipping_state of this Riskv1authenticationsOrderInformationLineItems.
+        State where item will be shipped
+
+        :param shipping_state: The shipping_state of this Riskv1authenticationsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._shipping_state = shipping_state
 
     def to_dict(self):
         """

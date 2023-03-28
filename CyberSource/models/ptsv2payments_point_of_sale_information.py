@@ -48,6 +48,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'terminal_card_capture_capability': 'str',
         'terminal_output_capability': 'str',
         'terminal_pin_capability': 'int',
+        'pin_entry_solution': 'str',
         'device_id': 'str',
         'pin_block_encoding_format': 'int',
         'encrypted_pin': 'str',
@@ -79,6 +80,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'terminal_card_capture_capability': 'terminalCardCaptureCapability',
         'terminal_output_capability': 'terminalOutputCapability',
         'terminal_pin_capability': 'terminalPinCapability',
+        'pin_entry_solution': 'pinEntrySolution',
         'device_id': 'deviceId',
         'pin_block_encoding_format': 'pinBlockEncodingFormat',
         'encrypted_pin': 'encryptedPin',
@@ -92,7 +94,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'service_code': 'serviceCode'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, pin_entry_solution=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -114,6 +116,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._terminal_card_capture_capability = None
         self._terminal_output_capability = None
         self._terminal_pin_capability = None
+        self._pin_entry_solution = None
         self._device_id = None
         self._pin_block_encoding_format = None
         self._encrypted_pin = None
@@ -160,6 +163,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.terminal_output_capability = terminal_output_capability
         if terminal_pin_capability is not None:
           self.terminal_pin_capability = terminal_pin_capability
+        if pin_entry_solution is not None:
+          self.pin_entry_solution = pin_entry_solution
         if device_id is not None:
           self.device_id = device_id
         if pin_block_encoding_format is not None:
@@ -295,10 +300,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param cat_level: The cat_level of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
         """
-        if cat_level is not None and cat_level > 9:
-            raise ValueError("Invalid value for `cat_level`, must be a value less than or equal to `9`")
-        if cat_level is not None and cat_level < 1:
-            raise ValueError("Invalid value for `cat_level`, must be a value greater than or equal to `1`")
 
         self._cat_level = cat_level
 
@@ -345,10 +346,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_capability: The terminal_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
         """
-        if terminal_capability is not None and terminal_capability > 5:
-            raise ValueError("Invalid value for `terminal_capability`, must be a value less than or equal to `5`")
-        if terminal_capability is not None and terminal_capability < 1:
-            raise ValueError("Invalid value for `terminal_capability`, must be a value greater than or equal to `1`")
 
         self._terminal_capability = terminal_capability
 
@@ -561,7 +558,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_pin_capability(self):
         """
         Gets the terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
-        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - OmniPay Direct - SIX  Required field for authorization or credit of PIN transactions. 
+        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  2: PIN Pad down -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - OmniPay Direct - SIX  Required field for authorization or credit of PIN transactions. 
 
         :return: The terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: int
@@ -572,13 +569,36 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def terminal_pin_capability(self, terminal_pin_capability):
         """
         Sets the terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
-        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - OmniPay Direct - SIX  Required field for authorization or credit of PIN transactions. 
+        Maximum PIN length that the terminal can capture.  Possible values: -  0: No PIN capture capability -  1: PIN capture capability unknown -  2: PIN Pad down -  4: Four characters -  5: Five characters -  6: Six characters -  7: Seven characters -  8: Eight characters -  9: Nine characters - 10: Ten characters - 11: Eleven characters - 12: Twelve characters  This field is supported for authorizations and credits only on the following processors: - American Express Direct - Credit Mutuel-CIC - OmniPay Direct - SIX  Required field for authorization or credit of PIN transactions. 
 
         :param terminal_pin_capability: The terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
         """
 
         self._terminal_pin_capability = terminal_pin_capability
+
+    @property
+    def pin_entry_solution(self):
+        """
+        Gets the pin_entry_solution of this Ptsv2paymentsPointOfSaleInformation.
+        This field will contain the type of Pin Pad the terminal has.  Possible values: -   PCI-SPoC: Where the pin is being put on screen -   PCI-PTS: Where the pin is being put on actual hardware pin pad 
+
+        :return: The pin_entry_solution of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._pin_entry_solution
+
+    @pin_entry_solution.setter
+    def pin_entry_solution(self, pin_entry_solution):
+        """
+        Sets the pin_entry_solution of this Ptsv2paymentsPointOfSaleInformation.
+        This field will contain the type of Pin Pad the terminal has.  Possible values: -   PCI-SPoC: Where the pin is being put on screen -   PCI-PTS: Where the pin is being put on actual hardware pin pad 
+
+        :param pin_entry_solution: The pin_entry_solution of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._pin_entry_solution = pin_entry_solution
 
     @property
     def device_id(self):
@@ -623,8 +643,6 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param pin_block_encoding_format: The pin_block_encoding_format of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
         """
-        if pin_block_encoding_format is not None and pin_block_encoding_format > 9:
-            raise ValueError("Invalid value for `pin_block_encoding_format`, must be a value less than or equal to `9`")
 
         self._pin_block_encoding_format = pin_block_encoding_format
 

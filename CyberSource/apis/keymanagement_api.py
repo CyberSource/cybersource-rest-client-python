@@ -67,7 +67,7 @@ class KeymanagementApi(object):
         :param list[str] key_types: Key Type, Possible values -  certificate, password, pgp and scmp_api. When Key Type is provided atleast one more filter needs to be provided
         :param datetime expiration_start_date: Expiry Filter Start Date. When Expiration Date filter is provided, atleast one more filter needs to be provided
         :param datetime expiration_end_date: Expiry Filter End Date. When Expiration Date filter is provided, atleast one more filter needs to be provided
-        :return: InlineResponse200
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -104,7 +104,7 @@ class KeymanagementApi(object):
         :param list[str] key_types: Key Type, Possible values -  certificate, password, pgp and scmp_api. When Key Type is provided atleast one more filter needs to be provided
         :param datetime expiration_start_date: Expiry Filter Start Date. When Expiration Date filter is provided, atleast one more filter needs to be provided
         :param datetime expiration_end_date: Expiry Filter End Date. When Expiration Date filter is provided, atleast one more filter needs to be provided
-        :return: InlineResponse200
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -185,7 +185,7 @@ class KeymanagementApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse200',
+                                        response_type='InlineResponse20011',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

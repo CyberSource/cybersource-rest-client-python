@@ -33,12 +33,14 @@ class Riskv1decisionsOrderInformationShipTo(object):
     swagger_types = {
         'address1': 'str',
         'address2': 'str',
+        'address3': 'str',
         'administrative_area': 'str',
         'country': 'str',
         'destination_types': 'str',
         'locality': 'str',
         'first_name': 'str',
         'last_name': 'str',
+        'middle_name': 'str',
         'phone_number': 'str',
         'postal_code': 'str',
         'destination_code': 'int',
@@ -48,31 +50,35 @@ class Riskv1decisionsOrderInformationShipTo(object):
     attribute_map = {
         'address1': 'address1',
         'address2': 'address2',
+        'address3': 'address3',
         'administrative_area': 'administrativeArea',
         'country': 'country',
         'destination_types': 'destinationTypes',
         'locality': 'locality',
         'first_name': 'firstName',
         'last_name': 'lastName',
+        'middle_name': 'middleName',
         'phone_number': 'phoneNumber',
         'postal_code': 'postalCode',
         'destination_code': 'destinationCode',
         'method': 'method'
     }
 
-    def __init__(self, address1=None, address2=None, administrative_area=None, country=None, destination_types=None, locality=None, first_name=None, last_name=None, phone_number=None, postal_code=None, destination_code=None, method=None):
+    def __init__(self, address1=None, address2=None, address3=None, administrative_area=None, country=None, destination_types=None, locality=None, first_name=None, last_name=None, middle_name=None, phone_number=None, postal_code=None, destination_code=None, method=None):
         """
         Riskv1decisionsOrderInformationShipTo - a model defined in Swagger
         """
 
         self._address1 = None
         self._address2 = None
+        self._address3 = None
         self._administrative_area = None
         self._country = None
         self._destination_types = None
         self._locality = None
         self._first_name = None
         self._last_name = None
+        self._middle_name = None
         self._phone_number = None
         self._postal_code = None
         self._destination_code = None
@@ -82,6 +88,8 @@ class Riskv1decisionsOrderInformationShipTo(object):
           self.address1 = address1
         if address2 is not None:
           self.address2 = address2
+        if address3 is not None:
+          self.address3 = address3
         if administrative_area is not None:
           self.administrative_area = administrative_area
         if country is not None:
@@ -94,6 +102,8 @@ class Riskv1decisionsOrderInformationShipTo(object):
           self.first_name = first_name
         if last_name is not None:
           self.last_name = last_name
+        if middle_name is not None:
+          self.middle_name = middle_name
         if phone_number is not None:
           self.phone_number = phone_number
         if postal_code is not None:
@@ -150,10 +160,33 @@ class Riskv1decisionsOrderInformationShipTo(object):
         self._address2 = address2
 
     @property
+    def address3(self):
+        """
+        Gets the address3 of this Riskv1decisionsOrderInformationShipTo.
+        Third line of the shipping address.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+
+        :return: The address3 of this Riskv1decisionsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._address3
+
+    @address3.setter
+    def address3(self, address3):
+        """
+        Sets the address3 of this Riskv1decisionsOrderInformationShipTo.
+        Third line of the shipping address.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+
+        :param address3: The address3 of this Riskv1decisionsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._address3 = address3
+
+    @property
     def administrative_area(self):
         """
         Gets the administrative_area of this Riskv1decisionsOrderInformationShipTo.
-        State or province of the shipping address. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf)  Required field for authorization if any shipping address information is included in the request and shipping to the U.S. or Canada; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        State or province of the shipping address. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf) (maximum length: 2)   Required field for authorization if any shipping address information is included in the request and shipping to the U.S. or Canada; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :return: The administrative_area of this Riskv1decisionsOrderInformationShipTo.
         :rtype: str
@@ -164,7 +197,7 @@ class Riskv1decisionsOrderInformationShipTo(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Riskv1decisionsOrderInformationShipTo.
-        State or province of the shipping address. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf)  Required field for authorization if any shipping address information is included in the request and shipping to the U.S. or Canada; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        State or province of the shipping address. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf) (maximum length: 2)   Required field for authorization if any shipping address information is included in the request and shipping to the U.S. or Canada; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
 
         :param administrative_area: The administrative_area of this Riskv1decisionsOrderInformationShipTo.
         :type: str
@@ -286,6 +319,29 @@ class Riskv1decisionsOrderInformationShipTo(object):
         """
 
         self._last_name = last_name
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this Riskv1decisionsOrderInformationShipTo.
+        Middle name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
+
+        :return: The middle_name of this Riskv1decisionsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this Riskv1decisionsOrderInformationShipTo.
+        Middle name of the recipient.  #### Litle Maximum length: 25  #### All other processors Maximum length: 60  Optional field. 
+
+        :param middle_name: The middle_name of this Riskv1decisionsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._middle_name = middle_name
 
     @property
     def phone_number(self):

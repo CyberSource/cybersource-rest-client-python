@@ -48,7 +48,7 @@ class UnifiedCheckoutCaptureContextApi(object):
     def generate_unified_checkout_capture_context(self, generate_unified_checkout_capture_context_request, **kwargs):
         """
         Generate Unified Checkout Capture Context
-        Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the paramiters for how Unified Chkcout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initate Unified Checkout within a merchnat web page
+        Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the parameters for how Unified Checkout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initiate Unified Checkout within a merchant web page
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -60,7 +60,7 @@ class UnifiedCheckoutCaptureContextApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param GenerateUnifiedCheckoutCaptureContextRequest generate_unified_checkout_capture_context_request: (required)
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -78,7 +78,7 @@ class UnifiedCheckoutCaptureContextApi(object):
     def generate_unified_checkout_capture_context_with_http_info(self, generate_unified_checkout_capture_context_request, **kwargs):
         """
         Generate Unified Checkout Capture Context
-        Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the paramiters for how Unified Chkcout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initate Unified Checkout within a merchnat web page
+        Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the parameters for how Unified Checkout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initiate Unified Checkout within a merchant web page
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -90,7 +90,7 @@ class UnifiedCheckoutCaptureContextApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param GenerateUnifiedCheckoutCaptureContextRequest generate_unified_checkout_capture_context_request: (required)
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -149,7 +149,7 @@ class UnifiedCheckoutCaptureContextApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='str',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

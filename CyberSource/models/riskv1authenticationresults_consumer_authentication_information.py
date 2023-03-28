@@ -39,7 +39,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'response_access_token': 'str',
         'signed_pares_status_reason': 'str',
         'signed_pares': 'str',
-        'white_list_status': 'str'
+        'white_list_status': 'str',
+        'credential_encrypted': 'str'
     }
 
     attribute_map = {
@@ -51,10 +52,11 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'response_access_token': 'responseAccessToken',
         'signed_pares_status_reason': 'signedParesStatusReason',
         'signed_pares': 'signedPares',
-        'white_list_status': 'whiteListStatus'
+        'white_list_status': 'whiteListStatus',
+        'credential_encrypted': 'credentialEncrypted'
     }
 
-    def __init__(self, authentication_transaction_id=None, authentication_transaction_context=None, otp_token=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None):
+    def __init__(self, authentication_transaction_id=None, authentication_transaction_context=None, otp_token=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None, credential_encrypted=None):
         """
         Riskv1authenticationresultsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -68,6 +70,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._signed_pares_status_reason = None
         self._signed_pares = None
         self._white_list_status = None
+        self._credential_encrypted = None
 
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
@@ -87,6 +90,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
           self.signed_pares = signed_pares
         if white_list_status is not None:
           self.white_list_status = white_list_status
+        if credential_encrypted is not None:
+          self.credential_encrypted = credential_encrypted
 
     @property
     def authentication_transaction_id(self):
@@ -294,6 +299,29 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         """
 
         self._white_list_status = white_list_status
+
+    @property
+    def credential_encrypted(self):
+        """
+        Gets the credential_encrypted of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        A flag to indicate if the passed credential has been encrypted by the Merchant.
+
+        :return: The credential_encrypted of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._credential_encrypted
+
+    @credential_encrypted.setter
+    def credential_encrypted(self, credential_encrypted):
+        """
+        Sets the credential_encrypted of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        A flag to indicate if the passed credential has been encrypted by the Merchant.
+
+        :param credential_encrypted: The credential_encrypted of this Riskv1authenticationresultsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._credential_encrypted = credential_encrypted
 
     def to_dict(self):
         """

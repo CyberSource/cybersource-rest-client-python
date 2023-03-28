@@ -45,22 +45,23 @@ class CustomerShippingAddressApi(object):
 
 
 
-    def delete_customer_shipping_address(self, customer_token_id, shipping_address_token_id, **kwargs):
+    def delete_customer_shipping_address(self, customer_id, shipping_address_id, **kwargs):
         """
         Delete a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customers Shipping Address**<br>Your system can use this API to delete an existing Shipping Address for a Customer.<br>If a customer has more than one Shipping Address then the default Shipping Address cannot be deleted without first selecting a [new default Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address_samplerequests-dropdown_make-customer-shipping-address-the-default_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer_shipping_address(customer_token_id, shipping_address_token_id, callback=callback_function)
+        >>> thread = api.delete_customer_shipping_address(customer_id, shipping_address_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -71,33 +72,34 @@ class CustomerShippingAddressApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
+            return self.delete_customer_shipping_address_with_http_info(customer_id, shipping_address_id, **kwargs)
         else:
-            (data) = self.delete_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
+            (data) = self.delete_customer_shipping_address_with_http_info(customer_id, shipping_address_id, **kwargs)
             return data
 
-    def delete_customer_shipping_address_with_http_info(self, customer_token_id, shipping_address_token_id, **kwargs):
+    def delete_customer_shipping_address_with_http_info(self, customer_id, shipping_address_id, **kwargs):
         """
         Delete a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customers Shipping Address**<br>Your system can use this API to delete an existing Shipping Address for a Customer.<br>If a customer has more than one Shipping Address then the default Shipping Address cannot be deleted without first selecting a [new default Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address_samplerequests-dropdown_make-customer-shipping-address-the-default_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, callback=callback_function)
+        >>> thread = api.delete_customer_shipping_address_with_http_info(customer_id, shipping_address_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'shipping_address_token_id', 'profile_id']
+        all_params = ['customer_id', 'shipping_address_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -112,33 +114,33 @@ class CustomerShippingAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `delete_customer_shipping_address`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `delete_customer_shipping_address`")
-        # verify the required parameter 'shipping_address_token_id' is set
-        if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer_shipping_address`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer_shipping_address`")
+        # verify the required parameter 'shipping_address_id' is set
+        if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`")
-            raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `delete_customer_shipping_address`")
+            raise ValueError("Missing the required parameter `shipping_address_id` when calling `delete_customer_shipping_address`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `32`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `delete_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_shipping_address`, length must be less than or equal to `36`")
@@ -151,10 +153,10 @@ class CustomerShippingAddressApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'shipping_address_token_id' in params:
-            path_params['shippingAddressTokenId'] = params['shipping_address_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'shipping_address_id' in params:
+            path_params['shippingAddressId'] = params['shipping_address_id']
 
         query_params = []
 
@@ -179,7 +181,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/shipping-addresses/{shipping_address_token_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -194,22 +196,23 @@ class CustomerShippingAddressApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_customer_shipping_address(self, customer_token_id, shipping_address_token_id, **kwargs):
+    def get_customer_shipping_address(self, customer_id, shipping_address_id, **kwargs):
         """
         Retrieve a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving a Customer Shipping Address**<br>Your system can use this API to retrieve an existing Shipping Address for a Customer.<br>To perform a payment with a particular Shipping Address simply specify the [Shipping Address Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_shipping_address(customer_token_id, shipping_address_token_id, callback=callback_function)
+        >>> thread = api.get_customer_shipping_address(customer_id, shipping_address_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
                  returns the request thread.
@@ -220,33 +223,34 @@ class CustomerShippingAddressApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
+            return self.get_customer_shipping_address_with_http_info(customer_id, shipping_address_id, **kwargs)
         else:
-            (data) = self.get_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, **kwargs)
+            (data) = self.get_customer_shipping_address_with_http_info(customer_id, shipping_address_id, **kwargs)
             return data
 
-    def get_customer_shipping_address_with_http_info(self, customer_token_id, shipping_address_token_id, **kwargs):
+    def get_customer_shipping_address_with_http_info(self, customer_id, shipping_address_id, **kwargs):
         """
         Retrieve a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving a Customer Shipping Address**<br>Your system can use this API to retrieve an existing Shipping Address for a Customer.<br>To perform a payment with a particular Shipping Address simply specify the [Shipping Address Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, callback=callback_function)
+        >>> thread = api.get_customer_shipping_address_with_http_info(customer_id, shipping_address_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'shipping_address_token_id', 'profile_id']
+        all_params = ['customer_id', 'shipping_address_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -261,33 +265,33 @@ class CustomerShippingAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_shipping_address`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_shipping_address`")
-        # verify the required parameter 'shipping_address_token_id' is set
-        if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_address`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_shipping_address`")
+        # verify the required parameter 'shipping_address_id' is set
+        if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `get_customer_shipping_address`")
-            raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `get_customer_shipping_address`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `get_customer_shipping_address`")
+            raise ValueError("Missing the required parameter `shipping_address_id` when calling `get_customer_shipping_address`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `get_customer_shipping_address`, length must be less than or equal to `32`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `get_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_address`, length must be less than or equal to `36`")
@@ -300,10 +304,10 @@ class CustomerShippingAddressApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'shipping_address_token_id' in params:
-            path_params['shippingAddressTokenId'] = params['shipping_address_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'shipping_address_id' in params:
+            path_params['shippingAddressId'] = params['shipping_address_id']
 
         query_params = []
 
@@ -328,7 +332,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/shipping-addresses/{shipping_address_token_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -343,21 +347,22 @@ class CustomerShippingAddressApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_customer_shipping_addresses_list(self, customer_token_id, **kwargs):
+    def get_customer_shipping_addresses_list(self, customer_id, **kwargs):
         """
         List Shipping Addresses for a Customer
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving all Customer Shipping Addresses**<br>Your system can use this API to retrieve all existing Shipping Addresses for a Customer. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_shipping_addresses_list(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer_shipping_addresses_list(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: ShippingAddressListForCustomer
@@ -370,26 +375,27 @@ class CustomerShippingAddressApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_customer_shipping_addresses_list_with_http_info(customer_token_id, **kwargs)
+            return self.get_customer_shipping_addresses_list_with_http_info(customer_id, **kwargs)
         else:
-            (data) = self.get_customer_shipping_addresses_list_with_http_info(customer_token_id, **kwargs)
+            (data) = self.get_customer_shipping_addresses_list_with_http_info(customer_id, **kwargs)
             return data
 
-    def get_customer_shipping_addresses_list_with_http_info(self, customer_token_id, **kwargs):
+    def get_customer_shipping_addresses_list_with_http_info(self, customer_id, **kwargs):
         """
         List Shipping Addresses for a Customer
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving all Customer Shipping Addresses**<br>Your system can use this API to retrieve all existing Shipping Addresses for a Customer. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_shipping_addresses_list_with_http_info(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer_shipping_addresses_list_with_http_info(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: ShippingAddressListForCustomer
@@ -397,7 +403,7 @@ class CustomerShippingAddressApi(object):
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'profile_id', 'offset', 'limit']
+        all_params = ['customer_id', 'profile_id', 'offset', 'limit']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -412,20 +418,20 @@ class CustomerShippingAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_shipping_addresses_list`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_shipping_addresses_list`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_shipping_addresses_list`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_shipping_addresses_list`, length must be less than or equal to `36`")
@@ -450,8 +456,8 @@ class CustomerShippingAddressApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
         if 'offset' in params:
@@ -480,7 +486,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/shipping-addresses', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -495,23 +501,24 @@ class CustomerShippingAddressApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_customers_shipping_address(self, customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, **kwargs):
+    def patch_customers_shipping_address(self, customer_id, shipping_address_id, patch_customer_shipping_address_request, **kwargs):
         """
         Update a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customers Shipping Address**<br>Your system can use this API to update an existing Shipping Addresses for a Customer, including selecting a [default Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address_samplerequests-dropdown_make-customer-shipping-address-the-default_liveconsole-tab-request-body) for use in payments. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customers_shipping_address(customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, callback=callback_function)
+        >>> thread = api.patch_customers_shipping_address(customer_id, shipping_address_id, patch_customer_shipping_address_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
         :param PatchCustomerShippingAddressRequest patch_customer_shipping_address_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
@@ -523,35 +530,36 @@ class CustomerShippingAddressApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_customers_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, **kwargs)
+            return self.patch_customers_shipping_address_with_http_info(customer_id, shipping_address_id, patch_customer_shipping_address_request, **kwargs)
         else:
-            (data) = self.patch_customers_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, **kwargs)
+            (data) = self.patch_customers_shipping_address_with_http_info(customer_id, shipping_address_id, patch_customer_shipping_address_request, **kwargs)
             return data
 
-    def patch_customers_shipping_address_with_http_info(self, customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, **kwargs):
+    def patch_customers_shipping_address_with_http_info(self, customer_id, shipping_address_id, patch_customer_shipping_address_request, **kwargs):
         """
         Update a Customer Shipping Address
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customers Shipping Address**<br>Your system can use this API to update an existing Shipping Addresses for a Customer, including selecting a [default Shipping Address](#token-management_customer-shipping-address_update-a-customer-shipping-address_samplerequests-dropdown_make-customer-shipping-address-the-default_liveconsole-tab-request-body) for use in payments. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customers_shipping_address_with_http_info(customer_token_id, shipping_address_token_id, patch_customer_shipping_address_request, callback=callback_function)
+        >>> thread = api.patch_customers_shipping_address_with_http_info(customer_id, shipping_address_id, patch_customer_shipping_address_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str shipping_address_token_id: The TokenId of an shipping address. (required)
+        :param str customer_id: The Id of a Customer. (required)
+        :param str shipping_address_id: The Id of a shipping address. (required)
         :param PatchCustomerShippingAddressRequest patch_customer_shipping_address_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'shipping_address_token_id', 'patch_customer_shipping_address_request', 'profile_id', 'if_match']
+        all_params = ['customer_id', 'shipping_address_id', 'patch_customer_shipping_address_request', 'profile_id', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -566,38 +574,38 @@ class CustomerShippingAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `patch_customers_shipping_address`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `patch_customers_shipping_address`")
-        # verify the required parameter 'shipping_address_token_id' is set
-        if ('shipping_address_token_id' not in params) or (params['shipping_address_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `patch_customers_shipping_address`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `patch_customers_shipping_address`")
+        # verify the required parameter 'shipping_address_id' is set
+        if ('shipping_address_id' not in params) or (params['shipping_address_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`")
-            raise ValueError("Missing the required parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `shipping_address_id` when calling `patch_customers_shipping_address`")
+            raise ValueError("Missing the required parameter `shipping_address_id` when calling `patch_customers_shipping_address`")
         # verify the required parameter 'patch_customer_shipping_address_request' is set
         if ('patch_customer_shipping_address_request' not in params) or (params['patch_customer_shipping_address_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
             raise ValueError("Missing the required parameter `patch_customer_shipping_address_request` when calling `patch_customers_shipping_address`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
-        if 'shipping_address_token_id' in params and len(params['shipping_address_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `32`")
+        if 'shipping_address_id' in params and len(params['shipping_address_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `shipping_address_token_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `shipping_address_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `shipping_address_id` when calling `patch_customers_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_shipping_address`, length must be less than or equal to `36`")
@@ -618,10 +626,10 @@ class CustomerShippingAddressApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'shipping_address_token_id' in params:
-            path_params['shippingAddressTokenId'] = params['shipping_address_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'shipping_address_id' in params:
+            path_params['shippingAddressId'] = params['shipping_address_id']
 
         query_params = []
 
@@ -648,7 +656,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/shipping-addresses/{shipping_address_token_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -663,23 +671,23 @@ class CustomerShippingAddressApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_customer_shipping_address(self, customer_token_id, post_customer_shipping_address_request, **kwargs):
+    def post_customer_shipping_address(self, customer_id, post_customer_shipping_address_request, **kwargs):
         """
         Create a Customer Shipping Address
-        Include an existing TMS Customer token id in the request URI. * A Customer token can be created by calling: **POST */tms/v2/customers*** 
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Creating a Customer Shipping Address**<br>Your system can use this API to create an existing Customers default or non default Shipping Address.<br>You can also create additional Customer Shipping Addresses via the [Payments API](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_customer_shipping_address(customer_token_id, post_customer_shipping_address_request, callback=callback_function)
+        >>> thread = api.post_customer_shipping_address(customer_id, post_customer_shipping_address_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PostCustomerShippingAddressRequest post_customer_shipping_address_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
                  returns the request thread.
@@ -690,34 +698,34 @@ class CustomerShippingAddressApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_customer_shipping_address_with_http_info(customer_token_id, post_customer_shipping_address_request, **kwargs)
+            return self.post_customer_shipping_address_with_http_info(customer_id, post_customer_shipping_address_request, **kwargs)
         else:
-            (data) = self.post_customer_shipping_address_with_http_info(customer_token_id, post_customer_shipping_address_request, **kwargs)
+            (data) = self.post_customer_shipping_address_with_http_info(customer_id, post_customer_shipping_address_request, **kwargs)
             return data
 
-    def post_customer_shipping_address_with_http_info(self, customer_token_id, post_customer_shipping_address_request, **kwargs):
+    def post_customer_shipping_address_with_http_info(self, customer_id, post_customer_shipping_address_request, **kwargs):
         """
         Create a Customer Shipping Address
-        Include an existing TMS Customer token id in the request URI. * A Customer token can be created by calling: **POST */tms/v2/customers*** 
+        |  |  |  | | --- | --- | --- | |**Customer Shipping Address**<br>A Customer Shipping Address represents tokenized customer shipping information.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Shipping Addresses](#token-management_customer-shipping-address_list-shipping-addresses-for-a-customer), with one allocated as the Customers default for use in payments.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Creating a Customer Shipping Address**<br>Your system can use this API to create an existing Customers default or non default Shipping Address.<br>You can also create additional Customer Shipping Addresses via the [Payments API](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_customer_shipping_address_with_http_info(customer_token_id, post_customer_shipping_address_request, callback=callback_function)
+        >>> thread = api.post_customer_shipping_address_with_http_info(customer_id, post_customer_shipping_address_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PostCustomerShippingAddressRequest post_customer_shipping_address_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultShippingAddress
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'post_customer_shipping_address_request', 'profile_id']
+        all_params = ['customer_id', 'post_customer_shipping_address_request', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -732,25 +740,25 @@ class CustomerShippingAddressApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `post_customer_shipping_address`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `post_customer_shipping_address`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `post_customer_shipping_address`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `post_customer_shipping_address`")
         # verify the required parameter 'post_customer_shipping_address_request' is set
         if ('post_customer_shipping_address_request' not in params) or (params['post_customer_shipping_address_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
             raise ValueError("Missing the required parameter `post_customer_shipping_address_request` when calling `post_customer_shipping_address`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_shipping_address`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_shipping_address`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_shipping_address`, length must be less than or equal to `36`")
@@ -763,8 +771,8 @@ class CustomerShippingAddressApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
 
@@ -789,7 +797,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/shipping-addresses', 'POST',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

@@ -3,6 +3,7 @@ from __future__ import absolute_import
 # import apis into api package
 from .o_auth_api import OAuthApi
 from .asymmetric_key_management_api import AsymmetricKeyManagementApi
+from .batches_api import BatchesApi
 from .capture_api import CaptureApi
 from .chargeback_details_api import ChargebackDetailsApi
 from .chargeback_summaries_api import ChargebackSummariesApi
@@ -19,11 +20,11 @@ from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
-from .key_generation_api import KeyGenerationApi
 from .keymanagement_api import KeymanagementApi
 from .keymanagementpassword_api import KeymanagementpasswordApi
 from .keymanagementpgp_api import KeymanagementpgpApi
 from .keymanagementscmp_api import KeymanagementscmpApi
+from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi
 from .payer_authentication_api import PayerAuthenticationApi
@@ -31,6 +32,7 @@ from .payment_batch_summaries_api import PaymentBatchSummariesApi
 from .payment_instrument_api import PaymentInstrumentApi
 from .payments_api import PaymentsApi
 from .payouts_api import PayoutsApi
+from .plans_api import PlansApi
 from .purchase_and_refund_details_api import PurchaseAndRefundDetailsApi
 from .push_funds_api import PushFundsApi
 from .refund_api import RefundApi
@@ -43,9 +45,10 @@ from .retrieval_summaries_api import RetrievalSummariesApi
 from .reversal_api import ReversalApi
 from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
+from .subscriptions_api import SubscriptionsApi
 from .symmetric_key_management_api import SymmetricKeyManagementApi
 from .taxes_api import TaxesApi
-from .tokenization_api import TokenizationApi
+from .token_api import TokenApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .transient_token_data_api import TransientTokenDataApi

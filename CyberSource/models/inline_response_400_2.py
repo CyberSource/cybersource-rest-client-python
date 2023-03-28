@@ -35,7 +35,7 @@ class InlineResponse4002(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'status_code': 'str'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
@@ -43,10 +43,10 @@ class InlineResponse4002(object):
         'status': 'status',
         'reason': 'reason',
         'message': 'message',
-        'status_code': 'statusCode'
+        'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, status_code=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse4002 - a model defined in Swagger
         """
@@ -55,7 +55,7 @@ class InlineResponse4002(object):
         self._status = None
         self._reason = None
         self._message = None
-        self._status_code = None
+        self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -65,8 +65,8 @@ class InlineResponse4002(object):
           self.reason = reason
         if message is not None:
           self.message = message
-        if status_code is not None:
-          self.status_code = status_code
+        if details is not None:
+          self.details = details
 
     @property
     def submit_time_utc(self):
@@ -118,7 +118,7 @@ class InlineResponse4002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_CARD_TYPE 
 
         :return: The reason of this InlineResponse4002.
         :rtype: str
@@ -129,7 +129,7 @@ class InlineResponse4002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_CARD_TYPE 
 
         :param reason: The reason of this InlineResponse4002.
         :type: str
@@ -161,27 +161,25 @@ class InlineResponse4002(object):
         self._message = message
 
     @property
-    def status_code(self):
+    def details(self):
         """
-        Gets the status_code of this InlineResponse4002.
-        HTTP status code of the submitted request.  Possible values:  - 500 
+        Gets the details of this InlineResponse4002.
 
-        :return: The status_code of this InlineResponse4002.
-        :rtype: str
+        :return: The details of this InlineResponse4002.
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
-        return self._status_code
+        return self._details
 
-    @status_code.setter
-    def status_code(self, status_code):
+    @details.setter
+    def details(self, details):
         """
-        Sets the status_code of this InlineResponse4002.
-        HTTP status code of the submitted request.  Possible values:  - 500 
+        Sets the details of this InlineResponse4002.
 
-        :param status_code: The status_code of this InlineResponse4002.
-        :type: str
+        :param details: The details of this InlineResponse4002.
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
-        self._status_code = status_code
+        self._details = details
 
     def to_dict(self):
         """

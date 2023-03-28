@@ -52,7 +52,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier(object)
     def id(self):
         """
         Gets the id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier.
-        The id of the Instrument Identifier token linked to the Payment Instrument. 
+        The Id of the Instrument Identifier linked to the Payment Instrument. 
 
         :return: The id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier(object)
     def id(self, id):
         """
         Sets the id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier.
-        The id of the Instrument Identifier token linked to the Payment Instrument. 
+        The Id of the Instrument Identifier linked to the Payment Instrument. 
 
         :param id: The id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier.
         :type: str

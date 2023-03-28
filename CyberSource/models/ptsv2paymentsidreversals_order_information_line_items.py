@@ -73,10 +73,6 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems(object):
         :param quantity: The quantity of this Ptsv2paymentsidreversalsOrderInformationLineItems.
         :type: int
         """
-        if quantity is not None and quantity > 999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
-        if quantity is not None and quantity < 1:
-            raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 
         self._quantity = quantity
 

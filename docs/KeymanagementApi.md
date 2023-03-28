@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **search_keys**
-> InlineResponse200 search_keys(offset=offset, limit=limit, sort=sort, organization_ids=organization_ids, key_ids=key_ids, key_types=key_types, expiration_start_date=expiration_start_date, expiration_end_date=expiration_end_date)
+> InlineResponse20011 search_keys(offset=offset, limit=limit, sort=sort, organization_ids=organization_ids, key_ids=key_ids, key_types=key_types, expiration_start_date=expiration_start_date, expiration_end_date=expiration_end_date)
 
 Search Keys
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

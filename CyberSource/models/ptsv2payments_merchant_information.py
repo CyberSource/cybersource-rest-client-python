@@ -205,8 +205,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param category_code: The category_code of this Ptsv2paymentsMerchantInformation.
         :type: int
         """
-        if category_code is not None and category_code > 9999:
-            raise ValueError("Invalid value for `category_code`, must be a value less than or equal to `9999`")
 
         self._category_code = category_code
 
@@ -230,8 +228,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param category_code_domestic: The category_code_domestic of this Ptsv2paymentsMerchantInformation.
         :type: int
         """
-        if category_code_domestic is not None and category_code_domestic > 9999:
-            raise ValueError("Invalid value for `category_code_domestic`, must be a value less than or equal to `9999`")
 
         self._category_code_domestic = category_code_domestic
 

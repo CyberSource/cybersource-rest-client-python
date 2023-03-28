@@ -33,16 +33,18 @@ class UmsV1UsersGet200ResponseUsers(object):
     swagger_types = {
         'account_information': 'UmsV1UsersGet200ResponseAccountInformation',
         'organization_information': 'UmsV1UsersGet200ResponseOrganizationInformation',
-        'contact_information': 'UmsV1UsersGet200ResponseContactInformation'
+        'contact_information': 'UmsV1UsersGet200ResponseContactInformation',
+        'custom_fields': 'dict(str, str)'
     }
 
     attribute_map = {
         'account_information': 'accountInformation',
         'organization_information': 'organizationInformation',
-        'contact_information': 'contactInformation'
+        'contact_information': 'contactInformation',
+        'custom_fields': 'customFields'
     }
 
-    def __init__(self, account_information=None, organization_information=None, contact_information=None):
+    def __init__(self, account_information=None, organization_information=None, contact_information=None, custom_fields=None):
         """
         UmsV1UsersGet200ResponseUsers - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class UmsV1UsersGet200ResponseUsers(object):
         self._account_information = None
         self._organization_information = None
         self._contact_information = None
+        self._custom_fields = None
 
         if account_information is not None:
           self.account_information = account_information
@@ -57,6 +60,8 @@ class UmsV1UsersGet200ResponseUsers(object):
           self.organization_information = organization_information
         if contact_information is not None:
           self.contact_information = contact_information
+        if custom_fields is not None:
+          self.custom_fields = custom_fields
 
     @property
     def account_information(self):
@@ -120,6 +125,27 @@ class UmsV1UsersGet200ResponseUsers(object):
         """
 
         self._contact_information = contact_information
+
+    @property
+    def custom_fields(self):
+        """
+        Gets the custom_fields of this UmsV1UsersGet200ResponseUsers.
+
+        :return: The custom_fields of this UmsV1UsersGet200ResponseUsers.
+        :rtype: dict(str, str)
+        """
+        return self._custom_fields
+
+    @custom_fields.setter
+    def custom_fields(self, custom_fields):
+        """
+        Sets the custom_fields of this UmsV1UsersGet200ResponseUsers.
+
+        :param custom_fields: The custom_fields of this UmsV1UsersGet200ResponseUsers.
+        :type: dict(str, str)
+        """
+
+        self._custom_fields = custom_fields
 
     def to_dict(self):
         """

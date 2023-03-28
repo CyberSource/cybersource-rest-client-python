@@ -257,8 +257,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param sequence: The sequence of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: int
         """
-        if sequence is not None and sequence > 99:
-            raise ValueError("Invalid value for `sequence`, must be a value less than or equal to `99`")
 
         self._sequence = sequence
 
@@ -305,8 +303,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param total_count: The total_count of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: int
         """
-        if total_count is not None and total_count > 99:
-            raise ValueError("Invalid value for `total_count`, must be a value less than or equal to `99`")
 
         self._total_count = total_count
 

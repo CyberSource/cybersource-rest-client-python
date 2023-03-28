@@ -118,7 +118,7 @@ class PtsV2IncrementalAuthorizationPatch400Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2IncrementalAuthorizationPatch400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_PAYMENT_ID 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_PAYMENT_ID  - NOT_SUPPORTED 
 
         :return: The reason of this PtsV2IncrementalAuthorizationPatch400Response.
         :rtype: str
@@ -129,7 +129,7 @@ class PtsV2IncrementalAuthorizationPatch400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2IncrementalAuthorizationPatch400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_PAYMENT_ID 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - CARD_TYPE_NOT_ACCEPTED  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_PAYMENT_ID  - NOT_SUPPORTED 
 
         :param reason: The reason of this PtsV2IncrementalAuthorizationPatch400Response.
         :type: str
