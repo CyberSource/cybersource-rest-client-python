@@ -164,7 +164,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -298,7 +298,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -451,7 +451,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,

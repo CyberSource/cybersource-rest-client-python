@@ -181,7 +181,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/shipping-addresses/{shipping_address_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -332,7 +332,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/shipping-addresses/{shipping_address_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -486,7 +486,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/shipping-addresses', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -656,7 +656,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/shipping-addresses/{shipping_address_id}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -797,7 +797,7 @@ class CustomerShippingAddressApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/shipping-addresses', 'POST',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/shipping-addresses', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
