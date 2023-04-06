@@ -85,7 +85,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
     def type(self):
         """
         Gets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
-        The type of the identification.  Valid values:   - driver license 
+        The type of the identification.  Possible Values:   - driver license 
 
         :return: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
         :rtype: str
@@ -96,7 +96,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
     def type(self, type):
         """
         Sets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
-        The type of the identification.  Valid values:   - driver license 
+        The type of the identification.  Possible Values:   - driver license 
 
         :param type: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
         :type: str

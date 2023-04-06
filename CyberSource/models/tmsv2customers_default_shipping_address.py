@@ -52,7 +52,7 @@ class Tmsv2customersDefaultShippingAddress(object):
     def id(self):
         """
         Gets the id of this Tmsv2customersDefaultShippingAddress.
-        The id of the Customers default Shipping Address 
+        The Id of the Customers default Shipping Address 
 
         :return: The id of this Tmsv2customersDefaultShippingAddress.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersDefaultShippingAddress(object):
     def id(self, id):
         """
         Sets the id of this Tmsv2customersDefaultShippingAddress.
-        The id of the Customers default Shipping Address 
+        The Id of the Customers default Shipping Address 
 
         :param id: The id of this Tmsv2customersDefaultShippingAddress.
         :type: str

@@ -71,7 +71,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'sdk_max_timeout': 'str',
         'secure_corporate_payment_indicator': 'str',
         'transaction_mode': 'str',
-        'white_list_status': 'str'
+        'white_list_status': 'str',
+        'score_request': 'int'
     }
 
     attribute_map = {
@@ -115,10 +116,11 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'sdk_max_timeout': 'sdkMaxTimeout',
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
         'transaction_mode': 'transactionMode',
-        'white_list_status': 'whiteListStatus'
+        'white_list_status': 'whiteListStatus',
+        'score_request': 'scoreRequest'
     }
 
-    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None):
+    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
         """
         Riskv1decisionsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -164,6 +166,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         self._secure_corporate_payment_indicator = None
         self._transaction_mode = None
         self._white_list_status = None
+        self._score_request = None
 
         if strong_authentication is not None:
           self.strong_authentication = strong_authentication
@@ -247,6 +250,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.transaction_mode = transaction_mode
         if white_list_status is not None:
           self.white_list_status = white_list_status
+        if score_request is not None:
+          self.score_request = score_request
 
     @property
     def strong_authentication(self):
@@ -1188,6 +1193,29 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         """
 
         self._white_list_status = white_list_status
+
+    @property
+    def score_request(self):
+        """
+        Gets the score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :return: The score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._score_request
+
+    @score_request.setter
+    def score_request(self, score_request):
+        """
+        Sets the score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :param score_request: The score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._score_request = score_request
 
     def to_dict(self):
         """

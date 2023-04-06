@@ -113,7 +113,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def client_version(self):
         """
         Gets the client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
-        verson number of Unified Checkout being used
+        version number of Unified Checkout being used
 
         :return: The client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: str
@@ -124,7 +124,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def client_version(self, client_version):
         """
         Sets the client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
-        verson number of Unified Checkout being used
+        version number of Unified Checkout being used
 
         :param client_version: The client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: str

@@ -31,129 +31,43 @@ class InlineResponse500(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
-        'message': 'str'
+        'errors': 'list[InlineResponse500Errors]'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
-        'message': 'message'
+        'errors': 'errors'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
+    def __init__(self, errors=None):
         """
         InlineResponse500 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
-        self._reason = None
-        self._message = None
+        self._errors = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reason is not None:
-          self.reason = reason
-        if message is not None:
-          self.message = message
+        if errors is not None:
+          self.errors = errors
 
     @property
-    def submit_time_utc(self):
+    def errors(self):
         """
-        Gets the submit_time_utc of this InlineResponse500.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the errors of this InlineResponse500.
 
-        :return: The submit_time_utc of this InlineResponse500.
-        :rtype: str
+        :return: The errors of this InlineResponse500.
+        :rtype: list[InlineResponse500Errors]
         """
-        return self._submit_time_utc
+        return self._errors
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @errors.setter
+    def errors(self, errors):
         """
-        Sets the submit_time_utc of this InlineResponse500.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the errors of this InlineResponse500.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse500.
-        :type: str
+        :param errors: The errors of this InlineResponse500.
+        :type: list[InlineResponse500Errors]
         """
 
-        self._submit_time_utc = submit_time_utc
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse500.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
-
-        :return: The status of this InlineResponse500.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse500.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
-
-        :param status: The status of this InlineResponse500.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse500.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
-
-        :return: The reason of this InlineResponse500.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse500.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
-
-        :param reason: The reason of this InlineResponse500.
-        :type: str
-        """
-
-        self._reason = reason
-
-    @property
-    def message(self):
-        """
-        Gets the message of this InlineResponse500.
-        The detail message related to the status and reason listed above.
-
-        :return: The message of this InlineResponse500.
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """
-        Sets the message of this InlineResponse500.
-        The detail message related to the status and reason listed above.
-
-        :param message: The message of this InlineResponse500.
-        :type: str
-        """
-
-        self._message = message
+        self._errors = errors
 
     def to_dict(self):
         """

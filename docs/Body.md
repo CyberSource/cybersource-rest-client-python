@@ -3,9 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**requestor** | **str** | Identifies the service requesting parsing  | 
-**parsed_tag_limit** | **int** | Number of tags to parse for each EMV tag string provided.  | [optional] 
-**emv_details_list** | [**list[Tssv2transactionsemvTagDetailsEmvDetailsList]**](Tssv2transactionsemvTagDetailsEmvDetailsList.md) | An array of objects, each containing a requestId and the corresponding emvRequestCombinedTags  | 
+**type** | **str** | Valid Values:   * oneOff   * amexRegistration  | [optional] [default to 'oneOff']
+**included** | [**Accountupdaterv1batchesIncluded**](Accountupdaterv1batchesIncluded.md) |  | [optional] 
+**merchant_reference** | **str** | Reference used by merchant to identify batch. | [optional] 
+**notification_email** | **str** | Email used to notify the batch status. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -36,6 +36,7 @@ class PatchPaymentInstrumentRequest(object):
         'object': 'str',
         'default': 'bool',
         'state': 'str',
+        'type': 'str',
         'bank_account': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount',
         'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
         'buyer_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
@@ -53,6 +54,7 @@ class PatchPaymentInstrumentRequest(object):
         'object': 'object',
         'default': 'default',
         'state': 'state',
+        'type': 'type',
         'bank_account': 'bankAccount',
         'card': 'card',
         'buyer_information': 'buyerInformation',
@@ -64,7 +66,7 @@ class PatchPaymentInstrumentRequest(object):
         'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, default=None, state=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, instrument_identifier=None, metadata=None, embedded=None):
+    def __init__(self, links=None, id=None, object=None, default=None, state=None, type=None, bank_account=None, card=None, buyer_information=None, bill_to=None, processing_information=None, merchant_information=None, instrument_identifier=None, metadata=None, embedded=None):
         """
         PatchPaymentInstrumentRequest - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class PatchPaymentInstrumentRequest(object):
         self._object = None
         self._default = None
         self._state = None
+        self._type = None
         self._bank_account = None
         self._card = None
         self._buyer_information = None
@@ -94,6 +97,8 @@ class PatchPaymentInstrumentRequest(object):
           self.default = default
         if state is not None:
           self.state = state
+        if type is not None:
+          self.type = type
         if bank_account is not None:
           self.bank_account = bank_account
         if card is not None:
@@ -138,7 +143,7 @@ class PatchPaymentInstrumentRequest(object):
     def id(self):
         """
         Gets the id of this PatchPaymentInstrumentRequest.
-        The id of the Payment Instrument Token.
+        The Id of the Payment Instrument Token.
 
         :return: The id of this PatchPaymentInstrumentRequest.
         :rtype: str
@@ -149,7 +154,7 @@ class PatchPaymentInstrumentRequest(object):
     def id(self, id):
         """
         Sets the id of this PatchPaymentInstrumentRequest.
-        The id of the Payment Instrument Token.
+        The Id of the Payment Instrument Token.
 
         :param id: The id of this PatchPaymentInstrumentRequest.
         :type: str
@@ -161,7 +166,7 @@ class PatchPaymentInstrumentRequest(object):
     def object(self):
         """
         Gets the object of this PatchPaymentInstrumentRequest.
-        The type of token.  Valid values: - paymentInstrument 
+        The type.  Possible Values: - paymentInstrument 
 
         :return: The object of this PatchPaymentInstrumentRequest.
         :rtype: str
@@ -172,7 +177,7 @@ class PatchPaymentInstrumentRequest(object):
     def object(self, object):
         """
         Sets the object of this PatchPaymentInstrumentRequest.
-        The type of token.  Valid values: - paymentInstrument 
+        The type.  Possible Values: - paymentInstrument 
 
         :param object: The object of this PatchPaymentInstrumentRequest.
         :type: str
@@ -184,7 +189,7 @@ class PatchPaymentInstrumentRequest(object):
     def default(self):
         """
         Gets the default of this PatchPaymentInstrumentRequest.
-        Flag that indicates whether customer payment instrument is the dafault. Valid values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
+        Flag that indicates whether customer payment instrument is the dafault. Possible Values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
 
         :return: The default of this PatchPaymentInstrumentRequest.
         :rtype: bool
@@ -195,7 +200,7 @@ class PatchPaymentInstrumentRequest(object):
     def default(self, default):
         """
         Sets the default of this PatchPaymentInstrumentRequest.
-        Flag that indicates whether customer payment instrument is the dafault. Valid values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
+        Flag that indicates whether customer payment instrument is the dafault. Possible Values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default. 
 
         :param default: The default of this PatchPaymentInstrumentRequest.
         :type: bool
@@ -207,7 +212,7 @@ class PatchPaymentInstrumentRequest(object):
     def state(self):
         """
         Gets the state of this PatchPaymentInstrumentRequest.
-        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
+        Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed. 
 
         :return: The state of this PatchPaymentInstrumentRequest.
         :rtype: str
@@ -218,13 +223,36 @@ class PatchPaymentInstrumentRequest(object):
     def state(self, state):
         """
         Sets the state of this PatchPaymentInstrumentRequest.
-        Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed. 
+        Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed. 
 
         :param state: The state of this PatchPaymentInstrumentRequest.
         :type: str
         """
 
         self._state = state
+
+    @property
+    def type(self):
+        """
+        Gets the type of this PatchPaymentInstrumentRequest.
+        The type of Payment Instrument. Possible Values: - cardHash 
+
+        :return: The type of this PatchPaymentInstrumentRequest.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this PatchPaymentInstrumentRequest.
+        The type of Payment Instrument. Possible Values: - cardHash 
+
+        :param type: The type of this PatchPaymentInstrumentRequest.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def bank_account(self):

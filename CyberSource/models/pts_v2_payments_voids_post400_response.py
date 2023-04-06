@@ -118,7 +118,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsVoidsPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE  - NOT_SUPPORTED 
 
         :return: The reason of this PtsV2PaymentsVoidsPost400Response.
         :rtype: str
@@ -129,7 +129,7 @@ class PtsV2PaymentsVoidsPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsVoidsPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - NOT_VOIDABLE  - NOT_SUPPORTED 
 
         :param reason: The reason of this PtsV2PaymentsVoidsPost400Response.
         :type: str

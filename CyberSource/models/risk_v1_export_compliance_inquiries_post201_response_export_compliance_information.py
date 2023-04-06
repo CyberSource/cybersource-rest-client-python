@@ -78,10 +78,6 @@ class RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation(
         :param ip_country_confidence: The ip_country_confidence of this RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation.
         :type: int
         """
-        if ip_country_confidence is not None and ip_country_confidence > 100:
-            raise ValueError("Invalid value for `ip_country_confidence`, must be a value less than or equal to `100`")
-        if ip_country_confidence is not None and ip_country_confidence < -1:
-            raise ValueError("Invalid value for `ip_country_confidence`, must be a value greater than or equal to `-1`")
 
         self._ip_country_confidence = ip_country_confidence
 

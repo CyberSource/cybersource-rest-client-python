@@ -118,7 +118,7 @@ class PtsV2PaymentsRefundPost400Response(object):
     def reason(self):
         """
         Gets the reason of this PtsV2PaymentsRefundPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - CAPTURE_ALREADY_VOIDED  - ACCOUNT_NOT_ALLOWED_CREDIT 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - CAPTURE_ALREADY_VOIDED  - ACCOUNT_NOT_ALLOWED_CREDIT  - NOT_SUPPORTED 
 
         :return: The reason of this PtsV2PaymentsRefundPost400Response.
         :rtype: str
@@ -129,7 +129,7 @@ class PtsV2PaymentsRefundPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PtsV2PaymentsRefundPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - CAPTURE_ALREADY_VOIDED  - ACCOUNT_NOT_ALLOWED_CREDIT 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_CARD  - INVALID_MERCHANT_CONFIGURATION  - INVALID_AMOUNT  - CAPTURE_ALREADY_VOIDED  - ACCOUNT_NOT_ALLOWED_CREDIT  - NOT_SUPPORTED 
 
         :param reason: The reason of this PtsV2PaymentsRefundPost400Response.
         :type: str

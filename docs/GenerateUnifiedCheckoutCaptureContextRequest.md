@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **target_origins** | **list[str]** |  | [optional] 
-**client_version** | **str** | verson number of Unified Checkout being used | [optional] 
+**client_version** | **str** | version number of Unified Checkout being used | [optional] 
 **allowed_card_networks** | **list[str]** |  | [optional] 
 **allowed_payment_types** | **list[str]** |  | [optional] 
 **country** | **str** | Country the purchase is originating from (e.g. country of the merchant). Use the two- character ISO Standard | [optional] 

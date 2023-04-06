@@ -45,22 +45,23 @@ class CustomerPaymentInstrumentApi(object):
 
 
 
-    def delete_customer_payment_instrument(self, customer_token_id, payment_instrument_token_id, **kwargs):
+    def delete_customer_payment_instrument(self, customer_id, payment_instrument_id, **kwargs):
         """
         Delete a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customers Payment Instrument**<br>Your system can use this API to delete an existing Payment Instrument for a Customer.<br>Any Instrument Identifiers representing the card number will also be deleted if they are not associated with any other Payment Instruments.<br>If a customer has more than one Payment Instrument then the default Payment Instrument cannot be deleted without first selecting a [new default Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument_samplerequests-dropdown_make-customer-payment-instrument-the-default_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer_payment_instrument(customer_token_id, payment_instrument_token_id, callback=callback_function)
+        >>> thread = api.delete_customer_payment_instrument(customer_id, payment_instrument_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -71,33 +72,34 @@ class CustomerPaymentInstrumentApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, **kwargs)
+            return self.delete_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, **kwargs)
         else:
-            (data) = self.delete_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, **kwargs)
+            (data) = self.delete_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, **kwargs)
             return data
 
-    def delete_customer_payment_instrument_with_http_info(self, customer_token_id, payment_instrument_token_id, **kwargs):
+    def delete_customer_payment_instrument_with_http_info(self, customer_id, payment_instrument_id, **kwargs):
         """
         Delete a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Deleting a Customers Payment Instrument**<br>Your system can use this API to delete an existing Payment Instrument for a Customer.<br>Any Instrument Identifiers representing the card number will also be deleted if they are not associated with any other Payment Instruments.<br>If a customer has more than one Payment Instrument then the default Payment Instrument cannot be deleted without first selecting a [new default Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument_samplerequests-dropdown_make-customer-payment-instrument-the-default_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, callback=callback_function)
+        >>> thread = api.delete_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'payment_instrument_token_id', 'profile_id']
+        all_params = ['customer_id', 'payment_instrument_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -112,33 +114,33 @@ class CustomerPaymentInstrumentApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `delete_customer_payment_instrument`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `delete_customer_payment_instrument`")
-        # verify the required parameter 'payment_instrument_token_id' is set
-        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer_payment_instrument`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer_payment_instrument`")
+        # verify the required parameter 'payment_instrument_id' is set
+        if ('payment_instrument_id' not in params) or (params['payment_instrument_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`")
-            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`")
+            raise ValueError("Missing the required parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `36`")
@@ -151,10 +153,10 @@ class CustomerPaymentInstrumentApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'payment_instrument_token_id' in params:
-            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'payment_instrument_id' in params:
+            path_params['paymentInstrumentId'] = params['payment_instrument_id']
 
         query_params = []
 
@@ -179,7 +181,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/payment-instruments/{payment_instrument_token_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -194,22 +196,23 @@ class CustomerPaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_customer_payment_instrument(self, customer_token_id, payment_instrument_token_id, **kwargs):
+    def get_customer_payment_instrument(self, customer_id, payment_instrument_id, **kwargs):
         """
         Retrieve a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving a Customer Payment Instrument**<br>Your system can use this API to retrieve an existing Payment Instrument for a Customer.<br>To perform a payment with a particular Payment Instrument simply specify the [Payment Instrument Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_payment_instrument(customer_token_id, payment_instrument_token_id, callback=callback_function)
+        >>> thread = api.get_customer_payment_instrument(customer_id, payment_instrument_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
                  returns the request thread.
@@ -220,33 +223,34 @@ class CustomerPaymentInstrumentApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, **kwargs)
+            return self.get_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, **kwargs)
         else:
-            (data) = self.get_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, **kwargs)
+            (data) = self.get_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, **kwargs)
             return data
 
-    def get_customer_payment_instrument_with_http_info(self, customer_token_id, payment_instrument_token_id, **kwargs):
+    def get_customer_payment_instrument_with_http_info(self, customer_id, payment_instrument_id, **kwargs):
         """
         Retrieve a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving a Customer Payment Instrument**<br>Your system can use this API to retrieve an existing Payment Instrument for a Customer.<br>To perform a payment with a particular Payment Instrument simply specify the [Payment Instrument Id in the payments request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, callback=callback_function)
+        >>> thread = api.get_customer_payment_instrument_with_http_info(customer_id, payment_instrument_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'payment_instrument_token_id', 'profile_id']
+        all_params = ['customer_id', 'payment_instrument_id', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -261,33 +265,33 @@ class CustomerPaymentInstrumentApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_payment_instrument`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_payment_instrument`")
-        # verify the required parameter 'payment_instrument_token_id' is set
-        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_payment_instrument`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_payment_instrument`")
+        # verify the required parameter 'payment_instrument_id' is set
+        if ('payment_instrument_id' not in params) or (params['payment_instrument_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`")
-            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `get_customer_payment_instrument`")
+            raise ValueError("Missing the required parameter `payment_instrument_id` when calling `get_customer_payment_instrument`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `36`")
@@ -300,10 +304,10 @@ class CustomerPaymentInstrumentApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'payment_instrument_token_id' in params:
-            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'payment_instrument_id' in params:
+            path_params['paymentInstrumentId'] = params['payment_instrument_id']
 
         query_params = []
 
@@ -328,7 +332,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/payment-instruments/{payment_instrument_token_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -343,21 +347,22 @@ class CustomerPaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_customer_payment_instruments_list(self, customer_token_id, **kwargs):
+    def get_customer_payment_instruments_list(self, customer_id, **kwargs):
         """
         List Payment Instruments for a Customer
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving all Customer Payment Instruments**<br>Your system can use this API to retrieve all existing Payment Instruments for a Customer. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_payment_instruments_list(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer_payment_instruments_list(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: PaymentInstrumentList
@@ -370,26 +375,27 @@ class CustomerPaymentInstrumentApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_customer_payment_instruments_list_with_http_info(customer_token_id, **kwargs)
+            return self.get_customer_payment_instruments_list_with_http_info(customer_id, **kwargs)
         else:
-            (data) = self.get_customer_payment_instruments_list_with_http_info(customer_token_id, **kwargs)
+            (data) = self.get_customer_payment_instruments_list_with_http_info(customer_id, **kwargs)
             return data
 
-    def get_customer_payment_instruments_list_with_http_info(self, customer_token_id, **kwargs):
+    def get_customer_payment_instruments_list_with_http_info(self, customer_id, **kwargs):
         """
         List Payment Instruments for a Customer
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Retrieving all Customer Payment Instruments**<br>Your system can use this API to retrieve all existing Payment Instruments for a Customer. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_customer_payment_instruments_list_with_http_info(customer_token_id, callback=callback_function)
+        >>> thread = api.get_customer_payment_instruments_list_with_http_info(customer_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str customer_id: The Id of a Customer. (required)
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: PaymentInstrumentList
@@ -397,7 +403,7 @@ class CustomerPaymentInstrumentApi(object):
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'profile_id', 'offset', 'limit']
+        all_params = ['customer_id', 'profile_id', 'offset', 'limit']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -412,20 +418,20 @@ class CustomerPaymentInstrumentApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `get_customer_payment_instruments_list`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `get_customer_payment_instruments_list`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `36`")
@@ -450,8 +456,8 @@ class CustomerPaymentInstrumentApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
         if 'offset' in params:
@@ -480,7 +486,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/payment-instruments', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -495,23 +501,24 @@ class CustomerPaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def patch_customers_payment_instrument(self, customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, **kwargs):
+    def patch_customers_payment_instrument(self, customer_id, payment_instrument_id, patch_customer_payment_instrument_request, **kwargs):
         """
         Update a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customers Payment Instrument**<br>Your system can use this API to update an existing Payment Instrument for a Customer, including selecting a [default Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument_samplerequests-dropdown_make-customer-payment-instrument-the-default_liveconsole-tab-request-body) for use in payments. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customers_payment_instrument(customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, callback=callback_function)
+        >>> thread = api.patch_customers_payment_instrument(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param PatchCustomerPaymentInstrumentRequest patch_customer_payment_instrument_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
@@ -523,35 +530,36 @@ class CustomerPaymentInstrumentApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.patch_customers_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, **kwargs)
+            return self.patch_customers_payment_instrument_with_http_info(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, **kwargs)
         else:
-            (data) = self.patch_customers_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, **kwargs)
+            (data) = self.patch_customers_payment_instrument_with_http_info(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, **kwargs)
             return data
 
-    def patch_customers_payment_instrument_with_http_info(self, customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, **kwargs):
+    def patch_customers_payment_instrument_with_http_info(self, customer_id, payment_instrument_id, patch_customer_payment_instrument_request, **kwargs):
         """
         Update a Customer Payment Instrument
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Updating a Customers Payment Instrument**<br>Your system can use this API to update an existing Payment Instrument for a Customer, including selecting a [default Payment Instrument](#token-management_customer-payment-instrument_update-a-customer-payment-instrument_samplerequests-dropdown_make-customer-payment-instrument-the-default_liveconsole-tab-request-body) for use in payments. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.patch_customers_payment_instrument_with_http_info(customer_token_id, payment_instrument_token_id, patch_customer_payment_instrument_request, callback=callback_function)
+        >>> thread = api.patch_customers_payment_instrument_with_http_info(customer_id, payment_instrument_id, patch_customer_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
-        :param str payment_instrument_token_id: The TokenId of a payment instrument. (required)
+        :param str customer_id: The Id of a Customer. (required)
+        :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param PatchCustomerPaymentInstrumentRequest patch_customer_payment_instrument_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'payment_instrument_token_id', 'patch_customer_payment_instrument_request', 'profile_id', 'if_match']
+        all_params = ['customer_id', 'payment_instrument_id', 'patch_customer_payment_instrument_request', 'profile_id', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -566,38 +574,38 @@ class CustomerPaymentInstrumentApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `patch_customers_payment_instrument`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `patch_customers_payment_instrument`")
-        # verify the required parameter 'payment_instrument_token_id' is set
-        if ('payment_instrument_token_id' not in params) or (params['payment_instrument_token_id'] is None):
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `patch_customers_payment_instrument`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `patch_customers_payment_instrument`")
+        # verify the required parameter 'payment_instrument_id' is set
+        if ('payment_instrument_id' not in params) or (params['payment_instrument_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`")
-            raise ValueError("Missing the required parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`")
+            raise ValueError("Missing the required parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`")
         # verify the required parameter 'patch_customer_payment_instrument_request' is set
         if ('patch_customer_payment_instrument_request' not in params) or (params['patch_customer_payment_instrument_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_payment_instrument_request` when calling `patch_customers_payment_instrument`")
             raise ValueError("Missing the required parameter `patch_customer_payment_instrument_request` when calling `patch_customers_payment_instrument`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) > 32:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_token_id' in params and len(params['payment_instrument_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
+        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_token_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `36`")
@@ -618,10 +626,10 @@ class CustomerPaymentInstrumentApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
-        if 'payment_instrument_token_id' in params:
-            path_params['paymentInstrumentTokenId'] = params['payment_instrument_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
+        if 'payment_instrument_id' in params:
+            path_params['paymentInstrumentId'] = params['payment_instrument_id']
 
         query_params = []
 
@@ -648,7 +656,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/payment-instruments/{payment_instrument_token_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -663,23 +671,23 @@ class CustomerPaymentInstrumentApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def post_customer_payment_instrument(self, customer_token_id, post_customer_payment_instrument_request, **kwargs):
+    def post_customer_payment_instrument(self, customer_id, post_customer_payment_instrument_request, **kwargs):
         """
         Create a Customer Payment Instrument
-        Include an existing TMS Customer & Instrument Identifier token id in the request. * A Customer token can be created by calling: **POST */tms/v2/customers*** * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br><br>**Creating a Customer Payment Instrument**<br>It is recommended you [create a Customer Payment Instrument via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body), this can be for a zero amount.<br>In Europe: You should perform Payer Authentication alongside the Authorization.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers Payment Instrument**<br>To perform a payment with a particular Payment Instrument or Shipping Address specify the [Payment Instrument in the payment request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_customer_payment_instrument(customer_token_id, post_customer_payment_instrument_request, callback=callback_function)
+        >>> thread = api.post_customer_payment_instrument(customer_id, post_customer_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PostCustomerPaymentInstrumentRequest post_customer_payment_instrument_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
                  returns the request thread.
@@ -690,34 +698,34 @@ class CustomerPaymentInstrumentApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.post_customer_payment_instrument_with_http_info(customer_token_id, post_customer_payment_instrument_request, **kwargs)
+            return self.post_customer_payment_instrument_with_http_info(customer_id, post_customer_payment_instrument_request, **kwargs)
         else:
-            (data) = self.post_customer_payment_instrument_with_http_info(customer_token_id, post_customer_payment_instrument_request, **kwargs)
+            (data) = self.post_customer_payment_instrument_with_http_info(customer_id, post_customer_payment_instrument_request, **kwargs)
             return data
 
-    def post_customer_payment_instrument_with_http_info(self, customer_token_id, post_customer_payment_instrument_request, **kwargs):
+    def post_customer_payment_instrument_with_http_info(self, customer_id, post_customer_payment_instrument_request, **kwargs):
         """
         Create a Customer Payment Instrument
-        Include an existing TMS Customer & Instrument Identifier token id in the request. * A Customer token can be created by calling: **POST */tms/v2/customers*** * An Instrument Identifier token can be created by calling: **POST */tms/v1/instrumentidentifiers*** 
+        |  |  |  | | --- | --- | --- | |**Customer Payment Instrument**<br>A Customer Payment Instrument represents tokenized customer payment information such as expiration date, billing address & card type.<br>A [Customer](#token-management_customer_create-a-customer) can have [one or more Payment Instruments](#token-management_customer-payment-instrument_retrieve-a-customer-payment-instrument), with one allocated as the Customers default for use in payments.<br>A Payment Instrument token does not store the card number. A Payment Instrument is associated with an [Instrument Identifier](#token-management_instrument-identifier_create-an-instrument-identifier) that represents either a payment card number, or in the case of an ACH bank account, the routing and account number.<br><br>**Creating a Customer Payment Instrument**<br>It is recommended you [create a Customer Payment Instrument via a Payment Authorization](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-with-token-create_authorization-create-default-payment-instrument-shipping-address-for-existing-customer_liveconsole-tab-request-body), this can be for a zero amount.<br>In Europe: You should perform Payer Authentication alongside the Authorization.|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**Payment Network Tokens**<br>Network tokens perform better than regular card numbers and they are not necessarily invalidated when a cardholder loses their card, or it expires.<br>A Payment Network Token will be automatically created and used in future payments if you are enabled for the service.<br>A Payment Network Token can also be [provisioned for an existing Instrument Identifier](#token-management_instrument-identifier_enroll-an-instrument-identifier-for-payment-network-token).<br>For more information about Payment Network Tokens see the Developer Guide.<br><br>**Payments with Customers Payment Instrument**<br>To perform a payment with a particular Payment Instrument or Shipping Address specify the [Payment Instrument in the payment request](#payments_payments_process-a-payment_samplerequests-dropdown_authorization-using-tokens_authorization-with-customer-payment-instrument-and-shipping-address-token-id_liveconsole-tab-request-body). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.post_customer_payment_instrument_with_http_info(customer_token_id, post_customer_payment_instrument_request, callback=callback_function)
+        >>> thread = api.post_customer_payment_instrument_with_http_info(customer_id, post_customer_payment_instrument_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str customer_token_id: The TokenId of a customer. (required)
+        :param str customer_id: The Id of a Customer. (required)
         :param PostCustomerPaymentInstrumentRequest post_customer_payment_instrument_request: (required)
-        :param str profile_id: The id of a profile containing user specific TMS configuration.
+        :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :return: Tmsv2customersEmbeddedDefaultPaymentInstrument
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['customer_token_id', 'post_customer_payment_instrument_request', 'profile_id']
+        all_params = ['customer_id', 'post_customer_payment_instrument_request', 'profile_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -732,25 +740,25 @@ class CustomerPaymentInstrumentApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'customer_token_id' is set
-        if ('customer_token_id' not in params) or (params['customer_token_id'] is None):
+        # verify the required parameter 'customer_id' is set
+        if ('customer_id' not in params) or (params['customer_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_token_id` when calling `post_customer_payment_instrument`")
-            raise ValueError("Missing the required parameter `customer_token_id` when calling `post_customer_payment_instrument`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `post_customer_payment_instrument`")
+            raise ValueError("Missing the required parameter `customer_id` when calling `post_customer_payment_instrument`")
         # verify the required parameter 'post_customer_payment_instrument_request' is set
         if ('post_customer_payment_instrument_request' not in params) or (params['post_customer_payment_instrument_request'] is None):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
             raise ValueError("Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
 
-        if 'customer_token_id' in params and len(params['customer_token_id']) > 32:
+        if 'customer_id' in params and len(params['customer_id']) > 32:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_token_id' in params and len(params['customer_token_id']) < 1:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
+        if 'customer_id' in params and len(params['customer_id']) < 1:
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_token_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_token_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
+            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
         if 'profile_id' in params and len(params['profile_id']) > 36:
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `36`")
@@ -763,8 +771,8 @@ class CustomerPaymentInstrumentApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'customer_token_id' in params:
-            path_params['customerTokenId'] = params['customer_token_id']
+        if 'customer_id' in params:
+            path_params['customerId'] = params['customer_id']
 
         query_params = []
 
@@ -789,7 +797,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_token_id}/payment-instruments', 'POST',
+        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

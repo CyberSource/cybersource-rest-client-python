@@ -52,7 +52,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddressMetadata(object):
     def creator(self):
         """
         Gets the creator of this Tmsv2customersEmbeddedDefaultShippingAddressMetadata.
-        The creator of the Shipping Address token.
+        The creator of the Shipping Address.
 
         :return: The creator of this Tmsv2customersEmbeddedDefaultShippingAddressMetadata.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersEmbeddedDefaultShippingAddressMetadata(object):
     def creator(self, creator):
         """
         Sets the creator of this Tmsv2customersEmbeddedDefaultShippingAddressMetadata.
-        The creator of the Shipping Address token.
+        The creator of the Shipping Address.
 
         :param creator: The creator of this Tmsv2customersEmbeddedDefaultShippingAddressMetadata.
         :type: str

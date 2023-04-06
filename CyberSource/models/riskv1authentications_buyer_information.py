@@ -33,16 +33,18 @@ class Riskv1authenticationsBuyerInformation(object):
     swagger_types = {
         'merchant_customer_id': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
-        'mobile_phone': 'int'
+        'mobile_phone': 'int',
+        'work_phone': 'int'
     }
 
     attribute_map = {
         'merchant_customer_id': 'merchantCustomerId',
         'personal_identification': 'personalIdentification',
-        'mobile_phone': 'mobilePhone'
+        'mobile_phone': 'mobilePhone',
+        'work_phone': 'workPhone'
     }
 
-    def __init__(self, merchant_customer_id=None, personal_identification=None, mobile_phone=None):
+    def __init__(self, merchant_customer_id=None, personal_identification=None, mobile_phone=None, work_phone=None):
         """
         Riskv1authenticationsBuyerInformation - a model defined in Swagger
         """
@@ -50,12 +52,15 @@ class Riskv1authenticationsBuyerInformation(object):
         self._merchant_customer_id = None
         self._personal_identification = None
         self._mobile_phone = None
+        self._work_phone = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
         if personal_identification is not None:
           self.personal_identification = personal_identification
         self.mobile_phone = mobile_phone
+        if work_phone is not None:
+          self.work_phone = work_phone
 
     @property
     def merchant_customer_id(self):
@@ -127,6 +132,29 @@ class Riskv1authenticationsBuyerInformation(object):
             raise ValueError("Invalid value for `mobile_phone`, must not be `None`")
 
         self._mobile_phone = mobile_phone
+
+    @property
+    def work_phone(self):
+        """
+        Gets the work_phone of this Riskv1authenticationsBuyerInformation.
+        Cardholder's work phone number.
+
+        :return: The work_phone of this Riskv1authenticationsBuyerInformation.
+        :rtype: int
+        """
+        return self._work_phone
+
+    @work_phone.setter
+    def work_phone(self, work_phone):
+        """
+        Sets the work_phone of this Riskv1authenticationsBuyerInformation.
+        Cardholder's work phone number.
+
+        :param work_phone: The work_phone of this Riskv1authenticationsBuyerInformation.
+        :type: int
+        """
+
+        self._work_phone = work_phone
 
     def to_dict(self):
         """

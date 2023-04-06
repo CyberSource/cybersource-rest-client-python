@@ -31,103 +31,128 @@ class Body(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'requestor': 'str',
-        'parsed_tag_limit': 'int',
-        'emv_details_list': 'list[Tssv2transactionsemvTagDetailsEmvDetailsList]'
+        'type': 'str',
+        'included': 'Accountupdaterv1batchesIncluded',
+        'merchant_reference': 'str',
+        'notification_email': 'str'
     }
 
     attribute_map = {
-        'requestor': 'requestor',
-        'parsed_tag_limit': 'parsedTagLimit',
-        'emv_details_list': 'emvDetailsList'
+        'type': 'type',
+        'included': 'included',
+        'merchant_reference': 'merchantReference',
+        'notification_email': 'notificationEmail'
     }
 
-    def __init__(self, requestor=None, parsed_tag_limit=None, emv_details_list=None):
+    def __init__(self, type='oneOff', included=None, merchant_reference=None, notification_email=None):
         """
         Body - a model defined in Swagger
         """
 
-        self._requestor = None
-        self._parsed_tag_limit = None
-        self._emv_details_list = None
+        self._type = None
+        self._included = None
+        self._merchant_reference = None
+        self._notification_email = None
 
-        self.requestor = requestor
-        if parsed_tag_limit is not None:
-          self.parsed_tag_limit = parsed_tag_limit
-        self.emv_details_list = emv_details_list
+        if type is not None:
+          self.type = type
+        if included is not None:
+          self.included = included
+        if merchant_reference is not None:
+          self.merchant_reference = merchant_reference
+        self.notification_email = notification_email
 
     @property
-    def requestor(self):
+    def type(self):
         """
-        Gets the requestor of this Body.
-        Identifies the service requesting parsing 
+        Gets the type of this Body.
+        Valid Values:   * oneOff   * amexRegistration 
 
-        :return: The requestor of this Body.
+        :return: The type of this Body.
         :rtype: str
         """
-        return self._requestor
+        return self._type
 
-    @requestor.setter
-    def requestor(self, requestor):
+    @type.setter
+    def type(self, type):
         """
-        Sets the requestor of this Body.
-        Identifies the service requesting parsing 
+        Sets the type of this Body.
+        Valid Values:   * oneOff   * amexRegistration 
 
-        :param requestor: The requestor of this Body.
+        :param type: The type of this Body.
         :type: str
         """
-        if requestor is None:
-            raise ValueError("Invalid value for `requestor`, must not be `None`")
 
-        self._requestor = requestor
+        self._type = type
 
     @property
-    def parsed_tag_limit(self):
+    def included(self):
         """
-        Gets the parsed_tag_limit of this Body.
-        Number of tags to parse for each EMV tag string provided. 
+        Gets the included of this Body.
 
-        :return: The parsed_tag_limit of this Body.
-        :rtype: int
+        :return: The included of this Body.
+        :rtype: Accountupdaterv1batchesIncluded
         """
-        return self._parsed_tag_limit
+        return self._included
 
-    @parsed_tag_limit.setter
-    def parsed_tag_limit(self, parsed_tag_limit):
+    @included.setter
+    def included(self, included):
         """
-        Sets the parsed_tag_limit of this Body.
-        Number of tags to parse for each EMV tag string provided. 
+        Sets the included of this Body.
 
-        :param parsed_tag_limit: The parsed_tag_limit of this Body.
-        :type: int
+        :param included: The included of this Body.
+        :type: Accountupdaterv1batchesIncluded
         """
 
-        self._parsed_tag_limit = parsed_tag_limit
+        self._included = included
 
     @property
-    def emv_details_list(self):
+    def merchant_reference(self):
         """
-        Gets the emv_details_list of this Body.
-        An array of objects, each containing a requestId and the corresponding emvRequestCombinedTags 
+        Gets the merchant_reference of this Body.
+        Reference used by merchant to identify batch.
 
-        :return: The emv_details_list of this Body.
-        :rtype: list[Tssv2transactionsemvTagDetailsEmvDetailsList]
+        :return: The merchant_reference of this Body.
+        :rtype: str
         """
-        return self._emv_details_list
+        return self._merchant_reference
 
-    @emv_details_list.setter
-    def emv_details_list(self, emv_details_list):
+    @merchant_reference.setter
+    def merchant_reference(self, merchant_reference):
         """
-        Sets the emv_details_list of this Body.
-        An array of objects, each containing a requestId and the corresponding emvRequestCombinedTags 
+        Sets the merchant_reference of this Body.
+        Reference used by merchant to identify batch.
 
-        :param emv_details_list: The emv_details_list of this Body.
-        :type: list[Tssv2transactionsemvTagDetailsEmvDetailsList]
+        :param merchant_reference: The merchant_reference of this Body.
+        :type: str
         """
-        if emv_details_list is None:
-            raise ValueError("Invalid value for `emv_details_list`, must not be `None`")
 
-        self._emv_details_list = emv_details_list
+        self._merchant_reference = merchant_reference
+
+    @property
+    def notification_email(self):
+        """
+        Gets the notification_email of this Body.
+        Email used to notify the batch status.
+
+        :return: The notification_email of this Body.
+        :rtype: str
+        """
+        return self._notification_email
+
+    @notification_email.setter
+    def notification_email(self, notification_email):
+        """
+        Sets the notification_email of this Body.
+        Email used to notify the batch status.
+
+        :param notification_email: The notification_email of this Body.
+        :type: str
+        """
+        if notification_email is None:
+            raise ValueError("Invalid value for `notification_email`, must not be `None`")
+
+        self._notification_email = notification_email
 
     def to_dict(self):
         """

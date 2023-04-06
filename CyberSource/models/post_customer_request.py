@@ -118,7 +118,7 @@ class PostCustomerRequest(object):
     def id(self):
         """
         Gets the id of this PostCustomerRequest.
-        The id of the Customer Token.
+        The Id of the Customer Token.
 
         :return: The id of this PostCustomerRequest.
         :rtype: str
@@ -129,7 +129,7 @@ class PostCustomerRequest(object):
     def id(self, id):
         """
         Sets the id of this PostCustomerRequest.
-        The id of the Customer Token.
+        The Id of the Customer Token.
 
         :param id: The id of this PostCustomerRequest.
         :type: str

@@ -32,31 +32,36 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
     """
     swagger_types = {
         '_self': 'PtsV2PaymentsPost201ResponseLinksSelf',
-        'next': 'PtsV2PaymentsPost201ResponseLinksSelf',
-        'previous': 'PtsV2PaymentsPost201ResponseLinksSelf'
+        'update': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'deliver': 'PtsV2PaymentsPost201ResponseLinksSelf',
+        'cancel': 'PtsV2PaymentsPost201ResponseLinksSelf'
     }
 
     attribute_map = {
         '_self': 'self',
-        'next': 'next',
-        'previous': 'previous'
+        'update': 'update',
+        'deliver': 'deliver',
+        'cancel': 'cancel'
     }
 
-    def __init__(self, _self=None, next=None, previous=None):
+    def __init__(self, _self=None, update=None, deliver=None, cancel=None):
         """
         InvoicingV2InvoicesAllGet200ResponseLinks - a model defined in Swagger
         """
 
         self.__self = None
-        self._next = None
-        self._previous = None
+        self._update = None
+        self._deliver = None
+        self._cancel = None
 
         if _self is not None:
           self._self = _self
-        if next is not None:
-          self.next = next
-        if previous is not None:
-          self.previous = previous
+        if update is not None:
+          self.update = update
+        if deliver is not None:
+          self.deliver = deliver
+        if cancel is not None:
+          self.cancel = cancel
 
     @property
     def _self(self):
@@ -80,46 +85,67 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
         self.__self = _self
 
     @property
-    def next(self):
+    def update(self):
         """
-        Gets the next of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        Gets the update of this InvoicingV2InvoicesAllGet200ResponseLinks.
 
-        :return: The next of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :return: The update of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :rtype: PtsV2PaymentsPost201ResponseLinksSelf
         """
-        return self._next
+        return self._update
 
-    @next.setter
-    def next(self, next):
+    @update.setter
+    def update(self, update):
         """
-        Sets the next of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        Sets the update of this InvoicingV2InvoicesAllGet200ResponseLinks.
 
-        :param next: The next of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :param update: The update of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-        self._next = next
+        self._update = update
 
     @property
-    def previous(self):
+    def deliver(self):
         """
-        Gets the previous of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        Gets the deliver of this InvoicingV2InvoicesAllGet200ResponseLinks.
 
-        :return: The previous of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :return: The deliver of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :rtype: PtsV2PaymentsPost201ResponseLinksSelf
         """
-        return self._previous
+        return self._deliver
 
-    @previous.setter
-    def previous(self, previous):
+    @deliver.setter
+    def deliver(self, deliver):
         """
-        Sets the previous of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        Sets the deliver of this InvoicingV2InvoicesAllGet200ResponseLinks.
 
-        :param previous: The previous of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :param deliver: The deliver of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-        self._previous = previous
+        self._deliver = deliver
+
+    @property
+    def cancel(self):
+        """
+        Gets the cancel of this InvoicingV2InvoicesAllGet200ResponseLinks.
+
+        :return: The cancel of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :rtype: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+        return self._cancel
+
+    @cancel.setter
+    def cancel(self, cancel):
+        """
+        Sets the cancel of this InvoicingV2InvoicesAllGet200ResponseLinks.
+
+        :param cancel: The cancel of this InvoicingV2InvoicesAllGet200ResponseLinks.
+        :type: PtsV2PaymentsPost201ResponseLinksSelf
+        """
+
+        self._cancel = cancel
 
     def to_dict(self):
         """

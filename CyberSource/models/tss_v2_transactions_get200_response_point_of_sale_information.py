@@ -134,10 +134,6 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :param terminal_capability: The terminal_capability of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
         :type: int
         """
-        if terminal_capability is not None and terminal_capability > 5:
-            raise ValueError("Invalid value for `terminal_capability`, must be a value less than or equal to `5`")
-        if terminal_capability is not None and terminal_capability < 1:
-            raise ValueError("Invalid value for `terminal_capability`, must be a value greater than or equal to `1`")
 
         self._terminal_capability = terminal_capability
 
