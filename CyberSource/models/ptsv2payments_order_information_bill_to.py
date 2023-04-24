@@ -52,7 +52,9 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'email_domain': 'str',
         'phone_number': 'str',
         'phone_type': 'str',
-        'verification_status': 'str'
+        'verification_status': 'str',
+        'alternate_phone_number': 'str',
+        'alternate_email': 'str'
     }
 
     attribute_map = {
@@ -77,10 +79,12 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'email_domain': 'emailDomain',
         'phone_number': 'phoneNumber',
         'phone_type': 'phoneType',
-        'verification_status': 'verificationStatus'
+        'verification_status': 'verificationStatus',
+        'alternate_phone_number': 'alternatePhoneNumber',
+        'alternate_email': 'alternateEmail'
     }
 
-    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, email=None, email_domain=None, phone_number=None, phone_type=None, verification_status=None):
+    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, email=None, email_domain=None, phone_number=None, phone_type=None, verification_status=None, alternate_phone_number=None, alternate_email=None):
         """
         Ptsv2paymentsOrderInformationBillTo - a model defined in Swagger
         """
@@ -107,6 +111,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         self._phone_number = None
         self._phone_type = None
         self._verification_status = None
+        self._alternate_phone_number = None
+        self._alternate_email = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -152,6 +158,10 @@ class Ptsv2paymentsOrderInformationBillTo(object):
           self.phone_type = phone_type
         if verification_status is not None:
           self.verification_status = verification_status
+        if alternate_phone_number is not None:
+          self.alternate_phone_number = alternate_phone_number
+        if alternate_email is not None:
+          self.alternate_email = alternate_email
 
     @property
     def first_name(self):
@@ -656,6 +666,52 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         """
 
         self._verification_status = verification_status
+
+    @property
+    def alternate_phone_number(self):
+        """
+        Gets the alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate phone number. 
+
+        :return: The alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._alternate_phone_number
+
+    @alternate_phone_number.setter
+    def alternate_phone_number(self, alternate_phone_number):
+        """
+        Sets the alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate phone number. 
+
+        :param alternate_phone_number: The alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._alternate_phone_number = alternate_phone_number
+
+    @property
+    def alternate_email(self):
+        """
+        Gets the alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate email address. 
+
+        :return: The alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._alternate_email
+
+    @alternate_email.setter
+    def alternate_email(self, alternate_email):
+        """
+        Sets the alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate email address. 
+
+        :param alternate_email: The alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._alternate_email = alternate_email
 
     def to_dict(self):
         """

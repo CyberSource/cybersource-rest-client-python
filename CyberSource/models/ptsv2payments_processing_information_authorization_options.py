@@ -49,7 +49,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'aggregated_auth_indicator': 'str',
         'debt_recovery_indicator': 'str',
         'deferred_auth_indicator': 'bool',
-        'cash_advance_indicator': 'bool'
+        'cash_advance_indicator': 'bool',
+        'split_payment_transaction': 'bool'
     }
 
     attribute_map = {
@@ -71,10 +72,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'aggregated_auth_indicator': 'aggregatedAuthIndicator',
         'debt_recovery_indicator': 'debtRecoveryIndicator',
         'deferred_auth_indicator': 'deferredAuthIndicator',
-        'cash_advance_indicator': 'cashAdvanceIndicator'
+        'cash_advance_indicator': 'cashAdvanceIndicator',
+        'split_payment_transaction': 'splitPaymentTransaction'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -98,6 +100,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._debt_recovery_indicator = None
         self._deferred_auth_indicator = None
         self._cash_advance_indicator = None
+        self._split_payment_transaction = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -137,6 +140,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.deferred_auth_indicator = deferred_auth_indicator
         if cash_advance_indicator is not None:
           self.cash_advance_indicator = cash_advance_indicator
+        if split_payment_transaction is not None:
+          self.split_payment_transaction = split_payment_transaction
 
     @property
     def auth_type(self):
@@ -572,6 +577,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._cash_advance_indicator = cash_advance_indicator
+
+    @property
+    def split_payment_transaction(self):
+        """
+        Gets the split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect Indicates split payment transaction. A split payment allows the use of two payment methods for a single transaction.  Possible values:   - `true` (split payment transaction is supported)   - `false` (default: split payment transaction is not supported) 
+
+        :return: The split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._split_payment_transaction
+
+    @split_payment_transaction.setter
+    def split_payment_transaction(self, split_payment_transaction):
+        """
+        Sets the split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect Indicates split payment transaction. A split payment allows the use of two payment methods for a single transaction.  Possible values:   - `true` (split payment transaction is supported)   - `false` (default: split payment transaction is not supported) 
+
+        :param split_payment_transaction: The split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._split_payment_transaction = split_payment_transaction
 
     def to_dict(self):
         """

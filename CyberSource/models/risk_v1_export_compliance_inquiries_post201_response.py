@@ -38,7 +38,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         'status': 'str',
         'message': 'str',
         'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
-        'export_compliance_information': 'RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation',
+        'export_compliance_information': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformation',
         'error_information': 'RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation'
     }
 
@@ -251,7 +251,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Gets the export_compliance_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :return: The export_compliance_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :rtype: RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation
+        :rtype: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
         """
         return self._export_compliance_information
 
@@ -261,7 +261,7 @@ class RiskV1ExportComplianceInquiriesPost201Response(object):
         Sets the export_compliance_information of this RiskV1ExportComplianceInquiriesPost201Response.
 
         :param export_compliance_information: The export_compliance_information of this RiskV1ExportComplianceInquiriesPost201Response.
-        :type: RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation
+        :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
         """
 
         self._export_compliance_information = export_compliance_information

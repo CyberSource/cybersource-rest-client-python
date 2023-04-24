@@ -44,7 +44,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'merchant_information': 'Riskv1decisionsMerchantInformation',
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
-        'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation'
+        'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
+        'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'merchant_information': 'merchantInformation',
         'acquirer_information': 'acquirerInformation',
         'recurring_payment_information': 'recurringPaymentInformation',
-        'consumer_authentication_information': 'consumerAuthenticationInformation'
+        'consumer_authentication_information': 'consumerAuthenticationInformation',
+        'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None):
+    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, watchlist_screening_information=None):
         """
         CreateBundledDecisionManagerCaseRequest - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         self._acquirer_information = None
         self._recurring_payment_information = None
         self._consumer_authentication_information = None
+        self._watchlist_screening_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -112,6 +115,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
           self.recurring_payment_information = recurring_payment_information
         if consumer_authentication_information is not None:
           self.consumer_authentication_information = consumer_authentication_information
+        if watchlist_screening_information is not None:
+          self.watchlist_screening_information = watchlist_screening_information
 
     @property
     def client_reference_information(self):
@@ -406,6 +411,27 @@ class CreateBundledDecisionManagerCaseRequest(object):
         """
 
         self._consumer_authentication_information = consumer_authentication_information
+
+    @property
+    def watchlist_screening_information(self):
+        """
+        Gets the watchlist_screening_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :return: The watchlist_screening_information of this CreateBundledDecisionManagerCaseRequest.
+        :rtype: Ptsv2paymentsWatchlistScreeningInformation
+        """
+        return self._watchlist_screening_information
+
+    @watchlist_screening_information.setter
+    def watchlist_screening_information(self, watchlist_screening_information):
+        """
+        Sets the watchlist_screening_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :param watchlist_screening_information: The watchlist_screening_information of this CreateBundledDecisionManagerCaseRequest.
+        :type: Ptsv2paymentsWatchlistScreeningInformation
+        """
+
+        self._watchlist_screening_information = watchlist_screening_information
 
     def to_dict(self):
         """

@@ -41,7 +41,8 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'assurance_level': 'str',
         'storage_method': 'str',
         'security_code': 'str',
-        'security_code_indicator': 'str'
+        'security_code_indicator': 'str',
+        'assurance_method': 'str'
     }
 
     attribute_map = {
@@ -55,10 +56,11 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'assurance_level': 'assuranceLevel',
         'storage_method': 'storageMethod',
         'security_code': 'securityCode',
-        'security_code_indicator': 'securityCodeIndicator'
+        'security_code_indicator': 'securityCodeIndicator',
+        'assurance_method': 'assuranceMethod'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None, security_code_indicator=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None, security_code_indicator=None, assurance_method=None):
         """
         Ptsv2paymentsPaymentInformationTokenizedCard - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         self._storage_method = None
         self._security_code = None
         self._security_code_indicator = None
+        self._assurance_method = None
 
         if number is not None:
           self.number = number
@@ -97,6 +100,8 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
           self.security_code = security_code
         if security_code_indicator is not None:
           self.security_code_indicator = security_code_indicator
+        if assurance_method is not None:
+          self.assurance_method = assurance_method
 
     @property
     def number(self):
@@ -263,7 +268,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :return: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -274,7 +279,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :param assurance_level: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -350,6 +355,29 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         """
 
         self._security_code_indicator = security_code_indicator
+
+    @property
+    def assurance_method(self):
+        """
+        Gets the assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :return: The assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._assurance_method
+
+    @assurance_method.setter
+    def assurance_method(self, assurance_method):
+        """
+        Sets the assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :param assurance_method: The assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._assurance_method = assurance_method
 
     def to_dict(self):
         """

@@ -61,7 +61,9 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'gift_card_currency': 'int',
         'shipping_destination_types': 'str',
         'gift': 'bool',
-        'passenger': 'Ptsv2paymentsOrderInformationPassenger'
+        'passenger': 'Ptsv2paymentsOrderInformationPassenger',
+        'allowed_export_countries': 'list[str]',
+        'restricted_export_countries': 'list[str]'
     }
 
     attribute_map = {
@@ -95,10 +97,12 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'gift_card_currency': 'giftCardCurrency',
         'shipping_destination_types': 'shippingDestinationTypes',
         'gift': 'gift',
-        'passenger': 'passenger'
+        'passenger': 'passenger',
+        'allowed_export_countries': 'allowedExportCountries',
+        'restricted_export_countries': 'restrictedExportCountries'
     }
 
-    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None, product_description=None, gift_card_currency=None, shipping_destination_types=None, gift=None, passenger=None):
+    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None, product_description=None, gift_card_currency=None, shipping_destination_types=None, gift=None, passenger=None, allowed_export_countries=None, restricted_export_countries=None):
         """
         Ptsv2paymentsOrderInformationLineItems - a model defined in Swagger
         """
@@ -134,6 +138,8 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         self._shipping_destination_types = None
         self._gift = None
         self._passenger = None
+        self._allowed_export_countries = None
+        self._restricted_export_countries = None
 
         if product_code is not None:
           self.product_code = product_code
@@ -197,6 +203,10 @@ class Ptsv2paymentsOrderInformationLineItems(object):
           self.gift = gift
         if passenger is not None:
           self.passenger = passenger
+        if allowed_export_countries is not None:
+          self.allowed_export_countries = allowed_export_countries
+        if restricted_export_countries is not None:
+          self.restricted_export_countries = restricted_export_countries
 
     @property
     def product_code(self):
@@ -906,6 +916,48 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         """
 
         self._passenger = passenger
+
+    @property
+    def allowed_export_countries(self):
+        """
+        Gets the allowed_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+
+        :return: The allowed_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._allowed_export_countries
+
+    @allowed_export_countries.setter
+    def allowed_export_countries(self, allowed_export_countries):
+        """
+        Sets the allowed_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+
+        :param allowed_export_countries: The allowed_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._allowed_export_countries = allowed_export_countries
+
+    @property
+    def restricted_export_countries(self):
+        """
+        Gets the restricted_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+
+        :return: The restricted_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._restricted_export_countries
+
+    @restricted_export_countries.setter
+    def restricted_export_countries(self, restricted_export_countries):
+        """
+        Sets the restricted_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+
+        :param restricted_export_countries: The restricted_export_countries of this Ptsv2paymentsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._restricted_export_countries = restricted_export_countries
 
     def to_dict(self):
         """

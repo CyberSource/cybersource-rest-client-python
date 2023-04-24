@@ -50,7 +50,8 @@ class PtsV2PaymentsPost201Response(object):
         'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
         'buyer_information': 'PtsV2PaymentsPost201ResponseBuyerInformation',
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
-        'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation'
+        'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation',
+        'watchlist_screening_information': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformation'
     }
 
     attribute_map = {
@@ -73,10 +74,11 @@ class PtsV2PaymentsPost201Response(object):
         'token_information': 'tokenInformation',
         'buyer_information': 'buyerInformation',
         'risk_information': 'riskInformation',
-        'consumer_authentication_information': 'consumerAuthenticationInformation'
+        'consumer_authentication_information': 'consumerAuthenticationInformation',
+        'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, watchlist_screening_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -101,6 +103,7 @@ class PtsV2PaymentsPost201Response(object):
         self._buyer_information = None
         self._risk_information = None
         self._consumer_authentication_information = None
+        self._watchlist_screening_information = None
 
         if links is not None:
           self.links = links
@@ -142,6 +145,8 @@ class PtsV2PaymentsPost201Response(object):
           self.risk_information = risk_information
         if consumer_authentication_information is not None:
           self.consumer_authentication_information = consumer_authentication_information
+        if watchlist_screening_information is not None:
+          self.watchlist_screening_information = watchlist_screening_information
 
     @property
     def links(self):
@@ -570,6 +575,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._consumer_authentication_information = consumer_authentication_information
+
+    @property
+    def watchlist_screening_information(self):
+        """
+        Gets the watchlist_screening_information of this PtsV2PaymentsPost201Response.
+
+        :return: The watchlist_screening_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
+        """
+        return self._watchlist_screening_information
+
+    @watchlist_screening_information.setter
+    def watchlist_screening_information(self, watchlist_screening_information):
+        """
+        Sets the watchlist_screening_information of this PtsV2PaymentsPost201Response.
+
+        :param watchlist_screening_information: The watchlist_screening_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
+        """
+
+        self._watchlist_screening_information = watchlist_screening_information
 
     def to_dict(self):
         """
