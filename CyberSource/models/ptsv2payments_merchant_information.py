@@ -45,6 +45,8 @@ class Ptsv2paymentsMerchantInformation(object):
         'success_url': 'str',
         'failure_url': 'str',
         'return_url': 'str',
+        'partner_id_code': 'str',
+        'service_location': 'Ptsv2paymentsMerchantInformationServiceLocation',
         'merchant_name': 'str'
     }
 
@@ -63,10 +65,12 @@ class Ptsv2paymentsMerchantInformation(object):
         'success_url': 'successUrl',
         'failure_url': 'failureUrl',
         'return_url': 'returnUrl',
+        'partner_id_code': 'partnerIdCode',
+        'service_location': 'serviceLocation',
         'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, return_url=None, merchant_name=None):
+    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, return_url=None, partner_id_code=None, service_location=None, merchant_name=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
@@ -85,6 +89,8 @@ class Ptsv2paymentsMerchantInformation(object):
         self._success_url = None
         self._failure_url = None
         self._return_url = None
+        self._partner_id_code = None
+        self._service_location = None
         self._merchant_name = None
 
         if merchant_descriptor is not None:
@@ -115,6 +121,10 @@ class Ptsv2paymentsMerchantInformation(object):
           self.failure_url = failure_url
         if return_url is not None:
           self.return_url = return_url
+        if partner_id_code is not None:
+          self.partner_id_code = partner_id_code
+        if service_location is not None:
+          self.service_location = service_location
         if merchant_name is not None:
           self.merchant_name = merchant_name
 
@@ -435,6 +445,50 @@ class Ptsv2paymentsMerchantInformation(object):
         """
 
         self._return_url = return_url
+
+    @property
+    def partner_id_code(self):
+        """
+        Gets the partner_id_code of this Ptsv2paymentsMerchantInformation.
+        #### Visa Platform Connect This field may be used for transactions on accounts issued under co-branding agreements when one of the co-branding partners. 
+
+        :return: The partner_id_code of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._partner_id_code
+
+    @partner_id_code.setter
+    def partner_id_code(self, partner_id_code):
+        """
+        Sets the partner_id_code of this Ptsv2paymentsMerchantInformation.
+        #### Visa Platform Connect This field may be used for transactions on accounts issued under co-branding agreements when one of the co-branding partners. 
+
+        :param partner_id_code: The partner_id_code of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._partner_id_code = partner_id_code
+
+    @property
+    def service_location(self):
+        """
+        Gets the service_location of this Ptsv2paymentsMerchantInformation.
+
+        :return: The service_location of this Ptsv2paymentsMerchantInformation.
+        :rtype: Ptsv2paymentsMerchantInformationServiceLocation
+        """
+        return self._service_location
+
+    @service_location.setter
+    def service_location(self, service_location):
+        """
+        Sets the service_location of this Ptsv2paymentsMerchantInformation.
+
+        :param service_location: The service_location of this Ptsv2paymentsMerchantInformation.
+        :type: Ptsv2paymentsMerchantInformationServiceLocation
+        """
+
+        self._service_location = service_location
 
     @property
     def merchant_name(self):

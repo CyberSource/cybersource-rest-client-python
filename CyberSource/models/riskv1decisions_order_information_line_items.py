@@ -44,7 +44,9 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'distributor_product_sku': 'str',
         'passenger': 'Ptsv2paymentsOrderInformationPassenger',
         'shipping_destination_types': 'str',
-        'tax_amount': 'str'
+        'tax_amount': 'str',
+        'allowed_export_countries': 'list[str]',
+        'restricted_export_countries': 'list[str]'
     }
 
     attribute_map = {
@@ -61,10 +63,12 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'distributor_product_sku': 'distributorProductSku',
         'passenger': 'passenger',
         'shipping_destination_types': 'shippingDestinationTypes',
-        'tax_amount': 'taxAmount'
+        'tax_amount': 'taxAmount',
+        'allowed_export_countries': 'allowedExportCountries',
+        'restricted_export_countries': 'restrictedExportCountries'
     }
 
-    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, passenger=None, shipping_destination_types=None, tax_amount=None):
+    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, passenger=None, shipping_destination_types=None, tax_amount=None, allowed_export_countries=None, restricted_export_countries=None):
         """
         Riskv1decisionsOrderInformationLineItems - a model defined in Swagger
         """
@@ -83,6 +87,8 @@ class Riskv1decisionsOrderInformationLineItems(object):
         self._passenger = None
         self._shipping_destination_types = None
         self._tax_amount = None
+        self._allowed_export_countries = None
+        self._restricted_export_countries = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -112,6 +118,10 @@ class Riskv1decisionsOrderInformationLineItems(object):
           self.shipping_destination_types = shipping_destination_types
         if tax_amount is not None:
           self.tax_amount = tax_amount
+        if allowed_export_countries is not None:
+          self.allowed_export_countries = allowed_export_countries
+        if restricted_export_countries is not None:
+          self.restricted_export_countries = restricted_export_countries
 
     @property
     def total_amount(self):
@@ -432,6 +442,48 @@ class Riskv1decisionsOrderInformationLineItems(object):
         """
 
         self._tax_amount = tax_amount
+
+    @property
+    def allowed_export_countries(self):
+        """
+        Gets the allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :return: The allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._allowed_export_countries
+
+    @allowed_export_countries.setter
+    def allowed_export_countries(self, allowed_export_countries):
+        """
+        Sets the allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :param allowed_export_countries: The allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._allowed_export_countries = allowed_export_countries
+
+    @property
+    def restricted_export_countries(self):
+        """
+        Gets the restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :return: The restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._restricted_export_countries
+
+    @restricted_export_countries.setter
+    def restricted_export_countries(self, restricted_export_countries):
+        """
+        Sets the restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :param restricted_export_countries: The restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._restricted_export_countries = restricted_export_countries
 
     def to_dict(self):
         """

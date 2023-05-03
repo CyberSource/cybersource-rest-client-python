@@ -34,17 +34,19 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         'acquirer_merchant_id': 'str',
         'acquirer_bin': 'str',
         'retrieval_reference_number': 'str',
-        'account_funding_reference_id': 'str'
+        'account_funding_reference_id': 'str',
+        'deferred_date_time': 'str'
     }
 
     attribute_map = {
         'acquirer_merchant_id': 'acquirerMerchantId',
         'acquirer_bin': 'acquirerBin',
         'retrieval_reference_number': 'retrievalReferenceNumber',
-        'account_funding_reference_id': 'accountFundingReferenceId'
+        'account_funding_reference_id': 'accountFundingReferenceId',
+        'deferred_date_time': 'deferredDateTime'
     }
 
-    def __init__(self, acquirer_merchant_id=None, acquirer_bin=None, retrieval_reference_number=None, account_funding_reference_id=None):
+    def __init__(self, acquirer_merchant_id=None, acquirer_bin=None, retrieval_reference_number=None, account_funding_reference_id=None, deferred_date_time=None):
         """
         Ptsv2payoutsProcessingInformationPayoutsOptions - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         self._acquirer_bin = None
         self._retrieval_reference_number = None
         self._account_funding_reference_id = None
+        self._deferred_date_time = None
 
         if acquirer_merchant_id is not None:
           self.acquirer_merchant_id = acquirer_merchant_id
@@ -62,6 +65,8 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
           self.retrieval_reference_number = retrieval_reference_number
         if account_funding_reference_id is not None:
           self.account_funding_reference_id = account_funding_reference_id
+        if deferred_date_time is not None:
+          self.deferred_date_time = deferred_date_time
 
     @property
     def acquirer_merchant_id(self):
@@ -154,6 +159,29 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         """
 
         self._account_funding_reference_id = account_funding_reference_id
+
+    @property
+    def deferred_date_time(self):
+        """
+        Gets the deferred_date_time of this Ptsv2payoutsProcessingInformationPayoutsOptions.
+        #### Visa Platform Connect  Contains date and time value indicating scheduled deferred OCT.  Format is : 'yyyyMMddHHmm', where  'YYYY' = year 'MM' = month 'DD' = day 'hh' = hour 'mm' = minutes 
+
+        :return: The deferred_date_time of this Ptsv2payoutsProcessingInformationPayoutsOptions.
+        :rtype: str
+        """
+        return self._deferred_date_time
+
+    @deferred_date_time.setter
+    def deferred_date_time(self, deferred_date_time):
+        """
+        Sets the deferred_date_time of this Ptsv2payoutsProcessingInformationPayoutsOptions.
+        #### Visa Platform Connect  Contains date and time value indicating scheduled deferred OCT.  Format is : 'yyyyMMddHHmm', where  'YYYY' = year 'MM' = month 'DD' = day 'hh' = hour 'mm' = minutes 
+
+        :param deferred_date_time: The deferred_date_time of this Ptsv2payoutsProcessingInformationPayoutsOptions.
+        :type: str
+        """
+
+        self._deferred_date_time = deferred_date_time
 
     def to_dict(self):
         """

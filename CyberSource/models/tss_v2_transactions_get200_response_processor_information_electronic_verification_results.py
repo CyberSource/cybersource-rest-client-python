@@ -143,7 +143,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name. 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :return: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -154,7 +154,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name. 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -166,7 +166,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self):
         """
         Gets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s name. 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :return: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -177,7 +177,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s name. 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :param name_raw: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str

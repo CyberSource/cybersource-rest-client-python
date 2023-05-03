@@ -37,7 +37,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         'assurance_level': 'str',
         'expiration_month': 'str',
         'expiration_year': 'str',
-        'requestor_id': 'str'
+        'requestor_id': 'str',
+        'assurance_method': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         'assurance_level': 'assuranceLevel',
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
-        'requestor_id': 'requestorId'
+        'requestor_id': 'requestorId',
+        'assurance_method': 'assuranceMethod'
     }
 
-    def __init__(self, prefix=None, suffix=None, type=None, assurance_level=None, expiration_month=None, expiration_year=None, requestor_id=None):
+    def __init__(self, prefix=None, suffix=None, type=None, assurance_level=None, expiration_month=None, expiration_year=None, requestor_id=None, assurance_method=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         self._expiration_month = None
         self._expiration_year = None
         self._requestor_id = None
+        self._assurance_method = None
 
         if prefix is not None:
           self.prefix = prefix
@@ -77,6 +80,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
           self.expiration_year = expiration_year
         if requestor_id is not None:
           self.requestor_id = requestor_id
+        if assurance_method is not None:
+          self.assurance_method = assurance_method
 
     @property
     def prefix(self):
@@ -151,7 +156,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :return: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -162,7 +167,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :param assurance_level: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
@@ -238,6 +243,29 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         """
 
         self._requestor_id = requestor_id
+
+    @property
+    def assurance_method(self):
+        """
+        Gets the assurance_method of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :return: The assurance_method of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._assurance_method
+
+    @assurance_method.setter
+    def assurance_method(self, assurance_method):
+        """
+        Sets the assurance_method of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :param assurance_method: The assurance_method of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._assurance_method = assurance_method
 
     def to_dict(self):
         """

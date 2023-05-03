@@ -32,7 +32,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
     """
     swagger_types = {
         'address_operator': 'str',
-        'weights': 'Riskv1exportcomplianceinquiriesExportComplianceInformationWeights',
+        'weights': 'Ptsv2paymentsWatchlistScreeningInformationWeights',
         'sanction_lists': 'list[str]'
     }
 
@@ -87,7 +87,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
         Gets the weights of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
 
         :return: The weights of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
-        :rtype: Riskv1exportcomplianceinquiriesExportComplianceInformationWeights
+        :rtype: Ptsv2paymentsWatchlistScreeningInformationWeights
         """
         return self._weights
 
@@ -97,7 +97,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
         Sets the weights of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
 
         :param weights: The weights of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
-        :type: Riskv1exportcomplianceinquiriesExportComplianceInformationWeights
+        :type: Ptsv2paymentsWatchlistScreeningInformationWeights
         """
 
         self._weights = weights

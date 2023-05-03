@@ -42,7 +42,13 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         'street': 'str',
         'street_raw': 'str',
         'name': 'str',
-        'name_raw': 'str'
+        'name_raw': 'str',
+        'first_name_raw': 'str',
+        'first_name': 'str',
+        'middle_name_raw': 'str',
+        'middle_name': 'str',
+        'last_name_raw': 'str',
+        'last_name': 'str'
     }
 
     attribute_map = {
@@ -57,10 +63,16 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         'street': 'street',
         'street_raw': 'streetRaw',
         'name': 'name',
-        'name_raw': 'nameRaw'
+        'name_raw': 'nameRaw',
+        'first_name_raw': 'firstNameRaw',
+        'first_name': 'firstName',
+        'middle_name_raw': 'middleNameRaw',
+        'middle_name': 'middleName',
+        'last_name_raw': 'lastNameRaw',
+        'last_name': 'lastName'
     }
 
-    def __init__(self, code=None, code_raw=None, email=None, email_raw=None, phone_number=None, phone_number_raw=None, postal_code=None, postal_code_raw=None, street=None, street_raw=None, name=None, name_raw=None):
+    def __init__(self, code=None, code_raw=None, email=None, email_raw=None, phone_number=None, phone_number_raw=None, postal_code=None, postal_code_raw=None, street=None, street_raw=None, name=None, name_raw=None, first_name_raw=None, first_name=None, middle_name_raw=None, middle_name=None, last_name_raw=None, last_name=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults - a model defined in Swagger
         """
@@ -77,6 +89,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         self._street_raw = None
         self._name = None
         self._name_raw = None
+        self._first_name_raw = None
+        self._first_name = None
+        self._middle_name_raw = None
+        self._middle_name = None
+        self._last_name_raw = None
+        self._last_name = None
 
         if code is not None:
           self.code = code
@@ -102,6 +120,18 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
           self.name = name
         if name_raw is not None:
           self.name_raw = name_raw
+        if first_name_raw is not None:
+          self.first_name_raw = first_name_raw
+        if first_name is not None:
+          self.first_name = first_name
+        if middle_name_raw is not None:
+          self.middle_name_raw = middle_name_raw
+        if middle_name is not None:
+          self.middle_name = middle_name
+        if last_name_raw is not None:
+          self.last_name_raw = last_name_raw
+        if last_name is not None:
+          self.last_name = last_name
 
     @property
     def code(self):
@@ -337,7 +367,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self):
         """
         Gets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name. 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :return: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -348,7 +378,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name(self, name):
         """
         Sets the name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s name. 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :param name: The name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -360,7 +390,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self):
         """
         Gets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s name. 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :return: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -371,13 +401,151 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s name. 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :param name_raw: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
 
         self._name_raw = name_raw
+
+    @property
+    def first_name_raw(self):
+        """
+        Gets the first_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s first name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :return: The first_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._first_name_raw
+
+    @first_name_raw.setter
+    def first_name_raw(self, first_name_raw):
+        """
+        Sets the first_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s first name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :param first_name_raw: The first_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._first_name_raw = first_name_raw
+
+    @property
+    def first_name(self):
+        """
+        Gets the first_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s first name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :return: The first_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        """
+        Sets the first_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s first name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :param first_name: The first_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._first_name = first_name
+
+    @property
+    def middle_name_raw(self):
+        """
+        Gets the middle_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s middle name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :return: The middle_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._middle_name_raw
+
+    @middle_name_raw.setter
+    def middle_name_raw(self, middle_name_raw):
+        """
+        Sets the middle_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s middle name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :param middle_name_raw: The middle_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._middle_name_raw = middle_name_raw
+
+    @property
+    def middle_name(self):
+        """
+        Gets the middle_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s middle name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :return: The middle_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._middle_name
+
+    @middle_name.setter
+    def middle_name(self, middle_name):
+        """
+        Sets the middle_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s middle name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :param middle_name: The middle_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._middle_name = middle_name
+
+    @property
+    def last_name_raw(self):
+        """
+        Gets the last_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s last name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :return: The last_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._last_name_raw
+
+    @last_name_raw.setter
+    def last_name_raw(self, last_name_raw):
+        """
+        Sets the last_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Raw electronic verification response code from the processor for the customer’s last name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+
+        :param last_name_raw: The last_name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._last_name_raw = last_name_raw
+
+    @property
+    def last_name(self):
+        """
+        Gets the last_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s last name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :return: The last_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :rtype: str
+        """
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        """
+        Sets the last_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        #### Visa Platform Connect Mapped electronic verification response code from the processor for the customer’s last name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+
+        :param last_name: The last_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
+        :type: str
+        """
+
+        self._last_name = last_name
 
     def to_dict(self):
         """
