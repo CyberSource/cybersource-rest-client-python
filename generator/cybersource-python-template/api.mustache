@@ -226,14 +226,12 @@ class {{classname}}(object):
 {{/bodyParam}}
         {{#hasProduces}}
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept([{{#produces}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/produces}}])
+        header_params['Accept'] = self.api_client.select_header_accept([{{#produces}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/produces}}])
 
         {{/hasProduces}}
         {{#hasConsumes}}
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([{{#consumes}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/consumes}}])
+        header_params['Content-Type'] = self.api_client.select_header_content_type([{{#consumes}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/consumes}}])
 
         {{/hasConsumes}}
         # Authentication setting
