@@ -1,10 +1,10 @@
-# CyberSource.KeymanagementscmpApi
+# CyberSource.KeyManagementScmpApi
 
 All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**update_scmp**](KeymanagementscmpApi.md#update_scmp) | **PATCH** /kms/v2/keys-scmp/{keyId} | Update or Deactivate
+[**update_scmp**](KeyManagementScmpApi.md#update_scmp) | **PATCH** /kms/v2/keys-scmp/{keyId} | Update or Deactivate
 
 
 # **update_scmp**
@@ -23,7 +23,7 @@ from CyberSource.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = CyberSource.KeymanagementscmpApi()
+api_instance = CyberSource.KeyManagementScmpApi()
 key_id = 'key_id_example' # str | Key ID. 
 update_pgp_keys_request = CyberSource.UpdatePGPKeysRequest1() # UpdatePGPKeysRequest1 | 
 
@@ -32,7 +32,7 @@ try:
     api_response = api_instance.update_scmp(key_id, update_pgp_keys_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling KeymanagementscmpApi->update_scmp: %s\n" % e)
+    print("Exception when calling KeyManagementScmpApi->update_scmp: %s\n" % e)
 ```
 
 ### Parameters

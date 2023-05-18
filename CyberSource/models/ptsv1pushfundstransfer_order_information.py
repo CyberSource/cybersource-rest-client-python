@@ -51,8 +51,7 @@ class Ptsv1pushfundstransferOrderInformation(object):
         self._is_cryptocurrency_purchase = None
         self._surcharge = None
 
-        if amount_details is not None:
-          self.amount_details = amount_details
+        self.amount_details = amount_details
         if is_cryptocurrency_purchase is not None:
           self.is_cryptocurrency_purchase = is_cryptocurrency_purchase
         if surcharge is not None:
@@ -76,6 +75,8 @@ class Ptsv1pushfundstransferOrderInformation(object):
         :param amount_details: The amount_details of this Ptsv1pushfundstransferOrderInformation.
         :type: Ptsv1pushfundstransferOrderInformationAmountDetails
         """
+        if amount_details is None:
+            raise ValueError("Invalid value for `amount_details`, must not be `None`")
 
         self._amount_details = amount_details
 

@@ -1,10 +1,10 @@
-# CyberSource.KeymanagementpasswordApi
+# CyberSource.KeyManagementPasswordApi
 
 All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**update_password**](KeymanagementpasswordApi.md#update_password) | **PATCH** /kms/v2/keys-password/{keyId} | Activate or De-activate Password
+[**update_password**](KeyManagementPasswordApi.md#update_password) | **PATCH** /kms/v2/keys-password/{keyId} | Activate or De-activate Password
 
 
 # **update_password**
@@ -23,7 +23,7 @@ from CyberSource.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = CyberSource.KeymanagementpasswordApi()
+api_instance = CyberSource.KeyManagementPasswordApi()
 key_id = 'key_id_example' # str | Key ID. 
 update_password_keys_request = CyberSource.UpdatePasswordKeysRequest() # UpdatePasswordKeysRequest | 
 
@@ -32,7 +32,7 @@ try:
     api_response = api_instance.update_password(key_id, update_password_keys_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling KeymanagementpasswordApi->update_password: %s\n" % e)
+    print("Exception when calling KeyManagementPasswordApi->update_password: %s\n" % e)
 ```
 
 ### Parameters

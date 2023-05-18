@@ -56,8 +56,7 @@ class Body(object):
 
         if type is not None:
           self.type = type
-        if included is not None:
-          self.included = included
+        self.included = included
         if merchant_reference is not None:
           self.merchant_reference = merchant_reference
         self.notification_email = notification_email
@@ -103,6 +102,8 @@ class Body(object):
         :param included: The included of this Body.
         :type: Accountupdaterv1batchesIncluded
         """
+        if included is None:
+            raise ValueError("Invalid value for `included`, must not be `None`")
 
         self._included = included
 

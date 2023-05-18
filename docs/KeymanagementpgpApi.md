@@ -1,10 +1,10 @@
-# CyberSource.KeymanagementpgpApi
+# CyberSource.KeyManagementPgpApi
 
 All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**update_pgp**](KeymanagementpgpApi.md#update_pgp) | **PATCH** /kms/v2/keys-pgp/{keyId} | Activate or De-activate PGP Key
+[**update_pgp**](KeyManagementPgpApi.md#update_pgp) | **PATCH** /kms/v2/keys-pgp/{keyId} | Activate or De-activate PGP Key
 
 
 # **update_pgp**
@@ -23,7 +23,7 @@ from CyberSource.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = CyberSource.KeymanagementpgpApi()
+api_instance = CyberSource.KeyManagementPgpApi()
 key_id = 'key_id_example' # str | Key ID. 
 update_pgp_keys_request = CyberSource.UpdatePGPKeysRequest() # UpdatePGPKeysRequest | 
 
@@ -32,7 +32,7 @@ try:
     api_response = api_instance.update_pgp(key_id, update_pgp_keys_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling KeymanagementpgpApi->update_pgp: %s\n" % e)
+    print("Exception when calling KeyManagementPgpApi->update_pgp: %s\n" % e)
 ```
 
 ### Parameters
