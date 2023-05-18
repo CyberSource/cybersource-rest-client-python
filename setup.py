@@ -27,7 +27,7 @@ setup(
         "DateTime",
         "setuptools",
         "six",
-        "urllib3==1.26.5",
+        "urllib3",
         "cryptography",
     ],
     packages=find_packages(),
