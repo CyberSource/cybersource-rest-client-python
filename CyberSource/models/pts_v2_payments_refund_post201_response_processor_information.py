@@ -37,7 +37,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'merchant_number': 'str',
         'response_code': 'str',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
-        'network_transaction_id': 'str'
+        'network_transaction_id': 'str',
+        'settlement_date': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'merchant_number': 'merchantNumber',
         'response_code': 'responseCode',
         'ach_verification': 'achVerification',
-        'network_transaction_id': 'networkTransactionId'
+        'network_transaction_id': 'networkTransactionId',
+        'settlement_date': 'settlementDate'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         self._response_code = None
         self._ach_verification = None
         self._network_transaction_id = None
+        self._settlement_date = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -77,6 +80,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.ach_verification = ach_verification
         if network_transaction_id is not None:
           self.network_transaction_id = network_transaction_id
+        if settlement_date is not None:
+          self.settlement_date = settlement_date
 
     @property
     def approval_code(self):
@@ -236,6 +241,29 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         """
 
         self._network_transaction_id = network_transaction_id
+
+    @property
+    def settlement_date(self):
+        """
+        Gets the settlement_date of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day. 
+
+        :return: The settlement_date of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._settlement_date
+
+    @settlement_date.setter
+    def settlement_date(self, settlement_date):
+        """
+        Sets the settlement_date of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day. 
+
+        :param settlement_date: The settlement_date of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._settlement_date = settlement_date
 
     def to_dict(self):
         """

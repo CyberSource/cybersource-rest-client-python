@@ -50,6 +50,7 @@ class TssV2TransactionsGet200Response(object):
         'order_information': 'TssV2TransactionsGet200ResponseOrderInformation',
         'payment_information': 'TssV2TransactionsGet200ResponsePaymentInformation',
         'payment_insights_information': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformation',
+        'payout_options': 'TssV2TransactionsGet200ResponsePayoutOptions',
         'processing_information': 'TssV2TransactionsGet200ResponseProcessingInformation',
         'processor_information': 'TssV2TransactionsGet200ResponseProcessorInformation',
         'point_of_sale_information': 'TssV2TransactionsGet200ResponsePointOfSaleInformation',
@@ -79,6 +80,7 @@ class TssV2TransactionsGet200Response(object):
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
         'payment_insights_information': 'paymentInsightsInformation',
+        'payout_options': 'payoutOptions',
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
@@ -88,7 +90,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -112,6 +114,7 @@ class TssV2TransactionsGet200Response(object):
         self._order_information = None
         self._payment_information = None
         self._payment_insights_information = None
+        self._payout_options = None
         self._processing_information = None
         self._processor_information = None
         self._point_of_sale_information = None
@@ -158,6 +161,8 @@ class TssV2TransactionsGet200Response(object):
           self.payment_information = payment_information
         if payment_insights_information is not None:
           self.payment_insights_information = payment_insights_information
+        if payout_options is not None:
+          self.payout_options = payout_options
         if processing_information is not None:
           self.processing_information = processing_information
         if processor_information is not None:
@@ -583,6 +588,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._payment_insights_information = payment_insights_information
+
+    @property
+    def payout_options(self):
+        """
+        Gets the payout_options of this TssV2TransactionsGet200Response.
+
+        :return: The payout_options of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponsePayoutOptions
+        """
+        return self._payout_options
+
+    @payout_options.setter
+    def payout_options(self, payout_options):
+        """
+        Sets the payout_options of this TssV2TransactionsGet200Response.
+
+        :param payout_options: The payout_options of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponsePayoutOptions
+        """
+
+        self._payout_options = payout_options
 
     @property
     def processing_information(self):
