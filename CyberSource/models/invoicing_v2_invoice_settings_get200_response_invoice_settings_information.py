@@ -38,7 +38,9 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'header_style': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle',
         'delivery_language': 'str',
         'default_currency_code': 'str',
-        'payer_authentication3_ds_version': 'str'
+        'payer_authentication3_ds_version': 'bool',
+        'show_vat_number': 'bool',
+        'vat_registration_number': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'header_style': 'headerStyle',
         'delivery_language': 'deliveryLanguage',
         'default_currency_code': 'defaultCurrencyCode',
-        'payer_authentication3_ds_version': 'payerAuthentication3DSVersion'
+        'payer_authentication3_ds_version': 'payerAuthentication3DSVersion',
+        'show_vat_number': 'showVatNumber',
+        'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=None):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=False, show_vat_number=False, vat_registration_number=None):
         """
         InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -65,6 +69,8 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         self._delivery_language = None
         self._default_currency_code = None
         self._payer_authentication3_ds_version = None
+        self._show_vat_number = None
+        self._vat_registration_number = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -82,6 +88,10 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
           self.default_currency_code = default_currency_code
         if payer_authentication3_ds_version is not None:
           self.payer_authentication3_ds_version = payer_authentication3_ds_version
+        if show_vat_number is not None:
+          self.show_vat_number = show_vat_number
+        if vat_registration_number is not None:
+          self.vat_registration_number = vat_registration_number
 
     @property
     def merchant_logo(self):
@@ -246,10 +256,10 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
     def payer_authentication3_ds_version(self):
         """
         Gets the payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        The 3D Secure payer authentication version or status for a merchant's invoice payments. Possible values are: - `1` - `2` - `None` - `Disabled` 
+        The 3D Secure payer authentication status for a merchant's invoice payments.
 
         :return: The payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        :rtype: str
+        :rtype: bool
         """
         return self._payer_authentication3_ds_version
 
@@ -257,13 +267,59 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
     def payer_authentication3_ds_version(self, payer_authentication3_ds_version):
         """
         Sets the payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        The 3D Secure payer authentication version or status for a merchant's invoice payments. Possible values are: - `1` - `2` - `None` - `Disabled` 
+        The 3D Secure payer authentication status for a merchant's invoice payments.
 
         :param payer_authentication3_ds_version: The payer_authentication3_ds_version of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        :type: str
+        :type: bool
         """
 
         self._payer_authentication3_ds_version = payer_authentication3_ds_version
+
+    @property
+    def show_vat_number(self):
+        """
+        Gets the show_vat_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Display VAT number on Invoice.
+
+        :return: The show_vat_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._show_vat_number
+
+    @show_vat_number.setter
+    def show_vat_number(self, show_vat_number):
+        """
+        Sets the show_vat_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Display VAT number on Invoice.
+
+        :param show_vat_number: The show_vat_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._show_vat_number = show_vat_number
+
+    @property
+    def vat_registration_number(self):
+        """
+        Gets the vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.       
+
+        :return: The vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: str
+        """
+        return self._vat_registration_number
+
+    @vat_registration_number.setter
+    def vat_registration_number(self, vat_registration_number):
+        """
+        Sets the vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.       
+
+        :param vat_registration_number: The vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: str
+        """
+
+        self._vat_registration_number = vat_registration_number
 
     def to_dict(self):
         """

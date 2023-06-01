@@ -74,16 +74,13 @@ class PushFundsRequest(object):
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
-        if order_information is not None:
-          self.order_information = order_information
-        if processing_information is not None:
-          self.processing_information = processing_information
+        self.order_information = order_information
+        self.processing_information = processing_information
         if processing_options is not None:
           self.processing_options = processing_options
         if recipient_information is not None:
           self.recipient_information = recipient_information
-        if sender_information is not None:
-          self.sender_information = sender_information
+        self.sender_information = sender_information
         if aggregator_information is not None:
           self.aggregator_information = aggregator_information
         if merchant_defined_information is not None:
@@ -132,6 +129,8 @@ class PushFundsRequest(object):
         :param order_information: The order_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferOrderInformation
         """
+        if order_information is None:
+            raise ValueError("Invalid value for `order_information`, must not be `None`")
 
         self._order_information = order_information
 
@@ -153,6 +152,8 @@ class PushFundsRequest(object):
         :param processing_information: The processing_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferProcessingInformation
         """
+        if processing_information is None:
+            raise ValueError("Invalid value for `processing_information`, must not be `None`")
 
         self._processing_information = processing_information
 
@@ -216,6 +217,8 @@ class PushFundsRequest(object):
         :param sender_information: The sender_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferSenderInformation
         """
+        if sender_information is None:
+            raise ValueError("Invalid value for `sender_information`, must not be `None`")
 
         self._sender_information = sender_information
 

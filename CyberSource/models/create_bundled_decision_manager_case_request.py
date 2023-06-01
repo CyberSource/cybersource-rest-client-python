@@ -95,8 +95,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
           self.processing_information = processing_information
         if payment_information is not None:
           self.payment_information = payment_information
-        if order_information is not None:
-          self.order_information = order_information
+        self.order_information = order_information
         if buyer_information is not None:
           self.buyer_information = buyer_information
         if device_information is not None:
@@ -220,6 +219,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param order_information: The order_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsOrderInformation
         """
+        if order_information is None:
+            raise ValueError("Invalid value for `order_information`, must not be `None`")
 
         self._order_information = order_information
 

@@ -34,17 +34,21 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         'customer': 'PtsV2PaymentsPost201ResponseTokenInformationCustomer',
         'payment_instrument': 'PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
         'shipping_address': 'PtsV2PaymentsPost201ResponseTokenInformationShippingAddress',
-        'instrument_identifier': 'TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier'
+        'instrument_identifier': 'TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier',
+        'jti': 'str',
+        'transient_token_jwt': 'str'
     }
 
     attribute_map = {
         'customer': 'customer',
         'payment_instrument': 'paymentInstrument',
         'shipping_address': 'shippingAddress',
-        'instrument_identifier': 'instrumentIdentifier'
+        'instrument_identifier': 'instrumentIdentifier',
+        'jti': 'jti',
+        'transient_token_jwt': 'transientTokenJwt'
     }
 
-    def __init__(self, customer=None, payment_instrument=None, shipping_address=None, instrument_identifier=None):
+    def __init__(self, customer=None, payment_instrument=None, shipping_address=None, instrument_identifier=None, jti=None, transient_token_jwt=None):
         """
         TssV2TransactionsGet200ResponseTokenInformation - a model defined in Swagger
         """
@@ -53,6 +57,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         self._payment_instrument = None
         self._shipping_address = None
         self._instrument_identifier = None
+        self._jti = None
+        self._transient_token_jwt = None
 
         if customer is not None:
           self.customer = customer
@@ -62,6 +68,10 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
           self.shipping_address = shipping_address
         if instrument_identifier is not None:
           self.instrument_identifier = instrument_identifier
+        if jti is not None:
+          self.jti = jti
+        if transient_token_jwt is not None:
+          self.transient_token_jwt = transient_token_jwt
 
     @property
     def customer(self):
@@ -146,6 +156,52 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         """
 
         self._instrument_identifier = instrument_identifier
+
+    @property
+    def jti(self):
+        """
+        Gets the jti of this TssV2TransactionsGet200ResponseTokenInformation.
+        TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV). 
+
+        :return: The jti of this TssV2TransactionsGet200ResponseTokenInformation.
+        :rtype: str
+        """
+        return self._jti
+
+    @jti.setter
+    def jti(self, jti):
+        """
+        Sets the jti of this TssV2TransactionsGet200ResponseTokenInformation.
+        TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV). 
+
+        :param jti: The jti of this TssV2TransactionsGet200ResponseTokenInformation.
+        :type: str
+        """
+
+        self._jti = jti
+
+    @property
+    def transient_token_jwt(self):
+        """
+        Gets the transient_token_jwt of this TssV2TransactionsGet200ResponseTokenInformation.
+        Flex API Transient Token encoded as JWT (JSON Web Token), e.g. Flex microform or Unified Payment checkout result. 
+
+        :return: The transient_token_jwt of this TssV2TransactionsGet200ResponseTokenInformation.
+        :rtype: str
+        """
+        return self._transient_token_jwt
+
+    @transient_token_jwt.setter
+    def transient_token_jwt(self, transient_token_jwt):
+        """
+        Sets the transient_token_jwt of this TssV2TransactionsGet200ResponseTokenInformation.
+        Flex API Transient Token encoded as JWT (JSON Web Token), e.g. Flex microform or Unified Payment checkout result. 
+
+        :param transient_token_jwt: The transient_token_jwt of this TssV2TransactionsGet200ResponseTokenInformation.
+        :type: str
+        """
+
+        self._transient_token_jwt = transient_token_jwt
 
     def to_dict(self):
         """

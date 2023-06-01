@@ -5,56 +5,57 @@ cd %~dp0
 REM Delete the previously generated SDK code
 
 rd /s /q ..\docs
+rd /s /q ..\CyberSource\api
 rd /s /q ..\CyberSource\apis
 rd /s /q ..\CyberSource\models
 rd /s /q ..\test
 
 REM Command to generate SDK
 
-java -jar swagger-codegen-cli-2.2.3.jar generate -t cybersource-python-template -i cybersource-rest-spec.json -l python -o ../ -c cybersource-python-config.json
+java -jar swagger-codegen-cli-2.3.0.jar generate -t cybersource-python-template -i cybersource-rest-spec.json -l python -o ../ -c cybersource-python-config.json
 
 REM Fixing file names
 powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.error__links import ErrorLinks', 'from .models.error_links import ErrorLinks'} | Set-Content ..\CyberSource\__init__.py"
 
 powershell -Command "(Get-Content ..\CyberSource\models\__init__.py) | ForEach-Object { $_ -replace 'from .error__links import ErrorLinks', 'from .error_links import ErrorLinks'} | Set-Content ..\CyberSource\models\__init__.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\report_subscriptions_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/report-subscriptions/{reportName}''', '''/reporting/v3/report-subscriptions/{report_name}'''} | Set-Content ..\CyberSource\apis\report_subscriptions_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\report_subscriptions_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/report-subscriptions/{reportName}''', '''/reporting/v3/report-subscriptions/{report_name}'''} | Set-Content ..\CyberSource\api\report_subscriptions_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}'''} | Set-Content ..\CyberSource\api\instrument_identifier_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/paymentinstruments''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}/paymentinstruments'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/paymentinstruments''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}/paymentinstruments'''} | Set-Content ..\CyberSource\api\instrument_identifier_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{paymentInstrumentId}''', '''/tms/v1/paymentinstruments/{payment_instrument_id}'''} | Set-Content ..\CyberSource\apis\payment_instrument_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v1/paymentinstruments/{paymentInstrumentId}''', '''/tms/v1/paymentinstruments/{payment_instrument_id}'''} | Set-Content ..\CyberSource\api\payment_instrument_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\reports_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/reports/{reportId}''', '''/reporting/v3/reports/{report_id}'''} | Set-Content ..\CyberSource\apis\reports_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\reports_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/reports/{reportId}''', '''/reporting/v3/reports/{report_id}'''} | Set-Content ..\CyberSource\api\reports_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\report_definitions_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/report-definitions/{reportDefinitionName}''', '''/reporting/v3/report-definitions/{report_definition_name}'''} | Set-Content ..\CyberSource\apis\report_definitions_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\report_definitions_api.py) | ForEach-Object { $_ -replace '''/reporting/v3/report-definitions/{reportDefinitionName}''', '''/reporting/v3/report-definitions/{report_definition_name}'''} | Set-Content ..\CyberSource\api\report_definitions_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace '''/sfs/v1/files/{fileId}''', '''/sfs/v1/files/{file_id}'''} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\secure_file_share_api.py) | ForEach-Object { $_ -replace '''/sfs/v1/files/{fileId}''', '''/sfs/v1/files/{file_id}'''} | Set-Content ..\CyberSource\api\secure_file_share_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{searchId}''', '''/tss/v2/searches/{search_id}'''} | Set-Content ..\CyberSource\apis\search_transactions_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\search_transactions_api.py) | ForEach-Object { $_ -replace '''/tss/v2/searches/{searchId}''', '''/tss/v2/searches/{search_id}'''} | Set-Content ..\CyberSource\api\search_transactions_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\customer_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}''', '''/tms/v2/customers/{customer_id}'''} | Set-Content ..\CyberSource\apis\customer_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\customer_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}''', '''/tms/v2/customers/{customer_id}'''} | Set-Content ..\CyberSource\api\customer_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\customer_shipping_address_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/shipping-addresses''', '''/tms/v2/customers/{customer_id}/shipping-addresses'''} | Set-Content ..\CyberSource\apis\customer_shipping_address_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\customer_shipping_address_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/shipping-addresses''', '''/tms/v2/customers/{customer_id}/shipping-addresses'''} | Set-Content ..\CyberSource\api\customer_shipping_address_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\customer_shipping_address_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}''', '''/tms/v2/customers/{customer_id}/shipping-addresses/{shipping_address_id}'''} | Set-Content ..\CyberSource\apis\customer_shipping_address_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\customer_shipping_address_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/shipping-addresses/{shippingAddressId}''', '''/tms/v2/customers/{customer_id}/shipping-addresses/{shipping_address_id}'''} | Set-Content ..\CyberSource\api\customer_shipping_address_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\customer_payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/payment-instruments''', '''/tms/v2/customers/{customer_id}/payment-instruments'''} | Set-Content ..\CyberSource\apis\customer_payment_instrument_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\customer_payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/payment-instruments''', '''/tms/v2/customers/{customer_id}/payment-instruments'''} | Set-Content ..\CyberSource\api\customer_payment_instrument_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\customer_payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}''', '''/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}'''} | Set-Content ..\CyberSource\apis\customer_payment_instrument_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\customer_payment_instrument_api.py) | ForEach-Object { $_ -replace '''/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}''', '''/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}'''} | Set-Content ..\CyberSource\api\customer_payment_instrument_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\symmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-sym/{keyId}''', '''/kms/v2/keys-sym/{key_id}'''} | Set-Content ..\CyberSource\apis\symmetric_key_management_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\symmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-sym/{keyId}''', '''/kms/v2/keys-sym/{key_id}'''} | Set-Content ..\CyberSource\api\symmetric_key_management_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\asymmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-asym/{keyId}''', '''/kms/v2/keys-asym/{key_id}'''} | Set-Content ..\CyberSource\apis\asymmetric_key_management_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\asymmetric_key_management_api.py) | ForEach-Object { $_ -replace '''/kms/v2/keys-asym/{keyId}''', '''/kms/v2/keys-asym/{key_id}'''} | Set-Content ..\CyberSource\api\asymmetric_key_management_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/enrollment''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}/enrollment'''} | Set-Content ..\CyberSource\apis\instrument_identifier_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\instrument_identifier_api.py) | ForEach-Object { $_ -replace '''/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/enrollment''', '''/tms/v1/instrumentidentifiers/{instrument_identifier_id}/enrollment'''} | Set-Content ..\CyberSource\api\instrument_identifier_api.py"
 
-powershell -Command "(Get-Content ..\CyberSource\apis\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''\*_\/_\*;charset=utf-8', 'select_header_content_type([''*/*;charset=utf-8'} | Set-Content ..\CyberSource\apis\secure_file_share_api.py"
+powershell -Command "(Get-Content ..\CyberSource\api\secure_file_share_api.py) | ForEach-Object { $_ -replace 'select_header_content_type\(\[''\*_\/_\*;charset=utf-8', 'select_header_content_type([''*/*;charset=utf-8'} | Set-Content ..\CyberSource\api\secure_file_share_api.py"
 
 powershell -Command "(Get-Content ..\docs\SecureFileShareApi.md) | ForEach-Object { $_ -replace '\*\*Content-Type\*\*: \*_\/_\*;charset=utf-8', '**Content-Type**: */*;charset=utf-8'} | Set-Content ..\docs\SecureFileShareApi.md"
 
-REM powershell -Command "(Get-Content ..\CyberSource\apis\__init__.py) | ForEach-Object { $_ -replace 'from .download_dtd_api import DownloadDTDApi', ''} | ForEach-Object { $_ -replace 'from .download_xsd_api import DownloadXSDApi', ''} | Set-Content ..\CyberSource\apis\__init__.py"
+REM powershell -Command "(Get-Content ..\CyberSource\api\__init__.py) | ForEach-Object { $_ -replace 'from .download_dtd_api import DownloadDTDApi', ''} | ForEach-Object { $_ -replace 'from .download_xsd_api import DownloadXSDApi', ''} | Set-Content ..\CyberSource\api\__init__.py"
 
 REM powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .apis.download_dtd_api import DownloadDTDApi', ''} | ForEach-Object { $_ -replace 'from .apis.download_xsd_api import DownloadXSDApi', ''} | Set-Content ..\CyberSource\__init__.py"
 
@@ -108,7 +109,7 @@ git checkout ..\README.md
 
 git checkout ..\setup.py
 
-git checkout ..\CyberSource\apis\o_auth_api.py
+git checkout ..\CyberSource\api\o_auth_api.py
 git checkout ..\CyberSource\models\access_token_response.py
 git checkout ..\CyberSource\models\bad_request_error.py
 git checkout ..\CyberSource\models\create_access_token_request.py

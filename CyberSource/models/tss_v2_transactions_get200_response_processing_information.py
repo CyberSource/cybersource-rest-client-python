@@ -31,6 +31,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'bin_source': 'str',
         'industry_data_type': 'str',
         'payment_solution': 'str',
         'commerce_indicator': 'str',
@@ -42,6 +43,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     }
 
     attribute_map = {
+        'bin_source': 'binSource',
         'industry_data_type': 'industryDataType',
         'payment_solution': 'paymentSolution',
         'commerce_indicator': 'commerceIndicator',
@@ -52,11 +54,12 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, industry_data_type=None, payment_solution=None, commerce_indicator=None, commerce_indicator_label=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
+    def __init__(self, bin_source=None, industry_data_type=None, payment_solution=None, commerce_indicator=None, commerce_indicator_label=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformation - a model defined in Swagger
         """
 
+        self._bin_source = None
         self._industry_data_type = None
         self._payment_solution = None
         self._commerce_indicator = None
@@ -66,6 +69,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         self._bank_transfer_options = None
         self._japan_payment_options = None
 
+        if bin_source is not None:
+          self.bin_source = bin_source
         if industry_data_type is not None:
           self.industry_data_type = industry_data_type
         if payment_solution is not None:
@@ -82,6 +87,29 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
           self.bank_transfer_options = bank_transfer_options
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
+
+    @property
+    def bin_source(self):
+        """
+        Gets the bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :return: The bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._bin_source
+
+    @bin_source.setter
+    def bin_source(self, bin_source):
+        """
+        Sets the bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :param bin_source: The bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._bin_source = bin_source
 
     @property
     def industry_data_type(self):

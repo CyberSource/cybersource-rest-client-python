@@ -1,10 +1,10 @@
-# CyberSource.KeymanagementApi
+# CyberSource.KeyManagementApi
 
 All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**search_keys**](KeymanagementApi.md#search_keys) | **GET** /kms/v2/keys | Search Keys
+[**search_keys**](KeyManagementApi.md#search_keys) | **GET** /kms/v2/keys | Search Keys
 
 
 # **search_keys**
@@ -23,7 +23,7 @@ from CyberSource.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = CyberSource.KeymanagementApi()
+api_instance = CyberSource.KeyManagementApi()
 offset = 56 # int | This allows you to specify the page offset from the resulting list resultset you want the records to be returned (optional)
 limit = 56 # int | This allows you to specify the total number of records to be returned off the resulting list resultset (optional)
 sort = 'sort_example' # str | This allows you to specify a comma separated list of fields in the order which the resulting list resultset must be sorted. (optional)
@@ -38,7 +38,7 @@ try:
     api_response = api_instance.search_keys(offset=offset, limit=limit, sort=sort, organization_ids=organization_ids, key_ids=key_ids, key_types=key_types, expiration_start_date=expiration_start_date, expiration_end_date=expiration_end_date)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling KeymanagementApi->search_keys: %s\n" % e)
+    print("Exception when calling KeyManagementApi->search_keys: %s\n" % e)
 ```
 
 ### Parameters

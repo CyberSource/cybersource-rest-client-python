@@ -67,8 +67,7 @@ class Rbsv1plansPlanInformation(object):
           self.description = description
         if status is not None:
           self.status = status
-        if billing_period is not None:
-          self.billing_period = billing_period
+        self.billing_period = billing_period
         if billing_cycles is not None:
           self.billing_cycles = billing_cycles
 
@@ -184,6 +183,8 @@ class Rbsv1plansPlanInformation(object):
         :param billing_period: The billing_period of this Rbsv1plansPlanInformation.
         :type: InlineResponse200PlanInformationBillingPeriod
         """
+        if billing_period is None:
+            raise ValueError("Invalid value for `billing_period`, must not be `None`")
 
         self._billing_period = billing_period
 

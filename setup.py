@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.44"
+VERSION = "0.0.45"
 # To install the library, run the following
 #
 # python setup.py install
@@ -27,7 +27,7 @@ setup(
         "DateTime",
         "setuptools",
         "six",
-        "urllib3==1.26.5",
+        "urllib3",
         "cryptography",
     ],
     packages=find_packages(),

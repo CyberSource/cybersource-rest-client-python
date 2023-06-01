@@ -39,6 +39,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         'start_year': 'str',
         'issue_number': 'str',
         'type': 'str',
+        'brand_name': 'str',
+        'currency': 'str',
         'account_encoder_id': 'str',
         'use_as': 'str'
     }
@@ -52,11 +54,13 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         'start_year': 'startYear',
         'issue_number': 'issueNumber',
         'type': 'type',
+        'brand_name': 'brandName',
+        'currency': 'currency',
         'account_encoder_id': 'accountEncoderId',
         'use_as': 'useAs'
     }
 
-    def __init__(self, suffix=None, prefix=None, expiration_month=None, expiration_year=None, start_month=None, start_year=None, issue_number=None, type=None, account_encoder_id=None, use_as=None):
+    def __init__(self, suffix=None, prefix=None, expiration_month=None, expiration_year=None, start_month=None, start_year=None, issue_number=None, type=None, brand_name=None, currency=None, account_encoder_id=None, use_as=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformationCard - a model defined in Swagger
         """
@@ -69,6 +73,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         self._start_year = None
         self._issue_number = None
         self._type = None
+        self._brand_name = None
+        self._currency = None
         self._account_encoder_id = None
         self._use_as = None
 
@@ -88,6 +94,10 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
           self.issue_number = issue_number
         if type is not None:
           self.type = type
+        if brand_name is not None:
+          self.brand_name = brand_name
+        if currency is not None:
+          self.currency = currency
         if account_encoder_id is not None:
           self.account_encoder_id = account_encoder_id
         if use_as is not None:
@@ -276,6 +286,52 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         """
 
         self._type = type
+
+    @property
+    def brand_name(self):
+        """
+        Gets the brand_name of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        This field contains the card brand name.   Some of the possible values (not an exhaustive list) are -    - VISA   - MASTERCARD   - AMERICAN EXPRESS   - DISCOVER   - DINERS CLUB   - CARTE BLANCHE   - JCB   - OPTIMA   - TWINPAY CREDIT CARD   - TWINPAY DEBIT CARD   - WALMART   - ENROUTE   - LOWES CONSUMER   - HOME DEPOT CONSUMER   - MBNA   - DICKS SPORTWEAR   - CASUAL CORNER   - SEARS   - JAL   - DISNEY CARD   - SWITCH/SOLO   - SAMS CLUB CONSUMER   - SAMS CLUB BUSINESS   - NICOS HOUSE CARD   - BEBE   - RESTORATION HARDWARE   - DELTA ONLINE   - SOLO   - VISA ELECTRON   - DANKORT   - LASER   - CARTE BANCAIRE   - CARTA SI   - ENCODED ACCOUNT   - UATP   - HOUSEHOLD   - MAESTRO   - GE CAPITAL   - KOREAN CARDS   - STYLE CARDS   - JCREW   - MEIJER   - HIPERCARD   - AURA   - REDECARD   - ORICO HOUSE CARD   - ELO   - CAPITAL ONE PRIVATE LABEL   - CARNET   - RUPAY   - CHINA UNION PAY   - FALABELLA PRIVATE LABEL   - PROMPTCARD   - KOREAN DOMESTIC   - BANRICOMPRAS 
+
+        :return: The brand_name of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        :rtype: str
+        """
+        return self._brand_name
+
+    @brand_name.setter
+    def brand_name(self, brand_name):
+        """
+        Sets the brand_name of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        This field contains the card brand name.   Some of the possible values (not an exhaustive list) are -    - VISA   - MASTERCARD   - AMERICAN EXPRESS   - DISCOVER   - DINERS CLUB   - CARTE BLANCHE   - JCB   - OPTIMA   - TWINPAY CREDIT CARD   - TWINPAY DEBIT CARD   - WALMART   - ENROUTE   - LOWES CONSUMER   - HOME DEPOT CONSUMER   - MBNA   - DICKS SPORTWEAR   - CASUAL CORNER   - SEARS   - JAL   - DISNEY CARD   - SWITCH/SOLO   - SAMS CLUB CONSUMER   - SAMS CLUB BUSINESS   - NICOS HOUSE CARD   - BEBE   - RESTORATION HARDWARE   - DELTA ONLINE   - SOLO   - VISA ELECTRON   - DANKORT   - LASER   - CARTE BANCAIRE   - CARTA SI   - ENCODED ACCOUNT   - UATP   - HOUSEHOLD   - MAESTRO   - GE CAPITAL   - KOREAN CARDS   - STYLE CARDS   - JCREW   - MEIJER   - HIPERCARD   - AURA   - REDECARD   - ORICO HOUSE CARD   - ELO   - CAPITAL ONE PRIVATE LABEL   - CARNET   - RUPAY   - CHINA UNION PAY   - FALABELLA PRIVATE LABEL   - PROMPTCARD   - KOREAN DOMESTIC   - BANRICOMPRAS 
+
+        :param brand_name: The brand_name of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        :type: str
+        """
+
+        self._brand_name = brand_name
+
+    @property
+    def currency(self):
+        """
+        Gets the currency of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency. 
+
+        :return: The currency of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        :rtype: str
+        """
+        return self._currency
+
+    @currency.setter
+    def currency(self, currency):
+        """
+        Sets the currency of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency. 
+
+        :param currency: The currency of this TssV2TransactionsGet200ResponsePaymentInformationCard.
+        :type: str
+        """
+
+        self._currency = currency
 
     @property
     def account_encoder_id(self):
