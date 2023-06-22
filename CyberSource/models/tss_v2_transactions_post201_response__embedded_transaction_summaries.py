@@ -34,11 +34,13 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'id': 'str',
         'submit_time_utc': 'str',
         'merchant_id': 'str',
+        'status': 'str',
         'application_information': 'TssV2TransactionsPost201ResponseEmbeddedApplicationInformation',
         'buyer_information': 'TssV2TransactionsPost201ResponseEmbeddedBuyerInformation',
         'client_reference_information': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation',
         'consumer_authentication_information': 'TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation',
         'device_information': 'Riskv1authenticationresultsDeviceInformation',
+        'error_information': 'TssV2TransactionsPost201ResponseEmbeddedErrorInformation',
         'fraud_marking_information': 'TssV2TransactionsGet200ResponseFraudMarkingInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
         'merchant_information': 'TssV2TransactionsPost201ResponseEmbeddedMerchantInformation',
@@ -55,11 +57,13 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'id': 'id',
         'submit_time_utc': 'submitTimeUtc',
         'merchant_id': 'merchantId',
+        'status': 'status',
         'application_information': 'applicationInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
         'device_information': 'deviceInformation',
+        'error_information': 'errorInformation',
         'fraud_marking_information': 'fraudMarkingInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
         'merchant_information': 'merchantInformation',
@@ -72,7 +76,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, merchant_id=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, fraud_marking_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, links=None):
+    def __init__(self, id=None, submit_time_utc=None, merchant_id=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, fraud_marking_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, links=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries - a model defined in Swagger
         """
@@ -80,11 +84,13 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         self._id = None
         self._submit_time_utc = None
         self._merchant_id = None
+        self._status = None
         self._application_information = None
         self._buyer_information = None
         self._client_reference_information = None
         self._consumer_authentication_information = None
         self._device_information = None
+        self._error_information = None
         self._fraud_marking_information = None
         self._merchant_defined_information = None
         self._merchant_information = None
@@ -102,6 +108,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
           self.submit_time_utc = submit_time_utc
         if merchant_id is not None:
           self.merchant_id = merchant_id
+        if status is not None:
+          self.status = status
         if application_information is not None:
           self.application_information = application_information
         if buyer_information is not None:
@@ -112,6 +120,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
           self.consumer_authentication_information = consumer_authentication_information
         if device_information is not None:
           self.device_information = device_information
+        if error_information is not None:
+          self.error_information = error_information
         if fraud_marking_information is not None:
           self.fraud_marking_information = fraud_marking_information
         if merchant_defined_information is not None:
@@ -201,6 +211,29 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         """
 
         self._merchant_id = merchant_id
+
+    @property
+    def status(self):
+        """
+        Gets the status of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        The status of the submitted transaction. Note: This field may not be returned for all transactions. 
+
+        :return: The status of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        The status of the submitted transaction. Note: This field may not be returned for all transactions. 
+
+        :param status: The status of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :type: str
+        """
+
+        self._status = status
 
     @property
     def application_information(self):
@@ -306,6 +339,27 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         """
 
         self._device_information = device_information
+
+    @property
+    def error_information(self):
+        """
+        Gets the error_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+
+        :return: The error_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :rtype: TssV2TransactionsPost201ResponseEmbeddedErrorInformation
+        """
+        return self._error_information
+
+    @error_information.setter
+    def error_information(self, error_information):
+        """
+        Sets the error_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+
+        :param error_information: The error_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
+        :type: TssV2TransactionsPost201ResponseEmbeddedErrorInformation
+        """
+
+        self._error_information = error_information
 
     @property
     def fraud_marking_information(self):

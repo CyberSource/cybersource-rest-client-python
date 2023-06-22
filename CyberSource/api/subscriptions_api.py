@@ -60,7 +60,6 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object activate_subscription_request:
         :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
@@ -91,13 +90,12 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object activate_subscription_request:
         :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'activate_subscription_request']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -133,8 +131,8 @@ class SubscriptionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'activate_subscription_request' in params:
-            body_params = params['activate_subscription_request']
+        if 'POST' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -174,7 +172,6 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object cancel_subscription_request:
         :return: InlineResponse202
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,13 +202,12 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object cancel_subscription_request:
         :return: InlineResponse202
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cancel_subscription_request']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -247,8 +243,8 @@ class SubscriptionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'cancel_subscription_request' in params:
-            body_params = params['cancel_subscription_request']
+        if 'POST' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -731,7 +727,6 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object suspend_subscription_request:
         :return: InlineResponse2021
                  If the method is called asynchronously,
                  returns the request thread.
@@ -762,13 +757,12 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :param object suspend_subscription_request:
         :return: InlineResponse2021
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'suspend_subscription_request']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -804,8 +798,8 @@ class SubscriptionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'suspend_subscription_request' in params:
-            body_params = params['suspend_subscription_request']
+        if 'POST' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 

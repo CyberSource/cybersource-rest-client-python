@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **activate_subscription**
-> InlineResponse2009 activate_subscription(id, activate_subscription_request=activate_subscription_request)
+> InlineResponse2009 activate_subscription(id)
 
 Activate a Subscription
 
@@ -32,11 +32,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsApi()
 id = 'id_example' # str | Subscription Id
-activate_subscription_request = NULL # object |  (optional)
 
 try: 
     # Activate a Subscription
-    api_response = api_instance.activate_subscription(id, activate_subscription_request=activate_subscription_request)
+    api_response = api_instance.activate_subscription(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->activate_subscription: %s\n" % e)
@@ -47,7 +46,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Subscription Id | 
- **activate_subscription_request** | **object**|  | [optional] 
 
 ### Return type
 
@@ -65,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancel_subscription**
-> InlineResponse202 cancel_subscription(id, cancel_subscription_request=cancel_subscription_request)
+> InlineResponse202 cancel_subscription(id)
 
 Cancel a Subscription
 
@@ -82,11 +80,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsApi()
 id = 'id_example' # str | Subscription Id
-cancel_subscription_request = NULL # object |  (optional)
 
 try: 
     # Cancel a Subscription
-    api_response = api_instance.cancel_subscription(id, cancel_subscription_request=cancel_subscription_request)
+    api_response = api_instance.cancel_subscription(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->cancel_subscription: %s\n" % e)
@@ -97,7 +94,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Subscription Id | 
- **cancel_subscription_request** | **object**|  | [optional] 
 
 ### Return type
 
@@ -309,7 +305,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **suspend_subscription**
-> InlineResponse2021 suspend_subscription(id, suspend_subscription_request=suspend_subscription_request)
+> InlineResponse2021 suspend_subscription(id)
 
 Suspend a Subscription
 
@@ -326,11 +322,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsApi()
 id = 'id_example' # str | Subscription Id
-suspend_subscription_request = NULL # object |  (optional)
 
 try: 
     # Suspend a Subscription
-    api_response = api_instance.suspend_subscription(id, suspend_subscription_request=suspend_subscription_request)
+    api_response = api_instance.suspend_subscription(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->suspend_subscription: %s\n" % e)
@@ -341,7 +336,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Subscription Id | 
- **suspend_subscription_request** | **object**|  | [optional] 
 
 ### Return type
 

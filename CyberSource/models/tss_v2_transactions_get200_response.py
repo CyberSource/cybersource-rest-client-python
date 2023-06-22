@@ -36,6 +36,7 @@ class TssV2TransactionsGet200Response(object):
         'reconciliation_id': 'str',
         'merchant_id': 'str',
         'submit_time_utc': 'str',
+        'status': 'str',
         'application_information': 'TssV2TransactionsGet200ResponseApplicationInformation',
         'buyer_information': 'TssV2TransactionsGet200ResponseBuyerInformation',
         'client_reference_information': 'TssV2TransactionsGet200ResponseClientReferenceInformation',
@@ -66,6 +67,7 @@ class TssV2TransactionsGet200Response(object):
         'reconciliation_id': 'reconciliationId',
         'merchant_id': 'merchantId',
         'submit_time_utc': 'submitTimeUTC',
+        'status': 'status',
         'application_information': 'applicationInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
@@ -90,7 +92,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -100,6 +102,7 @@ class TssV2TransactionsGet200Response(object):
         self._reconciliation_id = None
         self._merchant_id = None
         self._submit_time_utc = None
+        self._status = None
         self._application_information = None
         self._buyer_information = None
         self._client_reference_information = None
@@ -133,6 +136,8 @@ class TssV2TransactionsGet200Response(object):
           self.merchant_id = merchant_id
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
         if application_information is not None:
           self.application_information = application_information
         if buyer_information is not None:
@@ -292,6 +297,29 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this TssV2TransactionsGet200Response.
+        The status of the submitted transaction.
+
+        :return: The status of this TssV2TransactionsGet200Response.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this TssV2TransactionsGet200Response.
+        The status of the submitted transaction.
+
+        :param status: The status of this TssV2TransactionsGet200Response.
+        :type: str
+        """
+
+        self._status = status
 
     @property
     def application_information(self):
