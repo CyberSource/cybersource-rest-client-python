@@ -60,7 +60,6 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :param object activate_plan_request:
         :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
@@ -91,13 +90,12 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :param object activate_plan_request:
         :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'activate_plan_request']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -133,10 +131,10 @@ class PlansApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'activate_plan_request' in params:
-            body_params = params['activate_plan_request']
+        if 'POST' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -246,7 +244,7 @@ class PlansApi(object):
         if 'create_plan_request' in params:
             body_params = params['create_plan_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -284,7 +282,6 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :param object deactivate_plan_request:
         :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
@@ -315,13 +312,12 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :param object deactivate_plan_request:
         :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'deactivate_plan_request']
+        all_params = ['id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -357,10 +353,10 @@ class PlansApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'deactivate_plan_request' in params:
-            body_params = params['deactivate_plan_request']
+        if 'POST' in ('POST'):
+            body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -472,7 +468,7 @@ class PlansApi(object):
         if 'DELETE' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -584,7 +580,7 @@ class PlansApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -686,7 +682,7 @@ class PlansApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -809,7 +805,7 @@ class PlansApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -928,7 +924,7 @@ class PlansApi(object):
         if 'update_plan_request' in params:
             body_params = params['update_plan_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])

@@ -51,6 +51,7 @@ class PtsV2PaymentsPost201Response(object):
         'buyer_information': 'PtsV2PaymentsPost201ResponseBuyerInformation',
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation',
+        'embedded_actions': 'PtsV2PaymentsPost201ResponseEmbeddedActions',
         'watchlist_screening_information': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformation'
     }
 
@@ -75,10 +76,11 @@ class PtsV2PaymentsPost201Response(object):
         'buyer_information': 'buyerInformation',
         'risk_information': 'riskInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
+        'embedded_actions': 'embeddedActions',
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, watchlist_screening_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, embedded_actions=None, watchlist_screening_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
@@ -103,6 +105,7 @@ class PtsV2PaymentsPost201Response(object):
         self._buyer_information = None
         self._risk_information = None
         self._consumer_authentication_information = None
+        self._embedded_actions = None
         self._watchlist_screening_information = None
 
         if links is not None:
@@ -145,6 +148,8 @@ class PtsV2PaymentsPost201Response(object):
           self.risk_information = risk_information
         if consumer_authentication_information is not None:
           self.consumer_authentication_information = consumer_authentication_information
+        if embedded_actions is not None:
+          self.embedded_actions = embedded_actions
         if watchlist_screening_information is not None:
           self.watchlist_screening_information = watchlist_screening_information
 
@@ -575,6 +580,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._consumer_authentication_information = consumer_authentication_information
+
+    @property
+    def embedded_actions(self):
+        """
+        Gets the embedded_actions of this PtsV2PaymentsPost201Response.
+
+        :return: The embedded_actions of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseEmbeddedActions
+        """
+        return self._embedded_actions
+
+    @embedded_actions.setter
+    def embedded_actions(self, embedded_actions):
+        """
+        Sets the embedded_actions of this PtsV2PaymentsPost201Response.
+
+        :param embedded_actions: The embedded_actions of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseEmbeddedActions
+        """
+
+        self._embedded_actions = embedded_actions
 
     @property
     def watchlist_screening_information(self):

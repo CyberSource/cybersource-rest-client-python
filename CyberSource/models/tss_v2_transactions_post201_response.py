@@ -41,7 +41,6 @@ class TssV2TransactionsPost201Response(object):
         'sort': 'str',
         'count': 'int',
         'total_count': 'int',
-        'status': 'str',
         'submit_time_utc': 'str',
         'embedded': 'TssV2TransactionsPost201ResponseEmbedded',
         'links': 'PtsV2IncrementalAuthorizationPatch201ResponseLinks'
@@ -58,13 +57,12 @@ class TssV2TransactionsPost201Response(object):
         'sort': 'sort',
         'count': 'count',
         'total_count': 'totalCount',
-        'status': 'status',
         'submit_time_utc': 'submitTimeUtc',
         'embedded': '_embedded',
         'links': '_links'
     }
 
-    def __init__(self, search_id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, status=None, submit_time_utc=None, embedded=None, links=None):
+    def __init__(self, search_id=None, save=None, name=None, timezone=None, query=None, offset=None, limit=None, sort=None, count=None, total_count=None, submit_time_utc=None, embedded=None, links=None):
         """
         TssV2TransactionsPost201Response - a model defined in Swagger
         """
@@ -79,7 +77,6 @@ class TssV2TransactionsPost201Response(object):
         self._sort = None
         self._count = None
         self._total_count = None
-        self._status = None
         self._submit_time_utc = None
         self._embedded = None
         self._links = None
@@ -104,8 +101,6 @@ class TssV2TransactionsPost201Response(object):
           self.count = count
         if total_count is not None:
           self.total_count = total_count
-        if status is not None:
-          self.status = status
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if embedded is not None:
@@ -342,29 +337,6 @@ class TssV2TransactionsPost201Response(object):
         """
 
         self._total_count = total_count
-
-    @property
-    def status(self):
-        """
-        Gets the status of this TssV2TransactionsPost201Response.
-        The status of the submitted transaction.
-
-        :return: The status of this TssV2TransactionsPost201Response.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this TssV2TransactionsPost201Response.
-        The status of the submitted transaction.
-
-        :param status: The status of this TssV2TransactionsPost201Response.
-        :type: str
-        """
-
-        self._status = status
 
     @property
     def submit_time_utc(self):

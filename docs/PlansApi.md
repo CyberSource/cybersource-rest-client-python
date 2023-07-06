@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **activate_plan**
-> InlineResponse2004 activate_plan(id, activate_plan_request=activate_plan_request)
+> InlineResponse2004 activate_plan(id)
 
 Activate a Plan
 
@@ -32,11 +32,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PlansApi()
 id = 'id_example' # str | Plan Id
-activate_plan_request = NULL # object |  (optional)
 
 try: 
     # Activate a Plan
-    api_response = api_instance.activate_plan(id, activate_plan_request=activate_plan_request)
+    api_response = api_instance.activate_plan(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PlansApi->activate_plan: %s\n" % e)
@@ -47,7 +46,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Plan Id | 
- **activate_plan_request** | **object**|  | [optional] 
 
 ### Return type
 
@@ -60,7 +58,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -108,12 +106,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **deactivate_plan**
-> InlineResponse2004 deactivate_plan(id, deactivate_plan_request=deactivate_plan_request)
+> InlineResponse2004 deactivate_plan(id)
 
 Deactivate a Plan
 
@@ -130,11 +128,10 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.PlansApi()
 id = 'id_example' # str | Plan Id
-deactivate_plan_request = NULL # object |  (optional)
 
 try: 
     # Deactivate a Plan
-    api_response = api_instance.deactivate_plan(id, deactivate_plan_request=deactivate_plan_request)
+    api_response = api_instance.deactivate_plan(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PlansApi->deactivate_plan: %s\n" % e)
@@ -145,7 +142,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Plan Id | 
- **deactivate_plan_request** | **object**|  | [optional] 
 
 ### Return type
 
@@ -158,7 +154,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -206,7 +202,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -254,7 +250,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -298,7 +294,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -354,7 +350,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -404,7 +400,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
