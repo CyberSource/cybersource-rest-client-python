@@ -162,7 +162,7 @@ class TokenApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/tokens/{tokenId}/payment-credentials', 'POST',
+        return self.api_client.call_api(f'/tms/v2/tokens/{token_id}/payment-credentials', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

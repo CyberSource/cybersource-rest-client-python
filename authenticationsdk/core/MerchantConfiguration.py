@@ -48,6 +48,7 @@ class MerchantConfiguration:
         self.request_json_path_data = None
         self.solution_id = None
         self.log_config = None
+        self.__jwePEMFileDirectory = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
     def set_merchant_keyid(self, value):
@@ -168,6 +169,13 @@ class MerchantConfiguration:
         if not (value.get('log_config') is None):
             self.log_config = value['log_config']
 
+    def set_jwePEMFileDirectory(self, value):
+        if not (value.get('jwePEMFileDirectory') is None):
+            self.__jwePEMFileDirectory = value['jwePEMFileDirectory']
+
+    def get_jwePEMFileDirectory(self):
+        return self.__jwePEMFileDirectory
+
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
 
@@ -197,6 +205,7 @@ class MerchantConfiguration:
         self.set_access_token(val)
         self.set_refresh_token(val)
         self.set_log_configuration(val)
+        self.set_jwePEMFileDirectory(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
