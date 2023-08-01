@@ -155,14 +155,13 @@ class TokenApi(object):
             body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/jose;charset=utf-8'])
-
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/tokens/{token_id}/payment-credentials', 'POST',
+        return self.api_client.call_api(f'/tms/v2/tokens/{tokenId}/payment-credentials', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
