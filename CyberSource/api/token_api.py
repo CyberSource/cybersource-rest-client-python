@@ -155,6 +155,7 @@ class TokenApi(object):
             body_params = '{}'
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/jose;charset=utf-8'])
+
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
