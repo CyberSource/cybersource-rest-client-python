@@ -357,6 +357,7 @@ class InvoicesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 
@@ -469,6 +470,7 @@ class InvoicesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 
@@ -581,6 +583,7 @@ class InvoicesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 
@@ -700,6 +703,7 @@ class InvoicesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 

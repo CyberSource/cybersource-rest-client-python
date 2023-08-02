@@ -400,6 +400,7 @@ class ReportSubscriptionsApi(object):
         path_params = {}
         if 'report_name' in params:
             path_params['reportName'] = params['report_name']
+            reportName=report_name
 
         query_params = []
         if 'organization_id' in params:
@@ -422,7 +423,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{report_name}', 'DELETE',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{reportName}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -659,6 +660,7 @@ class ReportSubscriptionsApi(object):
         path_params = {}
         if 'report_name' in params:
             path_params['reportName'] = params['report_name']
+            reportName=report_name
 
         query_params = []
         if 'organization_id' in params:
@@ -681,7 +683,7 @@ class ReportSubscriptionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{report_name}', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/report-subscriptions/{reportName}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
