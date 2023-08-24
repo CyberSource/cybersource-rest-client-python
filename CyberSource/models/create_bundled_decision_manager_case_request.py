@@ -45,7 +45,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
         'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
-        'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation'
+        'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation',
+        'token_information': 'Riskv1decisionsTokenInformation'
     }
 
     attribute_map = {
@@ -63,10 +64,11 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'acquirer_information': 'acquirerInformation',
         'recurring_payment_information': 'recurringPaymentInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
-        'watchlist_screening_information': 'watchlistScreeningInformation'
+        'watchlist_screening_information': 'watchlistScreeningInformation',
+        'token_information': 'tokenInformation'
     }
 
-    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processor_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, risk_information=None, travel_information=None, merchant_defined_information=None, merchant_information=None, acquirer_information=None, recurring_payment_information=None, consumer_authentication_information=None, watchlist_screening_information=None, token_information=None):
         """
         CreateBundledDecisionManagerCaseRequest - a model defined in Swagger
         """
@@ -86,6 +88,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         self._recurring_payment_information = None
         self._consumer_authentication_information = None
         self._watchlist_screening_information = None
+        self._token_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -116,6 +119,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
           self.consumer_authentication_information = consumer_authentication_information
         if watchlist_screening_information is not None:
           self.watchlist_screening_information = watchlist_screening_information
+        if token_information is not None:
+          self.token_information = token_information
 
     @property
     def client_reference_information(self):
@@ -433,6 +438,27 @@ class CreateBundledDecisionManagerCaseRequest(object):
         """
 
         self._watchlist_screening_information = watchlist_screening_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :return: The token_information of this CreateBundledDecisionManagerCaseRequest.
+        :rtype: Riskv1decisionsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this CreateBundledDecisionManagerCaseRequest.
+
+        :param token_information: The token_information of this CreateBundledDecisionManagerCaseRequest.
+        :type: Riskv1decisionsTokenInformation
+        """
+
+        self._token_information = token_information
 
     def to_dict(self):
         """

@@ -44,6 +44,7 @@ from .unified_checkout_capture_context_api import UnifiedCheckoutCaptureContextA
 from .user_management_api import UserManagementApi
 from .user_management_search_api import UserManagementSearchApi
 from .verification_api import VerificationApi
+from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi
 from .credit_api import CreditApi
 from .invoice_settings_api import InvoiceSettingsApi
