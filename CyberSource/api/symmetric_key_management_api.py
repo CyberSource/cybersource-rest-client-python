@@ -461,6 +461,7 @@ class SymmetricKeyManagementApi(object):
         path_params = {}
         if 'key_id' in params:
             path_params['keyId'] = params['key_id']
+            keyId=key_id
 
         query_params = []
 
@@ -481,7 +482,7 @@ class SymmetricKeyManagementApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/kms/v2/keys-sym/{key_id}', 'GET',
+        return self.api_client.call_api(f'/kms/v2/keys-sym/{keyId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

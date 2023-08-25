@@ -262,6 +262,7 @@ class ReportsApi(object):
         path_params = {}
         if 'report_id' in params:
             path_params['reportId'] = params['report_id']
+            reportId=report_id
 
         query_params = []
         if 'organization_id' in params:
@@ -284,7 +285,7 @@ class ReportsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/reporting/v3/reports/{report_id}', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/reports/{reportId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

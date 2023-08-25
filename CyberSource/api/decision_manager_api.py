@@ -129,6 +129,7 @@ class DecisionManagerApi(object):
         path_params = {}
         if 'type' in params:
             path_params['type'] = params['type']
+            type=type
 
         query_params = []
 
@@ -358,6 +359,7 @@ class DecisionManagerApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 

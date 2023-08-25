@@ -122,6 +122,7 @@ class DownloadDTDApi(object):
         path_params = {}
         if 'report_definition_name_version' in params:
             path_params['reportDefinitionNameVersion'] = params['report_definition_name_version']
+            reportDefinitionNameVersion=report_definition_name_version
 
         query_params = []
 

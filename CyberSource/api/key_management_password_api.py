@@ -129,6 +129,7 @@ class KeyManagementPasswordApi(object):
         path_params = {}
         if 'key_id' in params:
             path_params['keyId'] = params['key_id']
+            keyId=key_id
 
         query_params = []
 

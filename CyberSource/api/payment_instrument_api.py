@@ -140,6 +140,7 @@ class PaymentInstrumentApi(object):
         path_params = {}
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -162,7 +163,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{paymentInstrumentId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -272,6 +273,7 @@ class PaymentInstrumentApi(object):
         path_params = {}
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -294,7 +296,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{paymentInstrumentId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -421,6 +423,7 @@ class PaymentInstrumentApi(object):
         path_params = {}
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -445,7 +448,7 @@ class PaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{payment_instrument_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v1/paymentinstruments/{paymentInstrumentId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,

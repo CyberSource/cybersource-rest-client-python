@@ -191,6 +191,7 @@ class {{classname}}(object):
         if '{{paramName}}' in params:
             path_params['{{baseName}}'] = params['{{paramName}}']{{#isListContainer}}
             collection_formats['{{baseName}}'] = '{{collectionFormat}}'{{/isListContainer}}
+            {{baseName}}={{paramName}}
 {{/pathParams}}
 
         query_params = []
