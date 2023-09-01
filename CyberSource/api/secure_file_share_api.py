@@ -136,6 +136,7 @@ class SecureFileShareApi(object):
         path_params = {}
         if 'file_id' in params:
             path_params['fileId'] = params['file_id']
+            fileId=file_id
 
         query_params = []
         if 'organization_id' in params:
@@ -158,7 +159,7 @@ class SecureFileShareApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/sfs/v1/files/{file_id}', 'GET',
+        return self.api_client.call_api(f'/sfs/v1/files/{fileId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

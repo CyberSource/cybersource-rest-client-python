@@ -140,6 +140,7 @@ class CustomerApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
 
         query_params = []
 
@@ -162,7 +163,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -272,6 +273,7 @@ class CustomerApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
 
         query_params = []
 
@@ -294,7 +296,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -421,6 +423,7 @@ class CustomerApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
 
         query_params = []
 
@@ -445,7 +448,7 @@ class CustomerApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,

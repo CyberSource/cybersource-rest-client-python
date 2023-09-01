@@ -155,8 +155,10 @@ class CustomerPaymentInstrumentApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -179,7 +181,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -304,8 +306,10 @@ class CustomerPaymentInstrumentApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -328,7 +332,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -454,6 +458,7 @@ class CustomerPaymentInstrumentApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
 
         query_params = []
         if 'offset' in params:
@@ -480,7 +485,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments', 'GET',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/payment-instruments', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -622,8 +627,10 @@ class CustomerPaymentInstrumentApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
         if 'payment_instrument_id' in params:
             path_params['paymentInstrumentId'] = params['payment_instrument_id']
+            paymentInstrumentId=payment_instrument_id
 
         query_params = []
 
@@ -648,7 +655,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments/{payment_instrument_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -765,6 +772,7 @@ class CustomerPaymentInstrumentApi(object):
         path_params = {}
         if 'customer_id' in params:
             path_params['customerId'] = params['customer_id']
+            customerId=customer_id
 
         query_params = []
 
@@ -787,7 +795,7 @@ class CustomerPaymentInstrumentApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v2/customers/{customer_id}/payment-instruments', 'POST',
+        return self.api_client.call_api(f'/tms/v2/customers/{customerId}/payment-instruments', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

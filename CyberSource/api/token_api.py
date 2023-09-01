@@ -140,6 +140,7 @@ class TokenApi(object):
         path_params = {}
         if 'token_id' in params:
             path_params['tokenId'] = params['token_id']
+            tokenId=token_id
 
         query_params = []
 

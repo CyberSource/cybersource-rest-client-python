@@ -140,6 +140,7 @@ class InstrumentIdentifierApi(object):
         path_params = {}
         if 'instrument_identifier_id' in params:
             path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
 
@@ -162,7 +163,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_id}', 'DELETE',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrumentIdentifierId}', 'DELETE',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -272,6 +273,7 @@ class InstrumentIdentifierApi(object):
         path_params = {}
         if 'instrument_identifier_id' in params:
             path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
 
@@ -294,7 +296,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_id}', 'GET',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrumentIdentifierId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -420,6 +422,7 @@ class InstrumentIdentifierApi(object):
         path_params = {}
         if 'instrument_identifier_id' in params:
             path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
         if 'offset' in params:
@@ -446,7 +449,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_id}/paymentinstruments', 'GET',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/paymentinstruments', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -573,6 +576,7 @@ class InstrumentIdentifierApi(object):
         path_params = {}
         if 'instrument_identifier_id' in params:
             path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
 
@@ -597,7 +601,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_id}', 'PATCH',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrumentIdentifierId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -836,6 +840,7 @@ class InstrumentIdentifierApi(object):
         path_params = {}
         if 'instrument_identifier_id' in params:
             path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
 
@@ -858,7 +863,7 @@ class InstrumentIdentifierApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrument_identifier_id}/enrollment', 'POST',
+        return self.api_client.call_api(f'/tms/v1/instrumentidentifiers/{instrumentIdentifierId}/enrollment', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

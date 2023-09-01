@@ -342,6 +342,7 @@ class AsymmetricKeyManagementApi(object):
         path_params = {}
         if 'key_id' in params:
             path_params['keyId'] = params['key_id']
+            keyId=key_id
 
         query_params = []
 
@@ -362,7 +363,7 @@ class AsymmetricKeyManagementApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/kms/v2/keys-asym/{key_id}', 'GET',
+        return self.api_client.call_api(f'/kms/v2/keys-asym/{keyId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -461,6 +462,7 @@ class AsymmetricKeyManagementApi(object):
         path_params = {}
         if 'key_id' in params:
             path_params['keyId'] = params['key_id']
+            keyId=key_id
 
         query_params = []
 
@@ -481,7 +483,7 @@ class AsymmetricKeyManagementApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/kms/v2/keys-asym/{key_id}', 'PATCH',
+        return self.api_client.call_api(f'/kms/v2/keys-asym/{keyId}', 'PATCH',
                                         path_params,
                                         query_params,
                                         header_params,

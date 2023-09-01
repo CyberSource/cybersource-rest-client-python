@@ -122,6 +122,7 @@ class TransientTokenDataApi(object):
         path_params = {}
         if 'transient_token' in params:
             path_params['transientToken'] = params['transient_token']
+            transientToken=transient_token
 
         query_params = []
 

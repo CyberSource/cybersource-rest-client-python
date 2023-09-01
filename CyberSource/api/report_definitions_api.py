@@ -140,6 +140,7 @@ class ReportDefinitionsApi(object):
         path_params = {}
         if 'report_definition_name' in params:
             path_params['reportDefinitionName'] = params['report_definition_name']
+            reportDefinitionName=report_definition_name
 
         query_params = []
         if 'subscription_type' in params:
@@ -166,7 +167,7 @@ class ReportDefinitionsApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/reporting/v3/report-definitions/{report_definition_name}', 'GET',
+        return self.api_client.call_api(f'/reporting/v3/report-definitions/{reportDefinitionName}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

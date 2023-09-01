@@ -124,7 +124,7 @@ class InvoiceSettingsApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -234,7 +234,7 @@ class InvoiceSettingsApi(object):
         if 'invoice_settings_request' in params:
             body_params = params['invoice_settings_request']
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])

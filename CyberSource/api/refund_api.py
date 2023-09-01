@@ -129,6 +129,7 @@ class RefundApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 
@@ -248,6 +249,7 @@ class RefundApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 
