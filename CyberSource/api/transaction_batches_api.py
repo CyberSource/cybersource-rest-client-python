@@ -126,6 +126,7 @@ class TransactionBatchesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
         if 'upload_date' in params:
@@ -242,6 +243,7 @@ class TransactionBatchesApi(object):
         path_params = {}
         if 'id' in params:
             path_params['id'] = params['id']
+            id=id
 
         query_params = []
 

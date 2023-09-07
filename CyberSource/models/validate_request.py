@@ -36,7 +36,8 @@ class ValidateRequest(object):
         'order_information': 'Riskv1authenticationresultsOrderInformation',
         'payment_information': 'Riskv1authenticationresultsPaymentInformation',
         'consumer_authentication_information': 'Riskv1authenticationresultsConsumerAuthenticationInformation',
-        'device_information': 'Riskv1authenticationresultsDeviceInformation'
+        'device_information': 'Riskv1authenticationresultsDeviceInformation',
+        'token_information': 'Riskv1decisionsTokenInformation'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class ValidateRequest(object):
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
-        'device_information': 'deviceInformation'
+        'device_information': 'deviceInformation',
+        'token_information': 'tokenInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, order_information=None, payment_information=None, consumer_authentication_information=None, device_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, order_information=None, payment_information=None, consumer_authentication_information=None, device_information=None, token_information=None):
         """
         ValidateRequest - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class ValidateRequest(object):
         self._payment_information = None
         self._consumer_authentication_information = None
         self._device_information = None
+        self._token_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -72,6 +75,8 @@ class ValidateRequest(object):
           self.consumer_authentication_information = consumer_authentication_information
         if device_information is not None:
           self.device_information = device_information
+        if token_information is not None:
+          self.token_information = token_information
 
     @property
     def client_reference_information(self):
@@ -198,6 +203,27 @@ class ValidateRequest(object):
         """
 
         self._device_information = device_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this ValidateRequest.
+
+        :return: The token_information of this ValidateRequest.
+        :rtype: Riskv1decisionsTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this ValidateRequest.
+
+        :param token_information: The token_information of this ValidateRequest.
+        :type: Riskv1decisionsTokenInformation
+        """
+
+        self._token_information = token_information
 
     def to_dict(self):
         """

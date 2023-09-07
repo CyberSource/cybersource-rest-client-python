@@ -130,6 +130,7 @@ class BatchesApi(object):
         path_params = {}
         if 'batch_id' in params:
             path_params['batchId'] = params['batch_id']
+            batchId=batch_id
 
         query_params = []
 
@@ -250,6 +251,7 @@ class BatchesApi(object):
         path_params = {}
         if 'batch_id' in params:
             path_params['batchId'] = params['batch_id']
+            batchId=batch_id
 
         query_params = []
 

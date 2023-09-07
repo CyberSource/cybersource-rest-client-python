@@ -39,6 +39,7 @@ class Ptsv2paymentsOrderInformation(object):
         'shipping_details': 'Ptsv2paymentsOrderInformationShippingDetails',
         'returns_accepted': 'bool',
         'is_cryptocurrency_purchase': 'str',
+        'cutoff_date_time': 'str',
         'pre_order': 'str',
         'pre_order_date': 'str',
         'reordered': 'bool',
@@ -54,13 +55,14 @@ class Ptsv2paymentsOrderInformation(object):
         'shipping_details': 'shippingDetails',
         'returns_accepted': 'returnsAccepted',
         'is_cryptocurrency_purchase': 'isCryptocurrencyPurchase',
+        'cutoff_date_time': 'cutoffDateTime',
         'pre_order': 'preOrder',
         'pre_order_date': 'preOrderDate',
         'reordered': 'reordered',
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, is_cryptocurrency_purchase=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
+    def __init__(self, amount_details=None, bill_to=None, ship_to=None, line_items=None, invoice_details=None, shipping_details=None, returns_accepted=None, is_cryptocurrency_purchase=None, cutoff_date_time=None, pre_order=None, pre_order_date=None, reordered=None, total_offers_count=None):
         """
         Ptsv2paymentsOrderInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsOrderInformation(object):
         self._shipping_details = None
         self._returns_accepted = None
         self._is_cryptocurrency_purchase = None
+        self._cutoff_date_time = None
         self._pre_order = None
         self._pre_order_date = None
         self._reordered = None
@@ -94,6 +97,8 @@ class Ptsv2paymentsOrderInformation(object):
           self.returns_accepted = returns_accepted
         if is_cryptocurrency_purchase is not None:
           self.is_cryptocurrency_purchase = is_cryptocurrency_purchase
+        if cutoff_date_time is not None:
+          self.cutoff_date_time = cutoff_date_time
         if pre_order is not None:
           self.pre_order = pre_order
         if pre_order_date is not None:
@@ -274,6 +279,29 @@ class Ptsv2paymentsOrderInformation(object):
         """
 
         self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
+
+    @property
+    def cutoff_date_time(self):
+        """
+        Gets the cutoff_date_time of this Ptsv2paymentsOrderInformation.
+        Starting date and time for an event or a journey that is independent of which transportation mechanism, in UTC. The cutoffDateTime will supersede travelInformation.transit.airline.legs[].departureDate and travelInformation.transit.airline.legs[].departureTime if these fields are supplied in the request. Format: YYYY-MM-DDThh:mm:ssZ. Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The cutoff_date_time of this Ptsv2paymentsOrderInformation.
+        :rtype: str
+        """
+        return self._cutoff_date_time
+
+    @cutoff_date_time.setter
+    def cutoff_date_time(self, cutoff_date_time):
+        """
+        Sets the cutoff_date_time of this Ptsv2paymentsOrderInformation.
+        Starting date and time for an event or a journey that is independent of which transportation mechanism, in UTC. The cutoffDateTime will supersede travelInformation.transit.airline.legs[].departureDate and travelInformation.transit.airline.legs[].departureTime if these fields are supplied in the request. Format: YYYY-MM-DDThh:mm:ssZ. Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param cutoff_date_time: The cutoff_date_time of this Ptsv2paymentsOrderInformation.
+        :type: str
+        """
+
+        self._cutoff_date_time = cutoff_date_time
 
     @property
     def pre_order(self):
