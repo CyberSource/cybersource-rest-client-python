@@ -49,12 +49,12 @@ class FileCache:
 
         return self.filecache[filename]
 
-    def get_cached_private_key_from_pem(self, file_path, file_name):
+    def get_cached_private_key_from_pem(self, file_path, cache_key):
         file_mod_time = os.stat(file_path).st_mtime
-        if (file_name not in self.filecache) or file_mod_time != self.filecache[str(file_name)][1]:
+        if (cache_key not in self.filecache) or file_mod_time != self.filecache[str(cache_key)][1]:
             private_key = self.get_private_key_from_pem(file_path)
-            self.filecache.setdefault(str(file_name), []).append(private_key)
-            self.filecache.setdefault(str(file_name), []).append(file_mod_time)
-        return self.filecache[str(file_name)][0]
+            self.filecache.setdefault(str(cache_key), []).append(private_key)
+            self.filecache.setdefault(str(cache_key), []).append(file_mod_time)
+        return self.filecache[str(cache_key)][0]
 
 
