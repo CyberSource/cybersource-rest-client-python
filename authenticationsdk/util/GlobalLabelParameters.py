@@ -14,7 +14,7 @@ class GlobalLabelParameters:
     HTTP = "HTTP_Signature"
     MERCHANT_ID = "v-c-merchant-id"
     AUTHORIZATION_BEARER = "Authorization"
-    REQUEST_TARGET = "(request-target)"
+    REQUEST_TARGET = "request-target"
     PUBLIC_KEY = "x5c"
     JWT = "JWT"
     OAUTH = "OAUTH"
