@@ -31,7 +31,7 @@ class Rbsv1subscriptionsPlanInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'billing_period': 'InlineResponse200PlanInformationBillingPeriod',
+        'billing_period': 'GetAllPlansResponsePlanInformationBillingPeriod',
         'billing_cycles': 'Rbsv1plansPlanInformationBillingCycles'
     }
 
@@ -59,7 +59,7 @@ class Rbsv1subscriptionsPlanInformation(object):
         Gets the billing_period of this Rbsv1subscriptionsPlanInformation.
 
         :return: The billing_period of this Rbsv1subscriptionsPlanInformation.
-        :rtype: InlineResponse200PlanInformationBillingPeriod
+        :rtype: GetAllPlansResponsePlanInformationBillingPeriod
         """
         return self._billing_period
 
@@ -69,7 +69,7 @@ class Rbsv1subscriptionsPlanInformation(object):
         Sets the billing_period of this Rbsv1subscriptionsPlanInformation.
 
         :param billing_period: The billing_period of this Rbsv1subscriptionsPlanInformation.
-        :type: InlineResponse200PlanInformationBillingPeriod
+        :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
         self._billing_period = billing_period

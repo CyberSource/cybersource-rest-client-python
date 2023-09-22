@@ -60,7 +60,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2004
+        :return: ActivateDeactivatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -90,7 +90,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2004
+        :return: ActivateDeactivatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -150,7 +150,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2004',
+                                        response_type='ActivateDeactivatePlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -173,7 +173,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreatePlanRequest create_plan_request: (required)
-        :return: InlineResponse201
+        :return: CreatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -203,7 +203,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreatePlanRequest create_plan_request: (required)
-        :return: InlineResponse201
+        :return: CreatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -260,7 +260,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse201',
+                                        response_type='CreatePlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -283,7 +283,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2004
+        :return: ActivateDeactivatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -313,7 +313,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2004
+        :return: ActivateDeactivatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -373,7 +373,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2004',
+                                        response_type='ActivateDeactivatePlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -396,7 +396,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2002
+        :return: DeletePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -426,7 +426,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2002
+        :return: DeletePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -486,7 +486,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2002',
+                                        response_type='DeletePlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -509,7 +509,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2001
+        :return: GetPlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -539,7 +539,7 @@ class PlansApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
-        :return: InlineResponse2001
+        :return: GetPlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -599,7 +599,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2001',
+                                        response_type='GetPlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -621,7 +621,7 @@ class PlansApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: InlineResponse2005
+        :return: GetPlanCodeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -650,7 +650,7 @@ class PlansApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: InlineResponse2005
+        :return: GetPlanCodeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -701,7 +701,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='GetPlanCodeResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -728,7 +728,7 @@ class PlansApi(object):
         :param str code: Filter by Plan Code
         :param str status: Filter by Plan Status
         :param str name: Filter by Plan Name. (First sub string or full string) **[Not Recommended]** 
-        :return: InlineResponse200
+        :return: GetAllPlansResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -762,7 +762,7 @@ class PlansApi(object):
         :param str code: Filter by Plan Code
         :param str status: Filter by Plan Status
         :param str name: Filter by Plan Name. (First sub string or full string) **[Not Recommended]** 
-        :return: InlineResponse200
+        :return: GetAllPlansResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -824,7 +824,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse200',
+                                        response_type='GetAllPlansResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -848,7 +848,7 @@ class PlansApi(object):
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
         :param UpdatePlanRequest update_plan_request: (required)
-        :return: InlineResponse2003
+        :return: UpdatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -879,7 +879,7 @@ class PlansApi(object):
             for asynchronous request. (optional)
         :param str id: Plan Id (required)
         :param UpdatePlanRequest update_plan_request: (required)
-        :return: InlineResponse2003
+        :return: UpdatePlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -944,7 +944,7 @@ class PlansApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2003',
+                                        response_type='UpdatePlanResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

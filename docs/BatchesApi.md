@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_batch_report**
-> InlineResponse20014 get_batch_report(batch_id)
+> InlineResponse2004 get_batch_report(batch_id)
 
 Retrieve a Batch Report
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batch_status**
-> InlineResponse20013 get_batch_status(batch_id)
+> InlineResponse2003 get_batch_status(batch_id)
 
 Retrieve a Batch Status
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batches_list**
-> InlineResponse20012 get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
+> InlineResponse2002 get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
 
 List Batches
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_batch**
-> InlineResponse2022 post_batch(body)
+> InlineResponse202 post_batch(body)
 
 Create a Batch
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2022**](InlineResponse2022.md)
+[**InlineResponse202**](InlineResponse202.md)
 
 ### Authorization
 

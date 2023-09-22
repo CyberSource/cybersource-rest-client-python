@@ -35,7 +35,7 @@ class InlineResponse4005(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'status_code': 'str'
     }
 
     attribute_map = {
@@ -43,10 +43,10 @@ class InlineResponse4005(object):
         'status': 'status',
         'reason': 'reason',
         'message': 'message',
-        'details': 'details'
+        'status_code': 'statusCode'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, status_code=None):
         """
         InlineResponse4005 - a model defined in Swagger
         """
@@ -55,7 +55,7 @@ class InlineResponse4005(object):
         self._status = None
         self._reason = None
         self._message = None
-        self._details = None
+        self._status_code = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -65,8 +65,8 @@ class InlineResponse4005(object):
           self.reason = reason
         if message is not None:
           self.message = message
-        if details is not None:
-          self.details = details
+        if status_code is not None:
+          self.status_code = status_code
 
     @property
     def submit_time_utc(self):
@@ -118,7 +118,7 @@ class InlineResponse4005(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD 
 
         :return: The reason of this InlineResponse4005.
         :rtype: str
@@ -129,7 +129,7 @@ class InlineResponse4005(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4005.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD 
 
         :param reason: The reason of this InlineResponse4005.
         :type: str
@@ -161,25 +161,27 @@ class InlineResponse4005(object):
         self._message = message
 
     @property
-    def details(self):
+    def status_code(self):
         """
-        Gets the details of this InlineResponse4005.
+        Gets the status_code of this InlineResponse4005.
+        HTTP status code of the submitted request.  Possible values:  - 500 
 
-        :return: The details of this InlineResponse4005.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :return: The status_code of this InlineResponse4005.
+        :rtype: str
         """
-        return self._details
+        return self._status_code
 
-    @details.setter
-    def details(self, details):
+    @status_code.setter
+    def status_code(self, status_code):
         """
-        Sets the details of this InlineResponse4005.
+        Sets the status_code of this InlineResponse4005.
+        HTTP status code of the submitted request.  Possible values:  - 500 
 
-        :param details: The details of this InlineResponse4005.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :param status_code: The status_code of this InlineResponse4005.
+        :type: str
         """
 
-        self._details = details
+        self._status_code = status_code
 
     def to_dict(self):
         """

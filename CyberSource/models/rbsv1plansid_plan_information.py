@@ -35,7 +35,7 @@ class Rbsv1plansidPlanInformation(object):
         'name': 'str',
         'description': 'str',
         'status': 'str',
-        'billing_period': 'InlineResponse200PlanInformationBillingPeriod',
+        'billing_period': 'GetAllPlansResponsePlanInformationBillingPeriod',
         'billing_cycles': 'Rbsv1plansPlanInformationBillingCycles'
     }
 
@@ -171,7 +171,7 @@ class Rbsv1plansidPlanInformation(object):
         Gets the billing_period of this Rbsv1plansidPlanInformation.
 
         :return: The billing_period of this Rbsv1plansidPlanInformation.
-        :rtype: InlineResponse200PlanInformationBillingPeriod
+        :rtype: GetAllPlansResponsePlanInformationBillingPeriod
         """
         return self._billing_period
 
@@ -181,7 +181,7 @@ class Rbsv1plansidPlanInformation(object):
         Sets the billing_period of this Rbsv1plansidPlanInformation.
 
         :param billing_period: The billing_period of this Rbsv1plansidPlanInformation.
-        :type: InlineResponse200PlanInformationBillingPeriod
+        :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
         self._billing_period = billing_period

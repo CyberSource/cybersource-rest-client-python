@@ -70,7 +70,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status_source': 'str',
         'xid': 'str',
         'directory_server_transaction_id': 'str',
-        'acs_operator_id': 'int',
+        'acs_operator_id': 'str',
         'acs_reference_number': 'str',
         'idci_decision': 'str',
         'idci_reason_code1': 'str',
@@ -1170,7 +1170,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         Directory Server assigned ACS identifier.
 
         :return: The acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        :rtype: int
+        :rtype: str
         """
         return self._acs_operator_id
 
@@ -1181,7 +1181,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         Directory Server assigned ACS identifier.
 
         :param acs_operator_id: The acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        :type: int
+        :type: str
         """
 
         self._acs_operator_id = acs_operator_id

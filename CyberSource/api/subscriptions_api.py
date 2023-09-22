@@ -60,7 +60,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2009
+        :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -90,7 +90,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2009
+        :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -150,7 +150,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2009',
+                                        response_type='ActivateSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -173,7 +173,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse202
+        :return: CancelSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -203,7 +203,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse202
+        :return: CancelSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -263,7 +263,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse202',
+                                        response_type='CancelSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -286,7 +286,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSubscriptionRequest create_subscription_request: (required)
-        :return: InlineResponse2011
+        :return: CreateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -316,7 +316,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateSubscriptionRequest create_subscription_request: (required)
-        :return: InlineResponse2011
+        :return: CreateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -373,7 +373,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2011',
+                                        response_type='CreateSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -399,7 +399,7 @@ class SubscriptionsApi(object):
         :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
-        :return: InlineResponse2006
+        :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -432,7 +432,7 @@ class SubscriptionsApi(object):
         :param int limit: Number of items to be returned. Default - `20`, Max - `100` 
         :param str code: Filter by Subscription Code
         :param str status: Filter by Subscription Status
-        :return: InlineResponse2006
+        :return: GetAllSubscriptionsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -492,7 +492,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2006',
+                                        response_type='GetAllSubscriptionsResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -515,7 +515,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2007
+        :return: GetSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -545,7 +545,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2007
+        :return: GetSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -605,7 +605,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2007',
+                                        response_type='GetSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -627,7 +627,7 @@ class SubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: InlineResponse20010
+        :return: GetSubscriptionCodeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -656,7 +656,7 @@ class SubscriptionsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :return: InlineResponse20010
+        :return: GetSubscriptionCodeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -707,7 +707,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse20010',
+                                        response_type='GetSubscriptionCodeResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -730,7 +730,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2021
+        :return: SuspendSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -760,7 +760,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
-        :return: InlineResponse2021
+        :return: SuspendSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -820,7 +820,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2021',
+                                        response_type='SuspendSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -844,7 +844,7 @@ class SubscriptionsApi(object):
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
         :param UpdateSubscription update_subscription: Update Subscription (required)
-        :return: InlineResponse2008
+        :return: UpdateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -875,7 +875,7 @@ class SubscriptionsApi(object):
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
         :param UpdateSubscription update_subscription: Update Subscription (required)
-        :return: InlineResponse2008
+        :return: UpdateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -940,7 +940,7 @@ class SubscriptionsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2008',
+                                        response_type='UpdateSubscriptionResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

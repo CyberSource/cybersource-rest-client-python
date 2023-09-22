@@ -31,73 +31,199 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str'
+        'links': 'list[InlineResponse2002Links]',
+        'object': 'str',
+        'offset': 'int',
+        'limit': 'int',
+        'count': 'int',
+        'total': 'int',
+        'embedded': 'InlineResponse2002Embedded'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status'
+        'links': '_links',
+        'object': 'object',
+        'offset': 'offset',
+        'limit': 'limit',
+        'count': 'count',
+        'total': 'total',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, submit_time_utc=None, status=None):
+    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
         """
         InlineResponse2002 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
+        self._links = None
+        self._object = None
+        self._offset = None
+        self._limit = None
+        self._count = None
+        self._total = None
+        self._embedded = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
+        if links is not None:
+          self.links = links
+        if object is not None:
+          self.object = object
+        if offset is not None:
+          self.offset = offset
+        if limit is not None:
+          self.limit = limit
+        if count is not None:
+          self.count = count
+        if total is not None:
+          self.total = total
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
-    def submit_time_utc(self):
+    def links(self):
         """
-        Gets the submit_time_utc of this InlineResponse2002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the links of this InlineResponse2002.
 
-        :return: The submit_time_utc of this InlineResponse2002.
+        :return: The links of this InlineResponse2002.
+        :rtype: list[InlineResponse2002Links]
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this InlineResponse2002.
+
+        :param links: The links of this InlineResponse2002.
+        :type: list[InlineResponse2002Links]
+        """
+
+        self._links = links
+
+    @property
+    def object(self):
+        """
+        Gets the object of this InlineResponse2002.
+
+        :return: The object of this InlineResponse2002.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._object
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @object.setter
+    def object(self, object):
         """
-        Sets the submit_time_utc of this InlineResponse2002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the object of this InlineResponse2002.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2002.
+        :param object: The object of this InlineResponse2002.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._object = object
 
     @property
-    def status(self):
+    def offset(self):
         """
-        Gets the status of this InlineResponse2002.
-        The status of the submitted transaction.  Possible values:  - COMPLETED 
+        Gets the offset of this InlineResponse2002.
 
-        :return: The status of this InlineResponse2002.
-        :rtype: str
+        :return: The offset of this InlineResponse2002.
+        :rtype: int
         """
-        return self._status
+        return self._offset
 
-    @status.setter
-    def status(self, status):
+    @offset.setter
+    def offset(self, offset):
         """
-        Sets the status of this InlineResponse2002.
-        The status of the submitted transaction.  Possible values:  - COMPLETED 
+        Sets the offset of this InlineResponse2002.
 
-        :param status: The status of this InlineResponse2002.
-        :type: str
+        :param offset: The offset of this InlineResponse2002.
+        :type: int
         """
 
-        self._status = status
+        self._offset = offset
+
+    @property
+    def limit(self):
+        """
+        Gets the limit of this InlineResponse2002.
+
+        :return: The limit of this InlineResponse2002.
+        :rtype: int
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """
+        Sets the limit of this InlineResponse2002.
+
+        :param limit: The limit of this InlineResponse2002.
+        :type: int
+        """
+
+        self._limit = limit
+
+    @property
+    def count(self):
+        """
+        Gets the count of this InlineResponse2002.
+
+        :return: The count of this InlineResponse2002.
+        :rtype: int
+        """
+        return self._count
+
+    @count.setter
+    def count(self, count):
+        """
+        Sets the count of this InlineResponse2002.
+
+        :param count: The count of this InlineResponse2002.
+        :type: int
+        """
+
+        self._count = count
+
+    @property
+    def total(self):
+        """
+        Gets the total of this InlineResponse2002.
+
+        :return: The total of this InlineResponse2002.
+        :rtype: int
+        """
+        return self._total
+
+    @total.setter
+    def total(self, total):
+        """
+        Sets the total of this InlineResponse2002.
+
+        :param total: The total of this InlineResponse2002.
+        :type: int
+        """
+
+        self._total = total
+
+    @property
+    def embedded(self):
+        """
+        Gets the embedded of this InlineResponse2002.
+
+        :return: The embedded of this InlineResponse2002.
+        :rtype: InlineResponse2002Embedded
+        """
+        return self._embedded
+
+    @embedded.setter
+    def embedded(self, embedded):
+        """
+        Sets the embedded of this InlineResponse2002.
+
+        :param embedded: The embedded of this InlineResponse2002.
+        :type: InlineResponse2002Embedded
+        """
+
+        self._embedded = embedded
 
     def to_dict(self):
         """

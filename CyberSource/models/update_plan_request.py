@@ -33,7 +33,7 @@ class UpdatePlanRequest(object):
     swagger_types = {
         'plan_information': 'Rbsv1plansidPlanInformation',
         'processing_information': 'Rbsv1plansidProcessingInformation',
-        'order_information': 'InlineResponse200OrderInformation'
+        'order_information': 'GetAllPlansResponseOrderInformation'
     }
 
     attribute_map = {
@@ -106,7 +106,7 @@ class UpdatePlanRequest(object):
         Gets the order_information of this UpdatePlanRequest.
 
         :return: The order_information of this UpdatePlanRequest.
-        :rtype: InlineResponse200OrderInformation
+        :rtype: GetAllPlansResponseOrderInformation
         """
         return self._order_information
 
@@ -116,7 +116,7 @@ class UpdatePlanRequest(object):
         Sets the order_information of this UpdatePlanRequest.
 
         :param order_information: The order_information of this UpdatePlanRequest.
-        :type: InlineResponse200OrderInformation
+        :type: GetAllPlansResponseOrderInformation
         """
 
         self._order_information = order_information

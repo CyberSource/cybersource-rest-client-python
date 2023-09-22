@@ -36,7 +36,7 @@ class CreateSubscriptionRequest(object):
         'plan_information': 'Rbsv1subscriptionsPlanInformation',
         'subscription_information': 'Rbsv1subscriptionsSubscriptionInformation',
         'payment_information': 'Rbsv1subscriptionsPaymentInformation',
-        'order_information': 'InlineResponse200OrderInformation'
+        'order_information': 'GetAllPlansResponseOrderInformation'
     }
 
     attribute_map = {
@@ -184,7 +184,7 @@ class CreateSubscriptionRequest(object):
         Gets the order_information of this CreateSubscriptionRequest.
 
         :return: The order_information of this CreateSubscriptionRequest.
-        :rtype: InlineResponse200OrderInformation
+        :rtype: GetAllPlansResponseOrderInformation
         """
         return self._order_information
 
@@ -194,7 +194,7 @@ class CreateSubscriptionRequest(object):
         Sets the order_information of this CreateSubscriptionRequest.
 
         :param order_information: The order_information of this CreateSubscriptionRequest.
-        :type: InlineResponse200OrderInformation
+        :type: GetAllPlansResponseOrderInformation
         """
 
         self._order_information = order_information

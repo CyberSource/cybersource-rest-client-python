@@ -28,6 +28,7 @@ setup(
         "setuptools",
         "six",
         "urllib3",
+        "jwcrypto",
         "cryptography",
     ],
     packages=find_packages(),

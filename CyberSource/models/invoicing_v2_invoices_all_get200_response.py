@@ -31,7 +31,7 @@ class InvoicingV2InvoicesAllGet200Response(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse200Links',
+        'links': 'GetAllPlansResponseLinks',
         'submit_time_utc': 'str',
         'total_invoices': 'int',
         'invoices': 'list[InvoicingV2InvoicesAllGet200ResponseInvoices]'
@@ -69,7 +69,7 @@ class InvoicingV2InvoicesAllGet200Response(object):
         Gets the links of this InvoicingV2InvoicesAllGet200Response.
 
         :return: The links of this InvoicingV2InvoicesAllGet200Response.
-        :rtype: InlineResponse200Links
+        :rtype: GetAllPlansResponseLinks
         """
         return self._links
 
@@ -79,7 +79,7 @@ class InvoicingV2InvoicesAllGet200Response(object):
         Sets the links of this InvoicingV2InvoicesAllGet200Response.
 
         :param links: The links of this InvoicingV2InvoicesAllGet200Response.
-        :type: InlineResponse200Links
+        :type: GetAllPlansResponseLinks
         """
 
         self._links = links
