@@ -7,7 +7,7 @@ from authenticationsdk.util.GlobalLabelParameters import *
 # paramter 'Signature' is calucated based on below keyvalues and then signed with SECRET KEY
 # host: Sandbox(apitest.cybersource.com) or Production(api.cybersource.com) hostname
 # date: "HTTP-date" format as defined by RFC7231
-# (request-target): Should be in format of httpMethod: path Example: "post /pts/v2/payments"
+# request-target: Should be in format of httpMethod: path Example: "post /pts/v2/payments"
 # Digest: Only needed for POST calls. digestString = BASE64( HMAC-SHA256 ( Payload ));
 
 # v-c-merchant-id: set value to Cybersource Merchant ID This ID can be found on EBC portal
@@ -26,8 +26,8 @@ class GetSignatureParameter:
 
         return self.get_signature_param(merchant_secret_key, merchant_id, httpmethod)
 
-    # This method adds the Host-Date-(request-target)-v-c-merchant_id for get method
-    # This method adds the Host-Date-(request-target)-digest-v-c-merchant_id for post method
+    # This method adds the Host-Date-request-target-v-c-merchant_id for get method
+    # This method adds the Host-Date-request-target-digest-v-c-merchant_id for post method
     def get_signature_param(self, merchant_secret_key, merchant_id, httpmethod):
 
         signature_list = ([])
