@@ -50,7 +50,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'debt_recovery_indicator': 'str',
         'deferred_auth_indicator': 'bool',
         'cash_advance_indicator': 'bool',
-        'split_payment_transaction': 'bool'
+        'split_payment_transaction': 'bool',
+        'card_verification_indicator': 'bool'
     }
 
     attribute_map = {
@@ -73,10 +74,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'debt_recovery_indicator': 'debtRecoveryIndicator',
         'deferred_auth_indicator': 'deferredAuthIndicator',
         'cash_advance_indicator': 'cashAdvanceIndicator',
-        'split_payment_transaction': 'splitPaymentTransaction'
+        'split_payment_transaction': 'splitPaymentTransaction',
+        'card_verification_indicator': 'cardVerificationIndicator'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -101,6 +103,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._deferred_auth_indicator = None
         self._cash_advance_indicator = None
         self._split_payment_transaction = None
+        self._card_verification_indicator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -142,6 +145,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.cash_advance_indicator = cash_advance_indicator
         if split_payment_transaction is not None:
           self.split_payment_transaction = split_payment_transaction
+        if card_verification_indicator is not None:
+          self.card_verification_indicator = card_verification_indicator
 
     @property
     def auth_type(self):
@@ -600,6 +605,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._split_payment_transaction = split_payment_transaction
+
+    @property
+    def card_verification_indicator(self):
+        """
+        Gets the card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :return: The card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._card_verification_indicator
+
+    @card_verification_indicator.setter
+    def card_verification_indicator(self, card_verification_indicator):
+        """
+        Sets the card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :param card_verification_indicator: The card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._card_verification_indicator = card_verification_indicator
 
     def to_dict(self):
         """

@@ -31,58 +31,60 @@ class InlineResponse200(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse200Links',
+        'id': 'str',
         'submit_time_utc': 'str',
-        'total_count': 'int',
-        'plans': 'list[InlineResponse200Plans]'
+        'status': 'str',
+        'embedded': 'InlineResponse200Embedded'
     }
 
     attribute_map = {
-        'links': '_links',
+        'id': 'id',
         'submit_time_utc': 'submitTimeUtc',
-        'total_count': 'totalCount',
-        'plans': 'plans'
+        'status': 'status',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, submit_time_utc=None, total_count=None, plans=None):
+    def __init__(self, id=None, submit_time_utc=None, status=None, embedded=None):
         """
         InlineResponse200 - a model defined in Swagger
         """
 
-        self._links = None
+        self._id = None
         self._submit_time_utc = None
-        self._total_count = None
-        self._plans = None
+        self._status = None
+        self._embedded = None
 
-        if links is not None:
-          self.links = links
+        if id is not None:
+          self.id = id
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
-        if total_count is not None:
-          self.total_count = total_count
-        if plans is not None:
-          self.plans = plans
+        if status is not None:
+          self.status = status
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
-    def links(self):
+    def id(self):
         """
-        Gets the links of this InlineResponse200.
+        Gets the id of this InlineResponse200.
+        UUID uniquely generated for this comments. 
 
-        :return: The links of this InlineResponse200.
-        :rtype: InlineResponse200Links
+        :return: The id of this InlineResponse200.
+        :rtype: str
         """
-        return self._links
+        return self._id
 
-    @links.setter
-    def links(self, links):
+    @id.setter
+    def id(self, id):
         """
-        Sets the links of this InlineResponse200.
+        Sets the id of this InlineResponse200.
+        UUID uniquely generated for this comments. 
 
-        :param links: The links of this InlineResponse200.
-        :type: InlineResponse200Links
+        :param id: The id of this InlineResponse200.
+        :type: str
         """
 
-        self._links = links
+        self._id = id
 
     @property
     def submit_time_utc(self):
@@ -108,48 +110,48 @@ class InlineResponse200(object):
         self._submit_time_utc = submit_time_utc
 
     @property
-    def total_count(self):
+    def status(self):
         """
-        Gets the total_count of this InlineResponse200.
-        total number of plans created
+        Gets the status of this InlineResponse200.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :return: The total_count of this InlineResponse200.
-        :rtype: int
+        :return: The status of this InlineResponse200.
+        :rtype: str
         """
-        return self._total_count
+        return self._status
 
-    @total_count.setter
-    def total_count(self, total_count):
+    @status.setter
+    def status(self, status):
         """
-        Sets the total_count of this InlineResponse200.
-        total number of plans created
+        Sets the status of this InlineResponse200.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :param total_count: The total_count of this InlineResponse200.
-        :type: int
+        :param status: The status of this InlineResponse200.
+        :type: str
         """
 
-        self._total_count = total_count
+        self._status = status
 
     @property
-    def plans(self):
+    def embedded(self):
         """
-        Gets the plans of this InlineResponse200.
+        Gets the embedded of this InlineResponse200.
 
-        :return: The plans of this InlineResponse200.
-        :rtype: list[InlineResponse200Plans]
+        :return: The embedded of this InlineResponse200.
+        :rtype: InlineResponse200Embedded
         """
-        return self._plans
+        return self._embedded
 
-    @plans.setter
-    def plans(self, plans):
+    @embedded.setter
+    def embedded(self, embedded):
         """
-        Sets the plans of this InlineResponse200.
+        Sets the embedded of this InlineResponse200.
 
-        :param plans: The plans of this InlineResponse200.
-        :type: list[InlineResponse200Plans]
+        :param embedded: The embedded of this InlineResponse200.
+        :type: InlineResponse200Embedded
         """
 
-        self._plans = plans
+        self._embedded = embedded
 
     def to_dict(self):
         """

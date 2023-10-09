@@ -34,17 +34,19 @@ class InlineResponse5001(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'reason': 'str',
-        'message': 'str'
+        'message': 'str',
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reason': 'reason',
-        'message': 'message'
+        'message': 'message',
+        'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse5001 - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class InlineResponse5001(object):
         self._status = None
         self._reason = None
         self._message = None
+        self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -62,6 +65,8 @@ class InlineResponse5001(object):
           self.reason = reason
         if message is not None:
           self.message = message
+        if details is not None:
+          self.details = details
 
     @property
     def submit_time_utc(self):
@@ -90,7 +95,7 @@ class InlineResponse5001(object):
     def status(self):
         """
         Gets the status of this InlineResponse5001.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
+        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
 
         :return: The status of this InlineResponse5001.
         :rtype: str
@@ -101,7 +106,7 @@ class InlineResponse5001(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse5001.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
+        The status of the submitted transaction. Possible values: - `SERVER_ERROR` 
 
         :param status: The status of this InlineResponse5001.
         :type: str
@@ -113,7 +118,7 @@ class InlineResponse5001(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse5001.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
+        The reason of the status. Possible Values: - `SYSTEM_ERROR` 
 
         :return: The reason of this InlineResponse5001.
         :rtype: str
@@ -124,7 +129,7 @@ class InlineResponse5001(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse5001.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
+        The reason of the status. Possible Values: - `SYSTEM_ERROR` 
 
         :param reason: The reason of this InlineResponse5001.
         :type: str
@@ -136,7 +141,7 @@ class InlineResponse5001(object):
     def message(self):
         """
         Gets the message of this InlineResponse5001.
-        The detail message related to the status and reason listed above.
+        Underlying service error with exception.
 
         :return: The message of this InlineResponse5001.
         :rtype: str
@@ -147,13 +152,34 @@ class InlineResponse5001(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse5001.
-        The detail message related to the status and reason listed above.
+        Underlying service error with exception.
 
         :param message: The message of this InlineResponse5001.
         :type: str
         """
 
         self._message = message
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse5001.
+
+        :return: The details of this InlineResponse5001.
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse5001.
+
+        :param details: The details of this InlineResponse5001.
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

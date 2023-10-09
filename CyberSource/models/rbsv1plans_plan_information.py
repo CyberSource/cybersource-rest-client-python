@@ -35,7 +35,7 @@ class Rbsv1plansPlanInformation(object):
         'name': 'str',
         'description': 'str',
         'status': 'str',
-        'billing_period': 'InlineResponse200PlanInformationBillingPeriod',
+        'billing_period': 'GetAllPlansResponsePlanInformationBillingPeriod',
         'billing_cycles': 'Rbsv1plansPlanInformationBillingCycles'
     }
 
@@ -171,7 +171,7 @@ class Rbsv1plansPlanInformation(object):
         Gets the billing_period of this Rbsv1plansPlanInformation.
 
         :return: The billing_period of this Rbsv1plansPlanInformation.
-        :rtype: InlineResponse200PlanInformationBillingPeriod
+        :rtype: GetAllPlansResponsePlanInformationBillingPeriod
         """
         return self._billing_period
 
@@ -181,7 +181,7 @@ class Rbsv1plansPlanInformation(object):
         Sets the billing_period of this Rbsv1plansPlanInformation.
 
         :param billing_period: The billing_period of this Rbsv1plansPlanInformation.
-        :type: InlineResponse200PlanInformationBillingPeriod
+        :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
         if billing_period is None:
             raise ValueError("Invalid value for `billing_period`, must not be `None`")
