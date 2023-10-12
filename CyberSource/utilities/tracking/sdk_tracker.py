@@ -1,3 +1,4 @@
+import json
 
 class SdkTracker:
     inclusion_list = [
@@ -38,20 +39,23 @@ class SdkTracker:
         pass
 
     def insert_developer_id_tracker(self, request_obj, request_class, run_environment):
+        request_obj = request_obj.replace('\"_', '\"')
         if request_class in self.inclusion_list:
             developer_id_value = ''
+            tester = json.loads(request_obj)
 
             if 'apitest.cybersource.com' in run_environment:
                 developer_id_value = 'J0TV2I9S'
             else:
                 developer_id_value = 'KZUR4KZ4'
 
-            if request_obj.client_reference_information is None:
-                request_obj.client_reference_information = {}
-            if request_obj.client_reference_information.partner is None:
-                request_obj.client_reference_information.partner = {}
-            if request_obj.client_reference_information.partner.developer_id is None:
-                request_obj.client_reference_information.partner.developer_id = developer_id_value
-            return request_obj
-        else:
-            return request_obj
+            if 'client_reference_information' not in tester:
+                tester['client_reference_information'] = {}
+            if 'partner' not in tester['client_reference_information']:
+                tester['client_reference_information']['partner'] = {}
+            if 'developer_id' not in tester['client_reference_information']['partner']:
+                tester['client_reference_information']['partner']['developer_id'] = developer_id_value
+                
+            request_with_tracker = json.dumps(tester)
+            return request_with_tracker
+        return request_obj
