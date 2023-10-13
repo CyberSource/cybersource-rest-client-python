@@ -24,6 +24,7 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
 
+from ..utilities.tracking.sdk_tracker import SdkTracker
 
 class OAuthApi(object):
     """
@@ -146,6 +147,10 @@ class OAuthApi(object):
         body_params = None
         if 'create_access_token_request' in params:
             body_params = params['create_access_token_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_access_token_request', self.api_client.mconfig.run_environment)
+
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json;charset=utf-8'])
