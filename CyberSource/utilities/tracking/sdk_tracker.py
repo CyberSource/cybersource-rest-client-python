@@ -53,7 +53,7 @@ class SdkTracker:
                 tester['client_reference_information'] = {}
             if 'partner' not in tester['client_reference_information']:
                 tester['client_reference_information']['partner'] = {}
-            if 'developer_id' not in tester['client_reference_information']['partner']:
+            if 'developer_id' not in tester['client_reference_information']['partner'] or not tester['client_reference_information']['partner']['developer_id']:
                 tester['client_reference_information']['partner']['developer_id'] = developer_id_value
                 
             request_with_tracker = json.dumps(tester)
