@@ -116,14 +116,14 @@ class BatchesApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `batch_id` when calling `get_batch_report`")
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_report`")
 
-        if 'batch_id' in params and params['batch_id'] > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value less than or equal to `32`")
-        if 'batch_id' in params and params['batch_id'] < 16:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value greater than or equal to `16`")
-            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value greater than or equal to `16`")
+        # if 'batch_id' in params and params['batch_id'] > 32:
+        #     if self.api_client.mconfig.log_config.enable_log:
+        #         self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value less than or equal to `32`")
+        #     raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value less than or equal to `32`")
+        # if 'batch_id' in params and params['batch_id'] < 16:
+        #     if self.api_client.mconfig.log_config.enable_log:
+        #         self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value greater than or equal to `16`")
+        #     raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_report`, must be a value greater than or equal to `16`")
 
         collection_formats = {}
 
@@ -237,14 +237,14 @@ class BatchesApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `batch_id` when calling `get_batch_status`")
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_status`")
 
-        if 'batch_id' in params and params['batch_id'] > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value less than or equal to `32`")
-        if 'batch_id' in params and params['batch_id'] < 16:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value greater than or equal to `16`")
-            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value greater than or equal to `16`")
+        # if 'batch_id' in params and params['batch_id'] > 32:
+        #     if self.api_client.mconfig.log_config.enable_log:
+        #         self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value less than or equal to `32`")
+        #     raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value less than or equal to `32`")
+        # if 'batch_id' in params and params['batch_id'] < 16:
+        #     if self.api_client.mconfig.log_config.enable_log:
+        #         self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value greater than or equal to `16`")
+        #     raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_status`, must be a value greater than or equal to `16`")
 
         collection_formats = {}
 
