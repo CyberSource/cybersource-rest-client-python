@@ -62,7 +62,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'extended_credit_total_count': 'str',
         'network_routing_order': 'str',
         'pay_by_points_indicator': 'bool',
-        'is_return_auth_record_enabled': 'bool'
+        'is_return_auth_record_enabled': 'bool',
+        'network_partner_id': 'str'
     }
 
     attribute_map = {
@@ -97,10 +98,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'extended_credit_total_count': 'extendedCreditTotalCount',
         'network_routing_order': 'networkRoutingOrder',
         'pay_by_points_indicator': 'payByPointsIndicator',
-        'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled'
+        'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled',
+        'network_partner_id': 'networkPartnerId'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None, network_partner_id=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -137,6 +139,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._network_routing_order = None
         self._pay_by_points_indicator = None
         self._is_return_auth_record_enabled = None
+        self._network_partner_id = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -202,6 +205,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.pay_by_points_indicator = pay_by_points_indicator
         if is_return_auth_record_enabled is not None:
           self.is_return_auth_record_enabled = is_return_auth_record_enabled
+        if network_partner_id is not None:
+          self.network_partner_id = network_partner_id
 
     @property
     def action_list(self):
@@ -922,6 +927,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._is_return_auth_record_enabled = is_return_auth_record_enabled
+
+    @property
+    def network_partner_id(self):
+        """
+        Gets the network_partner_id of this Ptsv2paymentsProcessingInformation.
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect. 
+
+        :return: The network_partner_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._network_partner_id
+
+    @network_partner_id.setter
+    def network_partner_id(self, network_partner_id):
+        """
+        Sets the network_partner_id of this Ptsv2paymentsProcessingInformation.
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction.  This field is supported for Visa Platform Connect. 
+
+        :param network_partner_id: The network_partner_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._network_partner_id = network_partner_id
 
     def to_dict(self):
         """

@@ -41,6 +41,7 @@ class CapturePaymentRequest(object):
         'aggregator_information': 'Ptsv2paymentsidcapturesAggregatorInformation',
         'point_of_sale_information': 'Ptsv2paymentsidcapturesPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
+        'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2paymentsidcapturesInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation'
@@ -57,12 +58,13 @@ class CapturePaymentRequest(object):
         'aggregator_information': 'aggregatorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
+        'merchant_defined_secure_information': 'merchantDefinedSecureInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
         'promotion_information': 'promotionInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, promotion_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, promotion_information=None):
         """
         CapturePaymentRequest - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class CapturePaymentRequest(object):
         self._aggregator_information = None
         self._point_of_sale_information = None
         self._merchant_defined_information = None
+        self._merchant_defined_secure_information = None
         self._installment_information = None
         self._travel_information = None
         self._promotion_information = None
@@ -101,6 +104,8 @@ class CapturePaymentRequest(object):
           self.point_of_sale_information = point_of_sale_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if merchant_defined_secure_information is not None:
+          self.merchant_defined_secure_information = merchant_defined_secure_information
         if installment_information is not None:
           self.installment_information = installment_information
         if travel_information is not None:
@@ -319,6 +324,27 @@ class CapturePaymentRequest(object):
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def merchant_defined_secure_information(self):
+        """
+        Gets the merchant_defined_secure_information of this CapturePaymentRequest.
+
+        :return: The merchant_defined_secure_information of this CapturePaymentRequest.
+        :rtype: Ptsv2paymentsMerchantDefinedSecureInformation
+        """
+        return self._merchant_defined_secure_information
+
+    @merchant_defined_secure_information.setter
+    def merchant_defined_secure_information(self, merchant_defined_secure_information):
+        """
+        Sets the merchant_defined_secure_information of this CapturePaymentRequest.
+
+        :param merchant_defined_secure_information: The merchant_defined_secure_information of this CapturePaymentRequest.
+        :type: Ptsv2paymentsMerchantDefinedSecureInformation
+        """
+
+        self._merchant_defined_secure_information = merchant_defined_secure_information
 
     @property
     def installment_information(self):

@@ -34,17 +34,19 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         'country': 'str',
         'discretionary_data': 'str',
         'country_specific_discretionary_data': 'str',
-        'response_code': 'str'
+        'response_code': 'str',
+        'pin_request_indicator': 'str'
     }
 
     attribute_map = {
         'country': 'country',
         'discretionary_data': 'discretionaryData',
         'country_specific_discretionary_data': 'countrySpecificDiscretionaryData',
-        'response_code': 'responseCode'
+        'response_code': 'responseCode',
+        'pin_request_indicator': 'pinRequestIndicator'
     }
 
-    def __init__(self, country=None, discretionary_data=None, country_specific_discretionary_data=None, response_code=None):
+    def __init__(self, country=None, discretionary_data=None, country_specific_discretionary_data=None, response_code=None, pin_request_indicator=None):
         """
         PtsV2PaymentsPost201ResponseIssuerInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         self._discretionary_data = None
         self._country_specific_discretionary_data = None
         self._response_code = None
+        self._pin_request_indicator = None
 
         if country is not None:
           self.country = country
@@ -62,6 +65,8 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
           self.country_specific_discretionary_data = country_specific_discretionary_data
         if response_code is not None:
           self.response_code = response_code
+        if pin_request_indicator is not None:
+          self.pin_request_indicator = pin_request_indicator
 
     @property
     def country(self):
@@ -154,6 +159,29 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         """
 
         self._response_code = response_code
+
+    @property
+    def pin_request_indicator(self):
+        """
+        Gets the pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        This field contains value ‘1’ which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
+
+        :return: The pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :rtype: str
+        """
+        return self._pin_request_indicator
+
+    @pin_request_indicator.setter
+    def pin_request_indicator(self, pin_request_indicator):
+        """
+        Sets the pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        This field contains value ‘1’ which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
+
+        :param pin_request_indicator: The pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
+        :type: str
+        """
+
+        self._pin_request_indicator = pin_request_indicator
 
     def to_dict(self):
         """

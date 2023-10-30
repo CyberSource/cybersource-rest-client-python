@@ -48,7 +48,7 @@ class InvoiceSettingsApi(object):
     def get_invoice_settings(self, **kwargs):
         """
         Get Invoice Settings
-        Get the invoice settings for the invoice payment page.
+        Allows you to retrieve the invoice settings for the payment page.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -77,7 +77,7 @@ class InvoiceSettingsApi(object):
     def get_invoice_settings_with_http_info(self, **kwargs):
         """
         Get Invoice Settings
-        Get the invoice settings for the invoice payment page.
+        Allows you to retrieve the invoice settings for the payment page.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -150,7 +150,7 @@ class InvoiceSettingsApi(object):
     def update_invoice_settings(self, invoice_settings_request, **kwargs):
         """
         Update Invoice Settings
-        Update invoice settings for the invoice payment page.
+        Allows you to customize the payment page, the checkout experience, email communication and payer authentication. You can customize the invoice to match your brand with your business name, logo and brand colors, and a VAT Tax number. You can choose to capture the payers shipping details, phone number and email during the checkout process. You can add a custom message to all invoice emails and enable or disable payer authentication for invoice payments.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -180,7 +180,7 @@ class InvoiceSettingsApi(object):
     def update_invoice_settings_with_http_info(self, invoice_settings_request, **kwargs):
         """
         Update Invoice Settings
-        Update invoice settings for the invoice payment page.
+        Allows you to customize the payment page, the checkout experience, email communication and payer authentication. You can customize the invoice to match your brand with your business name, logo and brand colors, and a VAT Tax number. You can choose to capture the payers shipping details, phone number and email during the checkout process. You can add a custom message to all invoice emails and enable or disable payer authentication for invoice payments.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

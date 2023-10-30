@@ -35,7 +35,8 @@ class Ptsv2paymentsTravelInformation(object):
         'agency': 'Ptsv2paymentsTravelInformationAgency',
         'auto_rental': 'Ptsv2paymentsTravelInformationAutoRental',
         'lodging': 'Ptsv2paymentsTravelInformationLodging',
-        'transit': 'Ptsv2paymentsTravelInformationTransit'
+        'transit': 'Ptsv2paymentsTravelInformationTransit',
+        'vehicle_data': 'Ptsv2paymentsTravelInformationVehicleData'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Ptsv2paymentsTravelInformation(object):
         'agency': 'agency',
         'auto_rental': 'autoRental',
         'lodging': 'lodging',
-        'transit': 'transit'
+        'transit': 'transit',
+        'vehicle_data': 'vehicleData'
     }
 
-    def __init__(self, duration=None, agency=None, auto_rental=None, lodging=None, transit=None):
+    def __init__(self, duration=None, agency=None, auto_rental=None, lodging=None, transit=None, vehicle_data=None):
         """
         Ptsv2paymentsTravelInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Ptsv2paymentsTravelInformation(object):
         self._auto_rental = None
         self._lodging = None
         self._transit = None
+        self._vehicle_data = None
 
         if duration is not None:
           self.duration = duration
@@ -67,6 +70,8 @@ class Ptsv2paymentsTravelInformation(object):
           self.lodging = lodging
         if transit is not None:
           self.transit = transit
+        if vehicle_data is not None:
+          self.vehicle_data = vehicle_data
 
     @property
     def duration(self):
@@ -174,6 +179,27 @@ class Ptsv2paymentsTravelInformation(object):
         """
 
         self._transit = transit
+
+    @property
+    def vehicle_data(self):
+        """
+        Gets the vehicle_data of this Ptsv2paymentsTravelInformation.
+
+        :return: The vehicle_data of this Ptsv2paymentsTravelInformation.
+        :rtype: Ptsv2paymentsTravelInformationVehicleData
+        """
+        return self._vehicle_data
+
+    @vehicle_data.setter
+    def vehicle_data(self, vehicle_data):
+        """
+        Sets the vehicle_data of this Ptsv2paymentsTravelInformation.
+
+        :param vehicle_data: The vehicle_data of this Ptsv2paymentsTravelInformation.
+        :type: Ptsv2paymentsTravelInformationVehicleData
+        """
+
+        self._vehicle_data = vehicle_data
 
     def to_dict(self):
         """
