@@ -169,7 +169,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsReversalsPost201Response.
-        The status of the submitted transaction.  Possible values:  - REVERSED 
+        The status of the submitted transaction.  Possible values:  - REVERSED  - PARTIALLY_REVERSED 
 
         :return: The status of this PtsV2PaymentsReversalsPost201Response.
         :rtype: str
@@ -180,7 +180,7 @@ class PtsV2PaymentsReversalsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsReversalsPost201Response.
-        The status of the submitted transaction.  Possible values:  - REVERSED 
+        The status of the submitted transaction.  Possible values:  - REVERSED  - PARTIALLY_REVERSED 
 
         :param status: The status of this PtsV2PaymentsReversalsPost201Response.
         :type: str

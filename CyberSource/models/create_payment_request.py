@@ -44,6 +44,7 @@ class CreatePaymentRequest(object):
         'consumer_authentication_information': 'Ptsv2paymentsConsumerAuthenticationInformation',
         'point_of_sale_information': 'Ptsv2paymentsPointOfSaleInformation',
         'merchant_defined_information': 'list[Ptsv2paymentsMerchantDefinedInformation]',
+        'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2paymentsInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
         'health_care_information': 'Ptsv2paymentsHealthCareInformation',
@@ -71,6 +72,7 @@ class CreatePaymentRequest(object):
         'consumer_authentication_information': 'consumerAuthenticationInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'merchant_defined_information': 'merchantDefinedInformation',
+        'merchant_defined_secure_information': 'merchantDefinedSecureInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
         'health_care_information': 'healthCareInformation',
@@ -84,7 +86,7 @@ class CreatePaymentRequest(object):
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -102,6 +104,7 @@ class CreatePaymentRequest(object):
         self._consumer_authentication_information = None
         self._point_of_sale_information = None
         self._merchant_defined_information = None
+        self._merchant_defined_secure_information = None
         self._installment_information = None
         self._travel_information = None
         self._health_care_information = None
@@ -140,6 +143,8 @@ class CreatePaymentRequest(object):
           self.point_of_sale_information = point_of_sale_information
         if merchant_defined_information is not None:
           self.merchant_defined_information = merchant_defined_information
+        if merchant_defined_secure_information is not None:
+          self.merchant_defined_secure_information = merchant_defined_secure_information
         if installment_information is not None:
           self.installment_information = installment_information
         if travel_information is not None:
@@ -437,6 +442,27 @@ class CreatePaymentRequest(object):
         """
 
         self._merchant_defined_information = merchant_defined_information
+
+    @property
+    def merchant_defined_secure_information(self):
+        """
+        Gets the merchant_defined_secure_information of this CreatePaymentRequest.
+
+        :return: The merchant_defined_secure_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsMerchantDefinedSecureInformation
+        """
+        return self._merchant_defined_secure_information
+
+    @merchant_defined_secure_information.setter
+    def merchant_defined_secure_information(self, merchant_defined_secure_information):
+        """
+        Sets the merchant_defined_secure_information of this CreatePaymentRequest.
+
+        :param merchant_defined_secure_information: The merchant_defined_secure_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsMerchantDefinedSecureInformation
+        """
+
+        self._merchant_defined_secure_information = merchant_defined_secure_information
 
     @property
     def installment_information(self):

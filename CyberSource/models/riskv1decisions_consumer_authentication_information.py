@@ -439,7 +439,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def transaction_flow_indicator(self):
         """
         Gets the transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
-        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW – Transaction performed at domestic merchant. 02:TW - Transaction performed at domestic merchant along with Token provisioning. 03:IT – Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 
+        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW- Transaction performed at domestic merchant. 02:TW- Transaction performed at domestic merchant along with Token provisioning. 03:IT- Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 08:GC- Guest Checkout 09:ST- SI Authentication Transaction only 10:SW- SI Authorization along with token provisioning 
 
         :return: The transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :rtype: int
@@ -450,7 +450,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def transaction_flow_indicator(self, transaction_flow_indicator):
         """
         Sets the transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
-        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW – Transaction performed at domestic merchant. 02:TW - Transaction performed at domestic merchant along with Token provisioning. 03:IT – Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 
+        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW- Transaction performed at domestic merchant. 02:TW- Transaction performed at domestic merchant along with Token provisioning. 03:IT- Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 08:GC- Guest Checkout 09:ST- SI Authentication Transaction only 10:SW- SI Authorization along with token provisioning 
 
         :param transaction_flow_indicator: The transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: int
