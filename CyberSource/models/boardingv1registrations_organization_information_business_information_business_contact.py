@@ -84,8 +84,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         """
         if first_name is None:
             raise ValueError("Invalid value for `first_name`, must not be `None`")
-        if first_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', first_name):
-            raise ValueError("Invalid value for `first_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
+        # if first_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', first_name):
+        #     raise ValueError("Invalid value for `first_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
 
         self._first_name = first_name
 
@@ -107,8 +107,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :param middle_name: The middle_name of this Boardingv1registrationsOrganizationInformationBusinessInformationBusinessContact.
         :type: str
         """
-        if middle_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', middle_name):
-            raise ValueError("Invalid value for `middle_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
+        # if middle_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', middle_name):
+        #     raise ValueError("Invalid value for `middle_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
 
         self._middle_name = middle_name
 
@@ -132,8 +132,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         """
         if last_name is None:
             raise ValueError("Invalid value for `last_name`, must not be `None`")
-        if last_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', last_name):
-            raise ValueError("Invalid value for `last_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
+        # if last_name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', last_name):
+        #     raise ValueError("Invalid value for `last_name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
 
         self._last_name = last_name
 
@@ -157,8 +157,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         """
         if phone_number is None:
             raise ValueError("Invalid value for `phone_number`, must not be `None`")
-        if phone_number is not None and not re.search('^[0-9a-zA-Z\\\\+\\\\-]+$', phone_number):
-            raise ValueError("Invalid value for `phone_number`, must be a follow pattern or equal to `/^[0-9a-zA-Z\\\\+\\\\-]+$/`")
+        # if phone_number is not None and not re.search('^[0-9a-zA-Z\\\\+\\\\-]+$', phone_number):
+        #     raise ValueError("Invalid value for `phone_number`, must be a follow pattern or equal to `/^[0-9a-zA-Z\\\\+\\\\-]+$/`")
 
         self._phone_number = phone_number
 
@@ -182,8 +182,8 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")
-        if email is not None and not re.search('^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$', email):
-            raise ValueError("Invalid value for `email`, must be a follow pattern or equal to `/^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$/`")
+        # if email is not None and not re.search('^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$', email):
+        #     raise ValueError("Invalid value for `email`, must be a follow pattern or equal to `/^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$/`")
 
         self._email = email
 
