@@ -33,6 +33,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
     swagger_types = {
         'name': 'str',
         'reason_code': 'str',
+        'status': 'str',
+        'reason': 'str',
         'r_code': 'str',
         'r_flag': 'str',
         'reconciliation_id': 'str',
@@ -43,6 +45,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
     attribute_map = {
         'name': 'name',
         'reason_code': 'reasonCode',
+        'status': 'status',
+        'reason': 'reason',
         'r_code': 'rCode',
         'r_flag': 'rFlag',
         'reconciliation_id': 'reconciliationId',
@@ -50,13 +54,15 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         'return_code': 'returnCode'
     }
 
-    def __init__(self, name=None, reason_code=None, r_code=None, r_flag=None, reconciliation_id=None, r_message=None, return_code=None):
+    def __init__(self, name=None, reason_code=None, status=None, reason=None, r_code=None, r_flag=None, reconciliation_id=None, r_message=None, return_code=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications - a model defined in Swagger
         """
 
         self._name = None
         self._reason_code = None
+        self._status = None
+        self._reason = None
         self._r_code = None
         self._r_flag = None
         self._reconciliation_id = None
@@ -67,6 +73,10 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
           self.name = name
         if reason_code is not None:
           self.reason_code = reason_code
+        if status is not None:
+          self.status = status
+        if reason is not None:
+          self.reason = reason
         if r_code is not None:
           self.r_code = r_code
         if r_flag is not None:
@@ -123,6 +133,52 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         """
 
         self._reason_code = reason_code
+
+    @property
+    def status(self):
+        """
+        Gets the status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        The status of the submitted transaction. Note: This field may not be returned for all transactions. 
+
+        :return: The status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        The status of the submitted transaction. Note: This field may not be returned for all transactions. 
+
+        :param status: The status of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        Description of why a request failed. Note: This field may not be returned for all transactions. 
+
+        :return: The reason of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        Description of why a request failed. Note: This field may not be returned for all transactions. 
+
+        :param reason: The reason of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
+        :type: str
+        """
+
+        self._reason = reason
 
     @property
     def r_code(self):

@@ -118,7 +118,7 @@ class VasV2PaymentsPost400Response(object):
     def reason(self):
         """
         Gets the reason of this VasV2PaymentsPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - PROCESSOR_UNAVAILABLE  - AVS_FAILED  - INVALID_MERCHANT_CONFIGURATION 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - INVALID_MERCHANT_CONFIGURATION  - INVALID_ADDRESS 
 
         :return: The reason of this VasV2PaymentsPost400Response.
         :rtype: str
@@ -129,7 +129,7 @@ class VasV2PaymentsPost400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this VasV2PaymentsPost400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - PROCESSOR_UNAVAILABLE  - AVS_FAILED  - INVALID_MERCHANT_CONFIGURATION 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - INVALID_MERCHANT_CONFIGURATION  - INVALID_ADDRESS 
 
         :param reason: The reason of this VasV2PaymentsPost400Response.
         :type: str

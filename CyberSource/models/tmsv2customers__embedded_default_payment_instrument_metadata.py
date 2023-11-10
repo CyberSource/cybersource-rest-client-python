@@ -52,7 +52,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata(object):
     def creator(self):
         """
         Gets the creator of this Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata.
-        The creator of the Payment Instrument token. 
+        The creator of the Payment Instrument. 
 
         :return: The creator of this Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata(object):
     def creator(self, creator):
         """
         Sets the creator of this Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata.
-        The creator of the Payment Instrument token. 
+        The creator of the Payment Instrument. 
 
         :param creator: The creator of this Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata.
         :type: str

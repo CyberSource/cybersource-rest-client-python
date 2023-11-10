@@ -1,14 +1,22 @@
-import os
-from authenticationsdk.util.GlobalLabelParameters import *
-from OpenSSL import crypto
-import ssl
 import base64
+import ssl
+
+from OpenSSL import crypto
+from jwcrypto import jwk
+
+from authenticationsdk.util.GlobalLabelParameters import *
 
 
 class FileCache:
 
     def __init__(self):
         self.filecache = {}
+
+    def get_private_key_from_pem(self, pem_file_path):
+        with open(pem_file_path, 'r') as pem_file:
+            cert = pem_file.read()
+            private_key = jwk.JWK.from_pem(cert.encode('utf-8'))
+            return private_key
 
     def grab_file(self, mconfig, filepath, filename):
 
@@ -40,3 +48,13 @@ class FileCache:
             self.filecache.setdefault(str(filename), []).append(file_mod_time)
 
         return self.filecache[filename]
+
+    def get_cached_private_key_from_pem(self, file_path, cache_key):
+        file_mod_time = os.stat(file_path).st_mtime
+        if (cache_key not in self.filecache) or file_mod_time != self.filecache[str(cache_key)][1]:
+            private_key = self.get_private_key_from_pem(file_path)
+            self.filecache.setdefault(str(cache_key), []).append(private_key)
+            self.filecache.setdefault(str(cache_key), []).append(file_mod_time)
+        return self.filecache[str(cache_key)][0]
+
+

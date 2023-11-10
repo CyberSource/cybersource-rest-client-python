@@ -31,22 +31,27 @@ class Ptsv2paymentsProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'pre_approval_token': 'str'
+        'pre_approval_token': 'str',
+        'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions'
     }
 
     attribute_map = {
-        'pre_approval_token': 'preApprovalToken'
+        'pre_approval_token': 'preApprovalToken',
+        'authorization_options': 'authorizationOptions'
     }
 
-    def __init__(self, pre_approval_token=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
 
         self._pre_approval_token = None
+        self._authorization_options = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
+        if authorization_options is not None:
+          self.authorization_options = authorization_options
 
     @property
     def pre_approval_token(self):
@@ -70,6 +75,27 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._pre_approval_token = pre_approval_token
+
+    @property
+    def authorization_options(self):
+        """
+        Gets the authorization_options of this Ptsv2paymentsProcessorInformation.
+
+        :return: The authorization_options of this Ptsv2paymentsProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationAuthorizationOptions
+        """
+        return self._authorization_options
+
+    @authorization_options.setter
+    def authorization_options(self, authorization_options):
+        """
+        Sets the authorization_options of this Ptsv2paymentsProcessorInformation.
+
+        :param authorization_options: The authorization_options of this Ptsv2paymentsProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationAuthorizationOptions
+        """
+
+        self._authorization_options = authorization_options
 
     def to_dict(self):
         """

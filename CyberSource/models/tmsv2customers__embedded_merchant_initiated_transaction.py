@@ -31,22 +31,27 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
                             and the value is json key in definition.
     """
     swagger_types = {
-        'previous_transaction_id': 'str'
+        'previous_transaction_id': 'str',
+        'original_authorized_amount': 'str'
     }
 
     attribute_map = {
-        'previous_transaction_id': 'previousTransactionId'
+        'previous_transaction_id': 'previousTransactionId',
+        'original_authorized_amount': 'originalAuthorizedAmount'
     }
 
-    def __init__(self, previous_transaction_id=None):
+    def __init__(self, previous_transaction_id=None, original_authorized_amount=None):
         """
         Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction - a model defined in Swagger
         """
 
         self._previous_transaction_id = None
+        self._original_authorized_amount = None
 
         if previous_transaction_id is not None:
           self.previous_transaction_id = previous_transaction_id
+        if original_authorized_amount is not None:
+          self.original_authorized_amount = original_authorized_amount
 
     @property
     def previous_transaction_id(self):
@@ -70,6 +75,29 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
         """
 
         self._previous_transaction_id = previous_transaction_id
+
+    @property
+    def original_authorized_amount(self):
+        """
+        Gets the original_authorized_amount of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        Amount of the original authorization. 
+
+        :return: The original_authorized_amount of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :rtype: str
+        """
+        return self._original_authorized_amount
+
+    @original_authorized_amount.setter
+    def original_authorized_amount(self, original_authorized_amount):
+        """
+        Sets the original_authorized_amount of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        Amount of the original authorization. 
+
+        :param original_authorized_amount: The original_authorized_amount of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :type: str
+        """
+
+        self._original_authorized_amount = original_authorized_amount
 
     def to_dict(self):
         """

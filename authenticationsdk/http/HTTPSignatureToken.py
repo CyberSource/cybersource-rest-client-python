@@ -8,8 +8,8 @@ from authenticationsdk.util.GlobalLabelParameters import *
 # keyid     -- Merchant ID obtained from EBC portal
 # algorithm -- Should have value as "HmacSHA256"
 # headers   -- List of all header name passed in the Signature paramter below
-# String getHeaders = "host date (request-target)" + " " + "v-c-merchant-id"
-# String postHeaders = "host date (request-target) digest v-c-merchant-id"
+# String getHeaders = "host date request-target" + " " + "v-c-merchant-id"
+# String postHeaders = "host date request-target digest v-c-merchant-id"
 # Note: Digest is not passed for GET calls
 # signature -- Signature header has paramter called signature
 # Paramter 'Signature' must contain all the paramters mentioned in header above in given order
@@ -51,19 +51,19 @@ class HTTPSignatureToken(TokenGeneration):
         # Headers are chosen based on HTTP method.Digest is not required for get method
 
         if self.http_method_sig.upper() == GlobalLabelParameters.GET:
-            getheaders = "host date (request-target)" + " " + "v-c-merchant-id"
+            getheaders = "host date request-target" + " " + "v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + getheaders + "\"")
         elif self.http_method_sig.upper() == GlobalLabelParameters.POST:
-            postheaders = "host date (request-target) digest v-c-merchant-id"
+            postheaders = "host date request-target digest v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + postheaders + "\"")
         elif self.http_method_sig.upper() == GlobalLabelParameters.PUT:
-            putheaders = "host date (request-target) digest v-c-merchant-id"
+            putheaders = "host date request-target digest v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + putheaders + "\"")
         elif self.http_method_sig.upper() == GlobalLabelParameters.PATCH:
-            patchheaders = "host date (request-target) digest v-c-merchant-id"
+            patchheaders = "host date request-target digest v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + patchheaders + "\"")
         elif self.http_method_sig.upper() == GlobalLabelParameters.DELETE:
-            deleteheaders = "host date (request-target)" + " " + "v-c-merchant-id"
+            deleteheaders = "host date request-target" + " " + "v-c-merchant-id"
             header_list.append(GlobalLabelParameters.HEADERS_PARAM + deleteheaders + "\"")
 
         get_signature_paramobj = GetSignatureParameter()

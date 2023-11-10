@@ -40,7 +40,9 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'transaction_type': 'str',
         'assurance_level': 'str',
         'storage_method': 'str',
-        'security_code': 'str'
+        'security_code': 'str',
+        'security_code_indicator': 'str',
+        'assurance_method': 'str'
     }
 
     attribute_map = {
@@ -53,10 +55,12 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         'transaction_type': 'transactionType',
         'assurance_level': 'assuranceLevel',
         'storage_method': 'storageMethod',
-        'security_code': 'securityCode'
+        'security_code': 'securityCode',
+        'security_code_indicator': 'securityCodeIndicator',
+        'assurance_method': 'assuranceMethod'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, requestor_id=None, transaction_type=None, assurance_level=None, storage_method=None, security_code=None, security_code_indicator=None, assurance_method=None):
         """
         Ptsv2paymentsPaymentInformationTokenizedCard - a model defined in Swagger
         """
@@ -71,6 +75,8 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         self._assurance_level = None
         self._storage_method = None
         self._security_code = None
+        self._security_code_indicator = None
+        self._assurance_method = None
 
         if number is not None:
           self.number = number
@@ -92,6 +98,10 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
           self.storage_method = storage_method
         if security_code is not None:
           self.security_code = security_code
+        if security_code_indicator is not None:
+          self.security_code_indicator = security_code_indicator
+        if assurance_method is not None:
+          self.assurance_method = assurance_method
 
     @property
     def number(self):
@@ -166,7 +176,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
+        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay - '070': EFTPOS  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
 
         :return: The type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -177,7 +187,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
+        Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay - '070': EFTPOS  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International 
 
         :param type: The type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -189,7 +199,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def cryptogram(self):
         """
         Gets the cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        This field is used internally.
+        This field contains token information.
 
         :return: The cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -200,7 +210,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def cryptogram(self, cryptogram):
         """
         Sets the cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        This field is used internally.
+        This field contains token information.
 
         :param cryptogram: The cryptogram of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -235,7 +245,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def transaction_type(self):
         """
         Gets the transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :return: The transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -246,7 +256,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def transaction_type(self, transaction_type):
         """
         Sets the transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Possible value: - `2`: Near-field communication (NFC) transaction. The customer’s mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.  #### Visa Platform Connect - `1`: For Rupay and In App tokenization. Example: InApp apple pay. - `3`: Card/Credential On File Tokenization.  **NOTE** No CyberSource through VisaNet acquirers support EMV at this time.  Required field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :param transaction_type: The transaction_type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -258,7 +268,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self):
         """
         Gets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :return: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :rtype: str
@@ -269,7 +279,7 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
     def assurance_level(self, assurance_level):
         """
         Sets the assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
-        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase. 
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  Returned by PIN debit credit or PIN debit purchase.  **Note** Merchants supported for **CyberSource through VisaNet**/**Visa Platform Connect** are advised not to use this field. 
 
         :param assurance_level: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
@@ -322,6 +332,52 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         """
 
         self._security_code = security_code
+
+    @property
+    def security_code_indicator(self):
+        """
+        Gets the security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Indicates whether a CVN code was sent. Possible values:   - `0` (default): CVN service not requested. This default value is used when you do not include      `securityCode` field in the request.  - `1` (default): CVN service requested and supported. This default value is used when you include      `securityCode` field in the request.  - `2`: CVN on credit card is illegible.  - `9`: CVN was not imprinted on credit card.  #### FDMS Nashville Required for American Express cards; otherwise, optional.  #### TSYS Acquiring Solutions Optional if `pointOfSaleInformation.entryMode=keyed`; otherwise, not used.  #### All other processors Optional. 
+
+        :return: The security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._security_code_indicator
+
+    @security_code_indicator.setter
+    def security_code_indicator(self, security_code_indicator):
+        """
+        Sets the security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Indicates whether a CVN code was sent. Possible values:   - `0` (default): CVN service not requested. This default value is used when you do not include      `securityCode` field in the request.  - `1` (default): CVN service requested and supported. This default value is used when you include      `securityCode` field in the request.  - `2`: CVN on credit card is illegible.  - `9`: CVN was not imprinted on credit card.  #### FDMS Nashville Required for American Express cards; otherwise, optional.  #### TSYS Acquiring Solutions Optional if `pointOfSaleInformation.entryMode=keyed`; otherwise, not used.  #### All other processors Optional. 
+
+        :param security_code_indicator: The security_code_indicator of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._security_code_indicator = security_code_indicator
+
+    @property
+    def assurance_method(self):
+        """
+        Gets the assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :return: The assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :rtype: str
+        """
+        return self._assurance_method
+
+    @assurance_method.setter
+    def assurance_method(self, assurance_method):
+        """
+        Sets the assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        Confidence level of the tokenization. This value is assigned by the token service provider.  **Note** This field is supported only for **Visa Platform Connect** 
+
+        :param assurance_method: The assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
+        :type: str
+        """
+
+        self._assurance_method = assurance_method
 
     def to_dict(self):
         """

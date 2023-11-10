@@ -164,7 +164,10 @@ class ApiClient(object):
         # This implements the fall back logic for JWT parameters key alias,key password,json file path
         self.mconfig.validate_merchant_details(config)
         # Setting the Host by reading the Environment(SANDBOX/PRODUCTION) from Merchant Config
-        self.host = self.mconfig.request_host
+        if self.mconfig.IntermediateHost:
+            self.host = self.mconfig.IntermediateHost
+        else:
+            self.host = self.mconfig.request_host
 
     # Calling the authentication header
     def call_authentication_header(self, method, header_params, body):
@@ -283,11 +286,29 @@ class ApiClient(object):
             body = self.sanitize_for_serialization(body)
 
         # request url
-        url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
+        if self.host.startswith("https://") or self.host.startswith("http://"):
+            url = self.host + resource_path
+        else:
+            url = GlobalLabelParameters.HTTP_URL_PREFIX+self.host + resource_path
         
         if self.download_file_path is not None:
             _preload_content = False        
             _request_timeout = 3000
+
+        # add client additional headers and override the previous one except signature header
+        if(self.mconfig.default_headers):
+            signVal=None
+            authVal=None
+            if "Signature" in header_params:
+                signVal= header_params['Signature']
+            if "Authorization" in header_params:
+                authVal= header_params['Authorization']
+            
+            header_params.update(self.mconfig.default_headers)
+            if(signVal is not None):
+                header_params['Signature']=signVal
+            if(authVal is not None):
+                header_params['Authorization']=authVal
 
         # perform request and return response
         response_data = self.request(method, url,

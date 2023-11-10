@@ -34,17 +34,19 @@ class Ptsv2paymentsRecipientInformation(object):
         'account_id': 'str',
         'last_name': 'str',
         'middle_name': 'str',
-        'postal_code': 'str'
+        'postal_code': 'str',
+        'date_of_birth': 'str'
     }
 
     attribute_map = {
         'account_id': 'accountId',
         'last_name': 'lastName',
         'middle_name': 'middleName',
-        'postal_code': 'postalCode'
+        'postal_code': 'postalCode',
+        'date_of_birth': 'dateOfBirth'
     }
 
-    def __init__(self, account_id=None, last_name=None, middle_name=None, postal_code=None):
+    def __init__(self, account_id=None, last_name=None, middle_name=None, postal_code=None, date_of_birth=None):
         """
         Ptsv2paymentsRecipientInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2paymentsRecipientInformation(object):
         self._last_name = None
         self._middle_name = None
         self._postal_code = None
+        self._date_of_birth = None
 
         if account_id is not None:
           self.account_id = account_id
@@ -62,6 +65,8 @@ class Ptsv2paymentsRecipientInformation(object):
           self.middle_name = middle_name
         if postal_code is not None:
           self.postal_code = postal_code
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
 
     @property
     def account_id(self):
@@ -154,6 +159,29 @@ class Ptsv2paymentsRecipientInformation(object):
         """
 
         self._postal_code = postal_code
+
+    @property
+    def date_of_birth(self):
+        """
+        Gets the date_of_birth of this Ptsv2paymentsRecipientInformation.
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The date_of_birth of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._date_of_birth
+
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
+        """
+        Sets the date_of_birth of this Ptsv2paymentsRecipientInformation.
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param date_of_birth: The date_of_birth of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._date_of_birth = date_of_birth
 
     def to_dict(self):
         """

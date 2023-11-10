@@ -39,6 +39,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'alternate_authentication_method': 'str',
         'authentication_date': 'str',
         'authentication_transaction_id': 'str',
+        'transaction_flow_indicator': 'int',
         'challenge_cancel_code': 'str',
         'challenge_code': 'str',
         'challenge_status': 'str',
@@ -70,7 +71,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'sdk_max_timeout': 'str',
         'secure_corporate_payment_indicator': 'str',
         'transaction_mode': 'str',
-        'white_list_status': 'str'
+        'white_list_status': 'str',
+        'score_request': 'int'
     }
 
     attribute_map = {
@@ -82,6 +84,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'alternate_authentication_method': 'alternateAuthenticationMethod',
         'authentication_date': 'authenticationDate',
         'authentication_transaction_id': 'authenticationTransactionId',
+        'transaction_flow_indicator': 'transactionFlowIndicator',
         'challenge_cancel_code': 'challengeCancelCode',
         'challenge_code': 'challengeCode',
         'challenge_status': 'challengeStatus',
@@ -113,10 +116,11 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'sdk_max_timeout': 'sdkMaxTimeout',
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
         'transaction_mode': 'transactionMode',
-        'white_list_status': 'whiteListStatus'
+        'white_list_status': 'whiteListStatus',
+        'score_request': 'scoreRequest'
     }
 
-    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None):
+    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
         """
         Riskv1decisionsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -129,6 +133,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         self._alternate_authentication_method = None
         self._authentication_date = None
         self._authentication_transaction_id = None
+        self._transaction_flow_indicator = None
         self._challenge_cancel_code = None
         self._challenge_code = None
         self._challenge_status = None
@@ -161,6 +166,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         self._secure_corporate_payment_indicator = None
         self._transaction_mode = None
         self._white_list_status = None
+        self._score_request = None
 
         if strong_authentication is not None:
           self.strong_authentication = strong_authentication
@@ -178,6 +184,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.authentication_date = authentication_date
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
+        if transaction_flow_indicator is not None:
+          self.transaction_flow_indicator = transaction_flow_indicator
         if challenge_cancel_code is not None:
           self.challenge_cancel_code = challenge_cancel_code
         if challenge_code is not None:
@@ -242,6 +250,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.transaction_mode = transaction_mode
         if white_list_status is not None:
           self.white_list_status = white_list_status
+        if score_request is not None:
+          self.score_request = score_request
 
     @property
     def strong_authentication(self):
@@ -268,7 +278,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_type(self):
         """
         Gets the authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :return: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
         :rtype: str
@@ -279,7 +289,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_type(self, authentication_type):
         """
         Sets the authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :param authentication_type: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
@@ -406,7 +416,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self):
         """
         Gets the authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :return: The authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :rtype: str
@@ -417,13 +427,36 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self, authentication_transaction_id):
         """
         Sets the authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :param authentication_transaction_id: The authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
 
         self._authentication_transaction_id = authentication_transaction_id
+
+    @property
+    def transaction_flow_indicator(self):
+        """
+        Gets the transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
+        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW – Transaction performed at domestic merchant. 02:TW - Transaction performed at domestic merchant along with Token provisioning. 03:IT – Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 
+
+        :return: The transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._transaction_flow_indicator
+
+    @transaction_flow_indicator.setter
+    def transaction_flow_indicator(self, transaction_flow_indicator):
+        """
+        Sets the transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
+        This  field is only applicable to Rupay and is optional. Merchant will have to pass a valid value from 01 through 07 which indicates the transaction flow. Below are the possible values. 01:NW – Transaction performed at domestic merchant. 02:TW - Transaction performed at domestic merchant along with Token provisioning. 03:IT – Transaction performed at International merchant. 04:AT- Authentication Transaction Only. 05:AW- Authentication transaction for provisioning. 06:DI- Domestic InApp Transaction. 07:II- International InApp transaction. 
+
+        :param transaction_flow_indicator: The transaction_flow_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._transaction_flow_indicator = transaction_flow_indicator
 
     @property
     def challenge_cancel_code(self):
@@ -1160,6 +1193,29 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         """
 
         self._white_list_status = white_list_status
+
+    @property
+    def score_request(self):
+        """
+        Gets the score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :return: The score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._score_request
+
+    @score_request.setter
+    def score_request(self, score_request):
+        """
+        Sets the score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard. This is to be sent by merchant if they would like to request a score
+
+        :param score_request: The score_request of this Riskv1decisionsConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._score_request = score_request
 
     def to_dict(self):
         """

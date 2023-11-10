@@ -33,16 +33,18 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     swagger_types = {
         'account': 'Ptsv2paymentsPaymentInformationBankAccount',
         'routing_number': 'str',
-        'iban': 'str'
+        'iban': 'str',
+        'swift_code': 'str'
     }
 
     attribute_map = {
         'account': 'account',
         'routing_number': 'routingNumber',
-        'iban': 'iban'
+        'iban': 'iban',
+        'swift_code': 'swiftCode'
     }
 
-    def __init__(self, account=None, routing_number=None, iban=None):
+    def __init__(self, account=None, routing_number=None, iban=None, swift_code=None):
         """
         Ptsv2paymentsidrefundsPaymentInformationBank - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
         self._account = None
         self._routing_number = None
         self._iban = None
+        self._swift_code = None
 
         if account is not None:
           self.account = account
@@ -57,6 +60,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
           self.routing_number = routing_number
         if iban is not None:
           self.iban = iban
+        if swift_code is not None:
+          self.swift_code = swift_code
 
     @property
     def account(self):
@@ -124,6 +129,29 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
         """
 
         self._iban = iban
+
+    @property
+    def swift_code(self):
+        """
+        Gets the swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
+        Bank’s SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
+        :rtype: str
+        """
+        return self._swift_code
+
+    @swift_code.setter
+    def swift_code(self, swift_code):
+        """
+        Sets the swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
+        Bank’s SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param swift_code: The swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
+        :type: str
+        """
+
+        self._swift_code = swift_code
 
     def to_dict(self):
         """

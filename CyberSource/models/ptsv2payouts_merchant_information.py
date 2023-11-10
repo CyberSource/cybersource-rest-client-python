@@ -83,8 +83,6 @@ class Ptsv2payoutsMerchantInformation(object):
         :param category_code: The category_code of this Ptsv2payoutsMerchantInformation.
         :type: int
         """
-        if category_code is not None and category_code > 9999:
-            raise ValueError("Invalid value for `category_code`, must be a value less than or equal to `9999`")
 
         self._category_code = category_code
 

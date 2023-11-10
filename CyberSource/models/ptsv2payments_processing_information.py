@@ -32,15 +32,19 @@ class Ptsv2paymentsProcessingInformation(object):
     """
     swagger_types = {
         'action_list': 'list[str]',
+        'enable_escrow_option': 'bool',
         'action_token_types': 'list[str]',
+        'bin_source': 'str',
         'capture': 'bool',
         'processor_id': 'str',
         'business_application_id': 'str',
         'commerce_indicator': 'str',
+        'commerce_indicator_label': 'str',
         'payment_solution': 'str',
         'reconciliation_id': 'str',
         'link_id': 'str',
         'purchase_level': 'str',
+        'payment_id': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'industry_data_type': 'str',
@@ -57,20 +61,25 @@ class Ptsv2paymentsProcessingInformation(object):
         'mobile_remote_payment_type': 'str',
         'extended_credit_total_count': 'str',
         'network_routing_order': 'str',
-        'pay_by_points_indicator': 'bool'
+        'pay_by_points_indicator': 'bool',
+        'is_return_auth_record_enabled': 'bool'
     }
 
     attribute_map = {
         'action_list': 'actionList',
+        'enable_escrow_option': 'enableEscrowOption',
         'action_token_types': 'actionTokenTypes',
+        'bin_source': 'binSource',
         'capture': 'capture',
         'processor_id': 'processorId',
         'business_application_id': 'businessApplicationId',
         'commerce_indicator': 'commerceIndicator',
+        'commerce_indicator_label': 'commerceIndicatorLabel',
         'payment_solution': 'paymentSolution',
         'reconciliation_id': 'reconciliationId',
         'link_id': 'linkId',
         'purchase_level': 'purchaseLevel',
+        'payment_id': 'paymentId',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
         'industry_data_type': 'industryDataType',
@@ -87,24 +96,29 @@ class Ptsv2paymentsProcessingInformation(object):
         'mobile_remote_payment_type': 'mobileRemotePaymentType',
         'extended_credit_total_count': 'extendedCreditTotalCount',
         'network_routing_order': 'networkRoutingOrder',
-        'pay_by_points_indicator': 'payByPointsIndicator'
+        'pay_by_points_indicator': 'payByPointsIndicator',
+        'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled'
     }
 
-    def __init__(self, action_list=None, action_token_types=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
 
         self._action_list = None
+        self._enable_escrow_option = None
         self._action_token_types = None
+        self._bin_source = None
         self._capture = None
         self._processor_id = None
         self._business_application_id = None
         self._commerce_indicator = None
+        self._commerce_indicator_label = None
         self._payment_solution = None
         self._reconciliation_id = None
         self._link_id = None
         self._purchase_level = None
+        self._payment_id = None
         self._report_group = None
         self._visa_checkout_id = None
         self._industry_data_type = None
@@ -122,11 +136,16 @@ class Ptsv2paymentsProcessingInformation(object):
         self._extended_credit_total_count = None
         self._network_routing_order = None
         self._pay_by_points_indicator = None
+        self._is_return_auth_record_enabled = None
 
         if action_list is not None:
           self.action_list = action_list
+        if enable_escrow_option is not None:
+          self.enable_escrow_option = enable_escrow_option
         if action_token_types is not None:
           self.action_token_types = action_token_types
+        if bin_source is not None:
+          self.bin_source = bin_source
         if capture is not None:
           self.capture = capture
         if processor_id is not None:
@@ -135,6 +154,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.business_application_id = business_application_id
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
+        if commerce_indicator_label is not None:
+          self.commerce_indicator_label = commerce_indicator_label
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if reconciliation_id is not None:
@@ -143,6 +164,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.link_id = link_id
         if purchase_level is not None:
           self.purchase_level = purchase_level
+        if payment_id is not None:
+          self.payment_id = payment_id
         if report_group is not None:
           self.report_group = report_group
         if visa_checkout_id is not None:
@@ -177,12 +200,14 @@ class Ptsv2paymentsProcessingInformation(object):
           self.network_routing_order = network_routing_order
         if pay_by_points_indicator is not None:
           self.pay_by_points_indicator = pay_by_points_indicator
+        if is_return_auth_record_enabled is not None:
+          self.is_return_auth_record_enabled = is_return_auth_record_enabled
 
     @property
     def action_list(self):
         """
         Gets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service. 
 
         :return: The action_list of this Ptsv2paymentsProcessingInformation.
         :rtype: list[str]
@@ -193,13 +218,36 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service. 
 
         :param action_list: The action_list of this Ptsv2paymentsProcessingInformation.
         :type: list[str]
         """
 
         self._action_list = action_list
+
+    @property
+    def enable_escrow_option(self):
+        """
+        Gets the enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        Indicates whether to use the customer’s escrow agreement. Possible values: - `true`: yes, use the customer’s escrow agreement. - `false`: no, do not use the customer’s escrow agreement.  
+
+        :return: The enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._enable_escrow_option
+
+    @enable_escrow_option.setter
+    def enable_escrow_option(self, enable_escrow_option):
+        """
+        Sets the enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        Indicates whether to use the customer’s escrow agreement. Possible values: - `true`: yes, use the customer’s escrow agreement. - `false`: no, do not use the customer’s escrow agreement.  
+
+        :param enable_escrow_option: The enable_escrow_option of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._enable_escrow_option = enable_escrow_option
 
     @property
     def action_token_types(self):
@@ -223,6 +271,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._action_token_types = action_token_types
+
+    @property
+    def bin_source(self):
+        """
+        Gets the bin_source of this Ptsv2paymentsProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :return: The bin_source of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._bin_source
+
+    @bin_source.setter
+    def bin_source(self, bin_source):
+        """
+        Sets the bin_source of this Ptsv2paymentsProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :param bin_source: The bin_source of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._bin_source = bin_source
 
     @property
     def capture(self):
@@ -317,6 +388,29 @@ class Ptsv2paymentsProcessingInformation(object):
         self._commerce_indicator = commerce_indicator
 
     @property
+    def commerce_indicator_label(self):
+        """
+        Gets the commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :return: The commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._commerce_indicator_label
+
+    @commerce_indicator_label.setter
+    def commerce_indicator_label(self, commerce_indicator_label):
+        """
+        Sets the commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :param commerce_indicator_label: The commerce_indicator_label of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._commerce_indicator_label = commerce_indicator_label
+
+    @property
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
@@ -407,6 +501,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._purchase_level = purchase_level
+
+    @property
+    def payment_id(self):
+        """
+        Gets the payment_id of this Ptsv2paymentsProcessingInformation.
+        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+
+        :return: The payment_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_id
+
+    @payment_id.setter
+    def payment_id(self, payment_id):
+        """
+        Sets the payment_id of this Ptsv2paymentsProcessingInformation.
+        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+
+        :param payment_id: The payment_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._payment_id = payment_id
 
     @property
     def report_group(self):
@@ -782,6 +899,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._pay_by_points_indicator = pay_by_points_indicator
+
+    @property
+    def is_return_auth_record_enabled(self):
+        """
+        Gets the is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates the functionality we are having for merchants for which auth is done through Cybersource but settlement is done by themselves. true: functionality is supported. Processor should send raw processor auth response to Merchant. false: functionality is not supported. Default: false 
+
+        :return: The is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        :rtype: bool
+        """
+        return self._is_return_auth_record_enabled
+
+    @is_return_auth_record_enabled.setter
+    def is_return_auth_record_enabled(self, is_return_auth_record_enabled):
+        """
+        Sets the is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        Flag that indicates the functionality we are having for merchants for which auth is done through Cybersource but settlement is done by themselves. true: functionality is supported. Processor should send raw processor auth response to Merchant. false: functionality is not supported. Default: false 
+
+        :param is_return_auth_record_enabled: The is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
+        :type: bool
+        """
+
+        self._is_return_auth_record_enabled = is_return_auth_record_enabled
 
     def to_dict(self):
         """

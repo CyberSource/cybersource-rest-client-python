@@ -34,17 +34,19 @@ class InlineResponse4002(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'reason': 'str',
-        'message': 'str'
+        'message': 'str',
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reason': 'reason',
-        'message': 'message'
+        'message': 'message',
+        'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse4002 - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class InlineResponse4002(object):
         self._status = None
         self._reason = None
         self._message = None
+        self._details = None
 
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
@@ -62,6 +65,8 @@ class InlineResponse4002(object):
           self.reason = reason
         if message is not None:
           self.message = message
+        if details is not None:
+          self.details = details
 
     @property
     def submit_time_utc(self):
@@ -113,7 +118,7 @@ class InlineResponse4002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
 
         :return: The reason of this InlineResponse4002.
         :rtype: str
@@ -124,7 +129,7 @@ class InlineResponse4002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
 
         :param reason: The reason of this InlineResponse4002.
         :type: str
@@ -154,6 +159,27 @@ class InlineResponse4002(object):
         """
 
         self._message = message
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse4002.
+
+        :return: The details of this InlineResponse4002.
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse4002.
+
+        :param details: The details of this InlineResponse4002.
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

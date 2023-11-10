@@ -584,8 +584,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param sequence: The sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: int
         """
-        if sequence is not None and sequence > 99:
-            raise ValueError("Invalid value for `sequence`, must be a value less than or equal to `99`")
 
         self._sequence = sequence
 
@@ -678,8 +676,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param total_count: The total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: int
         """
-        if total_count is not None and total_count > 99:
-            raise ValueError("Invalid value for `total_count`, must be a value less than or equal to `99`")
 
         self._total_count = total_count
 

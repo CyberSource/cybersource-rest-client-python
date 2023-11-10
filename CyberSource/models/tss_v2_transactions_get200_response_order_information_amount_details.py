@@ -37,7 +37,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         'authorized_amount': 'str',
         'settlement_amount': 'str',
         'settlement_currency': 'str',
-        'surcharge': 'Ptsv2paymentsOrderInformationAmountDetailsSurcharge'
+        'surcharge': 'Ptsv2payoutsOrderInformationAmountDetailsSurcharge'
     }
 
     attribute_map = {
@@ -222,7 +222,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         Gets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
 
         :return: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        :rtype: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        :rtype: Ptsv2payoutsOrderInformationAmountDetailsSurcharge
         """
         return self._surcharge
 
@@ -232,7 +232,7 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         Sets the surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
 
         :param surcharge: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
-        :type: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
+        :type: Ptsv2payoutsOrderInformationAmountDetailsSurcharge
         """
 
         self._surcharge = surcharge

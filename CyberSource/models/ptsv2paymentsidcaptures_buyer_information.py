@@ -32,26 +32,46 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
     """
     swagger_types = {
         'merchant_customer_id': 'str',
-        'vat_registration_number': 'str'
+        'vat_registration_number': 'str',
+        'date_of_birth': 'str',
+        'gender': 'str',
+        'language': 'str',
+        'personal_identification': 'list[Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification]'
     }
 
     attribute_map = {
         'merchant_customer_id': 'merchantCustomerId',
-        'vat_registration_number': 'vatRegistrationNumber'
+        'vat_registration_number': 'vatRegistrationNumber',
+        'date_of_birth': 'dateOfBirth',
+        'gender': 'gender',
+        'language': 'language',
+        'personal_identification': 'personalIdentification'
     }
 
-    def __init__(self, merchant_customer_id=None, vat_registration_number=None):
+    def __init__(self, merchant_customer_id=None, vat_registration_number=None, date_of_birth=None, gender=None, language=None, personal_identification=None):
         """
         Ptsv2paymentsidcapturesBuyerInformation - a model defined in Swagger
         """
 
         self._merchant_customer_id = None
         self._vat_registration_number = None
+        self._date_of_birth = None
+        self._gender = None
+        self._language = None
+        self._personal_identification = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
         if vat_registration_number is not None:
           self.vat_registration_number = vat_registration_number
+        if date_of_birth is not None:
+          self.date_of_birth = date_of_birth
+        if gender is not None:
+          self.gender = gender
+        if language is not None:
+          self.language = language
+        if personal_identification is not None:
+          self.personal_identification = personal_identification
 
     @property
     def merchant_customer_id(self):
@@ -98,6 +118,96 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         """
 
         self._vat_registration_number = vat_registration_number
+
+    @property
+    def date_of_birth(self):
+        """
+        Gets the date_of_birth of this Ptsv2paymentsidcapturesBuyerInformation.
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :return: The date_of_birth of this Ptsv2paymentsidcapturesBuyerInformation.
+        :rtype: str
+        """
+        return self._date_of_birth
+
+    @date_of_birth.setter
+    def date_of_birth(self, date_of_birth):
+        """
+        Sets the date_of_birth of this Ptsv2paymentsidcapturesBuyerInformation.
+        Recipient’s date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+
+        :param date_of_birth: The date_of_birth of this Ptsv2paymentsidcapturesBuyerInformation.
+        :type: str
+        """
+
+        self._date_of_birth = date_of_birth
+
+    @property
+    def gender(self):
+        """
+        Gets the gender of this Ptsv2paymentsidcapturesBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :return: The gender of this Ptsv2paymentsidcapturesBuyerInformation.
+        :rtype: str
+        """
+        return self._gender
+
+    @gender.setter
+    def gender(self, gender):
+        """
+        Sets the gender of this Ptsv2paymentsidcapturesBuyerInformation.
+        Customer's gender. Possible values are F (female), M (male),O (other).
+
+        :param gender: The gender of this Ptsv2paymentsidcapturesBuyerInformation.
+        :type: str
+        """
+
+        self._gender = gender
+
+    @property
+    def language(self):
+        """
+        Gets the language of this Ptsv2paymentsidcapturesBuyerInformation.
+        language setting of the user
+
+        :return: The language of this Ptsv2paymentsidcapturesBuyerInformation.
+        :rtype: str
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """
+        Sets the language of this Ptsv2paymentsidcapturesBuyerInformation.
+        language setting of the user
+
+        :param language: The language of this Ptsv2paymentsidcapturesBuyerInformation.
+        :type: str
+        """
+
+        self._language = language
+
+    @property
+    def personal_identification(self):
+        """
+        Gets the personal_identification of this Ptsv2paymentsidcapturesBuyerInformation.
+
+        :return: The personal_identification of this Ptsv2paymentsidcapturesBuyerInformation.
+        :rtype: list[Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification]
+        """
+        return self._personal_identification
+
+    @personal_identification.setter
+    def personal_identification(self, personal_identification):
+        """
+        Sets the personal_identification of this Ptsv2paymentsidcapturesBuyerInformation.
+
+        :param personal_identification: The personal_identification of this Ptsv2paymentsidcapturesBuyerInformation.
+        :type: list[Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification]
+        """
+
+        self._personal_identification = personal_identification
 
     def to_dict(self):
         """

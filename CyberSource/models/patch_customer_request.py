@@ -118,7 +118,7 @@ class PatchCustomerRequest(object):
     def id(self):
         """
         Gets the id of this PatchCustomerRequest.
-        The id of the Customer Token.
+        The Id of the Customer Token.
 
         :return: The id of this PatchCustomerRequest.
         :rtype: str
@@ -129,7 +129,7 @@ class PatchCustomerRequest(object):
     def id(self, id):
         """
         Sets the id of this PatchCustomerRequest.
-        The id of the Customer Token.
+        The Id of the Customer Token.
 
         :param id: The id of this PatchCustomerRequest.
         :type: str

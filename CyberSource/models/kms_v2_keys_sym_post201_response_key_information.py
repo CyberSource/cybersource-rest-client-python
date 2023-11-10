@@ -32,6 +32,7 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
     """
     swagger_types = {
         'organization_id': 'str',
+        'external_organization_id': 'str',
         'reference_number': 'str',
         'key_id': 'str',
         'key': 'str',
@@ -43,6 +44,7 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
 
     attribute_map = {
         'organization_id': 'organizationId',
+        'external_organization_id': 'externalOrganizationId',
         'reference_number': 'referenceNumber',
         'key_id': 'keyId',
         'key': 'key',
@@ -52,12 +54,13 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, organization_id=None, reference_number=None, key_id=None, key=None, status=None, expiration_date=None, message=None, error_information=None):
+    def __init__(self, organization_id=None, external_organization_id=None, reference_number=None, key_id=None, key=None, status=None, expiration_date=None, message=None, error_information=None):
         """
         KmsV2KeysSymPost201ResponseKeyInformation - a model defined in Swagger
         """
 
         self._organization_id = None
+        self._external_organization_id = None
         self._reference_number = None
         self._key_id = None
         self._key = None
@@ -68,6 +71,8 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
 
         if organization_id is not None:
           self.organization_id = organization_id
+        if external_organization_id is not None:
+          self.external_organization_id = external_organization_id
         if reference_number is not None:
           self.reference_number = reference_number
         if key_id is not None:
@@ -105,6 +110,29 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         """
 
         self._organization_id = organization_id
+
+    @property
+    def external_organization_id(self):
+        """
+        Gets the external_organization_id of this KmsV2KeysSymPost201ResponseKeyInformation.
+        Payworks MerchantId for given organizationId. 
+
+        :return: The external_organization_id of this KmsV2KeysSymPost201ResponseKeyInformation.
+        :rtype: str
+        """
+        return self._external_organization_id
+
+    @external_organization_id.setter
+    def external_organization_id(self, external_organization_id):
+        """
+        Sets the external_organization_id of this KmsV2KeysSymPost201ResponseKeyInformation.
+        Payworks MerchantId for given organizationId. 
+
+        :param external_organization_id: The external_organization_id of this KmsV2KeysSymPost201ResponseKeyInformation.
+        :type: str
+        """
+
+        self._external_organization_id = external_organization_id
 
     @property
     def reference_number(self):

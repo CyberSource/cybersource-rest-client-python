@@ -4,7 +4,7 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**mit_void**](VoidApi.md#mit_void) | **POST** /pts/v2/voids/ | Timeout Void
+[**mit_void**](VoidApi.md#mit_void) | **POST** /pts/v2/voids | Timeout Void
 [**void_capture**](VoidApi.md#void_capture) | **POST** /pts/v2/captures/{id}/voids | Void a Capture
 [**void_credit**](VoidApi.md#void_credit) | **POST** /pts/v2/credits/{id}/voids | Void a Credit
 [**void_payment**](VoidApi.md#void_payment) | **POST** /pts/v2/payments/{id}/voids | Void a Payment
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Timeout Void
 
-This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to Timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
+This is to void a previous payment, capture, refund, or credit that merchant does not receive a reply(Mostly due to timeout). To use this feature/API, make sure to pass unique value to field - clientReferenceInformation -> transactionId in your payment, capture, refund, or credit API call and use same transactionId in this API request payload to reverse the payment.
 
 ### Example 
 ```python

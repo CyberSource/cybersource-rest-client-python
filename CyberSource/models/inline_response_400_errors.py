@@ -62,7 +62,7 @@ class InlineResponse400Errors(object):
     def type(self):
         """
         Gets the type of this InlineResponse400Errors.
-        The type of error.
+        The type of error.  Possible Values:   - invalidHeaders   - missingHeaders   - invalidFields   - missingFields   - unsupportedPaymentMethodModification   - invalidCombination 
 
         :return: The type of this InlineResponse400Errors.
         :rtype: str
@@ -73,7 +73,7 @@ class InlineResponse400Errors(object):
     def type(self, type):
         """
         Sets the type of this InlineResponse400Errors.
-        The type of error.
+        The type of error.  Possible Values:   - invalidHeaders   - missingHeaders   - invalidFields   - missingFields   - unsupportedPaymentMethodModification   - invalidCombination 
 
         :param type: The type of this InlineResponse400Errors.
         :type: str
@@ -85,7 +85,7 @@ class InlineResponse400Errors(object):
     def message(self):
         """
         Gets the message of this InlineResponse400Errors.
-        The detailed message related to the type stated above.
+        The detailed message related to the type.
 
         :return: The message of this InlineResponse400Errors.
         :rtype: str
@@ -96,7 +96,7 @@ class InlineResponse400Errors(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse400Errors.
-        The detailed message related to the type stated above.
+        The detailed message related to the type.
 
         :param message: The message of this InlineResponse400Errors.
         :type: str

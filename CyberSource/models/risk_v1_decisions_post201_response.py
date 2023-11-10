@@ -41,6 +41,7 @@ class RiskV1DecisionsPost201Response(object):
         'client_reference_information': 'RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'order_information': 'RiskV1DecisionsPost201ResponseOrderInformation',
         'consumer_authentication_information': 'RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation',
+        'watchlist_screening_information': 'PtsV2PaymentsPost201ResponseWatchlistScreeningInformation',
         'error_information': 'RiskV1DecisionsPost201ResponseErrorInformation'
     }
 
@@ -55,10 +56,11 @@ class RiskV1DecisionsPost201Response(object):
         'client_reference_information': 'clientReferenceInformation',
         'order_information': 'orderInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
+        'watchlist_screening_information': 'watchlistScreeningInformation',
         'error_information': 'errorInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, risk_information=None, payment_information=None, client_reference_information=None, order_information=None, consumer_authentication_information=None, error_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, submit_time_local=None, status=None, risk_information=None, payment_information=None, client_reference_information=None, order_information=None, consumer_authentication_information=None, watchlist_screening_information=None, error_information=None):
         """
         RiskV1DecisionsPost201Response - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class RiskV1DecisionsPost201Response(object):
         self._client_reference_information = None
         self._order_information = None
         self._consumer_authentication_information = None
+        self._watchlist_screening_information = None
         self._error_information = None
 
         if links is not None:
@@ -95,6 +98,8 @@ class RiskV1DecisionsPost201Response(object):
           self.order_information = order_information
         if consumer_authentication_information is not None:
           self.consumer_authentication_information = consumer_authentication_information
+        if watchlist_screening_information is not None:
+          self.watchlist_screening_information = watchlist_screening_information
         if error_information is not None:
           self.error_information = error_information
 
@@ -315,6 +320,27 @@ class RiskV1DecisionsPost201Response(object):
         """
 
         self._consumer_authentication_information = consumer_authentication_information
+
+    @property
+    def watchlist_screening_information(self):
+        """
+        Gets the watchlist_screening_information of this RiskV1DecisionsPost201Response.
+
+        :return: The watchlist_screening_information of this RiskV1DecisionsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
+        """
+        return self._watchlist_screening_information
+
+    @watchlist_screening_information.setter
+    def watchlist_screening_information(self, watchlist_screening_information):
+        """
+        Sets the watchlist_screening_information of this RiskV1DecisionsPost201Response.
+
+        :param watchlist_screening_information: The watchlist_screening_information of this RiskV1DecisionsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
+        """
+
+        self._watchlist_screening_information = watchlist_screening_information
 
     @property
     def error_information(self):

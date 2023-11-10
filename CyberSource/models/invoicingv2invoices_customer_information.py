@@ -33,16 +33,18 @@ class Invoicingv2invoicesCustomerInformation(object):
     swagger_types = {
         'name': 'str',
         'email': 'str',
-        'merchant_customer_id': 'str'
+        'merchant_customer_id': 'str',
+        'company': 'Invoicingv2invoicesCustomerInformationCompany'
     }
 
     attribute_map = {
         'name': 'name',
         'email': 'email',
-        'merchant_customer_id': 'merchantCustomerId'
+        'merchant_customer_id': 'merchantCustomerId',
+        'company': 'company'
     }
 
-    def __init__(self, name=None, email=None, merchant_customer_id=None):
+    def __init__(self, name=None, email=None, merchant_customer_id=None, company=None):
         """
         Invoicingv2invoicesCustomerInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Invoicingv2invoicesCustomerInformation(object):
         self._name = None
         self._email = None
         self._merchant_customer_id = None
+        self._company = None
 
         if name is not None:
           self.name = name
@@ -57,6 +60,8 @@ class Invoicingv2invoicesCustomerInformation(object):
           self.email = email
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
+        if company is not None:
+          self.company = company
 
     @property
     def name(self):
@@ -126,6 +131,27 @@ class Invoicingv2invoicesCustomerInformation(object):
         """
 
         self._merchant_customer_id = merchant_customer_id
+
+    @property
+    def company(self):
+        """
+        Gets the company of this Invoicingv2invoicesCustomerInformation.
+
+        :return: The company of this Invoicingv2invoicesCustomerInformation.
+        :rtype: Invoicingv2invoicesCustomerInformationCompany
+        """
+        return self._company
+
+    @company.setter
+    def company(self, company):
+        """
+        Sets the company of this Invoicingv2invoicesCustomerInformation.
+
+        :param company: The company of this Invoicingv2invoicesCustomerInformation.
+        :type: Invoicingv2invoicesCustomerInformationCompany
+        """
+
+        self._company = company
 
     def to_dict(self):
         """

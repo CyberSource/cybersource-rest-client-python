@@ -90,7 +90,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def expiration_month(self):
         """
         Gets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        Two-digit month in which the payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :return: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :rtype: str
@@ -101,7 +101,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        Two-digit month in which the payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :param expiration_month: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :type: str
@@ -136,7 +136,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def security_code(self):
         """
         Gets the security_code of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        Card Verification Number. 
+        Card Verification Code.  This value is sent to the issuer to support the approval of a network token provision. It is not persisted against the Instrument Identifier. 
 
         :return: The security_code of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :rtype: str
@@ -147,7 +147,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def security_code(self, security_code):
         """
         Sets the security_code of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        Card Verification Number. 
+        Card Verification Code.  This value is sent to the issuer to support the approval of a network token provision. It is not persisted against the Instrument Identifier. 
 
         :param security_code: The security_code of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :type: str

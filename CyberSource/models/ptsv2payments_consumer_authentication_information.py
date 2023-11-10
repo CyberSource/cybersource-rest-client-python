@@ -578,7 +578,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_type(self):
         """
         Gets the authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :return: The authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -589,7 +589,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_type(self, authentication_type):
         """
         Sets the authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
 
         :param authentication_type: The authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -762,7 +762,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self):
         """
         Gets the authentication_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :return: The authentication_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -773,7 +773,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self, authentication_transaction_id):
         """
         Sets the authentication_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. **Note**: Required for Standard integration for enroll service. Required for Hybrid integration for validate service. 
+        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages.For Rupay,this is passed only in Re-Send OTP usecase. **Note**: Required for Standard integration, Rupay Seamless server to server integration for enroll service. Required for Hybrid integration for validate service. 
 
         :param authentication_transaction_id: The authentication_transaction_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str

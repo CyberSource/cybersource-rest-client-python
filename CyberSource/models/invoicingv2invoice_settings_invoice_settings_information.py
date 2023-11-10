@@ -38,7 +38,9 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         'header_style': 'InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle',
         'delivery_language': 'str',
         'default_currency_code': 'str',
-        'payer_authentication_in_invoicing': 'str'
+        'payer_authentication_in_invoicing': 'str',
+        'show_vat_number': 'bool',
+        'vat_registration_number': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         'header_style': 'headerStyle',
         'delivery_language': 'deliveryLanguage',
         'default_currency_code': 'defaultCurrencyCode',
-        'payer_authentication_in_invoicing': 'payerAuthenticationInInvoicing'
+        'payer_authentication_in_invoicing': 'payerAuthenticationInInvoicing',
+        'show_vat_number': 'showVatNumber',
+        'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication_in_invoicing=None):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication_in_invoicing=None, show_vat_number=False, vat_registration_number=None):
         """
         Invoicingv2invoiceSettingsInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -65,6 +69,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         self._delivery_language = None
         self._default_currency_code = None
         self._payer_authentication_in_invoicing = None
+        self._show_vat_number = None
+        self._vat_registration_number = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -82,6 +88,10 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
           self.default_currency_code = default_currency_code
         if payer_authentication_in_invoicing is not None:
           self.payer_authentication_in_invoicing = payer_authentication_in_invoicing
+        if show_vat_number is not None:
+          self.show_vat_number = show_vat_number
+        if vat_registration_number is not None:
+          self.vat_registration_number = vat_registration_number
 
     @property
     def merchant_logo(self):
@@ -264,6 +274,52 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         """
 
         self._payer_authentication_in_invoicing = payer_authentication_in_invoicing
+
+    @property
+    def show_vat_number(self):
+        """
+        Gets the show_vat_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        Display VAT number on Invoice.
+
+        :return: The show_vat_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._show_vat_number
+
+    @show_vat_number.setter
+    def show_vat_number(self, show_vat_number):
+        """
+        Sets the show_vat_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        Display VAT number on Invoice.
+
+        :param show_vat_number: The show_vat_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._show_vat_number = show_vat_number
+
+    @property
+    def vat_registration_number(self):
+        """
+        Gets the vat_registration_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes. 
+
+        :return: The vat_registration_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :rtype: str
+        """
+        return self._vat_registration_number
+
+    @vat_registration_number.setter
+    def vat_registration_number(self, vat_registration_number):
+        """
+        Sets the vat_registration_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes. 
+
+        :param vat_registration_number: The vat_registration_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
+        :type: str
+        """
+
+        self._vat_registration_number = vat_registration_number
 
     def to_dict(self):
         """

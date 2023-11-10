@@ -32,26 +32,31 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
     """
     swagger_types = {
         'code': 'str',
-        'code_raw': 'str'
+        'code_raw': 'str',
+        'name_match': 'str'
     }
 
     attribute_map = {
         'code': 'code',
-        'code_raw': 'codeRaw'
+        'code_raw': 'codeRaw',
+        'name_match': 'nameMatch'
     }
 
-    def __init__(self, code=None, code_raw=None):
+    def __init__(self, code=None, code_raw=None, name_match=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice - a model defined in Swagger
         """
 
         self._code = None
         self._code_raw = None
+        self._name_match = None
 
         if code is not None:
           self.code = code
         if code_raw is not None:
           self.code_raw = code_raw
+        if name_match is not None:
+          self.name_match = name_match
 
     @property
     def code(self):
@@ -98,6 +103,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
         """
 
         self._code_raw = code_raw
+
+    @property
+    def name_match(self):
+        """
+        Gets the name_match of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
+        #### Visa Platform Connect The field contains will contain the Account Name Request Result for zero amount Authorization request. Valid values are:  00 = Name Match Performed 01 = Name Match not Performed 02 = Name Match not supported 
+
+        :return: The name_match of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
+        :rtype: str
+        """
+        return self._name_match
+
+    @name_match.setter
+    def name_match(self, name_match):
+        """
+        Sets the name_match of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
+        #### Visa Platform Connect The field contains will contain the Account Name Request Result for zero amount Authorization request. Valid values are:  00 = Name Match Performed 01 = Name Match not Performed 02 = Name Match not supported 
+
+        :param name_match: The name_match of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
+        :type: str
+        """
+
+        self._name_match = name_match
 
     def to_dict(self):
         """

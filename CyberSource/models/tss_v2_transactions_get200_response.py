@@ -35,8 +35,8 @@ class TssV2TransactionsGet200Response(object):
         'root_id': 'str',
         'reconciliation_id': 'str',
         'merchant_id': 'str',
-        'status': 'str',
         'submit_time_utc': 'str',
+        'status': 'str',
         'application_information': 'TssV2TransactionsGet200ResponseApplicationInformation',
         'buyer_information': 'TssV2TransactionsGet200ResponseBuyerInformation',
         'client_reference_information': 'TssV2TransactionsGet200ResponseClientReferenceInformation',
@@ -50,11 +50,14 @@ class TssV2TransactionsGet200Response(object):
         'merchant_information': 'TssV2TransactionsGet200ResponseMerchantInformation',
         'order_information': 'TssV2TransactionsGet200ResponseOrderInformation',
         'payment_information': 'TssV2TransactionsGet200ResponsePaymentInformation',
+        'payment_insights_information': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformation',
+        'payout_options': 'TssV2TransactionsGet200ResponsePayoutOptions',
         'processing_information': 'TssV2TransactionsGet200ResponseProcessingInformation',
         'processor_information': 'TssV2TransactionsGet200ResponseProcessorInformation',
         'point_of_sale_information': 'TssV2TransactionsGet200ResponsePointOfSaleInformation',
         'risk_information': 'TssV2TransactionsGet200ResponseRiskInformation',
         'sender_information': 'TssV2TransactionsGet200ResponseSenderInformation',
+        'token_information': 'TssV2TransactionsGet200ResponseTokenInformation',
         'links': 'TssV2TransactionsGet200ResponseLinks'
     }
 
@@ -63,8 +66,8 @@ class TssV2TransactionsGet200Response(object):
         'root_id': 'rootId',
         'reconciliation_id': 'reconciliationId',
         'merchant_id': 'merchantId',
-        'status': 'status',
         'submit_time_utc': 'submitTimeUTC',
+        'status': 'status',
         'application_information': 'applicationInformation',
         'buyer_information': 'buyerInformation',
         'client_reference_information': 'clientReferenceInformation',
@@ -78,15 +81,18 @@ class TssV2TransactionsGet200Response(object):
         'merchant_information': 'merchantInformation',
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
+        'payment_insights_information': 'paymentInsightsInformation',
+        'payout_options': 'payoutOptions',
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'risk_information': 'riskInformation',
         'sender_information': 'senderInformation',
+        'token_information': 'tokenInformation',
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, status=None, submit_time_utc=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -95,8 +101,8 @@ class TssV2TransactionsGet200Response(object):
         self._root_id = None
         self._reconciliation_id = None
         self._merchant_id = None
-        self._status = None
         self._submit_time_utc = None
+        self._status = None
         self._application_information = None
         self._buyer_information = None
         self._client_reference_information = None
@@ -110,11 +116,14 @@ class TssV2TransactionsGet200Response(object):
         self._merchant_information = None
         self._order_information = None
         self._payment_information = None
+        self._payment_insights_information = None
+        self._payout_options = None
         self._processing_information = None
         self._processor_information = None
         self._point_of_sale_information = None
         self._risk_information = None
         self._sender_information = None
+        self._token_information = None
         self._links = None
 
         if id is not None:
@@ -125,10 +134,10 @@ class TssV2TransactionsGet200Response(object):
           self.reconciliation_id = reconciliation_id
         if merchant_id is not None:
           self.merchant_id = merchant_id
-        if status is not None:
-          self.status = status
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
         if application_information is not None:
           self.application_information = application_information
         if buyer_information is not None:
@@ -155,6 +164,10 @@ class TssV2TransactionsGet200Response(object):
           self.order_information = order_information
         if payment_information is not None:
           self.payment_information = payment_information
+        if payment_insights_information is not None:
+          self.payment_insights_information = payment_insights_information
+        if payout_options is not None:
+          self.payout_options = payout_options
         if processing_information is not None:
           self.processing_information = processing_information
         if processor_information is not None:
@@ -165,6 +178,8 @@ class TssV2TransactionsGet200Response(object):
           self.risk_information = risk_information
         if sender_information is not None:
           self.sender_information = sender_information
+        if token_information is not None:
+          self.token_information = token_information
         if links is not None:
           self.links = links
 
@@ -261,29 +276,6 @@ class TssV2TransactionsGet200Response(object):
         self._merchant_id = merchant_id
 
     @property
-    def status(self):
-        """
-        Gets the status of this TssV2TransactionsGet200Response.
-        The status of the submitted transaction.
-
-        :return: The status of this TssV2TransactionsGet200Response.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this TssV2TransactionsGet200Response.
-        The status of the submitted transaction.
-
-        :param status: The status of this TssV2TransactionsGet200Response.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this TssV2TransactionsGet200Response.
@@ -305,6 +297,29 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this TssV2TransactionsGet200Response.
+        The status of the submitted transaction.
+
+        :return: The status of this TssV2TransactionsGet200Response.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this TssV2TransactionsGet200Response.
+        The status of the submitted transaction.
+
+        :param status: The status of this TssV2TransactionsGet200Response.
+        :type: str
+        """
+
+        self._status = status
 
     @property
     def application_information(self):
@@ -582,6 +597,48 @@ class TssV2TransactionsGet200Response(object):
         self._payment_information = payment_information
 
     @property
+    def payment_insights_information(self):
+        """
+        Gets the payment_insights_information of this TssV2TransactionsGet200Response.
+
+        :return: The payment_insights_information of this TssV2TransactionsGet200Response.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
+        """
+        return self._payment_insights_information
+
+    @payment_insights_information.setter
+    def payment_insights_information(self, payment_insights_information):
+        """
+        Sets the payment_insights_information of this TssV2TransactionsGet200Response.
+
+        :param payment_insights_information: The payment_insights_information of this TssV2TransactionsGet200Response.
+        :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
+        """
+
+        self._payment_insights_information = payment_insights_information
+
+    @property
+    def payout_options(self):
+        """
+        Gets the payout_options of this TssV2TransactionsGet200Response.
+
+        :return: The payout_options of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponsePayoutOptions
+        """
+        return self._payout_options
+
+    @payout_options.setter
+    def payout_options(self, payout_options):
+        """
+        Sets the payout_options of this TssV2TransactionsGet200Response.
+
+        :param payout_options: The payout_options of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponsePayoutOptions
+        """
+
+        self._payout_options = payout_options
+
+    @property
     def processing_information(self):
         """
         Gets the processing_information of this TssV2TransactionsGet200Response.
@@ -685,6 +742,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._sender_information = sender_information
+
+    @property
+    def token_information(self):
+        """
+        Gets the token_information of this TssV2TransactionsGet200Response.
+
+        :return: The token_information of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseTokenInformation
+        """
+        return self._token_information
+
+    @token_information.setter
+    def token_information(self, token_information):
+        """
+        Sets the token_information of this TssV2TransactionsGet200Response.
+
+        :param token_information: The token_information of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseTokenInformation
+        """
+
+        self._token_information = token_information
 
     @property
     def links(self):

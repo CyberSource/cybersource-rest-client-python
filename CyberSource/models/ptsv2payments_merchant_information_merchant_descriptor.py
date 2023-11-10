@@ -40,7 +40,9 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'postal_code': 'str',
         'administrative_area': 'str',
         'phone': 'str',
-        'url': 'str'
+        'url': 'str',
+        'country_of_origin': 'str',
+        'customer_service_phone_number': 'str'
     }
 
     attribute_map = {
@@ -53,10 +55,12 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'postal_code': 'postalCode',
         'administrative_area': 'administrativeArea',
         'phone': 'phone',
-        'url': 'url'
+        'url': 'url',
+        'country_of_origin': 'countryOfOrigin',
+        'customer_service_phone_number': 'customerServicePhoneNumber'
     }
 
-    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, phone=None, url=None):
+    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, phone=None, url=None, country_of_origin=None, customer_service_phone_number=None):
         """
         Ptsv2paymentsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -71,6 +75,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         self._administrative_area = None
         self._phone = None
         self._url = None
+        self._country_of_origin = None
+        self._customer_service_phone_number = None
 
         if name is not None:
           self.name = name
@@ -92,6 +98,10 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
           self.phone = phone
         if url is not None:
           self.url = url
+        if country_of_origin is not None:
+          self.country_of_origin = country_of_origin
+        if customer_service_phone_number is not None:
+          self.customer_service_phone_number = customer_service_phone_number
 
     @property
     def name(self):
@@ -281,7 +291,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def phone(self):
         """
         Gets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        Merchnat phone as contact information for CNP transactions 
+        Merchant phone as contact information for CNP transactions 
 
         :return: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -292,7 +302,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def phone(self, phone):
         """
         Sets the phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        Merchnat phone as contact information for CNP transactions 
+        Merchant phone as contact information for CNP transactions 
 
         :param phone: The phone of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
@@ -322,6 +332,52 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         """
 
         self._url = url
+
+    @property
+    def country_of_origin(self):
+        """
+        Gets the country_of_origin of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        #### Visa Platform Connect This field will indicate merchant country of origin 
+
+        :return: The country_of_origin of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._country_of_origin
+
+    @country_of_origin.setter
+    def country_of_origin(self, country_of_origin):
+        """
+        Sets the country_of_origin of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        #### Visa Platform Connect This field will indicate merchant country of origin 
+
+        :param country_of_origin: The country_of_origin of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._country_of_origin = country_of_origin
+
+    @property
+    def customer_service_phone_number(self):
+        """
+        Gets the customer_service_phone_number of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        #### Visa Platform Connect Indicates customer service phone number of Merchant. 
+
+        :return: The customer_service_phone_number of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._customer_service_phone_number
+
+    @customer_service_phone_number.setter
+    def customer_service_phone_number(self, customer_service_phone_number):
+        """
+        Sets the customer_service_phone_number of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        #### Visa Platform Connect Indicates customer service phone number of Merchant. 
+
+        :param customer_service_phone_number: The customer_service_phone_number of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._customer_service_phone_number = customer_service_phone_number
 
     def to_dict(self):
         """

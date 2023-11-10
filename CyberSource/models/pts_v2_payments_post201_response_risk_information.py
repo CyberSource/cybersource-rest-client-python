@@ -39,7 +39,7 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         'local_time': 'str',
         'score': 'PtsV2PaymentsPost201ResponseRiskInformationScore',
         'ip_address': 'PtsV2PaymentsPost201ResponseRiskInformationIpAddress',
-        'providers': 'PtsV2PaymentsPost201ResponseRiskInformationProviders',
+        'providers': 'dict(str, dict(str, str))',
         'travel': 'PtsV2PaymentsPost201ResponseRiskInformationTravel'
     }
 
@@ -269,9 +269,10 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
     def providers(self):
         """
         Gets the providers of this PtsV2PaymentsPost201ResponseRiskInformation.
+        Name of the 3rd party provider, for example, Emailage. For all possible values, see the `decision_provider_#_name` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).
 
         :return: The providers of this PtsV2PaymentsPost201ResponseRiskInformation.
-        :rtype: PtsV2PaymentsPost201ResponseRiskInformationProviders
+        :rtype: dict(str, dict(str, str))
         """
         return self._providers
 
@@ -279,9 +280,10 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
     def providers(self, providers):
         """
         Sets the providers of this PtsV2PaymentsPost201ResponseRiskInformation.
+        Name of the 3rd party provider, for example, Emailage. For all possible values, see the `decision_provider_#_name` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link).
 
         :param providers: The providers of this PtsV2PaymentsPost201ResponseRiskInformation.
-        :type: PtsV2PaymentsPost201ResponseRiskInformationProviders
+        :type: dict(str, dict(str, str))
         """
 
         self._providers = providers

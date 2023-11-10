@@ -85,7 +85,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def expiration_month(self):
         """
         Gets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCardCard.
-         Two-digit month in which the customer’s latest payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+         Two-digit month in which the customer’s latest payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :return: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCardCard.
         :rtype: str
@@ -96,7 +96,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCardCard.
-         Two-digit month in which the customer’s latest payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+         Two-digit month in which the customer’s latest payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :param expiration_month: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCardCard.
         :type: str

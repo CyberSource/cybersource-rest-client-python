@@ -32,26 +32,31 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
     """
     swagger_types = {
         'amount': 'str',
-        'taxable': 'bool'
+        'taxable': 'bool',
+        'tax_rate': 'str'
     }
 
     attribute_map = {
         'amount': 'amount',
-        'taxable': 'taxable'
+        'taxable': 'taxable',
+        'tax_rate': 'taxRate'
     }
 
-    def __init__(self, amount=None, taxable=None):
+    def __init__(self, amount=None, taxable=None, tax_rate=None):
         """
         Invoicingv2invoicesOrderInformationAmountDetailsFreight - a model defined in Swagger
         """
 
         self._amount = None
         self._taxable = None
+        self._tax_rate = None
 
         if amount is not None:
           self.amount = amount
         if taxable is not None:
           self.taxable = taxable
+        if tax_rate is not None:
+          self.tax_rate = tax_rate
 
     @property
     def amount(self):
@@ -98,6 +103,29 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
         """
 
         self._taxable = taxable
+
+    @property
+    def tax_rate(self):
+        """
+        Gets the tax_rate of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
+        Shipping Tax rate applied to the freight amount.  **Visa**: Valid range is 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated).  **Mastercard**: Valid range is 0.00001 to 0.99999 (0.001% to 99.999%). 
+
+        :return: The tax_rate of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
+        :rtype: str
+        """
+        return self._tax_rate
+
+    @tax_rate.setter
+    def tax_rate(self, tax_rate):
+        """
+        Sets the tax_rate of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
+        Shipping Tax rate applied to the freight amount.  **Visa**: Valid range is 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated).  **Mastercard**: Valid range is 0.00001 to 0.99999 (0.001% to 99.999%). 
+
+        :param tax_rate: The tax_rate of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
+        :type: str
+        """
+
+        self._tax_rate = tax_rate
 
     def to_dict(self):
         """

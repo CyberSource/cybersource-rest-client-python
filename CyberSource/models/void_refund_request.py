@@ -32,26 +32,31 @@ class VoidRefundRequest(object):
     """
     swagger_types = {
         'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation',
-        'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation'
+        'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation',
+        'order_information': 'Ptsv2paymentsidvoidsOrderInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
-        'payment_information': 'paymentInformation'
+        'payment_information': 'paymentInformation',
+        'order_information': 'orderInformation'
     }
 
-    def __init__(self, client_reference_information=None, payment_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None, order_information=None):
         """
         VoidRefundRequest - a model defined in Swagger
         """
 
         self._client_reference_information = None
         self._payment_information = None
+        self._order_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         if payment_information is not None:
           self.payment_information = payment_information
+        if order_information is not None:
+          self.order_information = order_information
 
     @property
     def client_reference_information(self):
@@ -94,6 +99,27 @@ class VoidRefundRequest(object):
         """
 
         self._payment_information = payment_information
+
+    @property
+    def order_information(self):
+        """
+        Gets the order_information of this VoidRefundRequest.
+
+        :return: The order_information of this VoidRefundRequest.
+        :rtype: Ptsv2paymentsidvoidsOrderInformation
+        """
+        return self._order_information
+
+    @order_information.setter
+    def order_information(self, order_information):
+        """
+        Sets the order_information of this VoidRefundRequest.
+
+        :param order_information: The order_information of this VoidRefundRequest.
+        :type: Ptsv2paymentsidvoidsOrderInformation
+        """
+
+        self._order_information = order_information
 
     def to_dict(self):
         """

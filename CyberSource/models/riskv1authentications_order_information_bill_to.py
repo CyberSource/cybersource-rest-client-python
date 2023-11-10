@@ -33,6 +33,7 @@ class Riskv1authenticationsOrderInformationBillTo(object):
     swagger_types = {
         'address1': 'str',
         'address2': 'str',
+        'address3': 'str',
         'administrative_area': 'str',
         'country': 'str',
         'locality': 'str',
@@ -46,6 +47,7 @@ class Riskv1authenticationsOrderInformationBillTo(object):
     attribute_map = {
         'address1': 'address1',
         'address2': 'address2',
+        'address3': 'address3',
         'administrative_area': 'administrativeArea',
         'country': 'country',
         'locality': 'locality',
@@ -56,13 +58,14 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         'postal_code': 'postalCode'
     }
 
-    def __init__(self, address1=None, address2=None, administrative_area=None, country=None, locality=None, first_name=None, last_name=None, phone_number=None, email=None, postal_code=None):
+    def __init__(self, address1=None, address2=None, address3=None, administrative_area=None, country=None, locality=None, first_name=None, last_name=None, phone_number=None, email=None, postal_code=None):
         """
         Riskv1authenticationsOrderInformationBillTo - a model defined in Swagger
         """
 
         self._address1 = None
         self._address2 = None
+        self._address3 = None
         self._administrative_area = None
         self._country = None
         self._locality = None
@@ -75,6 +78,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         self.address1 = address1
         if address2 is not None:
           self.address2 = address2
+        if address3 is not None:
+          self.address3 = address3
         self.administrative_area = administrative_area
         self.country = country
         if locality is not None:
@@ -133,6 +138,29 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         """
 
         self._address2 = address2
+
+    @property
+    def address3(self):
+        """
+        Gets the address3 of this Riskv1authenticationsOrderInformationBillTo.
+        Additional address information (third line of the billing address) 
+
+        :return: The address3 of this Riskv1authenticationsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._address3
+
+    @address3.setter
+    def address3(self, address3):
+        """
+        Sets the address3 of this Riskv1authenticationsOrderInformationBillTo.
+        Additional address information (third line of the billing address) 
+
+        :param address3: The address3 of this Riskv1authenticationsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._address3 = address3
 
     @property
     def administrative_area(self):

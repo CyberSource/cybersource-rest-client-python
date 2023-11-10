@@ -80,7 +80,7 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
     def currency(self):
         """
         Gets the currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer. 
+        This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency. 
 
         :return: The currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :rtype: str
@@ -91,7 +91,7 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
     def currency(self, currency):
         """
         Sets the currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
-        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer. 
+        This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency. 
 
         :param currency: The currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :type: str

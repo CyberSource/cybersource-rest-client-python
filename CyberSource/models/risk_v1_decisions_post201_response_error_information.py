@@ -62,7 +62,7 @@ class RiskV1DecisionsPost201ResponseErrorInformation(object):
     def reason(self):
         """
         Gets the reason of this RiskV1DecisionsPost201ResponseErrorInformation.
-        The reason of the status.  Possible values:  - `EXPIRED_CARD`  - `SCORE_EXCEEDS_THRESHOLD`  - `DECISION_PROFILE_REVIEW`  - `DECISION_PROFILE_REJECT`  - `CONSUMER_AUTHENTICATION_REQUIRED`  - `INVALID_MERCHANT_CONFIGURATION`  - `CONSUMER_AUTHENTICATION_FAILED`  - `DECISION_PROFILE_CHALLENGE` 
+        The reason of the status.  Possible values:  - `EXPIRED_CARD`  - `SCORE_EXCEEDS_THRESHOLD`  - `DECISION_PROFILE_REVIEW`  - `DECISION_PROFILE_REJECT`  - `CONSUMER_AUTHENTICATION_REQUIRED`  - `INVALID_MERCHANT_CONFIGURATION`  - `CONSUMER_AUTHENTICATION_FAILED`  - `DECISION_PROFILE_CHALLENGE`  - `CUSTOMER_WATCHLIST_MATCH`  - `ADDRESS_COUNTRY_WATCHLIST_MATCH`  - `EMAIL_COUNTRY_WATCHLIST_MATCH`  - `IP_COUNTRY_WATCHLIST_MATCH` 
 
         :return: The reason of this RiskV1DecisionsPost201ResponseErrorInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class RiskV1DecisionsPost201ResponseErrorInformation(object):
     def reason(self, reason):
         """
         Sets the reason of this RiskV1DecisionsPost201ResponseErrorInformation.
-        The reason of the status.  Possible values:  - `EXPIRED_CARD`  - `SCORE_EXCEEDS_THRESHOLD`  - `DECISION_PROFILE_REVIEW`  - `DECISION_PROFILE_REJECT`  - `CONSUMER_AUTHENTICATION_REQUIRED`  - `INVALID_MERCHANT_CONFIGURATION`  - `CONSUMER_AUTHENTICATION_FAILED`  - `DECISION_PROFILE_CHALLENGE` 
+        The reason of the status.  Possible values:  - `EXPIRED_CARD`  - `SCORE_EXCEEDS_THRESHOLD`  - `DECISION_PROFILE_REVIEW`  - `DECISION_PROFILE_REJECT`  - `CONSUMER_AUTHENTICATION_REQUIRED`  - `INVALID_MERCHANT_CONFIGURATION`  - `CONSUMER_AUTHENTICATION_FAILED`  - `DECISION_PROFILE_CHALLENGE`  - `CUSTOMER_WATCHLIST_MATCH`  - `ADDRESS_COUNTRY_WATCHLIST_MATCH`  - `EMAIL_COUNTRY_WATCHLIST_MATCH`  - `IP_COUNTRY_WATCHLIST_MATCH` 
 
         :param reason: The reason of this RiskV1DecisionsPost201ResponseErrorInformation.
         :type: str

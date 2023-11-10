@@ -96,10 +96,6 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
         :param number_of_nights: The number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
         :type: int
         """
-        if number_of_nights is not None and number_of_nights > 9999:
-            raise ValueError("Invalid value for `number_of_nights`, must be a value less than or equal to `9999`")
-        if number_of_nights is not None and number_of_nights < 1:
-            raise ValueError("Invalid value for `number_of_nights`, must be a value greater than or equal to `1`")
 
         self._number_of_nights = number_of_nights
 

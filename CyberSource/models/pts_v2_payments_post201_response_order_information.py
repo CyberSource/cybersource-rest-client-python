@@ -33,16 +33,18 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
     swagger_types = {
         'amount_details': 'PtsV2PaymentsPost201ResponseOrderInformationAmountDetails',
         'invoice_details': 'PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails',
-        'reward_points_details': 'PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails'
+        'reward_points_details': 'PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails',
+        'bill_to': 'PtsV2PaymentsPost201ResponseOrderInformationBillTo'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
         'invoice_details': 'invoiceDetails',
-        'reward_points_details': 'rewardPointsDetails'
+        'reward_points_details': 'rewardPointsDetails',
+        'bill_to': 'billTo'
     }
 
-    def __init__(self, amount_details=None, invoice_details=None, reward_points_details=None):
+    def __init__(self, amount_details=None, invoice_details=None, reward_points_details=None, bill_to=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformation - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         self._amount_details = None
         self._invoice_details = None
         self._reward_points_details = None
+        self._bill_to = None
 
         if amount_details is not None:
           self.amount_details = amount_details
@@ -57,6 +60,8 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
           self.invoice_details = invoice_details
         if reward_points_details is not None:
           self.reward_points_details = reward_points_details
+        if bill_to is not None:
+          self.bill_to = bill_to
 
     @property
     def amount_details(self):
@@ -120,6 +125,27 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         """
 
         self._reward_points_details = reward_points_details
+
+    @property
+    def bill_to(self):
+        """
+        Gets the bill_to of this PtsV2PaymentsPost201ResponseOrderInformation.
+
+        :return: The bill_to of this PtsV2PaymentsPost201ResponseOrderInformation.
+        :rtype: PtsV2PaymentsPost201ResponseOrderInformationBillTo
+        """
+        return self._bill_to
+
+    @bill_to.setter
+    def bill_to(self, bill_to):
+        """
+        Sets the bill_to of this PtsV2PaymentsPost201ResponseOrderInformation.
+
+        :param bill_to: The bill_to of this PtsV2PaymentsPost201ResponseOrderInformation.
+        :type: PtsV2PaymentsPost201ResponseOrderInformationBillTo
+        """
+
+        self._bill_to = bill_to
 
     def to_dict(self):
         """

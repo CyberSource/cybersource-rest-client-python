@@ -32,26 +32,41 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
     """
     swagger_types = {
         'risk_analysis_exemption_result': 'str',
-        'trusted_merchant_exemption_result': 'str'
+        'trusted_merchant_exemption_result': 'str',
+        'low_value_exemption_result': 'str',
+        'secure_corporate_payment_result': 'str',
+        'transaction_risk_analysis_exemption_result': 'str'
     }
 
     attribute_map = {
         'risk_analysis_exemption_result': 'riskAnalysisExemptionResult',
-        'trusted_merchant_exemption_result': 'trustedMerchantExemptionResult'
+        'trusted_merchant_exemption_result': 'trustedMerchantExemptionResult',
+        'low_value_exemption_result': 'lowValueExemptionResult',
+        'secure_corporate_payment_result': 'secureCorporatePaymentResult',
+        'transaction_risk_analysis_exemption_result': 'transactionRiskAnalysisExemptionResult'
     }
 
-    def __init__(self, risk_analysis_exemption_result=None, trusted_merchant_exemption_result=None):
+    def __init__(self, risk_analysis_exemption_result=None, trusted_merchant_exemption_result=None, low_value_exemption_result=None, secure_corporate_payment_result=None, transaction_risk_analysis_exemption_result=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation - a model defined in Swagger
         """
 
         self._risk_analysis_exemption_result = None
         self._trusted_merchant_exemption_result = None
+        self._low_value_exemption_result = None
+        self._secure_corporate_payment_result = None
+        self._transaction_risk_analysis_exemption_result = None
 
         if risk_analysis_exemption_result is not None:
           self.risk_analysis_exemption_result = risk_analysis_exemption_result
         if trusted_merchant_exemption_result is not None:
           self.trusted_merchant_exemption_result = trusted_merchant_exemption_result
+        if low_value_exemption_result is not None:
+          self.low_value_exemption_result = low_value_exemption_result
+        if secure_corporate_payment_result is not None:
+          self.secure_corporate_payment_result = secure_corporate_payment_result
+        if transaction_risk_analysis_exemption_result is not None:
+          self.transaction_risk_analysis_exemption_result = transaction_risk_analysis_exemption_result
 
     @property
     def risk_analysis_exemption_result(self):
@@ -98,6 +113,75 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
         """
 
         self._trusted_merchant_exemption_result = trusted_merchant_exemption_result
+
+    @property
+    def low_value_exemption_result(self):
+        """
+        Gets the low_value_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when low value exemption has been requested.  Valid values: Visa Platform Connect - `2` Low value exemption validated/honored - `3` Low value exemption failed validation/not honored 
+
+        :return: The low_value_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :rtype: str
+        """
+        return self._low_value_exemption_result
+
+    @low_value_exemption_result.setter
+    def low_value_exemption_result(self, low_value_exemption_result):
+        """
+        Sets the low_value_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when low value exemption has been requested.  Valid values: Visa Platform Connect - `2` Low value exemption validated/honored - `3` Low value exemption failed validation/not honored 
+
+        :param low_value_exemption_result: The low_value_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :type: str
+        """
+
+        self._low_value_exemption_result = low_value_exemption_result
+
+    @property
+    def secure_corporate_payment_result(self):
+        """
+        Gets the secure_corporate_payment_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when secure corporate payment (scp) exemption has been requested.  Valid values: Visa Platform Connect - `2` Secure corporate payment exemption validated/honored - `3` Secure corporate payment exemption failed validation/not honored 
+
+        :return: The secure_corporate_payment_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :rtype: str
+        """
+        return self._secure_corporate_payment_result
+
+    @secure_corporate_payment_result.setter
+    def secure_corporate_payment_result(self, secure_corporate_payment_result):
+        """
+        Sets the secure_corporate_payment_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when secure corporate payment (scp) exemption has been requested.  Valid values: Visa Platform Connect - `2` Secure corporate payment exemption validated/honored - `3` Secure corporate payment exemption failed validation/not honored 
+
+        :param secure_corporate_payment_result: The secure_corporate_payment_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :type: str
+        """
+
+        self._secure_corporate_payment_result = secure_corporate_payment_result
+
+    @property
+    def transaction_risk_analysis_exemption_result(self):
+        """
+        Gets the transaction_risk_analysis_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when transaction risk analysis (TRA) exemption has been requested.    Valid values: Visa Platform Connect   - `2` transaction risk analysis (TRA) exemption validated/honored   - `3` transaction risk analysis (TRA) exemption failed validation/not honored 
+
+        :return: The transaction_risk_analysis_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :rtype: str
+        """
+        return self._transaction_risk_analysis_exemption_result
+
+    @transaction_risk_analysis_exemption_result.setter
+    def transaction_risk_analysis_exemption_result(self, transaction_risk_analysis_exemption_result):
+        """
+        Sets the transaction_risk_analysis_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        This will be the value returned by Visanet when transaction risk analysis (TRA) exemption has been requested.    Valid values: Visa Platform Connect   - `2` transaction risk analysis (TRA) exemption validated/honored   - `3` transaction risk analysis (TRA) exemption failed validation/not honored 
+
+        :param transaction_risk_analysis_exemption_result: The transaction_risk_analysis_exemption_result of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation.
+        :type: str
+        """
+
+        self._transaction_risk_analysis_exemption_result = transaction_risk_analysis_exemption_result
 
     def to_dict(self):
         """

@@ -34,17 +34,19 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         'terminal_id': 'str',
         'terminal_serial_number': 'str',
         'device_id': 'str',
-        'partner': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner'
+        'partner': 'TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner',
+        'emv': 'Ptsv2paymentsidreversalsPointOfSaleInformationEmv'
     }
 
     attribute_map = {
         'terminal_id': 'terminalId',
         'terminal_serial_number': 'terminalSerialNumber',
         'device_id': 'deviceId',
-        'partner': 'partner'
+        'partner': 'partner',
+        'emv': 'emv'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, device_id=None, partner=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, device_id=None, partner=None, emv=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         self._terminal_serial_number = None
         self._device_id = None
         self._partner = None
+        self._emv = None
 
         if terminal_id is not None:
           self.terminal_id = terminal_id
@@ -62,6 +65,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
           self.device_id = device_id
         if partner is not None:
           self.partner = partner
+        if emv is not None:
+          self.emv = emv
 
     @property
     def terminal_id(self):
@@ -152,6 +157,27 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         """
 
         self._partner = partner
+
+    @property
+    def emv(self):
+        """
+        Gets the emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
+
+        :return: The emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
+        :rtype: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        """
+        return self._emv
+
+    @emv.setter
+    def emv(self, emv):
+        """
+        Sets the emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
+
+        :param emv: The emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
+        :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
+        """
+
+        self._emv = emv
 
     def to_dict(self):
         """

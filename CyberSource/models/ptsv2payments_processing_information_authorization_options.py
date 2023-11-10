@@ -32,6 +32,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     """
     swagger_types = {
         'auth_type': 'str',
+        'pan_return_indicator': 'str',
         'verbal_auth_code': 'str',
         'verbal_auth_transaction_id': 'str',
         'auth_indicator': 'str',
@@ -47,11 +48,15 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'transportation_mode': 'str',
         'aggregated_auth_indicator': 'str',
         'debt_recovery_indicator': 'str',
-        'deferred_auth_indicator': 'bool'
+        'deferred_auth_indicator': 'bool',
+        'cash_advance_indicator': 'bool',
+        'split_payment_transaction': 'bool',
+        'card_verification_indicator': 'bool'
     }
 
     attribute_map = {
         'auth_type': 'authType',
+        'pan_return_indicator': 'panReturnIndicator',
         'verbal_auth_code': 'verbalAuthCode',
         'verbal_auth_transaction_id': 'verbalAuthTransactionId',
         'auth_indicator': 'authIndicator',
@@ -67,15 +72,19 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'transportation_mode': 'transportationMode',
         'aggregated_auth_indicator': 'aggregatedAuthIndicator',
         'debt_recovery_indicator': 'debtRecoveryIndicator',
-        'deferred_auth_indicator': 'deferredAuthIndicator'
+        'deferred_auth_indicator': 'deferredAuthIndicator',
+        'cash_advance_indicator': 'cashAdvanceIndicator',
+        'split_payment_transaction': 'splitPaymentTransaction',
+        'card_verification_indicator': 'cardVerificationIndicator'
     }
 
-    def __init__(self, auth_type=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._auth_type = None
+        self._pan_return_indicator = None
         self._verbal_auth_code = None
         self._verbal_auth_transaction_id = None
         self._auth_indicator = None
@@ -92,9 +101,14 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._aggregated_auth_indicator = None
         self._debt_recovery_indicator = None
         self._deferred_auth_indicator = None
+        self._cash_advance_indicator = None
+        self._split_payment_transaction = None
+        self._card_verification_indicator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
+        if pan_return_indicator is not None:
+          self.pan_return_indicator = pan_return_indicator
         if verbal_auth_code is not None:
           self.verbal_auth_code = verbal_auth_code
         if verbal_auth_transaction_id is not None:
@@ -127,6 +141,12 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.debt_recovery_indicator = debt_recovery_indicator
         if deferred_auth_indicator is not None:
           self.deferred_auth_indicator = deferred_auth_indicator
+        if cash_advance_indicator is not None:
+          self.cash_advance_indicator = cash_advance_indicator
+        if split_payment_transaction is not None:
+          self.split_payment_transaction = split_payment_transaction
+        if card_verification_indicator is not None:
+          self.card_verification_indicator = card_verification_indicator
 
     @property
     def auth_type(self):
@@ -150,6 +170,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._auth_type = auth_type
+
+    @property
+    def pan_return_indicator(self):
+        """
+        Gets the pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect The field contains the PAN translation indicator for American Express Contactless Transaction. Valid value is   1- Expresspay Translation, PAN request 2- Expresspay Translation, PAN and Expiry date request 
+
+        :return: The pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._pan_return_indicator
+
+    @pan_return_indicator.setter
+    def pan_return_indicator(self, pan_return_indicator):
+        """
+        Sets the pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect The field contains the PAN translation indicator for American Express Contactless Transaction. Valid value is   1- Expresspay Translation, PAN request 2- Expresspay Translation, PAN and Expiry date request 
+
+        :param pan_return_indicator: The pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._pan_return_indicator = pan_return_indicator
 
     @property
     def verbal_auth_code(self):
@@ -383,7 +426,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self):
         """
         Gets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :return: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -394,7 +437,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self, bill_payment_type):
         """
         Sets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  This field is supported only for bill payments in Brazil with Mastercard on CyberSource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :param bill_payment_type: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -516,6 +559,75 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._deferred_auth_indicator = deferred_auth_indicator
+
+    @property
+    def cash_advance_indicator(self):
+        """
+        Gets the cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field enables the merchant to indicate that a given transaction is Cash Advance.  Cash advance or Cash disbursement functionality allows a merchant to dispense cash at a point of sale. It provides the ability of a POS system to act like an ATM. These terminals are typically seen in bank branches where customers can use their card and withdraw cash or at merchant locations where ATMs are sparse.  Possible values:   - `true` (Cash advance is supported)   - `false` (default: cash advance is not supported) 
+
+        :return: The cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._cash_advance_indicator
+
+    @cash_advance_indicator.setter
+    def cash_advance_indicator(self, cash_advance_indicator):
+        """
+        Sets the cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field enables the merchant to indicate that a given transaction is Cash Advance.  Cash advance or Cash disbursement functionality allows a merchant to dispense cash at a point of sale. It provides the ability of a POS system to act like an ATM. These terminals are typically seen in bank branches where customers can use their card and withdraw cash or at merchant locations where ATMs are sparse.  Possible values:   - `true` (Cash advance is supported)   - `false` (default: cash advance is not supported) 
+
+        :param cash_advance_indicator: The cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._cash_advance_indicator = cash_advance_indicator
+
+    @property
+    def split_payment_transaction(self):
+        """
+        Gets the split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect Indicates split payment transaction. A split payment allows the use of two payment methods for a single transaction.  Possible values:   - `true` (split payment transaction is supported)   - `false` (default: split payment transaction is not supported) 
+
+        :return: The split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._split_payment_transaction
+
+    @split_payment_transaction.setter
+    def split_payment_transaction(self, split_payment_transaction):
+        """
+        Sets the split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        #### Visa Platform Connect Indicates split payment transaction. A split payment allows the use of two payment methods for a single transaction.  Possible values:   - `true` (split payment transaction is supported)   - `false` (default: split payment transaction is not supported) 
+
+        :param split_payment_transaction: The split_payment_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._split_payment_transaction = split_payment_transaction
+
+    @property
+    def card_verification_indicator(self):
+        """
+        Gets the card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :return: The card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._card_verification_indicator
+
+    @card_verification_indicator.setter
+    def card_verification_indicator(self, card_verification_indicator):
+        """
+        Sets the card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :param card_verification_indicator: The card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._card_verification_indicator = card_verification_indicator
 
     def to_dict(self):
         """

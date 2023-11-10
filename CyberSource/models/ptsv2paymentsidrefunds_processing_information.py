@@ -31,6 +31,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'action_list': 'list[str]',
         'payment_solution': 'str',
         'reconciliation_id': 'str',
         'link_id': 'str',
@@ -38,10 +39,13 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'visa_checkout_id': 'str',
         'purchase_level': 'str',
         'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
-        'industry_data_type': 'str'
+        'industry_data_type': 'str',
+        'payment_type': 'str',
+        'refund_options': 'Ptsv2paymentsidrefundsProcessingInformationRefundOptions'
     }
 
     attribute_map = {
+        'action_list': 'actionList',
         'payment_solution': 'paymentSolution',
         'reconciliation_id': 'reconciliationId',
         'link_id': 'linkId',
@@ -49,14 +53,17 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'visa_checkout_id': 'visaCheckoutId',
         'purchase_level': 'purchaseLevel',
         'recurring_options': 'recurringOptions',
-        'industry_data_type': 'industryDataType'
+        'industry_data_type': 'industryDataType',
+        'payment_type': 'paymentType',
+        'refund_options': 'refundOptions'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None):
+    def __init__(self, action_list=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None, payment_type=None, refund_options=None):
         """
         Ptsv2paymentsidrefundsProcessingInformation - a model defined in Swagger
         """
 
+        self._action_list = None
         self._payment_solution = None
         self._reconciliation_id = None
         self._link_id = None
@@ -65,7 +72,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         self._purchase_level = None
         self._recurring_options = None
         self._industry_data_type = None
+        self._payment_type = None
+        self._refund_options = None
 
+        if action_list is not None:
+          self.action_list = action_list
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if reconciliation_id is not None:
@@ -82,6 +93,33 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
           self.recurring_options = recurring_options
         if industry_data_type is not None:
           self.industry_data_type = industry_data_type
+        if payment_type is not None:
+          self.payment_type = payment_type
+        if refund_options is not None:
+          self.refund_options = refund_options
+
+    @property
+    def action_list(self):
+        """
+        Gets the action_list of this Ptsv2paymentsidrefundsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_REFUND`: Use this when Alternative Payment Refund service is requested. 
+
+        :return: The action_list of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_list
+
+    @action_list.setter
+    def action_list(self, action_list):
+        """
+        Sets the action_list of this Ptsv2paymentsidrefundsProcessingInformation.
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_REFUND`: Use this when Alternative Payment Refund service is requested. 
+
+        :param action_list: The action_list of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_list = action_list
 
     @property
     def payment_solution(self):
@@ -264,6 +302,50 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         """
 
         self._industry_data_type = industry_data_type
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        Identifier for the payment type
+
+        :return: The payment_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        Identifier for the payment type
+
+        :param payment_type: The payment_type of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: str
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def refund_options(self):
+        """
+        Gets the refund_options of this Ptsv2paymentsidrefundsProcessingInformation.
+
+        :return: The refund_options of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: Ptsv2paymentsidrefundsProcessingInformationRefundOptions
+        """
+        return self._refund_options
+
+    @refund_options.setter
+    def refund_options(self, refund_options):
+        """
+        Sets the refund_options of this Ptsv2paymentsidrefundsProcessingInformation.
+
+        :param refund_options: The refund_options of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: Ptsv2paymentsidrefundsProcessingInformationRefundOptions
+        """
+
+        self._refund_options = refund_options
 
     def to_dict(self):
         """

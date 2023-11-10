@@ -191,6 +191,7 @@ class {{classname}}(object):
         if '{{paramName}}' in params:
             path_params['{{baseName}}'] = params['{{paramName}}']{{#isListContainer}}
             collection_formats['{{baseName}}'] = '{{collectionFormat}}'{{/isListContainer}}
+            {{baseName}}={{paramName}}
 {{/pathParams}}
 
         query_params = []
@@ -220,16 +221,18 @@ class {{classname}}(object):
         if '{{paramName}}' in params:
             body_params = params['{{paramName}}']
 {{/bodyParam}}
+{{^bodyParam}}
+        if '{{httpMethod}}' in ('POST'):
+            body_params = '{}'
+{{/bodyParam}}
         {{#hasProduces}}
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept([{{#produces}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/produces}}])
+        header_params['Accept'] = self.api_client.select_header_accept([{{#produces}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/produces}}])
 
         {{/hasProduces}}
         {{#hasConsumes}}
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([{{#consumes}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/consumes}}])
+        header_params['Content-Type'] = self.api_client.select_header_content_type([{{#consumes}}'{{{mediaType}}}'{{#hasMore}}, {{/hasMore}}{{/consumes}}])
 
         {{/hasConsumes}}
         # Authentication setting

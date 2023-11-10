@@ -41,6 +41,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_details': 'str',
         'response_category_code': 'str',
         'forwarded_acquirer_code': 'str',
+        'settlement_date': 'str',
         'avs': 'PtsV2PaymentsPost201ResponseProcessorInformationAvs',
         'card_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationCardVerification',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
@@ -60,7 +61,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'merchant_number': 'str',
         'retrieval_reference_number': 'str',
         'payment_url': 'str',
-        'complete_url': 'str'
+        'complete_url': 'str',
+        'signature': 'str',
+        'public_key': 'str'
     }
 
     attribute_map = {
@@ -74,6 +77,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_details': 'responseDetails',
         'response_category_code': 'responseCategoryCode',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
+        'settlement_date': 'settlementDate',
         'avs': 'avs',
         'card_verification': 'cardVerification',
         'merchant_advice': 'merchantAdvice',
@@ -93,10 +97,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'merchant_number': 'merchantNumber',
         'retrieval_reference_number': 'retrievalReferenceNumber',
         'payment_url': 'paymentUrl',
-        'complete_url': 'completeUrl'
+        'complete_url': 'completeUrl',
+        'signature': 'signature',
+        'public_key': 'publicKey'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -111,6 +117,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._response_details = None
         self._response_category_code = None
         self._forwarded_acquirer_code = None
+        self._settlement_date = None
         self._avs = None
         self._card_verification = None
         self._merchant_advice = None
@@ -131,6 +138,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._retrieval_reference_number = None
         self._payment_url = None
         self._complete_url = None
+        self._signature = None
+        self._public_key = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -152,6 +161,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.response_category_code = response_category_code
         if forwarded_acquirer_code is not None:
           self.forwarded_acquirer_code = forwarded_acquirer_code
+        if settlement_date is not None:
+          self.settlement_date = settlement_date
         if avs is not None:
           self.avs = avs
         if card_verification is not None:
@@ -192,6 +203,10 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.payment_url = payment_url
         if complete_url is not None:
           self.complete_url = complete_url
+        if signature is not None:
+          self.signature = signature
+        if public_key is not None:
+          self.public_key = public_key
 
     @property
     def auth_indicator(self):
@@ -422,6 +437,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
+
+    @property
+    def settlement_date(self):
+        """
+        Gets the settlement_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day. 
+
+        :return: The settlement_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._settlement_date
+
+    @settlement_date.setter
+    def settlement_date(self, settlement_date):
+        """
+        Sets the settlement_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day. 
+
+        :param settlement_date: The settlement_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._settlement_date = settlement_date
 
     @property
     def avs(self):
@@ -866,6 +904,48 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._complete_url = complete_url
+
+    @property
+    def signature(self):
+        """
+        Gets the signature of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The signature of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._signature
+
+    @signature.setter
+    def signature(self, signature):
+        """
+        Sets the signature of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param signature: The signature of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._signature = signature
+
+    @property
+    def public_key(self):
+        """
+        Gets the public_key of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The public_key of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._public_key
+
+    @public_key.setter
+    def public_key(self, public_key):
+        """
+        Sets the public_key of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param public_key: The public_key of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._public_key = public_key
 
     def to_dict(self):
         """

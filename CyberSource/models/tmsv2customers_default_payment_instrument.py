@@ -52,7 +52,7 @@ class Tmsv2customersDefaultPaymentInstrument(object):
     def id(self):
         """
         Gets the id of this Tmsv2customersDefaultPaymentInstrument.
-        The id of the Customers default Payment Instrument 
+        The Id of the Customers default Payment Instrument 
 
         :return: The id of this Tmsv2customersDefaultPaymentInstrument.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersDefaultPaymentInstrument(object):
     def id(self, id):
         """
         Sets the id of this Tmsv2customersDefaultPaymentInstrument.
-        The id of the Customers default Payment Instrument 
+        The Id of the Customers default Payment Instrument 
 
         :param id: The id of this Tmsv2customersDefaultPaymentInstrument.
         :type: str

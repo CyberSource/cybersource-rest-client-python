@@ -37,6 +37,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'fingerprint_session_id': 'str',
         'use_raw_fingerprint_session_id': 'bool',
         'device_type': 'str',
+        'app_url': 'str',
         'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
         'http_accept_browser_value': 'str',
         'http_accept_content': 'str',
@@ -58,6 +59,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'fingerprint_session_id': 'fingerprintSessionId',
         'use_raw_fingerprint_session_id': 'useRawFingerprintSessionId',
         'device_type': 'deviceType',
+        'app_url': 'appUrl',
         'raw_data': 'rawData',
         'http_accept_browser_value': 'httpAcceptBrowserValue',
         'http_accept_content': 'httpAcceptContent',
@@ -72,7 +74,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent_browser_value': 'userAgentBrowserValue'
     }
 
-    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, device_type=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
+    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, device_type=None, app_url=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
         """
         Ptsv2paymentsDeviceInformation - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class Ptsv2paymentsDeviceInformation(object):
         self._fingerprint_session_id = None
         self._use_raw_fingerprint_session_id = None
         self._device_type = None
+        self._app_url = None
         self._raw_data = None
         self._http_accept_browser_value = None
         self._http_accept_content = None
@@ -108,6 +111,8 @@ class Ptsv2paymentsDeviceInformation(object):
           self.use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
         if device_type is not None:
           self.device_type = device_type
+        if app_url is not None:
+          self.app_url = app_url
         if raw_data is not None:
           self.raw_data = raw_data
         if http_accept_browser_value is not None:
@@ -270,6 +275,29 @@ class Ptsv2paymentsDeviceInformation(object):
         """
 
         self._device_type = device_type
+
+    @property
+    def app_url(self):
+        """
+        Gets the app_url of this Ptsv2paymentsDeviceInformation.
+        This field will contain the deep link that would help the Customer App to wake up. 
+
+        :return: The app_url of this Ptsv2paymentsDeviceInformation.
+        :rtype: str
+        """
+        return self._app_url
+
+    @app_url.setter
+    def app_url(self, app_url):
+        """
+        Sets the app_url of this Ptsv2paymentsDeviceInformation.
+        This field will contain the deep link that would help the Customer App to wake up. 
+
+        :param app_url: The app_url of this Ptsv2paymentsDeviceInformation.
+        :type: str
+        """
+
+        self._app_url = app_url
 
     @property
     def raw_data(self):

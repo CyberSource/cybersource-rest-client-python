@@ -44,7 +44,9 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'distributor_product_sku': 'str',
         'passenger': 'Ptsv2paymentsOrderInformationPassenger',
         'shipping_destination_types': 'str',
-        'tax_amount': 'str'
+        'tax_amount': 'str',
+        'allowed_export_countries': 'list[str]',
+        'restricted_export_countries': 'list[str]'
     }
 
     attribute_map = {
@@ -61,10 +63,12 @@ class Riskv1decisionsOrderInformationLineItems(object):
         'distributor_product_sku': 'distributorProductSku',
         'passenger': 'passenger',
         'shipping_destination_types': 'shippingDestinationTypes',
-        'tax_amount': 'taxAmount'
+        'tax_amount': 'taxAmount',
+        'allowed_export_countries': 'allowedExportCountries',
+        'restricted_export_countries': 'restrictedExportCountries'
     }
 
-    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, passenger=None, shipping_destination_types=None, tax_amount=None):
+    def __init__(self, total_amount=None, unit_price=None, quantity=None, gift_card_currency=None, product_sku=None, product_risk=None, product_description=None, product_name=None, product_code=None, gift=None, distributor_product_sku=None, passenger=None, shipping_destination_types=None, tax_amount=None, allowed_export_countries=None, restricted_export_countries=None):
         """
         Riskv1decisionsOrderInformationLineItems - a model defined in Swagger
         """
@@ -83,6 +87,8 @@ class Riskv1decisionsOrderInformationLineItems(object):
         self._passenger = None
         self._shipping_destination_types = None
         self._tax_amount = None
+        self._allowed_export_countries = None
+        self._restricted_export_countries = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -112,6 +118,10 @@ class Riskv1decisionsOrderInformationLineItems(object):
           self.shipping_destination_types = shipping_destination_types
         if tax_amount is not None:
           self.tax_amount = tax_amount
+        if allowed_export_countries is not None:
+          self.allowed_export_countries = allowed_export_countries
+        if restricted_export_countries is not None:
+          self.restricted_export_countries = restricted_export_countries
 
     @property
     def total_amount(self):
@@ -179,10 +189,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param quantity: The quantity of this Riskv1decisionsOrderInformationLineItems.
         :type: int
         """
-        if quantity is not None and quantity > 999999999:
-            raise ValueError("Invalid value for `quantity`, must be a value less than or equal to `999999999`")
-        if quantity is not None and quantity < 1:
-            raise ValueError("Invalid value for `quantity`, must be a value greater than or equal to `1`")
 
         self._quantity = quantity
 
@@ -305,7 +311,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def product_code(self):
         """
         Gets the product_code of this Riskv1decisionsOrderInformationLineItems.
-        Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  To use the tax calculation service, use values listed in the Tax Product Code Guide. For information about this document, contact customer support. See \"Product Codes,\" page 14, for more information. 
+        Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  The Product Codes for the tax service are located in the Cybersource Tax Codes guide. Contact Customer Support to request the guide. If you don’t send a tax service Product Code in your tax request, product-based rules or exemptions will not be applied and the transaction will default to fully taxable in the locations where you’ve indicated you need to collect tax [by way of nexus, no nexus, or seller registration number fields]. 
 
         :return: The product_code of this Riskv1decisionsOrderInformationLineItems.
         :rtype: str
@@ -316,7 +322,7 @@ class Riskv1decisionsOrderInformationLineItems(object):
     def product_code(self, product_code):
         """
         Sets the product_code of this Riskv1decisionsOrderInformationLineItems.
-        Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  To use the tax calculation service, use values listed in the Tax Product Code Guide. For information about this document, contact customer support. See \"Product Codes,\" page 14, for more information. 
+        Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  The Product Codes for the tax service are located in the Cybersource Tax Codes guide. Contact Customer Support to request the guide. If you don’t send a tax service Product Code in your tax request, product-based rules or exemptions will not be applied and the transaction will default to fully taxable in the locations where you’ve indicated you need to collect tax [by way of nexus, no nexus, or seller registration number fields]. 
 
         :param product_code: The product_code of this Riskv1decisionsOrderInformationLineItems.
         :type: str
@@ -436,6 +442,48 @@ class Riskv1decisionsOrderInformationLineItems(object):
         """
 
         self._tax_amount = tax_amount
+
+    @property
+    def allowed_export_countries(self):
+        """
+        Gets the allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :return: The allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._allowed_export_countries
+
+    @allowed_export_countries.setter
+    def allowed_export_countries(self, allowed_export_countries):
+        """
+        Sets the allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :param allowed_export_countries: The allowed_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._allowed_export_countries = allowed_export_countries
+
+    @property
+    def restricted_export_countries(self):
+        """
+        Gets the restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :return: The restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :rtype: list[str]
+        """
+        return self._restricted_export_countries
+
+    @restricted_export_countries.setter
+    def restricted_export_countries(self, restricted_export_countries):
+        """
+        Sets the restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+
+        :param restricted_export_countries: The restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
+        :type: list[str]
+        """
+
+        self._restricted_export_countries = restricted_export_countries
 
     def to_dict(self):
         """

@@ -31,22 +31,27 @@ class Riskv1authenticationsetupsTokenInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'transient_token': 'str'
+        'transient_token': 'str',
+        'jti': 'str'
     }
 
     attribute_map = {
-        'transient_token': 'transientToken'
+        'transient_token': 'transientToken',
+        'jti': 'jti'
     }
 
-    def __init__(self, transient_token=None):
+    def __init__(self, transient_token=None, jti=None):
         """
         Riskv1authenticationsetupsTokenInformation - a model defined in Swagger
         """
 
         self._transient_token = None
+        self._jti = None
 
         if transient_token is not None:
           self.transient_token = transient_token
+        if jti is not None:
+          self.jti = jti
 
     @property
     def transient_token(self):
@@ -70,6 +75,29 @@ class Riskv1authenticationsetupsTokenInformation(object):
         """
 
         self._transient_token = transient_token
+
+    @property
+    def jti(self):
+        """
+        Gets the jti of this Riskv1authenticationsetupsTokenInformation.
+        TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV). 
+
+        :return: The jti of this Riskv1authenticationsetupsTokenInformation.
+        :rtype: str
+        """
+        return self._jti
+
+    @jti.setter
+    def jti(self, jti):
+        """
+        Sets the jti of this Riskv1authenticationsetupsTokenInformation.
+        TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV). 
+
+        :param jti: The jti of this Riskv1authenticationsetupsTokenInformation.
+        :type: str
+        """
+
+        self._jti = jti
 
     def to_dict(self):
         """

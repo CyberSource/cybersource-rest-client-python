@@ -52,7 +52,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount(object):
     def type(self):
         """
         Gets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount.
-        Account type.  Valid values:  - checking : C  - general ledger : G This value is supported only on Wells Fargo ACH  - savings : S (U.S. dollars only)  - corporate checking : X (U.S. dollars only) 
+        Account type.  Possible Values:  - checking : C  - general ledger : G This value is supported only on Wells Fargo ACH  - savings : S (U.S. dollars only)  - corporate checking : X (U.S. dollars only) 
 
         :return: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount(object):
     def type(self, type):
         """
         Sets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount.
-        Account type.  Valid values:  - checking : C  - general ledger : G This value is supported only on Wells Fargo ACH  - savings : S (U.S. dollars only)  - corporate checking : X (U.S. dollars only) 
+        Account type.  Possible Values:  - checking : C  - general ledger : G This value is supported only on Wells Fargo ACH  - savings : S (U.S. dollars only)  - corporate checking : X (U.S. dollars only) 
 
         :param type: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount.
         :type: str

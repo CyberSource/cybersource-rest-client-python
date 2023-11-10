@@ -34,6 +34,7 @@ class Riskv1decisionsOrderInformation(object):
         'amount_details': 'Riskv1decisionsOrderInformationAmountDetails',
         'pre_order': 'str',
         'pre_order_date': 'str',
+        'cutoff_date_time': 'str',
         'reordered': 'bool',
         'shipping_details': 'Riskv1decisionsOrderInformationShippingDetails',
         'ship_to': 'Riskv1decisionsOrderInformationShipTo',
@@ -47,6 +48,7 @@ class Riskv1decisionsOrderInformation(object):
         'amount_details': 'amountDetails',
         'pre_order': 'preOrder',
         'pre_order_date': 'preOrderDate',
+        'cutoff_date_time': 'cutoffDateTime',
         'reordered': 'reordered',
         'shipping_details': 'shippingDetails',
         'ship_to': 'shipTo',
@@ -56,7 +58,7 @@ class Riskv1decisionsOrderInformation(object):
         'total_offers_count': 'totalOffersCount'
     }
 
-    def __init__(self, amount_details=None, pre_order=None, pre_order_date=None, reordered=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, total_offers_count=None):
+    def __init__(self, amount_details=None, pre_order=None, pre_order_date=None, cutoff_date_time=None, reordered=None, shipping_details=None, ship_to=None, returns_accepted=None, line_items=None, bill_to=None, total_offers_count=None):
         """
         Riskv1decisionsOrderInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Riskv1decisionsOrderInformation(object):
         self._amount_details = None
         self._pre_order = None
         self._pre_order_date = None
+        self._cutoff_date_time = None
         self._reordered = None
         self._shipping_details = None
         self._ship_to = None
@@ -78,6 +81,8 @@ class Riskv1decisionsOrderInformation(object):
           self.pre_order = pre_order
         if pre_order_date is not None:
           self.pre_order_date = pre_order_date
+        if cutoff_date_time is not None:
+          self.cutoff_date_time = cutoff_date_time
         if reordered is not None:
           self.reordered = reordered
         if shipping_details is not None:
@@ -159,6 +164,29 @@ class Riskv1decisionsOrderInformation(object):
         """
 
         self._pre_order_date = pre_order_date
+
+    @property
+    def cutoff_date_time(self):
+        """
+        Gets the cutoff_date_time of this Riskv1decisionsOrderInformation.
+        Starting date and time for an event or a journey that is independent of which transportation mechanism, in UTC. The cutoffDateTime will supersede travelInformation.departureTime if both are supplied in the request. Format: YYYY-MM-DDThh:mm:ssZ. Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The cutoff_date_time of this Riskv1decisionsOrderInformation.
+        :rtype: str
+        """
+        return self._cutoff_date_time
+
+    @cutoff_date_time.setter
+    def cutoff_date_time(self, cutoff_date_time):
+        """
+        Sets the cutoff_date_time of this Riskv1decisionsOrderInformation.
+        Starting date and time for an event or a journey that is independent of which transportation mechanism, in UTC. The cutoffDateTime will supersede travelInformation.departureTime if both are supplied in the request. Format: YYYY-MM-DDThh:mm:ssZ. Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param cutoff_date_time: The cutoff_date_time of this Riskv1decisionsOrderInformation.
+        :type: str
+        """
+
+        self._cutoff_date_time = cutoff_date_time
 
     @property
     def reordered(self):

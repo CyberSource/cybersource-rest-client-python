@@ -53,7 +53,8 @@ class CreatePaymentRequest(object):
         'processor_information': 'Ptsv2paymentsProcessorInformation',
         'risk_information': 'Ptsv2paymentsRiskInformation',
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
-        'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation'
+        'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
+        'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation'
     }
 
     attribute_map = {
@@ -79,10 +80,11 @@ class CreatePaymentRequest(object):
         'processor_information': 'processorInformation',
         'risk_information': 'riskInformation',
         'acquirer_information': 'acquirerInformation',
-        'recurring_payment_information': 'recurringPaymentInformation'
+        'recurring_payment_information': 'recurringPaymentInformation',
+        'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -110,6 +112,7 @@ class CreatePaymentRequest(object):
         self._risk_information = None
         self._acquirer_information = None
         self._recurring_payment_information = None
+        self._watchlist_screening_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -157,6 +160,8 @@ class CreatePaymentRequest(object):
           self.acquirer_information = acquirer_information
         if recurring_payment_information is not None:
           self.recurring_payment_information = recurring_payment_information
+        if watchlist_screening_information is not None:
+          self.watchlist_screening_information = watchlist_screening_information
 
     @property
     def client_reference_information(self):
@@ -642,6 +647,27 @@ class CreatePaymentRequest(object):
         """
 
         self._recurring_payment_information = recurring_payment_information
+
+    @property
+    def watchlist_screening_information(self):
+        """
+        Gets the watchlist_screening_information of this CreatePaymentRequest.
+
+        :return: The watchlist_screening_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsWatchlistScreeningInformation
+        """
+        return self._watchlist_screening_information
+
+    @watchlist_screening_information.setter
+    def watchlist_screening_information(self, watchlist_screening_information):
+        """
+        Sets the watchlist_screening_information of this CreatePaymentRequest.
+
+        :param watchlist_screening_information: The watchlist_screening_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsWatchlistScreeningInformation
+        """
+
+        self._watchlist_screening_information = watchlist_screening_information
 
     def to_dict(self):
         """

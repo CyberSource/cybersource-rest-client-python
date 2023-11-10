@@ -31,9 +31,11 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'bin_source': 'str',
         'industry_data_type': 'str',
         'payment_solution': 'str',
         'commerce_indicator': 'str',
+        'commerce_indicator_label': 'str',
         'business_application_id': 'str',
         'authorization_options': 'TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions',
         'bank_transfer_options': 'TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions',
@@ -41,34 +43,42 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
     }
 
     attribute_map = {
+        'bin_source': 'binSource',
         'industry_data_type': 'industryDataType',
         'payment_solution': 'paymentSolution',
         'commerce_indicator': 'commerceIndicator',
+        'commerce_indicator_label': 'commerceIndicatorLabel',
         'business_application_id': 'businessApplicationId',
         'authorization_options': 'authorizationOptions',
         'bank_transfer_options': 'bankTransferOptions',
         'japan_payment_options': 'japanPaymentOptions'
     }
 
-    def __init__(self, industry_data_type=None, payment_solution=None, commerce_indicator=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
+    def __init__(self, bin_source=None, industry_data_type=None, payment_solution=None, commerce_indicator=None, commerce_indicator_label=None, business_application_id=None, authorization_options=None, bank_transfer_options=None, japan_payment_options=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformation - a model defined in Swagger
         """
 
+        self._bin_source = None
         self._industry_data_type = None
         self._payment_solution = None
         self._commerce_indicator = None
+        self._commerce_indicator_label = None
         self._business_application_id = None
         self._authorization_options = None
         self._bank_transfer_options = None
         self._japan_payment_options = None
 
+        if bin_source is not None:
+          self.bin_source = bin_source
         if industry_data_type is not None:
           self.industry_data_type = industry_data_type
         if payment_solution is not None:
           self.payment_solution = payment_solution
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
+        if commerce_indicator_label is not None:
+          self.commerce_indicator_label = commerce_indicator_label
         if business_application_id is not None:
           self.business_application_id = business_application_id
         if authorization_options is not None:
@@ -77,6 +87,29 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
           self.bank_transfer_options = bank_transfer_options
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
+
+    @property
+    def bin_source(self):
+        """
+        Gets the bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :return: The bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._bin_source
+
+    @bin_source.setter
+    def bin_source(self, bin_source):
+        """
+        Sets the bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Bin Source File Identifier. Possible values: - itmx - rupay 
+
+        :param bin_source: The bin_source of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._bin_source = bin_source
 
     @property
     def industry_data_type(self):
@@ -146,6 +179,29 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         """
 
         self._commerce_indicator = commerce_indicator
+
+    @property
+    def commerce_indicator_label(self):
+        """
+        Gets the commerce_indicator_label of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :return: The commerce_indicator_label of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :rtype: str
+        """
+        return self._commerce_indicator_label
+
+    @commerce_indicator_label.setter
+    def commerce_indicator_label(self, commerce_indicator_label):
+        """
+        Sets the commerce_indicator_label of this TssV2TransactionsGet200ResponseProcessingInformation.
+        Type of transaction. Some payment card companies use this information when determining discount rates.  #### Used by **Authorization** Required payer authentication transactions; otherwise, optional. **Credit** Required for standalone credits on Chase Paymentech solutions; otherwise, optional.  The list of valid values in this field depends on your processor. See Appendix I, \"Commerce Indicators,\" on page 441 of the Cybersource Credit Card Guide.  #### Ingenico ePayments When you omit this field for Ingenico ePayments, the processor uses the default transaction type they have on file for you instead of the default value (listed in Appendix I, \"Commerce Indicators,\" on page 441.)  #### Payer Authentication Transactions For the possible values and requirements, see \"Payer Authentication,\" page 195.  #### Card Present You must set this field to `retail`. This field is required for a card-present transaction. Note that this should ONLY be used when the cardholder and card are present at the time of the transaction. For all keyed transactions originated from a POS terminal where the cardholder and card are not present, commerceIndicator should be submitted as “moto\" 
+
+        :param commerce_indicator_label: The commerce_indicator_label of this TssV2TransactionsGet200ResponseProcessingInformation.
+        :type: str
+        """
+
+        self._commerce_indicator_label = commerce_indicator_label
 
     @property
     def business_application_id(self):

@@ -365,10 +365,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param number_of_rooms: The number_of_rooms of this Ptsv2paymentsTravelInformationLodging.
         :type: int
         """
-        if number_of_rooms is not None and number_of_rooms > 99:
-            raise ValueError("Invalid value for `number_of_rooms`, must be a value less than or equal to `99`")
-        if number_of_rooms is not None and number_of_rooms < 1:
-            raise ValueError("Invalid value for `number_of_rooms`, must be a value greater than or equal to `1`")
 
         self._number_of_rooms = number_of_rooms
 
@@ -392,10 +388,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param number_of_guests: The number_of_guests of this Ptsv2paymentsTravelInformationLodging.
         :type: int
         """
-        if number_of_guests is not None and number_of_guests > 99:
-            raise ValueError("Invalid value for `number_of_guests`, must be a value less than or equal to `99`")
-        if number_of_guests is not None and number_of_guests < 1:
-            raise ValueError("Invalid value for `number_of_guests`, must be a value greater than or equal to `1`")
 
         self._number_of_guests = number_of_guests
 

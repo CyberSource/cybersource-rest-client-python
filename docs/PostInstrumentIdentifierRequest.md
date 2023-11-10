@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **links** | [**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierLinks**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierLinks.md) |  | [optional] 
-**id** | **str** | The id of the Instrument Identifier Token.  | [optional] 
-**object** | **str** | The type of token.  Valid values: - instrumentIdentifier  | [optional] 
-**state** | **str** | Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed.  | [optional] 
-**type** | **str** | The type of Instrument Identifier. Valid values: - enrollable card  | [optional] 
+**id** | **str** | The Id of the Instrument Identifier Token.  | [optional] 
+**object** | **str** | The type.  Possible Values: - instrumentIdentifier  | [optional] 
+**state** | **str** | Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed.  | [optional] 
+**type** | **str** | The type of Instrument Identifier. Possible Values: - enrollable card  | [optional] 
 **card** | [**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.md) |  | [optional] 
 **bank_account** | [**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount.md) |  | [optional] 
 **tokenized_card** | [**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.md) |  | [optional] 

@@ -32,26 +32,31 @@ class Ptsv2payoutsOrderInformation(object):
     """
     swagger_types = {
         'amount_details': 'Ptsv2payoutsOrderInformationAmountDetails',
-        'bill_to': 'Ptsv2payoutsOrderInformationBillTo'
+        'bill_to': 'Ptsv2payoutsOrderInformationBillTo',
+        'is_cryptocurrency_purchase': 'str'
     }
 
     attribute_map = {
         'amount_details': 'amountDetails',
-        'bill_to': 'billTo'
+        'bill_to': 'billTo',
+        'is_cryptocurrency_purchase': 'isCryptocurrencyPurchase'
     }
 
-    def __init__(self, amount_details=None, bill_to=None):
+    def __init__(self, amount_details=None, bill_to=None, is_cryptocurrency_purchase=None):
         """
         Ptsv2payoutsOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
         self._bill_to = None
+        self._is_cryptocurrency_purchase = None
 
         if amount_details is not None:
           self.amount_details = amount_details
         if bill_to is not None:
           self.bill_to = bill_to
+        if is_cryptocurrency_purchase is not None:
+          self.is_cryptocurrency_purchase = is_cryptocurrency_purchase
 
     @property
     def amount_details(self):
@@ -94,6 +99,29 @@ class Ptsv2payoutsOrderInformation(object):
         """
 
         self._bill_to = bill_to
+
+    @property
+    def is_cryptocurrency_purchase(self):
+        """
+        Gets the is_cryptocurrency_purchase of this Ptsv2payoutsOrderInformation.
+        #### Visa Platform Connect : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. Additional values to add : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. valid values are - Y/y, true - N/n, false 
+
+        :return: The is_cryptocurrency_purchase of this Ptsv2payoutsOrderInformation.
+        :rtype: str
+        """
+        return self._is_cryptocurrency_purchase
+
+    @is_cryptocurrency_purchase.setter
+    def is_cryptocurrency_purchase(self, is_cryptocurrency_purchase):
+        """
+        Sets the is_cryptocurrency_purchase of this Ptsv2payoutsOrderInformation.
+        #### Visa Platform Connect : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. Additional values to add : This API will contain the Flag that specifies whether the payment is for the purchase of cryptocurrency. valid values are - Y/y, true - N/n, false 
+
+        :param is_cryptocurrency_purchase: The is_cryptocurrency_purchase of this Ptsv2payoutsOrderInformation.
+        :type: str
+        """
+
+        self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
 
     def to_dict(self):
         """

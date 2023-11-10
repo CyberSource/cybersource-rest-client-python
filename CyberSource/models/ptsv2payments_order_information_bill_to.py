@@ -44,13 +44,17 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'locality': 'str',
         'administrative_area': 'str',
         'postal_code': 'str',
+        'county': 'str',
         'country': 'str',
         'district': 'str',
         'building_number': 'str',
         'email': 'str',
         'email_domain': 'str',
         'phone_number': 'str',
-        'phone_type': 'str'
+        'phone_type': 'str',
+        'verification_status': 'str',
+        'alternate_phone_number': 'str',
+        'alternate_email': 'str'
     }
 
     attribute_map = {
@@ -67,16 +71,20 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
+        'county': 'county',
         'country': 'country',
         'district': 'district',
         'building_number': 'buildingNumber',
         'email': 'email',
         'email_domain': 'emailDomain',
         'phone_number': 'phoneNumber',
-        'phone_type': 'phoneType'
+        'phone_type': 'phoneType',
+        'verification_status': 'verificationStatus',
+        'alternate_phone_number': 'alternatePhoneNumber',
+        'alternate_email': 'alternateEmail'
     }
 
-    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, email=None, email_domain=None, phone_number=None, phone_type=None):
+    def __init__(self, first_name=None, last_name=None, middle_name=None, name_suffix=None, title=None, company=None, address1=None, address2=None, address3=None, address4=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, email=None, email_domain=None, phone_number=None, phone_type=None, verification_status=None, alternate_phone_number=None, alternate_email=None):
         """
         Ptsv2paymentsOrderInformationBillTo - a model defined in Swagger
         """
@@ -94,6 +102,7 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         self._locality = None
         self._administrative_area = None
         self._postal_code = None
+        self._county = None
         self._country = None
         self._district = None
         self._building_number = None
@@ -101,6 +110,9 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         self._email_domain = None
         self._phone_number = None
         self._phone_type = None
+        self._verification_status = None
+        self._alternate_phone_number = None
+        self._alternate_email = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -128,6 +140,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
           self.administrative_area = administrative_area
         if postal_code is not None:
           self.postal_code = postal_code
+        if county is not None:
+          self.county = county
         if country is not None:
           self.country = country
         if district is not None:
@@ -142,6 +156,12 @@ class Ptsv2paymentsOrderInformationBillTo(object):
           self.phone_number = phone_number
         if phone_type is not None:
           self.phone_type = phone_type
+        if verification_status is not None:
+          self.verification_status = verification_status
+        if alternate_phone_number is not None:
+          self.alternate_phone_number = alternate_phone_number
+        if alternate_email is not None:
+          self.alternate_email = alternate_email
 
     @property
     def first_name(self):
@@ -441,6 +461,29 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         self._postal_code = postal_code
 
     @property
+    def county(self):
+        """
+        Gets the county of this Ptsv2paymentsOrderInformationBillTo.
+        U.S. county if available.
+
+        :return: The county of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._county
+
+    @county.setter
+    def county(self, county):
+        """
+        Sets the county of this Ptsv2paymentsOrderInformationBillTo.
+        U.S. county if available.
+
+        :param county: The county of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._county = county
+
+    @property
     def country(self):
         """
         Gets the country of this Ptsv2paymentsOrderInformationBillTo.
@@ -600,6 +643,75 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         """
 
         self._phone_type = phone_type
+
+    @property
+    def verification_status(self):
+        """
+        Gets the verification_status of this Ptsv2paymentsOrderInformationBillTo.
+        Whether buyer has verified their identity. Used in case of PayPal transactions.  Possible Values: * VERIFIED * UNVERIFIED 
+
+        :return: The verification_status of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._verification_status
+
+    @verification_status.setter
+    def verification_status(self, verification_status):
+        """
+        Sets the verification_status of this Ptsv2paymentsOrderInformationBillTo.
+        Whether buyer has verified their identity. Used in case of PayPal transactions.  Possible Values: * VERIFIED * UNVERIFIED 
+
+        :param verification_status: The verification_status of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._verification_status = verification_status
+
+    @property
+    def alternate_phone_number(self):
+        """
+        Gets the alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate phone number. 
+
+        :return: The alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._alternate_phone_number
+
+    @alternate_phone_number.setter
+    def alternate_phone_number(self, alternate_phone_number):
+        """
+        Sets the alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate phone number. 
+
+        :param alternate_phone_number: The alternate_phone_number of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._alternate_phone_number = alternate_phone_number
+
+    @property
+    def alternate_email(self):
+        """
+        Gets the alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate email address. 
+
+        :return: The alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._alternate_email
+
+    @alternate_email.setter
+    def alternate_email(self, alternate_email):
+        """
+        Sets the alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        #### Visa Platform Connect contains customer’s alternate email address. 
+
+        :param alternate_email: The alternate_email of this Ptsv2paymentsOrderInformationBillTo.
+        :type: str
+        """
+
+        self._alternate_email = alternate_email
 
     def to_dict(self):
         """

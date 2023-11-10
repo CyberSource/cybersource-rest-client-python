@@ -344,10 +344,6 @@ class CreateReportSubscriptionRequest(object):
         :param start_day: The start_day of this CreateReportSubscriptionRequest.
         :type: int
         """
-        if start_day is not None and start_day > 31:
-            raise ValueError("Invalid value for `start_day`, must be a value less than or equal to `31`")
-        if start_day is not None and start_day < 1:
-            raise ValueError("Invalid value for `start_day`, must be a value greater than or equal to `1`")
 
         self._start_day = start_day
 

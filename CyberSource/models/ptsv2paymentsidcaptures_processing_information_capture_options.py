@@ -73,10 +73,6 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         :param capture_sequence_number: The capture_sequence_number of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
         :type: int
         """
-        if capture_sequence_number is not None and capture_sequence_number > 99:
-            raise ValueError("Invalid value for `capture_sequence_number`, must be a value less than or equal to `99`")
-        if capture_sequence_number is not None and capture_sequence_number < 1:
-            raise ValueError("Invalid value for `capture_sequence_number`, must be a value greater than or equal to `1`")
 
         self._capture_sequence_number = capture_sequence_number
 
@@ -100,10 +96,6 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         :param total_capture_count: The total_capture_count of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
         :type: int
         """
-        if total_capture_count is not None and total_capture_count > 99:
-            raise ValueError("Invalid value for `total_capture_count`, must be a value less than or equal to `99`")
-        if total_capture_count is not None and total_capture_count < 1:
-            raise ValueError("Invalid value for `total_capture_count`, must be a value greater than or equal to `1`")
 
         self._total_capture_count = total_capture_count
 

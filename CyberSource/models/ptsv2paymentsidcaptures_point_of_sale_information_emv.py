@@ -40,7 +40,7 @@ class Ptsv2paymentsidcapturesPointOfSaleInformationEmv(object):
         'fallback': 'fallback'
     }
 
-    def __init__(self, tags=None, fallback=False):
+    def __init__(self, tags=None, fallback=None):
         """
         Ptsv2paymentsidcapturesPointOfSaleInformationEmv - a model defined in Swagger
         """

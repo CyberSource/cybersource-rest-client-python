@@ -44,7 +44,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
         'system_trace_audit_number': 'str',
-        'response_code_source': 'str'
+        'response_code_source': 'str',
+        'payment_account_reference_number': 'str'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'ach_verification': 'achVerification',
         'electronic_verification_results': 'electronicVerificationResults',
         'system_trace_audit_number': 'systemTraceAuditNumber',
-        'response_code_source': 'responseCodeSource'
+        'response_code_source': 'responseCodeSource',
+        'payment_account_reference_number': 'paymentAccountReferenceNumber'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -83,6 +85,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._electronic_verification_results = None
         self._system_trace_audit_number = None
         self._response_code_source = None
+        self._payment_account_reference_number = None
 
         if processor is not None:
           self.processor = processor
@@ -112,6 +115,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.system_trace_audit_number = system_trace_audit_number
         if response_code_source is not None:
           self.response_code_source = response_code_source
+        if payment_account_reference_number is not None:
+          self.payment_account_reference_number = payment_account_reference_number
 
     @property
     def processor(self):
@@ -424,6 +429,29 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._response_code_source = response_code_source
+
+    @property
+    def payment_account_reference_number(self):
+        """
+        Gets the payment_account_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. This reply field is returned only for CyberSource through VisaNet.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR8 - Position: 79-110 - Field: Payment Account Reference  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
+
+        :return: The payment_account_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._payment_account_reference_number
+
+    @payment_account_reference_number.setter
+    def payment_account_reference_number(self, payment_account_reference_number):
+        """
+        Sets the payment_account_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        Visa-generated reference number that identifies a card-present transaction for which you provided one of the following:   - Visa primary account number (PAN)  - Visa-generated token for a PAN  This reference number serves as a link to the cardholder account and to all transactions for that account. This reply field is returned only for CyberSource through VisaNet.  **Note** On CyberSource through VisaNet, the value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR8 - Position: 79-110 - Field: Payment Account Reference  The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment networks. 
+
+        :param payment_account_reference_number: The payment_account_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._payment_account_reference_number = payment_account_reference_number
 
     def to_dict(self):
         """

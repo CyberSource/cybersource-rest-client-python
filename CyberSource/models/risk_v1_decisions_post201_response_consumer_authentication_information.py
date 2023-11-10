@@ -37,7 +37,10 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'acs_url': 'str',
         'authentication_path': 'str',
         'authorization_payload': 'str',
+        'authentication_type': 'str',
         'authentication_transaction_id': 'str',
+        'authentication_transaction_context_id': 'str',
+        'validity_period': 'int',
         'cardholder_message': 'str',
         'cavv': 'str',
         'cavv_algorithm': 'str',
@@ -66,7 +69,13 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'veres_enrolled': 'str',
         'white_list_status_source': 'str',
         'xid': 'str',
-        'directory_server_transaction_id': 'str'
+        'directory_server_transaction_id': 'str',
+        'acs_operator_id': 'str',
+        'acs_reference_number': 'str',
+        'idci_decision': 'str',
+        'idci_reason_code1': 'str',
+        'idci_reason_code2': 'str',
+        'idci_score': 'int'
     }
 
     attribute_map = {
@@ -76,7 +85,10 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'acs_url': 'acsUrl',
         'authentication_path': 'authenticationPath',
         'authorization_payload': 'authorizationPayload',
+        'authentication_type': 'authenticationType',
         'authentication_transaction_id': 'authenticationTransactionId',
+        'authentication_transaction_context_id': 'authenticationTransactionContextId',
+        'validity_period': 'validityPeriod',
         'cardholder_message': 'cardholderMessage',
         'cavv': 'cavv',
         'cavv_algorithm': 'cavvAlgorithm',
@@ -105,10 +117,16 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'veres_enrolled': 'veresEnrolled',
         'white_list_status_source': 'whiteListStatusSource',
         'xid': 'xid',
-        'directory_server_transaction_id': 'directoryServerTransactionId'
+        'directory_server_transaction_id': 'directoryServerTransactionId',
+        'acs_operator_id': 'acsOperatorID',
+        'acs_reference_number': 'acsReferenceNumber',
+        'idci_decision': 'idciDecision',
+        'idci_reason_code1': 'idciReasonCode1',
+        'idci_reason_code2': 'idciReasonCode2',
+        'idci_score': 'idciScore'
     }
 
-    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_type=None, authentication_transaction_id=None, authentication_transaction_context_id=None, validity_period=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, acs_operator_id=None, acs_reference_number=None, idci_decision=None, idci_reason_code1=None, idci_reason_code2=None, idci_score=None):
         """
         RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -119,7 +137,10 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         self._acs_url = None
         self._authentication_path = None
         self._authorization_payload = None
+        self._authentication_type = None
         self._authentication_transaction_id = None
+        self._authentication_transaction_context_id = None
+        self._validity_period = None
         self._cardholder_message = None
         self._cavv = None
         self._cavv_algorithm = None
@@ -149,6 +170,12 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         self._white_list_status_source = None
         self._xid = None
         self._directory_server_transaction_id = None
+        self._acs_operator_id = None
+        self._acs_reference_number = None
+        self._idci_decision = None
+        self._idci_reason_code1 = None
+        self._idci_reason_code2 = None
+        self._idci_score = None
 
         if access_token is not None:
           self.access_token = access_token
@@ -162,8 +189,14 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
           self.authentication_path = authentication_path
         if authorization_payload is not None:
           self.authorization_payload = authorization_payload
+        if authentication_type is not None:
+          self.authentication_type = authentication_type
         if authentication_transaction_id is not None:
           self.authentication_transaction_id = authentication_transaction_id
+        if authentication_transaction_context_id is not None:
+          self.authentication_transaction_context_id = authentication_transaction_context_id
+        if validity_period is not None:
+          self.validity_period = validity_period
         if cardholder_message is not None:
           self.cardholder_message = cardholder_message
         if cavv is not None:
@@ -222,6 +255,18 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
           self.xid = xid
         if directory_server_transaction_id is not None:
           self.directory_server_transaction_id = directory_server_transaction_id
+        if acs_operator_id is not None:
+          self.acs_operator_id = acs_operator_id
+        if acs_reference_number is not None:
+          self.acs_reference_number = acs_reference_number
+        if idci_decision is not None:
+          self.idci_decision = idci_decision
+        if idci_reason_code1 is not None:
+          self.idci_reason_code1 = idci_reason_code1
+        if idci_reason_code2 is not None:
+          self.idci_reason_code2 = idci_reason_code2
+        if idci_score is not None:
+          self.idci_score = idci_score
 
     @property
     def access_token(self):
@@ -362,10 +407,33 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         self._authorization_payload = authorization_payload
 
     @property
+    def authentication_type(self):
+        """
+        Gets the authentication_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+
+        :return: The authentication_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_type
+
+    @authentication_type.setter
+    def authentication_type(self, authentication_type):
+        """
+        Sets the authentication_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+
+        :param authentication_type: The authentication_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_type = authentication_type
+
+    @property
     def authentication_transaction_id(self):
         """
         Gets the authentication_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. 
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
 
         :return: The authentication_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -376,13 +444,59 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
     def authentication_transaction_id(self, authentication_transaction_id):
         """
         Sets the authentication_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
-        Payer authentication transaction identifier passed to link the check enrollment and validate authentication messages. 
+        Payer authentication transaction identifier is used to link the check enrollment and validate authentication messages. For Rupay, this field should be passed as request only for Resend OTP use case. 
 
         :param authentication_transaction_id: The authentication_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
 
         self._authentication_transaction_id = authentication_transaction_id
+
+    @property
+    def authentication_transaction_context_id(self):
+        """
+        Gets the authentication_transaction_context_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier passed to link the validation and authorization calls. 
+
+        :return: The authentication_transaction_context_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_transaction_context_id
+
+    @authentication_transaction_context_id.setter
+    def authentication_transaction_context_id(self, authentication_transaction_context_id):
+        """
+        Sets the authentication_transaction_context_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication transaction identifier passed to link the validation and authorization calls. 
+
+        :param authentication_transaction_context_id: The authentication_transaction_context_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_transaction_context_id = authentication_transaction_context_id
+
+    @property
+    def validity_period(self):
+        """
+        Gets the validity_period of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Describes validity of OTP in minutes for incoming transaction.        . 
+
+        :return: The validity_period of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._validity_period
+
+    @validity_period.setter
+    def validity_period(self, validity_period):
+        """
+        Sets the validity_period of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Describes validity of OTP in minutes for incoming transaction.        . 
+
+        :param validity_period: The validity_period of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._validity_period = validity_period
 
     @property
     def cardholder_message(self):
@@ -1048,6 +1162,144 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         """
 
         self._directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def acs_operator_id(self):
+        """
+        Gets the acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :return: The acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_operator_id
+
+    @acs_operator_id.setter
+    def acs_operator_id(self, acs_operator_id):
+        """
+        Sets the acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :param acs_operator_id: The acs_operator_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_operator_id = acs_operator_id
+
+    @property
+    def acs_reference_number(self):
+        """
+        Gets the acs_reference_number of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :return: The acs_reference_number of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_reference_number
+
+    @acs_reference_number.setter
+    def acs_reference_number(self, acs_reference_number):
+        """
+        Sets the acs_reference_number of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :param acs_reference_number: The acs_reference_number of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_reference_number = acs_reference_number
+
+    @property
+    def idci_decision(self):
+        """
+        Gets the idci_decision of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Decision on the Risk Assessment from Mastercard.
+
+        :return: The idci_decision of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_decision
+
+    @idci_decision.setter
+    def idci_decision(self, idci_decision):
+        """
+        Sets the idci_decision of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Decision on the Risk Assessment from Mastercard.
+
+        :param idci_decision: The idci_decision of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_decision = idci_decision
+
+    @property
+    def idci_reason_code1(self):
+        """
+        Gets the idci_reason_code1 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :return: The idci_reason_code1 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_reason_code1
+
+    @idci_reason_code1.setter
+    def idci_reason_code1(self, idci_reason_code1):
+        """
+        Sets the idci_reason_code1 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :param idci_reason_code1: The idci_reason_code1 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_reason_code1 = idci_reason_code1
+
+    @property
+    def idci_reason_code2(self):
+        """
+        Gets the idci_reason_code2 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :return: The idci_reason_code2 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._idci_reason_code2
+
+    @idci_reason_code2.setter
+    def idci_reason_code2(self, idci_reason_code2):
+        """
+        Sets the idci_reason_code2 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        ReasonCode from Mastercard
+
+        :param idci_reason_code2: The idci_reason_code2 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._idci_reason_code2 = idci_reason_code2
+
+    @property
+    def idci_score(self):
+        """
+        Gets the idci_score of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard
+
+        :return: The idci_score of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: int
+        """
+        return self._idci_score
+
+    @idci_score.setter
+    def idci_score(self, idci_score):
+        """
+        Sets the idci_score of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Risk Assessment from Mastercard
+
+        :param idci_score: The idci_score of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: int
+        """
+
+        self._idci_score = idci_score
 
     def to_dict(self):
         """

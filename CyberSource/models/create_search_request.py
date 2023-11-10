@@ -197,7 +197,7 @@ class CreateSearchRequest(object):
     def limit(self):
         """
         Gets the limit of this CreateSearchRequest.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2000. 
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
 
         :return: The limit of this CreateSearchRequest.
         :rtype: int
@@ -208,7 +208,7 @@ class CreateSearchRequest(object):
     def limit(self, limit):
         """
         Sets the limit of this CreateSearchRequest.
-        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2000. 
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
 
         :param limit: The limit of this CreateSearchRequest.
         :type: int

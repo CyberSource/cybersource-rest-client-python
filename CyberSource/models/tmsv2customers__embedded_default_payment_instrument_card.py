@@ -38,6 +38,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         'start_month': 'str',
         'start_year': 'str',
         'use_as': 'str',
+        'hash': 'str',
         'tokenized_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation'
     }
 
@@ -49,10 +50,11 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         'start_month': 'startMonth',
         'start_year': 'startYear',
         'use_as': 'useAs',
+        'hash': 'hash',
         'tokenized_information': 'tokenizedInformation'
     }
 
-    def __init__(self, expiration_month=None, expiration_year=None, type=None, issue_number=None, start_month=None, start_year=None, use_as=None, tokenized_information=None):
+    def __init__(self, expiration_month=None, expiration_year=None, type=None, issue_number=None, start_month=None, start_year=None, use_as=None, hash=None, tokenized_information=None):
         """
         Tmsv2customersEmbeddedDefaultPaymentInstrumentCard - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         self._start_month = None
         self._start_year = None
         self._use_as = None
+        self._hash = None
         self._tokenized_information = None
 
         if expiration_month is not None:
@@ -80,6 +83,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
           self.start_year = start_year
         if use_as is not None:
           self.use_as = use_as
+        if hash is not None:
+          self.hash = hash
         if tokenized_information is not None:
           self.tokenized_information = tokenized_information
 
@@ -87,7 +92,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def expiration_month(self):
         """
         Gets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Two-digit month in which the payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :return: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :rtype: str
@@ -98,7 +103,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Two-digit month in which the payment card expires.  Format: `MM`.  Valid values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :param expiration_month: The expiration_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
@@ -133,7 +138,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def type(self):
         """
         Gets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Value that indicates the card type. Valid v2 : v1 - description values:   * 001 : visa   * 002 : mastercard - Eurocard—European regional brand of Mastercard   * 003 : american express   * 004 : discover   * 005 : diners club   * 006 : carte blanche   * 007 : jcb   * 008 : optima   * 011 : twinpay credit   * 012 : twinpay debit   * 013 : walmart   * 014 : enRoute   * 015 : lowes consumer   * 016 : home depot consumer   * 017 : mbna   * 018 : dicks sportswear   * 019 : casual corner   * 020 : sears   * 021 : jal   * 023 : disney   * 024 : maestro uk domestic   * 025 : sams club consumer   * 026 : sams club business   * 028 : bill me later   * 029 : bebe   * 030 : restoration hardware   * 031 : delta online — use this value only for Ingenico ePayments. For other processors, use 001 for all Visa card types.   * 032 : solo   * 033 : visa electron   * 034 : dankort   * 035 : laser   * 036 : carte bleue — formerly Cartes Bancaires   * 037 : carta si   * 038 : pinless debit   * 039 : encoded account   * 040 : uatp   * 041 : household   * 042 : maestro international   * 043 : ge money uk   * 044 : korean cards   * 045 : style   * 046 : jcrew   * 047 : payease china processing ewallet   * 048 : payease china processing bank transfer   * 049 : meijer private label   * 050 : hipercard — supported only by the Comercio Latino processor.   * 051 : aura — supported only by the Comercio Latino processor.   * 052 : redecard   * 054 : elo — supported only by the Comercio Latino processor.   * 055 : capital one private label   * 056 : synchrony private label   * 057 : costco private label   * 060 : mada   * 062 : china union pay   * 063 : falabella private label 
+        Value that indicates the card type. Possible Values v2 : v1:   * 001 : visa   * 002 : mastercard - Eurocard—European regional brand of Mastercard   * 003 : american express   * 004 : discover   * 005 : diners club   * 006 : carte blanche   * 007 : jcb   * 008 : optima   * 011 : twinpay credit   * 012 : twinpay debit   * 013 : walmart   * 014 : enRoute   * 015 : lowes consumer   * 016 : home depot consumer   * 017 : mbna   * 018 : dicks sportswear   * 019 : casual corner   * 020 : sears   * 021 : jal   * 023 : disney   * 024 : maestro uk domestic   * 025 : sams club consumer   * 026 : sams club business   * 028 : bill me later   * 029 : bebe   * 030 : restoration hardware   * 031 : delta online — use this value only for Ingenico ePayments. For other processors, use 001 for all Visa card types.   * 032 : solo   * 033 : visa electron   * 034 : dankort   * 035 : laser   * 036 : carte bleue — formerly Cartes Bancaires   * 037 : carta si   * 038 : pinless debit   * 039 : encoded account   * 040 : uatp   * 041 : household   * 042 : maestro international   * 043 : ge money uk   * 044 : korean cards   * 045 : style   * 046 : jcrew   * 047 : payease china processing ewallet   * 048 : payease china processing bank transfer   * 049 : meijer private label   * 050 : hipercard — supported only by the Comercio Latino processor.   * 051 : aura — supported only by the Comercio Latino processor.   * 052 : redecard   * 054 : elo — supported only by the Comercio Latino processor.   * 055 : capital one private label   * 056 : synchrony private label   * 057 : costco private label   * 060 : mada   * 062 : china union pay   * 063 : falabella private label 
 
         :return: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :rtype: str
@@ -144,7 +149,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def type(self, type):
         """
         Sets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Value that indicates the card type. Valid v2 : v1 - description values:   * 001 : visa   * 002 : mastercard - Eurocard—European regional brand of Mastercard   * 003 : american express   * 004 : discover   * 005 : diners club   * 006 : carte blanche   * 007 : jcb   * 008 : optima   * 011 : twinpay credit   * 012 : twinpay debit   * 013 : walmart   * 014 : enRoute   * 015 : lowes consumer   * 016 : home depot consumer   * 017 : mbna   * 018 : dicks sportswear   * 019 : casual corner   * 020 : sears   * 021 : jal   * 023 : disney   * 024 : maestro uk domestic   * 025 : sams club consumer   * 026 : sams club business   * 028 : bill me later   * 029 : bebe   * 030 : restoration hardware   * 031 : delta online — use this value only for Ingenico ePayments. For other processors, use 001 for all Visa card types.   * 032 : solo   * 033 : visa electron   * 034 : dankort   * 035 : laser   * 036 : carte bleue — formerly Cartes Bancaires   * 037 : carta si   * 038 : pinless debit   * 039 : encoded account   * 040 : uatp   * 041 : household   * 042 : maestro international   * 043 : ge money uk   * 044 : korean cards   * 045 : style   * 046 : jcrew   * 047 : payease china processing ewallet   * 048 : payease china processing bank transfer   * 049 : meijer private label   * 050 : hipercard — supported only by the Comercio Latino processor.   * 051 : aura — supported only by the Comercio Latino processor.   * 052 : redecard   * 054 : elo — supported only by the Comercio Latino processor.   * 055 : capital one private label   * 056 : synchrony private label   * 057 : costco private label   * 060 : mada   * 062 : china union pay   * 063 : falabella private label 
+        Value that indicates the card type. Possible Values v2 : v1:   * 001 : visa   * 002 : mastercard - Eurocard—European regional brand of Mastercard   * 003 : american express   * 004 : discover   * 005 : diners club   * 006 : carte blanche   * 007 : jcb   * 008 : optima   * 011 : twinpay credit   * 012 : twinpay debit   * 013 : walmart   * 014 : enRoute   * 015 : lowes consumer   * 016 : home depot consumer   * 017 : mbna   * 018 : dicks sportswear   * 019 : casual corner   * 020 : sears   * 021 : jal   * 023 : disney   * 024 : maestro uk domestic   * 025 : sams club consumer   * 026 : sams club business   * 028 : bill me later   * 029 : bebe   * 030 : restoration hardware   * 031 : delta online — use this value only for Ingenico ePayments. For other processors, use 001 for all Visa card types.   * 032 : solo   * 033 : visa electron   * 034 : dankort   * 035 : laser   * 036 : carte bleue — formerly Cartes Bancaires   * 037 : carta si   * 038 : pinless debit   * 039 : encoded account   * 040 : uatp   * 041 : household   * 042 : maestro international   * 043 : ge money uk   * 044 : korean cards   * 045 : style   * 046 : jcrew   * 047 : payease china processing ewallet   * 048 : payease china processing bank transfer   * 049 : meijer private label   * 050 : hipercard — supported only by the Comercio Latino processor.   * 051 : aura — supported only by the Comercio Latino processor.   * 052 : redecard   * 054 : elo — supported only by the Comercio Latino processor.   * 055 : capital one private label   * 056 : synchrony private label   * 057 : costco private label   * 060 : mada   * 062 : china union pay   * 063 : falabella private label 
 
         :param type: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
@@ -179,7 +184,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def start_month(self):
         """
         Gets the start_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Valid values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible Values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :return: The start_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :rtype: str
@@ -190,7 +195,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
     def start_month(self, start_month):
         """
         Sets the start_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
-        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Valid values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
+        Month of the start of the Maestro (UK Domestic) card validity period. Do not include the field, even with a blank value, if the card is not a Maestro (UK Domestic) card. `Format: MM`. Possible Values: 01 through 12.  **Note** The start date is not required for Maestro (UK Domestic) transactions. 
 
         :param start_month: The start_month of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
@@ -243,6 +248,29 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         """
 
         self._use_as = use_as
+
+    @property
+    def hash(self):
+        """
+        Gets the hash of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
+        Hash value representing the card. 
+
+        :return: The hash of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
+        :rtype: str
+        """
+        return self._hash
+
+    @hash.setter
+    def hash(self, hash):
+        """
+        Sets the hash of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
+        Hash value representing the card. 
+
+        :param hash: The hash of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
+        :type: str
+        """
+
+        self._hash = hash
 
     @property
     def tokenized_information(self):

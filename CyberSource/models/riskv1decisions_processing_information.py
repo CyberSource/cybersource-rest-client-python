@@ -52,7 +52,7 @@ class Riskv1decisionsProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Riskv1decisionsProcessingInformation.
-        Use CONSUMER_AUTHENTICATION to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. 
+        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. 
 
         :return: The action_list of this Riskv1decisionsProcessingInformation.
         :rtype: list[str]
@@ -63,7 +63,7 @@ class Riskv1decisionsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Riskv1decisionsProcessingInformation.
-        Use CONSUMER_AUTHENTICATION to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. 
+        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. 
 
         :param action_list: The action_list of this Riskv1decisionsProcessingInformation.
         :type: list[str]

@@ -52,7 +52,7 @@ class Tmsv2customersMetadata(object):
     def creator(self):
         """
         Gets the creator of this Tmsv2customersMetadata.
-        The creator of the Customer token. 
+        The creator of the Customer. 
 
         :return: The creator of this Tmsv2customersMetadata.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersMetadata(object):
     def creator(self, creator):
         """
         Sets the creator of this Tmsv2customersMetadata.
-        The creator of the Customer token. 
+        The creator of the Customer. 
 
         :param creator: The creator of this Tmsv2customersMetadata.
         :type: str

@@ -26,6 +26,8 @@ class MerchantConfiguration:
         self.authentication_type = None
         self.key_file_path = None
         self.run_environment = None
+        self.IntermediateHost = None
+        self.default_headers = None
         self.key_alias = None
         self.key_password = None
         self.enable_client_cert = None
@@ -46,6 +48,7 @@ class MerchantConfiguration:
         self.request_json_path_data = None
         self.solution_id = None
         self.log_config = None
+        self.__jwePEMFileDirectory = None
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
     def set_merchant_keyid(self, value):
@@ -85,6 +88,14 @@ class MerchantConfiguration:
     def set_portfolio_id(self, value):
         if not (value.get('portfolio_id') is None):
             self.portfolio_id = value['portfolio_id']
+
+    def set_IntermediateHost(self, value):
+        if not (value.get('IntermediateHost') is None):
+            self.IntermediateHost = value['IntermediateHost']
+
+    def set_default_headers(self, value):
+        if not (value.get('default_headers') is None):
+            self.default_headers = value['default_headers']
 
     def set_run_environment(self, value):
         if not (value.get('run_environment') is None):
@@ -158,6 +169,13 @@ class MerchantConfiguration:
         if not (value.get('log_config') is None):
             self.log_config = value['log_config']
 
+    def set_jwePEMFileDirectory(self, value):
+        if not (value.get('jwePEMFileDirectory') is None):
+            self.__jwePEMFileDirectory = value['jwePEMFileDirectory']
+
+    def get_jwePEMFileDirectory(self):
+        return self.__jwePEMFileDirectory
+
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
 
@@ -170,6 +188,8 @@ class MerchantConfiguration:
         self.set_use_metakey(val)
         self.set_portfolio_id(val)
         self.set_run_environment(val)
+        self.set_IntermediateHost(val)
+        self.set_default_headers(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)
         self.set_request_host(val)
@@ -185,6 +205,7 @@ class MerchantConfiguration:
         self.set_access_token(val)
         self.set_refresh_token(val)
         self.set_log_configuration(val)
+        self.set_jwePEMFileDirectory(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
