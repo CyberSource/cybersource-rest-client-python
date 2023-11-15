@@ -15,7 +15,7 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
 
-
+from ..utilities.tracking.sdk_tracker import SdkTracker
 {{#operations}}
 class {{classname}}(object):
     """
@@ -220,6 +220,9 @@ class {{classname}}(object):
 {{#bodyParam}}
         if '{{paramName}}' in params:
             body_params = params['{{paramName}}']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, '{{paramName}}', self.api_client.mconfig.run_environment)
 {{/bodyParam}}
 {{^bodyParam}}
         if '{{httpMethod}}' in ('POST'):

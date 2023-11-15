@@ -32,6 +32,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     """
     swagger_types = {
         'cavv': 'str',
+        'transaction_flow_indicator': 'str',
         'cavv_algorithm': 'str',
         'eci_raw': 'str',
         'pares_status': 'str',
@@ -91,6 +92,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
 
     attribute_map = {
         'cavv': 'cavv',
+        'transaction_flow_indicator': 'transactionFlowIndicator',
         'cavv_algorithm': 'cavvAlgorithm',
         'eci_raw': 'eciRaw',
         'pares_status': 'paresStatus',
@@ -148,12 +150,13 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'signed_pares': 'signedPares'
     }
 
-    def __init__(self, cavv=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
+    def __init__(self, cavv=None, transaction_flow_indicator=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._cavv = None
+        self._transaction_flow_indicator = None
         self._cavv_algorithm = None
         self._eci_raw = None
         self._pares_status = None
@@ -212,6 +215,8 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
 
         if cavv is not None:
           self.cavv = cavv
+        if transaction_flow_indicator is not None:
+          self.transaction_flow_indicator = transaction_flow_indicator
         if cavv_algorithm is not None:
           self.cavv_algorithm = cavv_algorithm
         if eci_raw is not None:
@@ -345,6 +350,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._cavv = cavv
+
+    @property
+    def transaction_flow_indicator(self):
+        """
+        Gets the transaction_flow_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        This field details out the type of transaction. Below are the possible values. 08:GC- Guest Checkout. 
+
+        :return: The transaction_flow_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._transaction_flow_indicator
+
+    @transaction_flow_indicator.setter
+    def transaction_flow_indicator(self, transaction_flow_indicator):
+        """
+        Sets the transaction_flow_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        This field details out the type of transaction. Below are the possible values. 08:GC- Guest Checkout. 
+
+        :param transaction_flow_indicator: The transaction_flow_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._transaction_flow_indicator = transaction_flow_indicator
 
     @property
     def cavv_algorithm(self):

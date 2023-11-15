@@ -36,7 +36,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         'country': 'str',
         'administrative_area': 'str',
         'postal_code': 'str',
-        'contact': 'str'
+        'contact': 'str',
+        'address1': 'str'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         'country': 'country',
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
-        'contact': 'contact'
+        'contact': 'contact',
+        'address1': 'address1'
     }
 
-    def __init__(self, name=None, locality=None, country=None, administrative_area=None, postal_code=None, contact=None):
+    def __init__(self, name=None, locality=None, country=None, administrative_area=None, postal_code=None, contact=None, address1=None):
         """
         Ptsv2payoutsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         self._administrative_area = None
         self._postal_code = None
         self._contact = None
+        self._address1 = None
 
         if name is not None:
           self.name = name
@@ -72,6 +75,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
           self.postal_code = postal_code
         if contact is not None:
           self.contact = contact
+        if address1 is not None:
+          self.address1 = address1
 
     @property
     def name(self):
@@ -210,6 +215,29 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         """
 
         self._contact = contact
+
+    @property
+    def address1(self):
+        """
+        Gets the address1 of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
+        First line of merchant's address. For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_street` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :return: The address1 of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._address1
+
+    @address1.setter
+    def address1(self, address1):
+        """
+        Sets the address1 of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
+        First line of merchant's address. For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_street` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+
+        :param address1: The address1 of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._address1 = address1
 
     def to_dict(self):
         """

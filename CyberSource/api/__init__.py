@@ -7,6 +7,7 @@ from .batches_api import BatchesApi
 from .chargeback_details_api import ChargebackDetailsApi
 from .chargeback_summaries_api import ChargebackSummariesApi
 from .conversion_details_api import ConversionDetailsApi
+from .create_new_webhooks_api import CreateNewWebhooksApi
 from .customer_api import CustomerApi
 from .customer_payment_instrument_api import CustomerPaymentInstrumentApi
 from .customer_shipping_address_api import CustomerShippingAddressApi
@@ -16,6 +17,8 @@ from .download_xsd_api import DownloadXSDApi
 from .emv_tag_details_api import EMVTagDetailsApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
+from .manage_webhooks_api import ManageWebhooksApi
+from .merchant_boarding_api import MerchantBoardingApi
 from .microform_integration_api import MicroformIntegrationApi
 from .net_fundings_api import NetFundingsApi
 from .notification_of_changes_api import NotificationOfChangesApi
