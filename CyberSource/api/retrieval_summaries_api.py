@@ -125,14 +125,6 @@ class RetrievalSummariesApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_retrieval_summary`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_retrieval_summary`")
 
-        if 'organization_id' in params and len(params['organization_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_retrieval_summary`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_retrieval_summary`, length must be less than or equal to `32`")
-        if 'organization_id' in params and len(params['organization_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_retrieval_summary`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_retrieval_summary`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_retrieval_summary`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")

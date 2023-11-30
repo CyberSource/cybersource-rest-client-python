@@ -135,26 +135,10 @@ class PurchaseAndRefundDetailsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_purchase_and_refund_details`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_purchase_and_refund_details`")
 
-        if 'organization_id' in params and len(params['organization_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, length must be less than or equal to `32`")
-        if 'organization_id' in params and len(params['organization_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
             raise ValueError("Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-        if 'limit' in params and params['limit'] > 2000:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_purchase_and_refund_details`, must be a value less than or equal to `2000`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_purchase_and_refund_details`, must be a value less than or equal to `2000`")
-        if 'limit' in params and params['limit'] < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_purchase_and_refund_details`, must be a value greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_purchase_and_refund_details`, must be a value greater than or equal to `1`")
 
         collection_formats = {}
 

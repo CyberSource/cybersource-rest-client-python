@@ -118,22 +118,6 @@ class CustomerApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `delete_customer`")
             raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -251,22 +235,6 @@ class CustomerApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -393,30 +361,6 @@ class CustomerApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_request` when calling `patch_customer`")
             raise ValueError("Missing the required parameter `patch_customer_request` when calling `patch_customer`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customer`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customer`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customer`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customer`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customer`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customer`, length must be greater than or equal to `36`")
-        if 'if_match' in params and len(params['if_match']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customer`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_customer`, length must be less than or equal to `32`")
-        if 'if_match' in params and len(params['if_match']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customer`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_customer`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -539,14 +483,6 @@ class CustomerApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_request` when calling `post_customer`")
             raise ValueError("Missing the required parameter `post_customer_request` when calling `post_customer`")
 
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 

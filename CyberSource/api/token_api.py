@@ -118,22 +118,6 @@ class TokenApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `token_id` when calling `post_token_payment_credentials`")
             raise ValueError("Missing the required parameter `token_id` when calling `post_token_payment_credentials`")
 
-        if 'token_id' in params and len(params['token_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `token_id` when calling `post_token_payment_credentials`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `token_id` when calling `post_token_payment_credentials`, length must be less than or equal to `32`")
-        if 'token_id' in params and len(params['token_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `token_id` when calling `post_token_payment_credentials`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `token_id` when calling `post_token_payment_credentials`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_token_payment_credentials`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_token_payment_credentials`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_token_payment_credentials`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_token_payment_credentials`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
