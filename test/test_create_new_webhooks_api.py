@@ -31,17 +31,17 @@ class TestCreateNewWebhooksApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_webhook(self):
+    def test_create_webhook_subscription(self):
         """
-        Test case for create_webhook
+        Test case for create_webhook_subscription
 
         Create a Webhook
         """
         pass
 
-    def test_find_product_to_subscribe(self):
+    def test_find_products_to_subscribe(self):
         """
-        Test case for find_product_to_subscribe
+        Test case for find_products_to_subscribe
 
         Find Products You Can Subscribe To
         """

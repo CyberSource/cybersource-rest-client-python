@@ -102,7 +102,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def name(self):
         """
         Gets the name of this Upv1capturecontextsOrderInformationBillToCompany.
-        Name of the customer’s company.
+        Name of the customer's company.
 
         :return: The name of this Upv1capturecontextsOrderInformationBillToCompany.
         :rtype: str
@@ -113,7 +113,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def name(self, name):
         """
         Sets the name of this Upv1capturecontextsOrderInformationBillToCompany.
-        Name of the customer’s company.
+        Name of the customer's company.
 
         :param name: The name of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
@@ -125,7 +125,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def address1(self):
         """
         Gets the address1 of this Upv1capturecontextsOrderInformationBillToCompany.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :return: The address1 of this Upv1capturecontextsOrderInformationBillToCompany.
         :rtype: str
@@ -136,7 +136,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def address1(self, address1):
         """
         Sets the address1 of this Upv1capturecontextsOrderInformationBillToCompany.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :param address1: The address1 of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
@@ -286,7 +286,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def district(self):
         """
         Gets the district of this Upv1capturecontextsOrderInformationBillToCompany.
-        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
+        Customer's neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
 
         :return: The district of this Upv1capturecontextsOrderInformationBillToCompany.
         :rtype: str
@@ -297,7 +297,7 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
     def district(self, district):
         """
         Sets the district of this Upv1capturecontextsOrderInformationBillToCompany.
-        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
+        Customer's neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
 
         :param district: The district of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str

@@ -151,7 +151,7 @@ class Riskv1authenticationsDeviceInformation(object):
     def http_accept_browser_value(self):
         """
         Gets the http_accept_browser_value of this Riskv1authenticationsDeviceInformation.
-        Value of the Accept header sent by the customer’s web browser. **Note** If the customer’s browser provides a value, you must include it in your request. 
+        Value of the Accept header sent by the customer's web browser. **Note** If the customer's browser provides a value, you must include it in your request. 
 
         :return: The http_accept_browser_value of this Riskv1authenticationsDeviceInformation.
         :rtype: str
@@ -162,7 +162,7 @@ class Riskv1authenticationsDeviceInformation(object):
     def http_accept_browser_value(self, http_accept_browser_value):
         """
         Sets the http_accept_browser_value of this Riskv1authenticationsDeviceInformation.
-        Value of the Accept header sent by the customer’s web browser. **Note** If the customer’s browser provides a value, you must include it in your request. 
+        Value of the Accept header sent by the customer's web browser. **Note** If the customer's browser provides a value, you must include it in your request. 
 
         :param http_accept_browser_value: The http_accept_browser_value of this Riskv1authenticationsDeviceInformation.
         :type: str
@@ -358,7 +358,7 @@ class Riskv1authenticationsDeviceInformation(object):
     def user_agent_browser_value(self):
         """
         Gets the user_agent_browser_value of this Riskv1authenticationsDeviceInformation.
-        Value of the User-Agent header sent by the customer’s web browser. Note If the customer’s browser provides a value, you must include it in your request. 
+        Value of the User-Agent header sent by the customer's web browser. Note If the customer's browser provides a value, you must include it in your request. 
 
         :return: The user_agent_browser_value of this Riskv1authenticationsDeviceInformation.
         :rtype: str
@@ -369,7 +369,7 @@ class Riskv1authenticationsDeviceInformation(object):
     def user_agent_browser_value(self, user_agent_browser_value):
         """
         Sets the user_agent_browser_value of this Riskv1authenticationsDeviceInformation.
-        Value of the User-Agent header sent by the customer’s web browser. Note If the customer’s browser provides a value, you must include it in your request. 
+        Value of the User-Agent header sent by the customer's web browser. Note If the customer's browser provides a value, you must include it in your request. 
 
         :param user_agent_browser_value: The user_agent_browser_value of this Riskv1authenticationsDeviceInformation.
         :type: str

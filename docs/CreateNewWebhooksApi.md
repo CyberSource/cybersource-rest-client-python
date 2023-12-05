@@ -4,13 +4,13 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_webhook**](CreateNewWebhooksApi.md#create_webhook) | **POST** /notification-subscriptions/v1/webhooks | Create a Webhook
-[**find_product_to_subscribe**](CreateNewWebhooksApi.md#find_product_to_subscribe) | **GET** /notification-subscriptions/v1/products/{organizationId} | Find Products You Can Subscribe To
+[**create_webhook_subscription**](CreateNewWebhooksApi.md#create_webhook_subscription) | **POST** /notification-subscriptions/v1/webhooks | Create a Webhook
+[**find_products_to_subscribe**](CreateNewWebhooksApi.md#find_products_to_subscribe) | **GET** /notification-subscriptions/v1/products/{organizationId} | Find Products You Can Subscribe To
 [**save_sym_egress_key**](CreateNewWebhooksApi.md#save_sym_egress_key) | **POST** /kms/egress/v2/keys-sym | Create Webhook Security Keys
 
 
-# **create_webhook**
-> InlineResponse2013 create_webhook(create_webhook=create_webhook)
+# **create_webhook_subscription**
+> InlineResponse2013 create_webhook_subscription(create_webhook_request=create_webhook_request)
 
 Create a Webhook
 
@@ -26,21 +26,21 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.CreateNewWebhooksApi()
-create_webhook = CyberSource.CreateWebhook() # CreateWebhook | The webhook payload (optional)
+create_webhook_request = CyberSource.CreateWebhookRequest() # CreateWebhookRequest | The webhook payload (optional)
 
 try: 
     # Create a Webhook
-    api_response = api_instance.create_webhook(create_webhook=create_webhook)
+    api_response = api_instance.create_webhook_subscription(create_webhook_request=create_webhook_request)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CreateNewWebhooksApi->create_webhook: %s\n" % e)
+    print("Exception when calling CreateNewWebhooksApi->create_webhook_subscription: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_webhook** | [**CreateWebhook**](CreateWebhook.md)| The webhook payload | [optional] 
+ **create_webhook_request** | [**CreateWebhookRequest**](CreateWebhookRequest.md)| The webhook payload | [optional] 
 
 ### Return type
 
@@ -53,12 +53,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **find_product_to_subscribe**
-> list[InlineResponse2003] find_product_to_subscribe(organization_id)
+# **find_products_to_subscribe**
+> list[InlineResponse2003] find_products_to_subscribe(organization_id)
 
 Find Products You Can Subscribe To
 
@@ -78,10 +78,10 @@ organization_id = 'organization_id_example' # str | The Organization Identifier.
 
 try: 
     # Find Products You Can Subscribe To
-    api_response = api_instance.find_product_to_subscribe(organization_id)
+    api_response = api_instance.find_products_to_subscribe(organization_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CreateNewWebhooksApi->find_product_to_subscribe: %s\n" % e)
+    print("Exception when calling CreateNewWebhooksApi->find_products_to_subscribe: %s\n" % e)
 ```
 
 ### Parameters
@@ -101,7 +101,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -155,7 +155,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

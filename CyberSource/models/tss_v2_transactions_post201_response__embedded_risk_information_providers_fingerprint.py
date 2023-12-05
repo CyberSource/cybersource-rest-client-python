@@ -62,7 +62,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self):
         """
         Gets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
+        Customer's true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :return: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :rtype: str
@@ -73,7 +73,7 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
     def true_ipaddress(self, true_ipaddress):
         """
         Sets the true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
-        Customer’s true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
+        Customer's true IP address detected by the application.  For details, see the `true_ipaddress` field description in _Device Fingerprinting Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Device Fingerprinting Guide_ (PDF link). 
 
         :param true_ipaddress: The true_ipaddress of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str

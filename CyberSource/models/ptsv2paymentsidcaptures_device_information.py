@@ -108,7 +108,7 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
     def user_agent(self):
         """
         Gets the user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
+        Customer's browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :return: The user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
         :rtype: str
@@ -119,7 +119,7 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
     def user_agent(self, user_agent):
         """
         Sets the user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
-        Customer’s browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
+        Customer's browser as identified from the HTTP header data. For example, `Mozilla` is the value that identifies the Netscape browser. 
 
         :param user_agent: The user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
         :type: str

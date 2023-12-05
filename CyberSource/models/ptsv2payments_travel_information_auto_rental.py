@@ -349,7 +349,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def distance_unit(self):
         """
         Gets the distance_unit of this Ptsv2paymentsTravelInformationAutoRental.
-        Miles/Kilometers Indicator shows whether the “miles” fields are expressed in miles or kilometers.  Allowed values: - `K` - Kilometers - `M` - Miles 
+        Miles/Kilometers Indicator shows whether the \"miles\" fields are expressed in miles or kilometers.  Allowed values: - `K` - Kilometers - `M` - Miles 
 
         :return: The distance_unit of this Ptsv2paymentsTravelInformationAutoRental.
         :rtype: str
@@ -360,7 +360,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def distance_unit(self, distance_unit):
         """
         Sets the distance_unit of this Ptsv2paymentsTravelInformationAutoRental.
-        Miles/Kilometers Indicator shows whether the “miles” fields are expressed in miles or kilometers.  Allowed values: - `K` - Kilometers - `M` - Miles 
+        Miles/Kilometers Indicator shows whether the \"miles\" fields are expressed in miles or kilometers.  Allowed values: - `K` - Kilometers - `M` - Miles 
 
         :param distance_unit: The distance_unit of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
@@ -464,7 +464,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def program_code(self):
         """
         Gets the program_code of this Ptsv2paymentsTravelInformationAutoRental.
-        Used to identify special circumstances applicable to the Card Transaction or Cardholder, such as \"renter” or ”show”.  This code is `2 digit` value agreed by Merchant and processor. 
+        Used to identify special circumstances applicable to the Card Transaction or Cardholder, such as \"renter\" or \"show\".  This code is `2 digit` value agreed by Merchant and processor. 
 
         :return: The program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :rtype: str
@@ -475,7 +475,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def program_code(self, program_code):
         """
         Sets the program_code of this Ptsv2paymentsTravelInformationAutoRental.
-        Used to identify special circumstances applicable to the Card Transaction or Cardholder, such as \"renter” or ”show”.  This code is `2 digit` value agreed by Merchant and processor. 
+        Used to identify special circumstances applicable to the Card Transaction or Cardholder, such as \"renter\" or \"show\".  This code is `2 digit` value agreed by Merchant and processor. 
 
         :param program_code: The program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
@@ -529,7 +529,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def agreement_number(self):
         """
         Gets the agreement_number of this Ptsv2paymentsTravelInformationAutoRental.
-        Auto rental agency’s agreement (invoice) number provided to the customer. It is used to trace any inquiries about transactions. This field is supported for Visa, MasterCard, and American Express. This Merchant-defined value, which may be composed of any combination of characters and/or numerals, may become part of the descriptive bill on the Cardmember's statement. 
+        Auto rental agency's agreement (invoice) number provided to the customer. It is used to trace any inquiries about transactions. This field is supported for Visa, MasterCard, and American Express. This Merchant-defined value, which may be composed of any combination of characters and/or numerals, may become part of the descriptive bill on the Cardmember's statement. 
 
         :return: The agreement_number of this Ptsv2paymentsTravelInformationAutoRental.
         :rtype: str
@@ -540,7 +540,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def agreement_number(self, agreement_number):
         """
         Sets the agreement_number of this Ptsv2paymentsTravelInformationAutoRental.
-        Auto rental agency’s agreement (invoice) number provided to the customer. It is used to trace any inquiries about transactions. This field is supported for Visa, MasterCard, and American Express. This Merchant-defined value, which may be composed of any combination of characters and/or numerals, may become part of the descriptive bill on the Cardmember's statement. 
+        Auto rental agency's agreement (invoice) number provided to the customer. It is used to trace any inquiries about transactions. This field is supported for Visa, MasterCard, and American Express. This Merchant-defined value, which may be composed of any combination of characters and/or numerals, may become part of the descriptive bill on the Cardmember's statement. 
 
         :param agreement_number: The agreement_number of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
@@ -667,7 +667,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def special_program_code(self):
         """
         Gets the special_program_code of this Ptsv2paymentsTravelInformationAutoRental.
-        Program code used to identify special circumstances, such as “frequent renter” or “no show” status for the renter. Possible values: - `0`: not applicable (default) - `1`: frequent renter - `2`: no show  For authorizations, this field is supported only for Visa.  For captures, this field is supported for Visa, MasterCard, and American Express.  Code for special programs applicable to the Card Transaction or the Cardholder. 
+        Program code used to identify special circumstances, such as \"frequent renter\" or \"no show\" status for the renter. Possible values: - `0`: not applicable (default) - `1`: frequent renter - `2`: no show  For authorizations, this field is supported only for Visa.  For captures, this field is supported for Visa, MasterCard, and American Express.  Code for special programs applicable to the Card Transaction or the Cardholder. 
 
         :return: The special_program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :rtype: str
@@ -678,7 +678,7 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
     def special_program_code(self, special_program_code):
         """
         Sets the special_program_code of this Ptsv2paymentsTravelInformationAutoRental.
-        Program code used to identify special circumstances, such as “frequent renter” or “no show” status for the renter. Possible values: - `0`: not applicable (default) - `1`: frequent renter - `2`: no show  For authorizations, this field is supported only for Visa.  For captures, this field is supported for Visa, MasterCard, and American Express.  Code for special programs applicable to the Card Transaction or the Cardholder. 
+        Program code used to identify special circumstances, such as \"frequent renter\" or \"no show\" status for the renter. Possible values: - `0`: not applicable (default) - `1`: frequent renter - `2`: no show  For authorizations, this field is supported only for Visa.  For captures, this field is supported for Visa, MasterCard, and American Express.  Code for special programs applicable to the Card Transaction or the Cardholder. 
 
         :param special_program_code: The special_program_code of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str

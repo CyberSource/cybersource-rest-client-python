@@ -123,7 +123,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def country(self):
         """
         Gets the country of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's country.  Country code for your business location. Use the ISO Standard Alpha Country Codes This value might be displayed on the cardholder’s statement.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Note If your business is located in the U.S. or Canada and you include this field in a request, you must also include merchantInformation.merchantDescriptor.administrativeArea. 
+        Merchant's country.  Country code for your business location. Use the ISO Standard Alpha Country Codes This value might be displayed on the cardholder's statement.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Note If your business is located in the U.S. or Canada and you include this field in a request, you must also include merchantInformation.merchantDescriptor.administrativeArea. 
 
         :return: The country of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -134,7 +134,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def country(self, country):
         """
         Sets the country of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's country.  Country code for your business location. Use the ISO Standard Alpha Country Codes This value might be displayed on the cardholder’s statement.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Note If your business is located in the U.S. or Canada and you include this field in a request, you must also include merchantInformation.merchantDescriptor.administrativeArea. 
+        Merchant's country.  Country code for your business location. Use the ISO Standard Alpha Country Codes This value might be displayed on the cardholder's statement.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Note If your business is located in the U.S. or Canada and you include this field in a request, you must also include merchantInformation.merchantDescriptor.administrativeArea. 
 
         :param country: The country of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
@@ -146,7 +146,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def locality(self):
         """
         Gets the locality of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's City.  City for your business location. This value might be displayed on the cardholder’s statement. 
+        Merchant's City.  City for your business location. This value might be displayed on the cardholder's statement. 
 
         :return: The locality of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -157,7 +157,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's City.  City for your business location. This value might be displayed on the cardholder’s statement. 
+        Merchant's City.  City for your business location. This value might be displayed on the cardholder's statement. 
 
         :param locality: The locality of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
@@ -169,7 +169,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def name(self):
         """
         Gets the name of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's business name. This name is displayed on the cardholder’s statement.  Chase Paymentech, Visa Platform Connect: length 22 
+        Merchant's business name. This name is displayed on the cardholder's statement.  Chase Paymentech, Visa Platform Connect: length 22 
 
         :return: The name of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -180,7 +180,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def name(self, name):
         """
         Sets the name of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's business name. This name is displayed on the cardholder’s statement.  Chase Paymentech, Visa Platform Connect: length 22 
+        Merchant's business name. This name is displayed on the cardholder's statement.  Chase Paymentech, Visa Platform Connect: length 22 
 
         :param name: The name of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
@@ -192,7 +192,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's postal code. This value might be displayed on the cardholder’s statement.  If your business is domiciled in the U.S., you can use a 5-digit or 9-digit postal code. A 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789  If your business is domiciled in Canada, you can use a 6-digit or 9-digit postal code. A 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
+        Merchant's postal code. This value might be displayed on the cardholder's statement.  If your business is domiciled in the U.S., you can use a 5-digit or 9-digit postal code. A 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789  If your business is domiciled in Canada, you can use a 6-digit or 9-digit postal code. A 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
 
         :return: The postal_code of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -203,7 +203,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
-        Merchant's postal code. This value might be displayed on the cardholder’s statement.  If your business is domiciled in the U.S., you can use a 5-digit or 9-digit postal code. A 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789  If your business is domiciled in Canada, you can use a 6-digit or 9-digit postal code. A 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
+        Merchant's postal code. This value might be displayed on the cardholder's statement.  If your business is domiciled in the U.S., you can use a 5-digit or 9-digit postal code. A 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789  If your business is domiciled in Canada, you can use a 6-digit or 9-digit postal code. A 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
 
         :param postal_code: The postal_code of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str

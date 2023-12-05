@@ -62,7 +62,7 @@ class Ptsv2billingagreementsDeviceInformation(object):
     def http_accept_browser_value(self):
         """
         Gets the http_accept_browser_value of this Ptsv2billingagreementsDeviceInformation.
-        Value of the Accept header sent by the customer’s web browser. **Note** If the customer’s browser provides a value, you must include it in your request. 
+        Value of the Accept header sent by the customer's web browser. **Note** If the customer's browser provides a value, you must include it in your request. 
 
         :return: The http_accept_browser_value of this Ptsv2billingagreementsDeviceInformation.
         :rtype: str
@@ -73,7 +73,7 @@ class Ptsv2billingagreementsDeviceInformation(object):
     def http_accept_browser_value(self, http_accept_browser_value):
         """
         Sets the http_accept_browser_value of this Ptsv2billingagreementsDeviceInformation.
-        Value of the Accept header sent by the customer’s web browser. **Note** If the customer’s browser provides a value, you must include it in your request. 
+        Value of the Accept header sent by the customer's web browser. **Note** If the customer's browser provides a value, you must include it in your request. 
 
         :param http_accept_browser_value: The http_accept_browser_value of this Ptsv2billingagreementsDeviceInformation.
         :type: str
@@ -108,7 +108,7 @@ class Ptsv2billingagreementsDeviceInformation(object):
     def user_agent_browser_value(self):
         """
         Gets the user_agent_browser_value of this Ptsv2billingagreementsDeviceInformation.
-        Value of the User-Agent header sent by the customer’s web browser. Note If the customer’s browser provides a value, you must include it in your request. 
+        Value of the User-Agent header sent by the customer's web browser. Note If the customer's browser provides a value, you must include it in your request. 
 
         :return: The user_agent_browser_value of this Ptsv2billingagreementsDeviceInformation.
         :rtype: str
@@ -119,7 +119,7 @@ class Ptsv2billingagreementsDeviceInformation(object):
     def user_agent_browser_value(self, user_agent_browser_value):
         """
         Sets the user_agent_browser_value of this Ptsv2billingagreementsDeviceInformation.
-        Value of the User-Agent header sent by the customer’s web browser. Note If the customer’s browser provides a value, you must include it in your request. 
+        Value of the User-Agent header sent by the customer's web browser. Note If the customer's browser provides a value, you must include it in your request. 
 
         :param user_agent_browser_value: The user_agent_browser_value of this Ptsv2billingagreementsDeviceInformation.
         :type: str

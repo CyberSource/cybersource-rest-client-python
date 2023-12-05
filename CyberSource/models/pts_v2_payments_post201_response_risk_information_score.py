@@ -83,7 +83,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
     def model_used(self):
         """
         Gets the model_used of this PtsV2PaymentsPost201ResponseRiskInformationScore.
-        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource's default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The model_used of this PtsV2PaymentsPost201ResponseRiskInformationScore.
         :rtype: str
@@ -94,7 +94,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
     def model_used(self, model_used):
         """
         Sets the model_used of this PtsV2PaymentsPost201ResponseRiskInformationScore.
-        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource’s default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Name of the score model used for the transaction. If you did not include a custom model in your request, this field contains the name of CyberSource's default model.  For all possible values, see the `score_model_used` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param model_used: The model_used of this PtsV2PaymentsPost201ResponseRiskInformationScore.
         :type: str

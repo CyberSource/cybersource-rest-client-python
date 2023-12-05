@@ -299,7 +299,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv1pushfundstransferRecipientInformation.
-        Sender’s middle name. This field is a passthrough, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Sender's middle name. This field is a passthrough, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :return: The middle_name of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -310,7 +310,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv1pushfundstransferRecipientInformation.
-        Sender’s middle name. This field is a passthrough, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Sender's middle name. This field is a passthrough, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :param middle_name: The middle_name of this Ptsv1pushfundstransferRecipientInformation.
         :type: str

@@ -114,7 +114,7 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self):
         """
         Gets the settlement_amount of this PushFunds201ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :return: The settlement_amount of this PushFunds201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -125,7 +125,7 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this PushFunds201ResponseOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :param settlement_amount: The settlement_amount of this PushFunds201ResponseOrderInformationAmountDetails.
         :type: str

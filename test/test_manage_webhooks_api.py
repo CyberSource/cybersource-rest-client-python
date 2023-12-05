@@ -39,25 +39,25 @@ class TestManageWebhooksApi(unittest.TestCase):
         """
         pass
 
-    def test_get_all_webhooks(self):
+    def test_get_webhook_subscription_by_id(self):
         """
-        Test case for get_all_webhooks
-
-        Get Details On All Created Webhooks
-        """
-        pass
-
-    def test_get_webhook_details(self):
-        """
-        Test case for get_webhook_details
+        Test case for get_webhook_subscription_by_id
 
         Get Details On a Single Webhook
         """
         pass
 
-    def test_replay_previous_webhook(self):
+    def test_get_webhook_subscriptions_by_org(self):
         """
-        Test case for replay_previous_webhook
+        Test case for get_webhook_subscriptions_by_org
+
+        Get Details On All Created Webhooks
+        """
+        pass
+
+    def test_replay_previous_webhooks(self):
+        """
+        Test case for replay_previous_webhooks
 
         Replay Previous Webhooks
         """

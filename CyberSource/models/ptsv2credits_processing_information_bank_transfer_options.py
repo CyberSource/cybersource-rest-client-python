@@ -82,7 +82,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def customer_memo(self):
         """
         Gets the customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Payment related information.  This information is included on the customer’s statement. 
+        Payment related information.  This information is included on the customer's statement. 
 
         :return: The customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :rtype: str
@@ -93,7 +93,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
     def customer_memo(self, customer_memo):
         """
         Sets the customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
-        Payment related information.  This information is included on the customer’s statement. 
+        Payment related information.  This information is included on the customer's statement. 
 
         :param customer_memo: The customer_memo of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str

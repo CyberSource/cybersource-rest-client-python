@@ -57,7 +57,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
     def requestor_id(self):
         """
         Gets the requestor_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only through **VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder's account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider's database.  **Note** This field is supported only through **VisaNet** and **FDC Nashville Global**. 
 
         :return: The requestor_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :rtype: str
@@ -68,7 +68,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only through **VisaNet** and **FDC Nashville Global**. 
+        Value that identifies your business and indicates that the cardholder's account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider's database.  **Note** This field is supported only through **VisaNet** and **FDC Nashville Global**. 
 
         :param requestor_id: The requestor_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :type: str
@@ -80,7 +80,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
     def transaction_type(self):
         """
         Gets the transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Set the value for this field to 1. An application on the customer’s mobile device provided the token data. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Set the value for this field to 1. An application on the customer's mobile device provided the token data. 
 
         :return: The transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :rtype: str
@@ -91,7 +91,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
     def transaction_type(self, transaction_type):
         """
         Sets the transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
-        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Set the value for this field to 1. An application on the customer’s mobile device provided the token data. 
+        Type of transaction that provided the token data. This value does not specify the token service provider; it specifies the entity that provided you with information about the token.  Set the value for this field to 1. An application on the customer's mobile device provided the token data. 
 
         :param transaction_type: The transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :type: str

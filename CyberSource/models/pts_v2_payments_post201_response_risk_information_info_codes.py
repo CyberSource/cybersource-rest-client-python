@@ -115,7 +115,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def address(self):
         """
         Gets the address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses. 
+        Indicates a mismatch between the customer's billing and shipping addresses. 
 
         :return: The address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -126,7 +126,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def address(self, address):
         """
         Sets the address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a mismatch between the customer’s billing and shipping addresses. 
+        Indicates a mismatch between the customer's billing and shipping addresses. 
 
         :param address: The address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -207,7 +207,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self):
         """
         Gets the internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address. 
+        Indicates a problem with the customer's email address, IP address, or billing address. 
 
         :return: The internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -218,7 +218,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def internet(self, internet):
         """
         Sets the internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s email address, IP address, or billing address. 
+        Indicates a problem with the customer's email address, IP address, or billing address. 
 
         :param internet: The internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
@@ -230,7 +230,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self):
         """
         Gets the phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number. 
+        Indicates a problem with the customer's phone number. 
 
         :return: The phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :rtype: list[str]
@@ -241,7 +241,7 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
     def phone(self, phone):
         """
         Sets the phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
-        Indicates a problem with the customer’s phone number. 
+        Indicates a problem with the customer's phone number. 
 
         :param phone: The phone of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]

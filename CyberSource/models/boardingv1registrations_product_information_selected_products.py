@@ -31,7 +31,7 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payments': 'PaymentProducts',
+        'payments': 'PaymentsProducts',
         'risk': 'RiskProducts',
         'commerce_solutions': 'CommerceSolutionsProducts',
         'value_added_services': 'ValueAddedServicesProducts'
@@ -69,7 +69,7 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         Gets the payments of this Boardingv1registrationsProductInformationSelectedProducts.
 
         :return: The payments of this Boardingv1registrationsProductInformationSelectedProducts.
-        :rtype: PaymentProducts
+        :rtype: PaymentsProducts
         """
         return self._payments
 
@@ -79,7 +79,7 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         Sets the payments of this Boardingv1registrationsProductInformationSelectedProducts.
 
         :param payments: The payments of this Boardingv1registrationsProductInformationSelectedProducts.
-        :type: PaymentProducts
+        :type: PaymentsProducts
         """
 
         self._payments = payments

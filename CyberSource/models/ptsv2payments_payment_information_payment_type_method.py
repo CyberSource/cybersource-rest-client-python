@@ -80,7 +80,7 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
     def type(self):
         """
         Gets the type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant’s site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
+        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant's site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
 
         :return: The type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :rtype: str
@@ -91,7 +91,7 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethod(object):
     def type(self, type):
         """
         Sets the type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
-        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant’s site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
+        The payment channel that facilitates the transactions. This parameter can be used if the payment channels are listed on the merchant's site, and the payment channel is known.  Possible Values:  #### Via PPRO - `alfaVa` - `kredivo` - `consumerBarCode` - `merchantQrCode` - `dokuWallet` 
 
         :param type: The type of this Ptsv2paymentsPaymentInformationPaymentTypeMethod.
         :type: str

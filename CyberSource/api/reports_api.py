@@ -169,7 +169,7 @@ class ReportsApi(object):
     def get_report_by_report_id(self, report_id, **kwargs):
         """
         Get Report Based on Report Id
-        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
+        Download a report using the reportId value. If you don't already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -200,7 +200,7 @@ class ReportsApi(object):
     def get_report_by_report_id_with_http_info(self, report_id, **kwargs):
         """
         Get Report Based on Report Id
-        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
+        Download a report using the reportId value. If you don't already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

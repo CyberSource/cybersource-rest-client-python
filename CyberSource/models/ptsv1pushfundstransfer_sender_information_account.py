@@ -80,7 +80,7 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
     def number(self):
         """
         Gets the number of this Ptsv1pushfundstransferSenderInformationAccount.
-        The account number of the entity funding the transaction. It is the sender’s account number. It can be a debit/credit card account number or bank account number.  Funds disbursements  This field is optional.  All other transactions  This field is required when the sender funds the transaction with a financial instrument, for example debit card. Length:  FDC Compass (<= 19) Chase Paymentech (<= 16) 
+        The account number of the entity funding the transaction. It is the sender's account number. It can be a debit/credit card account number or bank account number.  Funds disbursements  This field is optional.  All other transactions  This field is required when the sender funds the transaction with a financial instrument, for example debit card. Length:  FDC Compass (<= 19) Chase Paymentech (<= 16) 
 
         :return: The number of this Ptsv1pushfundstransferSenderInformationAccount.
         :rtype: str
@@ -91,7 +91,7 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
     def number(self, number):
         """
         Sets the number of this Ptsv1pushfundstransferSenderInformationAccount.
-        The account number of the entity funding the transaction. It is the sender’s account number. It can be a debit/credit card account number or bank account number.  Funds disbursements  This field is optional.  All other transactions  This field is required when the sender funds the transaction with a financial instrument, for example debit card. Length:  FDC Compass (<= 19) Chase Paymentech (<= 16) 
+        The account number of the entity funding the transaction. It is the sender's account number. It can be a debit/credit card account number or bank account number.  Funds disbursements  This field is optional.  All other transactions  This field is required when the sender funds the transaction with a financial instrument, for example debit card. Length:  FDC Compass (<= 19) Chase Paymentech (<= 16) 
 
         :param number: The number of this Ptsv1pushfundstransferSenderInformationAccount.
         :type: str

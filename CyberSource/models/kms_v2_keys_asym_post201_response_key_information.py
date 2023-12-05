@@ -115,7 +115,7 @@ class KmsV2KeysAsymPost201ResponseKeyInformation(object):
     def reference_number(self):
         """
         Gets the reference_number of this KmsV2KeysAsymPost201ResponseKeyInformation.
-        Reference number is a unique identifier provided by the client along with the organization Id. This is an optional field provided solely for the client’s convenience. If client specifies value for this field in the request, it is expected to be available in the response. 
+        Reference number is a unique identifier provided by the client along with the organization Id. This is an optional field provided solely for the client's convenience. If client specifies value for this field in the request, it is expected to be available in the response. 
 
         :return: The reference_number of this KmsV2KeysAsymPost201ResponseKeyInformation.
         :rtype: str
@@ -126,7 +126,7 @@ class KmsV2KeysAsymPost201ResponseKeyInformation(object):
     def reference_number(self, reference_number):
         """
         Sets the reference_number of this KmsV2KeysAsymPost201ResponseKeyInformation.
-        Reference number is a unique identifier provided by the client along with the organization Id. This is an optional field provided solely for the client’s convenience. If client specifies value for this field in the request, it is expected to be available in the response. 
+        Reference number is a unique identifier provided by the client along with the organization Id. This is an optional field provided solely for the client's convenience. If client specifies value for this field in the request, it is expected to be available in the response. 
 
         :param reference_number: The reference_number of this KmsV2KeysAsymPost201ResponseKeyInformation.
         :type: str

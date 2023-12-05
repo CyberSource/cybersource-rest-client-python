@@ -57,7 +57,7 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
     def first_name(self):
         """
         Gets the first_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
-        Customer’s first name. 
+        Customer's first name. 
 
         :return: The first_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
         :rtype: str
@@ -68,7 +68,7 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
-        Customer’s first name. 
+        Customer's first name. 
 
         :param first_name: The first_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
         :type: str
@@ -80,7 +80,7 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
     def last_name(self):
         """
         Gets the last_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
-        Customer’s last name. 
+        Customer's last name. 
 
         :return: The last_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
         :rtype: str
@@ -91,7 +91,7 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
-        Customer’s last name. 
+        Customer's last name. 
 
         :param last_name: The last_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
         :type: str

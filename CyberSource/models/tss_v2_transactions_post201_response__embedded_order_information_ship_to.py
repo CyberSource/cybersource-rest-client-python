@@ -118,7 +118,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def address1(self):
         """
         Gets the address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder's location when shipTo objects are not present. 
 
         :return: The address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -129,7 +129,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def address1(self, address1):
         """
         Sets the address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        First line of the shipping address.  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S. and Canadian taxes. Not applicable to international and value added taxes. Billing address objects will be used to determine the cardholder's location when shipTo objects are not present. 
 
         :param address1: The address1 of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str
@@ -141,7 +141,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self):
         """
         Gets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder's location when shipTo objects are not present. 
 
         :return: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :rtype: str
@@ -152,7 +152,7 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo(object):
     def country(self, country):
         """
         Sets the country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
-        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder’s location when shipTo objects are not present. 
+        Country of the shipping address. Use the two-character [ISO Standard Country Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf)  Required field for authorization if any shipping address information is included in the request; otherwise, optional.  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes. Billing address objects will be used to determine the cardholder's location when shipTo objects are not present. 
 
         :param country: The country of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo.
         :type: str

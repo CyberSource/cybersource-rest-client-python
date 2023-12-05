@@ -67,7 +67,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
     def company_tax_id(self):
         """
         Gets the company_tax_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
-        Company’s tax identifier. This is only used for eCheck service. 
+        Company's tax identifier. This is only used for eCheck service. 
 
         :return: The company_tax_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
         :rtype: str
@@ -78,7 +78,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
     def company_tax_id(self, company_tax_id):
         """
         Sets the company_tax_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
-        Company’s tax identifier. This is only used for eCheck service. 
+        Company's tax identifier. This is only used for eCheck service. 
 
         :param company_tax_id: The company_tax_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
         :type: str

@@ -122,7 +122,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def number(self):
         """
         Gets the number of this Ptsv2paymentsPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers.  #### FDMS Nashville Required. String (19)  #### GPX Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### All other processors Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers.  #### FDMS Nashville Required. String (19)  #### GPX Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### All other processors Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting. 
 
         :return: The number of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -133,7 +133,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def number(self, number):
         """
         Sets the number of this Ptsv2paymentsPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers.  #### FDMS Nashville Required. String (19)  #### GPX Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### All other processors Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers.  #### FDMS Nashville Required. String (19)  #### GPX Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### All other processors Required if `pointOfSaleInformation.entryMode=keyed`. However, this field is optional if your account is configured for relaxed requirements for address data and expiration date. **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting. 
 
         :param number: The number of this Ptsv2paymentsPaymentInformationCard.
         :type: str
@@ -329,7 +329,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def account_encoder_id(self):
         """
         Gets the account_encoder_id of this Ptsv2paymentsPaymentInformationCard.
-        Identifier for the issuing bank that provided the customer’s encoded account number. Contact your processor for the bank’s ID. 
+        Identifier for the issuing bank that provided the customer's encoded account number. Contact your processor for the bank's ID. 
 
         :return: The account_encoder_id of this Ptsv2paymentsPaymentInformationCard.
         :rtype: str
@@ -340,7 +340,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
     def account_encoder_id(self, account_encoder_id):
         """
         Sets the account_encoder_id of this Ptsv2paymentsPaymentInformationCard.
-        Identifier for the issuing bank that provided the customer’s encoded account number. Contact your processor for the bank’s ID. 
+        Identifier for the issuing bank that provided the customer's encoded account number. Contact your processor for the bank's ID. 
 
         :param account_encoder_id: The account_encoder_id of this Ptsv2paymentsPaymentInformationCard.
         :type: str

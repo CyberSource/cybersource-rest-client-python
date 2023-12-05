@@ -526,7 +526,7 @@ class ReportSubscriptionsApi(object):
     def get_subscription(self, report_name, **kwargs):
         """
         Get Subscription for Report Name
-        View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
+        View the details of a report subscription, such as the report format or report frequency, using the report's unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -557,7 +557,7 @@ class ReportSubscriptionsApi(object):
     def get_subscription_with_http_info(self, report_name, **kwargs):
         """
         Get Subscription for Report Name
-        View the details of a report subscription, such as the report format or report frequency, using the report’s unique name. 
+        View the details of a report subscription, such as the report format or report frequency, using the report's unique name. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

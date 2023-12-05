@@ -138,7 +138,7 @@ class ManageWebhooksApi(object):
         if 'DELETE' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -161,7 +161,123 @@ class ManageWebhooksApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_all_webhooks(self, organization_id, product_id, event_type, **kwargs):
+    def get_webhook_subscription_by_id(self, webhook_id, **kwargs):
+        """
+        Get Details On a Single Webhook
+        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_webhook_subscription_by_id(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The webhook Identifier (required)
+        :return: InlineResponse2004
+                 If the method is called asynchronously,
+                 returns the request thread.
+
+        DISCLAIMER:
+                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_webhook_subscription_by_id` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_webhook_subscription_by_id_with_http_info(webhook_id, **kwargs)
+        else:
+            (data) = self.get_webhook_subscription_by_id_with_http_info(webhook_id, **kwargs)
+            return data
+
+    def get_webhook_subscription_by_id_with_http_info(self, webhook_id, **kwargs):
+        """
+        Get Details On a Single Webhook
+        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_webhook_subscription_by_id_with_http_info(webhook_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str webhook_id: The webhook Identifier (required)
+        :return: InlineResponse2004
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['webhook_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_webhook_subscription_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'webhook_id' is set
+        if ('webhook_id' not in params) or (params['webhook_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
+            raise ValueError("Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'webhook_id' in params:
+            path_params['webhookId'] = params['webhook_id']
+            webhookId=webhook_id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='InlineResponse2004',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_webhook_subscriptions_by_org(self, organization_id, product_id, event_type, **kwargs):
         """
         Get Details On All Created Webhooks
         Retrieve a list of all previously created webhooks.
@@ -171,7 +287,7 @@ class ManageWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_webhooks(organization_id, product_id, event_type, callback=callback_function)
+        >>> thread = api.get_webhook_subscriptions_by_org(organization_id, product_id, event_type, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -187,16 +303,16 @@ class ManageWebhooksApi(object):
         """
 
         if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_all_webhooks` STARTED")
+            self.logger.info("CALL TO METHOD `get_webhook_subscriptions_by_org` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_all_webhooks_with_http_info(organization_id, product_id, event_type, **kwargs)
+            return self.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, **kwargs)
         else:
-            (data) = self.get_all_webhooks_with_http_info(organization_id, product_id, event_type, **kwargs)
+            (data) = self.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, **kwargs)
             return data
 
-    def get_all_webhooks_with_http_info(self, organization_id, product_id, event_type, **kwargs):
+    def get_webhook_subscriptions_by_org_with_http_info(self, organization_id, product_id, event_type, **kwargs):
         """
         Get Details On All Created Webhooks
         Retrieve a list of all previously created webhooks.
@@ -206,7 +322,7 @@ class ManageWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_all_webhooks_with_http_info(organization_id, product_id, event_type, callback=callback_function)
+        >>> thread = api.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -229,25 +345,25 @@ class ManageWebhooksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_all_webhooks" % key
+                    " to method get_webhook_subscriptions_by_org" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'organization_id' is set
         if ('organization_id' not in params) or (params['organization_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `get_all_webhooks`")
-            raise ValueError("Missing the required parameter `organization_id` when calling `get_all_webhooks`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
+            raise ValueError("Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
         # verify the required parameter 'product_id' is set
         if ('product_id' not in params) or (params['product_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `product_id` when calling `get_all_webhooks`")
-            raise ValueError("Missing the required parameter `product_id` when calling `get_all_webhooks`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `product_id` when calling `get_webhook_subscriptions_by_org`")
+            raise ValueError("Missing the required parameter `product_id` when calling `get_webhook_subscriptions_by_org`")
         # verify the required parameter 'event_type' is set
         if ('event_type' not in params) or (params['event_type'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `event_type` when calling `get_all_webhooks`")
-            raise ValueError("Missing the required parameter `event_type` when calling `get_all_webhooks`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
+            raise ValueError("Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
 
 
         collection_formats = {}
@@ -271,7 +387,7 @@ class ManageWebhooksApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -294,22 +410,23 @@ class ManageWebhooksApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def get_webhook_details(self, webhook_id, **kwargs):
+    def replay_previous_webhooks(self, webhook_id, **kwargs):
         """
-        Get Details On a Single Webhook
-        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
+        Replay Previous Webhooks
+        Initiate a webhook replay request to replay transactions that happened in the past.  Cannot execute more than 1 replay request at a time. While one request is processing, you will not be allowed to execute another replay.  The difference between Start and End time cannot exceed a 24 hour window, and 1 month is the farthest date back that is eligible for replay. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_webhook_details(webhook_id, callback=callback_function)
+        >>> thread = api.replay_previous_webhooks(webhook_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2004
+        :param str webhook_id: The webhook uuid identifier. (required)
+        :param ReplayWebhooksRequest replay_webhooks_request: The request query
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -318,36 +435,37 @@ class ManageWebhooksApi(object):
         """
 
         if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_webhook_details` STARTED")
+            self.logger.info("CALL TO METHOD `replay_previous_webhooks` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_webhook_details_with_http_info(webhook_id, **kwargs)
+            return self.replay_previous_webhooks_with_http_info(webhook_id, **kwargs)
         else:
-            (data) = self.get_webhook_details_with_http_info(webhook_id, **kwargs)
+            (data) = self.replay_previous_webhooks_with_http_info(webhook_id, **kwargs)
             return data
 
-    def get_webhook_details_with_http_info(self, webhook_id, **kwargs):
+    def replay_previous_webhooks_with_http_info(self, webhook_id, **kwargs):
         """
-        Get Details On a Single Webhook
-        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
+        Replay Previous Webhooks
+        Initiate a webhook replay request to replay transactions that happened in the past.  Cannot execute more than 1 replay request at a time. While one request is processing, you will not be allowed to execute another replay.  The difference between Start and End time cannot exceed a 24 hour window, and 1 month is the farthest date back that is eligible for replay. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_webhook_details_with_http_info(webhook_id, callback=callback_function)
+        >>> thread = api.replay_previous_webhooks_with_http_info(webhook_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2004
+        :param str webhook_id: The webhook uuid identifier. (required)
+        :param ReplayWebhooksRequest replay_webhooks_request: The request query
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['webhook_id']
+        all_params = ['webhook_id', 'replay_webhooks_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -358,15 +476,15 @@ class ManageWebhooksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_webhook_details" % key
+                    " to method replay_previous_webhooks" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_details`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `get_webhook_details`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `replay_previous_webhooks`")
+            raise ValueError("Missing the required parameter `webhook_id` when calling `replay_previous_webhooks`")
 
 
         collection_formats = {}
@@ -384,131 +502,13 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2004',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def replay_previous_webhook(self, webhook_id, **kwargs):
-        """
-        Replay Previous Webhooks
-        Initiate a webhook replay request to replay transactions that happened in the past.  Cannot execute more than 1 replay request at a time. While one request is processing, you will not be allowed to execute another replay.  The difference between Start and End time cannot exceed a 24 hour window, and 1 month is the farthest date back that is eligible for replay. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replay_previous_webhook(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The webhook uuid identifier. (required)
-        :param ReplayWebhooks replay_webhooks: The request query
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-
-        DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
-        """
-
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `replay_previous_webhook` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.replay_previous_webhook_with_http_info(webhook_id, **kwargs)
-        else:
-            (data) = self.replay_previous_webhook_with_http_info(webhook_id, **kwargs)
-            return data
-
-    def replay_previous_webhook_with_http_info(self, webhook_id, **kwargs):
-        """
-        Replay Previous Webhooks
-        Initiate a webhook replay request to replay transactions that happened in the past.  Cannot execute more than 1 replay request at a time. While one request is processing, you will not be allowed to execute another replay.  The difference between Start and End time cannot exceed a 24 hour window, and 1 month is the farthest date back that is eligible for replay. 
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.replay_previous_webhook_with_http_info(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The webhook uuid identifier. (required)
-        :param ReplayWebhooks replay_webhooks: The request query
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['webhook_id', 'replay_webhooks']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method replay_previous_webhook" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'webhook_id' is set
-        if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `replay_previous_webhook`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `replay_previous_webhook`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'webhook_id' in params:
-            path_params['webhookId'] = params['webhook_id']
-            webhookId=webhook_id
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'replay_webhooks' in params:
-            body_params = params['replay_webhooks']
+        if 'replay_webhooks_request' in params:
+            body_params = params['replay_webhooks_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'replay_webhooks', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'replay_webhooks_request', self.api_client.mconfig.run_environment)
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -654,7 +654,7 @@ class ManageWebhooksApi(object):
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_asym_egress_key', self.api_client.mconfig.run_environment)
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -692,7 +692,7 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
+        :param UpdateWebhookRequest update_webhook_request: The webhook payload or changes to apply.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -726,13 +726,13 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhook update_webhook: The webhook payload or changes to apply.
+        :param UpdateWebhookRequest update_webhook_request: The webhook payload or changes to apply.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['webhook_id', 'update_webhook']
+        all_params = ['webhook_id', 'update_webhook_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -769,13 +769,13 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'update_webhook' in params:
-            body_params = params['update_webhook']
+        if 'update_webhook_request' in params:
+            body_params = params['update_webhook_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook_request', self.api_client.mconfig.run_environment)
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])

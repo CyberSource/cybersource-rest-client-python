@@ -85,7 +85,7 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
     def credit_amount(self):
         """
         Gets the credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
-        Amount that was credited to the cardholder’s account.  Returned by PIN debit credit. 
+        Amount that was credited to the cardholder's account.  Returned by PIN debit credit. 
 
         :return: The credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
         :rtype: str
@@ -96,7 +96,7 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
     def credit_amount(self, credit_amount):
         """
         Sets the credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
-        Amount that was credited to the cardholder’s account.  Returned by PIN debit credit. 
+        Amount that was credited to the cardholder's account.  Returned by PIN debit credit. 
 
         :param credit_amount: The credit_amount of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
         :type: str

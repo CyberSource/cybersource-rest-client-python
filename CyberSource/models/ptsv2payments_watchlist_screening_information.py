@@ -67,7 +67,7 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
     def address_operator(self):
         """
         Gets the address_operator of this Ptsv2paymentsWatchlistScreeningInformation.
-        Parts of the customer’s information that must match with an entry in the DPL (denied parties list) before a match occurs. This field can contain one of the following values: - AND: (default) The customer’s name or company and the customer’s address must appear in the database. - OR: The customer’s name must appear in the database. - IGNORE: You want the service to detect a match only of the customer’s name or company but not of the address. 
+        Parts of the customer's information that must match with an entry in the DPL (denied parties list) before a match occurs. This field can contain one of the following values: - AND: (default) The customer's name or company and the customer's address must appear in the database. - OR: The customer's name must appear in the database. - IGNORE: You want the service to detect a match only of the customer's name or company but not of the address. 
 
         :return: The address_operator of this Ptsv2paymentsWatchlistScreeningInformation.
         :rtype: str
@@ -78,7 +78,7 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
     def address_operator(self, address_operator):
         """
         Sets the address_operator of this Ptsv2paymentsWatchlistScreeningInformation.
-        Parts of the customer’s information that must match with an entry in the DPL (denied parties list) before a match occurs. This field can contain one of the following values: - AND: (default) The customer’s name or company and the customer’s address must appear in the database. - OR: The customer’s name must appear in the database. - IGNORE: You want the service to detect a match only of the customer’s name or company but not of the address. 
+        Parts of the customer's information that must match with an entry in the DPL (denied parties list) before a match occurs. This field can contain one of the following values: - AND: (default) The customer's name or company and the customer's address must appear in the database. - OR: The customer's name must appear in the database. - IGNORE: You want the service to detect a match only of the customer's name or company but not of the address. 
 
         :param address_operator: The address_operator of this Ptsv2paymentsWatchlistScreeningInformation.
         :type: str
