@@ -67,7 +67,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def number(self):
         """
         Gets the number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers. 
 
         :return: The number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :rtype: str
@@ -78,7 +78,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def number(self, number):
         """
         Sets the number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). You can also use this field for encoded account numbers. 
 
         :param number: The number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard.
         :type: str

@@ -580,7 +580,7 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
     def cashback_amount(self):
         """
         Gets the cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
-        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
+        Cashback amount in the acquirer's currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :return: The cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
         :rtype: str
@@ -591,7 +591,7 @@ class Ptsv2paymentsidcapturesOrderInformationAmountDetails(object):
     def cashback_amount(self, cashback_amount):
         """
         Sets the cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
-        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
+        Cashback amount in the acquirer's currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :param cashback_amount: The cashback_amount of this Ptsv2paymentsidcapturesOrderInformationAmountDetails.
         :type: str

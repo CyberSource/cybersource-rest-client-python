@@ -225,7 +225,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self):
         """
         Gets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Value that identifies your business and indicates that the cardholder's account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider's database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :return: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :rtype: str
@@ -236,7 +236,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
     def requestor_id(self, requestor_id):
         """
         Sets the requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
-        Value that identifies your business and indicates that the cardholder’s account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider’s database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
+        Value that identifies your business and indicates that the cardholder's account number is tokenized. This value is assigned by the token service provider and is unique within the token service provider's database.  **Note** This field is supported only for **CyberSource through VisaNet** and **FDC Nashville Global**.  #### PIN debit Optional field for PIN debit credit or PIN debit purchase transactions that use payment network tokens; otherwise, not used. 
 
         :param requestor_id: The requestor_id of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str

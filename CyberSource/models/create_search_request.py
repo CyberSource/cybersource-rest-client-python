@@ -128,7 +128,7 @@ class CreateSearchRequest(object):
     def timezone(self):
         """
         Gets the timezone of this CreateSearchRequest.
-        Merchant’s time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
+        Merchant's time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
 
         :return: The timezone of this CreateSearchRequest.
         :rtype: str
@@ -139,7 +139,7 @@ class CreateSearchRequest(object):
     def timezone(self, timezone):
         """
         Sets the timezone of this CreateSearchRequest.
-        Merchant’s time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
+        Merchant's time zone in ISO standard, using the TZ database format. For example: `America/Chicago` 
 
         :param timezone: The timezone of this CreateSearchRequest.
         :type: str

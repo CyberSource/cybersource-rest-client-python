@@ -62,7 +62,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def name(self):
         """
         Gets the name of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        Name of the service provider that is collecting the service fee. The service provider name must consist of 3, 7, or 12 characters followed by an asterisk (*). This value must also include the words “Service Fee.”  When you include more than one consecutive space, extra spaces are removed. Use one of the following formats for this value: - <3-character name>*Service Fee - <7-character name>*Service Fee - <12-character name>*Service Fee  When payments are made in installments, this value must also include installment information such as “1 of 5” or “3 of 7.” For installment payments, use one of the following formats for this value: - <3-character name>*Service Fee*<N> of <M> - <7-character name>*Service Fee*<N> of <M> - <12-character name>*Service Fee*<N> of <M>  where <N> is the payment number and <M> is the total number of payments.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        Name of the service provider that is collecting the service fee. The service provider name must consist of 3, 7, or 12 characters followed by an asterisk (*). This value must also include the words \"Service Fee.\"  When you include more than one consecutive space, extra spaces are removed. Use one of the following formats for this value: - <3-character name>*Service Fee - <7-character name>*Service Fee - <12-character name>*Service Fee  When payments are made in installments, this value must also include installment information such as \"1 of 5\" or \"3 of 7.\" For installment payments, use one of the following formats for this value: - <3-character name>*Service Fee*<N> of <M> - <7-character name>*Service Fee*<N> of <M> - <12-character name>*Service Fee*<N> of <M>  where <N> is the payment number and <M> is the total number of payments.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :return: The name of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :rtype: str
@@ -73,7 +73,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def name(self, name):
         """
         Sets the name of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        Name of the service provider that is collecting the service fee. The service provider name must consist of 3, 7, or 12 characters followed by an asterisk (*). This value must also include the words “Service Fee.”  When you include more than one consecutive space, extra spaces are removed. Use one of the following formats for this value: - <3-character name>*Service Fee - <7-character name>*Service Fee - <12-character name>*Service Fee  When payments are made in installments, this value must also include installment information such as “1 of 5” or “3 of 7.” For installment payments, use one of the following formats for this value: - <3-character name>*Service Fee*<N> of <M> - <7-character name>*Service Fee*<N> of <M> - <12-character name>*Service Fee*<N> of <M>  where <N> is the payment number and <M> is the total number of payments.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        Name of the service provider that is collecting the service fee. The service provider name must consist of 3, 7, or 12 characters followed by an asterisk (*). This value must also include the words \"Service Fee.\"  When you include more than one consecutive space, extra spaces are removed. Use one of the following formats for this value: - <3-character name>*Service Fee - <7-character name>*Service Fee - <12-character name>*Service Fee  When payments are made in installments, this value must also include installment information such as \"1 of 5\" or \"3 of 7.\" For installment payments, use one of the following formats for this value: - <3-character name>*Service Fee*<N> of <M> - <7-character name>*Service Fee*<N> of <M> - <12-character name>*Service Fee*<N> of <M>  where <N> is the payment number and <M> is the total number of payments.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :param name: The name of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
@@ -85,7 +85,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def contact(self):
         """
         Gets the contact of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        Contact information for the service provider that is collecting the service fee. when you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        Contact information for the service provider that is collecting the service fee. when you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :return: The contact of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :rtype: str
@@ -96,7 +96,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def contact(self, contact):
         """
         Sets the contact of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        Contact information for the service provider that is collecting the service fee. when you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        Contact information for the service provider that is collecting the service fee. when you include more than one consecutive space, extra spaces are removed.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :param contact: The contact of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
@@ -108,7 +108,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def state(self):
         """
         Gets the state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        State or territory in which the service provider is located.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        State or territory in which the service provider is located.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :return: The state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :rtype: str
@@ -119,7 +119,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
     def state(self, state):
         """
         Sets the state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
-        State or territory in which the service provider is located.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder’s statement. 
+        State or territory in which the service provider is located.  When you do not include this value in your request, CyberSource uses the value that is in your CyberSource account.  This value might be displayed on the cardholder's statement. 
 
         :param state: The state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str

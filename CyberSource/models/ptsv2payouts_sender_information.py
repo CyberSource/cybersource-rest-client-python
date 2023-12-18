@@ -227,7 +227,7 @@ class Ptsv2payoutsSenderInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv2payoutsSenderInformation.
-        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Sender's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :return: The middle_name of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -238,7 +238,7 @@ class Ptsv2payoutsSenderInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv2payoutsSenderInformation.
-        Sender’s middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Sender's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :param middle_name: The middle_name of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -342,7 +342,7 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
+        Sender's state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :return: The administrative_area of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -353,7 +353,7 @@ class Ptsv2payoutsSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2payoutsSenderInformation.
-        Sender’s state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
+        Sender's state. Use the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf). 
 
         :param administrative_area: The administrative_area of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -388,7 +388,7 @@ class Ptsv2payoutsSenderInformation(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2payoutsSenderInformation.
-        Sender’s postal code. Required only for FDCCompass.
+        Sender's postal code. Required only for FDCCompass.
 
         :return: The postal_code of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -399,7 +399,7 @@ class Ptsv2payoutsSenderInformation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv2payoutsSenderInformation.
-        Sender’s postal code. Required only for FDCCompass.
+        Sender's postal code. Required only for FDCCompass.
 
         :param postal_code: The postal_code of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -411,7 +411,7 @@ class Ptsv2payoutsSenderInformation(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv2payoutsSenderInformation.
-        Sender’s phone number. Required only for FDCCompass.
+        Sender's phone number. Required only for FDCCompass.
 
         :return: The phone_number of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -422,7 +422,7 @@ class Ptsv2payoutsSenderInformation(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv2payoutsSenderInformation.
-        Sender’s phone number. Required only for FDCCompass.
+        Sender's phone number. Required only for FDCCompass.
 
         :param phone_number: The phone_number of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -434,7 +434,7 @@ class Ptsv2payoutsSenderInformation(object):
     def date_of_birth(self):
         """
         Gets the date_of_birth of this Ptsv2payoutsSenderInformation.
-        Sender’s date of birth in YYYYMMDD format. Required only for FDCCompass.
+        Sender's date of birth in YYYYMMDD format. Required only for FDCCompass.
 
         :return: The date_of_birth of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -445,7 +445,7 @@ class Ptsv2payoutsSenderInformation(object):
     def date_of_birth(self, date_of_birth):
         """
         Sets the date_of_birth of this Ptsv2payoutsSenderInformation.
-        Sender’s date of birth in YYYYMMDD format. Required only for FDCCompass.
+        Sender's date of birth in YYYYMMDD format. Required only for FDCCompass.
 
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsSenderInformation.
         :type: str

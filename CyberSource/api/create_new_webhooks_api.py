@@ -45,7 +45,7 @@ class CreateNewWebhooksApi(object):
 
 
 
-    def create_webhook(self, **kwargs):
+    def create_webhook_subscription(self, **kwargs):
         """
         Create a Webhook
         Create a new webhook subscription. Before creating a webhook, ensure that a security key has been created at the top of this developer center section. You will not need to pass us back the key during the creation of the webhook, but you will receive an error if you did not already create a key or store one on file. 
@@ -55,30 +55,30 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_webhook(callback=callback_function)
+        >>> thread = api.create_webhook_subscription(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param CreateWebhook create_webhook: The webhook payload
+        :param CreateWebhookRequest create_webhook_request: The webhook payload
         :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
 
         DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested (“Beta Product”) solely for the purpose of evaluating the functionality or marketability of the Beta Product (a “Beta Evaluation”). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer’s participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period (“Beta Product Form”). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer’s use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided “AS IS” and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
+                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
         """
 
         if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `create_webhook` STARTED")
+            self.logger.info("CALL TO METHOD `create_webhook_subscription` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_webhook_with_http_info(**kwargs)
+            return self.create_webhook_subscription_with_http_info(**kwargs)
         else:
-            (data) = self.create_webhook_with_http_info(**kwargs)
+            (data) = self.create_webhook_subscription_with_http_info(**kwargs)
             return data
 
-    def create_webhook_with_http_info(self, **kwargs):
+    def create_webhook_subscription_with_http_info(self, **kwargs):
         """
         Create a Webhook
         Create a new webhook subscription. Before creating a webhook, ensure that a security key has been created at the top of this developer center section. You will not need to pass us back the key during the creation of the webhook, but you will receive an error if you did not already create a key or store one on file. 
@@ -88,17 +88,17 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_webhook_with_http_info(callback=callback_function)
+        >>> thread = api.create_webhook_subscription_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param CreateWebhook create_webhook: The webhook payload
+        :param CreateWebhookRequest create_webhook_request: The webhook payload
         :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['create_webhook']
+        all_params = ['create_webhook_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -109,7 +109,7 @@ class CreateNewWebhooksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_webhook" % key
+                    " to method create_webhook_subscription" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -127,13 +127,13 @@ class CreateNewWebhooksApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'create_webhook' in params:
-            body_params = params['create_webhook']
+        if 'create_webhook_request' in params:
+            body_params = params['create_webhook_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook_request', self.api_client.mconfig.run_environment)
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -156,7 +156,7 @@ class CreateNewWebhooksApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def find_product_to_subscribe(self, organization_id, **kwargs):
+    def find_products_to_subscribe(self, organization_id, **kwargs):
         """
         Find Products You Can Subscribe To
         Retrieve a list of products and event types that your account is eligible for. These products and events are the ones that you may subscribe to in the next step of creating webhooks.
@@ -166,7 +166,7 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.find_product_to_subscribe(organization_id, callback=callback_function)
+        >>> thread = api.find_products_to_subscribe(organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -176,20 +176,20 @@ class CreateNewWebhooksApi(object):
                  returns the request thread.
 
         DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested (“Beta Product”) solely for the purpose of evaluating the functionality or marketability of the Beta Product (a “Beta Evaluation”). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer’s participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period (“Beta Product Form”). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer’s use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided “AS IS” and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
+                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
         """
 
         if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `find_product_to_subscribe` STARTED")
+            self.logger.info("CALL TO METHOD `find_products_to_subscribe` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.find_product_to_subscribe_with_http_info(organization_id, **kwargs)
+            return self.find_products_to_subscribe_with_http_info(organization_id, **kwargs)
         else:
-            (data) = self.find_product_to_subscribe_with_http_info(organization_id, **kwargs)
+            (data) = self.find_products_to_subscribe_with_http_info(organization_id, **kwargs)
             return data
 
-    def find_product_to_subscribe_with_http_info(self, organization_id, **kwargs):
+    def find_products_to_subscribe_with_http_info(self, organization_id, **kwargs):
         """
         Find Products You Can Subscribe To
         Retrieve a list of products and event types that your account is eligible for. These products and events are the ones that you may subscribe to in the next step of creating webhooks.
@@ -199,7 +199,7 @@ class CreateNewWebhooksApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.find_product_to_subscribe_with_http_info(organization_id, callback=callback_function)
+        >>> thread = api.find_products_to_subscribe_with_http_info(organization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -220,15 +220,15 @@ class CreateNewWebhooksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method find_product_to_subscribe" % key
+                    " to method find_products_to_subscribe" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'organization_id' is set
         if ('organization_id' not in params) or (params['organization_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `find_product_to_subscribe`")
-            raise ValueError("Missing the required parameter `organization_id` when calling `find_product_to_subscribe`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
+            raise ValueError("Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
 
 
         collection_formats = {}
@@ -249,7 +249,7 @@ class CreateNewWebhooksApi(object):
         if 'GET' in ('POST'):
             body_params = '{}'
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -295,7 +295,7 @@ class CreateNewWebhooksApi(object):
                  returns the request thread.
 
         DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested (“Beta Product”) solely for the purpose of evaluating the functionality or marketability of the Beta Product (a “Beta Evaluation”). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer’s participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period (“Beta Product Form”). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer’s use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided “AS IS” and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
+                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
         """
 
         if self.api_client.mconfig.log_config.enable_log:
@@ -357,26 +357,10 @@ class CreateNewWebhooksApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
 
-        if 'v_c_sender_organization_id' in params and len(params['v_c_sender_organization_id']) > 100:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, length must be less than or equal to `100`")
-            raise ValueError("Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, length must be less than or equal to `100`")
-        if 'v_c_sender_organization_id' in params and len(params['v_c_sender_organization_id']) < 2:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, length must be greater than or equal to `2`")
-            raise ValueError("Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, length must be greater than or equal to `2`")
         if 'v_c_sender_organization_id' in params and not re.search('^[A-Za-z0-9\\-_]+$', params['v_c_sender_organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\-_]+$/`")
             raise ValueError("Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\-_]+$/`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) > 100:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, length must be less than or equal to `100`")
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, length must be less than or equal to `100`")
-        if 'v_c_correlation_id' in params and len(params['v_c_correlation_id']) < 2:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, length must be greater than or equal to `2`")
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, length must be greater than or equal to `2`")
         if 'v_c_correlation_id' in params and not re.search('^[A-Za-z0-9\\.\\-_:]+$', params['v_c_correlation_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\.\\-_:]+$/`")
@@ -406,7 +390,7 @@ class CreateNewWebhooksApi(object):
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_sym_egress_key', self.api_client.mconfig.run_environment)
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])

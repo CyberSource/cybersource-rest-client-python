@@ -741,7 +741,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def process_identifier(self):
         """
         Gets the process_identifier of this Ptsv2paymentsTravelInformationTransitAirline.
-        Airline process identifier. This value is the airline’s three-digit IATA1 code which is used to process extended payment airline tickets. 
+        Airline process identifier. This value is the airline's three-digit IATA1 code which is used to process extended payment airline tickets. 
 
         :return: The process_identifier of this Ptsv2paymentsTravelInformationTransitAirline.
         :rtype: str
@@ -752,7 +752,7 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
     def process_identifier(self, process_identifier):
         """
         Sets the process_identifier of this Ptsv2paymentsTravelInformationTransitAirline.
-        Airline process identifier. This value is the airline’s three-digit IATA1 code which is used to process extended payment airline tickets. 
+        Airline process identifier. This value is the airline's three-digit IATA1 code which is used to process extended payment airline tickets. 
 
         :param process_identifier: The process_identifier of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str

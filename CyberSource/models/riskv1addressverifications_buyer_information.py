@@ -52,7 +52,7 @@ class Riskv1addressverificationsBuyerInformation(object):
     def merchant_customer_id(self):
         """
         Gets the merchant_customer_id of this Riskv1addressverificationsBuyerInformation.
-        Optional customer’s account ID, tracking number, reward number, or other unique number that you assign to the customer for the purpose that you choose 
+        Optional customer's account ID, tracking number, reward number, or other unique number that you assign to the customer for the purpose that you choose 
 
         :return: The merchant_customer_id of this Riskv1addressverificationsBuyerInformation.
         :rtype: str
@@ -63,7 +63,7 @@ class Riskv1addressverificationsBuyerInformation(object):
     def merchant_customer_id(self, merchant_customer_id):
         """
         Sets the merchant_customer_id of this Riskv1addressverificationsBuyerInformation.
-        Optional customer’s account ID, tracking number, reward number, or other unique number that you assign to the customer for the purpose that you choose 
+        Optional customer's account ID, tracking number, reward number, or other unique number that you assign to the customer for the purpose that you choose 
 
         :param merchant_customer_id: The merchant_customer_id of this Riskv1addressverificationsBuyerInformation.
         :type: str

@@ -139,7 +139,7 @@ class Ptsv2paymentsPaymentInformationBank(object):
     def swift_code(self):
         """
         Gets the swift_code of this Ptsv2paymentsPaymentInformationBank.
-        Bank’s SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :return: The swift_code of this Ptsv2paymentsPaymentInformationBank.
         :rtype: str
@@ -150,7 +150,7 @@ class Ptsv2paymentsPaymentInformationBank(object):
     def swift_code(self, swift_code):
         """
         Sets the swift_code of this Ptsv2paymentsPaymentInformationBank.
-        Bank’s SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
 
         :param swift_code: The swift_code of this Ptsv2paymentsPaymentInformationBank.
         :type: str
@@ -162,7 +162,7 @@ class Ptsv2paymentsPaymentInformationBank(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsPaymentInformationBank.
-        Bank code of the consumer’s account 
+        Bank code of the consumer's account 
 
         :return: The code of this Ptsv2paymentsPaymentInformationBank.
         :rtype: str
@@ -173,7 +173,7 @@ class Ptsv2paymentsPaymentInformationBank(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsPaymentInformationBank.
-        Bank code of the consumer’s account 
+        Bank code of the consumer's account 
 
         :param code: The code of this Ptsv2paymentsPaymentInformationBank.
         :type: str

@@ -77,7 +77,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def address1(self):
         """
         Gets the address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :return: The address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo.
         :rtype: str
@@ -88,7 +88,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def address1(self, address1):
         """
         Sets the address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :param address1: The address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo.
         :type: str

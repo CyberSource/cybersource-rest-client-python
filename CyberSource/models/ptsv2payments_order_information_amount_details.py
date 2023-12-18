@@ -566,7 +566,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_amount(self):
         """
         Gets the settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :return: The settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -577,7 +577,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def settlement_amount(self, settlement_amount):
         """
         Sets the settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder’s account. This field is returned for OCT transactions. 
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
 
         :param settlement_amount: The settlement_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
@@ -723,7 +723,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self):
         """
         Gets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
+        Cashback amount in the acquirer's currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :return: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :rtype: str
@@ -734,7 +734,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     def cashback_amount(self, cashback_amount):
         """
         Sets the cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
-        Cashback amount in the acquirer’s currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
+        Cashback amount in the acquirer's currency. If a cashback amount is included in the request, it must be included in the `orderInformation.amountDetails.totalAmount` value.  This field is supported only on CyberSource through VisaNet.  #### Used by **Authorization** Optional. **Authorization Reversal** Optional.  #### PIN debit Optional field for PIN debit purchase, PIN debit credit or PIN debit reversal. 
 
         :param cashback_amount: The cashback_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str

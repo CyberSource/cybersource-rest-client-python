@@ -125,30 +125,6 @@ class CustomerPaymentInstrumentApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`")
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_customer_payment_instrument`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -276,30 +252,6 @@ class CustomerPaymentInstrumentApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `get_customer_payment_instrument`")
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `get_customer_payment_instrument`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_payment_instrument`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -424,34 +376,6 @@ class CustomerPaymentInstrumentApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_payment_instruments_list`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_customer_payment_instruments_list`, length must be greater than or equal to `36`")
-        if 'offset' in params and params['offset'] < 0:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `offset` when calling `get_customer_payment_instruments_list`, must be a value greater than or equal to `0`")
-            raise ValueError("Invalid value for parameter `offset` when calling `get_customer_payment_instruments_list`, must be a value greater than or equal to `0`")
-        if 'limit' in params and params['limit'] > 100:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_customer_payment_instruments_list`, must be a value less than or equal to `100`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_customer_payment_instruments_list`, must be a value less than or equal to `100`")
-        if 'limit' in params and params['limit'] < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_customer_payment_instruments_list`, must be a value greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_customer_payment_instruments_list`, must be a value greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -589,38 +513,6 @@ class CustomerPaymentInstrumentApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_customer_payment_instrument_request` when calling `patch_customers_payment_instrument`")
             raise ValueError("Missing the required parameter `patch_customer_payment_instrument_request` when calling `patch_customers_payment_instrument`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-        if 'payment_instrument_id' in params and len(params['payment_instrument_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `payment_instrument_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customers_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `36`")
-        if 'if_match' in params and len(params['if_match']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_customers_payment_instrument`, length must be less than or equal to `32`")
-        if 'if_match' in params and len(params['if_match']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_customers_payment_instrument`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -753,22 +645,6 @@ class CustomerPaymentInstrumentApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
             raise ValueError("Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
 
-        if 'customer_id' in params and len(params['customer_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `32`")
-        if 'customer_id' in params and len(params['customer_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `customer_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `1`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer_payment_instrument`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_customer_payment_instrument`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 

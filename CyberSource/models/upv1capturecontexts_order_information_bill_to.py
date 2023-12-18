@@ -142,7 +142,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def address1(self):
         """
         Gets the address1 of this Upv1capturecontextsOrderInformationBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :return: The address1 of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -153,7 +153,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def address1(self, address1):
         """
         Sets the address1 of this Upv1capturecontextsOrderInformationBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :param address1: The address1 of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -303,7 +303,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def district(self):
         """
         Gets the district of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
+        Customer's neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
 
         :return: The district of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -314,7 +314,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def district(self, district):
         """
         Sets the district of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
+        Customer's neighborhood, community, or region (a barrio in Brazil) within the city or municipality 
 
         :param district: The district of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -416,7 +416,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def first_name(self):
         """
         Gets the first_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s first name. This name must be the same as the name on the card
+        Customer's first name. This name must be the same as the name on the card
 
         :return: The first_name of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -427,7 +427,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s first name. This name must be the same as the name on the card
+        Customer's first name. This name must be the same as the name on the card
 
         :param first_name: The first_name of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -439,7 +439,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def last_name(self):
         """
         Gets the last_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s last name. This name must be the same as the name on the card. 
+        Customer's last name. This name must be the same as the name on the card. 
 
         :return: The last_name of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -450,7 +450,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s last name. This name must be the same as the name on the card. 
+        Customer's last name. This name must be the same as the name on the card. 
 
         :param last_name: The last_name of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -462,7 +462,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def middle_name(self):
         """
         Gets the middle_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s middle name. 
+        Customer's middle name. 
 
         :return: The middle_name of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -473,7 +473,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s middle name. 
+        Customer's middle name. 
 
         :param middle_name: The middle_name of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -485,7 +485,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def name_suffix(self):
         """
         Gets the name_suffix of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s name suffix. 
+        Customer's name suffix. 
 
         :return: The name_suffix of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -496,7 +496,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def name_suffix(self, name_suffix):
         """
         Sets the name_suffix of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s name suffix. 
+        Customer's name suffix. 
 
         :param name_suffix: The name_suffix of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
@@ -531,7 +531,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def phone_number(self):
         """
         Gets the phone_number of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s phone number. 
+        Customer's phone number. 
 
         :return: The phone_number of this Upv1capturecontextsOrderInformationBillTo.
         :rtype: str
@@ -542,7 +542,7 @@ class Upv1capturecontextsOrderInformationBillTo(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Upv1capturecontextsOrderInformationBillTo.
-        Customer’s phone number. 
+        Customer's phone number. 
 
         :param phone_number: The phone_number of this Upv1capturecontextsOrderInformationBillTo.
         :type: str

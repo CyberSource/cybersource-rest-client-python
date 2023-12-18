@@ -164,7 +164,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def pin_request_indicator(self):
         """
         Gets the pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        This field contains value ‘1’ which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
+        This field contains value '1' which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
 
         :return: The pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :rtype: str
@@ -175,7 +175,7 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
     def pin_request_indicator(self, pin_request_indicator):
         """
         Sets the pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
-        This field contains value ‘1’ which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
+        This field contains value '1' which is sent by Issuer in the response when PIN is requested by issuer,   This field is only supported for Visa Platform Connect. 
 
         :param pin_request_indicator: The pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str

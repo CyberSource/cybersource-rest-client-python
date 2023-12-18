@@ -326,7 +326,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def acs_url(self):
         """
         Gets the acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        URL for the card-issuing bank’s authentication form that you receive when the card is enrolled. The value can be very large. 
+        URL for the card-issuing bank's authentication form that you receive when the card is enrolled. The value can be very large. 
 
         :return: The acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -337,7 +337,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def acs_url(self, acs_url):
         """
         Sets the acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        URL for the card-issuing bank’s authentication form that you receive when the card is enrolled. The value can be very large. 
+        URL for the card-issuing bank's authentication form that you receive when the card is enrolled. The value can be very large. 
 
         :param acs_url: The acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
@@ -349,7 +349,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def authentication_path(self):
         """
         Gets the authentication_path of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
+        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer's authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :return: The authentication_path of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -360,7 +360,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def authentication_path(self, authentication_path):
         """
         Sets the authentication_path of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer’s authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
+        Indicates what displays to the customer during the authentication process. This field can contain one of these values: - `ADS`: (Card not enrolled) customer prompted to activate the card during the checkout process. - `ATTEMPTS`: (Attempts processing) Processing briefly displays before the checkout process is completed. - `ENROLLED`: (Card enrolled) the card issuer's authentication window displays. - `UNKNOWN`: Card enrollment status cannot be determined. - `NOREDIRECT`: (Card not enrolled, authentication unavailable, or error occurred) nothing displays to the customer.  The following values can be returned if you are using rules-based payer authentication. - `RIBA`: The card-issuing bank supports risk-based authentication, but whether the cardholder is likely to be challenged cannot be determined. - `RIBA_PASS`: The card-issuing bank supports risk-based authentication and it is likely that the cardholder will not be challenged to provide credentials, also known as _silent authentication_.  For details about possible values, see `pa_enroll_authentication_path` field description and \"Rules-Based Payer Authentication\" in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html/) 
 
         :param authentication_path: The authentication_path of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
@@ -418,7 +418,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def cardholder_message(self):
         """
         Gets the cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
+        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, \"Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.\". The Issuing Bank can optionally support this value. 
 
         :return: The cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -429,7 +429,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def cardholder_message(self, cardholder_message):
         """
         Sets the cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, “Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.”. The Issuing Bank can optionally support this value. 
+        Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.The Issuer can provide information to Cardholder. For example, \"Additional authentication is needed for this transaction, please contact (Issuer Name) at xxx-xxx-xxxx.\". The Issuing Bank can optionally support this value. 
 
         :param cardholder_message: The cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
@@ -602,7 +602,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def ecommerce_indicator(self):
         """
         Gets the ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Commerce indicator for cards not enrolled. This field contains one of these values: - `internet`: Card not enrolled, or card type not supported by payer authentication. No liability shift. - `js_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `js_failure`: J/Secure directory service is not available. No liability shift. - `spa`: Mastercard card not enrolled in the SecureCode program. No liability shift. - `vbv_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `vbv_failure`: For payment processor Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Visa’s directory service is not available. No liability shift. 
+        Commerce indicator for cards not enrolled. This field contains one of these values: - `internet`: Card not enrolled, or card type not supported by payer authentication. No liability shift. - `js_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `js_failure`: J/Secure directory service is not available. No liability shift. - `spa`: Mastercard card not enrolled in the SecureCode program. No liability shift. - `vbv_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `vbv_failure`: For payment processor Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Visa's directory service is not available. No liability shift. 
 
         :return: The ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -613,7 +613,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
     def ecommerce_indicator(self, ecommerce_indicator):
         """
         Sets the ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
-        Commerce indicator for cards not enrolled. This field contains one of these values: - `internet`: Card not enrolled, or card type not supported by payer authentication. No liability shift. - `js_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `js_failure`: J/Secure directory service is not available. No liability shift. - `spa`: Mastercard card not enrolled in the SecureCode program. No liability shift. - `vbv_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `vbv_failure`: For payment processor Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Visa’s directory service is not available. No liability shift. 
+        Commerce indicator for cards not enrolled. This field contains one of these values: - `internet`: Card not enrolled, or card type not supported by payer authentication. No liability shift. - `js_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `js_failure`: J/Secure directory service is not available. No liability shift. - `spa`: Mastercard card not enrolled in the SecureCode program. No liability shift. - `vbv_attempted`: Card not enrolled, but attempt to authenticate is recorded. Liability shift. - `vbv_failure`: For payment processor Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Visa's directory service is not available. No liability shift. 
 
         :param ecommerce_indicator: The ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str

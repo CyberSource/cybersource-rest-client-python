@@ -118,22 +118,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
 
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `delete_instrument_identifier`, length must be less than or equal to `32`")
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) < 12:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `12`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `12`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `delete_instrument_identifier`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -251,22 +235,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
 
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier`, length must be less than or equal to `32`")
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) < 12:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier`, length must be greater than or equal to `12`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier`, length must be greater than or equal to `12`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -388,34 +356,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
 
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `32`")
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) < 12:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `12`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `12`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `get_instrument_identifier_payment_instruments_list`, length must be greater than or equal to `36`")
-        if 'offset' in params and params['offset'] < 0:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `offset` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `0`")
-            raise ValueError("Invalid value for parameter `offset` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `0`")
-        if 'limit' in params and params['limit'] > 100:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value less than or equal to `100`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value less than or equal to `100`")
-        if 'limit' in params and params['limit'] < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `limit` when calling `get_instrument_identifier_payment_instruments_list`, must be a value greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -546,30 +486,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
             raise ValueError("Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
 
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) < 12:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `12`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `12`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `patch_instrument_identifier`, length must be greater than or equal to `36`")
-        if 'if_match' in params and len(params['if_match']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be less than or equal to `32`")
-        if 'if_match' in params and len(params['if_match']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `if_match` when calling `patch_instrument_identifier`, length must be greater than or equal to `1`")
 
         collection_formats = {}
 
@@ -692,14 +608,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
 
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 
@@ -824,22 +732,6 @@ class InstrumentIdentifierApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
 
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `32`")
-        if 'instrument_identifier_id' in params and len(params['instrument_identifier_id']) < 12:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `12`")
-            raise ValueError("Invalid value for parameter `instrument_identifier_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `12`")
-        if 'profile_id' in params and len(params['profile_id']) > 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be less than or equal to `36`")
-        if 'profile_id' in params and len(params['profile_id']) < 36:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `36`")
-            raise ValueError("Invalid value for parameter `profile_id` when calling `post_instrument_identifier_enrollment`, length must be greater than or equal to `36`")
 
         collection_formats = {}
 

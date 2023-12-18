@@ -224,7 +224,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Required for FDCCompass. 
+        Sender's postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Required for FDCCompass. 
 
         :return: The postal_code of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -235,7 +235,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Required for FDCCompass. 
+        Sender's postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Required for FDCCompass. 
 
         :param postal_code: The postal_code of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -316,7 +316,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
+        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
 
         :return: The administrative_area of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -327,7 +327,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
+        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
 
         :param administrative_area: The administrative_area of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -385,7 +385,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def date_of_birth(self):
         """
         Gets the date_of_birth of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s date of birth in YYYYMMDD format. 
+        Sender's date of birth in YYYYMMDD format. 
 
         :return: The date_of_birth of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -396,7 +396,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def date_of_birth(self, date_of_birth):
         """
         Sets the date_of_birth of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s date of birth in YYYYMMDD format. 
+        Sender's date of birth in YYYYMMDD format. 
 
         :param date_of_birth: The date_of_birth of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -408,7 +408,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s phone number. 
+        Sender's phone number. 
 
         :return: The phone_number of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -419,7 +419,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv1pushfundstransferSenderInformation.
-        Sender’s phone number. 
+        Sender's phone number. 
 
         :param phone_number: The phone_number of this Ptsv1pushfundstransferSenderInformation.
         :type: str

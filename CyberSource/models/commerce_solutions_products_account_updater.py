@@ -31,7 +31,7 @@ class CommerceSolutionsProductsAccountUpdater(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'subscription_information': 'PaymentProductsPayerAuthenticationSubscriptionInformation',
+        'subscription_information': 'PaymentsProductsPayerAuthenticationSubscriptionInformation',
         'configuration_information': 'CommerceSolutionsProductsAccountUpdaterConfigurationInformation'
     }
 
@@ -59,7 +59,7 @@ class CommerceSolutionsProductsAccountUpdater(object):
         Gets the subscription_information of this CommerceSolutionsProductsAccountUpdater.
 
         :return: The subscription_information of this CommerceSolutionsProductsAccountUpdater.
-        :rtype: PaymentProductsPayerAuthenticationSubscriptionInformation
+        :rtype: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
         return self._subscription_information
 
@@ -69,7 +69,7 @@ class CommerceSolutionsProductsAccountUpdater(object):
         Sets the subscription_information of this CommerceSolutionsProductsAccountUpdater.
 
         :param subscription_information: The subscription_information of this CommerceSolutionsProductsAccountUpdater.
-        :type: PaymentProductsPayerAuthenticationSubscriptionInformation
+        :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
         self._subscription_information = subscription_information

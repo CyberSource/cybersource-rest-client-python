@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 NAME = "cybersource-rest-client-python"
-VERSION = "0.0.49"
+VERSION = "0.0.50"
 # To install the library, run the following
 #
 # python setup.py install

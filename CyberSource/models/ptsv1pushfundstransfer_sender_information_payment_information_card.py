@@ -146,7 +146,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def number(self):
         """
         Gets the number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
+        The customer's payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
 
         :return: The number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -157,7 +157,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def number(self, number):
         """
         Sets the number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
+        The customer's payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
 
         :param number: The number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str

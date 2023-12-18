@@ -57,7 +57,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount(obje
     def suffix(self):
         """
         Gets the suffix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount.
-        Last four digits of the customer’s payment account number. 
+        Last four digits of the customer's payment account number. 
 
         :return: The suffix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount.
         :rtype: str
@@ -68,7 +68,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount(obje
     def suffix(self, suffix):
         """
         Sets the suffix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount.
-        Last four digits of the customer’s payment account number. 
+        Last four digits of the customer's payment account number. 
 
         :param suffix: The suffix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount.
         :type: str

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payments** | [**PaymentProducts**](PaymentProducts.md) |  | [optional] 
+**payments** | [**PaymentsProducts**](PaymentsProducts.md) |  | [optional] 
 **risk** | [**RiskProducts**](RiskProducts.md) |  | [optional] 
 **commerce_solutions** | [**CommerceSolutionsProducts**](CommerceSolutionsProducts.md) |  | [optional] 
 **value_added_services** | [**ValueAddedServicesProducts**](ValueAddedServicesProducts.md) |  | [optional] 

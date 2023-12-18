@@ -5,9 +5,9 @@ All URIs are relative to *https://apitest.cybersource.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_webhook_subscription**](ManageWebhooksApi.md#delete_webhook_subscription) | **DELETE** /notification-subscriptions/v1/webhooks/{webhookId} | Delete a Webhook Subscription
-[**get_all_webhooks**](ManageWebhooksApi.md#get_all_webhooks) | **GET** /notification-subscriptions/v1/webhooks | Get Details On All Created Webhooks
-[**get_webhook_details**](ManageWebhooksApi.md#get_webhook_details) | **GET** /notification-subscriptions/v1/webhooks/{webhookId} | Get Details On a Single Webhook
-[**replay_previous_webhook**](ManageWebhooksApi.md#replay_previous_webhook) | **POST** /nrtf/v1/webhooks/{webhookId}/replays | Replay Previous Webhooks
+[**get_webhook_subscription_by_id**](ManageWebhooksApi.md#get_webhook_subscription_by_id) | **GET** /notification-subscriptions/v1/webhooks/{webhookId} | Get Details On a Single Webhook
+[**get_webhook_subscriptions_by_org**](ManageWebhooksApi.md#get_webhook_subscriptions_by_org) | **GET** /notification-subscriptions/v1/webhooks | Get Details On All Created Webhooks
+[**replay_previous_webhooks**](ManageWebhooksApi.md#replay_previous_webhooks) | **POST** /nrtf/v1/webhooks/{webhookId}/replays | Replay Previous Webhooks
 [**save_asym_egress_key**](ManageWebhooksApi.md#save_asym_egress_key) | **POST** /kms/egress/v2/keys-asym | Message Level Encryption
 [**update_webhook_subscription**](ManageWebhooksApi.md#update_webhook_subscription) | **PATCH** /notification-subscriptions/v1/webhooks/{webhookId} | Update a Webhook Subscription
 
@@ -55,12 +55,60 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_all_webhooks**
-> list[InlineResponse2004] get_all_webhooks(organization_id, product_id, event_type)
+# **get_webhook_subscription_by_id**
+> InlineResponse2004 get_webhook_subscription_by_id(webhook_id)
+
+Get Details On a Single Webhook
+
+Retrieve the details of a specific webhook by supplying the webhook ID in the path.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.ManageWebhooksApi()
+webhook_id = 'webhook_id_example' # str | The webhook Identifier
+
+try: 
+    # Get Details On a Single Webhook
+    api_response = api_instance.get_webhook_subscription_by_id(webhook_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ManageWebhooksApi->get_webhook_subscription_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhook_id** | **str**| The webhook Identifier | 
+
+### Return type
+
+[**InlineResponse2004**](InlineResponse2004.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_webhook_subscriptions_by_org**
+> list[InlineResponse2004] get_webhook_subscriptions_by_org(organization_id, product_id, event_type)
 
 Get Details On All Created Webhooks
 
@@ -82,10 +130,10 @@ event_type = 'event_type_example' # str | The Event Type.
 
 try: 
     # Get Details On All Created Webhooks
-    api_response = api_instance.get_all_webhooks(organization_id, product_id, event_type)
+    api_response = api_instance.get_webhook_subscriptions_by_org(organization_id, product_id, event_type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ManageWebhooksApi->get_all_webhooks: %s\n" % e)
+    print("Exception when calling ManageWebhooksApi->get_webhook_subscriptions_by_org: %s\n" % e)
 ```
 
 ### Parameters
@@ -107,60 +155,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_webhook_details**
-> InlineResponse2004 get_webhook_details(webhook_id)
-
-Get Details On a Single Webhook
-
-Retrieve the details of a specific webhook by supplying the webhook ID in the path.
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import CyberSource
-from CyberSource.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = CyberSource.ManageWebhooksApi()
-webhook_id = 'webhook_id_example' # str | The webhook Identifier
-
-try: 
-    # Get Details On a Single Webhook
-    api_response = api_instance.get_webhook_details(webhook_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ManageWebhooksApi->get_webhook_details: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhook_id** | **str**| The webhook Identifier | 
-
-### Return type
-
-[**InlineResponse2004**](InlineResponse2004.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replay_previous_webhook**
-> replay_previous_webhook(webhook_id, replay_webhooks=replay_webhooks)
+# **replay_previous_webhooks**
+> replay_previous_webhooks(webhook_id, replay_webhooks_request=replay_webhooks_request)
 
 Replay Previous Webhooks
 
@@ -177,13 +177,13 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ManageWebhooksApi()
 webhook_id = 'webhook_id_example' # str | The webhook uuid identifier.
-replay_webhooks = CyberSource.ReplayWebhooks() # ReplayWebhooks | The request query (optional)
+replay_webhooks_request = CyberSource.ReplayWebhooksRequest() # ReplayWebhooksRequest | The request query (optional)
 
 try: 
     # Replay Previous Webhooks
-    api_instance.replay_previous_webhook(webhook_id, replay_webhooks=replay_webhooks)
+    api_instance.replay_previous_webhooks(webhook_id, replay_webhooks_request=replay_webhooks_request)
 except ApiException as e:
-    print("Exception when calling ManageWebhooksApi->replay_previous_webhook: %s\n" % e)
+    print("Exception when calling ManageWebhooksApi->replay_previous_webhooks: %s\n" % e)
 ```
 
 ### Parameters
@@ -191,7 +191,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook_id** | **str**| The webhook uuid identifier. | 
- **replay_webhooks** | [**ReplayWebhooks**](ReplayWebhooks.md)| The request query | [optional] 
+ **replay_webhooks_request** | [**ReplayWebhooksRequest**](ReplayWebhooksRequest.md)| The request query | [optional] 
 
 ### Return type
 
@@ -204,7 +204,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -258,12 +258,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_webhook_subscription**
-> update_webhook_subscription(webhook_id, update_webhook=update_webhook)
+> update_webhook_subscription(webhook_id, update_webhook_request=update_webhook_request)
 
 Update a Webhook Subscription
 
@@ -280,11 +280,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.ManageWebhooksApi()
 webhook_id = 'webhook_id_example' # str | The Webhook Identifier.
-update_webhook = CyberSource.UpdateWebhook() # UpdateWebhook | The webhook payload or changes to apply. (optional)
+update_webhook_request = CyberSource.UpdateWebhookRequest() # UpdateWebhookRequest | The webhook payload or changes to apply. (optional)
 
 try: 
     # Update a Webhook Subscription
-    api_instance.update_webhook_subscription(webhook_id, update_webhook=update_webhook)
+    api_instance.update_webhook_subscription(webhook_id, update_webhook_request=update_webhook_request)
 except ApiException as e:
     print("Exception when calling ManageWebhooksApi->update_webhook_subscription: %s\n" % e)
 ```
@@ -294,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webhook_id** | **str**| The Webhook Identifier. | 
- **update_webhook** | [**UpdateWebhook**](UpdateWebhook.md)| The webhook payload or changes to apply. | [optional] 
+ **update_webhook_request** | [**UpdateWebhookRequest**](UpdateWebhookRequest.md)| The webhook payload or changes to apply. | [optional] 
 
 ### Return type
 
@@ -307,7 +307,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/hal+json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

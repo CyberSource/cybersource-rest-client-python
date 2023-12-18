@@ -164,7 +164,7 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
     def terminal_capability(self):
         """
         Gets the terminal_capability of this Ptsv1pushfundstransferPointOfServiceInformation.
-        integer [ 1 .. 5 ] POS terminal’s capability. Possible values:  - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards. - `5`: Terminal can read contactless chip cards; cannot use contact to read chip cards. For an EMV transaction, the value of this field must be 4 or 5.  Used by Authorization Required for the following processors: Chase Paymentech Solutions  Optional for the following processors: Visa Platform Connect 
+        integer [ 1 .. 5 ] POS terminal's capability. Possible values:  - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards. - `5`: Terminal can read contactless chip cards; cannot use contact to read chip cards. For an EMV transaction, the value of this field must be 4 or 5.  Used by Authorization Required for the following processors: Chase Paymentech Solutions  Optional for the following processors: Visa Platform Connect 
 
         :return: The terminal_capability of this Ptsv1pushfundstransferPointOfServiceInformation.
         :rtype: int
@@ -175,7 +175,7 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
     def terminal_capability(self, terminal_capability):
         """
         Sets the terminal_capability of this Ptsv1pushfundstransferPointOfServiceInformation.
-        integer [ 1 .. 5 ] POS terminal’s capability. Possible values:  - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards. - `5`: Terminal can read contactless chip cards; cannot use contact to read chip cards. For an EMV transaction, the value of this field must be 4 or 5.  Used by Authorization Required for the following processors: Chase Paymentech Solutions  Optional for the following processors: Visa Platform Connect 
+        integer [ 1 .. 5 ] POS terminal's capability. Possible values:  - `1`: Terminal has a magnetic stripe reader only. - `2`: Terminal has a magnetic stripe reader and manual entry capability. - `3`: Terminal has manual entry capability only. - `4`: Terminal can read chip cards. - `5`: Terminal can read contactless chip cards; cannot use contact to read chip cards. For an EMV transaction, the value of this field must be 4 or 5.  Used by Authorization Required for the following processors: Chase Paymentech Solutions  Optional for the following processors: Visa Platform Connect 
 
         :param terminal_capability: The terminal_capability of this Ptsv1pushfundstransferPointOfServiceInformation.
         :type: int

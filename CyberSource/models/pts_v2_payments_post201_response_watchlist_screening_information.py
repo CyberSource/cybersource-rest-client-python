@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
     def ip_country_confidence(self):
         """
         Gets the ip_country_confidence of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
-        Likelihood that the country associated with the customer’s IP address was identified correctly. Returns a value from 1–100, where 100 indicates the highest likelihood. If the country cannot be determined, the value is –1. 
+        Likelihood that the country associated with the customer's IP address was identified correctly. Returns a value from 1–100, where 100 indicates the highest likelihood. If the country cannot be determined, the value is –1. 
 
         :return: The ip_country_confidence of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
         :rtype: int
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
     def ip_country_confidence(self, ip_country_confidence):
         """
         Sets the ip_country_confidence of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
-        Likelihood that the country associated with the customer’s IP address was identified correctly. Returns a value from 1–100, where 100 indicates the highest likelihood. If the country cannot be determined, the value is –1. 
+        Likelihood that the country associated with the customer's IP address was identified correctly. Returns a value from 1–100, where 100 indicates the highest likelihood. If the country cannot be determined, the value is –1. 
 
         :param ip_country_confidence: The ip_country_confidence of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
         :type: int

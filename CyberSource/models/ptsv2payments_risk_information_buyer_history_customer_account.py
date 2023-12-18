@@ -77,7 +77,7 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
     def last_change_date(self):
         """
         Gets the last_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
-        Date the cardholder’s account was last changed. This includes changes to the billing or shipping address, new payment accounts or new users added. Recommended for Discover ProtectBuy. 
+        Date the cardholder's account was last changed. This includes changes to the billing or shipping address, new payment accounts or new users added. Recommended for Discover ProtectBuy. 
 
         :return: The last_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :rtype: str
@@ -88,7 +88,7 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
     def last_change_date(self, last_change_date):
         """
         Sets the last_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
-        Date the cardholder’s account was last changed. This includes changes to the billing or shipping address, new payment accounts or new users added. Recommended for Discover ProtectBuy. 
+        Date the cardholder's account was last changed. This includes changes to the billing or shipping address, new payment accounts or new users added. Recommended for Discover ProtectBuy. 
 
         :param last_change_date: The last_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str

@@ -115,7 +115,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def name(self):
         """
         Gets the name of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s business name.  Visa Platform Connect With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's business name.  Visa Platform Connect With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The name of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -126,7 +126,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def name(self, name):
         """
         Sets the name of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s business name.  Visa Platform Connect With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's business name.  Visa Platform Connect With American Express, the maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :param name: The name of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -138,7 +138,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        First line of the sub-merchant’s street address.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The address1 of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -149,7 +149,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        First line of the sub-merchant’s street address.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :param address1: The address1 of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -161,7 +161,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def locality(self):
         """
         Gets the locality of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s city.  For processor-specific details, see submerchant_city request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city.  For processor-specific details, see submerchant_city request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The locality of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -172,7 +172,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s city.  For processor-specific details, see submerchant_city request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city.  For processor-specific details, see submerchant_city request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :param locality: The locality of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -184,7 +184,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s state or province. See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province. See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The administrative_area of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -195,7 +195,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s state or province. See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province. See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
 
         :param administrative_area: The administrative_area of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -207,7 +207,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant’s address.  For processor-specific details, see submerchant_postal_code request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address.  For processor-specific details, see submerchant_postal_code request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The postal_code of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -218,7 +218,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant’s address.  For processor-specific details, see submerchant_postal_code request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address.  For processor-specific details, see submerchant_postal_code request field description in Credit Card Services Using the SCMP API.  Visa Platform Connect The value for this field does not map to the TC 33 capture file5.  FDC Compass This value must consist of uppercase characters. 
 
         :param postal_code: The postal_code of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -230,7 +230,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def country(self):
         """
         Gets the country of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s country. Use the ISO Standard numeric Country Codes.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's country. Use the ISO Standard numeric Country Codes.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
 
         :return: The country of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -241,7 +241,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def country(self, country):
         """
         Sets the country of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s country. Use the ISO Standard numeric Country Codes.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's country. Use the ISO Standard numeric Country Codes.  See https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect The value for this field does not map to the TC 33 capture file.  FDC Compass This value must consist of uppercase characters. 
 
         :param country: The country of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -253,7 +253,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def email(self):
         """
         Gets the email of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s email address.  CyberSource through VisaNet | With American Express, the value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address - Note The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+        Sub-merchant's email address.  CyberSource through VisaNet | With American Express, the value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address - Note The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
 
         :return: The email of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -264,7 +264,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def email(self, email):
         """
         Sets the email of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s email address.  CyberSource through VisaNet | With American Express, the value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address - Note The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant’s acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
+        Sub-merchant's email address.  CyberSource through VisaNet | With American Express, the value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCRB - Position: 25-64 - Field: American Express Seller E-mail Address - Note The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
 
         :param email: The email of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
@@ -276,7 +276,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s telephone number.  Maximum length for procesors  Visa Platform Connect: 20 FDC Compass: 13  FDC Compass This value must consist of uppercase characters. Use one of these recommended formats: NNN-NNN-NNNN NNN-AAAAAAA 
+        Sub-merchant's telephone number.  Maximum length for procesors  Visa Platform Connect: 20 FDC Compass: 13  FDC Compass This value must consist of uppercase characters. Use one of these recommended formats: NNN-NNN-NNNN NNN-AAAAAAA 
 
         :return: The phone_number of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :rtype: str
@@ -287,7 +287,7 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
-        Sub-merchant’s telephone number.  Maximum length for procesors  Visa Platform Connect: 20 FDC Compass: 13  FDC Compass This value must consist of uppercase characters. Use one of these recommended formats: NNN-NNN-NNNN NNN-AAAAAAA 
+        Sub-merchant's telephone number.  Maximum length for procesors  Visa Platform Connect: 20 FDC Compass: 13  FDC Compass This value must consist of uppercase characters. Use one of these recommended formats: NNN-NNN-NNNN NNN-AAAAAAA 
 
         :param phone_number: The phone_number of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str

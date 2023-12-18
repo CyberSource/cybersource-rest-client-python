@@ -133,7 +133,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def number(self):
         """
         Gets the number of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN).  Conditional: this field is required if not using tokens. 
+        The customer's payment card number, also known as the Primary Account Number (PAN).  Conditional: this field is required if not using tokens. 
 
         :return: The number of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :rtype: str
@@ -144,7 +144,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def number(self, number):
         """
         Sets the number of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        The customer’s payment card number, also known as the Primary Account Number (PAN).  Conditional: this field is required if not using tokens. 
+        The customer's payment card number, also known as the Primary Account Number (PAN).  Conditional: this field is required if not using tokens. 
 
         :param number: The number of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: str

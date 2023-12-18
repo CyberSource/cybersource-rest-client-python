@@ -118,14 +118,6 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
             raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
-        if 'organization_id' in params and len(params['organization_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be less than or equal to `32`")
-        if 'organization_id' in params and len(params['organization_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
@@ -177,7 +169,7 @@ class ReportsApi(object):
     def get_report_by_report_id(self, report_id, **kwargs):
         """
         Get Report Based on Report Id
-        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
+        Download a report using the reportId value. If you don't already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -208,7 +200,7 @@ class ReportsApi(object):
     def get_report_by_report_id_with_http_info(self, report_id, **kwargs):
         """
         Get Report Based on Report Id
-        Download a report using the reportId value. If you don’t already know this value, you can obtain it using the Retrieve available reports call. 
+        Download a report using the reportId value. If you don't already know this value, you can obtain it using the Retrieve available reports call. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -247,14 +239,6 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
             raise ValueError("Missing the required parameter `report_id` when calling `get_report_by_report_id`")
 
-        if 'organization_id' in params and len(params['organization_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be less than or equal to `32`")
-        if 'organization_id' in params and len(params['organization_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
@@ -400,14 +384,6 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
             raise ValueError("Missing the required parameter `time_query_type` when calling `search_reports`")
 
-        if 'organization_id' in params and len(params['organization_id']) > 32:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, length must be less than or equal to `32`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, length must be less than or equal to `32`")
-        if 'organization_id' in params and len(params['organization_id']) < 1:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, length must be greater than or equal to `1`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, length must be greater than or equal to `1`")
         if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")

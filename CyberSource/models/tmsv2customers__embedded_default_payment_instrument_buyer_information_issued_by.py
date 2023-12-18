@@ -52,7 +52,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy(obj
     def administrative_area(self):
         """
         Gets the administrative_area of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy.
-        The State or province where the customer’s driver’s license was issued.  Use the two-character State, Province, and Territory Codes for the United States and Canada. 
+        The State or province where the customer's driver's license was issued.  Use the two-character State, Province, and Territory Codes for the United States and Canada. 
 
         :return: The administrative_area of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy.
         :rtype: str
@@ -63,7 +63,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy(obj
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy.
-        The State or province where the customer’s driver’s license was issued.  Use the two-character State, Province, and Territory Codes for the United States and Canada. 
+        The State or province where the customer's driver's license was issued.  Use the two-character State, Province, and Territory Codes for the United States and Canada. 
 
         :param administrative_area: The administrative_area of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy.
         :type: str

@@ -108,7 +108,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def cookies_accepted(self):
         """
         Gets the cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
-        Whether the customer’s browser accepts cookies. This field can contain one of the following values: - `yes`: The customer’s browser accepts cookies. - `no`: The customer’s browser does not accept cookies. 
+        Whether the customer's browser accepts cookies. This field can contain one of the following values: - `yes`: The customer's browser accepts cookies. - `no`: The customer's browser does not accept cookies. 
 
         :return: The cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
         :rtype: str
@@ -119,7 +119,7 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
     def cookies_accepted(self, cookies_accepted):
         """
         Sets the cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
-        Whether the customer’s browser accepts cookies. This field can contain one of the following values: - `yes`: The customer’s browser accepts cookies. - `no`: The customer’s browser does not accept cookies. 
+        Whether the customer's browser accepts cookies. This field can contain one of the following values: - `yes`: The customer's browser accepts cookies. - `no`: The customer's browser does not accept cookies. 
 
         :param cookies_accepted: The cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str

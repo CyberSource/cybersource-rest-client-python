@@ -146,7 +146,7 @@ class PushFunds201ResponseProcessorInformation(object):
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
-        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer’s receipt. 
+        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer's receipt. 
 
         :return: The system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
         :rtype: str
@@ -157,7 +157,7 @@ class PushFunds201ResponseProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
-        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer’s receipt. 
+        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer's receipt. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
         :type: str

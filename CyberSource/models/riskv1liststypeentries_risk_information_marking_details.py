@@ -113,7 +113,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def record_name(self):
         """
         Gets the record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Name of the customer’s record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
+        Name of the customer's record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer's first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
 
         :return: The record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :rtype: str
@@ -124,7 +124,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def record_name(self, record_name):
         """
         Sets the record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Name of the customer’s record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer’s first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
+        Name of the customer's record entered in the list. For the positive list, it is required if `action_ code`=`add_positive`. If absent from the request, `ics_risk_update` creates the value for this field by concatenating the customer's first and last names. For the negative and the review lists, `record_name`, `customer_firstname`, and `customer_lastname` are optional. 
 
         :param record_name: The record_name of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str
@@ -136,7 +136,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def action(self):
         """
         Gets the action of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Indicates whether to add to or remove a customer’s identity from the negative or positive list. This field can contain one of the following values: - add: Add information to the list. - convert: moves the data. - delete: deletes the data from the list. 
+        Indicates whether to add to or remove a customer's identity from the negative or positive list. This field can contain one of the following values: - add: Add information to the list. - convert: moves the data. - delete: deletes the data from the list. 
 
         :return: The action of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :rtype: str
@@ -147,7 +147,7 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
     def action(self, action):
         """
         Sets the action of this Riskv1liststypeentriesRiskInformationMarkingDetails.
-        Indicates whether to add to or remove a customer’s identity from the negative or positive list. This field can contain one of the following values: - add: Add information to the list. - convert: moves the data. - delete: deletes the data from the list. 
+        Indicates whether to add to or remove a customer's identity from the negative or positive list. This field can contain one of the following values: - add: Add information to the list. - convert: moves the data. - delete: deletes the data from the list. 
 
         :param action: The action of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str

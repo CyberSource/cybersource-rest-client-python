@@ -67,7 +67,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location city name. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location city name. When merchant provides services from a location other than the location identified as merchant location. 
 
         :return: The locality of this Ptsv2paymentsMerchantInformationServiceLocation.
         :rtype: str
@@ -78,7 +78,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location city name. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location city name. When merchant provides services from a location other than the location identified as merchant location. 
 
         :param locality: The locality of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str
@@ -90,7 +90,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def country_subdivision_code(self):
         """
         Gets the country_subdivision_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location country subdivision code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location country subdivision code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :return: The country_subdivision_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :rtype: str
@@ -101,7 +101,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def country_subdivision_code(self, country_subdivision_code):
         """
         Sets the country_subdivision_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location country subdivision code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location country subdivision code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :param country_subdivision_code: The country_subdivision_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str
@@ -113,7 +113,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def country_code(self):
         """
         Gets the country_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location country code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location country code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :return: The country_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :rtype: str
@@ -124,7 +124,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def country_code(self, country_code):
         """
         Sets the country_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location country code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location country code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :param country_code: The country_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str
@@ -136,7 +136,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location postal code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location postal code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :return: The postal_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :rtype: str
@@ -147,7 +147,7 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv2paymentsMerchantInformationServiceLocation.
-        #### Visa Platform Connect  Merchant’s service location postal code. When merchant provides services from a location other than the location identified as merchant location. 
+        #### Visa Platform Connect  Merchant's service location postal code. When merchant provides services from a location other than the location identified as merchant location. 
 
         :param postal_code: The postal_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str

@@ -146,7 +146,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer's receipt. 
 
         :return: The system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :rtype: str
@@ -157,7 +157,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
-        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer’s receipt. 
+        This field is returned only for **American Express Direct** and **CyberSource through VisaNet**. Returned by authorization and incremental authorization services.  #### American Express Direct  System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.  #### CyberSource through VisaNet  System trace number that must be printed on the customer's receipt. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str

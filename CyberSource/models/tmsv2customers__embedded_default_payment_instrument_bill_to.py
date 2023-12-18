@@ -102,7 +102,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def first_name(self):
         """
         Gets the first_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s first name. This name must be the same as the name on the card. 
+        Customer's first name. This name must be the same as the name on the card. 
 
         :return: The first_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :rtype: str
@@ -113,7 +113,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s first name. This name must be the same as the name on the card. 
+        Customer's first name. This name must be the same as the name on the card. 
 
         :param first_name: The first_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :type: str
@@ -125,7 +125,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def last_name(self):
         """
         Gets the last_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s last name. This name must be the same as the name on the card. 
+        Customer's last name. This name must be the same as the name on the card. 
 
         :return: The last_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :rtype: str
@@ -136,7 +136,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s last name. This name must be the same as the name on the card. 
+        Customer's last name. This name must be the same as the name on the card. 
 
         :param last_name: The last_name of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :type: str
@@ -148,7 +148,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def company(self):
         """
         Gets the company of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Name of the customer’s company. 
+        Name of the customer's company. 
 
         :return: The company of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :rtype: str
@@ -159,7 +159,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def company(self, company):
         """
         Sets the company of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Name of the customer’s company. 
+        Name of the customer's company. 
 
         :param company: The company of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :type: str
@@ -171,7 +171,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def address1(self):
         """
         Gets the address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :return: The address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :rtype: str
@@ -182,7 +182,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def address1(self, address1):
         """
         Sets the address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Payment card billing street address as it appears on the credit card issuer’s records. 
+        Payment card billing street address as it appears on the credit card issuer's records. 
 
         :param address1: The address1 of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :type: str
@@ -332,7 +332,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def phone_number(self):
         """
         Gets the phone_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s phone number. 
+        Customer's phone number. 
 
         :return: The phone_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :rtype: str
@@ -343,7 +343,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
-        Customer’s phone number. 
+        Customer's phone number. 
 
         :param phone_number: The phone_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo.
         :type: str

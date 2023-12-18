@@ -97,7 +97,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email(self):
         """
         Gets the email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -108,7 +108,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email(self, email):
         """
         Sets the email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's email address.  For details, see `auth_ev_email` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param email: The email of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -120,7 +120,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email_raw(self):
         """
         Gets the email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s email address.
+        Raw Electronic Verification response code from the processor for the customer's email address.
 
         :return: The email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -131,7 +131,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def email_raw(self, email_raw):
         """
         Sets the email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s email address.
+        Raw Electronic Verification response code from the processor for the customer's email address.
 
         :param email_raw: The email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -143,7 +143,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self):
         """
         Gets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer's name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :return: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -154,7 +154,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name(self, name):
         """
         Sets the name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
+        #### Visa Platform Connect Mapped Electronic Verification response code for the customer's name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match 
 
         :param name: The name of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -166,7 +166,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self):
         """
         Gets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer's name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :return: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -177,7 +177,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def name_raw(self, name_raw):
         """
         Sets the name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
+        #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer's name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match 
 
         :param name_raw: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -189,7 +189,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number(self):
         """
         Gets the phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -200,7 +200,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's phone number.  For details, see `auth_ev_phone_number` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -212,7 +212,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number_raw(self):
         """
         Gets the phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s phone number.
+        Raw Electronic Verification response code from the processor for the customer's phone number.
 
         :return: The phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -223,7 +223,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def phone_number_raw(self, phone_number_raw):
         """
         Sets the phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s phone number.
+        Raw Electronic Verification response code from the processor for the customer's phone number.
 
         :param phone_number_raw: The phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -235,7 +235,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street(self):
         """
         Gets the street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -246,7 +246,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street(self, street):
         """
         Sets the street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's street address.  For details, see `auth_ev_street` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param street: The street of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -258,7 +258,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street_raw(self):
         """
         Gets the street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s street address.
+        Raw Electronic Verification response code from the processor for the customer's street address.
 
         :return: The street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -269,7 +269,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def street_raw(self, street_raw):
         """
         Sets the street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s street address.
+        Raw Electronic Verification response code from the processor for the customer's street address.
 
         :param street_raw: The street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -281,7 +281,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code(self):
         """
         Gets the postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :return: The postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -292,7 +292,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Mapped Electronic Verification response code for the customer’s postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Mapped Electronic Verification response code for the customer's postal code.  For details, see `auth_ev_postal_code` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
 
         :param postal_code: The postal_code of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
@@ -304,7 +304,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code_raw(self):
         """
         Gets the postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s postal code.
+        Raw Electronic Verification response code from the processor for the customer's postal code.
 
         :return: The postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :rtype: str
@@ -315,7 +315,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
     def postal_code_raw(self, postal_code_raw):
         """
         Sets the postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
-        Raw Electronic Verification response code from the processor for the customer’s postal code.
+        Raw Electronic Verification response code from the processor for the customer's postal code.
 
         :param postal_code_raw: The postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str

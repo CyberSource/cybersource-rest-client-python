@@ -31,8 +31,8 @@ class ValueAddedServicesProducts(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'reporting': 'PaymentProductsTax',
-        'transaction_search': 'PaymentProductsTax'
+        'reporting': 'PaymentsProductsTax',
+        'transaction_search': 'PaymentsProductsTax'
     }
 
     attribute_map = {
@@ -59,7 +59,7 @@ class ValueAddedServicesProducts(object):
         Gets the reporting of this ValueAddedServicesProducts.
 
         :return: The reporting of this ValueAddedServicesProducts.
-        :rtype: PaymentProductsTax
+        :rtype: PaymentsProductsTax
         """
         return self._reporting
 
@@ -69,7 +69,7 @@ class ValueAddedServicesProducts(object):
         Sets the reporting of this ValueAddedServicesProducts.
 
         :param reporting: The reporting of this ValueAddedServicesProducts.
-        :type: PaymentProductsTax
+        :type: PaymentsProductsTax
         """
 
         self._reporting = reporting
@@ -80,7 +80,7 @@ class ValueAddedServicesProducts(object):
         Gets the transaction_search of this ValueAddedServicesProducts.
 
         :return: The transaction_search of this ValueAddedServicesProducts.
-        :rtype: PaymentProductsTax
+        :rtype: PaymentsProductsTax
         """
         return self._transaction_search
 
@@ -90,7 +90,7 @@ class ValueAddedServicesProducts(object):
         Sets the transaction_search of this ValueAddedServicesProducts.
 
         :param transaction_search: The transaction_search of this ValueAddedServicesProducts.
-        :type: PaymentProductsTax
+        :type: PaymentsProductsTax
         """
 
         self._transaction_search = transaction_search
