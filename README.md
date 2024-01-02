@@ -51,6 +51,8 @@ The API Reference Guide provides examples of what information is needed for a pa
 
 * Use the created ApiClient instance to call CyberSource APIs. For example [SimpleAuthorizationInternet](https://github.com/CyberSource/cybersource-rest-samples-python/blob/c73bf7ae4a4826e4a6b652067cf38eb4affe765c/samples/Payments/Payments/simple-authorizationinternet.py#L95C9-L95C76).
 
+***Please note that this is for reference only. Ensure to store the credentials in a more secure manner.***
+
 ### Switching between the sandbox environment and the production environment
 
 Cybersource maintains a complete sandbox environment for testing and development purposes. This sandbox environment is an exact duplicate of our production environment with the transaction authorization and settlement process simulated. By default, this SDK is configured to communicate with the sandbox environment. To switch to the production environment, set the `run_environment` property in the SDK Configuration.  See our sample at <https://github.com/CyberSource/cybersource-rest-samples-python/blob/master/data/Configuration.py>
