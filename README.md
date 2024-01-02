@@ -27,6 +27,8 @@ Follow the first step mentioned in [Getting Started with CyberSource REST SDKs](
 
 Follow the second step mentioned in [Getting Started with CyberSource REST SDKs](https://developer.cybersource.com/hello-world/rest-api-sdks.html#gettingstarted) to configure the SDK by inputting your credentials.
 
+***Please note that this is for reference only. Ensure to store the credentials in a more secure manner.***
+
 ## How to Use
 
 To get started using this SDK, it's highly recommended to download our sample code repository:
@@ -51,7 +53,7 @@ The API Reference Guide provides examples of what information is needed for a pa
 
 * Use the created ApiClient instance to call CyberSource APIs. For example [SimpleAuthorizationInternet](https://github.com/CyberSource/cybersource-rest-samples-python/blob/c73bf7ae4a4826e4a6b652067cf38eb4affe765c/samples/Payments/Payments/simple-authorizationinternet.py#L95C9-L95C76).
 
-***Please note that this is for reference only. Ensure to store the credentials in a more secure manner.***
+For more detailed examples, refer to the [cybersource-rest-samples-python](https://github.com/CyberSource/cybersource-rest-samples-python) repository.
 
 ### Switching between the sandbox environment and the production environment
 
