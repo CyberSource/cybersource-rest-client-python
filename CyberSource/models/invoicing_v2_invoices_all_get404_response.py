@@ -95,7 +95,7 @@ class InvoicingV2InvoicesAllGet404Response(object):
     def status(self):
         """
         Gets the status of this InvoicingV2InvoicesAllGet404Response.
-        The status of the invoice.  Possible values:  - NOTFOUND     
+        The status of the invoice.  Possible values:  - NOTFOUND 
 
         :return: The status of this InvoicingV2InvoicesAllGet404Response.
         :rtype: str
@@ -106,7 +106,7 @@ class InvoicingV2InvoicesAllGet404Response(object):
     def status(self, status):
         """
         Sets the status of this InvoicingV2InvoicesAllGet404Response.
-        The status of the invoice.  Possible values:  - NOTFOUND     
+        The status of the invoice.  Possible values:  - NOTFOUND 
 
         :param status: The status of this InvoicingV2InvoicesAllGet404Response.
         :type: str

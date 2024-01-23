@@ -31,22 +31,27 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'transaction_id': 'str'
+        'transaction_id': 'str',
+        'network_transaction_id': 'str'
     }
 
     attribute_map = {
-        'transaction_id': 'transactionId'
+        'transaction_id': 'transactionId',
+        'network_transaction_id': 'networkTransactionId'
     }
 
-    def __init__(self, transaction_id=None):
+    def __init__(self, transaction_id=None, network_transaction_id=None):
         """
         PtsV2PaymentsCapturesPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._transaction_id = None
+        self._network_transaction_id = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
+        if network_transaction_id is not None:
+          self.network_transaction_id = network_transaction_id
 
     @property
     def transaction_id(self):
@@ -70,6 +75,29 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def network_transaction_id(self):
+        """
+        Gets the network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        Network Transaction Identifier Applicable for online capture transactions only. 
+
+        :return: The network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._network_transaction_id
+
+    @network_transaction_id.setter
+    def network_transaction_id(self, network_transaction_id):
+        """
+        Sets the network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        Network Transaction Identifier Applicable for online capture transactions only. 
+
+        :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._network_transaction_id = network_transaction_id
 
     def to_dict(self):
         """

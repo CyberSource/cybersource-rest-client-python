@@ -116,6 +116,10 @@ class BatchesApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `batch_id` when calling `get_batch_report`")
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_report`")
 
+        if 'batch_id' in params and not re.search('^[0-9]*$', params['batch_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_report`, must conform to the pattern `/^[0-9]*$/`")
+            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_report`, must conform to the pattern `/^[0-9]*$/`")
 
         collection_formats = {}
 
@@ -229,6 +233,10 @@ class BatchesApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `batch_id` when calling `get_batch_status`")
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_status`")
 
+        if 'batch_id' in params and not re.search('^[0-9]*$', params['batch_id']):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Invalid value for parameter `batch_id` when calling `get_batch_status`, must conform to the pattern `/^[0-9]*$/`")
+            raise ValueError("Invalid value for parameter `batch_id` when calling `get_batch_status`, must conform to the pattern `/^[0-9]*$/`")
 
         collection_formats = {}
 

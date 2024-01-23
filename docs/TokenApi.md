@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **post_token_payment_credentials**
-> str post_token_payment_credentials(token_id, profile_id=profile_id)
+> str post_token_payment_credentials(token_id, post_payment_credentials_request, profile_id=profile_id)
 
 Generate Payment Credentials for a TMS Token
 
@@ -25,11 +25,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.TokenApi()
 token_id = 'token_id_example' # str | The Id of a token representing a Customer, Payment Instrument or Instrument Identifier.
+post_payment_credentials_request = CyberSource.PostPaymentCredentialsRequest() # PostPaymentCredentialsRequest | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
 
 try: 
     # Generate Payment Credentials for a TMS Token
-    api_response = api_instance.post_token_payment_credentials(token_id, profile_id=profile_id)
+    api_response = api_instance.post_token_payment_credentials(token_id, post_payment_credentials_request, profile_id=profile_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TokenApi->post_token_payment_credentials: %s\n" % e)
@@ -40,6 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token_id** | **str**| The Id of a token representing a Customer, Payment Instrument or Instrument Identifier. | 
+ **post_payment_credentials_request** | [**PostPaymentCredentialsRequest**](PostPaymentCredentialsRequest.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
 
 ### Return type

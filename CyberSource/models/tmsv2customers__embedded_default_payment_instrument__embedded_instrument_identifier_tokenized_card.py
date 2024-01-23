@@ -33,6 +33,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     swagger_types = {
         'type': 'str',
         'state': 'str',
+        'enrollment_id': 'str',
+        'token_reference_id': 'str',
         'reason': 'str',
         'number': 'str',
         'expiration_month': 'str',
@@ -44,6 +46,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     attribute_map = {
         'type': 'type',
         'state': 'state',
+        'enrollment_id': 'enrollmentId',
+        'token_reference_id': 'tokenReferenceId',
         'reason': 'reason',
         'number': 'number',
         'expiration_month': 'expirationMonth',
@@ -52,13 +56,15 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
         'card': 'card'
     }
 
-    def __init__(self, type=None, state=None, reason=None, number=None, expiration_month=None, expiration_year=None, cryptogram=None, card=None):
+    def __init__(self, type=None, state=None, enrollment_id=None, token_reference_id=None, reason=None, number=None, expiration_month=None, expiration_year=None, cryptogram=None, card=None):
         """
         Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard - a model defined in Swagger
         """
 
         self._type = None
         self._state = None
+        self._enrollment_id = None
+        self._token_reference_id = None
         self._reason = None
         self._number = None
         self._expiration_month = None
@@ -70,6 +76,10 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
           self.type = type
         if state is not None:
           self.state = state
+        if enrollment_id is not None:
+          self.enrollment_id = enrollment_id
+        if token_reference_id is not None:
+          self.token_reference_id = token_reference_id
         if reason is not None:
           self.reason = reason
         if number is not None:
@@ -87,7 +97,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def type(self):
         """
         Gets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
-        The network token card association brand Possible Values: - visa - mastercard 
+        The network token card association brand Possible Values: - visa - mastercard - americanexpress 
 
         :return: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
         :rtype: str
@@ -98,7 +108,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     def type(self, type):
         """
         Sets the type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
-        The network token card association brand Possible Values: - visa - mastercard 
+        The network token card association brand Possible Values: - visa - mastercard - americanexpress 
 
         :param type: The type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
         :type: str
@@ -128,6 +138,52 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
         """
 
         self._state = state
+
+    @property
+    def enrollment_id(self):
+        """
+        Gets the enrollment_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        Unique Identifier for the enrolled PAN. This Id is provided by the card association when a network token is provisioned successfully. 
+
+        :return: The enrollment_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        :rtype: str
+        """
+        return self._enrollment_id
+
+    @enrollment_id.setter
+    def enrollment_id(self, enrollment_id):
+        """
+        Sets the enrollment_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        Unique Identifier for the enrolled PAN. This Id is provided by the card association when a network token is provisioned successfully. 
+
+        :param enrollment_id: The enrollment_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        :type: str
+        """
+
+        self._enrollment_id = enrollment_id
+
+    @property
+    def token_reference_id(self):
+        """
+        Gets the token_reference_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        Unique Identifier for the network token. This Id is provided by the card association when a network token is provisioned successfully. 
+
+        :return: The token_reference_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        :rtype: str
+        """
+        return self._token_reference_id
+
+    @token_reference_id.setter
+    def token_reference_id(self, token_reference_id):
+        """
+        Sets the token_reference_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        Unique Identifier for the network token. This Id is provided by the card association when a network token is provisioned successfully. 
+
+        :param token_reference_id: The token_reference_id of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard.
+        :type: str
+        """
+
+        self._token_reference_id = token_reference_id
 
     @property
     def reason(self):

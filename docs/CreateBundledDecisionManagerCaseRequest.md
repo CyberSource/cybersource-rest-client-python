@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **travel_information** | [**Riskv1decisionsTravelInformation**](Riskv1decisionsTravelInformation.md) |  | [optional] 
 **merchant_defined_information** | [**list[Riskv1decisionsMerchantDefinedInformation]**](Riskv1decisionsMerchantDefinedInformation.md) |  | [optional] 
 **merchant_information** | [**Riskv1decisionsMerchantInformation**](Riskv1decisionsMerchantInformation.md) |  | [optional] 
-**acquirer_information** | [**Ptsv2paymentsAcquirerInformation**](Ptsv2paymentsAcquirerInformation.md) |  | [optional] 
+**acquirer_information** | [**Riskv1decisionsAcquirerInformation**](Riskv1decisionsAcquirerInformation.md) |  | [optional] 
 **recurring_payment_information** | [**Ptsv2paymentsRecurringPaymentInformation**](Ptsv2paymentsRecurringPaymentInformation.md) |  | [optional] 
 **consumer_authentication_information** | [**Riskv1decisionsConsumerAuthenticationInformation**](Riskv1decisionsConsumerAuthenticationInformation.md) |  | [optional] 
 **watchlist_screening_information** | [**Ptsv2paymentsWatchlistScreeningInformation**](Ptsv2paymentsWatchlistScreeningInformation.md) |  | [optional] 

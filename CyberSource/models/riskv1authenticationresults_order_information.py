@@ -31,27 +31,22 @@ class Riskv1authenticationresultsOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'Riskv1authenticationresultsOrderInformationAmountDetails',
-        'line_items': 'list[Riskv1authenticationresultsOrderInformationLineItems]'
+        'amount_details': 'Riskv1authenticationresultsOrderInformationAmountDetails'
     }
 
     attribute_map = {
-        'amount_details': 'amountDetails',
-        'line_items': 'lineItems'
+        'amount_details': 'amountDetails'
     }
 
-    def __init__(self, amount_details=None, line_items=None):
+    def __init__(self, amount_details=None):
         """
         Riskv1authenticationresultsOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
-        self._line_items = None
 
         if amount_details is not None:
           self.amount_details = amount_details
-        if line_items is not None:
-          self.line_items = line_items
 
     @property
     def amount_details(self):
@@ -73,27 +68,6 @@ class Riskv1authenticationresultsOrderInformation(object):
         """
 
         self._amount_details = amount_details
-
-    @property
-    def line_items(self):
-        """
-        Gets the line_items of this Riskv1authenticationresultsOrderInformation.
-
-        :return: The line_items of this Riskv1authenticationresultsOrderInformation.
-        :rtype: list[Riskv1authenticationresultsOrderInformationLineItems]
-        """
-        return self._line_items
-
-    @line_items.setter
-    def line_items(self, line_items):
-        """
-        Sets the line_items of this Riskv1authenticationresultsOrderInformation.
-
-        :param line_items: The line_items of this Riskv1authenticationresultsOrderInformation.
-        :type: list[Riskv1authenticationresultsOrderInformationLineItems]
-        """
-
-        self._line_items = line_items
 
     def to_dict(self):
         """
