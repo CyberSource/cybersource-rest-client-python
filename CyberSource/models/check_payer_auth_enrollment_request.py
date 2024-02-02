@@ -39,7 +39,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         'buyer_information': 'Riskv1authenticationsBuyerInformation',
         'device_information': 'Riskv1authenticationsDeviceInformation',
         'merchant_information': 'Riskv1decisionsMerchantInformation',
-        'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
+        'acquirer_information': 'Riskv1decisionsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
         'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
         'risk_information': 'Riskv1authenticationsRiskInformation',
@@ -287,7 +287,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the acquirer_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The acquirer_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Ptsv2paymentsAcquirerInformation
+        :rtype: Riskv1decisionsAcquirerInformation
         """
         return self._acquirer_information
 
@@ -297,7 +297,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the acquirer_information of this CheckPayerAuthEnrollmentRequest.
 
         :param acquirer_information: The acquirer_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Ptsv2paymentsAcquirerInformation
+        :type: Riskv1decisionsAcquirerInformation
         """
 
         self._acquirer_information = acquirer_information

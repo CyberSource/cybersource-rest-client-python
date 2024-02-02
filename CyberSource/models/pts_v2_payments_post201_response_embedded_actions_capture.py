@@ -62,7 +62,7 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - TRANSMITTED (Only for Online Capture enabled merchants) 
 
         :return: The status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE.
         :rtype: str
@@ -73,7 +73,7 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE.
-        The status of the submitted transaction.  Possible values:  - PENDING 
+        The status of the submitted transaction.  Possible values:  - PENDING  - TRANSMITTED (Only for Online Capture enabled merchants) 
 
         :param status: The status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE.
         :type: str

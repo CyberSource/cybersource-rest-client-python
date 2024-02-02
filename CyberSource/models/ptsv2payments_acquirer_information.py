@@ -34,17 +34,19 @@ class Ptsv2paymentsAcquirerInformation(object):
         'acquirer_bin': 'str',
         'country': 'str',
         'password': 'str',
-        'merchant_id': 'str'
+        'merchant_id': 'str',
+        'acquirer_merchant_id': 'str'
     }
 
     attribute_map = {
         'acquirer_bin': 'acquirerBin',
         'country': 'country',
         'password': 'password',
-        'merchant_id': 'merchantId'
+        'merchant_id': 'merchantId',
+        'acquirer_merchant_id': 'acquirerMerchantId'
     }
 
-    def __init__(self, acquirer_bin=None, country=None, password=None, merchant_id=None):
+    def __init__(self, acquirer_bin=None, country=None, password=None, merchant_id=None, acquirer_merchant_id=None):
         """
         Ptsv2paymentsAcquirerInformation - a model defined in Swagger
         """
@@ -53,6 +55,7 @@ class Ptsv2paymentsAcquirerInformation(object):
         self._country = None
         self._password = None
         self._merchant_id = None
+        self._acquirer_merchant_id = None
 
         if acquirer_bin is not None:
           self.acquirer_bin = acquirer_bin
@@ -62,6 +65,8 @@ class Ptsv2paymentsAcquirerInformation(object):
           self.password = password
         if merchant_id is not None:
           self.merchant_id = merchant_id
+        if acquirer_merchant_id is not None:
+          self.acquirer_merchant_id = acquirer_merchant_id
 
     @property
     def acquirer_bin(self):
@@ -154,6 +159,29 @@ class Ptsv2paymentsAcquirerInformation(object):
         """
 
         self._merchant_id = merchant_id
+
+    @property
+    def acquirer_merchant_id(self):
+        """
+        Gets the acquirer_merchant_id of this Ptsv2paymentsAcquirerInformation.
+        Acquirer assigned merchant id. Check if your processor supports this field. 
+
+        :return: The acquirer_merchant_id of this Ptsv2paymentsAcquirerInformation.
+        :rtype: str
+        """
+        return self._acquirer_merchant_id
+
+    @acquirer_merchant_id.setter
+    def acquirer_merchant_id(self, acquirer_merchant_id):
+        """
+        Sets the acquirer_merchant_id of this Ptsv2paymentsAcquirerInformation.
+        Acquirer assigned merchant id. Check if your processor supports this field. 
+
+        :param acquirer_merchant_id: The acquirer_merchant_id of this Ptsv2paymentsAcquirerInformation.
+        :type: str
+        """
+
+        self._acquirer_merchant_id = acquirer_merchant_id
 
     def to_dict(self):
         """

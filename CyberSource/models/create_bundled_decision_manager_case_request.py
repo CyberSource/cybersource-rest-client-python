@@ -42,7 +42,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         'travel_information': 'Riskv1decisionsTravelInformation',
         'merchant_defined_information': 'list[Riskv1decisionsMerchantDefinedInformation]',
         'merchant_information': 'Riskv1decisionsMerchantInformation',
-        'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
+        'acquirer_information': 'Riskv1decisionsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
         'consumer_authentication_information': 'Riskv1decisionsConsumerAuthenticationInformation',
         'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation',
@@ -361,7 +361,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         Gets the acquirer_information of this CreateBundledDecisionManagerCaseRequest.
 
         :return: The acquirer_information of this CreateBundledDecisionManagerCaseRequest.
-        :rtype: Ptsv2paymentsAcquirerInformation
+        :rtype: Riskv1decisionsAcquirerInformation
         """
         return self._acquirer_information
 
@@ -371,7 +371,7 @@ class CreateBundledDecisionManagerCaseRequest(object):
         Sets the acquirer_information of this CreateBundledDecisionManagerCaseRequest.
 
         :param acquirer_information: The acquirer_information of this CreateBundledDecisionManagerCaseRequest.
-        :type: Ptsv2paymentsAcquirerInformation
+        :type: Riskv1decisionsAcquirerInformation
         """
 
         self._acquirer_information = acquirer_information
