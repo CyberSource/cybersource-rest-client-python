@@ -105,4 +105,4 @@ CyberSource may allow Customer to access, use, and/or test a CyberSource product
 
 ## License
 
-This repository is distributed under a proprietary license. See the provided [`LICENSE.txt`](/LICENSE.txt) file.
+This repository is distributed under a proprietary license. See the provided [`LICENSE.txt`](/license.txt) file.
