@@ -47,7 +47,8 @@ class PaymentsProducts(object):
         'payouts': 'PaymentsProductsPayouts',
         'differential_fee': 'PaymentsProductsDifferentialFee',
         'pay_by_link': 'PaymentsProductsTax',
-        'unified_checkout': 'PaymentsProductsTax'
+        'unified_checkout': 'PaymentsProductsTax',
+        'receivables_manager': 'PaymentsProductsTax'
     }
 
     attribute_map = {
@@ -67,10 +68,11 @@ class PaymentsProducts(object):
         'payouts': 'payouts',
         'differential_fee': 'differentialFee',
         'pay_by_link': 'payByLink',
-        'unified_checkout': 'unifiedCheckout'
+        'unified_checkout': 'unifiedCheckout',
+        'receivables_manager': 'receivablesManager'
     }
 
-    def __init__(self, card_processing=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None):
+    def __init__(self, card_processing=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None):
         """
         PaymentsProducts - a model defined in Swagger
         """
@@ -92,6 +94,7 @@ class PaymentsProducts(object):
         self._differential_fee = None
         self._pay_by_link = None
         self._unified_checkout = None
+        self._receivables_manager = None
 
         if card_processing is not None:
           self.card_processing = card_processing
@@ -127,6 +130,8 @@ class PaymentsProducts(object):
           self.pay_by_link = pay_by_link
         if unified_checkout is not None:
           self.unified_checkout = unified_checkout
+        if receivables_manager is not None:
+          self.receivables_manager = receivables_manager
 
     @property
     def card_processing(self):
@@ -484,6 +489,27 @@ class PaymentsProducts(object):
         """
 
         self._unified_checkout = unified_checkout
+
+    @property
+    def receivables_manager(self):
+        """
+        Gets the receivables_manager of this PaymentsProducts.
+
+        :return: The receivables_manager of this PaymentsProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._receivables_manager
+
+    @receivables_manager.setter
+    def receivables_manager(self, receivables_manager):
+        """
+        Sets the receivables_manager of this PaymentsProducts.
+
+        :param receivables_manager: The receivables_manager of this PaymentsProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._receivables_manager = receivables_manager
 
     def to_dict(self):
         """

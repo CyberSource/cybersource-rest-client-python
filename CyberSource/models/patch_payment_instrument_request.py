@@ -41,7 +41,7 @@ class PatchPaymentInstrumentRequest(object):
         'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
         'buyer_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
         'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo',
-        'processing_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation',
+        'processing_information': 'TmsPaymentInstrumentProcessingInfo',
         'merchant_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation',
         'instrument_identifier': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata',
@@ -344,7 +344,7 @@ class PatchPaymentInstrumentRequest(object):
         Gets the processing_information of this PatchPaymentInstrumentRequest.
 
         :return: The processing_information of this PatchPaymentInstrumentRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :rtype: TmsPaymentInstrumentProcessingInfo
         """
         return self._processing_information
 
@@ -354,7 +354,7 @@ class PatchPaymentInstrumentRequest(object):
         Sets the processing_information of this PatchPaymentInstrumentRequest.
 
         :param processing_information: The processing_information of this PatchPaymentInstrumentRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :type: TmsPaymentInstrumentProcessingInfo
         """
 
         self._processing_information = processing_information

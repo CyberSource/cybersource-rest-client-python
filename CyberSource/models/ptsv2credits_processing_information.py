@@ -48,7 +48,8 @@ class Ptsv2creditsProcessingInformation(object):
         'purchase_options': 'Ptsv2creditsProcessingInformationPurchaseOptions',
         'electronic_benefits_transfer': 'Ptsv2creditsProcessingInformationElectronicBenefitsTransfer',
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
-        'japan_payment_options': 'Ptsv2creditsProcessingInformationJapanPaymentOptions'
+        'japan_payment_options': 'Ptsv2creditsProcessingInformationJapanPaymentOptions',
+        'refund_options': 'Ptsv2creditsProcessingInformationRefundOptions'
     }
 
     attribute_map = {
@@ -69,10 +70,11 @@ class Ptsv2creditsProcessingInformation(object):
         'purchase_options': 'purchaseOptions',
         'electronic_benefits_transfer': 'electronicBenefitsTransfer',
         'loan_options': 'loanOptions',
-        'japan_payment_options': 'japanPaymentOptions'
+        'japan_payment_options': 'japanPaymentOptions',
+        'refund_options': 'refundOptions'
     }
 
-    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None):
+    def __init__(self, commerce_indicator=None, processor_id=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, wallet_type=None, national_net_domestic_data=None, network_routing_order=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, japan_payment_options=None, refund_options=None):
         """
         Ptsv2creditsProcessingInformation - a model defined in Swagger
         """
@@ -95,6 +97,7 @@ class Ptsv2creditsProcessingInformation(object):
         self._electronic_benefits_transfer = None
         self._loan_options = None
         self._japan_payment_options = None
+        self._refund_options = None
 
         if commerce_indicator is not None:
           self.commerce_indicator = commerce_indicator
@@ -132,6 +135,8 @@ class Ptsv2creditsProcessingInformation(object):
           self.loan_options = loan_options
         if japan_payment_options is not None:
           self.japan_payment_options = japan_payment_options
+        if refund_options is not None:
+          self.refund_options = refund_options
 
     @property
     def commerce_indicator(self):
@@ -534,6 +539,27 @@ class Ptsv2creditsProcessingInformation(object):
         """
 
         self._japan_payment_options = japan_payment_options
+
+    @property
+    def refund_options(self):
+        """
+        Gets the refund_options of this Ptsv2creditsProcessingInformation.
+
+        :return: The refund_options of this Ptsv2creditsProcessingInformation.
+        :rtype: Ptsv2creditsProcessingInformationRefundOptions
+        """
+        return self._refund_options
+
+    @refund_options.setter
+    def refund_options(self, refund_options):
+        """
+        Sets the refund_options of this Ptsv2creditsProcessingInformation.
+
+        :param refund_options: The refund_options of this Ptsv2creditsProcessingInformation.
+        :type: Ptsv2creditsProcessingInformationRefundOptions
+        """
+
+        self._refund_options = refund_options
 
     def to_dict(self):
         """

@@ -31,7 +31,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instrument_identifier': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier'
+        'instrument_identifier': 'TmsEmbeddedInstrumentIdentifier'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded(object):
         Gets the instrument_identifier of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded.
 
         :return: The instrument_identifier of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :rtype: TmsEmbeddedInstrumentIdentifier
         """
         return self._instrument_identifier
 
@@ -64,7 +64,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded(object):
         Sets the instrument_identifier of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded.
 
         :param instrument_identifier: The instrument_identifier of this Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :type: TmsEmbeddedInstrumentIdentifier
         """
 
         self._instrument_identifier = instrument_identifier

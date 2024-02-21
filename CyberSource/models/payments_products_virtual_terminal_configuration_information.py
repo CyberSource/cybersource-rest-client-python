@@ -32,7 +32,7 @@ class PaymentsProductsVirtualTerminalConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'PaymentsProductsVirtualTerminalConfigurationInformationConfigurations'
+        'configurations': 'VTConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class PaymentsProductsVirtualTerminalConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsVirtualTerminalConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsVirtualTerminalConfigurationInformation.
-        :rtype: PaymentsProductsVirtualTerminalConfigurationInformationConfigurations
+        :rtype: VTConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class PaymentsProductsVirtualTerminalConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsVirtualTerminalConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsVirtualTerminalConfigurationInformation.
-        :type: PaymentsProductsVirtualTerminalConfigurationInformationConfigurations
+        :type: VTConfig
         """
 
         self._configurations = configurations

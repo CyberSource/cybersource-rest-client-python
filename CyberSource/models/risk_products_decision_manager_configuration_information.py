@@ -32,7 +32,7 @@ class RiskProductsDecisionManagerConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'RiskProductsDecisionManagerConfigurationInformationConfigurations'
+        'configurations': 'DmConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class RiskProductsDecisionManagerConfigurationInformation(object):
         Gets the configurations of this RiskProductsDecisionManagerConfigurationInformation.
 
         :return: The configurations of this RiskProductsDecisionManagerConfigurationInformation.
-        :rtype: RiskProductsDecisionManagerConfigurationInformationConfigurations
+        :rtype: DmConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class RiskProductsDecisionManagerConfigurationInformation(object):
         Sets the configurations of this RiskProductsDecisionManagerConfigurationInformation.
 
         :param configurations: The configurations of this RiskProductsDecisionManagerConfigurationInformation.
-        :type: RiskProductsDecisionManagerConfigurationInformationConfigurations
+        :type: DmConfig
         """
 
         self._configurations = configurations

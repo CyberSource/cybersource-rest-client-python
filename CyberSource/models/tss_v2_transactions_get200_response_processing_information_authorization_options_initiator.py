@@ -34,7 +34,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         'type': 'str',
         'credential_stored_on_file': 'str',
         'stored_credential_used': 'str',
-        'merchant_initiated_transaction': 'Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction'
+        'merchant_initiated_transaction': 'MerchantInitiatedTransactionObject'
     }
 
     attribute_map = {
@@ -138,7 +138,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         Gets the merchant_initiated_transaction of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
 
         :return: The merchant_initiated_transaction of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
-        :rtype: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
+        :rtype: MerchantInitiatedTransactionObject
         """
         return self._merchant_initiated_transaction
 
@@ -148,7 +148,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         Sets the merchant_initiated_transaction of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
 
         :param merchant_initiated_transaction: The merchant_initiated_transaction of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
-        :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
+        :type: MerchantInitiatedTransactionObject
         """
 
         self._merchant_initiated_transaction = merchant_initiated_transaction

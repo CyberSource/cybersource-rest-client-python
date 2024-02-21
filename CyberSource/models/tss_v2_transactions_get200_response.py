@@ -52,8 +52,10 @@ class TssV2TransactionsGet200Response(object):
         'payment_information': 'TssV2TransactionsGet200ResponsePaymentInformation',
         'payment_insights_information': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformation',
         'payout_options': 'TssV2TransactionsGet200ResponsePayoutOptions',
+        'unscheduled_payment_information': 'TssV2TransactionsGet200ResponseUnscheduledPaymentInformation',
         'processing_information': 'TssV2TransactionsGet200ResponseProcessingInformation',
         'processor_information': 'TssV2TransactionsGet200ResponseProcessorInformation',
+        'recurring_payment_information': 'TssV2TransactionsGet200ResponseRecurringPaymentInformation',
         'point_of_sale_information': 'TssV2TransactionsGet200ResponsePointOfSaleInformation',
         'risk_information': 'TssV2TransactionsGet200ResponseRiskInformation',
         'sender_information': 'TssV2TransactionsGet200ResponseSenderInformation',
@@ -83,8 +85,10 @@ class TssV2TransactionsGet200Response(object):
         'payment_information': 'paymentInformation',
         'payment_insights_information': 'paymentInsightsInformation',
         'payout_options': 'payoutOptions',
+        'unscheduled_payment_information': 'unscheduledPaymentInformation',
         'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
+        'recurring_payment_information': 'recurringPaymentInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
         'risk_information': 'riskInformation',
         'sender_information': 'senderInformation',
@@ -92,7 +96,7 @@ class TssV2TransactionsGet200Response(object):
         'links': '_links'
     }
 
-    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, processing_information=None, processor_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
+    def __init__(self, id=None, root_id=None, reconciliation_id=None, merchant_id=None, submit_time_utc=None, status=None, application_information=None, buyer_information=None, client_reference_information=None, consumer_authentication_information=None, device_information=None, error_information=None, installment_information=None, fraud_marking_information=None, health_care_information=None, merchant_defined_information=None, merchant_information=None, order_information=None, payment_information=None, payment_insights_information=None, payout_options=None, unscheduled_payment_information=None, processing_information=None, processor_information=None, recurring_payment_information=None, point_of_sale_information=None, risk_information=None, sender_information=None, token_information=None, links=None):
         """
         TssV2TransactionsGet200Response - a model defined in Swagger
         """
@@ -118,8 +122,10 @@ class TssV2TransactionsGet200Response(object):
         self._payment_information = None
         self._payment_insights_information = None
         self._payout_options = None
+        self._unscheduled_payment_information = None
         self._processing_information = None
         self._processor_information = None
+        self._recurring_payment_information = None
         self._point_of_sale_information = None
         self._risk_information = None
         self._sender_information = None
@@ -168,10 +174,14 @@ class TssV2TransactionsGet200Response(object):
           self.payment_insights_information = payment_insights_information
         if payout_options is not None:
           self.payout_options = payout_options
+        if unscheduled_payment_information is not None:
+          self.unscheduled_payment_information = unscheduled_payment_information
         if processing_information is not None:
           self.processing_information = processing_information
         if processor_information is not None:
           self.processor_information = processor_information
+        if recurring_payment_information is not None:
+          self.recurring_payment_information = recurring_payment_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
         if risk_information is not None:
@@ -639,6 +649,27 @@ class TssV2TransactionsGet200Response(object):
         self._payout_options = payout_options
 
     @property
+    def unscheduled_payment_information(self):
+        """
+        Gets the unscheduled_payment_information of this TssV2TransactionsGet200Response.
+
+        :return: The unscheduled_payment_information of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseUnscheduledPaymentInformation
+        """
+        return self._unscheduled_payment_information
+
+    @unscheduled_payment_information.setter
+    def unscheduled_payment_information(self, unscheduled_payment_information):
+        """
+        Sets the unscheduled_payment_information of this TssV2TransactionsGet200Response.
+
+        :param unscheduled_payment_information: The unscheduled_payment_information of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseUnscheduledPaymentInformation
+        """
+
+        self._unscheduled_payment_information = unscheduled_payment_information
+
+    @property
     def processing_information(self):
         """
         Gets the processing_information of this TssV2TransactionsGet200Response.
@@ -679,6 +710,27 @@ class TssV2TransactionsGet200Response(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def recurring_payment_information(self):
+        """
+        Gets the recurring_payment_information of this TssV2TransactionsGet200Response.
+
+        :return: The recurring_payment_information of this TssV2TransactionsGet200Response.
+        :rtype: TssV2TransactionsGet200ResponseRecurringPaymentInformation
+        """
+        return self._recurring_payment_information
+
+    @recurring_payment_information.setter
+    def recurring_payment_information(self, recurring_payment_information):
+        """
+        Sets the recurring_payment_information of this TssV2TransactionsGet200Response.
+
+        :param recurring_payment_information: The recurring_payment_information of this TssV2TransactionsGet200Response.
+        :type: TssV2TransactionsGet200ResponseRecurringPaymentInformation
+        """
+
+        self._recurring_payment_information = recurring_payment_information
 
     @property
     def point_of_sale_information(self):

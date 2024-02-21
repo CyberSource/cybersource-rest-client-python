@@ -32,24 +32,39 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
     """
     swagger_types = {
         'auth_type': 'str',
+        'auth_indicator': 'str',
+        'extend_auth_indicator': 'str',
+        'card_verification_indicator': 'bool',
         'initiator': 'TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator'
     }
 
     attribute_map = {
         'auth_type': 'authType',
+        'auth_indicator': 'authIndicator',
+        'extend_auth_indicator': 'extendAuthIndicator',
+        'card_verification_indicator': 'cardVerificationIndicator',
         'initiator': 'initiator'
     }
 
-    def __init__(self, auth_type=None, initiator=None):
+    def __init__(self, auth_type=None, auth_indicator=None, extend_auth_indicator=None, card_verification_indicator=None, initiator=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
 
         self._auth_type = None
+        self._auth_indicator = None
+        self._extend_auth_indicator = None
+        self._card_verification_indicator = None
         self._initiator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
+        if auth_indicator is not None:
+          self.auth_indicator = auth_indicator
+        if extend_auth_indicator is not None:
+          self.extend_auth_indicator = extend_auth_indicator
+        if card_verification_indicator is not None:
+          self.card_verification_indicator = card_verification_indicator
         if initiator is not None:
           self.initiator = initiator
 
@@ -75,6 +90,75 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         """
 
         self._auth_type = auth_type
+
+    @property
+    def auth_indicator(self):
+        """
+        Gets the auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support.  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file. 
+
+        :return: The auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._auth_indicator
+
+    @auth_indicator.setter
+    def auth_indicator(self, auth_indicator):
+        """
+        Sets the auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Flag that specifies the purpose of the authorization.  Possible values:  - **0**: Preauthorization  - **1**: Final authorization  To set the default for this field, contact CyberSource Customer Support.  #### Barclays and Elavon The default for Barclays and Elavon is 1 (final authorization). To change the default for this field, contact CyberSource Customer Support.  #### CyberSource through VisaNet When the value for this field is 0, it corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR0  - Position: 164  - Field: Additional Authorization Indicators When the value for this field is 1, it does not correspond to any data in the TC 33 capture file. 
+
+        :param auth_indicator: The auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._auth_indicator = auth_indicator
+
+    @property
+    def extend_auth_indicator(self):
+        """
+        Gets the extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Flag that indicates whether the transaction is an extended authorization. 
+
+        :return: The extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._extend_auth_indicator
+
+    @extend_auth_indicator.setter
+    def extend_auth_indicator(self, extend_auth_indicator):
+        """
+        Sets the extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        Flag that indicates whether the transaction is an extended authorization. 
+
+        :param extend_auth_indicator: The extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._extend_auth_indicator = extend_auth_indicator
+
+    @property
+    def card_verification_indicator(self):
+        """
+        Gets the card_verification_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :return: The card_verification_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._card_verification_indicator
+
+    @card_verification_indicator.setter
+    def card_verification_indicator(self, card_verification_indicator):
+        """
+        Sets the card_verification_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        This API field will indicate whether a card verification check is being performed during the transaction  Possible values:   - `true`   - `false` (default value) 
+
+        :param card_verification_indicator: The card_verification_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._card_verification_indicator = card_verification_indicator
 
     @property
     def initiator(self):

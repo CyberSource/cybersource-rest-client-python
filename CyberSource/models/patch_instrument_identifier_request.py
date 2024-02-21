@@ -31,18 +31,18 @@ class PatchInstrumentIdentifierRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierLinks',
+        'links': 'TmsEmbeddedInstrumentIdentifierLinks',
         'id': 'str',
         'object': 'str',
         'state': 'str',
         'type': 'str',
-        'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard',
-        'bank_account': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount',
-        'tokenized_card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard',
-        'issuer': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierIssuer',
-        'processing_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformation',
-        'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo',
-        'metadata': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierMetadata'
+        'card': 'TmsEmbeddedInstrumentIdentifierCard',
+        'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
+        'tokenized_card': 'TmsEmbeddedInstrumentIdentifierTokenizedCard',
+        'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
+        'processing_information': 'TmsEmbeddedInstrumentIdentifierProcessingInformation',
+        'bill_to': 'TmsEmbeddedInstrumentIdentifierBillTo',
+        'metadata': 'TmsEmbeddedInstrumentIdentifierMetadata'
     }
 
     attribute_map = {
@@ -109,7 +109,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the links of this PatchInstrumentIdentifierRequest.
 
         :return: The links of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierLinks
+        :rtype: TmsEmbeddedInstrumentIdentifierLinks
         """
         return self._links
 
@@ -119,7 +119,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the links of this PatchInstrumentIdentifierRequest.
 
         :param links: The links of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierLinks
+        :type: TmsEmbeddedInstrumentIdentifierLinks
         """
 
         self._links = links
@@ -222,7 +222,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the card of this PatchInstrumentIdentifierRequest.
 
         :return: The card of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard
+        :rtype: TmsEmbeddedInstrumentIdentifierCard
         """
         return self._card
 
@@ -232,7 +232,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the card of this PatchInstrumentIdentifierRequest.
 
         :param card: The card of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierCard
+        :type: TmsEmbeddedInstrumentIdentifierCard
         """
 
         self._card = card
@@ -243,7 +243,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the bank_account of this PatchInstrumentIdentifierRequest.
 
         :return: The bank_account of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount
+        :rtype: TmsEmbeddedInstrumentIdentifierBankAccount
         """
         return self._bank_account
 
@@ -253,7 +253,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the bank_account of this PatchInstrumentIdentifierRequest.
 
         :param bank_account: The bank_account of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBankAccount
+        :type: TmsEmbeddedInstrumentIdentifierBankAccount
         """
 
         self._bank_account = bank_account
@@ -264,7 +264,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the tokenized_card of this PatchInstrumentIdentifierRequest.
 
         :return: The tokenized_card of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard
+        :rtype: TmsEmbeddedInstrumentIdentifierTokenizedCard
         """
         return self._tokenized_card
 
@@ -274,7 +274,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the tokenized_card of this PatchInstrumentIdentifierRequest.
 
         :param tokenized_card: The tokenized_card of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierTokenizedCard
+        :type: TmsEmbeddedInstrumentIdentifierTokenizedCard
         """
 
         self._tokenized_card = tokenized_card
@@ -285,7 +285,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the issuer of this PatchInstrumentIdentifierRequest.
 
         :return: The issuer of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierIssuer
+        :rtype: TmsEmbeddedInstrumentIdentifierIssuer
         """
         return self._issuer
 
@@ -295,7 +295,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the issuer of this PatchInstrumentIdentifierRequest.
 
         :param issuer: The issuer of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierIssuer
+        :type: TmsEmbeddedInstrumentIdentifierIssuer
         """
 
         self._issuer = issuer
@@ -306,7 +306,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the processing_information of this PatchInstrumentIdentifierRequest.
 
         :return: The processing_information of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformation
+        :rtype: TmsEmbeddedInstrumentIdentifierProcessingInformation
         """
         return self._processing_information
 
@@ -316,7 +316,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the processing_information of this PatchInstrumentIdentifierRequest.
 
         :param processing_information: The processing_information of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformation
+        :type: TmsEmbeddedInstrumentIdentifierProcessingInformation
         """
 
         self._processing_information = processing_information
@@ -327,7 +327,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the bill_to of this PatchInstrumentIdentifierRequest.
 
         :return: The bill_to of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo
+        :rtype: TmsEmbeddedInstrumentIdentifierBillTo
         """
         return self._bill_to
 
@@ -337,7 +337,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the bill_to of this PatchInstrumentIdentifierRequest.
 
         :param bill_to: The bill_to of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierBillTo
+        :type: TmsEmbeddedInstrumentIdentifierBillTo
         """
 
         self._bill_to = bill_to
@@ -348,7 +348,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the metadata of this PatchInstrumentIdentifierRequest.
 
         :return: The metadata of this PatchInstrumentIdentifierRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierMetadata
+        :rtype: TmsEmbeddedInstrumentIdentifierMetadata
         """
         return self._metadata
 
@@ -358,7 +358,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the metadata of this PatchInstrumentIdentifierRequest.
 
         :param metadata: The metadata of this PatchInstrumentIdentifierRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierMetadata
+        :type: TmsEmbeddedInstrumentIdentifierMetadata
         """
 
         self._metadata = metadata

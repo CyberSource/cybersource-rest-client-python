@@ -32,26 +32,41 @@ class Ptsv2payoutsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Ptsv2payoutsPaymentInformationCard',
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
+        'customer': 'Ptsv2paymentsPaymentInformationCustomer',
+        'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
+        'instrument_identifier': 'PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier',
+        'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard'
     }
 
     attribute_map = {
         'card': 'card',
-        'customer': 'customer'
+        'customer': 'customer',
+        'payment_instrument': 'paymentInstrument',
+        'instrument_identifier': 'instrumentIdentifier',
+        'tokenized_card': 'tokenizedCard'
     }
 
-    def __init__(self, card=None, customer=None):
+    def __init__(self, card=None, customer=None, payment_instrument=None, instrument_identifier=None, tokenized_card=None):
         """
         Ptsv2payoutsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._customer = None
+        self._payment_instrument = None
+        self._instrument_identifier = None
+        self._tokenized_card = None
 
         if card is not None:
           self.card = card
         if customer is not None:
           self.customer = customer
+        if payment_instrument is not None:
+          self.payment_instrument = payment_instrument
+        if instrument_identifier is not None:
+          self.instrument_identifier = instrument_identifier
+        if tokenized_card is not None:
+          self.tokenized_card = tokenized_card
 
     @property
     def card(self):
@@ -94,6 +109,69 @@ class Ptsv2payoutsPaymentInformation(object):
         """
 
         self._customer = customer
+
+    @property
+    def payment_instrument(self):
+        """
+        Gets the payment_instrument of this Ptsv2payoutsPaymentInformation.
+
+        :return: The payment_instrument of this Ptsv2payoutsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+        return self._payment_instrument
+
+    @payment_instrument.setter
+    def payment_instrument(self, payment_instrument):
+        """
+        Sets the payment_instrument of this Ptsv2payoutsPaymentInformation.
+
+        :param payment_instrument: The payment_instrument of this Ptsv2payoutsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentInstrument
+        """
+
+        self._payment_instrument = payment_instrument
+
+    @property
+    def instrument_identifier(self):
+        """
+        Gets the instrument_identifier of this Ptsv2payoutsPaymentInformation.
+
+        :return: The instrument_identifier of this Ptsv2payoutsPaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+        return self._instrument_identifier
+
+    @instrument_identifier.setter
+    def instrument_identifier(self, instrument_identifier):
+        """
+        Sets the instrument_identifier of this Ptsv2payoutsPaymentInformation.
+
+        :param instrument_identifier: The instrument_identifier of this Ptsv2payoutsPaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
+        """
+
+        self._instrument_identifier = instrument_identifier
+
+    @property
+    def tokenized_card(self):
+        """
+        Gets the tokenized_card of this Ptsv2payoutsPaymentInformation.
+
+        :return: The tokenized_card of this Ptsv2payoutsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationTokenizedCard
+        """
+        return self._tokenized_card
+
+    @tokenized_card.setter
+    def tokenized_card(self, tokenized_card):
+        """
+        Sets the tokenized_card of this Ptsv2payoutsPaymentInformation.
+
+        :param tokenized_card: The tokenized_card of this Ptsv2payoutsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationTokenizedCard
+        """
+
+        self._tokenized_card = tokenized_card
 
     def to_dict(self):
         """

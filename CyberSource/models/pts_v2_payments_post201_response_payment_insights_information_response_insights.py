@@ -32,26 +32,31 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
     """
     swagger_types = {
         'category': 'str',
-        'category_code': 'str'
+        'category_code': 'str',
+        'processor_raw_name': 'str'
     }
 
     attribute_map = {
         'category': 'category',
-        'category_code': 'categoryCode'
+        'category_code': 'categoryCode',
+        'processor_raw_name': 'processorRawName'
     }
 
-    def __init__(self, category=None, category_code=None):
+    def __init__(self, category=None, category_code=None, processor_raw_name=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights - a model defined in Swagger
         """
 
         self._category = None
         self._category_code = None
+        self._processor_raw_name = None
 
         if category is not None:
           self.category = category
         if category_code is not None:
           self.category_code = category_code
+        if processor_raw_name is not None:
+          self.processor_raw_name = processor_raw_name
 
     @property
     def category(self):
@@ -98,6 +103,29 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
         """
 
         self._category_code = category_code
+
+    @property
+    def processor_raw_name(self):
+        """
+        Gets the processor_raw_name of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
+        Raw name of the processor used for the transaction processing, especially useful during acquirer swing to see which processor transaction settled with 
+
+        :return: The processor_raw_name of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
+        :rtype: str
+        """
+        return self._processor_raw_name
+
+    @processor_raw_name.setter
+    def processor_raw_name(self, processor_raw_name):
+        """
+        Sets the processor_raw_name of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
+        Raw name of the processor used for the transaction processing, especially useful during acquirer swing to see which processor transaction settled with 
+
+        :param processor_raw_name: The processor_raw_name of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
+        :type: str
+        """
+
+        self._processor_raw_name = processor_raw_name
 
     def to_dict(self):
         """

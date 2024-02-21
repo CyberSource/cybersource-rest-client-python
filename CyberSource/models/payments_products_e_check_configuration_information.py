@@ -32,7 +32,7 @@ class PaymentsProductsECheckConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'PaymentsProductsECheckConfigurationInformationConfigurations'
+        'configurations': 'ECheckConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class PaymentsProductsECheckConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsECheckConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsECheckConfigurationInformation.
-        :rtype: PaymentsProductsECheckConfigurationInformationConfigurations
+        :rtype: ECheckConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class PaymentsProductsECheckConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsECheckConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsECheckConfigurationInformation.
-        :type: PaymentsProductsECheckConfigurationInformationConfigurations
+        :type: ECheckConfig
         """
 
         self._configurations = configurations

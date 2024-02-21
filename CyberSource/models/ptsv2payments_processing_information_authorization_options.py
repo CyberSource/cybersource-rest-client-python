@@ -37,6 +37,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'verbal_auth_transaction_id': 'str',
         'auth_indicator': 'str',
         'partial_auth_indicator': 'bool',
+        'extend_auth_indicator': 'str',
         'balance_inquiry': 'bool',
         'ignore_avs_result': 'bool',
         'decline_avs_flags': 'list[str]',
@@ -61,6 +62,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'verbal_auth_transaction_id': 'verbalAuthTransactionId',
         'auth_indicator': 'authIndicator',
         'partial_auth_indicator': 'partialAuthIndicator',
+        'extend_auth_indicator': 'extendAuthIndicator',
         'balance_inquiry': 'balanceInquiry',
         'ignore_avs_result': 'ignoreAvsResult',
         'decline_avs_flags': 'declineAvsFlags',
@@ -78,7 +80,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'card_verification_indicator': 'cardVerificationIndicator'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -89,6 +91,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._verbal_auth_transaction_id = None
         self._auth_indicator = None
         self._partial_auth_indicator = None
+        self._extend_auth_indicator = None
         self._balance_inquiry = None
         self._ignore_avs_result = None
         self._decline_avs_flags = None
@@ -117,6 +120,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.auth_indicator = auth_indicator
         if partial_auth_indicator is not None:
           self.partial_auth_indicator = partial_auth_indicator
+        if extend_auth_indicator is not None:
+          self.extend_auth_indicator = extend_auth_indicator
         if balance_inquiry is not None:
           self.balance_inquiry = balance_inquiry
         if ignore_avs_result is not None:
@@ -285,6 +290,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._partial_auth_indicator = partial_auth_indicator
+
+    @property
+    def extend_auth_indicator(self):
+        """
+        Gets the extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Flag that indicates whether the transaction is an extended authorization. 
+
+        :return: The extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._extend_auth_indicator
+
+    @extend_auth_indicator.setter
+    def extend_auth_indicator(self, extend_auth_indicator):
+        """
+        Sets the extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Flag that indicates whether the transaction is an extended authorization. 
+
+        :param extend_auth_indicator: The extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._extend_auth_indicator = extend_auth_indicator
 
     @property
     def balance_inquiry(self):

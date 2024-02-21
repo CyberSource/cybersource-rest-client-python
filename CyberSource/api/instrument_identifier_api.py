@@ -178,7 +178,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -209,7 +209,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -271,7 +271,7 @@ class InstrumentIdentifierApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
+                                        response_type='TmsEmbeddedInstrumentIdentifier',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -422,7 +422,7 @@ class InstrumentIdentifierApi(object):
         :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction Id to update. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -455,7 +455,7 @@ class InstrumentIdentifierApi(object):
         :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction Id to update. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -527,7 +527,7 @@ class InstrumentIdentifierApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
+                                        response_type='TmsEmbeddedInstrumentIdentifier',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -551,7 +551,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -582,7 +582,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
-        :return: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
+        :return: TmsEmbeddedInstrumentIdentifier
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -644,7 +644,7 @@ class InstrumentIdentifierApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier',
+                                        response_type='TmsEmbeddedInstrumentIdentifier',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
