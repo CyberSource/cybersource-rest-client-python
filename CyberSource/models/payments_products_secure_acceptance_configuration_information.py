@@ -32,7 +32,7 @@ class PaymentsProductsSecureAcceptanceConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'PaymentsProductsSecureAcceptanceConfigurationInformationConfigurations'
+        'configurations': 'SAConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class PaymentsProductsSecureAcceptanceConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsSecureAcceptanceConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsSecureAcceptanceConfigurationInformation.
-        :rtype: PaymentsProductsSecureAcceptanceConfigurationInformationConfigurations
+        :rtype: SAConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class PaymentsProductsSecureAcceptanceConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsSecureAcceptanceConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsSecureAcceptanceConfigurationInformation.
-        :type: PaymentsProductsSecureAcceptanceConfigurationInformationConfigurations
+        :type: SAConfig
         """
 
         self._configurations = configurations

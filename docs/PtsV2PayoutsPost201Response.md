@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **processor_information** | [**PtsV2PayoutsPost201ResponseProcessorInformation**](PtsV2PayoutsPost201ResponseProcessorInformation.md) |  | [optional] 
 **recipient_information** | [**PtsV2PayoutsPost201ResponseRecipientInformation**](PtsV2PayoutsPost201ResponseRecipientInformation.md) |  | [optional] 
 **issuer_information** | [**PtsV2PayoutsPost201ResponseIssuerInformation**](PtsV2PayoutsPost201ResponseIssuerInformation.md) |  | [optional] 
+**token_information** | [**PtsV2PaymentsPost201ResponseTokenInformation**](PtsV2PaymentsPost201ResponseTokenInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

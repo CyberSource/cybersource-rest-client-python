@@ -62,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier**
-> Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
+> TmsEmbeddedInstrumentIdentifier get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
 
 Retrieve an Instrument Identifier
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier.md)
+[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_instrument_identifier**
-> Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
+> TmsEmbeddedInstrumentIdentifier patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
 
 Update an Instrument Identifier
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier.md)
+[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_instrument_identifier**
-> Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
+> TmsEmbeddedInstrumentIdentifier post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
 
 Create an Instrument Identifier
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier**](Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier.md)
+[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
 
 ### Authorization
 

@@ -31,7 +31,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
                             and the value is json key in definition.
     """
     swagger_types = {
-        'issuer_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation'
+        'issuer_information': 'PaymentsStrongAuthIssuerInformation'
     }
 
     attribute_map = {
@@ -54,7 +54,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
         Gets the issuer_information of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
 
         :return: The issuer_information of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
-        :rtype: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation
+        :rtype: PaymentsStrongAuthIssuerInformation
         """
         return self._issuer_information
 
@@ -64,7 +64,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
         Sets the issuer_information of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
 
         :param issuer_information: The issuer_information of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.
-        :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthenticationIssuerInformation
+        :type: PaymentsStrongAuthIssuerInformation
         """
 
         self._issuer_information = issuer_information

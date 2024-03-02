@@ -41,7 +41,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrument(object):
         'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
         'buyer_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
         'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo',
-        'processing_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation',
+        'processing_information': 'TmsPaymentInstrumentProcessingInfo',
         'merchant_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation',
         'instrument_identifier': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata',
@@ -344,7 +344,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrument(object):
         Gets the processing_information of this Tmsv2customersEmbeddedDefaultPaymentInstrument.
 
         :return: The processing_information of this Tmsv2customersEmbeddedDefaultPaymentInstrument.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :rtype: TmsPaymentInstrumentProcessingInfo
         """
         return self._processing_information
 
@@ -354,7 +354,7 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrument(object):
         Sets the processing_information of this Tmsv2customersEmbeddedDefaultPaymentInstrument.
 
         :param processing_information: The processing_information of this Tmsv2customersEmbeddedDefaultPaymentInstrument.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :type: TmsPaymentInstrumentProcessingInfo
         """
 
         self._processing_information = processing_information

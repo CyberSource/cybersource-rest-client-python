@@ -32,7 +32,7 @@ class PaymentsProductsPayerAuthenticationConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'PaymentsProductsPayerAuthenticationConfigurationInformationConfigurations'
+        'configurations': 'PayerAuthConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class PaymentsProductsPayerAuthenticationConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsPayerAuthenticationConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsPayerAuthenticationConfigurationInformation.
-        :rtype: PaymentsProductsPayerAuthenticationConfigurationInformationConfigurations
+        :rtype: PayerAuthConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class PaymentsProductsPayerAuthenticationConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsPayerAuthenticationConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsPayerAuthenticationConfigurationInformation.
-        :type: PaymentsProductsPayerAuthenticationConfigurationInformationConfigurations
+        :type: PayerAuthConfig
         """
 
         self._configurations = configurations

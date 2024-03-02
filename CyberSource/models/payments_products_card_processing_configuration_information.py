@@ -32,7 +32,7 @@ class PaymentsProductsCardProcessingConfigurationInformation(object):
     """
     swagger_types = {
         'template_id': 'str',
-        'configurations': 'PaymentsProductsCardProcessingConfigurationInformationConfigurations'
+        'configurations': 'CardProcessingConfig'
     }
 
     attribute_map = {
@@ -80,7 +80,7 @@ class PaymentsProductsCardProcessingConfigurationInformation(object):
         Gets the configurations of this PaymentsProductsCardProcessingConfigurationInformation.
 
         :return: The configurations of this PaymentsProductsCardProcessingConfigurationInformation.
-        :rtype: PaymentsProductsCardProcessingConfigurationInformationConfigurations
+        :rtype: CardProcessingConfig
         """
         return self._configurations
 
@@ -90,7 +90,7 @@ class PaymentsProductsCardProcessingConfigurationInformation(object):
         Sets the configurations of this PaymentsProductsCardProcessingConfigurationInformation.
 
         :param configurations: The configurations of this PaymentsProductsCardProcessingConfigurationInformation.
-        :type: PaymentsProductsCardProcessingConfigurationInformationConfigurations
+        :type: CardProcessingConfig
         """
 
         self._configurations = configurations

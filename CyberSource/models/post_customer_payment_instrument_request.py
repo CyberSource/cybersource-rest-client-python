@@ -41,7 +41,7 @@ class PostCustomerPaymentInstrumentRequest(object):
         'card': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
         'buyer_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
         'bill_to': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo',
-        'processing_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation',
+        'processing_information': 'TmsPaymentInstrumentProcessingInfo',
         'merchant_information': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation',
         'instrument_identifier': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier',
         'metadata': 'Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata',
@@ -344,7 +344,7 @@ class PostCustomerPaymentInstrumentRequest(object):
         Gets the processing_information of this PostCustomerPaymentInstrumentRequest.
 
         :return: The processing_information of this PostCustomerPaymentInstrumentRequest.
-        :rtype: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :rtype: TmsPaymentInstrumentProcessingInfo
         """
         return self._processing_information
 
@@ -354,7 +354,7 @@ class PostCustomerPaymentInstrumentRequest(object):
         Sets the processing_information of this PostCustomerPaymentInstrumentRequest.
 
         :param processing_information: The processing_information of this PostCustomerPaymentInstrumentRequest.
-        :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentProcessingInformation
+        :type: TmsPaymentInstrumentProcessingInfo
         """
 
         self._processing_information = processing_information

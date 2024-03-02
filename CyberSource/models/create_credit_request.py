@@ -44,6 +44,8 @@ class CreateCreditRequest(object):
         'merchant_defined_secure_information': 'Ptsv2paymentsMerchantDefinedSecureInformation',
         'installment_information': 'Ptsv2creditsInstallmentInformation',
         'travel_information': 'Ptsv2paymentsTravelInformation',
+        'recipient_information': 'Ptsv2creditsRecipientInformation',
+        'sender_information': 'Ptsv2creditsSenderInformation',
         'promotion_information': 'Ptsv2paymentsPromotionInformation'
     }
 
@@ -61,10 +63,12 @@ class CreateCreditRequest(object):
         'merchant_defined_secure_information': 'merchantDefinedSecureInformation',
         'installment_information': 'installmentInformation',
         'travel_information': 'travelInformation',
+        'recipient_information': 'recipientInformation',
+        'sender_information': 'senderInformation',
         'promotion_information': 'promotionInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, promotion_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, payment_information=None, order_information=None, buyer_information=None, device_information=None, merchant_information=None, aggregator_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, recipient_information=None, sender_information=None, promotion_information=None):
         """
         CreateCreditRequest - a model defined in Swagger
         """
@@ -82,6 +86,8 @@ class CreateCreditRequest(object):
         self._merchant_defined_secure_information = None
         self._installment_information = None
         self._travel_information = None
+        self._recipient_information = None
+        self._sender_information = None
         self._promotion_information = None
 
         if client_reference_information is not None:
@@ -110,6 +116,10 @@ class CreateCreditRequest(object):
           self.installment_information = installment_information
         if travel_information is not None:
           self.travel_information = travel_information
+        if recipient_information is not None:
+          self.recipient_information = recipient_information
+        if sender_information is not None:
+          self.sender_information = sender_information
         if promotion_information is not None:
           self.promotion_information = promotion_information
 
@@ -387,6 +397,48 @@ class CreateCreditRequest(object):
         """
 
         self._travel_information = travel_information
+
+    @property
+    def recipient_information(self):
+        """
+        Gets the recipient_information of this CreateCreditRequest.
+
+        :return: The recipient_information of this CreateCreditRequest.
+        :rtype: Ptsv2creditsRecipientInformation
+        """
+        return self._recipient_information
+
+    @recipient_information.setter
+    def recipient_information(self, recipient_information):
+        """
+        Sets the recipient_information of this CreateCreditRequest.
+
+        :param recipient_information: The recipient_information of this CreateCreditRequest.
+        :type: Ptsv2creditsRecipientInformation
+        """
+
+        self._recipient_information = recipient_information
+
+    @property
+    def sender_information(self):
+        """
+        Gets the sender_information of this CreateCreditRequest.
+
+        :return: The sender_information of this CreateCreditRequest.
+        :rtype: Ptsv2creditsSenderInformation
+        """
+        return self._sender_information
+
+    @sender_information.setter
+    def sender_information(self, sender_information):
+        """
+        Sets the sender_information of this CreateCreditRequest.
+
+        :param sender_information: The sender_information of this CreateCreditRequest.
+        :type: Ptsv2creditsSenderInformation
+        """
+
+        self._sender_information = sender_information
 
     @property
     def promotion_information(self):
