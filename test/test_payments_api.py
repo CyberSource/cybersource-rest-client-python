@@ -31,11 +31,27 @@ class TestPaymentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_order_request(self):
+        """
+        Test case for create_order_request
+
+        Create a Payment Order Request
+        """
+        pass
+
     def test_create_payment(self):
         """
         Test case for create_payment
 
         Process a Payment
+        """
+        pass
+
+    def test_create_session_request(self):
+        """
+        Test case for create_session_request
+
+        Create Alternative Payments Sessions Request
         """
         pass
 
@@ -52,6 +68,14 @@ class TestPaymentsApi(unittest.TestCase):
         Test case for refresh_payment_status
 
         Check a Payment Status
+        """
+        pass
+
+    def test_update_session_req(self):
+        """
+        Test case for update_session_req
+
+        Update Alternative Payments Sessions Request
         """
         pass
 

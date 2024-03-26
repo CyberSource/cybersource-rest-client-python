@@ -31,22 +31,32 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'response_code': 'str'
+        'response_code': 'str',
+        'response_details': 'str',
+        'transaction_id': 'str'
     }
 
     attribute_map = {
-        'response_code': 'responseCode'
+        'response_code': 'responseCode',
+        'response_details': 'responseDetails',
+        'transaction_id': 'transactionId'
     }
 
-    def __init__(self, response_code=None):
+    def __init__(self, response_code=None, response_details=None, transaction_id=None):
         """
         PtsV2PaymentsVoidsPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._response_code = None
+        self._response_details = None
+        self._transaction_id = None
 
         if response_code is not None:
           self.response_code = response_code
+        if response_details is not None:
+          self.response_details = response_details
+        if transaction_id is not None:
+          self.transaction_id = transaction_id
 
     @property
     def response_code(self):
@@ -70,6 +80,52 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
         """
 
         self._response_code = response_code
+
+    @property
+    def response_details(self):
+        """
+        Gets the response_details of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        The reason for when the transaction status is Pending or Reversed. Possible values: - `PAYER_SHIPPING_UNCONFIRMED` - `MULTI_CURRENCY` - `RISK_REVIEW` - `REGULATORY_REVIEW` - `VERIFICATION_REQUIRED` - `ORDER` - `OTHER` 
+
+        :return: The response_details of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_details
+
+    @response_details.setter
+    def response_details(self, response_details):
+        """
+        Sets the response_details of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        The reason for when the transaction status is Pending or Reversed. Possible values: - `PAYER_SHIPPING_UNCONFIRMED` - `MULTI_CURRENCY` - `RISK_REVIEW` - `REGULATORY_REVIEW` - `VERIFICATION_REQUIRED` - `ORDER` - `OTHER` 
+
+        :param response_details: The response_details of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_details = response_details
+
+    @property
+    def transaction_id(self):
+        """
+        Gets the transaction_id of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        Identifier of the order transaction. 
+
+        :return: The transaction_id of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._transaction_id
+
+    @transaction_id.setter
+    def transaction_id(self, transaction_id):
+        """
+        Sets the transaction_id of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        Identifier of the order transaction. 
+
+        :param transaction_id: The transaction_id of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._transaction_id = transaction_id
 
     def to_dict(self):
         """

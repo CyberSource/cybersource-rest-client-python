@@ -47,6 +47,7 @@ class Ptsv2paymentsMerchantInformation(object):
         'return_url': 'str',
         'partner_id_code': 'str',
         'service_location': 'Ptsv2paymentsMerchantInformationServiceLocation',
+        'note_to_buyer': 'str',
         'merchant_name': 'str'
     }
 
@@ -67,10 +68,11 @@ class Ptsv2paymentsMerchantInformation(object):
         'return_url': 'returnUrl',
         'partner_id_code': 'partnerIdCode',
         'service_location': 'serviceLocation',
+        'note_to_buyer': 'noteToBuyer',
         'merchant_name': 'merchantName'
     }
 
-    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, return_url=None, partner_id_code=None, service_location=None, merchant_name=None):
+    def __init__(self, merchant_descriptor=None, domain_name=None, sales_organization_id=None, category_code=None, category_code_domestic=None, tax_id=None, vat_registration_number=None, card_acceptor_reference_number=None, transaction_local_date_time=None, service_fee_descriptor=None, cancel_url=None, success_url=None, failure_url=None, return_url=None, partner_id_code=None, service_location=None, note_to_buyer=None, merchant_name=None):
         """
         Ptsv2paymentsMerchantInformation - a model defined in Swagger
         """
@@ -91,6 +93,7 @@ class Ptsv2paymentsMerchantInformation(object):
         self._return_url = None
         self._partner_id_code = None
         self._service_location = None
+        self._note_to_buyer = None
         self._merchant_name = None
 
         if merchant_descriptor is not None:
@@ -125,6 +128,8 @@ class Ptsv2paymentsMerchantInformation(object):
           self.partner_id_code = partner_id_code
         if service_location is not None:
           self.service_location = service_location
+        if note_to_buyer is not None:
+          self.note_to_buyer = note_to_buyer
         if merchant_name is not None:
           self.merchant_name = merchant_name
 
@@ -489,6 +494,29 @@ class Ptsv2paymentsMerchantInformation(object):
         """
 
         self._service_location = service_location
+
+    @property
+    def note_to_buyer(self):
+        """
+        Gets the note_to_buyer of this Ptsv2paymentsMerchantInformation.
+        Free-form text field. 
+
+        :return: The note_to_buyer of this Ptsv2paymentsMerchantInformation.
+        :rtype: str
+        """
+        return self._note_to_buyer
+
+    @note_to_buyer.setter
+    def note_to_buyer(self, note_to_buyer):
+        """
+        Sets the note_to_buyer of this Ptsv2paymentsMerchantInformation.
+        Free-form text field. 
+
+        :param note_to_buyer: The note_to_buyer of this Ptsv2paymentsMerchantInformation.
+        :type: str
+        """
+
+        self._note_to_buyer = note_to_buyer
 
     @property
     def merchant_name(self):

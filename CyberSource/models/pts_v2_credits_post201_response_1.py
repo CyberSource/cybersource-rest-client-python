@@ -35,7 +35,7 @@ class PtsV2CreditsPost201Response1(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'processor_information': 'PtsV2CreditsPost201Response1ProcessorInformation',
-        'installment_information': 'PtsV2CreditsPost201Response1InstallmentInformation'
+        'installment_information': 'PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation'
     }
 
     attribute_map = {
@@ -164,7 +164,7 @@ class PtsV2CreditsPost201Response1(object):
         Gets the installment_information of this PtsV2CreditsPost201Response1.
 
         :return: The installment_information of this PtsV2CreditsPost201Response1.
-        :rtype: PtsV2CreditsPost201Response1InstallmentInformation
+        :rtype: PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation
         """
         return self._installment_information
 
@@ -174,7 +174,7 @@ class PtsV2CreditsPost201Response1(object):
         Sets the installment_information of this PtsV2CreditsPost201Response1.
 
         :param installment_information: The installment_information of this PtsV2CreditsPost201Response1.
-        :type: PtsV2CreditsPost201Response1InstallmentInformation
+        :type: PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation
         """
 
         self._installment_information = installment_information

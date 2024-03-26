@@ -33,7 +33,7 @@ class Ptsv2paymentsidrefundsPaymentInformationPaymentType(object):
     swagger_types = {
         'name': 'str',
         'sub_type_name': 'str',
-        'method': 'Ptsv2paymentsidrefundsPaymentInformationPaymentTypeMethod'
+        'method': 'Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod'
     }
 
     attribute_map = {
@@ -110,7 +110,7 @@ class Ptsv2paymentsidrefundsPaymentInformationPaymentType(object):
         Gets the method of this Ptsv2paymentsidrefundsPaymentInformationPaymentType.
 
         :return: The method of this Ptsv2paymentsidrefundsPaymentInformationPaymentType.
-        :rtype: Ptsv2paymentsidrefundsPaymentInformationPaymentTypeMethod
+        :rtype: Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod
         """
         return self._method
 
@@ -120,7 +120,7 @@ class Ptsv2paymentsidrefundsPaymentInformationPaymentType(object):
         Sets the method of this Ptsv2paymentsidrefundsPaymentInformationPaymentType.
 
         :param method: The method of this Ptsv2paymentsidrefundsPaymentInformationPaymentType.
-        :type: Ptsv2paymentsidrefundsPaymentInformationPaymentTypeMethod
+        :type: Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod
         """
 
         self._method = method

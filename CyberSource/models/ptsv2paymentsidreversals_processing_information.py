@@ -36,7 +36,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         'link_id': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
-        'issuer': 'Ptsv2paymentsIssuerInformation'
+        'issuer': 'Ptsv2paymentsIssuerInformation',
+        'action_list': 'list[str]'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         'link_id': 'linkId',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
-        'issuer': 'issuer'
+        'issuer': 'issuer',
+        'action_list': 'actionList'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, issuer=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, issuer=None, action_list=None):
         """
         Ptsv2paymentsidreversalsProcessingInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         self._report_group = None
         self._visa_checkout_id = None
         self._issuer = None
+        self._action_list = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -72,6 +75,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
           self.visa_checkout_id = visa_checkout_id
         if issuer is not None:
           self.issuer = issuer
+        if action_list is not None:
+          self.action_list = action_list
 
     @property
     def payment_solution(self):
@@ -208,6 +213,29 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         """
 
         self._issuer = issuer
+
+    @property
+    def action_list(self):
+        """
+        Gets the action_list of this Ptsv2paymentsidreversalsProcessingInformation.
+        Array of actions (one or more) to be included in the reversal Possible value: - `AP_AUTH_REVERSAL`: Use this when you want to reverse an Alternative Payment Authorization. 
+
+        :return: The action_list of this Ptsv2paymentsidreversalsProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_list
+
+    @action_list.setter
+    def action_list(self, action_list):
+        """
+        Sets the action_list of this Ptsv2paymentsidreversalsProcessingInformation.
+        Array of actions (one or more) to be included in the reversal Possible value: - `AP_AUTH_REVERSAL`: Use this when you want to reverse an Alternative Payment Authorization. 
+
+        :param action_list: The action_list of this Ptsv2paymentsidreversalsProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_list = action_list
 
     def to_dict(self):
         """

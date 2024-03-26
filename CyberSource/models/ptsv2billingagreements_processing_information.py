@@ -80,7 +80,7 @@ class Ptsv2billingagreementsProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Ptsv2billingagreementsProcessingInformation.
-        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. - Use `UPDATE_AGREEMENT` - Use `BILLING_AGREEMENT_CREATE` - Use `CANCEL_AGREEMENT` 
+        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. - Use `UPDATE_AGREEMENT` - Use `BILLING_AGREEMENT_CREATE` when Alternative Payment create mandate service is requested - Use `CANCEL_AGREEMENT` - Use `AP_IMPORT_AGREEMENT` when Alternative Payment import mandate service is requested. 
 
         :return: The action_list of this Ptsv2billingagreementsProcessingInformation.
         :rtype: list[str]
@@ -91,7 +91,7 @@ class Ptsv2billingagreementsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2billingagreementsProcessingInformation.
-        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. - Use `UPDATE_AGREEMENT` - Use `BILLING_AGREEMENT_CREATE` - Use `CANCEL_AGREEMENT` 
+        - Use `CONSUMER_AUTHENTICATION` to use Payer Authentication along with Decision Manager. For any other value, only Decision Manager will run. - Use `WATCHLIST_SCREENING`  when you want to call Watchlist Screening service. - Use `UPDATE_AGREEMENT` - Use `BILLING_AGREEMENT_CREATE` when Alternative Payment create mandate service is requested - Use `CANCEL_AGREEMENT` - Use `AP_IMPORT_AGREEMENT` when Alternative Payment import mandate service is requested. 
 
         :param action_list: The action_list of this Ptsv2billingagreementsProcessingInformation.
         :type: list[str]

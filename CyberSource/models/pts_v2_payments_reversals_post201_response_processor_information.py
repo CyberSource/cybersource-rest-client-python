@@ -36,7 +36,9 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'response_category_code': 'str',
         'forwarded_acquirer_code': 'str',
         'master_card_service_code': 'str',
-        'master_card_service_reply_code': 'str'
+        'master_card_service_reply_code': 'str',
+        'response_details': 'str',
+        'provider_response': 'str'
     }
 
     attribute_map = {
@@ -45,10 +47,12 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'response_category_code': 'responseCategoryCode',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'master_card_service_code': 'masterCardServiceCode',
-        'master_card_service_reply_code': 'masterCardServiceReplyCode'
+        'master_card_service_reply_code': 'masterCardServiceReplyCode',
+        'response_details': 'responseDetails',
+        'provider_response': 'providerResponse'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None):
+    def __init__(self, transaction_id=None, response_code=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None):
         """
         PtsV2PaymentsReversalsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -59,6 +63,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         self._forwarded_acquirer_code = None
         self._master_card_service_code = None
         self._master_card_service_reply_code = None
+        self._response_details = None
+        self._provider_response = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
@@ -72,6 +78,10 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
           self.master_card_service_code = master_card_service_code
         if master_card_service_reply_code is not None:
           self.master_card_service_reply_code = master_card_service_reply_code
+        if response_details is not None:
+          self.response_details = response_details
+        if provider_response is not None:
+          self.provider_response = provider_response
 
     @property
     def transaction_id(self):
@@ -210,6 +220,52 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         """
 
         self._master_card_service_reply_code = master_card_service_reply_code
+
+    @property
+    def response_details(self):
+        """
+        Gets the response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+
+        :return: The response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_details
+
+    @response_details.setter
+    def response_details(self, response_details):
+        """
+        Sets the response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        This field might contain information about a decline. This field is supported only for **CyberSource through VisaNet**. 
+
+        :param response_details: The response_details of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_details = response_details
+
+    @property
+    def provider_response(self):
+        """
+        Gets the provider_response of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Processor response to the API request. 
+
+        :return: The provider_response of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._provider_response
+
+    @provider_response.setter
+    def provider_response(self, provider_response):
+        """
+        Sets the provider_response of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Processor response to the API request. 
+
+        :param provider_response: The provider_response of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._provider_response = provider_response
 
     def to_dict(self):
         """

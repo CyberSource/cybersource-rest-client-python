@@ -42,7 +42,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'authorization_options': 'Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions',
         'capture_options': 'Ptsv2paymentsidcapturesProcessingInformationCaptureOptions',
         'loan_options': 'Ptsv2paymentsProcessingInformationLoanOptions',
-        'pay_by_points_indicator': 'bool'
+        'pay_by_points_indicator': 'bool',
+        'action_list': 'list[str]'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         'authorization_options': 'authorizationOptions',
         'capture_options': 'captureOptions',
         'loan_options': 'loanOptions',
-        'pay_by_points_indicator': 'payByPointsIndicator'
+        'pay_by_points_indicator': 'payByPointsIndicator',
+        'action_list': 'actionList'
     }
 
-    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None):
+    def __init__(self, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, industry_data_type=None, issuer=None, authorization_options=None, capture_options=None, loan_options=None, pay_by_points_indicator=None, action_list=None):
         """
         Ptsv2paymentsidcapturesProcessingInformation - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         self._capture_options = None
         self._loan_options = None
         self._pay_by_points_indicator = None
+        self._action_list = None
 
         if payment_solution is not None:
           self.payment_solution = payment_solution
@@ -102,6 +105,8 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
           self.loan_options = loan_options
         if pay_by_points_indicator is not None:
           self.pay_by_points_indicator = pay_by_points_indicator
+        if action_list is not None:
+          self.action_list = action_list
 
     @property
     def payment_solution(self):
@@ -370,6 +375,29 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         """
 
         self._pay_by_points_indicator = pay_by_points_indicator
+
+    @property
+    def action_list(self):
+        """
+        Gets the action_list of this Ptsv2paymentsidcapturesProcessingInformation.
+        Array of actions (one or more) to be included in the capture to invoke bundled services along with capture.  Possible values :   - `AP_CAPTURE`: Use this when Alternative Payment Capture service is requested. 
+
+        :return: The action_list of this Ptsv2paymentsidcapturesProcessingInformation.
+        :rtype: list[str]
+        """
+        return self._action_list
+
+    @action_list.setter
+    def action_list(self, action_list):
+        """
+        Sets the action_list of this Ptsv2paymentsidcapturesProcessingInformation.
+        Array of actions (one or more) to be included in the capture to invoke bundled services along with capture.  Possible values :   - `AP_CAPTURE`: Use this when Alternative Payment Capture service is requested. 
+
+        :param action_list: The action_list of this Ptsv2paymentsidcapturesProcessingInformation.
+        :type: list[str]
+        """
+
+        self._action_list = action_list
 
     def to_dict(self):
         """

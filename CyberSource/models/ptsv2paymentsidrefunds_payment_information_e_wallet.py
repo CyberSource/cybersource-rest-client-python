@@ -52,7 +52,7 @@ class Ptsv2paymentsidrefundsPaymentInformationEWallet(object):
     def funding_source(self):
         """
         Gets the funding_source of this Ptsv2paymentsidrefundsPaymentInformationEWallet.
-        Payment mode for the authorization or order transaction.  INSTANT_TRANSFER  MANUAL_BANK_TRANSFER  DELAYED_TRANSFER  ECHECK
+        Payment mode for the authorization or order transaction.  INSTANT_TRANSFER  MANUAL_BANK_TRANSFER  DELAYED_TRANSFER  ECHECK  UNRESTRICTED (default)—this value is available only when configured by PayPal for the merchant. INSTANT
 
         :return: The funding_source of this Ptsv2paymentsidrefundsPaymentInformationEWallet.
         :rtype: str
@@ -63,7 +63,7 @@ class Ptsv2paymentsidrefundsPaymentInformationEWallet(object):
     def funding_source(self, funding_source):
         """
         Sets the funding_source of this Ptsv2paymentsidrefundsPaymentInformationEWallet.
-        Payment mode for the authorization or order transaction.  INSTANT_TRANSFER  MANUAL_BANK_TRANSFER  DELAYED_TRANSFER  ECHECK
+        Payment mode for the authorization or order transaction.  INSTANT_TRANSFER  MANUAL_BANK_TRANSFER  DELAYED_TRANSFER  ECHECK  UNRESTRICTED (default)—this value is available only when configured by PayPal for the merchant. INSTANT
 
         :param funding_source: The funding_source of this Ptsv2paymentsidrefundsPaymentInformationEWallet.
         :type: str

@@ -52,6 +52,7 @@ class CreatePaymentRequest(object):
         'token_information': 'Ptsv2paymentsTokenInformation',
         'invoice_details': 'Ptsv2paymentsInvoiceDetails',
         'processor_information': 'Ptsv2paymentsProcessorInformation',
+        'agreement_information': 'Ptsv2paymentsAgreementInformation',
         'risk_information': 'Ptsv2paymentsRiskInformation',
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
@@ -80,13 +81,14 @@ class CreatePaymentRequest(object):
         'token_information': 'tokenInformation',
         'invoice_details': 'invoiceDetails',
         'processor_information': 'processorInformation',
+        'agreement_information': 'agreementInformation',
         'risk_information': 'riskInformation',
         'acquirer_information': 'acquirerInformation',
         'recurring_payment_information': 'recurringPaymentInformation',
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -112,6 +114,7 @@ class CreatePaymentRequest(object):
         self._token_information = None
         self._invoice_details = None
         self._processor_information = None
+        self._agreement_information = None
         self._risk_information = None
         self._acquirer_information = None
         self._recurring_payment_information = None
@@ -159,6 +162,8 @@ class CreatePaymentRequest(object):
           self.invoice_details = invoice_details
         if processor_information is not None:
           self.processor_information = processor_information
+        if agreement_information is not None:
+          self.agreement_information = agreement_information
         if risk_information is not None:
           self.risk_information = risk_information
         if acquirer_information is not None:
@@ -610,6 +615,27 @@ class CreatePaymentRequest(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def agreement_information(self):
+        """
+        Gets the agreement_information of this CreatePaymentRequest.
+
+        :return: The agreement_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsAgreementInformation
+        """
+        return self._agreement_information
+
+    @agreement_information.setter
+    def agreement_information(self, agreement_information):
+        """
+        Sets the agreement_information of this CreatePaymentRequest.
+
+        :param agreement_information: The agreement_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsAgreementInformation
+        """
+
+        self._agreement_information = agreement_information
 
     @property
     def risk_information(self):

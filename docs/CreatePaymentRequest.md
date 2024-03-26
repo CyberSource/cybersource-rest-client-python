@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **token_information** | [**Ptsv2paymentsTokenInformation**](Ptsv2paymentsTokenInformation.md) |  | [optional] 
 **invoice_details** | [**Ptsv2paymentsInvoiceDetails**](Ptsv2paymentsInvoiceDetails.md) |  | [optional] 
 **processor_information** | [**Ptsv2paymentsProcessorInformation**](Ptsv2paymentsProcessorInformation.md) |  | [optional] 
+**agreement_information** | [**Ptsv2paymentsAgreementInformation**](Ptsv2paymentsAgreementInformation.md) |  | [optional] 
 **risk_information** | [**Ptsv2paymentsRiskInformation**](Ptsv2paymentsRiskInformation.md) |  | [optional] 
 **acquirer_information** | [**Ptsv2paymentsAcquirerInformation**](Ptsv2paymentsAcquirerInformation.md) |  | [optional] 
 **recurring_payment_information** | [**Ptsv2paymentsRecurringPaymentInformation**](Ptsv2paymentsRecurringPaymentInformation.md) |  | [optional] 

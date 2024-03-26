@@ -33,16 +33,20 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
     swagger_types = {
         'administrative_area': 'str',
         'country': 'str',
-        'postal_code': 'str'
+        'postal_code': 'str',
+        'email': 'str',
+        'county': 'str'
     }
 
     attribute_map = {
         'administrative_area': 'administrativeArea',
         'country': 'country',
-        'postal_code': 'postalCode'
+        'postal_code': 'postalCode',
+        'email': 'email',
+        'county': 'county'
     }
 
-    def __init__(self, administrative_area=None, country=None, postal_code=None):
+    def __init__(self, administrative_area=None, country=None, postal_code=None, email=None, county=None):
         """
         Ptsv2paymentsidcapturesOrderInformationShipTo - a model defined in Swagger
         """
@@ -50,6 +54,8 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         self._administrative_area = None
         self._country = None
         self._postal_code = None
+        self._email = None
+        self._county = None
 
         if administrative_area is not None:
           self.administrative_area = administrative_area
@@ -57,6 +63,10 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
           self.country = country
         if postal_code is not None:
           self.postal_code = postal_code
+        if email is not None:
+          self.email = email
+        if county is not None:
+          self.county = county
 
     @property
     def administrative_area(self):
@@ -126,6 +136,52 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         """
 
         self._postal_code = postal_code
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        Email of the recipient.
+
+        :return: The email of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        Email of the recipient.
+
+        :param email: The email of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def county(self):
+        """
+        Gets the county of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        U.S. county if available.
+
+        :return: The county of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._county
+
+    @county.setter
+    def county(self, county):
+        """
+        Sets the county of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        U.S. county if available.
+
+        :param county: The county of this Ptsv2paymentsidcapturesOrderInformationShipTo.
+        :type: str
+        """
+
+        self._county = county
 
     def to_dict(self):
         """

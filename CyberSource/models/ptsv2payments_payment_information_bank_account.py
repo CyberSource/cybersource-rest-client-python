@@ -35,7 +35,8 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         'number': 'str',
         'encoder_id': 'str',
         'check_number': 'str',
-        'check_image_reference_number': 'str'
+        'check_image_reference_number': 'str',
+        'iban': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         'number': 'number',
         'encoder_id': 'encoderId',
         'check_number': 'checkNumber',
-        'check_image_reference_number': 'checkImageReferenceNumber'
+        'check_image_reference_number': 'checkImageReferenceNumber',
+        'iban': 'iban'
     }
 
-    def __init__(self, type=None, number=None, encoder_id=None, check_number=None, check_image_reference_number=None):
+    def __init__(self, type=None, number=None, encoder_id=None, check_number=None, check_image_reference_number=None, iban=None):
         """
         Ptsv2paymentsPaymentInformationBankAccount - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         self._encoder_id = None
         self._check_number = None
         self._check_image_reference_number = None
+        self._iban = None
 
         if type is not None:
           self.type = type
@@ -67,6 +70,8 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
           self.check_number = check_number
         if check_image_reference_number is not None:
           self.check_image_reference_number = check_image_reference_number
+        if iban is not None:
+          self.iban = iban
 
     @property
     def type(self):
@@ -182,6 +187,29 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         """
 
         self._check_image_reference_number = check_image_reference_number
+
+    @property
+    def iban(self):
+        """
+        Gets the iban of this Ptsv2paymentsPaymentInformationBankAccount.
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :return: The iban of this Ptsv2paymentsPaymentInformationBankAccount.
+        :rtype: str
+        """
+        return self._iban
+
+    @iban.setter
+    def iban(self, iban):
+        """
+        Sets the iban of this Ptsv2paymentsPaymentInformationBankAccount.
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+
+        :param iban: The iban of this Ptsv2paymentsPaymentInformationBankAccount.
+        :type: str
+        """
+
+        self._iban = iban
 
     def to_dict(self):
         """

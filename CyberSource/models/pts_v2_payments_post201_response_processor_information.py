@@ -63,7 +63,9 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'payment_url': 'str',
         'complete_url': 'str',
         'signature': 'str',
-        'public_key': 'str'
+        'public_key': 'str',
+        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
+        'transaction_expiry_date': 'str'
     }
 
     attribute_map = {
@@ -99,10 +101,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'payment_url': 'paymentUrl',
         'complete_url': 'completeUrl',
         'signature': 'signature',
-        'public_key': 'publicKey'
+        'public_key': 'publicKey',
+        'seller_protection': 'sellerProtection',
+        'transaction_expiry_date': 'transactionExpiryDate'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -140,6 +144,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._complete_url = None
         self._signature = None
         self._public_key = None
+        self._seller_protection = None
+        self._transaction_expiry_date = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -207,6 +213,10 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.signature = signature
         if public_key is not None:
           self.public_key = public_key
+        if seller_protection is not None:
+          self.seller_protection = seller_protection
+        if transaction_expiry_date is not None:
+          self.transaction_expiry_date = transaction_expiry_date
 
     @property
     def auth_indicator(self):
@@ -946,6 +956,50 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._public_key = public_key
+
+    @property
+    def seller_protection(self):
+        """
+        Gets the seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :return: The seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        """
+        return self._seller_protection
+
+    @seller_protection.setter
+    def seller_protection(self, seller_protection):
+        """
+        Sets the seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
+
+        :param seller_protection: The seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        """
+
+        self._seller_protection = seller_protection
+
+    @property
+    def transaction_expiry_date(self):
+        """
+        Gets the transaction_expiry_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date on which the transaction expires and payment cannot be made. 
+
+        :return: The transaction_expiry_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._transaction_expiry_date
+
+    @transaction_expiry_date.setter
+    def transaction_expiry_date(self, transaction_expiry_date):
+        """
+        Sets the transaction_expiry_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date on which the transaction expires and payment cannot be made. 
+
+        :param transaction_expiry_date: The transaction_expiry_date of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._transaction_expiry_date = transaction_expiry_date
 
     def to_dict(self):
         """

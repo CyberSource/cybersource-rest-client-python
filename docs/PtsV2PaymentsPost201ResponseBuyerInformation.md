@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **vat_registration_number** | **str** | Customer&#39;s government-assigned tax identification number.  #### Tax Calculation Optional for international and value added taxes only. Not applicable to U.S. and Canadian taxes.  For processor-specific information, see the purchaser_vat_registration_number field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html)  | [optional] 
 **personal_identification** | [**list[Ptsv2paymentsBuyerInformationPersonalIdentification]**](Ptsv2paymentsBuyerInformationPersonalIdentification.md) |  | [optional] 
 **tax_id** | **str** | The description for this field is not available. | [optional] 
+**login_id** | **str** | The buyer&#39;s Alipay login Id, the id might be an email or mobile number. The id is partially masked for privacy. cao***@126.com  or 186***22156  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -35,7 +35,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         'trade_number': 'str',
         'raw_response': 'str',
         'response_code': 'str',
-        'seller_protection': 'PtsV2PaymentsPost201Response1ProcessorInformationSellerProtection',
+        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
         'avs': 'PtsV2PaymentsPost201Response1ProcessorInformationAvs'
     }
 
@@ -171,7 +171,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         Gets the seller_protection of this PtsV2PaymentsPost201Response1ProcessorInformation.
 
         :return: The seller_protection of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        :rtype: PtsV2PaymentsPost201Response1ProcessorInformationSellerProtection
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
         """
         return self._seller_protection
 
@@ -181,7 +181,7 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         Sets the seller_protection of this PtsV2PaymentsPost201Response1ProcessorInformation.
 
         :param seller_protection: The seller_protection of this PtsV2PaymentsPost201Response1ProcessorInformation.
-        :type: PtsV2PaymentsPost201Response1ProcessorInformationSellerProtection
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
         """
 
         self._seller_protection = seller_protection

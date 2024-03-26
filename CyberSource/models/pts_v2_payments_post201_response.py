@@ -33,6 +33,7 @@ class PtsV2PaymentsPost201Response(object):
     swagger_types = {
         'links': 'PtsV2PaymentsPost201ResponseLinks',
         'id': 'str',
+        'message': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
         'reconciliation_id': 'str',
@@ -49,6 +50,7 @@ class PtsV2PaymentsPost201Response(object):
         'installment_information': 'PtsV2PaymentsPost201ResponseInstallmentInformation',
         'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
         'buyer_information': 'PtsV2PaymentsPost201ResponseBuyerInformation',
+        'merchant_information': 'PtsV2PaymentsPost201ResponseMerchantInformation',
         'risk_information': 'PtsV2PaymentsPost201ResponseRiskInformation',
         'consumer_authentication_information': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation',
         'embedded_actions': 'PtsV2PaymentsPost201ResponseEmbeddedActions',
@@ -58,6 +60,7 @@ class PtsV2PaymentsPost201Response(object):
     attribute_map = {
         'links': '_links',
         'id': 'id',
+        'message': 'message',
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'reconciliation_id': 'reconciliationId',
@@ -74,19 +77,21 @@ class PtsV2PaymentsPost201Response(object):
         'installment_information': 'installmentInformation',
         'token_information': 'tokenInformation',
         'buyer_information': 'buyerInformation',
+        'merchant_information': 'merchantInformation',
         'risk_information': 'riskInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
         'embedded_actions': 'embeddedActions',
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, risk_information=None, consumer_authentication_information=None, embedded_actions=None, watchlist_screening_information=None):
+    def __init__(self, links=None, id=None, message=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, processing_information=None, processor_information=None, issuer_information=None, payment_account_information=None, payment_information=None, payment_insights_information=None, order_information=None, point_of_sale_information=None, installment_information=None, token_information=None, buyer_information=None, merchant_information=None, risk_information=None, consumer_authentication_information=None, embedded_actions=None, watchlist_screening_information=None):
         """
         PtsV2PaymentsPost201Response - a model defined in Swagger
         """
 
         self._links = None
         self._id = None
+        self._message = None
         self._submit_time_utc = None
         self._status = None
         self._reconciliation_id = None
@@ -103,6 +108,7 @@ class PtsV2PaymentsPost201Response(object):
         self._installment_information = None
         self._token_information = None
         self._buyer_information = None
+        self._merchant_information = None
         self._risk_information = None
         self._consumer_authentication_information = None
         self._embedded_actions = None
@@ -112,6 +118,8 @@ class PtsV2PaymentsPost201Response(object):
           self.links = links
         if id is not None:
           self.id = id
+        if message is not None:
+          self.message = message
         if submit_time_utc is not None:
           self.submit_time_utc = submit_time_utc
         if status is not None:
@@ -144,6 +152,8 @@ class PtsV2PaymentsPost201Response(object):
           self.token_information = token_information
         if buyer_information is not None:
           self.buyer_information = buyer_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
         if risk_information is not None:
           self.risk_information = risk_information
         if consumer_authentication_information is not None:
@@ -196,6 +206,29 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._id = id
+
+    @property
+    def message(self):
+        """
+        Gets the message of this PtsV2PaymentsPost201Response.
+        More information about the transaction response. 
+
+        :return: The message of this PtsV2PaymentsPost201Response.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """
+        Sets the message of this PtsV2PaymentsPost201Response.
+        More information about the transaction response. 
+
+        :param message: The message of this PtsV2PaymentsPost201Response.
+        :type: str
+        """
+
+        self._message = message
 
     @property
     def submit_time_utc(self):
@@ -538,6 +571,27 @@ class PtsV2PaymentsPost201Response(object):
         """
 
         self._buyer_information = buyer_information
+
+    @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this PtsV2PaymentsPost201Response.
+
+        :return: The merchant_information of this PtsV2PaymentsPost201Response.
+        :rtype: PtsV2PaymentsPost201ResponseMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this PtsV2PaymentsPost201Response.
+
+        :param merchant_information: The merchant_information of this PtsV2PaymentsPost201Response.
+        :type: PtsV2PaymentsPost201ResponseMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
 
     @property
     def risk_information(self):

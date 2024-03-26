@@ -31,6 +31,14 @@ class TestTransientTokenDataApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_get_payment_credentials_for_transient_token(self):
+        """
+        Test case for get_payment_credentials_for_transient_token
+
+        Get Payment Credentials
+        """
+        pass
+
     def test_get_transaction_for_transient_token(self):
         """
         Test case for get_transaction_for_transient_token

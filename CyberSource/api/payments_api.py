@@ -45,6 +45,129 @@ class PaymentsApi(object):
 
 
 
+    def create_order_request(self, order_payment_request, id, **kwargs):
+        """
+        Create a Payment Order Request
+        Create a Payment Order Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_order_request(order_payment_request, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param OrderPaymentRequest order_payment_request: (required)
+        :param str id: Request identifier number for the order request.  (required)
+        :return: PtsV2PaymentsOrderPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_order_request` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_order_request_with_http_info(order_payment_request, id, **kwargs)
+        else:
+            (data) = self.create_order_request_with_http_info(order_payment_request, id, **kwargs)
+            return data
+
+    def create_order_request_with_http_info(self, order_payment_request, id, **kwargs):
+        """
+        Create a Payment Order Request
+        Create a Payment Order Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_order_request_with_http_info(order_payment_request, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param OrderPaymentRequest order_payment_request: (required)
+        :param str id: Request identifier number for the order request.  (required)
+        :return: PtsV2PaymentsOrderPost201Response
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['order_payment_request', 'id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_order_request" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'order_payment_request' is set
+        if ('order_payment_request' not in params) or (params['order_payment_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `order_payment_request` when calling `create_order_request`")
+            raise ValueError("Missing the required parameter `order_payment_request` when calling `create_order_request`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `create_order_request`")
+            raise ValueError("Missing the required parameter `id` when calling `create_order_request`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'order_payment_request' in params:
+            body_params = params['order_payment_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'order_payment_request', self.api_client.mconfig.run_environment)
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v2/payment-references/{id}/intents', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PtsV2PaymentsOrderPost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def create_payment(self, create_payment_request, **kwargs):
         """
         Process a Payment
@@ -151,6 +274,119 @@ class PaymentsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='PtsV2PaymentsPost201Response',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_session_request(self, create_session_req, **kwargs):
+        """
+        Create Alternative Payments Sessions Request
+        Create Alternative Payments Sessions Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_session_request(create_session_req, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateSessionReq create_session_req: (required)
+        :return: PtsV2PaymentsPost201Response2
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `create_session_request` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_session_request_with_http_info(create_session_req, **kwargs)
+        else:
+            (data) = self.create_session_request_with_http_info(create_session_req, **kwargs)
+            return data
+
+    def create_session_request_with_http_info(self, create_session_req, **kwargs):
+        """
+        Create Alternative Payments Sessions Request
+        Create Alternative Payments Sessions Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_session_request_with_http_info(create_session_req, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateSessionReq create_session_req: (required)
+        :return: PtsV2PaymentsPost201Response2
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['create_session_req']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_session_request" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'create_session_req' is set
+        if ('create_session_req' not in params) or (params['create_session_req'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_req` when calling `create_session_request`")
+            raise ValueError("Missing the required parameter `create_session_req` when calling `create_session_request`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'create_session_req' in params:
+            body_params = params['create_session_req']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_session_req', self.api_client.mconfig.run_environment)
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v2/payment-references', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PtsV2PaymentsPost201Response2',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -397,6 +633,129 @@ class PaymentsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='PtsV2PaymentsPost201Response1',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_session_req(self, create_session_request, id, **kwargs):
+        """
+        Update Alternative Payments Sessions Request
+        Update Alternative Payments Sessions Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_session_req(create_session_request, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateSessionRequest create_session_request: (required)
+        :param str id: The payment ID. This ID is returned from a previous payment request. (required)
+        :return: PtsV2PaymentsPost201Response2
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `update_session_req` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_session_req_with_http_info(create_session_request, id, **kwargs)
+        else:
+            (data) = self.update_session_req_with_http_info(create_session_request, id, **kwargs)
+            return data
+
+    def update_session_req_with_http_info(self, create_session_request, id, **kwargs):
+        """
+        Update Alternative Payments Sessions Request
+        Update Alternative Payments Sessions Request
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_session_req_with_http_info(create_session_request, id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param CreateSessionRequest create_session_request: (required)
+        :param str id: The payment ID. This ID is returned from a previous payment request. (required)
+        :return: PtsV2PaymentsPost201Response2
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['create_session_request', 'id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_session_req" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'create_session_request' is set
+        if ('create_session_request' not in params) or (params['create_session_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_request` when calling `update_session_req`")
+            raise ValueError("Missing the required parameter `create_session_request` when calling `update_session_req`")
+        # verify the required parameter 'id' is set
+        if ('id' not in params) or (params['id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_req`")
+            raise ValueError("Missing the required parameter `id` when calling `update_session_req`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']
+            id=id
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'create_session_request' in params:
+            body_params = params['create_session_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_session_request', self.api_client.mconfig.run_environment)
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v2/payment-references/{id}', 'PATCH',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='PtsV2PaymentsPost201Response2',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -33,16 +33,22 @@ class VoidPaymentRequest(object):
     swagger_types = {
         'client_reference_information': 'Ptsv2paymentsidreversalsClientReferenceInformation',
         'payment_information': 'Ptsv2paymentsidvoidsPaymentInformation',
-        'order_information': 'Ptsv2paymentsidvoidsOrderInformation'
+        'order_information': 'Ptsv2paymentsidvoidsOrderInformation',
+        'agreement_information': 'Ptsv2paymentsidvoidsAgreementInformation',
+        'merchant_information': 'Ptsv2paymentsidvoidsMerchantInformation',
+        'processing_information': 'Ptsv2paymentsidvoidsProcessingInformation'
     }
 
     attribute_map = {
         'client_reference_information': 'clientReferenceInformation',
         'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'agreement_information': 'agreementInformation',
+        'merchant_information': 'merchantInformation',
+        'processing_information': 'processingInformation'
     }
 
-    def __init__(self, client_reference_information=None, payment_information=None, order_information=None):
+    def __init__(self, client_reference_information=None, payment_information=None, order_information=None, agreement_information=None, merchant_information=None, processing_information=None):
         """
         VoidPaymentRequest - a model defined in Swagger
         """
@@ -50,6 +56,9 @@ class VoidPaymentRequest(object):
         self._client_reference_information = None
         self._payment_information = None
         self._order_information = None
+        self._agreement_information = None
+        self._merchant_information = None
+        self._processing_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -57,6 +66,12 @@ class VoidPaymentRequest(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if agreement_information is not None:
+          self.agreement_information = agreement_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
+        if processing_information is not None:
+          self.processing_information = processing_information
 
     @property
     def client_reference_information(self):
@@ -120,6 +135,69 @@ class VoidPaymentRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def agreement_information(self):
+        """
+        Gets the agreement_information of this VoidPaymentRequest.
+
+        :return: The agreement_information of this VoidPaymentRequest.
+        :rtype: Ptsv2paymentsidvoidsAgreementInformation
+        """
+        return self._agreement_information
+
+    @agreement_information.setter
+    def agreement_information(self, agreement_information):
+        """
+        Sets the agreement_information of this VoidPaymentRequest.
+
+        :param agreement_information: The agreement_information of this VoidPaymentRequest.
+        :type: Ptsv2paymentsidvoidsAgreementInformation
+        """
+
+        self._agreement_information = agreement_information
+
+    @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this VoidPaymentRequest.
+
+        :return: The merchant_information of this VoidPaymentRequest.
+        :rtype: Ptsv2paymentsidvoidsMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this VoidPaymentRequest.
+
+        :param merchant_information: The merchant_information of this VoidPaymentRequest.
+        :type: Ptsv2paymentsidvoidsMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this VoidPaymentRequest.
+
+        :return: The processing_information of this VoidPaymentRequest.
+        :rtype: Ptsv2paymentsidvoidsProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this VoidPaymentRequest.
+
+        :param processing_information: The processing_information of this VoidPaymentRequest.
+        :type: Ptsv2paymentsidvoidsProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     def to_dict(self):
         """

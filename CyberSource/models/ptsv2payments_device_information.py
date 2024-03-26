@@ -31,6 +31,7 @@ class Ptsv2paymentsDeviceInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'host_name': 'str',
         'ip_address': 'str',
         'user_agent': 'str',
@@ -38,6 +39,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'use_raw_fingerprint_session_id': 'bool',
         'device_type': 'str',
         'app_url': 'str',
+        'metadata': 'str',
         'raw_data': 'list[Ptsv2paymentsDeviceInformationRawData]',
         'http_accept_browser_value': 'str',
         'http_accept_content': 'str',
@@ -53,6 +55,7 @@ class Ptsv2paymentsDeviceInformation(object):
     }
 
     attribute_map = {
+        'id': 'id',
         'host_name': 'hostName',
         'ip_address': 'ipAddress',
         'user_agent': 'userAgent',
@@ -60,6 +63,7 @@ class Ptsv2paymentsDeviceInformation(object):
         'use_raw_fingerprint_session_id': 'useRawFingerprintSessionId',
         'device_type': 'deviceType',
         'app_url': 'appUrl',
+        'metadata': 'metadata',
         'raw_data': 'rawData',
         'http_accept_browser_value': 'httpAcceptBrowserValue',
         'http_accept_content': 'httpAcceptContent',
@@ -74,11 +78,12 @@ class Ptsv2paymentsDeviceInformation(object):
         'user_agent_browser_value': 'userAgentBrowserValue'
     }
 
-    def __init__(self, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, device_type=None, app_url=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
+    def __init__(self, id=None, host_name=None, ip_address=None, user_agent=None, fingerprint_session_id=None, use_raw_fingerprint_session_id=None, device_type=None, app_url=None, metadata=None, raw_data=None, http_accept_browser_value=None, http_accept_content=None, http_browser_email=None, http_browser_language=None, http_browser_java_enabled=None, http_browser_java_script_enabled=None, http_browser_color_depth=None, http_browser_screen_height=None, http_browser_screen_width=None, http_browser_time_difference=None, user_agent_browser_value=None):
         """
         Ptsv2paymentsDeviceInformation - a model defined in Swagger
         """
 
+        self._id = None
         self._host_name = None
         self._ip_address = None
         self._user_agent = None
@@ -86,6 +91,7 @@ class Ptsv2paymentsDeviceInformation(object):
         self._use_raw_fingerprint_session_id = None
         self._device_type = None
         self._app_url = None
+        self._metadata = None
         self._raw_data = None
         self._http_accept_browser_value = None
         self._http_accept_content = None
@@ -99,6 +105,8 @@ class Ptsv2paymentsDeviceInformation(object):
         self._http_browser_time_difference = None
         self._user_agent_browser_value = None
 
+        if id is not None:
+          self.id = id
         if host_name is not None:
           self.host_name = host_name
         if ip_address is not None:
@@ -113,6 +121,8 @@ class Ptsv2paymentsDeviceInformation(object):
           self.device_type = device_type
         if app_url is not None:
           self.app_url = app_url
+        if metadata is not None:
+          self.metadata = metadata
         if raw_data is not None:
           self.raw_data = raw_data
         if http_accept_browser_value is not None:
@@ -137,6 +147,29 @@ class Ptsv2paymentsDeviceInformation(object):
           self.http_browser_time_difference = http_browser_time_difference
         if user_agent_browser_value is not None:
           self.user_agent_browser_value = user_agent_browser_value
+
+    @property
+    def id(self):
+        """
+        Gets the id of this Ptsv2paymentsDeviceInformation.
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for authorizations and credits on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. String (32) 
+
+        :return: The id of this Ptsv2paymentsDeviceInformation.
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """
+        Sets the id of this Ptsv2paymentsDeviceInformation.
+        Value created by the client software that uniquely identifies the POS device. CyberSource does not forward this value to the processor. Instead, the value is forwarded to the CyberSource reporting functionality.  This field is supported only for authorizations and credits on these processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  Optional field. String (32) 
+
+        :param id: The id of this Ptsv2paymentsDeviceInformation.
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def host_name(self):
@@ -298,6 +331,29 @@ class Ptsv2paymentsDeviceInformation(object):
         """
 
         self._app_url = app_url
+
+    @property
+    def metadata(self):
+        """
+        Gets the metadata of this Ptsv2paymentsDeviceInformation.
+        Verifies that the payment is originating from a valid, user-approved application and device. Sending this field helps reduce fraud and declined transactions. Note The length is set for a hexadecimal representation of the GUID/UUID. This field accepts a 36-character string (with hyphens) or a 32-character string (without hyphens). Example 123e4567-e89b-12d3-a456-426655440000 Example 123e4567e89b12d3a456426655440000 
+
+        :return: The metadata of this Ptsv2paymentsDeviceInformation.
+        :rtype: str
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """
+        Sets the metadata of this Ptsv2paymentsDeviceInformation.
+        Verifies that the payment is originating from a valid, user-approved application and device. Sending this field helps reduce fraud and declined transactions. Note The length is set for a hexadecimal representation of the GUID/UUID. This field accepts a 36-character string (with hyphens) or a 32-character string (without hyphens). Example 123e4567-e89b-12d3-a456-426655440000 Example 123e4567e89b12d3a456426655440000 
+
+        :param metadata: The metadata of this Ptsv2paymentsDeviceInformation.
+        :type: str
+        """
+
+        self._metadata = metadata
 
     @property
     def raw_data(self):

@@ -32,26 +32,36 @@ class Ptsv2billingagreementsPaymentInformation(object):
     """
     swagger_types = {
         'card': 'Ptsv2billingagreementsPaymentInformationCard',
-        'tokenized_card': 'Ptsv2billingagreementsPaymentInformationTokenizedCard'
+        'tokenized_card': 'Ptsv2billingagreementsPaymentInformationTokenizedCard',
+        'payment_type': 'Ptsv2billingagreementsPaymentInformationPaymentType',
+        'bank': 'Ptsv2billingagreementsPaymentInformationBank'
     }
 
     attribute_map = {
         'card': 'card',
-        'tokenized_card': 'tokenizedCard'
+        'tokenized_card': 'tokenizedCard',
+        'payment_type': 'paymentType',
+        'bank': 'bank'
     }
 
-    def __init__(self, card=None, tokenized_card=None):
+    def __init__(self, card=None, tokenized_card=None, payment_type=None, bank=None):
         """
         Ptsv2billingagreementsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._payment_type = None
+        self._bank = None
 
         if card is not None:
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if payment_type is not None:
+          self.payment_type = payment_type
+        if bank is not None:
+          self.bank = bank
 
     @property
     def card(self):
@@ -94,6 +104,48 @@ class Ptsv2billingagreementsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2billingagreementsPaymentInformation.
+
+        :return: The payment_type of this Ptsv2billingagreementsPaymentInformation.
+        :rtype: Ptsv2billingagreementsPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2billingagreementsPaymentInformation.
+
+        :param payment_type: The payment_type of this Ptsv2billingagreementsPaymentInformation.
+        :type: Ptsv2billingagreementsPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
+
+    @property
+    def bank(self):
+        """
+        Gets the bank of this Ptsv2billingagreementsPaymentInformation.
+
+        :return: The bank of this Ptsv2billingagreementsPaymentInformation.
+        :rtype: Ptsv2billingagreementsPaymentInformationBank
+        """
+        return self._bank
+
+    @bank.setter
+    def bank(self, bank):
+        """
+        Sets the bank of this Ptsv2billingagreementsPaymentInformation.
+
+        :param bank: The bank of this Ptsv2billingagreementsPaymentInformation.
+        :type: Ptsv2billingagreementsPaymentInformationBank
+        """
+
+        self._bank = bank
 
     def to_dict(self):
         """

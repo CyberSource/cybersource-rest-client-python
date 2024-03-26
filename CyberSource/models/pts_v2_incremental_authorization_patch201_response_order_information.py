@@ -31,22 +31,27 @@ class PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'PtsV2PaymentsPost201ResponseOrderInformationAmountDetails'
+        'amount_details': 'PtsV2PaymentsPost201ResponseOrderInformationAmountDetails',
+        'invoice_details': 'PtsV2IncrementalAuthorizationPatch201ResponseOrderInformationInvoiceDetails'
     }
 
     attribute_map = {
-        'amount_details': 'amountDetails'
+        'amount_details': 'amountDetails',
+        'invoice_details': 'invoiceDetails'
     }
 
-    def __init__(self, amount_details=None):
+    def __init__(self, amount_details=None, invoice_details=None):
         """
         PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
+        self._invoice_details = None
 
         if amount_details is not None:
           self.amount_details = amount_details
+        if invoice_details is not None:
+          self.invoice_details = invoice_details
 
     @property
     def amount_details(self):
@@ -68,6 +73,27 @@ class PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation(object):
         """
 
         self._amount_details = amount_details
+
+    @property
+    def invoice_details(self):
+        """
+        Gets the invoice_details of this PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation.
+
+        :return: The invoice_details of this PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation.
+        :rtype: PtsV2IncrementalAuthorizationPatch201ResponseOrderInformationInvoiceDetails
+        """
+        return self._invoice_details
+
+    @invoice_details.setter
+    def invoice_details(self, invoice_details):
+        """
+        Sets the invoice_details of this PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation.
+
+        :param invoice_details: The invoice_details of this PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation.
+        :type: PtsV2IncrementalAuthorizationPatch201ResponseOrderInformationInvoiceDetails
+        """
+
+        self._invoice_details = invoice_details
 
     def to_dict(self):
         """

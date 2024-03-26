@@ -34,17 +34,23 @@ class Ptsv2billingagreementsMerchantInformation(object):
         'merchant_descriptor': 'Ptsv2billingagreementsMerchantInformationMerchantDescriptor',
         'category_code': 'int',
         'administrative_area': 'str',
-        'transaction_local_date_time': 'str'
+        'transaction_local_date_time': 'str',
+        'cancel_url': 'str',
+        'success_url': 'str',
+        'failure_url': 'str'
     }
 
     attribute_map = {
         'merchant_descriptor': 'merchantDescriptor',
         'category_code': 'categoryCode',
         'administrative_area': 'administrativeArea',
-        'transaction_local_date_time': 'transactionLocalDateTime'
+        'transaction_local_date_time': 'transactionLocalDateTime',
+        'cancel_url': 'cancelUrl',
+        'success_url': 'successUrl',
+        'failure_url': 'failureUrl'
     }
 
-    def __init__(self, merchant_descriptor=None, category_code=None, administrative_area=None, transaction_local_date_time=None):
+    def __init__(self, merchant_descriptor=None, category_code=None, administrative_area=None, transaction_local_date_time=None, cancel_url=None, success_url=None, failure_url=None):
         """
         Ptsv2billingagreementsMerchantInformation - a model defined in Swagger
         """
@@ -53,6 +59,9 @@ class Ptsv2billingagreementsMerchantInformation(object):
         self._category_code = None
         self._administrative_area = None
         self._transaction_local_date_time = None
+        self._cancel_url = None
+        self._success_url = None
+        self._failure_url = None
 
         if merchant_descriptor is not None:
           self.merchant_descriptor = merchant_descriptor
@@ -62,6 +71,12 @@ class Ptsv2billingagreementsMerchantInformation(object):
           self.administrative_area = administrative_area
         if transaction_local_date_time is not None:
           self.transaction_local_date_time = transaction_local_date_time
+        if cancel_url is not None:
+          self.cancel_url = cancel_url
+        if success_url is not None:
+          self.success_url = success_url
+        if failure_url is not None:
+          self.failure_url = failure_url
 
     @property
     def merchant_descriptor(self):
@@ -152,6 +167,75 @@ class Ptsv2billingagreementsMerchantInformation(object):
         """
 
         self._transaction_local_date_time = transaction_local_date_time
+
+    @property
+    def cancel_url(self):
+        """
+        Gets the cancel_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :return: The cancel_url of this Ptsv2billingagreementsMerchantInformation.
+        :rtype: str
+        """
+        return self._cancel_url
+
+    @cancel_url.setter
+    def cancel_url(self, cancel_url):
+        """
+        Sets the cancel_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :param cancel_url: The cancel_url of this Ptsv2billingagreementsMerchantInformation.
+        :type: str
+        """
+
+        self._cancel_url = cancel_url
+
+    @property
+    def success_url(self):
+        """
+        Gets the success_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :return: The success_url of this Ptsv2billingagreementsMerchantInformation.
+        :rtype: str
+        """
+        return self._success_url
+
+    @success_url.setter
+    def success_url(self, success_url):
+        """
+        Sets the success_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :param success_url: The success_url of this Ptsv2billingagreementsMerchantInformation.
+        :type: str
+        """
+
+        self._success_url = success_url
+
+    @property
+    def failure_url(self):
+        """
+        Gets the failure_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :return: The failure_url of this Ptsv2billingagreementsMerchantInformation.
+        :rtype: str
+        """
+        return self._failure_url
+
+    @failure_url.setter
+    def failure_url(self, failure_url):
+        """
+        Sets the failure_url of this Ptsv2billingagreementsMerchantInformation.
+        URL to which the customer is directed if they fail to sign the mandate. #### SEPA Required for Create Mandate and Update Mandate #### BACS Required for Create Mandate 
+
+        :param failure_url: The failure_url of this Ptsv2billingagreementsMerchantInformation.
+        :type: str
+        """
+
+        self._failure_url = failure_url
 
     def to_dict(self):
         """

@@ -32,26 +32,41 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
     """
     swagger_types = {
         'transaction_id': 'str',
-        'network_transaction_id': 'str'
+        'network_transaction_id': 'str',
+        'response_details': 'str',
+        'response_code': 'str',
+        'provider_response': 'str'
     }
 
     attribute_map = {
         'transaction_id': 'transactionId',
-        'network_transaction_id': 'networkTransactionId'
+        'network_transaction_id': 'networkTransactionId',
+        'response_details': 'responseDetails',
+        'response_code': 'responseCode',
+        'provider_response': 'providerResponse'
     }
 
-    def __init__(self, transaction_id=None, network_transaction_id=None):
+    def __init__(self, transaction_id=None, network_transaction_id=None, response_details=None, response_code=None, provider_response=None):
         """
         PtsV2PaymentsCapturesPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._transaction_id = None
         self._network_transaction_id = None
+        self._response_details = None
+        self._response_code = None
+        self._provider_response = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if network_transaction_id is not None:
           self.network_transaction_id = network_transaction_id
+        if response_details is not None:
+          self.response_details = response_details
+        if response_code is not None:
+          self.response_code = response_code
+        if provider_response is not None:
+          self.provider_response = provider_response
 
     @property
     def transaction_id(self):
@@ -98,6 +113,75 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         """
 
         self._network_transaction_id = network_transaction_id
+
+    @property
+    def response_details(self):
+        """
+        Gets the response_details of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        The processor code that describes why the transaction state is pending or reversed. 
+
+        :return: The response_details of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_details
+
+    @response_details.setter
+    def response_details(self, response_details):
+        """
+        Sets the response_details of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        The processor code that describes why the transaction state is pending or reversed. 
+
+        :param response_details: The response_details of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_details = response_details
+
+    @property
+    def response_code(self):
+        """
+        Gets the response_code of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+
+        :return: The response_code of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._response_code
+
+    @response_code.setter
+    def response_code(self, response_code):
+        """
+        Sets the response_code of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+
+        :param response_code: The response_code of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._response_code = response_code
+
+    @property
+    def provider_response(self):
+        """
+        Gets the provider_response of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        Processor response to the API request. 
+
+        :return: The provider_response of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._provider_response
+
+    @provider_response.setter
+    def provider_response(self, provider_response):
+        """
+        Sets the provider_response of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        Processor response to the API request. 
+
+        :param provider_response: The provider_response of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._provider_response = provider_response
 
     def to_dict(self):
         """

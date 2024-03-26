@@ -36,6 +36,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         'country': 'str',
         'locality': 'str',
         'name': 'str',
+        'store_id': 'str',
         'postal_code': 'str'
     }
 
@@ -45,10 +46,11 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         'country': 'country',
         'locality': 'locality',
         'name': 'name',
+        'store_id': 'storeId',
         'postal_code': 'postalCode'
     }
 
-    def __init__(self, administrative_area=None, contact=None, country=None, locality=None, name=None, postal_code=None):
+    def __init__(self, administrative_area=None, contact=None, country=None, locality=None, name=None, store_id=None, postal_code=None):
         """
         Ptsv1pushfundstransferMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -58,6 +60,7 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         self._country = None
         self._locality = None
         self._name = None
+        self._store_id = None
         self._postal_code = None
 
         if administrative_area is not None:
@@ -70,6 +73,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
           self.locality = locality
         if name is not None:
           self.name = name
+        if store_id is not None:
+          self.store_id = store_id
         if postal_code is not None:
           self.postal_code = postal_code
 
@@ -187,6 +192,29 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         """
 
         self._name = name
+
+    @property
+    def store_id(self):
+        """
+        Gets the store_id of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
+        The unique id of the merchant's shop which assigned by the merchant. 
+
+        :return: The store_id of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._store_id
+
+    @store_id.setter
+    def store_id(self, store_id):
+        """
+        Sets the store_id of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
+        The unique id of the merchant's shop which assigned by the merchant. 
+
+        :param store_id: The store_id of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._store_id = store_id
 
     @property
     def postal_code(self):
