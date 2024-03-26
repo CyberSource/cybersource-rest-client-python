@@ -31,7 +31,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'account': 'Ptsv2paymentsPaymentInformationBankAccount',
+        'account': 'Ptsv2paymentsidrefundsPaymentInformationBankAccount',
         'routing_number': 'str',
         'iban': 'str',
         'swift_code': 'str'
@@ -69,7 +69,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
         Gets the account of this Ptsv2paymentsidrefundsPaymentInformationBank.
 
         :return: The account of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        :rtype: Ptsv2paymentsPaymentInformationBankAccount
+        :rtype: Ptsv2paymentsidrefundsPaymentInformationBankAccount
         """
         return self._account
 
@@ -79,7 +79,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
         Sets the account of this Ptsv2paymentsidrefundsPaymentInformationBank.
 
         :param account: The account of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        :type: Ptsv2paymentsPaymentInformationBankAccount
+        :type: Ptsv2paymentsidrefundsPaymentInformationBankAccount
         """
 
         self._account = account

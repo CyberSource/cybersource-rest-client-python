@@ -33,6 +33,7 @@ class Ptsv2paymentsPaymentInformation(object):
     swagger_types = {
         'card': 'Ptsv2paymentsPaymentInformationCard',
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
+        'direct_debit': 'Ptsv2paymentsPaymentInformationDirectDebit',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
         'payment_instrument': 'Ptsv2paymentsPaymentInformationPaymentInstrument',
@@ -40,6 +41,7 @@ class Ptsv2paymentsPaymentInformation(object):
         'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
         'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'bank': 'Ptsv2paymentsPaymentInformationBank',
+        'options': 'Ptsv2paymentsPaymentInformationOptions',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str',
         'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet'
@@ -48,6 +50,7 @@ class Ptsv2paymentsPaymentInformation(object):
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
+        'direct_debit': 'directDebit',
         'fluid_data': 'fluidData',
         'customer': 'customer',
         'payment_instrument': 'paymentInstrument',
@@ -55,18 +58,20 @@ class Ptsv2paymentsPaymentInformation(object):
         'shipping_address': 'shippingAddress',
         'legacy_token': 'legacyToken',
         'bank': 'bank',
+        'options': 'options',
         'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel',
         'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, payment_type=None, initiation_channel=None, e_wallet=None):
+    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, e_wallet=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._direct_debit = None
         self._fluid_data = None
         self._customer = None
         self._payment_instrument = None
@@ -74,6 +79,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._shipping_address = None
         self._legacy_token = None
         self._bank = None
+        self._options = None
         self._payment_type = None
         self._initiation_channel = None
         self._e_wallet = None
@@ -82,6 +88,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if direct_debit is not None:
+          self.direct_debit = direct_debit
         if fluid_data is not None:
           self.fluid_data = fluid_data
         if customer is not None:
@@ -96,6 +104,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.legacy_token = legacy_token
         if bank is not None:
           self.bank = bank
+        if options is not None:
+          self.options = options
         if payment_type is not None:
           self.payment_type = payment_type
         if initiation_channel is not None:
@@ -144,6 +154,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def direct_debit(self):
+        """
+        Gets the direct_debit of this Ptsv2paymentsPaymentInformation.
+
+        :return: The direct_debit of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationDirectDebit
+        """
+        return self._direct_debit
+
+    @direct_debit.setter
+    def direct_debit(self, direct_debit):
+        """
+        Sets the direct_debit of this Ptsv2paymentsPaymentInformation.
+
+        :param direct_debit: The direct_debit of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationDirectDebit
+        """
+
+        self._direct_debit = direct_debit
 
     @property
     def fluid_data(self):
@@ -291,6 +322,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._bank = bank
+
+    @property
+    def options(self):
+        """
+        Gets the options of this Ptsv2paymentsPaymentInformation.
+
+        :return: The options of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationOptions
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        """
+        Sets the options of this Ptsv2paymentsPaymentInformation.
+
+        :param options: The options of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationOptions
+        """
+
+        self._options = options
 
     @property
     def payment_type(self):

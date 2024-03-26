@@ -40,10 +40,12 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'locality': 'str',
         'administrative_area': 'str',
         'postal_code': 'str',
+        'county': 'str',
         'country': 'str',
         'district': 'str',
         'building_number': 'str',
         'phone_number': 'str',
+        'email': 'str',
         'company': 'str',
         'destination_types': 'str',
         'destination_code': 'int',
@@ -60,17 +62,19 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
+        'county': 'county',
         'country': 'country',
         'district': 'district',
         'building_number': 'buildingNumber',
         'phone_number': 'phoneNumber',
+        'email': 'email',
         'company': 'company',
         'destination_types': 'destinationTypes',
         'destination_code': 'destinationCode',
         'method': 'method'
     }
 
-    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, district=None, building_number=None, phone_number=None, company=None, destination_types=None, destination_code=None, method=None):
+    def __init__(self, title=None, first_name=None, middle_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, county=None, country=None, district=None, building_number=None, phone_number=None, email=None, company=None, destination_types=None, destination_code=None, method=None):
         """
         Ptsv2paymentsOrderInformationShipTo - a model defined in Swagger
         """
@@ -84,10 +88,12 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         self._locality = None
         self._administrative_area = None
         self._postal_code = None
+        self._county = None
         self._country = None
         self._district = None
         self._building_number = None
         self._phone_number = None
+        self._email = None
         self._company = None
         self._destination_types = None
         self._destination_code = None
@@ -111,6 +117,8 @@ class Ptsv2paymentsOrderInformationShipTo(object):
           self.administrative_area = administrative_area
         if postal_code is not None:
           self.postal_code = postal_code
+        if county is not None:
+          self.county = county
         if country is not None:
           self.country = country
         if district is not None:
@@ -119,6 +127,8 @@ class Ptsv2paymentsOrderInformationShipTo(object):
           self.building_number = building_number
         if phone_number is not None:
           self.phone_number = phone_number
+        if email is not None:
+          self.email = email
         if company is not None:
           self.company = company
         if destination_types is not None:
@@ -336,6 +346,29 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         self._postal_code = postal_code
 
     @property
+    def county(self):
+        """
+        Gets the county of this Ptsv2paymentsOrderInformationShipTo.
+        U.S. county if available.
+
+        :return: The county of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._county
+
+    @county.setter
+    def county(self, county):
+        """
+        Sets the county of this Ptsv2paymentsOrderInformationShipTo.
+        U.S. county if available.
+
+        :param county: The county of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._county = county
+
+    @property
     def country(self):
         """
         Gets the country of this Ptsv2paymentsOrderInformationShipTo.
@@ -426,6 +459,29 @@ class Ptsv2paymentsOrderInformationShipTo(object):
         """
 
         self._phone_number = phone_number
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2paymentsOrderInformationShipTo.
+        Email of the recipient. 
+
+        :return: The email of this Ptsv2paymentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2paymentsOrderInformationShipTo.
+        Email of the recipient. 
+
+        :param email: The email of this Ptsv2paymentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def company(self):

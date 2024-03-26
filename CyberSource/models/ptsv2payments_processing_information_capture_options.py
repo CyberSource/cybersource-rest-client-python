@@ -33,16 +33,18 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
     swagger_types = {
         'capture_sequence_number': 'int',
         'total_capture_count': 'int',
-        'date_to_capture': 'str'
+        'date_to_capture': 'str',
+        'is_final': 'str'
     }
 
     attribute_map = {
         'capture_sequence_number': 'captureSequenceNumber',
         'total_capture_count': 'totalCaptureCount',
-        'date_to_capture': 'dateToCapture'
+        'date_to_capture': 'dateToCapture',
+        'is_final': 'isFinal'
     }
 
-    def __init__(self, capture_sequence_number=None, total_capture_count=None, date_to_capture=None):
+    def __init__(self, capture_sequence_number=None, total_capture_count=None, date_to_capture=None, is_final=None):
         """
         Ptsv2paymentsProcessingInformationCaptureOptions - a model defined in Swagger
         """
@@ -50,6 +52,7 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         self._capture_sequence_number = None
         self._total_capture_count = None
         self._date_to_capture = None
+        self._is_final = None
 
         if capture_sequence_number is not None:
           self.capture_sequence_number = capture_sequence_number
@@ -57,6 +60,8 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
           self.total_capture_count = total_capture_count
         if date_to_capture is not None:
           self.date_to_capture = date_to_capture
+        if is_final is not None:
+          self.is_final = is_final
 
     @property
     def capture_sequence_number(self):
@@ -126,6 +131,29 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         """
 
         self._date_to_capture = date_to_capture
+
+    @property
+    def is_final(self):
+        """
+        Gets the is_final of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Indicates whether to release the authorization hold on the remaining funds.   Possible Values: - `true` - `false` 
+
+        :return: The is_final of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :rtype: str
+        """
+        return self._is_final
+
+    @is_final.setter
+    def is_final(self, is_final):
+        """
+        Sets the is_final of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Indicates whether to release the authorization hold on the remaining funds.   Possible Values: - `true` - `false` 
+
+        :param is_final: The is_final of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :type: str
+        """
+
+        self._is_final = is_final
 
     def to_dict(self):
         """

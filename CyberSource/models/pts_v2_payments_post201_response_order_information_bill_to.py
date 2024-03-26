@@ -31,27 +31,285 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'first_name': 'str',
+        'last_name': 'str',
+        'address1': 'str',
+        'address2': 'str',
+        'locality': 'str',
+        'postal_code': 'str',
+        'administrative_area': 'str',
+        'country': 'str',
+        'email': 'str',
         'alternate_phone_number_verification_status': 'str',
-        'alternate_email_verification_status': 'str'
+        'alternate_email_verification_status': 'str',
+        'phone_number': 'str',
+        'name_suffix': 'str'
     }
 
     attribute_map = {
+        'first_name': 'firstName',
+        'last_name': 'lastName',
+        'address1': 'address1',
+        'address2': 'address2',
+        'locality': 'locality',
+        'postal_code': 'postalCode',
+        'administrative_area': 'administrativeArea',
+        'country': 'country',
+        'email': 'email',
         'alternate_phone_number_verification_status': 'alternatePhoneNumberVerificationStatus',
-        'alternate_email_verification_status': 'alternateEmailVerificationStatus'
+        'alternate_email_verification_status': 'alternateEmailVerificationStatus',
+        'phone_number': 'phoneNumber',
+        'name_suffix': 'nameSuffix'
     }
 
-    def __init__(self, alternate_phone_number_verification_status=None, alternate_email_verification_status=None):
+    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, postal_code=None, administrative_area=None, country=None, email=None, alternate_phone_number_verification_status=None, alternate_email_verification_status=None, phone_number=None, name_suffix=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationBillTo - a model defined in Swagger
         """
 
+        self._first_name = None
+        self._last_name = None
+        self._address1 = None
+        self._address2 = None
+        self._locality = None
+        self._postal_code = None
+        self._administrative_area = None
+        self._country = None
+        self._email = None
         self._alternate_phone_number_verification_status = None
         self._alternate_email_verification_status = None
+        self._phone_number = None
+        self._name_suffix = None
 
+        if first_name is not None:
+          self.first_name = first_name
+        if last_name is not None:
+          self.last_name = last_name
+        if address1 is not None:
+          self.address1 = address1
+        if address2 is not None:
+          self.address2 = address2
+        if locality is not None:
+          self.locality = locality
+        if postal_code is not None:
+          self.postal_code = postal_code
+        if administrative_area is not None:
+          self.administrative_area = administrative_area
+        if country is not None:
+          self.country = country
+        if email is not None:
+          self.email = email
         if alternate_phone_number_verification_status is not None:
           self.alternate_phone_number_verification_status = alternate_phone_number_verification_status
         if alternate_email_verification_status is not None:
           self.alternate_email_verification_status = alternate_email_verification_status
+        if phone_number is not None:
+          self.phone_number = phone_number
+        if name_suffix is not None:
+          self.name_suffix = name_suffix
+
+    @property
+    def first_name(self):
+        """
+        Gets the first_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+
+        :return: The first_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, first_name):
+        """
+        Sets the first_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+
+        :param first_name: The first_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._first_name = first_name
+
+    @property
+    def last_name(self):
+        """
+        Gets the last_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+
+        :return: The last_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        """
+        Sets the last_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+
+        :param last_name: The last_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._last_name = last_name
+
+    @property
+    def address1(self):
+        """
+        Gets the address1 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        First line of the billing street address. 
+
+        :return: The address1 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._address1
+
+    @address1.setter
+    def address1(self, address1):
+        """
+        Sets the address1 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        First line of the billing street address. 
+
+        :param address1: The address1 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._address1 = address1
+
+    @property
+    def address2(self):
+        """
+        Gets the address2 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Second line of the billing street address. 
+
+        :return: The address2 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._address2
+
+    @address2.setter
+    def address2(self, address2):
+        """
+        Sets the address2 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Second line of the billing street address. 
+
+        :param address2: The address2 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._address2 = address2
+
+    @property
+    def locality(self):
+        """
+        Gets the locality of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        City of the billing address. 
+
+        :return: The locality of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._locality
+
+    @locality.setter
+    def locality(self, locality):
+        """
+        Sets the locality of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        City of the billing address. 
+
+        :param locality: The locality of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._locality = locality
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Postal code for the billing address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789 When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
+
+        :return: The postal_code of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Postal code for the billing address. The postal code must consist of 5 to 9 digits.  When the billing country is the U.S., the 9-digit postal code must follow this format: [5 digits][dash][4 digits] Example: 12345-6789 When the billing country is Canada, the 6-digit postal code must follow this format: [alpha][numeric][alpha][space] [numeric][alpha][numeric] Example: A1B 2C3 
+
+        :param postal_code: The postal_code of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._postal_code = postal_code
+
+    @property
+    def administrative_area(self):
+        """
+        Gets the administrative_area of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        State or province of the billing address. Use the State, Province, and Territory Codes for the United States and Canada. 
+
+        :return: The administrative_area of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._administrative_area
+
+    @administrative_area.setter
+    def administrative_area(self, administrative_area):
+        """
+        Sets the administrative_area of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        State or province of the billing address. Use the State, Province, and Territory Codes for the United States and Canada. 
+
+        :param administrative_area: The administrative_area of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._administrative_area = administrative_area
+
+    @property
+    def country(self):
+        """
+        Gets the country of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Country of the billing address. Use the two-character ISO Standard Country Codes. 
+
+        :return: The country of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """
+        Sets the country of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Country of the billing address. Use the two-character ISO Standard Country Codes. 
+
+        :param country: The country of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._country = country
+
+    @property
+    def email(self):
+        """
+        Gets the email of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Email address of the customer. 
+
+        :return: The email of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Email address of the customer. 
+
+        :param email: The email of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def alternate_phone_number_verification_status(self):
@@ -98,6 +356,52 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         """
 
         self._alternate_email_verification_status = alternate_email_verification_status
+
+    @property
+    def phone_number(self):
+        """
+        Gets the phone_number of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  #### For Payouts: This field may be sent only for FDC Compass.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Optional field.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
+
+        :return: The phone_number of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """
+        Sets the phone_number of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  #### For Payouts: This field may be sent only for FDC Compass.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Optional field.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
+
+        :param phone_number: The phone_number of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def name_suffix(self):
+        """
+        Gets the name_suffix of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Customer's name suffix. 
+
+        :return: The name_suffix of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :rtype: str
+        """
+        return self._name_suffix
+
+    @name_suffix.setter
+    def name_suffix(self, name_suffix):
+        """
+        Sets the name_suffix of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        Customer's name suffix. 
+
+        :param name_suffix: The name_suffix of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
+        :type: str
+        """
+
+        self._name_suffix = name_suffix
 
     def to_dict(self):
         """

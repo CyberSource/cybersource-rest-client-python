@@ -36,6 +36,8 @@ Name | Type | Description | Notes
 **complete_url** | **str** | The redirect URL for forwarding the consumer to complete page.  This redirect needed by PSP to track browser information of consumer. PSP then redirect consumer to merchant success URL.  | [optional] 
 **signature** | **str** |  | [optional] 
 **public_key** | **str** |  | [optional] 
+**seller_protection** | [**PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection**](PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.md) |  | [optional] 
+**transaction_expiry_date** | **str** | The date on which the transaction expires and payment cannot be made.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

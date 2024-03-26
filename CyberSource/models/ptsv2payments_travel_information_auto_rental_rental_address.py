@@ -37,6 +37,7 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         'location_id': 'str',
         'address1': 'str',
         'address2': 'str',
+        'postal_code': 'str',
         'location': 'str'
     }
 
@@ -47,10 +48,11 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         'location_id': 'locationId',
         'address1': 'address1',
         'address2': 'address2',
+        'postal_code': 'postalCode',
         'location': 'location'
     }
 
-    def __init__(self, city=None, state=None, country=None, location_id=None, address1=None, address2=None, location=None):
+    def __init__(self, city=None, state=None, country=None, location_id=None, address1=None, address2=None, postal_code=None, location=None):
         """
         Ptsv2paymentsTravelInformationAutoRentalRentalAddress - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         self._location_id = None
         self._address1 = None
         self._address2 = None
+        self._postal_code = None
         self._location = None
 
         if city is not None:
@@ -75,6 +78,8 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
           self.address1 = address1
         if address2 is not None:
           self.address2 = address2
+        if postal_code is not None:
+          self.postal_code = postal_code
         if location is not None:
           self.location = location
 
@@ -215,6 +220,29 @@ class Ptsv2paymentsTravelInformationAutoRentalRentalAddress(object):
         """
 
         self._address2 = address2
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
+        When merchant wants to send the rental address's postal code. 
+
+        :return: The postal_code of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
+        When merchant wants to send the rental address's postal code. 
+
+        :param postal_code: The postal_code of this Ptsv2paymentsTravelInformationAutoRentalRentalAddress.
+        :type: str
+        """
+
+        self._postal_code = postal_code
 
     @property
     def location(self):

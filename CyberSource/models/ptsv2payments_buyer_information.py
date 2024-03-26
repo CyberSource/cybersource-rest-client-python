@@ -39,6 +39,7 @@ class Ptsv2paymentsBuyerInformation(object):
         'hashed_password': 'str',
         'gender': 'str',
         'language': 'str',
+        'note_to_seller': 'str',
         'mobile_phone': 'int'
     }
 
@@ -51,10 +52,11 @@ class Ptsv2paymentsBuyerInformation(object):
         'hashed_password': 'hashedPassword',
         'gender': 'gender',
         'language': 'language',
+        'note_to_seller': 'noteToSeller',
         'mobile_phone': 'mobilePhone'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, mobile_phone=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, company_tax_id=None, personal_identification=None, hashed_password=None, gender=None, language=None, note_to_seller=None, mobile_phone=None):
         """
         Ptsv2paymentsBuyerInformation - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class Ptsv2paymentsBuyerInformation(object):
         self._hashed_password = None
         self._gender = None
         self._language = None
+        self._note_to_seller = None
         self._mobile_phone = None
 
         if merchant_customer_id is not None:
@@ -85,6 +88,8 @@ class Ptsv2paymentsBuyerInformation(object):
           self.gender = gender
         if language is not None:
           self.language = language
+        if note_to_seller is not None:
+          self.note_to_seller = note_to_seller
         if mobile_phone is not None:
           self.mobile_phone = mobile_phone
 
@@ -269,6 +274,29 @@ class Ptsv2paymentsBuyerInformation(object):
         """
 
         self._language = language
+
+    @property
+    def note_to_seller(self):
+        """
+        Gets the note_to_seller of this Ptsv2paymentsBuyerInformation.
+        Note to the recipient of the funds in this transaction
+
+        :return: The note_to_seller of this Ptsv2paymentsBuyerInformation.
+        :rtype: str
+        """
+        return self._note_to_seller
+
+    @note_to_seller.setter
+    def note_to_seller(self, note_to_seller):
+        """
+        Sets the note_to_seller of this Ptsv2paymentsBuyerInformation.
+        Note to the recipient of the funds in this transaction
+
+        :param note_to_seller: The note_to_seller of this Ptsv2paymentsBuyerInformation.
+        :type: str
+        """
+
+        self._note_to_seller = note_to_seller
 
     @property
     def mobile_phone(self):

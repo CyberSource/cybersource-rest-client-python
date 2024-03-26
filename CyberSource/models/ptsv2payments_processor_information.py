@@ -32,26 +32,31 @@ class Ptsv2paymentsProcessorInformation(object):
     """
     swagger_types = {
         'pre_approval_token': 'str',
-        'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions'
+        'authorization_options': 'Ptsv2paymentsProcessorInformationAuthorizationOptions',
+        'reversal': 'Ptsv2paymentsProcessorInformationReversal'
     }
 
     attribute_map = {
         'pre_approval_token': 'preApprovalToken',
-        'authorization_options': 'authorizationOptions'
+        'authorization_options': 'authorizationOptions',
+        'reversal': 'reversal'
     }
 
-    def __init__(self, pre_approval_token=None, authorization_options=None):
+    def __init__(self, pre_approval_token=None, authorization_options=None, reversal=None):
         """
         Ptsv2paymentsProcessorInformation - a model defined in Swagger
         """
 
         self._pre_approval_token = None
         self._authorization_options = None
+        self._reversal = None
 
         if pre_approval_token is not None:
           self.pre_approval_token = pre_approval_token
         if authorization_options is not None:
           self.authorization_options = authorization_options
+        if reversal is not None:
+          self.reversal = reversal
 
     @property
     def pre_approval_token(self):
@@ -96,6 +101,27 @@ class Ptsv2paymentsProcessorInformation(object):
         """
 
         self._authorization_options = authorization_options
+
+    @property
+    def reversal(self):
+        """
+        Gets the reversal of this Ptsv2paymentsProcessorInformation.
+
+        :return: The reversal of this Ptsv2paymentsProcessorInformation.
+        :rtype: Ptsv2paymentsProcessorInformationReversal
+        """
+        return self._reversal
+
+    @reversal.setter
+    def reversal(self, reversal):
+        """
+        Sets the reversal of this Ptsv2paymentsProcessorInformation.
+
+        :param reversal: The reversal of this Ptsv2paymentsProcessorInformation.
+        :type: Ptsv2paymentsProcessorInformationReversal
+        """
+
+        self._reversal = reversal
 
     def to_dict(self):
         """
