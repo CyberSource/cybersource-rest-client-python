@@ -36,7 +36,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'response_code': 'str',
         'system_trace_audit_number': 'str',
         'response_details': 'str',
-        'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice'
+        'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
+        'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection'
     }
 
     attribute_map = {
@@ -45,10 +46,11 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'response_code': 'responseCode',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_details': 'responseDetails',
-        'merchant_advice': 'merchantAdvice'
+        'merchant_advice': 'merchantAdvice',
+        'seller_protection': 'sellerProtection'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None):
+    def __init__(self, approval_code=None, transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, seller_protection=None):
         """
         PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         self._system_trace_audit_number = None
         self._response_details = None
         self._merchant_advice = None
+        self._seller_protection = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -72,6 +75,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
           self.response_details = response_details
         if merchant_advice is not None:
           self.merchant_advice = merchant_advice
+        if seller_protection is not None:
+          self.seller_protection = seller_protection
 
     @property
     def approval_code(self):
@@ -208,6 +213,27 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         """
 
         self._merchant_advice = merchant_advice
+
+    @property
+    def seller_protection(self):
+        """
+        Gets the seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+
+        :return: The seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        """
+        return self._seller_protection
+
+    @seller_protection.setter
+    def seller_protection(self, seller_protection):
+        """
+        Sets the seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+
+        :param seller_protection: The seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
+        """
+
+        self._seller_protection = seller_protection
 
     def to_dict(self):
         """

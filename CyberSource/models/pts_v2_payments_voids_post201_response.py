@@ -37,7 +37,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         'status': 'str',
         'client_reference_information': 'PtsV2PaymentsPost201ResponseClientReferenceInformation',
         'void_amount_details': 'PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails',
-        'processor_information': 'PtsV2PaymentsVoidsPost201ResponseProcessorInformation'
+        'processor_information': 'PtsV2PaymentsVoidsPost201ResponseProcessorInformation',
+        'reconciliation_id': 'str'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class PtsV2PaymentsVoidsPost201Response(object):
         'status': 'status',
         'client_reference_information': 'clientReferenceInformation',
         'void_amount_details': 'voidAmountDetails',
-        'processor_information': 'processorInformation'
+        'processor_information': 'processorInformation',
+        'reconciliation_id': 'reconciliationId'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, client_reference_information=None, void_amount_details=None, processor_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, client_reference_information=None, void_amount_details=None, processor_information=None, reconciliation_id=None):
         """
         PtsV2PaymentsVoidsPost201Response - a model defined in Swagger
         """
@@ -62,6 +64,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
         self._client_reference_information = None
         self._void_amount_details = None
         self._processor_information = None
+        self._reconciliation_id = None
 
         if links is not None:
           self.links = links
@@ -77,6 +80,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
           self.void_amount_details = void_amount_details
         if processor_information is not None:
           self.processor_information = processor_information
+        if reconciliation_id is not None:
+          self.reconciliation_id = reconciliation_id
 
     @property
     def links(self):
@@ -149,7 +154,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsVoidsPost201Response.
-        The status of the submitted transaction.  Possible values:  - VOIDED 
+        The status of the submitted transaction.  Possible values:  - VOIDED  - CANCELLED  - FAILED 
 
         :return: The status of this PtsV2PaymentsVoidsPost201Response.
         :rtype: str
@@ -160,7 +165,7 @@ class PtsV2PaymentsVoidsPost201Response(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsVoidsPost201Response.
-        The status of the submitted transaction.  Possible values:  - VOIDED 
+        The status of the submitted transaction.  Possible values:  - VOIDED  - CANCELLED  - FAILED 
 
         :param status: The status of this PtsV2PaymentsVoidsPost201Response.
         :type: str
@@ -230,6 +235,29 @@ class PtsV2PaymentsVoidsPost201Response(object):
         """
 
         self._processor_information = processor_information
+
+    @property
+    def reconciliation_id(self):
+        """
+        Gets the reconciliation_id of this PtsV2PaymentsVoidsPost201Response.
+        Reference number that you use to reconcile CyberSource reports with your reports. 
+
+        :return: The reconciliation_id of this PtsV2PaymentsVoidsPost201Response.
+        :rtype: str
+        """
+        return self._reconciliation_id
+
+    @reconciliation_id.setter
+    def reconciliation_id(self, reconciliation_id):
+        """
+        Sets the reconciliation_id of this PtsV2PaymentsVoidsPost201Response.
+        Reference number that you use to reconcile CyberSource reports with your reports. 
+
+        :param reconciliation_id: The reconciliation_id of this PtsV2PaymentsVoidsPost201Response.
+        :type: str
+        """
+
+        self._reconciliation_id = reconciliation_id
 
     def to_dict(self):
         """

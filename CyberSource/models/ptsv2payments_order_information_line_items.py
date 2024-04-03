@@ -57,6 +57,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'weight_unit': 'str',
         'reference_data_code': 'str',
         'reference_data_number': 'str',
+        'unit_tax_amount': 'str',
         'product_description': 'str',
         'gift_card_currency': 'int',
         'shipping_destination_types': 'str',
@@ -93,6 +94,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'weight_unit': 'weightUnit',
         'reference_data_code': 'referenceDataCode',
         'reference_data_number': 'referenceDataNumber',
+        'unit_tax_amount': 'unitTaxAmount',
         'product_description': 'productDescription',
         'gift_card_currency': 'giftCardCurrency',
         'shipping_destination_types': 'shippingDestinationTypes',
@@ -102,7 +104,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         'restricted_export_countries': 'restrictedExportCountries'
     }
 
-    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None, product_description=None, gift_card_currency=None, shipping_destination_types=None, gift=None, passenger=None, allowed_export_countries=None, restricted_export_countries=None):
+    def __init__(self, product_code=None, product_name=None, product_sku=None, quantity=None, unit_price=None, unit_of_measure=None, total_amount=None, tax_amount=None, tax_rate=None, tax_applied_after_discount=None, tax_status_indicator=None, tax_type_code=None, amount_includes_tax=None, type_of_supply=None, commodity_code=None, discount_amount=None, discount_applied=None, discount_rate=None, invoice_number=None, tax_details=None, fulfillment_type=None, weight=None, weight_identifier=None, weight_unit=None, reference_data_code=None, reference_data_number=None, unit_tax_amount=None, product_description=None, gift_card_currency=None, shipping_destination_types=None, gift=None, passenger=None, allowed_export_countries=None, restricted_export_countries=None):
         """
         Ptsv2paymentsOrderInformationLineItems - a model defined in Swagger
         """
@@ -133,6 +135,7 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         self._weight_unit = None
         self._reference_data_code = None
         self._reference_data_number = None
+        self._unit_tax_amount = None
         self._product_description = None
         self._gift_card_currency = None
         self._shipping_destination_types = None
@@ -193,6 +196,8 @@ class Ptsv2paymentsOrderInformationLineItems(object):
           self.reference_data_code = reference_data_code
         if reference_data_number is not None:
           self.reference_data_number = reference_data_number
+        if unit_tax_amount is not None:
+          self.unit_tax_amount = unit_tax_amount
         if product_description is not None:
           self.product_description = product_description
         if gift_card_currency is not None:
@@ -803,6 +808,29 @@ class Ptsv2paymentsOrderInformationLineItems(object):
         """
 
         self._reference_data_number = reference_data_number
+
+    @property
+    def unit_tax_amount(self):
+        """
+        Gets the unit_tax_amount of this Ptsv2paymentsOrderInformationLineItems.
+        Per-item tax amount of the product. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. 
+
+        :return: The unit_tax_amount of this Ptsv2paymentsOrderInformationLineItems.
+        :rtype: str
+        """
+        return self._unit_tax_amount
+
+    @unit_tax_amount.setter
+    def unit_tax_amount(self, unit_tax_amount):
+        """
+        Sets the unit_tax_amount of this Ptsv2paymentsOrderInformationLineItems.
+        Per-item tax amount of the product. Note The amount value must be a non-negative number containing 2 decimal places and limited to 7 digits before the decimal point. 
+
+        :param unit_tax_amount: The unit_tax_amount of this Ptsv2paymentsOrderInformationLineItems.
+        :type: str
+        """
+
+        self._unit_tax_amount = unit_tax_amount
 
     @property
     def product_description(self):

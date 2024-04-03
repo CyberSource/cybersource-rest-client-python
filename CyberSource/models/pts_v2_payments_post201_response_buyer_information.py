@@ -35,7 +35,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         'date_of_birth': 'str',
         'vat_registration_number': 'str',
         'personal_identification': 'list[Ptsv2paymentsBuyerInformationPersonalIdentification]',
-        'tax_id': 'str'
+        'tax_id': 'str',
+        'login_id': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         'date_of_birth': 'dateOfBirth',
         'vat_registration_number': 'vatRegistrationNumber',
         'personal_identification': 'personalIdentification',
-        'tax_id': 'taxId'
+        'tax_id': 'taxId',
+        'login_id': 'loginId'
     }
 
-    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, personal_identification=None, tax_id=None):
+    def __init__(self, merchant_customer_id=None, date_of_birth=None, vat_registration_number=None, personal_identification=None, tax_id=None, login_id=None):
         """
         PtsV2PaymentsPost201ResponseBuyerInformation - a model defined in Swagger
         """
@@ -56,6 +58,7 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         self._vat_registration_number = None
         self._personal_identification = None
         self._tax_id = None
+        self._login_id = None
 
         if merchant_customer_id is not None:
           self.merchant_customer_id = merchant_customer_id
@@ -67,6 +70,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
           self.personal_identification = personal_identification
         if tax_id is not None:
           self.tax_id = tax_id
+        if login_id is not None:
+          self.login_id = login_id
 
     @property
     def merchant_customer_id(self):
@@ -180,6 +185,29 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         """
 
         self._tax_id = tax_id
+
+    @property
+    def login_id(self):
+        """
+        Gets the login_id of this PtsV2PaymentsPost201ResponseBuyerInformation.
+        The buyer's Alipay login Id, the id might be an email or mobile number. The id is partially masked for privacy. cao***@126.com  or 186***22156 
+
+        :return: The login_id of this PtsV2PaymentsPost201ResponseBuyerInformation.
+        :rtype: str
+        """
+        return self._login_id
+
+    @login_id.setter
+    def login_id(self, login_id):
+        """
+        Sets the login_id of this PtsV2PaymentsPost201ResponseBuyerInformation.
+        The buyer's Alipay login Id, the id might be an email or mobile number. The id is partially masked for privacy. cao***@126.com  or 186***22156 
+
+        :param login_id: The login_id of this PtsV2PaymentsPost201ResponseBuyerInformation.
+        :type: str
+        """
+
+        self._login_id = login_id
 
     def to_dict(self):
         """

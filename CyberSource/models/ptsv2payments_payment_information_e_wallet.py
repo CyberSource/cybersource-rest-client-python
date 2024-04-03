@@ -31,22 +31,27 @@ class Ptsv2paymentsPaymentInformationEWallet(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'account_id': 'str'
+        'account_id': 'str',
+        'funding_source': 'str'
     }
 
     attribute_map = {
-        'account_id': 'accountId'
+        'account_id': 'accountId',
+        'funding_source': 'fundingSource'
     }
 
-    def __init__(self, account_id=None):
+    def __init__(self, account_id=None, funding_source=None):
         """
         Ptsv2paymentsPaymentInformationEWallet - a model defined in Swagger
         """
 
         self._account_id = None
+        self._funding_source = None
 
         if account_id is not None:
           self.account_id = account_id
+        if funding_source is not None:
+          self.funding_source = funding_source
 
     @property
     def account_id(self):
@@ -70,6 +75,29 @@ class Ptsv2paymentsPaymentInformationEWallet(object):
         """
 
         self._account_id = account_id
+
+    @property
+    def funding_source(self):
+        """
+        Gets the funding_source of this Ptsv2paymentsPaymentInformationEWallet.
+        Payment method for the unit purchase. Possible values: - `UNRESTRICTED (default)—this value is only available if configured by PayPal for the merchant.` - `INSTANT` 
+
+        :return: The funding_source of this Ptsv2paymentsPaymentInformationEWallet.
+        :rtype: str
+        """
+        return self._funding_source
+
+    @funding_source.setter
+    def funding_source(self, funding_source):
+        """
+        Sets the funding_source of this Ptsv2paymentsPaymentInformationEWallet.
+        Payment method for the unit purchase. Possible values: - `UNRESTRICTED (default)—this value is only available if configured by PayPal for the merchant.` - `INSTANT` 
+
+        :param funding_source: The funding_source of this Ptsv2paymentsPaymentInformationEWallet.
+        :type: str
+        """
+
+        self._funding_source = funding_source
 
     def to_dict(self):
         """

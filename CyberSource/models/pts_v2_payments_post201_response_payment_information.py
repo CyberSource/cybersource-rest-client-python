@@ -43,7 +43,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         'bin': 'str',
         'account_type': 'str',
         'issuer': 'str',
-        'bin_country': 'str'
+        'bin_country': 'str',
+        'e_wallet': 'PtsV2PaymentsPost201ResponsePaymentInformationEWallet'
     }
 
     attribute_map = {
@@ -59,10 +60,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         'bin': 'bin',
         'account_type': 'accountType',
         'issuer': 'issuer',
-        'bin_country': 'binCountry'
+        'bin_country': 'binCountry',
+        'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, scheme=None, bin=None, account_type=None, issuer=None, bin_country=None):
+    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, scheme=None, bin=None, account_type=None, issuer=None, bin_country=None, e_wallet=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformation - a model defined in Swagger
         """
@@ -80,6 +82,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         self._account_type = None
         self._issuer = None
         self._bin_country = None
+        self._e_wallet = None
 
         if card is not None:
           self.card = card
@@ -107,6 +110,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
           self.issuer = issuer
         if bin_country is not None:
           self.bin_country = bin_country
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
 
     @property
     def card(self):
@@ -390,6 +395,27 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         """
 
         self._bin_country = bin_country
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The e_wallet of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param e_wallet: The e_wallet of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     def to_dict(self):
         """

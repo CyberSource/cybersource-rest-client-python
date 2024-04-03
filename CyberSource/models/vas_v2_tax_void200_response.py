@@ -118,7 +118,7 @@ class VasV2TaxVoid200Response(object):
     def status(self):
         """
         Gets the status of this VasV2TaxVoid200Response.
-        The status of the submitted transaction.  Possible values:  - VOIDED 
+        The status of the submitted transaction.  Possible values:  - VOIDED  - CANCELLED  - FAILED 
 
         :return: The status of this VasV2TaxVoid200Response.
         :rtype: str
@@ -129,7 +129,7 @@ class VasV2TaxVoid200Response(object):
     def status(self, status):
         """
         Sets the status of this VasV2TaxVoid200Response.
-        The status of the submitted transaction.  Possible values:  - VOIDED 
+        The status of the submitted transaction.  Possible values:  - VOIDED  - CANCELLED  - FAILED 
 
         :param status: The status of this VasV2TaxVoid200Response.
         :type: str

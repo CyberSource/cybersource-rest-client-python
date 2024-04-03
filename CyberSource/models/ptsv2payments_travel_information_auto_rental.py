@@ -72,7 +72,9 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         'gps_charge': 'str',
         'phone_charge': 'str',
         'parking_violation_charge': 'str',
-        'other_charges': 'str'
+        'other_charges': 'str',
+        'company_name': 'str',
+        'affiliate_name': 'str'
     }
 
     attribute_map = {
@@ -117,10 +119,12 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         'gps_charge': 'gpsCharge',
         'phone_charge': 'phoneCharge',
         'parking_violation_charge': 'parkingViolationCharge',
-        'other_charges': 'otherCharges'
+        'other_charges': 'otherCharges',
+        'company_name': 'companyName',
+        'affiliate_name': 'affiliateName'
     }
 
-    def __init__(self, no_show_indicator=None, customer_name=None, vehicle_class=None, distance_travelled=None, distance_unit=None, return_date_time=None, rental_date_time=None, max_free_distance=None, insurance_indicator=None, program_code=None, return_address=None, rental_address=None, agreement_number=None, odometer_reading=None, vehicle_identification_number=None, company_id=None, number_of_additional_drivers=None, driver_age=None, special_program_code=None, vehicle_make=None, vehicle_model=None, time_period=None, commodity_code=None, customer_service_phone_number=None, tax_details=None, insurance_amount=None, one_way_drop_off_amount=None, adjusted_amount_indicator=None, adjusted_amount=None, fuel_charges=None, weekly_rental_rate=None, daily_rental_rate=None, rate_per_mile=None, mileage_charge=None, extra_mileage_charge=None, late_fee_amount=None, towing_charge=None, extra_charge=None, gps_charge=None, phone_charge=None, parking_violation_charge=None, other_charges=None):
+    def __init__(self, no_show_indicator=None, customer_name=None, vehicle_class=None, distance_travelled=None, distance_unit=None, return_date_time=None, rental_date_time=None, max_free_distance=None, insurance_indicator=None, program_code=None, return_address=None, rental_address=None, agreement_number=None, odometer_reading=None, vehicle_identification_number=None, company_id=None, number_of_additional_drivers=None, driver_age=None, special_program_code=None, vehicle_make=None, vehicle_model=None, time_period=None, commodity_code=None, customer_service_phone_number=None, tax_details=None, insurance_amount=None, one_way_drop_off_amount=None, adjusted_amount_indicator=None, adjusted_amount=None, fuel_charges=None, weekly_rental_rate=None, daily_rental_rate=None, rate_per_mile=None, mileage_charge=None, extra_mileage_charge=None, late_fee_amount=None, towing_charge=None, extra_charge=None, gps_charge=None, phone_charge=None, parking_violation_charge=None, other_charges=None, company_name=None, affiliate_name=None):
         """
         Ptsv2paymentsTravelInformationAutoRental - a model defined in Swagger
         """
@@ -167,6 +171,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         self._phone_charge = None
         self._parking_violation_charge = None
         self._other_charges = None
+        self._company_name = None
+        self._affiliate_name = None
 
         if no_show_indicator is not None:
           self.no_show_indicator = no_show_indicator
@@ -252,6 +258,10 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
           self.parking_violation_charge = parking_violation_charge
         if other_charges is not None:
           self.other_charges = other_charges
+        if company_name is not None:
+          self.company_name = company_name
+        if affiliate_name is not None:
+          self.affiliate_name = affiliate_name
 
     @property
     def no_show_indicator(self):
@@ -1212,6 +1222,52 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         """
 
         self._other_charges = other_charges
+
+    @property
+    def company_name(self):
+        """
+        Gets the company_name of this Ptsv2paymentsTravelInformationAutoRental.
+        Merchant to send their auto rental company name 
+
+        :return: The company_name of this Ptsv2paymentsTravelInformationAutoRental.
+        :rtype: str
+        """
+        return self._company_name
+
+    @company_name.setter
+    def company_name(self, company_name):
+        """
+        Sets the company_name of this Ptsv2paymentsTravelInformationAutoRental.
+        Merchant to send their auto rental company name 
+
+        :param company_name: The company_name of this Ptsv2paymentsTravelInformationAutoRental.
+        :type: str
+        """
+
+        self._company_name = company_name
+
+    @property
+    def affiliate_name(self):
+        """
+        Gets the affiliate_name of this Ptsv2paymentsTravelInformationAutoRental.
+        When merchant wants to send the affiliate name. 
+
+        :return: The affiliate_name of this Ptsv2paymentsTravelInformationAutoRental.
+        :rtype: str
+        """
+        return self._affiliate_name
+
+    @affiliate_name.setter
+    def affiliate_name(self, affiliate_name):
+        """
+        Sets the affiliate_name of this Ptsv2paymentsTravelInformationAutoRental.
+        When merchant wants to send the affiliate name. 
+
+        :param affiliate_name: The affiliate_name of this Ptsv2paymentsTravelInformationAutoRental.
+        :type: str
+        """
+
+        self._affiliate_name = affiliate_name
 
     def to_dict(self):
         """

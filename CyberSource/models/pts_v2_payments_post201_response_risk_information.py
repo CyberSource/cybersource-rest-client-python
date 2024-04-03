@@ -40,7 +40,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         'score': 'PtsV2PaymentsPost201ResponseRiskInformationScore',
         'ip_address': 'PtsV2PaymentsPost201ResponseRiskInformationIpAddress',
         'providers': 'dict(str, dict(str, str))',
-        'travel': 'PtsV2PaymentsPost201ResponseRiskInformationTravel'
+        'travel': 'PtsV2PaymentsPost201ResponseRiskInformationTravel',
+        'processor_results': 'PtsV2PaymentsPost201ResponseRiskInformationProcessorResults'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         'score': 'score',
         'ip_address': 'ipAddress',
         'providers': 'providers',
-        'travel': 'travel'
+        'travel': 'travel',
+        'processor_results': 'processorResults'
     }
 
-    def __init__(self, profile=None, rules=None, info_codes=None, velocity=None, case_priority=None, local_time=None, score=None, ip_address=None, providers=None, travel=None):
+    def __init__(self, profile=None, rules=None, info_codes=None, velocity=None, case_priority=None, local_time=None, score=None, ip_address=None, providers=None, travel=None, processor_results=None):
         """
         PtsV2PaymentsPost201ResponseRiskInformation - a model defined in Swagger
         """
@@ -71,6 +73,7 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         self._ip_address = None
         self._providers = None
         self._travel = None
+        self._processor_results = None
 
         if profile is not None:
           self.profile = profile
@@ -92,6 +95,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
           self.providers = providers
         if travel is not None:
           self.travel = travel
+        if processor_results is not None:
+          self.processor_results = processor_results
 
     @property
     def profile(self):
@@ -308,6 +313,27 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         """
 
         self._travel = travel
+
+    @property
+    def processor_results(self):
+        """
+        Gets the processor_results of this PtsV2PaymentsPost201ResponseRiskInformation.
+
+        :return: The processor_results of this PtsV2PaymentsPost201ResponseRiskInformation.
+        :rtype: PtsV2PaymentsPost201ResponseRiskInformationProcessorResults
+        """
+        return self._processor_results
+
+    @processor_results.setter
+    def processor_results(self, processor_results):
+        """
+        Sets the processor_results of this PtsV2PaymentsPost201ResponseRiskInformation.
+
+        :param processor_results: The processor_results of this PtsV2PaymentsPost201ResponseRiskInformation.
+        :type: PtsV2PaymentsPost201ResponseRiskInformationProcessorResults
+        """
+
+        self._processor_results = processor_results
 
     def to_dict(self):
         """

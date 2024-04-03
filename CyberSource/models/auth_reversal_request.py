@@ -35,7 +35,9 @@ class AuthReversalRequest(object):
         'reversal_information': 'Ptsv2paymentsidreversalsReversalInformation',
         'processing_information': 'Ptsv2paymentsidreversalsProcessingInformation',
         'order_information': 'Ptsv2paymentsidreversalsOrderInformation',
-        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation'
+        'point_of_sale_information': 'Ptsv2paymentsidreversalsPointOfSaleInformation',
+        'payment_information': 'Ptsv2paymentsidreversalsPaymentInformation',
+        'processor_information': 'Ptsv2paymentsProcessorInformationReversal'
     }
 
     attribute_map = {
@@ -43,10 +45,12 @@ class AuthReversalRequest(object):
         'reversal_information': 'reversalInformation',
         'processing_information': 'processingInformation',
         'order_information': 'orderInformation',
-        'point_of_sale_information': 'pointOfSaleInformation'
+        'point_of_sale_information': 'pointOfSaleInformation',
+        'payment_information': 'paymentInformation',
+        'processor_information': 'processorInformation'
     }
 
-    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None):
+    def __init__(self, client_reference_information=None, reversal_information=None, processing_information=None, order_information=None, point_of_sale_information=None, payment_information=None, processor_information=None):
         """
         AuthReversalRequest - a model defined in Swagger
         """
@@ -56,6 +60,8 @@ class AuthReversalRequest(object):
         self._processing_information = None
         self._order_information = None
         self._point_of_sale_information = None
+        self._payment_information = None
+        self._processor_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -67,6 +73,10 @@ class AuthReversalRequest(object):
           self.order_information = order_information
         if point_of_sale_information is not None:
           self.point_of_sale_information = point_of_sale_information
+        if payment_information is not None:
+          self.payment_information = payment_information
+        if processor_information is not None:
+          self.processor_information = processor_information
 
     @property
     def client_reference_information(self):
@@ -172,6 +182,48 @@ class AuthReversalRequest(object):
         """
 
         self._point_of_sale_information = point_of_sale_information
+
+    @property
+    def payment_information(self):
+        """
+        Gets the payment_information of this AuthReversalRequest.
+
+        :return: The payment_information of this AuthReversalRequest.
+        :rtype: Ptsv2paymentsidreversalsPaymentInformation
+        """
+        return self._payment_information
+
+    @payment_information.setter
+    def payment_information(self, payment_information):
+        """
+        Sets the payment_information of this AuthReversalRequest.
+
+        :param payment_information: The payment_information of this AuthReversalRequest.
+        :type: Ptsv2paymentsidreversalsPaymentInformation
+        """
+
+        self._payment_information = payment_information
+
+    @property
+    def processor_information(self):
+        """
+        Gets the processor_information of this AuthReversalRequest.
+
+        :return: The processor_information of this AuthReversalRequest.
+        :rtype: Ptsv2paymentsProcessorInformationReversal
+        """
+        return self._processor_information
+
+    @processor_information.setter
+    def processor_information(self, processor_information):
+        """
+        Sets the processor_information of this AuthReversalRequest.
+
+        :param processor_information: The processor_information of this AuthReversalRequest.
+        :type: Ptsv2paymentsProcessorInformationReversal
+        """
+
+        self._processor_information = processor_information
 
     def to_dict(self):
         """

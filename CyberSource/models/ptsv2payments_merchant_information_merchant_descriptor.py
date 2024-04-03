@@ -42,7 +42,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'phone': 'str',
         'url': 'str',
         'country_of_origin': 'str',
-        'customer_service_phone_number': 'str'
+        'customer_service_phone_number': 'str',
+        'store_id': 'str'
     }
 
     attribute_map = {
@@ -57,10 +58,11 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         'phone': 'phone',
         'url': 'url',
         'country_of_origin': 'countryOfOrigin',
-        'customer_service_phone_number': 'customerServicePhoneNumber'
+        'customer_service_phone_number': 'customerServicePhoneNumber',
+        'store_id': 'storeId'
     }
 
-    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, phone=None, url=None, country_of_origin=None, customer_service_phone_number=None):
+    def __init__(self, name=None, alternate_name=None, contact=None, address1=None, locality=None, country=None, postal_code=None, administrative_area=None, phone=None, url=None, country_of_origin=None, customer_service_phone_number=None, store_id=None):
         """
         Ptsv2paymentsMerchantInformationMerchantDescriptor - a model defined in Swagger
         """
@@ -77,6 +79,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         self._url = None
         self._country_of_origin = None
         self._customer_service_phone_number = None
+        self._store_id = None
 
         if name is not None:
           self.name = name
@@ -102,6 +105,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
           self.country_of_origin = country_of_origin
         if customer_service_phone_number is not None:
           self.customer_service_phone_number = customer_service_phone_number
+        if store_id is not None:
+          self.store_id = store_id
 
     @property
     def name(self):
@@ -378,6 +383,29 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         """
 
         self._customer_service_phone_number = customer_service_phone_number
+
+    @property
+    def store_id(self):
+        """
+        Gets the store_id of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        The unique id of the merchant's shop which assigned by the merchant 
+
+        :return: The store_id of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :rtype: str
+        """
+        return self._store_id
+
+    @store_id.setter
+    def store_id(self, store_id):
+        """
+        Sets the store_id of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        The unique id of the merchant's shop which assigned by the merchant 
+
+        :param store_id: The store_id of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
+        :type: str
+        """
+
+        self._store_id = store_id
 
     def to_dict(self):
         """

@@ -44,6 +44,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'reconciliation_id': 'str',
         'link_id': 'str',
         'purchase_level': 'str',
+        'transaction_timeout': 'int',
+        'intents_id': 'str',
         'payment_id': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
@@ -63,7 +65,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'network_routing_order': 'str',
         'pay_by_points_indicator': 'bool',
         'is_return_auth_record_enabled': 'bool',
-        'network_partner_id': 'str'
+        'network_partner_id': 'str',
+        'payment_type': 'str'
     }
 
     attribute_map = {
@@ -80,6 +83,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'reconciliation_id': 'reconciliationId',
         'link_id': 'linkId',
         'purchase_level': 'purchaseLevel',
+        'transaction_timeout': 'transactionTimeout',
+        'intents_id': 'intentsId',
         'payment_id': 'paymentId',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
@@ -99,10 +104,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'network_routing_order': 'networkRoutingOrder',
         'pay_by_points_indicator': 'payByPointsIndicator',
         'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled',
-        'network_partner_id': 'networkPartnerId'
+        'network_partner_id': 'networkPartnerId',
+        'payment_type': 'paymentType'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None, network_partner_id=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -120,6 +126,8 @@ class Ptsv2paymentsProcessingInformation(object):
         self._reconciliation_id = None
         self._link_id = None
         self._purchase_level = None
+        self._transaction_timeout = None
+        self._intents_id = None
         self._payment_id = None
         self._report_group = None
         self._visa_checkout_id = None
@@ -140,6 +148,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._pay_by_points_indicator = None
         self._is_return_auth_record_enabled = None
         self._network_partner_id = None
+        self._payment_type = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -167,6 +176,10 @@ class Ptsv2paymentsProcessingInformation(object):
           self.link_id = link_id
         if purchase_level is not None:
           self.purchase_level = purchase_level
+        if transaction_timeout is not None:
+          self.transaction_timeout = transaction_timeout
+        if intents_id is not None:
+          self.intents_id = intents_id
         if payment_id is not None:
           self.payment_id = payment_id
         if report_group is not None:
@@ -207,12 +220,14 @@ class Ptsv2paymentsProcessingInformation(object):
           self.is_return_auth_record_enabled = is_return_auth_record_enabled
         if network_partner_id is not None:
           self.network_partner_id = network_partner_id
+        if payment_type is not None:
+          self.payment_type = payment_type
 
     @property
     def action_list(self):
         """
         Gets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service.   - `AP_SALE` : Use this when Alternative Payment Sale service is requested.    - `AP_AUTH` : Use this when Alternative Payment Authorize service is requested. 
 
         :return: The action_list of this Ptsv2paymentsProcessingInformation.
         :rtype: list[str]
@@ -223,7 +238,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2paymentsProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentication along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentication result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service.   - `AP_SALE` : Use this when Alternative Payment Sale service is requested.    - `AP_AUTH` : Use this when Alternative Payment Authorize service is requested. 
 
         :param action_list: The action_list of this Ptsv2paymentsProcessingInformation.
         :type: list[str]
@@ -506,6 +521,52 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._purchase_level = purchase_level
+
+    @property
+    def transaction_timeout(self):
+        """
+        Gets the transaction_timeout of this Ptsv2paymentsProcessingInformation.
+        The time-out limit in seconds for the transaction. The time-out limit starts when the customer is directed to the merchant URL that is included in the sale service response. The maximum value is 99999 (about 27 hours). When the transaction times out, the payment system changes the status to abandoned.
+
+        :return: The transaction_timeout of this Ptsv2paymentsProcessingInformation.
+        :rtype: int
+        """
+        return self._transaction_timeout
+
+    @transaction_timeout.setter
+    def transaction_timeout(self, transaction_timeout):
+        """
+        Sets the transaction_timeout of this Ptsv2paymentsProcessingInformation.
+        The time-out limit in seconds for the transaction. The time-out limit starts when the customer is directed to the merchant URL that is included in the sale service response. The maximum value is 99999 (about 27 hours). When the transaction times out, the payment system changes the status to abandoned.
+
+        :param transaction_timeout: The transaction_timeout of this Ptsv2paymentsProcessingInformation.
+        :type: int
+        """
+
+        self._transaction_timeout = transaction_timeout
+
+    @property
+    def intents_id(self):
+        """
+        Gets the intents_id of this Ptsv2paymentsProcessingInformation.
+        Set to the value of the requestID field returned in the order service response.
+
+        :return: The intents_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._intents_id
+
+    @intents_id.setter
+    def intents_id(self, intents_id):
+        """
+        Sets the intents_id of this Ptsv2paymentsProcessingInformation.
+        Set to the value of the requestID field returned in the order service response.
+
+        :param intents_id: The intents_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._intents_id = intents_id
 
     @property
     def payment_id(self):
@@ -950,6 +1011,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._network_partner_id = network_partner_id
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsProcessingInformation.
+        Identifier for the payment type. 
+
+        :return: The payment_type of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsProcessingInformation.
+        Identifier for the payment type. 
+
+        :param payment_type: The payment_type of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._payment_type = payment_type
 
     def to_dict(self):
         """

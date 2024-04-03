@@ -32,26 +32,31 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
     """
     swagger_types = {
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
-        'card': 'Ptsv2paymentsidcapturesPaymentInformationCard'
+        'card': 'Ptsv2paymentsidcapturesPaymentInformationCard',
+        'payment_type': 'Ptsv2paymentsidcapturesPaymentInformationPaymentType'
     }
 
     attribute_map = {
         'customer': 'customer',
-        'card': 'card'
+        'card': 'card',
+        'payment_type': 'paymentType'
     }
 
-    def __init__(self, customer=None, card=None):
+    def __init__(self, customer=None, card=None, payment_type=None):
         """
         Ptsv2paymentsidcapturesPaymentInformation - a model defined in Swagger
         """
 
         self._customer = None
         self._card = None
+        self._payment_type = None
 
         if customer is not None:
           self.customer = customer
         if card is not None:
           self.card = card
+        if payment_type is not None:
+          self.payment_type = payment_type
 
     @property
     def customer(self):
@@ -94,6 +99,27 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
         """
 
         self._card = card
+
+    @property
+    def payment_type(self):
+        """
+        Gets the payment_type of this Ptsv2paymentsidcapturesPaymentInformation.
+
+        :return: The payment_type of this Ptsv2paymentsidcapturesPaymentInformation.
+        :rtype: Ptsv2paymentsidcapturesPaymentInformationPaymentType
+        """
+        return self._payment_type
+
+    @payment_type.setter
+    def payment_type(self, payment_type):
+        """
+        Sets the payment_type of this Ptsv2paymentsidcapturesPaymentInformation.
+
+        :param payment_type: The payment_type of this Ptsv2paymentsidcapturesPaymentInformation.
+        :type: Ptsv2paymentsidcapturesPaymentInformationPaymentType
+        """
+
+        self._payment_type = payment_type
 
     def to_dict(self):
         """

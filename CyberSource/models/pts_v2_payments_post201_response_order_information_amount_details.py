@@ -33,16 +33,26 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
     swagger_types = {
         'total_amount': 'str',
         'authorized_amount': 'str',
-        'currency': 'str'
+        'currency': 'str',
+        'processor_transaction_fee': 'str',
+        'exchange_rate': 'str',
+        'foreign_currency': 'str',
+        'foreign_amount': 'str',
+        'discount_amount': 'str'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
         'authorized_amount': 'authorizedAmount',
-        'currency': 'currency'
+        'currency': 'currency',
+        'processor_transaction_fee': 'processorTransactionFee',
+        'exchange_rate': 'exchangeRate',
+        'foreign_currency': 'foreignCurrency',
+        'foreign_amount': 'foreignAmount',
+        'discount_amount': 'discountAmount'
     }
 
-    def __init__(self, total_amount=None, authorized_amount=None, currency=None):
+    def __init__(self, total_amount=None, authorized_amount=None, currency=None, processor_transaction_fee=None, exchange_rate=None, foreign_currency=None, foreign_amount=None, discount_amount=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -50,6 +60,11 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         self._total_amount = None
         self._authorized_amount = None
         self._currency = None
+        self._processor_transaction_fee = None
+        self._exchange_rate = None
+        self._foreign_currency = None
+        self._foreign_amount = None
+        self._discount_amount = None
 
         if total_amount is not None:
           self.total_amount = total_amount
@@ -57,6 +72,16 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
           self.authorized_amount = authorized_amount
         if currency is not None:
           self.currency = currency
+        if processor_transaction_fee is not None:
+          self.processor_transaction_fee = processor_transaction_fee
+        if exchange_rate is not None:
+          self.exchange_rate = exchange_rate
+        if foreign_currency is not None:
+          self.foreign_currency = foreign_currency
+        if foreign_amount is not None:
+          self.foreign_amount = foreign_amount
+        if discount_amount is not None:
+          self.discount_amount = discount_amount
 
     @property
     def total_amount(self):
@@ -126,6 +151,121 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         """
 
         self._currency = currency
+
+    @property
+    def processor_transaction_fee(self):
+        """
+        Gets the processor_transaction_fee of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Amount up to N digit after the decimals separator as defined in ISO 4217 for the appropriate currency code. 
+
+        :return: The processor_transaction_fee of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._processor_transaction_fee
+
+    @processor_transaction_fee.setter
+    def processor_transaction_fee(self, processor_transaction_fee):
+        """
+        Sets the processor_transaction_fee of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Amount up to N digit after the decimals separator as defined in ISO 4217 for the appropriate currency code. 
+
+        :param processor_transaction_fee: The processor_transaction_fee of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._processor_transaction_fee = processor_transaction_fee
+
+    @property
+    def exchange_rate(self):
+        """
+        Gets the exchange_rate of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        The rate of conversion of the currency given in the request to CNY. The conversion happens at the time when Alipay's trade order is created 
+
+        :return: The exchange_rate of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._exchange_rate
+
+    @exchange_rate.setter
+    def exchange_rate(self, exchange_rate):
+        """
+        Sets the exchange_rate of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        The rate of conversion of the currency given in the request to CNY. The conversion happens at the time when Alipay's trade order is created 
+
+        :param exchange_rate: The exchange_rate of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._exchange_rate = exchange_rate
+
+    @property
+    def foreign_currency(self):
+        """
+        Gets the foreign_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Currency code for the transaction performed in cross border currency. 
+
+        :return: The foreign_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._foreign_currency
+
+    @foreign_currency.setter
+    def foreign_currency(self, foreign_currency):
+        """
+        Sets the foreign_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Currency code for the transaction performed in cross border currency. 
+
+        :param foreign_currency: The foreign_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._foreign_currency = foreign_currency
+
+    @property
+    def foreign_amount(self):
+        """
+        Gets the foreign_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        The transaction amount in CNY. 
+
+        :return: The foreign_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._foreign_amount
+
+    @foreign_amount.setter
+    def foreign_amount(self, foreign_amount):
+        """
+        Sets the foreign_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        The transaction amount in CNY. 
+
+        :param foreign_amount: The foreign_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._foreign_amount = foreign_amount
+
+    @property
+    def discount_amount(self):
+        """
+        Gets the discount_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        If coupons/vouchers are used in the transaction, the discount amount redeemed in the settlement currency will be returned. Otherwise, no return. 
+
+        :return: The discount_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._discount_amount
+
+    @discount_amount.setter
+    def discount_amount(self, discount_amount):
+        """
+        Sets the discount_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        If coupons/vouchers are used in the transaction, the discount amount redeemed in the settlement currency will be returned. Otherwise, no return. 
+
+        :param discount_amount: The discount_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._discount_amount = discount_amount
 
     def to_dict(self):
         """

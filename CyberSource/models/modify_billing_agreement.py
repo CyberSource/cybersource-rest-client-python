@@ -31,7 +31,8 @@ class ModifyBillingAgreement(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Ptsv2paymentsClientReferenceInformation',
+        'agreement_information': 'Ptsv2billingagreementsidAgreementInformation',
+        'client_reference_information': 'Ptsv2billingagreementsClientReferenceInformation',
         'aggregator_information': 'Ptsv2billingagreementsAggregatorInformation',
         'consumer_authentication_information': 'Ptsv2billingagreementsConsumerAuthenticationInformation',
         'device_information': 'Ptsv2billingagreementsDeviceInformation',
@@ -39,10 +40,12 @@ class ModifyBillingAgreement(object):
         'merchant_information': 'Ptsv2billingagreementsMerchantInformation',
         'order_information': 'Ptsv2billingagreementsOrderInformation',
         'payment_information': 'Ptsv2billingagreementsPaymentInformation',
-        'processing_information': 'Ptsv2billingagreementsProcessingInformation'
+        'processing_information': 'Ptsv2billingagreementsidProcessingInformation',
+        'buyer_information': 'Ptsv2billingagreementsidBuyerInformation'
     }
 
     attribute_map = {
+        'agreement_information': 'agreementInformation',
         'client_reference_information': 'clientReferenceInformation',
         'aggregator_information': 'aggregatorInformation',
         'consumer_authentication_information': 'consumerAuthenticationInformation',
@@ -51,14 +54,16 @@ class ModifyBillingAgreement(object):
         'merchant_information': 'merchantInformation',
         'order_information': 'orderInformation',
         'payment_information': 'paymentInformation',
-        'processing_information': 'processingInformation'
+        'processing_information': 'processingInformation',
+        'buyer_information': 'buyerInformation'
     }
 
-    def __init__(self, client_reference_information=None, aggregator_information=None, consumer_authentication_information=None, device_information=None, installment_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None):
+    def __init__(self, agreement_information=None, client_reference_information=None, aggregator_information=None, consumer_authentication_information=None, device_information=None, installment_information=None, merchant_information=None, order_information=None, payment_information=None, processing_information=None, buyer_information=None):
         """
         ModifyBillingAgreement - a model defined in Swagger
         """
 
+        self._agreement_information = None
         self._client_reference_information = None
         self._aggregator_information = None
         self._consumer_authentication_information = None
@@ -68,7 +73,10 @@ class ModifyBillingAgreement(object):
         self._order_information = None
         self._payment_information = None
         self._processing_information = None
+        self._buyer_information = None
 
+        if agreement_information is not None:
+          self.agreement_information = agreement_information
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         if aggregator_information is not None:
@@ -87,6 +95,29 @@ class ModifyBillingAgreement(object):
           self.payment_information = payment_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if buyer_information is not None:
+          self.buyer_information = buyer_information
+
+    @property
+    def agreement_information(self):
+        """
+        Gets the agreement_information of this ModifyBillingAgreement.
+
+        :return: The agreement_information of this ModifyBillingAgreement.
+        :rtype: Ptsv2billingagreementsidAgreementInformation
+        """
+        return self._agreement_information
+
+    @agreement_information.setter
+    def agreement_information(self, agreement_information):
+        """
+        Sets the agreement_information of this ModifyBillingAgreement.
+
+        :param agreement_information: The agreement_information of this ModifyBillingAgreement.
+        :type: Ptsv2billingagreementsidAgreementInformation
+        """
+
+        self._agreement_information = agreement_information
 
     @property
     def client_reference_information(self):
@@ -94,7 +125,7 @@ class ModifyBillingAgreement(object):
         Gets the client_reference_information of this ModifyBillingAgreement.
 
         :return: The client_reference_information of this ModifyBillingAgreement.
-        :rtype: Ptsv2paymentsClientReferenceInformation
+        :rtype: Ptsv2billingagreementsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -104,7 +135,7 @@ class ModifyBillingAgreement(object):
         Sets the client_reference_information of this ModifyBillingAgreement.
 
         :param client_reference_information: The client_reference_information of this ModifyBillingAgreement.
-        :type: Ptsv2paymentsClientReferenceInformation
+        :type: Ptsv2billingagreementsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information
@@ -262,7 +293,7 @@ class ModifyBillingAgreement(object):
         Gets the processing_information of this ModifyBillingAgreement.
 
         :return: The processing_information of this ModifyBillingAgreement.
-        :rtype: Ptsv2billingagreementsProcessingInformation
+        :rtype: Ptsv2billingagreementsidProcessingInformation
         """
         return self._processing_information
 
@@ -272,10 +303,31 @@ class ModifyBillingAgreement(object):
         Sets the processing_information of this ModifyBillingAgreement.
 
         :param processing_information: The processing_information of this ModifyBillingAgreement.
-        :type: Ptsv2billingagreementsProcessingInformation
+        :type: Ptsv2billingagreementsidProcessingInformation
         """
 
         self._processing_information = processing_information
+
+    @property
+    def buyer_information(self):
+        """
+        Gets the buyer_information of this ModifyBillingAgreement.
+
+        :return: The buyer_information of this ModifyBillingAgreement.
+        :rtype: Ptsv2billingagreementsidBuyerInformation
+        """
+        return self._buyer_information
+
+    @buyer_information.setter
+    def buyer_information(self, buyer_information):
+        """
+        Sets the buyer_information of this ModifyBillingAgreement.
+
+        :param buyer_information: The buyer_information of this ModifyBillingAgreement.
+        :type: Ptsv2billingagreementsidBuyerInformation
+        """
+
+        self._buyer_information = buyer_information
 
     def to_dict(self):
         """

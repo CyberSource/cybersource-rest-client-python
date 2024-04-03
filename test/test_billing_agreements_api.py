@@ -35,7 +35,7 @@ class TestBillingAgreementsApi(unittest.TestCase):
         """
         Test case for billing_agreements_de_registration
 
-        Standing Instruction Cancellation or Modification
+        Modify a Billing Agreement
         """
         pass
 
@@ -51,7 +51,7 @@ class TestBillingAgreementsApi(unittest.TestCase):
         """
         Test case for billing_agreements_registration
 
-        Standing Instruction completion registration
+        Create a Billing Agreement
         """
         pass
 
