@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_customer_shipping_address**
-> Tmsv2customersEmbeddedDefaultShippingAddress get_customer_shipping_address(customer_id, shipping_address_id, profile_id=profile_id)
+> PostCustomerShippingAddressRequest get_customer_shipping_address(customer_id, shipping_address_id, profile_id=profile_id)
 
 Retrieve a Customer Shipping Address
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultShippingAddress**](Tmsv2customersEmbeddedDefaultShippingAddress.md)
+[**PostCustomerShippingAddressRequest**](PostCustomerShippingAddressRequest.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_customers_shipping_address**
-> Tmsv2customersEmbeddedDefaultShippingAddress patch_customers_shipping_address(customer_id, shipping_address_id, patch_customer_shipping_address_request, profile_id=profile_id, if_match=if_match)
+> PatchCustomerShippingAddressRequest patch_customers_shipping_address(customer_id, shipping_address_id, patch_customer_shipping_address_request, profile_id=profile_id, if_match=if_match)
 
 Update a Customer Shipping Address
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultShippingAddress**](Tmsv2customersEmbeddedDefaultShippingAddress.md)
+[**PatchCustomerShippingAddressRequest**](PatchCustomerShippingAddressRequest.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_customer_shipping_address**
-> Tmsv2customersEmbeddedDefaultShippingAddress post_customer_shipping_address(customer_id, post_customer_shipping_address_request, profile_id=profile_id)
+> PostCustomerShippingAddressRequest post_customer_shipping_address(customer_id, post_customer_shipping_address_request, profile_id=profile_id)
 
 Create a Customer Shipping Address
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultShippingAddress**](Tmsv2customersEmbeddedDefaultShippingAddress.md)
+[**PostCustomerShippingAddressRequest**](PostCustomerShippingAddressRequest.md)
 
 ### Authorization
 

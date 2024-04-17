@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument get_payment_instrument(payment_instrument_id, profile_id=profile_id)
+> PostPaymentInstrumentRequest get_payment_instrument(payment_instrument_id, profile_id=profile_id)
 
 Retrieve a Payment Instrument
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PostPaymentInstrumentRequest**](PostPaymentInstrumentRequest.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, if_match=if_match)
+> PatchPaymentInstrumentRequest patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, if_match=if_match)
 
 Update a Payment Instrument
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PatchPaymentInstrumentRequest**](PatchPaymentInstrumentRequest.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_payment_instrument**
-> Tmsv2customersEmbeddedDefaultPaymentInstrument post_payment_instrument(post_payment_instrument_request, profile_id=profile_id)
+> PostPaymentInstrumentRequest post_payment_instrument(post_payment_instrument_request, profile_id=profile_id)
 
 Create a Payment Instrument
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Tmsv2customersEmbeddedDefaultPaymentInstrument**](Tmsv2customersEmbeddedDefaultPaymentInstrument.md)
+[**PostPaymentInstrumentRequest**](PostPaymentInstrumentRequest.md)
 
 ### Authorization
 

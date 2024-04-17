@@ -62,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier**
-> TmsEmbeddedInstrumentIdentifier get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
+> PostInstrumentIdentifierRequest get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
 
 Retrieve an Instrument Identifier
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
+[**PostInstrumentIdentifierRequest**](PostInstrumentIdentifierRequest.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier_payment_instruments_list**
-> PaymentInstrumentList get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, offset=offset, limit=limit)
+> PaymentInstrumentList1 get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, offset=offset, limit=limit)
 
 List Payment Instruments for an Instrument Identifier
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaymentInstrumentList**](PaymentInstrumentList.md)
+[**PaymentInstrumentList1**](PaymentInstrumentList1.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_instrument_identifier**
-> TmsEmbeddedInstrumentIdentifier patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
+> PatchInstrumentIdentifierRequest patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
 
 Update an Instrument Identifier
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
+[**PatchInstrumentIdentifierRequest**](PatchInstrumentIdentifierRequest.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_instrument_identifier**
-> TmsEmbeddedInstrumentIdentifier post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
+> PostInstrumentIdentifierRequest post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
 
 Create an Instrument Identifier
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsEmbeddedInstrumentIdentifier**](TmsEmbeddedInstrumentIdentifier.md)
+[**PostInstrumentIdentifierRequest**](PostInstrumentIdentifierRequest.md)
 
 ### Authorization
 

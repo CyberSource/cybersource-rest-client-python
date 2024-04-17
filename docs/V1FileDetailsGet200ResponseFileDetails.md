@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** | Name of the file | [optional] 
 **created_time** | **datetime** | Date and time for the file in PST | [optional] 
 **last_modified_time** | **datetime** | Date and time for the file in PST | [optional] 
-**date** | **date** | Date and time for the file in PST | [optional] 
+**_date** | **date** | Date and time for the file in PST | [optional] 
 **mime_type** | **str** | &#39;File extension&#39;  Valid values: - &#39;application/xml&#39; - &#39;text/csv&#39; - &#39;application/pdf&#39; - &#39;application/octet-stream&#39;  | [optional] 
 **size** | **float** | Size of the file in bytes | [optional] 
 

@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_customer**
-> TmsV2CustomersResponse get_customer(customer_id, profile_id=profile_id)
+> PostCustomerRequest get_customer(customer_id, profile_id=profile_id)
 
 Retrieve a Customer
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsV2CustomersResponse**](TmsV2CustomersResponse.md)
+[**PostCustomerRequest**](PostCustomerRequest.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_customer**
-> TmsV2CustomersResponse patch_customer(customer_id, patch_customer_request, profile_id=profile_id, if_match=if_match)
+> PatchCustomerRequest patch_customer(customer_id, patch_customer_request, profile_id=profile_id, if_match=if_match)
 
 Update a Customer
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsV2CustomersResponse**](TmsV2CustomersResponse.md)
+[**PatchCustomerRequest**](PatchCustomerRequest.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_customer**
-> TmsV2CustomersResponse post_customer(post_customer_request, profile_id=profile_id)
+> PostCustomerRequest post_customer(post_customer_request, profile_id=profile_id)
 
 Create a Customer
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TmsV2CustomersResponse**](TmsV2CustomersResponse.md)
+[**PostCustomerRequest**](PostCustomerRequest.md)
 
 ### Authorization
 
