@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **object** | **str** | The type.  Possible Values: - instrumentIdentifier  | [optional] 
 **state** | **str** | Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed.  | [optional] 
 **type** | **str** | The type of Instrument Identifier. Possible Values: - enrollable card  | [optional] 
+**token_provisioning_information** | [**TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation**](TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation.md) |  | [optional] 
 **card** | [**TmsEmbeddedInstrumentIdentifierCard**](TmsEmbeddedInstrumentIdentifierCard.md) |  | [optional] 
 **bank_account** | [**TmsEmbeddedInstrumentIdentifierBankAccount**](TmsEmbeddedInstrumentIdentifierBankAccount.md) |  | [optional] 
 **tokenized_card** | [**TmsEmbeddedInstrumentIdentifierTokenizedCard**](TmsEmbeddedInstrumentIdentifierTokenizedCard.md) |  | [optional] 

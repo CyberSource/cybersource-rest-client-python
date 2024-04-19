@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**delete_webhook_subscription**](ManageWebhooksApi.md#delete_webhook_subscription) | **DELETE** /notification-subscriptions/v1/webhooks/{webhookId} | Delete a Webhook Subscription
 [**get_webhook_subscription_by_id**](ManageWebhooksApi.md#get_webhook_subscription_by_id) | **GET** /notification-subscriptions/v1/webhooks/{webhookId} | Get Details On a Single Webhook
 [**get_webhook_subscriptions_by_org**](ManageWebhooksApi.md#get_webhook_subscriptions_by_org) | **GET** /notification-subscriptions/v1/webhooks | Get Details On All Created Webhooks
-[**replay_previous_webhooks**](ManageWebhooksApi.md#replay_previous_webhooks) | **POST** /nrtf/v1/webhooks/{webhookId}/replays | Replay Previous Webhooks
 [**save_asym_egress_key**](ManageWebhooksApi.md#save_asym_egress_key) | **POST** /kms/egress/v2/keys-asym | Message Level Encryption
 [**update_webhook_subscription**](ManageWebhooksApi.md#update_webhook_subscription) | **PATCH** /notification-subscriptions/v1/webhooks/{webhookId} | Update a Webhook Subscription
 
@@ -147,55 +146,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[InlineResponse2004]**](InlineResponse2004.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replay_previous_webhooks**
-> replay_previous_webhooks(webhook_id, replay_webhooks_request=replay_webhooks_request)
-
-Replay Previous Webhooks
-
-Initiate a webhook replay request to replay transactions that happened in the past.  Cannot execute more than 1 replay request at a time. While one request is processing, you will not be allowed to execute another replay.  The difference between Start and End time cannot exceed a 24 hour window, and 1 month is the farthest date back that is eligible for replay. 
-
-### Example 
-```python
-from __future__ import print_function
-import time
-import CyberSource
-from CyberSource.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = CyberSource.ManageWebhooksApi()
-webhook_id = 'webhook_id_example' # str | The webhook uuid identifier.
-replay_webhooks_request = CyberSource.ReplayWebhooksRequest() # ReplayWebhooksRequest | The request query (optional)
-
-try: 
-    # Replay Previous Webhooks
-    api_instance.replay_previous_webhooks(webhook_id, replay_webhooks_request=replay_webhooks_request)
-except ApiException as e:
-    print("Exception when calling ManageWebhooksApi->replay_previous_webhooks: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **webhook_id** | **str**| The webhook uuid identifier. | 
- **replay_webhooks_request** | [**ReplayWebhooksRequest**](ReplayWebhooksRequest.md)| The request query | [optional] 
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 

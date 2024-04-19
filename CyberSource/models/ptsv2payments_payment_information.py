@@ -43,6 +43,7 @@ class Ptsv2paymentsPaymentInformation(object):
         'options': 'Ptsv2paymentsPaymentInformationOptions',
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str',
+        'sepa': 'Ptsv2paymentsPaymentInformationSepa',
         'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet'
     }
 
@@ -60,10 +61,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'options': 'options',
         'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel',
+        'sepa': 'sepa',
         'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, e_wallet=None):
+    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -81,6 +83,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._options = None
         self._payment_type = None
         self._initiation_channel = None
+        self._sepa = None
         self._e_wallet = None
 
         if card is not None:
@@ -109,6 +112,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.payment_type = payment_type
         if initiation_channel is not None:
           self.initiation_channel = initiation_channel
+        if sepa is not None:
+          self.sepa = sepa
         if e_wallet is not None:
           self.e_wallet = e_wallet
 
@@ -386,6 +391,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._initiation_channel = initiation_channel
+
+    @property
+    def sepa(self):
+        """
+        Gets the sepa of this Ptsv2paymentsPaymentInformation.
+
+        :return: The sepa of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationSepa
+        """
+        return self._sepa
+
+    @sepa.setter
+    def sepa(self, sepa):
+        """
+        Sets the sepa of this Ptsv2paymentsPaymentInformation.
+
+        :param sepa: The sepa of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationSepa
+        """
+
+        self._sepa = sepa
 
     @property
     def e_wallet(self):

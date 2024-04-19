@@ -33,6 +33,10 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         'total_amount': 'str',
         'authorized_amount': 'str',
         'currency': 'str',
+        'settlement_amount': 'str',
+        'settlement_currency': 'str',
+        'original_amount': 'str',
+        'original_currency': 'str',
         'processor_transaction_fee': 'str',
         'exchange_rate': 'str',
         'foreign_currency': 'str',
@@ -44,6 +48,10 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         'total_amount': 'totalAmount',
         'authorized_amount': 'authorizedAmount',
         'currency': 'currency',
+        'settlement_amount': 'settlementAmount',
+        'settlement_currency': 'settlementCurrency',
+        'original_amount': 'originalAmount',
+        'original_currency': 'originalCurrency',
         'processor_transaction_fee': 'processorTransactionFee',
         'exchange_rate': 'exchangeRate',
         'foreign_currency': 'foreignCurrency',
@@ -51,7 +59,7 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         'discount_amount': 'discountAmount'
     }
 
-    def __init__(self, total_amount=None, authorized_amount=None, currency=None, processor_transaction_fee=None, exchange_rate=None, foreign_currency=None, foreign_amount=None, discount_amount=None):
+    def __init__(self, total_amount=None, authorized_amount=None, currency=None, settlement_amount=None, settlement_currency=None, original_amount=None, original_currency=None, processor_transaction_fee=None, exchange_rate=None, foreign_currency=None, foreign_amount=None, discount_amount=None):
         """
         PtsV2PaymentsPost201ResponseOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -59,6 +67,10 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         self._total_amount = None
         self._authorized_amount = None
         self._currency = None
+        self._settlement_amount = None
+        self._settlement_currency = None
+        self._original_amount = None
+        self._original_currency = None
         self._processor_transaction_fee = None
         self._exchange_rate = None
         self._foreign_currency = None
@@ -71,6 +83,14 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
           self.authorized_amount = authorized_amount
         if currency is not None:
           self.currency = currency
+        if settlement_amount is not None:
+          self.settlement_amount = settlement_amount
+        if settlement_currency is not None:
+          self.settlement_currency = settlement_currency
+        if original_amount is not None:
+          self.original_amount = original_amount
+        if original_currency is not None:
+          self.original_currency = original_currency
         if processor_transaction_fee is not None:
           self.processor_transaction_fee = processor_transaction_fee
         if exchange_rate is not None:
@@ -150,6 +170,98 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         """
 
         self._currency = currency
+
+    @property
+    def settlement_amount(self):
+        """
+        Gets the settlement_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
+
+        :return: The settlement_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._settlement_amount
+
+    @settlement_amount.setter
+    def settlement_amount(self, settlement_amount):
+        """
+        Sets the settlement_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This is a multicurrency field. It contains the transaction amount (field 4), converted to the Currency used to bill the cardholder's account. This field is returned for OCT transactions. 
+
+        :param settlement_amount: The settlement_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._settlement_amount = settlement_amount
+
+    @property
+    def settlement_currency(self):
+        """
+        Gets the settlement_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
+
+        :return: The settlement_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._settlement_currency
+
+    @settlement_currency.setter
+    def settlement_currency(self, settlement_currency):
+        """
+        Sets the settlement_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder's account. This field is returned for OCT transactions. 
+
+        :param settlement_currency: The settlement_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._settlement_currency = settlement_currency
+
+    @property
+    def original_amount(self):
+        """
+        Gets the original_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
+
+        :return: The original_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._original_amount
+
+    @original_amount.setter
+    def original_amount(self, original_amount):
+        """
+        Sets the original_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Amount in your original local pricing currency.  This value cannot be negative. You can include a decimal point (.) in this field to denote the currency exponent, but you cannot include any other special characters.  If needed, CyberSource truncates the amount to the correct number of decimal places. 
+
+        :param original_amount: The original_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._original_amount = original_amount
+
+    @property
+    def original_currency(self):
+        """
+        Gets the original_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
+
+        :return: The original_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._original_currency
+
+    @original_currency.setter
+    def original_currency(self, original_currency):
+        """
+        Sets the original_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        Your local pricing currency code.  For the possible values, see the [ISO Standard Currency Codes.](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) 
+
+        :param original_currency: The original_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._original_currency = original_currency
 
     @property
     def processor_transaction_fee(self):

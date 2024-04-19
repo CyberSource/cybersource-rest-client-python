@@ -34,7 +34,10 @@ class Ptsv2paymentsRecipientInformation(object):
         'last_name': 'str',
         'middle_name': 'str',
         'postal_code': 'str',
-        'date_of_birth': 'str'
+        'date_of_birth': 'str',
+        'beneficiary_id': 'str',
+        'beneficiary_name': 'str',
+        'beneficiary_address': 'str'
     }
 
     attribute_map = {
@@ -42,10 +45,13 @@ class Ptsv2paymentsRecipientInformation(object):
         'last_name': 'lastName',
         'middle_name': 'middleName',
         'postal_code': 'postalCode',
-        'date_of_birth': 'dateOfBirth'
+        'date_of_birth': 'dateOfBirth',
+        'beneficiary_id': 'beneficiaryId',
+        'beneficiary_name': 'beneficiaryName',
+        'beneficiary_address': 'beneficiaryAddress'
     }
 
-    def __init__(self, account_id=None, last_name=None, middle_name=None, postal_code=None, date_of_birth=None):
+    def __init__(self, account_id=None, last_name=None, middle_name=None, postal_code=None, date_of_birth=None, beneficiary_id=None, beneficiary_name=None, beneficiary_address=None):
         """
         Ptsv2paymentsRecipientInformation - a model defined in Swagger
         """
@@ -55,6 +61,9 @@ class Ptsv2paymentsRecipientInformation(object):
         self._middle_name = None
         self._postal_code = None
         self._date_of_birth = None
+        self._beneficiary_id = None
+        self._beneficiary_name = None
+        self._beneficiary_address = None
 
         if account_id is not None:
           self.account_id = account_id
@@ -66,6 +75,12 @@ class Ptsv2paymentsRecipientInformation(object):
           self.postal_code = postal_code
         if date_of_birth is not None:
           self.date_of_birth = date_of_birth
+        if beneficiary_id is not None:
+          self.beneficiary_id = beneficiary_id
+        if beneficiary_name is not None:
+          self.beneficiary_name = beneficiary_name
+        if beneficiary_address is not None:
+          self.beneficiary_address = beneficiary_address
 
     @property
     def account_id(self):
@@ -181,6 +196,75 @@ class Ptsv2paymentsRecipientInformation(object):
         """
 
         self._date_of_birth = date_of_birth
+
+    @property
+    def beneficiary_id(self):
+        """
+        Gets the beneficiary_id of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: ID, username, hash or anything uniquely identifying the ultimate beneficiary. 
+
+        :return: The beneficiary_id of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._beneficiary_id
+
+    @beneficiary_id.setter
+    def beneficiary_id(self, beneficiary_id):
+        """
+        Sets the beneficiary_id of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: ID, username, hash or anything uniquely identifying the ultimate beneficiary. 
+
+        :param beneficiary_id: The beneficiary_id of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._beneficiary_id = beneficiary_id
+
+    @property
+    def beneficiary_name(self):
+        """
+        Gets the beneficiary_name of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: The ultimate beneficiary's full name. 
+
+        :return: The beneficiary_name of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._beneficiary_name
+
+    @beneficiary_name.setter
+    def beneficiary_name(self, beneficiary_name):
+        """
+        Sets the beneficiary_name of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: The ultimate beneficiary's full name. 
+
+        :param beneficiary_name: The beneficiary_name of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._beneficiary_name = beneficiary_name
+
+    @property
+    def beneficiary_address(self):
+        """
+        Gets the beneficiary_address of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: The ultimate beneficiary's street address (street, zip code, city), excluding the country. Example: \"Main street 1, 12345, Barcelona 
+
+        :return: The beneficiary_address of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._beneficiary_address
+
+    @beneficiary_address.setter
+    def beneficiary_address(self, beneficiary_address):
+        """
+        Sets the beneficiary_address of this Ptsv2paymentsRecipientInformation.
+        Only for e-wallets: The ultimate beneficiary's street address (street, zip code, city), excluding the country. Example: \"Main street 1, 12345, Barcelona 
+
+        :param beneficiary_address: The beneficiary_address of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._beneficiary_address = beneficiary_address
 
     def to_dict(self):
         """

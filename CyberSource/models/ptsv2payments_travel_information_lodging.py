@@ -71,7 +71,11 @@ class Ptsv2paymentsTravelInformationLodging(object):
         'banquest_cost': 'str',
         'non_room_tax_amount': 'str',
         'early_check_out_cost': 'str',
-        'internet_access_cost': 'str'
+        'internet_access_cost': 'str',
+        'name': 'str',
+        'hotel_name': 'str',
+        'check_in_date_time': 'str',
+        'check_out_date_time': 'str'
     }
 
     attribute_map = {
@@ -116,10 +120,14 @@ class Ptsv2paymentsTravelInformationLodging(object):
         'banquest_cost': 'banquestCost',
         'non_room_tax_amount': 'nonRoomTaxAmount',
         'early_check_out_cost': 'earlyCheckOutCost',
-        'internet_access_cost': 'internetAccessCost'
+        'internet_access_cost': 'internetAccessCost',
+        'name': 'name',
+        'hotel_name': 'hotelName',
+        'check_in_date_time': 'checkInDateTime',
+        'check_out_date_time': 'checkOutDateTime'
     }
 
-    def __init__(self, check_in_date=None, check_out_date=None, room=None, smoking_preference=None, number_of_rooms=None, number_of_guests=None, room_bed_type=None, room_tax_type=None, room_rate_type=None, guest_name=None, customer_service_phone_number=None, corporate_client_code=None, additional_discount_amount=None, room_location=None, special_program_code=None, total_tax_amount=None, prepaid_cost=None, food_and_beverage_cost=None, room_tax_amount=None, adjustment_amount=None, phone_cost=None, restaurant_cost=None, room_service_cost=None, mini_bar_cost=None, laundry_cost=None, miscellaneous_cost=None, gift_shop_cost=None, movie_cost=None, health_club_cost=None, valet_parking_cost=None, cash_disbursement_cost=None, non_room_cost=None, business_center_cost=None, lounge_bar_cost=None, transportation_cost=None, gratuity_amount=None, conference_room_cost=None, audio_visual_cost=None, banquest_cost=None, non_room_tax_amount=None, early_check_out_cost=None, internet_access_cost=None):
+    def __init__(self, check_in_date=None, check_out_date=None, room=None, smoking_preference=None, number_of_rooms=None, number_of_guests=None, room_bed_type=None, room_tax_type=None, room_rate_type=None, guest_name=None, customer_service_phone_number=None, corporate_client_code=None, additional_discount_amount=None, room_location=None, special_program_code=None, total_tax_amount=None, prepaid_cost=None, food_and_beverage_cost=None, room_tax_amount=None, adjustment_amount=None, phone_cost=None, restaurant_cost=None, room_service_cost=None, mini_bar_cost=None, laundry_cost=None, miscellaneous_cost=None, gift_shop_cost=None, movie_cost=None, health_club_cost=None, valet_parking_cost=None, cash_disbursement_cost=None, non_room_cost=None, business_center_cost=None, lounge_bar_cost=None, transportation_cost=None, gratuity_amount=None, conference_room_cost=None, audio_visual_cost=None, banquest_cost=None, non_room_tax_amount=None, early_check_out_cost=None, internet_access_cost=None, name=None, hotel_name=None, check_in_date_time=None, check_out_date_time=None):
         """
         Ptsv2paymentsTravelInformationLodging - a model defined in Swagger
         """
@@ -166,6 +174,10 @@ class Ptsv2paymentsTravelInformationLodging(object):
         self._non_room_tax_amount = None
         self._early_check_out_cost = None
         self._internet_access_cost = None
+        self._name = None
+        self._hotel_name = None
+        self._check_in_date_time = None
+        self._check_out_date_time = None
 
         if check_in_date is not None:
           self.check_in_date = check_in_date
@@ -251,6 +263,14 @@ class Ptsv2paymentsTravelInformationLodging(object):
           self.early_check_out_cost = early_check_out_cost
         if internet_access_cost is not None:
           self.internet_access_cost = internet_access_cost
+        if name is not None:
+          self.name = name
+        if hotel_name is not None:
+          self.hotel_name = hotel_name
+        if check_in_date_time is not None:
+          self.check_in_date_time = check_in_date_time
+        if check_out_date_time is not None:
+          self.check_out_date_time = check_out_date_time
 
     @property
     def check_in_date(self):
@@ -1217,6 +1237,98 @@ class Ptsv2paymentsTravelInformationLodging(object):
         """
 
         self._internet_access_cost = internet_access_cost
+
+    @property
+    def name(self):
+        """
+        Gets the name of this Ptsv2paymentsTravelInformationLodging.
+        Name of the hotel for which the reservation is for. Mandatory in case the merchant's business type is Hotel. 
+
+        :return: The name of this Ptsv2paymentsTravelInformationLodging.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this Ptsv2paymentsTravelInformationLodging.
+        Name of the hotel for which the reservation is for. Mandatory in case the merchant's business type is Hotel. 
+
+        :param name: The name of this Ptsv2paymentsTravelInformationLodging.
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def hotel_name(self):
+        """
+        Gets the hotel_name of this Ptsv2paymentsTravelInformationLodging.
+        The name of the hotel for which the reservation was made. 
+
+        :return: The hotel_name of this Ptsv2paymentsTravelInformationLodging.
+        :rtype: str
+        """
+        return self._hotel_name
+
+    @hotel_name.setter
+    def hotel_name(self, hotel_name):
+        """
+        Sets the hotel_name of this Ptsv2paymentsTravelInformationLodging.
+        The name of the hotel for which the reservation was made. 
+
+        :param hotel_name: The hotel_name of this Ptsv2paymentsTravelInformationLodging.
+        :type: str
+        """
+
+        self._hotel_name = hotel_name
+
+    @property
+    def check_in_date_time(self):
+        """
+        Gets the check_in_date_time of this Ptsv2paymentsTravelInformationLodging.
+        The date of the check-in in GMT+8 offset. 
+
+        :return: The check_in_date_time of this Ptsv2paymentsTravelInformationLodging.
+        :rtype: str
+        """
+        return self._check_in_date_time
+
+    @check_in_date_time.setter
+    def check_in_date_time(self, check_in_date_time):
+        """
+        Sets the check_in_date_time of this Ptsv2paymentsTravelInformationLodging.
+        The date of the check-in in GMT+8 offset. 
+
+        :param check_in_date_time: The check_in_date_time of this Ptsv2paymentsTravelInformationLodging.
+        :type: str
+        """
+
+        self._check_in_date_time = check_in_date_time
+
+    @property
+    def check_out_date_time(self):
+        """
+        Gets the check_out_date_time of this Ptsv2paymentsTravelInformationLodging.
+        The date of the check-out in GMT+8 offset. 
+
+        :return: The check_out_date_time of this Ptsv2paymentsTravelInformationLodging.
+        :rtype: str
+        """
+        return self._check_out_date_time
+
+    @check_out_date_time.setter
+    def check_out_date_time(self, check_out_date_time):
+        """
+        Sets the check_out_date_time of this Ptsv2paymentsTravelInformationLodging.
+        The date of the check-out in GMT+8 offset. 
+
+        :param check_out_date_time: The check_out_date_time of this Ptsv2paymentsTravelInformationLodging.
+        :type: str
+        """
+
+        self._check_out_date_time = check_out_date_time
 
     def to_dict(self):
         """

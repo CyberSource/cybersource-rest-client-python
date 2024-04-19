@@ -63,6 +63,7 @@ class Ptsv2paymentsProcessingInformation(object):
         'extended_credit_total_count': 'str',
         'network_routing_order': 'str',
         'pay_by_points_indicator': 'bool',
+        'timeout': 'int',
         'is_return_auth_record_enabled': 'bool',
         'network_partner_id': 'str',
         'payment_type': 'str'
@@ -102,12 +103,13 @@ class Ptsv2paymentsProcessingInformation(object):
         'extended_credit_total_count': 'extendedCreditTotalCount',
         'network_routing_order': 'networkRoutingOrder',
         'pay_by_points_indicator': 'payByPointsIndicator',
+        'timeout': 'timeout',
         'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled',
         'network_partner_id': 'networkPartnerId',
         'payment_type': 'paymentType'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -145,6 +147,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._extended_credit_total_count = None
         self._network_routing_order = None
         self._pay_by_points_indicator = None
+        self._timeout = None
         self._is_return_auth_record_enabled = None
         self._network_partner_id = None
         self._payment_type = None
@@ -215,6 +218,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.network_routing_order = network_routing_order
         if pay_by_points_indicator is not None:
           self.pay_by_points_indicator = pay_by_points_indicator
+        if timeout is not None:
+          self.timeout = timeout
         if is_return_auth_record_enabled is not None:
           self.is_return_auth_record_enabled = is_return_auth_record_enabled
         if network_partner_id is not None:
@@ -964,6 +969,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._pay_by_points_indicator = pay_by_points_indicator
+
+    @property
+    def timeout(self):
+        """
+        Gets the timeout of this Ptsv2paymentsProcessingInformation.
+        Minutes until a pending MyBank transaction will be timed out. Value must be between 5 and 30. Default is 5. 
+
+        :return: The timeout of this Ptsv2paymentsProcessingInformation.
+        :rtype: int
+        """
+        return self._timeout
+
+    @timeout.setter
+    def timeout(self, timeout):
+        """
+        Sets the timeout of this Ptsv2paymentsProcessingInformation.
+        Minutes until a pending MyBank transaction will be timed out. Value must be between 5 and 30. Default is 5. 
+
+        :param timeout: The timeout of this Ptsv2paymentsProcessingInformation.
+        :type: int
+        """
+
+        self._timeout = timeout
 
     @property
     def is_return_auth_record_enabled(self):

@@ -35,6 +35,7 @@ class PatchInstrumentIdentifierRequest(object):
         'object': 'str',
         'state': 'str',
         'type': 'str',
+        'token_provisioning_information': 'TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenized_card': 'TmsEmbeddedInstrumentIdentifierTokenizedCard',
@@ -50,6 +51,7 @@ class PatchInstrumentIdentifierRequest(object):
         'object': 'object',
         'state': 'state',
         'type': 'type',
+        'token_provisioning_information': 'tokenProvisioningInformation',
         'card': 'card',
         'bank_account': 'bankAccount',
         'tokenized_card': 'tokenizedCard',
@@ -59,7 +61,7 @@ class PatchInstrumentIdentifierRequest(object):
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, type=None, card=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None):
+    def __init__(self, links=None, id=None, object=None, state=None, type=None, token_provisioning_information=None, card=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None):
         """
         PatchInstrumentIdentifierRequest - a model defined in Swagger
         """
@@ -69,6 +71,7 @@ class PatchInstrumentIdentifierRequest(object):
         self._object = None
         self._state = None
         self._type = None
+        self._token_provisioning_information = None
         self._card = None
         self._bank_account = None
         self._tokenized_card = None
@@ -87,6 +90,8 @@ class PatchInstrumentIdentifierRequest(object):
           self.state = state
         if type is not None:
           self.type = type
+        if token_provisioning_information is not None:
+          self.token_provisioning_information = token_provisioning_information
         if card is not None:
           self.card = card
         if bank_account is not None:
@@ -214,6 +219,27 @@ class PatchInstrumentIdentifierRequest(object):
         """
 
         self._type = type
+
+    @property
+    def token_provisioning_information(self):
+        """
+        Gets the token_provisioning_information of this PatchInstrumentIdentifierRequest.
+
+        :return: The token_provisioning_information of this PatchInstrumentIdentifierRequest.
+        :rtype: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
+        """
+        return self._token_provisioning_information
+
+    @token_provisioning_information.setter
+    def token_provisioning_information(self, token_provisioning_information):
+        """
+        Sets the token_provisioning_information of this PatchInstrumentIdentifierRequest.
+
+        :param token_provisioning_information: The token_provisioning_information of this PatchInstrumentIdentifierRequest.
+        :type: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
+        """
+
+        self._token_provisioning_information = token_provisioning_information
 
     @property
     def card(self):

@@ -22,9 +22,9 @@ Name | Type | Description | Notes
 **installment_information** | [**PtsV2PaymentsPost201ResponseInstallmentInformation**](PtsV2PaymentsPost201ResponseInstallmentInformation.md) |  | [optional] 
 **token_information** | [**PtsV2PaymentsPost201ResponseTokenInformation**](PtsV2PaymentsPost201ResponseTokenInformation.md) |  | [optional] 
 **buyer_information** | [**PtsV2PaymentsPost201ResponseBuyerInformation**](PtsV2PaymentsPost201ResponseBuyerInformation.md) |  | [optional] 
-**merchant_information** | [**PtsV2PaymentsPost201ResponseMerchantInformation**](PtsV2PaymentsPost201ResponseMerchantInformation.md) |  | [optional] 
 **risk_information** | [**PtsV2PaymentsPost201ResponseRiskInformation**](PtsV2PaymentsPost201ResponseRiskInformation.md) |  | [optional] 
 **consumer_authentication_information** | [**PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation**](PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.md) |  | [optional] 
+**merchant_information** | [**PtsV2PaymentsPost201ResponseMerchantInformation**](PtsV2PaymentsPost201ResponseMerchantInformation.md) |  | [optional] 
 **embedded_actions** | [**PtsV2PaymentsPost201ResponseEmbeddedActions**](PtsV2PaymentsPost201ResponseEmbeddedActions.md) |  | [optional] 
 **watchlist_screening_information** | [**PtsV2PaymentsPost201ResponseWatchlistScreeningInformation**](PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.md) |  | [optional] 
 

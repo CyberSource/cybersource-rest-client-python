@@ -30,22 +30,76 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'merchant_name': 'str',
+        'merchant_descriptor': 'PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor',
         'return_url': 'str'
     }
 
     attribute_map = {
+        'merchant_name': 'merchantName',
+        'merchant_descriptor': 'merchantDescriptor',
         'return_url': 'returnUrl'
     }
 
-    def __init__(self, return_url=None):
+    def __init__(self, merchant_name=None, merchant_descriptor=None, return_url=None):
         """
         PtsV2PaymentsPost201ResponseMerchantInformation - a model defined in Swagger
         """
 
+        self._merchant_name = None
+        self._merchant_descriptor = None
         self._return_url = None
 
+        if merchant_name is not None:
+          self.merchant_name = merchant_name
+        if merchant_descriptor is not None:
+          self.merchant_descriptor = merchant_descriptor
         if return_url is not None:
           self.return_url = return_url
+
+    @property
+    def merchant_name(self):
+        """
+        Gets the merchant_name of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company's name as you want it to appear to the customer in the issuing bank's authentication form. This value overrides the value specified by your merchant bank. 
+
+        :return: The merchant_name of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :rtype: str
+        """
+        return self._merchant_name
+
+    @merchant_name.setter
+    def merchant_name(self, merchant_name):
+        """
+        Sets the merchant_name of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        Use this field only if you are requesting payment with Payer Authentication serice together.  Your company's name as you want it to appear to the customer in the issuing bank's authentication form. This value overrides the value specified by your merchant bank. 
+
+        :param merchant_name: The merchant_name of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :type: str
+        """
+
+        self._merchant_name = merchant_name
+
+    @property
+    def merchant_descriptor(self):
+        """
+        Gets the merchant_descriptor of this PtsV2PaymentsPost201ResponseMerchantInformation.
+
+        :return: The merchant_descriptor of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :rtype: PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor
+        """
+        return self._merchant_descriptor
+
+    @merchant_descriptor.setter
+    def merchant_descriptor(self, merchant_descriptor):
+        """
+        Sets the merchant_descriptor of this PtsV2PaymentsPost201ResponseMerchantInformation.
+
+        :param merchant_descriptor: The merchant_descriptor of this PtsV2PaymentsPost201ResponseMerchantInformation.
+        :type: PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor
+        """
+
+        self._merchant_descriptor = merchant_descriptor
 
     @property
     def return_url(self):

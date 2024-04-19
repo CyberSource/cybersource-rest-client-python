@@ -54,14 +54,6 @@ class TestManageWebhooksApi(unittest.TestCase):
         """
         pass
 
-    def test_replay_previous_webhooks(self):
-        """
-        Test case for replay_previous_webhooks
-
-        Replay Previous Webhooks
-        """
-        pass
-
     def test_save_asym_egress_key(self):
         """
         Test case for save_asym_egress_key

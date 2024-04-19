@@ -38,6 +38,9 @@ Name | Type | Description | Notes
 **public_key** | **str** |  | [optional] 
 **seller_protection** | [**PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection**](PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.md) |  | [optional] 
 **transaction_expiry_date** | **str** | The date on which the transaction expires and payment cannot be made.  | [optional] 
+**custom_url** | **str** | For merchants to declare customs Customs declaration service URL.  | [optional] 
+**scheme_assigned_id** | **str** | Unique id assigned to a merchant by the APM and not PSP The merchant ID, as boarded with Alipay  | [optional] 
+**device_url** | **str** | The QR code value. Convert this value into an image and send it to the POS terminal to be displayed. The terminal can also perform the conversion. The value is a URL like in the example below: https://qr.alipay.com/pmxabcka1ts5grar12.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
