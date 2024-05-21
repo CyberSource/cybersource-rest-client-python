@@ -173,7 +173,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param int offset: Page offset number. (required)
         :param int limit: Maximum number of items you would like returned. (required)
-        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED 
+        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING 
         :return: InvoicingV2InvoicesAllGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -205,7 +205,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param int offset: Page offset number. (required)
         :param int limit: Maximum number of items you would like returned. (required)
-        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED 
+        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING 
         :return: InvoicingV2InvoicesAllGet200Response
                  If the method is called asynchronously,
                  returns the request thread.

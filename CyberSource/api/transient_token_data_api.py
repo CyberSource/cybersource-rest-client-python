@@ -44,7 +44,7 @@ class TransientTokenDataApi(object):
 
 
 
-    def get_payment_credentials_for_transient_token(self, jti, **kwargs):
+    def get_payment_credentials_for_transient_token(self, payment_credentials_reference, **kwargs):
         """
         Get Payment Credentials
         Retrieve the Payment data captured by Unified Checkout. This API is used to retrieve the detailed data represented by the Transient Token. This API will return PCI payment data captured by the Unified Checkout platform.
@@ -54,11 +54,11 @@ class TransientTokenDataApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_payment_credentials_for_transient_token(jti, callback=callback_function)
+        >>> thread = api.get_payment_credentials_for_transient_token(payment_credentials_reference, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str jti: The jti field contained within the Transient token returned from a successful Unified Checkout transaction  (required)
+        :param str payment_credentials_reference: The paymentCredentialsReference field contained within the Transient token returned from a successful Unified Checkout transaction  (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,12 +69,12 @@ class TransientTokenDataApi(object):
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.get_payment_credentials_for_transient_token_with_http_info(jti, **kwargs)
+            return self.get_payment_credentials_for_transient_token_with_http_info(payment_credentials_reference, **kwargs)
         else:
-            (data) = self.get_payment_credentials_for_transient_token_with_http_info(jti, **kwargs)
+            (data) = self.get_payment_credentials_for_transient_token_with_http_info(payment_credentials_reference, **kwargs)
             return data
 
-    def get_payment_credentials_for_transient_token_with_http_info(self, jti, **kwargs):
+    def get_payment_credentials_for_transient_token_with_http_info(self, payment_credentials_reference, **kwargs):
         """
         Get Payment Credentials
         Retrieve the Payment data captured by Unified Checkout. This API is used to retrieve the detailed data represented by the Transient Token. This API will return PCI payment data captured by the Unified Checkout platform.
@@ -84,17 +84,17 @@ class TransientTokenDataApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.get_payment_credentials_for_transient_token_with_http_info(jti, callback=callback_function)
+        >>> thread = api.get_payment_credentials_for_transient_token_with_http_info(payment_credentials_reference, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str jti: The jti field contained within the Transient token returned from a successful Unified Checkout transaction  (required)
+        :param str payment_credentials_reference: The paymentCredentialsReference field contained within the Transient token returned from a successful Unified Checkout transaction  (required)
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['jti']
+        all_params = ['payment_credentials_reference']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -109,19 +109,19 @@ class TransientTokenDataApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'jti' is set
-        if ('jti' not in params) or (params['jti'] is None):
+        # verify the required parameter 'payment_credentials_reference' is set
+        if ('payment_credentials_reference' not in params) or (params['payment_credentials_reference'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `jti` when calling `get_payment_credentials_for_transient_token`")
-            raise ValueError("Missing the required parameter `jti` when calling `get_payment_credentials_for_transient_token`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
+            raise ValueError("Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
 
 
         collection_formats = {}
 
         path_params = {}
-        if 'jti' in params:
-            path_params['jti'] = params['jti']
-            jti=jti
+        if 'payment_credentials_reference' in params:
+            path_params['paymentCredentialsReference'] = params['payment_credentials_reference']
+            paymentCredentialsReference=payment_credentials_reference
 
         query_params = []
 
@@ -142,7 +142,7 @@ class TransientTokenDataApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/up/v1/payment-credentials/{jti}', 'GET',
+        return self.api_client.call_api(f'/flex/v2/payment-credentials/{paymentCredentialsReference}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

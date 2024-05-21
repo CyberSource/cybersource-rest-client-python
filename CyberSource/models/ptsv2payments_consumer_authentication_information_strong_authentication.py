@@ -30,6 +30,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
                             and the value is json key in definition.
     """
     swagger_types = {
+        'issuer_information': 'Ptsv2paymentsConsumerAuthenticationInformationStrongAuthenticationIssuerInformation',
         'low_value_exemption_indicator': 'str',
         'risk_analysis_exemption_indicator': 'str',
         'trusted_merchant_exemption_indicator': 'str',
@@ -40,6 +41,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
     }
 
     attribute_map = {
+        'issuer_information': 'issuerInformation',
         'low_value_exemption_indicator': 'lowValueExemptionIndicator',
         'risk_analysis_exemption_indicator': 'riskAnalysisExemptionIndicator',
         'trusted_merchant_exemption_indicator': 'trustedMerchantExemptionIndicator',
@@ -49,11 +51,12 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         'authentication_indicator': 'authenticationIndicator'
     }
 
-    def __init__(self, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None, outage_exemption_indicator=None, authentication_indicator=None):
+    def __init__(self, issuer_information=None, low_value_exemption_indicator=None, risk_analysis_exemption_indicator=None, trusted_merchant_exemption_indicator=None, secure_corporate_payment_indicator=None, delegated_authentication_exemption_indicator=None, outage_exemption_indicator=None, authentication_indicator=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication - a model defined in Swagger
         """
 
+        self._issuer_information = None
         self._low_value_exemption_indicator = None
         self._risk_analysis_exemption_indicator = None
         self._trusted_merchant_exemption_indicator = None
@@ -62,6 +65,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         self._outage_exemption_indicator = None
         self._authentication_indicator = None
 
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
         if low_value_exemption_indicator is not None:
           self.low_value_exemption_indicator = low_value_exemption_indicator
         if risk_analysis_exemption_indicator is not None:
@@ -76,6 +81,27 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
           self.outage_exemption_indicator = outage_exemption_indicator
         if authentication_indicator is not None:
           self.authentication_indicator = authentication_indicator
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+
+        :return: The issuer_information of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :rtype: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthenticationIssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+
+        :param issuer_information: The issuer_information of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
+        :type: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthenticationIssuerInformation
+        """
+
+        self._issuer_information = issuer_information
 
     @property
     def low_value_exemption_indicator(self):

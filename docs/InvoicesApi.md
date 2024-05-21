@@ -79,7 +79,7 @@ from pprint import pprint
 api_instance = CyberSource.InvoicesApi()
 offset = 56 # int | Page offset number.
 limit = 56 # int | Maximum number of items you would like returned.
-status = 'status_example' # str | The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED  (optional)
+status = 'status_example' # str | The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING  (optional)
 
 try: 
     # Get a List of Invoices
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offset** | **int**| Page offset number. | 
  **limit** | **int**| Maximum number of items you would like returned. | 
- **status** | **str**| The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED  | [optional] 
+ **status** | **str**| The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING  | [optional] 
 
 ### Return type
 

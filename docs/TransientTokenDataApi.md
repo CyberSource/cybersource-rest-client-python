@@ -4,12 +4,12 @@ All URIs are relative to *https://apitest.cybersource.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_payment_credentials_for_transient_token**](TransientTokenDataApi.md#get_payment_credentials_for_transient_token) | **GET** /up/v1/payment-credentials/{jti} | Get Payment Credentials
+[**get_payment_credentials_for_transient_token**](TransientTokenDataApi.md#get_payment_credentials_for_transient_token) | **GET** /flex/v2/payment-credentials/{paymentCredentialsReference} | Get Payment Credentials
 [**get_transaction_for_transient_token**](TransientTokenDataApi.md#get_transaction_for_transient_token) | **GET** /up/v1/payment-details/{transientToken} | Get Transient Token Data
 
 
 # **get_payment_credentials_for_transient_token**
-> str get_payment_credentials_for_transient_token(jti)
+> str get_payment_credentials_for_transient_token(payment_credentials_reference)
 
 Get Payment Credentials
 
@@ -25,11 +25,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = CyberSource.TransientTokenDataApi()
-jti = 'jti_example' # str | The jti field contained within the Transient token returned from a successful Unified Checkout transaction 
+payment_credentials_reference = 'payment_credentials_reference_example' # str | The paymentCredentialsReference field contained within the Transient token returned from a successful Unified Checkout transaction 
 
 try: 
     # Get Payment Credentials
-    api_response = api_instance.get_payment_credentials_for_transient_token(jti)
+    api_response = api_instance.get_payment_credentials_for_transient_token(payment_credentials_reference)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TransientTokenDataApi->get_payment_credentials_for_transient_token: %s\n" % e)
@@ -39,7 +39,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jti** | **str**| The jti field contained within the Transient token returned from a successful Unified Checkout transaction  | 
+ **payment_credentials_reference** | **str**| The paymentCredentialsReference field contained within the Transient token returned from a successful Unified Checkout transaction  | 
 
 ### Return type
 

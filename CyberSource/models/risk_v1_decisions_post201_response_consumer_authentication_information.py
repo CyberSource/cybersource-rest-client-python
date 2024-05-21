@@ -52,6 +52,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'eci': 'str',
         'eci_raw': 'str',
         'effective_authentication_type': 'str',
+        'exemption_data_raw': 'str',
         'ivr': 'PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr',
         'network_score': 'str',
         'pareq': 'str',
@@ -100,6 +101,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'eci': 'eci',
         'eci_raw': 'eciRaw',
         'effective_authentication_type': 'effectiveAuthenticationType',
+        'exemption_data_raw': 'exemptionDataRaw',
         'ivr': 'ivr',
         'network_score': 'networkScore',
         'pareq': 'pareq',
@@ -125,7 +127,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         'idci_score': 'idciScore'
     }
 
-    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_type=None, authentication_transaction_id=None, authentication_transaction_context_id=None, validity_period=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, acs_operator_id=None, acs_reference_number=None, idci_decision=None, idci_reason_code1=None, idci_reason_code2=None, idci_score=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_type=None, authentication_transaction_id=None, authentication_transaction_context_id=None, validity_period=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, exemption_data_raw=None, ivr=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, acs_operator_id=None, acs_reference_number=None, idci_decision=None, idci_reason_code1=None, idci_reason_code2=None, idci_score=None):
         """
         RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -152,6 +154,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         self._eci = None
         self._eci_raw = None
         self._effective_authentication_type = None
+        self._exemption_data_raw = None
         self._ivr = None
         self._network_score = None
         self._pareq = None
@@ -220,6 +223,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
           self.eci_raw = eci_raw
         if effective_authentication_type is not None:
           self.effective_authentication_type = effective_authentication_type
+        if exemption_data_raw is not None:
+          self.exemption_data_raw = exemption_data_raw
         if ivr is not None:
           self.ivr = ivr
         if network_score is not None:
@@ -772,6 +777,29 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         """
 
         self._effective_authentication_type = effective_authentication_type
+
+    @property
+    def exemption_data_raw(self):
+        """
+        Gets the exemption_data_raw of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication exemption indicator for Carte Bancaire exemptions.  This is used with unbundled authentication and authorizations calls, for example: \"low fraud merchant program\". The value returned in this field should be passed in the authorization request under the field - `consumerAuthenticationInformation.strongAuthentication.issuerInformation.exemptionDataRaw`. 
+
+        :return: The exemption_data_raw of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._exemption_data_raw
+
+    @exemption_data_raw.setter
+    def exemption_data_raw(self, exemption_data_raw):
+        """
+        Sets the exemption_data_raw of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        Payer authentication exemption indicator for Carte Bancaire exemptions.  This is used with unbundled authentication and authorizations calls, for example: \"low fraud merchant program\". The value returned in this field should be passed in the authorization request under the field - `consumerAuthenticationInformation.strongAuthentication.issuerInformation.exemptionDataRaw`. 
+
+        :param exemption_data_raw: The exemption_data_raw of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._exemption_data_raw = exemption_data_raw
 
     @property
     def ivr(self):

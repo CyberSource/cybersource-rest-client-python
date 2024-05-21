@@ -120,7 +120,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
     def status(self):
         """
         Gets the status of this InvoicingV2InvoicesAllGet200ResponseInvoices.
-        The status of the invoice.  Possible values: - DRAFT - CREATED - SENT - PARTIAL - PAID - CANCELED 
+        The status of the invoice.  Possible values: - DRAFT - CREATED - SENT - PARTIAL - PAID - CANCELED - PENDING 
 
         :return: The status of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :rtype: str
@@ -131,7 +131,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
     def status(self, status):
         """
         Sets the status of this InvoicingV2InvoicesAllGet200ResponseInvoices.
-        The status of the invoice.  Possible values: - DRAFT - CREATED - SENT - PARTIAL - PAID - CANCELED 
+        The status of the invoice.  Possible values: - DRAFT - CREATED - SENT - PARTIAL - PAID - CANCELED - PENDING 
 
         :param status: The status of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: str
