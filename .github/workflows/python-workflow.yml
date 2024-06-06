@@ -1,18 +1,28 @@
-name: workflow cybersource-rest-client-python
-on:
-    push:
-    pull_request:
-        types:
-            - opened
-        branches:
-            - 'master'
-            - 'adding-workflows'
+name: workflow cybersource-rest-client-python-test-run
+on: push
+    # pull_request:
+    #     types:
+    #         - opened
+    #     branches:
+    #         - 'master'
+    #         - 'adding-workflows'
 jobs:
     job-1:
         runs-on: ubunutu-latest
         steps:
-            - name: Checkout the Code
+            - name: Make New Directory
+              run: mkdir python_sdk
+            - name: Checkout the python-rest-client-repo
               uses: actions/checkout@v4
-            - name: Listing out all that is there
-              run: ls -lrt
-            
+              with:
+                path: 'python_sdk'
+            - name: Checkout the python-samples-folder
+              uses: actions/checkout@v4
+              with:
+                repository: 'CyberSource/cybersource-rest-samples-python'
+                path: 'python_sdk'
+            - name: Change the folder and list the files
+              run: |
+                cd python_sdk
+                ls
+                echo "Inside the python_sdk"
