@@ -8,21 +8,38 @@ on: push
     #         - 'adding-workflows'
 jobs:
     job-1:
-        runs-on: ubunutu-latest
+        runs-on: ubuntu-24.04
         steps:
             - name: Make New Directory
-              run: mkdir python_sdk
+              run: |
+                rm -rf python_sdk_testing
+                mkdir python_sdk_testing
             - name: Checkout the python-rest-client-repo
               uses: actions/checkout@v4
               with:
-                path: 'python_sdk'
+                path: 'python_sdk_testing'
             - name: Checkout the python-samples-folder
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
-                path: 'python_sdk'
+                path: 'python_sdk_testing'
             - name: Change the folder and list the files
               run: |
-                cd python_sdk
+                cd python_sdk_testing
                 ls
-                echo "Inside the python_sdk"
+                echo "Inside the python_sdk_testing"
+            - name: Setting up and activating python virtual environment 
+              run: |
+                python3 -m venv ve
+                source ve/bin/activate
+            - name: Building the projects
+              run: |
+                cd cyber-source-rest-client-python
+                pip install -e .
+                cd ..
+                cd cyber-source-rest-samples-python
+                pip install -e .
+                pip install requests
+                bash ./sample_code_runner.sh
+              
+            
