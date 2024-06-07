@@ -43,12 +43,14 @@ jobs:
                 cd ..
                 cd '$SAMPLE_FOLDER'
                 pip install -e .
+                pip install lib
                 #echo "Before Running the python file"
                 #python samples/Invoicing/InvoiceSettings/get-invoice-settings.py
                 #echo "Done with first sample"
                 #python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
                 #echo "After Running the Python File"
-                bash ./sample_code_runner.sh
+                #bash ./sample_code_runner.sh
+                python samples/authentication/sample_code/PutMethod.py
             - name: Upload the log files
               if: always()
               uses: actions/upload-artifact@v4
