@@ -1,45 +1,56 @@
 name: workflow cybersource-rest-client-python-test-run
-on: push
-    # pull_request:
-    #     types:
-    #         - opened
-    #     branches:
-    #         - 'master'
-    #         - 'adding-workflows'
+on:
+  push:
+
 jobs:
     job-1:
+        env:
+          CLIENT_FOLDER: 'cybersource-rest-client-python'
+          SAMPLE_FOLDER: 'cybersource-rest-samples-python'
         runs-on: ubuntu-24.04
         steps:
-            - name: Make New Directory
+            # - name: Code Checkout
+            #   uses: actions/checkout@v4
+            - name: Making separate folders
               run: |
-                rm -rf python_sdk_testing
-                mkdir python_sdk_testing
-            - name: Checkout the python-rest-client-repo
+                rm -rf '$CLIENT_FOLDER'
+                rm -rf '$SAMPLE_FOLDER'
+                mkdir $CLIENT_FOLDER $SAMPLE_FOLDER
+            - name: Adding client
               uses: actions/checkout@v4
               with:
-                path: 'python_sdk_testing'
-            - name: Checkout the python-samples-folder
+                repository: 'CyberSource/cybersource-rest-client-python'
+                path: './$CLIENT_FOLDER'
+            - name: Adding sample
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
-                path: 'python_sdk_testing'
-            - name: Change the folder and list the files
+                path: '$SAMPLE_FOLDER'
+            - name: Install Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.10"
+            - name: Set up virtual python environment
               run: |
-                cd python_sdk_testing
-                ls
-                echo "Inside the python_sdk_testing"
-            - name: Setting up and activating python virtual environment 
-              run: |
-                python3 -m venv ve
+                python -m pip install --upgrade pip
+                python -m venv ve
                 source ve/bin/activate
             - name: Building the projects
               run: |
-                cd cyber-source-rest-client-python
+                cd '$CLIENT_FOLDER'
                 pip install -e .
                 cd ..
-                cd cyber-source-rest-samples-python
+                cd '$SAMPLE_FOLDER'
                 pip install -e .
-                pip install requests
-                bash ./sample_code_runner.sh
-              
-            
+                #echo "Before Running the python file"
+                python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
+                #echo "After Running the Python File"
+                #bash ./sample_code_runner.sh
+            - name: Upload the log files
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                name: log-files
+                path: '$SAMPLE_FOLDER/output.log'
+
+
