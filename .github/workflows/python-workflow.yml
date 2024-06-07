@@ -25,6 +25,7 @@ jobs:
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
+                ref: 'testing-branch'
                 path: '$SAMPLE_FOLDER'
             - name: Install Python
               uses: actions/setup-python@v5
@@ -43,11 +44,11 @@ jobs:
                 cd '$SAMPLE_FOLDER'
                 pip install -e .
                 #echo "Before Running the python file"
-                python samples/Invoicing/InvoiceSettings/get-invoice-settings.py
-                echo "Done with first sample"
-                python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
+                #python samples/Invoicing/InvoiceSettings/get-invoice-settings.py
+                #echo "Done with first sample"
+                #python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
                 #echo "After Running the Python File"
-                #bash ./sample_code_runner.sh
+                bash ./sample_code_runner.sh
             - name: Upload the log files
               if: always()
               uses: actions/upload-artifact@v4
