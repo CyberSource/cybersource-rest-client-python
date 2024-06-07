@@ -7,7 +7,7 @@ jobs:
         env:
           CLIENT_FOLDER: 'cybersource-rest-client-python'
           SAMPLE_FOLDER: 'cybersource-rest-samples-python'
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-latest
         steps:
             # - name: Code Checkout
             #   uses: actions/checkout@v4
