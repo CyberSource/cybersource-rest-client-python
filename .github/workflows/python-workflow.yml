@@ -43,6 +43,8 @@ jobs:
                 cd '$SAMPLE_FOLDER'
                 pip install -e .
                 #echo "Before Running the python file"
+                python samples/Invoicing/InvoiceSettings/get-invoice-settings.py
+                echo "Done with first sample"
                 python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
                 #echo "After Running the Python File"
                 #bash ./sample_code_runner.sh
