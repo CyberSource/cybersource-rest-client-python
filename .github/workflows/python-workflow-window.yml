@@ -45,11 +45,15 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                #bash ./sample_code_runner.sh
+                pwd
+                bash ./sample_code_runner.sh
               shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 pwd
+                cd ~
+                pwd
+                ls
                 # cd ..
                 # source ve/Scripts/activate
                 # cd $SAMPLE_FOLDER
