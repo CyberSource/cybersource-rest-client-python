@@ -13,3 +13,5 @@ jobs:
                 echo "HI"
                 pwd
                 git --version
+                cd ..
+                pwd
