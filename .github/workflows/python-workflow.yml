@@ -40,7 +40,7 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                #bash ./sample_code_runner.sh
+                bash ./sample_code_runner.sh
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 cd ~
@@ -50,7 +50,6 @@ jobs:
                 pip install json2html
                 pip install xhtml2pdf
                 pip install bs4
-                echo hi >> output.log
                 cd Validation
                 python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
                 python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../$SAMPLE_FOLDER/python_actual_results.json -o python_validation_results.json
