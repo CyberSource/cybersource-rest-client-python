@@ -17,13 +17,13 @@ jobs:
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-client-python'
-                path: "${{env.CLIENT_FOLDER}}"
+                path: ${{env.CLIENT_FOLDER}}
             - name: Adding sample
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
                 ref: 'testing-branch'
-                path: "${{env.SAMPLE_FOLDER}}"
+                path: ${{env.SAMPLE_FOLDER}}
             - name: Install Python
               uses: actions/setup-python@v5
               with:
@@ -61,7 +61,7 @@ jobs:
               with:
                 name: log-files
                 path: |
-                  "${{env.SAMPLE_FOLDER}}/output.log"
-                  "${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf"
+                  ${{env.SAMPLE_FOLDER}}/output.log
+                  ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
 
 
