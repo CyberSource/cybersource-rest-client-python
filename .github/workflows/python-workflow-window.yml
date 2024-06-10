@@ -6,6 +6,7 @@ env:
   SAMPLE_FOLDER: 'cybersource-rest-samples-python'
 jobs:
     complete-job:
+        if: always()
         strategy:
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
@@ -76,7 +77,6 @@ jobs:
                 python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
               shell: bash
             - name: Upload the log files and report pdf
-              if: always()
               uses: actions/upload-artifact@v4
               with:
                 name: log-files-${{matrix.operating-system}}-ver${{matrix.pyth-version}}
