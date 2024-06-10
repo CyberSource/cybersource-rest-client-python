@@ -46,9 +46,9 @@ jobs:
                 bash ./sample_code_runner.sh
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                cd ~
-                cd work/cybersource-rest-client-python/cybersource-rest-client-python
-                source ve/bin/activate
+                # cd ~
+                # cd work/cybersource-rest-client-python/cybersource-rest-client-python
+                # source ve/bin/activate
                 cd $SAMPLE_FOLDER
                 pip install json2html
                 pip install xhtml2pdf
