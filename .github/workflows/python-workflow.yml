@@ -8,7 +8,7 @@ jobs:
     job-linux:
         strategy:
           matrix:
-            operating-system: [ubuntu-latest,windows-latest]
+            operating-system: [ubuntu-latest,macos-latest]
         runs-on: ${{matrix.operating-system}}
         steps:
             - name: Making separate folders
@@ -65,4 +65,3 @@ jobs:
                 path: |
                   ${{env.SAMPLE_FOLDER}}/output.log
                   ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
-
