@@ -54,13 +54,13 @@ jobs:
                 cd Validation
                 pwd
                 ls
-                cd..
+                cd ..
                 pwd
                 ls
-                cd..
+                cd ..
                 pwd
                 ls
-                cd..
+                cd ..
                 pwd
                 ls
                 #python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
