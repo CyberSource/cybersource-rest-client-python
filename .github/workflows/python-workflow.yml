@@ -61,7 +61,7 @@ jobs:
               with:
                 name: log-files
                 path: |
-                  $SAMPLE_FOLDER/output.log
-                  $SAMPLE_FOLDER/Validation/python_validation_results.pdf
+                  "${{env.SAMPLE_FOLDER}}/output.log"
+                  "${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf"
 
 
