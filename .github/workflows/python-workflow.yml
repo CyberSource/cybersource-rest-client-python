@@ -36,7 +36,7 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m venv ve
                 source ve/bin/activate
-            - name: Building the projects
+            - name: Building the projects and running the Tests
               run: |
                 cd '$CLIENT_FOLDER'
                 pip install -e .
@@ -50,11 +50,22 @@ jobs:
                 #echo "After Running the Python File"
                 bash ./sample_code_runner.sh
                 #python samples/authentication/sample_code/PutMethod.py
-            - name: Upload the log files
+            - name: Installing required python libraries and running the python programs to generate pdf report
+              run : |
+                cd Validation 
+                pip install json2html
+                pip install xhtml2pdf
+                pip install bs4
+                python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
+                python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../cybersource-rest-samples-python/python_actual_results.json -o python_validation_results.json
+                python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
+            - name: Upload the log files and report pdf
               if: always()
               uses: actions/upload-artifact@v4
               with:
                 name: log-files
-                path: '$SAMPLE_FOLDER/output.log'
+                path: |
+                  '$SAMPLE_FOLDER/output.log'
+                  '$SAMPLE_FOLDER/Validation/python_validation_results.pdf'
 
 
