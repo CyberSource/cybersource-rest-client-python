@@ -8,5 +8,5 @@ jobs:
     job-windows:
         runs-on: windows-latest
         steps:
-            - name: Print the Current Directory
-              run : cd
+            - name: Check the git Version
+              run : git --version
