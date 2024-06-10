@@ -45,12 +45,18 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                bash ./sample_code_runner.sh
+                #bash ./sample_code_runner.sh
               shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                pwd
-                ls
+                cd ..
+                source ve/Scripts/activate
+                cd $SAMPLE_FOLDER
+                pip install json2html
+                pip install xhtml2pdf
+                pip install bs4
+              shell: bash
+                
             #     cd work/cybersource-rest-client-python/cybersource-rest-client-python
             #     source ve/bin/activate
             #     cd $SAMPLE_FOLDER
