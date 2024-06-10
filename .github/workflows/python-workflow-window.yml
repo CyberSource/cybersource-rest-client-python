@@ -33,20 +33,20 @@ jobs:
               run: |
                 python -m pip install --upgrade pip
                 python -m venv ve
-                ls
+                #ls
                 source ve/Scripts/activate
               shell: bash
             #   ve/bin/activate
             #   shell: bash
-            # - name: Building the projects and running the Tests
-            #   run: |
-            #     cd $CLIENT_FOLDER
-            #     pip install -e .
-            #     cd ..
-            #     cd $SAMPLE_FOLDER
-            #     pip install -e .
-            #     bash ./sample_code_runner.sh
-            #   shell: bash
+            - name: Building the projects and running the Tests
+              run: |
+                cd $CLIENT_FOLDER
+                pip install -e .
+                cd ..
+                cd $SAMPLE_FOLDER
+                pip install -e .
+                bash ./sample_code_runner.sh
+              shell: bash
             # - name: Installing required python libraries and running the python programs to generate pdf report
             #   run : |
             #     cd ~
