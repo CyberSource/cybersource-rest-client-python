@@ -50,35 +50,22 @@ jobs:
               shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                pwd
-                cd ~
-                pwd
-                ls
-                # cd ..
-                # source ve/Scripts/activate
-                # cd $SAMPLE_FOLDER
-                # pip install json2html
-                # pip install xhtml2pdf
-                # pip install bs4
+                source ve/Scripts/activate
+                cd $SAMPLE_FOLDER
+                pip install json2html
+                pip install xhtml2pdf
+                pip install bs4
+                cd Validation
+                python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
+                python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../$SAMPLE_FOLDER/python_actual_results.json -o python_validation_results.json
+                python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
               shell: bash
-                
-            #     cd work/cybersource-rest-client-python/cybersource-rest-client-python
-            #     source ve/bin/activate
-            #     cd $SAMPLE_FOLDER
-            #     pip install json2html
-            #     pip install xhtml2pdf
-            #     pip install bs4
-            #     cd Validation
-            #     python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
-            #     python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../$SAMPLE_FOLDER/python_actual_results.json -o python_validation_results.json
-            #     python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
-            #   shell: bash
-            # - name: Upload the log files and report pdf
-            #   if: always()
-            #   uses: actions/upload-artifact@v4
-            #   with:
-            #     name: log-files-windows
-            #     path: |
-            #       ${{env.SAMPLE_FOLDER}}/output.log
-            #       ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
+            - name: Upload the log files and report pdf
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                name: log-files-windows
+                path: |
+                  ${{env.SAMPLE_FOLDER}}/output.log
+                  ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
 
