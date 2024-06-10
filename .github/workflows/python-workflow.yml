@@ -48,14 +48,15 @@ jobs:
                 #echo "Done with first sample"
                 #python samples/Invoicing/InvoiceSettings/updateinvoicesettings.py
                 #echo "After Running the Python File"
-                #bash ./sample_code_runner.sh
+                bash ./sample_code_runner.sh
                 #python samples/authentication/sample_code/PutMethod.py
             - name: Installing required python libraries and running the python programs to generate pdf report
               #working-directory: '$GITHUB_WORKSPACE/$SAMPLE_FOLDER'
               run : |
                 cd ~
-                pwd
-                exit
+                cd work/cybersource-rest-client-python/cybersource-rest-client-python
+                source ve/bin/activate
+                cd '$SAMPLE_FOLDER'
                 pip install json2html
                 pip install xhtml2pdf
                 pip install bs4
