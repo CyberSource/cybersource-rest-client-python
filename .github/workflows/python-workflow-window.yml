@@ -10,7 +10,7 @@ jobs:
         strategy:
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
-              pyth-version: ['3.9','3.10','3.11','3.12']
+              pyth-version: ['3.9','3.10','3.11','3.12','3.8']
         runs-on: ${{matrix.operating-system}}
         steps:
             - name: Making separate folders
@@ -83,4 +83,3 @@ jobs:
                 path: |
                   ${{env.SAMPLE_FOLDER}}/output.log
                   ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
-
