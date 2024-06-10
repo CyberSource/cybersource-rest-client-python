@@ -30,14 +30,11 @@ jobs:
                 python-version: "3.10"
             - name: Set up virtual python environment
               run: |
-                ls
-                pwd
                 python -m pip install --upgrade pip
                 python -m venv ve
                 source ve/bin/activate
             - name: Building the projects and running the Tests
               run: |
-                ls
                 cd $CLIENT_FOLDER
                 pip install -e .
                 cd ..
@@ -54,18 +51,15 @@ jobs:
                 pip install xhtml2pdf
                 pip install bs4
                 cd Validation
-                pwd
-                ls
+                cd ..
                 cd ..
                 pwd
                 ls
-                cd ..
-                pwd
+                cd $SAMPLE_FOLDER
+                echo "Print Sample Folder"
                 ls
-                cd ..
-                pwd
-                ls
-                #python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
+                echo hi >> output.log
+                python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
                 #python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../cybersource-rest-samples-python/python_actual_results.json -o python_validation_results.json
                 #python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
             - name: Upload the log files and report pdf
