@@ -49,12 +49,13 @@ jobs:
               shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                cd ..
-                source ve/Scripts/activate
-                cd $SAMPLE_FOLDER
-                pip install json2html
-                pip install xhtml2pdf
-                pip install bs4
+                pwd
+                # cd ..
+                # source ve/Scripts/activate
+                # cd $SAMPLE_FOLDER
+                # pip install json2html
+                # pip install xhtml2pdf
+                # pip install bs4
               shell: bash
                 
             #     cd work/cybersource-rest-client-python/cybersource-rest-client-python
