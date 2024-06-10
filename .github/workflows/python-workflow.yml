@@ -1,12 +1,11 @@
 name: workflow cybersource-rest-client-python-test-run
 on:
   push:
-
+env:
+  CLIENT_FOLDER: 'cybersource-rest-client-python'
+  SAMPLE_FOLDER: 'cybersource-rest-samples-python'
 jobs:
     job-linux:
-        env:
-          CLIENT_FOLDER: 'cybersource-rest-client-python'
-          SAMPLE_FOLDER: 'cybersource-rest-samples-python'
         runs-on: ubuntu-latest
         steps:
             - name: Making separate folders
