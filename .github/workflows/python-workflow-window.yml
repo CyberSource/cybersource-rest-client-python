@@ -34,8 +34,7 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m venv ve
                 ls
-                cd ve/Scripts/activate.bat
-                ls
+                source ve/Scripts/activate.bat
               shell: bash
             #   ve/bin/activate
             #   shell: bash
