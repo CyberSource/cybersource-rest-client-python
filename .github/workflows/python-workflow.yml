@@ -53,12 +53,9 @@ jobs:
             - name: Installing required python libraries and running the python programs to generate pdf report
               #working-directory: '$GITHUB_WORKSPACE/$SAMPLE_FOLDER'
               run : |
+                cd ~
+                pwd
                 exit
-                cd ../../
-                cd '$CLIENT_FOLDER'
-                cd '$CLIENT_FOLDER'
-                cd '$SAMPLE_FOLDER'
-                cd Validation 
                 pip install json2html
                 pip install xhtml2pdf
                 pip install bs4
