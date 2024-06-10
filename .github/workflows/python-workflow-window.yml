@@ -10,7 +10,10 @@ jobs:
         steps:
             - name: Making separate folders
               run: |
+                rm -rf $CLIENT_FOLDER
+                rm -rf $SAMPLE_FOLDER
                 mkdir $CLIENT_FOLDER $SAMPLE_FOLDER
+              shell: bash
             - name: Adding client
               uses: actions/checkout@v4
               with:
@@ -31,6 +34,7 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m venv ve
                 source ve/bin/activate
+              shell: bash
             - name: Building the projects and running the Tests
               run: |
                 cd $CLIENT_FOLDER
@@ -39,6 +43,7 @@ jobs:
                 cd $SAMPLE_FOLDER
                 pip install -e .
                 bash ./sample_code_runner.sh
+              shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 cd ~
@@ -52,6 +57,7 @@ jobs:
                 python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
                 python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../$SAMPLE_FOLDER/python_actual_results.json -o python_validation_results.json
                 python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
+              shell: bash
             - name: Upload the log files and report pdf
               if: always()
               uses: actions/upload-artifact@v4
