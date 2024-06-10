@@ -6,6 +6,9 @@ env:
   SAMPLE_FOLDER: 'cybersource-rest-samples-python'
 jobs:
     job-linux:
+        strategy:
+          matrix:
+            operating-system: [ubuntu-latest,windows-latest]
         runs-on: ubuntu-latest
         steps:
             - name: Making separate folders
@@ -62,5 +65,4 @@ jobs:
                 path: |
                   ${{env.SAMPLE_FOLDER}}/output.log
                   ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf
-
 
