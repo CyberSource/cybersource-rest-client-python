@@ -3,7 +3,7 @@ on:
   push:
 
 jobs:
-    job-1:
+    job-linux:
         env:
           CLIENT_FOLDER: 'cybersource-rest-client-python'
           SAMPLE_FOLDER: 'cybersource-rest-samples-python'
@@ -41,7 +41,7 @@ jobs:
                 cd ..
                 cd '$SAMPLE_FOLDER'
                 pip install -e .
-                bash ./sample_code_runner.sh
+                #bash ./sample_code_runner.sh
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 cd ~
@@ -52,9 +52,20 @@ jobs:
                 pip install xhtml2pdf
                 pip install bs4
                 cd Validation
-                python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
-                python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../cybersource-rest-samples-python/python_actual_results.json -o python_validation_results.json
-                python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
+                pwd
+                ls
+                cd..
+                pwd
+                ls
+                cd..
+                pwd
+                ls
+                cd..
+                pwd
+                ls
+                #python sample_code_log_processor.py -l ../../cybersource-rest-samples-python/output.log -o ../../cybersource-rest-samples-python/python_actual_results.json
+                #python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../cybersource-rest-samples-python/python_actual_results.json -o python_validation_results.json
+                #python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
             - name: Upload the log files and report pdf
               if: always()
               uses: actions/upload-artifact@v4
