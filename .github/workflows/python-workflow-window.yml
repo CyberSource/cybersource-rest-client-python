@@ -9,4 +9,7 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: Check the git Version
-              run : git --version
+              run : |
+                cd
+                pwd
+                git --version
