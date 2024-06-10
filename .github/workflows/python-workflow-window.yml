@@ -15,3 +15,5 @@ jobs:
                 git --version
                 cd ..
                 pwd
+                cd ~
+                pwd
