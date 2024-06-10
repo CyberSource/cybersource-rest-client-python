@@ -51,8 +51,12 @@ jobs:
                 #bash ./sample_code_runner.sh
                 #python samples/authentication/sample_code/PutMethod.py
             - name: Installing required python libraries and running the python programs to generate pdf report
-              working-directory: '$GITHUB_WORKSPACE/$SAMPLE_FOLDER'
+              #working-directory: '$GITHUB_WORKSPACE/$SAMPLE_FOLDER'
               run : |
+                cd ../../
+                cd '$CLIENT_FOLDER'
+                cd '$CLIENT_FOLDER'
+                cd '$SAMPLE_FOLDER'
                 cd Validation 
                 pip install json2html
                 pip install xhtml2pdf
