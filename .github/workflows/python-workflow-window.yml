@@ -10,6 +10,6 @@ jobs:
         steps:
             - name: Check the git Version
               run : |
-                cd
+                echo "HI"
                 pwd
                 git --version
