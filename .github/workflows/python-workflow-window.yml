@@ -5,8 +5,12 @@ env:
   CLIENT_FOLDER: 'cybersource-rest-client-python'
   SAMPLE_FOLDER: 'cybersource-rest-samples-python'
 jobs:
-    job-windows:
-        runs-on: windows-latest
+    complete-job:
+        strategy:
+            matrix:
+              operating-system: [ubuntu-latest,macos-latest]
+              pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
+        runs-on: ${{matrix.operating-system}}
         steps:
             - name: Making separate folders
               run: |
@@ -28,16 +32,21 @@ jobs:
             - name: Install Python
               uses: actions/setup-python@v5
               with:
-                python-version: "3.10"
+                python-version: ${{matrix.pyth-version}}
             - name: Set up virtual python environment
+              if: ${{matrix.operating-system == 'windows-latest' }}
               run: |
                 python -m pip install --upgrade pip
                 python -m venv ve
-                #ls
                 source ve/Scripts/activate
               shell: bash
-            #   ve/bin/activate
-            #   shell: bash
+            - name: Set up virtual python environment
+              if: ${{matrix.operating-system != 'windows-latest' }}
+              run: |
+                python -m pip install --upgrade pip
+                python -m venv ve
+                source ve/bin/activate
+              shell: bash
             - name: Building the projects and running the Tests
               run: |
                 cd $CLIENT_FOLDER
@@ -45,12 +54,18 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                pwd
                 bash ./sample_code_runner.sh
+              shell: bash
+            - name : Activating the Virtual Env non windows
+              if: ${{matrix.operating-system != 'windows-latest' }}
+              run: source ve/bin/activate
+              shell: bash
+            - name : Activating the Virtual Env for windows
+              if: ${{matrix.operating-system == 'windows-latest' }}
+              run: source ve/Scripts/activate
               shell: bash
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                source ve/Scripts/activate
                 cd $SAMPLE_FOLDER
                 pip install json2html
                 pip install xhtml2pdf
@@ -64,7 +79,7 @@ jobs:
               if: always()
               uses: actions/upload-artifact@v4
               with:
-                name: log-files-windows
+                name: log-files-${{matrix.operating-system}}-ver${{matrix.pyth-version}}
                 path: |
                   ${{env.SAMPLE_FOLDER}}/output.log
                   ${{env.SAMPLE_FOLDER}}/Validation/python_validation_results.pdf

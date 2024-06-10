@@ -9,6 +9,7 @@ jobs:
         strategy:
           matrix:
             operating-system: [ubuntu-latest,macos-latest]
+            pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
         runs-on: ${{matrix.operating-system}}
         steps:
             - name: Making separate folders
@@ -46,9 +47,7 @@ jobs:
                 bash ./sample_code_runner.sh
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                # cd ~
-                # cd work/cybersource-rest-client-python/cybersource-rest-client-python
-                # source ve/bin/activate
+                source ve/bin/activate
                 cd $SAMPLE_FOLDER
                 pip install json2html
                 pip install xhtml2pdf
