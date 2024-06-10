@@ -11,20 +11,20 @@ jobs:
         steps:
             - name: Making separate folders
               run: |
-                rm -rf '$CLIENT_FOLDER'
-                rm -rf '$SAMPLE_FOLDER'
+                rm -rf $CLIENT_FOLDER
+                rm -rf $SAMPLE_FOLDER
                 mkdir $CLIENT_FOLDER $SAMPLE_FOLDER
             - name: Adding client
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-client-python'
-                path: './$CLIENT_FOLDER'
+                path: $CLIENT_FOLDER
             - name: Adding sample
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
                 ref: 'testing-branch'
-                path: '$SAMPLE_FOLDER'
+                path: $SAMPLE_FOLDER
             - name: Install Python
               uses: actions/setup-python@v5
               with:
@@ -36,10 +36,10 @@ jobs:
                 source ve/bin/activate
             - name: Building the projects and running the Tests
               run: |
-                cd '$CLIENT_FOLDER'
+                cd $CLIENT_FOLDER
                 pip install -e .
                 cd ..
-                cd '$SAMPLE_FOLDER'
+                cd $SAMPLE_FOLDER
                 pip install -e .
                 #bash ./sample_code_runner.sh
             - name: Installing required python libraries and running the python programs to generate pdf report
@@ -47,7 +47,7 @@ jobs:
                 cd ~
                 cd work/cybersource-rest-client-python/cybersource-rest-client-python
                 source ve/bin/activate
-                cd '$SAMPLE_FOLDER'
+                cd $SAMPLE_FOLDER
                 pip install json2html
                 pip install xhtml2pdf
                 pip install bs4
@@ -72,7 +72,7 @@ jobs:
               with:
                 name: log-files
                 path: |
-                  '$SAMPLE_FOLDER/output.log'
-                  '$SAMPLE_FOLDER/Validation/python_validation_results.pdf'
+                  $SAMPLE_FOLDER/output.log
+                  $SAMPLE_FOLDER/Validation/python_validation_results.pdf
 
 
