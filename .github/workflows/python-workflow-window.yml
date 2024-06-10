@@ -10,8 +10,6 @@ jobs:
         steps:
             - name: Making separate folders
               run: |
-                rm -rf $CLIENT_FOLDER
-                rm -rf $SAMPLE_FOLDER
                 mkdir $CLIENT_FOLDER $SAMPLE_FOLDER
             - name: Adding client
               uses: actions/checkout@v4
