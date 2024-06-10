@@ -53,6 +53,7 @@ jobs:
             - name: Installing required python libraries and running the python programs to generate pdf report
               #working-directory: '$GITHUB_WORKSPACE/$SAMPLE_FOLDER'
               run : |
+                exit
                 cd ../../
                 cd '$CLIENT_FOLDER'
                 cd '$CLIENT_FOLDER'
