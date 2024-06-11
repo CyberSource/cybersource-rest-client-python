@@ -13,6 +13,22 @@ jobs:
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
               pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
+              include:
+                - operating-system: ubuntu-20.04
+                  pyth-version: '3.6'
+                - operating-system: macos-13
+                  pyth-version: '3.6'
+                - operating-system: macos-13
+                  pyth-version: '3.7'
+              exclude:
+                - operating-system: macos-latest
+                  pyth-version: '3.6'
+                - operating-system: macos-latest
+                  pyth-version: '3.7'
+                - operating-system: ubuntu-latest
+                  pyth-version: '3.6'
+                - operating-system: windows-latest
+                  pyth-version: '3.6'
         runs-on: ${{matrix.operating-system}}
         continue-on-error: true
         steps:
@@ -24,7 +40,6 @@ jobs:
             - name: Adding client
               uses: actions/checkout@v4
               with:
-                repository: 'CyberSource/cybersource-rest-client-python'
                 path: ${{env.CLIENT_FOLDER}}
             - name: Adding sample
               uses: actions/checkout@v4
@@ -55,6 +70,7 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
+                pip install requests munch
                 bash ./sample_code_runner.sh
             - name : Activating the Virtual Env non windows
               if: ${{matrix.operating-system != 'windows-latest' }}
@@ -66,7 +82,7 @@ jobs:
               run : |
                 cd $SAMPLE_FOLDER
                 pip install json2html
-                pip install xhtml2pdf==0.2.5
+                pip install xhtml2pdf
                 pip install bs4
                 cd Validation
                 python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
