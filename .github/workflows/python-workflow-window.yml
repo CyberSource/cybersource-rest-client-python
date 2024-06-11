@@ -70,7 +70,6 @@ jobs:
                 cd ..
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                pip install requests munch
                 bash ./sample_code_runner.sh
             - name : Activating the Virtual Env non windows
               if: ${{matrix.operating-system != 'windows-latest' }}
