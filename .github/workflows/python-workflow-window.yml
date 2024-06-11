@@ -66,7 +66,7 @@ jobs:
               run : |
                 cd $SAMPLE_FOLDER
                 pip install json2html
-                pip install xhtml2pdf
+                pip install xhtml2pdf==0.2.5
                 pip install bs4
                 cd Validation
                 python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
