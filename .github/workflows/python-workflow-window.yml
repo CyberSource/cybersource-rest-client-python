@@ -21,13 +21,13 @@ jobs:
                 - operating-system: macos-13
                   pyth-version: '3.7'
               exclude:
-                - operating-system: macos-latest
+                - operating-system: macos-latest  # python 3.6 is unavailable for mac os latest becuase 3.6 doesnt support arm 64
                   pyth-version: '3.6'
-                - operating-system: macos-latest
+                - operating-system: macos-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
                   pyth-version: '3.7'
-                - operating-system: ubuntu-latest
+                - operating-system: ubuntu-latest # The version '3.6' with architecture 'x64' was not found for Ubuntu 22.04.
                   pyth-version: '3.6'
-                - operating-system: windows-latest
+                - operating-system: windows-latest # The tests were run successfully but report generation was not possible as xhtml2pdf had issues with python 3.6,Fix :-  the output log file can be used to generate the report on another runner with a python ver 3.8 and above
                   pyth-version: '3.6'
         runs-on: ${{matrix.operating-system}}
         continue-on-error: true
