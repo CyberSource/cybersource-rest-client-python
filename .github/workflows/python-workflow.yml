@@ -1,4 +1,4 @@
-name: workflow for cybersource-rest-client-python
+name: workflow for python to run samples
 on:
   push:
 env:
