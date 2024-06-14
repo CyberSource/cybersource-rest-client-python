@@ -1,11 +1,11 @@
-name: workflow cybersource-rest-client-python-test-run
+name: workflow for cybersource-rest-client-python
 on:
   push:
 env:
   CLIENT_FOLDER: 'cybersource-rest-client-python'
   SAMPLE_FOLDER: 'cybersource-rest-samples-python'
 jobs:
-    complete-job:
+    workflow-job:
         defaults:
             run:
               shell: bash
@@ -14,9 +14,9 @@ jobs:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
               pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
               include:
-                - operating-system: ubuntu-20.04
+                - operating-system: ubuntu-20.04 # The tests were run successfully but report generation was not possible as xhtml2pdf had issues with python 3.6,Fix :-  the output log file can be used to generate the report on another runner with a python ver 3.8 and above
                   pyth-version: '3.6'
-                - operating-system: macos-13
+                - operating-system: macos-13     # The tests were run successfully but report generation was not possible as xhtml2pdf had issues with python 3.6,Fix :-  the output log file can be used to generate the report on another runner with a python ver 3.8 and above
                   pyth-version: '3.6'
                 - operating-system: macos-13
                   pyth-version: '3.7'
@@ -71,12 +71,12 @@ jobs:
                 cd $SAMPLE_FOLDER
                 pip install -e .
                 bash ./sample_code_runner.sh
-            - name : Activating the Virtual Env non windows
-              if: ${{matrix.operating-system != 'windows-latest' }}
-              run: source ve/bin/activate
-            - name : Activating the Virtual Env for windows
-              if: ${{matrix.operating-system == 'windows-latest' }}
-              run: source ve/Scripts/activate
+            # - name : Activating the Virtual Env non windows
+            #   if: ${{matrix.operating-system != 'windows-latest' }}
+            #   run: source ve/bin/activate
+            # - name : Activating the Virtual Env for windows
+            #   if: ${{matrix.operating-system == 'windows-latest' }}
+            #   run: source ve/Scripts/activate
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 cd $SAMPLE_FOLDER
