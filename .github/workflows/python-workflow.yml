@@ -16,11 +16,11 @@ jobs:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
               pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
               include:
-                - operating-system: ubuntu-20.04 
+                - operating-system: ubuntu-20.04 # Checking support for ubuntu with python 3.6
                   pyth-version: '3.6'
-                - operating-system: macos-13    
+                - operating-system: macos-13   # Checking support for mac os with python 3.6
                   pyth-version: '3.6'
-                - operating-system: macos-13
+                - operating-system: macos-13   # Checking support for mac os with python 3.7
                   pyth-version: '3.7'
               exclude:
                 - operating-system: macos-latest  # python 3.6 is unavailable for mac os latest becuase 3.6 doesnt support arm 64
@@ -91,5 +91,4 @@ jobs:
               with:
                 name: log-files-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
                 path: |
-                  # ${{env.SAMPLE_FOLDER}}/output.log
                   ${{env.SAMPLE_FOLDER}}/python_validation_results.pdf
