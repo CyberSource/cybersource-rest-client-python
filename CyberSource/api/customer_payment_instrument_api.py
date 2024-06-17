@@ -125,6 +125,9 @@ class CustomerPaymentInstrumentApi(object):
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `delete_customer_payment_instrument`")
 
 
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -252,6 +255,9 @@ class CustomerPaymentInstrumentApi(object):
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `get_customer_payment_instrument`")
 
 
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -374,6 +380,10 @@ class CustomerPaymentInstrumentApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer_payment_instruments_list`")
+
+
+
+
 
 
         collection_formats = {}
@@ -513,6 +523,11 @@ class CustomerPaymentInstrumentApi(object):
             raise ValueError("Missing the required parameter `patch_customer_payment_instrument_request` when calling `patch_customers_payment_instrument`")
 
 
+
+
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -643,6 +658,9 @@ class CustomerPaymentInstrumentApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
             raise ValueError("Missing the required parameter `post_customer_payment_instrument_request` when calling `post_customer_payment_instrument`")
+
+
+
 
 
         collection_formats = {}

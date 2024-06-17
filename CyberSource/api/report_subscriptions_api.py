@@ -117,10 +117,8 @@ class ReportSubscriptionsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `predefined_subscription_request_bean` when calling `create_standard_or_classic_subscription`")
             raise ValueError("Missing the required parameter `predefined_subscription_request_bean` when calling `create_standard_or_classic_subscription`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `create_standard_or_classic_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 
@@ -238,10 +236,8 @@ class ReportSubscriptionsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
             raise ValueError("Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `create_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 
@@ -359,14 +355,8 @@ class ReportSubscriptionsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `delete_subscription`")
             raise ValueError("Missing the required parameter `report_name` when calling `delete_subscription`")
 
-        if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
-            raise ValueError("Invalid value for parameter `report_name` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `delete_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 
@@ -477,10 +467,7 @@ class ReportSubscriptionsApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_all_subscriptions`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
 
         collection_formats = {}
 
@@ -595,14 +582,8 @@ class ReportSubscriptionsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `get_subscription`")
             raise ValueError("Missing the required parameter `report_name` when calling `get_subscription`")
 
-        if 'report_name' in params and not re.search('[a-zA-Z0-9-_+]+', params['report_name']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `report_name` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
-            raise ValueError("Invalid value for parameter `report_name` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_+]+/`")
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_subscription`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 

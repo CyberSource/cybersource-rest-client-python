@@ -123,6 +123,8 @@ class CaptureApi(object):
             raise ValueError("Missing the required parameter `id` when calling `capture_payment`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}

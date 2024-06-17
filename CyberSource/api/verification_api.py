@@ -116,6 +116,7 @@ class VerificationApi(object):
             raise ValueError("Missing the required parameter `validate_export_compliance_request` when calling `validate_export_compliance`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -227,6 +228,7 @@ class VerificationApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `verify_customer_address_request` when calling `verify_customer_address`")
             raise ValueError("Missing the required parameter `verify_customer_address_request` when calling `verify_customer_address`")
+
 
 
         collection_formats = {}

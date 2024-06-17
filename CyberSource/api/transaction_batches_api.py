@@ -120,6 +120,9 @@ class TransactionBatchesApi(object):
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_details`")
 
 
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -235,6 +238,7 @@ class TransactionBatchesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_transaction_batch_id`")
             raise ValueError("Missing the required parameter `id` when calling `get_transaction_batch_id`")
+
 
 
         collection_formats = {}
@@ -355,6 +359,8 @@ class TransactionBatchesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_transaction_batches`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_transaction_batches`")
+
+
 
 
         collection_formats = {}

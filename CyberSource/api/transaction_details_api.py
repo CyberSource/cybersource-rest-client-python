@@ -116,6 +116,7 @@ class TransactionDetailsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `get_transaction`")
 
 
+
         collection_formats = {}
 
         path_params = {}

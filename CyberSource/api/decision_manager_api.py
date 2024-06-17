@@ -123,6 +123,8 @@ class DecisionManagerApi(object):
             raise ValueError("Missing the required parameter `case_management_actions_request` when calling `action_decision_manager_case`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -244,6 +246,8 @@ class DecisionManagerApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `add_negative_list_request` when calling `add_negative`")
             raise ValueError("Missing the required parameter `add_negative_list_request` when calling `add_negative`")
+
+
 
 
         collection_formats = {}
@@ -369,6 +373,8 @@ class DecisionManagerApi(object):
             raise ValueError("Missing the required parameter `case_management_comments_request` when calling `comment_decision_manager_case`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -483,6 +489,7 @@ class DecisionManagerApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_bundled_decision_manager_case_request` when calling `create_bundled_decision_manager_case`")
             raise ValueError("Missing the required parameter `create_bundled_decision_manager_case_request` when calling `create_bundled_decision_manager_case`")
+
 
 
         collection_formats = {}
@@ -603,6 +610,8 @@ class DecisionManagerApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `fraud_marking_action_request` when calling `fraud_update`")
             raise ValueError("Missing the required parameter `fraud_marking_action_request` when calling `fraud_update`")
+
+
 
 
         collection_formats = {}

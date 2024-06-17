@@ -116,6 +116,7 @@ class SubscriptionsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `activate_subscription`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -227,6 +228,7 @@ class SubscriptionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `cancel_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `cancel_subscription`")
+
 
 
         collection_formats = {}
@@ -342,6 +344,7 @@ class SubscriptionsApi(object):
             raise ValueError("Missing the required parameter `create_subscription_request` when calling `create_subscription`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -454,6 +457,10 @@ class SubscriptionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
+
+
+
+
 
 
         collection_formats = {}
@@ -572,6 +579,7 @@ class SubscriptionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_subscription`")
             raise ValueError("Missing the required parameter `id` when calling `get_subscription`")
+
 
 
         collection_formats = {}
@@ -789,6 +797,7 @@ class SubscriptionsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `suspend_subscription`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -907,6 +916,8 @@ class SubscriptionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `update_subscription` when calling `update_subscription`")
             raise ValueError("Missing the required parameter `update_subscription` when calling `update_subscription`")
+
+
 
 
         collection_formats = {}

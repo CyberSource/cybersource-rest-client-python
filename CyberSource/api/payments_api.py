@@ -123,6 +123,8 @@ class PaymentsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `create_order_request`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -239,6 +241,7 @@ class PaymentsApi(object):
             raise ValueError("Missing the required parameter `create_payment_request` when calling `create_payment`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -350,6 +353,7 @@ class PaymentsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_session_req` when calling `create_session_request`")
             raise ValueError("Missing the required parameter `create_session_req` when calling `create_session_request`")
+
 
 
         collection_formats = {}
@@ -470,6 +474,8 @@ class PaymentsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `increment_auth_request` when calling `increment_auth`")
             raise ValueError("Missing the required parameter `increment_auth_request` when calling `increment_auth`")
+
+
 
 
         collection_formats = {}
@@ -595,6 +601,8 @@ class PaymentsApi(object):
             raise ValueError("Missing the required parameter `refresh_payment_status_request` when calling `refresh_payment_status`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -716,6 +724,8 @@ class PaymentsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `update_session_req`")
             raise ValueError("Missing the required parameter `id` when calling `update_session_req`")
+
+
 
 
         collection_formats = {}

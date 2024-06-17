@@ -119,6 +119,7 @@ class MerchantBoardingApi(object):
             raise ValueError("Missing the required parameter `registration_id` when calling `get_registration`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -235,6 +236,8 @@ class MerchantBoardingApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_registration_body` when calling `post_registration`")
             raise ValueError("Missing the required parameter `post_registration_body` when calling `post_registration`")
+
+
 
 
         collection_formats = {}

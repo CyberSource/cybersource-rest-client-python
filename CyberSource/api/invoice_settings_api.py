@@ -218,6 +218,7 @@ class InvoiceSettingsApi(object):
             raise ValueError("Missing the required parameter `invoice_settings_request` when calling `update_invoice_settings`")
 
 
+
         collection_formats = {}
 
         path_params = {}

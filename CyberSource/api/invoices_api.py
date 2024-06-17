@@ -116,6 +116,7 @@ class InvoicesApi(object):
             raise ValueError("Missing the required parameter `create_invoice_request` when calling `create_invoice`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -238,6 +239,9 @@ class InvoicesApi(object):
             raise ValueError("Missing the required parameter `limit` when calling `get_all_invoices`")
 
 
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -354,6 +358,7 @@ class InvoicesApi(object):
             raise ValueError("Missing the required parameter `id` when calling `get_invoice`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -467,6 +472,7 @@ class InvoicesApi(object):
             raise ValueError("Missing the required parameter `id` when calling `perform_cancel_action`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -578,6 +584,7 @@ class InvoicesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `perform_send_action`")
             raise ValueError("Missing the required parameter `id` when calling `perform_send_action`")
+
 
 
         collection_formats = {}
@@ -698,6 +705,8 @@ class InvoicesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `update_invoice_request` when calling `update_invoice`")
             raise ValueError("Missing the required parameter `update_invoice_request` when calling `update_invoice`")
+
+
 
 
         collection_formats = {}

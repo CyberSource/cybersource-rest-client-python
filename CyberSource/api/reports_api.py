@@ -117,10 +117,8 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
             raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `create_report`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 
@@ -238,10 +236,8 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
             raise ValueError("Missing the required parameter `report_id` when calling `get_report_by_report_id`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_report_by_report_id`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
 
         collection_formats = {}
 
@@ -383,10 +379,15 @@ class ReportsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
             raise ValueError("Missing the required parameter `time_query_type` when calling `search_reports`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `search_reports`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `search_reports`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
+
+
+
+
+
+
+
+
+
 
         collection_formats = {}
 

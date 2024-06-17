@@ -123,6 +123,8 @@ class KeyManagementScmpApi(object):
             raise ValueError("Missing the required parameter `update_pgp_keys_request` when calling `update_scmp`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}

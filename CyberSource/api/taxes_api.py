@@ -116,6 +116,7 @@ class TaxesApi(object):
             raise ValueError("Missing the required parameter `tax_request` when calling `calculate_tax`")
 
 
+
         collection_formats = {}
 
         path_params = {}
@@ -234,6 +235,8 @@ class TaxesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_tax`")
             raise ValueError("Missing the required parameter `id` when calling `void_tax`")
+
+
 
 
         collection_formats = {}

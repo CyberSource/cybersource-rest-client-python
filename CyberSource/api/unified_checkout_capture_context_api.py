@@ -116,6 +116,7 @@ class UnifiedCheckoutCaptureContextApi(object):
             raise ValueError("Missing the required parameter `generate_unified_checkout_capture_context_request` when calling `generate_unified_checkout_capture_context`")
 
 
+
         collection_formats = {}
 
         path_params = {}

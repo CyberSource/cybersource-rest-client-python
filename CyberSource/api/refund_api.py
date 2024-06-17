@@ -123,6 +123,8 @@ class RefundApi(object):
             raise ValueError("Missing the required parameter `id` when calling `refund_capture`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -244,6 +246,8 @@ class RefundApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `refund_payment`")
             raise ValueError("Missing the required parameter `id` when calling `refund_payment`")
+
+
 
 
         collection_formats = {}

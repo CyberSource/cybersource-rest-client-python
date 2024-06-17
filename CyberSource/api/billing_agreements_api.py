@@ -123,6 +123,8 @@ class BillingAgreementsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `billing_agreements_de_registration`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -246,6 +248,8 @@ class BillingAgreementsApi(object):
             raise ValueError("Missing the required parameter `id` when calling `billing_agreements_intimation`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -360,6 +364,7 @@ class BillingAgreementsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_billing_agreement` when calling `billing_agreements_registration`")
             raise ValueError("Missing the required parameter `create_billing_agreement` when calling `billing_agreements_registration`")
+
 
 
         collection_formats = {}

@@ -118,6 +118,8 @@ class CustomerApi(object):
             raise ValueError("Missing the required parameter `customer_id` when calling `delete_customer`")
 
 
+
+
         collection_formats = {}
 
         path_params = {}
@@ -233,6 +235,8 @@ class CustomerApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `customer_id` when calling `get_customer`")
             raise ValueError("Missing the required parameter `customer_id` when calling `get_customer`")
+
+
 
 
         collection_formats = {}
@@ -361,6 +365,10 @@ class CustomerApi(object):
             raise ValueError("Missing the required parameter `patch_customer_request` when calling `patch_customer`")
 
 
+
+
+
+
         collection_formats = {}
 
         path_params = {}
@@ -481,6 +489,8 @@ class CustomerApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_customer_request` when calling `post_customer`")
             raise ValueError("Missing the required parameter `post_customer_request` when calling `post_customer`")
+
+
 
 
         collection_formats = {}

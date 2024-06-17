@@ -218,6 +218,7 @@ class EMVTagDetailsApi(object):
             raise ValueError("Missing the required parameter `body` when calling `parse_emv_tags`")
 
 
+
         collection_formats = {}
 
         path_params = {}
