@@ -66,6 +66,8 @@ class Riskv1liststypeentriesBuyerInformation(object):
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
 
+
+
         self._personal_identification = personal_identification
 
     def to_dict(self):

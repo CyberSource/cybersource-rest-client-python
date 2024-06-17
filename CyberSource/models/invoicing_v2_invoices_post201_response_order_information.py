@@ -71,6 +71,8 @@ class InvoicingV2InvoicesPost201ResponseOrderInformation(object):
         :type: InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -91,6 +93,8 @@ class InvoicingV2InvoicesPost201ResponseOrderInformation(object):
         :param line_items: The line_items of this InvoicingV2InvoicesPost201ResponseOrderInformation.
         :type: list[Invoicingv2invoicesOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 

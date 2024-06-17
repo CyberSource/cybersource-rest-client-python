@@ -66,6 +66,8 @@ class PaymentsProductsDifferentialFeeSubscriptionInformationFeatures(object):
         :type: PaymentsProductsDifferentialFeeSubscriptionInformationFeaturesSurcharge
         """
 
+
+
         self._surcharge = surcharge
 
     def to_dict(self):

@@ -66,6 +66,8 @@ class PaymentInstrumentListEmbedded(object):
         :type: list[Tmsv2customersEmbeddedDefaultPaymentInstrument]
         """
 
+
+
         self._payment_instruments = payment_instruments
 
     def to_dict(self):

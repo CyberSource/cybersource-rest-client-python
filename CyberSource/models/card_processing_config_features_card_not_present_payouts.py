@@ -108,6 +108,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :type: str
         """
 
+
+
         self._reimbursement_code = reimbursement_code
 
     @property
@@ -130,6 +132,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :param acquiring_institution_id: The acquiring_institution_id of this CardProcessingConfigFeaturesCardNotPresentPayouts.
         :type: str
         """
+
+
 
         self._acquiring_institution_id = acquiring_institution_id
 
@@ -154,6 +158,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :type: str
         """
 
+
+
         self._business_application_id = business_application_id
 
     @property
@@ -176,6 +182,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :param financial_institution_id: The financial_institution_id of this CardProcessingConfigFeaturesCardNotPresentPayouts.
         :type: str
         """
+
+
 
         self._financial_institution_id = financial_institution_id
 
@@ -200,6 +208,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :type: str
         """
 
+
+
         self._merchant_aba_number = merchant_aba_number
 
     @property
@@ -222,6 +232,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :param network_order: The network_order of this CardProcessingConfigFeaturesCardNotPresentPayouts.
         :type: str
         """
+
+
 
         self._network_order = network_order
 
@@ -246,6 +258,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :type: dict(str, CardProcessingConfigFeaturesCardNotPresentPayoutsCurrencies)
         """
 
+
+
         self._currencies = currencies
 
     @property
@@ -269,6 +283,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :type: str
         """
 
+
+
         self._merchant_id = merchant_id
 
     @property
@@ -291,6 +307,8 @@ class CardProcessingConfigFeaturesCardNotPresentPayouts(object):
         :param terminal_id: The terminal_id of this CardProcessingConfigFeaturesCardNotPresentPayouts.
         :type: str
         """
+
+
 
         self._terminal_id = terminal_id
 

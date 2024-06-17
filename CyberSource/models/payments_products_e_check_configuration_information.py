@@ -71,6 +71,8 @@ class PaymentsProductsECheckConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsECheckConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsECheckConfigurationInformation.
         :type: ECheckConfig
         """
+
+
 
         self._configurations = configurations
 

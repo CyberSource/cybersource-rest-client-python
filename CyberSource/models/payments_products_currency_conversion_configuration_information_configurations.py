@@ -66,6 +66,8 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurations(o
         :type: dict(str, PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors)
         """
 
+
+
         self._processors = processors
 
     def to_dict(self):

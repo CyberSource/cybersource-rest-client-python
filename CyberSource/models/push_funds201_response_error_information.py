@@ -78,6 +78,8 @@ class PushFunds201ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -101,6 +103,8 @@ class PushFunds201ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -121,6 +125,8 @@ class PushFunds201ResponseErrorInformation(object):
         :param details: The details of this PushFunds201ResponseErrorInformation.
         :type: list[PushFunds201ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

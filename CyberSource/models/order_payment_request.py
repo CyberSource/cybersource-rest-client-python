@@ -81,6 +81,8 @@ class OrderPaymentRequest(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -101,6 +103,8 @@ class OrderPaymentRequest(object):
         :param processing_information: The processing_information of this OrderPaymentRequest.
         :type: Ptsv2paymentreferencesidintentsProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -123,6 +127,8 @@ class OrderPaymentRequest(object):
         :type: Ptsv2paymentreferencesidintentsPaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -143,6 +149,8 @@ class OrderPaymentRequest(object):
         :param order_information: The order_information of this OrderPaymentRequest.
         :type: Ptsv2paymentreferencesidintentsOrderInformation
         """
+
+
 
         self._order_information = order_information
 

@@ -83,6 +83,8 @@ class InlineResponse5003(object):
         :type: date
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -106,6 +108,8 @@ class InlineResponse5003(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -128,6 +132,7 @@ class InlineResponse5003(object):
         :param reason: The reason of this InlineResponse5003.
         :type: str
         """
+
         allowed_values = ["SYSTEM_ERROR"]
         if reason not in allowed_values:
             raise ValueError(
@@ -157,6 +162,8 @@ class InlineResponse5003(object):
         :param message: The message of this InlineResponse5003.
         :type: str
         """
+
+
 
         self._message = message
 

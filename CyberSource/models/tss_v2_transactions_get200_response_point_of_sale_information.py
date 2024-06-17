@@ -88,6 +88,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_id = terminal_id
 
     @property
@@ -110,6 +112,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :param entry_mode: The entry_mode of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
         :type: str
         """
+
+
 
         self._entry_mode = entry_mode
 
@@ -134,6 +138,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._terminal_capability = terminal_capability
 
     @property
@@ -157,6 +163,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._cardholder_verification_method_used = cardholder_verification_method_used
 
     @property
@@ -177,6 +185,8 @@ class TssV2TransactionsGet200ResponsePointOfSaleInformation(object):
         :param emv: The emv of this TssV2TransactionsGet200ResponsePointOfSaleInformation.
         :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
         """
+
+
 
         self._emv = emv
 

@@ -103,6 +103,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._business_application_id = business_application_id
 
     @property
@@ -125,6 +127,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :param network_routing_order: The network_routing_order of this Ptsv2payoutsProcessingInformation.
         :type: str
         """
+
+
 
         self._network_routing_order = network_routing_order
 
@@ -149,6 +153,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._commerce_indicator = commerce_indicator
 
     @property
@@ -172,6 +178,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -192,6 +200,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :param payouts_options: The payouts_options of this Ptsv2payoutsProcessingInformation.
         :type: Ptsv2payoutsProcessingInformationPayoutsOptions
         """
+
+
 
         self._payouts_options = payouts_options
 
@@ -216,6 +226,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._transaction_reason = transaction_reason
 
     @property
@@ -239,6 +251,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._purpose_of_payment = purpose_of_payment
 
     @property
@@ -259,6 +273,8 @@ class Ptsv2payoutsProcessingInformation(object):
         :param funding_options: The funding_options of this Ptsv2payoutsProcessingInformation.
         :type: Ptsv2payoutsProcessingInformationFundingOptions
         """
+
+
 
         self._funding_options = funding_options
 

@@ -108,6 +108,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -130,6 +132,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :param name: The name of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
         """
+
+
 
         self._name = name
 
@@ -154,6 +158,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -176,6 +182,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :param locality: The locality of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -200,6 +208,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -222,6 +232,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :param postal_code: The postal_code of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -246,6 +258,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -269,6 +283,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -291,6 +307,8 @@ class Ptsv1pushfundstransferAggregatorInformationSubMerchant(object):
         :param phone_number: The phone_number of this Ptsv1pushfundstransferAggregatorInformationSubMerchant.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 

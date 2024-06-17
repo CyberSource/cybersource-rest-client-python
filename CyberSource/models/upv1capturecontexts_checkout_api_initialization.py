@@ -111,6 +111,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :type: str
         """
 
+
+
         self._profile_id = profile_id
 
     @property
@@ -131,6 +133,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :param access_key: The access_key of this Upv1capturecontextsCheckoutApiInitialization.
         :type: str
         """
+
+
 
         self._access_key = access_key
 
@@ -153,6 +157,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :type: str
         """
 
+
+
         self._reference_number = reference_number
 
     @property
@@ -173,6 +179,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :param transaction_uuid: The transaction_uuid of this Upv1capturecontextsCheckoutApiInitialization.
         :type: str
         """
+
+
 
         self._transaction_uuid = transaction_uuid
 
@@ -195,6 +203,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :type: str
         """
 
+
+
         self._transaction_type = transaction_type
 
     @property
@@ -215,6 +225,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :param currency: The currency of this Upv1capturecontextsCheckoutApiInitialization.
         :type: str
         """
+
+
 
         self._currency = currency
 
@@ -237,6 +249,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -257,6 +271,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :param locale: The locale of this Upv1capturecontextsCheckoutApiInitialization.
         :type: str
         """
+
+
 
         self._locale = locale
 
@@ -279,6 +295,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :type: str
         """
 
+
+
         self._override_custom_receipt_page = override_custom_receipt_page
 
     @property
@@ -299,6 +317,8 @@ class Upv1capturecontextsCheckoutApiInitialization(object):
         :param unsigned_field_names: The unsigned_field_names of this Upv1capturecontextsCheckoutApiInitialization.
         :type: str
         """
+
+
 
         self._unsigned_field_names = unsigned_field_names
 

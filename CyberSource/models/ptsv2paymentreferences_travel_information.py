@@ -66,6 +66,8 @@ class Ptsv2paymentreferencesTravelInformation(object):
         :type: Ptsv2paymentreferencesTravelInformationAutoRental
         """
 
+
+
         self._auto_rental = auto_rental
 
     def to_dict(self):

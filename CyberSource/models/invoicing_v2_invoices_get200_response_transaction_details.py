@@ -73,6 +73,8 @@ class InvoicingV2InvoicesGet200ResponseTransactionDetails(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -95,6 +97,8 @@ class InvoicingV2InvoicesGet200ResponseTransactionDetails(object):
         :param amount: The amount of this InvoicingV2InvoicesGet200ResponseTransactionDetails.
         :type: str
         """
+
+
 
         self._amount = amount
 

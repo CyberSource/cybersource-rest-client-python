@@ -76,6 +76,8 @@ class InlineResponse2008Records(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -97,6 +99,8 @@ class InlineResponse2008Records(object):
         :type: InlineResponse2008SourceRecord
         """
 
+
+
         self._source_record = source_record
 
     @property
@@ -117,6 +121,8 @@ class InlineResponse2008Records(object):
         :param response_record: The response_record of this InlineResponse2008Records.
         :type: InlineResponse2008ResponseRecord
         """
+
+
 
         self._response_record = response_record
 

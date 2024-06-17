@@ -118,6 +118,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._provider = provider
 
     @property
@@ -140,6 +142,8 @@ class InlineResponse2012KeyInformation(object):
         :param tenant: The tenant of this InlineResponse2012KeyInformation.
         :type: str
         """
+
+
 
         self._tenant = tenant
 
@@ -164,6 +168,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     @property
@@ -186,6 +192,8 @@ class InlineResponse2012KeyInformation(object):
         :param client_key_id: The client_key_id of this InlineResponse2012KeyInformation.
         :type: str
         """
+
+
 
         self._client_key_id = client_key_id
 
@@ -210,6 +218,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._key_id = key_id
 
     @property
@@ -232,6 +242,8 @@ class InlineResponse2012KeyInformation(object):
         :param key: The key of this InlineResponse2012KeyInformation.
         :type: str
         """
+
+
 
         self._key = key
 
@@ -256,6 +268,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._key_type = key_type
 
     @property
@@ -278,6 +292,8 @@ class InlineResponse2012KeyInformation(object):
         :param status: The status of this InlineResponse2012KeyInformation.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -302,6 +318,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._expiration_date = expiration_date
 
     @property
@@ -325,6 +343,8 @@ class InlineResponse2012KeyInformation(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -345,6 +365,8 @@ class InlineResponse2012KeyInformation(object):
         :param error_information: The error_information of this InlineResponse2012KeyInformation.
         :type: InlineResponse2012KeyInformationErrorInformation
         """
+
+
 
         self._error_information = error_information
 

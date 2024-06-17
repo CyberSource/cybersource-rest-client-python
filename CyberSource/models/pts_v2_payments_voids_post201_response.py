@@ -101,6 +101,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -123,6 +125,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :param id: The id of this PtsV2PaymentsVoidsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -147,6 +151,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -170,6 +176,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -190,6 +198,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsVoidsPost201Response.
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -212,6 +222,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :type: PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails
         """
 
+
+
         self._void_amount_details = void_amount_details
 
     @property
@@ -232,6 +244,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :param processor_information: The processor_information of this PtsV2PaymentsVoidsPost201Response.
         :type: PtsV2PaymentsVoidsPost201ResponseProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -255,6 +269,8 @@ class PtsV2PaymentsVoidsPost201Response(object):
         :param reconciliation_id: The reconciliation_id of this PtsV2PaymentsVoidsPost201Response.
         :type: str
         """
+
+
 
         self._reconciliation_id = reconciliation_id
 

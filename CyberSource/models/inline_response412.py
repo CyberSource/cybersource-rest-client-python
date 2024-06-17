@@ -66,6 +66,8 @@ class InlineResponse412(object):
         :type: list[InlineResponse412Errors]
         """
 
+
+
         self._errors = errors
 
     def to_dict(self):

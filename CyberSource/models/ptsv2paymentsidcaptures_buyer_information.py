@@ -93,6 +93,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :type: str
         """
 
+
+
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -115,6 +117,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
+
+
 
         self._vat_registration_number = vat_registration_number
 
@@ -139,6 +143,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :type: str
         """
 
+
+
         self._date_of_birth = date_of_birth
 
     @property
@@ -161,6 +167,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param gender: The gender of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: str
         """
+
+
 
         self._gender = gender
 
@@ -185,6 +193,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :type: str
         """
 
+
+
         self._language = language
 
     @property
@@ -205,6 +215,8 @@ class Ptsv2paymentsidcapturesBuyerInformation(object):
         :param personal_identification: The personal_identification of this Ptsv2paymentsidcapturesBuyerInformation.
         :type: list[Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification]
         """
+
+
 
         self._personal_identification = personal_identification
 

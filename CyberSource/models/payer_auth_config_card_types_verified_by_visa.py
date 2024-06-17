@@ -71,6 +71,8 @@ class PayerAuthConfigCardTypesVerifiedByVisa(object):
         :type: bool
         """
 
+
+
         self._enabled = enabled
 
     @property
@@ -91,6 +93,8 @@ class PayerAuthConfigCardTypesVerifiedByVisa(object):
         :param currencies: The currencies of this PayerAuthConfigCardTypesVerifiedByVisa.
         :type: list[PayerAuthConfigCardTypesVerifiedByVisaCurrencies]
         """
+
+
 
         self._currencies = currencies
 

@@ -68,6 +68,8 @@ class Ptsv2paymentsidrefundsPaymentInformationEWallet(object):
         :type: str
         """
 
+
+
         self._funding_source = funding_source
 
     def to_dict(self):

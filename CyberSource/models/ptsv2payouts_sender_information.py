@@ -153,6 +153,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._reference_number = reference_number
 
     @property
@@ -173,6 +175,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param account: The account of this Ptsv2payoutsSenderInformation.
         :type: Ptsv2payoutsSenderInformationAccount
         """
+
+
 
         self._account = account
 
@@ -197,6 +201,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -219,6 +225,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._middle_initial = middle_initial
 
@@ -243,6 +251,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -265,6 +275,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -289,6 +301,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -311,6 +325,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param address1: The address1 of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._address1 = address1
 
@@ -335,6 +351,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -357,6 +375,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -381,6 +401,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._country_code = country_code
 
     @property
@@ -403,6 +425,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param postal_code: The postal_code of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -427,6 +451,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -449,6 +475,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._date_of_birth = date_of_birth
 
@@ -473,6 +501,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -495,6 +525,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param personal_id_type: The personal_id_type of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._personal_id_type = personal_id_type
 
@@ -519,6 +551,8 @@ class Ptsv2payoutsSenderInformation(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -541,6 +575,8 @@ class Ptsv2payoutsSenderInformation(object):
         :param identification_number: The identification_number of this Ptsv2payoutsSenderInformation.
         :type: str
         """
+
+
 
         self._identification_number = identification_number
 

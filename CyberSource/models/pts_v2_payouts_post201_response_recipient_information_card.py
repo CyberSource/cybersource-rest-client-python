@@ -73,6 +73,8 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
         :type: str
         """
 
+
+
         self._balance = balance
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard(object):
         :param currency: The currency of this PtsV2PayoutsPost201ResponseRecipientInformationCard.
         :type: str
         """
+
+
 
         self._currency = currency
 

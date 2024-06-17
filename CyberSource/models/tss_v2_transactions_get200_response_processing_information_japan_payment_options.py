@@ -83,6 +83,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :type: str
         """
 
+
+
         self._payment_method = payment_method
 
     @property
@@ -105,6 +107,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param terminal_id: The terminal_id of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
+
+
 
         self._terminal_id = terminal_id
 
@@ -129,6 +133,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :type: str
         """
 
+
+
         self._business_name = business_name
 
     @property
@@ -151,6 +157,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         :param business_name_katakana: The business_name_katakana of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
         :type: str
         """
+
+
 
         self._business_name_katakana = business_name_katakana
 

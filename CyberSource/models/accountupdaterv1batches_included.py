@@ -66,6 +66,8 @@ class Accountupdaterv1batchesIncluded(object):
         :type: list[Accountupdaterv1batchesIncludedTokens]
         """
 
+
+
         self._tokens = tokens
 
     def to_dict(self):

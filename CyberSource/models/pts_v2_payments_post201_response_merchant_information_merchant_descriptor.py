@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._store_id = store_id
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :param store_name: The store_name of this PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._store_name = store_name
 

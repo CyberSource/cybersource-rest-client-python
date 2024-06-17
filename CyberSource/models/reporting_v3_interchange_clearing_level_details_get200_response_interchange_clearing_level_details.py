@@ -316,6 +316,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._request_id = request_id
 
     @property
@@ -336,6 +338,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param organization_id: The organization_id of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._organization_id = organization_id
 
@@ -358,6 +362,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._account_id = account_id
 
     @property
@@ -378,6 +384,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param processor_merchant_id: The processor_merchant_id of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._processor_merchant_id = processor_merchant_id
 
@@ -400,6 +408,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._transaction_reference_number = transaction_reference_number
 
     @property
@@ -420,6 +430,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param merchant_reference_number: The merchant_reference_number of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._merchant_reference_number = merchant_reference_number
 
@@ -442,6 +454,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._account_suffix = account_suffix
 
     @property
@@ -462,6 +476,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param payment_sub_type: The payment_sub_type of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._payment_sub_type = payment_sub_type
 
@@ -484,6 +500,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._payment_sub_type_description = payment_sub_type_description
 
     @property
@@ -504,6 +522,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param transaction_time: The transaction_time of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: datetime
         """
+
+
 
         self._transaction_time = transaction_time
 
@@ -526,6 +546,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: datetime
         """
 
+
+
         self._processed_time = processed_time
 
     @property
@@ -547,6 +569,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._transaction_type = transaction_type
 
     @property
@@ -567,6 +591,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param amount: The amount of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._amount = amount
 
@@ -591,6 +617,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._currency_code = currency_code
 
     @property
@@ -611,6 +639,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param price_type: The price_type of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._price_type = price_type
 
@@ -633,6 +663,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._price_amount_one = price_amount_one
 
     @property
@@ -653,6 +685,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param price_amount_two: The price_amount_two of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._price_amount_two = price_amount_two
 
@@ -675,6 +709,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._re_class = re_class
 
     @property
@@ -695,6 +731,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param settlement_time: The settlement_time of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: datetime
         """
+
+
 
         self._settlement_time = settlement_time
 
@@ -717,6 +755,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._settlement_processor = settlement_processor
 
     @property
@@ -737,6 +777,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param merchant_batch_number: The merchant_batch_number of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._merchant_batch_number = merchant_batch_number
 
@@ -759,6 +801,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._cleared_level = cleared_level
 
     @property
@@ -779,6 +823,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param billback_reason_code: The billback_reason_code of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._billback_reason_code = billback_reason_code
 
@@ -801,6 +847,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._billback_reason_description = billback_reason_description
 
     @property
@@ -821,6 +869,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param merchant_priced_level: The merchant_priced_level of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._merchant_priced_level = merchant_priced_level
 
@@ -843,6 +893,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._discount_rate = discount_rate
 
     @property
@@ -863,6 +915,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param discount_amount: The discount_amount of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._discount_amount = discount_amount
 
@@ -885,6 +939,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._clearing_rate_amount_one = clearing_rate_amount_one
 
     @property
@@ -906,6 +962,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._clearing_rate_amount_two = clearing_rate_amount_two
 
     @property
@@ -926,6 +984,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param clearing_rate_amount_three: The clearing_rate_amount_three of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._clearing_rate_amount_three = clearing_rate_amount_three
 
@@ -950,6 +1010,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._clearing_rate_currency_code = clearing_rate_currency_code
 
     @property
@@ -970,6 +1032,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param interchange_amount: The interchange_amount of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._interchange_amount = interchange_amount
 
@@ -992,6 +1056,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._billback_amount = billback_amount
 
     @property
@@ -1012,6 +1078,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param settlement_amount: The settlement_amount of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._settlement_amount = settlement_amount
 
@@ -1036,6 +1104,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._settlement_currency_code = settlement_currency_code
 
     @property
@@ -1056,6 +1126,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param conversion_rate: The conversion_rate of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._conversion_rate = conversion_rate
 
@@ -1078,6 +1150,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._delta_cost = delta_cost
 
     @property
@@ -1098,6 +1172,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param surcharge_amount: The surcharge_amount of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._surcharge_amount = surcharge_amount
 
@@ -1120,6 +1196,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._percent_rate_charged = percent_rate_charged
 
     @property
@@ -1140,6 +1218,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param per_transaction_charged: The per_transaction_charged of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._per_transaction_charged = per_transaction_charged
 
@@ -1162,6 +1242,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._downgrade_reason_code = downgrade_reason_code
 
     @property
@@ -1182,6 +1264,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param process_time: The process_time of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: datetime
         """
+
+
 
         self._process_time = process_time
 
@@ -1204,6 +1288,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._auth_code = auth_code
 
     @property
@@ -1224,6 +1310,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param batch_time: The batch_time of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: datetime
         """
+
+
 
         self._batch_time = batch_time
 
@@ -1246,6 +1334,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._processor_batch_number = processor_batch_number
 
     @property
@@ -1267,6 +1357,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._card_indicator = card_indicator
 
     @property
@@ -1287,6 +1379,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param minimum_unit: The minimum_unit of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: int
         """
+
+
 
         self._minimum_unit = minimum_unit
 
@@ -1311,6 +1405,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._minimum_unit_currency_code = minimum_unit_currency_code
 
     @property
@@ -1331,6 +1427,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param credit_delta_indicator: The credit_delta_indicator of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._credit_delta_indicator = credit_delta_indicator
 
@@ -1353,6 +1451,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :type: str
         """
 
+
+
         self._fee_category = fee_category
 
     @property
@@ -1373,6 +1473,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearin
         :param application_name: The application_name of this ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails.
         :type: str
         """
+
+
 
         self._application_name = application_name
 

@@ -136,6 +136,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: TssV2TransactionsGet200ResponseProcessorInformationProcessor
         """
 
+
+
         self._processor = processor
 
     @property
@@ -158,6 +160,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param multi_processor_routing: The multi_processor_routing of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: list[TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting]
         """
+
+
 
         self._multi_processor_routing = multi_processor_routing
 
@@ -182,6 +186,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -204,6 +210,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param network_transaction_id: The network_transaction_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._network_transaction_id = network_transaction_id
 
@@ -228,6 +236,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._retrieval_reference_number = retrieval_reference_number
 
     @property
@@ -250,6 +260,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param response_id: The response_id of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._response_id = response_id
 
@@ -274,6 +286,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._approval_code = approval_code
 
     @property
@@ -297,6 +311,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_code = response_code
 
     @property
@@ -317,6 +333,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param avs: The avs of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationAvs
         """
+
+
 
         self._avs = avs
 
@@ -339,6 +357,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: Riskv1decisionsProcessorInformationCardVerification
         """
 
+
+
         self._card_verification = card_verification
 
     @property
@@ -360,6 +380,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
         """
 
+
+
         self._ach_verification = ach_verification
 
     @property
@@ -380,6 +402,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param electronic_verification_results: The electronic_verification_results of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults
         """
+
+
 
         self._electronic_verification_results = electronic_verification_results
 
@@ -404,6 +428,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._system_trace_audit_number = system_trace_audit_number
 
     @property
@@ -427,6 +453,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_code_source = response_code_source
 
     @property
@@ -449,6 +477,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         :param payment_account_reference_number: The payment_account_reference_number of this TssV2TransactionsGet200ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._payment_account_reference_number = payment_account_reference_number
 

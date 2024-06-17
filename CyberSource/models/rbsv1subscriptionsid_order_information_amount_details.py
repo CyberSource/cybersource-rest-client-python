@@ -73,6 +73,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._billing_amount = billing_amount
 
     @property
@@ -95,6 +97,8 @@ class Rbsv1subscriptionsidOrderInformationAmountDetails(object):
         :param setup_fee: The setup_fee of this Rbsv1subscriptionsidOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._setup_fee = setup_fee
 

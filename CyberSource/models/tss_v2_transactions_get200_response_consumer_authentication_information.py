@@ -88,6 +88,8 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._eci_raw = eci_raw
 
     @property
@@ -110,6 +112,8 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._cavv = cavv
 
@@ -134,6 +138,8 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._xid = xid
 
     @property
@@ -157,6 +163,8 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -177,6 +185,8 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformation(object):
         :param strong_authentication: The strong_authentication of this TssV2TransactionsGet200ResponseConsumerAuthenticationInformation.
         :type: TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuthentication
         """
+
+
 
         self._strong_authentication = strong_authentication
 

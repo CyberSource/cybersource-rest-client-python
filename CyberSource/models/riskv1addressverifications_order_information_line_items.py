@@ -91,8 +91,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if unit_price is None:
-            raise ValueError("Invalid value for `unit_price`, must not be `None`")
+
+
 
         self._unit_price = unit_price
 
@@ -117,6 +117,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: int
         """
 
+
+
         self._quantity = quantity
 
     @property
@@ -139,6 +141,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._product_sku = product_sku
 
@@ -163,6 +167,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_risk = product_risk
 
     @property
@@ -186,6 +192,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_name = product_name
 
     @property
@@ -208,6 +216,8 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_code: The product_code of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._product_code = product_code
 

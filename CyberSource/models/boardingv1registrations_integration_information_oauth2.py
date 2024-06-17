@@ -69,8 +69,8 @@ class Boardingv1registrationsIntegrationInformationOauth2(object):
         :param client_id: The client_id of this Boardingv1registrationsIntegrationInformationOauth2.
         :type: str
         """
-        if client_id is None:
-            raise ValueError("Invalid value for `client_id`, must not be `None`")
+
+
 
         self._client_id = client_id
 
@@ -92,6 +92,8 @@ class Boardingv1registrationsIntegrationInformationOauth2(object):
         :param state: The state of this Boardingv1registrationsIntegrationInformationOauth2.
         :type: str
         """
+
+
 
         self._state = state
 

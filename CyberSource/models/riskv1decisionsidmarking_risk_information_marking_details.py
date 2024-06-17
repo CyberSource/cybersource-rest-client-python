@@ -83,6 +83,8 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :type: str
         """
 
+
+
         self._notes = notes
 
     @property
@@ -105,6 +107,8 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :param reason: The reason of this Riskv1decisionsidmarkingRiskInformationMarkingDetails.
         :type: str
         """
+
+
 
         self._reason = reason
 
@@ -129,6 +133,8 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :type: list[str]
         """
 
+
+
         self._fields_included = fields_included
 
     @property
@@ -151,6 +157,8 @@ class Riskv1decisionsidmarkingRiskInformationMarkingDetails(object):
         :param action: The action of this Riskv1decisionsidmarkingRiskInformationMarkingDetails.
         :type: str
         """
+
+
 
         self._action = action
 

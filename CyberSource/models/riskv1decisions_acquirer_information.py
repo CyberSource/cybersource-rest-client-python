@@ -83,6 +83,8 @@ class Riskv1decisionsAcquirerInformation(object):
         :type: str
         """
 
+
+
         self._acquirer_bin = acquirer_bin
 
     @property
@@ -105,6 +107,8 @@ class Riskv1decisionsAcquirerInformation(object):
         :param country: The country of this Riskv1decisionsAcquirerInformation.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -129,6 +133,8 @@ class Riskv1decisionsAcquirerInformation(object):
         :type: str
         """
 
+
+
         self._password = password
 
     @property
@@ -151,6 +157,8 @@ class Riskv1decisionsAcquirerInformation(object):
         :param merchant_id: The merchant_id of this Riskv1decisionsAcquirerInformation.
         :type: str
         """
+
+
 
         self._merchant_id = merchant_id
 

@@ -140,6 +140,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -160,6 +162,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param processor_information: The processor_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -182,6 +186,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -203,6 +209,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsPaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -223,8 +231,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param order_information: The order_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsOrderInformation
         """
-        if order_information is None:
-            raise ValueError("Invalid value for `order_information`, must not be `None`")
+
+
 
         self._order_information = order_information
 
@@ -247,6 +255,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsBuyerInformation
         """
 
+
+
         self._buyer_information = buyer_information
 
     @property
@@ -267,6 +277,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param device_information: The device_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsDeviceInformation
         """
+
+
 
         self._device_information = device_information
 
@@ -289,6 +301,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -309,6 +323,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param travel_information: The travel_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsTravelInformation
         """
+
+
 
         self._travel_information = travel_information
 
@@ -331,6 +347,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: list[Riskv1decisionsMerchantDefinedInformation]
         """
 
+
+
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -351,6 +369,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param merchant_information: The merchant_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsMerchantInformation
         """
+
+
 
         self._merchant_information = merchant_information
 
@@ -373,6 +393,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsAcquirerInformation
         """
 
+
+
         self._acquirer_information = acquirer_information
 
     @property
@@ -393,6 +415,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param recurring_payment_information: The recurring_payment_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Ptsv2paymentsRecurringPaymentInformation
         """
+
+
 
         self._recurring_payment_information = recurring_payment_information
 
@@ -415,6 +439,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Riskv1decisionsConsumerAuthenticationInformation
         """
 
+
+
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -436,6 +462,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :type: Ptsv2paymentsWatchlistScreeningInformation
         """
 
+
+
         self._watchlist_screening_information = watchlist_screening_information
 
     @property
@@ -456,6 +484,8 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param token_information: The token_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsTokenInformation
         """
+
+
 
         self._token_information = token_information
 

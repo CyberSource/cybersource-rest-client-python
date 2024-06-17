@@ -74,6 +74,8 @@ class SaveSymEgressKey(object):
         :type: Kmsegressv2keyssymClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -96,8 +98,8 @@ class SaveSymEgressKey(object):
         :param client_request_action: The client_request_action of this SaveSymEgressKey.
         :type: str
         """
-        if client_request_action is None:
-            raise ValueError("Invalid value for `client_request_action`, must not be `None`")
+
+
 
         self._client_request_action = client_request_action
 
@@ -119,8 +121,8 @@ class SaveSymEgressKey(object):
         :param key_information: The key_information of this SaveSymEgressKey.
         :type: Kmsegressv2keyssymKeyInformation
         """
-        if key_information is None:
-            raise ValueError("Invalid value for `key_information`, must not be `None`")
+
+
 
         self._key_information = key_information
 

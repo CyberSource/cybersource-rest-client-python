@@ -83,6 +83,8 @@ class PushFunds404Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -105,6 +107,8 @@ class PushFunds404Response(object):
         :param submit_time_utc: The submit_time_utc of this PushFunds404Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -129,6 +133,8 @@ class PushFunds404Response(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -151,6 +157,8 @@ class PushFunds404Response(object):
         :param message: The message of this PushFunds404Response.
         :type: str
         """
+
+
 
         self._message = message
 

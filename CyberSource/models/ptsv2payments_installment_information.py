@@ -138,6 +138,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -160,6 +162,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param frequency: The frequency of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+
+
 
         self._frequency = frequency
 
@@ -184,6 +188,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._plan_type = plan_type
 
     @property
@@ -206,6 +212,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param sequence: The sequence of this Ptsv2paymentsInstallmentInformation.
         :type: int
         """
+
+
 
         self._sequence = sequence
 
@@ -230,6 +238,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -252,6 +262,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param total_count: The total_count of this Ptsv2paymentsInstallmentInformation.
         :type: int
         """
+
+
 
         self._total_count = total_count
 
@@ -276,6 +288,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._first_installment_date = first_installment_date
 
     @property
@@ -298,6 +312,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param invoice_data: The invoice_data of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+
+
 
         self._invoice_data = invoice_data
 
@@ -322,6 +338,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._payment_type = payment_type
 
     @property
@@ -344,6 +362,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param eligibility_inquiry: The eligibility_inquiry of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+
+
 
         self._eligibility_inquiry = eligibility_inquiry
 
@@ -368,6 +388,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._grace_period_duration = grace_period_duration
 
     @property
@@ -390,6 +412,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param grace_period_duration_type: The grace_period_duration_type of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+
+
 
         self._grace_period_duration_type = grace_period_duration_type
 
@@ -414,6 +438,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._first_installment_amount = first_installment_amount
 
     @property
@@ -437,6 +463,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._validation_indicator = validation_indicator
 
     @property
@@ -459,6 +487,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         :param identifier: The identifier of this Ptsv2paymentsInstallmentInformation.
         :type: str
         """
+
+
 
         self._identifier = identifier
 

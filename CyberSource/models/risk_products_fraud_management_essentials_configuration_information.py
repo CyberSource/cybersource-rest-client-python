@@ -66,6 +66,8 @@ class RiskProductsFraudManagementEssentialsConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     def to_dict(self):

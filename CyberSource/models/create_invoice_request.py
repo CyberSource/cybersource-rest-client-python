@@ -76,6 +76,8 @@ class CreateInvoiceRequest(object):
         :type: Invoicingv2invoicesCustomerInformation
         """
 
+
+
         self._customer_information = customer_information
 
     @property
@@ -97,6 +99,8 @@ class CreateInvoiceRequest(object):
         :type: Invoicingv2invoicesInvoiceInformation
         """
 
+
+
         self._invoice_information = invoice_information
 
     @property
@@ -117,6 +121,8 @@ class CreateInvoiceRequest(object):
         :param order_information: The order_information of this CreateInvoiceRequest.
         :type: Invoicingv2invoicesOrderInformation
         """
+
+
 
         self._order_information = order_information
 

@@ -83,6 +83,8 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         :type: int
         """
 
+
+
         self._category_code = category_code
 
     @property
@@ -105,6 +107,8 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         :param submit_local_date_time: The submit_local_date_time of this Ptsv1pushfundstransferMerchantInformation.
         :type: str
         """
+
+
 
         self._submit_local_date_time = submit_local_date_time
 
@@ -129,6 +133,8 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -149,6 +155,8 @@ class Ptsv1pushfundstransferMerchantInformation(object):
         :param merchant_descriptor: The merchant_descriptor of this Ptsv1pushfundstransferMerchantInformation.
         :type: Ptsv1pushfundstransferMerchantInformationMerchantDescriptor
         """
+
+
 
         self._merchant_descriptor = merchant_descriptor
 

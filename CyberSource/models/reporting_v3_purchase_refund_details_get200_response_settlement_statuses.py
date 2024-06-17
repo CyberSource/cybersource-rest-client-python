@@ -88,6 +88,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses(object):
         :type: str
         """
 
+
+
         self._request_id = request_id
 
     @property
@@ -110,6 +112,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses(object):
         :param status: The status of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -134,6 +138,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses(object):
         :type: datetime
         """
 
+
+
         self._settlement_time = settlement_time
 
     @property
@@ -157,6 +163,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses(object):
         :type: str
         """
 
+
+
         self._reason_code = reason_code
 
     @property
@@ -179,6 +187,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses(object):
         :param error_text: The error_text of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses.
         :type: str
         """
+
+
 
         self._error_text = error_text
 

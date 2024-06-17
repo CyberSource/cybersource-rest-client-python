@@ -73,6 +73,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsOrderPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._currency = currency
 

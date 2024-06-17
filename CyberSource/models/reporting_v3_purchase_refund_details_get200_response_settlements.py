@@ -128,6 +128,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._request_id = request_id
 
     @property
@@ -150,6 +152,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param transaction_type: The transaction_type of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: str
         """
+
+
 
         self._transaction_type = transaction_type
 
@@ -174,6 +178,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: datetime
         """
 
+
+
         self._submission_time = submission_time
 
     @property
@@ -196,6 +202,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param amount: The amount of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: str
         """
+
+
 
         self._amount = amount
 
@@ -220,6 +228,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._currency_code = currency_code
 
     @property
@@ -242,6 +252,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param payment_method: The payment_method of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: str
         """
+
+
 
         self._payment_method = payment_method
 
@@ -266,6 +278,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._wallet_type = wallet_type
 
     @property
@@ -288,6 +302,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param payment_type: The payment_type of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: str
         """
+
+
 
         self._payment_type = payment_type
 
@@ -312,6 +328,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._account_suffix = account_suffix
 
     @property
@@ -334,6 +352,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param cybersource_batch_time: The cybersource_batch_time of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: datetime
         """
+
+
 
         self._cybersource_batch_time = cybersource_batch_time
 
@@ -358,6 +378,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._cybersource_batch_id = cybersource_batch_id
 
     @property
@@ -381,6 +403,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :type: str
         """
 
+
+
         self._card_type = card_type
 
     @property
@@ -403,6 +427,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseSettlements(object):
         :param debit_network: The debit_network of this ReportingV3PurchaseRefundDetailsGet200ResponseSettlements.
         :type: str
         """
+
+
 
         self._debit_network = debit_network
 

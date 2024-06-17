@@ -103,6 +103,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -125,6 +127,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :param status: The status of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -149,6 +153,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :type: str
         """
 
+
+
         self._reason_code = reason_code
 
     @property
@@ -171,6 +177,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :param r_code: The r_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._r_code = r_code
 
@@ -195,6 +203,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :type: str
         """
 
+
+
         self._r_flag = r_flag
 
     @property
@@ -217,6 +227,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :param reconciliation_id: The reconciliation_id of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._reconciliation_id = reconciliation_id
 
@@ -241,6 +253,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :type: str
         """
 
+
+
         self._r_message = r_message
 
     @property
@@ -263,6 +277,8 @@ class TssV2TransactionsGet200ResponseApplicationInformationApplications(object):
         :param return_code: The return_code of this TssV2TransactionsGet200ResponseApplicationInformationApplications.
         :type: int
         """
+
+
 
         self._return_code = return_code
 

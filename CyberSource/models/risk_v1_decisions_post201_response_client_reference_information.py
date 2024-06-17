@@ -78,6 +78,8 @@ class RiskV1DecisionsPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -101,6 +103,8 @@ class RiskV1DecisionsPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -121,6 +125,8 @@ class RiskV1DecisionsPost201ResponseClientReferenceInformation(object):
         :param partner: The partner of this RiskV1DecisionsPost201ResponseClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 

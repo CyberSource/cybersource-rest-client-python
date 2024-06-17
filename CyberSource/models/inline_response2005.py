@@ -133,6 +133,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._webhook_id = webhook_id
 
     @property
@@ -156,6 +158,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     @property
@@ -176,6 +180,8 @@ class InlineResponse2005(object):
         :param products: The products of this InlineResponse2005.
         :type: list[Notificationsubscriptionsv1webhooksProducts]
         """
+
+
 
         self._products = products
 
@@ -200,6 +206,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._webhook_url = webhook_url
 
     @property
@@ -223,6 +231,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._health_check_url = health_check_url
 
     @property
@@ -243,6 +253,8 @@ class InlineResponse2005(object):
         :param notification_scope: The notification_scope of this InlineResponse2005.
         :type: Notificationsubscriptionsv1webhooksNotificationScope
         """
+
+
 
         self._notification_scope = notification_scope
 
@@ -267,6 +279,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -289,6 +303,8 @@ class InlineResponse2005(object):
         :param name: The name of this InlineResponse2005.
         :type: str
         """
+
+
 
         self._name = name
 
@@ -313,6 +329,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._description = description
 
     @property
@@ -334,6 +352,8 @@ class InlineResponse2005(object):
         :type: Notificationsubscriptionsv1webhooksRetryPolicy
         """
 
+
+
         self._retry_policy = retry_policy
 
     @property
@@ -354,6 +374,8 @@ class InlineResponse2005(object):
         :param security_policy: The security_policy of this InlineResponse2005.
         :type: Notificationsubscriptionsv1webhooksSecurityPolicy
         """
+
+
 
         self._security_policy = security_policy
 
@@ -378,6 +400,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._created_on = created_on
 
     @property
@@ -401,6 +425,8 @@ class InlineResponse2005(object):
         :type: str
         """
 
+
+
         self._updated_on = updated_on
 
     @property
@@ -423,6 +449,8 @@ class InlineResponse2005(object):
         :param additional_attributes: The additional_attributes of this InlineResponse2005.
         :type: list[dict(str, str)]
         """
+
+
 
         self._additional_attributes = additional_attributes
 

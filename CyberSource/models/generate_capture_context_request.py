@@ -83,6 +83,8 @@ class GenerateCaptureContextRequest(object):
         :type: list[str]
         """
 
+
+
         self._target_origins = target_origins
 
     @property
@@ -103,6 +105,8 @@ class GenerateCaptureContextRequest(object):
         :param allowed_card_networks: The allowed_card_networks of this GenerateCaptureContextRequest.
         :type: list[str]
         """
+
+
 
         self._allowed_card_networks = allowed_card_networks
 
@@ -125,6 +129,8 @@ class GenerateCaptureContextRequest(object):
         :type: str
         """
 
+
+
         self._client_version = client_version
 
     @property
@@ -145,6 +151,8 @@ class GenerateCaptureContextRequest(object):
         :param checkout_api_initialization: The checkout_api_initialization of this GenerateCaptureContextRequest.
         :type: Microformv2sessionsCheckoutApiInitialization
         """
+
+
 
         self._checkout_api_initialization = checkout_api_initialization
 

@@ -118,6 +118,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: str
         """
 
+
+
         self._bin_source = bin_source
 
     @property
@@ -140,6 +142,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param industry_data_type: The industry_data_type of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
         """
+
+
 
         self._industry_data_type = industry_data_type
 
@@ -164,6 +168,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: str
         """
 
+
+
         self._payment_solution = payment_solution
 
     @property
@@ -186,6 +192,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: str
         """
+
+
 
         self._commerce_indicator = commerce_indicator
 
@@ -210,6 +218,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: str
         """
 
+
+
         self._commerce_indicator_label = commerce_indicator_label
 
     @property
@@ -233,6 +243,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: str
         """
 
+
+
         self._business_application_id = business_application_id
 
     @property
@@ -253,6 +265,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param authorization_options: The authorization_options of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions
         """
+
+
 
         self._authorization_options = authorization_options
 
@@ -275,6 +289,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions
         """
 
+
+
         self._bank_transfer_options = bank_transfer_options
 
     @property
@@ -295,6 +311,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param capture_options: The capture_options of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: TssV2TransactionsGet200ResponseProcessingInformationCaptureOptions
         """
+
+
 
         self._capture_options = capture_options
 
@@ -319,6 +337,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -339,6 +359,8 @@ class TssV2TransactionsGet200ResponseProcessingInformation(object):
         :param japan_payment_options: The japan_payment_options of this TssV2TransactionsGet200ResponseProcessingInformation.
         :type: TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions
         """
+
+
 
         self._japan_payment_options = japan_payment_options
 

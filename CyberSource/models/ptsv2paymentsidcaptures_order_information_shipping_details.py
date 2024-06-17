@@ -68,6 +68,8 @@ class Ptsv2paymentsidcapturesOrderInformationShippingDetails(object):
         :type: str
         """
 
+
+
         self._ship_from_postal_code = ship_from_postal_code
 
     def to_dict(self):

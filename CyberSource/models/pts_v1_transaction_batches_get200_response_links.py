@@ -66,6 +66,8 @@ class PtsV1TransactionBatchesGet200ResponseLinks(object):
         :type: PtsV1TransactionBatchesGet200ResponseLinksSelf
         """
 
+
+
         self.__self = _self
 
     def to_dict(self):

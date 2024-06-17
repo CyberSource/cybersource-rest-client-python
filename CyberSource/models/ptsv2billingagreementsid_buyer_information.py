@@ -78,6 +78,8 @@ class Ptsv2billingagreementsidBuyerInformation(object):
         :type: str
         """
 
+
+
         self._date_of_birth = date_of_birth
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2billingagreementsidBuyerInformation(object):
         :type: str
         """
 
+
+
         self._gender = gender
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2billingagreementsidBuyerInformation(object):
         :param language: The language of this Ptsv2billingagreementsidBuyerInformation.
         :type: str
         """
+
+
 
         self._language = language
 

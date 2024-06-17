@@ -73,6 +73,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount(obje
         :type: str
         """
 
+
+
         self._suffix = suffix
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount(obje
         :param prefix: The prefix of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._prefix = prefix
 

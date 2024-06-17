@@ -78,6 +78,8 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -101,6 +103,8 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
         :type: str
         """
 
+
+
         self._personal_id_type = personal_id_type
 
     @property
@@ -123,6 +127,8 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
         :param type: The type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
         :type: str
         """
+
+
 
         self._type = type
 

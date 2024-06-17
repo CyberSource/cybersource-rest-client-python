@@ -87,6 +87,8 @@ class ECheckConfigCommon(object):
         :type: dict(str, ECheckConfigCommonProcessors)
         """
 
+
+
         self._processors = processors
 
     @property
@@ -107,6 +109,8 @@ class ECheckConfigCommon(object):
         :param internal_only: The internal_only of this ECheckConfigCommon.
         :type: ECheckConfigCommonInternalOnly
         """
+
+
 
         self._internal_only = internal_only
 
@@ -130,8 +134,8 @@ class ECheckConfigCommon(object):
         :param account_holder_name: The account_holder_name of this ECheckConfigCommon.
         :type: str
         """
-        if account_holder_name is None:
-            raise ValueError("Invalid value for `account_holder_name`, must not be `None`")
+
+
 
         self._account_holder_name = account_holder_name
 
@@ -155,8 +159,8 @@ class ECheckConfigCommon(object):
         :param account_type: The account_type of this ECheckConfigCommon.
         :type: str
         """
-        if account_type is None:
-            raise ValueError("Invalid value for `account_type`, must not be `None`")
+
+
 
         self._account_type = account_type
 
@@ -180,8 +184,8 @@ class ECheckConfigCommon(object):
         :param account_routing_number: The account_routing_number of this ECheckConfigCommon.
         :type: str
         """
-        if account_routing_number is None:
-            raise ValueError("Invalid value for `account_routing_number`, must not be `None`")
+
+
 
         self._account_routing_number = account_routing_number
 
@@ -205,8 +209,8 @@ class ECheckConfigCommon(object):
         :param account_number: The account_number of this ECheckConfigCommon.
         :type: str
         """
-        if account_number is None:
-            raise ValueError("Invalid value for `account_number`, must not be `None`")
+
+
 
         self._account_number = account_number
 

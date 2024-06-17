@@ -78,6 +78,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -101,6 +103,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
         :type: str
         """
 
+
+
         self._eligibility = eligibility
 
     @property
@@ -123,6 +127,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
         :param eligibility_type: The eligibility_type of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
         :type: str
         """
+
+
 
         self._eligibility_type = eligibility_type
 

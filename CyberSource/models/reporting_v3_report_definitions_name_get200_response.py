@@ -101,6 +101,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -121,6 +123,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :param report_definition_id: The report_definition_id of this ReportingV3ReportDefinitionsNameGet200Response.
         :type: int
         """
+
+
 
         self._report_definition_id = report_definition_id
 
@@ -143,6 +147,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :type: str
         """
 
+
+
         self._report_defintion_name = report_defintion_name
 
     @property
@@ -163,6 +169,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :param attributes: The attributes of this ReportingV3ReportDefinitionsNameGet200Response.
         :type: list[ReportingV3ReportDefinitionsNameGet200ResponseAttributes]
         """
+
+
 
         self._attributes = attributes
 
@@ -185,6 +193,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :type: list[str]
         """
 
+
+
         self._supported_formats = supported_formats
 
     @property
@@ -206,6 +216,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :type: str
         """
 
+
+
         self._description = description
 
     @property
@@ -226,6 +238,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :param default_settings: The default_settings of this ReportingV3ReportDefinitionsNameGet200Response.
         :type: ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings
         """
+
+
 
         self._default_settings = default_settings
 
@@ -249,6 +263,8 @@ class ReportingV3ReportDefinitionsNameGet200Response(object):
         :param subscription_type: The subscription_type of this ReportingV3ReportDefinitionsNameGet200Response.
         :type: str
         """
+
+
 
         self._subscription_type = subscription_type
 

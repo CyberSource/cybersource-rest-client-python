@@ -83,6 +83,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -105,6 +107,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         :param credential_stored_on_file: The credential_stored_on_file of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
         :type: str
         """
+
+
 
         self._credential_stored_on_file = credential_stored_on_file
 
@@ -129,6 +133,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         :type: str
         """
 
+
+
         self._stored_credential_used = stored_credential_used
 
     @property
@@ -149,6 +155,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsIn
         :param merchant_initiated_transaction: The merchant_initiated_transaction of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator.
         :type: MerchantInitiatedTransactionObject
         """
+
+
 
         self._merchant_initiated_transaction = merchant_initiated_transaction
 

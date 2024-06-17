@@ -66,6 +66,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded(object):
         :type: TmsEmbeddedInstrumentIdentifier
         """
 
+
+
         self._instrument_identifier = instrument_identifier
 
     def to_dict(self):

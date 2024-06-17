@@ -83,6 +83,8 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -105,6 +107,8 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
         :param country_subdivision_code: The country_subdivision_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str
         """
+
+
 
         self._country_subdivision_code = country_subdivision_code
 
@@ -129,6 +133,8 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
         :type: str
         """
 
+
+
         self._country_code = country_code
 
     @property
@@ -151,6 +157,8 @@ class Ptsv2paymentsMerchantInformationServiceLocation(object):
         :param postal_code: The postal_code of this Ptsv2paymentsMerchantInformationServiceLocation.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 

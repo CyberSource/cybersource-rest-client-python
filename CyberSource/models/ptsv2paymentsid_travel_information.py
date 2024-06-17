@@ -68,6 +68,8 @@ class Ptsv2paymentsidTravelInformation(object):
         :type: str
         """
 
+
+
         self._duration = duration
 
     def to_dict(self):

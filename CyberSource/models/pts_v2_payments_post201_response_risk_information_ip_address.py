@@ -98,6 +98,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :type: str
         """
 
+
+
         self._anonymizer_status = anonymizer_status
 
     @property
@@ -120,6 +122,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param locality: The locality of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -144,6 +148,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -166,6 +172,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param administrative_area: The administrative_area of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -190,6 +198,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :type: str
         """
 
+
+
         self._routing_method = routing_method
 
     @property
@@ -213,6 +223,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :type: str
         """
 
+
+
         self._carrier = carrier
 
     @property
@@ -235,6 +247,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationIpAddress(object):
         :param organization: The organization of this PtsV2PaymentsPost201ResponseRiskInformationIpAddress.
         :type: str
         """
+
+
 
         self._organization = organization
 

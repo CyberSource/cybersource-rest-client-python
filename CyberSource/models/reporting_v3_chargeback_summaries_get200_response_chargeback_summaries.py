@@ -78,6 +78,8 @@ class ReportingV3ChargebackSummariesGet200ResponseChargebackSummaries(object):
         :type: float
         """
 
+
+
         self._count = count
 
     @property
@@ -101,6 +103,8 @@ class ReportingV3ChargebackSummariesGet200ResponseChargebackSummaries(object):
         :type: datetime
         """
 
+
+
         self._time = time
 
     @property
@@ -123,6 +127,8 @@ class ReportingV3ChargebackSummariesGet200ResponseChargebackSummaries(object):
         :param account_id: The account_id of this ReportingV3ChargebackSummariesGet200ResponseChargebackSummaries.
         :type: str
         """
+
+
 
         self._account_id = account_id
 

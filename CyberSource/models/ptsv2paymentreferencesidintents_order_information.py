@@ -66,6 +66,8 @@ class Ptsv2paymentreferencesidintentsOrderInformation(object):
         :type: Ptsv2paymentsOrderInformationAmountDetailsOrder
         """
 
+
+
         self._amount_details = amount_details
 
     def to_dict(self):

@@ -66,6 +66,8 @@ class UmsV1UsersGet200ResponseOrganizationInformation(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     def to_dict(self):

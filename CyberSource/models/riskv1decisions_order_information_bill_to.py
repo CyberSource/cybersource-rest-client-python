@@ -113,6 +113,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -135,6 +137,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :param address2: The address2 of this Riskv1decisionsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -159,6 +163,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -181,6 +187,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :param country: The country of this Riskv1decisionsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -205,6 +213,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -227,6 +237,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :param first_name: The first_name of this Riskv1decisionsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._first_name = first_name
 
@@ -251,6 +263,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._last_name = last_name
 
     @property
@@ -273,6 +287,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Riskv1decisionsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 
@@ -297,6 +313,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -319,6 +337,8 @@ class Riskv1decisionsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1decisionsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 

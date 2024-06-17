@@ -86,6 +86,8 @@ class InlineResponse2006EmbeddedTotals(object):
         :type: int
         """
 
+
+
         self._accepted_records = accepted_records
 
     @property
@@ -106,6 +108,8 @@ class InlineResponse2006EmbeddedTotals(object):
         :param rejected_records: The rejected_records of this InlineResponse2006EmbeddedTotals.
         :type: int
         """
+
+
 
         self._rejected_records = rejected_records
 
@@ -128,6 +132,8 @@ class InlineResponse2006EmbeddedTotals(object):
         :type: int
         """
 
+
+
         self._updated_records = updated_records
 
     @property
@@ -149,6 +155,8 @@ class InlineResponse2006EmbeddedTotals(object):
         :type: int
         """
 
+
+
         self._ca_responses = ca_responses
 
     @property
@@ -169,6 +177,8 @@ class InlineResponse2006EmbeddedTotals(object):
         :param ca_responses_omitted: The ca_responses_omitted of this InlineResponse2006EmbeddedTotals.
         :type: int
         """
+
+
 
         self._ca_responses_omitted = ca_responses_omitted
 

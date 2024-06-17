@@ -71,6 +71,8 @@ class Riskv1decisionsMerchantInformation(object):
         :type: Riskv1decisionsMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -93,6 +95,8 @@ class Riskv1decisionsMerchantInformation(object):
         :param merchant_name: The merchant_name of this Riskv1decisionsMerchantInformation.
         :type: str
         """
+
+
 
         self._merchant_name = merchant_name
 

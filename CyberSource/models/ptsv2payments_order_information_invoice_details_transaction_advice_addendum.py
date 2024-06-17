@@ -68,6 +68,8 @@ class Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum(objec
         :type: str
         """
 
+
+
         self._data = data
 
     def to_dict(self):

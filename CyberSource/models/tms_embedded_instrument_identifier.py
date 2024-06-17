@@ -126,6 +126,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: TmsEmbeddedInstrumentIdentifierLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -148,6 +150,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param id: The id of this TmsEmbeddedInstrumentIdentifier.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -172,6 +176,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: str
         """
 
+
+
         self._object = object
 
     @property
@@ -194,6 +200,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param state: The state of this TmsEmbeddedInstrumentIdentifier.
         :type: str
         """
+
+
 
         self._state = state
 
@@ -218,6 +226,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -238,6 +248,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param token_provisioning_information: The token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
         :type: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
         """
+
+
 
         self._token_provisioning_information = token_provisioning_information
 
@@ -260,6 +272,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: TmsEmbeddedInstrumentIdentifierCard
         """
 
+
+
         self._card = card
 
     @property
@@ -280,6 +294,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param bank_account: The bank_account of this TmsEmbeddedInstrumentIdentifier.
         :type: TmsEmbeddedInstrumentIdentifierBankAccount
         """
+
+
 
         self._bank_account = bank_account
 
@@ -302,6 +318,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: TmsEmbeddedInstrumentIdentifierTokenizedCard
         """
 
+
+
         self._tokenized_card = tokenized_card
 
     @property
@@ -322,6 +340,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param issuer: The issuer of this TmsEmbeddedInstrumentIdentifier.
         :type: TmsEmbeddedInstrumentIdentifierIssuer
         """
+
+
 
         self._issuer = issuer
 
@@ -344,6 +364,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: TmsEmbeddedInstrumentIdentifierProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -365,6 +387,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :type: TmsEmbeddedInstrumentIdentifierBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -385,6 +409,8 @@ class TmsEmbeddedInstrumentIdentifier(object):
         :param metadata: The metadata of this TmsEmbeddedInstrumentIdentifier.
         :type: TmsEmbeddedInstrumentIdentifierMetadata
         """
+
+
 
         self._metadata = metadata
 

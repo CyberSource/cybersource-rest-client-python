@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201Response1PaymentInformationPaymentType(object):
         :type: PtsV2PaymentsPost201Response1PaymentInformationPaymentTypeMethod
         """
 
+
+
         self._method = method
 
     def to_dict(self):

@@ -68,6 +68,8 @@ class Ptsv2billingagreementsPaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._number = number
 
     def to_dict(self):

@@ -66,6 +66,8 @@ class PtsV1TransactionBatchesIdGet200ResponseLinks(object):
         :type: list[PtsV1TransactionBatchesIdGet200ResponseLinksTransactions]
         """
 
+
+
         self._transactions = transactions
 
     def to_dict(self):

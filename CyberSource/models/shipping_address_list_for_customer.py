@@ -91,6 +91,8 @@ class ShippingAddressListForCustomer(object):
         :type: ShippingAddressListForCustomerLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -113,6 +115,8 @@ class ShippingAddressListForCustomer(object):
         :param offset: The offset of this ShippingAddressListForCustomer.
         :type: int
         """
+
+
 
         self._offset = offset
 
@@ -137,6 +141,8 @@ class ShippingAddressListForCustomer(object):
         :type: int
         """
 
+
+
         self._limit = limit
 
     @property
@@ -159,6 +165,8 @@ class ShippingAddressListForCustomer(object):
         :param count: The count of this ShippingAddressListForCustomer.
         :type: int
         """
+
+
 
         self._count = count
 
@@ -183,6 +191,8 @@ class ShippingAddressListForCustomer(object):
         :type: int
         """
 
+
+
         self._total = total
 
     @property
@@ -203,6 +213,8 @@ class ShippingAddressListForCustomer(object):
         :param embedded: The embedded of this ShippingAddressListForCustomer.
         :type: ShippingAddressListForCustomerEmbedded
         """
+
+
 
         self._embedded = embedded
 

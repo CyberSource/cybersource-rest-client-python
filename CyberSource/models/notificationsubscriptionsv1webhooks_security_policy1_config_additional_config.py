@@ -81,6 +81,8 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig(o
         :type: str
         """
 
+
+
         self._aud = aud
 
     @property
@@ -101,6 +103,8 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig(o
         :param client_id: The client_id of this Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig.
         :type: str
         """
+
+
 
         self._client_id = client_id
 
@@ -123,6 +127,8 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig(o
         :type: str
         """
 
+
+
         self._key_id = key_id
 
     @property
@@ -143,6 +149,8 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig(o
         :param scope: The scope of this Notificationsubscriptionsv1webhooksSecurityPolicy1ConfigAdditionalConfig.
         :type: str
         """
+
+
 
         self._scope = scope
 

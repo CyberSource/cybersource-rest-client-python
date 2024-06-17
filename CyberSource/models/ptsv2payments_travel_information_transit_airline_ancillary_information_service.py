@@ -73,6 +73,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
         :type: str
         """
 
+
+
         self._category_code = category_code
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService(ob
         :param sub_category_code: The sub_category_code of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService.
         :type: str
         """
+
+
 
         self._sub_category_code = sub_category_code
 

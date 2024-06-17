@@ -71,6 +71,8 @@ class PaymentsProductsVirtualTerminalConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsVirtualTerminalConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsVirtualTerminalConfigurationInformation.
         :type: VTConfig
         """
+
+
 
         self._configurations = configurations
 

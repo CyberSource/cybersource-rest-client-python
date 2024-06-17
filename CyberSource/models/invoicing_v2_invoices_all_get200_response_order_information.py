@@ -66,6 +66,8 @@ class InvoicingV2InvoicesAllGet200ResponseOrderInformation(object):
         :type: InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     def to_dict(self):

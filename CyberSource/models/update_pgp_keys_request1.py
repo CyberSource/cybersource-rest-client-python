@@ -88,6 +88,8 @@ class UpdatePGPKeysRequest1(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     @property
@@ -110,6 +112,8 @@ class UpdatePGPKeysRequest1(object):
         :param status: The status of this UpdatePGPKeysRequest1.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -134,6 +138,8 @@ class UpdatePGPKeysRequest1(object):
         :type: str
         """
 
+
+
         self._expiration_date = expiration_date
 
     @property
@@ -157,6 +163,8 @@ class UpdatePGPKeysRequest1(object):
         :type: str
         """
 
+
+
         self._version = version
 
     @property
@@ -179,6 +187,8 @@ class UpdatePGPKeysRequest1(object):
         :param comment: The comment of this UpdatePGPKeysRequest1.
         :type: str
         """
+
+
 
         self._comment = comment
 

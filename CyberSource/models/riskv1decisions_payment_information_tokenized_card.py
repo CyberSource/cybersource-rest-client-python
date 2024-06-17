@@ -88,6 +88,8 @@ class Riskv1decisionsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._transaction_type = transaction_type
 
     @property
@@ -110,6 +112,8 @@ class Riskv1decisionsPaymentInformationTokenizedCard(object):
         :param type: The type of this Riskv1decisionsPaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -134,6 +138,8 @@ class Riskv1decisionsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._number = number
 
     @property
@@ -157,6 +163,8 @@ class Riskv1decisionsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -179,6 +187,8 @@ class Riskv1decisionsPaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this Riskv1decisionsPaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 

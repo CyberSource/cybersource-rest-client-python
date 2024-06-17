@@ -71,6 +71,8 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformation(object):
         :param configurations: The configurations of this CommerceSolutionsProductsTokenManagementConfigurationInformation.
         :type: CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations
         """
+
+
 
         self._configurations = configurations
 

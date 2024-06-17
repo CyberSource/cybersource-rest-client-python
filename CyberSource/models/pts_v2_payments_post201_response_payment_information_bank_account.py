@@ -68,6 +68,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._corrected_account_number = corrected_account_number
 
     def to_dict(self):

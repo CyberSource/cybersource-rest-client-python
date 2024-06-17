@@ -93,6 +93,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -115,6 +117,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :param application_version: The application_version of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
         """
+
+
 
         self._application_version = application_version
 
@@ -139,6 +143,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_name = application_name
 
     @property
@@ -162,6 +168,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_user = application_user
 
     @property
@@ -182,6 +190,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :param partner: The partner of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: TssV2TransactionsGet200ResponseClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 
@@ -205,6 +215,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformation(object):
         :param comments: The comments of this TssV2TransactionsGet200ResponseClientReferenceInformation.
         :type: str
         """
+
+
 
         self._comments = comments
 

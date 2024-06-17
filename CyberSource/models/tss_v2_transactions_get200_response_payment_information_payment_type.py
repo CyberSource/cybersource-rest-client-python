@@ -78,6 +78,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -101,6 +103,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -123,6 +127,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationPaymentType(object):
         :param method: The method of this TssV2TransactionsGet200ResponsePaymentInformationPaymentType.
         :type: str
         """
+
+
 
         self._method = method
 

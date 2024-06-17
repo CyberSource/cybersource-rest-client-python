@@ -106,6 +106,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :type: str
         """
 
+
+
         self._default_standard_entry_class_code = default_standard_entry_class_code
 
     @property
@@ -128,6 +130,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :param default_country_code: The default_country_code of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: str
         """
+
+
 
         self._default_country_code = default_country_code
 
@@ -152,6 +156,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :type: str
         """
 
+
+
         self._default_currency_code = default_currency_code
 
     @property
@@ -172,6 +178,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :param default_transaction_type: The default_transaction_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: str
         """
+
         allowed_values = ["AUTHORIZATION", "SALE"]
         if default_transaction_type not in allowed_values:
             raise ValueError(
@@ -199,6 +206,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :param default_payment_type: The default_payment_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: str
         """
+
         allowed_values = ["CREDIT_CARD", "ECHECK"]
         if default_payment_type not in allowed_values:
             raise ValueError(
@@ -227,6 +235,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :type: str
         """
 
+
+
         self._default_transaction_source = default_transaction_source
 
     @property
@@ -247,6 +257,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :param display_retail: The display_retail of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: bool
         """
+
+
 
         self._display_retail = display_retail
 
@@ -269,6 +281,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :type: bool
         """
 
+
+
         self._display_moto = display_moto
 
     @property
@@ -289,6 +303,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
         :param display_internet: The display_internet of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: bool
         """
+
+
 
         self._display_internet = display_internet
 

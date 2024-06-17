@@ -71,6 +71,8 @@ class PtsV1TransactionBatchesGet400Response(object):
         :type: PtsV1TransactionBatchesGet400ResponseErrorInformation
         """
 
+
+
         self._error_information = error_information
 
     @property
@@ -93,6 +95,8 @@ class PtsV1TransactionBatchesGet400Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV1TransactionBatchesGet400Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 

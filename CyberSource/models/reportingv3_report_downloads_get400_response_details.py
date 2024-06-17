@@ -73,6 +73,8 @@ class Reportingv3ReportDownloadsGet400ResponseDetails(object):
         :type: str
         """
 
+
+
         self._field = field
 
     @property
@@ -95,6 +97,8 @@ class Reportingv3ReportDownloadsGet400ResponseDetails(object):
         :param reason: The reason of this Reportingv3ReportDownloadsGet400ResponseDetails.
         :type: str
         """
+
+
 
         self._reason = reason
 

@@ -91,6 +91,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :type: Ptsv2paymentsidcapturesOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -111,6 +113,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :param bill_to: The bill_to of this Ptsv2paymentsidrefundsOrderInformation.
         :type: Ptsv2paymentsidcapturesOrderInformationBillTo
         """
+
+
 
         self._bill_to = bill_to
 
@@ -133,6 +137,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :type: Ptsv2paymentsidcapturesOrderInformationShipTo
         """
 
+
+
         self._ship_to = ship_to
 
     @property
@@ -153,6 +159,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :param line_items: The line_items of this Ptsv2paymentsidrefundsOrderInformation.
         :type: list[Ptsv2paymentsidrefundsOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 
@@ -175,6 +183,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :type: Ptsv2paymentsidcapturesOrderInformationInvoiceDetails
         """
 
+
+
         self._invoice_details = invoice_details
 
     @property
@@ -195,6 +205,8 @@ class Ptsv2paymentsidrefundsOrderInformation(object):
         :param shipping_details: The shipping_details of this Ptsv2paymentsidrefundsOrderInformation.
         :type: Ptsv2paymentsidcapturesOrderInformationShippingDetails
         """
+
+
 
         self._shipping_details = shipping_details
 

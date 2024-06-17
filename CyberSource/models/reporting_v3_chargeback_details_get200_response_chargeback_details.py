@@ -178,6 +178,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._processor_merchant_id = processor_merchant_id
 
     @property
@@ -200,6 +202,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param merchant_name: The merchant_name of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._merchant_name = merchant_name
 
@@ -224,6 +228,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._transaction_reference_number = transaction_reference_number
 
     @property
@@ -246,6 +252,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param merchant_reference_number: The merchant_reference_number of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._merchant_reference_number = merchant_reference_number
 
@@ -270,6 +278,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._nature_of_dispute = nature_of_dispute
 
     @property
@@ -292,6 +302,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param alert_type: The alert_type of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._alert_type = alert_type
 
@@ -316,6 +328,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -338,6 +352,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param sign: The sign of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._sign = sign
 
@@ -362,6 +378,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._action = action
 
     @property
@@ -384,6 +402,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param card_type: The card_type of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._card_type = card_type
 
@@ -408,6 +428,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: datetime
         """
 
+
+
         self._original_settlement_time = original_settlement_time
 
     @property
@@ -430,6 +452,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param tracking_number: The tracking_number of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._tracking_number = tracking_number
 
@@ -454,6 +478,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._currency_code = currency_code
 
     @property
@@ -476,6 +502,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param request_id: The request_id of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._request_id = request_id
 
@@ -500,6 +528,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: datetime
         """
 
+
+
         self._response_due_time = response_due_time
 
     @property
@@ -522,6 +552,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param time: The time of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: datetime
         """
+
+
 
         self._time = time
 
@@ -546,6 +578,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._action_description = action_description
 
     @property
@@ -568,6 +602,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param customer_id: The customer_id of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._customer_id = customer_id
 
@@ -592,6 +628,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._reason_code = reason_code
 
     @property
@@ -614,6 +652,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param representment_cp_time: The representment_cp_time of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: datetime
         """
+
+
 
         self._representment_cp_time = representment_cp_time
 
@@ -638,6 +678,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: str
         """
 
+
+
         self._applications = applications
 
     @property
@@ -661,6 +703,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :type: datetime
         """
 
+
+
         self._event_requested_time = event_requested_time
 
     @property
@@ -683,6 +727,8 @@ class ReportingV3ChargebackDetailsGet200ResponseChargebackDetails(object):
         :param pre_dispute_flag: The pre_dispute_flag of this ReportingV3ChargebackDetailsGet200ResponseChargebackDetails.
         :type: str
         """
+
+
 
         self._pre_dispute_flag = pre_dispute_flag
 

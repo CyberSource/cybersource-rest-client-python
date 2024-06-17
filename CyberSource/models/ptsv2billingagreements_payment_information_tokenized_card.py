@@ -93,6 +93,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._cryptogram = cryptogram
 
     @property
@@ -115,6 +117,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this Ptsv2billingagreementsPaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._expiration_month = expiration_month
 
@@ -139,6 +143,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._expiration_year = expiration_year
 
     @property
@@ -161,6 +167,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :param number: The number of this Ptsv2billingagreementsPaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._number = number
 
@@ -185,6 +193,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._transaction_type = transaction_type
 
     @property
@@ -207,6 +217,8 @@ class Ptsv2billingagreementsPaymentInformationTokenizedCard(object):
         :param type: The type of this Ptsv2billingagreementsPaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._type = type
 

@@ -96,6 +96,8 @@ class GetSubscriptionResponse(object):
         :type: GetAllSubscriptionsResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -118,6 +120,8 @@ class GetSubscriptionResponse(object):
         :param id: The id of this GetSubscriptionResponse.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -142,6 +146,8 @@ class GetSubscriptionResponse(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -162,6 +168,8 @@ class GetSubscriptionResponse(object):
         :param plan_information: The plan_information of this GetSubscriptionResponse.
         :type: GetAllSubscriptionsResponsePlanInformation
         """
+
+
 
         self._plan_information = plan_information
 
@@ -184,6 +192,8 @@ class GetSubscriptionResponse(object):
         :type: GetAllSubscriptionsResponseSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -205,6 +215,8 @@ class GetSubscriptionResponse(object):
         :type: GetAllSubscriptionsResponsePaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -225,6 +237,8 @@ class GetSubscriptionResponse(object):
         :param order_information: The order_information of this GetSubscriptionResponse.
         :type: GetAllSubscriptionsResponseOrderInformation
         """
+
+
 
         self._order_information = order_information
 

@@ -81,6 +81,8 @@ class MitVoidRequest(object):
         :type: Ptsv2paymentsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -101,6 +103,8 @@ class MitVoidRequest(object):
         :param payment_information: The payment_information of this MitVoidRequest.
         :type: Ptsv2paymentsidvoidsPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -123,6 +127,8 @@ class MitVoidRequest(object):
         :type: Ptsv2paymentsidvoidsOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -143,6 +149,8 @@ class MitVoidRequest(object):
         :param processing_information: The processing_information of this MitVoidRequest.
         :type: Ptsv2voidsProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 

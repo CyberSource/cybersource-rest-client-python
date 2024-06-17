@@ -78,6 +78,8 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         :type: bool
         """
 
+
+
         self._gift_wrap = gift_wrap
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         :type: str
         """
 
+
+
         self._shipping_method = shipping_method
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2paymentsOrderInformationShippingDetails(object):
         :param ship_from_postal_code: The ship_from_postal_code of this Ptsv2paymentsOrderInformationShippingDetails.
         :type: str
         """
+
+
 
         self._ship_from_postal_code = ship_from_postal_code
 

@@ -73,6 +73,8 @@ class Ptsv2paymentsPaymentInformationEWallet(object):
         :type: str
         """
 
+
+
         self._account_id = account_id
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsPaymentInformationEWallet(object):
         :param funding_source: The funding_source of this Ptsv2paymentsPaymentInformationEWallet.
         :type: str
         """
+
+
 
         self._funding_source = funding_source
 

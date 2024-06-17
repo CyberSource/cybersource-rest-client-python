@@ -73,6 +73,8 @@ class InlineResponse2006Links(object):
         :type: str
         """
 
+
+
         self._rel = rel
 
     @property
@@ -93,6 +95,8 @@ class InlineResponse2006Links(object):
         :param href: The href of this InlineResponse2006Links.
         :type: str
         """
+
+
 
         self._href = href
 

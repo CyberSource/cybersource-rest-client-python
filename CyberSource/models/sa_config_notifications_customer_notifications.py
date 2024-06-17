@@ -98,6 +98,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :type: bool
         """
 
+
+
         self._custom_receipt_page_enabled = custom_receipt_page_enabled
 
     @property
@@ -120,6 +122,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :param receipt_email_address: The receipt_email_address of this SAConfigNotificationsCustomerNotifications.
         :type: str
         """
+
+
 
         self._receipt_email_address = receipt_email_address
 
@@ -144,6 +148,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :type: bool
         """
 
+
+
         self._customer_receipt_email_enabled = customer_receipt_email_enabled
 
     @property
@@ -166,6 +172,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :param custom_cancel_page: The custom_cancel_page of this SAConfigNotificationsCustomerNotifications.
         :type: str
         """
+
+
 
         self._custom_cancel_page = custom_cancel_page
 
@@ -190,6 +198,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :type: str
         """
 
+
+
         self._custom_receipt_page = custom_receipt_page
 
     @property
@@ -213,6 +223,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :type: bool
         """
 
+
+
         self._custom_cancel_page_enabled = custom_cancel_page_enabled
 
     @property
@@ -235,6 +247,8 @@ class SAConfigNotificationsCustomerNotifications(object):
         :param notification_receipt_email_enabled: The notification_receipt_email_enabled of this SAConfigNotificationsCustomerNotifications.
         :type: bool
         """
+
+
 
         self._notification_receipt_email_enabled = notification_receipt_email_enabled
 

@@ -68,6 +68,8 @@ class PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._identifier = identifier
 
     def to_dict(self):

@@ -76,6 +76,8 @@ class Ptsv2payoutsOrderInformation(object):
         :type: Ptsv2payoutsOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -96,6 +98,8 @@ class Ptsv2payoutsOrderInformation(object):
         :param bill_to: The bill_to of this Ptsv2payoutsOrderInformation.
         :type: Ptsv2payoutsOrderInformationBillTo
         """
+
+
 
         self._bill_to = bill_to
 
@@ -119,6 +123,8 @@ class Ptsv2payoutsOrderInformation(object):
         :param is_cryptocurrency_purchase: The is_cryptocurrency_purchase of this Ptsv2payoutsOrderInformation.
         :type: str
         """
+
+
 
         self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
 

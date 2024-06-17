@@ -163,6 +163,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_code = product_code
 
     @property
@@ -185,6 +187,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param product_name: The product_name of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._product_name = product_name
 
@@ -209,6 +213,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_sku = product_sku
 
     @property
@@ -231,6 +237,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param quantity: The quantity of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: int
         """
+
+
 
         self._quantity = quantity
 
@@ -255,6 +263,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._unit_price = unit_price
 
     @property
@@ -277,6 +287,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param unit_of_measure: The unit_of_measure of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._unit_of_measure = unit_of_measure
 
@@ -301,6 +313,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -323,6 +337,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._tax_amount = tax_amount
 
@@ -347,6 +363,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._tax_rate = tax_rate
 
     @property
@@ -369,6 +387,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param tax_applied_after_discount: The tax_applied_after_discount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._tax_applied_after_discount = tax_applied_after_discount
 
@@ -393,6 +413,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._tax_status_indicator = tax_status_indicator
 
     @property
@@ -415,6 +437,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._tax_type_code = tax_type_code
 
@@ -439,6 +463,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: bool
         """
 
+
+
         self._amount_includes_tax = amount_includes_tax
 
     @property
@@ -461,6 +487,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param type_of_supply: The type_of_supply of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._type_of_supply = type_of_supply
 
@@ -485,6 +513,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._commodity_code = commodity_code
 
     @property
@@ -507,6 +537,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param discount_amount: The discount_amount of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._discount_amount = discount_amount
 
@@ -531,6 +563,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: bool
         """
 
+
+
         self._discount_applied = discount_applied
 
     @property
@@ -553,6 +587,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param discount_rate: The discount_rate of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._discount_rate = discount_rate
 
@@ -577,6 +613,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._invoice_number = invoice_number
 
     @property
@@ -597,6 +635,8 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems(object):
         :param tax_details: The tax_details of this Ptsv2paymentsidrefundsOrderInformationLineItems.
         :type: list[Ptsv2paymentsOrderInformationAmountDetailsTaxDetails]
         """
+
+
 
         self._tax_details = tax_details
 

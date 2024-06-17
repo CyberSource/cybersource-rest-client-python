@@ -118,6 +118,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: str
         """
 
+
+
         self._end_date = end_date
 
     @property
@@ -140,6 +142,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param frequency: The frequency of this Ptsv2paymentsRecurringPaymentInformation.
         :type: int
         """
+
+
 
         self._frequency = frequency
 
@@ -164,6 +168,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: int
         """
 
+
+
         self._number_of_payments = number_of_payments
 
     @property
@@ -186,6 +192,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param original_purchase_date: The original_purchase_date of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
+
+
 
         self._original_purchase_date = original_purchase_date
 
@@ -210,6 +218,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: int
         """
 
+
+
         self._sequence_number = sequence_number
 
     @property
@@ -232,6 +242,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param type: The type of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -256,6 +268,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: str
         """
 
+
+
         self._occurrence = occurrence
 
     @property
@@ -278,6 +292,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param validation_indicator: The validation_indicator of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
+
+
 
         self._validation_indicator = validation_indicator
 
@@ -302,6 +318,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: str
         """
 
+
+
         self._amount_type = amount_type
 
     @property
@@ -325,6 +343,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :type: str
         """
 
+
+
         self._maximum_amount = maximum_amount
 
     @property
@@ -347,6 +367,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         :param reference_number: The reference_number of this Ptsv2paymentsRecurringPaymentInformation.
         :type: str
         """
+
+
 
         self._reference_number = reference_number
 

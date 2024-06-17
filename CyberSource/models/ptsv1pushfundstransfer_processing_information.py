@@ -102,6 +102,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :type: str
         """
 
+
+
         self._business_application_id = business_application_id
 
     @property
@@ -124,8 +126,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
         """
-        if commerce_indicator is None:
-            raise ValueError("Invalid value for `commerce_indicator`, must not be `None`")
+
+
 
         self._commerce_indicator = commerce_indicator
 
@@ -150,6 +152,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :type: str
         """
 
+
+
         self._network_routing_order = network_routing_order
 
     @property
@@ -170,6 +174,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :param payouts_options: The payouts_options of this Ptsv1pushfundstransferProcessingInformation.
         :type: Ptsv1pushfundstransferProcessingInformationPayoutsOptions
         """
+
+
 
         self._payouts_options = payouts_options
 
@@ -194,6 +200,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :type: str
         """
 
+
+
         self._purpose_of_payment = purpose_of_payment
 
     @property
@@ -217,6 +225,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -237,6 +247,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :param recurring_options: The recurring_options of this Ptsv1pushfundstransferProcessingInformation.
         :type: Ptsv1pushfundstransferProcessingInformationRecurringOptions
         """
+
+
 
         self._recurring_options = recurring_options
 
@@ -260,6 +272,8 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         :param transaction_reason: The transaction_reason of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
         """
+
+
 
         self._transaction_reason = transaction_reason
 

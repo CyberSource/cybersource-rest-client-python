@@ -66,6 +66,8 @@ class Ptsv2paymentsidcapturesPaymentInformationPaymentType(object):
         :type: Ptsv2paymentsidcapturesPaymentInformationPaymentTypeMethod
         """
 
+
+
         self._method = method
 
     def to_dict(self):

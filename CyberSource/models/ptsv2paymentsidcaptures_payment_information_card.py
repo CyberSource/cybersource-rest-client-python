@@ -73,6 +73,8 @@ class Ptsv2paymentsidcapturesPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._source_account_type = source_account_type
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsidcapturesPaymentInformationCard(object):
         :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsidcapturesPaymentInformationCard.
         :type: str
         """
+
+
 
         self._source_account_type_details = source_account_type_details
 

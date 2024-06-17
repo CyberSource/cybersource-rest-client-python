@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201Response2OrderInformation(object):
         :type: PtsV2PaymentsPost201Response2OrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     def to_dict(self):

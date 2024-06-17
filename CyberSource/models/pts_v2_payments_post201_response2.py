@@ -111,6 +111,8 @@ class PtsV2PaymentsPost201Response2(object):
         :type: PtsV2PaymentsPost201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -133,6 +135,8 @@ class PtsV2PaymentsPost201Response2(object):
         :param id: The id of this PtsV2PaymentsPost201Response2.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -157,6 +161,8 @@ class PtsV2PaymentsPost201Response2(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -179,6 +185,8 @@ class PtsV2PaymentsPost201Response2(object):
         :param status: The status of this PtsV2PaymentsPost201Response2.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -203,6 +211,8 @@ class PtsV2PaymentsPost201Response2(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -223,6 +233,8 @@ class PtsV2PaymentsPost201Response2(object):
         :param error_information: The error_information of this PtsV2PaymentsPost201Response2.
         :type: PtsV2PaymentsPost201ResponseErrorInformation
         """
+
+
 
         self._error_information = error_information
 
@@ -245,6 +257,8 @@ class PtsV2PaymentsPost201Response2(object):
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -265,6 +279,8 @@ class PtsV2PaymentsPost201Response2(object):
         :param processor_information: The processor_information of this PtsV2PaymentsPost201Response2.
         :type: PtsV2PaymentsPost201Response2ProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -287,6 +303,8 @@ class PtsV2PaymentsPost201Response2(object):
         :type: PtsV2PaymentsPost201Response2PaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -307,6 +325,8 @@ class PtsV2PaymentsPost201Response2(object):
         :param order_information: The order_information of this PtsV2PaymentsPost201Response2.
         :type: PtsV2PaymentsPost201Response2OrderInformation
         """
+
+
 
         self._order_information = order_information
 

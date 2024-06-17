@@ -88,6 +88,8 @@ class PtsV2CreateBillingAgreementPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._approval_code = approval_code
 
     @property
@@ -110,6 +112,8 @@ class PtsV2CreateBillingAgreementPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2CreateBillingAgreementPost201ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._response_code = response_code
 
@@ -134,6 +138,8 @@ class PtsV2CreateBillingAgreementPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -157,6 +163,8 @@ class PtsV2CreateBillingAgreementPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_details = response_details
 
     @property
@@ -179,6 +187,8 @@ class PtsV2CreateBillingAgreementPost201ResponseProcessorInformation(object):
         :param reason_code: The reason_code of this PtsV2CreateBillingAgreementPost201ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._reason_code = reason_code
 

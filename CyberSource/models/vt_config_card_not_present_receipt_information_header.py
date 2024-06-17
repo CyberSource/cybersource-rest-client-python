@@ -66,6 +66,8 @@ class VTConfigCardNotPresentReceiptInformationHeader(object):
         :type: str
         """
 
+
+
         self._virtual_terminal_receipt_header = virtual_terminal_receipt_header
 
     def to_dict(self):

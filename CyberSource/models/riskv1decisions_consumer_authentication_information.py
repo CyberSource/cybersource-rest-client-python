@@ -271,6 +271,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: Riskv1decisionsConsumerAuthenticationInformationStrongAuthentication
         """
 
+
+
         self._strong_authentication = strong_authentication
 
     @property
@@ -293,6 +295,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param authentication_type: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_type = authentication_type
 
@@ -317,6 +321,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._acs_window_size = acs_window_size
 
     @property
@@ -339,6 +345,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param alternate_authentication_data: The alternate_authentication_data of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._alternate_authentication_data = alternate_authentication_data
 
@@ -363,6 +371,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._alternate_authentication_date = alternate_authentication_date
 
     @property
@@ -385,6 +395,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param alternate_authentication_method: The alternate_authentication_method of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._alternate_authentication_method = alternate_authentication_method
 
@@ -409,6 +421,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_date = authentication_date
 
     @property
@@ -431,6 +445,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -455,6 +471,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: int
         """
 
+
+
         self._transaction_flow_indicator = transaction_flow_indicator
 
     @property
@@ -477,6 +495,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -501,6 +521,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._challenge_code = challenge_code
 
     @property
@@ -523,6 +545,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param challenge_status: The challenge_status of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._challenge_status = challenge_status
 
@@ -547,6 +571,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._customer_card_alias = customer_card_alias
 
     @property
@@ -569,6 +595,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -593,6 +621,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._decoupled_authentication_max_time = decoupled_authentication_max_time
 
     @property
@@ -615,6 +645,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param default_card: The default_card of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: bool
         """
+
+
 
         self._default_card = default_card
 
@@ -639,6 +671,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._device_channel = device_channel
 
     @property
@@ -661,6 +695,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param installment_total_count: The installment_total_count of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: int
         """
+
+
 
         self._installment_total_count = installment_total_count
 
@@ -685,6 +721,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._merchant_fraud_rate = merchant_fraud_rate
 
     @property
@@ -707,6 +745,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param marketing_opt_in: The marketing_opt_in of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: bool
         """
+
+
 
         self._marketing_opt_in = marketing_opt_in
 
@@ -731,6 +771,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._marketing_source = marketing_source
 
     @property
@@ -753,6 +795,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param mcc: The mcc of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._mcc = mcc
 
@@ -777,6 +821,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: int
         """
 
+
+
         self._merchant_score = merchant_score
 
     @property
@@ -799,6 +845,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param message_category: The message_category of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._message_category = message_category
 
@@ -823,6 +871,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._npa_code = npa_code
 
     @property
@@ -845,6 +895,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param override_payment_method: The override_payment_method of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._override_payment_method = override_payment_method
 
@@ -869,6 +921,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._override_country_code = override_country_code
 
     @property
@@ -891,6 +945,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_data: The prior_authentication_data of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._prior_authentication_data = prior_authentication_data
 
@@ -915,6 +971,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._prior_authentication_method = prior_authentication_method
 
     @property
@@ -937,6 +995,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param prior_authentication_reference_id: The prior_authentication_reference_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._prior_authentication_reference_id = prior_authentication_reference_id
 
@@ -961,6 +1021,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._prior_authentication_time = prior_authentication_time
 
     @property
@@ -983,6 +1045,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param product_code: The product_code of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._product_code = product_code
 
@@ -1007,6 +1071,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._return_url = return_url
 
     @property
@@ -1029,6 +1095,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param requestor_id: The requestor_id of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._requestor_id = requestor_id
 
@@ -1053,6 +1121,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._requestor_initiated_authentication_indicator = requestor_initiated_authentication_indicator
 
     @property
@@ -1075,6 +1145,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param requestor_name: The requestor_name of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._requestor_name = requestor_name
 
@@ -1099,6 +1171,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._reference_id = reference_id
 
     @property
@@ -1121,6 +1195,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param sdk_max_timeout: The sdk_max_timeout of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._sdk_max_timeout = sdk_max_timeout
 
@@ -1145,6 +1221,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
     @property
@@ -1167,6 +1245,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param transaction_mode: The transaction_mode of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._transaction_mode = transaction_mode
 
@@ -1191,6 +1271,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._white_list_status = white_list_status
 
     @property
@@ -1213,6 +1295,8 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         :param score_request: The score_request of this Riskv1decisionsConsumerAuthenticationInformation.
         :type: int
         """
+
+
 
         self._score_request = score_request
 

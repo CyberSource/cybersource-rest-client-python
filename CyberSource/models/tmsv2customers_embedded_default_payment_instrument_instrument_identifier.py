@@ -68,6 +68,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier(object)
         :type: str
         """
 
+
+
         self._id = id
 
     def to_dict(self):

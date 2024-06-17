@@ -83,6 +83,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -105,6 +107,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         :param country: The country of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -129,6 +133,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         :type: str
         """
 
+
+
         self._bin_length = bin_length
 
     @property
@@ -151,6 +157,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 

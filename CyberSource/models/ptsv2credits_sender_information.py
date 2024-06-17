@@ -93,6 +93,8 @@ class Ptsv2creditsSenderInformation(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -115,6 +117,8 @@ class Ptsv2creditsSenderInformation(object):
         :param last_name: The last_name of this Ptsv2creditsSenderInformation.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -139,6 +143,8 @@ class Ptsv2creditsSenderInformation(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -161,6 +167,8 @@ class Ptsv2creditsSenderInformation(object):
         :param locality: The locality of this Ptsv2creditsSenderInformation.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -185,6 +193,8 @@ class Ptsv2creditsSenderInformation(object):
         :type: str
         """
 
+
+
         self._country_code = country_code
 
     @property
@@ -205,6 +215,8 @@ class Ptsv2creditsSenderInformation(object):
         :param account: The account of this Ptsv2creditsSenderInformation.
         :type: Ptsv2creditsSenderInformationAccount
         """
+
+
 
         self._account = account
 

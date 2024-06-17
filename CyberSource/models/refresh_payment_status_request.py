@@ -81,6 +81,8 @@ class RefreshPaymentStatusRequest(object):
         :type: Ptsv2refreshpaymentstatusidPaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -101,6 +103,8 @@ class RefreshPaymentStatusRequest(object):
         :param client_reference_information: The client_reference_information of this RefreshPaymentStatusRequest.
         :type: Ptsv2refreshpaymentstatusidClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -123,6 +127,8 @@ class RefreshPaymentStatusRequest(object):
         :type: Ptsv2refreshpaymentstatusidAgreementInformation
         """
 
+
+
         self._agreement_information = agreement_information
 
     @property
@@ -143,6 +149,8 @@ class RefreshPaymentStatusRequest(object):
         :param processing_information: The processing_information of this RefreshPaymentStatusRequest.
         :type: Ptsv2refreshpaymentstatusidProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 

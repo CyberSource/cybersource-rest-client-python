@@ -98,6 +98,8 @@ class SAConfigService(object):
         :type: bool
         """
 
+
+
         self._decision_manager_verbose_enabled = decision_manager_verbose_enabled
 
     @property
@@ -120,6 +122,8 @@ class SAConfigService(object):
         :param declined_retry_limit: The declined_retry_limit of this SAConfigService.
         :type: float
         """
+
+
 
         self._declined_retry_limit = declined_retry_limit
 
@@ -144,6 +148,8 @@ class SAConfigService(object):
         :type: bool
         """
 
+
+
         self._decision_manager_enabled = decision_manager_enabled
 
     @property
@@ -166,6 +172,8 @@ class SAConfigService(object):
         :param tokenization_enabled: The tokenization_enabled of this SAConfigService.
         :type: bool
         """
+
+
 
         self._tokenization_enabled = tokenization_enabled
 
@@ -190,6 +198,8 @@ class SAConfigService(object):
         :type: bool
         """
 
+
+
         self._reverse_auth_on_address_verification_system_failure = reverse_auth_on_address_verification_system_failure
 
     @property
@@ -213,6 +223,8 @@ class SAConfigService(object):
         :type: bool
         """
 
+
+
         self._device_fingerprint_enabled = device_fingerprint_enabled
 
     @property
@@ -235,6 +247,8 @@ class SAConfigService(object):
         :param reverse_auth_on_card_verification_number_failure: The reverse_auth_on_card_verification_number_failure of this SAConfigService.
         :type: bool
         """
+
+
 
         self._reverse_auth_on_card_verification_number_failure = reverse_auth_on_card_verification_number_failure
 

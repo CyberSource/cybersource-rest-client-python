@@ -125,6 +125,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_card_verification_value: The display_card_verification_value of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
+
         allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
         if not set(display_card_verification_value).issubset(set(allowed_values)):
             raise ValueError(
@@ -153,6 +154,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param require_card_verification_value: The require_card_verification_value of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
+
         allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
         if not set(require_card_verification_value).issubset(set(allowed_values)):
             raise ValueError(
@@ -181,6 +183,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param accepted_card_types: The accepted_card_types of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
+
         allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
         if not set(accepted_card_types).issubset(set(allowed_values)):
             raise ValueError(
@@ -210,6 +213,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :type: bool
         """
 
+
+
         self._display_credit_cards = display_credit_cards
 
     @property
@@ -230,6 +235,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_echecks: The display_echecks of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: bool
         """
+
+
 
         self._display_echecks = display_echecks
 
@@ -252,6 +259,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :type: bool
         """
 
+
+
         self._display_debt_indicator = display_debt_indicator
 
     @property
@@ -272,6 +281,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_bill_payment: The display_bill_payment of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: bool
         """
+
+
 
         self._display_bill_payment = display_bill_payment
 
@@ -294,6 +305,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :type: bool
         """
 
+
+
         self._enable_echecks = enable_echecks
 
     @property
@@ -314,6 +327,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_ignore_e_check_avs_checkbox: The display_ignore_e_check_avs_checkbox of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: bool
         """
+
+
 
         self._display_ignore_e_check_avs_checkbox = display_ignore_e_check_avs_checkbox
 
@@ -336,6 +351,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :type: bool
         """
 
+
+
         self._first_name_required = first_name_required
 
     @property
@@ -356,6 +373,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param last_name_required: The last_name_required of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: bool
         """
+
+
 
         self._last_name_required = last_name_required
 
@@ -378,6 +397,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :type: bool
         """
 
+
+
         self._display_first_name = display_first_name
 
     @property
@@ -398,6 +419,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_last_name: The display_last_name of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: bool
         """
+
+
 
         self._display_last_name = display_last_name
 

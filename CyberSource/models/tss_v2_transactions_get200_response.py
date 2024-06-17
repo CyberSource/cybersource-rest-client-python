@@ -213,6 +213,8 @@ class TssV2TransactionsGet200Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -235,6 +237,8 @@ class TssV2TransactionsGet200Response(object):
         :param root_id: The root_id of this TssV2TransactionsGet200Response.
         :type: str
         """
+
+
 
         self._root_id = root_id
 
@@ -259,6 +263,8 @@ class TssV2TransactionsGet200Response(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -281,6 +287,8 @@ class TssV2TransactionsGet200Response(object):
         :param merchant_id: The merchant_id of this TssV2TransactionsGet200Response.
         :type: str
         """
+
+
 
         self._merchant_id = merchant_id
 
@@ -305,6 +313,8 @@ class TssV2TransactionsGet200Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -328,6 +338,8 @@ class TssV2TransactionsGet200Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -348,6 +360,8 @@ class TssV2TransactionsGet200Response(object):
         :param application_information: The application_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseApplicationInformation
         """
+
+
 
         self._application_information = application_information
 
@@ -370,6 +384,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseBuyerInformation
         """
 
+
+
         self._buyer_information = buyer_information
 
     @property
@@ -390,6 +406,8 @@ class TssV2TransactionsGet200Response(object):
         :param client_reference_information: The client_reference_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -412,6 +430,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseConsumerAuthenticationInformation
         """
 
+
+
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -432,6 +452,8 @@ class TssV2TransactionsGet200Response(object):
         :param device_information: The device_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseDeviceInformation
         """
+
+
 
         self._device_information = device_information
 
@@ -454,6 +476,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseErrorInformation
         """
 
+
+
         self._error_information = error_information
 
     @property
@@ -474,6 +498,8 @@ class TssV2TransactionsGet200Response(object):
         :param installment_information: The installment_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseInstallmentInformation
         """
+
+
 
         self._installment_information = installment_information
 
@@ -496,6 +522,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseFraudMarkingInformation
         """
 
+
+
         self._fraud_marking_information = fraud_marking_information
 
     @property
@@ -516,6 +544,8 @@ class TssV2TransactionsGet200Response(object):
         :param health_care_information: The health_care_information of this TssV2TransactionsGet200Response.
         :type: Ptsv2paymentsHealthCareInformation
         """
+
+
 
         self._health_care_information = health_care_information
 
@@ -540,6 +570,8 @@ class TssV2TransactionsGet200Response(object):
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
+
+
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -560,6 +592,8 @@ class TssV2TransactionsGet200Response(object):
         :param merchant_information: The merchant_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseMerchantInformation
         """
+
+
 
         self._merchant_information = merchant_information
 
@@ -582,6 +616,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -602,6 +638,8 @@ class TssV2TransactionsGet200Response(object):
         :param payment_information: The payment_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponsePaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -624,6 +662,8 @@ class TssV2TransactionsGet200Response(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
         """
 
+
+
         self._payment_insights_information = payment_insights_information
 
     @property
@@ -644,6 +684,8 @@ class TssV2TransactionsGet200Response(object):
         :param payout_options: The payout_options of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponsePayoutOptions
         """
+
+
 
         self._payout_options = payout_options
 
@@ -666,6 +708,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseUnscheduledPaymentInformation
         """
 
+
+
         self._unscheduled_payment_information = unscheduled_payment_information
 
     @property
@@ -686,6 +730,8 @@ class TssV2TransactionsGet200Response(object):
         :param processing_information: The processing_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -708,6 +754,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -728,6 +776,8 @@ class TssV2TransactionsGet200Response(object):
         :param recurring_payment_information: The recurring_payment_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseRecurringPaymentInformation
         """
+
+
 
         self._recurring_payment_information = recurring_payment_information
 
@@ -750,6 +800,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponsePointOfSaleInformation
         """
 
+
+
         self._point_of_sale_information = point_of_sale_information
 
     @property
@@ -770,6 +822,8 @@ class TssV2TransactionsGet200Response(object):
         :param risk_information: The risk_information of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseRiskInformation
         """
+
+
 
         self._risk_information = risk_information
 
@@ -792,6 +846,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseSenderInformation
         """
 
+
+
         self._sender_information = sender_information
 
     @property
@@ -813,6 +869,8 @@ class TssV2TransactionsGet200Response(object):
         :type: TssV2TransactionsGet200ResponseTokenInformation
         """
 
+
+
         self._token_information = token_information
 
     @property
@@ -833,6 +891,8 @@ class TssV2TransactionsGet200Response(object):
         :param links: The links of this TssV2TransactionsGet200Response.
         :type: TssV2TransactionsGet200ResponseLinks
         """
+
+
 
         self._links = links
 

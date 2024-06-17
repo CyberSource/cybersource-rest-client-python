@@ -98,6 +98,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :type: bool
         """
 
+
+
         self._card_verification_number_supported = card_verification_number_supported
 
     @property
@@ -120,6 +122,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :param card_verification_number_display: The card_verification_number_display of this SAConfigPaymentTypesCardTypesDiscover.
         :type: bool
         """
+
+
 
         self._card_verification_number_display = card_verification_number_display
 
@@ -144,6 +148,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :type: bool
         """
 
+
+
         self._payer_authentication_supported = payer_authentication_supported
 
     @property
@@ -167,6 +173,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :type: list[str]
         """
 
+
+
         self._supported_currencies = supported_currencies
 
     @property
@@ -187,6 +195,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :param method: The method of this SAConfigPaymentTypesCardTypesDiscover.
         :type: str
         """
+
+
 
         self._method = method
 
@@ -209,6 +219,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :type: bool
         """
 
+
+
         self._card_verification_number_required = card_verification_number_required
 
     @property
@@ -229,6 +241,8 @@ class SAConfigPaymentTypesCardTypesDiscover(object):
         :param payer_authentication_enabled: The payer_authentication_enabled of this SAConfigPaymentTypesCardTypesDiscover.
         :type: bool
         """
+
+
 
         self._payer_authentication_enabled = payer_authentication_enabled
 

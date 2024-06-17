@@ -293,6 +293,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._access_token = access_token
 
     @property
@@ -315,6 +317,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_rendering_type: The acs_rendering_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._acs_rendering_type = acs_rendering_type
 
@@ -339,6 +343,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._acs_transaction_id = acs_transaction_id
 
     @property
@@ -361,6 +367,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_url: The acs_url of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._acs_url = acs_url
 
@@ -385,6 +393,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_path = authentication_path
 
     @property
@@ -407,6 +417,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param authorization_payload: The authorization_payload of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authorization_payload = authorization_payload
 
@@ -431,6 +443,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_type = authentication_type
 
     @property
@@ -453,6 +467,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param authentication_transaction_id: The authentication_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_transaction_id = authentication_transaction_id
 
@@ -477,6 +493,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_transaction_context_id = authentication_transaction_context_id
 
     @property
@@ -499,6 +517,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param validity_period: The validity_period of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: int
         """
+
+
 
         self._validity_period = validity_period
 
@@ -523,6 +543,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._cardholder_message = cardholder_message
 
     @property
@@ -545,6 +567,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._cavv = cavv
 
@@ -569,6 +593,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._cavv_algorithm = cavv_algorithm
 
     @property
@@ -591,6 +617,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -615,6 +643,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._challenge_required = challenge_required
 
     @property
@@ -637,6 +667,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -661,6 +693,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._directory_server_error_code = directory_server_error_code
 
     @property
@@ -683,6 +717,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_error_description: The directory_server_error_description of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._directory_server_error_description = directory_server_error_description
 
@@ -707,6 +743,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._ecommerce_indicator = ecommerce_indicator
 
     @property
@@ -729,6 +767,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param eci: The eci of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._eci = eci
 
@@ -753,6 +793,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._eci_raw = eci_raw
 
     @property
@@ -775,6 +817,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param effective_authentication_type: The effective_authentication_type of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._effective_authentication_type = effective_authentication_type
 
@@ -799,6 +843,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._exemption_data_raw = exemption_data_raw
 
     @property
@@ -819,6 +865,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param ivr: The ivr of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr
         """
+
+
 
         self._ivr = ivr
 
@@ -843,6 +891,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._network_score = network_score
 
     @property
@@ -865,6 +915,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param pareq: The pareq of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._pareq = pareq
 
@@ -889,6 +941,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._pares_status = pares_status
 
     @property
@@ -911,6 +965,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param proof_xml: The proof_xml of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._proof_xml = proof_xml
 
@@ -935,6 +991,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._proxy_pan = proxy_pan
 
     @property
@@ -957,6 +1015,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param sdk_transaction_id: The sdk_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._sdk_transaction_id = sdk_transaction_id
 
@@ -981,6 +1041,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._signed_pares_status_reason = signed_pares_status_reason
 
     @property
@@ -1003,6 +1065,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param specification_version: The specification_version of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._specification_version = specification_version
 
@@ -1027,6 +1091,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._step_up_url = step_up_url
 
     @property
@@ -1049,6 +1115,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
@@ -1073,6 +1141,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._ucaf_authentication_data = ucaf_authentication_data
 
     @property
@@ -1095,6 +1165,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
@@ -1119,6 +1191,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._veres_enrolled = veres_enrolled
 
     @property
@@ -1141,6 +1215,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param white_list_status_source: The white_list_status_source of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._white_list_status_source = white_list_status_source
 
@@ -1165,6 +1241,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._xid = xid
 
     @property
@@ -1187,6 +1265,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_transaction_id: The directory_server_transaction_id of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._directory_server_transaction_id = directory_server_transaction_id
 
@@ -1211,6 +1291,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._acs_operator_id = acs_operator_id
 
     @property
@@ -1233,6 +1315,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_reference_number: The acs_reference_number of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._acs_reference_number = acs_reference_number
 
@@ -1257,6 +1341,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._idci_decision = idci_decision
 
     @property
@@ -1279,6 +1365,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param idci_reason_code1: The idci_reason_code1 of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._idci_reason_code1 = idci_reason_code1
 
@@ -1303,6 +1391,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._idci_reason_code2 = idci_reason_code2
 
     @property
@@ -1325,6 +1415,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation(object):
         :param idci_score: The idci_score of this RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation.
         :type: int
         """
+
+
 
         self._idci_score = idci_score
 

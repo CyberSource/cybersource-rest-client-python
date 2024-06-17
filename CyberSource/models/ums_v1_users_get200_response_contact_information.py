@@ -81,6 +81,8 @@ class UmsV1UsersGet200ResponseContactInformation(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -101,6 +103,8 @@ class UmsV1UsersGet200ResponseContactInformation(object):
         :param phone_number: The phone_number of this UmsV1UsersGet200ResponseContactInformation.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 
@@ -123,6 +127,8 @@ class UmsV1UsersGet200ResponseContactInformation(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -143,6 +149,8 @@ class UmsV1UsersGet200ResponseContactInformation(object):
         :param last_name: The last_name of this UmsV1UsersGet200ResponseContactInformation.
         :type: str
         """
+
+
 
         self._last_name = last_name
 

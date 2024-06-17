@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
         :type: str
         """
 
+
+
         self._result_code = result_code
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCardVerification(object):
         :param result_code_raw: The result_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationCardVerification.
         :type: str
         """
+
+
 
         self._result_code_raw = result_code_raw
 

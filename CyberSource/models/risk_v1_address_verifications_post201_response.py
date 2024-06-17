@@ -106,6 +106,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -128,6 +130,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :param id: The id of this RiskV1AddressVerificationsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -152,6 +156,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -174,6 +180,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :param submit_time_local: The submit_time_local of this RiskV1AddressVerificationsPost201Response.
         :type: str
         """
+
+
 
         self._submit_time_local = submit_time_local
 
@@ -198,6 +206,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -221,6 +231,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -241,6 +253,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :param client_reference_information: The client_reference_information of this RiskV1AddressVerificationsPost201Response.
         :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -263,6 +277,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :type: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation
         """
 
+
+
         self._address_verification_information = address_verification_information
 
     @property
@@ -283,6 +299,8 @@ class RiskV1AddressVerificationsPost201Response(object):
         :param error_information: The error_information of this RiskV1AddressVerificationsPost201Response.
         :type: RiskV1AddressVerificationsPost201ResponseErrorInformation
         """
+
+
 
         self._error_information = error_information
 

@@ -66,6 +66,8 @@ class PaymentsProductsDigitalPayments(object):
         :type: PaymentsProductsDigitalPaymentsSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     def to_dict(self):

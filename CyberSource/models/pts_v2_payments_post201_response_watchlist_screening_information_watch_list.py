@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList(object)
         :type: list[PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches]
         """
 
+
+
         self._matches = matches
 
     def to_dict(self):

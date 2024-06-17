@@ -73,6 +73,8 @@ class Ptsv2billingagreementsidAgreementInformation(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -93,6 +95,8 @@ class Ptsv2billingagreementsidAgreementInformation(object):
         :param e_sign_indicator: The e_sign_indicator of this Ptsv2billingagreementsidAgreementInformation.
         :type: str
         """
+
+
 
         self._e_sign_indicator = e_sign_indicator
 

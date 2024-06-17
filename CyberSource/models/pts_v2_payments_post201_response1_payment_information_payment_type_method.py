@@ -68,6 +68,8 @@ class PtsV2PaymentsPost201Response1PaymentInformationPaymentTypeMethod(object):
         :type: str
         """
 
+
+
         self._type = type
 
     def to_dict(self):

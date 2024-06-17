@@ -73,6 +73,8 @@ class Ptsv2paymentsProcessingInformationLoanOptions(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsProcessingInformationLoanOptions(object):
         :param asset_type: The asset_type of this Ptsv2paymentsProcessingInformationLoanOptions.
         :type: str
         """
+
+
 
         self._asset_type = asset_type
 

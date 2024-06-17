@@ -70,8 +70,8 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is None:
-            raise ValueError("Invalid value for `total_amount`, must not be `None`")
+
+
 
         self._total_amount = total_amount
 
@@ -95,8 +95,8 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
+
+
 
         self._currency = currency
 

@@ -73,6 +73,8 @@ class Riskv1decisionsClientReferenceInformationPartner(object):
         :type: str
         """
 
+
+
         self._developer_id = developer_id
 
     @property
@@ -95,6 +97,8 @@ class Riskv1decisionsClientReferenceInformationPartner(object):
         :param solution_id: The solution_id of this Riskv1decisionsClientReferenceInformationPartner.
         :type: str
         """
+
+
 
         self._solution_id = solution_id
 

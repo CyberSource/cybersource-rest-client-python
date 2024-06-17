@@ -66,6 +66,8 @@ class UmsV1UsersGet200Response(object):
         :type: list[UmsV1UsersGet200ResponseUsers]
         """
 
+
+
         self._users = users
 
     def to_dict(self):

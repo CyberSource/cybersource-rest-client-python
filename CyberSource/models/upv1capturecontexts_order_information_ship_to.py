@@ -123,6 +123,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -145,6 +147,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param address2: The address2 of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -169,6 +173,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._address3 = address3
 
     @property
@@ -191,6 +197,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param address4: The address4 of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._address4 = address4
 
@@ -215,6 +223,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -237,6 +247,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param building_number: The building_number of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._building_number = building_number
 
@@ -261,6 +273,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -283,6 +297,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param district: The district of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._district = district
 
@@ -307,6 +323,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -329,6 +347,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -353,6 +373,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -375,6 +397,8 @@ class Upv1capturecontextsOrderInformationShipTo(object):
         :param last_name: The last_name of this Upv1capturecontextsOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 

@@ -143,6 +143,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -165,6 +167,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param address2: The address2 of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -189,6 +193,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -211,6 +217,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param building_number: The building_number of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._building_number = building_number
 
@@ -235,6 +243,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._company = company
 
     @property
@@ -257,6 +267,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param country: The country of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -281,6 +293,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._county = county
 
     @property
@@ -303,6 +317,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param district: The district of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._district = district
 
@@ -327,6 +343,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -349,6 +367,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param first_name: The first_name of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._first_name = first_name
 
@@ -373,6 +393,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -395,6 +417,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param last_name: The last_name of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -419,6 +443,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -441,6 +467,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 
@@ -465,6 +493,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -485,6 +515,8 @@ class Ptsv2billingagreementsOrderInformationBillTo(object):
         :param title: The title of this Ptsv2billingagreementsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._title = title
 

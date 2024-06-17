@@ -76,6 +76,8 @@ class PtsV1TransactionBatchesGet400ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -97,6 +99,8 @@ class PtsV1TransactionBatchesGet400ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -117,6 +121,8 @@ class PtsV1TransactionBatchesGet400ResponseErrorInformation(object):
         :param details: The details of this PtsV1TransactionBatchesGet400ResponseErrorInformation.
         :type: list[PtsV1TransactionBatchesGet400ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

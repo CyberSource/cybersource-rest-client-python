@@ -81,6 +81,8 @@ class Ptsv2billingagreementsPaymentInformation(object):
         :type: Ptsv2billingagreementsPaymentInformationCard
         """
 
+
+
         self._card = card
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2billingagreementsPaymentInformation(object):
         :param tokenized_card: The tokenized_card of this Ptsv2billingagreementsPaymentInformation.
         :type: Ptsv2billingagreementsPaymentInformationTokenizedCard
         """
+
+
 
         self._tokenized_card = tokenized_card
 
@@ -123,6 +127,8 @@ class Ptsv2billingagreementsPaymentInformation(object):
         :type: Ptsv2billingagreementsPaymentInformationPaymentType
         """
 
+
+
         self._payment_type = payment_type
 
     @property
@@ -143,6 +149,8 @@ class Ptsv2billingagreementsPaymentInformation(object):
         :param bank: The bank of this Ptsv2billingagreementsPaymentInformation.
         :type: Ptsv2billingagreementsPaymentInformationBank
         """
+
+
 
         self._bank = bank
 

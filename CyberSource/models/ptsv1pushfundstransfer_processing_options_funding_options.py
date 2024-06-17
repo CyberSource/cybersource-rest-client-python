@@ -66,6 +66,8 @@ class Ptsv1pushfundstransferProcessingOptionsFundingOptions(object):
         :type: Ptsv1pushfundstransferProcessingOptionsFundingOptionsInitiator
         """
 
+
+
         self._initiator = initiator
 
     def to_dict(self):

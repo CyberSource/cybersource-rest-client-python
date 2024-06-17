@@ -83,6 +83,8 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._account_number = account_number
 
     @property
@@ -105,6 +107,8 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param code: The code of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
+
+
 
         self._code = code
 
@@ -129,6 +133,8 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -151,6 +157,8 @@ class Riskv1liststypeentriesPaymentInformationBank(object):
         :param iban: The iban of this Riskv1liststypeentriesPaymentInformationBank.
         :type: str
         """
+
+
 
         self._iban = iban
 

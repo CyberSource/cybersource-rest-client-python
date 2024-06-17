@@ -68,6 +68,8 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurat
         :type: str
         """
 
+
+
         self._parent_profile_id = parent_profile_id
 
     def to_dict(self):

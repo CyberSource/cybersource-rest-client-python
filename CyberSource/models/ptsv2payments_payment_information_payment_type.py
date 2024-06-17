@@ -78,6 +78,8 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
         :type: str
         """
 
+
+
         self._sub_type_name = sub_type_name
 
     @property
@@ -121,6 +125,8 @@ class Ptsv2paymentsPaymentInformationPaymentType(object):
         :param method: The method of this Ptsv2paymentsPaymentInformationPaymentType.
         :type: Ptsv2paymentsPaymentInformationPaymentTypeMethod
         """
+
+
 
         self._method = method
 

@@ -110,8 +110,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param address1: The address1 of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if address1 is None:
-            raise ValueError("Invalid value for `address1`, must not be `None`")
+
+
 
         self._address1 = address1
 
@@ -136,6 +136,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -159,6 +161,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address3 = address3
 
     @property
@@ -181,8 +185,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if administrative_area is None:
-            raise ValueError("Invalid value for `administrative_area`, must not be `None`")
+
+
 
         self._administrative_area = administrative_area
 
@@ -206,8 +210,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param country: The country of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if country is None:
-            raise ValueError("Invalid value for `country`, must not be `None`")
+
+
 
         self._country = country
 
@@ -232,6 +236,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -254,8 +260,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param first_name: The first_name of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if first_name is None:
-            raise ValueError("Invalid value for `first_name`, must not be `None`")
+
+
 
         self._first_name = first_name
 
@@ -279,8 +285,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param last_name: The last_name of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if last_name is None:
-            raise ValueError("Invalid value for `last_name`, must not be `None`")
+
+
 
         self._last_name = last_name
 
@@ -305,6 +311,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -327,8 +335,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param email: The email of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")
+
+
 
         self._email = email
 
@@ -352,8 +360,8 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if postal_code is None:
-            raise ValueError("Invalid value for `postal_code`, must not be `None`")
+
+
 
         self._postal_code = postal_code
 

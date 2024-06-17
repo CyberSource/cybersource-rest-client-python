@@ -71,6 +71,8 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         :type: TssV2TransactionsGet200ResponseProcessorInformationProcessor
         """
 
+
+
         self._processor = processor
 
     @property
@@ -93,6 +95,8 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         :param approval_code: The approval_code of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
         :type: str
         """
+
+
 
         self._approval_code = approval_code
 

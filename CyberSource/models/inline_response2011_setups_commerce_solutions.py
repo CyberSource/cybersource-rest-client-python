@@ -76,6 +76,8 @@ class InlineResponse2011SetupsCommerceSolutions(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._token_management = token_management
 
     @property
@@ -97,6 +99,8 @@ class InlineResponse2011SetupsCommerceSolutions(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._account_updater = account_updater
 
     @property
@@ -117,6 +121,8 @@ class InlineResponse2011SetupsCommerceSolutions(object):
         :param bin_lookup: The bin_lookup of this InlineResponse2011SetupsCommerceSolutions.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._bin_lookup = bin_lookup
 

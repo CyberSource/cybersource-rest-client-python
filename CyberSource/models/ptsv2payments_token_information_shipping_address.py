@@ -68,6 +68,8 @@ class Ptsv2paymentsTokenInformationShippingAddress(object):
         :type: bool
         """
 
+
+
         self._default = default
 
     def to_dict(self):

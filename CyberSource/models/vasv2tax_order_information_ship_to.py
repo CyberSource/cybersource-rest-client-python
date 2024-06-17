@@ -98,6 +98,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -120,6 +122,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -144,6 +148,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -166,6 +172,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -190,6 +198,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -213,6 +223,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -235,6 +247,8 @@ class Vasv2taxOrderInformationShipTo(object):
         :param address3: The address3 of this Vasv2taxOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._address3 = address3
 

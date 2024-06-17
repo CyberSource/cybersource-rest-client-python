@@ -86,6 +86,8 @@ class Ptsv2paymentreferencesPaymentInformation(object):
         :type: Ptsv2paymentreferencesPaymentInformationCard
         """
 
+
+
         self._card = card
 
     @property
@@ -106,6 +108,8 @@ class Ptsv2paymentreferencesPaymentInformation(object):
         :param bank: The bank of this Ptsv2paymentreferencesPaymentInformation.
         :type: Ptsv2paymentreferencesPaymentInformationBank
         """
+
+
 
         self._bank = bank
 
@@ -128,6 +132,8 @@ class Ptsv2paymentreferencesPaymentInformation(object):
         :type: Ptsv2paymentreferencesPaymentInformationEWallet
         """
 
+
+
         self._e_wallet = e_wallet
 
     @property
@@ -149,6 +155,8 @@ class Ptsv2paymentreferencesPaymentInformation(object):
         :type: Ptsv2paymentreferencesPaymentInformationOptions
         """
 
+
+
         self._options = options
 
     @property
@@ -169,6 +177,8 @@ class Ptsv2paymentreferencesPaymentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentreferencesPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationPaymentType
         """
+
+
 
         self._payment_type = payment_type
 

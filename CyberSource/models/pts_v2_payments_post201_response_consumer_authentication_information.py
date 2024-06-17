@@ -273,6 +273,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._access_token = access_token
 
     @property
@@ -295,6 +297,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_rendering_type: The acs_rendering_type of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._acs_rendering_type = acs_rendering_type
 
@@ -319,6 +323,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._acs_transaction_id = acs_transaction_id
 
     @property
@@ -341,6 +347,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param acs_url: The acs_url of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._acs_url = acs_url
 
@@ -365,6 +373,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_path = authentication_path
 
     @property
@@ -387,6 +397,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param authorization_payload: The authorization_payload of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authorization_payload = authorization_payload
 
@@ -411,6 +423,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
@@ -433,6 +447,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param cardholder_message: The cardholder_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._cardholder_message = cardholder_message
 
@@ -457,6 +473,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._cavv = cavv
 
     @property
@@ -479,6 +497,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param cavv_algorithm: The cavv_algorithm of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._cavv_algorithm = cavv_algorithm
 
@@ -503,6 +523,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._challenge_cancel_code = challenge_cancel_code
 
     @property
@@ -525,6 +547,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param challenge_required: The challenge_required of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._challenge_required = challenge_required
 
@@ -549,6 +573,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
     @property
@@ -571,6 +597,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_error_code: The directory_server_error_code of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._directory_server_error_code = directory_server_error_code
 
@@ -595,6 +623,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._directory_server_error_description = directory_server_error_description
 
     @property
@@ -617,6 +647,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param ecommerce_indicator: The ecommerce_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._ecommerce_indicator = ecommerce_indicator
 
@@ -641,6 +673,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._eci = eci
 
     @property
@@ -663,6 +697,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param eci_raw: The eci_raw of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._eci_raw = eci_raw
 
@@ -687,6 +723,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._effective_authentication_type = effective_authentication_type
 
     @property
@@ -708,6 +746,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr
         """
 
+
+
         self._ivr = ivr
 
     @property
@@ -728,6 +768,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param strong_authentication: The strong_authentication of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthentication
         """
+
+
 
         self._strong_authentication = strong_authentication
 
@@ -752,6 +794,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._network_score = network_score
 
     @property
@@ -774,6 +818,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param pareq: The pareq of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._pareq = pareq
 
@@ -798,6 +844,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._pares_status = pares_status
 
     @property
@@ -820,6 +868,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param proof_xml: The proof_xml of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._proof_xml = proof_xml
 
@@ -844,6 +894,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._proxy_pan = proxy_pan
 
     @property
@@ -866,6 +918,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param sdk_transaction_id: The sdk_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._sdk_transaction_id = sdk_transaction_id
 
@@ -890,6 +944,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._signed_pares_status_reason = signed_pares_status_reason
 
     @property
@@ -912,6 +968,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param specification_version: The specification_version of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._specification_version = specification_version
 
@@ -936,6 +994,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._step_up_url = step_up_url
 
     @property
@@ -958,6 +1018,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
@@ -982,6 +1044,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._ucaf_authentication_data = ucaf_authentication_data
 
     @property
@@ -1004,6 +1068,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
@@ -1028,6 +1094,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._veres_enrolled = veres_enrolled
 
     @property
@@ -1050,6 +1118,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param white_list_status_source: The white_list_status_source of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._white_list_status_source = white_list_status_source
 
@@ -1074,6 +1144,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._xid = xid
 
     @property
@@ -1096,6 +1168,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param directory_server_transaction_id: The directory_server_transaction_id of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._directory_server_transaction_id = directory_server_transaction_id
 
@@ -1120,6 +1194,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_result = authentication_result
 
     @property
@@ -1142,6 +1218,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param authentication_status_msg: The authentication_status_msg of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_status_msg = authentication_status_msg
 
@@ -1166,6 +1244,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._indicator = indicator
 
     @property
@@ -1189,6 +1269,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._interaction_counter = interaction_counter
 
     @property
@@ -1211,6 +1293,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._white_list_status = white_list_status
 

@@ -96,6 +96,8 @@ class OctCreatePaymentRequest(object):
         :type: Ptsv2payoutsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -116,6 +118,8 @@ class OctCreatePaymentRequest(object):
         :param order_information: The order_information of this OctCreatePaymentRequest.
         :type: Ptsv2payoutsOrderInformation
         """
+
+
 
         self._order_information = order_information
 
@@ -138,6 +142,8 @@ class OctCreatePaymentRequest(object):
         :type: Ptsv2payoutsMerchantInformation
         """
 
+
+
         self._merchant_information = merchant_information
 
     @property
@@ -158,6 +164,8 @@ class OctCreatePaymentRequest(object):
         :param recipient_information: The recipient_information of this OctCreatePaymentRequest.
         :type: Ptsv2payoutsRecipientInformation
         """
+
+
 
         self._recipient_information = recipient_information
 
@@ -180,6 +188,8 @@ class OctCreatePaymentRequest(object):
         :type: Ptsv2payoutsSenderInformation
         """
 
+
+
         self._sender_information = sender_information
 
     @property
@@ -201,6 +211,8 @@ class OctCreatePaymentRequest(object):
         :type: Ptsv2payoutsProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -221,6 +233,8 @@ class OctCreatePaymentRequest(object):
         :param payment_information: The payment_information of this OctCreatePaymentRequest.
         :type: Ptsv2payoutsPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 

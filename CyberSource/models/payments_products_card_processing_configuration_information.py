@@ -71,6 +71,8 @@ class PaymentsProductsCardProcessingConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsCardProcessingConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsCardProcessingConfigurationInformation.
         :type: CardProcessingConfig
         """
+
+
 
         self._configurations = configurations
 

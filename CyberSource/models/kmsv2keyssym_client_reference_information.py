@@ -78,6 +78,8 @@ class Kmsv2keyssymClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -101,6 +103,8 @@ class Kmsv2keyssymClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -121,6 +125,8 @@ class Kmsv2keyssymClientReferenceInformation(object):
         :param partner: The partner of this Kmsv2keyssymClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 

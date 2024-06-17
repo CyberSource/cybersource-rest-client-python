@@ -66,6 +66,8 @@ class DmConfigProcessingOptions(object):
         :type: bool
         """
 
+
+
         self._step_up_auth_enabled = step_up_auth_enabled
 
     def to_dict(self):

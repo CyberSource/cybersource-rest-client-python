@@ -68,6 +68,8 @@ class Rbsv1plansPlanInformationBillingCycles(object):
         :type: str
         """
 
+
+
         self._total = total
 
     def to_dict(self):

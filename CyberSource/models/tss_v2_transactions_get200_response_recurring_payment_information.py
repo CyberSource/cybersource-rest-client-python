@@ -68,6 +68,8 @@ class TssV2TransactionsGet200ResponseRecurringPaymentInformation(object):
         :type: str
         """
 
+
+
         self._amount_type = amount_type
 
     def to_dict(self):

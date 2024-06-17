@@ -66,6 +66,8 @@ class ReportingV3ReportDefinitionsGet200Response(object):
         :type: list[ReportingV3ReportDefinitionsGet200ResponseReportDefinitions]
         """
 
+
+
         self._report_definitions = report_definitions
 
     def to_dict(self):

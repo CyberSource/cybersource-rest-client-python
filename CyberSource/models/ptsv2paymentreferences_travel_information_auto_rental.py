@@ -98,6 +98,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._company_name = company_name
 
     @property
@@ -121,6 +123,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._affiliate_name = affiliate_name
 
     @property
@@ -142,6 +146,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :type: Ptsv2paymentsTravelInformationAutoRentalRentalAddress
         """
 
+
+
         self._rental_address = rental_address
 
     @property
@@ -162,6 +168,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :param return_address: The return_address of this Ptsv2paymentreferencesTravelInformationAutoRental.
         :type: Ptsv2paymentsTravelInformationAutoRentalReturnAddress
         """
+
+
 
         self._return_address = return_address
 
@@ -186,6 +194,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._return_date_time = return_date_time
 
     @property
@@ -209,6 +219,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._rental_date_time = rental_date_time
 
     @property
@@ -231,6 +243,8 @@ class Ptsv2paymentreferencesTravelInformationAutoRental(object):
         :param customer_name: The customer_name of this Ptsv2paymentreferencesTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._customer_name = customer_name
 

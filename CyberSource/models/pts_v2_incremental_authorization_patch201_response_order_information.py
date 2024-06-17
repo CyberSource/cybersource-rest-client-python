@@ -71,6 +71,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation(object):
         :type: PtsV2PaymentsPost201ResponseOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -91,6 +93,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation(object):
         :param invoice_details: The invoice_details of this PtsV2IncrementalAuthorizationPatch201ResponseOrderInformation.
         :type: PtsV2IncrementalAuthorizationPatch201ResponseOrderInformationInvoiceDetails
         """
+
+
 
         self._invoice_details = invoice_details
 

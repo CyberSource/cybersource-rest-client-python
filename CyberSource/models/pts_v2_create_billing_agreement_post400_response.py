@@ -93,6 +93,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -115,6 +117,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2CreateBillingAgreementPost400Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -139,6 +143,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -161,6 +167,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :param reason: The reason of this PtsV2CreateBillingAgreementPost400Response.
         :type: str
         """
+
+
 
         self._reason = reason
 
@@ -185,6 +193,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -205,6 +215,8 @@ class PtsV2CreateBillingAgreementPost400Response(object):
         :param details: The details of this PtsV2CreateBillingAgreementPost400Response.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

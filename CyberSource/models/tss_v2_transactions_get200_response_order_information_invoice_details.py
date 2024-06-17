@@ -68,6 +68,8 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails(object):
         :type: int
         """
 
+
+
         self._sales_slip_number = sales_slip_number
 
     def to_dict(self):

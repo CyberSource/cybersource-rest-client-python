@@ -73,6 +73,8 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems(object):
         :type: int
         """
 
+
+
         self._quantity = quantity
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Ptsv2paymentsidreversalsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._unit_price = unit_price
 

@@ -71,6 +71,8 @@ class Boardingv1registrationsIntegrationInformation(object):
         :type: list[Boardingv1registrationsIntegrationInformationOauth2]
         """
 
+
+
         self._oauth2 = oauth2
 
     @property
@@ -93,6 +95,8 @@ class Boardingv1registrationsIntegrationInformation(object):
         :param tenant_configurations: The tenant_configurations of this Boardingv1registrationsIntegrationInformation.
         :type: list[Boardingv1registrationsIntegrationInformationTenantConfigurations]
         """
+
+
 
         self._tenant_configurations = tenant_configurations
 

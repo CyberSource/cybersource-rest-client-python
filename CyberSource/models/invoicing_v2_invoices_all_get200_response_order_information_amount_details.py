@@ -73,6 +73,8 @@ class InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -95,6 +97,8 @@ class InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this InvoicingV2InvoicesAllGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._currency = currency
 

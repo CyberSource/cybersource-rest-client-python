@@ -71,6 +71,8 @@ class InlineResponse202Links(object):
         :type: InlineResponse401LinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class InlineResponse202Links(object):
         :param status: The status of this InlineResponse202Links.
         :type: list[InlineResponse202LinksStatus]
         """
+
+
 
         self._status = status
 

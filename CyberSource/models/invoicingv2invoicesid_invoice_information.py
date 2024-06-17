@@ -83,6 +83,8 @@ class Invoicingv2invoicesidInvoiceInformation(object):
         :type: str
         """
 
+
+
         self._description = description
 
     @property
@@ -105,6 +107,8 @@ class Invoicingv2invoicesidInvoiceInformation(object):
         :param due_date: The due_date of this Invoicingv2invoicesidInvoiceInformation.
         :type: date
         """
+
+
 
         self._due_date = due_date
 
@@ -129,6 +133,8 @@ class Invoicingv2invoicesidInvoiceInformation(object):
         :type: bool
         """
 
+
+
         self._allow_partial_payments = allow_partial_payments
 
     @property
@@ -151,6 +157,8 @@ class Invoicingv2invoicesidInvoiceInformation(object):
         :param delivery_mode: The delivery_mode of this Invoicingv2invoicesidInvoiceInformation.
         :type: str
         """
+
+
 
         self._delivery_mode = delivery_mode
 

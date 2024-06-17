@@ -163,6 +163,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._carrier_code = carrier_code
 
     @property
@@ -185,6 +187,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param flight_number: The flight_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._flight_number = flight_number
 
@@ -209,6 +213,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._originating_airport_code = originating_airport_code
 
     @property
@@ -231,6 +237,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param _class: The _class of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self.__class = _class
 
@@ -255,6 +263,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: int
         """
 
+
+
         self._stopover_indicator = stopover_indicator
 
     @property
@@ -277,6 +287,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param departure_date: The departure_date of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: int
         """
+
+
 
         self._departure_date = departure_date
 
@@ -301,6 +313,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._destination_airport_code = destination_airport_code
 
     @property
@@ -323,6 +337,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param fare_basis: The fare_basis of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._fare_basis = fare_basis
 
@@ -347,6 +363,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._depart_tax_amount = depart_tax_amount
 
     @property
@@ -369,6 +387,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param conjunction_ticket: The conjunction_ticket of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._conjunction_ticket = conjunction_ticket
 
@@ -393,6 +413,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._exchange_ticket_number = exchange_ticket_number
 
     @property
@@ -415,6 +437,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param coupon_number: The coupon_number of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._coupon_number = coupon_number
 
@@ -439,6 +463,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: int
         """
 
+
+
         self._departure_time = departure_time
 
     @property
@@ -461,6 +487,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param departure_time_meridian: The departure_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._departure_time_meridian = departure_time_meridian
 
@@ -485,6 +513,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: int
         """
 
+
+
         self._arrival_time = arrival_time
 
     @property
@@ -507,6 +537,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param arrival_time_meridian: The arrival_time_meridian of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._arrival_time_meridian = arrival_time_meridian
 
@@ -531,6 +563,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._endorsements_restrictions = endorsements_restrictions
 
     @property
@@ -553,6 +587,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param total_fare_amount: The total_fare_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._total_fare_amount = total_fare_amount
 
@@ -577,6 +613,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :type: str
         """
 
+
+
         self._fee_amount = fee_amount
 
     @property
@@ -599,6 +637,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsTravelInformationTransitAirlineLegs.
         :type: str
         """
+
+
 
         self._tax_amount = tax_amount
 

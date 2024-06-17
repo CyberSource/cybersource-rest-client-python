@@ -71,6 +71,8 @@ class DmConfigThirdpartyProviderSignifyd(object):
         :type: bool
         """
 
+
+
         self._enabled = enabled
 
     @property
@@ -91,6 +93,8 @@ class DmConfigThirdpartyProviderSignifyd(object):
         :param credentials: The credentials of this DmConfigThirdpartyProviderSignifyd.
         :type: DmConfigThirdpartyProviderSignifydCredentials
         """
+
+
 
         self._credentials = credentials
 

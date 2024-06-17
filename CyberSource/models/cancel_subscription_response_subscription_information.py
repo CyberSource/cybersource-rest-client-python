@@ -73,6 +73,8 @@ class CancelSubscriptionResponseSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class CancelSubscriptionResponseSubscriptionInformation(object):
         :param status: The status of this CancelSubscriptionResponseSubscriptionInformation.
         :type: str
         """
+
+
 
         self._status = status
 

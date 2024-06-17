@@ -93,6 +93,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -115,6 +117,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :param trade_number: The trade_number of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :type: str
         """
+
+
 
         self._trade_number = trade_number
 
@@ -139,6 +143,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :type: str
         """
 
+
+
         self._raw_response = raw_response
 
     @property
@@ -162,6 +168,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_code = response_code
 
     @property
@@ -183,6 +191,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
         """
 
+
+
         self._seller_protection = seller_protection
 
     @property
@@ -203,6 +213,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         :param avs: The avs of this PtsV2PaymentsPost201Response1ProcessorInformation.
         :type: PtsV2PaymentsPost201Response1ProcessorInformationAvs
         """
+
+
 
         self._avs = avs
 

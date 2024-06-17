@@ -73,6 +73,8 @@ class PushFunds201ResponseClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class PushFunds201ResponseClientReferenceInformation(object):
         :param submit_local_date_time: The submit_local_date_time of this PushFunds201ResponseClientReferenceInformation.
         :type: str
         """
+
+
 
         self._submit_local_date_time = submit_local_date_time
 

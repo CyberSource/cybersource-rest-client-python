@@ -88,6 +88,8 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
+
+
         self._bin_country = bin_country
 
     @property
@@ -110,6 +112,8 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param account_type: The account_type of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
+
+
 
         self._account_type = account_type
 
@@ -134,6 +138,8 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
+
+
         self._issuer = issuer
 
     @property
@@ -157,6 +163,8 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
+
+
         self._scheme = scheme
 
     @property
@@ -179,6 +187,8 @@ class RiskV1DecisionsPost201ResponsePaymentInformation(object):
         :param bin: The bin of this RiskV1DecisionsPost201ResponsePaymentInformation.
         :type: str
         """
+
+
 
         self._bin = bin
 

@@ -86,6 +86,8 @@ class TaxRequest(object):
         :type: Vasv2taxClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -106,6 +108,8 @@ class TaxRequest(object):
         :param tax_information: The tax_information of this TaxRequest.
         :type: Vasv2taxTaxInformation
         """
+
+
 
         self._tax_information = tax_information
 
@@ -128,6 +132,8 @@ class TaxRequest(object):
         :type: Vasv2taxOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -149,6 +155,8 @@ class TaxRequest(object):
         :type: Vasv2taxMerchantInformation
         """
 
+
+
         self._merchant_information = merchant_information
 
     @property
@@ -169,6 +177,8 @@ class TaxRequest(object):
         :param buyer_information: The buyer_information of this TaxRequest.
         :type: Vasv2taxBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 

@@ -71,6 +71,8 @@ class Riskv1decisionsProcessorInformation(object):
         :type: Riskv1decisionsProcessorInformationAvs
         """
 
+
+
         self._avs = avs
 
     @property
@@ -91,6 +93,8 @@ class Riskv1decisionsProcessorInformation(object):
         :param card_verification: The card_verification of this Riskv1decisionsProcessorInformation.
         :type: Riskv1decisionsProcessorInformationCardVerification
         """
+
+
 
         self._card_verification = card_verification
 

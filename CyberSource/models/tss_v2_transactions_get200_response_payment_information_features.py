@@ -98,6 +98,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :type: str
         """
 
+
+
         self._account_funding_source = account_funding_source
 
     @property
@@ -120,6 +122,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :param account_funding_source_sub_type: The account_funding_source_sub_type of this TssV2TransactionsGet200ResponsePaymentInformationFeatures.
         :type: str
         """
+
+
 
         self._account_funding_source_sub_type = account_funding_source_sub_type
 
@@ -144,6 +148,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :type: str
         """
 
+
+
         self._card_product = card_product
 
     @property
@@ -166,6 +172,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :param message_type: The message_type of this TssV2TransactionsGet200ResponsePaymentInformationFeatures.
         :type: str
         """
+
+
 
         self._message_type = message_type
 
@@ -190,6 +198,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :type: str
         """
 
+
+
         self._acceptance_level = acceptance_level
 
     @property
@@ -213,6 +223,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :type: str
         """
 
+
+
         self._card_platform = card_platform
 
     @property
@@ -235,6 +247,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFeatures(object):
         :param combo_card: The combo_card of this TssV2TransactionsGet200ResponsePaymentInformationFeatures.
         :type: str
         """
+
+
 
         self._combo_card = combo_card
 

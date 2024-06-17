@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformationPartner(object):
         :type: str
         """
 
+
+
         self._solution_id = solution_id
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponseClientReferenceInformationPartner(object):
         :param third_party_certification_number: The third_party_certification_number of this TssV2TransactionsGet200ResponseClientReferenceInformationPartner.
         :type: str
         """
+
+
 
         self._third_party_certification_number = third_party_certification_number
 

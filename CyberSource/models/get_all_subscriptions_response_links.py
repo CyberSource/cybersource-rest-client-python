@@ -81,6 +81,8 @@ class GetAllSubscriptionsResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -101,6 +103,8 @@ class GetAllSubscriptionsResponseLinks(object):
         :param cancel: The cancel of this GetAllSubscriptionsResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
+
+
 
         self._cancel = cancel
 
@@ -123,6 +127,8 @@ class GetAllSubscriptionsResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self._suspend = suspend
 
     @property
@@ -143,6 +149,8 @@ class GetAllSubscriptionsResponseLinks(object):
         :param activate: The activate of this GetAllSubscriptionsResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
+
+
 
         self._activate = activate
 

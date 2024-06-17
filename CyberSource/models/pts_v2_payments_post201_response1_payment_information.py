@@ -76,6 +76,8 @@ class PtsV2PaymentsPost201Response1PaymentInformation(object):
         :type: PtsV2PaymentsPost201Response1PaymentInformationPaymentType
         """
 
+
+
         self._payment_type = payment_type
 
     @property
@@ -97,6 +99,8 @@ class PtsV2PaymentsPost201Response1PaymentInformation(object):
         :type: Ptsv2refreshpaymentstatusidPaymentInformationCustomer
         """
 
+
+
         self._customer = customer
 
     @property
@@ -117,6 +121,8 @@ class PtsV2PaymentsPost201Response1PaymentInformation(object):
         :param bank: The bank of this PtsV2PaymentsPost201Response1PaymentInformation.
         :type: PtsV2PaymentsPost201Response1PaymentInformationBank
         """
+
+
 
         self._bank = bank
 

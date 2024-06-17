@@ -76,6 +76,8 @@ class VTConfigCardNotPresentReceiptInformation(object):
         :type: VTConfigCardNotPresentReceiptInformationHeader
         """
 
+
+
         self._header = header
 
     @property
@@ -97,6 +99,8 @@ class VTConfigCardNotPresentReceiptInformation(object):
         :type: VTConfigCardNotPresentReceiptInformationOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -117,6 +121,8 @@ class VTConfigCardNotPresentReceiptInformation(object):
         :param email_receipt: The email_receipt of this VTConfigCardNotPresentReceiptInformation.
         :type: VTConfigCardNotPresentReceiptInformationEmailReceipt
         """
+
+
 
         self._email_receipt = email_receipt
 

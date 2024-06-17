@@ -78,6 +78,8 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :type: str
         """
 
+
+
         self._true_ipaddress = true_ipaddress
 
     @property
@@ -101,6 +103,8 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :type: str
         """
 
+
+
         self._hash = hash
 
     @property
@@ -123,6 +127,8 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprin
         :param smart_id: The smart_id of this TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint.
         :type: str
         """
+
+
 
         self._smart_id = smart_id
 

@@ -73,6 +73,8 @@ class Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer(object):
         :type: str
         """
 
+
+
         self._category = category
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer(object):
         :param voucher_serial_number: The voucher_serial_number of this Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer.
         :type: str
         """
+
+
 
         self._voucher_serial_number = voucher_serial_number
 

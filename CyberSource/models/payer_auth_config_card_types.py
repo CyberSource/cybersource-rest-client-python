@@ -101,6 +101,8 @@ class PayerAuthConfigCardTypes(object):
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
 
+
+
         self._verified_by_visa = verified_by_visa
 
     @property
@@ -121,6 +123,8 @@ class PayerAuthConfigCardTypes(object):
         :param master_card_secure_code: The master_card_secure_code of this PayerAuthConfigCardTypes.
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
+
+
 
         self._master_card_secure_code = master_card_secure_code
 
@@ -143,6 +147,8 @@ class PayerAuthConfigCardTypes(object):
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
 
+
+
         self._amex_safe_key = amex_safe_key
 
     @property
@@ -163,6 +169,8 @@ class PayerAuthConfigCardTypes(object):
         :param j_cbj_secure: The j_cbj_secure of this PayerAuthConfigCardTypes.
         :type: PayerAuthConfigCardTypesJCBJSecure
         """
+
+
 
         self._j_cbj_secure = j_cbj_secure
 
@@ -185,6 +193,8 @@ class PayerAuthConfigCardTypes(object):
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
 
+
+
         self._diners_club_international_protect_buy = diners_club_international_protect_buy
 
     @property
@@ -205,6 +215,8 @@ class PayerAuthConfigCardTypes(object):
         :param elo: The elo of this PayerAuthConfigCardTypes.
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
+
+
 
         self._elo = elo
 
@@ -227,6 +239,8 @@ class PayerAuthConfigCardTypes(object):
         :type: PayerAuthConfigCardTypesVerifiedByVisa
         """
 
+
+
         self._upi = upi
 
     @property
@@ -247,6 +261,8 @@ class PayerAuthConfigCardTypes(object):
         :param cb: The cb of this PayerAuthConfigCardTypes.
         :type: PayerAuthConfigCardTypesCB
         """
+
+
 
         self._cb = cb
 

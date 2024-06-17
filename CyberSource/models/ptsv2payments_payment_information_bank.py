@@ -86,6 +86,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :type: Ptsv2paymentsPaymentInformationBankAccount
         """
 
+
+
         self._account = account
 
     @property
@@ -108,6 +110,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :param routing_number: The routing_number of this Ptsv2paymentsPaymentInformationBank.
         :type: str
         """
+
+
 
         self._routing_number = routing_number
 
@@ -132,6 +136,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._iban = iban
 
     @property
@@ -155,6 +161,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._swift_code = swift_code
 
     @property
@@ -177,6 +185,8 @@ class Ptsv2paymentsPaymentInformationBank(object):
         :param code: The code of this Ptsv2paymentsPaymentInformationBank.
         :type: str
         """
+
+
 
         self._code = code
 

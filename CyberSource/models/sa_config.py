@@ -98,6 +98,8 @@ class SAConfig(object):
         :type: str
         """
 
+
+
         self._parent_profile_id = parent_profile_id
 
     @property
@@ -118,6 +120,8 @@ class SAConfig(object):
         :param contact_information: The contact_information of this SAConfig.
         :type: SAConfigContactInformation
         """
+
+
 
         self._contact_information = contact_information
 
@@ -140,6 +144,8 @@ class SAConfig(object):
         :type: SAConfigNotifications
         """
 
+
+
         self._notifications = notifications
 
     @property
@@ -160,6 +166,8 @@ class SAConfig(object):
         :param service: The service of this SAConfig.
         :type: SAConfigService
         """
+
+
 
         self._service = service
 
@@ -182,6 +190,8 @@ class SAConfig(object):
         :type: SAConfigPaymentMethods
         """
 
+
+
         self._payment_methods = payment_methods
 
     @property
@@ -203,6 +213,8 @@ class SAConfig(object):
         :type: SAConfigCheckout
         """
 
+
+
         self._checkout = checkout
 
     @property
@@ -223,6 +235,8 @@ class SAConfig(object):
         :param payment_types: The payment_types of this SAConfig.
         :type: SAConfigPaymentTypes
         """
+
+
 
         self._payment_types = payment_types
 

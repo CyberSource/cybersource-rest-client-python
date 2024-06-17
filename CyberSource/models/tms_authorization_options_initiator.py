@@ -66,6 +66,8 @@ class TmsAuthorizationOptionsInitiator(object):
         :type: TmsAuthorizationOptionsInitiatorMerchantInitiatedTransaction
         """
 
+
+
         self._merchant_initiated_transaction = merchant_initiated_transaction
 
     def to_dict(self):

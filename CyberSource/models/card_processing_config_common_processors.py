@@ -282,6 +282,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._batch_group = batch_group
 
     @property
@@ -304,6 +306,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param business_application_id: The business_application_id of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._business_application_id = business_application_id
 
@@ -328,6 +332,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._merchant_verification_value = merchant_verification_value
 
     @property
@@ -351,6 +357,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._aba_number = aba_number
 
     @property
@@ -371,6 +379,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param acquirer: The acquirer of this CardProcessingConfigCommonProcessors.
         :type: CardProcessingConfigCommonAcquirer
         """
+
+
 
         self._acquirer = acquirer
 
@@ -394,8 +404,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param merchant_id: The merchant_id of this CardProcessingConfigCommonProcessors.
         :type: str
         """
-        if merchant_id is None:
-            raise ValueError("Invalid value for `merchant_id`, must not be `None`")
+
+
 
         self._merchant_id = merchant_id
 
@@ -420,6 +430,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._terminal_id = terminal_id
 
     @property
@@ -442,6 +454,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param payment_types: The payment_types of this CardProcessingConfigCommonProcessors.
         :type: dict(str, CardProcessingConfigCommonPaymentTypes)
         """
+
+
 
         self._payment_types = payment_types
 
@@ -466,6 +480,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: dict(str, CardProcessingConfigCommonCurrencies1)
         """
 
+
+
         self._currencies = currencies
 
     @property
@@ -488,6 +504,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param sic_code: The sic_code of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._sic_code = sic_code
 
@@ -512,6 +530,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._allow_multiple_bills = allow_multiple_bills
 
     @property
@@ -534,6 +554,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param allow_merchant_descriptor_override: The allow_merchant_descriptor_override of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._allow_merchant_descriptor_override = allow_merchant_descriptor_override
 
@@ -558,6 +580,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._enhanced_data = enhanced_data
 
     @property
@@ -580,6 +604,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param fire_safety_indicator: The fire_safety_indicator of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._fire_safety_indicator = fire_safety_indicator
 
@@ -604,6 +630,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._quasi_cash = quasi_cash
 
     @property
@@ -626,6 +654,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param acquirer_merchant_id: The acquirer_merchant_id of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._acquirer_merchant_id = acquirer_merchant_id
 
@@ -650,6 +680,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._avs_format = avs_format
 
     @property
@@ -672,6 +704,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_long_trans_ref_no: The enable_long_trans_ref_no of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._enable_long_trans_ref_no = enable_long_trans_ref_no
 
@@ -696,6 +730,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_level2 = enable_level2
 
     @property
@@ -718,6 +754,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_multiple_transaction_advice_addendum: The enable_multiple_transaction_advice_addendum of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._enable_multiple_transaction_advice_addendum = enable_multiple_transaction_advice_addendum
 
@@ -742,6 +780,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._amex_transaction_advice_addendum1 = amex_transaction_advice_addendum1
 
     @property
@@ -764,6 +804,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_multi_line_items: The enable_multi_line_items of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._enable_multi_line_items = enable_multi_line_items
 
@@ -788,6 +830,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_transaction_reference_number = enable_transaction_reference_number
 
     @property
@@ -810,6 +854,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_auto_auth_reversal_after_void: The enable_auto_auth_reversal_after_void of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._enable_auto_auth_reversal_after_void = enable_auto_auth_reversal_after_void
 
@@ -834,6 +880,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_expresspay_pan_translation = enable_expresspay_pan_translation
 
     @property
@@ -857,6 +905,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_credit_auth = enable_credit_auth
 
     @property
@@ -879,6 +929,7 @@ class CardProcessingConfigCommonProcessors(object):
         :param industry_code: The industry_code of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
         allowed_values = ["0", "A", "B", "D", "F", "G", "H", "L", "O", "P", "R"]
         if industry_code not in allowed_values:
             raise ValueError(
@@ -909,6 +960,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._send_amex_level2_data = send_amex_level2_data
 
     @property
@@ -931,6 +984,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param soft_descriptor_type: The soft_descriptor_type of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._soft_descriptor_type = soft_descriptor_type
 
@@ -955,6 +1010,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._vital_number = vital_number
 
     @property
@@ -977,6 +1034,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param bank_number: The bank_number of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._bank_number = bank_number
 
@@ -1001,6 +1060,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._chain_number = chain_number
 
     @property
@@ -1023,6 +1084,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param merchant_bin_number: The merchant_bin_number of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._merchant_bin_number = merchant_bin_number
 
@@ -1047,6 +1110,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._merchant_location_number = merchant_location_number
 
     @property
@@ -1069,6 +1134,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param store_id: The store_id of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._store_id = store_id
 
@@ -1093,6 +1160,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._travel_agency_code = travel_agency_code
 
     @property
@@ -1115,6 +1184,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param travel_agency_name: The travel_agency_name of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._travel_agency_name = travel_agency_name
 
@@ -1139,6 +1210,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._settlement_currency = settlement_currency
 
     @property
@@ -1161,6 +1234,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_least_cost_routing: The enable_least_cost_routing of this CardProcessingConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._enable_least_cost_routing = enable_least_cost_routing
 
@@ -1185,6 +1260,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_cvv_response_indicator = enable_cvv_response_indicator
 
     @property
@@ -1207,6 +1284,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param enable_multi_currency_processing: The enable_multi_currency_processing of this CardProcessingConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._enable_multi_currency_processing = enable_multi_currency_processing
 
@@ -1231,6 +1310,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_pos_network_switching = enable_pos_network_switching
 
     @property
@@ -1254,6 +1335,8 @@ class CardProcessingConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_dynamic_currency_conversion = enable_dynamic_currency_conversion
 
     @property
@@ -1276,8 +1359,8 @@ class CardProcessingConfigCommonProcessors(object):
         :param merchant_tier: The merchant_tier of this CardProcessingConfigCommonProcessors.
         :type: str
         """
-        if merchant_tier is not None and not re.search('^[0-9]+$', merchant_tier):
-            raise ValueError("Invalid value for `merchant_tier`, must be a follow pattern or equal to `/^[0-9]+$/`")
+
+
 
         self._merchant_tier = merchant_tier
 

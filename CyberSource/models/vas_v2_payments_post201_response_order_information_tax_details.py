@@ -73,6 +73,8 @@ class VasV2PaymentsPost201ResponseOrderInformationTaxDetails(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -95,6 +97,8 @@ class VasV2PaymentsPost201ResponseOrderInformationTaxDetails(object):
         :param amount: The amount of this VasV2PaymentsPost201ResponseOrderInformationTaxDetails.
         :type: str
         """
+
+
 
         self._amount = amount
 

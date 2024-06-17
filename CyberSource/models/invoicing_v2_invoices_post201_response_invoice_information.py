@@ -93,6 +93,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :type: str
         """
 
+
+
         self._invoice_number = invoice_number
 
     @property
@@ -115,6 +117,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :param description: The description of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
         :type: str
         """
+
+
 
         self._description = description
 
@@ -139,6 +143,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :type: date
         """
 
+
+
         self._due_date = due_date
 
     @property
@@ -161,6 +167,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :param allow_partial_payments: The allow_partial_payments of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
         :type: bool
         """
+
+
 
         self._allow_partial_payments = allow_partial_payments
 
@@ -185,6 +193,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :type: str
         """
 
+
+
         self._payment_link = payment_link
 
     @property
@@ -207,6 +217,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         :param delivery_mode: The delivery_mode of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
         :type: str
         """
+
+
 
         self._delivery_mode = delivery_mode
 

@@ -103,6 +103,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :type: str
         """
 
+
+
         self._account_id = account_id
 
     @property
@@ -125,6 +127,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -149,6 +153,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -171,6 +177,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :param postal_code: The postal_code of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -195,6 +203,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :type: str
         """
 
+
+
         self._date_of_birth = date_of_birth
 
     @property
@@ -217,6 +227,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :param beneficiary_id: The beneficiary_id of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
+
+
 
         self._beneficiary_id = beneficiary_id
 
@@ -241,6 +253,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :type: str
         """
 
+
+
         self._beneficiary_name = beneficiary_name
 
     @property
@@ -263,6 +277,8 @@ class Ptsv2paymentsRecipientInformation(object):
         :param beneficiary_address: The beneficiary_address of this Ptsv2paymentsRecipientInformation.
         :type: str
         """
+
+
 
         self._beneficiary_address = beneficiary_address
 

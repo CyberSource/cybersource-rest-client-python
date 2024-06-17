@@ -68,6 +68,8 @@ class Ptsv2creditsProcessingInformationPurchaseOptions(object):
         :type: bool
         """
 
+
+
         self._is_electronic_benefits_transfer = is_electronic_benefits_transfer
 
     def to_dict(self):

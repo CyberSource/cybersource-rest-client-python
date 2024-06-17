@@ -82,8 +82,8 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param solution_id: The solution_id of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if solution_id is not None and not re.search('^[0-9a-zA-Z_]+$', solution_id):
-            raise ValueError("Invalid value for `solution_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._solution_id = solution_id
 
@@ -107,8 +107,8 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param tenant_configuration_id: The tenant_configuration_id of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if tenant_configuration_id is not None and not re.search('^[0-9a-zA-Z_]+$', tenant_configuration_id):
-            raise ValueError("Invalid value for `tenant_configuration_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._tenant_configuration_id = tenant_configuration_id
 
@@ -130,6 +130,7 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param status: The status of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
+
         allowed_values = ["LIVE", "INACTIVE", "TEST"]
         if status not in allowed_values:
             raise ValueError(
@@ -159,6 +160,8 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param submit_time_utc: The submit_time_utc of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: datetime
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 

@@ -66,6 +66,8 @@ class Boardingv1registrationsDocumentInformation(object):
         :type: list[Boardingv1registrationsDocumentInformationSignedDocuments]
         """
 
+
+
         self._signed_documents = signed_documents
 
     def to_dict(self):

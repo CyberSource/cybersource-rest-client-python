@@ -148,6 +148,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._cookies_accepted = cookies_accepted
 
     @property
@@ -170,6 +172,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param ip_address: The ip_address of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._ip_address = ip_address
 
@@ -194,6 +198,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._host_name = host_name
 
     @property
@@ -216,6 +222,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param fingerprint_session_id: The fingerprint_session_id of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._fingerprint_session_id = fingerprint_session_id
 
@@ -240,6 +248,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_email = http_browser_email
 
     @property
@@ -263,6 +273,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._user_agent = user_agent
 
     @property
@@ -283,6 +295,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param raw_data: The raw_data of this Riskv1decisionsDeviceInformation.
         :type: list[Ptsv2paymentsDeviceInformationRawData]
         """
+
+
 
         self._raw_data = raw_data
 
@@ -307,6 +321,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_accept_browser_value = http_accept_browser_value
 
     @property
@@ -329,6 +345,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param http_accept_content: The http_accept_content of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_accept_content = http_accept_content
 
@@ -353,6 +371,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_language = http_browser_language
 
     @property
@@ -375,6 +395,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param http_browser_java_enabled: The http_browser_java_enabled of this Riskv1decisionsDeviceInformation.
         :type: bool
         """
+
+
 
         self._http_browser_java_enabled = http_browser_java_enabled
 
@@ -399,6 +421,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: bool
         """
 
+
+
         self._http_browser_java_script_enabled = http_browser_java_script_enabled
 
     @property
@@ -421,6 +445,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param http_browser_color_depth: The http_browser_color_depth of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_browser_color_depth = http_browser_color_depth
 
@@ -445,6 +471,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_screen_height = http_browser_screen_height
 
     @property
@@ -467,6 +495,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param http_browser_screen_width: The http_browser_screen_width of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_browser_screen_width = http_browser_screen_width
 
@@ -491,6 +521,8 @@ class Riskv1decisionsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_time_difference = http_browser_time_difference
 
     @property
@@ -513,6 +545,8 @@ class Riskv1decisionsDeviceInformation(object):
         :param user_agent_browser_value: The user_agent_browser_value of this Riskv1decisionsDeviceInformation.
         :type: str
         """
+
+
 
         self._user_agent_browser_value = user_agent_browser_value
 

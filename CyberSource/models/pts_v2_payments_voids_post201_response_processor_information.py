@@ -78,6 +78,8 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_code = response_code
 
     @property
@@ -101,6 +103,8 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_details = response_details
 
     @property
@@ -123,6 +127,8 @@ class PtsV2PaymentsVoidsPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsVoidsPost201ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._transaction_id = transaction_id
 

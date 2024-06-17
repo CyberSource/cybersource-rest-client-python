@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights
         """
 
+
+
         self._response_insights = response_insights
 
     def to_dict(self):

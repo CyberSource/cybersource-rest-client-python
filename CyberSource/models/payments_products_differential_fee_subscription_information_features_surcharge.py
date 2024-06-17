@@ -66,6 +66,8 @@ class PaymentsProductsDifferentialFeeSubscriptionInformationFeaturesSurcharge(ob
         :type: bool
         """
 
+
+
         self._enabled = enabled
 
     def to_dict(self):

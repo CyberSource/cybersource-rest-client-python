@@ -98,6 +98,8 @@ class Riskv1decisionsTravelInformation(object):
         :type: str
         """
 
+
+
         self._actual_final_destination = actual_final_destination
 
     @property
@@ -120,6 +122,8 @@ class Riskv1decisionsTravelInformation(object):
         :param complete_route: The complete_route of this Riskv1decisionsTravelInformation.
         :type: str
         """
+
+
 
         self._complete_route = complete_route
 
@@ -144,6 +148,8 @@ class Riskv1decisionsTravelInformation(object):
         :type: str
         """
 
+
+
         self._departure_time = departure_time
 
     @property
@@ -167,6 +173,8 @@ class Riskv1decisionsTravelInformation(object):
         :type: str
         """
 
+
+
         self._journey_type = journey_type
 
     @property
@@ -187,6 +195,8 @@ class Riskv1decisionsTravelInformation(object):
         :param legs: The legs of this Riskv1decisionsTravelInformation.
         :type: list[Riskv1decisionsTravelInformationLegs]
         """
+
+
 
         self._legs = legs
 
@@ -211,6 +221,8 @@ class Riskv1decisionsTravelInformation(object):
         :type: int
         """
 
+
+
         self._number_of_passengers = number_of_passengers
 
     @property
@@ -231,6 +243,8 @@ class Riskv1decisionsTravelInformation(object):
         :param passengers: The passengers of this Riskv1decisionsTravelInformation.
         :type: list[Riskv1decisionsTravelInformationPassengers]
         """
+
+
 
         self._passengers = passengers
 

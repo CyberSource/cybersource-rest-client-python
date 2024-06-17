@@ -66,6 +66,8 @@ class Ptsv2paymentsidvoidsOrderInformation(object):
         :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     def to_dict(self):

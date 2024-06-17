@@ -68,6 +68,8 @@ class InlineResponse2011IntegrationInformation(object):
         :type: list[InlineResponse2011IntegrationInformationTenantConfigurations]
         """
 
+
+
         self._tenant_configurations = tenant_configurations
 
     def to_dict(self):

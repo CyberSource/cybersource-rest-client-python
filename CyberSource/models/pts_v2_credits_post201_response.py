@@ -121,6 +121,8 @@ class PtsV2CreditsPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -143,6 +145,8 @@ class PtsV2CreditsPost201Response(object):
         :param id: The id of this PtsV2CreditsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -167,6 +171,8 @@ class PtsV2CreditsPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -189,6 +195,8 @@ class PtsV2CreditsPost201Response(object):
         :param status: The status of this PtsV2CreditsPost201Response.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -213,6 +221,8 @@ class PtsV2CreditsPost201Response(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -233,6 +243,8 @@ class PtsV2CreditsPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2CreditsPost201Response.
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -255,6 +267,8 @@ class PtsV2CreditsPost201Response(object):
         :type: PtsV2CreditsPost201ResponseCreditAmountDetails
         """
 
+
+
         self._credit_amount_details = credit_amount_details
 
     @property
@@ -275,6 +289,8 @@ class PtsV2CreditsPost201Response(object):
         :param processing_information: The processing_information of this PtsV2CreditsPost201Response.
         :type: PtsV2CreditsPost201ResponseProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -297,6 +313,8 @@ class PtsV2CreditsPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -317,6 +335,8 @@ class PtsV2CreditsPost201Response(object):
         :param payment_information: The payment_information of this PtsV2CreditsPost201Response.
         :type: PtsV2CreditsPost201ResponsePaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -339,6 +359,8 @@ class PtsV2CreditsPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -359,6 +381,8 @@ class PtsV2CreditsPost201Response(object):
         :param point_of_sale_information: The point_of_sale_information of this PtsV2CreditsPost201Response.
         :type: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
         """
+
+
 
         self._point_of_sale_information = point_of_sale_information
 

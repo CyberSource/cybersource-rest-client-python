@@ -88,6 +88,8 @@ class PtsV2CreditsPost201Response1(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -110,6 +112,8 @@ class PtsV2CreditsPost201Response1(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2CreditsPost201Response1.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -134,6 +138,8 @@ class PtsV2CreditsPost201Response1(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -155,6 +161,8 @@ class PtsV2CreditsPost201Response1(object):
         :type: PtsV2CreditsPost201Response1ProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -175,6 +183,8 @@ class PtsV2CreditsPost201Response1(object):
         :param installment_information: The installment_information of this PtsV2CreditsPost201Response1.
         :type: PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation
         """
+
+
 
         self._installment_information = installment_information
 

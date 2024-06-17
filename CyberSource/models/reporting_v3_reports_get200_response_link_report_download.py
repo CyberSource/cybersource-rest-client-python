@@ -71,6 +71,8 @@ class ReportingV3ReportsGet200ResponseLinkReportDownload(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -91,6 +93,8 @@ class ReportingV3ReportsGet200ResponseLinkReportDownload(object):
         :param method: The method of this ReportingV3ReportsGet200ResponseLinkReportDownload.
         :type: str
         """
+
+
 
         self._method = method
 

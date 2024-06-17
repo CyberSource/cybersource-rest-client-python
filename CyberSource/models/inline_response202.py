@@ -76,6 +76,8 @@ class InlineResponse202(object):
         :type: InlineResponse202Links
         """
 
+
+
         self._links = links
 
     @property
@@ -99,6 +101,8 @@ class InlineResponse202(object):
         :type: str
         """
 
+
+
         self._batch_id = batch_id
 
     @property
@@ -119,6 +123,8 @@ class InlineResponse202(object):
         :param batch_item_count: The batch_item_count of this InlineResponse202.
         :type: int
         """
+
+
 
         self._batch_item_count = batch_item_count
 

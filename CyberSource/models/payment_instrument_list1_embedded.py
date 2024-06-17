@@ -66,6 +66,8 @@ class PaymentInstrumentList1Embedded(object):
         :type: list[PaymentInstrumentList1EmbeddedPaymentInstruments]
         """
 
+
+
         self._payment_instruments = payment_instruments
 
     def to_dict(self):

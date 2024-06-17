@@ -86,6 +86,8 @@ class Ptsv2payoutsPaymentInformation(object):
         :type: Ptsv2payoutsPaymentInformationCard
         """
 
+
+
         self._card = card
 
     @property
@@ -106,6 +108,8 @@ class Ptsv2payoutsPaymentInformation(object):
         :param customer: The customer of this Ptsv2payoutsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
+
+
 
         self._customer = customer
 
@@ -128,6 +132,8 @@ class Ptsv2payoutsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationPaymentInstrument
         """
 
+
+
         self._payment_instrument = payment_instrument
 
     @property
@@ -149,6 +155,8 @@ class Ptsv2payoutsPaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
         """
 
+
+
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -169,6 +177,8 @@ class Ptsv2payoutsPaymentInformation(object):
         :param tokenized_card: The tokenized_card of this Ptsv2payoutsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationTokenizedCard
         """
+
+
 
         self._tokenized_card = tokenized_card
 

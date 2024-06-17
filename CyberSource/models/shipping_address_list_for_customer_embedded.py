@@ -66,6 +66,8 @@ class ShippingAddressListForCustomerEmbedded(object):
         :type: list[Tmsv2customersEmbeddedDefaultShippingAddress]
         """
 
+
+
         self._shipping_addresses = shipping_addresses
 
     def to_dict(self):

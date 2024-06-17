@@ -86,6 +86,8 @@ class PaymentInstrumentListLinks(object):
         :type: PaymentInstrumentListLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -106,6 +108,8 @@ class PaymentInstrumentListLinks(object):
         :param first: The first of this PaymentInstrumentListLinks.
         :type: PaymentInstrumentListLinksFirst
         """
+
+
 
         self._first = first
 
@@ -128,6 +132,8 @@ class PaymentInstrumentListLinks(object):
         :type: PaymentInstrumentListLinksPrev
         """
 
+
+
         self._prev = prev
 
     @property
@@ -149,6 +155,8 @@ class PaymentInstrumentListLinks(object):
         :type: PaymentInstrumentListLinksNext
         """
 
+
+
         self._next = next
 
     @property
@@ -169,6 +177,8 @@ class PaymentInstrumentListLinks(object):
         :param last: The last of this PaymentInstrumentListLinks.
         :type: PaymentInstrumentListLinksLast
         """
+
+
 
         self._last = last
 

@@ -76,6 +76,8 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -97,6 +99,8 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedOrderInformationShipTo
         """
 
+
+
         self._ship_to = ship_to
 
     @property
@@ -117,6 +121,8 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformation(object):
         :param amount_details: The amount_details of this TssV2TransactionsPost201ResponseEmbeddedOrderInformation.
         :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
+
+
 
         self._amount_details = amount_details
 

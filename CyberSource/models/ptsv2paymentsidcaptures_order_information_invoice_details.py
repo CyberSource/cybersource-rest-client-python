@@ -98,6 +98,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._purchase_order_number = purchase_order_number
 
     @property
@@ -120,6 +122,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param purchase_order_date: The purchase_order_date of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: str
         """
+
+
 
         self._purchase_order_date = purchase_order_date
 
@@ -144,6 +148,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._purchase_contact_name = purchase_contact_name
 
     @property
@@ -166,6 +172,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param taxable: The taxable of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: bool
         """
+
+
 
         self._taxable = taxable
 
@@ -190,6 +198,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._vat_invoice_reference_number = vat_invoice_reference_number
 
     @property
@@ -213,6 +223,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._commodity_code = commodity_code
 
     @property
@@ -233,6 +245,8 @@ class Ptsv2paymentsidcapturesOrderInformationInvoiceDetails(object):
         :param transaction_advice_addendum: The transaction_advice_addendum of this Ptsv2paymentsidcapturesOrderInformationInvoiceDetails.
         :type: list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]
         """
+
+
 
         self._transaction_advice_addendum = transaction_advice_addendum
 

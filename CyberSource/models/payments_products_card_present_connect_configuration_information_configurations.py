@@ -68,6 +68,8 @@ class PaymentsProductsCardPresentConnectConfigurationInformationConfigurations(o
         :type: str
         """
 
+
+
         self._partner_solution_identifier = partner_solution_identifier
 
     def to_dict(self):

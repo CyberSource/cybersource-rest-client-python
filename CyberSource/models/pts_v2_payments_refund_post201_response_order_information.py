@@ -71,6 +71,8 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -91,6 +93,8 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformation(object):
         :param invoice_details: The invoice_details of this PtsV2PaymentsRefundPost201ResponseOrderInformation.
         :type: PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails
         """
+
+
 
         self._invoice_details = invoice_details
 

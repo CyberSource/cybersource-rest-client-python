@@ -108,6 +108,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :type: list[str]
         """
 
+
+
         self._velocity = velocity
 
     @property
@@ -130,6 +132,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :param address: The address of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
         """
+
+
 
         self._address = address
 
@@ -154,6 +158,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :type: list[str]
         """
 
+
+
         self._customer_list = customer_list
 
     @property
@@ -176,6 +182,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :param device_behavior: The device_behavior of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
         """
+
+
 
         self._device_behavior = device_behavior
 
@@ -200,6 +208,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :type: list[str]
         """
 
+
+
         self._identity_change = identity_change
 
     @property
@@ -222,6 +232,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :param internet: The internet of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
         """
+
+
 
         self._internet = internet
 
@@ -246,6 +258,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :type: list[str]
         """
 
+
+
         self._phone = phone
 
     @property
@@ -269,6 +283,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :type: list[str]
         """
 
+
+
         self._suspicious = suspicious
 
     @property
@@ -291,6 +307,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationInfoCodes(object):
         :param global_velocity: The global_velocity of this PtsV2PaymentsPost201ResponseRiskInformationInfoCodes.
         :type: list[str]
         """
+
+
 
         self._global_velocity = global_velocity
 

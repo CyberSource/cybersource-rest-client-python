@@ -106,6 +106,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: list[str]
         """
 
+
+
         self._target_origins = target_origins
 
     @property
@@ -129,6 +131,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: str
         """
 
+
+
         self._client_version = client_version
 
     @property
@@ -150,6 +154,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: list[str]
         """
 
+
+
         self._allowed_card_networks = allowed_card_networks
 
     @property
@@ -170,6 +176,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :param allowed_payment_types: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
         """
+
+
 
         self._allowed_payment_types = allowed_payment_types
 
@@ -194,6 +202,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -217,6 +227,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: str
         """
 
+
+
         self._locale = locale
 
     @property
@@ -237,6 +249,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :param capture_mandate: The capture_mandate of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: Upv1capturecontextsCaptureMandate
         """
+
+
 
         self._capture_mandate = capture_mandate
 
@@ -259,6 +273,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :type: Upv1capturecontextsOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -279,6 +295,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         :param checkout_api_initialization: The checkout_api_initialization of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: Upv1capturecontextsCheckoutApiInitialization
         """
+
+
 
         self._checkout_api_initialization = checkout_api_initialization
 

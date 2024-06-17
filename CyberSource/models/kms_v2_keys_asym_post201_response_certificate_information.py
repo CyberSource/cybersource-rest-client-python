@@ -83,6 +83,8 @@ class KmsV2KeysAsymPost201ResponseCertificateInformation(object):
         :type: str
         """
 
+
+
         self._alias = alias
 
     @property
@@ -105,6 +107,8 @@ class KmsV2KeysAsymPost201ResponseCertificateInformation(object):
         :param key_id: The key_id of this KmsV2KeysAsymPost201ResponseCertificateInformation.
         :type: str
         """
+
+
 
         self._key_id = key_id
 
@@ -129,6 +133,8 @@ class KmsV2KeysAsymPost201ResponseCertificateInformation(object):
         :type: str
         """
 
+
+
         self._key = key
 
     @property
@@ -151,6 +157,8 @@ class KmsV2KeysAsymPost201ResponseCertificateInformation(object):
         :param expiration_date: The expiration_date of this KmsV2KeysAsymPost201ResponseCertificateInformation.
         :type: str
         """
+
+
 
         self._expiration_date = expiration_date
 

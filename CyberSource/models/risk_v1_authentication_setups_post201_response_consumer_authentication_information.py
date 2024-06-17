@@ -78,6 +78,8 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :type: str
         """
 
+
+
         self._access_token = access_token
 
     @property
@@ -101,6 +103,8 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :type: str
         """
 
+
+
         self._reference_id = reference_id
 
     @property
@@ -123,6 +127,8 @@ class RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         :param device_data_collection_url: The device_data_collection_url of this RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._device_data_collection_url = device_data_collection_url
 

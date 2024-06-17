@@ -73,6 +73,8 @@ class Ptsv2creditsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
+
+
         self._payment_method = payment_method
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2creditsProcessingInformationJapanPaymentOptions(object):
         :param installments: The installments of this Ptsv2creditsProcessingInformationJapanPaymentOptions.
         :type: str
         """
+
+
 
         self._installments = installments
 

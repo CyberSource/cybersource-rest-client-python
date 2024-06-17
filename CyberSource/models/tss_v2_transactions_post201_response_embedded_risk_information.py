@@ -66,6 +66,8 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedRiskInformationProviders
         """
 
+
+
         self._providers = providers
 
     def to_dict(self):

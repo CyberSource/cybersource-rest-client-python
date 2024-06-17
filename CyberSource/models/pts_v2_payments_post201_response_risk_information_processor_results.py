@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationProcessorResults(object):
         :type: str
         """
 
+
+
         self._fraud_decision = fraud_decision
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationProcessorResults(object):
         :param fraud_decision_reason: The fraud_decision_reason of this PtsV2PaymentsPost201ResponseRiskInformationProcessorResults.
         :type: str
         """
+
+
 
         self._fraud_decision_reason = fraud_decision_reason
 

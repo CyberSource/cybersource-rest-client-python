@@ -101,6 +101,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :type: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthenticationIssuerInformation
         """
 
+
+
         self._issuer_information = issuer_information
 
     @property
@@ -123,6 +125,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param low_value_exemption_indicator: The low_value_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
+
+
 
         self._low_value_exemption_indicator = low_value_exemption_indicator
 
@@ -147,6 +151,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :type: str
         """
 
+
+
         self._risk_analysis_exemption_indicator = risk_analysis_exemption_indicator
 
     @property
@@ -169,6 +175,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param trusted_merchant_exemption_indicator: The trusted_merchant_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
+
+
 
         self._trusted_merchant_exemption_indicator = trusted_merchant_exemption_indicator
 
@@ -193,6 +201,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :type: str
         """
 
+
+
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
     @property
@@ -215,6 +225,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param delegated_authentication_exemption_indicator: The delegated_authentication_exemption_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
+
+
 
         self._delegated_authentication_exemption_indicator = delegated_authentication_exemption_indicator
 
@@ -239,6 +251,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :type: str
         """
 
+
+
         self._outage_exemption_indicator = outage_exemption_indicator
 
     @property
@@ -261,6 +275,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication(object)
         :param authentication_indicator: The authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication.
         :type: str
         """
+
+
 
         self._authentication_indicator = authentication_indicator
 

@@ -131,6 +131,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1decisionsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -151,6 +153,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param order_information: The order_information of this CheckPayerAuthEnrollmentRequest.
         :type: Riskv1authenticationsOrderInformation
         """
+
+
 
         self._order_information = order_information
 
@@ -173,6 +177,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1authenticationsPaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -193,6 +199,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param processing_information: The processing_information of this CheckPayerAuthEnrollmentRequest.
         :type: Riskv1authenticationsetupsProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -215,6 +223,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1authenticationsetupsTokenInformation
         """
 
+
+
         self._token_information = token_information
 
     @property
@@ -235,6 +245,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param buyer_information: The buyer_information of this CheckPayerAuthEnrollmentRequest.
         :type: Riskv1authenticationsBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 
@@ -257,6 +269,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1authenticationsDeviceInformation
         """
 
+
+
         self._device_information = device_information
 
     @property
@@ -277,6 +291,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param merchant_information: The merchant_information of this CheckPayerAuthEnrollmentRequest.
         :type: Riskv1decisionsMerchantInformation
         """
+
+
 
         self._merchant_information = merchant_information
 
@@ -299,6 +315,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1decisionsAcquirerInformation
         """
 
+
+
         self._acquirer_information = acquirer_information
 
     @property
@@ -319,6 +337,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param recurring_payment_information: The recurring_payment_information of this CheckPayerAuthEnrollmentRequest.
         :type: Ptsv2paymentsRecurringPaymentInformation
         """
+
+
 
         self._recurring_payment_information = recurring_payment_information
 
@@ -341,6 +361,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1decisionsConsumerAuthenticationInformation
         """
 
+
+
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -361,6 +383,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param risk_information: The risk_information of this CheckPayerAuthEnrollmentRequest.
         :type: Riskv1authenticationsRiskInformation
         """
+
+
 
         self._risk_information = risk_information
 
@@ -383,6 +407,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :type: Riskv1authenticationsTravelInformation
         """
 
+
+
         self._travel_information = travel_information
 
     @property
@@ -403,6 +429,8 @@ class CheckPayerAuthEnrollmentRequest(object):
         :param merchant_defined_information: The merchant_defined_information of this CheckPayerAuthEnrollmentRequest.
         :type: list[Riskv1decisionsMerchantDefinedInformation]
         """
+
+
 
         self._merchant_defined_information = merchant_defined_information
 

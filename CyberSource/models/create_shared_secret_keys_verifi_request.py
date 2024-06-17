@@ -71,6 +71,8 @@ class CreateSharedSecretKeysVerifiRequest(object):
         :type: Kmsv2keyssymClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -91,6 +93,8 @@ class CreateSharedSecretKeysVerifiRequest(object):
         :param key_information: The key_information of this CreateSharedSecretKeysVerifiRequest.
         :type: list[Kmsv2keyssymverifiKeyInformation]
         """
+
+
 
         self._key_information = key_information
 

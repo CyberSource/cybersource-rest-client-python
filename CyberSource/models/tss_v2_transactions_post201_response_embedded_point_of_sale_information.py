@@ -88,6 +88,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_id = terminal_id
 
     @property
@@ -110,6 +112,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :param terminal_serial_number: The terminal_serial_number of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._terminal_serial_number = terminal_serial_number
 
@@ -134,6 +138,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._device_id = device_id
 
     @property
@@ -155,6 +161,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner
         """
 
+
+
         self._partner = partner
 
     @property
@@ -175,6 +183,8 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation(object):
         :param emv: The emv of this TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation.
         :type: Ptsv2paymentsidreversalsPointOfSaleInformationEmv
         """
+
+
 
         self._emv = emv
 

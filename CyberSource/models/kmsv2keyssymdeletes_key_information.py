@@ -75,8 +75,8 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :param organization_id: The organization_id of this Kmsv2keyssymdeletesKeyInformation.
         :type: str
         """
-        if organization_id is None:
-            raise ValueError("Invalid value for `organization_id`, must not be `None`")
+
+
 
         self._organization_id = organization_id
 
@@ -101,6 +101,8 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :type: str
         """
 
+
+
         self._reference_number = reference_number
 
     @property
@@ -123,8 +125,8 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :param key_id: The key_id of this Kmsv2keyssymdeletesKeyInformation.
         :type: str
         """
-        if key_id is None:
-            raise ValueError("Invalid value for `key_id`, must not be `None`")
+
+
 
         self._key_id = key_id
 

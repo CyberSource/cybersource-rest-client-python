@@ -76,6 +76,8 @@ class Riskv1exportcomplianceinquiriesOrderInformation(object):
         :type: Riskv1exportcomplianceinquiriesOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -97,6 +99,8 @@ class Riskv1exportcomplianceinquiriesOrderInformation(object):
         :type: Riskv1exportcomplianceinquiriesOrderInformationShipTo
         """
 
+
+
         self._ship_to = ship_to
 
     @property
@@ -117,6 +121,8 @@ class Riskv1exportcomplianceinquiriesOrderInformation(object):
         :param line_items: The line_items of this Riskv1exportcomplianceinquiriesOrderInformation.
         :type: list[Riskv1exportcomplianceinquiriesOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 

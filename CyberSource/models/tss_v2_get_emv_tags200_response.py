@@ -68,6 +68,8 @@ class TssV2GetEmvTags200Response(object):
         :type: list[TssV2GetEmvTags200ResponseEmvTagBreakdownList]
         """
 
+
+
         self._emv_tag_breakdown_list = emv_tag_breakdown_list
 
     def to_dict(self):

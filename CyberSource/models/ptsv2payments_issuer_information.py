@@ -68,6 +68,8 @@ class Ptsv2paymentsIssuerInformation(object):
         :type: str
         """
 
+
+
         self._discretionary_data = discretionary_data
 
     def to_dict(self):

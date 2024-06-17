@@ -88,6 +88,8 @@ class InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -108,6 +110,7 @@ class InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus(object):
         :param status: The status of this InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus.
         :type: str
         """
+
         allowed_values = ["SUCCESS", "FAILURE", "PARTIAL", "PENDING"]
         if status not in allowed_values:
             raise ValueError(
@@ -135,6 +138,7 @@ class InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus(object):
         :param reason: The reason of this InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus.
         :type: str
         """
+
         allowed_values = ["DEPENDENT_PRODUCT_NOT_CONTRACTED", "DEPENDENT_FEATURE_NOT_CHOSEN", "MISSING_DATA", "INVALID_DATA", "DUPLICATE_FIELD"]
         if reason not in allowed_values:
             raise ValueError(
@@ -163,6 +167,8 @@ class InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus(object):
         :type: list[dict(str, str)]
         """
 
+
+
         self._details = details
 
     @property
@@ -183,6 +189,8 @@ class InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus(object):
         :param message: The message of this InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus.
         :type: str
         """
+
+
 
         self._message = message
 

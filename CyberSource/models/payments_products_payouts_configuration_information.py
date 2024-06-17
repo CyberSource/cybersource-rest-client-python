@@ -66,6 +66,8 @@ class PaymentsProductsPayoutsConfigurationInformation(object):
         :type: PaymentsProductsPayoutsConfigurationInformationConfigurations
         """
 
+
+
         self._configurations = configurations
 
     def to_dict(self):

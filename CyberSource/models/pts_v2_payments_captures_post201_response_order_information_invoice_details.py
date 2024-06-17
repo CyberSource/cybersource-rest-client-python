@@ -68,6 +68,8 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationInvoiceDetails(object)
         :type: bool
         """
 
+
+
         self._level3_transmission_status = level3_transmission_status
 
     def to_dict(self):

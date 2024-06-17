@@ -71,6 +71,8 @@ class VTConfigCardNotPresent(object):
         :type: VTConfigCardNotPresentGlobalPaymentInformation
         """
 
+
+
         self._global_payment_information = global_payment_information
 
     @property
@@ -91,6 +93,8 @@ class VTConfigCardNotPresent(object):
         :param receipt_information: The receipt_information of this VTConfigCardNotPresent.
         :type: VTConfigCardNotPresentReceiptInformation
         """
+
+
 
         self._receipt_information = receipt_information
 

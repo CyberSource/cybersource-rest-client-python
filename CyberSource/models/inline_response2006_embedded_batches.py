@@ -111,6 +111,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :type: InlineResponse2006EmbeddedLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -133,6 +135,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :param batch_id: The batch_id of this InlineResponse2006EmbeddedBatches.
         :type: str
         """
+
+
 
         self._batch_id = batch_id
 
@@ -157,6 +161,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :type: str
         """
 
+
+
         self._batch_created_date = batch_created_date
 
     @property
@@ -179,6 +185,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :param batch_modified_date: The batch_modified_date of this InlineResponse2006EmbeddedBatches.
         :type: str
         """
+
+
 
         self._batch_modified_date = batch_modified_date
 
@@ -203,6 +211,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :type: str
         """
 
+
+
         self._batch_source = batch_source
 
     @property
@@ -225,6 +235,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :param token_source: The token_source of this InlineResponse2006EmbeddedBatches.
         :type: str
         """
+
+
 
         self._token_source = token_source
 
@@ -249,6 +261,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :type: str
         """
 
+
+
         self._merchant_reference = merchant_reference
 
     @property
@@ -271,6 +285,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2006EmbeddedBatches.
         :type: list[str]
         """
+
+
 
         self._batch_ca_endpoints = batch_ca_endpoints
 
@@ -295,6 +311,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -315,6 +333,8 @@ class InlineResponse2006EmbeddedBatches(object):
         :param totals: The totals of this InlineResponse2006EmbeddedBatches.
         :type: InlineResponse2006EmbeddedTotals
         """
+
+
 
         self._totals = totals
 

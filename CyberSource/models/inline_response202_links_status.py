@@ -66,6 +66,8 @@ class InlineResponse202LinksStatus(object):
         :type: str
         """
 
+
+
         self._href = href
 
     def to_dict(self):

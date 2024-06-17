@@ -73,6 +73,8 @@ class Tmsv2customersMerchantDefinedInformation(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -95,6 +97,8 @@ class Tmsv2customersMerchantDefinedInformation(object):
         :param value: The value of this Tmsv2customersMerchantDefinedInformation.
         :type: str
         """
+
+
 
         self._value = value
 

@@ -98,6 +98,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_code = product_code
 
     @property
@@ -120,6 +122,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param product_name: The product_name of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._product_name = product_name
 
@@ -144,6 +148,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_sku = product_sku
 
     @property
@@ -166,6 +172,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._tax_amount = tax_amount
 
@@ -190,6 +198,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :type: int
         """
 
+
+
         self._quantity = quantity
 
     @property
@@ -213,6 +223,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._unit_price = unit_price
 
     @property
@@ -235,6 +247,8 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
         :param fulfillment_type: The fulfillment_type of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._fulfillment_type = fulfillment_type
 

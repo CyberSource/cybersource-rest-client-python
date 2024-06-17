@@ -153,6 +153,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._account_type = account_type
 
     @property
@@ -175,6 +177,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param account_status: The account_status of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._account_status = account_status
 
@@ -199,6 +203,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: list[PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances]
         """
 
+
+
         self._balances = balances
 
     @property
@@ -221,6 +227,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param balance_amount: The balance_amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._balance_amount = balance_amount
 
@@ -245,6 +253,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._balance_amount_type = balance_amount_type
 
     @property
@@ -267,6 +277,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._currency = currency
 
@@ -291,6 +303,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._balance_sign = balance_sign
 
     @property
@@ -313,6 +327,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param affluence_indicator: The affluence_indicator of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._affluence_indicator = affluence_indicator
 
@@ -337,6 +353,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._category = category
 
     @property
@@ -359,6 +377,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param commercial: The commercial of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._commercial = commercial
 
@@ -383,6 +403,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._group = group
 
     @property
@@ -405,6 +427,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param health_care: The health_care of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._health_care = health_care
 
@@ -429,6 +453,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._payroll = payroll
 
     @property
@@ -451,6 +477,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param level3_eligible: The level3_eligible of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._level3_eligible = level3_eligible
 
@@ -475,6 +503,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._pinless_debit = pinless_debit
 
     @property
@@ -497,6 +527,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param signature_debit: The signature_debit of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._signature_debit = signature_debit
 
@@ -521,6 +553,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
+
+
         self._prepaid = prepaid
 
     @property
@@ -543,6 +577,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         :param regulated: The regulated of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
         :type: str
         """
+
+
 
         self._regulated = regulated
 

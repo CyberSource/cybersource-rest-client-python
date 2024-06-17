@@ -93,6 +93,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :type: str
         """
 
+
+
         self._last_change_date = last_change_date
 
     @property
@@ -115,6 +117,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param creation_history: The creation_history of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
+
+
 
         self._creation_history = creation_history
 
@@ -139,6 +143,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :type: str
         """
 
+
+
         self._modification_history = modification_history
 
     @property
@@ -161,6 +167,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param password_history: The password_history of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
+
+
 
         self._password_history = password_history
 
@@ -185,6 +193,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :type: str
         """
 
+
+
         self._create_date = create_date
 
     @property
@@ -207,6 +217,8 @@ class Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount(object):
         :param password_change_date: The password_change_date of this Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount.
         :type: str
         """
+
+
 
         self._password_change_date = password_change_date
 

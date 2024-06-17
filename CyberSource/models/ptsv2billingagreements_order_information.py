@@ -71,6 +71,8 @@ class Ptsv2billingagreementsOrderInformation(object):
         :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -91,6 +93,8 @@ class Ptsv2billingagreementsOrderInformation(object):
         :param bill_to: The bill_to of this Ptsv2billingagreementsOrderInformation.
         :type: Ptsv2billingagreementsOrderInformationBillTo
         """
+
+
 
         self._bill_to = bill_to
 

@@ -71,6 +71,8 @@ class PaymentsProductsCurrencyConversionConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsCurrencyConversionConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsCurrencyConversionConfigurationInformation.
         :type: PaymentsProductsCurrencyConversionConfigurationInformationConfigurations
         """
+
+
 
         self._configurations = configurations
 

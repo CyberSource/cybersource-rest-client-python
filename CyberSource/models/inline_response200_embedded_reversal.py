@@ -73,6 +73,8 @@ class InlineResponse200EmbeddedReversal(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -93,6 +95,8 @@ class InlineResponse200EmbeddedReversal(object):
         :param links: The links of this InlineResponse200EmbeddedReversal.
         :type: InlineResponse200EmbeddedReversalLinks
         """
+
+
 
         self._links = links
 

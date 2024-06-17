@@ -68,6 +68,8 @@ class Riskv1decisionsProcessorInformationCardVerification(object):
         :type: str
         """
 
+
+
         self._result_code = result_code
 
     def to_dict(self):

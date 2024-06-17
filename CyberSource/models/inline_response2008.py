@@ -111,6 +111,8 @@ class InlineResponse2008(object):
         :type: str
         """
 
+
+
         self._version = version
 
     @property
@@ -133,6 +135,8 @@ class InlineResponse2008(object):
         :param report_created_date: The report_created_date of this InlineResponse2008.
         :type: str
         """
+
+
 
         self._report_created_date = report_created_date
 
@@ -157,6 +161,8 @@ class InlineResponse2008(object):
         :type: str
         """
 
+
+
         self._batch_id = batch_id
 
     @property
@@ -180,6 +186,8 @@ class InlineResponse2008(object):
         :type: str
         """
 
+
+
         self._batch_source = batch_source
 
     @property
@@ -200,6 +208,8 @@ class InlineResponse2008(object):
         :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2008.
         :type: str
         """
+
+
 
         self._batch_ca_endpoints = batch_ca_endpoints
 
@@ -224,6 +234,8 @@ class InlineResponse2008(object):
         :type: str
         """
 
+
+
         self._batch_created_date = batch_created_date
 
     @property
@@ -247,6 +259,8 @@ class InlineResponse2008(object):
         :type: str
         """
 
+
+
         self._merchant_reference = merchant_reference
 
     @property
@@ -267,6 +281,8 @@ class InlineResponse2008(object):
         :param totals: The totals of this InlineResponse2008.
         :type: InlineResponse2006EmbeddedTotals
         """
+
+
 
         self._totals = totals
 
@@ -289,6 +305,8 @@ class InlineResponse2008(object):
         :type: InlineResponse2007Billing
         """
 
+
+
         self._billing = billing
 
     @property
@@ -309,6 +327,8 @@ class InlineResponse2008(object):
         :param records: The records of this InlineResponse2008.
         :type: list[InlineResponse2008Records]
         """
+
+
 
         self._records = records
 

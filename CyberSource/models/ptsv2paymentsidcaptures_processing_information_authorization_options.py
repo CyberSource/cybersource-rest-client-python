@@ -78,6 +78,8 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
+
+
         self._auth_type = auth_type
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
+
+
         self._verbal_auth_code = verbal_auth_code
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions(object):
         :param verbal_auth_transaction_id: The verbal_auth_transaction_id of this Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions.
         :type: str
         """
+
+
 
         self._verbal_auth_transaction_id = verbal_auth_transaction_id
 

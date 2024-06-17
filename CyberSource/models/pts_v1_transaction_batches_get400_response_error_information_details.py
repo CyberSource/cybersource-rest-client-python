@@ -73,6 +73,8 @@ class PtsV1TransactionBatchesGet400ResponseErrorInformationDetails(object):
         :type: str
         """
 
+
+
         self._field = field
 
     @property
@@ -95,6 +97,8 @@ class PtsV1TransactionBatchesGet400ResponseErrorInformationDetails(object):
         :param message: The message of this PtsV1TransactionBatchesGet400ResponseErrorInformationDetails.
         :type: str
         """
+
+
 
         self._message = message
 

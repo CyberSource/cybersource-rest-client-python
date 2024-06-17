@@ -283,6 +283,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: bool
         """
 
+
+
         self._no_show_indicator = no_show_indicator
 
     @property
@@ -305,6 +307,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param customer_name: The customer_name of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._customer_name = customer_name
 
@@ -329,6 +333,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._vehicle_class = vehicle_class
 
     @property
@@ -351,6 +357,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param distance_travelled: The distance_travelled of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._distance_travelled = distance_travelled
 
@@ -375,6 +383,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._distance_unit = distance_unit
 
     @property
@@ -397,6 +407,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param return_date_time: The return_date_time of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._return_date_time = return_date_time
 
@@ -421,6 +433,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._rental_date_time = rental_date_time
 
     @property
@@ -443,6 +457,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param max_free_distance: The max_free_distance of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._max_free_distance = max_free_distance
 
@@ -467,6 +483,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: bool
         """
 
+
+
         self._insurance_indicator = insurance_indicator
 
     @property
@@ -490,6 +508,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._program_code = program_code
 
     @property
@@ -511,6 +531,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: Ptsv2paymentsTravelInformationAutoRentalReturnAddress
         """
 
+
+
         self._return_address = return_address
 
     @property
@@ -531,6 +553,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param rental_address: The rental_address of this Ptsv2paymentsTravelInformationAutoRental.
         :type: Ptsv2paymentsTravelInformationAutoRentalRentalAddress
         """
+
+
 
         self._rental_address = rental_address
 
@@ -555,6 +579,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._agreement_number = agreement_number
 
     @property
@@ -577,6 +603,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param odometer_reading: The odometer_reading of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._odometer_reading = odometer_reading
 
@@ -601,6 +629,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._vehicle_identification_number = vehicle_identification_number
 
     @property
@@ -623,6 +653,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param company_id: The company_id of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._company_id = company_id
 
@@ -647,6 +679,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._number_of_additional_drivers = number_of_additional_drivers
 
     @property
@@ -669,6 +703,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param driver_age: The driver_age of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._driver_age = driver_age
 
@@ -693,6 +729,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._special_program_code = special_program_code
 
     @property
@@ -715,6 +753,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param vehicle_make: The vehicle_make of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._vehicle_make = vehicle_make
 
@@ -739,6 +779,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._vehicle_model = vehicle_model
 
     @property
@@ -761,6 +803,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param time_period: The time_period of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._time_period = time_period
 
@@ -785,6 +829,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._commodity_code = commodity_code
 
     @property
@@ -808,6 +854,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._customer_service_phone_number = customer_service_phone_number
 
     @property
@@ -828,6 +876,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param tax_details: The tax_details of this Ptsv2paymentsTravelInformationAutoRental.
         :type: Ptsv2paymentsTravelInformationAutoRentalTaxDetails
         """
+
+
 
         self._tax_details = tax_details
 
@@ -852,6 +902,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._insurance_amount = insurance_amount
 
     @property
@@ -874,6 +926,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param one_way_drop_off_amount: The one_way_drop_off_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._one_way_drop_off_amount = one_way_drop_off_amount
 
@@ -898,6 +952,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._adjusted_amount_indicator = adjusted_amount_indicator
 
     @property
@@ -920,6 +976,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param adjusted_amount: The adjusted_amount of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._adjusted_amount = adjusted_amount
 
@@ -944,6 +1002,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._fuel_charges = fuel_charges
 
     @property
@@ -966,6 +1026,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param weekly_rental_rate: The weekly_rental_rate of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._weekly_rental_rate = weekly_rental_rate
 
@@ -990,6 +1052,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._daily_rental_rate = daily_rental_rate
 
     @property
@@ -1012,6 +1076,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param rate_per_mile: The rate_per_mile of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._rate_per_mile = rate_per_mile
 
@@ -1036,6 +1102,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._mileage_charge = mileage_charge
 
     @property
@@ -1058,6 +1126,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param extra_mileage_charge: The extra_mileage_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._extra_mileage_charge = extra_mileage_charge
 
@@ -1082,6 +1152,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._late_fee_amount = late_fee_amount
 
     @property
@@ -1104,6 +1176,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param towing_charge: The towing_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._towing_charge = towing_charge
 
@@ -1128,6 +1202,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._extra_charge = extra_charge
 
     @property
@@ -1150,6 +1226,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param gps_charge: The gps_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._gps_charge = gps_charge
 
@@ -1174,6 +1252,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._phone_charge = phone_charge
 
     @property
@@ -1196,6 +1276,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param parking_violation_charge: The parking_violation_charge of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._parking_violation_charge = parking_violation_charge
 
@@ -1220,6 +1302,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._other_charges = other_charges
 
     @property
@@ -1243,6 +1327,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :type: str
         """
 
+
+
         self._company_name = company_name
 
     @property
@@ -1265,6 +1351,8 @@ class Ptsv2paymentsTravelInformationAutoRental(object):
         :param affiliate_name: The affiliate_name of this Ptsv2paymentsTravelInformationAutoRental.
         :type: str
         """
+
+
 
         self._affiliate_name = affiliate_name
 

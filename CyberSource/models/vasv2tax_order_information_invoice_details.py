@@ -68,6 +68,8 @@ class Vasv2taxOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._invoice_date = invoice_date
 
     def to_dict(self):

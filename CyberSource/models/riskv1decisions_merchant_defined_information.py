@@ -73,6 +73,8 @@ class Riskv1decisionsMerchantDefinedInformation(object):
         :type: str
         """
 
+
+
         self._key = key
 
     @property
@@ -95,6 +97,8 @@ class Riskv1decisionsMerchantDefinedInformation(object):
         :param value: The value of this Riskv1decisionsMerchantDefinedInformation.
         :type: str
         """
+
+
 
         self._value = value
 

@@ -71,6 +71,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks(object):
         :param customer: The customer of this Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks.
         :type: Tmsv2customersLinksSelf
         """
+
+
 
         self._customer = customer
 

@@ -66,6 +66,8 @@ class InlineResponse2006EmbeddedLinks(object):
         :type: list[InlineResponse2006EmbeddedLinksReports]
         """
 
+
+
         self._reports = reports
 
     def to_dict(self):

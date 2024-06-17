@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
         :type: str
         """
 
+
+
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponseBuyerInformation(object):
         :param hashed_password: The hashed_password of this TssV2TransactionsGet200ResponseBuyerInformation.
         :type: str
         """
+
+
 
         self._hashed_password = hashed_password
 

@@ -117,8 +117,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address1: The address1 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if address1 is None:
-            raise ValueError("Invalid value for `address1`, must not be `None`")
+
+
 
         self._address1 = address1
 
@@ -143,6 +143,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -165,6 +167,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address3: The address3 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address3 = address3
 
@@ -189,6 +193,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address4 = address4
 
     @property
@@ -212,6 +218,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -234,8 +242,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param country: The country of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if country is None:
-            raise ValueError("Invalid value for `country`, must not be `None`")
+
+
 
         self._country = country
 
@@ -259,8 +267,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param locality: The locality of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if locality is None:
-            raise ValueError("Invalid value for `locality`, must not be `None`")
+
+
 
         self._locality = locality
 
@@ -284,8 +292,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if postal_code is None:
-            raise ValueError("Invalid value for `postal_code`, must not be `None`")
+
+
 
         self._postal_code = postal_code
 
@@ -307,6 +315,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param company: The company of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: Riskv1exportcomplianceinquiriesOrderInformationBillToCompany
         """
+
+
 
         self._company = company
 
@@ -331,6 +341,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -354,6 +366,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._last_name = last_name
 
     @property
@@ -376,8 +390,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param email: The email of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")
+
+
 
         self._email = email
 

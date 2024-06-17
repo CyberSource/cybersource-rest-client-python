@@ -78,6 +78,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200Response(object):
         :type: datetime
         """
 
+
+
         self._start_date = start_date
 
     @property
@@ -101,6 +103,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200Response(object):
         :type: datetime
         """
 
+
+
         self._end_date = end_date
 
     @property
@@ -123,6 +127,8 @@ class ReportingV3InterchangeClearingLevelDetailsGet200Response(object):
         :param interchange_clearing_level_details: The interchange_clearing_level_details of this ReportingV3InterchangeClearingLevelDetailsGet200Response.
         :type: list[ReportingV3InterchangeClearingLevelDetailsGet200ResponseInterchangeClearingLevelDetails]
         """
+
+
 
         self._interchange_clearing_level_details = interchange_clearing_level_details
 

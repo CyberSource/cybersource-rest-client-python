@@ -81,6 +81,8 @@ class Reportingv3reportsReportFilters(object):
         :type: list[str]
         """
 
+
+
         self._application_name = application_name
 
     @property
@@ -101,6 +103,8 @@ class Reportingv3reportsReportFilters(object):
         :param first_name: The first_name of this Reportingv3reportsReportFilters.
         :type: list[str]
         """
+
+
 
         self._first_name = first_name
 
@@ -123,6 +127,8 @@ class Reportingv3reportsReportFilters(object):
         :type: list[str]
         """
 
+
+
         self._last_name = last_name
 
     @property
@@ -143,6 +149,8 @@ class Reportingv3reportsReportFilters(object):
         :param email: The email of this Reportingv3reportsReportFilters.
         :type: list[str]
         """
+
+
 
         self._email = email
 

@@ -123,6 +123,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._number = number
 
     @property
@@ -145,6 +147,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._expiration_month = expiration_month
 
@@ -169,6 +173,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._expiration_year = expiration_year
 
     @property
@@ -191,6 +197,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param type: The type of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -215,6 +223,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._account_encoder_id = account_encoder_id
 
     @property
@@ -237,6 +247,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param issue_number: The issue_number of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._issue_number = issue_number
 
@@ -261,6 +273,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._start_month = start_month
 
     @property
@@ -283,6 +297,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param start_year: The start_year of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._start_year = start_year
 
@@ -307,6 +323,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._source_account_type = source_account_type
 
     @property
@@ -329,6 +347,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param source_account_type_details: The source_account_type_details of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._source_account_type_details = source_account_type_details
 
@@ -353,6 +373,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._security_code = security_code
 
     @property
@@ -375,6 +397,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard(object):
         :param use_as: The use_as of this Ptsv2paymentsidrefundsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._use_as = use_as
 

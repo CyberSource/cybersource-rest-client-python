@@ -71,6 +71,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurations(object):
         :type: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds)
         """
 
+
+
         self._pullfunds = pullfunds
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurations(object):
         :param pushfunds: The pushfunds of this PaymentsProductsPayoutsConfigurationInformationConfigurations.
         :type: dict(str, PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds)
         """
+
+
 
         self._pushfunds = pushfunds
 

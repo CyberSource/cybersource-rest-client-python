@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationEWallet(object):
         :type: str
         """
 
+
+
         self._funding_source = funding_source
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationEWallet(object):
         :param account_id: The account_id of this PtsV2PaymentsPost201ResponsePaymentInformationEWallet.
         :type: str
         """
+
+
 
         self._account_id = account_id
 

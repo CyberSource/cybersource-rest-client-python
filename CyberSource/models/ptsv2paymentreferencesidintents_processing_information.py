@@ -68,6 +68,8 @@ class Ptsv2paymentreferencesidintentsProcessingInformation(object):
         :type: list[str]
         """
 
+
+
         self._action_list = action_list
 
     def to_dict(self):

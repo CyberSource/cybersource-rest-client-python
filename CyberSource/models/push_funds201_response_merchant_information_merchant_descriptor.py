@@ -78,6 +78,8 @@ class PushFunds201ResponseMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -101,6 +103,8 @@ class PushFunds201ResponseMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -123,6 +127,8 @@ class PushFunds201ResponseMerchantInformationMerchantDescriptor(object):
         :param country: The country of this PushFunds201ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._country = country
 

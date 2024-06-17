@@ -68,6 +68,8 @@ class Ptsv2paymentsidreversalsPointOfSaleInformationEmv(object):
         :type: str
         """
 
+
+
         self._tags = tags
 
     def to_dict(self):

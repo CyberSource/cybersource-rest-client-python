@@ -88,6 +88,8 @@ class InlineResponse4005(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -110,6 +112,8 @@ class InlineResponse4005(object):
         :param status: The status of this InlineResponse4005.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -134,6 +138,8 @@ class InlineResponse4005(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -157,6 +163,8 @@ class InlineResponse4005(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -179,6 +187,8 @@ class InlineResponse4005(object):
         :param status_code: The status_code of this InlineResponse4005.
         :type: str
         """
+
+
 
         self._status_code = status_code
 

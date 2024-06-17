@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseLinksSelf(object):
         :param method: The method of this PtsV2PaymentsPost201ResponseLinksSelf.
         :type: str
         """
+
+
 
         self._method = method
 

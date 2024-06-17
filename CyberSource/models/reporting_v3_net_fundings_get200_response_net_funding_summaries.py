@@ -103,6 +103,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -123,6 +125,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :param payment_sub_type: The payment_sub_type of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :type: str
         """
+
+
 
         self._payment_sub_type = payment_sub_type
 
@@ -145,6 +149,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :type: int
         """
 
+
+
         self._conveyed_count = conveyed_count
 
     @property
@@ -165,6 +171,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :param conveyed_amount: The conveyed_amount of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :type: str
         """
+
+
 
         self._conveyed_amount = conveyed_amount
 
@@ -187,6 +195,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :type: int
         """
 
+
+
         self._settled_count = settled_count
 
     @property
@@ -208,6 +218,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :type: int
         """
 
+
+
         self._funded_count = funded_count
 
     @property
@@ -228,6 +240,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :param funded_amount: The funded_amount of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :type: str
         """
+
+
 
         self._funded_amount = funded_amount
 
@@ -251,6 +265,8 @@ class ReportingV3NetFundingsGet200ResponseNetFundingSummaries(object):
         :param currency_code: The currency_code of this ReportingV3NetFundingsGet200ResponseNetFundingSummaries.
         :type: str
         """
+
+
 
         self._currency_code = currency_code
 

@@ -146,6 +146,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._card_processing = card_processing
 
     @property
@@ -166,6 +168,8 @@ class InlineResponse2011SetupsPayments(object):
         :param card_present_connect: The card_present_connect of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._card_present_connect = card_present_connect
 
@@ -188,6 +192,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._e_check = e_check
 
     @property
@@ -208,6 +214,8 @@ class InlineResponse2011SetupsPayments(object):
         :param payer_authentication: The payer_authentication of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._payer_authentication = payer_authentication
 
@@ -230,6 +238,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
+
+
         self._digital_payments = digital_payments
 
     @property
@@ -250,6 +260,8 @@ class InlineResponse2011SetupsPayments(object):
         :param secure_acceptance: The secure_acceptance of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._secure_acceptance = secure_acceptance
 
@@ -272,6 +284,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._virtual_terminal = virtual_terminal
 
     @property
@@ -292,6 +306,8 @@ class InlineResponse2011SetupsPayments(object):
         :param currency_conversion: The currency_conversion of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._currency_conversion = currency_conversion
 
@@ -314,6 +330,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
+
+
         self._tax = tax
 
     @property
@@ -334,6 +352,8 @@ class InlineResponse2011SetupsPayments(object):
         :param customer_invoicing: The customer_invoicing of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
+
+
 
         self._customer_invoicing = customer_invoicing
 
@@ -356,6 +376,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._recurring_billing = recurring_billing
 
     @property
@@ -376,6 +398,8 @@ class InlineResponse2011SetupsPayments(object):
         :param cybs_ready_terminal: The cybs_ready_terminal of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._cybs_ready_terminal = cybs_ready_terminal
 
@@ -398,6 +422,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
+
+
         self._payment_orchestration = payment_orchestration
 
     @property
@@ -418,6 +444,8 @@ class InlineResponse2011SetupsPayments(object):
         :param payouts: The payouts of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._payouts = payouts
 
@@ -440,6 +468,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
+
+
         self._pay_by_link = pay_by_link
 
     @property
@@ -461,6 +491,8 @@ class InlineResponse2011SetupsPayments(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
+
+
         self._unified_checkout = unified_checkout
 
     @property
@@ -481,6 +513,8 @@ class InlineResponse2011SetupsPayments(object):
         :param receivables_manager: The receivables_manager of this InlineResponse2011SetupsPayments.
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
+
+
 
         self._receivables_manager = receivables_manager
 

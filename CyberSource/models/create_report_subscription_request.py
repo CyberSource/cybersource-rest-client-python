@@ -120,8 +120,8 @@ class CreateReportSubscriptionRequest(object):
         :param organization_id: The organization_id of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if organization_id is not None and not re.search('[a-zA-Z0-9-_]+', organization_id):
-            raise ValueError("Invalid value for `organization_id`, must be a follow pattern or equal to `/[a-zA-Z0-9-_]+/`")
+
+
 
         self._organization_id = organization_id
 
@@ -145,10 +145,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_definition_name: The report_definition_name of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if report_definition_name is None:
-            raise ValueError("Invalid value for `report_definition_name`, must not be `None`")
-        if report_definition_name is not None and not re.search('[a-zA-Z0-9-]+', report_definition_name):
-            raise ValueError("Invalid value for `report_definition_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-]+/`")
+
+
 
         self._report_definition_name = report_definition_name
 
@@ -170,8 +168,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_fields: The report_fields of this CreateReportSubscriptionRequest.
         :type: list[str]
         """
-        if report_fields is None:
-            raise ValueError("Invalid value for `report_fields`, must not be `None`")
+
+
 
         self._report_fields = report_fields
 
@@ -195,8 +193,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_mime_type: The report_mime_type of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if report_mime_type is None:
-            raise ValueError("Invalid value for `report_mime_type`, must not be `None`")
+
+
 
         self._report_mime_type = report_mime_type
 
@@ -220,8 +218,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_frequency: The report_frequency of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if report_frequency is None:
-            raise ValueError("Invalid value for `report_frequency`, must not be `None`")
+
+
 
         self._report_frequency = report_frequency
 
@@ -245,8 +243,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_interval: The report_interval of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if report_interval is not None and not re.search('^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$', report_interval):
-            raise ValueError("Invalid value for `report_interval`, must be a follow pattern or equal to `/^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$/`")
+
+
 
         self._report_interval = report_interval
 
@@ -268,10 +266,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_name: The report_name of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if report_name is None:
-            raise ValueError("Invalid value for `report_name`, must not be `None`")
-        if report_name is not None and not re.search('[a-zA-Z0-9-_ ]+', report_name):
-            raise ValueError("Invalid value for `report_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
+
+
 
         self._report_name = report_name
 
@@ -293,8 +289,8 @@ class CreateReportSubscriptionRequest(object):
         :param timezone: The timezone of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if timezone is None:
-            raise ValueError("Invalid value for `timezone`, must not be `None`")
+
+
 
         self._timezone = timezone
 
@@ -318,8 +314,8 @@ class CreateReportSubscriptionRequest(object):
         :param start_time: The start_time of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if start_time is None:
-            raise ValueError("Invalid value for `start_time`, must not be `None`")
+
+
 
         self._start_time = start_time
 
@@ -344,6 +340,8 @@ class CreateReportSubscriptionRequest(object):
         :type: int
         """
 
+
+
         self._start_day = start_day
 
     @property
@@ -367,6 +365,8 @@ class CreateReportSubscriptionRequest(object):
         :type: dict(str, list[str])
         """
 
+
+
         self._report_filters = report_filters
 
     @property
@@ -387,6 +387,8 @@ class CreateReportSubscriptionRequest(object):
         :param report_preferences: The report_preferences of this CreateReportSubscriptionRequest.
         :type: Reportingv3reportsReportPreferences
         """
+
+
 
         self._report_preferences = report_preferences
 
@@ -410,8 +412,8 @@ class CreateReportSubscriptionRequest(object):
         :param group_name: The group_name of this CreateReportSubscriptionRequest.
         :type: str
         """
-        if group_name is not None and not re.search('[a-zA-Z0-9-_ ]+', group_name):
-            raise ValueError("Invalid value for `group_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
+
+
 
         self._group_name = group_name
 

@@ -158,6 +158,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -180,6 +182,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param address2: The address2 of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -204,6 +208,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address3 = address3
 
     @property
@@ -226,6 +232,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param address4: The address4 of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address4 = address4
 
@@ -250,6 +258,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -272,6 +282,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param building_number: The building_number of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._building_number = building_number
 
@@ -296,6 +308,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -318,6 +332,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param district: The district of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._district = district
 
@@ -342,6 +358,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -365,6 +383,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -385,6 +405,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param company: The company of this Upv1capturecontextsOrderInformationBillTo.
         :type: Upv1capturecontextsOrderInformationBillToCompany
         """
+
+
 
         self._company = company
 
@@ -409,6 +431,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -431,6 +455,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param first_name: The first_name of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._first_name = first_name
 
@@ -455,6 +481,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._last_name = last_name
 
     @property
@@ -477,6 +505,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param middle_name: The middle_name of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._middle_name = middle_name
 
@@ -501,6 +531,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._name_suffix = name_suffix
 
     @property
@@ -523,6 +555,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param title: The title of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._title = title
 
@@ -547,6 +581,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -569,6 +605,8 @@ class Upv1capturecontextsOrderInformationBillTo(object):
         :param phone_type: The phone_type of this Upv1capturecontextsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._phone_type = phone_type
 

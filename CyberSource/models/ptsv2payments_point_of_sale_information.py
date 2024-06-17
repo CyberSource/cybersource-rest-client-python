@@ -208,6 +208,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_id = terminal_id
 
     @property
@@ -230,6 +232,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_serial_number: The terminal_serial_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._terminal_serial_number = terminal_serial_number
 
@@ -254,6 +258,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._cardholder_verification_method_used = cardholder_verification_method_used
 
     @property
@@ -276,6 +282,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param lane_number: The lane_number of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._lane_number = lane_number
 
@@ -300,6 +308,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._cat_level = cat_level
 
     @property
@@ -322,6 +332,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param entry_mode: The entry_mode of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._entry_mode = entry_mode
 
@@ -346,6 +358,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._terminal_capability = terminal_capability
 
     @property
@@ -369,6 +383,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._operating_environment = operating_environment
 
     @property
@@ -389,6 +405,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param emv: The emv of this Ptsv2paymentsPointOfSaleInformation.
         :type: Ptsv2paymentsPointOfSaleInformationEmv
         """
+
+
 
         self._emv = emv
 
@@ -413,6 +431,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._amex_capn_data = amex_capn_data
 
     @property
@@ -435,6 +455,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param track_data: The track_data of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._track_data = track_data
 
@@ -459,6 +481,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._store_and_forward_indicator = store_and_forward_indicator
 
     @property
@@ -481,6 +505,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param cardholder_verification_method: The cardholder_verification_method of this Ptsv2paymentsPointOfSaleInformation.
         :type: list[str]
         """
+
+
 
         self._cardholder_verification_method = cardholder_verification_method
 
@@ -505,6 +531,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: list[str]
         """
 
+
+
         self._terminal_input_capability = terminal_input_capability
 
     @property
@@ -527,6 +555,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_card_capture_capability: The terminal_card_capture_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._terminal_card_capture_capability = terminal_card_capture_capability
 
@@ -551,6 +581,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_output_capability = terminal_output_capability
 
     @property
@@ -573,6 +605,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_pin_capability: The terminal_pin_capability of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
         """
+
+
 
         self._terminal_pin_capability = terminal_pin_capability
 
@@ -597,6 +631,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._pin_entry_solution = pin_entry_solution
 
     @property
@@ -619,6 +655,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param device_id: The device_id of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._device_id = device_id
 
@@ -643,6 +681,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: int
         """
 
+
+
         self._pin_block_encoding_format = pin_block_encoding_format
 
     @property
@@ -665,6 +705,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param encrypted_pin: The encrypted_pin of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._encrypted_pin = encrypted_pin
 
@@ -689,6 +731,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._encrypted_key_serial_number = encrypted_key_serial_number
 
     @property
@@ -711,6 +755,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param partner_sdk_version: The partner_sdk_version of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._partner_sdk_version = partner_sdk_version
 
@@ -735,6 +781,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._emv_application_identifier_and_dedicated_file_name = emv_application_identifier_and_dedicated_file_name
 
     @property
@@ -757,6 +805,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_compliance: The terminal_compliance of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._terminal_compliance = terminal_compliance
 
@@ -781,6 +831,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._is_dedicated_hardware_terminal = is_dedicated_hardware_terminal
 
     @property
@@ -803,6 +855,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param terminal_model: The terminal_model of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._terminal_model = terminal_model
 
@@ -827,6 +881,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_make = terminal_make
 
     @property
@@ -849,6 +905,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         :param service_code: The service_code of this Ptsv2paymentsPointOfSaleInformation.
         :type: str
         """
+
+
 
         self._service_code = service_code
 

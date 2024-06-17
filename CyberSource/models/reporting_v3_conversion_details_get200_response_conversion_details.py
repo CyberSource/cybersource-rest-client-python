@@ -113,6 +113,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :type: str
         """
 
+
+
         self._merchant_reference_number = merchant_reference_number
 
     @property
@@ -135,6 +137,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :param conversion_time: The conversion_time of this ReportingV3ConversionDetailsGet200ResponseConversionDetails.
         :type: datetime
         """
+
+
 
         self._conversion_time = conversion_time
 
@@ -159,6 +163,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :type: str
         """
 
+
+
         self._request_id = request_id
 
     @property
@@ -181,6 +187,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :param original_decision: The original_decision of this ReportingV3ConversionDetailsGet200ResponseConversionDetails.
         :type: str
         """
+
+
 
         self._original_decision = original_decision
 
@@ -205,6 +213,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :type: str
         """
 
+
+
         self._new_decision = new_decision
 
     @property
@@ -227,6 +237,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :param reviewer: The reviewer of this ReportingV3ConversionDetailsGet200ResponseConversionDetails.
         :type: str
         """
+
+
 
         self._reviewer = reviewer
 
@@ -251,6 +263,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :type: str
         """
 
+
+
         self._reviewer_comments = reviewer_comments
 
     @property
@@ -273,6 +287,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :param queue: The queue of this ReportingV3ConversionDetailsGet200ResponseConversionDetails.
         :type: str
         """
+
+
 
         self._queue = queue
 
@@ -297,6 +313,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :type: str
         """
 
+
+
         self._profile = profile
 
     @property
@@ -317,6 +335,8 @@ class ReportingV3ConversionDetailsGet200ResponseConversionDetails(object):
         :param notes: The notes of this ReportingV3ConversionDetailsGet200ResponseConversionDetails.
         :type: list[ReportingV3ConversionDetailsGet200ResponseNotes]
         """
+
+
 
         self._notes = notes
 

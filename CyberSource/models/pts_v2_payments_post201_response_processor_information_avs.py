@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationAvs(object):
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationAvs.
         :type: str
         """
+
+
 
         self._code_raw = code_raw
 

@@ -73,6 +73,8 @@ class Ptsv2paymentsTravelInformationAgency(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsTravelInformationAgency(object):
         :param name: The name of this Ptsv2paymentsTravelInformationAgency.
         :type: str
         """
+
+
 
         self._name = name
 

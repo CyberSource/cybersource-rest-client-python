@@ -84,6 +84,8 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._bin = bin
 
     @property
@@ -106,8 +108,8 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param type: The type of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")
+
+
 
         self._type = type
 
@@ -131,8 +133,8 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-        if expiration_month is None:
-            raise ValueError("Invalid value for `expiration_month`, must not be `None`")
+
+
 
         self._expiration_month = expiration_month
 
@@ -156,8 +158,8 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param expiration_year: The expiration_year of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-        if expiration_year is None:
-            raise ValueError("Invalid value for `expiration_year`, must not be `None`")
+
+
 
         self._expiration_year = expiration_year
 
@@ -181,8 +183,8 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param number: The number of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-        if number is None:
-            raise ValueError("Invalid value for `number`, must not be `None`")
+
+
 
         self._number = number
 

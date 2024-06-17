@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
         :type: bool
         """
 
+
+
         self._level3_transmission_status = level3_transmission_status
 
     @property
@@ -95,6 +97,8 @@ class PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails(object):
         :param sales_slip_number: The sales_slip_number of this PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails.
         :type: int
         """
+
+
 
         self._sales_slip_number = sales_slip_number
 

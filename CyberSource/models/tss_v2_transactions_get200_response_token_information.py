@@ -91,6 +91,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformationCustomer
         """
 
+
+
         self._customer = customer
 
     @property
@@ -111,6 +113,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :param payment_instrument: The payment_instrument of this TssV2TransactionsGet200ResponseTokenInformation.
         :type: PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument
         """
+
+
 
         self._payment_instrument = payment_instrument
 
@@ -133,6 +137,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformationShippingAddress
         """
 
+
+
         self._shipping_address = shipping_address
 
     @property
@@ -153,6 +159,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :param instrument_identifier: The instrument_identifier of this TssV2TransactionsGet200ResponseTokenInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier
         """
+
+
 
         self._instrument_identifier = instrument_identifier
 
@@ -177,6 +185,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :type: str
         """
 
+
+
         self._jti = jti
 
     @property
@@ -199,6 +209,8 @@ class TssV2TransactionsGet200ResponseTokenInformation(object):
         :param transient_token_jwt: The transient_token_jwt of this TssV2TransactionsGet200ResponseTokenInformation.
         :type: str
         """
+
+
 
         self._transient_token_jwt = transient_token_jwt
 

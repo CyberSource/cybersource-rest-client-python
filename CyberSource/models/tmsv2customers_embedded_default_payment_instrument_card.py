@@ -108,6 +108,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -130,6 +132,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param expiration_year: The expiration_year of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 
@@ -154,6 +158,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -176,6 +182,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param issue_number: The issue_number of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
+
+
 
         self._issue_number = issue_number
 
@@ -200,6 +208,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :type: str
         """
 
+
+
         self._start_month = start_month
 
     @property
@@ -222,6 +232,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param start_year: The start_year of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: str
         """
+
+
 
         self._start_year = start_year
 
@@ -246,6 +258,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :type: str
         """
 
+
+
         self._use_as = use_as
 
     @property
@@ -269,6 +283,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :type: str
         """
 
+
+
         self._hash = hash
 
     @property
@@ -289,6 +305,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCard(object):
         :param tokenized_information: The tokenized_information of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCard.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation
         """
+
+
 
         self._tokenized_information = tokenized_information
 

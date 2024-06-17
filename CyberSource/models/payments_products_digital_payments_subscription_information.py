@@ -76,6 +76,8 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
         :type: bool
         """
 
+
+
         self._enabled = enabled
 
     @property
@@ -98,6 +100,7 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
         :param self_serviceability: The self_serviceability of this PaymentsProductsDigitalPaymentsSubscriptionInformation.
         :type: str
         """
+
         allowed_values = ["SELF_SERVICEABLE", "NOT_SELF_SERVICEABLE", "SELF_SERVICE_ONLY"]
         if self_serviceability not in allowed_values:
             raise ValueError(
@@ -127,6 +130,8 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformation(object):
         :param features: The features of this PaymentsProductsDigitalPaymentsSubscriptionInformation.
         :type: dict(str, PaymentsProductsDigitalPaymentsSubscriptionInformationFeatures)
         """
+
+
 
         self._features = features
 

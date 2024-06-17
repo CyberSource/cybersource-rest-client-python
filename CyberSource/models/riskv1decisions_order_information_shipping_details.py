@@ -73,6 +73,8 @@ class Riskv1decisionsOrderInformationShippingDetails(object):
         :type: bool
         """
 
+
+
         self._gift_wrap = gift_wrap
 
     @property
@@ -95,6 +97,8 @@ class Riskv1decisionsOrderInformationShippingDetails(object):
         :param shipping_method: The shipping_method of this Riskv1decisionsOrderInformationShippingDetails.
         :type: str
         """
+
+
 
         self._shipping_method = shipping_method
 

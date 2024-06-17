@@ -86,6 +86,8 @@ class Riskv1decisionsPaymentInformation(object):
         :type: Riskv1decisionsPaymentInformationCard
         """
 
+
+
         self._card = card
 
     @property
@@ -106,6 +108,8 @@ class Riskv1decisionsPaymentInformation(object):
         :param tokenized_card: The tokenized_card of this Riskv1decisionsPaymentInformation.
         :type: Riskv1decisionsPaymentInformationTokenizedCard
         """
+
+
 
         self._tokenized_card = tokenized_card
 
@@ -128,6 +132,8 @@ class Riskv1decisionsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
+
+
         self._customer = customer
 
     @property
@@ -148,6 +154,8 @@ class Riskv1decisionsPaymentInformation(object):
         :param bank: The bank of this Riskv1decisionsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationBank
         """
+
+
 
         self._bank = bank
 
@@ -171,6 +179,8 @@ class Riskv1decisionsPaymentInformation(object):
         :param method: The method of this Riskv1decisionsPaymentInformation.
         :type: str
         """
+
+
 
         self._method = method
 

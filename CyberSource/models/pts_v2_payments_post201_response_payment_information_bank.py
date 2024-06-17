@@ -71,6 +71,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBank(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationBankAccount
         """
 
+
+
         self._account = account
 
     @property
@@ -93,6 +95,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationBank(object):
         :param corrected_routing_number: The corrected_routing_number of this PtsV2PaymentsPost201ResponsePaymentInformationBank.
         :type: str
         """
+
+
 
         self._corrected_routing_number = corrected_routing_number
 

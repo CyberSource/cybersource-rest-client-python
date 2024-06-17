@@ -71,6 +71,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformation(object):
         :type: PtsV2ModifyBillingAgreementPost201ResponseOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -91,6 +93,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformation(object):
         :param ship_to: The ship_to of this PtsV2ModifyBillingAgreementPost201ResponseOrderInformation.
         :type: PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo
         """
+
+
 
         self._ship_to = ship_to
 

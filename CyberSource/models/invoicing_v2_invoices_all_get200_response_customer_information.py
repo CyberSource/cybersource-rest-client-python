@@ -73,6 +73,8 @@ class InvoicingV2InvoicesAllGet200ResponseCustomerInformation(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -95,6 +97,8 @@ class InvoicingV2InvoicesAllGet200ResponseCustomerInformation(object):
         :param merchant_customer_id: The merchant_customer_id of this InvoicingV2InvoicesAllGet200ResponseCustomerInformation.
         :type: str
         """
+
+
 
         self._merchant_customer_id = merchant_customer_id
 

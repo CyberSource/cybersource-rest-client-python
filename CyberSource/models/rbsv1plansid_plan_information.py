@@ -93,6 +93,8 @@ class Rbsv1plansidPlanInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -115,6 +117,8 @@ class Rbsv1plansidPlanInformation(object):
         :param name: The name of this Rbsv1plansidPlanInformation.
         :type: str
         """
+
+
 
         self._name = name
 
@@ -139,6 +143,8 @@ class Rbsv1plansidPlanInformation(object):
         :type: str
         """
 
+
+
         self._description = description
 
     @property
@@ -162,6 +168,8 @@ class Rbsv1plansidPlanInformation(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -183,6 +191,8 @@ class Rbsv1plansidPlanInformation(object):
         :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
+
+
         self._billing_period = billing_period
 
     @property
@@ -203,6 +213,8 @@ class Rbsv1plansidPlanInformation(object):
         :param billing_cycles: The billing_cycles of this Rbsv1plansidPlanInformation.
         :type: Rbsv1plansPlanInformationBillingCycles
         """
+
+
 
         self._billing_cycles = billing_cycles
 

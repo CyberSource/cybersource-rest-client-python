@@ -151,6 +151,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsCardProcessing
         """
 
+
+
         self._card_processing = card_processing
 
     @property
@@ -171,6 +173,8 @@ class PaymentsProducts(object):
         :param card_present_connect: The card_present_connect of this PaymentsProducts.
         :type: PaymentsProductsCardPresentConnect
         """
+
+
 
         self._card_present_connect = card_present_connect
 
@@ -193,6 +197,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsCybsReadyTerminal
         """
 
+
+
         self._cybs_ready_terminal = cybs_ready_terminal
 
     @property
@@ -213,6 +219,8 @@ class PaymentsProducts(object):
         :param e_check: The e_check of this PaymentsProducts.
         :type: PaymentsProductsECheck
         """
+
+
 
         self._e_check = e_check
 
@@ -235,6 +243,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsPayerAuthentication
         """
 
+
+
         self._payer_authentication = payer_authentication
 
     @property
@@ -255,6 +265,8 @@ class PaymentsProducts(object):
         :param digital_payments: The digital_payments of this PaymentsProducts.
         :type: PaymentsProductsDigitalPayments
         """
+
+
 
         self._digital_payments = digital_payments
 
@@ -277,6 +289,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsSecureAcceptance
         """
 
+
+
         self._secure_acceptance = secure_acceptance
 
     @property
@@ -297,6 +311,8 @@ class PaymentsProducts(object):
         :param virtual_terminal: The virtual_terminal of this PaymentsProducts.
         :type: PaymentsProductsVirtualTerminal
         """
+
+
 
         self._virtual_terminal = virtual_terminal
 
@@ -319,6 +335,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsCurrencyConversion
         """
 
+
+
         self._currency_conversion = currency_conversion
 
     @property
@@ -339,6 +357,8 @@ class PaymentsProducts(object):
         :param tax: The tax of this PaymentsProducts.
         :type: PaymentsProductsTax
         """
+
+
 
         self._tax = tax
 
@@ -361,6 +381,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsTax
         """
 
+
+
         self._customer_invoicing = customer_invoicing
 
     @property
@@ -381,6 +403,8 @@ class PaymentsProducts(object):
         :param recurring_billing: The recurring_billing of this PaymentsProducts.
         :type: PaymentsProductsTax
         """
+
+
 
         self._recurring_billing = recurring_billing
 
@@ -403,6 +427,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsTax
         """
 
+
+
         self._payment_orchestration = payment_orchestration
 
     @property
@@ -423,6 +449,8 @@ class PaymentsProducts(object):
         :param payouts: The payouts of this PaymentsProducts.
         :type: PaymentsProductsPayouts
         """
+
+
 
         self._payouts = payouts
 
@@ -445,6 +473,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsDifferentialFee
         """
 
+
+
         self._differential_fee = differential_fee
 
     @property
@@ -465,6 +495,8 @@ class PaymentsProducts(object):
         :param pay_by_link: The pay_by_link of this PaymentsProducts.
         :type: PaymentsProductsTax
         """
+
+
 
         self._pay_by_link = pay_by_link
 
@@ -487,6 +519,8 @@ class PaymentsProducts(object):
         :type: PaymentsProductsTax
         """
 
+
+
         self._unified_checkout = unified_checkout
 
     @property
@@ -507,6 +541,8 @@ class PaymentsProducts(object):
         :param receivables_manager: The receivables_manager of this PaymentsProducts.
         :type: PaymentsProductsTax
         """
+
+
 
         self._receivables_manager = receivables_manager
 

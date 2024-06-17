@@ -118,6 +118,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._decline_avs_flags = decline_avs_flags
 
     @property
@@ -140,6 +142,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param sec_code: The sec_code of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._sec_code = sec_code
 
@@ -164,6 +168,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._terminal_city = terminal_city
 
     @property
@@ -186,6 +192,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param terminal_state: The terminal_state of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._terminal_state = terminal_state
 
@@ -210,6 +218,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._effective_date = effective_date
 
     @property
@@ -232,6 +242,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param partial_payment_id: The partial_payment_id of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._partial_payment_id = partial_payment_id
 
@@ -256,6 +268,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._customer_memo = customer_memo
 
     @property
@@ -278,6 +292,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param payment_category_code: The payment_category_code of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._payment_category_code = payment_category_code
 
@@ -302,6 +318,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._settlement_method = settlement_method
 
     @property
@@ -325,6 +343,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._fraud_screening_level = fraud_screening_level
 
     @property
@@ -347,6 +367,8 @@ class Ptsv2paymentsProcessingInformationBankTransferOptions(object):
         :param customer_present: The customer_present of this Ptsv2paymentsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._customer_present = customer_present
 

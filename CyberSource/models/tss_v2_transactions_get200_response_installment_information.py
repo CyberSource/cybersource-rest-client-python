@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponseInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._number_of_installments = number_of_installments
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponseInstallmentInformation(object):
         :param identifier: The identifier of this TssV2TransactionsGet200ResponseInstallmentInformation.
         :type: str
         """
+
+
 
         self._identifier = identifier
 

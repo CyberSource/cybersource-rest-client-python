@@ -93,6 +93,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -115,6 +117,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :param start_time: The start_time of this Nrtfv1webhookswebhookIdreplaysByDeliveryStatus.
         :type: datetime
         """
+
+
 
         self._start_time = start_time
 
@@ -139,6 +143,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :type: datetime
         """
 
+
+
         self._end_time = end_time
 
     @property
@@ -162,6 +168,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :type: int
         """
 
+
+
         self._hours_back = hours_back
 
     @property
@@ -183,6 +191,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :type: str
         """
 
+
+
         self._product_id = product_id
 
     @property
@@ -203,6 +213,8 @@ class Nrtfv1webhookswebhookIdreplaysByDeliveryStatus(object):
         :param event_type: The event_type of this Nrtfv1webhookswebhookIdreplaysByDeliveryStatus.
         :type: str
         """
+
+
 
         self._event_type = event_type
 

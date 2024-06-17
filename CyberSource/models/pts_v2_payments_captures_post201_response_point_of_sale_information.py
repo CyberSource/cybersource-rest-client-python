@@ -68,6 +68,8 @@ class PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation(object):
         :type: str
         """
 
+
+
         self._terminal_id = terminal_id
 
     def to_dict(self):

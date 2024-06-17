@@ -106,6 +106,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :type: Ptsv2paymentsRiskInformationBuyerHistoryCustomerAccount
         """
 
+
+
         self._customer_account = customer_account
 
     @property
@@ -126,6 +128,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :param account_history: The account_history of this Ptsv2paymentsRiskInformationBuyerHistory.
         :type: Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory
         """
+
+
 
         self._account_history = account_history
 
@@ -150,6 +154,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :type: int
         """
 
+
+
         self._account_purchases = account_purchases
 
     @property
@@ -172,6 +178,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :param add_card_attempts: The add_card_attempts of this Ptsv2paymentsRiskInformationBuyerHistory.
         :type: int
         """
+
+
 
         self._add_card_attempts = add_card_attempts
 
@@ -196,6 +204,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :type: bool
         """
 
+
+
         self._prior_suspicious_activity = prior_suspicious_activity
 
     @property
@@ -218,6 +228,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :param payment_account_history: The payment_account_history of this Ptsv2paymentsRiskInformationBuyerHistory.
         :type: str
         """
+
+
 
         self._payment_account_history = payment_account_history
 
@@ -242,6 +254,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :type: int
         """
 
+
+
         self._payment_account_date = payment_account_date
 
     @property
@@ -265,6 +279,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :type: int
         """
 
+
+
         self._transaction_count_day = transaction_count_day
 
     @property
@@ -287,6 +303,8 @@ class Ptsv2paymentsRiskInformationBuyerHistory(object):
         :param transaction_count_year: The transaction_count_year of this Ptsv2paymentsRiskInformationBuyerHistory.
         :type: int
         """
+
+
 
         self._transaction_count_year = transaction_count_year
 

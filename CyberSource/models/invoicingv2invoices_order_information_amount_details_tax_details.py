@@ -78,6 +78,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -101,6 +103,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -123,6 +127,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails(object):
         :param rate: The rate of this Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
+
+
 
         self._rate = rate
 

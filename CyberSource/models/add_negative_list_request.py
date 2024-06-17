@@ -91,6 +91,8 @@ class AddNegativeListRequest(object):
         :type: Riskv1liststypeentriesOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -111,6 +113,8 @@ class AddNegativeListRequest(object):
         :param payment_information: The payment_information of this AddNegativeListRequest.
         :type: Riskv1liststypeentriesPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -133,6 +137,8 @@ class AddNegativeListRequest(object):
         :type: Riskv1liststypeentriesClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -153,6 +159,8 @@ class AddNegativeListRequest(object):
         :param device_information: The device_information of this AddNegativeListRequest.
         :type: Riskv1liststypeentriesDeviceInformation
         """
+
+
 
         self._device_information = device_information
 
@@ -175,6 +183,8 @@ class AddNegativeListRequest(object):
         :type: Riskv1liststypeentriesRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -195,6 +205,8 @@ class AddNegativeListRequest(object):
         :param buyer_information: The buyer_information of this AddNegativeListRequest.
         :type: Riskv1liststypeentriesBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 

@@ -81,6 +81,8 @@ class InlineResponse2007Billing(object):
         :type: int
         """
 
+
+
         self._nan = nan
 
     @property
@@ -101,6 +103,8 @@ class InlineResponse2007Billing(object):
         :param ned: The ned of this InlineResponse2007Billing.
         :type: int
         """
+
+
 
         self._ned = ned
 
@@ -123,6 +127,8 @@ class InlineResponse2007Billing(object):
         :type: int
         """
 
+
+
         self._acl = acl
 
     @property
@@ -143,6 +149,8 @@ class InlineResponse2007Billing(object):
         :param cch: The cch of this InlineResponse2007Billing.
         :type: int
         """
+
+
 
         self._cch = cch
 

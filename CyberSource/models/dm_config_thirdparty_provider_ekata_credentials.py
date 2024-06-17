@@ -66,6 +66,8 @@ class DmConfigThirdpartyProviderEkataCredentials(object):
         :type: str
         """
 
+
+
         self._api_key = api_key
 
     def to_dict(self):

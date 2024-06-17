@@ -181,6 +181,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -203,6 +205,8 @@ class PtsV2PaymentsPost201Response(object):
         :param id: The id of this PtsV2PaymentsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -227,6 +231,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -249,6 +255,8 @@ class PtsV2PaymentsPost201Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV2PaymentsPost201Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -273,6 +281,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -296,6 +306,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -316,6 +328,8 @@ class PtsV2PaymentsPost201Response(object):
         :param error_information: The error_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseErrorInformation
         """
+
+
 
         self._error_information = error_information
 
@@ -338,6 +352,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -358,6 +374,8 @@ class PtsV2PaymentsPost201Response(object):
         :param processing_information: The processing_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -380,6 +398,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -400,6 +420,8 @@ class PtsV2PaymentsPost201Response(object):
         :param issuer_information: The issuer_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseIssuerInformation
         """
+
+
 
         self._issuer_information = issuer_information
 
@@ -422,6 +444,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponsePaymentAccountInformation
         """
 
+
+
         self._payment_account_information = payment_account_information
 
     @property
@@ -442,6 +466,8 @@ class PtsV2PaymentsPost201Response(object):
         :param payment_information: The payment_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponsePaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -464,6 +490,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformation
         """
 
+
+
         self._payment_insights_information = payment_insights_information
 
     @property
@@ -484,6 +512,8 @@ class PtsV2PaymentsPost201Response(object):
         :param order_information: The order_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseOrderInformation
         """
+
+
 
         self._order_information = order_information
 
@@ -506,6 +536,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponsePointOfSaleInformation
         """
 
+
+
         self._point_of_sale_information = point_of_sale_information
 
     @property
@@ -526,6 +558,8 @@ class PtsV2PaymentsPost201Response(object):
         :param installment_information: The installment_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseInstallmentInformation
         """
+
+
 
         self._installment_information = installment_information
 
@@ -548,6 +582,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformation
         """
 
+
+
         self._token_information = token_information
 
     @property
@@ -568,6 +604,8 @@ class PtsV2PaymentsPost201Response(object):
         :param buyer_information: The buyer_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 
@@ -590,6 +628,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -610,6 +650,8 @@ class PtsV2PaymentsPost201Response(object):
         :param consumer_authentication_information: The consumer_authentication_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation
         """
+
+
 
         self._consumer_authentication_information = consumer_authentication_information
 
@@ -632,6 +674,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseMerchantInformation
         """
 
+
+
         self._merchant_information = merchant_information
 
     @property
@@ -653,6 +697,8 @@ class PtsV2PaymentsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseEmbeddedActions
         """
 
+
+
         self._embedded_actions = embedded_actions
 
     @property
@@ -673,6 +719,8 @@ class PtsV2PaymentsPost201Response(object):
         :param watchlist_screening_information: The watchlist_screening_information of this PtsV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
         """
+
+
 
         self._watchlist_screening_information = watchlist_screening_information
 

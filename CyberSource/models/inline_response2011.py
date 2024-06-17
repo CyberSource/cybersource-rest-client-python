@@ -106,6 +106,8 @@ class InlineResponse2011(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -129,6 +131,8 @@ class InlineResponse2011(object):
         :type: date
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -151,6 +155,7 @@ class InlineResponse2011(object):
         :param status: The status of this InlineResponse2011.
         :type: str
         """
+
         allowed_values = ["INITIALIZED", "RECEIVED", "PROCESSING", "SUCCESS", "FAILURE", "PARTIAL"]
         if status not in allowed_values:
             raise ValueError(
@@ -179,6 +184,8 @@ class InlineResponse2011(object):
         :type: InlineResponse2011RegistrationInformation
         """
 
+
+
         self._registration_information = registration_information
 
     @property
@@ -199,6 +206,8 @@ class InlineResponse2011(object):
         :param integration_information: The integration_information of this InlineResponse2011.
         :type: InlineResponse2011IntegrationInformation
         """
+
+
 
         self._integration_information = integration_information
 
@@ -221,6 +230,8 @@ class InlineResponse2011(object):
         :type: InlineResponse2011OrganizationInformation
         """
 
+
+
         self._organization_information = organization_information
 
     @property
@@ -241,6 +252,8 @@ class InlineResponse2011(object):
         :param product_information_setups: The product_information_setups of this InlineResponse2011.
         :type: list[InlineResponse2011ProductInformationSetups]
         """
+
+
 
         self._product_information_setups = product_information_setups
 
@@ -263,6 +276,8 @@ class InlineResponse2011(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -283,6 +298,8 @@ class InlineResponse2011(object):
         :param details: The details of this InlineResponse2011.
         :type: dict(str, list[object])
         """
+
+
 
         self._details = details
 

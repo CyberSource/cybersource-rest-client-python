@@ -70,8 +70,8 @@ class Tssv2transactionsemvTagDetailsEmvDetailsList(object):
         :param request_id: The request_id of this Tssv2transactionsemvTagDetailsEmvDetailsList.
         :type: str
         """
-        if request_id is None:
-            raise ValueError("Invalid value for `request_id`, must not be `None`")
+
+
 
         self._request_id = request_id
 
@@ -95,8 +95,8 @@ class Tssv2transactionsemvTagDetailsEmvDetailsList(object):
         :param emv_request_combined_tags: The emv_request_combined_tags of this Tssv2transactionsemvTagDetailsEmvDetailsList.
         :type: str
         """
-        if emv_request_combined_tags is None:
-            raise ValueError("Invalid value for `emv_request_combined_tags`, must not be `None`")
+
+
 
         self._emv_request_combined_tags = emv_request_combined_tags
 

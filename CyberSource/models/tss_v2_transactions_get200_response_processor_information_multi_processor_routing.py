@@ -83,6 +83,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -105,6 +107,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :param response_code: The response_code of this TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting.
         :type: str
         """
+
+
 
         self._response_code = response_code
 
@@ -129,6 +133,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :type: str
         """
 
+
+
         self._reason_code = reason_code
 
     @property
@@ -151,6 +157,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting(o
         :param sequence: The sequence of this TssV2TransactionsGet200ResponseProcessorInformationMultiProcessorRouting.
         :type: str
         """
+
+
 
         self._sequence = sequence
 

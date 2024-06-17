@@ -76,6 +76,8 @@ class DmConfigThirdpartyProviderCredilinkCredentials(object):
         :type: str
         """
 
+
+
         self._username = username
 
     @property
@@ -97,6 +99,8 @@ class DmConfigThirdpartyProviderCredilinkCredentials(object):
         :type: str
         """
 
+
+
         self._password = password
 
     @property
@@ -117,6 +121,8 @@ class DmConfigThirdpartyProviderCredilinkCredentials(object):
         :param sigla: The sigla of this DmConfigThirdpartyProviderCredilinkCredentials.
         :type: str
         """
+
+
 
         self._sigla = sigla
 

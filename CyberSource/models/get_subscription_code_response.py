@@ -73,6 +73,8 @@ class GetSubscriptionCodeResponse(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class GetSubscriptionCodeResponse(object):
         :param submit_time_utc: The submit_time_utc of this GetSubscriptionCodeResponse.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 

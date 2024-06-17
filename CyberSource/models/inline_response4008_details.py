@@ -71,6 +71,8 @@ class InlineResponse4008Details(object):
         :type: str
         """
 
+
+
         self._location = location
 
     @property
@@ -91,6 +93,8 @@ class InlineResponse4008Details(object):
         :param message: The message of this InlineResponse4008Details.
         :type: str
         """
+
+
 
         self._message = message
 

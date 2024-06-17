@@ -98,6 +98,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._customer_memo = customer_memo
 
     @property
@@ -120,6 +122,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param sec_code: The sec_code of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._sec_code = sec_code
 
@@ -144,6 +148,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._terminal_city = terminal_city
 
     @property
@@ -166,6 +172,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param terminal_state: The terminal_state of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._terminal_state = terminal_state
 
@@ -190,6 +198,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._effective_date = effective_date
 
     @property
@@ -213,6 +223,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :type: str
         """
 
+
+
         self._partial_payment_id = partial_payment_id
 
     @property
@@ -235,6 +247,8 @@ class Ptsv2creditsProcessingInformationBankTransferOptions(object):
         :param settlement_method: The settlement_method of this Ptsv2creditsProcessingInformationBankTransferOptions.
         :type: str
         """
+
+
 
         self._settlement_method = settlement_method
 

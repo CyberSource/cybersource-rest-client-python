@@ -78,6 +78,8 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :type: str
         """
 
+
+
         self._original_transaction_id = original_transaction_id
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :type: str
         """
 
+
+
         self._developer_id = developer_id
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2paymentsidClientReferenceInformationPartner(object):
         :param solution_id: The solution_id of this Ptsv2paymentsidClientReferenceInformationPartner.
         :type: str
         """
+
+
 
         self._solution_id = solution_id
 

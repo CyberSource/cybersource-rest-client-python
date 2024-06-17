@@ -73,6 +73,8 @@ class Reportingv3reportsReportPreferences(object):
         :type: bool
         """
 
+
+
         self._signed_amounts = signed_amounts
 
     @property
@@ -95,6 +97,8 @@ class Reportingv3reportsReportPreferences(object):
         :param field_name_convention: The field_name_convention of this Reportingv3reportsReportPreferences.
         :type: str
         """
+
+
 
         self._field_name_convention = field_name_convention
 

@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationStrongAuthent
         :type: PaymentsStrongAuthIssuerInformation
         """
 
+
+
         self._issuer_information = issuer_information
 
     def to_dict(self):

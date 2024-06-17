@@ -70,8 +70,8 @@ class UpdatePGPKeysRequest(object):
         :param status: The status of this UpdatePGPKeysRequest.
         :type: str
         """
-        if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")
+
+
 
         self._status = status
 
@@ -95,8 +95,8 @@ class UpdatePGPKeysRequest(object):
         :param organization_id: The organization_id of this UpdatePGPKeysRequest.
         :type: str
         """
-        if organization_id is None:
-            raise ValueError("Invalid value for `organization_id`, must not be `None`")
+
+
 
         self._organization_id = organization_id
 

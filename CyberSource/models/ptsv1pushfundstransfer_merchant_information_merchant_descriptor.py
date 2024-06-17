@@ -98,6 +98,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -120,6 +122,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :param contact: The contact of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._contact = contact
 
@@ -144,6 +148,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -166,6 +172,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :param locality: The locality of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -190,6 +198,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -213,6 +223,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._store_id = store_id
 
     @property
@@ -235,6 +247,8 @@ class Ptsv1pushfundstransferMerchantInformationMerchantDescriptor(object):
         :param postal_code: The postal_code of this Ptsv1pushfundstransferMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 

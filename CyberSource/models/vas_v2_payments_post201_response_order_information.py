@@ -93,6 +93,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :type: str
         """
 
+
+
         self._exempt_amount = exempt_amount
 
     @property
@@ -115,6 +117,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param taxable_amount: The taxable_amount of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: str
         """
+
+
 
         self._taxable_amount = taxable_amount
 
@@ -139,6 +143,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :type: str
         """
 
+
+
         self._tax_amount = tax_amount
 
     @property
@@ -159,6 +165,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param line_items: The line_items of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: list[VasV2PaymentsPost201ResponseOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 
@@ -181,6 +189,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :type: list[VasV2PaymentsPost201ResponseOrderInformationTaxDetails]
         """
 
+
+
         self._tax_details = tax_details
 
     @property
@@ -201,6 +211,8 @@ class VasV2PaymentsPost201ResponseOrderInformation(object):
         :param amount_details: The amount_details of this VasV2PaymentsPost201ResponseOrderInformation.
         :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
+
+
 
         self._amount_details = amount_details
 

@@ -73,6 +73,8 @@ class Vasv2taxidClientReferenceInformationPartner(object):
         :type: str
         """
 
+
+
         self._solution_id = solution_id
 
     @property
@@ -95,6 +97,8 @@ class Vasv2taxidClientReferenceInformationPartner(object):
         :param developer_id: The developer_id of this Vasv2taxidClientReferenceInformationPartner.
         :type: str
         """
+
+
 
         self._developer_id = developer_id
 

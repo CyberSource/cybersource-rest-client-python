@@ -73,6 +73,8 @@ class InlineResponse400Details(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -95,6 +97,8 @@ class InlineResponse400Details(object):
         :param location: The location of this InlineResponse400Details.
         :type: str
         """
+
+
 
         self._location = location
 

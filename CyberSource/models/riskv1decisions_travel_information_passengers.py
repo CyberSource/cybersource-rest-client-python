@@ -73,6 +73,8 @@ class Riskv1decisionsTravelInformationPassengers(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -95,6 +97,8 @@ class Riskv1decisionsTravelInformationPassengers(object):
         :param last_name: The last_name of this Riskv1decisionsTravelInformationPassengers.
         :type: str
         """
+
+
 
         self._last_name = last_name
 

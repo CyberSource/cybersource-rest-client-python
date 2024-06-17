@@ -73,6 +73,8 @@ class Riskv1liststypeentriesDeviceInformation(object):
         :type: str
         """
 
+
+
         self._ip_address = ip_address
 
     @property
@@ -95,6 +97,8 @@ class Riskv1liststypeentriesDeviceInformation(object):
         :param network_ip_address: The network_ip_address of this Riskv1liststypeentriesDeviceInformation.
         :type: str
         """
+
+
 
         self._network_ip_address = network_ip_address
 

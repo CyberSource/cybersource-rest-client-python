@@ -88,6 +88,8 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -110,6 +112,8 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :param number: The number of this Ptsv2payoutsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._number = number
 
@@ -134,6 +138,8 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -157,6 +163,8 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._expiration_year = expiration_year
 
     @property
@@ -179,6 +187,8 @@ class Ptsv2payoutsPaymentInformationCard(object):
         :param source_account_type: The source_account_type of this Ptsv2payoutsPaymentInformationCard.
         :type: str
         """
+
+
 
         self._source_account_type = source_account_type
 

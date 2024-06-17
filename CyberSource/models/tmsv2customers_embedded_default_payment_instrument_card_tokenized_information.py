@@ -73,6 +73,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
         :type: str
         """
 
+
+
         self._requestor_id = requestor_id
 
     @property
@@ -95,6 +97,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation(obj
         :param transaction_type: The transaction_type of this Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTokenizedInformation.
         :type: str
         """
+
+
 
         self._transaction_type = transaction_type
 

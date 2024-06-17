@@ -71,6 +71,8 @@ class Ptsv2refreshpaymentstatusidPaymentInformation(object):
         :type: Ptsv2refreshpaymentstatusidPaymentInformationCustomer
         """
 
+
+
         self._customer = customer
 
     @property
@@ -91,6 +93,8 @@ class Ptsv2refreshpaymentstatusidPaymentInformation(object):
         :param payment_type: The payment_type of this Ptsv2refreshpaymentstatusidPaymentInformation.
         :type: Ptsv2refreshpaymentstatusidPaymentInformationPaymentType
         """
+
+
 
         self._payment_type = payment_type
 

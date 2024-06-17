@@ -71,6 +71,8 @@ class PaymentsProductsPayerAuthenticationConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsPayerAuthenticationConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsPayerAuthenticationConfigurationInformation.
         :type: PayerAuthConfig
         """
+
+
 
         self._configurations = configurations
 

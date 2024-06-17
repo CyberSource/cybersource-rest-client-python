@@ -66,6 +66,8 @@ class Rbsv1subscriptionsidOrderInformation(object):
         :type: Rbsv1subscriptionsidOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     def to_dict(self):

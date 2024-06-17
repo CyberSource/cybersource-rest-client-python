@@ -76,6 +76,8 @@ class CreatePlanRequest(object):
         :type: Rbsv1plansClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -97,6 +99,8 @@ class CreatePlanRequest(object):
         :type: Rbsv1plansPlanInformation
         """
 
+
+
         self._plan_information = plan_information
 
     @property
@@ -117,6 +121,8 @@ class CreatePlanRequest(object):
         :param order_information: The order_information of this CreatePlanRequest.
         :type: Rbsv1plansOrderInformation
         """
+
+
 
         self._order_information = order_information
 

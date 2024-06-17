@@ -116,6 +116,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -138,6 +140,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :param id: The id of this PtsV2PaymentsReversalsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -162,6 +166,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -184,6 +190,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :param status: The status of this PtsV2PaymentsReversalsPost201Response.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -208,6 +216,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -228,6 +238,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsReversalsPost201Response.
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -250,6 +262,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails
         """
 
+
+
         self._reversal_amount_details = reversal_amount_details
 
     @property
@@ -270,6 +284,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :param processor_information: The processor_information of this PtsV2PaymentsReversalsPost201Response.
         :type: PtsV2PaymentsReversalsPost201ResponseProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -292,6 +308,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: PtsV2PaymentsReversalsPost201ResponseIssuerInformation
         """
 
+
+
         self._issuer_information = issuer_information
 
     @property
@@ -313,6 +331,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :type: PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation
         """
 
+
+
         self._authorization_information = authorization_information
 
     @property
@@ -333,6 +353,8 @@ class PtsV2PaymentsReversalsPost201Response(object):
         :param point_of_sale_information: The point_of_sale_information of this PtsV2PaymentsReversalsPost201Response.
         :type: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
+
+
 
         self._point_of_sale_information = point_of_sale_information
 

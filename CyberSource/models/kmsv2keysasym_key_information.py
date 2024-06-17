@@ -75,8 +75,8 @@ class Kmsv2keysasymKeyInformation(object):
         :param organization_id: The organization_id of this Kmsv2keysasymKeyInformation.
         :type: str
         """
-        if organization_id is None:
-            raise ValueError("Invalid value for `organization_id`, must not be `None`")
+
+
 
         self._organization_id = organization_id
 
@@ -101,6 +101,8 @@ class Kmsv2keysasymKeyInformation(object):
         :type: str
         """
 
+
+
         self._reference_number = reference_number
 
     @property
@@ -123,8 +125,8 @@ class Kmsv2keysasymKeyInformation(object):
         :param cert: The cert of this Kmsv2keysasymKeyInformation.
         :type: str
         """
-        if cert is None:
-            raise ValueError("Invalid value for `cert`, must not be `None`")
+
+
 
         self._cert = cert
 

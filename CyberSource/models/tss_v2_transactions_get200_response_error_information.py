@@ -78,6 +78,8 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -101,6 +103,8 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -121,6 +125,8 @@ class TssV2TransactionsGet200ResponseErrorInformation(object):
         :param details: The details of this TssV2TransactionsGet200ResponseErrorInformation.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

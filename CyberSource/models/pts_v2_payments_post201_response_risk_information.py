@@ -116,6 +116,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationProfile
         """
 
+
+
         self._profile = profile
 
     @property
@@ -136,6 +138,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :param rules: The rules of this PtsV2PaymentsPost201ResponseRiskInformation.
         :type: list[PtsV2PaymentsPost201ResponseRiskInformationRules]
         """
+
+
 
         self._rules = rules
 
@@ -158,6 +162,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationInfoCodes
         """
 
+
+
         self._info_codes = info_codes
 
     @property
@@ -178,6 +184,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :param velocity: The velocity of this PtsV2PaymentsPost201ResponseRiskInformation.
         :type: PtsV2PaymentsPost201ResponseRiskInformationVelocity
         """
+
+
 
         self._velocity = velocity
 
@@ -202,6 +210,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: int
         """
 
+
+
         self._case_priority = case_priority
 
     @property
@@ -225,6 +235,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: str
         """
 
+
+
         self._local_time = local_time
 
     @property
@@ -246,6 +258,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationScore
         """
 
+
+
         self._score = score
 
     @property
@@ -266,6 +280,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :param ip_address: The ip_address of this PtsV2PaymentsPost201ResponseRiskInformation.
         :type: PtsV2PaymentsPost201ResponseRiskInformationIpAddress
         """
+
+
 
         self._ip_address = ip_address
 
@@ -290,6 +306,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: dict(str, dict(str, str))
         """
 
+
+
         self._providers = providers
 
     @property
@@ -311,6 +329,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationTravel
         """
 
+
+
         self._travel = travel
 
     @property
@@ -331,6 +351,8 @@ class PtsV2PaymentsPost201ResponseRiskInformation(object):
         :param processor_results: The processor_results of this PtsV2PaymentsPost201ResponseRiskInformation.
         :type: PtsV2PaymentsPost201ResponseRiskInformationProcessorResults
         """
+
+
 
         self._processor_results = processor_results
 

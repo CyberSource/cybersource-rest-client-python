@@ -81,6 +81,8 @@ class Riskv1liststypeentriesOrderInformation(object):
         :type: Riskv1liststypeentriesOrderInformationAddress
         """
 
+
+
         self._address = address
 
     @property
@@ -102,6 +104,8 @@ class Riskv1liststypeentriesOrderInformation(object):
         :type: Riskv1liststypeentriesOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -122,6 +126,8 @@ class Riskv1liststypeentriesOrderInformation(object):
         :param ship_to: The ship_to of this Riskv1liststypeentriesOrderInformation.
         :type: Riskv1liststypeentriesOrderInformationShipTo
         """
+
+
 
         self._ship_to = ship_to
 
@@ -145,6 +151,8 @@ class Riskv1liststypeentriesOrderInformation(object):
         :param line_items: The line_items of this Riskv1liststypeentriesOrderInformation.
         :type: list[Riskv1liststypeentriesOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 

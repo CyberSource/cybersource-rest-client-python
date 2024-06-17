@@ -73,6 +73,8 @@ class InlineResponse200EmbeddedReversalLinksSelf(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -95,6 +97,8 @@ class InlineResponse200EmbeddedReversalLinksSelf(object):
         :param method: The method of this InlineResponse200EmbeddedReversalLinksSelf.
         :type: str
         """
+
+
 
         self._method = method
 

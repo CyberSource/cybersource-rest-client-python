@@ -78,6 +78,8 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
         :type: str
         """
 
+
+
         self._merchant_name = merchant_name
 
     @property
@@ -98,6 +100,8 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
         :param merchant_descriptor: The merchant_descriptor of this PtsV2PaymentsPost201ResponseMerchantInformation.
         :type: PtsV2PaymentsPost201ResponseMerchantInformationMerchantDescriptor
         """
+
+
 
         self._merchant_descriptor = merchant_descriptor
 
@@ -121,6 +125,8 @@ class PtsV2PaymentsPost201ResponseMerchantInformation(object):
         :param return_url: The return_url of this PtsV2PaymentsPost201ResponseMerchantInformation.
         :type: str
         """
+
+
 
         self._return_url = return_url
 

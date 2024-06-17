@@ -81,6 +81,8 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         :type: PaymentsProducts
         """
 
+
+
         self._payments = payments
 
     @property
@@ -101,6 +103,8 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         :param risk: The risk of this Boardingv1registrationsProductInformationSelectedProducts.
         :type: RiskProducts
         """
+
+
 
         self._risk = risk
 
@@ -123,6 +127,8 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         :type: CommerceSolutionsProducts
         """
 
+
+
         self._commerce_solutions = commerce_solutions
 
     @property
@@ -143,6 +149,8 @@ class Boardingv1registrationsProductInformationSelectedProducts(object):
         :param value_added_services: The value_added_services of this Boardingv1registrationsProductInformationSelectedProducts.
         :type: ValueAddedServicesProducts
         """
+
+
 
         self._value_added_services = value_added_services
 

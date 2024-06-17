@@ -113,6 +113,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
@@ -135,6 +137,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param authentication_transaction_context: The authentication_transaction_context of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_transaction_context = authentication_transaction_context
 
@@ -159,6 +163,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._otp_token = otp_token
 
     @property
@@ -181,6 +187,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param authentication_type: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._authentication_type = authentication_type
 
@@ -205,6 +213,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._effective_authentication_type = effective_authentication_type
 
     @property
@@ -227,6 +237,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param response_access_token: The response_access_token of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._response_access_token = response_access_token
 
@@ -251,6 +263,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._signed_pares_status_reason = signed_pares_status_reason
 
     @property
@@ -273,6 +287,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param signed_pares: The signed_pares of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._signed_pares = signed_pares
 
@@ -297,6 +313,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :type: str
         """
 
+
+
         self._white_list_status = white_list_status
 
     @property
@@ -319,6 +337,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         :param credential_encrypted: The credential_encrypted of this Riskv1authenticationresultsConsumerAuthenticationInformation.
         :type: str
         """
+
+
 
         self._credential_encrypted = credential_encrypted
 

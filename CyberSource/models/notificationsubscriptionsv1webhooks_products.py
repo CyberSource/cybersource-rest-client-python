@@ -73,6 +73,8 @@ class Notificationsubscriptionsv1webhooksProducts(object):
         :type: str
         """
 
+
+
         self._product_id = product_id
 
     @property
@@ -93,6 +95,8 @@ class Notificationsubscriptionsv1webhooksProducts(object):
         :param event_types: The event_types of this Notificationsubscriptionsv1webhooksProducts.
         :type: list[str]
         """
+
+
 
         self._event_types = event_types
 

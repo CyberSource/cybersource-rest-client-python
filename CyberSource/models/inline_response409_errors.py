@@ -73,6 +73,8 @@ class InlineResponse409Errors(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -95,6 +97,8 @@ class InlineResponse409Errors(object):
         :param message: The message of this InlineResponse409Errors.
         :type: str
         """
+
+
 
         self._message = message
 

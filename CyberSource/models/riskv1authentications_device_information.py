@@ -123,6 +123,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._ip_address = ip_address
 
     @property
@@ -143,6 +145,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param raw_data: The raw_data of this Riskv1authenticationsDeviceInformation.
         :type: list[Ptsv2paymentsDeviceInformationRawData]
         """
+
+
 
         self._raw_data = raw_data
 
@@ -167,6 +171,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_accept_browser_value = http_accept_browser_value
 
     @property
@@ -189,6 +195,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param http_accept_content: The http_accept_content of this Riskv1authenticationsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_accept_content = http_accept_content
 
@@ -213,6 +221,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_language = http_browser_language
 
     @property
@@ -235,6 +245,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param http_browser_java_enabled: The http_browser_java_enabled of this Riskv1authenticationsDeviceInformation.
         :type: bool
         """
+
+
 
         self._http_browser_java_enabled = http_browser_java_enabled
 
@@ -259,6 +271,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: bool
         """
 
+
+
         self._http_browser_java_script_enabled = http_browser_java_script_enabled
 
     @property
@@ -281,6 +295,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param http_browser_color_depth: The http_browser_color_depth of this Riskv1authenticationsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_browser_color_depth = http_browser_color_depth
 
@@ -305,6 +321,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_screen_height = http_browser_screen_height
 
     @property
@@ -327,6 +345,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param http_browser_screen_width: The http_browser_screen_width of this Riskv1authenticationsDeviceInformation.
         :type: str
         """
+
+
 
         self._http_browser_screen_width = http_browser_screen_width
 
@@ -351,6 +371,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_browser_time_difference = http_browser_time_difference
 
     @property
@@ -373,6 +395,8 @@ class Riskv1authenticationsDeviceInformation(object):
         :param user_agent_browser_value: The user_agent_browser_value of this Riskv1authenticationsDeviceInformation.
         :type: str
         """
+
+
 
         self._user_agent_browser_value = user_agent_browser_value
 

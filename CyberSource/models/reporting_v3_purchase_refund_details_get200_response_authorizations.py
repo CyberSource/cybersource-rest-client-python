@@ -103,6 +103,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :type: str
         """
 
+
+
         self._request_id = request_id
 
     @property
@@ -125,6 +127,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :param transaction_reference_number: The transaction_reference_number of this ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations.
         :type: str
         """
+
+
 
         self._transaction_reference_number = transaction_reference_number
 
@@ -149,6 +153,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :type: datetime
         """
 
+
+
         self._time = time
 
     @property
@@ -171,6 +177,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :param authorization_request_id: The authorization_request_id of this ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations.
         :type: str
         """
+
+
 
         self._authorization_request_id = authorization_request_id
 
@@ -195,6 +203,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -217,6 +227,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :param currency_code: The currency_code of this ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations.
         :type: str
         """
+
+
 
         self._currency_code = currency_code
 
@@ -241,6 +253,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -263,6 +277,8 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations(object):
         :param rcode: The rcode of this ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations.
         :type: str
         """
+
+
 
         self._rcode = rcode
 

@@ -81,6 +81,8 @@ class DmConfig(object):
         :type: DmConfigProcessingOptions
         """
 
+
+
         self._processing_options = processing_options
 
     @property
@@ -101,6 +103,8 @@ class DmConfig(object):
         :param organization: The organization of this DmConfig.
         :type: DmConfigOrganization
         """
+
+
 
         self._organization = organization
 
@@ -123,6 +127,8 @@ class DmConfig(object):
         :type: DmConfigPortfolioControls
         """
 
+
+
         self._portfolio_controls = portfolio_controls
 
     @property
@@ -143,6 +149,8 @@ class DmConfig(object):
         :param thirdparty: The thirdparty of this DmConfig.
         :type: DmConfigThirdparty
         """
+
+
 
         self._thirdparty = thirdparty
 

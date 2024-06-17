@@ -196,6 +196,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -216,6 +218,8 @@ class CreatePaymentRequest(object):
         :param processing_information: The processing_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsProcessingInformation
         """
+
+
 
         self._processing_information = processing_information
 
@@ -238,6 +242,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsIssuerInformation
         """
 
+
+
         self._issuer_information = issuer_information
 
     @property
@@ -258,6 +264,8 @@ class CreatePaymentRequest(object):
         :param payment_information: The payment_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -280,6 +288,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -300,6 +310,8 @@ class CreatePaymentRequest(object):
         :param buyer_information: The buyer_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 
@@ -322,6 +334,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsRecipientInformation
         """
 
+
+
         self._recipient_information = recipient_information
 
     @property
@@ -342,6 +356,8 @@ class CreatePaymentRequest(object):
         :param device_information: The device_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsDeviceInformation
         """
+
+
 
         self._device_information = device_information
 
@@ -364,6 +380,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsMerchantInformation
         """
 
+
+
         self._merchant_information = merchant_information
 
     @property
@@ -384,6 +402,8 @@ class CreatePaymentRequest(object):
         :param aggregator_information: The aggregator_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsAggregatorInformation
         """
+
+
 
         self._aggregator_information = aggregator_information
 
@@ -406,6 +426,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsConsumerAuthenticationInformation
         """
 
+
+
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -426,6 +448,8 @@ class CreatePaymentRequest(object):
         :param point_of_sale_information: The point_of_sale_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsPointOfSaleInformation
         """
+
+
 
         self._point_of_sale_information = point_of_sale_information
 
@@ -450,6 +474,8 @@ class CreatePaymentRequest(object):
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
+
+
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -470,6 +496,8 @@ class CreatePaymentRequest(object):
         :param merchant_defined_secure_information: The merchant_defined_secure_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsMerchantDefinedSecureInformation
         """
+
+
 
         self._merchant_defined_secure_information = merchant_defined_secure_information
 
@@ -492,6 +520,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsInstallmentInformation
         """
 
+
+
         self._installment_information = installment_information
 
     @property
@@ -512,6 +542,8 @@ class CreatePaymentRequest(object):
         :param travel_information: The travel_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsTravelInformation
         """
+
+
 
         self._travel_information = travel_information
 
@@ -534,6 +566,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsHealthCareInformation
         """
 
+
+
         self._health_care_information = health_care_information
 
     @property
@@ -554,6 +588,8 @@ class CreatePaymentRequest(object):
         :param promotion_information: The promotion_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsPromotionInformation
         """
+
+
 
         self._promotion_information = promotion_information
 
@@ -576,6 +612,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsTokenInformation
         """
 
+
+
         self._token_information = token_information
 
     @property
@@ -596,6 +634,8 @@ class CreatePaymentRequest(object):
         :param invoice_details: The invoice_details of this CreatePaymentRequest.
         :type: Ptsv2paymentsInvoiceDetails
         """
+
+
 
         self._invoice_details = invoice_details
 
@@ -618,6 +658,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -638,6 +680,8 @@ class CreatePaymentRequest(object):
         :param agreement_information: The agreement_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsAgreementInformation
         """
+
+
 
         self._agreement_information = agreement_information
 
@@ -660,6 +704,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -680,6 +726,8 @@ class CreatePaymentRequest(object):
         :param acquirer_information: The acquirer_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsAcquirerInformation
         """
+
+
 
         self._acquirer_information = acquirer_information
 
@@ -702,6 +750,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsRecurringPaymentInformation
         """
 
+
+
         self._recurring_payment_information = recurring_payment_information
 
     @property
@@ -723,6 +773,8 @@ class CreatePaymentRequest(object):
         :type: Ptsv2paymentsHostedPaymentInformation
         """
 
+
+
         self._hosted_payment_information = hosted_payment_information
 
     @property
@@ -743,6 +795,8 @@ class CreatePaymentRequest(object):
         :param watchlist_screening_information: The watchlist_screening_information of this CreatePaymentRequest.
         :type: Ptsv2paymentsWatchlistScreeningInformation
         """
+
+
 
         self._watchlist_screening_information = watchlist_screening_information
 

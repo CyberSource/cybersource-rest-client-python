@@ -68,6 +68,8 @@ class TssV2TransactionsPost201ResponseEmbedded(object):
         :type: list[TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries]
         """
 
+
+
         self._transaction_summaries = transaction_summaries
 
     def to_dict(self):

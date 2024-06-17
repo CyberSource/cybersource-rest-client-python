@@ -68,6 +68,8 @@ class GetAllPlansResponsePlanInformationBillingCycles(object):
         :type: str
         """
 
+
+
         self._total = total
 
     def to_dict(self):

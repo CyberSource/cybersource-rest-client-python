@@ -83,6 +83,8 @@ class SearchRequest(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     @property
@@ -105,6 +107,8 @@ class SearchRequest(object):
         :param user_name: The user_name of this SearchRequest.
         :type: str
         """
+
+
 
         self._user_name = user_name
 
@@ -129,6 +133,8 @@ class SearchRequest(object):
         :type: str
         """
 
+
+
         self._role_id = role_id
 
     @property
@@ -151,6 +157,8 @@ class SearchRequest(object):
         :param permission_id: The permission_id of this SearchRequest.
         :type: str
         """
+
+
 
         self._permission_id = permission_id
 

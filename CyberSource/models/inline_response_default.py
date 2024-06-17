@@ -71,6 +71,8 @@ class InlineResponseDefault(object):
         :type: InlineResponseDefaultResponseStatus
         """
 
+
+
         self._response_status = response_status
 
     @property
@@ -91,6 +93,8 @@ class InlineResponseDefault(object):
         :param links: The links of this InlineResponseDefault.
         :type: InlineResponseDefaultLinks
         """
+
+
 
         self._links = links
 

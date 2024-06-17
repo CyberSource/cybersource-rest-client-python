@@ -71,6 +71,8 @@ class PaymentsProductsPayerAuthentication(object):
         :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsPayerAuthentication(object):
         :param configuration_information: The configuration_information of this PaymentsProductsPayerAuthentication.
         :type: PaymentsProductsPayerAuthenticationConfigurationInformation
         """
+
+
 
         self._configuration_information = configuration_information
 

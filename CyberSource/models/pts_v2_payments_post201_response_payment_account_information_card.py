@@ -93,6 +93,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :type: str
         """
 
+
+
         self._suffix = suffix
 
     @property
@@ -115,6 +117,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :param expiration_month: The expiration_month of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
         :type: str
         """
+
+
 
         self._expiration_month = expiration_month
 
@@ -139,6 +143,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :type: str
         """
 
+
+
         self._expiration_year = expiration_year
 
     @property
@@ -161,6 +167,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :param type: The type of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -185,6 +193,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :type: str
         """
 
+
+
         self._prefix = prefix
 
     @property
@@ -207,6 +217,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformationCard(object):
         :param hashed_number: The hashed_number of this PtsV2PaymentsPost201ResponsePaymentAccountInformationCard.
         :type: str
         """
+
+
 
         self._hashed_number = hashed_number
 

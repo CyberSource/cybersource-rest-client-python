@@ -163,6 +163,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -185,6 +187,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param submit_time_utc: The submit_time_utc of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -209,6 +213,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: str
         """
 
+
+
         self._merchant_id = merchant_id
 
     @property
@@ -232,6 +238,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -252,6 +260,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param application_information: The application_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedApplicationInformation
         """
+
+
 
         self._application_information = application_information
 
@@ -274,6 +284,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedBuyerInformation
         """
 
+
+
         self._buyer_information = buyer_information
 
     @property
@@ -294,6 +306,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param client_reference_information: The client_reference_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -316,6 +330,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation
         """
 
+
+
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -336,6 +352,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param device_information: The device_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: Riskv1authenticationresultsDeviceInformation
         """
+
+
 
         self._device_information = device_information
 
@@ -358,6 +376,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedErrorInformation
         """
 
+
+
         self._error_information = error_information
 
     @property
@@ -378,6 +398,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param fraud_marking_information: The fraud_marking_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsGet200ResponseFraudMarkingInformation
         """
+
+
 
         self._fraud_marking_information = fraud_marking_information
 
@@ -402,6 +424,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
+
+
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -422,6 +446,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param merchant_information: The merchant_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedMerchantInformation
         """
+
+
 
         self._merchant_information = merchant_information
 
@@ -444,6 +470,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -464,6 +492,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param payment_information: The payment_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -486,6 +516,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -506,6 +538,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param processor_information: The processor_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -528,6 +562,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformation
         """
 
+
+
         self._point_of_sale_information = point_of_sale_information
 
     @property
@@ -549,6 +585,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -569,6 +607,8 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         :param links: The links of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
         :type: TssV2TransactionsPost201ResponseEmbeddedLinks
         """
+
+
 
         self._links = links
 

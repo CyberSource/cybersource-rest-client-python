@@ -71,6 +71,8 @@ class Ptsv2billingagreementsPaymentInformationPaymentType(object):
         :type: Ptsv2billingagreementsPaymentInformationPaymentTypeMethod
         """
 
+
+
         self._method = method
 
     @property
@@ -93,6 +95,8 @@ class Ptsv2billingagreementsPaymentInformationPaymentType(object):
         :param name: The name of this Ptsv2billingagreementsPaymentInformationPaymentType.
         :type: str
         """
+
+
 
         self._name = name
 

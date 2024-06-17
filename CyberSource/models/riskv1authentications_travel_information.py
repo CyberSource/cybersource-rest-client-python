@@ -76,6 +76,8 @@ class Riskv1authenticationsTravelInformation(object):
         :type: list[Riskv1decisionsTravelInformationLegs]
         """
 
+
+
         self._legs = legs
 
     @property
@@ -99,6 +101,8 @@ class Riskv1authenticationsTravelInformation(object):
         :type: int
         """
 
+
+
         self._number_of_passengers = number_of_passengers
 
     @property
@@ -119,6 +123,8 @@ class Riskv1authenticationsTravelInformation(object):
         :param passengers: The passengers of this Riskv1authenticationsTravelInformation.
         :type: list[Riskv1decisionsTravelInformationPassengers]
         """
+
+
 
         self._passengers = passengers
 

@@ -95,6 +95,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :type: str
         """
 
+
+
         self._acquirer_organization_id = acquirer_organization_id
 
     @property
@@ -117,8 +119,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param acquiring_bin: The acquiring_bin of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: int
         """
-        if acquiring_bin is None:
-            raise ValueError("Invalid value for `acquiring_bin`, must not be `None`")
+
+
 
         self._acquiring_bin = acquiring_bin
 
@@ -143,6 +145,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :type: bool
         """
 
+
+
         self._allow_crypto_currency_purchase = allow_crypto_currency_purchase
 
     @property
@@ -165,8 +169,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param card_acceptor_id: The card_acceptor_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: str
         """
-        if card_acceptor_id is None:
-            raise ValueError("Invalid value for `card_acceptor_id`, must not be `None`")
+
+
 
         self._card_acceptor_id = card_acceptor_id
 
@@ -191,6 +195,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :type: str
         """
 
+
+
         self._originator_mvv = originator_mvv
 
     @property
@@ -214,6 +220,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :type: str
         """
 
+
+
         self._originator_name_abbreviation = originator_name_abbreviation
 
     @property
@@ -236,8 +244,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param card_terminal_id: The card_terminal_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: str
         """
-        if card_terminal_id is None:
-            raise ValueError("Invalid value for `card_terminal_id`, must not be `None`")
+
+
 
         self._card_terminal_id = card_terminal_id
 

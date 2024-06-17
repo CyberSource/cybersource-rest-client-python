@@ -76,6 +76,8 @@ class GetAllPlansResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -97,6 +99,8 @@ class GetAllPlansResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self._next = next
 
     @property
@@ -117,6 +121,8 @@ class GetAllPlansResponseLinks(object):
         :param previous: The previous of this GetAllPlansResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
+
+
 
         self._previous = previous
 

@@ -83,6 +83,8 @@ class PtsV2PaymentsPost502Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -105,6 +107,8 @@ class PtsV2PaymentsPost502Response(object):
         :param status: The status of this PtsV2PaymentsPost502Response.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -129,6 +133,8 @@ class PtsV2PaymentsPost502Response(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -151,6 +157,8 @@ class PtsV2PaymentsPost502Response(object):
         :param message: The message of this PtsV2PaymentsPost502Response.
         :type: str
         """
+
+
 
         self._message = message
 

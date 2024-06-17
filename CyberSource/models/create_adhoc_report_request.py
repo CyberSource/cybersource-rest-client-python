@@ -117,8 +117,8 @@ class CreateAdhocReportRequest(object):
         :param organization_id: The organization_id of this CreateAdhocReportRequest.
         :type: str
         """
-        if organization_id is not None and not re.search('[a-zA-Z0-9-_]+', organization_id):
-            raise ValueError("Invalid value for `organization_id`, must be a follow pattern or equal to `/[a-zA-Z0-9-_]+/`")
+
+
 
         self._organization_id = organization_id
 
@@ -140,8 +140,8 @@ class CreateAdhocReportRequest(object):
         :param report_definition_name: The report_definition_name of this CreateAdhocReportRequest.
         :type: str
         """
-        if report_definition_name is not None and not re.search('[a-zA-Z0-9-]+', report_definition_name):
-            raise ValueError("Invalid value for `report_definition_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-]+/`")
+
+
 
         self._report_definition_name = report_definition_name
 
@@ -166,6 +166,8 @@ class CreateAdhocReportRequest(object):
         :type: list[str]
         """
 
+
+
         self._report_fields = report_fields
 
     @property
@@ -189,6 +191,8 @@ class CreateAdhocReportRequest(object):
         :type: str
         """
 
+
+
         self._report_mime_type = report_mime_type
 
     @property
@@ -211,8 +215,8 @@ class CreateAdhocReportRequest(object):
         :param report_name: The report_name of this CreateAdhocReportRequest.
         :type: str
         """
-        if report_name is not None and not re.search('[a-zA-Z0-9-_ ]+', report_name):
-            raise ValueError("Invalid value for `report_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
+
+
 
         self._report_name = report_name
 
@@ -237,6 +241,8 @@ class CreateAdhocReportRequest(object):
         :type: str
         """
 
+
+
         self._timezone = timezone
 
     @property
@@ -259,6 +265,8 @@ class CreateAdhocReportRequest(object):
         :param report_start_time: The report_start_time of this CreateAdhocReportRequest.
         :type: datetime
         """
+
+
 
         self._report_start_time = report_start_time
 
@@ -283,6 +291,8 @@ class CreateAdhocReportRequest(object):
         :type: datetime
         """
 
+
+
         self._report_end_time = report_end_time
 
     @property
@@ -304,6 +314,8 @@ class CreateAdhocReportRequest(object):
         :type: Reportingv3reportsReportFilters
         """
 
+
+
         self._report_filters = report_filters
 
     @property
@@ -324,6 +336,8 @@ class CreateAdhocReportRequest(object):
         :param report_preferences: The report_preferences of this CreateAdhocReportRequest.
         :type: Reportingv3reportsReportPreferences
         """
+
+
 
         self._report_preferences = report_preferences
 
@@ -347,8 +361,8 @@ class CreateAdhocReportRequest(object):
         :param group_name: The group_name of this CreateAdhocReportRequest.
         :type: str
         """
-        if group_name is not None and not re.search('[0-9]*', group_name):
-            raise ValueError("Invalid value for `group_name`, must be a follow pattern or equal to `/[0-9]*/`")
+
+
 
         self._group_name = group_name
 

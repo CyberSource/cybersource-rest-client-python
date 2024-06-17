@@ -108,6 +108,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._alert_preference = alert_preference
 
     @property
@@ -130,6 +132,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :param first_installment_date: The first_installment_date of this Ptsv2billingagreementsInstallmentInformation.
         :type: str
         """
+
+
 
         self._first_installment_date = first_installment_date
 
@@ -154,6 +158,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._identifier = identifier
 
     @property
@@ -176,6 +182,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :param last_installment_date: The last_installment_date of this Ptsv2billingagreementsInstallmentInformation.
         :type: str
         """
+
+
 
         self._last_installment_date = last_installment_date
 
@@ -200,6 +208,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._max_amount = max_amount
 
     @property
@@ -222,6 +232,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :param min_amount: The min_amount of this Ptsv2billingagreementsInstallmentInformation.
         :type: str
         """
+
+
 
         self._min_amount = min_amount
 
@@ -246,6 +258,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._payment_type = payment_type
 
     @property
@@ -269,6 +283,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :type: str
         """
 
+
+
         self._preferred_day = preferred_day
 
     @property
@@ -291,6 +307,8 @@ class Ptsv2billingagreementsInstallmentInformation(object):
         :param sequence: The sequence of this Ptsv2billingagreementsInstallmentInformation.
         :type: int
         """
+
+
 
         self._sequence = sequence
 

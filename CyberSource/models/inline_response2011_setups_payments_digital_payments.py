@@ -66,6 +66,8 @@ class InlineResponse2011SetupsPaymentsDigitalPayments(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus
         """
 
+
+
         self._subscription_status = subscription_status
 
     def to_dict(self):

@@ -83,6 +83,8 @@ class Ptsv2payoutsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -105,6 +107,8 @@ class Ptsv2payoutsClientReferenceInformation(object):
         :param application_name: The application_name of this Ptsv2payoutsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._application_name = application_name
 
@@ -129,6 +133,8 @@ class Ptsv2payoutsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_version = application_version
 
     @property
@@ -151,6 +157,8 @@ class Ptsv2payoutsClientReferenceInformation(object):
         :param application_user: The application_user of this Ptsv2payoutsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._application_user = application_user
 

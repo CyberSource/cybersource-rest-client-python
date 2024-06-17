@@ -73,6 +73,8 @@ class Ptsv2paymentsHostedPaymentInformationUserAgent(object):
         :type: str
         """
 
+
+
         self._url = url
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsHostedPaymentInformationUserAgent(object):
         :param width: The width of this Ptsv2paymentsHostedPaymentInformationUserAgent.
         :type: int
         """
+
+
 
         self._width = width
 

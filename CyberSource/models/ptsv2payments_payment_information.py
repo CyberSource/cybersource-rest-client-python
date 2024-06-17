@@ -136,6 +136,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCard
         """
 
+
+
         self._card = card
 
     @property
@@ -156,6 +158,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param tokenized_card: The tokenized_card of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationTokenizedCard
         """
+
+
 
         self._tokenized_card = tokenized_card
 
@@ -178,6 +182,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationDirectDebit
         """
 
+
+
         self._direct_debit = direct_debit
 
     @property
@@ -198,6 +204,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param fluid_data: The fluid_data of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationFluidData
         """
+
+
 
         self._fluid_data = fluid_data
 
@@ -220,6 +228,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
+
+
         self._customer = customer
 
     @property
@@ -240,6 +250,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param payment_instrument: The payment_instrument of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationPaymentInstrument
         """
+
+
 
         self._payment_instrument = payment_instrument
 
@@ -262,6 +274,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationInstrumentIdentifier
         """
 
+
+
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -282,6 +296,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param shipping_address: The shipping_address of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationShippingAddress
         """
+
+
 
         self._shipping_address = shipping_address
 
@@ -304,6 +320,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationLegacyToken
         """
 
+
+
         self._legacy_token = legacy_token
 
     @property
@@ -324,6 +342,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param bank: The bank of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationBank
         """
+
+
 
         self._bank = bank
 
@@ -346,6 +366,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationOptions
         """
 
+
+
         self._options = options
 
     @property
@@ -366,6 +388,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationPaymentType
         """
+
+
 
         self._payment_type = payment_type
 
@@ -390,6 +414,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: str
         """
 
+
+
         self._initiation_channel = initiation_channel
 
     @property
@@ -411,6 +437,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationSepa
         """
 
+
+
         self._sepa = sepa
 
     @property
@@ -431,6 +459,8 @@ class Ptsv2paymentsPaymentInformation(object):
         :param e_wallet: The e_wallet of this Ptsv2paymentsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationEWallet
         """
+
+
 
         self._e_wallet = e_wallet
 

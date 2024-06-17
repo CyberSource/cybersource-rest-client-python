@@ -66,6 +66,8 @@ class VTConfigCardNotPresentReceiptInformationEmailReceipt(object):
         :type: str
         """
 
+
+
         self._senders_email_address = senders_email_address
 
     def to_dict(self):

@@ -111,6 +111,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -133,6 +135,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :param id: The id of this PtsV2CreateBillingAgreementPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -157,6 +161,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -180,6 +186,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -200,6 +208,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :param processor_information: The processor_information of this PtsV2CreateBillingAgreementPost201Response.
         :type: PtsV2CreateBillingAgreementPost201ResponseProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -222,6 +232,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation
         """
 
+
+
         self._installment_information = installment_information
 
     @property
@@ -242,6 +254,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :param agreement_information: The agreement_information of this PtsV2CreateBillingAgreementPost201Response.
         :type: PtsV2CreateBillingAgreementPost201ResponseAgreementInformation
         """
+
+
 
         self._agreement_information = agreement_information
 
@@ -264,6 +278,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -284,6 +300,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :param risk_information: The risk_information of this PtsV2CreateBillingAgreementPost201Response.
         :type: PtsV2CreateBillingAgreementPost201ResponseRiskInformation
         """
+
+
 
         self._risk_information = risk_information
 
@@ -307,6 +325,8 @@ class PtsV2CreateBillingAgreementPost201Response(object):
         :param reconciliation_id: The reconciliation_id of this PtsV2CreateBillingAgreementPost201Response.
         :type: str
         """
+
+
 
         self._reconciliation_id = reconciliation_id
 

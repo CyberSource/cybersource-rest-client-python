@@ -76,8 +76,8 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :param code: The code of this Riskv1liststypeentriesClientReferenceInformation.
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
+
+
 
         self._code = code
 
@@ -102,6 +102,8 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -122,6 +124,8 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :param partner: The partner of this Riskv1liststypeentriesClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 

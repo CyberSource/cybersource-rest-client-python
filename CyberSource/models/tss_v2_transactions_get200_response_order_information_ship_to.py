@@ -113,6 +113,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -135,6 +137,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :param last_name: The last_name of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -159,6 +163,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -181,6 +187,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :param address2: The address2 of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -205,6 +213,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -227,6 +237,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -251,6 +263,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -273,6 +287,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :param company: The company of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._company = company
 
@@ -297,6 +313,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -319,6 +337,8 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
         :param phone_number: The phone_number of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 

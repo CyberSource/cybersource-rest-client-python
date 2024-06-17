@@ -81,6 +81,8 @@ class Body(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -101,8 +103,8 @@ class Body(object):
         :param included: The included of this Body.
         :type: Accountupdaterv1batchesIncluded
         """
-        if included is None:
-            raise ValueError("Invalid value for `included`, must not be `None`")
+
+
 
         self._included = included
 
@@ -127,6 +129,8 @@ class Body(object):
         :type: str
         """
 
+
+
         self._merchant_reference = merchant_reference
 
     @property
@@ -149,8 +153,8 @@ class Body(object):
         :param notification_email: The notification_email of this Body.
         :type: str
         """
-        if notification_email is None:
-            raise ValueError("Invalid value for `notification_email`, must not be `None`")
+
+
 
         self._notification_email = notification_email
 

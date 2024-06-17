@@ -118,6 +118,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -140,6 +142,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :param address2: The address2 of this Riskv1liststypeentriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -164,6 +168,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -186,6 +192,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :param country: The country of this Riskv1liststypeentriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -210,6 +218,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -232,6 +242,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1liststypeentriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -256,6 +268,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -278,6 +292,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :param last_name: The last_name of this Riskv1liststypeentriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -302,6 +318,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -325,6 +343,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -347,6 +367,8 @@ class Riskv1liststypeentriesOrderInformationBillTo(object):
         :param email_domain: The email_domain of this Riskv1liststypeentriesOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._email_domain = email_domain
 

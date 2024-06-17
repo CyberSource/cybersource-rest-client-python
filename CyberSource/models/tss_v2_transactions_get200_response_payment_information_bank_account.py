@@ -98,6 +98,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._suffix = suffix
 
     @property
@@ -120,6 +122,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :param prefix: The prefix of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._prefix = prefix
 
@@ -144,6 +148,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._check_number = check_number
 
     @property
@@ -166,6 +172,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -190,6 +198,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -213,6 +223,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._check_digit = check_digit
 
     @property
@@ -235,6 +247,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
         :param encoder_id: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._encoder_id = encoder_id
 

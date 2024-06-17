@@ -66,6 +66,8 @@ class InlineResponse200EmbeddedReversalLinks(object):
         :type: InlineResponse200EmbeddedReversalLinksSelf
         """
 
+
+
         self.__self = _self
 
     def to_dict(self):

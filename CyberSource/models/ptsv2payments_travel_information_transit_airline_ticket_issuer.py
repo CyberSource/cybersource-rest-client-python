@@ -98,6 +98,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -120,6 +122,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param name: The name of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
+
+
 
         self._name = name
 
@@ -144,6 +148,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :type: str
         """
 
+
+
         self._address = address
 
     @property
@@ -166,6 +172,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param locality: The locality of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -190,6 +198,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -213,6 +223,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -235,6 +247,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer(object):
         :param country: The country of this Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer.
         :type: str
         """
+
+
 
         self._country = country
 

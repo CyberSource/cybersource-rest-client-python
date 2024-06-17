@@ -88,6 +88,8 @@ class Ptsv2paymentsTokenInformation(object):
         :type: str
         """
 
+
+
         self._jti = jti
 
     @property
@@ -111,6 +113,8 @@ class Ptsv2paymentsTokenInformation(object):
         :type: str
         """
 
+
+
         self._transient_token_jwt = transient_token_jwt
 
     @property
@@ -132,6 +136,8 @@ class Ptsv2paymentsTokenInformation(object):
         :type: Ptsv2paymentsTokenInformationPaymentInstrument
         """
 
+
+
         self._payment_instrument = payment_instrument
 
     @property
@@ -152,6 +158,8 @@ class Ptsv2paymentsTokenInformation(object):
         :param shipping_address: The shipping_address of this Ptsv2paymentsTokenInformation.
         :type: Ptsv2paymentsTokenInformationShippingAddress
         """
+
+
 
         self._shipping_address = shipping_address
 
@@ -175,6 +183,8 @@ class Ptsv2paymentsTokenInformation(object):
         :param network_token_option: The network_token_option of this Ptsv2paymentsTokenInformation.
         :type: str
         """
+
+
 
         self._network_token_option = network_token_option
 

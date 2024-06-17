@@ -81,6 +81,8 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         :type: Ptsv2billingagreementsPaymentInformationBankAccount
         """
 
+
+
         self._account = account
 
     @property
@@ -103,6 +105,8 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         :param iban: The iban of this Ptsv2billingagreementsPaymentInformationBank.
         :type: str
         """
+
+
 
         self._iban = iban
 
@@ -127,6 +131,8 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._swift_code = swift_code
 
     @property
@@ -149,6 +155,8 @@ class Ptsv2billingagreementsPaymentInformationBank(object):
         :param scheme: The scheme of this Ptsv2billingagreementsPaymentInformationBank.
         :type: str
         """
+
+
 
         self._scheme = scheme
 

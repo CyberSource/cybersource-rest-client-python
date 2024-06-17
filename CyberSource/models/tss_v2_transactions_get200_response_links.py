@@ -71,6 +71,8 @@ class TssV2TransactionsGet200ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class TssV2TransactionsGet200ResponseLinks(object):
         :param related_transactions: The related_transactions of this TssV2TransactionsGet200ResponseLinks.
         :type: list[PtsV2PaymentsPost201ResponseLinksSelf]
         """
+
+
 
         self._related_transactions = related_transactions
 

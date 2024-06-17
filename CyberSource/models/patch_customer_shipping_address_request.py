@@ -86,6 +86,8 @@ class PatchCustomerShippingAddressRequest(object):
         :type: Tmsv2customersEmbeddedDefaultShippingAddressLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -108,6 +110,8 @@ class PatchCustomerShippingAddressRequest(object):
         :param id: The id of this PatchCustomerShippingAddressRequest.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -132,6 +136,8 @@ class PatchCustomerShippingAddressRequest(object):
         :type: bool
         """
 
+
+
         self._default = default
 
     @property
@@ -153,6 +159,8 @@ class PatchCustomerShippingAddressRequest(object):
         :type: Tmsv2customersEmbeddedDefaultShippingAddressShipTo
         """
 
+
+
         self._ship_to = ship_to
 
     @property
@@ -173,6 +181,8 @@ class PatchCustomerShippingAddressRequest(object):
         :param metadata: The metadata of this PatchCustomerShippingAddressRequest.
         :type: Tmsv2customersEmbeddedDefaultShippingAddressMetadata
         """
+
+
 
         self._metadata = metadata
 

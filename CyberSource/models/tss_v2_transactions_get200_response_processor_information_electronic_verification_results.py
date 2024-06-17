@@ -113,6 +113,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -135,6 +137,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param email_raw: The email_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
+
+
 
         self._email_raw = email_raw
 
@@ -159,6 +163,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -181,6 +187,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param name_raw: The name_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
+
+
 
         self._name_raw = name_raw
 
@@ -205,6 +213,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -227,6 +237,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param phone_number_raw: The phone_number_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
+
+
 
         self._phone_number_raw = phone_number_raw
 
@@ -251,6 +263,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :type: str
         """
 
+
+
         self._street = street
 
     @property
@@ -273,6 +287,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param street_raw: The street_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
+
+
 
         self._street_raw = street_raw
 
@@ -297,6 +313,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -319,6 +337,8 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
         :param postal_code_raw: The postal_code_raw of this TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
+
+
 
         self._postal_code_raw = postal_code_raw
 

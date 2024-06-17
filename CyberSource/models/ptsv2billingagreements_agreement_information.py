@@ -73,6 +73,8 @@ class Ptsv2billingagreementsAgreementInformation(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2billingagreementsAgreementInformation(object):
         :param date_signed: The date_signed of this Ptsv2billingagreementsAgreementInformation.
         :type: str
         """
+
+
 
         self._date_signed = date_signed
 

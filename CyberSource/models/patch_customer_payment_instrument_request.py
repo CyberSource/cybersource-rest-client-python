@@ -136,6 +136,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -158,6 +160,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param id: The id of this PatchCustomerPaymentInstrumentRequest.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -182,6 +186,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: str
         """
 
+
+
         self._object = object
 
     @property
@@ -204,6 +210,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param default: The default of this PatchCustomerPaymentInstrumentRequest.
         :type: bool
         """
+
+
 
         self._default = default
 
@@ -228,6 +236,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: str
         """
 
+
+
         self._state = state
 
     @property
@@ -251,6 +261,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -271,6 +283,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param bank_account: The bank_account of this PatchCustomerPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount
         """
+
+
 
         self._bank_account = bank_account
 
@@ -293,6 +307,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentCard
         """
 
+
+
         self._card = card
 
     @property
@@ -313,6 +329,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param buyer_information: The buyer_information of this PatchCustomerPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 
@@ -335,6 +353,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -355,6 +375,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param processing_information: The processing_information of this PatchCustomerPaymentInstrumentRequest.
         :type: TmsPaymentInstrumentProcessingInfo
         """
+
+
 
         self._processing_information = processing_information
 
@@ -377,6 +399,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation
         """
 
+
+
         self._merchant_information = merchant_information
 
     @property
@@ -397,6 +421,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param instrument_identifier: The instrument_identifier of this PatchCustomerPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
         """
+
+
 
         self._instrument_identifier = instrument_identifier
 
@@ -419,6 +445,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata
         """
 
+
+
         self._metadata = metadata
 
     @property
@@ -439,6 +467,8 @@ class PatchCustomerPaymentInstrumentRequest(object):
         :param embedded: The embedded of this PatchCustomerPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded
         """
+
+
 
         self._embedded = embedded
 

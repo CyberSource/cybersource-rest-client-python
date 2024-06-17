@@ -66,6 +66,8 @@ class TmsAuthorizationOptions(object):
         :type: TmsAuthorizationOptionsInitiator
         """
 
+
+
         self._initiator = initiator
 
     def to_dict(self):

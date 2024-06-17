@@ -81,8 +81,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param code: The code of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
+
+
 
         self._code = code
 
@@ -107,6 +107,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._paused_request_id = paused_request_id
 
     @property
@@ -130,6 +132,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -150,6 +154,8 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param partner: The partner of this Riskv1decisionsClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 

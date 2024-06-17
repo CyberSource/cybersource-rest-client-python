@@ -97,8 +97,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param id: The id of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
-        if id is not None and not re.search('^[a-zA-Z0-9_+-]*$', id):
-            raise ValueError("Invalid value for `id`, must be a follow pattern or equal to `/^[a-zA-Z0-9_+-]*$/`")
+
+
 
         self._id = id
 
@@ -123,6 +123,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: str
         """
 
+
+
         self._upload_date = upload_date
 
     @property
@@ -145,6 +147,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param completion_date: The completion_date of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
+
+
 
         self._completion_date = completion_date
 
@@ -169,6 +173,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: int
         """
 
+
+
         self._transaction_count = transaction_count
 
     @property
@@ -191,6 +197,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param accepted_transaction_count: The accepted_transaction_count of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: int
         """
+
+
 
         self._accepted_transaction_count = accepted_transaction_count
 
@@ -215,6 +223,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: str
         """
 
+
+
         self._rejected_transaction_count = rejected_transaction_count
 
     @property
@@ -237,6 +247,8 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param status: The status of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
+
+
 
         self._status = status
 

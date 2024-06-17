@@ -68,6 +68,8 @@ class Ptsv2paymentsidrefundsProcessingInformationRecurringOptions(object):
         :type: bool
         """
 
+
+
         self._loan_payment = loan_payment
 
     def to_dict(self):

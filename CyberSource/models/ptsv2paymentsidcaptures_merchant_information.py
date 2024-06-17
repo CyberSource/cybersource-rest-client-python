@@ -91,6 +91,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :type: Ptsv2paymentsMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -113,6 +115,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsidcapturesMerchantInformation.
         :type: str
         """
+
+
 
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
@@ -137,6 +141,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :type: int
         """
 
+
+
         self._category_code = category_code
 
     @property
@@ -160,6 +166,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -180,6 +188,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :param service_fee_descriptor: The service_fee_descriptor of this Ptsv2paymentsidcapturesMerchantInformation.
         :type: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
         """
+
+
 
         self._service_fee_descriptor = service_fee_descriptor
 
@@ -203,6 +213,8 @@ class Ptsv2paymentsidcapturesMerchantInformation(object):
         :param tax_id: The tax_id of this Ptsv2paymentsidcapturesMerchantInformation.
         :type: str
         """
+
+
 
         self._tax_id = tax_id
 

@@ -78,6 +78,8 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -101,6 +103,8 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._currency = currency
 
     @property
@@ -123,6 +127,8 @@ class PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails(object):
         :param processor_transaction_fee: The processor_transaction_fee of this PtsV2PaymentsCapturesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._processor_transaction_fee = processor_transaction_fee
 

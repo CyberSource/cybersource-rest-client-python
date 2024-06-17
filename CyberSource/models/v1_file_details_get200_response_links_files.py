@@ -78,6 +78,8 @@ class V1FileDetailsGet200ResponseLinksFiles(object):
         :type: str
         """
 
+
+
         self._file_id = file_id
 
     @property
@@ -99,6 +101,8 @@ class V1FileDetailsGet200ResponseLinksFiles(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -119,6 +123,8 @@ class V1FileDetailsGet200ResponseLinksFiles(object):
         :param method: The method of this V1FileDetailsGet200ResponseLinksFiles.
         :type: str
         """
+
+
 
         self._method = method
 

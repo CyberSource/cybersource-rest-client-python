@@ -68,6 +68,8 @@ class Ptsv2refreshpaymentstatusidPaymentInformationCustomer(object):
         :type: str
         """
 
+
+
         self._customer_id = customer_id
 
     def to_dict(self):

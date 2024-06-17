@@ -73,6 +73,8 @@ class Ptsv2paymentsMerchantDefinedInformation(object):
         :type: str
         """
 
+
+
         self._key = key
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsMerchantDefinedInformation(object):
         :param value: The value of this Ptsv2paymentsMerchantDefinedInformation.
         :type: str
         """
+
+
 
         self._value = value
 

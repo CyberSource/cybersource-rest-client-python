@@ -108,6 +108,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -130,6 +132,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :param currency: The currency of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :type: str
         """
+
+
 
         self._currency = currency
 
@@ -154,6 +158,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :type: str
         """
 
+
+
         self._sub_total_amount = sub_total_amount
 
     @property
@@ -176,6 +182,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :param handling_amount: The handling_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :type: str
         """
+
+
 
         self._handling_amount = handling_amount
 
@@ -200,6 +208,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :type: str
         """
 
+
+
         self._shipping_amount = shipping_amount
 
     @property
@@ -222,6 +232,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :param shipping_discount_amount: The shipping_discount_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :type: str
         """
+
+
 
         self._shipping_discount_amount = shipping_discount_amount
 
@@ -246,6 +258,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :type: str
         """
 
+
+
         self._tax_amount = tax_amount
 
     @property
@@ -269,6 +283,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :type: str
         """
 
+
+
         self._insurance_amount = insurance_amount
 
     @property
@@ -291,6 +307,8 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
         :param gift_wrap_amount: The gift_wrap_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :type: str
         """
+
+
 
         self._gift_wrap_amount = gift_wrap_amount
 

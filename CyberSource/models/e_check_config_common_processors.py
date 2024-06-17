@@ -91,8 +91,8 @@ class ECheckConfigCommonProcessors(object):
         :param company_entry_description: The company_entry_description of this ECheckConfigCommonProcessors.
         :type: str
         """
-        if company_entry_description is None:
-            raise ValueError("Invalid value for `company_entry_description`, must not be `None`")
+
+
 
         self._company_entry_description = company_entry_description
 
@@ -117,6 +117,8 @@ class ECheckConfigCommonProcessors(object):
         :type: str
         """
 
+
+
         self._company_id = company_id
 
     @property
@@ -139,6 +141,8 @@ class ECheckConfigCommonProcessors(object):
         :param batch_group: The batch_group of this ECheckConfigCommonProcessors.
         :type: str
         """
+
+
 
         self._batch_group = batch_group
 
@@ -163,6 +167,8 @@ class ECheckConfigCommonProcessors(object):
         :type: bool
         """
 
+
+
         self._enable_accuity_for_avs = enable_accuity_for_avs
 
     @property
@@ -186,6 +192,8 @@ class ECheckConfigCommonProcessors(object):
         :type: object
         """
 
+
+
         self._accuity_check_type = accuity_check_type
 
     @property
@@ -208,6 +216,8 @@ class ECheckConfigCommonProcessors(object):
         :param set_completed_state: The set_completed_state of this ECheckConfigCommonProcessors.
         :type: bool
         """
+
+
 
         self._set_completed_state = set_completed_state
 

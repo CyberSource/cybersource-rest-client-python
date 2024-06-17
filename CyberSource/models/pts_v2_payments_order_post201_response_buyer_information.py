@@ -66,6 +66,8 @@ class PtsV2PaymentsOrderPost201ResponseBuyerInformation(object):
         :type: list[PtsV2PaymentsOrderPost201ResponseBuyerInformationPersonalIdentification]
         """
 
+
+
         self._personal_identification = personal_identification
 
     def to_dict(self):

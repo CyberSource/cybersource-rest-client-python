@@ -70,8 +70,8 @@ class Riskv1authenticationsOrderInformationAmountDetails(object):
         :param currency: The currency of this Riskv1authenticationsOrderInformationAmountDetails.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
+
+
 
         self._currency = currency
 
@@ -95,8 +95,8 @@ class Riskv1authenticationsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Riskv1authenticationsOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is None:
-            raise ValueError("Invalid value for `total_amount`, must not be `None`")
+
+
 
         self._total_amount = total_amount
 

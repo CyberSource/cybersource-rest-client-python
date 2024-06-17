@@ -81,6 +81,8 @@ class InvoicingV2InvoicesAllGet200Response(object):
         :type: GetAllPlansResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -104,6 +106,8 @@ class InvoicingV2InvoicesAllGet200Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -125,6 +129,8 @@ class InvoicingV2InvoicesAllGet200Response(object):
         :type: int
         """
 
+
+
         self._total_invoices = total_invoices
 
     @property
@@ -145,6 +151,8 @@ class InvoicingV2InvoicesAllGet200Response(object):
         :param invoices: The invoices of this InvoicingV2InvoicesAllGet200Response.
         :type: list[InvoicingV2InvoicesAllGet200ResponseInvoices]
         """
+
+
 
         self._invoices = invoices
 

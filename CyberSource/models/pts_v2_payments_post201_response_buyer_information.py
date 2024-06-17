@@ -93,6 +93,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :type: str
         """
 
+
+
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -115,6 +117,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :param date_of_birth: The date_of_birth of this PtsV2PaymentsPost201ResponseBuyerInformation.
         :type: str
         """
+
+
 
         self._date_of_birth = date_of_birth
 
@@ -139,6 +143,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -159,6 +165,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :param personal_identification: The personal_identification of this PtsV2PaymentsPost201ResponseBuyerInformation.
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
+
+
 
         self._personal_identification = personal_identification
 
@@ -183,6 +191,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :type: str
         """
 
+
+
         self._tax_id = tax_id
 
     @property
@@ -205,6 +215,8 @@ class PtsV2PaymentsPost201ResponseBuyerInformation(object):
         :param login_id: The login_id of this PtsV2PaymentsPost201ResponseBuyerInformation.
         :type: str
         """
+
+
 
         self._login_id = login_id
 

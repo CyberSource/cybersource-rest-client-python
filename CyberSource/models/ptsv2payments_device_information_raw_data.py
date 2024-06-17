@@ -73,6 +73,8 @@ class Ptsv2paymentsDeviceInformationRawData(object):
         :type: str
         """
 
+
+
         self._data = data
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsDeviceInformationRawData(object):
         :param provider: The provider of this Ptsv2paymentsDeviceInformationRawData.
         :type: str
         """
+
+
 
         self._provider = provider
 

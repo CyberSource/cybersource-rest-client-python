@@ -73,6 +73,8 @@ class GetAllPlansResponsePlanInformationBillingPeriod(object):
         :type: str
         """
 
+
+
         self._length = length
 
     @property
@@ -95,6 +97,8 @@ class GetAllPlansResponsePlanInformationBillingPeriod(object):
         :param unit: The unit of this GetAllPlansResponsePlanInformationBillingPeriod.
         :type: str
         """
+
+
 
         self._unit = unit
 

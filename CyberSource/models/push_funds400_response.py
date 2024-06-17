@@ -93,6 +93,8 @@ class PushFunds400Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -115,6 +117,8 @@ class PushFunds400Response(object):
         :param submit_time_utc: The submit_time_utc of this PushFunds400Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -139,6 +143,8 @@ class PushFunds400Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -161,6 +167,8 @@ class PushFunds400Response(object):
         :param reason: The reason of this PushFunds400Response.
         :type: str
         """
+
+
 
         self._reason = reason
 
@@ -185,6 +193,8 @@ class PushFunds400Response(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -205,6 +215,8 @@ class PushFunds400Response(object):
         :param details: The details of this PushFunds400Response.
         :type: list[PushFunds400ResponseDetails]
         """
+
+
 
         self._details = details
 

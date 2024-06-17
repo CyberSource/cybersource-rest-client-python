@@ -71,6 +71,8 @@ class Ptsv2paymentsidreversalsReversalInformation(object):
         :type: Ptsv2paymentsidreversalsReversalInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -93,6 +95,8 @@ class Ptsv2paymentsidreversalsReversalInformation(object):
         :param reason: The reason of this Ptsv2paymentsidreversalsReversalInformation.
         :type: str
         """
+
+
 
         self._reason = reason
 

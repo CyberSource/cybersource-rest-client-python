@@ -83,6 +83,8 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches(
         :type: list[str]
         """
 
+
+
         self._addresses = addresses
 
     @property
@@ -105,6 +107,8 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches(
         :param sanction_list: The sanction_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches.
         :type: str
         """
+
+
 
         self._sanction_list = sanction_list
 
@@ -129,6 +133,8 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches(
         :type: list[str]
         """
 
+
+
         self._aliases = aliases
 
     @property
@@ -151,6 +157,8 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches(
         :param programs: The programs of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchListMatches.
         :type: list[str]
         """
+
+
 
         self._programs = programs
 

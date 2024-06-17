@@ -118,6 +118,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -138,6 +140,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsOrderPost201Response.
         :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -160,6 +164,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: PtsV2PaymentsOrderPost201ResponseProcessorInformation
         """
 
+
+
         self._processor_information = processor_information
 
     @property
@@ -180,6 +186,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :param order_information: The order_information of this PtsV2PaymentsOrderPost201Response.
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformation
         """
+
+
 
         self._order_information = order_information
 
@@ -202,6 +210,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: PtsV2PaymentsOrderPost201ResponsePaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -223,6 +233,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: PtsV2PaymentsOrderPost201ResponseProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -243,6 +255,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :param buyer_information: The buyer_information of this PtsV2PaymentsOrderPost201Response.
         :type: PtsV2PaymentsOrderPost201ResponseBuyerInformation
         """
+
+
 
         self._buyer_information = buyer_information
 
@@ -267,6 +281,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -289,6 +305,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :param status: The status of this PtsV2PaymentsOrderPost201Response.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -313,6 +331,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -333,6 +353,8 @@ class PtsV2PaymentsOrderPost201Response(object):
         :param risk_information: The risk_information of this PtsV2PaymentsOrderPost201Response.
         :type: PtsV2PaymentsPost201ResponseRiskInformationProcessorResults
         """
+
+
 
         self._risk_information = risk_information
 

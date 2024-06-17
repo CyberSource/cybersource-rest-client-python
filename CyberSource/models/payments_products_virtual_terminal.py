@@ -71,6 +71,8 @@ class PaymentsProductsVirtualTerminal(object):
         :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsVirtualTerminal(object):
         :param configuration_information: The configuration_information of this PaymentsProductsVirtualTerminal.
         :type: PaymentsProductsVirtualTerminalConfigurationInformation
         """
+
+
 
         self._configuration_information = configuration_information
 

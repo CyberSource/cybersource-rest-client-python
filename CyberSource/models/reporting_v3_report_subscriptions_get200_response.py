@@ -66,6 +66,8 @@ class ReportingV3ReportSubscriptionsGet200Response(object):
         :type: list[ReportingV3ReportSubscriptionsGet200ResponseSubscriptions]
         """
 
+
+
         self._subscriptions = subscriptions
 
     def to_dict(self):

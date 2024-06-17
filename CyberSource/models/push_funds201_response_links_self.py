@@ -73,6 +73,8 @@ class PushFunds201ResponseLinksSelf(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -95,6 +97,8 @@ class PushFunds201ResponseLinksSelf(object):
         :param method: The method of this PushFunds201ResponseLinksSelf.
         :type: str
         """
+
+
 
         self._method = method
 

@@ -71,6 +71,8 @@ class Tmsv2customersEmbedded(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrument
         """
 
+
+
         self._default_payment_instrument = default_payment_instrument
 
     @property
@@ -91,6 +93,8 @@ class Tmsv2customersEmbedded(object):
         :param default_shipping_address: The default_shipping_address of this Tmsv2customersEmbedded.
         :type: Tmsv2customersEmbeddedDefaultShippingAddress
         """
+
+
 
         self._default_shipping_address = default_shipping_address
 

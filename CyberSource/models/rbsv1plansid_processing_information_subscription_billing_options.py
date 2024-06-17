@@ -68,6 +68,8 @@ class Rbsv1plansidProcessingInformationSubscriptionBillingOptions(object):
         :type: str
         """
 
+
+
         self._apply_to = apply_to
 
     def to_dict(self):

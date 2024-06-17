@@ -88,6 +88,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -110,6 +112,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._network_transaction_id = network_transaction_id
 
@@ -134,6 +138,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_details = response_details
 
     @property
@@ -157,6 +163,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :type: str
         """
 
+
+
         self._response_code = response_code
 
     @property
@@ -179,6 +187,8 @@ class PtsV2PaymentsCapturesPost201ResponseProcessorInformation(object):
         :param provider_response: The provider_response of this PtsV2PaymentsCapturesPost201ResponseProcessorInformation.
         :type: str
         """
+
+
 
         self._provider_response = provider_response
 

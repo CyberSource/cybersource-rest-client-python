@@ -71,6 +71,8 @@ class PaymentsProductsCardPresentConnect(object):
         :type: PaymentsProductsCardPresentConnectSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsCardPresentConnect(object):
         :param configuration_information: The configuration_information of this PaymentsProductsCardPresentConnect.
         :type: PaymentsProductsCardPresentConnectConfigurationInformation
         """
+
+
 
         self._configuration_information = configuration_information
 

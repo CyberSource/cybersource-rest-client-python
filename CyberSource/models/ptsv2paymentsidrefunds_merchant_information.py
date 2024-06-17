@@ -86,6 +86,8 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :type: Ptsv2paymentsMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -108,6 +110,8 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :param category_code: The category_code of this Ptsv2paymentsidrefundsMerchantInformation.
         :type: int
         """
+
+
 
         self._category_code = category_code
 
@@ -132,6 +136,8 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -155,6 +161,8 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :type: str
         """
 
+
+
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
     @property
@@ -177,6 +185,8 @@ class Ptsv2paymentsidrefundsMerchantInformation(object):
         :param tax_id: The tax_id of this Ptsv2paymentsidrefundsMerchantInformation.
         :type: str
         """
+
+
 
         self._tax_id = tax_id
 

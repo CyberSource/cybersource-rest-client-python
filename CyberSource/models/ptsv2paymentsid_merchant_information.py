@@ -68,6 +68,8 @@ class Ptsv2paymentsidMerchantInformation(object):
         :type: str
         """
 
+
+
         self._transaction_local_date_time = transaction_local_date_time
 
     def to_dict(self):

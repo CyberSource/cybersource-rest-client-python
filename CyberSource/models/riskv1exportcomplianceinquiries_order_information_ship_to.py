@@ -78,6 +78,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -101,6 +103,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -123,6 +127,8 @@ class Riskv1exportcomplianceinquiriesOrderInformationShipTo(object):
         :param last_name: The last_name of this Riskv1exportcomplianceinquiriesOrderInformationShipTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 

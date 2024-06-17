@@ -88,6 +88,8 @@ class GetAllSubscriptionsResponseSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -110,6 +112,8 @@ class GetAllSubscriptionsResponseSubscriptionInformation(object):
         :param plan_id: The plan_id of this GetAllSubscriptionsResponseSubscriptionInformation.
         :type: str
         """
+
+
 
         self._plan_id = plan_id
 
@@ -134,6 +138,8 @@ class GetAllSubscriptionsResponseSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -157,6 +163,8 @@ class GetAllSubscriptionsResponseSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._start_date = start_date
 
     @property
@@ -179,6 +187,8 @@ class GetAllSubscriptionsResponseSubscriptionInformation(object):
         :param status: The status of this GetAllSubscriptionsResponseSubscriptionInformation.
         :type: str
         """
+
+
 
         self._status = status
 

@@ -133,6 +133,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._title = title
 
     @property
@@ -155,6 +157,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param first_name: The first_name of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._first_name = first_name
 
@@ -179,6 +183,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -201,6 +207,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param last_name: The last_name of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -225,6 +233,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._name_suffix = name_suffix
 
     @property
@@ -247,6 +257,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param address1: The address1 of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address1 = address1
 
@@ -271,6 +283,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -293,6 +307,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param locality: The locality of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -317,6 +333,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -339,6 +357,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -363,6 +383,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -385,6 +407,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param email: The email of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._email = email
 
@@ -409,6 +433,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -431,6 +457,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo(object):
         :param verification_status: The verification_status of this PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._verification_status = verification_status
 

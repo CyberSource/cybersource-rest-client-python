@@ -69,8 +69,8 @@ class FraudMarkingActionRequest(object):
         :param risk_information: The risk_information of this FraudMarkingActionRequest.
         :type: Riskv1decisionsidmarkingRiskInformation
         """
-        if risk_information is None:
-            raise ValueError("Invalid value for `risk_information`, must not be `None`")
+
+
 
         self._risk_information = risk_information
 
@@ -92,6 +92,8 @@ class FraudMarkingActionRequest(object):
         :param client_reference_information: The client_reference_information of this FraudMarkingActionRequest.
         :type: Riskv1liststypeentriesClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 

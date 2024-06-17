@@ -68,6 +68,8 @@ class Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator(objec
         :type: str
         """
 
+
+
         self._type = type
 
     def to_dict(self):

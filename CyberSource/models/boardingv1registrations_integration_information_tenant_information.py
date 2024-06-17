@@ -68,6 +68,8 @@ class Boardingv1registrationsIntegrationInformationTenantInformation(object):
         :type: str
         """
 
+
+
         self._tenant_id = tenant_id
 
     def to_dict(self):

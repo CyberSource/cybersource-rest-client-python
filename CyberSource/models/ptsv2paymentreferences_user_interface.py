@@ -78,6 +78,8 @@ class Ptsv2paymentreferencesUserInterface(object):
         :type: str
         """
 
+
+
         self._border_radius = border_radius
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentreferencesUserInterface(object):
         :type: str
         """
 
+
+
         self._theme = theme
 
     @property
@@ -121,6 +125,8 @@ class Ptsv2paymentreferencesUserInterface(object):
         :param color: The color of this Ptsv2paymentreferencesUserInterface.
         :type: Ptsv2paymentreferencesUserInterfaceColor
         """
+
+
 
         self._color = color
 

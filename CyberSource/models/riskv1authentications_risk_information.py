@@ -66,6 +66,8 @@ class Riskv1authenticationsRiskInformation(object):
         :type: Ptsv2paymentsRiskInformationBuyerHistory
         """
 
+
+
         self._buyer_history = buyer_history
 
     def to_dict(self):

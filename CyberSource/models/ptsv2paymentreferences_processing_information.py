@@ -78,6 +78,8 @@ class Ptsv2paymentreferencesProcessingInformation(object):
         :type: str
         """
 
+
+
         self._session_type = session_type
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentreferencesProcessingInformation(object):
         :type: str
         """
 
+
+
         self._payment_flow_mode = payment_flow_mode
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2paymentreferencesProcessingInformation(object):
         :param action_list: The action_list of this Ptsv2paymentreferencesProcessingInformation.
         :type: list[str]
         """
+
+
 
         self._action_list = action_list
 

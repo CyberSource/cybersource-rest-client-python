@@ -76,6 +76,8 @@ class Riskv1addressverificationsOrderInformation(object):
         :type: Riskv1addressverificationsOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -97,6 +99,8 @@ class Riskv1addressverificationsOrderInformation(object):
         :type: Riskv1addressverificationsOrderInformationShipTo
         """
 
+
+
         self._ship_to = ship_to
 
     @property
@@ -117,6 +121,8 @@ class Riskv1addressverificationsOrderInformation(object):
         :param line_items: The line_items of this Riskv1addressverificationsOrderInformation.
         :type: list[Riskv1addressverificationsOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 

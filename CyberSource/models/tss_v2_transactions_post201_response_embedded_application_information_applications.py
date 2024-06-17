@@ -108,6 +108,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -130,6 +132,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :param reason_code: The reason_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._reason_code = reason_code
 
@@ -154,6 +158,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -176,6 +182,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :param reason: The reason of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._reason = reason
 
@@ -200,6 +208,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :type: str
         """
 
+
+
         self._r_code = r_code
 
     @property
@@ -222,6 +232,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :param r_flag: The r_flag of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
         :type: str
         """
+
+
 
         self._r_flag = r_flag
 
@@ -246,6 +258,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -269,6 +283,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :type: str
         """
 
+
+
         self._r_message = r_message
 
     @property
@@ -291,6 +307,8 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications
         :param return_code: The return_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications.
         :type: int
         """
+
+
 
         self._return_code = return_code
 

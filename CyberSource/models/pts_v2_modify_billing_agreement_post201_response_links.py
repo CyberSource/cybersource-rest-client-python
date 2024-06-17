@@ -71,6 +71,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class PtsV2ModifyBillingAgreementPost201ResponseLinks(object):
         :param status: The status of this PtsV2ModifyBillingAgreementPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
+
+
 
         self._status = status
 

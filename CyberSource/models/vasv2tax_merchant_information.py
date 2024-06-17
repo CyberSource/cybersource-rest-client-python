@@ -68,6 +68,8 @@ class Vasv2taxMerchantInformation(object):
         :type: str
         """
 
+
+
         self._vat_registration_number = vat_registration_number
 
     def to_dict(self):

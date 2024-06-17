@@ -81,6 +81,8 @@ class PayerAuthSetupRequest(object):
         :type: Riskv1decisionsClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -101,6 +103,8 @@ class PayerAuthSetupRequest(object):
         :param payment_information: The payment_information of this PayerAuthSetupRequest.
         :type: Riskv1authenticationsetupsPaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 
@@ -123,6 +127,8 @@ class PayerAuthSetupRequest(object):
         :type: Riskv1authenticationsetupsProcessingInformation
         """
 
+
+
         self._processing_information = processing_information
 
     @property
@@ -143,6 +149,8 @@ class PayerAuthSetupRequest(object):
         :param token_information: The token_information of this PayerAuthSetupRequest.
         :type: Riskv1authenticationsetupsTokenInformation
         """
+
+
 
         self._token_information = token_information
 

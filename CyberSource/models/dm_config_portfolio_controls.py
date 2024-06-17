@@ -71,6 +71,8 @@ class DmConfigPortfolioControls(object):
         :type: bool
         """
 
+
+
         self._hide_risk_menus = hide_risk_menus
 
     @property
@@ -91,6 +93,8 @@ class DmConfigPortfolioControls(object):
         :param hide_risk_transaction_data: The hide_risk_transaction_data of this DmConfigPortfolioControls.
         :type: bool
         """
+
+
 
         self._hide_risk_transaction_data = hide_risk_transaction_data
 

@@ -73,6 +73,8 @@ class PushFunds201ResponseRecipientInformationCard(object):
         :type: str
         """
 
+
+
         self._balance = balance
 
     @property
@@ -95,6 +97,8 @@ class PushFunds201ResponseRecipientInformationCard(object):
         :param currency: The currency of this PushFunds201ResponseRecipientInformationCard.
         :type: str
         """
+
+
 
         self._currency = currency
 

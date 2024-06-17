@@ -66,6 +66,8 @@ class GetAllSubscriptionsResponsePaymentInformation(object):
         :type: GetAllSubscriptionsResponsePaymentInformationCustomer
         """
 
+
+
         self._customer = customer
 
     def to_dict(self):

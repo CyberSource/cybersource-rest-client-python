@@ -103,6 +103,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :type: str
         """
 
+
+
         self._merchant_reference_number = merchant_reference_number
 
     @property
@@ -125,6 +127,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :param transaction_reference_number: The transaction_reference_number of this ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges.
         :type: str
         """
+
+
 
         self._transaction_reference_number = transaction_reference_number
 
@@ -149,6 +153,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :type: datetime
         """
 
+
+
         self._time = time
 
     @property
@@ -171,6 +177,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :param code: The code of this ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges.
         :type: str
         """
+
+
 
         self._code = code
 
@@ -195,6 +203,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :type: str
         """
 
+
+
         self._account_type = account_type
 
     @property
@@ -217,6 +227,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :param routing_number: The routing_number of this ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges.
         :type: str
         """
+
+
 
         self._routing_number = routing_number
 
@@ -241,6 +253,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :type: str
         """
 
+
+
         self._account_number = account_number
 
     @property
@@ -263,6 +277,8 @@ class ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges(object
         :param consumer_name: The consumer_name of this ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges.
         :type: str
         """
+
+
 
         self._consumer_name = consumer_name
 

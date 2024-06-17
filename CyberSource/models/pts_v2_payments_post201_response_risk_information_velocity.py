@@ -73,6 +73,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocity(object):
         :type: list[PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing]
         """
 
+
+
         self._morphing = morphing
 
     @property
@@ -93,6 +95,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocity(object):
         :param address: The address of this PtsV2PaymentsPost201ResponseRiskInformationVelocity.
         :type: list[str]
         """
+
+
 
         self._address = address
 

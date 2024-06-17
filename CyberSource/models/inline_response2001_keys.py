@@ -128,6 +128,8 @@ class InlineResponse2001Keys(object):
         :type: str
         """
 
+
+
         self._organization_id = organization_id
 
     @property
@@ -150,6 +152,8 @@ class InlineResponse2001Keys(object):
         :param merchant_name: The merchant_name of this InlineResponse2001Keys.
         :type: str
         """
+
+
 
         self._merchant_name = merchant_name
 
@@ -174,6 +178,8 @@ class InlineResponse2001Keys(object):
         :type: str
         """
 
+
+
         self._key_id = key_id
 
     @property
@@ -196,6 +202,8 @@ class InlineResponse2001Keys(object):
         :param key_type: The key_type of this InlineResponse2001Keys.
         :type: str
         """
+
+
 
         self._key_type = key_type
 
@@ -220,6 +228,8 @@ class InlineResponse2001Keys(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -242,6 +252,8 @@ class InlineResponse2001Keys(object):
         :param expiration_date: The expiration_date of this InlineResponse2001Keys.
         :type: date
         """
+
+
 
         self._expiration_date = expiration_date
 
@@ -266,6 +278,8 @@ class InlineResponse2001Keys(object):
         :type: date
         """
 
+
+
         self._date_added = date_added
 
     @property
@@ -288,6 +302,8 @@ class InlineResponse2001Keys(object):
         :param added_by: The added_by of this InlineResponse2001Keys.
         :type: str
         """
+
+
 
         self._added_by = added_by
 
@@ -312,6 +328,8 @@ class InlineResponse2001Keys(object):
         :type: date
         """
 
+
+
         self._date_modified = date_modified
 
     @property
@@ -334,6 +352,8 @@ class InlineResponse2001Keys(object):
         :param modified_by: The modified_by of this InlineResponse2001Keys.
         :type: str
         """
+
+
 
         self._modified_by = modified_by
 
@@ -358,6 +378,8 @@ class InlineResponse2001Keys(object):
         :type: str
         """
 
+
+
         self._version = version
 
     @property
@@ -381,6 +403,8 @@ class InlineResponse2001Keys(object):
         :type: str
         """
 
+
+
         self._serial_number = serial_number
 
     @property
@@ -403,6 +427,8 @@ class InlineResponse2001Keys(object):
         :param issuer_name: The issuer_name of this InlineResponse2001Keys.
         :type: str
         """
+
+
 
         self._issuer_name = issuer_name
 

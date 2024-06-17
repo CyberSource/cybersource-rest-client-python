@@ -108,6 +108,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -130,6 +132,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :param paused_request_id: The paused_request_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._paused_request_id = paused_request_id
 
@@ -154,6 +158,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -174,6 +180,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :param partner: The partner of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: Ptsv2paymentsidreversalsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 
@@ -198,6 +206,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_name = application_name
 
     @property
@@ -220,6 +230,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :param application_version: The application_version of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._application_version = application_version
 
@@ -244,6 +256,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_user = application_user
 
     @property
@@ -267,6 +281,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -289,6 +305,8 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
         :param transaction_id: The transaction_id of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._transaction_id = transaction_id
 

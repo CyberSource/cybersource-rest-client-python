@@ -75,8 +75,8 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :param currency: The currency of this Rbsv1plansOrderInformationAmountDetails.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
+
+
 
         self._currency = currency
 
@@ -100,8 +100,8 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :param billing_amount: The billing_amount of this Rbsv1plansOrderInformationAmountDetails.
         :type: str
         """
-        if billing_amount is None:
-            raise ValueError("Invalid value for `billing_amount`, must not be `None`")
+
+
 
         self._billing_amount = billing_amount
 
@@ -125,6 +125,8 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :param setup_fee: The setup_fee of this Rbsv1plansOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._setup_fee = setup_fee
 

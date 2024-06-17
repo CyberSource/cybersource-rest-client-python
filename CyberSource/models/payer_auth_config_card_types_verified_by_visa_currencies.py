@@ -76,6 +76,8 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :type: list[str]
         """
 
+
+
         self._currency_codes = currency_codes
 
     @property
@@ -98,8 +100,8 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :param acquirer_id: The acquirer_id of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
         :type: str
         """
-        if acquirer_id is not None and not re.search('^[a-zA-Z0-9]{6,20}$', acquirer_id):
-            raise ValueError("Invalid value for `acquirer_id`, must be a follow pattern or equal to `/^[a-zA-Z0-9]{6,20}$/`")
+
+
 
         self._acquirer_id = acquirer_id
 
@@ -123,8 +125,8 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :param processor_merchant_id: The processor_merchant_id of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
         :type: str
         """
-        if processor_merchant_id is not None and not re.search('^[a-zA-Z0-9]{6,35}$', processor_merchant_id):
-            raise ValueError("Invalid value for `processor_merchant_id`, must be a follow pattern or equal to `/^[a-zA-Z0-9]{6,35}$/`")
+
+
 
         self._processor_merchant_id = processor_merchant_id
 

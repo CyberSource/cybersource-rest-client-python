@@ -248,6 +248,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: list[str]
         """
 
+
+
         self._action_list = action_list
 
     @property
@@ -270,6 +272,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param enable_escrow_option: The enable_escrow_option of this Ptsv2paymentsProcessingInformation.
         :type: bool
         """
+
+
 
         self._enable_escrow_option = enable_escrow_option
 
@@ -294,6 +298,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: list[str]
         """
 
+
+
         self._action_token_types = action_token_types
 
     @property
@@ -316,6 +322,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param bin_source: The bin_source of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._bin_source = bin_source
 
@@ -340,6 +348,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: bool
         """
 
+
+
         self._capture = capture
 
     @property
@@ -362,6 +372,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param processor_id: The processor_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._processor_id = processor_id
 
@@ -386,6 +398,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._business_application_id = business_application_id
 
     @property
@@ -408,6 +422,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param commerce_indicator: The commerce_indicator of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._commerce_indicator = commerce_indicator
 
@@ -432,6 +448,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._commerce_indicator_label = commerce_indicator_label
 
     @property
@@ -454,6 +472,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param payment_solution: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._payment_solution = payment_solution
 
@@ -478,6 +498,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -500,6 +522,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param link_id: The link_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._link_id = link_id
 
@@ -524,6 +548,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._purchase_level = purchase_level
 
     @property
@@ -546,6 +572,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param transaction_timeout: The transaction_timeout of this Ptsv2paymentsProcessingInformation.
         :type: int
         """
+
+
 
         self._transaction_timeout = transaction_timeout
 
@@ -570,6 +598,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._intents_id = intents_id
 
     @property
@@ -592,6 +622,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param payment_id: The payment_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._payment_id = payment_id
 
@@ -616,6 +648,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._report_group = report_group
 
     @property
@@ -638,6 +672,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._visa_checkout_id = visa_checkout_id
 
@@ -662,6 +698,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._industry_data_type = industry_data_type
 
     @property
@@ -682,6 +720,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param authorization_options: The authorization_options of this Ptsv2paymentsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationAuthorizationOptions
         """
+
+
 
         self._authorization_options = authorization_options
 
@@ -704,6 +744,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: Ptsv2paymentsProcessingInformationCaptureOptions
         """
 
+
+
         self._capture_options = capture_options
 
     @property
@@ -724,6 +766,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param recurring_options: The recurring_options of this Ptsv2paymentsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationRecurringOptions
         """
+
+
 
         self._recurring_options = recurring_options
 
@@ -746,6 +790,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: Ptsv2paymentsProcessingInformationBankTransferOptions
         """
 
+
+
         self._bank_transfer_options = bank_transfer_options
 
     @property
@@ -766,6 +812,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param purchase_options: The purchase_options of this Ptsv2paymentsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationPurchaseOptions
         """
+
+
 
         self._purchase_options = purchase_options
 
@@ -788,6 +836,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: Ptsv2paymentsProcessingInformationElectronicBenefitsTransfer
         """
 
+
+
         self._electronic_benefits_transfer = electronic_benefits_transfer
 
     @property
@@ -808,6 +858,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param loan_options: The loan_options of this Ptsv2paymentsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationLoanOptions
         """
+
+
 
         self._loan_options = loan_options
 
@@ -832,6 +884,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._wallet_type = wallet_type
 
     @property
@@ -855,6 +909,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._national_net_domestic_data = national_net_domestic_data
 
     @property
@@ -875,6 +931,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param japan_payment_options: The japan_payment_options of this Ptsv2paymentsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationJapanPaymentOptions
         """
+
+
 
         self._japan_payment_options = japan_payment_options
 
@@ -899,6 +957,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._mobile_remote_payment_type = mobile_remote_payment_type
 
     @property
@@ -921,6 +981,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param extended_credit_total_count: The extended_credit_total_count of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._extended_credit_total_count = extended_credit_total_count
 
@@ -945,6 +1007,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._network_routing_order = network_routing_order
 
     @property
@@ -967,6 +1031,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param pay_by_points_indicator: The pay_by_points_indicator of this Ptsv2paymentsProcessingInformation.
         :type: bool
         """
+
+
 
         self._pay_by_points_indicator = pay_by_points_indicator
 
@@ -991,6 +1057,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: int
         """
 
+
+
         self._timeout = timeout
 
     @property
@@ -1013,6 +1081,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param is_return_auth_record_enabled: The is_return_auth_record_enabled of this Ptsv2paymentsProcessingInformation.
         :type: bool
         """
+
+
 
         self._is_return_auth_record_enabled = is_return_auth_record_enabled
 
@@ -1037,6 +1107,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._network_partner_id = network_partner_id
 
     @property
@@ -1059,6 +1131,8 @@ class Ptsv2paymentsProcessingInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsProcessingInformation.
         :type: str
         """
+
+
 
         self._payment_type = payment_type
 

@@ -78,6 +78,8 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
         :type: str
         """
 
+
+
         self._category = category
 
     @property
@@ -101,6 +103,8 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
         :type: str
         """
 
+
+
         self._category_code = category_code
 
     @property
@@ -123,6 +127,8 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
         :param processor_raw_name: The processor_raw_name of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
         :type: str
         """
+
+
 
         self._processor_raw_name = processor_raw_name
 

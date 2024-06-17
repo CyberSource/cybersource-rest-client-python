@@ -71,6 +71,8 @@ class PaymentsProductsECheck(object):
         :type: PaymentsProductsECheckSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsECheck(object):
         :param configuration_information: The configuration_information of this PaymentsProductsECheck.
         :type: PaymentsProductsECheckConfigurationInformation
         """
+
+
 
         self._configuration_information = configuration_information
 

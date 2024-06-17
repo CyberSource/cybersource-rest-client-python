@@ -68,6 +68,8 @@ class TssV2PostEmvTags200Response(object):
         :type: list[TssV2PostEmvTags200ResponseParsedEMVTagsList]
         """
 
+
+
         self._parsed_emv_tags_list = parsed_emv_tags_list
 
     def to_dict(self):

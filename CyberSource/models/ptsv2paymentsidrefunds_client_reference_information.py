@@ -113,6 +113,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -135,6 +137,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidrefundsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._reconciliation_id = reconciliation_id
 
@@ -159,6 +163,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._return_reconciliation_id = return_reconciliation_id
 
     @property
@@ -181,6 +187,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :param paused_request_id: The paused_request_id of this Ptsv2paymentsidrefundsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._paused_request_id = paused_request_id
 
@@ -205,6 +213,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._transaction_id = transaction_id
 
     @property
@@ -228,6 +238,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._comments = comments
 
     @property
@@ -248,6 +260,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :param partner: The partner of this Ptsv2paymentsidrefundsClientReferenceInformation.
         :type: Ptsv2paymentsClientReferenceInformationPartner
         """
+
+
 
         self._partner = partner
 
@@ -272,6 +286,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_name = application_name
 
     @property
@@ -295,6 +311,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :type: str
         """
 
+
+
         self._application_version = application_version
 
     @property
@@ -317,6 +335,8 @@ class Ptsv2paymentsidrefundsClientReferenceInformation(object):
         :param application_user: The application_user of this Ptsv2paymentsidrefundsClientReferenceInformation.
         :type: str
         """
+
+
 
         self._application_user = application_user
 

@@ -71,6 +71,8 @@ class PaymentsProductsCardPresentConnectConfigurationInformation(object):
         :type: str
         """
 
+
+
         self._template_id = template_id
 
     @property
@@ -91,6 +93,8 @@ class PaymentsProductsCardPresentConnectConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsCardPresentConnectConfigurationInformation.
         :type: PaymentsProductsCardPresentConnectConfigurationInformationConfigurations
         """
+
+
 
         self._configurations = configurations
 

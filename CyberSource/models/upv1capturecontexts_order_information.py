@@ -76,6 +76,8 @@ class Upv1capturecontextsOrderInformation(object):
         :type: Upv1capturecontextsOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -97,6 +99,8 @@ class Upv1capturecontextsOrderInformation(object):
         :type: Upv1capturecontextsOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -117,6 +121,8 @@ class Upv1capturecontextsOrderInformation(object):
         :param ship_to: The ship_to of this Upv1capturecontextsOrderInformation.
         :type: Upv1capturecontextsOrderInformationShipTo
         """
+
+
 
         self._ship_to = ship_to
 

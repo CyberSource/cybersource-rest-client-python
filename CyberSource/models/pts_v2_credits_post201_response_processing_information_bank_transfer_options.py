@@ -68,6 +68,8 @@ class PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions(object
         :type: str
         """
 
+
+
         self._settlement_method = settlement_method
 
     def to_dict(self):

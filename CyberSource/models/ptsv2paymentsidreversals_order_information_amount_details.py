@@ -68,6 +68,8 @@ class Ptsv2paymentsidreversalsOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._service_fee_amount = service_fee_amount
 
     def to_dict(self):

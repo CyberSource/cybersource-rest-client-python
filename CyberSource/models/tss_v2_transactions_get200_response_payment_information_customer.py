@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCustomer(object):
         :type: str
         """
 
+
+
         self._customer_id = customer_id
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCustomer(object):
         :param id: The id of this TssV2TransactionsGet200ResponsePaymentInformationCustomer.
         :type: str
         """
+
+
 
         self._id = id
 

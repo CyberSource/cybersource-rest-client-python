@@ -73,6 +73,8 @@ class KmsV2KeysSymPost201ResponseErrorInformation(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -93,6 +95,8 @@ class KmsV2KeysSymPost201ResponseErrorInformation(object):
         :param details: The details of this KmsV2KeysSymPost201ResponseErrorInformation.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

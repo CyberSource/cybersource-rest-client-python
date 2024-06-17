@@ -91,6 +91,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :type: TssV2TransactionsGet200ResponseOrderInformationBillTo
         """
 
+
+
         self._bill_to = bill_to
 
     @property
@@ -111,6 +113,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :param ship_to: The ship_to of this TssV2TransactionsGet200ResponseOrderInformation.
         :type: TssV2TransactionsGet200ResponseOrderInformationShipTo
         """
+
+
 
         self._ship_to = ship_to
 
@@ -135,6 +139,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :type: list[TssV2TransactionsGet200ResponseOrderInformationLineItems]
         """
 
+
+
         self._line_items = line_items
 
     @property
@@ -155,6 +161,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :param amount_details: The amount_details of this TssV2TransactionsGet200ResponseOrderInformation.
         :type: TssV2TransactionsGet200ResponseOrderInformationAmountDetails
         """
+
+
 
         self._amount_details = amount_details
 
@@ -177,6 +185,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :type: TssV2TransactionsGet200ResponseOrderInformationShippingDetails
         """
 
+
+
         self._shipping_details = shipping_details
 
     @property
@@ -197,6 +207,8 @@ class TssV2TransactionsGet200ResponseOrderInformation(object):
         :param invoice_details: The invoice_details of this TssV2TransactionsGet200ResponseOrderInformation.
         :type: TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails
         """
+
+
 
         self._invoice_details = invoice_details
 

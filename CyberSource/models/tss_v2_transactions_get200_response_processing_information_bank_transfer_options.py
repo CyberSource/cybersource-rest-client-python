@@ -68,6 +68,8 @@ class TssV2TransactionsGet200ResponseProcessingInformationBankTransferOptions(ob
         :type: str
         """
 
+
+
         self._sec_code = sec_code
 
     def to_dict(self):

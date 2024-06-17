@@ -88,6 +88,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :type: str
         """
 
+
+
         self._ticket_number = ticket_number
 
     @property
@@ -110,6 +112,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param passenger_name: The passenger_name of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: str
         """
+
+
 
         self._passenger_name = passenger_name
 
@@ -134,6 +138,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :type: str
         """
 
+
+
         self._connected_ticket_number = connected_ticket_number
 
     @property
@@ -157,6 +163,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :type: str
         """
 
+
+
         self._credit_reason_indicator = credit_reason_indicator
 
     @property
@@ -177,6 +185,8 @@ class Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation(object):
         :param service: The service of this Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation.
         :type: list[Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformationService]
         """
+
+
 
         self._service = service
 

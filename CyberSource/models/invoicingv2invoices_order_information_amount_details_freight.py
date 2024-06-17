@@ -78,6 +78,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
         :type: str
         """
 
+
+
         self._amount = amount
 
     @property
@@ -101,6 +103,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
         :type: bool
         """
 
+
+
         self._taxable = taxable
 
     @property
@@ -123,6 +127,8 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
         :param tax_rate: The tax_rate of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
         :type: str
         """
+
+
 
         self._tax_rate = tax_rate
 

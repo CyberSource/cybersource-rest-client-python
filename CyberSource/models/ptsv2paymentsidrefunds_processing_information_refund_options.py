@@ -68,6 +68,8 @@ class Ptsv2paymentsidrefundsProcessingInformationRefundOptions(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     def to_dict(self):

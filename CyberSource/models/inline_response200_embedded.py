@@ -71,6 +71,8 @@ class InlineResponse200Embedded(object):
         :type: InlineResponse200EmbeddedCapture
         """
 
+
+
         self._capture = capture
 
     @property
@@ -91,6 +93,8 @@ class InlineResponse200Embedded(object):
         :param reversal: The reversal of this InlineResponse200Embedded.
         :type: InlineResponse200EmbeddedReversal
         """
+
+
 
         self._reversal = reversal
 

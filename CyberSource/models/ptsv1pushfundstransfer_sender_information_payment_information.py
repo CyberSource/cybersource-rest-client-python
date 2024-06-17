@@ -66,6 +66,8 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformation(object):
         :type: Ptsv1pushfundstransferSenderInformationPaymentInformationCard
         """
 
+
+
         self._card = card
 
     def to_dict(self):

@@ -98,6 +98,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._routing_number = routing_number
 
     @property
@@ -120,6 +122,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :param branch_code: The branch_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
         """
+
+
 
         self._branch_code = branch_code
 
@@ -144,6 +148,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._swift_code = swift_code
 
     @property
@@ -166,6 +172,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :param bank_code: The bank_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
         """
+
+
 
         self._bank_code = bank_code
 
@@ -190,6 +198,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._iban = iban
 
     @property
@@ -211,6 +221,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationBankAccount
         """
 
+
+
         self._account = account
 
     @property
@@ -231,6 +243,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
         :param mandate: The mandate of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: TssV2TransactionsGet200ResponsePaymentInformationBankMandate
         """
+
+
 
         self._mandate = mandate
 

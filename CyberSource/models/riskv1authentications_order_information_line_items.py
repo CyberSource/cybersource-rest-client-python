@@ -162,6 +162,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -184,8 +186,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
-        if unit_price is None:
-            raise ValueError("Invalid value for `unit_price`, must not be `None`")
+
+
 
         self._unit_price = unit_price
 
@@ -210,6 +212,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: int
         """
 
+
+
         self._quantity = quantity
 
     @property
@@ -232,6 +236,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param gift_card_currency: The gift_card_currency of this Riskv1authenticationsOrderInformationLineItems.
         :type: int
         """
+
+
 
         self._gift_card_currency = gift_card_currency
 
@@ -256,6 +262,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_sku = product_sku
 
     @property
@@ -278,6 +286,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param product_description: The product_description of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._product_description = product_description
 
@@ -302,6 +312,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._product_name = product_name
 
     @property
@@ -322,6 +334,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param passenger: The passenger of this Riskv1authenticationsOrderInformationLineItems.
         :type: Ptsv2paymentsOrderInformationPassenger
         """
+
+
 
         self._passenger = passenger
 
@@ -346,6 +360,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._shipping_destination_types = shipping_destination_types
 
     @property
@@ -368,6 +384,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._tax_amount = tax_amount
 
@@ -392,6 +410,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._shipping_address1 = shipping_address1
 
     @property
@@ -414,6 +434,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_address2: The shipping_address2 of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._shipping_address2 = shipping_address2
 
@@ -438,6 +460,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._shipping_city = shipping_city
 
     @property
@@ -460,6 +484,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_country_code: The shipping_country_code of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._shipping_country_code = shipping_country_code
 
@@ -484,6 +510,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._shipping_first_name = shipping_first_name
 
     @property
@@ -506,6 +534,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_last_name: The shipping_last_name of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._shipping_last_name = shipping_last_name
 
@@ -530,6 +560,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: str
         """
 
+
+
         self._shipping_middle_name = shipping_middle_name
 
     @property
@@ -552,6 +584,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_phone: The shipping_phone of this Riskv1authenticationsOrderInformationLineItems.
         :type: int
         """
+
+
 
         self._shipping_phone = shipping_phone
 
@@ -576,6 +610,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :type: int
         """
 
+
+
         self._shipping_postal_code = shipping_postal_code
 
     @property
@@ -598,6 +634,8 @@ class Riskv1authenticationsOrderInformationLineItems(object):
         :param shipping_state: The shipping_state of this Riskv1authenticationsOrderInformationLineItems.
         :type: str
         """
+
+
 
         self._shipping_state = shipping_state
 

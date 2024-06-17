@@ -91,6 +91,8 @@ class Rbsv1plansPlanInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -113,8 +115,8 @@ class Rbsv1plansPlanInformation(object):
         :param name: The name of this Rbsv1plansPlanInformation.
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
+
+
 
         self._name = name
 
@@ -139,6 +141,8 @@ class Rbsv1plansPlanInformation(object):
         :type: str
         """
 
+
+
         self._description = description
 
     @property
@@ -162,6 +166,8 @@ class Rbsv1plansPlanInformation(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -182,8 +188,8 @@ class Rbsv1plansPlanInformation(object):
         :param billing_period: The billing_period of this Rbsv1plansPlanInformation.
         :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
-        if billing_period is None:
-            raise ValueError("Invalid value for `billing_period`, must not be `None`")
+
+
 
         self._billing_period = billing_period
 
@@ -205,6 +211,8 @@ class Rbsv1plansPlanInformation(object):
         :param billing_cycles: The billing_cycles of this Rbsv1plansPlanInformation.
         :type: Rbsv1plansPlanInformationBillingCycles
         """
+
+
 
         self._billing_cycles = billing_cycles
 

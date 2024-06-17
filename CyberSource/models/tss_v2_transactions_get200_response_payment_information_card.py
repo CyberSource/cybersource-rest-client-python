@@ -123,6 +123,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._suffix = suffix
 
     @property
@@ -145,6 +147,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param prefix: The prefix of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._prefix = prefix
 
@@ -169,6 +173,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -191,6 +197,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param expiration_year: The expiration_year of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 
@@ -215,6 +223,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._start_month = start_month
 
     @property
@@ -237,6 +247,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param start_year: The start_year of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._start_year = start_year
 
@@ -261,6 +273,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._issue_number = issue_number
 
     @property
@@ -283,6 +297,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param type: The type of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._type = type
 
@@ -307,6 +323,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._brand_name = brand_name
 
     @property
@@ -329,6 +347,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param currency: The currency of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._currency = currency
 
@@ -353,6 +373,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :type: str
         """
 
+
+
         self._account_encoder_id = account_encoder_id
 
     @property
@@ -375,6 +397,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard(object):
         :param use_as: The use_as of this TssV2TransactionsGet200ResponsePaymentInformationCard.
         :type: str
         """
+
+
 
         self._use_as = use_as
 

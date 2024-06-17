@@ -68,6 +68,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationFluidData(object):
         :type: str
         """
 
+
+
         self._descriptor = descriptor
 
     def to_dict(self):

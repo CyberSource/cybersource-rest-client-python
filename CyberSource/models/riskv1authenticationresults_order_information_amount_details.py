@@ -73,6 +73,8 @@ class Riskv1authenticationresultsOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._currency = currency
 
     @property
@@ -95,6 +97,8 @@ class Riskv1authenticationresultsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Riskv1authenticationresultsOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._total_amount = total_amount
 

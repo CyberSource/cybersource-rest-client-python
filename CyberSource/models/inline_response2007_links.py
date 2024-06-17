@@ -71,6 +71,8 @@ class InlineResponse2007Links(object):
         :type: InlineResponse202LinksStatus
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class InlineResponse2007Links(object):
         :param report: The report of this InlineResponse2007Links.
         :type: list[InlineResponse2007LinksReport]
         """
+
+
 
         self._report = report
 

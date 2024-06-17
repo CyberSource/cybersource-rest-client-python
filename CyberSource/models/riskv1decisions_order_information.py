@@ -116,6 +116,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: Riskv1decisionsOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -138,6 +140,8 @@ class Riskv1decisionsOrderInformation(object):
         :param pre_order: The pre_order of this Riskv1decisionsOrderInformation.
         :type: str
         """
+
+
 
         self._pre_order = pre_order
 
@@ -162,6 +166,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: str
         """
 
+
+
         self._pre_order_date = pre_order_date
 
     @property
@@ -184,6 +190,8 @@ class Riskv1decisionsOrderInformation(object):
         :param cutoff_date_time: The cutoff_date_time of this Riskv1decisionsOrderInformation.
         :type: str
         """
+
+
 
         self._cutoff_date_time = cutoff_date_time
 
@@ -208,6 +216,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: bool
         """
 
+
+
         self._reordered = reordered
 
     @property
@@ -229,6 +239,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: Riskv1decisionsOrderInformationShippingDetails
         """
 
+
+
         self._shipping_details = shipping_details
 
     @property
@@ -249,6 +261,8 @@ class Riskv1decisionsOrderInformation(object):
         :param ship_to: The ship_to of this Riskv1decisionsOrderInformation.
         :type: Riskv1decisionsOrderInformationShipTo
         """
+
+
 
         self._ship_to = ship_to
 
@@ -273,6 +287,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: bool
         """
 
+
+
         self._returns_accepted = returns_accepted
 
     @property
@@ -296,6 +312,8 @@ class Riskv1decisionsOrderInformation(object):
         :type: list[Riskv1decisionsOrderInformationLineItems]
         """
 
+
+
         self._line_items = line_items
 
     @property
@@ -316,6 +334,8 @@ class Riskv1decisionsOrderInformation(object):
         :param bill_to: The bill_to of this Riskv1decisionsOrderInformation.
         :type: Riskv1decisionsOrderInformationBillTo
         """
+
+
 
         self._bill_to = bill_to
 
@@ -339,6 +359,8 @@ class Riskv1decisionsOrderInformation(object):
         :param total_offers_count: The total_offers_count of this Riskv1decisionsOrderInformation.
         :type: str
         """
+
+
 
         self._total_offers_count = total_offers_count
 

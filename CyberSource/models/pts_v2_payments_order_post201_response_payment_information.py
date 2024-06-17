@@ -66,6 +66,8 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet
         """
 
+
+
         self._e_wallet = e_wallet
 
     def to_dict(self):

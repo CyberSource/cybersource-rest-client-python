@@ -73,6 +73,8 @@ class UpdatePlanResponsePlanInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -95,6 +97,8 @@ class UpdatePlanResponsePlanInformation(object):
         :param status: The status of this UpdatePlanResponsePlanInformation.
         :type: str
         """
+
+
 
         self._status = status
 

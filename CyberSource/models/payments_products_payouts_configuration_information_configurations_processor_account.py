@@ -75,8 +75,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :param originator_merchant_id: The originator_merchant_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount.
         :type: str
         """
-        if originator_merchant_id is None:
-            raise ValueError("Invalid value for `originator_merchant_id`, must not be `None`")
+
+
 
         self._originator_merchant_id = originator_merchant_id
 
@@ -100,8 +100,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :param originator_terminal_id: The originator_terminal_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount.
         :type: list[str]
         """
-        if originator_terminal_id is None:
-            raise ValueError("Invalid value for `originator_terminal_id`, must not be `None`")
+
+
 
         self._originator_terminal_id = originator_terminal_id
 
@@ -125,6 +125,8 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :param supported_currencies: The supported_currencies of this PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount.
         :type: list[str]
         """
+
+
 
         self._supported_currencies = supported_currencies
 

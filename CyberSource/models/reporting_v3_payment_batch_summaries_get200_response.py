@@ -76,6 +76,8 @@ class ReportingV3PaymentBatchSummariesGet200Response(object):
         :type: datetime
         """
 
+
+
         self._start_time = start_time
 
     @property
@@ -97,6 +99,8 @@ class ReportingV3PaymentBatchSummariesGet200Response(object):
         :type: datetime
         """
 
+
+
         self._end_time = end_time
 
     @property
@@ -117,6 +121,8 @@ class ReportingV3PaymentBatchSummariesGet200Response(object):
         :param payment_batch_summaries: The payment_batch_summaries of this ReportingV3PaymentBatchSummariesGet200Response.
         :type: list[ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries]
         """
+
+
 
         self._payment_batch_summaries = payment_batch_summaries
 

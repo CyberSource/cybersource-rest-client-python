@@ -78,6 +78,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCardCard(object):
         :type: str
         """
 
+
+
         self._suffix = suffix
 
     @property
@@ -101,6 +103,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCardCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -123,6 +127,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCardCard(object):
         :param expiration_year: The expiration_year of this TmsEmbeddedInstrumentIdentifierTokenizedCardCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 

@@ -73,6 +73,8 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
         :type: bool
         """
 
+
+
         self._loan_payment = loan_payment
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
         :param first_recurring_payment: The first_recurring_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
         :type: bool
         """
+
+
 
         self._first_recurring_payment = first_recurring_payment
 

@@ -68,6 +68,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponsePaymentInformationAccountFeat
         :type: str
         """
 
+
+
         self._category = category
 
     def to_dict(self):

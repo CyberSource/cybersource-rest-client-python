@@ -118,6 +118,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -140,6 +142,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :param last_name: The last_name of this PtsV2PaymentsPost201Response1OrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -164,6 +168,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._name_suffix = name_suffix
 
     @property
@@ -186,6 +192,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :param address1: The address1 of this PtsV2PaymentsPost201Response1OrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address1 = address1
 
@@ -210,6 +218,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -232,6 +242,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :param locality: The locality of this PtsV2PaymentsPost201Response1OrderInformationBillTo.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -256,6 +268,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -278,6 +292,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :param postal_code: The postal_code of this PtsV2PaymentsPost201Response1OrderInformationBillTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -302,6 +318,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -325,6 +343,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email = email
 
     @property
@@ -347,6 +367,8 @@ class PtsV2PaymentsPost201Response1OrderInformationBillTo(object):
         :param verification_status: The verification_status of this PtsV2PaymentsPost201Response1OrderInformationBillTo.
         :type: str
         """
+
+
 
         self._verification_status = verification_status
 

@@ -71,6 +71,8 @@ class CardProcessingConfig(object):
         :type: CardProcessingConfigCommon
         """
 
+
+
         self._common = common
 
     @property
@@ -91,6 +93,8 @@ class CardProcessingConfig(object):
         :param features: The features of this CardProcessingConfig.
         :type: CardProcessingConfigFeatures
         """
+
+
 
         self._features = features
 

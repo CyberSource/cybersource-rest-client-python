@@ -68,6 +68,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata(object):
         :type: str
         """
 
+
+
         self._creator = creator
 
     def to_dict(self):

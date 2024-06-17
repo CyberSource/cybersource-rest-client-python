@@ -66,6 +66,8 @@ class PaymentInstrumentList1EmbeddedEmbedded(object):
         :type: PatchInstrumentIdentifierRequest
         """
 
+
+
         self._instrument_identifier = instrument_identifier
 
     def to_dict(self):

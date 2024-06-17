@@ -98,6 +98,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :type: str
         """
 
+
+
         self._default_point_of_sale_terminal_id = default_point_of_sale_terminal_id
 
     @property
@@ -120,6 +122,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :param point_of_sale_terminal_ids: The point_of_sale_terminal_ids of this CardProcessingConfigFeaturesCardPresentProcessors.
         :type: list[str]
         """
+
+
 
         self._point_of_sale_terminal_ids = point_of_sale_terminal_ids
 
@@ -144,6 +148,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :type: bool
         """
 
+
+
         self._disable_point_of_sale_terminal_id_validation = disable_point_of_sale_terminal_id_validation
 
     @property
@@ -166,6 +172,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :param pin_debit_network_order: The pin_debit_network_order of this CardProcessingConfigFeaturesCardPresentProcessors.
         :type: str
         """
+
+
 
         self._pin_debit_network_order = pin_debit_network_order
 
@@ -190,6 +198,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :type: str
         """
 
+
+
         self._pin_debit_reimbursement_code = pin_debit_reimbursement_code
 
     @property
@@ -213,6 +223,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :type: str
         """
 
+
+
         self._financial_institution_id = financial_institution_id
 
     @property
@@ -235,6 +247,8 @@ class CardProcessingConfigFeaturesCardPresentProcessors(object):
         :param enable_pin_translation: The enable_pin_translation of this CardProcessingConfigFeaturesCardPresentProcessors.
         :type: bool
         """
+
+
 
         self._enable_pin_translation = enable_pin_translation
 

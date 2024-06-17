@@ -86,6 +86,8 @@ class Ptsv2paymentreferencesMerchantInformation(object):
         :type: Ptsv2paymentsMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -108,6 +110,8 @@ class Ptsv2paymentreferencesMerchantInformation(object):
         :param cancel_url: The cancel_url of this Ptsv2paymentreferencesMerchantInformation.
         :type: str
         """
+
+
 
         self._cancel_url = cancel_url
 
@@ -132,6 +136,8 @@ class Ptsv2paymentreferencesMerchantInformation(object):
         :type: str
         """
 
+
+
         self._success_url = success_url
 
     @property
@@ -155,6 +161,8 @@ class Ptsv2paymentreferencesMerchantInformation(object):
         :type: str
         """
 
+
+
         self._failure_url = failure_url
 
     @property
@@ -177,6 +185,8 @@ class Ptsv2paymentreferencesMerchantInformation(object):
         :param note_to_buyer: The note_to_buyer of this Ptsv2paymentreferencesMerchantInformation.
         :type: str
         """
+
+
 
         self._note_to_buyer = note_to_buyer
 

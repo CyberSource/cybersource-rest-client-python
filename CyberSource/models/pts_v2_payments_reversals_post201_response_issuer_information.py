@@ -68,6 +68,8 @@ class PtsV2PaymentsReversalsPost201ResponseIssuerInformation(object):
         :type: str
         """
 
+
+
         self._response_code = response_code
 
     def to_dict(self):

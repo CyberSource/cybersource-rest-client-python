@@ -73,6 +73,8 @@ class InlineResponse200EmbeddedCaptureLinksSelf(object):
         :type: str
         """
 
+
+
         self._href = href
 
     @property
@@ -95,6 +97,8 @@ class InlineResponse200EmbeddedCaptureLinksSelf(object):
         :param method: The method of this InlineResponse200EmbeddedCaptureLinksSelf.
         :type: str
         """
+
+
 
         self._method = method
 

@@ -131,6 +131,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: Ptsv1pushfundstransferRecipientInformationPaymentInformation
         """
 
+
+
         self._payment_information = payment_information
 
     @property
@@ -153,6 +155,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param address1: The address1 of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._address1 = address1
 
@@ -177,6 +181,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -199,6 +205,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param locality: The locality of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -223,6 +231,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -245,6 +255,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param administrative_area: The administrative_area of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -269,6 +281,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -291,6 +305,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param first_name: The first_name of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._first_name = first_name
 
@@ -315,6 +331,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -337,6 +355,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param middle_initial: The middle_initial of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._middle_initial = middle_initial
 
@@ -361,6 +381,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._last_name = last_name
 
     @property
@@ -383,6 +405,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
+
+
 
         self._date_of_birth = date_of_birth
 
@@ -407,6 +431,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -427,6 +453,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         :param personal_identification: The personal_identification of this Ptsv1pushfundstransferRecipientInformation.
         :type: Ptsv1pushfundstransferRecipientInformationPersonalIdentification
         """
+
+
 
         self._personal_identification = personal_identification
 

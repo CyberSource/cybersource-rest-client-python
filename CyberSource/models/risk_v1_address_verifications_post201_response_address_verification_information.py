@@ -103,6 +103,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :type: str
         """
 
+
+
         self._address_type = address_type
 
     @property
@@ -123,6 +125,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param bar_code: The bar_code of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBarCode
         """
+
+
 
         self._bar_code = bar_code
 
@@ -147,6 +151,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :type: str
         """
 
+
+
         self._applicable_region = applicable_region
 
     @property
@@ -169,6 +175,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param error_code: The error_code of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
+
+
 
         self._error_code = error_code
 
@@ -193,6 +201,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :type: str
         """
 
+
+
         self._status_code = status_code
 
     @property
@@ -215,6 +225,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param care_of: The care_of of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: str
         """
+
+
 
         self._care_of = care_of
 
@@ -239,6 +251,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :type: int
         """
 
+
+
         self._match_score = match_score
 
     @property
@@ -259,6 +273,8 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation(ob
         :param standard_address: The standard_address of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformation.
         :type: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress
         """
+
+
 
         self._standard_address = standard_address
 

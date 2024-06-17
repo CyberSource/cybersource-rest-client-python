@@ -88,6 +88,8 @@ class CardProcessingConfigCommonAcquirer(object):
         :type: str
         """
 
+
+
         self._institution_id = institution_id
 
     @property
@@ -110,6 +112,8 @@ class CardProcessingConfigCommonAcquirer(object):
         :param interbank_card_association_id: The interbank_card_association_id of this CardProcessingConfigCommonAcquirer.
         :type: str
         """
+
+
 
         self._interbank_card_association_id = interbank_card_association_id
 
@@ -134,6 +138,8 @@ class CardProcessingConfigCommonAcquirer(object):
         :type: str
         """
 
+
+
         self._discover_institution_id = discover_institution_id
 
     @property
@@ -157,6 +163,8 @@ class CardProcessingConfigCommonAcquirer(object):
         :type: str
         """
 
+
+
         self._country_code = country_code
 
     @property
@@ -179,6 +187,8 @@ class CardProcessingConfigCommonAcquirer(object):
         :param file_destination_bin: The file_destination_bin of this CardProcessingConfigCommonAcquirer.
         :type: str
         """
+
+
 
         self._file_destination_bin = file_destination_bin
 

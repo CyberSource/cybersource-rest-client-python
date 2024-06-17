@@ -78,6 +78,8 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :type: str
         """
 
+
+
         self._host_name = host_name
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :type: str
         """
 
+
+
         self._ip_address = ip_address
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2paymentsidcapturesDeviceInformation(object):
         :param user_agent: The user_agent of this Ptsv2paymentsidcapturesDeviceInformation.
         :type: str
         """
+
+
 
         self._user_agent = user_agent
 

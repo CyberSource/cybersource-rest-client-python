@@ -68,6 +68,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier(obje
         :type: str
         """
 
+
+
         self._id = id
 
     def to_dict(self):

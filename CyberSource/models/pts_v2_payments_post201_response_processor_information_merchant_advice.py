@@ -78,6 +78,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -101,6 +103,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
         :type: str
         """
 
+
+
         self._code_raw = code_raw
 
     @property
@@ -123,6 +127,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice(object):
         :param name_match: The name_match of this PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice.
         :type: str
         """
+
+
 
         self._name_match = name_match
 

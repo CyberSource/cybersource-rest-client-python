@@ -98,6 +98,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :type: bool
         """
 
+
+
         self._enabled_message = enabled_message
 
     @property
@@ -120,6 +122,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param encryption_key: The encryption_key of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
+
+
 
         self._encryption_key = encryption_key
 
@@ -144,6 +148,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :type: bool
         """
 
+
+
         self._encryption_mandatory = encryption_mandatory
 
     @property
@@ -166,6 +172,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param encryption_type: The encryption_type of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
+
+
 
         self._encryption_type = encryption_type
 
@@ -190,6 +198,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :type: str
         """
 
+
+
         self._label = label
 
     @property
@@ -213,6 +223,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :type: str
         """
 
+
+
         self._prompt = prompt
 
     @property
@@ -235,6 +247,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr(object):
         :param status_message: The status_message of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformationIvr.
         :type: str
         """
+
+
 
         self._status_message = status_message
 

@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponseRiskInformationRules(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponseRiskInformationRules(object):
         :param decision: The decision of this TssV2TransactionsGet200ResponseRiskInformationRules.
         :type: str
         """
+
+
 
         self._decision = decision
 

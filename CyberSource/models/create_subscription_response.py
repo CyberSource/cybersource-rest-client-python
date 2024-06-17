@@ -86,6 +86,8 @@ class CreateSubscriptionResponse(object):
         :type: CreateSubscriptionResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -108,6 +110,8 @@ class CreateSubscriptionResponse(object):
         :param id: The id of this CreateSubscriptionResponse.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -132,6 +136,8 @@ class CreateSubscriptionResponse(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -155,6 +161,8 @@ class CreateSubscriptionResponse(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -175,6 +183,8 @@ class CreateSubscriptionResponse(object):
         :param subscription_information: The subscription_information of this CreateSubscriptionResponse.
         :type: CreateSubscriptionResponseSubscriptionInformation
         """
+
+
 
         self._subscription_information = subscription_information
 

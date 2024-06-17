@@ -88,6 +88,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -110,6 +112,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
         :param number: The number of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._number = number
 
@@ -134,6 +138,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._encoder_id = encoder_id
 
     @property
@@ -157,6 +163,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
         :type: str
         """
 
+
+
         self._check_number = check_number
 
     @property
@@ -179,6 +187,8 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
         :param check_image_reference_number: The check_image_reference_number of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
         :type: str
         """
+
+
 
         self._check_image_reference_number = check_image_reference_number
 

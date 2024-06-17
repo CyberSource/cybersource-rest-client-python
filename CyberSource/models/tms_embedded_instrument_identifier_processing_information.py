@@ -66,6 +66,8 @@ class TmsEmbeddedInstrumentIdentifierProcessingInformation(object):
         :type: TmsAuthorizationOptions
         """
 
+
+
         self._authorization_options = authorization_options
 
     def to_dict(self):

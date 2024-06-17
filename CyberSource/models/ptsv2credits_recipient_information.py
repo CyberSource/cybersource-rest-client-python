@@ -73,6 +73,8 @@ class Ptsv2creditsRecipientInformation(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2creditsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2creditsRecipientInformation.
         :type: str
         """
+
+
 
         self._last_name = last_name
 

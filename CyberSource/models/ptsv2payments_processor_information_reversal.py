@@ -68,6 +68,8 @@ class Ptsv2paymentsProcessorInformationReversal(object):
         :type: str
         """
 
+
+
         self._pre_approval_token = pre_approval_token
 
     def to_dict(self):

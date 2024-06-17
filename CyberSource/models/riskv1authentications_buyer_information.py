@@ -82,6 +82,8 @@ class Riskv1authenticationsBuyerInformation(object):
         :type: str
         """
 
+
+
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -105,6 +107,8 @@ class Riskv1authenticationsBuyerInformation(object):
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
 
+
+
         self._personal_identification = personal_identification
 
     @property
@@ -127,8 +131,8 @@ class Riskv1authenticationsBuyerInformation(object):
         :param mobile_phone: The mobile_phone of this Riskv1authenticationsBuyerInformation.
         :type: int
         """
-        if mobile_phone is None:
-            raise ValueError("Invalid value for `mobile_phone`, must not be `None`")
+
+
 
         self._mobile_phone = mobile_phone
 
@@ -152,6 +156,8 @@ class Riskv1authenticationsBuyerInformation(object):
         :param work_phone: The work_phone of this Riskv1authenticationsBuyerInformation.
         :type: int
         """
+
+
 
         self._work_phone = work_phone
 

@@ -78,6 +78,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankMandate(object):
         :type: str
         """
 
+
+
         self._reference_number = reference_number
 
     @property
@@ -101,6 +103,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankMandate(object):
         :type: str
         """
 
+
+
         self._recurring_type = recurring_type
 
     @property
@@ -123,6 +127,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankMandate(object):
         :param id: The id of this TssV2TransactionsGet200ResponsePaymentInformationBankMandate.
         :type: str
         """
+
+
 
         self._id = id
 

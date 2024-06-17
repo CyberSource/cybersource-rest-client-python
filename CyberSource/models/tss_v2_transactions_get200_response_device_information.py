@@ -78,6 +78,8 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :type: str
         """
 
+
+
         self._ip_address = ip_address
 
     @property
@@ -101,6 +103,8 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :type: str
         """
 
+
+
         self._host_name = host_name
 
     @property
@@ -123,6 +127,8 @@ class TssV2TransactionsGet200ResponseDeviceInformation(object):
         :param cookies_accepted: The cookies_accepted of this TssV2TransactionsGet200ResponseDeviceInformation.
         :type: str
         """
+
+
 
         self._cookies_accepted = cookies_accepted
 

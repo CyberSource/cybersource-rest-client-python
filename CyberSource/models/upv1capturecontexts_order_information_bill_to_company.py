@@ -118,6 +118,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -140,6 +142,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :param address1: The address1 of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
         """
+
+
 
         self._address1 = address1
 
@@ -164,6 +168,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -186,6 +192,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :param address3: The address3 of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
         """
+
+
 
         self._address3 = address3
 
@@ -210,6 +218,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._address4 = address4
 
     @property
@@ -232,6 +242,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :param administrative_area: The administrative_area of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -256,6 +268,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._building_number = building_number
 
     @property
@@ -278,6 +292,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :param country: The country of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
         """
+
+
 
         self._country = country
 
@@ -302,6 +318,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._district = district
 
     @property
@@ -325,6 +343,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -347,6 +367,8 @@ class Upv1capturecontextsOrderInformationBillToCompany(object):
         :param postal_code: The postal_code of this Upv1capturecontextsOrderInformationBillToCompany.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 

@@ -78,6 +78,8 @@ class Ptsv2billingagreementsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._http_accept_browser_value = http_accept_browser_value
 
     @property
@@ -101,6 +103,8 @@ class Ptsv2billingagreementsDeviceInformation(object):
         :type: str
         """
 
+
+
         self._ip_address = ip_address
 
     @property
@@ -123,6 +127,8 @@ class Ptsv2billingagreementsDeviceInformation(object):
         :param user_agent_browser_value: The user_agent_browser_value of this Ptsv2billingagreementsDeviceInformation.
         :type: str
         """
+
+
 
         self._user_agent_browser_value = user_agent_browser_value
 

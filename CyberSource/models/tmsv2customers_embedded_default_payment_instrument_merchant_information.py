@@ -66,6 +66,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     def to_dict(self):

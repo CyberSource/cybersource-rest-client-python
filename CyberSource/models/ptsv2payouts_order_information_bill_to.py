@@ -113,6 +113,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -135,6 +137,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :param last_name: The last_name of this Ptsv2payoutsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -159,6 +163,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -181,6 +187,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :param address2: The address2 of this Ptsv2payoutsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -205,6 +213,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -227,6 +237,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :param locality: The locality of this Ptsv2payoutsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -251,6 +263,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -273,6 +287,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Ptsv2payoutsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._postal_code = postal_code
 
@@ -297,6 +313,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_number = phone_number
 
     @property
@@ -319,6 +337,8 @@ class Ptsv2payoutsOrderInformationBillTo(object):
         :param phone_type: The phone_type of this Ptsv2payoutsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._phone_type = phone_type
 

@@ -106,6 +106,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :type: int
         """
 
+
+
         self._offset = offset
 
     @property
@@ -127,6 +129,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :type: int
         """
 
+
+
         self._limit = limit
 
     @property
@@ -147,6 +151,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :param page_results: The page_results of this ReportingV3PurchaseRefundDetailsGet200Response.
         :type: int
         """
+
+
 
         self._page_results = page_results
 
@@ -171,6 +177,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails]
         """
 
+
+
         self._request_details = request_details
 
     @property
@@ -193,6 +201,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :param settlements: The settlements of this ReportingV3PurchaseRefundDetailsGet200Response.
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseSettlements]
         """
+
+
 
         self._settlements = settlements
 
@@ -217,6 +227,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseAuthorizations]
         """
 
+
+
         self._authorizations = authorizations
 
     @property
@@ -239,6 +251,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :param fee_and_funding_details: The fee_and_funding_details of this ReportingV3PurchaseRefundDetailsGet200Response.
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails]
         """
+
+
 
         self._fee_and_funding_details = fee_and_funding_details
 
@@ -263,6 +277,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseOthers]
         """
 
+
+
         self._others = others
 
     @property
@@ -285,6 +301,8 @@ class ReportingV3PurchaseRefundDetailsGet200Response(object):
         :param settlement_statuses: The settlement_statuses of this ReportingV3PurchaseRefundDetailsGet200Response.
         :type: list[ReportingV3PurchaseRefundDetailsGet200ResponseSettlementStatuses]
         """
+
+
 
         self._settlement_statuses = settlement_statuses
 

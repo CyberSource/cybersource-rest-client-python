@@ -83,6 +83,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -105,6 +107,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination(object):
         :param locality: The locality of this PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -129,6 +133,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination(object):
         :type: str
         """
 
+
+
         self._latitude = latitude
 
     @property
@@ -151,6 +157,8 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination(object):
         :param longitude: The longitude of this PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination.
         :type: str
         """
+
+
 
         self._longitude = longitude
 

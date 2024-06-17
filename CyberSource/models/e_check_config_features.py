@@ -66,6 +66,8 @@ class ECheckConfigFeatures(object):
         :type: ECheckConfigFeaturesAccountValidationService
         """
 
+
+
         self._account_validation_service = account_validation_service
 
     def to_dict(self):

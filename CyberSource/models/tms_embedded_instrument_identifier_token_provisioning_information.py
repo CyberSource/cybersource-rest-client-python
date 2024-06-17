@@ -73,6 +73,8 @@ class TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation(object):
         :type: bool
         """
 
+
+
         self._consumer_consent_obtained = consumer_consent_obtained
 
     @property
@@ -95,6 +97,8 @@ class TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation(object):
         :param multi_factor_authenticated: The multi_factor_authenticated of this TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation.
         :type: bool
         """
+
+
 
         self._multi_factor_authenticated = multi_factor_authenticated
 

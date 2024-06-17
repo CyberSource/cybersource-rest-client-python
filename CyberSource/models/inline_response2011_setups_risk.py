@@ -71,6 +71,8 @@ class InlineResponse2011SetupsRisk(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
 
+
+
         self._fraud_management_essentials = fraud_management_essentials
 
     @property
@@ -91,6 +93,8 @@ class InlineResponse2011SetupsRisk(object):
         :param decision_manager: The decision_manager of this InlineResponse2011SetupsRisk.
         :type: InlineResponse2011SetupsPaymentsCardProcessing
         """
+
+
 
         self._decision_manager = decision_manager
 

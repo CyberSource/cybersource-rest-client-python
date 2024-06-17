@@ -83,6 +83,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
         :type: str
         """
 
+
+
         self._company_tax_id = company_tax_id
 
     @property
@@ -105,6 +107,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
         :param currency: The currency of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
         :type: str
         """
+
+
 
         self._currency = currency
 
@@ -129,6 +133,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
         :type: date
         """
 
+
+
         self._date_of_birth = date_of_birth
 
     @property
@@ -149,6 +155,8 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation(object):
         :param personal_identification: The personal_identification of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation.
         :type: list[Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification]
         """
+
+
 
         self._personal_identification = personal_identification
 

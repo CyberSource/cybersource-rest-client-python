@@ -73,6 +73,8 @@ class PushFunds201ResponseErrorInformationDetails(object):
         :type: str
         """
 
+
+
         self._field = field
 
     @property
@@ -95,6 +97,8 @@ class PushFunds201ResponseErrorInformationDetails(object):
         :param reason: The reason of this PushFunds201ResponseErrorInformationDetails.
         :type: str
         """
+
+
 
         self._reason = reason
 

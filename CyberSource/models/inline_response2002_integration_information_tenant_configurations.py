@@ -87,8 +87,8 @@ class InlineResponse2002IntegrationInformationTenantConfigurations(object):
         :param solution_id: The solution_id of this InlineResponse2002IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if solution_id is not None and not re.search('^[0-9a-zA-Z_]+$', solution_id):
-            raise ValueError("Invalid value for `solution_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._solution_id = solution_id
 
@@ -112,8 +112,8 @@ class InlineResponse2002IntegrationInformationTenantConfigurations(object):
         :param tenant_configuration_id: The tenant_configuration_id of this InlineResponse2002IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if tenant_configuration_id is not None and not re.search('^[0-9a-zA-Z_]+$', tenant_configuration_id):
-            raise ValueError("Invalid value for `tenant_configuration_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._tenant_configuration_id = tenant_configuration_id
 
@@ -135,6 +135,7 @@ class InlineResponse2002IntegrationInformationTenantConfigurations(object):
         :param status: The status of this InlineResponse2002IntegrationInformationTenantConfigurations.
         :type: str
         """
+
         allowed_values = ["LIVE", "INACTIVE", "TEST"]
         if status not in allowed_values:
             raise ValueError(
@@ -165,6 +166,8 @@ class InlineResponse2002IntegrationInformationTenantConfigurations(object):
         :type: datetime
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -185,6 +188,8 @@ class InlineResponse2002IntegrationInformationTenantConfigurations(object):
         :param tenant_information: The tenant_information of this InlineResponse2002IntegrationInformationTenantConfigurations.
         :type: Boardingv1registrationsIntegrationInformationTenantInformation
         """
+
+
 
         self._tenant_information = tenant_information
 

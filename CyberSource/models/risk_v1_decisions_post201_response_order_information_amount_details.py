@@ -68,6 +68,8 @@ class RiskV1DecisionsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._currency = currency
 
     def to_dict(self):

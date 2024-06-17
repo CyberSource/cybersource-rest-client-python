@@ -83,6 +83,8 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :type: str
         """
 
+
+
         self._ship_from_locality = ship_from_locality
 
     @property
@@ -105,6 +107,8 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_country: The ship_from_country of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
+
+
 
         self._ship_from_country = ship_from_country
 
@@ -129,6 +133,8 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :type: str
         """
 
+
+
         self._ship_from_postal_code = ship_from_postal_code
 
     @property
@@ -151,6 +157,8 @@ class Vasv2taxOrderInformationShippingDetails(object):
         :param ship_from_administrative_area: The ship_from_administrative_area of this Vasv2taxOrderInformationShippingDetails.
         :type: str
         """
+
+
 
         self._ship_from_administrative_area = ship_from_administrative_area
 

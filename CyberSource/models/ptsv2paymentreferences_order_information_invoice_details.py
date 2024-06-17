@@ -73,6 +73,8 @@ class Ptsv2paymentreferencesOrderInformationInvoiceDetails(object):
         :type: str
         """
 
+
+
         self._cost_center = cost_center
 
     @property
@@ -95,6 +97,8 @@ class Ptsv2paymentreferencesOrderInformationInvoiceDetails(object):
         :param product_description: The product_description of this Ptsv2paymentreferencesOrderInformationInvoiceDetails.
         :type: str
         """
+
+
 
         self._product_description = product_description
 

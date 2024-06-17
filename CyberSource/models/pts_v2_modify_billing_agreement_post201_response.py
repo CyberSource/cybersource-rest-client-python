@@ -116,6 +116,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: PtsV2ModifyBillingAgreementPost201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -138,6 +140,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :param id: The id of this PtsV2ModifyBillingAgreementPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -162,6 +166,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -185,6 +191,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -205,6 +213,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :param processor_information: The processor_information of this PtsV2ModifyBillingAgreementPost201Response.
         :type: PtsV2CreateBillingAgreementPost201ResponseProcessorInformation
         """
+
+
 
         self._processor_information = processor_information
 
@@ -227,6 +237,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseInstallmentInformation
         """
 
+
+
         self._installment_information = installment_information
 
     @property
@@ -247,6 +259,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2ModifyBillingAgreementPost201Response.
         :type: PtsV2CreateBillingAgreementPost201ResponseClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -269,6 +283,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseRiskInformation
         """
 
+
+
         self._risk_information = risk_information
 
     @property
@@ -289,6 +305,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :param agreement_information: The agreement_information of this PtsV2ModifyBillingAgreementPost201Response.
         :type: PtsV2ModifyBillingAgreementPost201ResponseAgreementInformation
         """
+
+
 
         self._agreement_information = agreement_information
 
@@ -311,6 +329,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :type: PtsV2ModifyBillingAgreementPost201ResponseOrderInformation
         """
 
+
+
         self._order_information = order_information
 
     @property
@@ -331,6 +351,8 @@ class PtsV2ModifyBillingAgreementPost201Response(object):
         :param payment_information: The payment_information of this PtsV2ModifyBillingAgreementPost201Response.
         :type: PtsV2ModifyBillingAgreementPost201ResponsePaymentInformation
         """
+
+
 
         self._payment_information = payment_information
 

@@ -68,6 +68,8 @@ class DmConfigOrganization(object):
         :type: str
         """
 
+
+
         self._hierarchy_group = hierarchy_group
 
     def to_dict(self):

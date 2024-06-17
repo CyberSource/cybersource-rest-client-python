@@ -96,6 +96,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -118,6 +120,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :param id: The id of this RiskV1AuthenticationSetupsPost201Response.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -142,6 +146,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -165,6 +171,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -185,6 +193,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :param consumer_authentication_information: The consumer_authentication_information of this RiskV1AuthenticationSetupsPost201Response.
         :type: RiskV1AuthenticationSetupsPost201ResponseConsumerAuthenticationInformation
         """
+
+
 
         self._consumer_authentication_information = consumer_authentication_information
 
@@ -207,6 +217,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -227,6 +239,8 @@ class RiskV1AuthenticationSetupsPost201Response(object):
         :param error_information: The error_information of this RiskV1AuthenticationSetupsPost201Response.
         :type: RiskV1AuthenticationSetupsPost201ResponseErrorInformation
         """
+
+
 
         self._error_information = error_information
 

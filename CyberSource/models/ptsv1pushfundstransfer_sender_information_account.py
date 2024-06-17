@@ -73,6 +73,8 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
         :type: str
         """
 
+
+
         self._funds_source = funds_source
 
     @property
@@ -95,6 +97,8 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
         :param number: The number of this Ptsv1pushfundstransferSenderInformationAccount.
         :type: str
         """
+
+
 
         self._number = number
 

@@ -83,6 +83,8 @@ class Ptsv2paymentsBuyerInformationPersonalIdentification(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -105,6 +107,8 @@ class Ptsv2paymentsBuyerInformationPersonalIdentification(object):
         :param id: The id of this Ptsv2paymentsBuyerInformationPersonalIdentification.
         :type: str
         """
+
+
 
         self._id = id
 
@@ -129,6 +133,8 @@ class Ptsv2paymentsBuyerInformationPersonalIdentification(object):
         :type: str
         """
 
+
+
         self._issued_by = issued_by
 
     @property
@@ -151,6 +157,8 @@ class Ptsv2paymentsBuyerInformationPersonalIdentification(object):
         :param verification_results: The verification_results of this Ptsv2paymentsBuyerInformationPersonalIdentification.
         :type: str
         """
+
+
 
         self._verification_results = verification_results
 

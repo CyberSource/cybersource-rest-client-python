@@ -104,8 +104,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param organization_id: The organization_id of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        if organization_id is not None and not re.search('^[0-9a-zA-Z_]+$', organization_id):
-            raise ValueError("Invalid value for `organization_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._organization_id = organization_id
 
@@ -129,8 +129,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param parent_organization_id: The parent_organization_id of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        if parent_organization_id is not None and not re.search('^[0-9a-zA-Z_]+$', parent_organization_id):
-            raise ValueError("Invalid value for `parent_organization_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
+
+
 
         self._parent_organization_id = parent_organization_id
 
@@ -152,6 +152,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param child_organizations: The child_organizations of this Boardingv1registrationsOrganizationInformation.
         :type: list[str]
         """
+
+
 
         self._child_organizations = child_organizations
 
@@ -175,6 +177,7 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param type: The type of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
+
         allowed_values = ["TRANSACTING", "STRUCTURAL", "MERCHANT"]
         if type not in allowed_values:
             raise ValueError(
@@ -204,6 +207,7 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param status: The status of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
+
         allowed_values = ["LIVE", "TEST", "DRAFT"]
         if status not in allowed_values:
             raise ValueError(
@@ -234,6 +238,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: bool
         """
 
+
+
         self._configurable = configurable
 
     @property
@@ -254,8 +260,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param business_information: The business_information of this Boardingv1registrationsOrganizationInformation.
         :type: Boardingv1registrationsOrganizationInformationBusinessInformation
         """
-        if business_information is None:
-            raise ValueError("Invalid value for `business_information`, must not be `None`")
+
+
 
         self._business_information = business_information
 
@@ -278,6 +284,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: Boardingv1registrationsOrganizationInformationKYC
         """
 
+
+
         self._kyc = kyc
 
     @property
@@ -298,6 +306,8 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param owners: The owners of this Boardingv1registrationsOrganizationInformation.
         :type: list[Boardingv1registrationsOrganizationInformationOwners]
         """
+
+
 
         self._owners = owners
 

@@ -73,6 +73,8 @@ class Riskv1authenticationsetupsTokenInformation(object):
         :type: str
         """
 
+
+
         self._transient_token = transient_token
 
     @property
@@ -95,6 +97,8 @@ class Riskv1authenticationsetupsTokenInformation(object):
         :param jti: The jti of this Riskv1authenticationsetupsTokenInformation.
         :type: str
         """
+
+
 
         self._jti = jti
 

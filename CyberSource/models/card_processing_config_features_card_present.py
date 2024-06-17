@@ -73,6 +73,8 @@ class CardProcessingConfigFeaturesCardPresent(object):
         :type: dict(str, CardProcessingConfigFeaturesCardPresentProcessors)
         """
 
+
+
         self._processors = processors
 
     @property
@@ -95,6 +97,8 @@ class CardProcessingConfigFeaturesCardPresent(object):
         :param enable_terminal_id_lookup: The enable_terminal_id_lookup of this CardProcessingConfigFeaturesCardPresent.
         :type: bool
         """
+
+
 
         self._enable_terminal_id_lookup = enable_terminal_id_lookup
 

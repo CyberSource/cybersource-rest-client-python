@@ -86,6 +86,8 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsMasterCard
         """
 
+
+
         self._master_card = master_card
 
     @property
@@ -106,6 +108,8 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param visa: The visa of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations.
         :type: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsVisa
         """
+
+
 
         self._visa = visa
 
@@ -128,6 +132,8 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsAmex
         """
 
+
+
         self._amex = amex
 
     @property
@@ -149,6 +155,8 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: float
         """
 
+
+
         self._preferred_day = preferred_day
 
     @property
@@ -169,6 +177,8 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param days_window: The days_window of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations.
         :type: float
         """
+
+
 
         self._days_window = days_window
 

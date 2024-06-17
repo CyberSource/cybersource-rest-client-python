@@ -81,6 +81,8 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._code = code
 
     @property
@@ -104,6 +106,8 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         :type: str
         """
 
+
+
         self._plan_id = plan_id
 
     @property
@@ -126,8 +130,8 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         :param name: The name of this Rbsv1subscriptionsSubscriptionInformation.
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
+
+
 
         self._name = name
 
@@ -151,8 +155,8 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         :param start_date: The start_date of this Rbsv1subscriptionsSubscriptionInformation.
         :type: str
         """
-        if start_date is None:
-            raise ValueError("Invalid value for `start_date`, must not be `None`")
+
+
 
         self._start_date = start_date
 

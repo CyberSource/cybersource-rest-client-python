@@ -68,6 +68,8 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformationShippingDetails(object):
         :type: str
         """
 
+
+
         self._shipping_method = shipping_method
 
     def to_dict(self):

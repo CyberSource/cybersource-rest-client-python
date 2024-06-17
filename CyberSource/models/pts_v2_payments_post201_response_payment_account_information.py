@@ -66,6 +66,8 @@ class PtsV2PaymentsPost201ResponsePaymentAccountInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
 
+
+
         self._card = card
 
     def to_dict(self):

@@ -114,8 +114,7 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param when_is_customer_charged: The when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-        if when_is_customer_charged is None:
-            raise ValueError("Invalid value for `when_is_customer_charged`, must not be `None`")
+
         allowed_values = ["ONETIMEBEFORE", "ONETIMEAFTER", "OTHER"]
         if when_is_customer_charged not in allowed_values:
             raise ValueError(
@@ -144,6 +143,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: str
         """
 
+
+
         self._when_is_customer_charged_description = when_is_customer_charged_description
 
     @property
@@ -164,8 +165,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param offer_subscriptions: The offer_subscriptions of this Boardingv1registrationsOrganizationInformationKYC.
         :type: bool
         """
-        if offer_subscriptions is None:
-            raise ValueError("Invalid value for `offer_subscriptions`, must not be `None`")
+
+
 
         self._offer_subscriptions = offer_subscriptions
 
@@ -188,6 +189,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
+
+
         self._monthly_subscription_percent = monthly_subscription_percent
 
     @property
@@ -208,6 +211,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param quarterly_subscription_percent: The quarterly_subscription_percent of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
+
+
 
         self._quarterly_subscription_percent = quarterly_subscription_percent
 
@@ -230,6 +235,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
+
+
         self._semi_annual_subscription_percent = semi_annual_subscription_percent
 
     @property
@@ -251,6 +258,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
+
+
         self._annual_subscription_percent = annual_subscription_percent
 
     @property
@@ -271,8 +280,7 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param time_to_product_delivery: The time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-        if time_to_product_delivery is None:
-            raise ValueError("Invalid value for `time_to_product_delivery`, must not be `None`")
+
         allowed_values = ["INSTANT", "UPTO2", "UPTO5", "UPTO10", "GREATERTHAN10"]
         if time_to_product_delivery not in allowed_values:
             raise ValueError(
@@ -300,8 +308,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param estimated_monthly_sales: The estimated_monthly_sales of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
-        if estimated_monthly_sales is None:
-            raise ValueError("Invalid value for `estimated_monthly_sales`, must not be `None`")
+
+
 
         self._estimated_monthly_sales = estimated_monthly_sales
 
@@ -323,8 +331,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param average_order_amount: The average_order_amount of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
-        if average_order_amount is None:
-            raise ValueError("Invalid value for `average_order_amount`, must not be `None`")
+
+
 
         self._average_order_amount = average_order_amount
 
@@ -346,8 +354,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param largest_expected_order_amount: The largest_expected_order_amount of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
-        if largest_expected_order_amount is None:
-            raise ValueError("Invalid value for `largest_expected_order_amount`, must not be `None`")
+
+
 
         self._largest_expected_order_amount = largest_expected_order_amount
 
@@ -369,6 +377,8 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param deposit_bank_account: The deposit_bank_account of this Boardingv1registrationsOrganizationInformationKYC.
         :type: Boardingv1registrationsOrganizationInformationKYCDepositBankAccount
         """
+
+
 
         self._deposit_bank_account = deposit_bank_account
 

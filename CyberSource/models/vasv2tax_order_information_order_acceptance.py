@@ -83,6 +83,8 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -105,6 +107,8 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param administrative_area: The administrative_area of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -129,6 +133,8 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -151,6 +157,8 @@ class Vasv2taxOrderInformationOrderAcceptance(object):
         :param country: The country of this Vasv2taxOrderInformationOrderAcceptance.
         :type: str
         """
+
+
 
         self._country = country
 

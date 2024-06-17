@@ -71,6 +71,8 @@ class RiskProductsFraudManagementEssentials(object):
         :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     @property
@@ -91,6 +93,8 @@ class RiskProductsFraudManagementEssentials(object):
         :param configuration_information: The configuration_information of this RiskProductsFraudManagementEssentials.
         :type: RiskProductsFraudManagementEssentialsConfigurationInformation
         """
+
+
 
         self._configuration_information = configuration_information
 

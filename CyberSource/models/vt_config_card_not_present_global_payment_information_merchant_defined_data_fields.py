@@ -186,6 +186,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._display_merchant_defined_data1 = display_merchant_defined_data1
 
     @property
@@ -206,6 +208,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param display_merchant_defined_data2: The display_merchant_defined_data2 of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._display_merchant_defined_data2 = display_merchant_defined_data2
 
@@ -228,6 +232,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._display_merchant_defined_data3 = display_merchant_defined_data3
 
     @property
@@ -248,6 +254,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param display_merchant_defined_data4: The display_merchant_defined_data4 of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._display_merchant_defined_data4 = display_merchant_defined_data4
 
@@ -270,6 +278,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._display_merchant_defined_data5 = display_merchant_defined_data5
 
     @property
@@ -290,6 +300,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data1_default_value: The merchant_defined_data1_default_value of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: str
         """
+
+
 
         self._merchant_defined_data1_default_value = merchant_defined_data1_default_value
 
@@ -312,6 +324,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: str
         """
 
+
+
         self._merchant_defined_data1_label = merchant_defined_data1_label
 
     @property
@@ -332,6 +346,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param require_merchant_defined_data1: The require_merchant_defined_data1 of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._require_merchant_defined_data1 = require_merchant_defined_data1
 
@@ -354,6 +370,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: str
         """
 
+
+
         self._merchant_defined_data2_default_value = merchant_defined_data2_default_value
 
     @property
@@ -374,6 +392,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data2_label: The merchant_defined_data2_label of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: str
         """
+
+
 
         self._merchant_defined_data2_label = merchant_defined_data2_label
 
@@ -396,6 +416,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._require_merchant_defined_data2 = require_merchant_defined_data2
 
     @property
@@ -416,6 +438,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data3_default_value: The merchant_defined_data3_default_value of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: str
         """
+
+
 
         self._merchant_defined_data3_default_value = merchant_defined_data3_default_value
 
@@ -438,6 +462,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: str
         """
 
+
+
         self._merchant_defined_data3_label = merchant_defined_data3_label
 
     @property
@@ -458,6 +484,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param require_merchant_defined_data3: The require_merchant_defined_data3 of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._require_merchant_defined_data3 = require_merchant_defined_data3
 
@@ -480,6 +508,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: str
         """
 
+
+
         self._merchant_defined_data4_default_value = merchant_defined_data4_default_value
 
     @property
@@ -500,6 +530,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data4_label: The merchant_defined_data4_label of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: str
         """
+
+
 
         self._merchant_defined_data4_label = merchant_defined_data4_label
 
@@ -522,6 +554,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._require_merchant_defined_data4 = require_merchant_defined_data4
 
     @property
@@ -542,6 +576,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data5_default_value: The merchant_defined_data5_default_value of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: str
         """
+
+
 
         self._merchant_defined_data5_default_value = merchant_defined_data5_default_value
 
@@ -564,6 +600,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: str
         """
 
+
+
         self._merchant_defined_data5_label = merchant_defined_data5_label
 
     @property
@@ -584,6 +622,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param require_merchant_defined_data5: The require_merchant_defined_data5 of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._require_merchant_defined_data5 = require_merchant_defined_data5
 
@@ -606,6 +646,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._merchant_defined_data1_display_on_receipt = merchant_defined_data1_display_on_receipt
 
     @property
@@ -626,6 +668,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data2_display_on_receipt: The merchant_defined_data2_display_on_receipt of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._merchant_defined_data2_display_on_receipt = merchant_defined_data2_display_on_receipt
 
@@ -648,6 +692,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._merchant_defined_data3_display_on_receipt = merchant_defined_data3_display_on_receipt
 
     @property
@@ -669,6 +715,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :type: bool
         """
 
+
+
         self._merchant_defined_data4_display_on_receipt = merchant_defined_data4_display_on_receipt
 
     @property
@@ -689,6 +737,8 @@ class VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields(ob
         :param merchant_defined_data5_display_on_receipt: The merchant_defined_data5_display_on_receipt of this VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields.
         :type: bool
         """
+
+
 
         self._merchant_defined_data5_display_on_receipt = merchant_defined_data5_display_on_receipt
 

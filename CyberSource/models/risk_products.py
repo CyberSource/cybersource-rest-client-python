@@ -71,6 +71,8 @@ class RiskProducts(object):
         :type: RiskProductsFraudManagementEssentials
         """
 
+
+
         self._fraud_management_essentials = fraud_management_essentials
 
     @property
@@ -91,6 +93,8 @@ class RiskProducts(object):
         :param decision_manager: The decision_manager of this RiskProducts.
         :type: RiskProductsDecisionManager
         """
+
+
 
         self._decision_manager = decision_manager
 

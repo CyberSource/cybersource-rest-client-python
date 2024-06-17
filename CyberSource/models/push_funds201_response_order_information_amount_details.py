@@ -82,6 +82,8 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._total_amount = total_amount
 
     @property
@@ -104,8 +106,8 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this PushFunds201ResponseOrderInformationAmountDetails.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
+
+
 
         self._currency = currency
 
@@ -130,6 +132,8 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
+
+
         self._settlement_amount = settlement_amount
 
     @property
@@ -152,6 +156,8 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this PushFunds201ResponseOrderInformationAmountDetails.
         :type: str
         """
+
+
 
         self._settlement_currency = settlement_currency
 

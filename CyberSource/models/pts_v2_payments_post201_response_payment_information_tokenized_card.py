@@ -103,6 +103,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._prefix = prefix
 
     @property
@@ -125,6 +127,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param suffix: The suffix of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._suffix = suffix
 
@@ -149,6 +153,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -171,6 +177,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param assurance_level: The assurance_level of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._assurance_level = assurance_level
 
@@ -195,6 +203,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -217,6 +227,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param expiration_year: The expiration_year of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 
@@ -241,6 +253,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :type: str
         """
 
+
+
         self._requestor_id = requestor_id
 
     @property
@@ -263,6 +277,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard(object):
         :param assurance_method: The assurance_method of this PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard.
         :type: str
         """
+
+
 
         self._assurance_method = assurance_method
 

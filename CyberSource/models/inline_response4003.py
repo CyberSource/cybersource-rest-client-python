@@ -88,6 +88,8 @@ class InlineResponse4003(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -110,6 +112,8 @@ class InlineResponse4003(object):
         :param status: The status of this InlineResponse4003.
         :type: str
         """
+
+
 
         self._status = status
 
@@ -134,6 +138,8 @@ class InlineResponse4003(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -157,6 +163,8 @@ class InlineResponse4003(object):
         :type: str
         """
 
+
+
         self._message = message
 
     @property
@@ -177,6 +185,8 @@ class InlineResponse4003(object):
         :param details: The details of this InlineResponse4003.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
+
+
 
         self._details = details
 

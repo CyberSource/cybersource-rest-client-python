@@ -66,6 +66,8 @@ class PaymentsProductsCybsReadyTerminal(object):
         :type: PaymentsProductsCardPresentConnectSubscriptionInformation
         """
 
+
+
         self._subscription_information = subscription_information
 
     def to_dict(self):

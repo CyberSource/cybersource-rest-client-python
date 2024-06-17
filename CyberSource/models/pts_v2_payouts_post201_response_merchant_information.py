@@ -66,6 +66,8 @@ class PtsV2PayoutsPost201ResponseMerchantInformation(object):
         :type: PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor
         """
 
+
+
         self._merchant_descriptor = merchant_descriptor
 
     def to_dict(self):

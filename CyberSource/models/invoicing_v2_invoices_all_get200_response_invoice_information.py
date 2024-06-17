@@ -68,6 +68,8 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
         :type: date
         """
 
+
+
         self._due_date = due_date
 
     def to_dict(self):

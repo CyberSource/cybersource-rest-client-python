@@ -73,6 +73,8 @@ class Tmsv2customersBuyerInformation(object):
         :type: str
         """
 
+
+
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -95,6 +97,8 @@ class Tmsv2customersBuyerInformation(object):
         :param email: The email of this Tmsv2customersBuyerInformation.
         :type: str
         """
+
+
 
         self._email = email
 

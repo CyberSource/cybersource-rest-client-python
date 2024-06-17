@@ -111,6 +111,8 @@ class PostCustomerRequest(object):
         :type: Tmsv2customersLinks
         """
 
+
+
         self._links = links
 
     @property
@@ -134,6 +136,8 @@ class PostCustomerRequest(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -154,6 +158,8 @@ class PostCustomerRequest(object):
         :param object_information: The object_information of this PostCustomerRequest.
         :type: Tmsv2customersObjectInformation
         """
+
+
 
         self._object_information = object_information
 
@@ -176,6 +182,8 @@ class PostCustomerRequest(object):
         :type: Tmsv2customersBuyerInformation
         """
 
+
+
         self._buyer_information = buyer_information
 
     @property
@@ -196,6 +204,8 @@ class PostCustomerRequest(object):
         :param client_reference_information: The client_reference_information of this PostCustomerRequest.
         :type: Tmsv2customersClientReferenceInformation
         """
+
+
 
         self._client_reference_information = client_reference_information
 
@@ -220,6 +230,8 @@ class PostCustomerRequest(object):
         :type: list[Tmsv2customersMerchantDefinedInformation]
         """
 
+
+
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -240,6 +252,8 @@ class PostCustomerRequest(object):
         :param default_payment_instrument: The default_payment_instrument of this PostCustomerRequest.
         :type: Tmsv2customersDefaultPaymentInstrument
         """
+
+
 
         self._default_payment_instrument = default_payment_instrument
 
@@ -262,6 +276,8 @@ class PostCustomerRequest(object):
         :type: Tmsv2customersDefaultShippingAddress
         """
 
+
+
         self._default_shipping_address = default_shipping_address
 
     @property
@@ -283,6 +299,8 @@ class PostCustomerRequest(object):
         :type: Tmsv2customersMetadata
         """
 
+
+
         self._metadata = metadata
 
     @property
@@ -303,6 +321,8 @@ class PostCustomerRequest(object):
         :param embedded: The embedded of this PostCustomerRequest.
         :type: Tmsv2customersEmbedded
         """
+
+
 
         self._embedded = embedded
 

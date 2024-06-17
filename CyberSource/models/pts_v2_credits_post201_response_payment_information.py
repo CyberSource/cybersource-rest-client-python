@@ -86,6 +86,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationBank
         """
 
+
+
         self._bank = bank
 
     @property
@@ -106,6 +108,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         :param customer: The customer of this PtsV2CreditsPost201ResponsePaymentInformation.
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
+
+
 
         self._customer = customer
 
@@ -128,6 +132,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationPaymentInstrument
         """
 
+
+
         self._payment_instrument = payment_instrument
 
     @property
@@ -149,6 +155,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
         """
 
+
+
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -169,6 +177,8 @@ class PtsV2CreditsPost201ResponsePaymentInformation(object):
         :param shipping_address: The shipping_address of this PtsV2CreditsPost201ResponsePaymentInformation.
         :type: Ptsv2paymentsPaymentInformationShippingAddress
         """
+
+
 
         self._shipping_address = shipping_address
 

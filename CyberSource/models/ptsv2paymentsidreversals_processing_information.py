@@ -98,6 +98,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._payment_solution = payment_solution
 
     @property
@@ -120,6 +122,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
+
+
 
         self._reconciliation_id = reconciliation_id
 
@@ -144,6 +148,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._link_id = link_id
 
     @property
@@ -166,6 +172,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param report_group: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
         """
+
+
 
         self._report_group = report_group
 
@@ -190,6 +198,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :type: str
         """
 
+
+
         self._visa_checkout_id = visa_checkout_id
 
     @property
@@ -210,6 +220,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param issuer: The issuer of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: Ptsv2paymentsIssuerInformation
         """
+
+
 
         self._issuer = issuer
 
@@ -233,6 +245,8 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
         :param action_list: The action_list of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: list[str]
         """
+
+
 
         self._action_list = action_list
 

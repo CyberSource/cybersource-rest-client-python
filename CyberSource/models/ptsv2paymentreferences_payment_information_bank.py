@@ -73,6 +73,8 @@ class Ptsv2paymentreferencesPaymentInformationBank(object):
         :type: str
         """
 
+
+
         self._swift_code = swift_code
 
     @property
@@ -93,6 +95,8 @@ class Ptsv2paymentreferencesPaymentInformationBank(object):
         :param account: The account of this Ptsv2paymentreferencesPaymentInformationBank.
         :type: Ptsv2paymentreferencesPaymentInformationBankAccount
         """
+
+
 
         self._account = account
 

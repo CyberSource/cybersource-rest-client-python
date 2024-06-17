@@ -88,6 +88,8 @@ class VasV2TaxVoid200Response(object):
         :type: str
         """
 
+
+
         self._id = id
 
     @property
@@ -110,6 +112,8 @@ class VasV2TaxVoid200Response(object):
         :param submit_time_utc: The submit_time_utc of this VasV2TaxVoid200Response.
         :type: str
         """
+
+
 
         self._submit_time_utc = submit_time_utc
 
@@ -134,6 +138,8 @@ class VasV2TaxVoid200Response(object):
         :type: str
         """
 
+
+
         self._status = status
 
     @property
@@ -155,6 +161,8 @@ class VasV2TaxVoid200Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
 
+
+
         self._client_reference_information = client_reference_information
 
     @property
@@ -175,6 +183,8 @@ class VasV2TaxVoid200Response(object):
         :param void_amount_details: The void_amount_details of this VasV2TaxVoid200Response.
         :type: VasV2TaxVoid200ResponseVoidAmountDetails
         """
+
+
 
         self._void_amount_details = void_amount_details
 

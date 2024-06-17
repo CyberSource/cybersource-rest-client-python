@@ -98,6 +98,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._name = name
 
     @property
@@ -120,6 +122,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param locality: The locality of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._locality = locality
 
@@ -144,6 +148,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -166,6 +172,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param administrative_area: The administrative_area of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -190,6 +198,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -213,6 +223,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
+
+
         self._contact = contact
 
     @property
@@ -235,6 +247,8 @@ class Ptsv2payoutsMerchantInformationMerchantDescriptor(object):
         :param address1: The address1 of this Ptsv2payoutsMerchantInformationMerchantDescriptor.
         :type: str
         """
+
+
 
         self._address1 = address1
 

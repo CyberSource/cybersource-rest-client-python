@@ -73,6 +73,8 @@ class TssV2TransactionsGet200ResponseRiskInformationScore(object):
         :type: list[str]
         """
 
+
+
         self._factor_codes = factor_codes
 
     @property
@@ -95,6 +97,8 @@ class TssV2TransactionsGet200ResponseRiskInformationScore(object):
         :param result: The result of this TssV2TransactionsGet200ResponseRiskInformationScore.
         :type: int
         """
+
+
 
         self._result = result
 

@@ -98,8 +98,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :param address1: The address1 of this Riskv1addressverificationsOrderInformationBillTo.
         :type: str
         """
-        if address1 is None:
-            raise ValueError("Invalid value for `address1`, must not be `None`")
+
+
 
         self._address1 = address1
 
@@ -124,6 +124,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address2 = address2
 
     @property
@@ -146,6 +148,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :param address3: The address3 of this Riskv1addressverificationsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address3 = address3
 
@@ -170,6 +174,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address4 = address4
 
     @property
@@ -193,6 +199,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._administrative_area = administrative_area
 
     @property
@@ -215,8 +223,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :param country: The country of this Riskv1addressverificationsOrderInformationBillTo.
         :type: str
         """
-        if country is None:
-            raise ValueError("Invalid value for `country`, must not be `None`")
+
+
 
         self._country = country
 
@@ -240,8 +248,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :param locality: The locality of this Riskv1addressverificationsOrderInformationBillTo.
         :type: str
         """
-        if locality is None:
-            raise ValueError("Invalid value for `locality`, must not be `None`")
+
+
 
         self._locality = locality
 
@@ -265,8 +273,8 @@ class Riskv1addressverificationsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1addressverificationsOrderInformationBillTo.
         :type: str
         """
-        if postal_code is None:
-            raise ValueError("Invalid value for `postal_code`, must not be `None`")
+
+
 
         self._postal_code = postal_code
 

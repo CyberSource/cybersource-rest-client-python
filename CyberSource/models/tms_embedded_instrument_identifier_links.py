@@ -71,6 +71,8 @@ class TmsEmbeddedInstrumentIdentifierLinks(object):
         :type: TmsEmbeddedInstrumentIdentifierLinksSelf
         """
 
+
+
         self.__self = _self
 
     @property
@@ -91,6 +93,8 @@ class TmsEmbeddedInstrumentIdentifierLinks(object):
         :param payment_instruments: The payment_instruments of this TmsEmbeddedInstrumentIdentifierLinks.
         :type: TmsEmbeddedInstrumentIdentifierLinksPaymentInstruments
         """
+
+
 
         self._payment_instruments = payment_instruments
 

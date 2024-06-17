@@ -68,6 +68,8 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthenticationIssuerIn
         :type: str
         """
 
+
+
         self._exemption_data_raw = exemption_data_raw
 
     def to_dict(self):

@@ -71,6 +71,8 @@ class Ptsv2paymentsidreversalsOrderInformation(object):
         :type: Ptsv2paymentsidreversalsOrderInformationAmountDetails
         """
 
+
+
         self._amount_details = amount_details
 
     @property
@@ -91,6 +93,8 @@ class Ptsv2paymentsidreversalsOrderInformation(object):
         :param line_items: The line_items of this Ptsv2paymentsidreversalsOrderInformation.
         :type: list[Ptsv2paymentsidreversalsOrderInformationLineItems]
         """
+
+
 
         self._line_items = line_items
 

@@ -183,6 +183,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._first_name = first_name
 
     @property
@@ -205,6 +207,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param last_name: The last_name of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._last_name = last_name
 
@@ -229,6 +233,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._middle_name = middle_name
 
     @property
@@ -251,6 +257,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param name_suffix: The name_suffix of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._name_suffix = name_suffix
 
@@ -275,6 +283,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._title = title
 
     @property
@@ -295,6 +305,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param company: The company of this Ptsv2paymentsOrderInformationBillTo.
         :type: Ptsv2paymentsOrderInformationBillToCompany
         """
+
+
 
         self._company = company
 
@@ -319,6 +331,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address1 = address1
 
     @property
@@ -341,6 +355,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address2: The address2 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address2 = address2
 
@@ -365,6 +381,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._address3 = address3
 
     @property
@@ -387,6 +405,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param address4: The address4 of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._address4 = address4
 
@@ -411,6 +431,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._locality = locality
 
     @property
@@ -433,6 +455,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._administrative_area = administrative_area
 
@@ -457,6 +481,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._postal_code = postal_code
 
     @property
@@ -479,6 +505,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param county: The county of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._county = county
 
@@ -503,6 +531,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._country = country
 
     @property
@@ -525,6 +555,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param district: The district of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._district = district
 
@@ -549,6 +581,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._building_number = building_number
 
     @property
@@ -571,6 +605,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param email: The email of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._email = email
 
@@ -595,6 +631,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._email_domain = email_domain
 
     @property
@@ -617,6 +655,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._phone_number = phone_number
 
@@ -641,6 +681,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._phone_type = phone_type
 
     @property
@@ -663,6 +705,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param verification_status: The verification_status of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._verification_status = verification_status
 
@@ -687,6 +731,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :type: str
         """
 
+
+
         self._alternate_phone_number = alternate_phone_number
 
     @property
@@ -709,6 +755,8 @@ class Ptsv2paymentsOrderInformationBillTo(object):
         :param alternate_email: The alternate_email of this Ptsv2paymentsOrderInformationBillTo.
         :type: str
         """
+
+
 
         self._alternate_email = alternate_email
 

@@ -103,6 +103,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :type: str
         """
 
+
+
         self._algorithm = algorithm
 
     @property
@@ -125,6 +127,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :param first_retry: The first_retry of this Notificationsubscriptionsv1webhooksRetryPolicy.
         :type: int
         """
+
+
 
         self._first_retry = first_retry
 
@@ -149,6 +153,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :type: int
         """
 
+
+
         self._interval = interval
 
     @property
@@ -171,6 +177,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :param number_of_retries: The number_of_retries of this Notificationsubscriptionsv1webhooksRetryPolicy.
         :type: int
         """
+
+
 
         self._number_of_retries = number_of_retries
 
@@ -195,6 +203,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :type: str
         """
 
+
+
         self._deactivate_flag = deactivate_flag
 
     @property
@@ -217,6 +227,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :param repeat_sequence_count: The repeat_sequence_count of this Notificationsubscriptionsv1webhooksRetryPolicy.
         :type: int
         """
+
+
 
         self._repeat_sequence_count = repeat_sequence_count
 
@@ -241,6 +253,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :type: int
         """
 
+
+
         self._repeat_sequence_wait_time = repeat_sequence_wait_time
 
     @property
@@ -263,6 +277,8 @@ class Notificationsubscriptionsv1webhooksRetryPolicy(object):
         :param additional_attributes: The additional_attributes of this Notificationsubscriptionsv1webhooksRetryPolicy.
         :type: list[dict(str, str)]
         """
+
+
 
         self._additional_attributes = additional_attributes
 

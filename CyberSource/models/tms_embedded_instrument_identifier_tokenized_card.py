@@ -113,6 +113,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :type: str
         """
 
+
+
         self._type = type
 
     @property
@@ -135,6 +137,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :param state: The state of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
         :type: str
         """
+
+
 
         self._state = state
 
@@ -159,6 +163,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :type: str
         """
 
+
+
         self._enrollment_id = enrollment_id
 
     @property
@@ -181,6 +187,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :param token_reference_id: The token_reference_id of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
         :type: str
         """
+
+
 
         self._token_reference_id = token_reference_id
 
@@ -205,6 +213,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :type: str
         """
 
+
+
         self._reason = reason
 
     @property
@@ -227,6 +237,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :param number: The number of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
         :type: str
         """
+
+
 
         self._number = number
 
@@ -251,6 +263,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :type: str
         """
 
+
+
         self._expiration_month = expiration_month
 
     @property
@@ -273,6 +287,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :param expiration_year: The expiration_year of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
         :type: str
         """
+
+
 
         self._expiration_year = expiration_year
 
@@ -297,6 +313,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :type: str
         """
 
+
+
         self._cryptogram = cryptogram
 
     @property
@@ -317,6 +335,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         :param card: The card of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
         :type: TmsEmbeddedInstrumentIdentifierTokenizedCardCard
         """
+
+
 
         self._card = card
 

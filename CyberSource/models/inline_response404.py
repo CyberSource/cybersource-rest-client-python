@@ -73,6 +73,8 @@ class InlineResponse404(object):
         :type: str
         """
 
+
+
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -95,6 +97,8 @@ class InlineResponse404(object):
         :param status: The status of this InlineResponse404.
         :type: str
         """
+
+
 
         self._status = status
 

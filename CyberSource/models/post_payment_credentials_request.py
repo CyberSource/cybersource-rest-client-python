@@ -68,6 +68,8 @@ class PostPaymentCredentialsRequest(object):
         :type: str
         """
 
+
+
         self._payment_credential_type = payment_credential_type
 
     def to_dict(self):
