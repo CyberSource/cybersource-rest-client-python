@@ -82,6 +82,8 @@ jobs:
               run : |
                 echo "Before Running Report Generation"
                 echo $VIRTUAL_ENV
+                echo "PWD"
+                pwd
                 cd $SAMPLE_FOLDER
                 pip install json2html
                 pip install xhtml2pdf
