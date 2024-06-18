@@ -93,6 +93,17 @@ jobs:
                 python-version: 3.12
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
+                if [[ "$(uname -s)" == "Linux" ]]; then
+                source ve/bin/activate
+                echo "In LINUX"
+                elif [[ "$(uname -s)" == "Darwin" ]]; then
+                source ve/bin/activate
+                echo "In MAC"
+                else
+                source ve/Scripts/activate
+                echo "In Windows"
+                fi
+                echo $VIRTUAL_ENV
                 echo "Before Running Report Generation"
                 echo "PWD"
                 pwd
