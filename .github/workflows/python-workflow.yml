@@ -63,6 +63,7 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m venv ve
                 source ve/bin/activate
+                echo $VIRTUAL_ENV
             - name: Building the projects and running the Test Cases
               run: |
                 echo $VIRTUAL_ENV
