@@ -85,7 +85,6 @@ class {{classname}}(object):
         :param {{name}}: The {{name}} of this {{classname}}.
         :type: {{datatype}}
         """
-
 {{#isEnum}}
 {{#isContainer}}
         allowed_values = [{{#allowableValues}}{{#values}}{{#items.isString}}"{{/items.isString}}{{{this}}}{{#items.isString}}"{{/items.isString}}{{^-last}}, {{/-last}}{{/values}}{{/allowableValues}}]
@@ -116,7 +115,6 @@ class {{classname}}(object):
 {{/isContainer}}
 {{/isEnum}}
 {{^isEnum}}
-
 {{/isEnum}}
 
         self._{{name}} = {{name}}
