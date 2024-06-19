@@ -76,6 +76,11 @@ Since v0.0.31, a new logging framework has been introduced in the SDK. This new 
 
 More information about this new logging framework can be found in this file : [Logging.md](Logging.md)
 
+### Tetsing for different environments
+[![workflow for cybs rest client python sdk to run samples](https://github.com/CyberSource/cybersource-rest-client-python/actions/workflows/python-workflow.yml/badge.svg?branch=adding-workflows)](https://github.com/CyberSource/cybersource-rest-client-python/actions/workflows/python-workflow.yml)
+
+The tag indicates whether sample codes have been successfully run for different environments.
+
 ## Features
 
 ## MetaKey Support
