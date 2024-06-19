@@ -98,8 +98,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -122,8 +120,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -148,8 +144,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._tax_amount = tax_amount
 
     @property
@@ -172,8 +166,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param authorized_amount: The authorized_amount of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._authorized_amount = authorized_amount
 
@@ -198,8 +190,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_amount = settlement_amount
 
     @property
@@ -223,8 +213,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_currency = settlement_currency
 
     @property
@@ -245,8 +233,6 @@ class TssV2TransactionsGet200ResponseOrderInformationAmountDetails(object):
         :param surcharge: The surcharge of this TssV2TransactionsGet200ResponseOrderInformationAmountDetails.
         :type: Ptsv2payoutsOrderInformationAmountDetailsSurcharge
         """
-
-
 
         self._surcharge = surcharge
 

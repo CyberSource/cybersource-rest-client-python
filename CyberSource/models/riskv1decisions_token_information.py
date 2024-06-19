@@ -68,8 +68,6 @@ class Riskv1decisionsTokenInformation(object):
         :type: str
         """
 
-
-
         self._jti = jti
 
     def to_dict(self):

@@ -103,8 +103,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -127,8 +125,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :param upload_date: The upload_date of this PtsV1TransactionBatchesIdGet200Response.
         :type: str
         """
-
-
 
         self._upload_date = upload_date
 
@@ -153,8 +149,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :type: str
         """
 
-
-
         self._completion_date = completion_date
 
     @property
@@ -177,8 +171,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :param transaction_count: The transaction_count of this PtsV1TransactionBatchesIdGet200Response.
         :type: int
         """
-
-
 
         self._transaction_count = transaction_count
 
@@ -203,8 +195,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :type: int
         """
 
-
-
         self._accepted_transaction_count = accepted_transaction_count
 
     @property
@@ -227,8 +217,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :param rejected_transaction_count: The rejected_transaction_count of this PtsV1TransactionBatchesIdGet200Response.
         :type: str
         """
-
-
 
         self._rejected_transaction_count = rejected_transaction_count
 
@@ -253,8 +241,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -275,8 +261,6 @@ class PtsV1TransactionBatchesIdGet200Response(object):
         :param links: The links of this PtsV1TransactionBatchesIdGet200Response.
         :type: PtsV1TransactionBatchesIdGet200ResponseLinks
         """
-
-
 
         self._links = links
 

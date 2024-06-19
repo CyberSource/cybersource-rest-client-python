@@ -66,8 +66,6 @@ class InlineResponse401Links(object):
         :type: InlineResponse401LinksSelf
         """
 
-
-
         self.__self = _self
 
     def to_dict(self):

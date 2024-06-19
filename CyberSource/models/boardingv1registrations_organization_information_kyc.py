@@ -114,7 +114,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param when_is_customer_charged: The when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-
         allowed_values = ["ONETIMEBEFORE", "ONETIMEAFTER", "OTHER"]
         if when_is_customer_charged not in allowed_values:
             raise ValueError(
@@ -143,8 +142,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: str
         """
 
-
-
         self._when_is_customer_charged_description = when_is_customer_charged_description
 
     @property
@@ -165,8 +162,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param offer_subscriptions: The offer_subscriptions of this Boardingv1registrationsOrganizationInformationKYC.
         :type: bool
         """
-
-
 
         self._offer_subscriptions = offer_subscriptions
 
@@ -189,8 +184,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
-
-
         self._monthly_subscription_percent = monthly_subscription_percent
 
     @property
@@ -211,8 +204,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param quarterly_subscription_percent: The quarterly_subscription_percent of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
-
-
 
         self._quarterly_subscription_percent = quarterly_subscription_percent
 
@@ -235,8 +226,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
-
-
         self._semi_annual_subscription_percent = semi_annual_subscription_percent
 
     @property
@@ -258,8 +247,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
-
-
         self._annual_subscription_percent = annual_subscription_percent
 
     @property
@@ -280,7 +267,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param time_to_product_delivery: The time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-
         allowed_values = ["INSTANT", "UPTO2", "UPTO5", "UPTO10", "GREATERTHAN10"]
         if time_to_product_delivery not in allowed_values:
             raise ValueError(
@@ -309,8 +295,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
-
-
         self._estimated_monthly_sales = estimated_monthly_sales
 
     @property
@@ -331,8 +315,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param average_order_amount: The average_order_amount of this Boardingv1registrationsOrganizationInformationKYC.
         :type: float
         """
-
-
 
         self._average_order_amount = average_order_amount
 
@@ -355,8 +337,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :type: float
         """
 
-
-
         self._largest_expected_order_amount = largest_expected_order_amount
 
     @property
@@ -377,8 +357,6 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
         :param deposit_bank_account: The deposit_bank_account of this Boardingv1registrationsOrganizationInformationKYC.
         :type: Boardingv1registrationsOrganizationInformationKYCDepositBankAccount
         """
-
-
 
         self._deposit_bank_account = deposit_bank_account
 

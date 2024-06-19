@@ -86,8 +86,6 @@ class IntimateBillingAgreement(object):
         :type: Ptsv2paymentsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -108,8 +106,6 @@ class IntimateBillingAgreement(object):
         :param installment_information: The installment_information of this IntimateBillingAgreement.
         :type: Ptsv2billingagreementsInstallmentInformation
         """
-
-
 
         self._installment_information = installment_information
 
@@ -132,8 +128,6 @@ class IntimateBillingAgreement(object):
         :type: Ptsv2billingagreementsMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -155,8 +149,6 @@ class IntimateBillingAgreement(object):
         :type: Ptsv2billingagreementsOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -177,8 +169,6 @@ class IntimateBillingAgreement(object):
         :param payment_information: The payment_information of this IntimateBillingAgreement.
         :type: Ptsv2billingagreementsPaymentInformation
         """
-
-
 
         self._payment_information = payment_information
 

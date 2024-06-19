@@ -83,8 +83,6 @@ class Ptsv2paymentreferencesDeviceInformation(object):
         :type: str
         """
 
-
-
         self._ip_address = ip_address
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentreferencesDeviceInformation(object):
         :param device_type: The device_type of this Ptsv2paymentreferencesDeviceInformation.
         :type: str
         """
-
-
 
         self._device_type = device_type
 
@@ -133,8 +129,6 @@ class Ptsv2paymentreferencesDeviceInformation(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2paymentreferencesDeviceInformation(object):
         :param user_agent: The user_agent of this Ptsv2paymentreferencesDeviceInformation.
         :type: str
         """
-
-
 
         self._user_agent = user_agent
 

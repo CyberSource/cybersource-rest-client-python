@@ -66,8 +66,6 @@ class Ptsv2paymentsidvoidsPaymentInformation(object):
         :type: Ptsv2paymentsidrefundsPaymentInformationPaymentType
         """
 
-
-
         self._payment_type = payment_type
 
     def to_dict(self):

@@ -111,8 +111,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -135,8 +133,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :param id: The id of this PtsV2PaymentsRefundPost201Response.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -161,8 +157,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -185,8 +179,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :param status: The status of this PtsV2PaymentsRefundPost201Response.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -211,8 +203,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -233,8 +223,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsRefundPost201Response.
         :type: PtsV2PaymentsRefundPost201ResponseClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 
@@ -257,8 +245,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseRefundAmountDetails
         """
 
-
-
         self._refund_amount_details = refund_amount_details
 
     @property
@@ -279,8 +265,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :param processor_information: The processor_information of this PtsV2PaymentsRefundPost201Response.
         :type: PtsV2PaymentsRefundPost201ResponseProcessorInformation
         """
-
-
 
         self._processor_information = processor_information
 
@@ -303,8 +287,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :type: PtsV2PaymentsRefundPost201ResponseOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -325,8 +307,6 @@ class PtsV2PaymentsRefundPost201Response(object):
         :param point_of_sale_information: The point_of_sale_information of this PtsV2PaymentsRefundPost201Response.
         :type: PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation
         """
-
-
 
         self._point_of_sale_information = point_of_sale_information
 

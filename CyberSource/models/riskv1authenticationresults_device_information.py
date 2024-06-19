@@ -68,8 +68,6 @@ class Riskv1authenticationresultsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._ip_address = ip_address
 
     def to_dict(self):

@@ -116,7 +116,6 @@ class TransientTokenDataApi(object):
             raise ValueError("Missing the required parameter `payment_credentials_reference` when calling `get_payment_credentials_for_transient_token`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -228,7 +227,6 @@ class TransientTokenDataApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `transient_token` when calling `get_transaction_for_transient_token`")
             raise ValueError("Missing the required parameter `transient_token` when calling `get_transaction_for_transient_token`")
-
 
 
         collection_formats = {}

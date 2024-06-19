@@ -83,8 +83,6 @@ class TssV2TransactionsPost400Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -107,8 +105,6 @@ class TssV2TransactionsPost400Response(object):
         :param status: The status of this TssV2TransactionsPost400Response.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -133,8 +129,6 @@ class TssV2TransactionsPost400Response(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -155,8 +149,6 @@ class TssV2TransactionsPost400Response(object):
         :param details: The details of this TssV2TransactionsPost400Response.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
-
-
 
         self._details = details
 

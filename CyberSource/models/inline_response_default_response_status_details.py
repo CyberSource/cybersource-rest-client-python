@@ -73,8 +73,6 @@ class InlineResponseDefaultResponseStatusDetails(object):
         :type: str
         """
 
-
-
         self._location = location
 
     @property
@@ -97,8 +95,6 @@ class InlineResponseDefaultResponseStatusDetails(object):
         :param message: The message of this InlineResponseDefaultResponseStatusDetails.
         :type: str
         """
-
-
 
         self._message = message
 

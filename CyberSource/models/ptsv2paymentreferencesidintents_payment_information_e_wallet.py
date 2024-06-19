@@ -68,8 +68,6 @@ class Ptsv2paymentreferencesidintentsPaymentInformationEWallet(object):
         :type: str
         """
 
-
-
         self._account_id = account_id
 
     def to_dict(self):

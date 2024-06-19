@@ -73,8 +73,6 @@ class Ptsv2paymentsidOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._additional_amount = additional_amount
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsidOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentsidOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

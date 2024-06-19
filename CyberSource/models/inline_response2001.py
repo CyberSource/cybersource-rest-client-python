@@ -93,8 +93,6 @@ class InlineResponse2001(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -117,8 +115,6 @@ class InlineResponse2001(object):
         :param total_count: The total_count of this InlineResponse2001.
         :type: int
         """
-
-
 
         self._total_count = total_count
 
@@ -143,8 +139,6 @@ class InlineResponse2001(object):
         :type: int
         """
 
-
-
         self._offset = offset
 
     @property
@@ -167,8 +161,6 @@ class InlineResponse2001(object):
         :param limit: The limit of this InlineResponse2001.
         :type: int
         """
-
-
 
         self._limit = limit
 
@@ -193,8 +185,6 @@ class InlineResponse2001(object):
         :type: str
         """
 
-
-
         self._sort = sort
 
     @property
@@ -215,8 +205,6 @@ class InlineResponse2001(object):
         :param keys: The keys of this InlineResponse2001.
         :type: list[InlineResponse2001Keys]
         """
-
-
 
         self._keys = keys
 

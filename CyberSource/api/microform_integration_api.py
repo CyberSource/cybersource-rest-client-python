@@ -116,7 +116,6 @@ class MicroformIntegrationApi(object):
             raise ValueError("Missing the required parameter `generate_capture_context_request` when calling `generate_capture_context`")
 
 
-
         collection_formats = {}
 
         path_params = {}

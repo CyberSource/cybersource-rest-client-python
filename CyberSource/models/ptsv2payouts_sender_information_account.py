@@ -73,8 +73,6 @@ class Ptsv2payoutsSenderInformationAccount(object):
         :type: str
         """
 
-
-
         self._funds_source = funds_source
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2payoutsSenderInformationAccount(object):
         :param number: The number of this Ptsv2payoutsSenderInformationAccount.
         :type: str
         """
-
-
 
         self._number = number
 

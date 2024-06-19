@@ -88,8 +88,6 @@ class InvoicingV2InvoicesAllGet400Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -112,8 +110,6 @@ class InvoicingV2InvoicesAllGet400Response(object):
         :param status: The status of this InvoicingV2InvoicesAllGet400Response.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -138,8 +134,6 @@ class InvoicingV2InvoicesAllGet400Response(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -163,8 +157,6 @@ class InvoicingV2InvoicesAllGet400Response(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -185,8 +177,6 @@ class InvoicingV2InvoicesAllGet400Response(object):
         :param details: The details of this InvoicingV2InvoicesAllGet400Response.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
-
-
 
         self._details = details
 

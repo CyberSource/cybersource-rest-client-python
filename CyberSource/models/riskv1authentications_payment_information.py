@@ -81,8 +81,6 @@ class Riskv1authenticationsPaymentInformation(object):
         :type: Riskv1authenticationsPaymentInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -103,8 +101,6 @@ class Riskv1authenticationsPaymentInformation(object):
         :param tokenized_card: The tokenized_card of this Riskv1authenticationsPaymentInformation.
         :type: Riskv1authenticationsPaymentInformationTokenizedCard
         """
-
-
 
         self._tokenized_card = tokenized_card
 
@@ -127,8 +123,6 @@ class Riskv1authenticationsPaymentInformation(object):
         :type: Riskv1authenticationsetupsPaymentInformationFluidData
         """
 
-
-
         self._fluid_data = fluid_data
 
     @property
@@ -149,8 +143,6 @@ class Riskv1authenticationsPaymentInformation(object):
         :param customer: The customer of this Riskv1authenticationsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
-
-
 
         self._customer = customer
 

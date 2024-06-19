@@ -71,8 +71,6 @@ class CardProcessingConfigCommonPaymentTypes(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -95,8 +93,6 @@ class CardProcessingConfigCommonPaymentTypes(object):
         :param currencies: The currencies of this CardProcessingConfigCommonPaymentTypes.
         :type: dict(str, CardProcessingConfigCommonCurrencies)
         """
-
-
 
         self._currencies = currencies
 

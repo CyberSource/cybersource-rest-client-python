@@ -73,8 +73,6 @@ class VasV2PaymentsPost201ResponseTaxInformation(object):
         :type: bool
         """
 
-
-
         self._commit_indicator = commit_indicator
 
     @property
@@ -97,8 +95,6 @@ class VasV2PaymentsPost201ResponseTaxInformation(object):
         :param refund_indicator: The refund_indicator of this VasV2PaymentsPost201ResponseTaxInformation.
         :type: bool
         """
-
-
 
         self._refund_indicator = refund_indicator
 

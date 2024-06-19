@@ -78,8 +78,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :type: str
         """
 
-
-
         self._contact = contact
 
     @property
@@ -127,8 +123,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor(object):
         :param state: The state of this Ptsv2paymentsMerchantInformationServiceFeeDescriptor.
         :type: str
         """
-
-
 
         self._state = state
 

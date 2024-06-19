@@ -88,8 +88,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -111,8 +109,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -133,8 +129,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :param address2: The address2 of this Boardingv1registrationsOrganizationInformationBusinessInformationAddress.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -159,8 +153,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -184,8 +176,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -208,8 +198,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationAddress(o
         :param postal_code: The postal_code of this Boardingv1registrationsOrganizationInformationBusinessInformationAddress.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 

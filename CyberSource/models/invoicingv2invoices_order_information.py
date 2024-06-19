@@ -71,8 +71,6 @@ class Invoicingv2invoicesOrderInformation(object):
         :type: Invoicingv2invoicesOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -93,8 +91,6 @@ class Invoicingv2invoicesOrderInformation(object):
         :param line_items: The line_items of this Invoicingv2invoicesOrderInformation.
         :type: list[Invoicingv2invoicesOrderInformationLineItems]
         """
-
-
 
         self._line_items = line_items
 

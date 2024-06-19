@@ -75,8 +75,6 @@ class Accountupdaterv1batchesIncludedTokens(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -98,8 +96,6 @@ class Accountupdaterv1batchesIncludedTokens(object):
         :type: str
         """
 
-
-
         self._expiration_month = expiration_month
 
     @property
@@ -120,8 +116,6 @@ class Accountupdaterv1batchesIncludedTokens(object):
         :param expiration_year: The expiration_year of this Accountupdaterv1batchesIncludedTokens.
         :type: str
         """
-
-
 
         self._expiration_year = expiration_year
 

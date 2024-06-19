@@ -68,8 +68,6 @@ class Ptsv2creditsInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._plan_type = plan_type
 
     def to_dict(self):

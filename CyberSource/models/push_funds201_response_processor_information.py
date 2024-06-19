@@ -93,8 +93,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :type: int
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -117,8 +115,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PushFunds201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 
@@ -143,8 +139,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -167,8 +161,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :param system_trace_audit_number: The system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -193,8 +185,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_code_source = response_code_source
 
     @property
@@ -217,8 +207,6 @@ class PushFunds201ResponseProcessorInformation(object):
         :param retrieval_reference_number: The retrieval_reference_number of this PushFunds201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._retrieval_reference_number = retrieval_reference_number
 

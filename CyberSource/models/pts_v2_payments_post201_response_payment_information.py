@@ -131,8 +131,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentAccountInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -153,8 +151,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param tokenized_card: The tokenized_card of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard
         """
-
-
 
         self._tokenized_card = tokenized_card
 
@@ -177,8 +173,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures
         """
 
-
-
         self._account_features = account_features
 
     @property
@@ -199,8 +193,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param bank: The bank of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: PtsV2PaymentsPost201ResponsePaymentInformationBank
         """
-
-
 
         self._bank = bank
 
@@ -223,8 +215,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
-
-
         self._customer = customer
 
     @property
@@ -245,8 +235,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param payment_instrument: The payment_instrument of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: Ptsv2paymentsPaymentInformationPaymentInstrument
         """
-
-
 
         self._payment_instrument = payment_instrument
 
@@ -269,8 +257,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponsePaymentInformationInstrumentIdentifier
         """
 
-
-
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -291,8 +277,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param shipping_address: The shipping_address of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: Ptsv2paymentsPaymentInformationShippingAddress
         """
-
-
 
         self._shipping_address = shipping_address
 
@@ -317,8 +301,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
-
-
         self._scheme = scheme
 
     @property
@@ -341,8 +323,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param bin: The bin of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: str
         """
-
-
 
         self._bin = bin
 
@@ -367,8 +347,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
-
-
         self._account_type = account_type
 
     @property
@@ -391,8 +369,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param issuer: The issuer of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: str
         """
-
-
 
         self._issuer = issuer
 
@@ -417,8 +393,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :type: str
         """
 
-
-
         self._bin_country = bin_country
 
     @property
@@ -439,8 +413,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         :param e_wallet: The e_wallet of this PtsV2PaymentsPost201ResponsePaymentInformation.
         :type: PtsV2PaymentsPost201ResponsePaymentInformationEWallet
         """
-
-
 
         self._e_wallet = e_wallet
 

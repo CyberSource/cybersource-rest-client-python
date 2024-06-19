@@ -122,10 +122,6 @@ class ReportDefinitionsApi(object):
             raise ValueError("Missing the required parameter `report_definition_name` when calling `get_resource_info_by_report_definition`")
 
 
-
-
-
-
         collection_formats = {}
 
         path_params = {}
@@ -240,8 +236,6 @@ class ReportDefinitionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-
-
 
 
         collection_formats = {}

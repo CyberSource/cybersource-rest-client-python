@@ -73,8 +73,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformationSellerProtection(obje
         :type: str
         """
 
-
-
         self._eligibilty = eligibilty
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformationSellerProtection(obje
         :param type: The type of this PtsV2PaymentsOrderPost201ResponseProcessorInformationSellerProtection.
         :type: str
         """
-
-
 
         self._type = type
 

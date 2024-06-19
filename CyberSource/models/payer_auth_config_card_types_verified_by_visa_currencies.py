@@ -76,8 +76,6 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :type: list[str]
         """
 
-
-
         self._currency_codes = currency_codes
 
     @property
@@ -101,8 +99,6 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :type: str
         """
 
-
-
         self._acquirer_id = acquirer_id
 
     @property
@@ -125,8 +121,6 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
         :param processor_merchant_id: The processor_merchant_id of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
         :type: str
         """
-
-
 
         self._processor_merchant_id = processor_merchant_id
 

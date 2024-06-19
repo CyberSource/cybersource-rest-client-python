@@ -76,8 +76,6 @@ class UpdatePlanRequest(object):
         :type: Rbsv1plansidPlanInformation
         """
 
-
-
         self._plan_information = plan_information
 
     @property
@@ -99,8 +97,6 @@ class UpdatePlanRequest(object):
         :type: Rbsv1plansidProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -121,8 +117,6 @@ class UpdatePlanRequest(object):
         :param order_information: The order_information of this UpdatePlanRequest.
         :type: GetAllPlansResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

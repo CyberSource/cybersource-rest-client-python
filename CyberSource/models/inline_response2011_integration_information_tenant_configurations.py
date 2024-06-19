@@ -83,8 +83,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :type: str
         """
 
-
-
         self._solution_id = solution_id
 
     @property
@@ -108,8 +106,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :type: str
         """
 
-
-
         self._tenant_configuration_id = tenant_configuration_id
 
     @property
@@ -130,7 +126,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param status: The status of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
-
         allowed_values = ["LIVE", "INACTIVE", "TEST"]
         if status not in allowed_values:
             raise ValueError(
@@ -160,8 +155,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param submit_time_utc: The submit_time_utc of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: datetime
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 

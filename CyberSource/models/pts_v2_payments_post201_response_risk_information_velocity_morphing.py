@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
         :type: int
         """
 
-
-
         self._count = count
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
         :type: str
         """
 
-
-
         self._field_name = field_name
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing(object):
         :param information_code: The information_code of this PtsV2PaymentsPost201ResponseRiskInformationVelocityMorphing.
         :type: str
         """
-
-
 
         self._information_code = information_code
 

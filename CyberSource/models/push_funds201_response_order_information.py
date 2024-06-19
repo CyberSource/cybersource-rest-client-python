@@ -66,8 +66,6 @@ class PushFunds201ResponseOrderInformation(object):
         :type: PushFunds201ResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     def to_dict(self):

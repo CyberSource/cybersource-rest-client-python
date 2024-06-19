@@ -123,8 +123,6 @@ class NotificationOfChangesApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_notification_of_change_report`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}

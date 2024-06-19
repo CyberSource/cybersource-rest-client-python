@@ -138,8 +138,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._title = title
 
     @property
@@ -162,8 +160,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param first_name: The first_name of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._first_name = first_name
 
@@ -188,8 +184,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._middle_name = middle_name
 
     @property
@@ -213,8 +207,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -235,8 +227,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param company: The company of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: Ptsv2paymentsOrderInformationBillToCompany
         """
-
-
 
         self._company = company
 
@@ -261,8 +251,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -285,8 +273,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param address2: The address2 of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -311,8 +297,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -335,8 +319,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param district: The district of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._district = district
 
@@ -361,8 +343,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -385,8 +365,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -411,8 +389,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._county = county
 
     @property
@@ -435,8 +411,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param country: The country of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -461,8 +435,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -485,8 +457,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillTo(object):
         :param phone_number: The phone_number of this Ptsv2paymentsidcapturesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 

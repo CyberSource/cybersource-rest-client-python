@@ -76,8 +76,6 @@ class DmConfigThirdpartyProviderTargus(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -99,8 +97,6 @@ class DmConfigThirdpartyProviderTargus(object):
         :type: bool
         """
 
-
-
         self._use_cybs_credentials = use_cybs_credentials
 
     @property
@@ -121,8 +117,6 @@ class DmConfigThirdpartyProviderTargus(object):
         :param credentials: The credentials of this DmConfigThirdpartyProviderTargus.
         :type: DmConfigThirdpartyProviderTargusCredentials
         """
-
-
 
         self._credentials = credentials
 

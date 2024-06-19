@@ -76,8 +76,6 @@ class Tmsv2customersLinks(object):
         :type: Tmsv2customersLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -99,8 +97,6 @@ class Tmsv2customersLinks(object):
         :type: Tmsv2customersLinksPaymentInstruments
         """
 
-
-
         self._payment_instruments = payment_instruments
 
     @property
@@ -121,8 +117,6 @@ class Tmsv2customersLinks(object):
         :param shipping_address: The shipping_address of this Tmsv2customersLinks.
         :type: Tmsv2customersLinksShippingAddress
         """
-
-
 
         self._shipping_address = shipping_address
 

@@ -88,8 +88,6 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -112,8 +110,6 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
         :param reason_code: The reason_code of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: str
         """
-
-
 
         self._reason_code = reason_code
 
@@ -138,8 +134,6 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
         :type: str
         """
 
-
-
         self._r_code = r_code
 
     @property
@@ -163,8 +157,6 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
         :type: str
         """
 
-
-
         self._r_flag = r_flag
 
     @property
@@ -185,8 +177,6 @@ class TssV2TransactionsGet200ResponseApplicationInformation(object):
         :param applications: The applications of this TssV2TransactionsGet200ResponseApplicationInformation.
         :type: list[TssV2TransactionsGet200ResponseApplicationInformationApplications]
         """
-
-
 
         self._applications = applications
 

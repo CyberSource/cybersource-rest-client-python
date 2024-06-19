@@ -128,8 +128,6 @@ class TssV2TransactionsPost201Response(object):
         :type: str
         """
 
-
-
         self._search_id = search_id
 
     @property
@@ -152,8 +150,6 @@ class TssV2TransactionsPost201Response(object):
         :param save: The save of this TssV2TransactionsPost201Response.
         :type: bool
         """
-
-
 
         self._save = save
 
@@ -178,8 +174,6 @@ class TssV2TransactionsPost201Response(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -202,8 +196,6 @@ class TssV2TransactionsPost201Response(object):
         :param timezone: The timezone of this TssV2TransactionsPost201Response.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -228,8 +220,6 @@ class TssV2TransactionsPost201Response(object):
         :type: str
         """
 
-
-
         self._query = query
 
     @property
@@ -252,8 +242,6 @@ class TssV2TransactionsPost201Response(object):
         :param offset: The offset of this TssV2TransactionsPost201Response.
         :type: int
         """
-
-
 
         self._offset = offset
 
@@ -278,8 +266,6 @@ class TssV2TransactionsPost201Response(object):
         :type: int
         """
 
-
-
         self._limit = limit
 
     @property
@@ -302,8 +288,6 @@ class TssV2TransactionsPost201Response(object):
         :param sort: The sort of this TssV2TransactionsPost201Response.
         :type: str
         """
-
-
 
         self._sort = sort
 
@@ -328,8 +312,6 @@ class TssV2TransactionsPost201Response(object):
         :type: int
         """
 
-
-
         self._count = count
 
     @property
@@ -352,8 +334,6 @@ class TssV2TransactionsPost201Response(object):
         :param total_count: The total_count of this TssV2TransactionsPost201Response.
         :type: int
         """
-
-
 
         self._total_count = total_count
 
@@ -378,8 +358,6 @@ class TssV2TransactionsPost201Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -401,8 +379,6 @@ class TssV2TransactionsPost201Response(object):
         :type: TssV2TransactionsPost201ResponseEmbedded
         """
 
-
-
         self._embedded = embedded
 
     @property
@@ -423,8 +399,6 @@ class TssV2TransactionsPost201Response(object):
         :param links: The links of this TssV2TransactionsPost201Response.
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
-
-
 
         self._links = links
 

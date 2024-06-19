@@ -158,8 +158,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._commerce_indicator = commerce_indicator
 
     @property
@@ -182,8 +180,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param processor_id: The processor_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-
-
 
         self._processor_id = processor_id
 
@@ -208,8 +204,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_solution = payment_solution
 
     @property
@@ -232,8 +226,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-
-
 
         self._reconciliation_id = reconciliation_id
 
@@ -258,8 +250,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._link_id = link_id
 
     @property
@@ -282,8 +272,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param report_group: The report_group of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-
-
 
         self._report_group = report_group
 
@@ -308,8 +296,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._visa_checkout_id = visa_checkout_id
 
     @property
@@ -332,8 +318,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param purchase_level: The purchase_level of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-
-
 
         self._purchase_level = purchase_level
 
@@ -358,8 +342,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._industry_data_type = industry_data_type
 
     @property
@@ -382,8 +364,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param wallet_type: The wallet_type of this Ptsv2creditsProcessingInformation.
         :type: str
         """
-
-
 
         self._wallet_type = wallet_type
 
@@ -408,8 +388,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._national_net_domestic_data = national_net_domestic_data
 
     @property
@@ -433,8 +411,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._network_routing_order = network_routing_order
 
     @property
@@ -455,8 +431,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param recurring_options: The recurring_options of this Ptsv2creditsProcessingInformation.
         :type: Ptsv2paymentsidrefundsProcessingInformationRecurringOptions
         """
-
-
 
         self._recurring_options = recurring_options
 
@@ -479,8 +453,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: Ptsv2creditsProcessingInformationBankTransferOptions
         """
 
-
-
         self._bank_transfer_options = bank_transfer_options
 
     @property
@@ -501,8 +473,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param purchase_options: The purchase_options of this Ptsv2creditsProcessingInformation.
         :type: Ptsv2creditsProcessingInformationPurchaseOptions
         """
-
-
 
         self._purchase_options = purchase_options
 
@@ -525,8 +495,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: Ptsv2creditsProcessingInformationElectronicBenefitsTransfer
         """
 
-
-
         self._electronic_benefits_transfer = electronic_benefits_transfer
 
     @property
@@ -547,8 +515,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param loan_options: The loan_options of this Ptsv2creditsProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationLoanOptions
         """
-
-
 
         self._loan_options = loan_options
 
@@ -571,8 +537,6 @@ class Ptsv2creditsProcessingInformation(object):
         :type: Ptsv2creditsProcessingInformationJapanPaymentOptions
         """
 
-
-
         self._japan_payment_options = japan_payment_options
 
     @property
@@ -593,8 +557,6 @@ class Ptsv2creditsProcessingInformation(object):
         :param refund_options: The refund_options of this Ptsv2creditsProcessingInformation.
         :type: Ptsv2creditsProcessingInformationRefundOptions
         """
-
-
 
         self._refund_options = refund_options
 

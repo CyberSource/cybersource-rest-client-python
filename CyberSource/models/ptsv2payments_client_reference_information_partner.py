@@ -83,8 +83,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :type: str
         """
 
-
-
         self._original_transaction_id = original_transaction_id
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param developer_id: The developer_id of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-
-
 
         self._developer_id = developer_id
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :type: str
         """
 
-
-
         self._solution_id = solution_id
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2paymentsClientReferenceInformationPartner(object):
         :param third_party_certification_number: The third_party_certification_number of this Ptsv2paymentsClientReferenceInformationPartner.
         :type: str
         """
-
-
 
         self._third_party_certification_number = third_party_certification_number
 

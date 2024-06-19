@@ -66,8 +66,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformation(object):
         :type: PtsV2PayoutsPost201ResponseRecipientInformationCard
         """
 
-
-
         self._card = card
 
     def to_dict(self):

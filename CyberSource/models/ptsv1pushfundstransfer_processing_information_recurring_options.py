@@ -68,8 +68,6 @@ class Ptsv1pushfundstransferProcessingInformationRecurringOptions(object):
         :type: bool
         """
 
-
-
         self._loan_payment = loan_payment
 
     def to_dict(self):

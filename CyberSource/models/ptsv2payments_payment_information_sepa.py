@@ -66,8 +66,6 @@ class Ptsv2paymentsPaymentInformationSepa(object):
         :type: Ptsv2paymentsPaymentInformationSepaDirectDebit
         """
 
-
-
         self._direct_debit = direct_debit
 
     def to_dict(self):

@@ -88,8 +88,6 @@ class PtsV2PaymentsPost201Response2ProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -112,8 +110,6 @@ class PtsV2PaymentsPost201Response2ProcessorInformation(object):
         :param payment_url: The payment_url of this PtsV2PaymentsPost201Response2ProcessorInformation.
         :type: str
         """
-
-
 
         self._payment_url = payment_url
 
@@ -138,8 +134,6 @@ class PtsV2PaymentsPost201Response2ProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_details = response_details
 
     @property
@@ -163,8 +157,6 @@ class PtsV2PaymentsPost201Response2ProcessorInformation(object):
         :type: str
         """
 
-
-
         self._token = token
 
     @property
@@ -187,8 +179,6 @@ class PtsV2PaymentsPost201Response2ProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsPost201Response2ProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 

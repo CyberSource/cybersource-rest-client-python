@@ -88,8 +88,6 @@ class Riskv1decisionsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -112,8 +110,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param username: The username of this Riskv1decisionsBuyerInformation.
         :type: str
         """
-
-
 
         self._username = username
 
@@ -138,8 +134,6 @@ class Riskv1decisionsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._hashed_password = hashed_password
 
     @property
@@ -163,8 +157,6 @@ class Riskv1decisionsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._date_of_birth = date_of_birth
 
     @property
@@ -185,8 +177,6 @@ class Riskv1decisionsBuyerInformation(object):
         :param personal_identification: The personal_identification of this Riskv1decisionsBuyerInformation.
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
-
-
 
         self._personal_identification = personal_identification
 

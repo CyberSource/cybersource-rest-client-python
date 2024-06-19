@@ -88,8 +88,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -112,8 +110,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param discretionary_data: The discretionary_data of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-
-
 
         self._discretionary_data = discretionary_data
 
@@ -138,8 +134,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :type: str
         """
 
-
-
         self._country_specific_discretionary_data = country_specific_discretionary_data
 
     @property
@@ -163,8 +157,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :type: str
         """
 
-
-
         self._response_code = response_code
 
     @property
@@ -187,8 +179,6 @@ class PtsV2PaymentsPost201ResponseIssuerInformation(object):
         :param pin_request_indicator: The pin_request_indicator of this PtsV2PaymentsPost201ResponseIssuerInformation.
         :type: str
         """
-
-
 
         self._pin_request_indicator = pin_request_indicator
 

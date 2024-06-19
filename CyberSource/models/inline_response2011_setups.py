@@ -81,8 +81,6 @@ class InlineResponse2011Setups(object):
         :type: InlineResponse2011SetupsPayments
         """
 
-
-
         self._payments = payments
 
     @property
@@ -103,8 +101,6 @@ class InlineResponse2011Setups(object):
         :param risk: The risk of this InlineResponse2011Setups.
         :type: InlineResponse2011SetupsRisk
         """
-
-
 
         self._risk = risk
 
@@ -127,8 +123,6 @@ class InlineResponse2011Setups(object):
         :type: InlineResponse2011SetupsCommerceSolutions
         """
 
-
-
         self._commerce_solutions = commerce_solutions
 
     @property
@@ -149,8 +143,6 @@ class InlineResponse2011Setups(object):
         :param value_added_services: The value_added_services of this InlineResponse2011Setups.
         :type: InlineResponse2011SetupsValueAddedServices
         """
-
-
 
         self._value_added_services = value_added_services
 

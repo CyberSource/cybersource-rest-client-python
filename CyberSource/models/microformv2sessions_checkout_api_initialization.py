@@ -111,8 +111,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :type: str
         """
 
-
-
         self._profile_id = profile_id
 
     @property
@@ -133,8 +131,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :param access_key: The access_key of this Microformv2sessionsCheckoutApiInitialization.
         :type: str
         """
-
-
 
         self._access_key = access_key
 
@@ -157,8 +153,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     @property
@@ -179,8 +173,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :param transaction_uuid: The transaction_uuid of this Microformv2sessionsCheckoutApiInitialization.
         :type: str
         """
-
-
 
         self._transaction_uuid = transaction_uuid
 
@@ -203,8 +195,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :type: str
         """
 
-
-
         self._transaction_type = transaction_type
 
     @property
@@ -225,8 +215,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :param currency: The currency of this Microformv2sessionsCheckoutApiInitialization.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -249,8 +237,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     @property
@@ -271,8 +257,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :param locale: The locale of this Microformv2sessionsCheckoutApiInitialization.
         :type: str
         """
-
-
 
         self._locale = locale
 
@@ -295,8 +279,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :type: str
         """
 
-
-
         self._override_custom_receipt_page = override_custom_receipt_page
 
     @property
@@ -317,8 +299,6 @@ class Microformv2sessionsCheckoutApiInitialization(object):
         :param unsigned_field_names: The unsigned_field_names of this Microformv2sessionsCheckoutApiInitialization.
         :type: str
         """
-
-
 
         self._unsigned_field_names = unsigned_field_names
 

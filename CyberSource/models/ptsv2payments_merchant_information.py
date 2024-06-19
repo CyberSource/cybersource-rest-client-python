@@ -151,8 +151,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: Ptsv2paymentsMerchantInformationMerchantDescriptor
         """
 
-
-
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -175,8 +173,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param domain_name: The domain_name of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._domain_name = domain_name
 
@@ -201,8 +197,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._sales_organization_id = sales_organization_id
 
     @property
@@ -225,8 +219,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param category_code: The category_code of this Ptsv2paymentsMerchantInformation.
         :type: int
         """
-
-
 
         self._category_code = category_code
 
@@ -251,8 +243,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: int
         """
 
-
-
         self._category_code_domestic = category_code_domestic
 
     @property
@@ -275,8 +265,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param tax_id: The tax_id of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._tax_id = tax_id
 
@@ -301,8 +289,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -325,8 +311,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._card_acceptor_reference_number = card_acceptor_reference_number
 
@@ -351,8 +335,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._transaction_local_date_time = transaction_local_date_time
 
     @property
@@ -373,8 +355,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param service_fee_descriptor: The service_fee_descriptor of this Ptsv2paymentsMerchantInformation.
         :type: Ptsv2paymentsMerchantInformationServiceFeeDescriptor
         """
-
-
 
         self._service_fee_descriptor = service_fee_descriptor
 
@@ -399,8 +379,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._cancel_url = cancel_url
 
     @property
@@ -423,8 +401,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param success_url: The success_url of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._success_url = success_url
 
@@ -449,8 +425,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._failure_url = failure_url
 
     @property
@@ -473,8 +447,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param return_url: The return_url of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._return_url = return_url
 
@@ -499,8 +471,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._partner_id_code = partner_id_code
 
     @property
@@ -521,8 +491,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param service_location: The service_location of this Ptsv2paymentsMerchantInformation.
         :type: Ptsv2paymentsMerchantInformationServiceLocation
         """
-
-
 
         self._service_location = service_location
 
@@ -547,8 +515,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._note_to_buyer = note_to_buyer
 
     @property
@@ -571,8 +537,6 @@ class Ptsv2paymentsMerchantInformation(object):
         :param merchant_name: The merchant_name of this Ptsv2paymentsMerchantInformation.
         :type: str
         """
-
-
 
         self._merchant_name = merchant_name
 

@@ -71,8 +71,6 @@ class PtsV2PaymentsRefundPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -93,8 +91,6 @@ class PtsV2PaymentsRefundPost201ResponseLinks(object):
         :param void: The void of this PtsV2PaymentsRefundPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._void = void
 

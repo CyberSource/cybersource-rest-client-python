@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :type: str
         """
 
-
-
         self._network = network
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :type: str
         """
 
-
-
         self._network_name = network_name
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationRouting(object):
         :param customer_signature_required: The customer_signature_required of this PtsV2PaymentsPost201ResponseProcessorInformationRouting.
         :type: str
         """
-
-
 
         self._customer_signature_required = customer_signature_required
 

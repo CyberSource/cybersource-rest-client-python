@@ -91,8 +91,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :type: GetAllSubscriptionsResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -116,8 +114,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -138,8 +134,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :param plan_information: The plan_information of this GetAllSubscriptionsResponseSubscriptions.
         :type: GetAllSubscriptionsResponsePlanInformation
         """
-
-
 
         self._plan_information = plan_information
 
@@ -162,8 +156,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :type: GetAllSubscriptionsResponseSubscriptionInformation
         """
 
-
-
         self._subscription_information = subscription_information
 
     @property
@@ -185,8 +177,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :type: GetAllSubscriptionsResponsePaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -207,8 +197,6 @@ class GetAllSubscriptionsResponseSubscriptions(object):
         :param order_information: The order_information of this GetAllSubscriptionsResponseSubscriptions.
         :type: GetAllSubscriptionsResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

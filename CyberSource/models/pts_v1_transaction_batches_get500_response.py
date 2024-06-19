@@ -71,8 +71,6 @@ class PtsV1TransactionBatchesGet500Response(object):
         :type: PtsV1TransactionBatchesGet500ResponseErrorInformation
         """
 
-
-
         self._error_information = error_information
 
     @property
@@ -95,8 +93,6 @@ class PtsV1TransactionBatchesGet500Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV1TransactionBatchesGet500Response.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 

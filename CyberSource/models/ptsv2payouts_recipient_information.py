@@ -118,8 +118,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -142,8 +140,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param middle_initial: The middle_initial of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-
-
 
         self._middle_initial = middle_initial
 
@@ -168,8 +164,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._middle_name = middle_name
 
     @property
@@ -192,8 +186,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param last_name: The last_name of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -218,8 +210,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -242,8 +232,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param locality: The locality of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-
-
 
         self._locality = locality
 
@@ -268,8 +256,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -292,8 +278,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param country: The country of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -318,8 +302,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -343,8 +325,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -367,8 +347,6 @@ class Ptsv2payoutsRecipientInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2payoutsRecipientInformation.
         :type: str
         """
-
-
 
         self._date_of_birth = date_of_birth
 

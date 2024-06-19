@@ -78,8 +78,6 @@ class GetAllPlansResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -103,8 +101,6 @@ class GetAllPlansResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._billing_amount = billing_amount
 
     @property
@@ -127,8 +123,6 @@ class GetAllPlansResponseOrderInformationAmountDetails(object):
         :param setup_fee: The setup_fee of this GetAllPlansResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._setup_fee = setup_fee
 

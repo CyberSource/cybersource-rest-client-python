@@ -66,8 +66,6 @@ class DmConfigThirdparty(object):
         :type: DmConfigThirdpartyProvider
         """
 
-
-
         self._provider = provider
 
     def to_dict(self):

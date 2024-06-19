@@ -66,8 +66,6 @@ class TssV2TransactionsPost201ResponseEmbeddedRiskInformationProviders(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedRiskInformationProvidersFingerprint
         """
 
-
-
         self._fingerprint = fingerprint
 
     def to_dict(self):

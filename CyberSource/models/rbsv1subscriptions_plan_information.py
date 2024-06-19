@@ -71,8 +71,6 @@ class Rbsv1subscriptionsPlanInformation(object):
         :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
-
-
         self._billing_period = billing_period
 
     @property
@@ -93,8 +91,6 @@ class Rbsv1subscriptionsPlanInformation(object):
         :param billing_cycles: The billing_cycles of this Rbsv1subscriptionsPlanInformation.
         :type: Rbsv1plansPlanInformationBillingCycles
         """
-
-
 
         self._billing_cycles = billing_cycles
 

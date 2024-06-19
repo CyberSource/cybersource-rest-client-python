@@ -88,8 +88,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :type: str
         """
 
-
-
         self._tag = tag
 
     @property
@@ -112,8 +110,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :param name: The name of this TssV2PostEmvTags200ResponseEmvTagBreakdownList.
         :type: str
         """
-
-
 
         self._name = name
 
@@ -138,8 +134,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :type: int
         """
 
-
-
         self._length = length
 
     @property
@@ -163,8 +157,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :type: str
         """
 
-
-
         self._value = value
 
     @property
@@ -187,8 +179,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :param description: The description of this TssV2PostEmvTags200ResponseEmvTagBreakdownList.
         :type: str
         """
-
-
 
         self._description = description
 

@@ -158,13 +158,6 @@ class PushFundsApi(object):
             raise ValueError("Missing the required parameter `v_c_organization_id` when calling `create_push_funds_transfer`")
 
 
-
-
-
-
-
-
-
         collection_formats = {}
 
         path_params = {}

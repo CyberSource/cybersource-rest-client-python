@@ -93,8 +93,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :type: str
         """
 
-
-
         self._billing_type = billing_type
 
     @property
@@ -117,8 +115,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :param request_email: The request_email of this Upv1capturecontextsCaptureMandate.
         :type: bool
         """
-
-
 
         self._request_email = request_email
 
@@ -143,8 +139,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :type: bool
         """
 
-
-
         self._request_phone = request_phone
 
     @property
@@ -167,8 +161,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :param request_shipping: The request_shipping of this Upv1capturecontextsCaptureMandate.
         :type: bool
         """
-
-
 
         self._request_shipping = request_shipping
 
@@ -193,8 +185,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :type: list[str]
         """
 
-
-
         self._ship_to_countries = ship_to_countries
 
     @property
@@ -217,8 +207,6 @@ class Upv1capturecontextsCaptureMandate(object):
         :param show_accepted_network_icons: The show_accepted_network_icons of this Upv1capturecontextsCaptureMandate.
         :type: bool
         """
-
-
 
         self._show_accepted_network_icons = show_accepted_network_icons
 

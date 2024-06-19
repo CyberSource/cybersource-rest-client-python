@@ -103,8 +103,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -127,8 +125,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :param security_code: The security_code of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: str
         """
-
-
 
         self._security_code = security_code
 
@@ -153,8 +149,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -177,8 +171,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -203,8 +195,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -225,8 +215,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :param customer: The customer of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: Ptsv1pushfundstransferRecipientInformationPaymentInformationCardCustomer
         """
-
-
 
         self._customer = customer
 
@@ -249,8 +237,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :type: Ptsv1pushfundstransferRecipientInformationPaymentInformationCardPaymentInstrument
         """
 
-
-
         self._payment_instrument = payment_instrument
 
     @property
@@ -271,8 +257,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
         :param instrument_identifier: The instrument_identifier of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: Ptsv1pushfundstransferRecipientInformationPaymentInformationCardInstrumentIdentifier
         """
-
-
 
         self._instrument_identifier = instrument_identifier
 

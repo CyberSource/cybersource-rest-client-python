@@ -78,8 +78,6 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
         :type: str
         """
 
-
-
         self._reversed_amount = reversed_amount
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
         :type: str
         """
 
-
-
         self._original_transaction_amount = original_transaction_amount
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsReversalsPost201ResponseReversalAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

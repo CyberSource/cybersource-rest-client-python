@@ -71,8 +71,6 @@ class RiskProductsDecisionManagerConfigurationInformation(object):
         :type: str
         """
 
-
-
         self._template_id = template_id
 
     @property
@@ -93,8 +91,6 @@ class RiskProductsDecisionManagerConfigurationInformation(object):
         :param configurations: The configurations of this RiskProductsDecisionManagerConfigurationInformation.
         :type: DmConfig
         """
-
-
 
         self._configurations = configurations
 

@@ -78,8 +78,6 @@ class PayerAuthConfigCardTypesCB(object):
         :type: str
         """
 
-
-
         self._requestor_id = requestor_id
 
     @property
@@ -101,8 +99,6 @@ class PayerAuthConfigCardTypesCB(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -123,8 +119,6 @@ class PayerAuthConfigCardTypesCB(object):
         :param currencies: The currencies of this PayerAuthConfigCardTypesCB.
         :type: list[PayerAuthConfigCardTypesVerifiedByVisaCurrencies]
         """
-
-
 
         self._currencies = currencies
 

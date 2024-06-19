@@ -138,8 +138,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -162,8 +160,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -188,8 +184,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -212,8 +206,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type = type
 
@@ -238,8 +230,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._use_as = use_as
 
     @property
@@ -262,8 +252,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param source_account_type: The source_account_type of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._source_account_type = source_account_type
 
@@ -288,8 +276,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._source_account_type_details = source_account_type_details
 
     @property
@@ -312,8 +298,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._security_code = security_code
 
@@ -338,8 +322,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._security_code_indicator = security_code_indicator
 
     @property
@@ -362,8 +344,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param account_encoder_id: The account_encoder_id of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._account_encoder_id = account_encoder_id
 
@@ -388,8 +368,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._issue_number = issue_number
 
     @property
@@ -412,8 +390,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param start_month: The start_month of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._start_month = start_month
 
@@ -438,8 +414,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._start_year = start_year
 
     @property
@@ -463,8 +437,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._product_name = product_name
 
     @property
@@ -487,8 +459,6 @@ class Ptsv2paymentsPaymentInformationCard(object):
         :param type_selection_indicator: The type_selection_indicator of this Ptsv2paymentsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type_selection_indicator = type_selection_indicator
 

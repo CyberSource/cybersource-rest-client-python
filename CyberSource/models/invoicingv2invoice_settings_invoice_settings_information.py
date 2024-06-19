@@ -113,8 +113,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: str
         """
 
-
-
         self._merchant_logo = merchant_logo
 
     @property
@@ -137,8 +135,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param merchant_display_name: The merchant_display_name of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-
-
 
         self._merchant_display_name = merchant_display_name
 
@@ -163,8 +159,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: str
         """
 
-
-
         self._custom_email_message = custom_email_message
 
     @property
@@ -188,8 +182,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: bool
         """
 
-
-
         self._enable_reminders = enable_reminders
 
     @property
@@ -210,8 +202,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param header_style: The header_style of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle
         """
-
-
 
         self._header_style = header_style
 
@@ -236,8 +226,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: str
         """
 
-
-
         self._delivery_language = delivery_language
 
     @property
@@ -260,8 +248,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param default_currency_code: The default_currency_code of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-
-
 
         self._default_currency_code = default_currency_code
 
@@ -286,8 +272,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: str
         """
 
-
-
         self._payer_authentication_in_invoicing = payer_authentication_in_invoicing
 
     @property
@@ -311,8 +295,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :type: bool
         """
 
-
-
         self._show_vat_number = show_vat_number
 
     @property
@@ -335,8 +317,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation(object):
         :param vat_registration_number: The vat_registration_number of this Invoicingv2invoiceSettingsInvoiceSettingsInformation.
         :type: str
         """
-
-
 
         self._vat_registration_number = vat_registration_number
 

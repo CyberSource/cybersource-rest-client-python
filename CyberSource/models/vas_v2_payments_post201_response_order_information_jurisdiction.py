@@ -108,8 +108,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -132,8 +130,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param tax_name: The tax_name of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-
-
 
         self._tax_name = tax_name
 
@@ -158,8 +154,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :type: str
         """
 
-
-
         self._tax_amount = tax_amount
 
     @property
@@ -182,8 +176,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param taxable: The taxable of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-
-
 
         self._taxable = taxable
 
@@ -208,8 +200,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -232,8 +222,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param code: The code of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-
-
 
         self._code = code
 
@@ -258,8 +246,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :type: str
         """
 
-
-
         self._rate = rate
 
     @property
@@ -283,8 +269,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :type: str
         """
 
-
-
         self._region = region
 
     @property
@@ -307,8 +291,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction(object):
         :param country: The country of this VasV2PaymentsPost201ResponseOrderInformationJurisdiction.
         :type: str
         """
-
-
 
         self._country = country
 

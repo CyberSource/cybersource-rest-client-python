@@ -83,8 +83,6 @@ class ReportingV3ConversionDetailsGet200Response(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -105,8 +103,6 @@ class ReportingV3ConversionDetailsGet200Response(object):
         :param start_time: The start_time of this ReportingV3ConversionDetailsGet200Response.
         :type: datetime
         """
-
-
 
         self._start_time = start_time
 
@@ -129,8 +125,6 @@ class ReportingV3ConversionDetailsGet200Response(object):
         :type: datetime
         """
 
-
-
         self._end_time = end_time
 
     @property
@@ -151,8 +145,6 @@ class ReportingV3ConversionDetailsGet200Response(object):
         :param conversion_details: The conversion_details of this ReportingV3ConversionDetailsGet200Response.
         :type: list[ReportingV3ConversionDetailsGet200ResponseConversionDetails]
         """
-
-
 
         self._conversion_details = conversion_details
 

@@ -173,8 +173,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._auth_type = auth_type
 
     @property
@@ -197,8 +195,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param pan_return_indicator: The pan_return_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._pan_return_indicator = pan_return_indicator
 
@@ -223,8 +219,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._verbal_auth_code = verbal_auth_code
 
     @property
@@ -247,8 +241,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param verbal_auth_transaction_id: The verbal_auth_transaction_id of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._verbal_auth_transaction_id = verbal_auth_transaction_id
 
@@ -273,8 +265,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._auth_indicator = auth_indicator
 
     @property
@@ -297,8 +287,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param partial_auth_indicator: The partial_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
         """
-
-
 
         self._partial_auth_indicator = partial_auth_indicator
 
@@ -323,8 +311,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._extend_auth_indicator = extend_auth_indicator
 
     @property
@@ -347,8 +333,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param balance_inquiry: The balance_inquiry of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
         """
-
-
 
         self._balance_inquiry = balance_inquiry
 
@@ -373,8 +357,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._ignore_avs_result = ignore_avs_result
 
     @property
@@ -397,8 +379,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param decline_avs_flags: The decline_avs_flags of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: list[str]
         """
-
-
 
         self._decline_avs_flags = decline_avs_flags
 
@@ -423,8 +403,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._ignore_cv_result = ignore_cv_result
 
     @property
@@ -445,8 +423,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param initiator: The initiator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator
         """
-
-
 
         self._initiator = initiator
 
@@ -471,8 +447,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._bill_payment = bill_payment
 
     @property
@@ -495,8 +469,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param bill_payment_type: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._bill_payment_type = bill_payment_type
 
@@ -521,8 +493,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._redemption_inquiry = redemption_inquiry
 
     @property
@@ -545,8 +515,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param transportation_mode: The transportation_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._transportation_mode = transportation_mode
 
@@ -571,8 +539,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._aggregated_auth_indicator = aggregated_auth_indicator
 
     @property
@@ -595,8 +561,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param debt_recovery_indicator: The debt_recovery_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._debt_recovery_indicator = debt_recovery_indicator
 
@@ -621,8 +585,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._deferred_auth_indicator = deferred_auth_indicator
 
     @property
@@ -645,8 +607,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param cash_advance_indicator: The cash_advance_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
         """
-
-
 
         self._cash_advance_indicator = cash_advance_indicator
 
@@ -671,8 +631,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :type: bool
         """
 
-
-
         self._split_payment_transaction = split_payment_transaction
 
     @property
@@ -695,8 +653,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         :param card_verification_indicator: The card_verification_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: bool
         """
-
-
 
         self._card_verification_indicator = card_verification_indicator
 

@@ -68,8 +68,6 @@ class PtsV2ModifyBillingAgreementPost201ResponsePaymentInformationBank(object):
         :type: str
         """
 
-
-
         self._iban = iban
 
     def to_dict(self):

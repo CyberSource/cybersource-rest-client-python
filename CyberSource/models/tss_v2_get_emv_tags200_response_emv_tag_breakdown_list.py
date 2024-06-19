@@ -73,8 +73,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList(object):
         :type: str
         """
 
-
-
         self._tag = tag
 
     @property
@@ -97,8 +95,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList(object):
         :param name: The name of this TssV2GetEmvTags200ResponseEmvTagBreakdownList.
         :type: str
         """
-
-
 
         self._name = name
 

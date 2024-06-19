@@ -71,8 +71,6 @@ class DeleteBulkSymmetricKeysRequest(object):
         :type: Kmsv2keyssymClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -93,8 +91,6 @@ class DeleteBulkSymmetricKeysRequest(object):
         :param key_information: The key_information of this DeleteBulkSymmetricKeysRequest.
         :type: list[Kmsv2keyssymdeletesKeyInformation]
         """
-
-
 
         self._key_information = key_information
 

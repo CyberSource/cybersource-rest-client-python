@@ -68,8 +68,6 @@ class Ptsv1pushfundstransferOrderInformationSurcharge(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     def to_dict(self):

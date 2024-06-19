@@ -93,8 +93,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -117,8 +115,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :param address2: The address2 of this Vasv2taxOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -143,8 +139,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -167,8 +161,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Vasv2taxOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -193,8 +185,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -217,8 +207,6 @@ class Vasv2taxOrderInformationBillTo(object):
         :param country: The country of this Vasv2taxOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._country = country
 

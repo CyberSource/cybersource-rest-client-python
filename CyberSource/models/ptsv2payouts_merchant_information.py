@@ -83,8 +83,6 @@ class Ptsv2payoutsMerchantInformation(object):
         :type: int
         """
 
-
-
         self._category_code = category_code
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2payoutsMerchantInformation(object):
         :param submit_local_date_time: The submit_local_date_time of this Ptsv2payoutsMerchantInformation.
         :type: str
         """
-
-
 
         self._submit_local_date_time = submit_local_date_time
 
@@ -133,8 +129,6 @@ class Ptsv2payoutsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -155,8 +149,6 @@ class Ptsv2payoutsMerchantInformation(object):
         :param merchant_descriptor: The merchant_descriptor of this Ptsv2payoutsMerchantInformation.
         :type: Ptsv2payoutsMerchantInformationMerchantDescriptor
         """
-
-
 
         self._merchant_descriptor = merchant_descriptor
 

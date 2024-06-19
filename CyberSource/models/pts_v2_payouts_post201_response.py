@@ -126,8 +126,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -150,8 +148,6 @@ class PtsV2PayoutsPost201Response(object):
         :param id: The id of this PtsV2PayoutsPost201Response.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -176,8 +172,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -200,8 +194,6 @@ class PtsV2PayoutsPost201Response(object):
         :param status: The status of this PtsV2PayoutsPost201Response.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -226,8 +218,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -248,8 +238,6 @@ class PtsV2PayoutsPost201Response(object):
         :param error_information: The error_information of this PtsV2PayoutsPost201Response.
         :type: PtsV2PayoutsPost201ResponseErrorInformation
         """
-
-
 
         self._error_information = error_information
 
@@ -272,8 +260,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -294,8 +280,6 @@ class PtsV2PayoutsPost201Response(object):
         :param merchant_information: The merchant_information of this PtsV2PayoutsPost201Response.
         :type: PtsV2PayoutsPost201ResponseMerchantInformation
         """
-
-
 
         self._merchant_information = merchant_information
 
@@ -318,8 +302,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: PtsV2PayoutsPost201ResponseOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -340,8 +322,6 @@ class PtsV2PayoutsPost201Response(object):
         :param processor_information: The processor_information of this PtsV2PayoutsPost201Response.
         :type: PtsV2PayoutsPost201ResponseProcessorInformation
         """
-
-
 
         self._processor_information = processor_information
 
@@ -364,8 +344,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: PtsV2PayoutsPost201ResponseRecipientInformation
         """
 
-
-
         self._recipient_information = recipient_information
 
     @property
@@ -387,8 +365,6 @@ class PtsV2PayoutsPost201Response(object):
         :type: PtsV2PayoutsPost201ResponseIssuerInformation
         """
 
-
-
         self._issuer_information = issuer_information
 
     @property
@@ -409,8 +385,6 @@ class PtsV2PayoutsPost201Response(object):
         :param token_information: The token_information of this PtsV2PayoutsPost201Response.
         :type: PtsV2PaymentsPost201ResponseTokenInformation
         """
-
-
 
         self._token_information = token_information
 

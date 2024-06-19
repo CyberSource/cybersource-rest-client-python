@@ -76,8 +76,6 @@ class VerifyCustomerAddressRequest(object):
         :type: Riskv1liststypeentriesClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -99,8 +97,6 @@ class VerifyCustomerAddressRequest(object):
         :type: Riskv1addressverificationsOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -121,8 +117,6 @@ class VerifyCustomerAddressRequest(object):
         :param buyer_information: The buyer_information of this VerifyCustomerAddressRequest.
         :type: Riskv1addressverificationsBuyerInformation
         """
-
-
 
         self._buyer_information = buyer_information
 

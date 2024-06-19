@@ -73,8 +73,6 @@ class Riskv1exportcomplianceinquiriesDeviceInformation(object):
         :type: str
         """
 
-
-
         self._ip_address = ip_address
 
     @property
@@ -97,8 +95,6 @@ class Riskv1exportcomplianceinquiriesDeviceInformation(object):
         :param host_name: The host_name of this Riskv1exportcomplianceinquiriesDeviceInformation.
         :type: str
         """
-
-
 
         self._host_name = host_name
 

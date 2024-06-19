@@ -118,8 +118,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -142,8 +140,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :param last_name: The last_name of this Tmsv2customersEmbeddedDefaultShippingAddressShipTo.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -168,8 +164,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._company = company
 
     @property
@@ -192,8 +186,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :param address1: The address1 of this Tmsv2customersEmbeddedDefaultShippingAddressShipTo.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -218,8 +210,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._address2 = address2
 
     @property
@@ -242,8 +232,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :param locality: The locality of this Tmsv2customersEmbeddedDefaultShippingAddressShipTo.
         :type: str
         """
-
-
 
         self._locality = locality
 
@@ -268,8 +256,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -292,8 +278,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :param postal_code: The postal_code of this Tmsv2customersEmbeddedDefaultShippingAddressShipTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -318,8 +302,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -343,8 +325,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -367,8 +347,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressShipTo(object):
         :param phone_number: The phone_number of this Tmsv2customersEmbeddedDefaultShippingAddressShipTo.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 

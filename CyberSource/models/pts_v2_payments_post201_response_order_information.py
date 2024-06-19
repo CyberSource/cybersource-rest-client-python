@@ -86,8 +86,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsPost201ResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -108,8 +106,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         :param invoice_details: The invoice_details of this PtsV2PaymentsPost201ResponseOrderInformation.
         :type: PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails
         """
-
-
 
         self._invoice_details = invoice_details
 
@@ -132,8 +128,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails
         """
 
-
-
         self._reward_points_details = reward_points_details
 
     @property
@@ -155,8 +149,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsPost201ResponseOrderInformationBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -177,8 +169,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation(object):
         :param ship_to: The ship_to of this PtsV2PaymentsPost201ResponseOrderInformation.
         :type: PtsV2PaymentsPost201ResponseOrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 

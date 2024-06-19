@@ -86,8 +86,6 @@ class InlineResponse2008ResponseRecordAdditionalUpdates(object):
         :type: str
         """
 
-
-
         self._customer_id = customer_id
 
     @property
@@ -109,8 +107,6 @@ class InlineResponse2008ResponseRecordAdditionalUpdates(object):
         :type: str
         """
 
-
-
         self._payment_instrument_id = payment_instrument_id
 
     @property
@@ -131,8 +127,6 @@ class InlineResponse2008ResponseRecordAdditionalUpdates(object):
         :param creator: The creator of this InlineResponse2008ResponseRecordAdditionalUpdates.
         :type: str
         """
-
-
 
         self._creator = creator
 
@@ -157,8 +151,6 @@ class InlineResponse2008ResponseRecordAdditionalUpdates(object):
         :type: str
         """
 
-
-
         self._state = state
 
     @property
@@ -179,8 +171,6 @@ class InlineResponse2008ResponseRecordAdditionalUpdates(object):
         :param message: The message of this InlineResponse2008ResponseRecordAdditionalUpdates.
         :type: str
         """
-
-
 
         self._message = message
 

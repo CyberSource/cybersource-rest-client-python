@@ -123,8 +123,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -147,8 +145,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -173,8 +169,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -197,8 +191,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._type = type
 
@@ -223,8 +215,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._cryptogram = cryptogram
 
     @property
@@ -247,8 +237,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param requestor_id: The requestor_id of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._requestor_id = requestor_id
 
@@ -273,8 +261,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._transaction_type = transaction_type
 
     @property
@@ -297,8 +283,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param assurance_level: The assurance_level of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._assurance_level = assurance_level
 
@@ -323,8 +307,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._storage_method = storage_method
 
     @property
@@ -347,8 +329,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param security_code: The security_code of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._security_code = security_code
 
@@ -373,8 +353,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :type: str
         """
 
-
-
         self._security_code_indicator = security_code_indicator
 
     @property
@@ -397,8 +375,6 @@ class Ptsv2paymentsPaymentInformationTokenizedCard(object):
         :param assurance_method: The assurance_method of this Ptsv2paymentsPaymentInformationTokenizedCard.
         :type: str
         """
-
-
 
         self._assurance_method = assurance_method
 

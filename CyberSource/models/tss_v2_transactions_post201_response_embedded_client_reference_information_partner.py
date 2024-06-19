@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner(
         :type: str
         """
 
-
-
         self._solution_id = solution_id
 
     def to_dict(self):

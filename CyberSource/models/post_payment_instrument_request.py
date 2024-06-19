@@ -136,8 +136,6 @@ class PostPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -160,8 +158,6 @@ class PostPaymentInstrumentRequest(object):
         :param id: The id of this PostPaymentInstrumentRequest.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -186,8 +182,6 @@ class PostPaymentInstrumentRequest(object):
         :type: str
         """
 
-
-
         self._object = object
 
     @property
@@ -210,8 +204,6 @@ class PostPaymentInstrumentRequest(object):
         :param default: The default of this PostPaymentInstrumentRequest.
         :type: bool
         """
-
-
 
         self._default = default
 
@@ -236,8 +228,6 @@ class PostPaymentInstrumentRequest(object):
         :type: str
         """
 
-
-
         self._state = state
 
     @property
@@ -261,8 +251,6 @@ class PostPaymentInstrumentRequest(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -283,8 +271,6 @@ class PostPaymentInstrumentRequest(object):
         :param bank_account: The bank_account of this PostPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount
         """
-
-
 
         self._bank_account = bank_account
 
@@ -307,8 +293,6 @@ class PostPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentCard
         """
 
-
-
         self._card = card
 
     @property
@@ -329,8 +313,6 @@ class PostPaymentInstrumentRequest(object):
         :param buyer_information: The buyer_information of this PostPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation
         """
-
-
 
         self._buyer_information = buyer_information
 
@@ -353,8 +335,6 @@ class PostPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -375,8 +355,6 @@ class PostPaymentInstrumentRequest(object):
         :param processing_information: The processing_information of this PostPaymentInstrumentRequest.
         :type: TmsPaymentInstrumentProcessingInfo
         """
-
-
 
         self._processing_information = processing_information
 
@@ -399,8 +377,6 @@ class PostPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -421,8 +397,6 @@ class PostPaymentInstrumentRequest(object):
         :param instrument_identifier: The instrument_identifier of this PostPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentInstrumentIdentifier
         """
-
-
 
         self._instrument_identifier = instrument_identifier
 
@@ -445,8 +419,6 @@ class PostPaymentInstrumentRequest(object):
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentMetadata
         """
 
-
-
         self._metadata = metadata
 
     @property
@@ -467,8 +439,6 @@ class PostPaymentInstrumentRequest(object):
         :param embedded: The embedded of this PostPaymentInstrumentRequest.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded
         """
-
-
 
         self._embedded = embedded
 

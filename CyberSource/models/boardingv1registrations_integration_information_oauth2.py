@@ -70,8 +70,6 @@ class Boardingv1registrationsIntegrationInformationOauth2(object):
         :type: str
         """
 
-
-
         self._client_id = client_id
 
     @property
@@ -92,8 +90,6 @@ class Boardingv1registrationsIntegrationInformationOauth2(object):
         :param state: The state of this Boardingv1registrationsIntegrationInformationOauth2.
         :type: str
         """
-
-
 
         self._state = state
 

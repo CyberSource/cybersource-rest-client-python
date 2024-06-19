@@ -92,8 +92,6 @@ class ECheckConfigCommonProcessors(object):
         :type: str
         """
 
-
-
         self._company_entry_description = company_entry_description
 
     @property
@@ -116,8 +114,6 @@ class ECheckConfigCommonProcessors(object):
         :param company_id: The company_id of this ECheckConfigCommonProcessors.
         :type: str
         """
-
-
 
         self._company_id = company_id
 
@@ -142,8 +138,6 @@ class ECheckConfigCommonProcessors(object):
         :type: str
         """
 
-
-
         self._batch_group = batch_group
 
     @property
@@ -166,8 +160,6 @@ class ECheckConfigCommonProcessors(object):
         :param enable_accuity_for_avs: The enable_accuity_for_avs of this ECheckConfigCommonProcessors.
         :type: bool
         """
-
-
 
         self._enable_accuity_for_avs = enable_accuity_for_avs
 
@@ -192,8 +184,6 @@ class ECheckConfigCommonProcessors(object):
         :type: object
         """
 
-
-
         self._accuity_check_type = accuity_check_type
 
     @property
@@ -216,8 +206,6 @@ class ECheckConfigCommonProcessors(object):
         :param set_completed_state: The set_completed_state of this ECheckConfigCommonProcessors.
         :type: bool
         """
-
-
 
         self._set_completed_state = set_completed_state
 

@@ -81,8 +81,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType
         """
 
-
-
         self._payment_type = payment_type
 
     @property
@@ -103,8 +101,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         :param customer: The customer of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
         :type: Ptsv2refreshpaymentstatusidPaymentInformationCustomer
         """
-
-
 
         self._customer = customer
 
@@ -127,8 +123,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -149,8 +143,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation(object):
         :param bank: The bank of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformation.
         :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank
         """
-
-
 
         self._bank = bank
 

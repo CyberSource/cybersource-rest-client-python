@@ -68,8 +68,6 @@ class PtsV2PayoutsPost201ResponseIssuerInformation(object):
         :type: str
         """
 
-
-
         self._service_processing_type = service_processing_type
 
     def to_dict(self):

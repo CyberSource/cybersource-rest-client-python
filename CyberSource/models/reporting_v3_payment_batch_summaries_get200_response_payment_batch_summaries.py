@@ -121,8 +121,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: str
         """
 
-
-
         self._currency_code = currency_code
 
     @property
@@ -143,8 +141,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param payment_sub_type_description: The payment_sub_type_description of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: str
         """
-
-
 
         self._payment_sub_type_description = payment_sub_type_description
 
@@ -167,8 +163,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: datetime
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -189,8 +183,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param end_time: The end_time of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: datetime
         """
-
-
 
         self._end_time = end_time
 
@@ -213,8 +205,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: int
         """
 
-
-
         self._sales_count = sales_count
 
     @property
@@ -235,8 +225,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param sales_amount: The sales_amount of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: str
         """
-
-
 
         self._sales_amount = sales_amount
 
@@ -259,8 +247,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: int
         """
 
-
-
         self._credit_count = credit_count
 
     @property
@@ -281,8 +267,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param credit_amount: The credit_amount of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: str
         """
-
-
 
         self._credit_amount = credit_amount
 
@@ -305,8 +289,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: str
         """
 
-
-
         self._account_name = account_name
 
     @property
@@ -327,8 +309,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param account_id: The account_id of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: str
         """
-
-
 
         self._account_id = account_id
 
@@ -351,8 +331,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :type: str
         """
 
-
-
         self._merchant_id = merchant_id
 
     @property
@@ -373,8 +351,6 @@ class ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries(object
         :param merchant_name: The merchant_name of this ReportingV3PaymentBatchSummariesGet200ResponsePaymentBatchSummaries.
         :type: str
         """
-
-
 
         self._merchant_name = merchant_name
 

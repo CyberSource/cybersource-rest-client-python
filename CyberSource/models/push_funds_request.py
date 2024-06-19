@@ -108,8 +108,6 @@ class PushFundsRequest(object):
         :type: Ptsv1pushfundstransferClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -130,8 +128,6 @@ class PushFundsRequest(object):
         :param order_information: The order_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -154,8 +150,6 @@ class PushFundsRequest(object):
         :type: Ptsv1pushfundstransferProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -176,8 +170,6 @@ class PushFundsRequest(object):
         :param processing_options: The processing_options of this PushFundsRequest.
         :type: Ptsv1pushfundstransferProcessingOptions
         """
-
-
 
         self._processing_options = processing_options
 
@@ -200,8 +192,6 @@ class PushFundsRequest(object):
         :type: Ptsv1pushfundstransferRecipientInformation
         """
 
-
-
         self._recipient_information = recipient_information
 
     @property
@@ -222,8 +212,6 @@ class PushFundsRequest(object):
         :param sender_information: The sender_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferSenderInformation
         """
-
-
 
         self._sender_information = sender_information
 
@@ -246,8 +234,6 @@ class PushFundsRequest(object):
         :type: Ptsv1pushfundstransferAggregatorInformation
         """
 
-
-
         self._aggregator_information = aggregator_information
 
     @property
@@ -268,8 +254,6 @@ class PushFundsRequest(object):
         :param merchant_defined_information: The merchant_defined_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferMerchantDefinedInformation
         """
-
-
 
         self._merchant_defined_information = merchant_defined_information
 
@@ -292,8 +276,6 @@ class PushFundsRequest(object):
         :type: Ptsv1pushfundstransferMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -314,8 +296,6 @@ class PushFundsRequest(object):
         :param point_of_service_information: The point_of_service_information of this PushFundsRequest.
         :type: Ptsv1pushfundstransferPointOfServiceInformation
         """
-
-
 
         self._point_of_service_information = point_of_service_information
 

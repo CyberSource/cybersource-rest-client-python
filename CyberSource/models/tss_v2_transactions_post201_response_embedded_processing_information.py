@@ -83,8 +83,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_solution = payment_solution
 
     @property
@@ -107,8 +105,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :param business_application_id: The business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str
         """
-
-
 
         self._business_application_id = business_application_id
 
@@ -133,8 +129,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :type: str
         """
 
-
-
         self._commerce_indicator = commerce_indicator
 
     @property
@@ -157,8 +151,6 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
         :param commerce_indicator_label: The commerce_indicator_label of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str
         """
-
-
 
         self._commerce_indicator_label = commerce_indicator_label
 

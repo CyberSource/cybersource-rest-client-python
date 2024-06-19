@@ -83,8 +83,6 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
         :type: str
         """
 
-
-
         self._address_operator = address_operator
 
     @property
@@ -105,8 +103,6 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
         :param weights: The weights of this Ptsv2paymentsWatchlistScreeningInformation.
         :type: Ptsv2paymentsWatchlistScreeningInformationWeights
         """
-
-
 
         self._weights = weights
 
@@ -131,8 +127,6 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
         :type: list[str]
         """
 
-
-
         self._sanction_lists = sanction_lists
 
     @property
@@ -155,8 +149,6 @@ class Ptsv2paymentsWatchlistScreeningInformation(object):
         :param proceed_on_match: The proceed_on_match of this Ptsv2paymentsWatchlistScreeningInformation.
         :type: bool
         """
-
-
 
         self._proceed_on_match = proceed_on_match
 

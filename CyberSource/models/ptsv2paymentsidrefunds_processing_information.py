@@ -118,8 +118,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: list[str]
         """
 
-
-
         self._action_list = action_list
 
     @property
@@ -142,8 +140,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param payment_solution: The payment_solution of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-
-
 
         self._payment_solution = payment_solution
 
@@ -168,8 +164,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -192,8 +186,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param link_id: The link_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-
-
 
         self._link_id = link_id
 
@@ -218,8 +210,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._report_group = report_group
 
     @property
@@ -242,8 +232,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: str
         """
-
-
 
         self._visa_checkout_id = visa_checkout_id
 
@@ -268,8 +256,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._purchase_level = purchase_level
 
     @property
@@ -290,8 +276,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param recurring_options: The recurring_options of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: Ptsv2paymentsidrefundsProcessingInformationRecurringOptions
         """
-
-
 
         self._recurring_options = recurring_options
 
@@ -316,8 +300,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._industry_data_type = industry_data_type
 
     @property
@@ -341,8 +323,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_type = payment_type
 
     @property
@@ -363,8 +343,6 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         :param refund_options: The refund_options of this Ptsv2paymentsidrefundsProcessingInformation.
         :type: Ptsv2paymentsidrefundsProcessingInformationRefundOptions
         """
-
-
 
         self._refund_options = refund_options
 

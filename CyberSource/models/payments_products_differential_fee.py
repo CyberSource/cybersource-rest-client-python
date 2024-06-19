@@ -66,8 +66,6 @@ class PaymentsProductsDifferentialFee(object):
         :type: PaymentsProductsDifferentialFeeSubscriptionInformation
         """
 
-
-
         self._subscription_information = subscription_information
 
     def to_dict(self):

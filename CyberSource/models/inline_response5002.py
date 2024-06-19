@@ -83,8 +83,6 @@ class InlineResponse5002(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -107,8 +105,6 @@ class InlineResponse5002(object):
         :param status: The status of this InlineResponse5002.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -133,8 +129,6 @@ class InlineResponse5002(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -157,8 +151,6 @@ class InlineResponse5002(object):
         :param message: The message of this InlineResponse5002.
         :type: str
         """
-
-
 
         self._message = message
 

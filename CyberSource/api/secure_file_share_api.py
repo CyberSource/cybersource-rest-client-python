@@ -118,8 +118,6 @@ class SecureFileShareApi(object):
             raise ValueError("Missing the required parameter `file_id` when calling `get_file`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -244,10 +242,6 @@ class SecureFileShareApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `end_date` when calling `get_file_detail`")
-
-
-
-
 
 
         collection_formats = {}

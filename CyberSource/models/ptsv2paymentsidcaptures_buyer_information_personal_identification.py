@@ -68,8 +68,6 @@ class Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification(object):
         :type: str
         """
 
-
-
         self._id = id
 
     def to_dict(self):

@@ -98,8 +98,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -122,8 +120,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param upload_date: The upload_date of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
-
-
 
         self._upload_date = upload_date
 
@@ -148,8 +144,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: str
         """
 
-
-
         self._completion_date = completion_date
 
     @property
@@ -172,8 +166,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param transaction_count: The transaction_count of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: int
         """
-
-
 
         self._transaction_count = transaction_count
 
@@ -198,8 +190,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: int
         """
 
-
-
         self._accepted_transaction_count = accepted_transaction_count
 
     @property
@@ -223,8 +213,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :type: str
         """
 
-
-
         self._rejected_transaction_count = rejected_transaction_count
 
     @property
@@ -247,8 +235,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param status: The status of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
-
-
 
         self._status = status
 

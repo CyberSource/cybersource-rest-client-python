@@ -67,8 +67,6 @@ class CaseManagementCommentsRequest(object):
         :type: str
         """
 
-
-
         self._comments = comments
 
     def to_dict(self):

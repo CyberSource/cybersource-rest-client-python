@@ -73,8 +73,6 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -97,8 +95,6 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
         :param type: The type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :type: str
         """
-
-
 
         self._type = type
 

@@ -78,8 +78,6 @@ class InlineResponse400Errors(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -103,8 +101,6 @@ class InlineResponse400Errors(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -125,8 +121,6 @@ class InlineResponse400Errors(object):
         :param details: The details of this InlineResponse400Errors.
         :type: list[InlineResponse400Details]
         """
-
-
 
         self._details = details
 

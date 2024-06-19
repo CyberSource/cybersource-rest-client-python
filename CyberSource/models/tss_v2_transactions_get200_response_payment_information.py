@@ -131,8 +131,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationPaymentType
         """
 
-
-
         self._payment_type = payment_type
 
     @property
@@ -154,8 +152,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationCustomer
         """
 
-
-
         self._customer = customer
 
     @property
@@ -176,8 +172,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param card: The card of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationCard
         """
-
-
 
         self._card = card
 
@@ -202,8 +196,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: list[TssV2TransactionsGet200ResponsePaymentInformationBrands]
         """
 
-
-
         self._brands = brands
 
     @property
@@ -224,8 +216,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param features: The features of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationFeatures
         """
-
-
 
         self._features = features
 
@@ -248,8 +238,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationInvoice
         """
 
-
-
         self._invoice = invoice
 
     @property
@@ -270,8 +258,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param network: The network of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationNetwork
         """
-
-
 
         self._network = network
 
@@ -294,8 +280,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation
         """
 
-
-
         self._issuer_information = issuer_information
 
     @property
@@ -316,8 +300,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param bank: The bank of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationBank
         """
-
-
 
         self._bank = bank
 
@@ -340,8 +322,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures
         """
 
-
-
         self._account_features = account_features
 
     @property
@@ -362,8 +342,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param payment_instrument: The payment_instrument of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument
         """
-
-
 
         self._payment_instrument = payment_instrument
 
@@ -386,8 +364,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier
         """
 
-
-
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -409,8 +385,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformationShippingAddress
         """
 
-
-
         self._shipping_address = shipping_address
 
     @property
@@ -431,8 +405,6 @@ class TssV2TransactionsGet200ResponsePaymentInformation(object):
         :param fluid_data: The fluid_data of this TssV2TransactionsGet200ResponsePaymentInformation.
         :type: TssV2TransactionsGet200ResponsePaymentInformationFluidData
         """
-
-
 
         self._fluid_data = fluid_data
 

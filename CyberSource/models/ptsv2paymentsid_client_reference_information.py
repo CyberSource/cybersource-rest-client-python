@@ -88,8 +88,6 @@ class Ptsv2paymentsidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -110,8 +108,6 @@ class Ptsv2paymentsidClientReferenceInformation(object):
         :param partner: The partner of this Ptsv2paymentsidClientReferenceInformation.
         :type: Ptsv2paymentsidClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 
@@ -136,8 +132,6 @@ class Ptsv2paymentsidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._application_name = application_name
 
     @property
@@ -161,8 +155,6 @@ class Ptsv2paymentsidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._application_version = application_version
 
     @property
@@ -185,8 +177,6 @@ class Ptsv2paymentsidClientReferenceInformation(object):
         :param application_user: The application_user of this Ptsv2paymentsidClientReferenceInformation.
         :type: str
         """
-
-
 
         self._application_user = application_user
 

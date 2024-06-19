@@ -68,8 +68,6 @@ class Ptsv2creditsProcessingInformationElectronicBenefitsTransfer(object):
         :type: str
         """
 
-
-
         self._category = category
 
     def to_dict(self):

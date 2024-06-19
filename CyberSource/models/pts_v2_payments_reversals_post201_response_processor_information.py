@@ -103,8 +103,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -127,8 +125,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 
@@ -153,8 +149,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_category_code = response_category_code
 
     @property
@@ -177,8 +171,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -203,8 +195,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._master_card_service_code = master_card_service_code
 
     @property
@@ -227,8 +217,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._master_card_service_reply_code = master_card_service_reply_code
 
@@ -253,8 +241,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_details = response_details
 
     @property
@@ -277,8 +263,6 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         :param provider_response: The provider_response of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._provider_response = provider_response
 

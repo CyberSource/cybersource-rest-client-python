@@ -96,8 +96,6 @@ class InlineResponse2006(object):
         :type: list[InlineResponse2006Links]
         """
 
-
-
         self._links = links
 
     @property
@@ -118,8 +116,6 @@ class InlineResponse2006(object):
         :param object: The object of this InlineResponse2006.
         :type: str
         """
-
-
 
         self._object = object
 
@@ -142,8 +138,6 @@ class InlineResponse2006(object):
         :type: int
         """
 
-
-
         self._offset = offset
 
     @property
@@ -164,8 +158,6 @@ class InlineResponse2006(object):
         :param limit: The limit of this InlineResponse2006.
         :type: int
         """
-
-
 
         self._limit = limit
 
@@ -188,8 +180,6 @@ class InlineResponse2006(object):
         :type: int
         """
 
-
-
         self._count = count
 
     @property
@@ -211,8 +201,6 @@ class InlineResponse2006(object):
         :type: int
         """
 
-
-
         self._total = total
 
     @property
@@ -233,8 +221,6 @@ class InlineResponse2006(object):
         :param embedded: The embedded of this InlineResponse2006.
         :type: InlineResponse2006Embedded
         """
-
-
 
         self._embedded = embedded
 

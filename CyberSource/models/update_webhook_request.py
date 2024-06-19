@@ -123,8 +123,6 @@ class UpdateWebhookRequest(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -147,8 +145,6 @@ class UpdateWebhookRequest(object):
         :param description: The description of this UpdateWebhookRequest.
         :type: str
         """
-
-
 
         self._description = description
 
@@ -173,8 +169,6 @@ class UpdateWebhookRequest(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -197,8 +191,6 @@ class UpdateWebhookRequest(object):
         :param product_id: The product_id of this UpdateWebhookRequest.
         :type: str
         """
-
-
 
         self._product_id = product_id
 
@@ -223,8 +215,6 @@ class UpdateWebhookRequest(object):
         :type: list[str]
         """
 
-
-
         self._event_types = event_types
 
     @property
@@ -247,8 +237,6 @@ class UpdateWebhookRequest(object):
         :param webhook_url: The webhook_url of this UpdateWebhookRequest.
         :type: str
         """
-
-
 
         self._webhook_url = webhook_url
 
@@ -273,8 +261,6 @@ class UpdateWebhookRequest(object):
         :type: str
         """
 
-
-
         self._health_check_url = health_check_url
 
     @property
@@ -298,8 +284,6 @@ class UpdateWebhookRequest(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -320,8 +304,6 @@ class UpdateWebhookRequest(object):
         :param notification_scope: The notification_scope of this UpdateWebhookRequest.
         :type: Notificationsubscriptionsv1webhooksNotificationScope
         """
-
-
 
         self._notification_scope = notification_scope
 
@@ -344,8 +326,6 @@ class UpdateWebhookRequest(object):
         :type: Notificationsubscriptionsv1webhooksRetryPolicy
         """
 
-
-
         self._retry_policy = retry_policy
 
     @property
@@ -366,8 +346,6 @@ class UpdateWebhookRequest(object):
         :param security_policy: The security_policy of this UpdateWebhookRequest.
         :type: Notificationsubscriptionsv1webhooksSecurityPolicy
         """
-
-
 
         self._security_policy = security_policy
 
@@ -391,8 +369,6 @@ class UpdateWebhookRequest(object):
         :param additional_attributes: The additional_attributes of this UpdateWebhookRequest.
         :type: list[dict(str, str)]
         """
-
-
 
         self._additional_attributes = additional_attributes
 

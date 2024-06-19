@@ -66,8 +66,6 @@ class RiskV1DecisionsPost201ResponseOrderInformation(object):
         :type: RiskV1DecisionsPost201ResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     def to_dict(self):

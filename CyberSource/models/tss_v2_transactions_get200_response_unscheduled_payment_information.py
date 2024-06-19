@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseUnscheduledPaymentInformation(object):
         :type: str
         """
 
-
-
         self._type = type
 
     def to_dict(self):

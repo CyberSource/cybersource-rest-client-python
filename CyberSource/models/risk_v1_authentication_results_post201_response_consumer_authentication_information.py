@@ -193,8 +193,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._acs_rendering_type = acs_rendering_type
 
     @property
@@ -217,8 +215,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param acs_transaction_id: The acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._acs_transaction_id = acs_transaction_id
 
@@ -243,8 +239,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._authentication_result = authentication_result
 
     @property
@@ -267,8 +261,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param authentication_status_msg: The authentication_status_msg of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._authentication_status_msg = authentication_status_msg
 
@@ -293,8 +285,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
@@ -317,8 +307,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param authentication_transaction_context_id: The authentication_transaction_context_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._authentication_transaction_context_id = authentication_transaction_context_id
 
@@ -343,8 +331,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._transaction_token = transaction_token
 
     @property
@@ -367,8 +353,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param authorization_payload: The authorization_payload of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._authorization_payload = authorization_payload
 
@@ -393,8 +377,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._cavv = cavv
 
     @property
@@ -417,8 +399,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param cavv_algorithm: The cavv_algorithm of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._cavv_algorithm = cavv_algorithm
 
@@ -443,8 +423,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._directory_server_error_code = directory_server_error_code
 
     @property
@@ -467,8 +445,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param directory_server_error_description: The directory_server_error_description of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._directory_server_error_description = directory_server_error_description
 
@@ -493,8 +469,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._indicator = indicator
 
     @property
@@ -517,8 +491,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param interaction_counter: The interaction_counter of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._interaction_counter = interaction_counter
 
@@ -543,8 +515,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._eci = eci
 
     @property
@@ -567,8 +537,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param eci_raw: The eci_raw of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._eci_raw = eci_raw
 
@@ -593,8 +561,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._pares_status = pares_status
 
     @property
@@ -617,8 +583,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param sdk_transaction_id: The sdk_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._sdk_transaction_id = sdk_transaction_id
 
@@ -643,8 +607,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._specification_version = specification_version
 
     @property
@@ -667,8 +629,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param three_ds_server_transaction_id: The three_ds_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._three_ds_server_transaction_id = three_ds_server_transaction_id
 
@@ -693,8 +653,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._ucaf_authentication_data = ucaf_authentication_data
 
     @property
@@ -717,8 +675,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
@@ -743,8 +699,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._white_list_status = white_list_status
 
     @property
@@ -767,8 +721,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param white_list_status_source: The white_list_status_source of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._white_list_status_source = white_list_status_source
 
@@ -793,8 +745,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :type: str
         """
 
-
-
         self._xid = xid
 
     @property
@@ -817,8 +767,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         :param directory_server_transaction_id: The directory_server_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._directory_server_transaction_id = directory_server_transaction_id
 

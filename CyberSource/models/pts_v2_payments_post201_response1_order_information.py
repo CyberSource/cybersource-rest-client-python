@@ -71,8 +71,6 @@ class PtsV2PaymentsPost201Response1OrderInformation(object):
         :type: PtsV2PaymentsPost201Response1OrderInformationBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -93,8 +91,6 @@ class PtsV2PaymentsPost201Response1OrderInformation(object):
         :param ship_to: The ship_to of this PtsV2PaymentsPost201Response1OrderInformation.
         :type: PtsV2PaymentsPost201Response1OrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 

@@ -78,8 +78,6 @@ class TssV2PostEmvTags200ResponseParsedEMVTagsList(object):
         :type: str
         """
 
-
-
         self._request_id = request_id
 
     @property
@@ -103,8 +101,6 @@ class TssV2PostEmvTags200ResponseParsedEMVTagsList(object):
         :type: int
         """
 
-
-
         self._total_tags = total_tags
 
     @property
@@ -127,8 +123,6 @@ class TssV2PostEmvTags200ResponseParsedEMVTagsList(object):
         :param emv_tag_breakdown_list: The emv_tag_breakdown_list of this TssV2PostEmvTags200ResponseParsedEMVTagsList.
         :type: list[TssV2PostEmvTags200ResponseEmvTagBreakdownList]
         """
-
-
 
         self._emv_tag_breakdown_list = emv_tag_breakdown_list
 

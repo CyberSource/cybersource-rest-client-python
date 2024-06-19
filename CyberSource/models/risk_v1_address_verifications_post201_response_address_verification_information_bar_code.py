@@ -73,8 +73,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBar
         :type: str
         """
 
-
-
         self._value = value
 
     @property
@@ -97,8 +95,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBar
         :param check_digit: The check_digit of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationBarCode.
         :type: float
         """
-
-
 
         self._check_digit = check_digit
 

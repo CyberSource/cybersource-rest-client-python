@@ -96,8 +96,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -119,8 +117,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -141,8 +137,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :param description: The description of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :type: str
         """
-
-
 
         self._description = description
 
@@ -167,8 +161,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :type: str
         """
 
-
-
         self._filter_type = filter_type
 
     @property
@@ -190,8 +182,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :type: bool
         """
 
-
-
         self._default = default
 
     @property
@@ -212,8 +202,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :param required: The required of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :type: bool
         """
-
-
 
         self._required = required
 
@@ -237,8 +225,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseAttributes(object):
         :param supported_type: The supported_type of this ReportingV3ReportDefinitionsNameGet200ResponseAttributes.
         :type: str
         """
-
-
 
         self._supported_type = supported_type
 

@@ -88,8 +88,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :type: str
         """
 
-
-
         self._auth_type = auth_type
 
     @property
@@ -112,8 +110,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :param auth_indicator: The auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :type: str
         """
-
-
 
         self._auth_indicator = auth_indicator
 
@@ -138,8 +134,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :type: str
         """
 
-
-
         self._extend_auth_indicator = extend_auth_indicator
 
     @property
@@ -163,8 +157,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :type: bool
         """
 
-
-
         self._card_verification_indicator = card_verification_indicator
 
     @property
@@ -185,8 +177,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
         :param initiator: The initiator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :type: TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptionsInitiator
         """
-
-
 
         self._initiator = initiator
 

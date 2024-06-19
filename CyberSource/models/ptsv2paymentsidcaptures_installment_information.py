@@ -188,8 +188,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     @property
@@ -212,8 +210,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param frequency: The frequency of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._frequency = frequency
 
@@ -238,8 +234,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._plan_type = plan_type
 
     @property
@@ -262,8 +256,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param sequence: The sequence of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: int
         """
-
-
 
         self._sequence = sequence
 
@@ -288,8 +280,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -312,8 +302,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param total_count: The total_count of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: int
         """
-
-
 
         self._total_count = total_count
 
@@ -338,8 +326,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._first_installment_date = first_installment_date
 
     @property
@@ -362,8 +348,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param first_installment_amount: The first_installment_amount of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._first_installment_amount = first_installment_amount
 
@@ -388,8 +372,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._invoice_data = invoice_data
 
     @property
@@ -412,8 +394,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._payment_type = payment_type
 
@@ -438,8 +418,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._additional_costs = additional_costs
 
     @property
@@ -462,8 +440,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param additional_costs_percentage: The additional_costs_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._additional_costs_percentage = additional_costs_percentage
 
@@ -488,8 +464,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._amount_funded = amount_funded
 
     @property
@@ -512,8 +486,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param amount_requested_percentage: The amount_requested_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._amount_requested_percentage = amount_requested_percentage
 
@@ -538,8 +510,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._annual_financing_cost = annual_financing_cost
 
     @property
@@ -562,8 +532,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param annual_interest_rate: The annual_interest_rate of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._annual_interest_rate = annual_interest_rate
 
@@ -588,8 +556,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._expenses = expenses
 
     @property
@@ -612,8 +578,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param expenses_percentage: The expenses_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._expenses_percentage = expenses_percentage
 
@@ -638,8 +602,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._fees = fees
 
     @property
@@ -662,8 +624,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param fees_percentage: The fees_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._fees_percentage = fees_percentage
 
@@ -688,8 +648,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._insurance = insurance
 
     @property
@@ -712,8 +670,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param insurance_percentage: The insurance_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._insurance_percentage = insurance_percentage
 
@@ -738,8 +694,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._monthly_interest_rate = monthly_interest_rate
 
     @property
@@ -763,8 +717,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._taxes = taxes
 
     @property
@@ -787,8 +739,6 @@ class Ptsv2paymentsidcapturesInstallmentInformation(object):
         :param taxes_percentage: The taxes_percentage of this Ptsv2paymentsidcapturesInstallmentInformation.
         :type: str
         """
-
-
 
         self._taxes_percentage = taxes_percentage
 

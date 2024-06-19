@@ -121,8 +121,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -146,8 +144,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._report_definition_name = report_definition_name
 
     @property
@@ -168,8 +164,6 @@ class CreateReportSubscriptionRequest(object):
         :param report_fields: The report_fields of this CreateReportSubscriptionRequest.
         :type: list[str]
         """
-
-
 
         self._report_fields = report_fields
 
@@ -194,8 +188,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._report_mime_type = report_mime_type
 
     @property
@@ -218,8 +210,6 @@ class CreateReportSubscriptionRequest(object):
         :param report_frequency: The report_frequency of this CreateReportSubscriptionRequest.
         :type: str
         """
-
-
 
         self._report_frequency = report_frequency
 
@@ -244,8 +234,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._report_interval = report_interval
 
     @property
@@ -267,8 +255,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._report_name = report_name
 
     @property
@@ -289,8 +275,6 @@ class CreateReportSubscriptionRequest(object):
         :param timezone: The timezone of this CreateReportSubscriptionRequest.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -315,8 +299,6 @@ class CreateReportSubscriptionRequest(object):
         :type: str
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -339,8 +321,6 @@ class CreateReportSubscriptionRequest(object):
         :param start_day: The start_day of this CreateReportSubscriptionRequest.
         :type: int
         """
-
-
 
         self._start_day = start_day
 
@@ -365,8 +345,6 @@ class CreateReportSubscriptionRequest(object):
         :type: dict(str, list[str])
         """
 
-
-
         self._report_filters = report_filters
 
     @property
@@ -387,8 +365,6 @@ class CreateReportSubscriptionRequest(object):
         :param report_preferences: The report_preferences of this CreateReportSubscriptionRequest.
         :type: Reportingv3reportsReportPreferences
         """
-
-
 
         self._report_preferences = report_preferences
 
@@ -412,8 +388,6 @@ class CreateReportSubscriptionRequest(object):
         :param group_name: The group_name of this CreateReportSubscriptionRequest.
         :type: str
         """
-
-
 
         self._group_name = group_name
 

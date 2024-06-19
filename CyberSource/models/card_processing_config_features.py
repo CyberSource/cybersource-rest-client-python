@@ -71,8 +71,6 @@ class CardProcessingConfigFeatures(object):
         :type: CardProcessingConfigFeaturesCardNotPresent
         """
 
-
-
         self._card_not_present = card_not_present
 
     @property
@@ -93,8 +91,6 @@ class CardProcessingConfigFeatures(object):
         :param card_present: The card_present of this CardProcessingConfigFeatures.
         :type: CardProcessingConfigFeaturesCardPresent
         """
-
-
 
         self._card_present = card_present
 

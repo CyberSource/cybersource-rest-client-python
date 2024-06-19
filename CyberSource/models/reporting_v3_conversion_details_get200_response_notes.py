@@ -78,8 +78,6 @@ class ReportingV3ConversionDetailsGet200ResponseNotes(object):
         :type: datetime
         """
 
-
-
         self._time = time
 
     @property
@@ -103,8 +101,6 @@ class ReportingV3ConversionDetailsGet200ResponseNotes(object):
         :type: str
         """
 
-
-
         self._added_by = added_by
 
     @property
@@ -127,8 +123,6 @@ class ReportingV3ConversionDetailsGet200ResponseNotes(object):
         :param comments: The comments of this ReportingV3ConversionDetailsGet200ResponseNotes.
         :type: str
         """
-
-
 
         self._comments = comments
 

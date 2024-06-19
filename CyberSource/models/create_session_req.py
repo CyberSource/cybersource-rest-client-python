@@ -116,8 +116,6 @@ class CreateSessionReq(object):
         :type: Ptsv2refreshpaymentstatusidClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -138,8 +136,6 @@ class CreateSessionReq(object):
         :param processing_information: The processing_information of this CreateSessionReq.
         :type: Ptsv2paymentreferencesProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -162,8 +158,6 @@ class CreateSessionReq(object):
         :type: Ptsv2paymentreferencesPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -184,8 +178,6 @@ class CreateSessionReq(object):
         :param order_information: The order_information of this CreateSessionReq.
         :type: Ptsv2paymentreferencesOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -208,8 +200,6 @@ class CreateSessionReq(object):
         :type: Ptsv2paymentreferencesBuyerInformation
         """
 
-
-
         self._buyer_information = buyer_information
 
     @property
@@ -230,8 +220,6 @@ class CreateSessionReq(object):
         :param device_information: The device_information of this CreateSessionReq.
         :type: Ptsv2paymentreferencesDeviceInformation
         """
-
-
 
         self._device_information = device_information
 
@@ -254,8 +242,6 @@ class CreateSessionReq(object):
         :type: Ptsv2paymentreferencesMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -276,8 +262,6 @@ class CreateSessionReq(object):
         :param user_interface: The user_interface of this CreateSessionReq.
         :type: Ptsv2paymentreferencesUserInterface
         """
-
-
 
         self._user_interface = user_interface
 
@@ -302,8 +286,6 @@ class CreateSessionReq(object):
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
-
-
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -325,8 +307,6 @@ class CreateSessionReq(object):
         :type: Ptsv2paymentreferencesAgreementInformation
         """
 
-
-
         self._agreement_information = agreement_information
 
     @property
@@ -347,8 +327,6 @@ class CreateSessionReq(object):
         :param travel_information: The travel_information of this CreateSessionReq.
         :type: Ptsv2paymentreferencesTravelInformation
         """
-
-
 
         self._travel_information = travel_information
 

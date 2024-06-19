@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentMerchantInformationMerchantD
         :type: str
         """
 
-
-
         self._alternate_name = alternate_name
 
     def to_dict(self):

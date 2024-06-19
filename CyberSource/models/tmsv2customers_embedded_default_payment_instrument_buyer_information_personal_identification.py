@@ -78,8 +78,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -103,8 +101,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -125,8 +121,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIden
         :param issued_by: The issued_by of this Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationPersonalIdentification.
         :type: Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy
         """
-
-
 
         self._issued_by = issued_by
 

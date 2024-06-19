@@ -83,8 +83,6 @@ class Ptsv2billingagreementsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2billingagreementsBuyerInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2billingagreementsBuyerInformation.
         :type: str
         """
-
-
 
         self._date_of_birth = date_of_birth
 
@@ -133,8 +129,6 @@ class Ptsv2billingagreementsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._gender = gender
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2billingagreementsBuyerInformation(object):
         :param language: The language of this Ptsv2billingagreementsBuyerInformation.
         :type: str
         """
-
-
 
         self._language = language
 

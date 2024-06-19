@@ -288,8 +288,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._is_domestic = is_domestic
 
     @property
@@ -312,8 +310,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param booking_reference_number: The booking_reference_number of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._booking_reference_number = booking_reference_number
 
@@ -338,8 +334,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._carrier_name = carrier_name
 
     @property
@@ -360,8 +354,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param ticket_issuer: The ticket_issuer of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: Ptsv2paymentsTravelInformationTransitAirlineTicketIssuer
         """
-
-
 
         self._ticket_issuer = ticket_issuer
 
@@ -386,8 +378,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._ticket_number = ticket_number
 
     @property
@@ -410,8 +400,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param check_digit: The check_digit of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._check_digit = check_digit
 
@@ -436,8 +424,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: int
         """
 
-
-
         self._restricted_ticket_indicator = restricted_ticket_indicator
 
     @property
@@ -460,8 +446,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param transaction_type: The transaction_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: int
         """
-
-
 
         self._transaction_type = transaction_type
 
@@ -486,8 +470,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._extended_payment_code = extended_payment_code
 
     @property
@@ -510,8 +492,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param passenger_name: The passenger_name of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._passenger_name = passenger_name
 
@@ -536,8 +516,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._customer_code = customer_code
 
     @property
@@ -560,8 +538,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param document_type: The document_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._document_type = document_type
 
@@ -586,8 +562,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._document_number = document_number
 
     @property
@@ -610,8 +584,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param document_number_of_parts: The document_number_of_parts of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: int
         """
-
-
 
         self._document_number_of_parts = document_number_of_parts
 
@@ -636,8 +608,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._invoice_number = invoice_number
 
     @property
@@ -660,8 +630,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param invoice_date: The invoice_date of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: int
         """
-
-
 
         self._invoice_date = invoice_date
 
@@ -686,8 +654,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._additional_charges = additional_charges
 
     @property
@@ -710,8 +676,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param total_fee_amount: The total_fee_amount of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._total_fee_amount = total_fee_amount
 
@@ -736,8 +700,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._clearing_sequence = clearing_sequence
 
     @property
@@ -760,8 +722,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param clearing_count: The clearing_count of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._clearing_count = clearing_count
 
@@ -786,8 +746,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._total_clearing_amount = total_clearing_amount
 
     @property
@@ -810,8 +768,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param number_of_passengers: The number_of_passengers of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: int
         """
-
-
 
         self._number_of_passengers = number_of_passengers
 
@@ -836,8 +792,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._reservation_system_code = reservation_system_code
 
     @property
@@ -860,8 +814,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param process_identifier: The process_identifier of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._process_identifier = process_identifier
 
@@ -886,8 +838,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._ticket_issue_date = ticket_issue_date
 
     @property
@@ -910,8 +860,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param electronic_ticket_indicator: The electronic_ticket_indicator of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: bool
         """
-
-
 
         self._electronic_ticket_indicator = electronic_ticket_indicator
 
@@ -936,8 +884,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._original_ticket_number = original_ticket_number
 
     @property
@@ -960,8 +906,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param purchase_type: The purchase_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._purchase_type = purchase_type
 
@@ -986,8 +930,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._credit_reason_indicator = credit_reason_indicator
 
     @property
@@ -1010,8 +952,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param ticket_change_indicator: The ticket_change_indicator of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._ticket_change_indicator = ticket_change_indicator
 
@@ -1036,8 +976,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._plan_number = plan_number
 
     @property
@@ -1060,8 +998,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param arrival_date: The arrival_date of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._arrival_date = arrival_date
 
@@ -1086,8 +1022,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._restricted_ticket_desciption = restricted_ticket_desciption
 
     @property
@@ -1110,8 +1044,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param exchange_ticket_amount: The exchange_ticket_amount of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._exchange_ticket_amount = exchange_ticket_amount
 
@@ -1136,8 +1068,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._exchange_ticket_fee_amount = exchange_ticket_fee_amount
 
     @property
@@ -1160,8 +1090,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param reservation_type: The reservation_type of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._reservation_type = reservation_type
 
@@ -1186,8 +1114,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._boarding_fee_amount = boarding_fee_amount
 
     @property
@@ -1209,8 +1135,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: list[Ptsv2paymentsTravelInformationTransitAirlineLegs]
         """
 
-
-
         self._legs = legs
 
     @property
@@ -1231,8 +1155,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param ancillary_information: The ancillary_information of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: Ptsv2paymentsTravelInformationTransitAirlineAncillaryInformation
         """
-
-
 
         self._ancillary_information = ancillary_information
 
@@ -1257,8 +1179,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._flight_type = flight_type
 
     @property
@@ -1281,8 +1201,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param insurance_amount: The insurance_amount of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._insurance_amount = insurance_amount
 
@@ -1307,8 +1225,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._frequent_flyer_number = frequent_flyer_number
 
     @property
@@ -1331,8 +1247,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param third_party_status: The third_party_status of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._third_party_status = third_party_status
 
@@ -1357,8 +1271,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :type: str
         """
 
-
-
         self._passenger_type = passenger_type
 
     @property
@@ -1381,8 +1293,6 @@ class Ptsv2paymentsTravelInformationTransitAirline(object):
         :param total_insurance_amount: The total_insurance_amount of this Ptsv2paymentsTravelInformationTransitAirline.
         :type: str
         """
-
-
 
         self._total_insurance_amount = total_insurance_amount
 

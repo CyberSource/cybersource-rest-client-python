@@ -133,8 +133,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._payment_method = payment_method
 
     @property
@@ -157,8 +155,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param bonuses: The bonuses of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._bonuses = bonuses
 
@@ -183,8 +179,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._bonus_month = bonus_month
 
     @property
@@ -207,8 +201,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param second_bonus_month: The second_bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._second_bonus_month = second_bonus_month
 
@@ -233,8 +225,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._bonus_amount = bonus_amount
 
     @property
@@ -257,8 +247,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param second_bonus_amount: The second_bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._second_bonus_amount = second_bonus_amount
 
@@ -283,8 +271,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._preapproval_type = preapproval_type
 
     @property
@@ -307,8 +293,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param installments: The installments of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._installments = installments
 
@@ -333,8 +317,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._terminal_id = terminal_id
 
     @property
@@ -357,8 +339,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param first_billing_month: The first_billing_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._first_billing_month = first_billing_month
 
@@ -383,8 +363,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._business_name = business_name
 
     @property
@@ -407,8 +385,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param business_name_katakana: The business_name_katakana of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._business_name_katakana = business_name_katakana
 
@@ -433,8 +409,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :type: str
         """
 
-
-
         self._jis2_track_data = jis2_track_data
 
     @property
@@ -457,8 +431,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         :param business_name_alpha_numeric: The business_name_alpha_numeric of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
         :type: str
         """
-
-
 
         self._business_name_alpha_numeric = business_name_alpha_numeric
 

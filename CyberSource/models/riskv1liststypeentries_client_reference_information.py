@@ -77,8 +77,6 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -102,8 +100,6 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._comments = comments
 
     @property
@@ -124,8 +120,6 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :param partner: The partner of this Riskv1liststypeentriesClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 

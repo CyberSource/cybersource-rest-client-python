@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201Response2OrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     def to_dict(self):

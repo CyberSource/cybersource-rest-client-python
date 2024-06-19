@@ -74,8 +74,6 @@ class SaveSymEgressKey(object):
         :type: Kmsegressv2keyssymClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -99,8 +97,6 @@ class SaveSymEgressKey(object):
         :type: str
         """
 
-
-
         self._client_request_action = client_request_action
 
     @property
@@ -121,8 +117,6 @@ class SaveSymEgressKey(object):
         :param key_information: The key_information of this SaveSymEgressKey.
         :type: Kmsegressv2keyssymKeyInformation
         """
-
-
 
         self._key_information = key_information
 

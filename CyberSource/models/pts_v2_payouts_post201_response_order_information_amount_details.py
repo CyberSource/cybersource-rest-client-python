@@ -83,8 +83,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -107,8 +105,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -133,8 +129,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_amount = settlement_amount
 
     @property
@@ -157,8 +151,6 @@ class PtsV2PayoutsPost201ResponseOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this PtsV2PayoutsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._settlement_currency = settlement_currency
 

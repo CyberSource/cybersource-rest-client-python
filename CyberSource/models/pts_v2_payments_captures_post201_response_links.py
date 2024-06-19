@@ -76,8 +76,6 @@ class PtsV2PaymentsCapturesPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -99,8 +97,6 @@ class PtsV2PaymentsCapturesPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._void = void
 
     @property
@@ -121,8 +117,6 @@ class PtsV2PaymentsCapturesPost201ResponseLinks(object):
         :param refund: The refund of this PtsV2PaymentsCapturesPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._refund = refund
 

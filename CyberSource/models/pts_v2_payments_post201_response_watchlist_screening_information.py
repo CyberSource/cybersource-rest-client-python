@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
         :type: int
         """
 
-
-
         self._ip_country_confidence = ip_country_confidence
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
         :type: list[str]
         """
 
-
-
         self._info_codes = info_codes
 
     @property
@@ -125,8 +121,6 @@ class PtsV2PaymentsPost201ResponseWatchlistScreeningInformation(object):
         :param watch_list: The watch_list of this PtsV2PaymentsPost201ResponseWatchlistScreeningInformation.
         :type: PtsV2PaymentsPost201ResponseWatchlistScreeningInformationWatchList
         """
-
-
 
         self._watch_list = watch_list
 

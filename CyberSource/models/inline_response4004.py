@@ -91,8 +91,6 @@ class InlineResponse4004(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -115,8 +113,6 @@ class InlineResponse4004(object):
         :param message: The message of this InlineResponse4004.
         :type: str
         """
-
-
 
         self._message = message
 
@@ -141,8 +137,6 @@ class InlineResponse4004(object):
         :type: str
         """
 
-
-
         self._localization_key = localization_key
 
     @property
@@ -165,8 +159,6 @@ class InlineResponse4004(object):
         :param correlation_id: The correlation_id of this InlineResponse4004.
         :type: str
         """
-
-
 
         self._correlation_id = correlation_id
 
@@ -191,8 +183,6 @@ class InlineResponse4004(object):
         :type: str
         """
 
-
-
         self._detail = detail
 
     @property
@@ -215,8 +205,6 @@ class InlineResponse4004(object):
         :param fields: The fields of this InlineResponse4004.
         :type: list[InlineResponse4004Fields]
         """
-
-
 
         self._fields = fields
 

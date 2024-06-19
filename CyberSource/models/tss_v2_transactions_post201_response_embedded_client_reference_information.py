@@ -83,8 +83,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -107,8 +105,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         :param application_name: The application_name of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: str
         """
-
-
 
         self._application_name = application_name
 
@@ -133,8 +129,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         :type: str
         """
 
-
-
         self._application_user = application_user
 
     @property
@@ -155,8 +149,6 @@ class TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation(object)
         :param partner: The partner of this TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation.
         :type: TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 

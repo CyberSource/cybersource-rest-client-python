@@ -71,8 +71,6 @@ class InlineResponse2011SetupsValueAddedServices(object):
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
 
-
-
         self._reporting = reporting
 
     @property
@@ -93,8 +91,6 @@ class InlineResponse2011SetupsValueAddedServices(object):
         :param transaction_search: The transaction_search of this InlineResponse2011SetupsValueAddedServices.
         :type: InlineResponse2011SetupsPaymentsDigitalPayments
         """
-
-
 
         self._transaction_search = transaction_search
 

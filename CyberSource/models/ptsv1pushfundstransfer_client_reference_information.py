@@ -83,8 +83,6 @@ class Ptsv1pushfundstransferClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -107,8 +105,6 @@ class Ptsv1pushfundstransferClientReferenceInformation(object):
         :param application_name: The application_name of this Ptsv1pushfundstransferClientReferenceInformation.
         :type: str
         """
-
-
 
         self._application_name = application_name
 
@@ -133,8 +129,6 @@ class Ptsv1pushfundstransferClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._application_version = application_version
 
     @property
@@ -157,8 +151,6 @@ class Ptsv1pushfundstransferClientReferenceInformation(object):
         :param application_user: The application_user of this Ptsv1pushfundstransferClientReferenceInformation.
         :type: str
         """
-
-
 
         self._application_user = application_user
 

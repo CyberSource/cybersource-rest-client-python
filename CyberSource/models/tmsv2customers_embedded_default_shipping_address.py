@@ -86,8 +86,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
         :type: Tmsv2customersEmbeddedDefaultShippingAddressLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -110,8 +108,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
         :param id: The id of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -136,8 +132,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
         :type: bool
         """
 
-
-
         self._default = default
 
     @property
@@ -159,8 +153,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
         :type: Tmsv2customersEmbeddedDefaultShippingAddressShipTo
         """
 
-
-
         self._ship_to = ship_to
 
     @property
@@ -181,8 +173,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddress(object):
         :param metadata: The metadata of this Tmsv2customersEmbeddedDefaultShippingAddress.
         :type: Tmsv2customersEmbeddedDefaultShippingAddressMetadata
         """
-
-
 
         self._metadata = metadata
 

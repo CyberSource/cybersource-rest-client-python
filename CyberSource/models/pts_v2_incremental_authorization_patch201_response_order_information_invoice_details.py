@@ -68,8 +68,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseOrderInformationInvoiceDetail
         :type: str
         """
 
-
-
         self._product_id = product_id
 
     def to_dict(self):

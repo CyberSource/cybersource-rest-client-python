@@ -73,8 +73,6 @@ class Ptsv2paymentsTravelInformationVehicleData(object):
         :type: str
         """
 
-
-
         self._connector_type = connector_type
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsTravelInformationVehicleData(object):
         :param charging_reason_code: The charging_reason_code of this Ptsv2paymentsTravelInformationVehicleData.
         :type: str
         """
-
-
 
         self._charging_reason_code = charging_reason_code
 

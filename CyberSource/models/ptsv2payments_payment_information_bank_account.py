@@ -93,8 +93,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -117,8 +115,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param number: The number of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-
-
 
         self._number = number
 
@@ -143,8 +139,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :type: str
         """
 
-
-
         self._encoder_id = encoder_id
 
     @property
@@ -167,8 +161,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param check_number: The check_number of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-
-
 
         self._check_number = check_number
 
@@ -193,8 +185,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :type: str
         """
 
-
-
         self._check_image_reference_number = check_image_reference_number
 
     @property
@@ -217,8 +207,6 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
         :param iban: The iban of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
         """
-
-
 
         self._iban = iban
 

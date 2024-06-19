@@ -78,8 +78,6 @@ class Vasv2taxClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -100,8 +98,6 @@ class Vasv2taxClientReferenceInformation(object):
         :param partner: The partner of this Vasv2taxClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 
@@ -125,8 +121,6 @@ class Vasv2taxClientReferenceInformation(object):
         :param comments: The comments of this Vasv2taxClientReferenceInformation.
         :type: str
         """
-
-
 
         self._comments = comments
 

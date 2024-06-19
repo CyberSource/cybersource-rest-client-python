@@ -98,8 +98,6 @@ class CreateSearchRequest(object):
         :type: bool
         """
 
-
-
         self._save = save
 
     @property
@@ -122,8 +120,6 @@ class CreateSearchRequest(object):
         :param name: The name of this CreateSearchRequest.
         :type: str
         """
-
-
 
         self._name = name
 
@@ -148,8 +144,6 @@ class CreateSearchRequest(object):
         :type: str
         """
 
-
-
         self._timezone = timezone
 
     @property
@@ -172,8 +166,6 @@ class CreateSearchRequest(object):
         :param query: The query of this CreateSearchRequest.
         :type: str
         """
-
-
 
         self._query = query
 
@@ -198,8 +190,6 @@ class CreateSearchRequest(object):
         :type: int
         """
 
-
-
         self._offset = offset
 
     @property
@@ -223,8 +213,6 @@ class CreateSearchRequest(object):
         :type: int
         """
 
-
-
         self._limit = limit
 
     @property
@@ -247,8 +235,6 @@ class CreateSearchRequest(object):
         :param sort: The sort of this CreateSearchRequest.
         :type: str
         """
-
-
 
         self._sort = sort
 

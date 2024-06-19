@@ -83,8 +83,6 @@ class ReportingV3RetrievalDetailsGet200Response(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -107,8 +105,6 @@ class ReportingV3RetrievalDetailsGet200Response(object):
         :param start_time: The start_time of this ReportingV3RetrievalDetailsGet200Response.
         :type: datetime
         """
-
-
 
         self._start_time = start_time
 
@@ -133,8 +129,6 @@ class ReportingV3RetrievalDetailsGet200Response(object):
         :type: datetime
         """
 
-
-
         self._end_time = end_time
 
     @property
@@ -157,8 +151,6 @@ class ReportingV3RetrievalDetailsGet200Response(object):
         :param retrieval_details: The retrieval_details of this ReportingV3RetrievalDetailsGet200Response.
         :type: list[ReportingV3RetrievalDetailsGet200ResponseRetrievalDetails]
         """
-
-
 
         self._retrieval_details = retrieval_details
 

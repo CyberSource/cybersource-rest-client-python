@@ -68,8 +68,6 @@ class Riskv1liststypeentriesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._unit_price = unit_price
 
     def to_dict(self):

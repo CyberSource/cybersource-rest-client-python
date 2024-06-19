@@ -71,8 +71,6 @@ class ReportingV3NetFundingsGet200ResponseTotalPurchases(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -93,8 +91,6 @@ class ReportingV3NetFundingsGet200ResponseTotalPurchases(object):
         :param value: The value of this ReportingV3NetFundingsGet200ResponseTotalPurchases.
         :type: str
         """
-
-
 
         self._value = value
 

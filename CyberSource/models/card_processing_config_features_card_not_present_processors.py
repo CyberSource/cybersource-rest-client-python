@@ -93,8 +93,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :type: bool
         """
 
-
-
         self._relax_address_verification_system = relax_address_verification_system
 
     @property
@@ -117,8 +115,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :param relax_address_verification_system_allow_zip_without_country: The relax_address_verification_system_allow_zip_without_country of this CardProcessingConfigFeaturesCardNotPresentProcessors.
         :type: bool
         """
-
-
 
         self._relax_address_verification_system_allow_zip_without_country = relax_address_verification_system_allow_zip_without_country
 
@@ -143,8 +139,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :type: bool
         """
 
-
-
         self._relax_address_verification_system_allow_expired_card = relax_address_verification_system_allow_expired_card
 
     @property
@@ -167,8 +161,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :param enable_ems_transaction_risk_score: The enable_ems_transaction_risk_score of this CardProcessingConfigFeaturesCardNotPresentProcessors.
         :type: bool
         """
-
-
 
         self._enable_ems_transaction_risk_score = enable_ems_transaction_risk_score
 
@@ -193,8 +185,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :type: str
         """
 
-
-
         self._prestigious_property_indicator = prestigious_property_indicator
 
     @property
@@ -215,8 +205,6 @@ class CardProcessingConfigFeaturesCardNotPresentProcessors(object):
         :param payouts: The payouts of this CardProcessingConfigFeaturesCardNotPresentProcessors.
         :type: CardProcessingConfigFeaturesCardNotPresentPayouts
         """
-
-
 
         self._payouts = payouts
 

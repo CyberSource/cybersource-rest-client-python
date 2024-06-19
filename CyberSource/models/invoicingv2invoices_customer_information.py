@@ -83,8 +83,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -107,8 +105,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :param email: The email of this Invoicingv2invoicesCustomerInformation.
         :type: str
         """
-
-
 
         self._email = email
 
@@ -133,8 +129,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -155,8 +149,6 @@ class Invoicingv2invoicesCustomerInformation(object):
         :param company: The company of this Invoicingv2invoicesCustomerInformation.
         :type: Invoicingv2invoicesCustomerInformationCompany
         """
-
-
 
         self._company = company
 

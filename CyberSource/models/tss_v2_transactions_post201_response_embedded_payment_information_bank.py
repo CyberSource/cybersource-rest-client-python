@@ -66,8 +66,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank(object):
         :type: TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBankAccount
         """
 
-
-
         self._account = account
 
     def to_dict(self):

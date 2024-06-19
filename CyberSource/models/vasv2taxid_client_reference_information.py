@@ -78,8 +78,6 @@ class Vasv2taxidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -103,8 +101,6 @@ class Vasv2taxidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._comments = comments
 
     @property
@@ -125,8 +121,6 @@ class Vasv2taxidClientReferenceInformation(object):
         :param partner: The partner of this Vasv2taxidClientReferenceInformation.
         :type: Vasv2taxidClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 

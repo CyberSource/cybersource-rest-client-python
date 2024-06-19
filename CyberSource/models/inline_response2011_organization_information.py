@@ -76,8 +76,6 @@ class InlineResponse2011OrganizationInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -99,8 +97,6 @@ class InlineResponse2011OrganizationInformation(object):
         :type: str
         """
 
-
-
         self._parent_organization_id = parent_organization_id
 
     @property
@@ -121,8 +117,6 @@ class InlineResponse2011OrganizationInformation(object):
         :param child_organizations: The child_organizations of this InlineResponse2011OrganizationInformation.
         :type: list[str]
         """
-
-
 
         self._child_organizations = child_organizations
 

@@ -93,8 +93,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :type: str
         """
 
-
-
         self._request_id = request_id
 
     @property
@@ -117,8 +115,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :param cybersource_merchant_id: The cybersource_merchant_id of this ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails.
         :type: str
         """
-
-
 
         self._cybersource_merchant_id = cybersource_merchant_id
 
@@ -143,8 +139,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :type: str
         """
 
-
-
         self._processor_merchant_id = processor_merchant_id
 
     @property
@@ -167,8 +161,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :param group_name: The group_name of this ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails.
         :type: str
         """
-
-
 
         self._group_name = group_name
 
@@ -193,8 +185,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :type: str
         """
 
-
-
         self._transaction_reference_number = transaction_reference_number
 
     @property
@@ -217,8 +207,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails(object):
         :param merchant_reference_number: The merchant_reference_number of this ReportingV3PurchaseRefundDetailsGet200ResponseRequestDetails.
         :type: str
         """
-
-
 
         self._merchant_reference_number = merchant_reference_number
 

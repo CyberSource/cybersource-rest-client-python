@@ -168,8 +168,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -192,8 +190,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param host_name: The host_name of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._host_name = host_name
 
@@ -218,8 +214,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._ip_address = ip_address
 
     @property
@@ -242,8 +236,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param user_agent: The user_agent of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._user_agent = user_agent
 
@@ -268,8 +260,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._fingerprint_session_id = fingerprint_session_id
 
     @property
@@ -292,8 +282,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param use_raw_fingerprint_session_id: The use_raw_fingerprint_session_id of this Ptsv2paymentsDeviceInformation.
         :type: bool
         """
-
-
 
         self._use_raw_fingerprint_session_id = use_raw_fingerprint_session_id
 
@@ -318,8 +306,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._device_type = device_type
 
     @property
@@ -342,8 +328,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param app_url: The app_url of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._app_url = app_url
 
@@ -368,8 +352,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._metadata = metadata
 
     @property
@@ -390,8 +372,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param raw_data: The raw_data of this Ptsv2paymentsDeviceInformation.
         :type: list[Ptsv2paymentsDeviceInformationRawData]
         """
-
-
 
         self._raw_data = raw_data
 
@@ -416,8 +396,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._http_accept_browser_value = http_accept_browser_value
 
     @property
@@ -440,8 +418,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param http_accept_content: The http_accept_content of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._http_accept_content = http_accept_content
 
@@ -466,8 +442,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._http_browser_email = http_browser_email
 
     @property
@@ -490,8 +464,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param http_browser_language: The http_browser_language of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._http_browser_language = http_browser_language
 
@@ -516,8 +488,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: bool
         """
 
-
-
         self._http_browser_java_enabled = http_browser_java_enabled
 
     @property
@@ -540,8 +510,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param http_browser_java_script_enabled: The http_browser_java_script_enabled of this Ptsv2paymentsDeviceInformation.
         :type: bool
         """
-
-
 
         self._http_browser_java_script_enabled = http_browser_java_script_enabled
 
@@ -566,8 +534,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._http_browser_color_depth = http_browser_color_depth
 
     @property
@@ -590,8 +556,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param http_browser_screen_height: The http_browser_screen_height of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._http_browser_screen_height = http_browser_screen_height
 
@@ -616,8 +580,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._http_browser_screen_width = http_browser_screen_width
 
     @property
@@ -641,8 +603,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :type: str
         """
 
-
-
         self._http_browser_time_difference = http_browser_time_difference
 
     @property
@@ -665,8 +625,6 @@ class Ptsv2paymentsDeviceInformation(object):
         :param user_agent_browser_value: The user_agent_browser_value of this Ptsv2paymentsDeviceInformation.
         :type: str
         """
-
-
 
         self._user_agent_browser_value = user_agent_browser_value
 

@@ -73,8 +73,6 @@ class Ptsv2paymentsidreversalsReversalInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsidreversalsReversalInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentsidreversalsReversalInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

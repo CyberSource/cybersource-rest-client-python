@@ -78,8 +78,6 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
         :type: str
         """
 
-
-
         self._event = event
 
     @property
@@ -103,8 +101,6 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
         :type: datetime
         """
 
-
-
         self.__date = _date
 
     @property
@@ -125,8 +121,6 @@ class InvoicingV2InvoicesGet200ResponseInvoiceHistory(object):
         :param transaction_details: The transaction_details of this InvoicingV2InvoicesGet200ResponseInvoiceHistory.
         :type: InvoicingV2InvoicesGet200ResponseTransactionDetails
         """
-
-
 
         self._transaction_details = transaction_details
 

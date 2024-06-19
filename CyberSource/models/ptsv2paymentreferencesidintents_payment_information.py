@@ -71,8 +71,6 @@ class Ptsv2paymentreferencesidintentsPaymentInformation(object):
         :type: Ptsv2paymentsidreversalsPaymentInformationPaymentType
         """
 
-
-
         self._payment_type = payment_type
 
     @property
@@ -93,8 +91,6 @@ class Ptsv2paymentreferencesidintentsPaymentInformation(object):
         :param e_wallet: The e_wallet of this Ptsv2paymentreferencesidintentsPaymentInformation.
         :type: Ptsv2paymentreferencesidintentsPaymentInformationEWallet
         """
-
-
 
         self._e_wallet = e_wallet
 

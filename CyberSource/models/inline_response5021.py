@@ -88,8 +88,6 @@ class InlineResponse5021(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -112,8 +110,6 @@ class InlineResponse5021(object):
         :param status: The status of this InlineResponse5021.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -138,8 +134,6 @@ class InlineResponse5021(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -163,8 +157,6 @@ class InlineResponse5021(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -187,8 +179,6 @@ class InlineResponse5021(object):
         :param status_code: The status_code of this InlineResponse5021.
         :type: str
         """
-
-
 
         self._status_code = status_code
 

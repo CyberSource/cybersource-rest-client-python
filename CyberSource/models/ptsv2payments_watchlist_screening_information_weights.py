@@ -78,8 +78,6 @@ class Ptsv2paymentsWatchlistScreeningInformationWeights(object):
         :type: str
         """
 
-
-
         self._address = address
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsWatchlistScreeningInformationWeights(object):
         :type: str
         """
 
-
-
         self._company = company
 
     @property
@@ -127,8 +123,6 @@ class Ptsv2paymentsWatchlistScreeningInformationWeights(object):
         :param name: The name of this Ptsv2paymentsWatchlistScreeningInformationWeights.
         :type: str
         """
-
-
 
         self._name = name
 

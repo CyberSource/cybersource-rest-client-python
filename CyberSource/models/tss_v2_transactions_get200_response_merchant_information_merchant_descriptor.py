@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor(objec
         :type: str
         """
 
-
-
         self._name = name
 
     def to_dict(self):

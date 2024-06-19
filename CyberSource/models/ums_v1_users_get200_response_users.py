@@ -81,8 +81,6 @@ class UmsV1UsersGet200ResponseUsers(object):
         :type: UmsV1UsersGet200ResponseAccountInformation
         """
 
-
-
         self._account_information = account_information
 
     @property
@@ -103,8 +101,6 @@ class UmsV1UsersGet200ResponseUsers(object):
         :param organization_information: The organization_information of this UmsV1UsersGet200ResponseUsers.
         :type: UmsV1UsersGet200ResponseOrganizationInformation
         """
-
-
 
         self._organization_information = organization_information
 
@@ -127,8 +123,6 @@ class UmsV1UsersGet200ResponseUsers(object):
         :type: UmsV1UsersGet200ResponseContactInformation
         """
 
-
-
         self._contact_information = contact_information
 
     @property
@@ -149,8 +143,6 @@ class UmsV1UsersGet200ResponseUsers(object):
         :param custom_fields: The custom_fields of this UmsV1UsersGet200ResponseUsers.
         :type: dict(str, str)
         """
-
-
 
         self._custom_fields = custom_fields
 

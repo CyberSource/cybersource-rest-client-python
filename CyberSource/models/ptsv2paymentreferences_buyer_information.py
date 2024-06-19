@@ -88,8 +88,6 @@ class Ptsv2paymentreferencesBuyerInformation(object):
         :type: str
         """
 
-
-
         self._date_of_birth = date_of_birth
 
     @property
@@ -112,8 +110,6 @@ class Ptsv2paymentreferencesBuyerInformation(object):
         :param gender: The gender of this Ptsv2paymentreferencesBuyerInformation.
         :type: str
         """
-
-
 
         self._gender = gender
 
@@ -138,8 +134,6 @@ class Ptsv2paymentreferencesBuyerInformation(object):
         :type: str
         """
 
-
-
         self._language = language
 
     @property
@@ -163,8 +157,6 @@ class Ptsv2paymentreferencesBuyerInformation(object):
         :type: str
         """
 
-
-
         self._note_to_seller = note_to_seller
 
     @property
@@ -185,8 +177,6 @@ class Ptsv2paymentreferencesBuyerInformation(object):
         :param personal_identification: The personal_identification of this Ptsv2paymentreferencesBuyerInformation.
         :type: list[Ptsv2paymentsidcapturesBuyerInformationPersonalIdentification]
         """
-
-
 
         self._personal_identification = personal_identification
 

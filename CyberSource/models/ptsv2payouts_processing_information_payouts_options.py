@@ -88,8 +88,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :type: str
         """
 
-
-
         self._acquirer_merchant_id = acquirer_merchant_id
 
     @property
@@ -112,8 +110,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param acquirer_bin: The acquirer_bin of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-
-
 
         self._acquirer_bin = acquirer_bin
 
@@ -138,8 +134,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :type: str
         """
 
-
-
         self._retrieval_reference_number = retrieval_reference_number
 
     @property
@@ -163,8 +157,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :type: str
         """
 
-
-
         self._account_funding_reference_id = account_funding_reference_id
 
     @property
@@ -187,8 +179,6 @@ class Ptsv2payoutsProcessingInformationPayoutsOptions(object):
         :param deferred_date_time: The deferred_date_time of this Ptsv2payoutsProcessingInformationPayoutsOptions.
         :type: str
         """
-
-
 
         self._deferred_date_time = deferred_date_time
 

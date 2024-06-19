@@ -73,8 +73,6 @@ class PtsV1TransactionBatchesGet500ResponseErrorInformation(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -97,8 +95,6 @@ class PtsV1TransactionBatchesGet500ResponseErrorInformation(object):
         :param message: The message of this PtsV1TransactionBatchesGet500ResponseErrorInformation.
         :type: str
         """
-
-
 
         self._message = message
 

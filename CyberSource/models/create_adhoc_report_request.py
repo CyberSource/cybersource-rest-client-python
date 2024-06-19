@@ -118,8 +118,6 @@ class CreateAdhocReportRequest(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -140,8 +138,6 @@ class CreateAdhocReportRequest(object):
         :param report_definition_name: The report_definition_name of this CreateAdhocReportRequest.
         :type: str
         """
-
-
 
         self._report_definition_name = report_definition_name
 
@@ -166,8 +162,6 @@ class CreateAdhocReportRequest(object):
         :type: list[str]
         """
 
-
-
         self._report_fields = report_fields
 
     @property
@@ -190,8 +184,6 @@ class CreateAdhocReportRequest(object):
         :param report_mime_type: The report_mime_type of this CreateAdhocReportRequest.
         :type: str
         """
-
-
 
         self._report_mime_type = report_mime_type
 
@@ -216,8 +208,6 @@ class CreateAdhocReportRequest(object):
         :type: str
         """
 
-
-
         self._report_name = report_name
 
     @property
@@ -240,8 +230,6 @@ class CreateAdhocReportRequest(object):
         :param timezone: The timezone of this CreateAdhocReportRequest.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -266,8 +254,6 @@ class CreateAdhocReportRequest(object):
         :type: datetime
         """
 
-
-
         self._report_start_time = report_start_time
 
     @property
@@ -291,8 +277,6 @@ class CreateAdhocReportRequest(object):
         :type: datetime
         """
 
-
-
         self._report_end_time = report_end_time
 
     @property
@@ -314,8 +298,6 @@ class CreateAdhocReportRequest(object):
         :type: Reportingv3reportsReportFilters
         """
 
-
-
         self._report_filters = report_filters
 
     @property
@@ -336,8 +318,6 @@ class CreateAdhocReportRequest(object):
         :param report_preferences: The report_preferences of this CreateAdhocReportRequest.
         :type: Reportingv3reportsReportPreferences
         """
-
-
 
         self._report_preferences = report_preferences
 
@@ -361,8 +341,6 @@ class CreateAdhocReportRequest(object):
         :param group_name: The group_name of this CreateAdhocReportRequest.
         :type: str
         """
-
-
 
         self._group_name = group_name
 

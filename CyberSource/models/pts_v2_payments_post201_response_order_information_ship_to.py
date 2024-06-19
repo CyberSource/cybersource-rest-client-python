@@ -108,8 +108,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._firstname = firstname
 
     @property
@@ -132,8 +130,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :param lastname: The lastname of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._lastname = lastname
 
@@ -158,8 +154,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -182,8 +176,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :param address2: The address2 of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -208,8 +200,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -232,8 +222,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -258,8 +246,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -283,8 +269,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -307,8 +291,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationShipTo(object):
         :param phone_number: The phone_number of this PtsV2PaymentsPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 

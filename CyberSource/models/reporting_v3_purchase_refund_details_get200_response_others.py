@@ -98,8 +98,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :type: str
         """
 
-
-
         self._request_id = request_id
 
     @property
@@ -122,8 +120,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :param merchant_data1: The merchant_data1 of this ReportingV3PurchaseRefundDetailsGet200ResponseOthers.
         :type: str
         """
-
-
 
         self._merchant_data1 = merchant_data1
 
@@ -148,8 +144,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :type: str
         """
 
-
-
         self._merchant_data2 = merchant_data2
 
     @property
@@ -172,8 +166,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :param merchant_data3: The merchant_data3 of this ReportingV3PurchaseRefundDetailsGet200ResponseOthers.
         :type: str
         """
-
-
 
         self._merchant_data3 = merchant_data3
 
@@ -198,8 +190,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :type: str
         """
 
-
-
         self._merchant_data4 = merchant_data4
 
     @property
@@ -223,8 +213,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -247,8 +235,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseOthers(object):
         :param last_name: The last_name of this ReportingV3PurchaseRefundDetailsGet200ResponseOthers.
         :type: str
         """
-
-
 
         self._last_name = last_name
 

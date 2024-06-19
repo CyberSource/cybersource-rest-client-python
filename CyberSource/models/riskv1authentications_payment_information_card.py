@@ -84,8 +84,6 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._bin = bin
 
     @property
@@ -108,8 +106,6 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param type: The type of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type = type
 
@@ -134,8 +130,6 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_month = expiration_month
 
     @property
@@ -159,8 +153,6 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -183,8 +175,6 @@ class Riskv1authenticationsPaymentInformationCard(object):
         :param number: The number of this Riskv1authenticationsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._number = number
 

@@ -66,8 +66,6 @@ class TssV2TransactionsGet200ResponseMerchantInformation(object):
         :type: TssV2TransactionsGet200ResponseMerchantInformationMerchantDescriptor
         """
 
-
-
         self._merchant_descriptor = merchant_descriptor
 
     def to_dict(self):

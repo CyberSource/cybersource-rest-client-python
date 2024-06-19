@@ -128,8 +128,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._request_id = request_id
 
     @property
@@ -152,8 +150,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param interchange_per_item_fee: The interchange_per_item_fee of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._interchange_per_item_fee = interchange_per_item_fee
 
@@ -178,8 +174,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._interchange_description = interchange_description
 
     @property
@@ -202,8 +196,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param interchange_percentage: The interchange_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._interchange_percentage = interchange_percentage
 
@@ -228,8 +220,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._interchange_percentage_amount = interchange_percentage_amount
 
     @property
@@ -252,8 +242,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param discount_percentage: The discount_percentage of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._discount_percentage = discount_percentage
 
@@ -278,8 +266,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -302,8 +288,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param discount_per_item_fee: The discount_per_item_fee of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._discount_per_item_fee = discount_per_item_fee
 
@@ -328,8 +312,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._total_fee = total_fee
 
     @property
@@ -352,8 +334,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param fee_currency: The fee_currency of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._fee_currency = fee_currency
 
@@ -378,8 +358,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._dues_assessments = dues_assessments
 
     @property
@@ -403,8 +381,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :type: str
         """
 
-
-
         self._funding_amount = funding_amount
 
     @property
@@ -427,8 +403,6 @@ class ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails(object)
         :param funding_currency: The funding_currency of this ReportingV3PurchaseRefundDetailsGet200ResponseFeeAndFundingDetails.
         :type: str
         """
-
-
 
         self._funding_currency = funding_currency
 

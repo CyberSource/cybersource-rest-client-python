@@ -66,8 +66,6 @@ class InlineResponse200EmbeddedCaptureLinks(object):
         :type: InlineResponse200EmbeddedCaptureLinksSelf
         """
 
-
-
         self.__self = _self
 
     def to_dict(self):

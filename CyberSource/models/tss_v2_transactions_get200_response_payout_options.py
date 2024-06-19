@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponsePayoutOptions(object):
         :type: str
         """
 
-
-
         self._payout_inquiry = payout_inquiry
 
     def to_dict(self):

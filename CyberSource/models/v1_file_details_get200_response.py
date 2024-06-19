@@ -71,8 +71,6 @@ class V1FileDetailsGet200Response(object):
         :type: list[V1FileDetailsGet200ResponseFileDetails]
         """
 
-
-
         self._file_details = file_details
 
     @property
@@ -93,8 +91,6 @@ class V1FileDetailsGet200Response(object):
         :param links: The links of this V1FileDetailsGet200Response.
         :type: V1FileDetailsGet200ResponseLinks
         """
-
-
 
         self._links = links
 

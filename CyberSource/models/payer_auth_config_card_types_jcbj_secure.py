@@ -78,8 +78,6 @@ class PayerAuthConfigCardTypesJCBJSecure(object):
         :type: str
         """
 
-
-
         self._secure_password_for_jcb = secure_password_for_jcb
 
     @property
@@ -101,8 +99,6 @@ class PayerAuthConfigCardTypesJCBJSecure(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -123,8 +119,6 @@ class PayerAuthConfigCardTypesJCBJSecure(object):
         :param currencies: The currencies of this PayerAuthConfigCardTypesJCBJSecure.
         :type: list[PayerAuthConfigCardTypesVerifiedByVisaCurrencies]
         """
-
-
 
         self._currencies = currencies
 

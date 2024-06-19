@@ -77,8 +77,6 @@ class Kmsv2keyssymverifiKeyInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -102,8 +100,6 @@ class Kmsv2keyssymverifiKeyInformation(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     @property
@@ -126,7 +122,6 @@ class Kmsv2keyssymverifiKeyInformation(object):
         :param digest_algorithm: The digest_algorithm of this Kmsv2keyssymverifiKeyInformation.
         :type: str
         """
-
         allowed_values = ["HMACSHA1", "HMACSHA2"]
         if digest_algorithm not in allowed_values:
             raise ValueError(

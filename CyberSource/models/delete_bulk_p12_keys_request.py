@@ -71,8 +71,6 @@ class DeleteBulkP12KeysRequest(object):
         :type: Kmsv2keyssymClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -93,8 +91,6 @@ class DeleteBulkP12KeysRequest(object):
         :param key_information: The key_information of this DeleteBulkP12KeysRequest.
         :type: list[Kmsv2keyssymdeletesKeyInformation]
         """
-
-
 
         self._key_information = key_information
 

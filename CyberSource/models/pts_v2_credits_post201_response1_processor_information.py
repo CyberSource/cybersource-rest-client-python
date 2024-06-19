@@ -73,8 +73,6 @@ class PtsV2CreditsPost201Response1ProcessorInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -97,8 +95,6 @@ class PtsV2CreditsPost201Response1ProcessorInformation(object):
         :param response_code: The response_code of this PtsV2CreditsPost201Response1ProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 

@@ -73,8 +73,6 @@ class Ptsv2billingagreementsAggregatorInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -95,8 +93,6 @@ class Ptsv2billingagreementsAggregatorInformation(object):
         :param sub_merchant: The sub_merchant of this Ptsv2billingagreementsAggregatorInformation.
         :type: Ptsv2paymentsAggregatorInformationSubMerchant
         """
-
-
 
         self._sub_merchant = sub_merchant
 

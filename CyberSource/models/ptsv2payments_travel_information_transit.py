@@ -66,8 +66,6 @@ class Ptsv2paymentsTravelInformationTransit(object):
         :type: Ptsv2paymentsTravelInformationTransitAirline
         """
 
-
-
         self._airline = airline
 
     def to_dict(self):

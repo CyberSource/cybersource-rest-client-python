@@ -88,8 +88,6 @@ class SAConfigNotificationsMerchantNotifications(object):
         :type: bool
         """
 
-
-
         self._backoffice_post_enabled = backoffice_post_enabled
 
     @property
@@ -112,8 +110,6 @@ class SAConfigNotificationsMerchantNotifications(object):
         :param backoffice_email_address: The backoffice_email_address of this SAConfigNotificationsMerchantNotifications.
         :type: str
         """
-
-
 
         self._backoffice_email_address = backoffice_email_address
 
@@ -138,8 +134,6 @@ class SAConfigNotificationsMerchantNotifications(object):
         :type: bool
         """
 
-
-
         self._backoffice_email_enabled = backoffice_email_enabled
 
     @property
@@ -163,8 +157,6 @@ class SAConfigNotificationsMerchantNotifications(object):
         :type: str
         """
 
-
-
         self._backoffice_post_url = backoffice_post_url
 
     @property
@@ -187,8 +179,6 @@ class SAConfigNotificationsMerchantNotifications(object):
         :param card_number_format: The card_number_format of this SAConfigNotificationsMerchantNotifications.
         :type: str
         """
-
-
 
         self._card_number_format = card_number_format
 

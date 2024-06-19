@@ -105,8 +105,6 @@ class ECheckConfigUnderwriting(object):
         :type: str
         """
 
-
-
         self._standard_entry_class_codes = standard_entry_class_codes
 
     @property
@@ -129,8 +127,6 @@ class ECheckConfigUnderwriting(object):
         :param enable_hold: The enable_hold of this ECheckConfigUnderwriting.
         :type: bool
         """
-
-
 
         self._enable_hold = enable_hold
 
@@ -155,8 +151,6 @@ class ECheckConfigUnderwriting(object):
         :type: float
         """
 
-
-
         self._monthly_total_transaction_amount_limit = monthly_total_transaction_amount_limit
 
     @property
@@ -179,8 +173,6 @@ class ECheckConfigUnderwriting(object):
         :param holding_days: The holding_days of this ECheckConfigUnderwriting.
         :type: float
         """
-
-
 
         self._holding_days = holding_days
 
@@ -205,8 +197,6 @@ class ECheckConfigUnderwriting(object):
         :type: bool
         """
 
-
-
         self._enable_credits = enable_credits
 
     @property
@@ -229,8 +219,6 @@ class ECheckConfigUnderwriting(object):
         :param transaction_amount_limit: The transaction_amount_limit of this ECheckConfigUnderwriting.
         :type: float
         """
-
-
 
         self._transaction_amount_limit = transaction_amount_limit
 
@@ -255,8 +243,6 @@ class ECheckConfigUnderwriting(object):
         :type: str
         """
 
-
-
         self._risk_reserve_method = risk_reserve_method
 
     @property
@@ -279,8 +265,6 @@ class ECheckConfigUnderwriting(object):
         :param risk_reserve_rate: The risk_reserve_rate of this ECheckConfigUnderwriting.
         :type: float
         """
-
-
 
         self._risk_reserve_rate = risk_reserve_rate
 
@@ -305,8 +289,6 @@ class ECheckConfigUnderwriting(object):
         :type: float
         """
 
-
-
         self._risk_reserve_target_amount = risk_reserve_target_amount
 
     @property
@@ -329,8 +311,6 @@ class ECheckConfigUnderwriting(object):
         :param solution_organization_id: The solution_organization_id of this ECheckConfigUnderwriting.
         :type: str
         """
-
-
 
         self._solution_organization_id = solution_organization_id
 

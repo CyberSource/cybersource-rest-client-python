@@ -71,8 +71,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation(object):
         :type: Ptsv2paymentsidcapturesPointOfSaleInformationEmv
         """
 
-
-
         self._emv = emv
 
     @property
@@ -95,8 +93,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformation(object):
         :param amex_capn_data: The amex_capn_data of this Ptsv2paymentsidcapturesPointOfSaleInformation.
         :type: str
         """
-
-
 
         self._amex_capn_data = amex_capn_data
 

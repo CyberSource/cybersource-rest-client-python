@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationRules(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationRules(object):
         :param decision: The decision of this PtsV2PaymentsPost201ResponseRiskInformationRules.
         :type: str
         """
-
-
 
         self._decision = decision
 

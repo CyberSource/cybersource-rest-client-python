@@ -96,8 +96,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :type: Ptsv2billingagreementsMerchantInformationMerchantDescriptor
         """
 
-
-
         self._merchant_descriptor = merchant_descriptor
 
     @property
@@ -120,8 +118,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :param category_code: The category_code of this Ptsv2billingagreementsMerchantInformation.
         :type: int
         """
-
-
 
         self._category_code = category_code
 
@@ -146,8 +142,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -170,8 +164,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :param transaction_local_date_time: The transaction_local_date_time of this Ptsv2billingagreementsMerchantInformation.
         :type: str
         """
-
-
 
         self._transaction_local_date_time = transaction_local_date_time
 
@@ -196,8 +188,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._cancel_url = cancel_url
 
     @property
@@ -221,8 +211,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :type: str
         """
 
-
-
         self._success_url = success_url
 
     @property
@@ -245,8 +233,6 @@ class Ptsv2billingagreementsMerchantInformation(object):
         :param failure_url: The failure_url of this Ptsv2billingagreementsMerchantInformation.
         :type: str
         """
-
-
 
         self._failure_url = failure_url
 

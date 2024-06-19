@@ -103,8 +103,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -127,8 +125,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._transaction_id = transaction_id
 
@@ -153,8 +149,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
     @property
@@ -177,8 +171,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param merchant_number: The merchant_number of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._merchant_number = merchant_number
 
@@ -203,8 +195,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_code = response_code
 
     @property
@@ -225,8 +215,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param ach_verification: The ach_verification of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
         """
-
-
 
         self._ach_verification = ach_verification
 
@@ -251,8 +239,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._network_transaction_id = network_transaction_id
 
     @property
@@ -275,8 +261,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         :param settlement_date: The settlement_date of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._settlement_date = settlement_date
 

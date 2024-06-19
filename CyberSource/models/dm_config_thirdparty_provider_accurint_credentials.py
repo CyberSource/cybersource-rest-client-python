@@ -71,8 +71,6 @@ class DmConfigThirdpartyProviderAccurintCredentials(object):
         :type: str
         """
 
-
-
         self._username = username
 
     @property
@@ -93,8 +91,6 @@ class DmConfigThirdpartyProviderAccurintCredentials(object):
         :param password: The password of this DmConfigThirdpartyProviderAccurintCredentials.
         :type: str
         """
-
-
 
         self._password = password
 

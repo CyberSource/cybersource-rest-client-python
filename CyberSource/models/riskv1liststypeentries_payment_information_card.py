@@ -78,8 +78,6 @@ class Riskv1liststypeentriesPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -103,8 +101,6 @@ class Riskv1liststypeentriesPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -127,8 +123,6 @@ class Riskv1liststypeentriesPaymentInformationCard(object):
         :param bin: The bin of this Riskv1liststypeentriesPaymentInformationCard.
         :type: str
         """
-
-
 
         self._bin = bin
 

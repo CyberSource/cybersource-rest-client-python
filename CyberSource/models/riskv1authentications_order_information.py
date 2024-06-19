@@ -101,8 +101,6 @@ class Riskv1authenticationsOrderInformation(object):
         :type: Riskv1authenticationsOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -125,8 +123,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param pre_order: The pre_order of this Riskv1authenticationsOrderInformation.
         :type: str
         """
-
-
 
         self._pre_order = pre_order
 
@@ -151,8 +147,6 @@ class Riskv1authenticationsOrderInformation(object):
         :type: str
         """
 
-
-
         self._pre_order_date = pre_order_date
 
     @property
@@ -176,8 +170,6 @@ class Riskv1authenticationsOrderInformation(object):
         :type: bool
         """
 
-
-
         self._reordered = reordered
 
     @property
@@ -198,8 +190,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param ship_to: The ship_to of this Riskv1authenticationsOrderInformation.
         :type: Riskv1decisionsOrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 
@@ -224,8 +214,6 @@ class Riskv1authenticationsOrderInformation(object):
         :type: list[Riskv1authenticationsOrderInformationLineItems]
         """
 
-
-
         self._line_items = line_items
 
     @property
@@ -246,8 +234,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param bill_to: The bill_to of this Riskv1authenticationsOrderInformation.
         :type: Riskv1authenticationsOrderInformationBillTo
         """
-
-
 
         self._bill_to = bill_to
 
@@ -271,8 +257,6 @@ class Riskv1authenticationsOrderInformation(object):
         :param total_offers_count: The total_offers_count of this Riskv1authenticationsOrderInformation.
         :type: str
         """
-
-
 
         self._total_offers_count = total_offers_count
 

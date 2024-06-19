@@ -68,8 +68,6 @@ class Ptsv2paymentsidProcessingInformationAuthorizationOptionsInitiator(object):
         :type: bool
         """
 
-
-
         self._stored_credential_used = stored_credential_used
 
     def to_dict(self):

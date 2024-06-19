@@ -78,8 +78,6 @@ class InlineResponse201(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -103,8 +101,6 @@ class InlineResponse201(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -127,8 +123,6 @@ class InlineResponse201(object):
         :param status: The status of this InlineResponse201.
         :type: str
         """
-
-
 
         self._status = status
 

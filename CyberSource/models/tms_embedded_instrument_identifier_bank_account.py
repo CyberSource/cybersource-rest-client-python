@@ -73,8 +73,6 @@ class TmsEmbeddedInstrumentIdentifierBankAccount(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -97,8 +95,6 @@ class TmsEmbeddedInstrumentIdentifierBankAccount(object):
         :param routing_number: The routing_number of this TmsEmbeddedInstrumentIdentifierBankAccount.
         :type: str
         """
-
-
 
         self._routing_number = routing_number
 

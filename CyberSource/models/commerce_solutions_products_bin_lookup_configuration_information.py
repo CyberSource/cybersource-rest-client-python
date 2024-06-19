@@ -66,8 +66,6 @@ class CommerceSolutionsProductsBinLookupConfigurationInformation(object):
         :type: CommerceSolutionsProductsBinLookupConfigurationInformationConfigurations
         """
 
-
-
         self._configurations = configurations
 
     def to_dict(self):

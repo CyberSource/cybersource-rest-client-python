@@ -126,8 +126,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -148,8 +146,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param last_name: The last_name of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -174,8 +170,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -198,8 +192,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param address2: The address2 of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -224,8 +216,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -248,8 +238,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param postal_code: The postal_code of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -274,8 +262,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -298,8 +284,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param country: The country of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -324,8 +308,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -348,8 +330,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param alternate_phone_number_verification_status: The alternate_phone_number_verification_status of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._alternate_phone_number_verification_status = alternate_phone_number_verification_status
 
@@ -374,8 +354,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._alternate_email_verification_status = alternate_email_verification_status
 
     @property
@@ -399,8 +377,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -423,8 +399,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationBillTo(object):
         :param name_suffix: The name_suffix of this PtsV2PaymentsPost201ResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._name_suffix = name_suffix
 

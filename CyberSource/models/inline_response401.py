@@ -96,8 +96,6 @@ class InlineResponse401(object):
         :type: InlineResponse401Links
         """
 
-
-
         self._links = links
 
     @property
@@ -121,8 +119,6 @@ class InlineResponse401(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -143,8 +139,6 @@ class InlineResponse401(object):
         :param correlation_id: The correlation_id of this InlineResponse401.
         :type: str
         """
-
-
 
         self._correlation_id = correlation_id
 
@@ -167,8 +161,6 @@ class InlineResponse401(object):
         :type: str
         """
 
-
-
         self._detail = detail
 
     @property
@@ -189,8 +181,6 @@ class InlineResponse401(object):
         :param fields: The fields of this InlineResponse401.
         :type: list[InlineResponse401Fields]
         """
-
-
 
         self._fields = fields
 
@@ -215,8 +205,6 @@ class InlineResponse401(object):
         :type: str
         """
 
-
-
         self._localization_key = localization_key
 
     @property
@@ -237,8 +225,6 @@ class InlineResponse401(object):
         :param message: The message of this InlineResponse401.
         :type: str
         """
-
-
 
         self._message = message
 

@@ -66,8 +66,6 @@ class Riskv1authenticationresultsOrderInformation(object):
         :type: Riskv1authenticationresultsOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     def to_dict(self):

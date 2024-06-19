@@ -71,8 +71,6 @@ class VTConfigCardNotPresentReceiptInformationOrderInformation(object):
         :type: str
         """
 
-
-
         self._email_alias_name = email_alias_name
 
     @property
@@ -93,8 +91,6 @@ class VTConfigCardNotPresentReceiptInformationOrderInformation(object):
         :param custom_reply_to_email_address: The custom_reply_to_email_address of this VTConfigCardNotPresentReceiptInformationOrderInformation.
         :type: str
         """
-
-
 
         self._custom_reply_to_email_address = custom_reply_to_email_address
 

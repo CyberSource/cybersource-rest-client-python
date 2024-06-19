@@ -113,8 +113,6 @@ class InlineResponse2008ResponseRecord(object):
         :type: str
         """
 
-
-
         self._response = response
 
     @property
@@ -135,8 +133,6 @@ class InlineResponse2008ResponseRecord(object):
         :param reason: The reason of this InlineResponse2008ResponseRecord.
         :type: str
         """
-
-
 
         self._reason = reason
 
@@ -159,8 +155,6 @@ class InlineResponse2008ResponseRecord(object):
         :type: str
         """
 
-
-
         self._token = token
 
     @property
@@ -181,8 +175,6 @@ class InlineResponse2008ResponseRecord(object):
         :param instrument_identifier_id: The instrument_identifier_id of this InlineResponse2008ResponseRecord.
         :type: str
         """
-
-
 
         self._instrument_identifier_id = instrument_identifier_id
 
@@ -207,8 +199,6 @@ class InlineResponse2008ResponseRecord(object):
         :type: str
         """
 
-
-
         self._instrument_identifier_created = instrument_identifier_created
 
     @property
@@ -229,8 +219,6 @@ class InlineResponse2008ResponseRecord(object):
         :param card_number: The card_number of this InlineResponse2008ResponseRecord.
         :type: str
         """
-
-
 
         self._card_number = card_number
 
@@ -253,8 +241,6 @@ class InlineResponse2008ResponseRecord(object):
         :type: str
         """
 
-
-
         self._card_expiry_month = card_expiry_month
 
     @property
@@ -275,8 +261,6 @@ class InlineResponse2008ResponseRecord(object):
         :param card_expiry_year: The card_expiry_year of this InlineResponse2008ResponseRecord.
         :type: str
         """
-
-
 
         self._card_expiry_year = card_expiry_year
 
@@ -299,8 +283,6 @@ class InlineResponse2008ResponseRecord(object):
         :type: str
         """
 
-
-
         self._card_type = card_type
 
     @property
@@ -321,8 +303,6 @@ class InlineResponse2008ResponseRecord(object):
         :param additional_updates: The additional_updates of this InlineResponse2008ResponseRecord.
         :type: list[InlineResponse2008ResponseRecordAdditionalUpdates]
         """
-
-
 
         self._additional_updates = additional_updates
 

@@ -108,8 +108,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -132,8 +130,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param address1: The address1 of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -158,8 +154,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -182,8 +176,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -208,8 +200,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -232,8 +222,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param country: The country of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -258,8 +246,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -283,8 +269,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -307,8 +291,6 @@ class Ptsv2paymentsidcapturesAggregatorInformationSubMerchant(object):
         :param id: The id of this Ptsv2paymentsidcapturesAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._id = id
 

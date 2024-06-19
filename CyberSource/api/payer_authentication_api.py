@@ -116,7 +116,6 @@ class PayerAuthenticationApi(object):
             raise ValueError("Missing the required parameter `check_payer_auth_enrollment_request` when calling `check_payer_auth_enrollment`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -230,7 +229,6 @@ class PayerAuthenticationApi(object):
             raise ValueError("Missing the required parameter `payer_auth_setup_request` when calling `payer_auth_setup`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -342,7 +340,6 @@ class PayerAuthenticationApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `validate_request` when calling `validate_authentication_results`")
             raise ValueError("Missing the required parameter `validate_request` when calling `validate_authentication_results`")
-
 
 
         collection_formats = {}

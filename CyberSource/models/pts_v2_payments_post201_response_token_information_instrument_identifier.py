@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier(object):
         :param state: The state of this PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier.
         :type: str
         """
-
-
 
         self._state = state
 

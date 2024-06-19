@@ -118,8 +118,6 @@ class ReportSubscriptionsApi(object):
             raise ValueError("Missing the required parameter `predefined_subscription_request_bean` when calling `create_standard_or_classic_subscription`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -235,8 +233,6 @@ class ReportSubscriptionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
             raise ValueError("Missing the required parameter `create_report_subscription_request` when calling `create_subscription`")
-
-
 
 
         collection_formats = {}
@@ -356,8 +352,6 @@ class ReportSubscriptionsApi(object):
             raise ValueError("Missing the required parameter `report_name` when calling `delete_subscription`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -466,7 +460,6 @@ class ReportSubscriptionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-
 
 
         collection_formats = {}
@@ -581,8 +574,6 @@ class ReportSubscriptionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_name` when calling `get_subscription`")
             raise ValueError("Missing the required parameter `report_name` when calling `get_subscription`")
-
-
 
 
         collection_formats = {}

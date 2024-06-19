@@ -73,8 +73,6 @@ class InlineResponse200EmbeddedCapture(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -95,8 +93,6 @@ class InlineResponse200EmbeddedCapture(object):
         :param links: The links of this InlineResponse200EmbeddedCapture.
         :type: InlineResponse200EmbeddedCaptureLinks
         """
-
-
 
         self._links = links
 

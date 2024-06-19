@@ -68,8 +68,6 @@ class Ptsv2paymentsProcessorInformationAuthorizationOptions(object):
         :type: str
         """
 
-
-
         self._pan_return_indicator = pan_return_indicator
 
     def to_dict(self):

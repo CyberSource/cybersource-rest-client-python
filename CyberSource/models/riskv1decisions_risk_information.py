@@ -81,8 +81,6 @@ class Riskv1decisionsRiskInformation(object):
         :type: Ptsv2paymentsRiskInformationProfile
         """
 
-
-
         self._profile = profile
 
     @property
@@ -106,8 +104,6 @@ class Riskv1decisionsRiskInformation(object):
         :type: str
         """
 
-
-
         self._event_type = event_type
 
     @property
@@ -129,8 +125,6 @@ class Riskv1decisionsRiskInformation(object):
         :type: Ptsv2paymentsRiskInformationBuyerHistory
         """
 
-
-
         self._buyer_history = buyer_history
 
     @property
@@ -151,8 +145,6 @@ class Riskv1decisionsRiskInformation(object):
         :param auxiliary_data: The auxiliary_data of this Riskv1decisionsRiskInformation.
         :type: list[Ptsv2paymentsRiskInformationAuxiliaryData]
         """
-
-
 
         self._auxiliary_data = auxiliary_data
 

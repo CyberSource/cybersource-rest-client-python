@@ -135,14 +135,6 @@ class PurchaseAndRefundDetailsApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_purchase_and_refund_details`")
 
 
-
-
-
-
-
-
-
-
         collection_formats = {}
 
         path_params = {}

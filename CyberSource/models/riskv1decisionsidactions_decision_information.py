@@ -73,8 +73,6 @@ class Riskv1decisionsidactionsDecisionInformation(object):
         :type: str
         """
 
-
-
         self._decision = decision
 
     @property
@@ -97,8 +95,6 @@ class Riskv1decisionsidactionsDecisionInformation(object):
         :param comments: The comments of this Riskv1decisionsidactionsDecisionInformation.
         :type: str
         """
-
-
 
         self._comments = comments
 

@@ -118,8 +118,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_sku = product_sku
 
     @property
@@ -142,8 +140,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :param product_name: The product_name of this Ptsv2paymentreferencesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_name = product_name
 
@@ -168,8 +164,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: int
         """
 
-
-
         self._quantity = quantity
 
     @property
@@ -192,8 +186,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Ptsv2paymentreferencesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._unit_price = unit_price
 
@@ -218,8 +210,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -242,8 +232,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :param discount_rate: The discount_rate of this Ptsv2paymentreferencesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._discount_rate = discount_rate
 
@@ -268,8 +256,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._tax_amount = tax_amount
 
     @property
@@ -292,8 +278,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :param tax_rate: The tax_rate of this Ptsv2paymentreferencesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._tax_rate = tax_rate
 
@@ -318,8 +302,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -343,8 +325,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_code = product_code
 
     @property
@@ -367,8 +347,6 @@ class Ptsv2paymentreferencesOrderInformationLineItems(object):
         :param product_description: The product_description of this Ptsv2paymentreferencesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_description = product_description
 

@@ -123,8 +123,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -147,8 +145,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param authorized_amount: The authorized_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._authorized_amount = authorized_amount
 
@@ -173,8 +169,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -197,8 +191,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param settlement_amount: The settlement_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._settlement_amount = settlement_amount
 
@@ -223,8 +215,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_currency = settlement_currency
 
     @property
@@ -247,8 +237,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param original_amount: The original_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._original_amount = original_amount
 
@@ -273,8 +261,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._original_currency = original_currency
 
     @property
@@ -297,8 +283,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param processor_transaction_fee: The processor_transaction_fee of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._processor_transaction_fee = processor_transaction_fee
 
@@ -323,8 +307,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._exchange_rate = exchange_rate
 
     @property
@@ -347,8 +329,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param foreign_currency: The foreign_currency of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._foreign_currency = foreign_currency
 
@@ -373,8 +353,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._foreign_amount = foreign_amount
 
     @property
@@ -397,8 +375,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationAmountDetails(object):
         :param discount_amount: The discount_amount of this PtsV2PaymentsPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._discount_amount = discount_amount
 

@@ -102,8 +102,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._unit_price = unit_price
 
     @property
@@ -125,8 +123,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :type: list[str]
         """
 
-
-
         self._allowed_export_countries = allowed_export_countries
 
     @property
@@ -147,8 +143,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :param restricted_export_countries: The restricted_export_countries of this Riskv1exportcomplianceinquiriesOrderInformationLineItems.
         :type: list[str]
         """
-
-
 
         self._restricted_export_countries = restricted_export_countries
 
@@ -173,8 +167,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :type: int
         """
 
-
-
         self._quantity = quantity
 
     @property
@@ -197,8 +189,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :param product_sku: The product_sku of this Riskv1exportcomplianceinquiriesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_sku = product_sku
 
@@ -223,8 +213,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_risk = product_risk
 
     @property
@@ -248,8 +236,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_name = product_name
 
     @property
@@ -272,8 +258,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationLineItems(object):
         :param product_code: The product_code of this Riskv1exportcomplianceinquiriesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_code = product_code
 

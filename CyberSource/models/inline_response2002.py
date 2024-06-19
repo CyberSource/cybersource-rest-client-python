@@ -96,8 +96,6 @@ class InlineResponse2002(object):
         :type: Boardingv1registrationsRegistrationInformation
         """
 
-
-
         self._registration_information = registration_information
 
     @property
@@ -118,8 +116,6 @@ class InlineResponse2002(object):
         :param integration_information: The integration_information of this InlineResponse2002.
         :type: InlineResponse2002IntegrationInformation
         """
-
-
 
         self._integration_information = integration_information
 
@@ -142,8 +138,6 @@ class InlineResponse2002(object):
         :type: Boardingv1registrationsOrganizationInformation
         """
 
-
-
         self._organization_information = organization_information
 
     @property
@@ -164,8 +158,6 @@ class InlineResponse2002(object):
         :param product_information: The product_information of this InlineResponse2002.
         :type: Boardingv1registrationsProductInformation
         """
-
-
 
         self._product_information = product_information
 
@@ -188,8 +180,6 @@ class InlineResponse2002(object):
         :type: list[InlineResponse2011ProductInformationSetups]
         """
 
-
-
         self._product_information_setups = product_information_setups
 
     @property
@@ -211,8 +201,6 @@ class InlineResponse2002(object):
         :type: Boardingv1registrationsDocumentInformation
         """
 
-
-
         self._document_information = document_information
 
     @property
@@ -233,8 +221,6 @@ class InlineResponse2002(object):
         :param details: The details of this InlineResponse2002.
         :type: dict(str, list[object])
         """
-
-
 
         self._details = details
 

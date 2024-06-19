@@ -125,9 +125,6 @@ class RetrievalSummariesApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_retrieval_summary`")
 
 
-
-
-
         collection_formats = {}
 
         path_params = {}

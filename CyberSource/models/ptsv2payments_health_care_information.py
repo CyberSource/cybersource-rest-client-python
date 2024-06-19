@@ -68,8 +68,6 @@ class Ptsv2paymentsHealthCareInformation(object):
         :type: list[Ptsv2paymentsHealthCareInformationAmountDetails]
         """
 
-
-
         self._amount_details = amount_details
 
     def to_dict(self):

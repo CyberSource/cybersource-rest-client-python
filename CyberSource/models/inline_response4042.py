@@ -76,8 +76,6 @@ class InlineResponse4042(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -99,8 +97,6 @@ class InlineResponse4042(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -121,8 +117,6 @@ class InlineResponse4042(object):
         :param details: The details of this InlineResponse4042.
         :type: list[InlineResponse4042Details]
         """
-
-
 
         self._details = details
 

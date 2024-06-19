@@ -128,8 +128,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_solution = payment_solution
 
     @property
@@ -152,8 +150,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
         """
-
-
 
         self._reconciliation_id = reconciliation_id
 
@@ -178,8 +174,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: str
         """
 
-
-
         self._link_id = link_id
 
     @property
@@ -202,8 +196,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param report_group: The report_group of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
         """
-
-
 
         self._report_group = report_group
 
@@ -228,8 +220,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: str
         """
 
-
-
         self._visa_checkout_id = visa_checkout_id
 
     @property
@@ -252,8 +242,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param purchase_level: The purchase_level of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: str
         """
-
-
 
         self._purchase_level = purchase_level
 
@@ -278,8 +266,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: str
         """
 
-
-
         self._industry_data_type = industry_data_type
 
     @property
@@ -300,8 +286,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param issuer: The issuer of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: Ptsv2paymentsIssuerInformation
         """
-
-
 
         self._issuer = issuer
 
@@ -324,8 +308,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: Ptsv2paymentsidcapturesProcessingInformationAuthorizationOptions
         """
 
-
-
         self._authorization_options = authorization_options
 
     @property
@@ -347,8 +329,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: Ptsv2paymentsidcapturesProcessingInformationCaptureOptions
         """
 
-
-
         self._capture_options = capture_options
 
     @property
@@ -369,8 +349,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param loan_options: The loan_options of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: Ptsv2paymentsProcessingInformationLoanOptions
         """
-
-
 
         self._loan_options = loan_options
 
@@ -395,8 +373,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :type: bool
         """
 
-
-
         self._pay_by_points_indicator = pay_by_points_indicator
 
     @property
@@ -419,8 +395,6 @@ class Ptsv2paymentsidcapturesProcessingInformation(object):
         :param action_list: The action_list of this Ptsv2paymentsidcapturesProcessingInformation.
         :type: list[str]
         """
-
-
 
         self._action_list = action_list
 

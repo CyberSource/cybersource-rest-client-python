@@ -98,8 +98,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :type: str
         """
 
-
-
         self._city = city
 
     @property
@@ -122,8 +120,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param state: The state of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-
-
 
         self._state = state
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -172,8 +166,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param location_id: The location_id of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-
-
 
         self._location_id = location_id
 
@@ -198,8 +190,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -223,8 +213,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -247,8 +235,6 @@ class Ptsv2paymentsTravelInformationAutoRentalReturnAddress(object):
         :param location: The location of this Ptsv2paymentsTravelInformationAutoRentalReturnAddress.
         :type: str
         """
-
-
 
         self._location = location
 

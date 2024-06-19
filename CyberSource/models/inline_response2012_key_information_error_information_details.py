@@ -73,8 +73,6 @@ class InlineResponse2012KeyInformationErrorInformationDetails(object):
         :type: str
         """
 
-
-
         self._field = field
 
     @property
@@ -97,8 +95,6 @@ class InlineResponse2012KeyInformationErrorInformationDetails(object):
         :param reason: The reason of this InlineResponse2012KeyInformationErrorInformationDetails.
         :type: str
         """
-
-
 
         self._reason = reason
 

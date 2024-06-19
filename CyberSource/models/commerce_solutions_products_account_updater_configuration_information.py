@@ -71,8 +71,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation(object):
         :type: str
         """
 
-
-
         self._template_id = template_id
 
     @property
@@ -93,8 +91,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformation(object):
         :param configurations: The configurations of this CommerceSolutionsProductsAccountUpdaterConfigurationInformation.
         :type: CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurations
         """
-
-
 
         self._configurations = configurations
 

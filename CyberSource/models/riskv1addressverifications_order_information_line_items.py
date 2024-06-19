@@ -92,8 +92,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._unit_price = unit_price
 
     @property
@@ -116,8 +114,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param quantity: The quantity of this Riskv1addressverificationsOrderInformationLineItems.
         :type: int
         """
-
-
 
         self._quantity = quantity
 
@@ -142,8 +138,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_sku = product_sku
 
     @property
@@ -166,8 +160,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_risk: The product_risk of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_risk = product_risk
 
@@ -192,8 +184,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_name = product_name
 
     @property
@@ -216,8 +206,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param product_code: The product_code of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_code = product_code
 

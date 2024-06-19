@@ -66,8 +66,6 @@ class PaymentsProductsDigitalPaymentsSubscriptionInformationFeatures(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     def to_dict(self):

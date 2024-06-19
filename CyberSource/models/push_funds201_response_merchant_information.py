@@ -66,8 +66,6 @@ class PushFunds201ResponseMerchantInformation(object):
         :type: PushFunds201ResponseMerchantInformationMerchantDescriptor
         """
 
-
-
         self._merchant_descriptor = merchant_descriptor
 
     def to_dict(self):

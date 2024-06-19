@@ -103,8 +103,6 @@ class PtsV2PaymentsPost201Response1(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -127,8 +125,6 @@ class PtsV2PaymentsPost201Response1(object):
         :param status: The status of this PtsV2PaymentsPost201Response1.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -153,8 +149,6 @@ class PtsV2PaymentsPost201Response1(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -175,8 +169,6 @@ class PtsV2PaymentsPost201Response1(object):
         :param processor_information: The processor_information of this PtsV2PaymentsPost201Response1.
         :type: PtsV2PaymentsPost201Response1ProcessorInformation
         """
-
-
 
         self._processor_information = processor_information
 
@@ -201,8 +193,6 @@ class PtsV2PaymentsPost201Response1(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -223,8 +213,6 @@ class PtsV2PaymentsPost201Response1(object):
         :param payment_information: The payment_information of this PtsV2PaymentsPost201Response1.
         :type: PtsV2PaymentsPost201Response1PaymentInformation
         """
-
-
 
         self._payment_information = payment_information
 
@@ -247,8 +235,6 @@ class PtsV2PaymentsPost201Response1(object):
         :type: PtsV2PaymentsPost201Response1OrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -269,8 +255,6 @@ class PtsV2PaymentsPost201Response1(object):
         :param client_reference_information: The client_reference_information of this PtsV2PaymentsPost201Response1.
         :type: PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 

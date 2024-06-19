@@ -118,8 +118,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -142,8 +140,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-
-
 
         self._date_of_birth = date_of_birth
 
@@ -168,8 +164,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -193,8 +187,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._company_tax_id = company_tax_id
 
     @property
@@ -215,8 +207,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param personal_identification: The personal_identification of this Ptsv2paymentsBuyerInformation.
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
-
-
 
         self._personal_identification = personal_identification
 
@@ -241,8 +231,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._hashed_password = hashed_password
 
     @property
@@ -265,8 +253,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param gender: The gender of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-
-
 
         self._gender = gender
 
@@ -291,8 +277,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._language = language
 
     @property
@@ -315,8 +299,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param note_to_seller: The note_to_seller of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-
-
 
         self._note_to_seller = note_to_seller
 
@@ -341,8 +323,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :type: int
         """
 
-
-
         self._mobile_phone = mobile_phone
 
     @property
@@ -365,8 +345,6 @@ class Ptsv2paymentsBuyerInformation(object):
         :param wallet_id: The wallet_id of this Ptsv2paymentsBuyerInformation.
         :type: str
         """
-
-
 
         self._wallet_id = wallet_id
 

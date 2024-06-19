@@ -68,8 +68,6 @@ class PtsV2ModifyBillingAgreementPost201ResponsePaymentInformationEWallet(object
         :type: str
         """
 
-
-
         self._account_id = account_id
 
     def to_dict(self):

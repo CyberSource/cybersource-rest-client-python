@@ -123,8 +123,6 @@ class KeyManagementPgpApi(object):
             raise ValueError("Missing the required parameter `update_pgp_keys_request` when calling `update_pgp`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}

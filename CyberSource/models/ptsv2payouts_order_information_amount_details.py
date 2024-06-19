@@ -78,8 +78,6 @@ class Ptsv2payoutsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2payoutsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -125,8 +121,6 @@ class Ptsv2payoutsOrderInformationAmountDetails(object):
         :param surcharge: The surcharge of this Ptsv2payoutsOrderInformationAmountDetails.
         :type: Ptsv2payoutsOrderInformationAmountDetailsSurcharge
         """
-
-
 
         self._surcharge = surcharge
 

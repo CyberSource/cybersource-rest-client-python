@@ -116,8 +116,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsidrefundsPaymentInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -138,8 +136,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :param bank: The bank of this Ptsv2paymentsidrefundsPaymentInformation.
         :type: Ptsv2paymentsidrefundsPaymentInformationBank
         """
-
-
 
         self._bank = bank
 
@@ -162,8 +158,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationTokenizedCard
         """
 
-
-
         self._tokenized_card = tokenized_card
 
     @property
@@ -184,8 +178,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :param fluid_data: The fluid_data of this Ptsv2paymentsidrefundsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationFluidData
         """
-
-
 
         self._fluid_data = fluid_data
 
@@ -208,8 +200,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
-
-
         self._customer = customer
 
     @property
@@ -230,8 +220,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :param payment_instrument: The payment_instrument of this Ptsv2paymentsidrefundsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationPaymentInstrument
         """
-
-
 
         self._payment_instrument = payment_instrument
 
@@ -254,8 +242,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationInstrumentIdentifier
         """
 
-
-
         self._instrument_identifier = instrument_identifier
 
     @property
@@ -276,8 +262,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :param shipping_address: The shipping_address of this Ptsv2paymentsidrefundsPaymentInformation.
         :type: Ptsv2paymentsPaymentInformationShippingAddress
         """
-
-
 
         self._shipping_address = shipping_address
 
@@ -300,8 +284,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationLegacyToken
         """
 
-
-
         self._legacy_token = legacy_token
 
     @property
@@ -323,8 +305,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :type: Ptsv2paymentsidrefundsPaymentInformationPaymentType
         """
 
-
-
         self._payment_type = payment_type
 
     @property
@@ -345,8 +325,6 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         :param e_wallet: The e_wallet of this Ptsv2paymentsidrefundsPaymentInformation.
         :type: Ptsv2paymentsidrefundsPaymentInformationEWallet
         """
-
-
 
         self._e_wallet = e_wallet
 

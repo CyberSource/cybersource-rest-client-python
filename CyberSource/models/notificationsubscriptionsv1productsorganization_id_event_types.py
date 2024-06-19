@@ -86,8 +86,6 @@ class Notificationsubscriptionsv1productsorganizationIdEventTypes(object):
         :type: str
         """
 
-
-
         self._event_name = event_name
 
     @property
@@ -108,8 +106,6 @@ class Notificationsubscriptionsv1productsorganizationIdEventTypes(object):
         :param display_name: The display_name of this Notificationsubscriptionsv1productsorganizationIdEventTypes.
         :type: str
         """
-
-
 
         self._display_name = display_name
 
@@ -132,8 +128,6 @@ class Notificationsubscriptionsv1productsorganizationIdEventTypes(object):
         :type: int
         """
 
-
-
         self._frequency = frequency
 
     @property
@@ -155,8 +149,6 @@ class Notificationsubscriptionsv1productsorganizationIdEventTypes(object):
         :type: bool
         """
 
-
-
         self._time_sensitivity = time_sensitivity
 
     @property
@@ -177,8 +169,6 @@ class Notificationsubscriptionsv1productsorganizationIdEventTypes(object):
         :param payload_encryption: The payload_encryption of this Notificationsubscriptionsv1productsorganizationIdEventTypes.
         :type: bool
         """
-
-
 
         self._payload_encryption = payload_encryption
 

@@ -78,8 +78,6 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         :type: int
         """
 
-
-
         self._capture_sequence_number = capture_sequence_number
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         :type: int
         """
 
-
-
         self._total_capture_count = total_capture_count
 
     @property
@@ -127,8 +123,6 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         :param is_final: The is_final of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
         :type: str
         """
-
-
 
         self._is_final = is_final
 

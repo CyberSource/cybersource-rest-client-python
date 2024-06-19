@@ -96,8 +96,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -118,8 +116,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :param reversal: The reversal of this PtsV2PaymentsPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._reversal = reversal
 
@@ -142,8 +138,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._capture = capture
 
     @property
@@ -164,8 +158,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :param customer: The customer of this PtsV2PaymentsPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._customer = customer
 
@@ -188,8 +180,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._payment_instrument = payment_instrument
 
     @property
@@ -211,8 +201,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._shipping_address = shipping_address
 
     @property
@@ -233,8 +221,6 @@ class PtsV2PaymentsPost201ResponseLinks(object):
         :param instrument_identifier: The instrument_identifier of this PtsV2PaymentsPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._instrument_identifier = instrument_identifier
 

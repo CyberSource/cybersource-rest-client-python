@@ -66,8 +66,6 @@ class Riskv1liststypeentriesRiskInformation(object):
         :type: Riskv1liststypeentriesRiskInformationMarkingDetails
         """
 
-
-
         self._marking_details = marking_details
 
     def to_dict(self):

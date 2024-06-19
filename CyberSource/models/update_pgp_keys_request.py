@@ -71,8 +71,6 @@ class UpdatePGPKeysRequest(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -95,8 +93,6 @@ class UpdatePGPKeysRequest(object):
         :param organization_id: The organization_id of this UpdatePGPKeysRequest.
         :type: str
         """
-
-
 
         self._organization_id = organization_id
 

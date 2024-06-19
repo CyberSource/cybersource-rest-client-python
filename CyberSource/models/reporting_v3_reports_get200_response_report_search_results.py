@@ -141,8 +141,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: ReportingV3ReportsGet200ResponseLink
         """
 
-
-
         self._link = link
 
     @property
@@ -165,8 +163,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param report_definition_id: The report_definition_id of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
         """
-
-
 
         self._report_definition_id = report_definition_id
 
@@ -191,8 +187,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: str
         """
 
-
-
         self._report_name = report_name
 
     @property
@@ -215,8 +209,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param report_mime_type: The report_mime_type of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
         """
-
-
 
         self._report_mime_type = report_mime_type
 
@@ -241,8 +233,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: str
         """
 
-
-
         self._report_frequency = report_frequency
 
     @property
@@ -265,8 +255,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param status: The status of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -291,8 +279,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: datetime
         """
 
-
-
         self._report_start_time = report_start_time
 
     @property
@@ -315,8 +301,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param report_end_time: The report_end_time of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: datetime
         """
-
-
 
         self._report_end_time = report_end_time
 
@@ -341,8 +325,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: str
         """
 
-
-
         self._timezone = timezone
 
     @property
@@ -365,8 +347,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param report_id: The report_id of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
         """
-
-
 
         self._report_id = report_id
 
@@ -391,8 +371,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -415,8 +393,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param queued_time: The queued_time of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: datetime
         """
-
-
 
         self._queued_time = queued_time
 
@@ -441,8 +417,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: datetime
         """
 
-
-
         self._report_generating_time = report_generating_time
 
     @property
@@ -465,8 +439,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param report_completed_time: The report_completed_time of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: datetime
         """
-
-
 
         self._report_completed_time = report_completed_time
 
@@ -491,8 +463,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :type: str
         """
 
-
-
         self._subscription_type = subscription_type
 
     @property
@@ -515,8 +485,6 @@ class ReportingV3ReportsGet200ResponseReportSearchResults(object):
         :param group_id: The group_id of this ReportingV3ReportsGet200ResponseReportSearchResults.
         :type: str
         """
-
-
 
         self._group_id = group_id
 

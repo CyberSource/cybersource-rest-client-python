@@ -66,8 +66,6 @@ class PtsV2CreateBillingAgreementPost201ResponseRiskInformation(object):
         :type: PtsV2CreateBillingAgreementPost201ResponseRiskInformationProcessorResults
         """
 
-
-
         self._processor_results = processor_results
 
     def to_dict(self):

@@ -85,8 +85,6 @@ class PostRegistrationBody(object):
         :type: Boardingv1registrationsRegistrationInformation
         """
 
-
-
         self._registration_information = registration_information
 
     @property
@@ -107,8 +105,6 @@ class PostRegistrationBody(object):
         :param integration_information: The integration_information of this PostRegistrationBody.
         :type: Boardingv1registrationsIntegrationInformation
         """
-
-
 
         self._integration_information = integration_information
 
@@ -131,8 +127,6 @@ class PostRegistrationBody(object):
         :type: Boardingv1registrationsOrganizationInformation
         """
 
-
-
         self._organization_information = organization_information
 
     @property
@@ -154,8 +148,6 @@ class PostRegistrationBody(object):
         :type: Boardingv1registrationsProductInformation
         """
 
-
-
         self._product_information = product_information
 
     @property
@@ -176,8 +168,6 @@ class PostRegistrationBody(object):
         :param document_information: The document_information of this PostRegistrationBody.
         :type: Boardingv1registrationsDocumentInformation
         """
-
-
 
         self._document_information = document_information
 

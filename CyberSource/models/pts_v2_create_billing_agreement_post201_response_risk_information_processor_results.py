@@ -68,8 +68,6 @@ class PtsV2CreateBillingAgreementPost201ResponseRiskInformationProcessorResults(
         :type: str
         """
 
-
-
         self._risk_score = risk_score
 
     def to_dict(self):

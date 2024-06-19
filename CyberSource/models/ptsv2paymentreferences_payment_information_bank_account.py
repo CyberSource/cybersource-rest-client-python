@@ -73,8 +73,6 @@ class Ptsv2paymentreferencesPaymentInformationBankAccount(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentreferencesPaymentInformationBankAccount(object):
         :param iban: The iban of this Ptsv2paymentreferencesPaymentInformationBankAccount.
         :type: str
         """
-
-
 
         self._iban = iban
 

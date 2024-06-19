@@ -91,8 +91,6 @@ class VoidCaptureRequest(object):
         :type: Ptsv2paymentsidreversalsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -113,8 +111,6 @@ class VoidCaptureRequest(object):
         :param payment_information: The payment_information of this VoidCaptureRequest.
         :type: Ptsv2paymentsidvoidsPaymentInformation
         """
-
-
 
         self._payment_information = payment_information
 
@@ -137,8 +133,6 @@ class VoidCaptureRequest(object):
         :type: Ptsv2paymentsidvoidsOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -159,8 +153,6 @@ class VoidCaptureRequest(object):
         :param agreement_information: The agreement_information of this VoidCaptureRequest.
         :type: Ptsv2paymentsidvoidsAgreementInformation
         """
-
-
 
         self._agreement_information = agreement_information
 
@@ -183,8 +175,6 @@ class VoidCaptureRequest(object):
         :type: Ptsv2paymentsidvoidsMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -205,8 +195,6 @@ class VoidCaptureRequest(object):
         :param processing_information: The processing_information of this VoidCaptureRequest.
         :type: Ptsv2paymentsidvoidsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 

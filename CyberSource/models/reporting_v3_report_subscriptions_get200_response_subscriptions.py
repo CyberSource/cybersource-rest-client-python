@@ -133,8 +133,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -157,8 +155,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_definition_id: The report_definition_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-
-
 
         self._report_definition_id = report_definition_id
 
@@ -183,8 +179,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: str
         """
 
-
-
         self._report_definition_name = report_definition_name
 
     @property
@@ -207,8 +201,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_mime_type: The report_mime_type of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-
-
 
         self._report_mime_type = report_mime_type
 
@@ -233,8 +225,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: str
         """
 
-
-
         self._report_frequency = report_frequency
 
     @property
@@ -257,8 +247,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_interval: The report_interval of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-
-
 
         self._report_interval = report_interval
 
@@ -283,8 +271,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: str
         """
 
-
-
         self._report_name = report_name
 
     @property
@@ -307,8 +293,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param timezone: The timezone of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -333,8 +317,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: datetime
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -357,8 +339,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param start_day: The start_day of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: int
         """
-
-
 
         self._start_day = start_day
 
@@ -383,8 +363,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: list[str]
         """
 
-
-
         self._report_fields = report_fields
 
     @property
@@ -408,8 +386,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :type: dict(str, list[str])
         """
 
-
-
         self._report_filters = report_filters
 
     @property
@@ -430,8 +406,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_preferences: The report_preferences of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: Reportingv3reportsReportPreferences
         """
-
-
 
         self._report_preferences = report_preferences
 
@@ -455,8 +429,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param group_id: The group_id of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-
-
 
         self._group_id = group_id
 

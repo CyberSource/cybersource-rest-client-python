@@ -126,8 +126,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: Ptsv2paymentsOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -148,8 +146,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param bill_to: The bill_to of this Ptsv2paymentsOrderInformation.
         :type: Ptsv2paymentsOrderInformationBillTo
         """
-
-
 
         self._bill_to = bill_to
 
@@ -172,8 +168,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: Ptsv2paymentsOrderInformationShipTo
         """
 
-
-
         self._ship_to = ship_to
 
     @property
@@ -194,8 +188,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param line_items: The line_items of this Ptsv2paymentsOrderInformation.
         :type: list[Ptsv2paymentsOrderInformationLineItems]
         """
-
-
 
         self._line_items = line_items
 
@@ -218,8 +210,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: Ptsv2paymentsOrderInformationInvoiceDetails
         """
 
-
-
         self._invoice_details = invoice_details
 
     @property
@@ -240,8 +230,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param shipping_details: The shipping_details of this Ptsv2paymentsOrderInformation.
         :type: Ptsv2paymentsOrderInformationShippingDetails
         """
-
-
 
         self._shipping_details = shipping_details
 
@@ -266,8 +254,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: bool
         """
 
-
-
         self._returns_accepted = returns_accepted
 
     @property
@@ -290,8 +276,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param is_cryptocurrency_purchase: The is_cryptocurrency_purchase of this Ptsv2paymentsOrderInformation.
         :type: str
         """
-
-
 
         self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
 
@@ -316,8 +300,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: str
         """
 
-
-
         self._cutoff_date_time = cutoff_date_time
 
     @property
@@ -340,8 +322,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param pre_order: The pre_order of this Ptsv2paymentsOrderInformation.
         :type: str
         """
-
-
 
         self._pre_order = pre_order
 
@@ -366,8 +346,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: str
         """
 
-
-
         self._pre_order_date = pre_order_date
 
     @property
@@ -391,8 +369,6 @@ class Ptsv2paymentsOrderInformation(object):
         :type: bool
         """
 
-
-
         self._reordered = reordered
 
     @property
@@ -415,8 +391,6 @@ class Ptsv2paymentsOrderInformation(object):
         :param total_offers_count: The total_offers_count of this Ptsv2paymentsOrderInformation.
         :type: str
         """
-
-
 
         self._total_offers_count = total_offers_count
 

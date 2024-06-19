@@ -108,8 +108,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -132,8 +130,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :param external_organization_id: The external_organization_id of this KmsV2KeysSymPost201ResponseKeyInformation.
         :type: str
         """
-
-
 
         self._external_organization_id = external_organization_id
 
@@ -158,8 +154,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     @property
@@ -182,8 +176,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :param key_id: The key_id of this KmsV2KeysSymPost201ResponseKeyInformation.
         :type: str
         """
-
-
 
         self._key_id = key_id
 
@@ -208,8 +200,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :type: str
         """
 
-
-
         self._key = key
 
     @property
@@ -232,8 +222,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :param status: The status of this KmsV2KeysSymPost201ResponseKeyInformation.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -258,8 +246,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :type: str
         """
 
-
-
         self._expiration_date = expiration_date
 
     @property
@@ -283,8 +269,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -305,8 +289,6 @@ class KmsV2KeysSymPost201ResponseKeyInformation(object):
         :param error_information: The error_information of this KmsV2KeysSymPost201ResponseKeyInformation.
         :type: KmsV2KeysSymPost201ResponseErrorInformation
         """
-
-
 
         self._error_information = error_information
 

@@ -71,8 +71,6 @@ class VTConfig(object):
         :type: VTConfigCardNotPresent
         """
 
-
-
         self._card_not_present = card_not_present
 
     @property
@@ -93,8 +91,6 @@ class VTConfig(object):
         :param card_present: The card_present of this VTConfig.
         :type: VTConfigCardNotPresent
         """
-
-
 
         self._card_present = card_present
 

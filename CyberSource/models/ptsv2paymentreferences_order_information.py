@@ -91,8 +91,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :type: Ptsv2paymentreferencesOrderInformationBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -113,8 +111,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :param ship_to: The ship_to of this Ptsv2paymentreferencesOrderInformation.
         :type: Ptsv2paymentreferencesOrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 
@@ -137,8 +133,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :type: Ptsv2paymentreferencesOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -159,8 +153,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :param line_items: The line_items of this Ptsv2paymentreferencesOrderInformation.
         :type: list[Ptsv2paymentreferencesOrderInformationLineItems]
         """
-
-
 
         self._line_items = line_items
 
@@ -183,8 +175,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :type: Ptsv2paymentreferencesOrderInformationInvoiceDetails
         """
 
-
-
         self._invoice_details = invoice_details
 
     @property
@@ -205,8 +195,6 @@ class Ptsv2paymentreferencesOrderInformation(object):
         :param shipping_details: The shipping_details of this Ptsv2paymentreferencesOrderInformation.
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformationShippingDetails
         """
-
-
 
         self._shipping_details = shipping_details
 

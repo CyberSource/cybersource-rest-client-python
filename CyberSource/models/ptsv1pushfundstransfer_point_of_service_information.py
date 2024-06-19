@@ -88,8 +88,6 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
         :type: str
         """
 
-
-
         self._terminal_id = terminal_id
 
     @property
@@ -112,8 +110,6 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
         :param cat_level: The cat_level of this Ptsv1pushfundstransferPointOfServiceInformation.
         :type: int
         """
-
-
 
         self._cat_level = cat_level
 
@@ -138,8 +134,6 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
         :type: str
         """
 
-
-
         self._entry_mode = entry_mode
 
     @property
@@ -163,8 +157,6 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
         :type: int
         """
 
-
-
         self._pin_entry_capability = pin_entry_capability
 
     @property
@@ -187,8 +179,6 @@ class Ptsv1pushfundstransferPointOfServiceInformation(object):
         :param terminal_capability: The terminal_capability of this Ptsv1pushfundstransferPointOfServiceInformation.
         :type: int
         """
-
-
 
         self._terminal_capability = terminal_capability
 

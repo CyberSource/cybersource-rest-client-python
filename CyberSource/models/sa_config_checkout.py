@@ -78,8 +78,6 @@ class SAConfigCheckout(object):
         :type: bool
         """
 
-
-
         self._display_tax_amount = display_tax_amount
 
     @property
@@ -103,8 +101,6 @@ class SAConfigCheckout(object):
         :type: str
         """
 
-
-
         self._template_type = template_type
 
     @property
@@ -127,8 +123,6 @@ class SAConfigCheckout(object):
         :param return_to_merchant_site_url: The return_to_merchant_site_url of this SAConfigCheckout.
         :type: str
         """
-
-
 
         self._return_to_merchant_site_url = return_to_merchant_site_url
 

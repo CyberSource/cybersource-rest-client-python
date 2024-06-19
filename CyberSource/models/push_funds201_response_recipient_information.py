@@ -66,8 +66,6 @@ class PushFunds201ResponseRecipientInformation(object):
         :type: PushFunds201ResponseRecipientInformationCard
         """
 
-
-
         self._card = card
 
     def to_dict(self):

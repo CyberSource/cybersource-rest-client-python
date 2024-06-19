@@ -71,8 +71,6 @@ class UpdateAsymKeysRequest(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -95,8 +93,6 @@ class UpdateAsymKeysRequest(object):
         :param organization_id: The organization_id of this UpdateAsymKeysRequest.
         :type: str
         """
-
-
 
         self._organization_id = organization_id
 

@@ -66,8 +66,6 @@ class TssV2TransactionsPost201ResponseEmbeddedLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._transaction_detail = transaction_detail
 
     def to_dict(self):

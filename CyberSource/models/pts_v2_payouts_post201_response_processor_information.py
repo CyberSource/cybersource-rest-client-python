@@ -88,8 +88,6 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -112,8 +110,6 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PayoutsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 
@@ -138,8 +134,6 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -163,8 +157,6 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._system_trace_audit_number = system_trace_audit_number
 
     @property
@@ -187,8 +179,6 @@ class PtsV2PayoutsPost201ResponseProcessorInformation(object):
         :param response_code_source: The response_code_source of this PtsV2PayoutsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code_source = response_code_source
 

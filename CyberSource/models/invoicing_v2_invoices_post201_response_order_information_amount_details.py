@@ -108,8 +108,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -132,8 +130,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param currency: The currency of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -158,8 +154,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._balance_amount = balance_amount
 
     @property
@@ -182,8 +176,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param discount_amount: The discount_amount of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._discount_amount = discount_amount
 
@@ -208,8 +200,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :type: float
         """
 
-
-
         self._discount_percent = discount_percent
 
     @property
@@ -232,8 +222,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param sub_amount: The sub_amount of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: float
         """
-
-
 
         self._sub_amount = sub_amount
 
@@ -258,8 +246,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :type: float
         """
 
-
-
         self._minimum_partial_amount = minimum_partial_amount
 
     @property
@@ -281,8 +267,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :type: Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails
         """
 
-
-
         self._tax_details = tax_details
 
     @property
@@ -303,8 +287,6 @@ class InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails(object):
         :param freight: The freight of this InvoicingV2InvoicesPost201ResponseOrderInformationAmountDetails.
         :type: Invoicingv2invoicesOrderInformationAmountDetailsFreight
         """
-
-
 
         self._freight = freight
 

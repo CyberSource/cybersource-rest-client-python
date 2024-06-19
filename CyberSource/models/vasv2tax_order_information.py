@@ -101,8 +101,6 @@ class Vasv2taxOrderInformation(object):
         :type: RiskV1DecisionsPost201ResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -123,8 +121,6 @@ class Vasv2taxOrderInformation(object):
         :param bill_to: The bill_to of this Vasv2taxOrderInformation.
         :type: Vasv2taxOrderInformationBillTo
         """
-
-
 
         self._bill_to = bill_to
 
@@ -147,8 +143,6 @@ class Vasv2taxOrderInformation(object):
         :type: Vasv2taxOrderInformationShippingDetails
         """
 
-
-
         self._shipping_details = shipping_details
 
     @property
@@ -169,8 +163,6 @@ class Vasv2taxOrderInformation(object):
         :param ship_to: The ship_to of this Vasv2taxOrderInformation.
         :type: Vasv2taxOrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 
@@ -193,8 +185,6 @@ class Vasv2taxOrderInformation(object):
         :type: list[Vasv2taxOrderInformationLineItems]
         """
 
-
-
         self._line_items = line_items
 
     @property
@@ -215,8 +205,6 @@ class Vasv2taxOrderInformation(object):
         :param invoice_details: The invoice_details of this Vasv2taxOrderInformation.
         :type: Vasv2taxOrderInformationInvoiceDetails
         """
-
-
 
         self._invoice_details = invoice_details
 
@@ -239,8 +227,6 @@ class Vasv2taxOrderInformation(object):
         :type: Vasv2taxOrderInformationOrderAcceptance
         """
 
-
-
         self._order_acceptance = order_acceptance
 
     @property
@@ -261,8 +247,6 @@ class Vasv2taxOrderInformation(object):
         :param order_origin: The order_origin of this Vasv2taxOrderInformation.
         :type: Vasv2taxOrderInformationOrderOrigin
         """
-
-
 
         self._order_origin = order_origin
 

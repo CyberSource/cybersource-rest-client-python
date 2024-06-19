@@ -72,8 +72,6 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
         :type: str
         """
 
-
-
         self._solution_id = solution_id
 
     @property
@@ -94,8 +92,6 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
         :param tenant_information: The tenant_information of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
         :type: Boardingv1registrationsIntegrationInformationTenantInformation
         """
-
-
 
         self._tenant_information = tenant_information
 

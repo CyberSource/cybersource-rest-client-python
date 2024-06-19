@@ -81,8 +81,6 @@ class SAConfigContactInformation(object):
         :type: str
         """
 
-
-
         self._phone = phone
 
     @property
@@ -103,8 +101,6 @@ class SAConfigContactInformation(object):
         :param company_name: The company_name of this SAConfigContactInformation.
         :type: str
         """
-
-
 
         self._company_name = company_name
 
@@ -127,8 +123,6 @@ class SAConfigContactInformation(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -149,8 +143,6 @@ class SAConfigContactInformation(object):
         :param name: The name of this SAConfigContactInformation.
         :type: str
         """
-
-
 
         self._name = name
 

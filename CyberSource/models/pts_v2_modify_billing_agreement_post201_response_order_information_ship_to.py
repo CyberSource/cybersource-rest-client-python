@@ -103,8 +103,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -127,8 +125,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :param last_name: The last_name of this PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -153,8 +149,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -177,8 +171,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :param address2: The address2 of this PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -203,8 +195,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -227,8 +217,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -253,8 +241,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -277,8 +263,6 @@ class PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo(object):
         :param country: The country of this PtsV2ModifyBillingAgreementPost201ResponseOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._country = country
 

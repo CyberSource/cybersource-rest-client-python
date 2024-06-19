@@ -73,8 +73,6 @@ class InvoicingV2InvoiceSettingsGet200Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -95,8 +93,6 @@ class InvoicingV2InvoiceSettingsGet200Response(object):
         :param invoice_settings_information: The invoice_settings_information of this InvoicingV2InvoiceSettingsGet200Response.
         :type: InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation
         """
-
-
 
         self._invoice_settings_information = invoice_settings_information
 

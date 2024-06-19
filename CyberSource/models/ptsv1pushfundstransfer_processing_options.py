@@ -66,8 +66,6 @@ class Ptsv1pushfundstransferProcessingOptions(object):
         :type: Ptsv1pushfundstransferProcessingOptionsFundingOptions
         """
 
-
-
         self._funding_options = funding_options
 
     def to_dict(self):

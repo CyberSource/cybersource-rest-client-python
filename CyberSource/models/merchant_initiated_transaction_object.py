@@ -83,8 +83,6 @@ class MerchantInitiatedTransactionObject(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -107,8 +105,6 @@ class MerchantInitiatedTransactionObject(object):
         :param previous_transaction_id: The previous_transaction_id of this MerchantInitiatedTransactionObject.
         :type: str
         """
-
-
 
         self._previous_transaction_id = previous_transaction_id
 
@@ -133,8 +129,6 @@ class MerchantInitiatedTransactionObject(object):
         :type: str
         """
 
-
-
         self._original_authorized_amount = original_authorized_amount
 
     @property
@@ -157,8 +151,6 @@ class MerchantInitiatedTransactionObject(object):
         :param agreement_id: The agreement_id of this MerchantInitiatedTransactionObject.
         :type: str
         """
-
-
 
         self._agreement_id = agreement_id
 

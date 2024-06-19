@@ -68,8 +68,6 @@ class Ptsv2voidsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_id = payment_id
 
     def to_dict(self):

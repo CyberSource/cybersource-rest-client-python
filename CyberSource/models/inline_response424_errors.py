@@ -73,8 +73,6 @@ class InlineResponse424Errors(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -97,8 +95,6 @@ class InlineResponse424Errors(object):
         :param message: The message of this InlineResponse424Errors.
         :type: str
         """
-
-
 
         self._message = message
 

@@ -76,8 +76,6 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
         :type: Ptsv2paymentsPaymentInformationCustomer
         """
 
-
-
         self._customer = customer
 
     @property
@@ -99,8 +97,6 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
         :type: Ptsv2paymentsidcapturesPaymentInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -121,8 +117,6 @@ class Ptsv2paymentsidcapturesPaymentInformation(object):
         :param payment_type: The payment_type of this Ptsv2paymentsidcapturesPaymentInformation.
         :type: Ptsv2paymentsidcapturesPaymentInformationPaymentType
         """
-
-
 
         self._payment_type = payment_type
 

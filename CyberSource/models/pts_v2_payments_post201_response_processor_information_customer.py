@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationCustomer(object):
         :type: str
         """
 
-
-
         self._personal_id_result = personal_id_result
 
     def to_dict(self):

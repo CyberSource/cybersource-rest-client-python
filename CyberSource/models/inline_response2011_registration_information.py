@@ -76,8 +76,6 @@ class InlineResponse2011RegistrationInformation(object):
         :type: str
         """
 
-
-
         self._boarding_package_id = boarding_package_id
 
     @property
@@ -100,7 +98,6 @@ class InlineResponse2011RegistrationInformation(object):
         :param mode: The mode of this InlineResponse2011RegistrationInformation.
         :type: str
         """
-
         allowed_values = ["COMPLETE", "PARTIAL"]
         if mode not in allowed_values:
             raise ValueError(
@@ -128,8 +125,6 @@ class InlineResponse2011RegistrationInformation(object):
         :param sales_rep_id: The sales_rep_id of this InlineResponse2011RegistrationInformation.
         :type: str
         """
-
-
 
         self._sales_rep_id = sales_rep_id
 

@@ -73,8 +73,6 @@ class PtsV2CreditsPost201ResponseCreditAmountDetails(object):
         :type: str
         """
 
-
-
         self._credit_amount = credit_amount
 
     @property
@@ -97,8 +95,6 @@ class PtsV2CreditsPost201ResponseCreditAmountDetails(object):
         :param currency: The currency of this PtsV2CreditsPost201ResponseCreditAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

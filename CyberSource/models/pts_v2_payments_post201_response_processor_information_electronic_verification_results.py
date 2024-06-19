@@ -153,8 +153,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -177,8 +175,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._code_raw = code_raw
 
@@ -203,8 +199,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -227,8 +221,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param email_raw: The email_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._email_raw = email_raw
 
@@ -253,8 +245,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -277,8 +267,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param phone_number_raw: The phone_number_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._phone_number_raw = phone_number_raw
 
@@ -303,8 +291,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -327,8 +313,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param postal_code_raw: The postal_code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._postal_code_raw = postal_code_raw
 
@@ -353,8 +337,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._street = street
 
     @property
@@ -377,8 +359,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param street_raw: The street_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._street_raw = street_raw
 
@@ -403,8 +383,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -427,8 +405,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param name_raw: The name_raw of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._name_raw = name_raw
 
@@ -453,8 +429,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._first_name_raw = first_name_raw
 
     @property
@@ -477,8 +451,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param first_name: The first_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._first_name = first_name
 
@@ -503,8 +475,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._middle_name_raw = middle_name_raw
 
     @property
@@ -527,8 +497,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param middle_name: The middle_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._middle_name = middle_name
 
@@ -553,8 +521,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :type: str
         """
 
-
-
         self._last_name_raw = last_name_raw
 
     @property
@@ -577,8 +543,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResu
         :param last_name: The last_name of this PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults.
         :type: str
         """
-
-
 
         self._last_name = last_name
 

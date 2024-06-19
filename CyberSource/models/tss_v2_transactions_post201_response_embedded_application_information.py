@@ -88,8 +88,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         :type: str
         """
 
-
-
         self._reason_code = reason_code
 
     @property
@@ -112,8 +110,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         :param r_code: The r_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :type: str
         """
-
-
 
         self._r_code = r_code
 
@@ -138,8 +134,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         :type: str
         """
 
-
-
         self._r_flag = r_flag
 
     @property
@@ -160,8 +154,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         :param applications: The applications of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :type: list[TssV2TransactionsPost201ResponseEmbeddedApplicationInformationApplications]
         """
-
-
 
         self._applications = applications
 
@@ -185,8 +177,6 @@ class TssV2TransactionsPost201ResponseEmbeddedApplicationInformation(object):
         :param return_code: The return_code of this TssV2TransactionsPost201ResponseEmbeddedApplicationInformation.
         :type: int
         """
-
-
 
         self._return_code = return_code
 

@@ -78,8 +78,6 @@ class PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails(object):
         :type: str
         """
 
-
-
         self._void_amount = void_amount
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails(object):
         :type: str
         """
 
-
-
         self._original_transaction_amount = original_transaction_amount
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsVoidsPost201ResponseVoidAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

@@ -348,8 +348,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._cavv = cavv
 
     @property
@@ -372,8 +370,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param transaction_flow_indicator: The transaction_flow_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._transaction_flow_indicator = transaction_flow_indicator
 
@@ -398,8 +394,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._cavv_algorithm = cavv_algorithm
 
     @property
@@ -422,8 +416,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param eci_raw: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._eci_raw = eci_raw
 
@@ -448,8 +440,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._pares_status = pares_status
 
     @property
@@ -472,8 +462,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param veres_enrolled: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._veres_enrolled = veres_enrolled
 
@@ -498,8 +486,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._xid = xid
 
     @property
@@ -522,8 +508,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._ucaf_collection_indicator = ucaf_collection_indicator
 
@@ -548,8 +532,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._ucaf_authentication_data = ucaf_authentication_data
 
     @property
@@ -570,8 +552,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param strong_authentication: The strong_authentication of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication
         """
-
-
 
         self._strong_authentication = strong_authentication
 
@@ -596,8 +576,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._directory_server_transaction_id = directory_server_transaction_id
 
     @property
@@ -620,8 +598,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param pa_specification_version: The pa_specification_version of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._pa_specification_version = pa_specification_version
 
@@ -646,8 +622,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._authentication_type = authentication_type
 
     @property
@@ -670,8 +644,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param response_access_token: The response_access_token of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._response_access_token = response_access_token
 
@@ -696,8 +668,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._acs_transaction_id = acs_transaction_id
 
     @property
@@ -720,8 +690,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param acs_window_size: The acs_window_size of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._acs_window_size = acs_window_size
 
@@ -746,8 +714,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._alternate_authentication_data = alternate_authentication_data
 
     @property
@@ -770,8 +736,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param alternate_authentication_date: The alternate_authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._alternate_authentication_date = alternate_authentication_date
 
@@ -796,8 +760,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._alternate_authentication_method = alternate_authentication_method
 
     @property
@@ -820,8 +782,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param authentication_date: The authentication_date of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._authentication_date = authentication_date
 
@@ -846,8 +806,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._authentication_transaction_id = authentication_transaction_id
 
     @property
@@ -870,8 +828,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param challenge_cancel_code: The challenge_cancel_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._challenge_cancel_code = challenge_cancel_code
 
@@ -896,8 +852,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._challenge_code = challenge_code
 
     @property
@@ -920,8 +874,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param challenge_status: The challenge_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._challenge_status = challenge_status
 
@@ -946,8 +898,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._customer_card_alias = customer_card_alias
 
     @property
@@ -970,8 +920,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param decoupled_authentication_indicator: The decoupled_authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._decoupled_authentication_indicator = decoupled_authentication_indicator
 
@@ -996,8 +944,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._decoupled_authentication_max_time = decoupled_authentication_max_time
 
     @property
@@ -1020,8 +966,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param default_card: The default_card of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: bool
         """
-
-
 
         self._default_card = default_card
 
@@ -1046,8 +990,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._device_channel = device_channel
 
     @property
@@ -1070,8 +1012,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param installment_total_count: The installment_total_count of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: int
         """
-
-
 
         self._installment_total_count = installment_total_count
 
@@ -1096,8 +1036,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._merchant_fraud_rate = merchant_fraud_rate
 
     @property
@@ -1120,8 +1058,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param marketing_opt_in: The marketing_opt_in of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: bool
         """
-
-
 
         self._marketing_opt_in = marketing_opt_in
 
@@ -1146,8 +1082,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._marketing_source = marketing_source
 
     @property
@@ -1170,8 +1104,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param mcc: The mcc of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._mcc = mcc
 
@@ -1196,8 +1128,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: int
         """
 
-
-
         self._merchant_score = merchant_score
 
     @property
@@ -1220,8 +1150,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param message_category: The message_category of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._message_category = message_category
 
@@ -1246,8 +1174,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._network_score = network_score
 
     @property
@@ -1270,8 +1196,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param npa_code: The npa_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._npa_code = npa_code
 
@@ -1296,8 +1220,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._override_payment_method = override_payment_method
 
     @property
@@ -1320,8 +1242,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param override_country_code: The override_country_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._override_country_code = override_country_code
 
@@ -1346,8 +1266,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._prior_authentication_data = prior_authentication_data
 
     @property
@@ -1370,8 +1288,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_method: The prior_authentication_method of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._prior_authentication_method = prior_authentication_method
 
@@ -1396,8 +1312,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._prior_authentication_reference_id = prior_authentication_reference_id
 
     @property
@@ -1420,8 +1334,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param prior_authentication_time: The prior_authentication_time of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._prior_authentication_time = prior_authentication_time
 
@@ -1446,8 +1358,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._product_code = product_code
 
     @property
@@ -1470,8 +1380,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param return_url: The return_url of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._return_url = return_url
 
@@ -1496,8 +1404,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._requestor_id = requestor_id
 
     @property
@@ -1520,8 +1426,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param requestor_initiated_authentication_indicator: The requestor_initiated_authentication_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._requestor_initiated_authentication_indicator = requestor_initiated_authentication_indicator
 
@@ -1546,8 +1450,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._requestor_name = requestor_name
 
     @property
@@ -1570,8 +1472,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param reference_id: The reference_id of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._reference_id = reference_id
 
@@ -1596,8 +1496,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._sdk_max_timeout = sdk_max_timeout
 
     @property
@@ -1620,8 +1518,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param secure_corporate_payment_indicator: The secure_corporate_payment_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._secure_corporate_payment_indicator = secure_corporate_payment_indicator
 
@@ -1646,8 +1542,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._transaction_mode = transaction_mode
 
     @property
@@ -1670,8 +1564,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param white_list_status: The white_list_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._white_list_status = white_list_status
 
@@ -1696,8 +1588,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._effective_authentication_type = effective_authentication_type
 
     @property
@@ -1721,8 +1611,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._signed_pares_status_reason = signed_pares_status_reason
 
     @property
@@ -1745,8 +1633,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         :param signed_pares: The signed_pares of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._signed_pares = signed_pares
 

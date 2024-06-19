@@ -78,8 +78,6 @@ class Ptsv2paymentsProcessorInformation(object):
         :type: str
         """
 
-
-
         self._pre_approval_token = pre_approval_token
 
     @property
@@ -101,8 +99,6 @@ class Ptsv2paymentsProcessorInformation(object):
         :type: Ptsv2paymentsProcessorInformationAuthorizationOptions
         """
 
-
-
         self._authorization_options = authorization_options
 
     @property
@@ -123,8 +119,6 @@ class Ptsv2paymentsProcessorInformation(object):
         :param reversal: The reversal of this Ptsv2paymentsProcessorInformation.
         :type: Ptsv2paymentsProcessorInformationReversal
         """
-
-
 
         self._reversal = reversal
 

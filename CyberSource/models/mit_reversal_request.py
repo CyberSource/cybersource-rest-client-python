@@ -86,8 +86,6 @@ class MitReversalRequest(object):
         :type: Ptsv2paymentsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -108,8 +106,6 @@ class MitReversalRequest(object):
         :param reversal_information: The reversal_information of this MitReversalRequest.
         :type: Ptsv2paymentsidreversalsReversalInformation
         """
-
-
 
         self._reversal_information = reversal_information
 
@@ -132,8 +128,6 @@ class MitReversalRequest(object):
         :type: Ptsv2paymentsidreversalsProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -155,8 +149,6 @@ class MitReversalRequest(object):
         :type: Ptsv2paymentsidreversalsOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -177,8 +169,6 @@ class MitReversalRequest(object):
         :param point_of_sale_information: The point_of_sale_information of this MitReversalRequest.
         :type: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
-
-
 
         self._point_of_sale_information = point_of_sale_information
 

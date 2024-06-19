@@ -82,8 +82,6 @@ class Riskv1authenticationsBuyerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     @property
@@ -106,8 +104,6 @@ class Riskv1authenticationsBuyerInformation(object):
         :param personal_identification: The personal_identification of this Riskv1authenticationsBuyerInformation.
         :type: list[Ptsv2paymentsBuyerInformationPersonalIdentification]
         """
-
-
 
         self._personal_identification = personal_identification
 
@@ -132,8 +128,6 @@ class Riskv1authenticationsBuyerInformation(object):
         :type: int
         """
 
-
-
         self._mobile_phone = mobile_phone
 
     @property
@@ -156,8 +150,6 @@ class Riskv1authenticationsBuyerInformation(object):
         :param work_phone: The work_phone of this Riskv1authenticationsBuyerInformation.
         :type: int
         """
-
-
 
         self._work_phone = work_phone
 

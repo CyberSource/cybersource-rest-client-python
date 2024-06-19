@@ -133,8 +133,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -157,8 +155,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param address2: The address2 of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -183,8 +179,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address3 = address3
 
     @property
@@ -207,8 +201,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param administrative_area: The administrative_area of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -233,8 +225,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -257,8 +247,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param destination_types: The destination_types of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._destination_types = destination_types
 
@@ -283,8 +271,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -307,8 +293,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param first_name: The first_name of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._first_name = first_name
 
@@ -333,8 +317,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -357,8 +339,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param middle_name: The middle_name of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._middle_name = middle_name
 
@@ -383,8 +363,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -407,8 +385,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -433,8 +409,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :type: int
         """
 
-
-
         self._destination_code = destination_code
 
     @property
@@ -457,8 +431,6 @@ class Riskv1decisionsOrderInformationShipTo(object):
         :param method: The method of this Riskv1decisionsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._method = method
 

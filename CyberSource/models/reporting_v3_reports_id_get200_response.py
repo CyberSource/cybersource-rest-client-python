@@ -133,8 +133,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -157,8 +155,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_id: The report_id of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-
-
 
         self._report_id = report_id
 
@@ -183,8 +179,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: str
         """
 
-
-
         self._report_definition_id = report_definition_id
 
     @property
@@ -207,8 +201,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_name: The report_name of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-
-
 
         self._report_name = report_name
 
@@ -233,8 +225,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: str
         """
 
-
-
         self._report_mime_type = report_mime_type
 
     @property
@@ -257,8 +247,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_frequency: The report_frequency of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-
-
 
         self._report_frequency = report_frequency
 
@@ -283,8 +271,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: list[str]
         """
 
-
-
         self._report_fields = report_fields
 
     @property
@@ -307,8 +293,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_status: The report_status of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-
-
 
         self._report_status = report_status
 
@@ -333,8 +317,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: datetime
         """
 
-
-
         self._report_start_time = report_start_time
 
     @property
@@ -357,8 +339,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_end_time: The report_end_time of this ReportingV3ReportsIdGet200Response.
         :type: datetime
         """
-
-
 
         self._report_end_time = report_end_time
 
@@ -383,8 +363,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: str
         """
 
-
-
         self._timezone = timezone
 
     @property
@@ -408,8 +386,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :type: dict(str, list[str])
         """
 
-
-
         self._report_filters = report_filters
 
     @property
@@ -430,8 +406,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param report_preferences: The report_preferences of this ReportingV3ReportsIdGet200Response.
         :type: Reportingv3reportsReportPreferences
         """
-
-
 
         self._report_preferences = report_preferences
 
@@ -455,8 +429,6 @@ class ReportingV3ReportsIdGet200Response(object):
         :param group_id: The group_id of this ReportingV3ReportsIdGet200Response.
         :type: str
         """
-
-
 
         self._group_id = group_id
 

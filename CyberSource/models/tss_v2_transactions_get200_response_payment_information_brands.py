@@ -73,8 +73,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationBrands(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -97,8 +95,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationBrands(object):
         :param brand_name: The brand_name of this TssV2TransactionsGet200ResponsePaymentInformationBrands.
         :type: str
         """
-
-
 
         self._brand_name = brand_name
 

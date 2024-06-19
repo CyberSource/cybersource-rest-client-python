@@ -88,8 +88,6 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         :type: bool
         """
 
-
-
         self._instrumentidentifier_new = instrumentidentifier_new
 
     @property
@@ -110,8 +108,6 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         :param customer: The customer of this PtsV2PaymentsPost201ResponseTokenInformation.
         :type: PtsV2PaymentsPost201ResponseTokenInformationCustomer
         """
-
-
 
         self._customer = customer
 
@@ -134,8 +130,6 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument
         """
 
-
-
         self._payment_instrument = payment_instrument
 
     @property
@@ -157,8 +151,6 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         :type: PtsV2PaymentsPost201ResponseTokenInformationShippingAddress
         """
 
-
-
         self._shipping_address = shipping_address
 
     @property
@@ -179,8 +171,6 @@ class PtsV2PaymentsPost201ResponseTokenInformation(object):
         :param instrument_identifier: The instrument_identifier of this PtsV2PaymentsPost201ResponseTokenInformation.
         :type: PtsV2PaymentsPost201ResponseTokenInformationInstrumentIdentifier
         """
-
-
 
         self._instrument_identifier = instrument_identifier
 

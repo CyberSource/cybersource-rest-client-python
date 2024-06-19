@@ -81,8 +81,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -103,8 +101,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
         :param update: The update of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._update = update
 
@@ -127,8 +123,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._deliver = deliver
 
     @property
@@ -149,8 +143,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks(object):
         :param cancel: The cancel of this InvoicingV2InvoicesAllGet200ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._cancel = cancel
 

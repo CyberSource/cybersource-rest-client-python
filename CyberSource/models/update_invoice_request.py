@@ -76,8 +76,6 @@ class UpdateInvoiceRequest(object):
         :type: Invoicingv2invoicesCustomerInformation
         """
 
-
-
         self._customer_information = customer_information
 
     @property
@@ -99,8 +97,6 @@ class UpdateInvoiceRequest(object):
         :type: Invoicingv2invoicesidInvoiceInformation
         """
 
-
-
         self._invoice_information = invoice_information
 
     @property
@@ -121,8 +117,6 @@ class UpdateInvoiceRequest(object):
         :param order_information: The order_information of this UpdateInvoiceRequest.
         :type: Invoicingv2invoicesOrderInformation
         """
-
-
 
         self._order_information = order_information
 

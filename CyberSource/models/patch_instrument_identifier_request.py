@@ -126,8 +126,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: TmsEmbeddedInstrumentIdentifierLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -150,8 +148,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param id: The id of this PatchInstrumentIdentifierRequest.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -176,8 +172,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: str
         """
 
-
-
         self._object = object
 
     @property
@@ -200,8 +194,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param state: The state of this PatchInstrumentIdentifierRequest.
         :type: str
         """
-
-
 
         self._state = state
 
@@ -226,8 +218,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -248,8 +238,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param token_provisioning_information: The token_provisioning_information of this PatchInstrumentIdentifierRequest.
         :type: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
         """
-
-
 
         self._token_provisioning_information = token_provisioning_information
 
@@ -272,8 +260,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: TmsEmbeddedInstrumentIdentifierCard
         """
 
-
-
         self._card = card
 
     @property
@@ -294,8 +280,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param bank_account: The bank_account of this PatchInstrumentIdentifierRequest.
         :type: TmsEmbeddedInstrumentIdentifierBankAccount
         """
-
-
 
         self._bank_account = bank_account
 
@@ -318,8 +302,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: TmsEmbeddedInstrumentIdentifierTokenizedCard
         """
 
-
-
         self._tokenized_card = tokenized_card
 
     @property
@@ -340,8 +322,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param issuer: The issuer of this PatchInstrumentIdentifierRequest.
         :type: TmsEmbeddedInstrumentIdentifierIssuer
         """
-
-
 
         self._issuer = issuer
 
@@ -364,8 +344,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: TmsEmbeddedInstrumentIdentifierProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -387,8 +365,6 @@ class PatchInstrumentIdentifierRequest(object):
         :type: TmsEmbeddedInstrumentIdentifierBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -409,8 +385,6 @@ class PatchInstrumentIdentifierRequest(object):
         :param metadata: The metadata of this PatchInstrumentIdentifierRequest.
         :type: TmsEmbeddedInstrumentIdentifierMetadata
         """
-
-
 
         self._metadata = metadata
 

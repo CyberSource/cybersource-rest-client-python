@@ -76,8 +76,6 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -100,7 +98,6 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
         :param self_serviceability: The self_serviceability of this PaymentsProductsCardProcessingSubscriptionInformation.
         :type: str
         """
-
         allowed_values = ["SELF_SERVICEABLE", "NOT_SELF_SERVICEABLE", "SELF_SERVICE_ONLY"]
         if self_serviceability not in allowed_values:
             raise ValueError(
@@ -130,8 +127,6 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
         :param features: The features of this PaymentsProductsCardProcessingSubscriptionInformation.
         :type: dict(str, PaymentsProductsCardProcessingSubscriptionInformationFeatures)
         """
-
-
 
         self._features = features
 

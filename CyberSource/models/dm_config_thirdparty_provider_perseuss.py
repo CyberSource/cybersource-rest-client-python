@@ -76,8 +76,6 @@ class DmConfigThirdpartyProviderPerseuss(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -99,8 +97,6 @@ class DmConfigThirdpartyProviderPerseuss(object):
         :type: bool
         """
 
-
-
         self._enable_real_time = enable_real_time
 
     @property
@@ -121,8 +117,6 @@ class DmConfigThirdpartyProviderPerseuss(object):
         :param credentials: The credentials of this DmConfigThirdpartyProviderPerseuss.
         :type: DmConfigThirdpartyProviderAccurintCredentials
         """
-
-
 
         self._credentials = credentials
 

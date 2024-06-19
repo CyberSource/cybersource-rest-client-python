@@ -76,8 +76,6 @@ class InlineResponseDefaultLinks(object):
         :type: list[InlineResponseDefaultLinksNext]
         """
 
-
-
         self._next = next
 
     @property
@@ -99,8 +97,6 @@ class InlineResponseDefaultLinks(object):
         :type: list[InlineResponseDefaultLinksNext]
         """
 
-
-
         self._documentation = documentation
 
     @property
@@ -121,8 +117,6 @@ class InlineResponseDefaultLinks(object):
         :param _self: The _self of this InlineResponseDefaultLinks.
         :type: InlineResponseDefaultLinksNext
         """
-
-
 
         self.__self = _self
 

@@ -118,8 +118,6 @@ class ReportsApi(object):
             raise ValueError("Missing the required parameter `create_adhoc_report_request` when calling `create_report`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -235,8 +233,6 @@ class ReportsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `report_id` when calling `get_report_by_report_id`")
             raise ValueError("Missing the required parameter `report_id` when calling `get_report_by_report_id`")
-
-
 
 
         collection_formats = {}
@@ -378,15 +374,6 @@ class ReportsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `time_query_type` when calling `search_reports`")
             raise ValueError("Missing the required parameter `time_query_type` when calling `search_reports`")
-
-
-
-
-
-
-
-
-
 
 
         collection_formats = {}

@@ -86,8 +86,6 @@ class CancelSubscriptionResponse(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -110,8 +108,6 @@ class CancelSubscriptionResponse(object):
         :param id: The id of this CancelSubscriptionResponse.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -136,8 +132,6 @@ class CancelSubscriptionResponse(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -161,8 +155,6 @@ class CancelSubscriptionResponse(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -183,8 +175,6 @@ class CancelSubscriptionResponse(object):
         :param subscription_information: The subscription_information of this CancelSubscriptionResponse.
         :type: CancelSubscriptionResponseSubscriptionInformation
         """
-
-
 
         self._subscription_information = subscription_information
 

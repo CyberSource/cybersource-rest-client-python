@@ -83,8 +83,6 @@ class Rbsv1subscriptionsidSubscriptionInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -107,8 +105,6 @@ class Rbsv1subscriptionsidSubscriptionInformation(object):
         :param plan_id: The plan_id of this Rbsv1subscriptionsidSubscriptionInformation.
         :type: str
         """
-
-
 
         self._plan_id = plan_id
 
@@ -133,8 +129,6 @@ class Rbsv1subscriptionsidSubscriptionInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -157,8 +151,6 @@ class Rbsv1subscriptionsidSubscriptionInformation(object):
         :param start_date: The start_date of this Rbsv1subscriptionsidSubscriptionInformation.
         :type: str
         """
-
-
 
         self._start_date = start_date
 

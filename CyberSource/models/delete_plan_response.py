@@ -73,8 +73,6 @@ class DeletePlanResponse(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -97,8 +95,6 @@ class DeletePlanResponse(object):
         :param status: The status of this DeletePlanResponse.
         :type: str
         """
-
-
 
         self._status = status
 

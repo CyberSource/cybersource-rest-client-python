@@ -121,8 +121,6 @@ class ReplayWebhooksApi(object):
             raise ValueError("Missing the required parameter `webhook_id` when calling `replay_previous_webhooks`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}

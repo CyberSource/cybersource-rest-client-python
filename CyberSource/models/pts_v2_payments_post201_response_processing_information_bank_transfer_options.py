@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
         :type: str
         """
 
-
-
         self._settlement_method = settlement_method
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions(objec
         :param fraud_screening_level: The fraud_screening_level of this PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions.
         :type: str
         """
-
-
 
         self._fraud_screening_level = fraud_screening_level
 

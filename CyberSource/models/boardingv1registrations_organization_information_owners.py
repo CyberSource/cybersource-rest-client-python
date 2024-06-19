@@ -121,8 +121,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -144,8 +142,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._middle_name = middle_name
 
     @property
@@ -166,8 +162,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param last_name: The last_name of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -192,8 +186,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: date
         """
 
-
-
         self._birth_date = birth_date
 
     @property
@@ -216,8 +208,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param is_primary: The is_primary of this Boardingv1registrationsOrganizationInformationOwners.
         :type: bool
         """
-
-
 
         self._is_primary = is_primary
 
@@ -242,8 +232,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._ssn = ssn
 
     @property
@@ -267,8 +255,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._passport_number = passport_number
 
     @property
@@ -290,8 +276,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._passport_country = passport_country
 
     @property
@@ -312,8 +296,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param job_title: The job_title of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-
-
 
         self._job_title = job_title
 
@@ -338,8 +320,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: bool
         """
 
-
-
         self._has_significant_responsability = has_significant_responsability
 
     @property
@@ -363,8 +343,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: float
         """
 
-
-
         self._ownership_percentage = ownership_percentage
 
     @property
@@ -385,8 +363,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param phone_number: The phone_number of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 
@@ -409,8 +385,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -431,8 +405,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param address: The address of this Boardingv1registrationsOrganizationInformationOwners.
         :type: Boardingv1registrationsOrganizationInformationBusinessInformationAddress
         """
-
-
 
         self._address = address
 

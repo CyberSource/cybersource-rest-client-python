@@ -86,8 +86,6 @@ class UpdateSubscription(object):
         :type: Rbsv1subscriptionsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -108,8 +106,6 @@ class UpdateSubscription(object):
         :param processing_information: The processing_information of this UpdateSubscription.
         :type: Rbsv1subscriptionsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -132,8 +128,6 @@ class UpdateSubscription(object):
         :type: Rbsv1subscriptionsidPlanInformation
         """
 
-
-
         self._plan_information = plan_information
 
     @property
@@ -155,8 +149,6 @@ class UpdateSubscription(object):
         :type: Rbsv1subscriptionsidSubscriptionInformation
         """
 
-
-
         self._subscription_information = subscription_information
 
     @property
@@ -177,8 +169,6 @@ class UpdateSubscription(object):
         :param order_information: The order_information of this UpdateSubscription.
         :type: Rbsv1subscriptionsidOrderInformation
         """
-
-
 
         self._order_information = order_information
 

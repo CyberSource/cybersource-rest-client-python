@@ -66,8 +66,6 @@ class ReportingV3ReportsGet200Response(object):
         :type: list[ReportingV3ReportsGet200ResponseReportSearchResults]
         """
 
-
-
         self._report_search_results = report_search_results
 
     def to_dict(self):

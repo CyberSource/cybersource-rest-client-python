@@ -76,8 +76,6 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -101,8 +99,6 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._billing_amount = billing_amount
 
     @property
@@ -125,8 +121,6 @@ class Rbsv1plansOrderInformationAmountDetails(object):
         :param setup_fee: The setup_fee of this Rbsv1plansOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._setup_fee = setup_fee
 

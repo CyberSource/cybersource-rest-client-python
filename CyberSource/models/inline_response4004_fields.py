@@ -78,8 +78,6 @@ class InlineResponse4004Fields(object):
         :type: str
         """
 
-
-
         self._path = path
 
     @property
@@ -103,8 +101,6 @@ class InlineResponse4004Fields(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -127,8 +123,6 @@ class InlineResponse4004Fields(object):
         :param localization_key: The localization_key of this InlineResponse4004Fields.
         :type: str
         """
-
-
 
         self._localization_key = localization_key
 

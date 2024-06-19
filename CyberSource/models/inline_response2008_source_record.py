@@ -101,8 +101,6 @@ class InlineResponse2008SourceRecord(object):
         :type: str
         """
 
-
-
         self._token = token
 
     @property
@@ -123,8 +121,6 @@ class InlineResponse2008SourceRecord(object):
         :param customer_id: The customer_id of this InlineResponse2008SourceRecord.
         :type: str
         """
-
-
 
         self._customer_id = customer_id
 
@@ -147,8 +143,6 @@ class InlineResponse2008SourceRecord(object):
         :type: str
         """
 
-
-
         self._payment_instrument_id = payment_instrument_id
 
     @property
@@ -169,8 +163,6 @@ class InlineResponse2008SourceRecord(object):
         :param instrument_identifier_id: The instrument_identifier_id of this InlineResponse2008SourceRecord.
         :type: str
         """
-
-
 
         self._instrument_identifier_id = instrument_identifier_id
 
@@ -193,8 +185,6 @@ class InlineResponse2008SourceRecord(object):
         :type: str
         """
 
-
-
         self._card_number = card_number
 
     @property
@@ -215,8 +205,6 @@ class InlineResponse2008SourceRecord(object):
         :param card_expiry_month: The card_expiry_month of this InlineResponse2008SourceRecord.
         :type: str
         """
-
-
 
         self._card_expiry_month = card_expiry_month
 
@@ -239,8 +227,6 @@ class InlineResponse2008SourceRecord(object):
         :type: str
         """
 
-
-
         self._card_expiry_year = card_expiry_year
 
     @property
@@ -261,8 +247,6 @@ class InlineResponse2008SourceRecord(object):
         :param card_type: The card_type of this InlineResponse2008SourceRecord.
         :type: str
         """
-
-
 
         self._card_type = card_type
 

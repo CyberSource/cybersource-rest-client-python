@@ -71,8 +71,6 @@ class GetAllSubscriptionsResponseOrderInformation(object):
         :type: GetAllPlansResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -93,8 +91,6 @@ class GetAllSubscriptionsResponseOrderInformation(object):
         :param bill_to: The bill_to of this GetAllSubscriptionsResponseOrderInformation.
         :type: GetAllSubscriptionsResponseOrderInformationBillTo
         """
-
-
 
         self._bill_to = bill_to
 

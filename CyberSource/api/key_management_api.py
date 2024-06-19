@@ -125,14 +125,6 @@ class KeyManagementApi(object):
         del params['kwargs']
 
 
-
-
-
-
-
-
-
-
         collection_formats = {}
 
         path_params = {}

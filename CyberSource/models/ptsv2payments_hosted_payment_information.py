@@ -78,8 +78,6 @@ class Ptsv2paymentsHostedPaymentInformation(object):
         :type: str
         """
 
-
-
         self._host_name = host_name
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsHostedPaymentInformation(object):
         :type: str
         """
 
-
-
         self._ip_address = ip_address
 
     @property
@@ -125,8 +121,6 @@ class Ptsv2paymentsHostedPaymentInformation(object):
         :param user_agent: The user_agent of this Ptsv2paymentsHostedPaymentInformation.
         :type: Ptsv2paymentsHostedPaymentInformationUserAgent
         """
-
-
 
         self._user_agent = user_agent
 

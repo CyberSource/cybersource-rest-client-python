@@ -71,8 +71,6 @@ class ReplayWebhooksRequest(object):
         :type: list[str]
         """
 
-
-
         self._by_transaction_trace_identifiers = by_transaction_trace_identifiers
 
     @property
@@ -93,8 +91,6 @@ class ReplayWebhooksRequest(object):
         :param by_delivery_status: The by_delivery_status of this ReplayWebhooksRequest.
         :type: Nrtfv1webhookswebhookIdreplaysByDeliveryStatus
         """
-
-
 
         self._by_delivery_status = by_delivery_status
 

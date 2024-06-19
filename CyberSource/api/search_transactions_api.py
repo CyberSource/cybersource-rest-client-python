@@ -116,7 +116,6 @@ class SearchTransactionsApi(object):
             raise ValueError("Missing the required parameter `create_search_request` when calling `create_search`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -228,7 +227,6 @@ class SearchTransactionsApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `search_id` when calling `get_search`")
             raise ValueError("Missing the required parameter `search_id` when calling `get_search`")
-
 
 
         collection_formats = {}

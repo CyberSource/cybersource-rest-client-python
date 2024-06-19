@@ -71,8 +71,6 @@ class SAConfigNotifications(object):
         :type: SAConfigNotificationsMerchantNotifications
         """
 
-
-
         self._merchant_notifications = merchant_notifications
 
     @property
@@ -93,8 +91,6 @@ class SAConfigNotifications(object):
         :param customer_notifications: The customer_notifications of this SAConfigNotifications.
         :type: SAConfigNotificationsCustomerNotifications
         """
-
-
 
         self._customer_notifications = customer_notifications
 

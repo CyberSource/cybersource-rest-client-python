@@ -116,7 +116,6 @@ class PlansApi(object):
             raise ValueError("Missing the required parameter `id` when calling `activate_plan`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -228,7 +227,6 @@ class PlansApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `create_plan_request` when calling `create_plan`")
             raise ValueError("Missing the required parameter `create_plan_request` when calling `create_plan`")
-
 
 
         collection_formats = {}
@@ -344,7 +342,6 @@ class PlansApi(object):
             raise ValueError("Missing the required parameter `id` when calling `deactivate_plan`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -458,7 +455,6 @@ class PlansApi(object):
             raise ValueError("Missing the required parameter `id` when calling `delete_plan`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -570,7 +566,6 @@ class PlansApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `get_plan`")
             raise ValueError("Missing the required parameter `id` when calling `get_plan`")
-
 
 
         collection_formats = {}
@@ -791,11 +786,6 @@ class PlansApi(object):
         del params['kwargs']
 
 
-
-
-
-
-
         collection_formats = {}
 
         path_params = {}
@@ -921,8 +911,6 @@ class PlansApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `update_plan_request` when calling `update_plan`")
             raise ValueError("Missing the required parameter `update_plan_request` when calling `update_plan`")
-
-
 
 
         collection_formats = {}

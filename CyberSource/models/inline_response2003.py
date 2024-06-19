@@ -78,8 +78,6 @@ class InlineResponse2003(object):
         :type: str
         """
 
-
-
         self._product_id = product_id
 
     @property
@@ -103,8 +101,6 @@ class InlineResponse2003(object):
         :type: str
         """
 
-
-
         self._product_name = product_name
 
     @property
@@ -125,8 +121,6 @@ class InlineResponse2003(object):
         :param event_types: The event_types of this InlineResponse2003.
         :type: list[Notificationsubscriptionsv1productsorganizationIdEventTypes]
         """
-
-
 
         self._event_types = event_types
 

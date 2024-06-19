@@ -73,8 +73,6 @@ class ECheckConfigCommonInternalOnly(object):
         :type: bool
         """
 
-
-
         self._display_echeck_info = display_echeck_info
 
     @property
@@ -97,8 +95,6 @@ class ECheckConfigCommonInternalOnly(object):
         :param processors: The processors of this ECheckConfigCommonInternalOnly.
         :type: dict(str, ECheckConfigCommonInternalOnlyProcessors)
         """
-
-
 
         self._processors = processors
 

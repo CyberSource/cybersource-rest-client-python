@@ -93,8 +93,6 @@ class Ptsv2paymentsTravelInformation(object):
         :type: str
         """
 
-
-
         self._duration = duration
 
     @property
@@ -115,8 +113,6 @@ class Ptsv2paymentsTravelInformation(object):
         :param agency: The agency of this Ptsv2paymentsTravelInformation.
         :type: Ptsv2paymentsTravelInformationAgency
         """
-
-
 
         self._agency = agency
 
@@ -139,8 +135,6 @@ class Ptsv2paymentsTravelInformation(object):
         :type: Ptsv2paymentsTravelInformationAutoRental
         """
 
-
-
         self._auto_rental = auto_rental
 
     @property
@@ -161,8 +155,6 @@ class Ptsv2paymentsTravelInformation(object):
         :param lodging: The lodging of this Ptsv2paymentsTravelInformation.
         :type: Ptsv2paymentsTravelInformationLodging
         """
-
-
 
         self._lodging = lodging
 
@@ -185,8 +177,6 @@ class Ptsv2paymentsTravelInformation(object):
         :type: Ptsv2paymentsTravelInformationTransit
         """
 
-
-
         self._transit = transit
 
     @property
@@ -207,8 +197,6 @@ class Ptsv2paymentsTravelInformation(object):
         :param vehicle_data: The vehicle_data of this Ptsv2paymentsTravelInformation.
         :type: Ptsv2paymentsTravelInformationVehicleData
         """
-
-
 
         self._vehicle_data = vehicle_data
 

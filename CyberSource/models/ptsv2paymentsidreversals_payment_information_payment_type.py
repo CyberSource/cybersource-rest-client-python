@@ -66,8 +66,6 @@ class Ptsv2paymentsidreversalsPaymentInformationPaymentType(object):
         :type: Ptsv2paymentsidreversalsPaymentInformationPaymentTypeMethod
         """
 
-
-
         self._method = method
 
     def to_dict(self):

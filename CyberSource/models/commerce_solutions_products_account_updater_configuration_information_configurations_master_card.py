@@ -76,8 +76,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._merchant_id = merchant_id
 
     @property
@@ -101,8 +99,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._interbank_card_association_number = interbank_card_association_number
 
     @property
@@ -123,8 +119,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param active: The active of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsMasterCard.
         :type: bool
         """
-
-
 
         self._active = active
 

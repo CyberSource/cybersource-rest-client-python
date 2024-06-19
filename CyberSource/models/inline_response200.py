@@ -83,8 +83,6 @@ class InlineResponse200(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -107,8 +105,6 @@ class InlineResponse200(object):
         :param submit_time_utc: The submit_time_utc of this InlineResponse200.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 
@@ -133,8 +129,6 @@ class InlineResponse200(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -155,8 +149,6 @@ class InlineResponse200(object):
         :param embedded: The embedded of this InlineResponse200.
         :type: InlineResponse200Embedded
         """
-
-
 
         self._embedded = embedded
 

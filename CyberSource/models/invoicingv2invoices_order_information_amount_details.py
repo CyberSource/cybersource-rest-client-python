@@ -103,8 +103,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -127,8 +125,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param currency: The currency of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -153,8 +149,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -177,8 +171,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param discount_percent: The discount_percent of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: float
         """
-
-
 
         self._discount_percent = discount_percent
 
@@ -203,8 +195,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :type: float
         """
 
-
-
         self._sub_amount = sub_amount
 
     @property
@@ -228,8 +218,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :type: float
         """
 
-
-
         self._minimum_partial_amount = minimum_partial_amount
 
     @property
@@ -251,8 +239,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :type: Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails
         """
 
-
-
         self._tax_details = tax_details
 
     @property
@@ -273,8 +259,6 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         :param freight: The freight of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: Invoicingv2invoicesOrderInformationAmountDetailsFreight
         """
-
-
 
         self._freight = freight
 

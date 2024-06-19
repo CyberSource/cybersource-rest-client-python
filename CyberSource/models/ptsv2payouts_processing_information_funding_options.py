@@ -66,8 +66,6 @@ class Ptsv2payoutsProcessingInformationFundingOptions(object):
         :type: Ptsv2payoutsProcessingInformationFundingOptionsInitiator
         """
 
-
-
         self._initiator = initiator
 
     def to_dict(self):

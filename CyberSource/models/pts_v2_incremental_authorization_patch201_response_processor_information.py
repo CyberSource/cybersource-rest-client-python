@@ -98,8 +98,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -122,8 +120,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._transaction_id = transaction_id
 
@@ -148,8 +144,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_code = response_code
 
     @property
@@ -172,8 +166,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param system_trace_audit_number: The system_trace_audit_number of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._system_trace_audit_number = system_trace_audit_number
 
@@ -198,8 +190,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_details = response_details
 
     @property
@@ -221,8 +211,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice
         """
 
-
-
         self._merchant_advice = merchant_advice
 
     @property
@@ -243,8 +231,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         :param seller_protection: The seller_protection of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
         """
-
-
 
         self._seller_protection = seller_protection
 

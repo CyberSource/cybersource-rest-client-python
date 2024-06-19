@@ -73,8 +73,6 @@ class Tmsv2customersObjectInformation(object):
         :type: str
         """
 
-
-
         self._title = title
 
     @property
@@ -97,8 +95,6 @@ class Tmsv2customersObjectInformation(object):
         :param comment: The comment of this Tmsv2customersObjectInformation.
         :type: str
         """
-
-
 
         self._comment = comment
 

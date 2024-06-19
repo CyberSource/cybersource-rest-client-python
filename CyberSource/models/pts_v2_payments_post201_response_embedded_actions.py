@@ -86,8 +86,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         :type: PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE
         """
 
-
-
         self._capture = capture
 
     @property
@@ -108,8 +106,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         :param decision: The decision of this PtsV2PaymentsPost201ResponseEmbeddedActions.
         :type: PtsV2PaymentsPost201ResponseEmbeddedActionsDECISION
         """
-
-
 
         self._decision = decision
 
@@ -132,8 +128,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         :type: PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION
         """
 
-
-
         self._consumer_authentication = consumer_authentication
 
     @property
@@ -155,8 +149,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         :type: PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION
         """
 
-
-
         self._validate_consumer_authentication = validate_consumer_authentication
 
     @property
@@ -177,8 +169,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         :param watchlist_screening: The watchlist_screening of this PtsV2PaymentsPost201ResponseEmbeddedActions.
         :type: PtsV2PaymentsPost201ResponseEmbeddedActionsWATCHLISTSCREENING
         """
-
-
 
         self._watchlist_screening = watchlist_screening
 

@@ -80,8 +80,6 @@ class Riskv1authenticationsetupsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -104,8 +102,6 @@ class Riskv1authenticationsetupsPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Riskv1authenticationsetupsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -130,8 +126,6 @@ class Riskv1authenticationsetupsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -154,8 +148,6 @@ class Riskv1authenticationsetupsPaymentInformationCard(object):
         :param number: The number of this Riskv1authenticationsetupsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._number = number
 

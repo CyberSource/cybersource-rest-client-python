@@ -93,8 +93,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :type: str
         """
 
-
-
         self._tags = tags
 
     @property
@@ -117,8 +115,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :param cardholder_verification_method_used: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: int
         """
-
-
 
         self._cardholder_verification_method_used = cardholder_verification_method_used
 
@@ -143,8 +139,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :type: str
         """
 
-
-
         self._card_sequence_number = card_sequence_number
 
     @property
@@ -167,8 +161,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :param fallback: The fallback of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: bool
         """
-
-
 
         self._fallback = fallback
 
@@ -193,8 +185,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :type: int
         """
 
-
-
         self._fallback_condition = fallback_condition
 
     @property
@@ -217,8 +207,6 @@ class Ptsv2paymentsPointOfSaleInformationEmv(object):
         :param is_repeat: The is_repeat of this Ptsv2paymentsPointOfSaleInformationEmv.
         :type: bool
         """
-
-
 
         self._is_repeat = is_repeat
 

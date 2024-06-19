@@ -96,8 +96,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :type: str
         """
 
-
-
         self._boarding_registration_id = boarding_registration_id
 
     @property
@@ -121,8 +119,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :type: date
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -145,7 +141,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param status: The status of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-
         allowed_values = ["PROCESSING", "SUCCESS", "FAILURE", "PARTIAL"]
         if status not in allowed_values:
             raise ValueError(
@@ -174,8 +169,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :type: str
         """
 
-
-
         self._boarding_package_id = boarding_package_id
 
     @property
@@ -198,7 +191,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param boarding_flow: The boarding_flow of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-
         allowed_values = ["ENTERPRISE", "SMB", "ADDPRODUCT"]
         if boarding_flow not in allowed_values:
             raise ValueError(
@@ -228,7 +220,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param mode: The mode of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-
         allowed_values = ["COMPLETE", "PARTIAL"]
         if mode not in allowed_values:
             raise ValueError(
@@ -256,8 +247,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param sales_rep_id: The sales_rep_id of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-
-
 
         self._sales_rep_id = sales_rep_id
 

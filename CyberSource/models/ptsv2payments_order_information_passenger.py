@@ -103,8 +103,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -127,8 +125,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param status: The status of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -153,8 +149,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :type: str
         """
 
-
-
         self._phone = phone
 
     @property
@@ -177,8 +171,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param first_name: The first_name of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-
-
 
         self._first_name = first_name
 
@@ -203,8 +195,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -227,8 +217,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param id: The id of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -253,8 +241,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -277,8 +263,6 @@ class Ptsv2paymentsOrderInformationPassenger(object):
         :param nationality: The nationality of this Ptsv2paymentsOrderInformationPassenger.
         :type: str
         """
-
-
 
         self._nationality = nationality
 

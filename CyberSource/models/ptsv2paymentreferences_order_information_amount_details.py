@@ -128,8 +128,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -152,8 +150,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -178,8 +174,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -202,8 +196,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._tax_amount = tax_amount
 
@@ -228,8 +220,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._duty_amount = duty_amount
 
     @property
@@ -252,8 +242,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param exchange_rate: The exchange_rate of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._exchange_rate = exchange_rate
 
@@ -278,8 +266,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._exchange_rate_time_stamp = exchange_rate_time_stamp
 
     @property
@@ -302,8 +288,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._settlement_currency = settlement_currency
 
@@ -328,8 +312,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._giftwrap_amount = giftwrap_amount
 
     @property
@@ -352,8 +334,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param handling_amount: The handling_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._handling_amount = handling_amount
 
@@ -378,8 +358,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._shipping_amount = shipping_amount
 
     @property
@@ -403,8 +381,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._shipping_discount_amount = shipping_discount_amount
 
     @property
@@ -427,8 +403,6 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         :param insurance_amount: The insurance_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._insurance_amount = insurance_amount
 

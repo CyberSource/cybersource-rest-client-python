@@ -293,8 +293,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._check_in_date = check_in_date
 
     @property
@@ -317,8 +315,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param check_out_date: The check_out_date of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._check_out_date = check_out_date
 
@@ -343,8 +339,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: list[Ptsv2paymentsTravelInformationLodgingRoom]
         """
 
-
-
         self._room = room
 
     @property
@@ -367,8 +361,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param smoking_preference: The smoking_preference of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._smoking_preference = smoking_preference
 
@@ -393,8 +385,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: int
         """
 
-
-
         self._number_of_rooms = number_of_rooms
 
     @property
@@ -417,8 +407,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param number_of_guests: The number_of_guests of this Ptsv2paymentsTravelInformationLodging.
         :type: int
         """
-
-
 
         self._number_of_guests = number_of_guests
 
@@ -443,8 +431,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._room_bed_type = room_bed_type
 
     @property
@@ -467,8 +453,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_tax_type: The room_tax_type of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._room_tax_type = room_tax_type
 
@@ -493,8 +477,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._room_rate_type = room_rate_type
 
     @property
@@ -517,8 +499,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param guest_name: The guest_name of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._guest_name = guest_name
 
@@ -543,8 +523,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._customer_service_phone_number = customer_service_phone_number
 
     @property
@@ -567,8 +545,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param corporate_client_code: The corporate_client_code of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._corporate_client_code = corporate_client_code
 
@@ -593,8 +569,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._additional_discount_amount = additional_discount_amount
 
     @property
@@ -617,8 +591,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param room_location: The room_location of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._room_location = room_location
 
@@ -643,8 +615,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._special_program_code = special_program_code
 
     @property
@@ -667,8 +637,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param total_tax_amount: The total_tax_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._total_tax_amount = total_tax_amount
 
@@ -693,8 +661,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._prepaid_cost = prepaid_cost
 
     @property
@@ -717,8 +683,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param food_and_beverage_cost: The food_and_beverage_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._food_and_beverage_cost = food_and_beverage_cost
 
@@ -743,8 +707,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._room_tax_amount = room_tax_amount
 
     @property
@@ -767,8 +729,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param adjustment_amount: The adjustment_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._adjustment_amount = adjustment_amount
 
@@ -793,8 +753,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._phone_cost = phone_cost
 
     @property
@@ -817,8 +775,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param restaurant_cost: The restaurant_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._restaurant_cost = restaurant_cost
 
@@ -843,8 +799,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._room_service_cost = room_service_cost
 
     @property
@@ -867,8 +821,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param mini_bar_cost: The mini_bar_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._mini_bar_cost = mini_bar_cost
 
@@ -893,8 +845,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._laundry_cost = laundry_cost
 
     @property
@@ -917,8 +867,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param miscellaneous_cost: The miscellaneous_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._miscellaneous_cost = miscellaneous_cost
 
@@ -943,8 +891,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._gift_shop_cost = gift_shop_cost
 
     @property
@@ -967,8 +913,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param movie_cost: The movie_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._movie_cost = movie_cost
 
@@ -993,8 +937,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._health_club_cost = health_club_cost
 
     @property
@@ -1017,8 +959,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param valet_parking_cost: The valet_parking_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._valet_parking_cost = valet_parking_cost
 
@@ -1043,8 +983,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._cash_disbursement_cost = cash_disbursement_cost
 
     @property
@@ -1067,8 +1005,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param non_room_cost: The non_room_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._non_room_cost = non_room_cost
 
@@ -1093,8 +1029,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._business_center_cost = business_center_cost
 
     @property
@@ -1117,8 +1051,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param lounge_bar_cost: The lounge_bar_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._lounge_bar_cost = lounge_bar_cost
 
@@ -1143,8 +1075,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._transportation_cost = transportation_cost
 
     @property
@@ -1167,8 +1097,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param gratuity_amount: The gratuity_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._gratuity_amount = gratuity_amount
 
@@ -1193,8 +1121,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._conference_room_cost = conference_room_cost
 
     @property
@@ -1217,8 +1143,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param audio_visual_cost: The audio_visual_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._audio_visual_cost = audio_visual_cost
 
@@ -1243,8 +1167,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._banquest_cost = banquest_cost
 
     @property
@@ -1267,8 +1189,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param non_room_tax_amount: The non_room_tax_amount of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._non_room_tax_amount = non_room_tax_amount
 
@@ -1293,8 +1213,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._early_check_out_cost = early_check_out_cost
 
     @property
@@ -1317,8 +1235,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param internet_access_cost: The internet_access_cost of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._internet_access_cost = internet_access_cost
 
@@ -1343,8 +1259,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -1367,8 +1281,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param hotel_name: The hotel_name of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._hotel_name = hotel_name
 
@@ -1393,8 +1305,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :type: str
         """
 
-
-
         self._check_in_date_time = check_in_date_time
 
     @property
@@ -1417,8 +1327,6 @@ class Ptsv2paymentsTravelInformationLodging(object):
         :param check_out_date_time: The check_out_date_time of this Ptsv2paymentsTravelInformationLodging.
         :type: str
         """
-
-
 
         self._check_out_date_time = check_out_date_time
 

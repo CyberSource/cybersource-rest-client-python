@@ -108,8 +108,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :type: str
         """
 
-
-
         self._border = border
 
     @property
@@ -132,8 +130,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :param border_selected: The border_selected of this Ptsv2paymentreferencesUserInterfaceColor.
         :type: str
         """
-
-
 
         self._border_selected = border_selected
 
@@ -158,8 +154,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :type: str
         """
 
-
-
         self._button = button
 
     @property
@@ -182,8 +176,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :param button_text: The button_text of this Ptsv2paymentreferencesUserInterfaceColor.
         :type: str
         """
-
-
 
         self._button_text = button_text
 
@@ -208,8 +200,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :type: str
         """
 
-
-
         self._checkbox = checkbox
 
     @property
@@ -232,8 +222,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :param checkbox_check_mark: The checkbox_check_mark of this Ptsv2paymentreferencesUserInterfaceColor.
         :type: str
         """
-
-
 
         self._checkbox_check_mark = checkbox_check_mark
 
@@ -258,8 +246,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :type: str
         """
 
-
-
         self._header = header
 
     @property
@@ -283,8 +269,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :type: str
         """
 
-
-
         self._link = link
 
     @property
@@ -307,8 +291,6 @@ class Ptsv2paymentreferencesUserInterfaceColor(object):
         :param text: The text of this Ptsv2paymentreferencesUserInterfaceColor.
         :type: str
         """
-
-
 
         self._text = text
 

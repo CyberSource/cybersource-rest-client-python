@@ -70,8 +70,6 @@ class FraudMarkingActionRequest(object):
         :type: Riskv1decisionsidmarkingRiskInformation
         """
 
-
-
         self._risk_information = risk_information
 
     @property
@@ -92,8 +90,6 @@ class FraudMarkingActionRequest(object):
         :param client_reference_information: The client_reference_information of this FraudMarkingActionRequest.
         :type: Riskv1liststypeentriesClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 

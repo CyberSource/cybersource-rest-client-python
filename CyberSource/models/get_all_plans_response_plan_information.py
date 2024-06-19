@@ -93,8 +93,6 @@ class GetAllPlansResponsePlanInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -117,8 +115,6 @@ class GetAllPlansResponsePlanInformation(object):
         :param status: The status of this GetAllPlansResponsePlanInformation.
         :type: str
         """
-
-
 
         self._status = status
 
@@ -143,8 +139,6 @@ class GetAllPlansResponsePlanInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -168,8 +162,6 @@ class GetAllPlansResponsePlanInformation(object):
         :type: str
         """
 
-
-
         self._description = description
 
     @property
@@ -191,8 +183,6 @@ class GetAllPlansResponsePlanInformation(object):
         :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
-
-
         self._billing_period = billing_period
 
     @property
@@ -213,8 +203,6 @@ class GetAllPlansResponsePlanInformation(object):
         :param billing_cycles: The billing_cycles of this GetAllPlansResponsePlanInformation.
         :type: GetAllPlansResponsePlanInformationBillingCycles
         """
-
-
 
         self._billing_cycles = billing_cycles
 

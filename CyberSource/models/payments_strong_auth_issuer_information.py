@@ -88,8 +88,6 @@ class PaymentsStrongAuthIssuerInformation(object):
         :type: str
         """
 
-
-
         self._risk_analysis_exemption_result = risk_analysis_exemption_result
 
     @property
@@ -112,8 +110,6 @@ class PaymentsStrongAuthIssuerInformation(object):
         :param trusted_merchant_exemption_result: The trusted_merchant_exemption_result of this PaymentsStrongAuthIssuerInformation.
         :type: str
         """
-
-
 
         self._trusted_merchant_exemption_result = trusted_merchant_exemption_result
 
@@ -138,8 +134,6 @@ class PaymentsStrongAuthIssuerInformation(object):
         :type: str
         """
 
-
-
         self._low_value_exemption_result = low_value_exemption_result
 
     @property
@@ -163,8 +157,6 @@ class PaymentsStrongAuthIssuerInformation(object):
         :type: str
         """
 
-
-
         self._secure_corporate_payment_result = secure_corporate_payment_result
 
     @property
@@ -187,8 +179,6 @@ class PaymentsStrongAuthIssuerInformation(object):
         :param transaction_risk_analysis_exemption_result: The transaction_risk_analysis_exemption_result of this PaymentsStrongAuthIssuerInformation.
         :type: str
         """
-
-
 
         self._transaction_risk_analysis_exemption_result = transaction_risk_analysis_exemption_result
 

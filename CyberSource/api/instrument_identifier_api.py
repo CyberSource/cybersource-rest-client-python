@@ -118,8 +118,6 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `delete_instrument_identifier`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -235,8 +233,6 @@ class InstrumentIdentifierApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier`")
-
-
 
 
         collection_formats = {}
@@ -358,10 +354,6 @@ class InstrumentIdentifierApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
             raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_instrument_identifier_payment_instruments_list`")
-
-
-
-
 
 
         collection_formats = {}
@@ -494,10 +486,6 @@ class InstrumentIdentifierApi(object):
             raise ValueError("Missing the required parameter `patch_instrument_identifier_request` when calling `patch_instrument_identifier`")
 
 
-
-
-
-
         collection_formats = {}
 
         path_params = {}
@@ -618,8 +606,6 @@ class InstrumentIdentifierApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_request` when calling `post_instrument_identifier`")
-
-
 
 
         collection_formats = {}
@@ -744,9 +730,6 @@ class InstrumentIdentifierApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
             raise ValueError("Missing the required parameter `post_instrument_identifier_enrollment_request` when calling `post_instrument_identifier_enrollment`")
-
-
-
 
 
         collection_formats = {}

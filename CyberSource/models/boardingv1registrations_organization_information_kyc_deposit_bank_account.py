@@ -77,8 +77,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :type: str
         """
 
-
-
         self._account_holder_name = account_holder_name
 
     @property
@@ -99,7 +97,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_type: The account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-
         allowed_values = ["checking", "savings", "corporatechecking", "corporatesavings"]
         if account_type not in allowed_values:
             raise ValueError(
@@ -128,8 +125,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :type: str
         """
 
-
-
         self._account_routing_number = account_routing_number
 
     @property
@@ -150,8 +145,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_number: The account_number of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-
-
 
         self._account_number = account_number
 

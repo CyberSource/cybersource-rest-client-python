@@ -75,8 +75,6 @@ class Ptsv1pushfundstransferOrderInformation(object):
         :type: Ptsv1pushfundstransferOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -100,8 +98,6 @@ class Ptsv1pushfundstransferOrderInformation(object):
         :type: str
         """
 
-
-
         self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
 
     @property
@@ -122,8 +118,6 @@ class Ptsv1pushfundstransferOrderInformation(object):
         :param surcharge: The surcharge of this Ptsv1pushfundstransferOrderInformation.
         :type: Ptsv1pushfundstransferOrderInformationSurcharge
         """
-
-
 
         self._surcharge = surcharge
 

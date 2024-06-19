@@ -76,8 +76,6 @@ class PtsV1TransactionBatchesGet200Response(object):
         :type: list[PtsV1TransactionBatchesGet200ResponseTransactionBatches]
         """
 
-
-
         self._transaction_batches = transaction_batches
 
     @property
@@ -98,8 +96,6 @@ class PtsV1TransactionBatchesGet200Response(object):
         :param links: The links of this PtsV1TransactionBatchesGet200Response.
         :type: PtsV1TransactionBatchesGet200ResponseLinks
         """
-
-
 
         self._links = links
 
@@ -123,8 +119,6 @@ class PtsV1TransactionBatchesGet200Response(object):
         :param submit_time_utc: The submit_time_utc of this PtsV1TransactionBatchesGet200Response.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 

@@ -101,8 +101,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :type: InvoicingV2InvoicesAllGet200ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -125,8 +123,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :param id: The id of this InvoicingV2InvoicesGet200Response.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -151,8 +147,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -176,8 +170,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -198,8 +190,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :param customer_information: The customer_information of this InvoicingV2InvoicesGet200Response.
         :type: Invoicingv2invoicesCustomerInformation
         """
-
-
 
         self._customer_information = customer_information
 
@@ -222,8 +212,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :type: InvoicingV2InvoicesPost201ResponseInvoiceInformation
         """
 
-
-
         self._invoice_information = invoice_information
 
     @property
@@ -245,8 +233,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :type: InvoicingV2InvoicesPost201ResponseOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -267,8 +253,6 @@ class InvoicingV2InvoicesGet200Response(object):
         :param invoice_history: The invoice_history of this InvoicingV2InvoicesGet200Response.
         :type: list[InvoicingV2InvoicesGet200ResponseInvoiceHistory]
         """
-
-
 
         self._invoice_history = invoice_history
 

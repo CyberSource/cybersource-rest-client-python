@@ -78,8 +78,6 @@ class KmsV2KeysSymGet200Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -103,8 +101,6 @@ class KmsV2KeysSymGet200Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -125,8 +121,6 @@ class KmsV2KeysSymGet200Response(object):
         :param key_information: The key_information of this KmsV2KeysSymGet200Response.
         :type: KmsV2KeysSymGet200ResponseKeyInformation
         """
-
-
 
         self._key_information = key_information
 

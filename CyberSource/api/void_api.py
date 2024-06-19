@@ -116,7 +116,6 @@ class VoidApi(object):
             raise ValueError("Missing the required parameter `mit_void_request` when calling `mit_void`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -235,8 +234,6 @@ class VoidApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_capture`")
             raise ValueError("Missing the required parameter `id` when calling `void_capture`")
-
-
 
 
         collection_formats = {}
@@ -362,8 +359,6 @@ class VoidApi(object):
             raise ValueError("Missing the required parameter `id` when calling `void_credit`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -487,8 +482,6 @@ class VoidApi(object):
             raise ValueError("Missing the required parameter `id` when calling `void_payment`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -610,8 +603,6 @@ class VoidApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `id` when calling `void_refund`")
             raise ValueError("Missing the required parameter `id` when calling `void_refund`")
-
-
 
 
         collection_formats = {}

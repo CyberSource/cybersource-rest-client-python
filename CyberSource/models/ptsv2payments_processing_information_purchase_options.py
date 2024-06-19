@@ -73,8 +73,6 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
         :type: bool
         """
 
-
-
         self._is_electronic_benefits_transfer = is_electronic_benefits_transfer
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
         :param type: The type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
         :type: str
         """
-
-
 
         self._type = type
 

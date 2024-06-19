@@ -83,8 +83,6 @@ class PtsV2PaymentsRefundPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -107,8 +105,6 @@ class PtsV2PaymentsRefundPost201ResponseClientReferenceInformation(object):
         :param submit_local_date_time: The submit_local_date_time of this PtsV2PaymentsRefundPost201ResponseClientReferenceInformation.
         :type: str
         """
-
-
 
         self._submit_local_date_time = submit_local_date_time
 
@@ -133,8 +129,6 @@ class PtsV2PaymentsRefundPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._owner_merchant_id = owner_merchant_id
 
     @property
@@ -157,8 +151,6 @@ class PtsV2PaymentsRefundPost201ResponseClientReferenceInformation(object):
         :param return_reconciliation_id: The return_reconciliation_id of this PtsV2PaymentsRefundPost201ResponseClientReferenceInformation.
         :type: str
         """
-
-
 
         self._return_reconciliation_id = return_reconciliation_id
 

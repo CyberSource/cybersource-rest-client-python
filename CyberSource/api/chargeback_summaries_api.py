@@ -125,9 +125,6 @@ class ChargebackSummariesApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_chargeback_summaries`")
 
 
-
-
-
         collection_formats = {}
 
         path_params = {}

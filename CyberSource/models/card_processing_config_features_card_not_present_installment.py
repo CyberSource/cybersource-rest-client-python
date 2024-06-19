@@ -73,8 +73,6 @@ class CardProcessingConfigFeaturesCardNotPresentInstallment(object):
         :type: bool
         """
 
-
-
         self._enable_installment = enable_installment
 
     @property
@@ -97,8 +95,6 @@ class CardProcessingConfigFeaturesCardNotPresentInstallment(object):
         :param installment_plan: The installment_plan of this CardProcessingConfigFeaturesCardNotPresentInstallment.
         :type: str
         """
-
-
 
         self._installment_plan = installment_plan
 

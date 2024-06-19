@@ -118,8 +118,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -142,8 +140,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address2: The address2 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -168,8 +164,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address3 = address3
 
     @property
@@ -192,8 +186,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param address4: The address4 of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._address4 = address4
 
@@ -218,8 +210,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -242,8 +232,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param country: The country of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -268,8 +256,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -293,8 +279,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -315,8 +299,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param company: The company of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: Riskv1exportcomplianceinquiriesOrderInformationBillToCompany
         """
-
-
 
         self._company = company
 
@@ -341,8 +323,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -366,8 +346,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -390,8 +368,6 @@ class Riskv1exportcomplianceinquiriesOrderInformationBillTo(object):
         :param email: The email of this Riskv1exportcomplianceinquiriesOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._email = email
 

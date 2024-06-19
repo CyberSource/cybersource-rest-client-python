@@ -103,8 +103,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -127,8 +125,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :param city: The city of this CardProcessingConfigCommonMerchantDescriptorInformation.
         :type: str
         """
-
-
 
         self._city = city
 
@@ -153,8 +149,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -177,8 +171,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :param phone: The phone of this CardProcessingConfigCommonMerchantDescriptorInformation.
         :type: str
         """
-
-
 
         self._phone = phone
 
@@ -203,8 +195,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :type: str
         """
 
-
-
         self._state = state
 
     @property
@@ -227,8 +217,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :param street: The street of this CardProcessingConfigCommonMerchantDescriptorInformation.
         :type: str
         """
-
-
 
         self._street = street
 
@@ -253,8 +241,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :type: str
         """
 
-
-
         self._zip = zip
 
     @property
@@ -277,8 +263,6 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         :param url: The url of this CardProcessingConfigCommonMerchantDescriptorInformation.
         :type: str
         """
-
-
 
         self._url = url
 

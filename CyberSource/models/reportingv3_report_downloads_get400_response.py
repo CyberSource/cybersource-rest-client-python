@@ -79,8 +79,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :type: datetime
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -103,8 +101,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param reason: The reason of this Reportingv3ReportDownloadsGet400Response.
         :type: str
         """
-
-
 
         self._reason = reason
 
@@ -129,8 +125,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -153,8 +147,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param details: The details of this Reportingv3ReportDownloadsGet400Response.
         :type: list[Reportingv3ReportDownloadsGet400ResponseDetails]
         """
-
-
 
         self._details = details
 

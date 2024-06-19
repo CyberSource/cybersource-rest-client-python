@@ -81,8 +81,6 @@ class PtsV2CreateBillingAgreementPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -103,8 +101,6 @@ class PtsV2CreateBillingAgreementPost201ResponseLinks(object):
         :param update_agreement: The update_agreement of this PtsV2CreateBillingAgreementPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._update_agreement = update_agreement
 
@@ -127,8 +123,6 @@ class PtsV2CreateBillingAgreementPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._revoke_agreement = revoke_agreement
 
     @property
@@ -149,8 +143,6 @@ class PtsV2CreateBillingAgreementPost201ResponseLinks(object):
         :param status: The status of this PtsV2CreateBillingAgreementPost201ResponseLinks.
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
-
-
 
         self._status = status
 

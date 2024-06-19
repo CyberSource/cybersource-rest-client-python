@@ -148,8 +148,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -172,8 +170,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param first_name: The first_name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._first_name = first_name
 
@@ -198,8 +194,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -222,8 +216,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param middle_name: The middle_name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._middle_name = middle_name
 
@@ -248,8 +240,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -272,8 +262,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param address1: The address1 of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -298,8 +286,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._address2 = address2
 
     @property
@@ -322,8 +308,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param locality: The locality of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._locality = locality
 
@@ -348,8 +332,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -372,8 +354,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param country: The country of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -398,8 +378,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._vat_registration_number = vat_registration_number
 
     @property
@@ -422,8 +400,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param date_of_birth: The date_of_birth of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
-
-
 
         self._date_of_birth = date_of_birth
 
@@ -448,8 +424,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -470,8 +444,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param payment_information: The payment_information of this Ptsv1pushfundstransferSenderInformation.
         :type: Ptsv1pushfundstransferSenderInformationPaymentInformation
         """
-
-
 
         self._payment_information = payment_information
 
@@ -496,8 +468,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     @property
@@ -519,8 +489,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :type: Ptsv1pushfundstransferSenderInformationAccount
         """
 
-
-
         self._account = account
 
     @property
@@ -541,8 +509,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         :param personal_identification: The personal_identification of this Ptsv1pushfundstransferSenderInformation.
         :type: Ptsv1pushfundstransferSenderInformationPersonalIdentification
         """
-
-
 
         self._personal_identification = personal_identification
 

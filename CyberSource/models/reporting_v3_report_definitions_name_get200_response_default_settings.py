@@ -103,8 +103,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :type: str
         """
 
-
-
         self._report_mime_type = report_mime_type
 
     @property
@@ -127,8 +125,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :param report_frequency: The report_frequency of this ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings.
         :type: str
         """
-
-
 
         self._report_frequency = report_frequency
 
@@ -153,8 +149,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :type: str
         """
 
-
-
         self._report_name = report_name
 
     @property
@@ -177,8 +171,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :param timezone: The timezone of this ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -203,8 +195,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :type: str
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -227,8 +217,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :param start_day: The start_day of this ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings.
         :type: int
         """
-
-
 
         self._start_day = start_day
 
@@ -253,8 +241,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :type: dict(str, list[str])
         """
 
-
-
         self._report_filters = report_filters
 
     @property
@@ -275,8 +261,6 @@ class ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings(object):
         :param report_preferences: The report_preferences of this ReportingV3ReportDefinitionsNameGet200ResponseDefaultSettings.
         :type: Reportingv3reportsReportPreferences
         """
-
-
 
         self._report_preferences = report_preferences
 

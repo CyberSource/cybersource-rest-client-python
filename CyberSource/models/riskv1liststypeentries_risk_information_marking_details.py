@@ -83,8 +83,6 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
         :type: str
         """
 
-
-
         self._notes = notes
 
     @property
@@ -107,8 +105,6 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
         :param reason: The reason of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str
         """
-
-
 
         self._reason = reason
 
@@ -133,8 +129,6 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
         :type: str
         """
 
-
-
         self._record_name = record_name
 
     @property
@@ -157,8 +151,6 @@ class Riskv1liststypeentriesRiskInformationMarkingDetails(object):
         :param action: The action of this Riskv1liststypeentriesRiskInformationMarkingDetails.
         :type: str
         """
-
-
 
         self._action = action
 

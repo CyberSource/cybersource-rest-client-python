@@ -72,8 +72,6 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._currency = currency
 
     @property
@@ -96,8 +94,6 @@ class Riskv1decisionsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Riskv1decisionsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._total_amount = total_amount
 

@@ -253,8 +253,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._auth_indicator = auth_indicator
 
     @property
@@ -277,8 +275,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param approval_code: The approval_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._approval_code = approval_code
 
@@ -303,8 +299,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._card_reference_data = card_reference_data
 
     @property
@@ -327,8 +321,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param transaction_id: The transaction_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._transaction_id = transaction_id
 
@@ -353,8 +345,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._network_transaction_id = network_transaction_id
 
     @property
@@ -377,8 +367,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_code: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_code = response_code
 
@@ -403,8 +391,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_code_source = response_code_source
 
     @property
@@ -427,8 +413,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param response_details: The response_details of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_details = response_details
 
@@ -453,8 +437,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._response_category_code = response_category_code
 
     @property
@@ -477,8 +459,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param forwarded_acquirer_code: The forwarded_acquirer_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._forwarded_acquirer_code = forwarded_acquirer_code
 
@@ -503,8 +483,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._settlement_date = settlement_date
 
     @property
@@ -525,8 +503,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param avs: The avs of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationAvs
         """
-
-
 
         self._avs = avs
 
@@ -549,8 +525,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationCardVerification
         """
 
-
-
         self._card_verification = card_verification
 
     @property
@@ -571,8 +545,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param merchant_advice: The merchant_advice of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice
         """
-
-
 
         self._merchant_advice = merchant_advice
 
@@ -595,8 +567,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationElectronicVerificationResults
         """
 
-
-
         self._electronic_verification_results = electronic_verification_results
 
     @property
@@ -617,8 +587,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param ach_verification: The ach_verification of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationAchVerification
         """
-
-
 
         self._ach_verification = ach_verification
 
@@ -641,8 +609,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessorInformationCustomer
         """
 
-
-
         self._customer = customer
 
     @property
@@ -663,8 +629,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param consumer_authentication_response: The consumer_authentication_response of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse
         """
-
-
 
         self._consumer_authentication_response = consumer_authentication_response
 
@@ -689,8 +653,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._system_trace_audit_number = system_trace_audit_number
 
     @property
@@ -713,8 +675,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param payment_account_reference_number: The payment_account_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._payment_account_reference_number = payment_account_reference_number
 
@@ -739,8 +699,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_integrity_code = transaction_integrity_code
 
     @property
@@ -763,8 +721,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param amex_verbal_auth_reference_number: The amex_verbal_auth_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._amex_verbal_auth_reference_number = amex_verbal_auth_reference_number
 
@@ -789,8 +745,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._master_card_service_code = master_card_service_code
 
     @property
@@ -813,8 +767,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param master_card_service_reply_code: The master_card_service_reply_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._master_card_service_reply_code = master_card_service_reply_code
 
@@ -839,8 +791,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._master_card_authentication_type = master_card_authentication_type
 
     @property
@@ -864,8 +814,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -886,8 +834,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param routing: The routing of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationRouting
         """
-
-
 
         self._routing = routing
 
@@ -912,8 +858,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._merchant_number = merchant_number
 
     @property
@@ -936,8 +880,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param retrieval_reference_number: The retrieval_reference_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._retrieval_reference_number = retrieval_reference_number
 
@@ -962,8 +904,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._payment_url = payment_url
 
     @property
@@ -987,8 +927,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._complete_url = complete_url
 
     @property
@@ -1009,8 +947,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param signature: The signature of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._signature = signature
 
@@ -1033,8 +969,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._public_key = public_key
 
     @property
@@ -1055,8 +989,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param seller_protection: The seller_protection of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection
         """
-
-
 
         self._seller_protection = seller_protection
 
@@ -1081,8 +1013,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_expiry_date = transaction_expiry_date
 
     @property
@@ -1105,8 +1035,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param custom_url: The custom_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._custom_url = custom_url
 
@@ -1131,8 +1059,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._scheme_assigned_id = scheme_assigned_id
 
     @property
@@ -1155,8 +1081,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         :param device_url: The device_url of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._device_url = device_url
 

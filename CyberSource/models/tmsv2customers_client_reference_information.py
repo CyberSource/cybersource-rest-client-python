@@ -68,8 +68,6 @@ class Tmsv2customersClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     def to_dict(self):

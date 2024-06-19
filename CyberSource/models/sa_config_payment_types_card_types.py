@@ -81,8 +81,6 @@ class SAConfigPaymentTypesCardTypes(object):
         :type: SAConfigPaymentTypesCardTypesDiscover
         """
 
-
-
         self._discover = discover
 
     @property
@@ -103,8 +101,6 @@ class SAConfigPaymentTypesCardTypes(object):
         :param amex: The amex of this SAConfigPaymentTypesCardTypes.
         :type: SAConfigPaymentTypesCardTypesDiscover
         """
-
-
 
         self._amex = amex
 
@@ -127,8 +123,6 @@ class SAConfigPaymentTypesCardTypes(object):
         :type: SAConfigPaymentTypesCardTypesDiscover
         """
 
-
-
         self._master_card = master_card
 
     @property
@@ -149,8 +143,6 @@ class SAConfigPaymentTypesCardTypes(object):
         :param visa: The visa of this SAConfigPaymentTypesCardTypes.
         :type: SAConfigPaymentTypesCardTypesDiscover
         """
-
-
 
         self._visa = visa
 

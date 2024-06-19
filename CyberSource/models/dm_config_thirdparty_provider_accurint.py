@@ -71,8 +71,6 @@ class DmConfigThirdpartyProviderAccurint(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -93,8 +91,6 @@ class DmConfigThirdpartyProviderAccurint(object):
         :param credentials: The credentials of this DmConfigThirdpartyProviderAccurint.
         :type: DmConfigThirdpartyProviderAccurintCredentials
         """
-
-
 
         self._credentials = credentials
 

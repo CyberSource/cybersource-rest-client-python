@@ -73,8 +73,6 @@ class Riskv1decisionsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -97,8 +95,6 @@ class Riskv1decisionsMerchantInformationMerchantDescriptor(object):
         :param url: The url of this Riskv1decisionsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._url = url
 

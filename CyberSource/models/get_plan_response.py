@@ -86,8 +86,6 @@ class GetPlanResponse(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -110,8 +108,6 @@ class GetPlanResponse(object):
         :param id: The id of this GetPlanResponse.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -136,8 +132,6 @@ class GetPlanResponse(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -159,8 +153,6 @@ class GetPlanResponse(object):
         :type: GetAllPlansResponsePlanInformation
         """
 
-
-
         self._plan_information = plan_information
 
     @property
@@ -181,8 +173,6 @@ class GetPlanResponse(object):
         :param order_information: The order_information of this GetPlanResponse.
         :type: GetAllPlansResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

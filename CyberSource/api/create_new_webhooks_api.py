@@ -114,7 +114,6 @@ class CreateNewWebhooksApi(object):
         del params['kwargs']
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -229,7 +228,6 @@ class CreateNewWebhooksApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
             raise ValueError("Missing the required parameter `organization_id` when calling `find_products_to_subscribe`")
-
 
 
         collection_formats = {}
@@ -357,10 +355,6 @@ class CreateNewWebhooksApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
-
-
-
-
 
 
         collection_formats = {}

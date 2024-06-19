@@ -78,8 +78,6 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         :type: str
         """
 
-
-
         self._refund_amount = refund_amount
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         :type: str
         """
 
-
-
         self._credit_amount = credit_amount
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsRefundPost201ResponseRefundAmountDetails(object):
         :param currency: The currency of this PtsV2PaymentsRefundPost201ResponseRefundAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

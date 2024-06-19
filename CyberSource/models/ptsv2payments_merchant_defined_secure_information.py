@@ -83,8 +83,6 @@ class Ptsv2paymentsMerchantDefinedSecureInformation(object):
         :type: str
         """
 
-
-
         self._secure1 = secure1
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentsMerchantDefinedSecureInformation(object):
         :param secure2: The secure2 of this Ptsv2paymentsMerchantDefinedSecureInformation.
         :type: str
         """
-
-
 
         self._secure2 = secure2
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsMerchantDefinedSecureInformation(object):
         :type: str
         """
 
-
-
         self._secure3 = secure3
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2paymentsMerchantDefinedSecureInformation(object):
         :param secure4: The secure4 of this Ptsv2paymentsMerchantDefinedSecureInformation.
         :type: str
         """
-
-
 
         self._secure4 = secure4
 

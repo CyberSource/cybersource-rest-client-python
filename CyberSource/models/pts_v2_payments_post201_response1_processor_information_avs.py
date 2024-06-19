@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201Response1ProcessorInformationAvs(object):
         :type: str
         """
 
-
-
         self._code_raw = code_raw
 
     def to_dict(self):

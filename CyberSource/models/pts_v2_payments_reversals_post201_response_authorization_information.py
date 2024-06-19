@@ -78,8 +78,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :type: str
         """
 
-
-
         self._approval_code = approval_code
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :type: str
         """
 
-
-
         self._reason_code = reason_code
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation(object):
         :param reversal_submitted: The reversal_submitted of this PtsV2PaymentsReversalsPost201ResponseAuthorizationInformation.
         :type: str
         """
-
-
 
         self._reversal_submitted = reversal_submitted
 

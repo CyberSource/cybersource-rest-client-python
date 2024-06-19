@@ -73,8 +73,6 @@ class VasV2TaxVoid200ResponseVoidAmountDetails(object):
         :type: str
         """
 
-
-
         self._void_amount = void_amount
 
     @property
@@ -97,8 +95,6 @@ class VasV2TaxVoid200ResponseVoidAmountDetails(object):
         :param currency: The currency of this VasV2TaxVoid200ResponseVoidAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

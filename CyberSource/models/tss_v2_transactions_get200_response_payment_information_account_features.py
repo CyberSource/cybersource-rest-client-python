@@ -78,8 +78,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
-
-
         self._balance_amount = balance_amount
 
     @property
@@ -103,8 +101,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :type: str
         """
 
-
-
         self._previous_balance_amount = previous_balance_amount
 
     @property
@@ -127,8 +123,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures(object):
         :param currency: The currency of this TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures.
         :type: str
         """
-
-
 
         self._currency = currency
 

@@ -83,8 +83,6 @@ class GetAllSubscriptionsResponsePlanInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -108,8 +106,6 @@ class GetAllSubscriptionsResponsePlanInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -131,8 +127,6 @@ class GetAllSubscriptionsResponsePlanInformation(object):
         :type: GetAllPlansResponsePlanInformationBillingPeriod
         """
 
-
-
         self._billing_period = billing_period
 
     @property
@@ -153,8 +147,6 @@ class GetAllSubscriptionsResponsePlanInformation(object):
         :param billing_cycles: The billing_cycles of this GetAllSubscriptionsResponsePlanInformation.
         :type: GetAllSubscriptionsResponsePlanInformationBillingCycles
         """
-
-
 
         self._billing_cycles = billing_cycles
 

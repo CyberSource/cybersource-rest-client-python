@@ -81,8 +81,6 @@ class Body(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -103,8 +101,6 @@ class Body(object):
         :param included: The included of this Body.
         :type: Accountupdaterv1batchesIncluded
         """
-
-
 
         self._included = included
 
@@ -129,8 +125,6 @@ class Body(object):
         :type: str
         """
 
-
-
         self._merchant_reference = merchant_reference
 
     @property
@@ -153,8 +147,6 @@ class Body(object):
         :param notification_email: The notification_email of this Body.
         :type: str
         """
-
-
 
         self._notification_email = notification_email
 

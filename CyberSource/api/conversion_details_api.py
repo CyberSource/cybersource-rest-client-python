@@ -125,9 +125,6 @@ class ConversionDetailsApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_conversion_detail`")
 
 
-
-
-
         collection_formats = {}
 
         path_params = {}

@@ -88,8 +88,6 @@ class CardProcessingConfigFeaturesCardNotPresent(object):
         :type: dict(str, CardProcessingConfigFeaturesCardNotPresentProcessors)
         """
 
-
-
         self._processors = processors
 
     @property
@@ -112,8 +110,6 @@ class CardProcessingConfigFeaturesCardNotPresent(object):
         :param ignore_address_verification_system: The ignore_address_verification_system of this CardProcessingConfigFeaturesCardNotPresent.
         :type: bool
         """
-
-
 
         self._ignore_address_verification_system = ignore_address_verification_system
 
@@ -138,8 +134,6 @@ class CardProcessingConfigFeaturesCardNotPresent(object):
         :type: bool
         """
 
-
-
         self._visa_straight_through_processing_only = visa_straight_through_processing_only
 
     @property
@@ -163,8 +157,6 @@ class CardProcessingConfigFeaturesCardNotPresent(object):
         :type: str
         """
 
-
-
         self._amex_transaction_advice_addendum1 = amex_transaction_advice_addendum1
 
     @property
@@ -185,8 +177,6 @@ class CardProcessingConfigFeaturesCardNotPresent(object):
         :param installment: The installment of this CardProcessingConfigFeaturesCardNotPresent.
         :type: CardProcessingConfigFeaturesCardNotPresentInstallment
         """
-
-
 
         self._installment = installment
 

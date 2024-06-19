@@ -73,8 +73,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory(object):
         :type: bool
         """
 
-
-
         self._first_use_of_shipping_address = first_use_of_shipping_address
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory(object):
         :param shipping_address_usage_date: The shipping_address_usage_date of this Ptsv2paymentsRiskInformationBuyerHistoryAccountHistory.
         :type: str
         """
-
-
 
         self._shipping_address_usage_date = shipping_address_usage_date
 

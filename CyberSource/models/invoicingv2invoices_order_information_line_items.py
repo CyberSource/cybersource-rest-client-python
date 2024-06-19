@@ -108,8 +108,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_sku = product_sku
 
     @property
@@ -132,8 +130,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param product_name: The product_name of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_name = product_name
 
@@ -158,8 +154,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :type: int
         """
 
-
-
         self._quantity = quantity
 
     @property
@@ -182,8 +176,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._unit_price = unit_price
 
@@ -208,8 +200,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -232,8 +222,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param discount_rate: The discount_rate of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._discount_rate = discount_rate
 
@@ -258,8 +246,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._tax_amount = tax_amount
 
     @property
@@ -283,8 +269,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._tax_rate = tax_rate
 
     @property
@@ -307,8 +291,6 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         :param total_amount: The total_amount of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._total_amount = total_amount
 

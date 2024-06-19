@@ -73,8 +73,6 @@ class TmsPaymentInstrumentProcessingInfo(object):
         :type: bool
         """
 
-
-
         self._bill_payment_program_enabled = bill_payment_program_enabled
 
     @property
@@ -95,8 +93,6 @@ class TmsPaymentInstrumentProcessingInfo(object):
         :param bank_transfer_options: The bank_transfer_options of this TmsPaymentInstrumentProcessingInfo.
         :type: TmsPaymentInstrumentProcessingInfoBankTransferOptions
         """
-
-
 
         self._bank_transfer_options = bank_transfer_options
 

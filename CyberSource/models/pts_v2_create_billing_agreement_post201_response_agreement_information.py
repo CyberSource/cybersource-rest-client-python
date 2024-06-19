@@ -93,8 +93,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -117,8 +115,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :param date_signed: The date_signed of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
         :type: str
         """
-
-
 
         self._date_signed = date_signed
 
@@ -143,8 +139,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :type: str
         """
 
-
-
         self._date_created = date_created
 
     @property
@@ -167,8 +161,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :param encoded_html: The encoded_html of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
         :type: str
         """
-
-
 
         self._encoded_html = encoded_html
 
@@ -193,8 +185,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :type: str
         """
 
-
-
         self._encoded_html_popup = encoded_html_popup
 
     @property
@@ -217,8 +207,6 @@ class PtsV2CreateBillingAgreementPost201ResponseAgreementInformation(object):
         :param url: The url of this PtsV2CreateBillingAgreementPost201ResponseAgreementInformation.
         :type: str
         """
-
-
 
         self._url = url
 

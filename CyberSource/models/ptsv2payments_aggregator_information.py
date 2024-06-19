@@ -78,8 +78,6 @@ class Ptsv2paymentsAggregatorInformation(object):
         :type: str
         """
 
-
-
         self._aggregator_id = aggregator_id
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsAggregatorInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -125,8 +121,6 @@ class Ptsv2paymentsAggregatorInformation(object):
         :param sub_merchant: The sub_merchant of this Ptsv2paymentsAggregatorInformation.
         :type: Ptsv2paymentsAggregatorInformationSubMerchant
         """
-
-
 
         self._sub_merchant = sub_merchant
 

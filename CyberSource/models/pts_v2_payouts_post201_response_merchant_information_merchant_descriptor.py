@@ -78,8 +78,6 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor(object):
         :param country: The country of this PtsV2PayoutsPost201ResponseMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._country = country
 

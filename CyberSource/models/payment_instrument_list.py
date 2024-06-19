@@ -91,8 +91,6 @@ class PaymentInstrumentList(object):
         :type: PaymentInstrumentListLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -115,8 +113,6 @@ class PaymentInstrumentList(object):
         :param offset: The offset of this PaymentInstrumentList.
         :type: int
         """
-
-
 
         self._offset = offset
 
@@ -141,8 +137,6 @@ class PaymentInstrumentList(object):
         :type: int
         """
 
-
-
         self._limit = limit
 
     @property
@@ -165,8 +159,6 @@ class PaymentInstrumentList(object):
         :param count: The count of this PaymentInstrumentList.
         :type: int
         """
-
-
 
         self._count = count
 
@@ -191,8 +183,6 @@ class PaymentInstrumentList(object):
         :type: int
         """
 
-
-
         self._total = total
 
     @property
@@ -213,8 +203,6 @@ class PaymentInstrumentList(object):
         :param embedded: The embedded of this PaymentInstrumentList.
         :type: PaymentInstrumentListEmbedded
         """
-
-
 
         self._embedded = embedded
 

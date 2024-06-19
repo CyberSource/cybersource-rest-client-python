@@ -71,8 +71,6 @@ class CreateP12KeysRequest(object):
         :type: Kmsv2keyssymClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -93,8 +91,6 @@ class CreateP12KeysRequest(object):
         :param key_information: The key_information of this CreateP12KeysRequest.
         :type: list[Kmsv2keysasymKeyInformation]
         """
-
-
 
         self._key_information = key_information
 

@@ -73,8 +73,6 @@ class Ptsv2billingagreementsidProcessingInformation(object):
         :type: str
         """
 
-
-
         self._commerce_indicator = commerce_indicator
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2billingagreementsidProcessingInformation(object):
         :param action_list: The action_list of this Ptsv2billingagreementsidProcessingInformation.
         :type: list[str]
         """
-
-
 
         self._action_list = action_list
 

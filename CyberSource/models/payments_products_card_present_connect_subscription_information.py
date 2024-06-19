@@ -71,8 +71,6 @@ class PaymentsProductsCardPresentConnectSubscriptionInformation(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -95,7 +93,6 @@ class PaymentsProductsCardPresentConnectSubscriptionInformation(object):
         :param self_serviceability: The self_serviceability of this PaymentsProductsCardPresentConnectSubscriptionInformation.
         :type: str
         """
-
         allowed_values = ["NOT_SELF_SERVICEABLE"]
         if self_serviceability not in allowed_values:
             raise ValueError(

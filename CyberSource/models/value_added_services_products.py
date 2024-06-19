@@ -71,8 +71,6 @@ class ValueAddedServicesProducts(object):
         :type: PaymentsProductsTax
         """
 
-
-
         self._reporting = reporting
 
     @property
@@ -93,8 +91,6 @@ class ValueAddedServicesProducts(object):
         :param transaction_search: The transaction_search of this ValueAddedServicesProducts.
         :type: PaymentsProductsTax
         """
-
-
 
         self._transaction_search = transaction_search
 

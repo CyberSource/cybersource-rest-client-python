@@ -71,8 +71,6 @@ class PtsV2CreditsPost201ResponseProcessingInformation(object):
         :type: PtsV2CreditsPost201ResponseProcessingInformationBankTransferOptions
         """
 
-
-
         self._bank_transfer_options = bank_transfer_options
 
     @property
@@ -95,8 +93,6 @@ class PtsV2CreditsPost201ResponseProcessingInformation(object):
         :param enhanced_data_enabled: The enhanced_data_enabled of this PtsV2CreditsPost201ResponseProcessingInformation.
         :type: bool
         """
-
-
 
         self._enhanced_data_enabled = enhanced_data_enabled
 

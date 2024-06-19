@@ -88,8 +88,6 @@ class Ptsv2billingagreementsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_month = expiration_month
 
     @property
@@ -112,8 +110,6 @@ class Ptsv2billingagreementsPaymentInformationCard(object):
         :param expiration_year: The expiration_year of this Ptsv2billingagreementsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_year = expiration_year
 
@@ -138,8 +134,6 @@ class Ptsv2billingagreementsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -163,8 +157,6 @@ class Ptsv2billingagreementsPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._security_code = security_code
 
     @property
@@ -187,8 +179,6 @@ class Ptsv2billingagreementsPaymentInformationCard(object):
         :param type: The type of this Ptsv2billingagreementsPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type = type
 

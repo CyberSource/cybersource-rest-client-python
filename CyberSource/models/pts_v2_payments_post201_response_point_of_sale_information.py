@@ -76,8 +76,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         :type: PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv
         """
 
-
-
         self._emv = emv
 
     @property
@@ -101,8 +99,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         :type: str
         """
 
-
-
         self._amex_capn_data = amex_capn_data
 
     @property
@@ -125,8 +121,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformation(object):
         :param terminal_id: The terminal_id of this PtsV2PaymentsPost201ResponsePointOfSaleInformation.
         :type: str
         """
-
-
 
         self._terminal_id = terminal_id
 

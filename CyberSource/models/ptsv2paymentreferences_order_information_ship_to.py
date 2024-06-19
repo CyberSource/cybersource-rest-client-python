@@ -153,8 +153,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -177,8 +175,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param title: The title of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._title = title
 
@@ -203,8 +199,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -227,8 +221,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param middle_name: The middle_name of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._middle_name = middle_name
 
@@ -253,8 +245,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -277,8 +267,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param company: The company of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._company = company
 
@@ -303,8 +291,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -327,8 +313,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param address2: The address2 of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -353,8 +337,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._district = district
 
     @property
@@ -377,8 +359,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param locality: The locality of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._locality = locality
 
@@ -403,8 +383,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -427,8 +405,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -453,8 +429,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -477,8 +451,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param building_number: The building_number of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._building_number = building_number
 
@@ -503,8 +475,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -527,8 +497,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param immutable: The immutable of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._immutable = immutable
 
@@ -553,8 +521,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._not_applicable = not_applicable
 
     @property
@@ -577,8 +543,6 @@ class Ptsv2paymentreferencesOrderInformationShipTo(object):
         :param county: The county of this Ptsv2paymentreferencesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._county = county
 

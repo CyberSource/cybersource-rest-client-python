@@ -78,8 +78,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1(object):
         :type: str
         """
 
-
-
         self._security_type = security_type
 
     @property
@@ -103,8 +101,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1(object):
         :type: str
         """
 
-
-
         self._proxy_type = proxy_type
 
     @property
@@ -125,8 +121,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicy1(object):
         :param config: The config of this Notificationsubscriptionsv1webhooksSecurityPolicy1.
         :type: Notificationsubscriptionsv1webhooksSecurityPolicy1Config
         """
-
-
 
         self._config = config
 

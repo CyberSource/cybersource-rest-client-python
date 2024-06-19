@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseFraudMarkingInformation(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     def to_dict(self):

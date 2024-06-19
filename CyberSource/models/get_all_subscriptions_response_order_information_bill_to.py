@@ -73,8 +73,6 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -97,8 +95,6 @@ class GetAllSubscriptionsResponseOrderInformationBillTo(object):
         :param last_name: The last_name of this GetAllSubscriptionsResponseOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._last_name = last_name
 

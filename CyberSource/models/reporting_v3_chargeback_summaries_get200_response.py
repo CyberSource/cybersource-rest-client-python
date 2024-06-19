@@ -83,8 +83,6 @@ class ReportingV3ChargebackSummariesGet200Response(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -107,8 +105,6 @@ class ReportingV3ChargebackSummariesGet200Response(object):
         :param start_time: The start_time of this ReportingV3ChargebackSummariesGet200Response.
         :type: datetime
         """
-
-
 
         self._start_time = start_time
 
@@ -133,8 +129,6 @@ class ReportingV3ChargebackSummariesGet200Response(object):
         :type: str
         """
 
-
-
         self._end_time = end_time
 
     @property
@@ -157,8 +151,6 @@ class ReportingV3ChargebackSummariesGet200Response(object):
         :param chargeback_summaries: The chargeback_summaries of this ReportingV3ChargebackSummariesGet200Response.
         :type: list[ReportingV3ChargebackSummariesGet200ResponseChargebackSummaries]
         """
-
-
 
         self._chargeback_summaries = chargeback_summaries
 

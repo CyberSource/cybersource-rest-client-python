@@ -125,9 +125,6 @@ class InterchangeClearingLevelDetailsApi(object):
             raise ValueError("Missing the required parameter `end_time` when calling `get_interchange_clearing_level_details`")
 
 
-
-
-
         collection_formats = {}
 
         path_params = {}

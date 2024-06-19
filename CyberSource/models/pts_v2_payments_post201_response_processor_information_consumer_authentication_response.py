@@ -73,8 +73,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResp
         :param code_raw: The code_raw of this PtsV2PaymentsPost201ResponseProcessorInformationConsumerAuthenticationResponse.
         :type: str
         """
-
-
 
         self._code_raw = code_raw
 

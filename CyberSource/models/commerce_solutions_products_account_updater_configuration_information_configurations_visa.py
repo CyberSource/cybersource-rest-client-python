@@ -76,8 +76,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._merchant_id = merchant_id
 
     @property
@@ -101,8 +99,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._segment_id = segment_id
 
     @property
@@ -123,8 +119,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param active: The active of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsVisa.
         :type: bool
         """
-
-
 
         self._active = active
 

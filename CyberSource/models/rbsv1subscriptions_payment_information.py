@@ -66,8 +66,6 @@ class Rbsv1subscriptionsPaymentInformation(object):
         :type: Rbsv1subscriptionsPaymentInformationCustomer
         """
 
-
-
         self._customer = customer
 
     def to_dict(self):

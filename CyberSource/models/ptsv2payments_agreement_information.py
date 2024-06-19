@@ -68,8 +68,6 @@ class Ptsv2paymentsAgreementInformation(object):
         :type: str
         """
 
-
-
         self._agreement_id = agreement_id
 
     def to_dict(self):

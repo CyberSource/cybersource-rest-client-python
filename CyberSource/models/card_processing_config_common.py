@@ -168,8 +168,6 @@ class CardProcessingConfigCommon(object):
         :type: dict(str, CardProcessingConfigCommonProcessors)
         """
 
-
-
         self._processors = processors
 
     @property
@@ -193,8 +191,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._amex_vendor_code = amex_vendor_code
 
     @property
@@ -217,7 +213,6 @@ class CardProcessingConfigCommon(object):
         :param default_auth_type_code: The default_auth_type_code of this CardProcessingConfigCommon.
         :type: str
         """
-
         allowed_values = ["PRE", "FINAL", "UNDEFINED"]
         if default_auth_type_code not in allowed_values:
             raise ValueError(
@@ -248,8 +243,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._master_card_assigned_id = master_card_assigned_id
 
     @property
@@ -272,8 +265,6 @@ class CardProcessingConfigCommon(object):
         :param enable_partial_auth: The enable_partial_auth of this CardProcessingConfigCommon.
         :type: bool
         """
-
-
 
         self._enable_partial_auth = enable_partial_auth
 
@@ -298,8 +289,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._merchant_category_code = merchant_category_code
 
     @property
@@ -322,8 +311,6 @@ class CardProcessingConfigCommon(object):
         :param sic_code: The sic_code of this CardProcessingConfigCommon.
         :type: str
         """
-
-
 
         self._sic_code = sic_code
 
@@ -348,8 +335,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._food_and_consumer_service_id = food_and_consumer_service_id
 
     @property
@@ -372,8 +357,6 @@ class CardProcessingConfigCommon(object):
         :param enable_split_shipment: The enable_split_shipment of this CardProcessingConfigCommon.
         :type: bool
         """
-
-
 
         self._enable_split_shipment = enable_split_shipment
 
@@ -398,8 +381,6 @@ class CardProcessingConfigCommon(object):
         :type: bool
         """
 
-
-
         self._enable_interchange_optimization = enable_interchange_optimization
 
     @property
@@ -422,8 +403,6 @@ class CardProcessingConfigCommon(object):
         :param visa_delegated_authentication_id: The visa_delegated_authentication_id of this CardProcessingConfigCommon.
         :type: str
         """
-
-
 
         self._visa_delegated_authentication_id = visa_delegated_authentication_id
 
@@ -448,8 +427,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._credit_card_refund_limit_percent = credit_card_refund_limit_percent
 
     @property
@@ -472,8 +449,6 @@ class CardProcessingConfigCommon(object):
         :param business_center_credit_card_refund_limit_percent: The business_center_credit_card_refund_limit_percent of this CardProcessingConfigCommon.
         :type: str
         """
-
-
 
         self._business_center_credit_card_refund_limit_percent = business_center_credit_card_refund_limit_percent
 
@@ -498,8 +473,6 @@ class CardProcessingConfigCommon(object):
         :type: bool
         """
 
-
-
         self._allow_captures_greater_than_authorizations = allow_captures_greater_than_authorizations
 
     @property
@@ -522,8 +495,6 @@ class CardProcessingConfigCommon(object):
         :param enable_duplicate_merchant_reference_number_blocking: The enable_duplicate_merchant_reference_number_blocking of this CardProcessingConfigCommon.
         :type: bool
         """
-
-
 
         self._enable_duplicate_merchant_reference_number_blocking = enable_duplicate_merchant_reference_number_blocking
 
@@ -548,8 +519,6 @@ class CardProcessingConfigCommon(object):
         :type: bool
         """
 
-
-
         self._domestic_merchant_id = domestic_merchant_id
 
     @property
@@ -572,8 +541,6 @@ class CardProcessingConfigCommon(object):
         :param process_level3_data: The process_level3_data of this CardProcessingConfigCommon.
         :type: str
         """
-
-
 
         self._process_level3_data = process_level3_data
 
@@ -598,8 +565,6 @@ class CardProcessingConfigCommon(object):
         :type: str
         """
 
-
-
         self._sub_merchant_id = sub_merchant_id
 
     @property
@@ -622,8 +587,6 @@ class CardProcessingConfigCommon(object):
         :param sub_merchant_business_name: The sub_merchant_business_name of this CardProcessingConfigCommon.
         :type: str
         """
-
-
 
         self._sub_merchant_business_name = sub_merchant_business_name
 
@@ -648,8 +611,6 @@ class CardProcessingConfigCommon(object):
         :type: bool
         """
 
-
-
         self._prefer_cobadged_secondary_brand = prefer_cobadged_secondary_brand
 
     @property
@@ -670,8 +631,6 @@ class CardProcessingConfigCommon(object):
         :param merchant_descriptor_information: The merchant_descriptor_information of this CardProcessingConfigCommon.
         :type: CardProcessingConfigCommonMerchantDescriptorInformation
         """
-
-
 
         self._merchant_descriptor_information = merchant_descriptor_information
 

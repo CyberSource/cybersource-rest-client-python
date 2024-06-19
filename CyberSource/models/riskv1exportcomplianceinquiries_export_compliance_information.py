@@ -78,8 +78,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
         :type: str
         """
 
-
-
         self._address_operator = address_operator
 
     @property
@@ -100,8 +98,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
         :param weights: The weights of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
         :type: Ptsv2paymentsWatchlistScreeningInformationWeights
         """
-
-
 
         self._weights = weights
 
@@ -125,8 +121,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation(object):
         :param sanction_lists: The sanction_lists of this Riskv1exportcomplianceinquiriesExportComplianceInformation.
         :type: list[str]
         """
-
-
 
         self._sanction_lists = sanction_lists
 

@@ -125,9 +125,6 @@ class ReportDownloadsApi(object):
             raise ValueError("Missing the required parameter `report_name` when calling `download_report`")
 
 
-
-
-
         collection_formats = {}
 
         path_params = {}

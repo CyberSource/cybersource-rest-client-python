@@ -78,8 +78,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicyConfig(object):
         :type: str
         """
 
-
-
         self._o_auth_token_expiry = o_auth_token_expiry
 
     @property
@@ -103,8 +101,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicyConfig(object):
         :type: str
         """
 
-
-
         self._o_auth_url = o_auth_url
 
     @property
@@ -127,8 +123,6 @@ class Notificationsubscriptionsv1webhooksSecurityPolicyConfig(object):
         :param o_auth_token_type: The o_auth_token_type of this Notificationsubscriptionsv1webhooksSecurityPolicyConfig.
         :type: str
         """
-
-
 
         self._o_auth_token_type = o_auth_token_type
 

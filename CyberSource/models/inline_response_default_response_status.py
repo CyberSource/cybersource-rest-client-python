@@ -88,8 +88,6 @@ class InlineResponseDefaultResponseStatus(object):
         :type: float
         """
 
-
-
         self._status = status
 
     @property
@@ -112,8 +110,6 @@ class InlineResponseDefaultResponseStatus(object):
         :param reason: The reason of this InlineResponseDefaultResponseStatus.
         :type: str
         """
-
-
 
         self._reason = reason
 
@@ -138,8 +134,6 @@ class InlineResponseDefaultResponseStatus(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -163,8 +157,6 @@ class InlineResponseDefaultResponseStatus(object):
         :type: str
         """
 
-
-
         self._correlation_id = correlation_id
 
     @property
@@ -185,8 +177,6 @@ class InlineResponseDefaultResponseStatus(object):
         :param details: The details of this InlineResponseDefaultResponseStatus.
         :type: list[InlineResponseDefaultResponseStatusDetails]
         """
-
-
 
         self._details = details
 

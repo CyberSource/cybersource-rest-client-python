@@ -105,8 +105,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -130,8 +128,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: str
         """
 
-
-
         self._parent_organization_id = parent_organization_id
 
     @property
@@ -152,8 +148,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param child_organizations: The child_organizations of this Boardingv1registrationsOrganizationInformation.
         :type: list[str]
         """
-
-
 
         self._child_organizations = child_organizations
 
@@ -177,7 +171,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param type: The type of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-
         allowed_values = ["TRANSACTING", "STRUCTURAL", "MERCHANT"]
         if type not in allowed_values:
             raise ValueError(
@@ -207,7 +200,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param status: The status of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-
         allowed_values = ["LIVE", "TEST", "DRAFT"]
         if status not in allowed_values:
             raise ValueError(
@@ -238,8 +230,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: bool
         """
 
-
-
         self._configurable = configurable
 
     @property
@@ -260,8 +250,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param business_information: The business_information of this Boardingv1registrationsOrganizationInformation.
         :type: Boardingv1registrationsOrganizationInformationBusinessInformation
         """
-
-
 
         self._business_information = business_information
 
@@ -284,8 +272,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :type: Boardingv1registrationsOrganizationInformationKYC
         """
 
-
-
         self._kyc = kyc
 
     @property
@@ -306,8 +292,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param owners: The owners of this Boardingv1registrationsOrganizationInformation.
         :type: list[Boardingv1registrationsOrganizationInformationOwners]
         """
-
-
 
         self._owners = owners
 

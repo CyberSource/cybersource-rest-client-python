@@ -81,8 +81,6 @@ class GetAllPlansResponse(object):
         :type: GetAllPlansResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -105,8 +103,6 @@ class GetAllPlansResponse(object):
         :param submit_time_utc: The submit_time_utc of this GetAllPlansResponse.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 
@@ -131,8 +127,6 @@ class GetAllPlansResponse(object):
         :type: int
         """
 
-
-
         self._total_count = total_count
 
     @property
@@ -153,8 +147,6 @@ class GetAllPlansResponse(object):
         :param plans: The plans of this GetAllPlansResponse.
         :type: list[GetAllPlansResponsePlans]
         """
-
-
 
         self._plans = plans
 

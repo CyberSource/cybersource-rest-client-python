@@ -116,8 +116,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddressAddress1
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -140,8 +138,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param address2: The address2 of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -166,8 +162,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._address3 = address3
 
     @property
@@ -190,8 +184,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param address4: The address4 of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress.
         :type: str
         """
-
-
 
         self._address4 = address4
 
@@ -216,8 +208,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -240,8 +230,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param county: The county of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress.
         :type: str
         """
-
-
 
         self._county = county
 
@@ -266,8 +254,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -290,8 +276,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param csz: The csz of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress.
         :type: str
         """
-
-
 
         self._csz = csz
 
@@ -316,8 +300,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._iso_country = iso_country
 
     @property
@@ -341,8 +323,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -365,8 +345,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param postal_code: The postal_code of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddress.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 

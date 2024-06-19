@@ -98,8 +98,6 @@ class Vasv2taxTaxInformation(object):
         :type: str
         """
 
-
-
         self._reporting_date = reporting_date
 
     @property
@@ -122,8 +120,6 @@ class Vasv2taxTaxInformation(object):
         :param date_override_reason: The date_override_reason of this Vasv2taxTaxInformation.
         :type: str
         """
-
-
 
         self._date_override_reason = date_override_reason
 
@@ -148,8 +144,6 @@ class Vasv2taxTaxInformation(object):
         :type: list[str]
         """
 
-
-
         self._nexus = nexus
 
     @property
@@ -172,8 +166,6 @@ class Vasv2taxTaxInformation(object):
         :param no_nexus: The no_nexus of this Vasv2taxTaxInformation.
         :type: list[str]
         """
-
-
 
         self._no_nexus = no_nexus
 
@@ -198,8 +190,6 @@ class Vasv2taxTaxInformation(object):
         :type: str
         """
 
-
-
         self._show_tax_per_line_item = show_tax_per_line_item
 
     @property
@@ -223,8 +213,6 @@ class Vasv2taxTaxInformation(object):
         :type: bool
         """
 
-
-
         self._commit_indicator = commit_indicator
 
     @property
@@ -247,8 +235,6 @@ class Vasv2taxTaxInformation(object):
         :param refund_indicator: The refund_indicator of this Vasv2taxTaxInformation.
         :type: bool
         """
-
-
 
         self._refund_indicator = refund_indicator
 

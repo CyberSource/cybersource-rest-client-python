@@ -103,8 +103,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :type: datetime
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -127,8 +125,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :param end_time: The end_time of this ReportingV3NetFundingsGet200Response.
         :type: datetime
         """
-
-
 
         self._end_time = end_time
 
@@ -153,8 +149,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :type: list[ReportingV3NetFundingsGet200ResponseNetFundingSummaries]
         """
 
-
-
         self._net_funding_summaries = net_funding_summaries
 
     @property
@@ -177,8 +171,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :param total_purchases: The total_purchases of this ReportingV3NetFundingsGet200Response.
         :type: list[ReportingV3NetFundingsGet200ResponseTotalPurchases]
         """
-
-
 
         self._total_purchases = total_purchases
 
@@ -203,8 +195,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :type: list[ReportingV3NetFundingsGet200ResponseTotalPurchases]
         """
 
-
-
         self._total_refunds = total_refunds
 
     @property
@@ -227,8 +217,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :param total_fees: The total_fees of this ReportingV3NetFundingsGet200Response.
         :type: list[ReportingV3NetFundingsGet200ResponseTotalPurchases]
         """
-
-
 
         self._total_fees = total_fees
 
@@ -253,8 +241,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :type: list[ReportingV3NetFundingsGet200ResponseTotalPurchases]
         """
 
-
-
         self._total_chargebacks = total_chargebacks
 
     @property
@@ -277,8 +263,6 @@ class ReportingV3NetFundingsGet200Response(object):
         :param net_total: The net_total of this ReportingV3NetFundingsGet200Response.
         :type: list[ReportingV3NetFundingsGet200ResponseTotalPurchases]
         """
-
-
 
         self._net_total = net_total
 

@@ -93,8 +93,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :type: str
         """
 
-
-
         self._invoice_number = invoice_number
 
     @property
@@ -117,8 +115,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :param description: The description of this Invoicingv2invoicesInvoiceInformation.
         :type: str
         """
-
-
 
         self._description = description
 
@@ -143,8 +139,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :type: date
         """
 
-
-
         self._due_date = due_date
 
     @property
@@ -167,8 +161,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :param send_immediately: The send_immediately of this Invoicingv2invoicesInvoiceInformation.
         :type: bool
         """
-
-
 
         self._send_immediately = send_immediately
 
@@ -193,8 +185,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :type: bool
         """
 
-
-
         self._allow_partial_payments = allow_partial_payments
 
     @property
@@ -217,8 +207,6 @@ class Invoicingv2invoicesInvoiceInformation(object):
         :param delivery_mode: The delivery_mode of this Invoicingv2invoicesInvoiceInformation.
         :type: str
         """
-
-
 
         self._delivery_mode = delivery_mode
 

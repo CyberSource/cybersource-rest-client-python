@@ -141,8 +141,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2paymentsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -163,8 +161,6 @@ class CreateCreditRequest(object):
         :param processing_information: The processing_information of this CreateCreditRequest.
         :type: Ptsv2creditsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -187,8 +183,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2paymentsidrefundsPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -209,8 +203,6 @@ class CreateCreditRequest(object):
         :param order_information: The order_information of this CreateCreditRequest.
         :type: Ptsv2paymentsidrefundsOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -233,8 +225,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2paymentsidcapturesBuyerInformation
         """
 
-
-
         self._buyer_information = buyer_information
 
     @property
@@ -255,8 +245,6 @@ class CreateCreditRequest(object):
         :param device_information: The device_information of this CreateCreditRequest.
         :type: Ptsv2paymentsidcapturesDeviceInformation
         """
-
-
 
         self._device_information = device_information
 
@@ -279,8 +267,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2paymentsidrefundsMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -302,8 +288,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2paymentsidcapturesAggregatorInformation
         """
 
-
-
         self._aggregator_information = aggregator_information
 
     @property
@@ -324,8 +308,6 @@ class CreateCreditRequest(object):
         :param point_of_sale_information: The point_of_sale_information of this CreateCreditRequest.
         :type: Ptsv2paymentsPointOfSaleInformation
         """
-
-
 
         self._point_of_sale_information = point_of_sale_information
 
@@ -350,8 +332,6 @@ class CreateCreditRequest(object):
         :type: list[Ptsv2paymentsMerchantDefinedInformation]
         """
 
-
-
         self._merchant_defined_information = merchant_defined_information
 
     @property
@@ -372,8 +352,6 @@ class CreateCreditRequest(object):
         :param merchant_defined_secure_information: The merchant_defined_secure_information of this CreateCreditRequest.
         :type: Ptsv2paymentsMerchantDefinedSecureInformation
         """
-
-
 
         self._merchant_defined_secure_information = merchant_defined_secure_information
 
@@ -396,8 +374,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2creditsInstallmentInformation
         """
 
-
-
         self._installment_information = installment_information
 
     @property
@@ -418,8 +394,6 @@ class CreateCreditRequest(object):
         :param travel_information: The travel_information of this CreateCreditRequest.
         :type: Ptsv2paymentsTravelInformation
         """
-
-
 
         self._travel_information = travel_information
 
@@ -442,8 +416,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2creditsRecipientInformation
         """
 
-
-
         self._recipient_information = recipient_information
 
     @property
@@ -465,8 +437,6 @@ class CreateCreditRequest(object):
         :type: Ptsv2creditsSenderInformation
         """
 
-
-
         self._sender_information = sender_information
 
     @property
@@ -487,8 +457,6 @@ class CreateCreditRequest(object):
         :param promotion_information: The promotion_information of this CreateCreditRequest.
         :type: Ptsv2paymentsPromotionInformation
         """
-
-
 
         self._promotion_information = promotion_information
 

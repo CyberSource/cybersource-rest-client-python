@@ -66,8 +66,6 @@ class Rbsv1plansidProcessingInformation(object):
         :type: Rbsv1plansidProcessingInformationSubscriptionBillingOptions
         """
 
-
-
         self._subscription_billing_options = subscription_billing_options
 
     def to_dict(self):

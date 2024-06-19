@@ -70,8 +70,6 @@ class CaseManagementActionsRequest(object):
         :type: Riskv1decisionsidactionsDecisionInformation
         """
 
-
-
         self._decision_information = decision_information
 
     @property
@@ -92,8 +90,6 @@ class CaseManagementActionsRequest(object):
         :param processing_information: The processing_information of this CaseManagementActionsRequest.
         :type: Riskv1decisionsidactionsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 

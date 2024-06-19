@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         :type: str
         """
 
-
-
         self._xid = xid
 
     @property
@@ -103,8 +101,6 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         :type: str
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -127,8 +123,6 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
         :param eci_raw: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._eci_raw = eci_raw
 

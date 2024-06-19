@@ -88,8 +88,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -112,8 +110,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :param country: The country of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -138,8 +134,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -163,8 +157,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -187,8 +179,6 @@ class Ptsv2paymentsidcapturesOrderInformationShipTo(object):
         :param county: The county of this Ptsv2paymentsidcapturesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._county = county
 

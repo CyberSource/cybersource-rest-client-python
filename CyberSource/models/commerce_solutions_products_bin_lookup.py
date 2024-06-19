@@ -71,8 +71,6 @@ class CommerceSolutionsProductsBinLookup(object):
         :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
-
-
         self._subscription_information = subscription_information
 
     @property
@@ -93,8 +91,6 @@ class CommerceSolutionsProductsBinLookup(object):
         :param configuration_information: The configuration_information of this CommerceSolutionsProductsBinLookup.
         :type: CommerceSolutionsProductsBinLookupConfigurationInformation
         """
-
-
 
         self._configuration_information = configuration_information
 

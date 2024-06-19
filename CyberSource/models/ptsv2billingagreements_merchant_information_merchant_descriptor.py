@@ -83,8 +83,6 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
         :param contact: The contact of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._contact = contact
 
@@ -133,8 +129,6 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
         :param name: The name of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._name = name
 

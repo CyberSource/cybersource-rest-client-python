@@ -119,7 +119,6 @@ class ManageWebhooksApi(object):
             raise ValueError("Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -234,7 +233,6 @@ class ManageWebhooksApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
-
 
 
         collection_formats = {}
@@ -365,9 +363,6 @@ class ManageWebhooksApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
             raise ValueError("Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
-
-
-
 
 
         collection_formats = {}
@@ -505,10 +500,6 @@ class ManageWebhooksApi(object):
             raise ValueError("Missing the required parameter `save_asym_egress_key` when calling `save_asym_egress_key`")
 
 
-
-
-
-
         collection_formats = {}
 
         path_params = {}
@@ -631,8 +622,6 @@ class ManageWebhooksApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
             raise ValueError("Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
-
-
 
 
         collection_formats = {}

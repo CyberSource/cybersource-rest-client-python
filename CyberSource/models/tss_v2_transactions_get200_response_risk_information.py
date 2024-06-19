@@ -91,8 +91,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :type: TssV2TransactionsGet200ResponseRiskInformationProfile
         """
 
-
-
         self._profile = profile
 
     @property
@@ -113,8 +111,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :param rules: The rules of this TssV2TransactionsGet200ResponseRiskInformation.
         :type: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
-
-
 
         self._rules = rules
 
@@ -137,8 +133,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :type: TssV2TransactionsGet200ResponseRiskInformationProfile
         """
 
-
-
         self._passive_profile = passive_profile
 
     @property
@@ -160,8 +154,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :type: list[TssV2TransactionsGet200ResponseRiskInformationRules]
         """
 
-
-
         self._passive_rules = passive_rules
 
     @property
@@ -182,8 +174,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :param score: The score of this TssV2TransactionsGet200ResponseRiskInformation.
         :type: TssV2TransactionsGet200ResponseRiskInformationScore
         """
-
-
 
         self._score = score
 
@@ -207,8 +197,6 @@ class TssV2TransactionsGet200ResponseRiskInformation(object):
         :param local_time: The local_time of this TssV2TransactionsGet200ResponseRiskInformation.
         :type: str
         """
-
-
 
         self._local_time = local_time
 

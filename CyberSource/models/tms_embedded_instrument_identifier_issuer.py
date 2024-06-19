@@ -68,8 +68,6 @@ class TmsEmbeddedInstrumentIdentifierIssuer(object):
         :type: str
         """
 
-
-
         self._payment_account_reference = payment_account_reference
 
     def to_dict(self):

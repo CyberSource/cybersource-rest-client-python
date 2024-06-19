@@ -86,8 +86,6 @@ class ShippingAddressListForCustomerLinks(object):
         :type: ShippingAddressListForCustomerLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -108,8 +106,6 @@ class ShippingAddressListForCustomerLinks(object):
         :param first: The first of this ShippingAddressListForCustomerLinks.
         :type: ShippingAddressListForCustomerLinksFirst
         """
-
-
 
         self._first = first
 
@@ -132,8 +128,6 @@ class ShippingAddressListForCustomerLinks(object):
         :type: ShippingAddressListForCustomerLinksPrev
         """
 
-
-
         self._prev = prev
 
     @property
@@ -155,8 +149,6 @@ class ShippingAddressListForCustomerLinks(object):
         :type: ShippingAddressListForCustomerLinksNext
         """
 
-
-
         self._next = next
 
     @property
@@ -177,8 +169,6 @@ class ShippingAddressListForCustomerLinks(object):
         :param last: The last of this ShippingAddressListForCustomerLinks.
         :type: ShippingAddressListForCustomerLinksLast
         """
-
-
 
         self._last = last
 

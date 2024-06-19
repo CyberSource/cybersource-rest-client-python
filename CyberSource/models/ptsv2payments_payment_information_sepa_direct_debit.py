@@ -83,8 +83,6 @@ class Ptsv2paymentsPaymentInformationSepaDirectDebit(object):
         :type: str
         """
 
-
-
         self._reference = reference
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentsPaymentInformationSepaDirectDebit(object):
         :param signature_date: The signature_date of this Ptsv2paymentsPaymentInformationSepaDirectDebit.
         :type: str
         """
-
-
 
         self._signature_date = signature_date
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsPaymentInformationSepaDirectDebit(object):
         :type: str
         """
 
-
-
         self._url = url
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2paymentsPaymentInformationSepaDirectDebit(object):
         :param type: The type of this Ptsv2paymentsPaymentInformationSepaDirectDebit.
         :type: str
         """
-
-
 
         self._type = type
 

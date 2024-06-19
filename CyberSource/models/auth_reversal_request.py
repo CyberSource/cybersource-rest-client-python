@@ -96,8 +96,6 @@ class AuthReversalRequest(object):
         :type: Ptsv2paymentsidreversalsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -118,8 +116,6 @@ class AuthReversalRequest(object):
         :param reversal_information: The reversal_information of this AuthReversalRequest.
         :type: Ptsv2paymentsidreversalsReversalInformation
         """
-
-
 
         self._reversal_information = reversal_information
 
@@ -142,8 +138,6 @@ class AuthReversalRequest(object):
         :type: Ptsv2paymentsidreversalsProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -164,8 +158,6 @@ class AuthReversalRequest(object):
         :param order_information: The order_information of this AuthReversalRequest.
         :type: Ptsv2paymentsidreversalsOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -188,8 +180,6 @@ class AuthReversalRequest(object):
         :type: Ptsv2paymentsidreversalsPointOfSaleInformation
         """
 
-
-
         self._point_of_sale_information = point_of_sale_information
 
     @property
@@ -211,8 +201,6 @@ class AuthReversalRequest(object):
         :type: Ptsv2paymentsidreversalsPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -233,8 +221,6 @@ class AuthReversalRequest(object):
         :param processor_information: The processor_information of this AuthReversalRequest.
         :type: Ptsv2paymentsProcessorInformationReversal
         """
-
-
 
         self._processor_information = processor_information
 

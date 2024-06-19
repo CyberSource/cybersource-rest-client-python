@@ -116,7 +116,6 @@ class CreditApi(object):
             raise ValueError("Missing the required parameter `create_credit_request` when calling `create_credit`")
 
 
-
         collection_formats = {}
 
         path_params = {}

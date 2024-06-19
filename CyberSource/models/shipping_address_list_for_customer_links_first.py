@@ -68,8 +68,6 @@ class ShippingAddressListForCustomerLinksFirst(object):
         :type: str
         """
 
-
-
         self._href = href
 
     def to_dict(self):

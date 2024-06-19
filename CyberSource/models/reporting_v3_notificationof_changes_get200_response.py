@@ -68,8 +68,6 @@ class ReportingV3NotificationofChangesGet200Response(object):
         :type: list[ReportingV3NotificationofChangesGet200ResponseNotificationOfChanges]
         """
 
-
-
         self._notification_of_changes = notification_of_changes
 
     def to_dict(self):

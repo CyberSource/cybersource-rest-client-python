@@ -73,8 +73,6 @@ class PtsV2PaymentsOrderPost201ResponseBuyerInformationPersonalIdentification(ob
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -97,8 +95,6 @@ class PtsV2PaymentsOrderPost201ResponseBuyerInformationPersonalIdentification(ob
         :param id: The id of this PtsV2PaymentsOrderPost201ResponseBuyerInformationPersonalIdentification.
         :type: str
         """
-
-
 
         self._id = id
 

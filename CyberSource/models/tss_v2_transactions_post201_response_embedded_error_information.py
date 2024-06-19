@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedErrorInformation(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     def to_dict(self):

@@ -108,8 +108,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -132,8 +130,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str
         """
-
-
 
         self._reconciliation_id = reconciliation_id
 
@@ -158,8 +154,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._paused_request_id = paused_request_id
 
     @property
@@ -182,8 +176,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param transaction_id: The transaction_id of this Ptsv2paymentsClientReferenceInformation.
         :type: str
         """
-
-
 
         self._transaction_id = transaction_id
 
@@ -208,8 +200,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._comments = comments
 
     @property
@@ -230,8 +220,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param partner: The partner of this Ptsv2paymentsClientReferenceInformation.
         :type: Ptsv2paymentsClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 
@@ -256,8 +244,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._application_name = application_name
 
     @property
@@ -281,8 +267,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._application_version = application_version
 
     @property
@@ -305,8 +289,6 @@ class Ptsv2paymentsClientReferenceInformation(object):
         :param application_user: The application_user of this Ptsv2paymentsClientReferenceInformation.
         :type: str
         """
-
-
 
         self._application_user = application_user
 

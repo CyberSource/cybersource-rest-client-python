@@ -71,8 +71,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressLinks(object):
         :type: Tmsv2customersEmbeddedDefaultShippingAddressLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -93,8 +91,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressLinks(object):
         :param customer: The customer of this Tmsv2customersEmbeddedDefaultShippingAddressLinks.
         :type: Tmsv2customersEmbeddedDefaultShippingAddressLinksCustomer
         """
-
-
 
         self._customer = customer
 

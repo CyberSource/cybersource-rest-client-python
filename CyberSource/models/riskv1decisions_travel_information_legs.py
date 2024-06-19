@@ -83,8 +83,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :type: str
         """
 
-
-
         self._origination = origination
 
     @property
@@ -107,8 +105,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :param destination: The destination of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-
-
 
         self._destination = destination
 
@@ -133,8 +129,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :type: str
         """
 
-
-
         self._carrier_code = carrier_code
 
     @property
@@ -157,8 +151,6 @@ class Riskv1decisionsTravelInformationLegs(object):
         :param departure_date: The departure_date of this Riskv1decisionsTravelInformationLegs.
         :type: str
         """
-
-
 
         self._departure_date = departure_date
 

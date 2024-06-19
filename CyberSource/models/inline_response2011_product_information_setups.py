@@ -71,8 +71,6 @@ class InlineResponse2011ProductInformationSetups(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -93,8 +91,6 @@ class InlineResponse2011ProductInformationSetups(object):
         :param setups: The setups of this InlineResponse2011ProductInformationSetups.
         :type: InlineResponse2011Setups
         """
-
-
 
         self._setups = setups
 

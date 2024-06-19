@@ -73,8 +73,6 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
         :type: str
         """
 
-
-
         self._merchant_id = merchant_id
 
     @property
@@ -95,8 +93,6 @@ class PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsPr
         :param acquirer_id: The acquirer_id of this PaymentsProductsCurrencyConversionConfigurationInformationConfigurationsProcessors.
         :type: str
         """
-
-
 
         self._acquirer_id = acquirer_id
 

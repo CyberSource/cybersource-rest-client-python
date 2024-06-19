@@ -93,8 +93,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :type: str
         """
 
-
-
         self._points_before_redemption = points_before_redemption
 
     @property
@@ -117,8 +115,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :param points_value_before_redemption: The points_value_before_redemption of this PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails.
         :type: str
         """
-
-
 
         self._points_value_before_redemption = points_value_before_redemption
 
@@ -143,8 +139,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :type: str
         """
 
-
-
         self._points_redeemed = points_redeemed
 
     @property
@@ -167,8 +161,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :param points_value_redeemed: The points_value_redeemed of this PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails.
         :type: str
         """
-
-
 
         self._points_value_redeemed = points_value_redeemed
 
@@ -193,8 +185,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :type: str
         """
 
-
-
         self._points_after_redemption = points_after_redemption
 
     @property
@@ -217,8 +207,6 @@ class PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails(object):
         :param points_value_after_redemption: The points_value_after_redemption of this PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails.
         :type: str
         """
-
-
 
         self._points_value_after_redemption = points_value_after_redemption
 

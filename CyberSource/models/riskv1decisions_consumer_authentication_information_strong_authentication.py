@@ -68,8 +68,6 @@ class Riskv1decisionsConsumerAuthenticationInformationStrongAuthentication(objec
         :type: str
         """
 
-
-
         self._authentication_indicator = authentication_indicator
 
     def to_dict(self):

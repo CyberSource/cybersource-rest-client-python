@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedBuyerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_customer_id = merchant_customer_id
 
     def to_dict(self):

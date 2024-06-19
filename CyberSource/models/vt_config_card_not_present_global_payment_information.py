@@ -76,8 +76,6 @@ class VTConfigCardNotPresentGlobalPaymentInformation(object):
         :type: VTConfigCardNotPresentGlobalPaymentInformationBasicInformation
         """
 
-
-
         self._basic_information = basic_information
 
     @property
@@ -99,8 +97,6 @@ class VTConfigCardNotPresentGlobalPaymentInformation(object):
         :type: VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -121,8 +117,6 @@ class VTConfigCardNotPresentGlobalPaymentInformation(object):
         :param merchant_defined_data_fields: The merchant_defined_data_fields of this VTConfigCardNotPresentGlobalPaymentInformation.
         :type: VTConfigCardNotPresentGlobalPaymentInformationMerchantDefinedDataFields
         """
-
-
 
         self._merchant_defined_data_fields = merchant_defined_data_fields
 

@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE(object):
         :param message: The message of this PtsV2PaymentsPost201ResponseEmbeddedActionsCAPTURE.
         :type: str
         """
-
-
 
         self._message = message
 

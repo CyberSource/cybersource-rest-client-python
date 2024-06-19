@@ -93,8 +93,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -117,8 +115,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param last_name: The last_name of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._last_name = last_name
 
@@ -143,8 +139,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -167,8 +161,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param email: The email of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._email = email
 
@@ -193,8 +185,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -217,8 +207,6 @@ class TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo(object):
         :param phone_number: The phone_number of this TssV2TransactionsPost201ResponseEmbeddedOrderInformationBillTo.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 

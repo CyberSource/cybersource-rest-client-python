@@ -66,8 +66,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     def to_dict(self):

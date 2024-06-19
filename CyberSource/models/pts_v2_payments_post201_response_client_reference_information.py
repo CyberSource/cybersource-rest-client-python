@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._submit_local_date_time = submit_local_date_time
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseClientReferenceInformation(object):
         :param owner_merchant_id: The owner_merchant_id of this PtsV2PaymentsPost201ResponseClientReferenceInformation.
         :type: str
         """
-
-
 
         self._owner_merchant_id = owner_merchant_id
 

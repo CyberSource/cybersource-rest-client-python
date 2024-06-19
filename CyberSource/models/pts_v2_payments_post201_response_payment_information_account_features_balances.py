@@ -83,8 +83,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :type: str
         """
 
-
-
         self._account_type = account_type
 
     @property
@@ -107,8 +105,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param amount: The amount of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-
-
 
         self._amount = amount
 
@@ -133,8 +129,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :type: str
         """
 
-
-
         self._amount_type = amount_type
 
     @property
@@ -157,8 +151,6 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances(obje
         :param currency: The currency of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeaturesBalances.
         :type: str
         """
-
-
 
         self._currency = currency
 

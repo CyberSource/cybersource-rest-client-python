@@ -76,8 +76,6 @@ class ECheckConfig(object):
         :type: ECheckConfigCommon
         """
 
-
-
         self._common = common
 
     @property
@@ -99,8 +97,6 @@ class ECheckConfig(object):
         :type: ECheckConfigUnderwriting
         """
 
-
-
         self._underwriting = underwriting
 
     @property
@@ -121,8 +117,6 @@ class ECheckConfig(object):
         :param features: The features of this ECheckConfig.
         :type: ECheckConfigFeatures
         """
-
-
 
         self._features = features
 

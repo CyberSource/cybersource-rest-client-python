@@ -76,8 +76,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         :type: PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions
         """
 
-
-
         self._bank_transfer_options = bank_transfer_options
 
     @property
@@ -101,8 +99,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_solution = payment_solution
 
     @property
@@ -125,8 +121,6 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         :param enhanced_data_enabled: The enhanced_data_enabled of this PtsV2PaymentsPost201ResponseProcessingInformation.
         :type: bool
         """
-
-
 
         self._enhanced_data_enabled = enhanced_data_enabled
 

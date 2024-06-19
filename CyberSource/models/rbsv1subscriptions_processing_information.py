@@ -73,8 +73,6 @@ class Rbsv1subscriptionsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._commerce_indicator = commerce_indicator
 
     @property
@@ -95,8 +93,6 @@ class Rbsv1subscriptionsProcessingInformation(object):
         :param authorization_options: The authorization_options of this Rbsv1subscriptionsProcessingInformation.
         :type: Rbsv1subscriptionsProcessingInformationAuthorizationOptions
         """
-
-
 
         self._authorization_options = authorization_options
 

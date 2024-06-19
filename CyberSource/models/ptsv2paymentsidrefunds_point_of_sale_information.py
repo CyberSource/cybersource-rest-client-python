@@ -66,8 +66,6 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
         :type: Ptsv2paymentsidcapturesPointOfSaleInformationEmv
         """
 
-
-
         self._emv = emv
 
     def to_dict(self):

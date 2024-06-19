@@ -93,8 +93,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -117,8 +115,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :param security_code: The security_code of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
         """
-
-
 
         self._security_code = security_code
 
@@ -143,8 +139,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._source_account_type = source_account_type
 
     @property
@@ -167,8 +161,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :param number: The number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
         """
-
-
 
         self._number = number
 
@@ -193,8 +185,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_month = expiration_month
 
     @property
@@ -217,8 +207,6 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
         :param expiration_year: The expiration_year of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_year = expiration_year
 

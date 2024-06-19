@@ -66,8 +66,6 @@ class Boardingv1registrationsDocumentInformationSignedDocuments(object):
         :type: str
         """
 
-
-
         self._document_id = document_id
 
     def to_dict(self):

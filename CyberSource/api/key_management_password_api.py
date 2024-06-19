@@ -123,8 +123,6 @@ class KeyManagementPasswordApi(object):
             raise ValueError("Missing the required parameter `update_password_keys_request` when calling `update_password`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}

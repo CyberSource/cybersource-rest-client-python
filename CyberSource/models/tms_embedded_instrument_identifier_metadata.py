@@ -68,8 +68,6 @@ class TmsEmbeddedInstrumentIdentifierMetadata(object):
         :type: str
         """
 
-
-
         self._creator = creator
 
     def to_dict(self):

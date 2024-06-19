@@ -66,8 +66,6 @@ class Ptsv2paymentsidProcessingInformation(object):
         :type: Ptsv2paymentsidProcessingInformationAuthorizationOptions
         """
 
-
-
         self._authorization_options = authorization_options
 
     def to_dict(self):

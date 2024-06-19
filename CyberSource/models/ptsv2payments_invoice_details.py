@@ -68,8 +68,6 @@ class Ptsv2paymentsInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._barcode_number = barcode_number
 
     def to_dict(self):

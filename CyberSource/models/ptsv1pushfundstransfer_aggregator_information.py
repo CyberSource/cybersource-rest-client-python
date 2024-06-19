@@ -78,8 +78,6 @@ class Ptsv1pushfundstransferAggregatorInformation(object):
         :type: str
         """
 
-
-
         self._aggregator_id = aggregator_id
 
     @property
@@ -103,8 +101,6 @@ class Ptsv1pushfundstransferAggregatorInformation(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -125,8 +121,6 @@ class Ptsv1pushfundstransferAggregatorInformation(object):
         :param sub_merchant: The sub_merchant of this Ptsv1pushfundstransferAggregatorInformation.
         :type: Ptsv1pushfundstransferAggregatorInformationSubMerchant
         """
-
-
 
         self._sub_merchant = sub_merchant
 

@@ -116,7 +116,6 @@ class DownloadDTDApi(object):
             raise ValueError("Missing the required parameter `report_definition_name_version` when calling `get_dtdv2`")
 
 
-
         collection_formats = {}
 
         path_params = {}

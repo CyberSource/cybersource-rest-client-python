@@ -73,8 +73,6 @@ class Ptsv2refreshpaymentstatusidClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2refreshpaymentstatusidClientReferenceInformation(object):
         :param reconciliation_id: The reconciliation_id of this Ptsv2refreshpaymentstatusidClientReferenceInformation.
         :type: str
         """
-
-
 
         self._reconciliation_id = reconciliation_id
 

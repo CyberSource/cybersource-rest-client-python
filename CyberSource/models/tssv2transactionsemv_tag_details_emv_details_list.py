@@ -71,8 +71,6 @@ class Tssv2transactionsemvTagDetailsEmvDetailsList(object):
         :type: str
         """
 
-
-
         self._request_id = request_id
 
     @property
@@ -95,8 +93,6 @@ class Tssv2transactionsemvTagDetailsEmvDetailsList(object):
         :param emv_request_combined_tags: The emv_request_combined_tags of this Tssv2transactionsemvTagDetailsEmvDetailsList.
         :type: str
         """
-
-
 
         self._emv_request_combined_tags = emv_request_combined_tags
 

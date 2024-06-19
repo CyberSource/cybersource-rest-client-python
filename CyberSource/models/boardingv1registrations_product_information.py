@@ -66,8 +66,6 @@ class Boardingv1registrationsProductInformation(object):
         :type: Boardingv1registrationsProductInformationSelectedProducts
         """
 
-
-
         self._selected_products = selected_products
 
     def to_dict(self):

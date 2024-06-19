@@ -123,8 +123,6 @@ class ReversalApi(object):
             raise ValueError("Missing the required parameter `auth_reversal_request` when calling `auth_reversal`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -239,7 +237,6 @@ class ReversalApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `mit_reversal_request` when calling `mit_reversal`")
             raise ValueError("Missing the required parameter `mit_reversal_request` when calling `mit_reversal`")
-
 
 
         collection_formats = {}

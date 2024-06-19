@@ -66,8 +66,6 @@ class Rbsv1subscriptionsidPlanInformation(object):
         :type: Rbsv1plansPlanInformationBillingCycles
         """
 
-
-
         self._billing_cycles = billing_cycles
 
     def to_dict(self):

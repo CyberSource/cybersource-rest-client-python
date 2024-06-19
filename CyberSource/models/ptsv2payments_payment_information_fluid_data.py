@@ -83,8 +83,6 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
         :type: str
         """
 
-
-
         self._key_serial_number = key_serial_number
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
         :param descriptor: The descriptor of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
-
-
 
         self._descriptor = descriptor
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
         :type: str
         """
 
-
-
         self._value = value
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2paymentsPaymentInformationFluidData(object):
         :param encoding: The encoding of this Ptsv2paymentsPaymentInformationFluidData.
         :type: str
         """
-
-
 
         self._encoding = encoding
 

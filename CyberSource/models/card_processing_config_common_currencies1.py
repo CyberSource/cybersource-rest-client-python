@@ -96,8 +96,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -120,8 +118,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :param enabled_card_present: The enabled_card_present of this CardProcessingConfigCommonCurrencies1.
         :type: bool
         """
-
-
 
         self._enabled_card_present = enabled_card_present
 
@@ -146,8 +142,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :type: bool
         """
 
-
-
         self._enabled_card_not_present = enabled_card_not_present
 
     @property
@@ -170,8 +164,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :param merchant_id: The merchant_id of this CardProcessingConfigCommonCurrencies1.
         :type: object
         """
-
-
 
         self._merchant_id = merchant_id
 
@@ -196,8 +188,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :type: object
         """
 
-
-
         self._terminal_id = terminal_id
 
     @property
@@ -221,8 +211,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :type: list[str]
         """
 
-
-
         self._terminal_ids = terminal_ids
 
     @property
@@ -245,8 +233,6 @@ class CardProcessingConfigCommonCurrencies1(object):
         :param service_enablement_number: The service_enablement_number of this CardProcessingConfigCommonCurrencies1.
         :type: object
         """
-
-
 
         self._service_enablement_number = service_enablement_number
 

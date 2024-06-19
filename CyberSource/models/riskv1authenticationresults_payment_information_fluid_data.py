@@ -83,8 +83,6 @@ class Riskv1authenticationresultsPaymentInformationFluidData(object):
         :type: str
         """
 
-
-
         self._value = value
 
     @property
@@ -107,8 +105,6 @@ class Riskv1authenticationresultsPaymentInformationFluidData(object):
         :param key_serial_number: The key_serial_number of this Riskv1authenticationresultsPaymentInformationFluidData.
         :type: str
         """
-
-
 
         self._key_serial_number = key_serial_number
 
@@ -133,8 +129,6 @@ class Riskv1authenticationresultsPaymentInformationFluidData(object):
         :type: str
         """
 
-
-
         self._descriptor = descriptor
 
     @property
@@ -157,8 +151,6 @@ class Riskv1authenticationresultsPaymentInformationFluidData(object):
         :param encoding: The encoding of this Riskv1authenticationresultsPaymentInformationFluidData.
         :type: str
         """
-
-
 
         self._encoding = encoding
 

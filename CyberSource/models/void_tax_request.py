@@ -66,8 +66,6 @@ class VoidTaxRequest(object):
         :type: Vasv2taxidClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     def to_dict(self):

@@ -66,8 +66,6 @@ class InlineResponse2006Embedded(object):
         :type: list[InlineResponse2006EmbeddedBatches]
         """
 
-
-
         self._batches = batches
 
     def to_dict(self):

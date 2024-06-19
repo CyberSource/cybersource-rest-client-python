@@ -73,8 +73,6 @@ class Notificationsubscriptionsv1webhooksNotificationScope(object):
         :type: str
         """
 
-
-
         self._scope = scope
 
     @property
@@ -97,8 +95,6 @@ class Notificationsubscriptionsv1webhooksNotificationScope(object):
         :param scope_data: The scope_data of this Notificationsubscriptionsv1webhooksNotificationScope.
         :type: list[str]
         """
-
-
 
         self._scope_data = scope_data
 

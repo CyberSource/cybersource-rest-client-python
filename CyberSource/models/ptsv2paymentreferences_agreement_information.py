@@ -73,8 +73,6 @@ class Ptsv2paymentreferencesAgreementInformation(object):
         :type: str
         """
 
-
-
         self._indicator = indicator
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentreferencesAgreementInformation(object):
         :param description: The description of this Ptsv2paymentreferencesAgreementInformation.
         :type: str
         """
-
-
 
         self._description = description
 

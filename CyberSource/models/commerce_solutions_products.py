@@ -76,8 +76,6 @@ class CommerceSolutionsProducts(object):
         :type: CommerceSolutionsProductsTokenManagement
         """
 
-
-
         self._token_management = token_management
 
     @property
@@ -99,8 +97,6 @@ class CommerceSolutionsProducts(object):
         :type: CommerceSolutionsProductsAccountUpdater
         """
 
-
-
         self._account_updater = account_updater
 
     @property
@@ -121,8 +117,6 @@ class CommerceSolutionsProducts(object):
         :param bin_lookup: The bin_lookup of this CommerceSolutionsProducts.
         :type: CommerceSolutionsProductsBinLookup
         """
-
-
 
         self._bin_lookup = bin_lookup
 

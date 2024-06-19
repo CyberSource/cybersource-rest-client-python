@@ -81,8 +81,6 @@ class DmConfigThirdpartyProviderCredilink(object):
         :type: bool
         """
 
-
-
         self._enabled = enabled
 
     @property
@@ -103,8 +101,6 @@ class DmConfigThirdpartyProviderCredilink(object):
         :param enable_real_time: The enable_real_time of this DmConfigThirdpartyProviderCredilink.
         :type: bool
         """
-
-
 
         self._enable_real_time = enable_real_time
 
@@ -127,8 +123,6 @@ class DmConfigThirdpartyProviderCredilink(object):
         :type: bool
         """
 
-
-
         self._use_cybs_credentials = use_cybs_credentials
 
     @property
@@ -149,8 +143,6 @@ class DmConfigThirdpartyProviderCredilink(object):
         :param credentials: The credentials of this DmConfigThirdpartyProviderCredilink.
         :type: DmConfigThirdpartyProviderCredilinkCredentials
         """
-
-
 
         self._credentials = credentials
 

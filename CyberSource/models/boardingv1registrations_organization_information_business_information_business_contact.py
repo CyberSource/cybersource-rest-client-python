@@ -82,8 +82,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :type: str
         """
 
-
-
         self._first_name = first_name
 
     @property
@@ -104,8 +102,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :param middle_name: The middle_name of this Boardingv1registrationsOrganizationInformationBusinessInformationBusinessContact.
         :type: str
         """
-
-
 
         self._middle_name = middle_name
 
@@ -128,8 +124,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :type: str
         """
 
-
-
         self._last_name = last_name
 
     @property
@@ -151,8 +145,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :type: str
         """
 
-
-
         self._phone_number = phone_number
 
     @property
@@ -173,8 +165,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformationBusinessC
         :param email: The email of this Boardingv1registrationsOrganizationInformationBusinessInformationBusinessContact.
         :type: str
         """
-
-
 
         self._email = email
 

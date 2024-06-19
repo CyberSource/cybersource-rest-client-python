@@ -73,8 +73,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformationEmv(object):
         :type: str
         """
 
-
-
         self._tags = tags
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsidcapturesPointOfSaleInformationEmv(object):
         :param fallback: The fallback of this Ptsv2paymentsidcapturesPointOfSaleInformationEmv.
         :type: bool
         """
-
-
 
         self._fallback = fallback
 

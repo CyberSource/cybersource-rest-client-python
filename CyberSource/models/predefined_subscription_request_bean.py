@@ -111,8 +111,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: str
         """
 
-
-
         self._report_definition_name = report_definition_name
 
     @property
@@ -136,8 +134,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: str
         """
 
-
-
         self._subscription_type = subscription_type
 
     @property
@@ -158,8 +154,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param report_name: The report_name of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-
-
 
         self._report_name = report_name
 
@@ -184,8 +178,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: str
         """
 
-
-
         self._report_mime_type = report_mime_type
 
     @property
@@ -208,8 +200,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param report_frequency: The report_frequency of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-
-
 
         self._report_frequency = report_frequency
 
@@ -234,8 +224,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: str
         """
 
-
-
         self._report_interval = report_interval
 
     @property
@@ -258,8 +246,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param timezone: The timezone of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-
-
 
         self._timezone = timezone
 
@@ -284,8 +270,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: str
         """
 
-
-
         self._start_time = start_time
 
     @property
@@ -309,8 +293,6 @@ class PredefinedSubscriptionRequestBean(object):
         :type: int
         """
 
-
-
         self._start_day = start_day
 
     @property
@@ -333,8 +315,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param subscription_status: The subscription_status of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-
-
 
         self._subscription_status = subscription_status
 

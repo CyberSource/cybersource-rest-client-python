@@ -71,8 +71,6 @@ class InlineResponse4042Details(object):
         :type: str
         """
 
-
-
         self._field = field
 
     @property
@@ -93,8 +91,6 @@ class InlineResponse4042Details(object):
         :param reason: The reason of this InlineResponse4042Details.
         :type: str
         """
-
-
 
         self._reason = reason
 

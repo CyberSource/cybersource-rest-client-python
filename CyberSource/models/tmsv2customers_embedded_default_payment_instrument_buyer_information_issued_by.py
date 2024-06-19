@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformationIssuedBy(obj
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     def to_dict(self):

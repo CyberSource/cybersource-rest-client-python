@@ -104,8 +104,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :type: int
         """
 
-
-
         self._acquirer_country_code = acquirer_country_code
 
     @property
@@ -128,8 +126,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param acquiring_bin: The acquiring_bin of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: int
         """
-
-
 
         self._acquiring_bin = acquiring_bin
 
@@ -154,8 +150,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :type: bool
         """
 
-
-
         self._allow_crypto_currency_purchase = allow_crypto_currency_purchase
 
     @property
@@ -178,8 +172,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param financial_institution_id: The financial_institution_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: str
         """
-
-
 
         self._financial_institution_id = financial_institution_id
 
@@ -204,8 +196,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :type: str
         """
 
-
-
         self._network_order = network_order
 
     @property
@@ -228,8 +218,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param national_reimbursement_fee: The national_reimbursement_fee of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: str
         """
-
-
 
         self._national_reimbursement_fee = national_reimbursement_fee
 
@@ -254,8 +242,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :type: str
         """
 
-
-
         self._originator_business_application_id = originator_business_application_id
 
     @property
@@ -279,8 +265,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :type: str
         """
 
-
-
         self._originator_pseudo_aba_number = originator_pseudo_aba_number
 
     @property
@@ -303,8 +287,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param processor_account: The processor_account of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: list[PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount]
         """
-
-
 
         self._processor_account = processor_account
 

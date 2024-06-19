@@ -133,8 +133,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -157,8 +155,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param alternate_name: The alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._alternate_name = alternate_name
 
@@ -183,8 +179,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._contact = contact
 
     @property
@@ -207,8 +201,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param address1: The address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -233,8 +225,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -257,8 +247,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param country: The country of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -283,8 +271,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -307,8 +293,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -333,8 +317,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._phone = phone
 
     @property
@@ -357,8 +339,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param url: The url of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._url = url
 
@@ -383,8 +363,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._country_of_origin = country_of_origin
 
     @property
@@ -407,8 +385,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param store_id: The store_id of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._store_id = store_id
 
@@ -433,8 +409,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :type: str
         """
 
-
-
         self._store_name = store_name
 
     @property
@@ -457,8 +431,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
         :param customer_service_phone_number: The customer_service_phone_number of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
         """
-
-
 
         self._customer_service_phone_number = customer_service_phone_number
 

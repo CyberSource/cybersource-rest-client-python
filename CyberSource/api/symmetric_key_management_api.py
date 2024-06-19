@@ -116,7 +116,6 @@ class SymmetricKeyManagementApi(object):
             raise ValueError("Missing the required parameter `create_shared_secret_keys_request` when calling `create_v2_shared_secret_keys`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -237,8 +236,6 @@ class SymmetricKeyManagementApi(object):
             raise ValueError("Missing the required parameter `create_shared_secret_keys_verifi_request` when calling `create_v2_shared_secret_keys_verifi`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -354,7 +351,6 @@ class SymmetricKeyManagementApi(object):
             raise ValueError("Missing the required parameter `delete_bulk_symmetric_keys_request` when calling `delete_bulk_symmetric_keys`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -466,7 +462,6 @@ class SymmetricKeyManagementApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `key_id` when calling `get_key_details`")
             raise ValueError("Missing the required parameter `key_id` when calling `get_key_details`")
-
 
 
         collection_formats = {}

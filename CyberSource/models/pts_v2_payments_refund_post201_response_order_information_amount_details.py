@@ -88,8 +88,6 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_amount = settlement_amount
 
     @property
@@ -112,8 +110,6 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         :param settlement_currency: The settlement_currency of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._settlement_currency = settlement_currency
 
@@ -138,8 +134,6 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._exchange_rate = exchange_rate
 
     @property
@@ -163,8 +157,6 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._foreign_amount = foreign_amount
 
     @property
@@ -187,8 +179,6 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
         :param foreign_currency: The foreign_currency of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._foreign_currency = foreign_currency
 

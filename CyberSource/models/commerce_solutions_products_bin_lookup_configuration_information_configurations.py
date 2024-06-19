@@ -73,8 +73,6 @@ class CommerceSolutionsProductsBinLookupConfigurationInformationConfigurations(o
         :type: bool
         """
 
-
-
         self._is_payout_options_enabled = is_payout_options_enabled
 
     @property
@@ -97,8 +95,6 @@ class CommerceSolutionsProductsBinLookupConfigurationInformationConfigurations(o
         :param is_account_prefix_enabled: The is_account_prefix_enabled of this CommerceSolutionsProductsBinLookupConfigurationInformationConfigurations.
         :type: bool
         """
-
-
 
         self._is_account_prefix_enabled = is_account_prefix_enabled
 

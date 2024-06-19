@@ -71,8 +71,6 @@ class PtsV2ModifyBillingAgreementPost201ResponsePaymentInformation(object):
         :type: PtsV2ModifyBillingAgreementPost201ResponsePaymentInformationEWallet
         """
 
-
-
         self._e_wallet = e_wallet
 
     @property
@@ -93,8 +91,6 @@ class PtsV2ModifyBillingAgreementPost201ResponsePaymentInformation(object):
         :param bank: The bank of this PtsV2ModifyBillingAgreementPost201ResponsePaymentInformation.
         :type: PtsV2ModifyBillingAgreementPost201ResponsePaymentInformationBank
         """
-
-
 
         self._bank = bank
 

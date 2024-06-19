@@ -93,8 +93,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -117,8 +115,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :param expiration_month: The expiration_month of this Ptsv2paymentreferencesPaymentInformationCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -143,8 +139,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -167,8 +161,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :param type: The type of this Ptsv2paymentreferencesPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type = type
 
@@ -193,8 +185,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._security_code = security_code
 
     @property
@@ -217,8 +207,6 @@ class Ptsv2paymentreferencesPaymentInformationCard(object):
         :param use_as: The use_as of this Ptsv2paymentreferencesPaymentInformationCard.
         :type: str
         """
-
-
 
         self._use_as = use_as
 

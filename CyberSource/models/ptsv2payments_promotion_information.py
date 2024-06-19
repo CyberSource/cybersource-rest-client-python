@@ -73,8 +73,6 @@ class Ptsv2paymentsPromotionInformation(object):
         :type: str
         """
 
-
-
         self._additional_code = additional_code
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsPromotionInformation(object):
         :param code: The code of this Ptsv2paymentsPromotionInformation.
         :type: str
         """
-
-
 
         self._code = code
 

@@ -73,8 +73,6 @@ class Riskv1authenticationsetupsProcessingInformation(object):
         :type: str
         """
 
-
-
         self._payment_solution = payment_solution
 
     @property
@@ -97,8 +95,6 @@ class Riskv1authenticationsetupsProcessingInformation(object):
         :param visa_checkout_id: The visa_checkout_id of this Riskv1authenticationsetupsProcessingInformation.
         :type: str
         """
-
-
 
         self._visa_checkout_id = visa_checkout_id
 

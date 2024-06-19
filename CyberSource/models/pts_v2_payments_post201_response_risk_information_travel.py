@@ -81,8 +81,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravel(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationTravelActualFinalDestination
         """
 
-
-
         self._actual_final_destination = actual_final_destination
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravel(object):
         :param first_departure: The first_departure of this PtsV2PaymentsPost201ResponseRiskInformationTravel.
         :type: PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDeparture
         """
-
-
 
         self._first_departure = first_departure
 
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravel(object):
         :type: PtsV2PaymentsPost201ResponseRiskInformationTravelFirstDestination
         """
 
-
-
         self._first_destination = first_destination
 
     @property
@@ -149,8 +143,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationTravel(object):
         :param last_destination: The last_destination of this PtsV2PaymentsPost201ResponseRiskInformationTravel.
         :type: PtsV2PaymentsPost201ResponseRiskInformationTravelLastDestination
         """
-
-
 
         self._last_destination = last_destination
 

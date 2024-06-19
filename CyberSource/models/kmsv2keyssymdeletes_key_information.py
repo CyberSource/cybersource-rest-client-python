@@ -76,8 +76,6 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -101,8 +99,6 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     @property
@@ -125,8 +121,6 @@ class Kmsv2keyssymdeletesKeyInformation(object):
         :param key_id: The key_id of this Kmsv2keyssymdeletesKeyInformation.
         :type: str
         """
-
-
 
         self._key_id = key_id
 

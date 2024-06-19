@@ -101,8 +101,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -125,8 +123,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address2: The address2 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -151,8 +147,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address3 = address3
 
     @property
@@ -175,8 +169,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address4: The address4 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address4 = address4
 
@@ -201,8 +193,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -225,8 +215,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param country: The country of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -251,8 +239,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -275,8 +261,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 

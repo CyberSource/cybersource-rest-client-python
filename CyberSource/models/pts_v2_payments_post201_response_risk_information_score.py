@@ -76,8 +76,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
         :type: list[str]
         """
 
-
-
         self._factor_codes = factor_codes
 
     @property
@@ -101,8 +99,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
         :type: str
         """
 
-
-
         self._model_used = model_used
 
     @property
@@ -125,8 +121,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationScore(object):
         :param result: The result of this PtsV2PaymentsPost201ResponseRiskInformationScore.
         :type: str
         """
-
-
 
         self._result = result
 

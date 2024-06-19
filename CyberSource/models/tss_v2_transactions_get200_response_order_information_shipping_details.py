@@ -73,8 +73,6 @@ class TssV2TransactionsGet200ResponseOrderInformationShippingDetails(object):
         :type: bool
         """
 
-
-
         self._gift_wrap = gift_wrap
 
     @property
@@ -97,8 +95,6 @@ class TssV2TransactionsGet200ResponseOrderInformationShippingDetails(object):
         :param shipping_method: The shipping_method of this TssV2TransactionsGet200ResponseOrderInformationShippingDetails.
         :type: str
         """
-
-
 
         self._shipping_method = shipping_method
 

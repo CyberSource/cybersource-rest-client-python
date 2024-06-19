@@ -71,8 +71,6 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -93,8 +91,6 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
         :param currency: The currency of this Upv1capturecontextsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

@@ -81,8 +81,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         :type: PtsV2PaymentsOrderPost201ResponseProcessorInformationSellerProtection
         """
 
-
-
         self._seller_protection = seller_protection
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         :param avs: The avs of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
         :type: PtsV2PaymentsPost201Response1ProcessorInformationAvs
         """
-
-
 
         self._avs = avs
 
@@ -129,8 +125,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         :type: str
         """
 
-
-
         self._transaction_id = transaction_id
 
     @property
@@ -153,8 +147,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessorInformation(object):
         :param response_details: The response_details of this PtsV2PaymentsOrderPost201ResponseProcessorInformation.
         :type: str
         """
-
-
 
         self._response_details = response_details
 

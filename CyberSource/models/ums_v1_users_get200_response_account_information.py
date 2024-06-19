@@ -101,8 +101,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :type: str
         """
 
-
-
         self._user_name = user_name
 
     @property
@@ -124,8 +122,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :type: str
         """
 
-
-
         self._role_id = role_id
 
     @property
@@ -146,8 +142,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :param permissions: The permissions of this UmsV1UsersGet200ResponseAccountInformation.
         :type: list[str]
         """
-
-
 
         self._permissions = permissions
 
@@ -172,8 +166,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -194,8 +186,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :param created_time: The created_time of this UmsV1UsersGet200ResponseAccountInformation.
         :type: datetime
         """
-
-
 
         self._created_time = created_time
 
@@ -218,8 +208,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :type: datetime
         """
 
-
-
         self._last_access_time = last_access_time
 
     @property
@@ -241,8 +229,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :type: str
         """
 
-
-
         self._language_preference = language_preference
 
     @property
@@ -263,8 +249,6 @@ class UmsV1UsersGet200ResponseAccountInformation(object):
         :param timezone: The timezone of this UmsV1UsersGet200ResponseAccountInformation.
         :type: str
         """
-
-
 
         self._timezone = timezone
 

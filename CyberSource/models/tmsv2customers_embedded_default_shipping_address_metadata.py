@@ -68,8 +68,6 @@ class Tmsv2customersEmbeddedDefaultShippingAddressMetadata(object):
         :type: str
         """
 
-
-
         self._creator = creator
 
     def to_dict(self):

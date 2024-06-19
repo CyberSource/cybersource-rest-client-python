@@ -82,8 +82,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -106,8 +104,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param paused_request_id: The paused_request_id of this Riskv1decisionsClientReferenceInformation.
         :type: str
         """
-
-
 
         self._paused_request_id = paused_request_id
 
@@ -132,8 +128,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :type: str
         """
 
-
-
         self._comments = comments
 
     @property
@@ -154,8 +148,6 @@ class Riskv1decisionsClientReferenceInformation(object):
         :param partner: The partner of this Riskv1decisionsClientReferenceInformation.
         :type: Riskv1decisionsClientReferenceInformationPartner
         """
-
-
 
         self._partner = partner
 

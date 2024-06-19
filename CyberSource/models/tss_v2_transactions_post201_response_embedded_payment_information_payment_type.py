@@ -73,8 +73,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -97,8 +95,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType(obje
         :param method: The method of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType.
         :type: str
         """
-
-
 
         self._method = method
 

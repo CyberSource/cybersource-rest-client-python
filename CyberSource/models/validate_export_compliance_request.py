@@ -86,8 +86,6 @@ class ValidateExportComplianceRequest(object):
         :type: Riskv1liststypeentriesClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -108,8 +106,6 @@ class ValidateExportComplianceRequest(object):
         :param order_information: The order_information of this ValidateExportComplianceRequest.
         :type: Riskv1exportcomplianceinquiriesOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -132,8 +128,6 @@ class ValidateExportComplianceRequest(object):
         :type: Riskv1addressverificationsBuyerInformation
         """
 
-
-
         self._buyer_information = buyer_information
 
     @property
@@ -155,8 +149,6 @@ class ValidateExportComplianceRequest(object):
         :type: Riskv1exportcomplianceinquiriesDeviceInformation
         """
 
-
-
         self._device_information = device_information
 
     @property
@@ -177,8 +169,6 @@ class ValidateExportComplianceRequest(object):
         :param export_compliance_information: The export_compliance_information of this ValidateExportComplianceRequest.
         :type: Riskv1exportcomplianceinquiriesExportComplianceInformation
         """
-
-
 
         self._export_compliance_information = export_compliance_information
 

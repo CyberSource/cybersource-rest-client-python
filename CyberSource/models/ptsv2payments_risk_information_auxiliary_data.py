@@ -73,8 +73,6 @@ class Ptsv2paymentsRiskInformationAuxiliaryData(object):
         :type: str
         """
 
-
-
         self._key = key
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsRiskInformationAuxiliaryData(object):
         :param value: The value of this Ptsv2paymentsRiskInformationAuxiliaryData.
         :type: str
         """
-
-
 
         self._value = value
 

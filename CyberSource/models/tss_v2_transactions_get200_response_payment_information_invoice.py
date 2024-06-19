@@ -78,8 +78,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationInvoice(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -103,8 +101,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationInvoice(object):
         :type: str
         """
 
-
-
         self._barcode_number = barcode_number
 
     @property
@@ -127,8 +123,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationInvoice(object):
         :param expiration_date: The expiration_date of this TssV2TransactionsGet200ResponsePaymentInformationInvoice.
         :type: str
         """
-
-
 
         self._expiration_date = expiration_date
 

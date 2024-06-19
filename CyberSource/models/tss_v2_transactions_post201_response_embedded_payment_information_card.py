@@ -78,8 +78,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._suffix = suffix
 
     @property
@@ -103,8 +101,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :type: str
         """
 
-
-
         self._prefix = prefix
 
     @property
@@ -127,8 +123,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard(object):
         :param type: The type of this TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard.
         :type: str
         """
-
-
 
         self._type = type
 

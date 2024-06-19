@@ -71,8 +71,6 @@ class PaymentsProductsSecureAcceptanceConfigurationInformation(object):
         :type: str
         """
 
-
-
         self._template_id = template_id
 
     @property
@@ -93,8 +91,6 @@ class PaymentsProductsSecureAcceptanceConfigurationInformation(object):
         :param configurations: The configurations of this PaymentsProductsSecureAcceptanceConfigurationInformation.
         :type: SAConfig
         """
-
-
 
         self._configurations = configurations
 

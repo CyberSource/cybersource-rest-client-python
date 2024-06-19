@@ -86,8 +86,6 @@ class IncrementAuthRequest(object):
         :type: Ptsv2paymentsidClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -108,8 +106,6 @@ class IncrementAuthRequest(object):
         :param processing_information: The processing_information of this IncrementAuthRequest.
         :type: Ptsv2paymentsidProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -132,8 +128,6 @@ class IncrementAuthRequest(object):
         :type: Ptsv2paymentsidOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -155,8 +149,6 @@ class IncrementAuthRequest(object):
         :type: Ptsv2paymentsidMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -177,8 +169,6 @@ class IncrementAuthRequest(object):
         :param travel_information: The travel_information of this IncrementAuthRequest.
         :type: Ptsv2paymentsidTravelInformation
         """
-
-
 
         self._travel_information = travel_information
 

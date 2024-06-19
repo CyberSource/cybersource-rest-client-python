@@ -73,8 +73,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsSurcharge(object):
         :param description: The description of this Ptsv2paymentsOrderInformationAmountDetailsSurcharge.
         :type: str
         """
-
-
 
         self._description = description
 

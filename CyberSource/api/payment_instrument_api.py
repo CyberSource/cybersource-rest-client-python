@@ -118,8 +118,6 @@ class PaymentInstrumentApi(object):
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `delete_payment_instrument`")
 
 
-
-
         collection_formats = {}
 
         path_params = {}
@@ -235,8 +233,6 @@ class PaymentInstrumentApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `payment_instrument_id` when calling `get_payment_instrument`")
             raise ValueError("Missing the required parameter `payment_instrument_id` when calling `get_payment_instrument`")
-
-
 
 
         collection_formats = {}
@@ -365,10 +361,6 @@ class PaymentInstrumentApi(object):
             raise ValueError("Missing the required parameter `patch_payment_instrument_request` when calling `patch_payment_instrument`")
 
 
-
-
-
-
         collection_formats = {}
 
         path_params = {}
@@ -489,8 +481,6 @@ class PaymentInstrumentApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `post_payment_instrument_request` when calling `post_payment_instrument`")
             raise ValueError("Missing the required parameter `post_payment_instrument_request` when calling `post_payment_instrument`")
-
-
 
 
         collection_formats = {}

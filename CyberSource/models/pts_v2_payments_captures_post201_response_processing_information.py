@@ -68,8 +68,6 @@ class PtsV2PaymentsCapturesPost201ResponseProcessingInformation(object):
         :type: bool
         """
 
-
-
         self._enhanced_data_enabled = enhanced_data_enabled
 
     def to_dict(self):

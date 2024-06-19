@@ -73,8 +73,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :type: str
         """
 
-
-
         self._with_apartment = with_apartment
 
     @property
@@ -97,8 +95,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
         :param without_apartment: The without_apartment of this RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationStandardAddressAddress1.
         :type: str
         """
-
-
 
         self._without_apartment = without_apartment
 

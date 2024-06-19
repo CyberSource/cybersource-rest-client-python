@@ -81,8 +81,6 @@ class DmConfigThirdpartyProviderSignifydCredentials(object):
         :type: str
         """
 
-
-
         self._team_id = team_id
 
     @property
@@ -103,8 +101,6 @@ class DmConfigThirdpartyProviderSignifydCredentials(object):
         :param api_key: The api_key of this DmConfigThirdpartyProviderSignifydCredentials.
         :type: str
         """
-
-
 
         self._api_key = api_key
 
@@ -127,8 +123,6 @@ class DmConfigThirdpartyProviderSignifydCredentials(object):
         :type: str
         """
 
-
-
         self._secret_keyid = secret_keyid
 
     @property
@@ -149,8 +143,6 @@ class DmConfigThirdpartyProviderSignifydCredentials(object):
         :param secret_key: The secret_key of this DmConfigThirdpartyProviderSignifydCredentials.
         :type: str
         """
-
-
 
         self._secret_key = secret_key
 

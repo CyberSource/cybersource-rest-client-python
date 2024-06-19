@@ -66,8 +66,6 @@ class VasV2PaymentsPost201ResponseLinks(object):
         :type: PtsV2PaymentsPost201ResponseLinksSelf
         """
 
-
-
         self._void = void
 
     def to_dict(self):

@@ -87,8 +87,6 @@ class ECheckConfigCommon(object):
         :type: dict(str, ECheckConfigCommonProcessors)
         """
 
-
-
         self._processors = processors
 
     @property
@@ -109,8 +107,6 @@ class ECheckConfigCommon(object):
         :param internal_only: The internal_only of this ECheckConfigCommon.
         :type: ECheckConfigCommonInternalOnly
         """
-
-
 
         self._internal_only = internal_only
 
@@ -135,8 +131,6 @@ class ECheckConfigCommon(object):
         :type: str
         """
 
-
-
         self._account_holder_name = account_holder_name
 
     @property
@@ -159,8 +153,6 @@ class ECheckConfigCommon(object):
         :param account_type: The account_type of this ECheckConfigCommon.
         :type: str
         """
-
-
 
         self._account_type = account_type
 
@@ -185,8 +177,6 @@ class ECheckConfigCommon(object):
         :type: str
         """
 
-
-
         self._account_routing_number = account_routing_number
 
     @property
@@ -209,8 +199,6 @@ class ECheckConfigCommon(object):
         :param account_number: The account_number of this ECheckConfigCommon.
         :type: str
         """
-
-
 
         self._account_number = account_number
 

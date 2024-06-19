@@ -98,8 +98,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :type: str
         """
 
-
-
         self._configuration_id = configuration_id
 
     @property
@@ -120,8 +118,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :param version: The version of this InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-
-
 
         self._version = version
 
@@ -146,8 +142,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -168,7 +162,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :param status: The status of this InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-
         allowed_values = ["SUCCESS", "PARTIAL", "PENDING", "NOT_SETUP"]
         if status not in allowed_values:
             raise ValueError(
@@ -196,7 +189,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :param reason: The reason of this InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-
         allowed_values = ["PENDING_PROVISIONING_PROCESS", "MISSING_DATA", "INVALID_DATA", "DUPLICATE_FIELD", "NOT_APPLICABLE"]
         if reason not in allowed_values:
             raise ValueError(
@@ -225,8 +217,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :type: list[dict(str, str)]
         """
 
-
-
         self._details = details
 
     @property
@@ -247,8 +237,6 @@ class InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus(object):
         :param message: The message of this InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-
-
 
         self._message = message
 

@@ -83,8 +83,6 @@ class Ptsv2billingagreementsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._authentication_transaction_context_id = authentication_transaction_context_id
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2billingagreementsConsumerAuthenticationInformation(object):
         :param cavv: The cavv of this Ptsv2billingagreementsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._cavv = cavv
 
@@ -133,8 +129,6 @@ class Ptsv2billingagreementsConsumerAuthenticationInformation(object):
         :type: str
         """
 
-
-
         self._transaction_token = transaction_token
 
     @property
@@ -157,8 +151,6 @@ class Ptsv2billingagreementsConsumerAuthenticationInformation(object):
         :param xid: The xid of this Ptsv2billingagreementsConsumerAuthenticationInformation.
         :type: str
         """
-
-
 
         self._xid = xid
 

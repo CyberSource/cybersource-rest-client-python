@@ -73,8 +73,6 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
         :type: str
         """
 
-
-
         self._daily_rate = daily_rate
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsTravelInformationLodgingRoom(object):
         :param number_of_nights: The number_of_nights of this Ptsv2paymentsTravelInformationLodgingRoom.
         :type: int
         """
-
-
 
         self._number_of_nights = number_of_nights
 

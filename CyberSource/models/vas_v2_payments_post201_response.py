@@ -96,8 +96,6 @@ class VasV2PaymentsPost201Response(object):
         :type: VasV2PaymentsPost201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -120,8 +118,6 @@ class VasV2PaymentsPost201Response(object):
         :param id: The id of this VasV2PaymentsPost201Response.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -146,8 +142,6 @@ class VasV2PaymentsPost201Response(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -171,8 +165,6 @@ class VasV2PaymentsPost201Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -193,8 +185,6 @@ class VasV2PaymentsPost201Response(object):
         :param client_reference_information: The client_reference_information of this VasV2PaymentsPost201Response.
         :type: PtsV2PaymentsPost201ResponseClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 
@@ -217,8 +207,6 @@ class VasV2PaymentsPost201Response(object):
         :type: VasV2PaymentsPost201ResponseTaxInformation
         """
 
-
-
         self._tax_information = tax_information
 
     @property
@@ -239,8 +227,6 @@ class VasV2PaymentsPost201Response(object):
         :param order_information: The order_information of this VasV2PaymentsPost201Response.
         :type: VasV2PaymentsPost201ResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

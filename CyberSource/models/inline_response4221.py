@@ -88,8 +88,6 @@ class InlineResponse4221(object):
         :type: date
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -113,8 +111,6 @@ class InlineResponse4221(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -137,7 +133,6 @@ class InlineResponse4221(object):
         :param reason: The reason of this InlineResponse4221.
         :type: str
         """
-
         allowed_values = ["INVALID_DATA"]
         if reason not in allowed_values:
             raise ValueError(
@@ -168,8 +163,6 @@ class InlineResponse4221(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -190,8 +183,6 @@ class InlineResponse4221(object):
         :param details: The details of this InlineResponse4221.
         :type: list[InlineResponse4007Details]
         """
-
-
 
         self._details = details
 

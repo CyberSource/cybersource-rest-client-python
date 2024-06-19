@@ -73,8 +73,6 @@ class TmsAuthorizationOptionsInitiatorMerchantInitiatedTransaction(object):
         :type: str
         """
 
-
-
         self._previous_transaction_id = previous_transaction_id
 
     @property
@@ -97,8 +95,6 @@ class TmsAuthorizationOptionsInitiatorMerchantInitiatedTransaction(object):
         :param original_authorized_amount: The original_authorized_amount of this TmsAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
-
-
 
         self._original_authorized_amount = original_authorized_amount
 

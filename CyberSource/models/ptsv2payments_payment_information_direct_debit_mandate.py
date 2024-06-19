@@ -68,8 +68,6 @@ class Ptsv2paymentsPaymentInformationDirectDebitMandate(object):
         :type: str
         """
 
-
-
         self._clearing_date = clearing_date
 
     def to_dict(self):

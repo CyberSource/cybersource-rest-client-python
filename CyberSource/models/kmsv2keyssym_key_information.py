@@ -72,8 +72,6 @@ class Kmsv2keyssymKeyInformation(object):
         :type: str
         """
 
-
-
         self._organization_id = organization_id
 
     @property
@@ -96,8 +94,6 @@ class Kmsv2keyssymKeyInformation(object):
         :param reference_number: The reference_number of this Kmsv2keyssymKeyInformation.
         :type: str
         """
-
-
 
         self._reference_number = reference_number
 

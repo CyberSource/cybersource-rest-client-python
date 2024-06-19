@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
         :type: str
         """
 
-
-
         self._message = message
 
     @property
@@ -125,8 +121,6 @@ class PtsV2PaymentsPost201ResponseErrorInformation(object):
         :param details: The details of this PtsV2PaymentsPost201ResponseErrorInformation.
         :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
-
-
 
         self._details = details
 

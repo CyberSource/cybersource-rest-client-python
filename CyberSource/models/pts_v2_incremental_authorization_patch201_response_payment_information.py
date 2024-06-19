@@ -66,8 +66,6 @@ class PtsV2IncrementalAuthorizationPatch201ResponsePaymentInformation(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponsePaymentInformationAccountFeatures
         """
 
-
-
         self._account_features = account_features
 
     def to_dict(self):

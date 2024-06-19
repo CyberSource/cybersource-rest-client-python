@@ -81,8 +81,6 @@ class PushFunds201ResponseLinks(object):
         :type: PushFunds201ResponseLinksSelf
         """
 
-
-
         self.__self = _self
 
     @property
@@ -103,8 +101,6 @@ class PushFunds201ResponseLinks(object):
         :param customer: The customer of this PushFunds201ResponseLinks.
         :type: PushFunds201ResponseLinksCustomer
         """
-
-
 
         self._customer = customer
 
@@ -127,8 +123,6 @@ class PushFunds201ResponseLinks(object):
         :type: PushFunds201ResponseLinksPaymentInstrument
         """
 
-
-
         self._payment_instrument = payment_instrument
 
     @property
@@ -149,8 +143,6 @@ class PushFunds201ResponseLinks(object):
         :param instrument_identifier: The instrument_identifier of this PushFunds201ResponseLinks.
         :type: PushFunds201ResponseLinksInstrumentIdentifier
         """
-
-
 
         self._instrument_identifier = instrument_identifier
 

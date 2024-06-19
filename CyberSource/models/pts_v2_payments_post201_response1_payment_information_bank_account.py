@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201Response1PaymentInformationBankAccount(object):
         :type: str
         """
 
-
-
         self._iban_suffix = iban_suffix
 
     def to_dict(self):

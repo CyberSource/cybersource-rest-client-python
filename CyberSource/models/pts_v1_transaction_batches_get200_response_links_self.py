@@ -71,8 +71,6 @@ class PtsV1TransactionBatchesGet200ResponseLinksSelf(object):
         :type: str
         """
 
-
-
         self._href = href
 
     @property
@@ -93,8 +91,6 @@ class PtsV1TransactionBatchesGet200ResponseLinksSelf(object):
         :param method: The method of this PtsV1TransactionBatchesGet200ResponseLinksSelf.
         :type: str
         """
-
-
 
         self._method = method
 

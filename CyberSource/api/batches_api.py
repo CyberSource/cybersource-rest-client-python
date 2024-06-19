@@ -116,7 +116,6 @@ class BatchesApi(object):
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_report`")
 
 
-
         collection_formats = {}
 
         path_params = {}
@@ -228,7 +227,6 @@ class BatchesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `batch_id` when calling `get_batch_status`")
             raise ValueError("Missing the required parameter `batch_id` when calling `get_batch_status`")
-
 
 
         collection_formats = {}
@@ -343,10 +341,6 @@ class BatchesApi(object):
                 )
             params[key] = val
         del params['kwargs']
-
-
-
-
 
 
         collection_formats = {}
@@ -465,7 +459,6 @@ class BatchesApi(object):
             if self.api_client.mconfig.log_config.enable_log:
                 self.logger.error("InvalidArgumentException : Missing the required parameter `body` when calling `post_batch`")
             raise ValueError("Missing the required parameter `body` when calling `post_batch`")
-
 
 
         collection_formats = {}

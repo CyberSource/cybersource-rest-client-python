@@ -86,8 +86,6 @@ class VasV2PaymentsPost201ResponseOrderInformationLineItems(object):
         :type: list[VasV2PaymentsPost201ResponseOrderInformationTaxDetails]
         """
 
-
-
         self._tax_details = tax_details
 
     @property
@@ -108,8 +106,6 @@ class VasV2PaymentsPost201ResponseOrderInformationLineItems(object):
         :param jurisdiction: The jurisdiction of this VasV2PaymentsPost201ResponseOrderInformationLineItems.
         :type: list[VasV2PaymentsPost201ResponseOrderInformationJurisdiction]
         """
-
-
 
         self._jurisdiction = jurisdiction
 
@@ -134,8 +130,6 @@ class VasV2PaymentsPost201ResponseOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._exempt_amount = exempt_amount
 
     @property
@@ -159,8 +153,6 @@ class VasV2PaymentsPost201ResponseOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._taxable_amount = taxable_amount
 
     @property
@@ -183,8 +175,6 @@ class VasV2PaymentsPost201ResponseOrderInformationLineItems(object):
         :param tax_amount: The tax_amount of this VasV2PaymentsPost201ResponseOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._tax_amount = tax_amount
 

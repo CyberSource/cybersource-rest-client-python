@@ -203,8 +203,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._gift_wrap_amount = gift_wrap_amount
 
     @property
@@ -227,8 +225,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param total_amount: The total_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._total_amount = total_amount
 
@@ -253,8 +249,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._sub_total_amount = sub_total_amount
 
     @property
@@ -277,8 +271,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 
@@ -303,8 +295,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._discount_amount = discount_amount
 
     @property
@@ -327,8 +317,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param duty_amount: The duty_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._duty_amount = duty_amount
 
@@ -353,8 +341,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._gratuity_amount = gratuity_amount
 
     @property
@@ -377,8 +363,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._tax_amount = tax_amount
 
@@ -403,8 +387,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._national_tax_included = national_tax_included
 
     @property
@@ -427,8 +409,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_applied_after_discount: The tax_applied_after_discount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._tax_applied_after_discount = tax_applied_after_discount
 
@@ -453,8 +433,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._tax_applied_level = tax_applied_level
 
     @property
@@ -477,8 +455,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_type_code: The tax_type_code of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._tax_type_code = tax_type_code
 
@@ -503,8 +479,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._freight_amount = freight_amount
 
     @property
@@ -527,8 +501,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param foreign_amount: The foreign_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._foreign_amount = foreign_amount
 
@@ -553,8 +525,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._foreign_currency = foreign_currency
 
     @property
@@ -577,8 +547,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param exchange_rate: The exchange_rate of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._exchange_rate = exchange_rate
 
@@ -603,8 +571,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._exchange_rate_time_stamp = exchange_rate_time_stamp
 
     @property
@@ -625,8 +591,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param surcharge: The surcharge of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: Ptsv2paymentsOrderInformationAmountDetailsSurcharge
         """
-
-
 
         self._surcharge = surcharge
 
@@ -651,8 +615,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_amount = settlement_amount
 
     @property
@@ -676,8 +638,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._settlement_currency = settlement_currency
 
     @property
@@ -699,8 +659,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: list[Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts]
         """
 
-
-
         self._amex_additional_amounts = amex_additional_amounts
 
     @property
@@ -721,8 +679,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param tax_details: The tax_details of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: list[Ptsv2paymentsOrderInformationAmountDetailsTaxDetails]
         """
-
-
 
         self._tax_details = tax_details
 
@@ -747,8 +703,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._service_fee_amount = service_fee_amount
 
     @property
@@ -771,8 +725,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param original_amount: The original_amount of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._original_amount = original_amount
 
@@ -797,8 +749,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._original_currency = original_currency
 
     @property
@@ -822,8 +772,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._cashback_amount = cashback_amount
 
     @property
@@ -845,8 +793,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :type: Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion
         """
 
-
-
         self._currency_conversion = currency_conversion
 
     @property
@@ -867,8 +813,6 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         :param order: The order of this Ptsv2paymentsOrderInformationAmountDetails.
         :type: Ptsv2paymentsOrderInformationAmountDetailsOrder
         """
-
-
 
         self._order = order
 

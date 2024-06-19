@@ -118,8 +118,6 @@ class PushFunds201Response(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -142,8 +140,6 @@ class PushFunds201Response(object):
         :param submit_time_utc: The submit_time_utc of this PushFunds201Response.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 
@@ -168,8 +164,6 @@ class PushFunds201Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -193,8 +187,6 @@ class PushFunds201Response(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -215,8 +207,6 @@ class PushFunds201Response(object):
         :param client_reference_information: The client_reference_information of this PushFunds201Response.
         :type: PushFunds201ResponseClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 
@@ -239,8 +229,6 @@ class PushFunds201Response(object):
         :type: PushFunds201ResponseRecipientInformation
         """
 
-
-
         self._recipient_information = recipient_information
 
     @property
@@ -261,8 +249,6 @@ class PushFunds201Response(object):
         :param merchant_information: The merchant_information of this PushFunds201Response.
         :type: PushFunds201ResponseMerchantInformation
         """
-
-
 
         self._merchant_information = merchant_information
 
@@ -285,8 +271,6 @@ class PushFunds201Response(object):
         :type: PushFunds201ResponseErrorInformation
         """
 
-
-
         self._error_information = error_information
 
     @property
@@ -307,8 +291,6 @@ class PushFunds201Response(object):
         :param processor_information: The processor_information of this PushFunds201Response.
         :type: PushFunds201ResponseProcessorInformation
         """
-
-
 
         self._processor_information = processor_information
 
@@ -331,8 +313,6 @@ class PushFunds201Response(object):
         :type: PushFunds201ResponseOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -353,8 +333,6 @@ class PushFunds201Response(object):
         :param links: The links of this PushFunds201Response.
         :type: PushFunds201ResponseLinks
         """
-
-
 
         self._links = links
 

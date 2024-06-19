@@ -83,8 +83,6 @@ class InlineResponse2012(object):
         :type: str
         """
 
-
-
         self._submit_time_utc = submit_time_utc
 
     @property
@@ -108,8 +106,6 @@ class InlineResponse2012(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -131,8 +127,6 @@ class InlineResponse2012(object):
         :type: Kmsegressv2keyssymClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -153,8 +147,6 @@ class InlineResponse2012(object):
         :param key_information: The key_information of this InlineResponse2012.
         :type: InlineResponse2012KeyInformation
         """
-
-
 
         self._key_information = key_information
 

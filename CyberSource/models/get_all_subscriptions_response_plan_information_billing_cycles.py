@@ -73,8 +73,6 @@ class GetAllSubscriptionsResponsePlanInformationBillingCycles(object):
         :type: str
         """
 
-
-
         self._total = total
 
     @property
@@ -97,8 +95,6 @@ class GetAllSubscriptionsResponsePlanInformationBillingCycles(object):
         :param current: The current of this GetAllSubscriptionsResponsePlanInformationBillingCycles.
         :type: str
         """
-
-
 
         self._current = current
 

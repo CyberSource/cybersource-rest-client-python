@@ -73,8 +73,6 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
         :type: str
         """
 
-
-
         self._customer_id = customer_id
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsPaymentInformationCustomer(object):
         :param id: The id of this Ptsv2paymentsPaymentInformationCustomer.
         :type: str
         """
-
-
 
         self._id = id
 

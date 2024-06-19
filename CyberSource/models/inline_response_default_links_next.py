@@ -78,8 +78,6 @@ class InlineResponseDefaultLinksNext(object):
         :type: str
         """
 
-
-
         self._href = href
 
     @property
@@ -103,8 +101,6 @@ class InlineResponseDefaultLinksNext(object):
         :type: str
         """
 
-
-
         self._title = title
 
     @property
@@ -127,8 +123,6 @@ class InlineResponseDefaultLinksNext(object):
         :param method: The method of this InlineResponseDefaultLinksNext.
         :type: str
         """
-
-
 
         self._method = method
 

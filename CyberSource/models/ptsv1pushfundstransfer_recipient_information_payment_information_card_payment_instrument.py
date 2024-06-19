@@ -68,8 +68,6 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCardPaymentIns
         :type: str
         """
 
-
-
         self._id = id
 
     def to_dict(self):

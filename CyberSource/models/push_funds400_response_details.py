@@ -73,8 +73,6 @@ class PushFunds400ResponseDetails(object):
         :type: str
         """
 
-
-
         self._field = field
 
     @property
@@ -97,8 +95,6 @@ class PushFunds400ResponseDetails(object):
         :param reason: The reason of this PushFunds400ResponseDetails.
         :type: str
         """
-
-
 
         self._reason = reason
 

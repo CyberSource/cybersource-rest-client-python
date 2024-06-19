@@ -116,8 +116,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsidAgreementInformation
         """
 
-
-
         self._agreement_information = agreement_information
 
     @property
@@ -138,8 +136,6 @@ class ModifyBillingAgreement(object):
         :param client_reference_information: The client_reference_information of this ModifyBillingAgreement.
         :type: Ptsv2billingagreementsClientReferenceInformation
         """
-
-
 
         self._client_reference_information = client_reference_information
 
@@ -162,8 +158,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsAggregatorInformation
         """
 
-
-
         self._aggregator_information = aggregator_information
 
     @property
@@ -184,8 +178,6 @@ class ModifyBillingAgreement(object):
         :param consumer_authentication_information: The consumer_authentication_information of this ModifyBillingAgreement.
         :type: Ptsv2billingagreementsConsumerAuthenticationInformation
         """
-
-
 
         self._consumer_authentication_information = consumer_authentication_information
 
@@ -208,8 +200,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsDeviceInformation
         """
 
-
-
         self._device_information = device_information
 
     @property
@@ -230,8 +220,6 @@ class ModifyBillingAgreement(object):
         :param installment_information: The installment_information of this ModifyBillingAgreement.
         :type: Ptsv2billingagreementsInstallmentInformation
         """
-
-
 
         self._installment_information = installment_information
 
@@ -254,8 +242,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsMerchantInformation
         """
 
-
-
         self._merchant_information = merchant_information
 
     @property
@@ -276,8 +262,6 @@ class ModifyBillingAgreement(object):
         :param order_information: The order_information of this ModifyBillingAgreement.
         :type: Ptsv2billingagreementsOrderInformation
         """
-
-
 
         self._order_information = order_information
 
@@ -300,8 +284,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -323,8 +305,6 @@ class ModifyBillingAgreement(object):
         :type: Ptsv2billingagreementsidProcessingInformation
         """
 
-
-
         self._processing_information = processing_information
 
     @property
@@ -345,8 +325,6 @@ class ModifyBillingAgreement(object):
         :param buyer_information: The buyer_information of this ModifyBillingAgreement.
         :type: Ptsv2billingagreementsidBuyerInformation
         """
-
-
 
         self._buyer_information = buyer_information
 

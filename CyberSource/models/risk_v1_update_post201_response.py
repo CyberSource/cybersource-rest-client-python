@@ -86,8 +86,6 @@ class RiskV1UpdatePost201Response(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -108,8 +106,6 @@ class RiskV1UpdatePost201Response(object):
         :param client_reference_informaton: The client_reference_informaton of this RiskV1UpdatePost201Response.
         :type: RiskV1DecisionsPost201ResponseClientReferenceInformation
         """
-
-
 
         self._client_reference_informaton = client_reference_informaton
 
@@ -134,8 +130,6 @@ class RiskV1UpdatePost201Response(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -159,8 +153,6 @@ class RiskV1UpdatePost201Response(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -183,8 +175,6 @@ class RiskV1UpdatePost201Response(object):
         :param submit_time_utc: The submit_time_utc of this RiskV1UpdatePost201Response.
         :type: str
         """
-
-
 
         self._submit_time_utc = submit_time_utc
 

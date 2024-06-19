@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :type: str
         """
 
-
-
         self._tags = tags
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :type: str
         """
 
-
-
         self._chip_validation_type = chip_validation_type
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv(object):
         :param chip_validation_result: The chip_validation_result of this PtsV2PaymentsPost201ResponsePointOfSaleInformationEmv.
         :type: str
         """
-
-
 
         self._chip_validation_result = chip_validation_result
 

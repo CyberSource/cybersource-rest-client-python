@@ -83,8 +83,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._mode = mode
 
     @property
@@ -105,8 +103,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param se_number: The se_number of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsAmex.
         :type: str
         """
-
-
 
         self._se_number = se_number
 
@@ -129,8 +125,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :type: str
         """
 
-
-
         self._subscriber_id = subscriber_id
 
     @property
@@ -151,8 +145,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param active: The active of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsAmex.
         :type: bool
         """
-
-
 
         self._active = active
 

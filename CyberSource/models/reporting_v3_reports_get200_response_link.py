@@ -66,8 +66,6 @@ class ReportingV3ReportsGet200ResponseLink(object):
         :type: ReportingV3ReportsGet200ResponseLinkReportDownload
         """
 
-
-
         self._report_download = report_download
 
     def to_dict(self):

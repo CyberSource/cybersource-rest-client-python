@@ -96,8 +96,6 @@ class ValidateRequest(object):
         :type: Riskv1decisionsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -118,8 +116,6 @@ class ValidateRequest(object):
         :param processing_information: The processing_information of this ValidateRequest.
         :type: Riskv1authenticationsetupsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -142,8 +138,6 @@ class ValidateRequest(object):
         :type: Riskv1authenticationresultsOrderInformation
         """
 
-
-
         self._order_information = order_information
 
     @property
@@ -164,8 +158,6 @@ class ValidateRequest(object):
         :param payment_information: The payment_information of this ValidateRequest.
         :type: Riskv1authenticationresultsPaymentInformation
         """
-
-
 
         self._payment_information = payment_information
 
@@ -188,8 +180,6 @@ class ValidateRequest(object):
         :type: Riskv1authenticationresultsConsumerAuthenticationInformation
         """
 
-
-
         self._consumer_authentication_information = consumer_authentication_information
 
     @property
@@ -211,8 +201,6 @@ class ValidateRequest(object):
         :type: Riskv1authenticationresultsDeviceInformation
         """
 
-
-
         self._device_information = device_information
 
     @property
@@ -233,8 +221,6 @@ class ValidateRequest(object):
         :param token_information: The token_information of this ValidateRequest.
         :type: Riskv1decisionsTokenInformation
         """
-
-
 
         self._token_information = token_information
 

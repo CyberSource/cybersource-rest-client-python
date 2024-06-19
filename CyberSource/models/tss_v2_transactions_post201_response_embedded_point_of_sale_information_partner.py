@@ -68,8 +68,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationPartner(obje
         :type: str
         """
 
-
-
         self._original_transaction_id = original_transaction_id
 
     def to_dict(self):

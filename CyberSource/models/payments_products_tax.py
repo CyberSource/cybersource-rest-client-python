@@ -66,8 +66,6 @@ class PaymentsProductsTax(object):
         :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
         """
 
-
-
         self._subscription_information = subscription_information
 
     def to_dict(self):

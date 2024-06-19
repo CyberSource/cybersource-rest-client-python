@@ -68,8 +68,6 @@ class Ptsv2paymentsRiskInformationProfile(object):
         :type: str
         """
 
-
-
         self._name = name
 
     def to_dict(self):

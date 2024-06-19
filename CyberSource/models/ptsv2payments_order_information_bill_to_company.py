@@ -98,8 +98,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -122,8 +120,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :param address1: The address1 of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :type: str
         """
 
-
-
         self._address2 = address2
 
     @property
@@ -172,8 +166,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :param locality: The locality of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str
         """
-
-
 
         self._locality = locality
 
@@ -198,8 +190,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -223,8 +213,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :type: str
         """
 
-
-
         self._postal_code = postal_code
 
     @property
@@ -247,8 +235,6 @@ class Ptsv2paymentsOrderInformationBillToCompany(object):
         :param country: The country of this Ptsv2paymentsOrderInformationBillToCompany.
         :type: str
         """
-
-
 
         self._country = country
 

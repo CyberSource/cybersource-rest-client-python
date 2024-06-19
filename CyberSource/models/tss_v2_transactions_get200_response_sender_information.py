@@ -68,8 +68,6 @@ class TssV2TransactionsGet200ResponseSenderInformation(object):
         :type: str
         """
 
-
-
         self._reference_number = reference_number
 
     def to_dict(self):

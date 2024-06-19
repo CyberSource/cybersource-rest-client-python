@@ -91,8 +91,6 @@ class CreateSubscriptionRequest(object):
         :type: Rbsv1subscriptionsClientReferenceInformation
         """
 
-
-
         self._client_reference_information = client_reference_information
 
     @property
@@ -113,8 +111,6 @@ class CreateSubscriptionRequest(object):
         :param processing_information: The processing_information of this CreateSubscriptionRequest.
         :type: Rbsv1subscriptionsProcessingInformation
         """
-
-
 
         self._processing_information = processing_information
 
@@ -137,8 +133,6 @@ class CreateSubscriptionRequest(object):
         :type: Rbsv1subscriptionsPlanInformation
         """
 
-
-
         self._plan_information = plan_information
 
     @property
@@ -159,8 +153,6 @@ class CreateSubscriptionRequest(object):
         :param subscription_information: The subscription_information of this CreateSubscriptionRequest.
         :type: Rbsv1subscriptionsSubscriptionInformation
         """
-
-
 
         self._subscription_information = subscription_information
 
@@ -183,8 +175,6 @@ class CreateSubscriptionRequest(object):
         :type: Rbsv1subscriptionsPaymentInformation
         """
 
-
-
         self._payment_information = payment_information
 
     @property
@@ -205,8 +195,6 @@ class CreateSubscriptionRequest(object):
         :param order_information: The order_information of this CreateSubscriptionRequest.
         :type: GetAllPlansResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

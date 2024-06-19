@@ -66,8 +66,6 @@ class Rbsv1subscriptionsProcessingInformationAuthorizationOptions(object):
         :type: Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator
         """
 
-
-
         self._initiator = initiator
 
     def to_dict(self):

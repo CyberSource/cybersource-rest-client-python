@@ -71,8 +71,6 @@ class Riskv1liststypeentriesPaymentInformation(object):
         :type: Riskv1liststypeentriesPaymentInformationCard
         """
 
-
-
         self._card = card
 
     @property
@@ -93,8 +91,6 @@ class Riskv1liststypeentriesPaymentInformation(object):
         :param bank: The bank of this Riskv1liststypeentriesPaymentInformation.
         :type: Riskv1liststypeentriesPaymentInformationBank
         """
-
-
 
         self._bank = bank
 

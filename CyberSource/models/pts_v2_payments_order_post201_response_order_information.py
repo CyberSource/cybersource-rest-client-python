@@ -81,8 +81,6 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformationBillTo
         """
 
-
-
         self._bill_to = bill_to
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformation(object):
         :param ship_to: The ship_to of this PtsV2PaymentsOrderPost201ResponseOrderInformation.
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformationShipTo
         """
-
-
 
         self._ship_to = ship_to
 
@@ -127,8 +123,6 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformation(object):
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformationAmountDetails
         """
 
-
-
         self._amount_details = amount_details
 
     @property
@@ -149,8 +143,6 @@ class PtsV2PaymentsOrderPost201ResponseOrderInformation(object):
         :param shipping_details: The shipping_details of this PtsV2PaymentsOrderPost201ResponseOrderInformation.
         :type: PtsV2PaymentsOrderPost201ResponseOrderInformationShippingDetails
         """
-
-
 
         self._shipping_details = shipping_details
 

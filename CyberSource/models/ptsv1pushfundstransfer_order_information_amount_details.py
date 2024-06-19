@@ -71,8 +71,6 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -95,8 +93,6 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         :param currency: The currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
-
-
 
         self._currency = currency
 

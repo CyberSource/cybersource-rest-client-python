@@ -81,8 +81,6 @@ class GetAllPlansResponsePlans(object):
         :type: PtsV2IncrementalAuthorizationPatch201ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -106,8 +104,6 @@ class GetAllPlansResponsePlans(object):
         :type: str
         """
 
-
-
         self._id = id
 
     @property
@@ -129,8 +125,6 @@ class GetAllPlansResponsePlans(object):
         :type: GetAllPlansResponsePlanInformation
         """
 
-
-
         self._plan_information = plan_information
 
     @property
@@ -151,8 +145,6 @@ class GetAllPlansResponsePlans(object):
         :param order_information: The order_information of this GetAllPlansResponsePlans.
         :type: GetAllPlansResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

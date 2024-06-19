@@ -76,8 +76,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :type: str
         """
 
-
-
         self._originator_merchant_id = originator_merchant_id
 
     @property
@@ -101,8 +99,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :type: list[str]
         """
 
-
-
         self._originator_terminal_id = originator_terminal_id
 
     @property
@@ -125,8 +121,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAcco
         :param supported_currencies: The supported_currencies of this PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount.
         :type: list[str]
         """
-
-
 
         self._supported_currencies = supported_currencies
 

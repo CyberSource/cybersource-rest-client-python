@@ -68,8 +68,6 @@ class PtsV2PaymentsOrderPost201ResponseProcessingInformation(object):
         :type: str
         """
 
-
-
         self._intents_id = intents_id
 
     def to_dict(self):

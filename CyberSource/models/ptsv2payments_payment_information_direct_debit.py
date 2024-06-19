@@ -66,8 +66,6 @@ class Ptsv2paymentsPaymentInformationDirectDebit(object):
         :type: Ptsv2paymentsPaymentInformationDirectDebitMandate
         """
 
-
-
         self._mandate = mandate
 
     def to_dict(self):

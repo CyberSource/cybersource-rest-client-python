@@ -88,8 +88,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :type: str
         """
 
-
-
         self._acquirer_bin = acquirer_bin
 
     @property
@@ -112,8 +110,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param country: The country of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -138,8 +134,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :type: str
         """
 
-
-
         self._password = password
 
     @property
@@ -163,8 +157,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :type: str
         """
 
-
-
         self._merchant_id = merchant_id
 
     @property
@@ -187,8 +179,6 @@ class Ptsv2paymentsAcquirerInformation(object):
         :param acquirer_merchant_id: The acquirer_merchant_id of this Ptsv2paymentsAcquirerInformation.
         :type: str
         """
-
-
 
         self._acquirer_merchant_id = acquirer_merchant_id
 

@@ -66,8 +66,6 @@ class PayerAuthConfig(object):
         :type: PayerAuthConfigCardTypes
         """
 
-
-
         self._card_types = card_types
 
     def to_dict(self):

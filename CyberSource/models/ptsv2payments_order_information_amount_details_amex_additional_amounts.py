@@ -73,8 +73,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
         :type: str
         """
 
-
-
         self._code = code
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
         :type: str
         """
-
-
 
         self._amount = amount
 

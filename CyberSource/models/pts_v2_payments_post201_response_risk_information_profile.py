@@ -78,8 +78,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -103,8 +101,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :type: str
         """
 
-
-
         self._desination_queue = desination_queue
 
     @property
@@ -127,8 +123,6 @@ class PtsV2PaymentsPost201ResponseRiskInformationProfile(object):
         :param selector_rule: The selector_rule of this PtsV2PaymentsPost201ResponseRiskInformationProfile.
         :type: str
         """
-
-
 
         self._selector_rule = selector_rule
 

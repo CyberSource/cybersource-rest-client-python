@@ -98,8 +98,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :type: bool
         """
 
-
-
         self._enable_ccs = enable_ccs
 
     @property
@@ -122,8 +120,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :param terminal_id: The terminal_id of this ECheckConfigCommonInternalOnlyProcessors.
         :type: str
         """
-
-
 
         self._terminal_id = terminal_id
 
@@ -148,8 +144,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :type: bool
         """
 
-
-
         self._enable15an_transaction_reference_number = enable15an_transaction_reference_number
 
     @property
@@ -172,8 +166,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :param portal_supported_paytypes: The portal_supported_paytypes of this ECheckConfigCommonInternalOnlyProcessors.
         :type: str
         """
-
-
 
         self._portal_supported_paytypes = portal_supported_paytypes
 
@@ -198,8 +190,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :type: object
         """
 
-
-
         self._settlement_method = settlement_method
 
     @property
@@ -223,8 +213,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :type: object
         """
 
-
-
         self._verification_level = verification_level
 
     @property
@@ -247,8 +235,6 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         :param set_completed_state: The set_completed_state of this ECheckConfigCommonInternalOnlyProcessors.
         :type: bool
         """
-
-
 
         self._set_completed_state = set_completed_state
 

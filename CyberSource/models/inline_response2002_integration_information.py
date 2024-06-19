@@ -71,8 +71,6 @@ class InlineResponse2002IntegrationInformation(object):
         :type: list[Boardingv1registrationsIntegrationInformationOauth2]
         """
 
-
-
         self._oauth2 = oauth2
 
     @property
@@ -95,8 +93,6 @@ class InlineResponse2002IntegrationInformation(object):
         :param tenant_configurations: The tenant_configurations of this InlineResponse2002IntegrationInformation.
         :type: list[InlineResponse2002IntegrationInformationTenantConfigurations]
         """
-
-
 
         self._tenant_configurations = tenant_configurations
 

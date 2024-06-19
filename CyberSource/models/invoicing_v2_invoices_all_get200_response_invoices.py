@@ -91,8 +91,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :type: InvoicingV2InvoicesAllGet200ResponseLinks
         """
 
-
-
         self._links = links
 
     @property
@@ -115,8 +113,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :param id: The id of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -141,8 +137,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -163,8 +157,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :param customer_information: The customer_information of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: InvoicingV2InvoicesAllGet200ResponseCustomerInformation
         """
-
-
 
         self._customer_information = customer_information
 
@@ -187,8 +179,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :type: InvoicingV2InvoicesAllGet200ResponseInvoiceInformation
         """
 
-
-
         self._invoice_information = invoice_information
 
     @property
@@ -209,8 +199,6 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         :param order_information: The order_information of this InvoicingV2InvoicesAllGet200ResponseInvoices.
         :type: InvoicingV2InvoicesAllGet200ResponseOrderInformation
         """
-
-
 
         self._order_information = order_information
 

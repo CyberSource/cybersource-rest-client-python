@@ -73,8 +73,6 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
         :type: str
         """
 
-
-
         self._amount_type = amount_type
 
     @property
@@ -97,8 +95,6 @@ class Ptsv2paymentsHealthCareInformationAmountDetails(object):
         :param amount: The amount of this Ptsv2paymentsHealthCareInformationAmountDetails.
         :type: str
         """
-
-
 
         self._amount = amount
 

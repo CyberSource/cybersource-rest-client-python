@@ -143,8 +143,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -167,8 +165,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._unit_price = unit_price
 
@@ -193,8 +189,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: int
         """
 
-
-
         self._quantity = quantity
 
     @property
@@ -217,8 +211,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param gift_card_currency: The gift_card_currency of this Riskv1decisionsOrderInformationLineItems.
         :type: int
         """
-
-
 
         self._gift_card_currency = gift_card_currency
 
@@ -243,8 +235,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_sku = product_sku
 
     @property
@@ -267,8 +257,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_risk: The product_risk of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_risk = product_risk
 
@@ -293,8 +281,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_description = product_description
 
     @property
@@ -317,8 +303,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param product_name: The product_name of this Riskv1decisionsOrderInformationLineItems.
         :type: str
         """
-
-
 
         self._product_name = product_name
 
@@ -343,8 +327,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._product_code = product_code
 
     @property
@@ -367,8 +349,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param gift: The gift of this Riskv1decisionsOrderInformationLineItems.
         :type: bool
         """
-
-
 
         self._gift = gift
 
@@ -393,8 +373,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._distributor_product_sku = distributor_product_sku
 
     @property
@@ -415,8 +393,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param passenger: The passenger of this Riskv1decisionsOrderInformationLineItems.
         :type: Ptsv2paymentsOrderInformationPassenger
         """
-
-
 
         self._passenger = passenger
 
@@ -441,8 +417,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._shipping_destination_types = shipping_destination_types
 
     @property
@@ -466,8 +440,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: str
         """
 
-
-
         self._tax_amount = tax_amount
 
     @property
@@ -489,8 +461,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :type: list[str]
         """
 
-
-
         self._allowed_export_countries = allowed_export_countries
 
     @property
@@ -511,8 +481,6 @@ class Riskv1decisionsOrderInformationLineItems(object):
         :param restricted_export_countries: The restricted_export_countries of this Riskv1decisionsOrderInformationLineItems.
         :type: list[str]
         """
-
-
 
         self._restricted_export_countries = restricted_export_countries
 

@@ -83,8 +83,6 @@ class TmsEmbeddedInstrumentIdentifierCard(object):
         :type: str
         """
 
-
-
         self._number = number
 
     @property
@@ -107,8 +105,6 @@ class TmsEmbeddedInstrumentIdentifierCard(object):
         :param expiration_month: The expiration_month of this TmsEmbeddedInstrumentIdentifierCard.
         :type: str
         """
-
-
 
         self._expiration_month = expiration_month
 
@@ -133,8 +129,6 @@ class TmsEmbeddedInstrumentIdentifierCard(object):
         :type: str
         """
 
-
-
         self._expiration_year = expiration_year
 
     @property
@@ -157,8 +151,6 @@ class TmsEmbeddedInstrumentIdentifierCard(object):
         :param security_code: The security_code of this TmsEmbeddedInstrumentIdentifierCard.
         :type: str
         """
-
-
 
         self._security_code = security_code
 

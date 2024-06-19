@@ -73,8 +73,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderSt
         :type: str
         """
 
-
-
         self._font_color = font_color
 
     @property
@@ -97,8 +95,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderSt
         :param background_color: The background_color of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle.
         :type: str
         """
-
-
 
         self._background_color = background_color
 

@@ -78,8 +78,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :type: str
         """
 
-
-
         self._indicator = indicator
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :type: str
         """
 
-
-
         self._reconciliation_id = reconciliation_id
 
     @property
@@ -127,8 +123,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion(object):
         :param id: The id of this Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion.
         :type: str
         """
-
-
 
         self._id = id
 

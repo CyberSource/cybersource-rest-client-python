@@ -73,8 +73,6 @@ class Ptsv1pushfundstransferMerchantDefinedInformation(object):
         :type: str
         """
 
-
-
         self._key = key
 
     @property
@@ -97,8 +95,6 @@ class Ptsv1pushfundstransferMerchantDefinedInformation(object):
         :param value: The value of this Ptsv1pushfundstransferMerchantDefinedInformation.
         :type: str
         """
-
-
 
         self._value = value
 

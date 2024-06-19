@@ -93,8 +93,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     @property
@@ -117,8 +115,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param rate: The rate of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-
-
 
         self._rate = rate
 
@@ -143,8 +139,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :type: bool
         """
 
-
-
         self._applied = applied
 
     @property
@@ -167,8 +161,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param exemption_code: The exemption_code of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-
-
 
         self._exemption_code = exemption_code
 
@@ -193,8 +185,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :type: str
         """
 
-
-
         self._tax_type = tax_type
 
     @property
@@ -217,8 +207,6 @@ class Ptsv2paymentsTravelInformationAutoRentalTaxDetails(object):
         :param tax_summary: The tax_summary of this Ptsv2paymentsTravelInformationAutoRentalTaxDetails.
         :type: str
         """
-
-
 
         self._tax_summary = tax_summary
 

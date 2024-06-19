@@ -68,8 +68,6 @@ class ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors(object)
         :type: object
         """
 
-
-
         self._avs_version = avs_version
 
     def to_dict(self):

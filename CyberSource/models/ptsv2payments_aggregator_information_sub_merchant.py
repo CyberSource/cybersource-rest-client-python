@@ -118,8 +118,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._card_acceptor_id = card_acceptor_id
 
     @property
@@ -142,8 +140,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :param id: The id of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._id = id
 
@@ -168,8 +164,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._name = name
 
     @property
@@ -192,8 +186,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :param address1: The address1 of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._address1 = address1
 
@@ -218,8 +210,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -242,8 +232,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :param administrative_area: The administrative_area of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._administrative_area = administrative_area
 
@@ -268,8 +256,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._region = region
 
     @property
@@ -292,8 +278,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :param postal_code: The postal_code of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 
@@ -318,8 +302,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._country = country
 
     @property
@@ -343,8 +325,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :type: str
         """
 
-
-
         self._email = email
 
     @property
@@ -367,8 +347,6 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
         :param phone_number: The phone_number of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
         """
-
-
 
         self._phone_number = phone_number
 

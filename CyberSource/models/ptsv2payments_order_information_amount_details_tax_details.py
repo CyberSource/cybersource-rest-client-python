@@ -98,8 +98,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -122,8 +120,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param amount: The amount of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-
-
 
         self._amount = amount
 
@@ -148,8 +144,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :type: str
         """
 
-
-
         self._rate = rate
 
     @property
@@ -172,8 +166,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-
-
 
         self._code = code
 
@@ -198,8 +190,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :type: str
         """
 
-
-
         self._tax_id = tax_id
 
     @property
@@ -223,8 +213,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :type: bool
         """
 
-
-
         self._applied = applied
 
     @property
@@ -247,8 +235,6 @@ class Ptsv2paymentsOrderInformationAmountDetailsTaxDetails(object):
         :param exemption_code: The exemption_code of this Ptsv2paymentsOrderInformationAmountDetailsTaxDetails.
         :type: str
         """
-
-
 
         self._exemption_code = exemption_code
 

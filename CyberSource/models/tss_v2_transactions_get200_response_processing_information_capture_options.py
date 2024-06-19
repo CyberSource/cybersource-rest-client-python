@@ -73,8 +73,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationCaptureOptions(object)
         :type: int
         """
 
-
-
         self._total_capture_count = total_capture_count
 
     @property
@@ -97,8 +95,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationCaptureOptions(object)
         :param capture_sequence_number: The capture_sequence_number of this TssV2TransactionsGet200ResponseProcessingInformationCaptureOptions.
         :type: int
         """
-
-
 
         self._capture_sequence_number = capture_sequence_number
 

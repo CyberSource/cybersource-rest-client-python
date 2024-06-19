@@ -76,8 +76,6 @@ class DmConfigThirdpartyProviderTargusCredentials(object):
         :type: str
         """
 
-
-
         self._username = username
 
     @property
@@ -99,8 +97,6 @@ class DmConfigThirdpartyProviderTargusCredentials(object):
         :type: str
         """
 
-
-
         self._password = password
 
     @property
@@ -121,8 +117,6 @@ class DmConfigThirdpartyProviderTargusCredentials(object):
         :param service_id: The service_id of this DmConfigThirdpartyProviderTargusCredentials.
         :type: str
         """
-
-
 
         self._service_id = service_id
 

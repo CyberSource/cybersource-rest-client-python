@@ -78,8 +78,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :type: str
         """
 
-
-
         self._reason = reason
 
     @property
@@ -103,8 +101,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :type: str
         """
 
-
-
         self._previous_transaction_id = previous_transaction_id
 
     @property
@@ -127,8 +123,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         :param original_authorized_amount: The original_authorized_amount of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
         :type: str
         """
-
-
 
         self._original_authorized_amount = original_authorized_amount
 

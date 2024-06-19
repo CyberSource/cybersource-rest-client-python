@@ -193,8 +193,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._additional_costs = additional_costs
 
     @property
@@ -217,8 +215,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param additional_costs_percentage: The additional_costs_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._additional_costs_percentage = additional_costs_percentage
 
@@ -243,8 +239,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._amount = amount
 
     @property
@@ -267,8 +261,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param amount_funded: The amount_funded of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._amount_funded = amount_funded
 
@@ -293,8 +285,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._amount_requested_percentage = amount_requested_percentage
 
     @property
@@ -317,8 +307,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param annual_financing_cost: The annual_financing_cost of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._annual_financing_cost = annual_financing_cost
 
@@ -343,8 +331,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._annual_interest_rate = annual_interest_rate
 
     @property
@@ -367,8 +353,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param expenses: The expenses of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._expenses = expenses
 
@@ -393,8 +377,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._expenses_percentage = expenses_percentage
 
     @property
@@ -417,8 +399,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param fees: The fees of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._fees = fees
 
@@ -443,8 +423,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._fees_percentage = fees_percentage
 
     @property
@@ -467,8 +445,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param frequency: The frequency of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._frequency = frequency
 
@@ -493,8 +469,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._insurance = insurance
 
     @property
@@ -517,8 +491,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param insurance_percentage: The insurance_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._insurance_percentage = insurance_percentage
 
@@ -543,8 +515,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._invoice_data = invoice_data
 
     @property
@@ -567,8 +537,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param monthly_interest_rate: The monthly_interest_rate of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._monthly_interest_rate = monthly_interest_rate
 
@@ -593,8 +561,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._plan_type = plan_type
 
     @property
@@ -617,8 +583,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param sequence: The sequence of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: int
         """
-
-
 
         self._sequence = sequence
 
@@ -643,8 +607,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._taxes = taxes
 
     @property
@@ -667,8 +629,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param taxes_percentage: The taxes_percentage of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._taxes_percentage = taxes_percentage
 
@@ -693,8 +653,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._total_amount = total_amount
 
     @property
@@ -717,8 +675,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param total_count: The total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: int
         """
-
-
 
         self._total_count = total_count
 
@@ -743,8 +699,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._minimum_total_count = minimum_total_count
 
     @property
@@ -767,8 +721,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param maximum_total_count: The maximum_total_count of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._maximum_total_count = maximum_total_count
 
@@ -793,8 +745,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :type: str
         """
 
-
-
         self._first_installment_amount = first_installment_amount
 
     @property
@@ -817,8 +767,6 @@ class PtsV2PaymentsPost201ResponseInstallmentInformation(object):
         :param first_installment_date: The first_installment_date of this PtsV2PaymentsPost201ResponseInstallmentInformation.
         :type: str
         """
-
-
 
         self._first_installment_date = first_installment_date
 

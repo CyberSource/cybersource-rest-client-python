@@ -68,8 +68,6 @@ class PtsV2PaymentsPost201ResponseTokenInformationShippingAddress(object):
         :type: str
         """
 
-
-
         self._id = id
 
     def to_dict(self):

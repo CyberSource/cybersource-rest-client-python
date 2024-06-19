@@ -71,8 +71,6 @@ class UpdatePasswordKeysRequest(object):
         :type: str
         """
 
-
-
         self._status = status
 
     @property
@@ -95,8 +93,6 @@ class UpdatePasswordKeysRequest(object):
         :param organization_id: The organization_id of this UpdatePasswordKeysRequest.
         :type: str
         """
-
-
 
         self._organization_id = organization_id
 

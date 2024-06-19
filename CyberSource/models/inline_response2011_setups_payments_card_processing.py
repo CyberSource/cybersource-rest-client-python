@@ -71,8 +71,6 @@ class InlineResponse2011SetupsPaymentsCardProcessing(object):
         :type: InlineResponse2011SetupsPaymentsCardProcessingSubscriptionStatus
         """
 
-
-
         self._subscription_status = subscription_status
 
     @property
@@ -93,8 +91,6 @@ class InlineResponse2011SetupsPaymentsCardProcessing(object):
         :param configuration_status: The configuration_status of this InlineResponse2011SetupsPaymentsCardProcessing.
         :type: InlineResponse2011SetupsPaymentsCardProcessingConfigurationStatus
         """
-
-
 
         self._configuration_status = configuration_status
 

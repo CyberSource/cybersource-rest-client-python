@@ -153,8 +153,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._invoice_number = invoice_number
 
     @property
@@ -177,8 +175,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param barcode_number: The barcode_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._barcode_number = barcode_number
 
@@ -203,8 +199,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._expiration_date = expiration_date
 
     @property
@@ -227,8 +221,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param purchase_order_number: The purchase_order_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._purchase_order_number = purchase_order_number
 
@@ -253,8 +245,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._purchase_order_date = purchase_order_date
 
     @property
@@ -277,8 +267,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param purchase_contact_name: The purchase_contact_name of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._purchase_contact_name = purchase_contact_name
 
@@ -303,8 +291,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: bool
         """
 
-
-
         self._taxable = taxable
 
     @property
@@ -327,8 +313,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param vat_invoice_reference_number: The vat_invoice_reference_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._vat_invoice_reference_number = vat_invoice_reference_number
 
@@ -353,8 +337,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._commodity_code = commodity_code
 
     @property
@@ -378,8 +360,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: int
         """
 
-
-
         self._merchandise_code = merchandise_code
 
     @property
@@ -400,8 +380,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param transaction_advice_addendum: The transaction_advice_addendum of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: list[Ptsv2paymentsOrderInformationInvoiceDetailsTransactionAdviceAddendum]
         """
-
-
 
         self._transaction_advice_addendum = transaction_advice_addendum
 
@@ -426,8 +404,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._reference_data_code = reference_data_code
 
     @property
@@ -450,8 +426,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param reference_data_number: The reference_data_number of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._reference_data_number = reference_data_number
 
@@ -476,8 +450,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: int
         """
 
-
-
         self._sales_slip_number = sales_slip_number
 
     @property
@@ -500,8 +472,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param invoice_date: The invoice_date of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._invoice_date = invoice_date
 
@@ -526,8 +496,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._cost_center = cost_center
 
     @property
@@ -551,8 +519,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :type: str
         """
 
-
-
         self._issuer_message = issuer_message
 
     @property
@@ -575,8 +541,6 @@ class Ptsv2paymentsOrderInformationInvoiceDetails(object):
         :param product_description: The product_description of this Ptsv2paymentsOrderInformationInvoiceDetails.
         :type: str
         """
-
-
 
         self._product_description = product_description
 

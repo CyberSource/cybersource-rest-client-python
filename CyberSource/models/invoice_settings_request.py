@@ -66,8 +66,6 @@ class InvoiceSettingsRequest(object):
         :type: Invoicingv2invoiceSettingsInvoiceSettingsInformation
         """
 
-
-
         self._invoice_settings_information = invoice_settings_information
 
     def to_dict(self):

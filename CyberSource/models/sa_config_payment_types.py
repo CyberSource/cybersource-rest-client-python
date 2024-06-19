@@ -66,8 +66,6 @@ class SAConfigPaymentTypes(object):
         :type: SAConfigPaymentTypesCardTypes
         """
 
-
-
         self._card_types = card_types
 
     def to_dict(self):

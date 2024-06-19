@@ -98,8 +98,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :type: str
         """
 
-
-
         self._file_id = file_id
 
     @property
@@ -122,8 +120,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :param name: The name of this V1FileDetailsGet200ResponseFileDetails.
         :type: str
         """
-
-
 
         self._name = name
 
@@ -148,8 +144,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :type: datetime
         """
 
-
-
         self._created_time = created_time
 
     @property
@@ -172,8 +166,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :param last_modified_time: The last_modified_time of this V1FileDetailsGet200ResponseFileDetails.
         :type: datetime
         """
-
-
 
         self._last_modified_time = last_modified_time
 
@@ -198,8 +190,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :type: date
         """
 
-
-
         self.__date = _date
 
     @property
@@ -223,8 +213,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :type: str
         """
 
-
-
         self._mime_type = mime_type
 
     @property
@@ -247,8 +235,6 @@ class V1FileDetailsGet200ResponseFileDetails(object):
         :param size: The size of this V1FileDetailsGet200ResponseFileDetails.
         :type: float
         """
-
-
 
         self._size = size
 

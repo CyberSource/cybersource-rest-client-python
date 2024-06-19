@@ -93,8 +93,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._address1 = address1
 
     @property
@@ -117,8 +115,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :param address2: The address2 of this Riskv1liststypeentriesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._address2 = address2
 
@@ -143,8 +139,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._administrative_area = administrative_area
 
     @property
@@ -167,8 +161,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :param country: The country of this Riskv1liststypeentriesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._country = country
 
@@ -193,8 +185,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :type: str
         """
 
-
-
         self._locality = locality
 
     @property
@@ -217,8 +207,6 @@ class Riskv1liststypeentriesOrderInformationShipTo(object):
         :param postal_code: The postal_code of this Riskv1liststypeentriesOrderInformationShipTo.
         :type: str
         """
-
-
 
         self._postal_code = postal_code
 

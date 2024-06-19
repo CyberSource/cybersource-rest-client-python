@@ -83,8 +83,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
         :type: str
         """
 
-
-
         self._type = type
 
     @property
@@ -107,8 +105,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
         :param credential_stored_on_file: The credential_stored_on_file of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :type: bool
         """
-
-
 
         self._credential_stored_on_file = credential_stored_on_file
 
@@ -133,8 +129,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
         :type: bool
         """
 
-
-
         self._stored_credential_used = stored_credential_used
 
     @property
@@ -155,8 +149,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator(object):
         :param merchant_initiated_transaction: The merchant_initiated_transaction of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiator.
         :type: Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction
         """
-
-
 
         self._merchant_initiated_transaction = merchant_initiated_transaction
 

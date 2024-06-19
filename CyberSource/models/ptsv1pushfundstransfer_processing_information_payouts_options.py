@@ -73,8 +73,6 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
         :type: str
         """
 
-
-
         self._account_funding_reference_id = account_funding_reference_id
 
     @property
@@ -97,8 +95,6 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
         :param retrieval_reference_number: The retrieval_reference_number of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :type: str
         """
-
-
 
         self._retrieval_reference_number = retrieval_reference_number
 

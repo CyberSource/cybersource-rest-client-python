@@ -108,8 +108,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :type: bool
         """
 
-
-
         self._avs_account_ownership_service = avs_account_ownership_service
 
     @property
@@ -132,8 +130,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :param avs_account_status_service: The avs_account_status_service of this ECheckConfigFeaturesAccountValidationServiceProcessors.
         :type: bool
         """
-
-
 
         self._avs_account_status_service = avs_account_status_service
 
@@ -158,8 +154,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :type: bool
         """
 
-
-
         self._avs_signed_agreement = avs_signed_agreement
 
     @property
@@ -182,8 +176,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :param avs_calculated_response_behavior: The avs_calculated_response_behavior of this ECheckConfigFeaturesAccountValidationServiceProcessors.
         :type: object
         """
-
-
 
         self._avs_calculated_response_behavior = avs_calculated_response_behavior
 
@@ -208,8 +200,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :type: str
         """
 
-
-
         self._avs_additional_id = avs_additional_id
 
     @property
@@ -232,8 +222,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :param enable_avs: The enable_avs of this ECheckConfigFeaturesAccountValidationServiceProcessors.
         :type: bool
         """
-
-
 
         self._enable_avs = enable_avs
 
@@ -258,8 +246,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :type: str
         """
 
-
-
         self._avs_entity_id = avs_entity_id
 
     @property
@@ -283,8 +269,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :type: object
         """
 
-
-
         self._avs_result_mode = avs_result_mode
 
     @property
@@ -307,8 +291,6 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         :param enable_avs_token_creation: The enable_avs_token_creation of this ECheckConfigFeaturesAccountValidationServiceProcessors.
         :type: bool
         """
-
-
 
         self._enable_avs_token_creation = enable_avs_token_creation
 
