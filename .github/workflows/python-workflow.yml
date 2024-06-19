@@ -15,21 +15,13 @@ jobs:
             fail-fast: false
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
-              pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
+              pyth-version: ['3.7','3.8','3.9','3.10','3.11','3.12']
               include:
-                - operating-system: ubuntu-20.04 # Checking support for ubuntu with python 3.6
-                  pyth-version: '3.6'
-                - operating-system: macos-13   # Checking support for mac os with python 3.6
-                  pyth-version: '3.6'
                 - operating-system: macos-13   # Checking support for mac os with python 3.7
                   pyth-version: '3.7'
               exclude:
-                - operating-system: macos-latest  # python 3.6 is unavailable for mac os latest becuase 3.6 doesnt support arm 64
-                  pyth-version: '3.6'
                 - operating-system: macos-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
                   pyth-version: '3.7'
-                - operating-system: ubuntu-latest # The version '3.6' with architecture 'x64' was not found for Ubuntu 22.04.
-                  pyth-version: '3.6'
         runs-on: ${{matrix.operating-system}}
         steps:
             - name: Creating separate folders for checkout repos
@@ -51,32 +43,25 @@ jobs:
               uses: actions/setup-python@v5
               with:
                 python-version: ${{matrix.pyth-version}}
-            # - name: Setup Virtual Python Environment if OS is windows
-            #   if: ${{matrix.operating-system == 'windows-latest' }}
-            #   run: |
-            #     python -m pip install --upgrade pip
-            #     python -m venv ve
-            #     source ve/Scripts/activate
-            # - name: Setup Virtual Python Environment if OS is not windows
-            #   if: ${{matrix.operating-system != 'windows-latest' }}
-            #   run: |
-            #     python -m pip install --upgrade pip
-            #     python -m venv ve
-            #     source ve/bin/activate
-            #     echo $VIRTUAL_ENV
             - name: Building the projects and running the Test Cases
               run: |
                 python -m pip install --upgrade pip
                 python -m venv ve
                 if [[ "$(uname -s)" == "Linux" ]]; then
-                source ve/bin/activate
                 echo "In LINUX"
-                elif [[ "$(uname -s)" == "Darwin" ]]; then
                 source ve/bin/activate
+                elif [[ "$(uname -s)" == "Darwin" ]]; then
                 echo "In MAC"
+                source ve/bin/activate
                 else
-                source ve/Scripts/activate
                 echo "In Windows"
+                source ve/Scripts/activate
+                version=$(python3 --version 2>&1 | awk '{print $2}')
+                if [[ $version == 3.7.* ]]
+                then
+                pip install cryptography==41.0.7
+                fi
+                # check if python version is 3.7 then "pip install cryptography==41.0.7"
                 fi
                 echo $VIRTUAL_ENV
                 cd $CLIENT_FOLDER
