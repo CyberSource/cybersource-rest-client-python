@@ -15,11 +15,19 @@ jobs:
             fail-fast: false
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
-              pyth-version: ['3.7','3.8','3.9','3.10','3.11','3.12']
+              pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
               include:
+                - operating-system: ubuntu-20.0.4   # Checking support for ubuntu os with python 3.6
+                  pyth-version: '3.6'
+                - operating-system: macos-13   # Checking support for mac os with python 3.6
+                  pyth-version: '3.6'
                 - operating-system: macos-13   # Checking support for mac os with python 3.7
                   pyth-version: '3.7'
               exclude:
+                - operating-system: ubuntu-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
+                  pyth-version: '3.6'
+                - operating-system: macos-latest  # python 3.6 is unavailable for mac os latest becuase 3.6 doesnt support arm 64
+                  pyth-version: '3.6'
                 - operating-system: macos-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
                   pyth-version: '3.7'
         runs-on: ${{matrix.operating-system}}
@@ -48,20 +56,19 @@ jobs:
                 python -m pip install --upgrade pip
                 python -m venv ve
                 if [[ "$(uname -s)" == "Linux" ]]; then
-                echo "In LINUX"
-                source ve/bin/activate
+                    echo "In LINUX"
+                    source ve/bin/activate
                 elif [[ "$(uname -s)" == "Darwin" ]]; then
-                echo "In MAC"
-                source ve/bin/activate
+                    echo "In MAC"
+                    source ve/bin/activate
                 else
-                echo "In Windows"
-                source ve/Scripts/activate
-                version=$(python3 --version 2>&1 | awk '{print $2}')
-                if [[ $version == 3.7.* ]]
-                then
-                pip install cryptography==41.0.7
-                fi
-                # check if python version is 3.7 then "pip install cryptography==41.0.7"
+                    echo "In Windows"
+                    source ve/Scripts/activate
+                    version=$(python3 --version 2>&1 | awk '{print $2}')
+                    # if [[ $version == 3.7.* ]]; then
+                    #   pip install cryptography==41.0.7
+                    # fi
+                    # # check if python version is 3.7 then "pip install cryptography==41.0.7"
                 fi
                 echo $VIRTUAL_ENV
                 cd $CLIENT_FOLDER
@@ -79,14 +86,14 @@ jobs:
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
                 if [[ "$(uname -s)" == "Linux" ]]; then
-                source ve/bin/activate
-                echo "In LINUX"
+                    source ve/bin/activate
+                    echo "In LINUX"
                 elif [[ "$(uname -s)" == "Darwin" ]]; then
-                source ve/bin/activate
-                echo "In MAC"
+                    source ve/bin/activate
+                    echo "In MAC"
                 else
-                source ve/Scripts/activate
-                echo "In Windows"
+                    source ve/Scripts/activate
+                    echo "In Windows"
                 fi
                 echo $VIRTUAL_ENV
                 echo "Before Running Report Generation"
