@@ -17,7 +17,7 @@ jobs:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
               pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
               include:
-                - operating-system: ubuntu-20.0.4   # Checking support for ubuntu os with python 3.6
+                - operating-system: ubuntu-20.04   # Checking support for ubuntu os with python 3.6
                   pyth-version: '3.6'
                 - operating-system: macos-13   # Checking support for mac os with python 3.6
                   pyth-version: '3.6'
@@ -85,16 +85,6 @@ jobs:
                 python-version: 3.12
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
-                if [[ "$(uname -s)" == "Linux" ]]; then
-                    source ve/bin/activate
-                    echo "In LINUX"
-                elif [[ "$(uname -s)" == "Darwin" ]]; then
-                    source ve/bin/activate
-                    echo "In MAC"
-                else
-                    source ve/Scripts/activate
-                    echo "In Windows"
-                fi
                 echo $VIRTUAL_ENV
                 echo "Before Running Report Generation"
                 echo "PWD"
