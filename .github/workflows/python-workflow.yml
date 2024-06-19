@@ -1,4 +1,4 @@
-name: workflow for cybs rest client python sdk to run samples
+name: PYTHON BUILDS
 on:
   push:
   pull_request:
