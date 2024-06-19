@@ -32,6 +32,10 @@ jobs:
                   pyth-version: '3.7'
         runs-on: ${{matrix.operating-system}}
         steps:
+            - run: echo "VCPKG_ROOT=$env:VCPKG_INSTALLATION_ROOT" | Out-File -FilePath $env:GITHUB_ENV -Append
+              if: runner.os == 'Windows'
+            - run: vcpkg install openssl:x64-windows-static-md
+              if: runner.os == 'Windows'
             - name: Creating separate folders for checkout repos
               run: |
                 rm -rf $CLIENT_FOLDER
