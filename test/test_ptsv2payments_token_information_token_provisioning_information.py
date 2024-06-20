@@ -18,11 +18,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.ptsv1pushfundstransfer_processing_options_funding_options_initiator import Ptsv1pushfundstransferProcessingOptionsFundingOptionsInitiator
+from CyberSource.models.ptsv2payments_token_information_token_provisioning_information import Ptsv2paymentsTokenInformationTokenProvisioningInformation
 
 
-class TestPtsv1pushfundstransferProcessingOptionsFundingOptionsInitiator(unittest.TestCase):
-    """ Ptsv1pushfundstransferProcessingOptionsFundingOptionsInitiator unit test stubs """
+class TestPtsv2paymentsTokenInformationTokenProvisioningInformation(unittest.TestCase):
+    """ Ptsv2paymentsTokenInformationTokenProvisioningInformation unit test stubs """
 
     def setUp(self):
         pass
@@ -30,12 +30,12 @@ class TestPtsv1pushfundstransferProcessingOptionsFundingOptionsInitiator(unittes
     def tearDown(self):
         pass
 
-    def testPtsv1pushfundstransferProcessingOptionsFundingOptionsInitiator(self):
+    def testPtsv2paymentsTokenInformationTokenProvisioningInformation(self):
         """
-        Test Ptsv1pushfundstransferProcessingOptionsFundingOptionsInitiator
+        Test Ptsv2paymentsTokenInformationTokenProvisioningInformation
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.ptsv1pushfundstransfer_processing_options_funding_options_initiator.Ptsv1pushfundstransferProcessingOptionsFundingOptionsInitiator()
+        #model = CyberSource.models.ptsv2payments_token_information_token_provisioning_information.Ptsv2paymentsTokenInformationTokenProvisioningInformation()
         pass
 
 

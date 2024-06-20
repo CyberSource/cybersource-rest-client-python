@@ -81,7 +81,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def routing_number(self):
         """
         Gets the routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the transit number. 
 
         :return: The routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -92,7 +92,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def routing_number(self, routing_number):
         """
         Sets the routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the transit number. 
 
         :param routing_number: The routing_number of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
@@ -104,7 +104,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def branch_code(self):
         """
         Gets the branch_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Code used to identify the branch of the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN. Use this field only when scoring a direct debit transaction.  For all possible values, see the `branch_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Code used to identify the branch of the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN. Use this field only when scoring a direct debit transaction. 
 
         :return: The branch_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -115,7 +115,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def branch_code(self, branch_code):
         """
         Sets the branch_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Code used to identify the branch of the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN. Use this field only when scoring a direct debit transaction.  For all possible values, see the `branch_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Code used to identify the branch of the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN. Use this field only when scoring a direct debit transaction. 
 
         :param branch_code: The branch_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
@@ -127,7 +127,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def swift_code(self):
         """
         Gets the swift_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions. 
 
         :return: The swift_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -138,7 +138,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def swift_code(self, swift_code):
         """
         Sets the swift_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions. 
 
         :param swift_code: The swift_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
@@ -150,7 +150,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def bank_code(self):
         """
         Gets the bank_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Country-specific code used to identify the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN instead. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Country-specific code used to identify the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN instead. You can use this field only when scoring a direct debit transaction. 
 
         :return: The bank_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -161,7 +161,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def bank_code(self, bank_code):
         """
         Sets the bank_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        Country-specific code used to identify the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN instead. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_code` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Country-specific code used to identify the customer's bank. Required for some countries if you do not or are not allowed to provide the IBAN instead. You can use this field only when scoring a direct debit transaction. 
 
         :param bank_code: The bank_code of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str
@@ -173,7 +173,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def iban(self):
         """
         Gets the iban of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :return: The iban of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :rtype: str
@@ -184,7 +184,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBank(object):
     def iban(self, iban):
         """
         Sets the iban of this TssV2TransactionsGet200ResponsePaymentInformationBank.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :param iban: The iban of this TssV2TransactionsGet200ResponsePaymentInformationBank.
         :type: str

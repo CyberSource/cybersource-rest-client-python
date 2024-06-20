@@ -122,7 +122,7 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
     def encoder_id(self):
         """
         Gets the encoder_id of this Ptsv2paymentsPaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :return: The encoder_id of this Ptsv2paymentsPaymentInformationBankAccount.
         :rtype: str
@@ -133,7 +133,7 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
     def encoder_id(self, encoder_id):
         """
         Sets the encoder_id of this Ptsv2paymentsPaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :param encoder_id: The encoder_id of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str
@@ -191,7 +191,7 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
     def iban(self):
         """
         Gets the iban of this Ptsv2paymentsPaymentInformationBankAccount.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :return: The iban of this Ptsv2paymentsPaymentInformationBankAccount.
         :rtype: str
@@ -202,7 +202,7 @@ class Ptsv2paymentsPaymentInformationBankAccount(object):
     def iban(self, iban):
         """
         Sets the iban of this Ptsv2paymentsPaymentInformationBankAccount.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :param iban: The iban of this Ptsv2paymentsPaymentInformationBankAccount.
         :type: str

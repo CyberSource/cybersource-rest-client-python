@@ -61,7 +61,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
     def amount(self):
         """
         Gets the amount of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
-        Total freight or shipping and handling charges for the order. When you include this field in your request, you must also include the **totalAmount** field.  For processor-specific information, see the freight_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total freight or shipping and handling charges for the order. When you include this field in your request, you must also include the **totalAmount** field. 
 
         :return: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
         :rtype: str
@@ -72,7 +72,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight(object):
     def amount(self, amount):
         """
         Sets the amount of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
-        Total freight or shipping and handling charges for the order. When you include this field in your request, you must also include the **totalAmount** field.  For processor-specific information, see the freight_amount field in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Total freight or shipping and handling charges for the order. When you include this field in your request, you must also include the **totalAmount** field. 
 
         :param amount: The amount of this Invoicingv2invoicesOrderInformationAmountDetailsFreight.
         :type: str

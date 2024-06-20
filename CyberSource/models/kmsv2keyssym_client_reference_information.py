@@ -84,7 +84,7 @@ class Kmsv2keyssymClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Kmsv2keyssymClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this Kmsv2keyssymClientReferenceInformation.
         :rtype: str
@@ -95,7 +95,7 @@ class Kmsv2keyssymClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Kmsv2keyssymClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this Kmsv2keyssymClientReferenceInformation.
         :type: str

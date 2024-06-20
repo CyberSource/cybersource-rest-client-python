@@ -56,7 +56,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
     def code(self):
         """
         Gets the code of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
-        Additional amount type. This field is supported only for **American Express Direct**.  For processor-specific information, see the `additional_amount_type0` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Additional amount type. This field is supported only for **American Express Direct**. 
 
         :return: The code of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
         :rtype: str
@@ -67,7 +67,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts(object):
     def code(self, code):
         """
         Sets the code of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
-        Additional amount type. This field is supported only for **American Express Direct**.  For processor-specific information, see the `additional_amount_type0` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Additional amount type. This field is supported only for **American Express Direct**. 
 
         :param code: The code of this Ptsv2paymentsOrderInformationAmountDetailsAmexAdditionalAmounts.
         :type: str

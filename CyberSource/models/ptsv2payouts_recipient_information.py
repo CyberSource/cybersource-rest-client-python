@@ -31,7 +31,6 @@ class Ptsv2payoutsRecipientInformation(object):
     """
     swagger_types = {
         'first_name': 'str',
-        'middle_initial': 'str',
         'middle_name': 'str',
         'last_name': 'str',
         'address1': 'str',
@@ -39,13 +38,11 @@ class Ptsv2payoutsRecipientInformation(object):
         'administrative_area': 'str',
         'country': 'str',
         'postal_code': 'str',
-        'phone_number': 'str',
-        'date_of_birth': 'str'
+        'phone_number': 'str'
     }
 
     attribute_map = {
         'first_name': 'firstName',
-        'middle_initial': 'middleInitial',
         'middle_name': 'middleName',
         'last_name': 'lastName',
         'address1': 'address1',
@@ -53,17 +50,15 @@ class Ptsv2payoutsRecipientInformation(object):
         'administrative_area': 'administrativeArea',
         'country': 'country',
         'postal_code': 'postalCode',
-        'phone_number': 'phoneNumber',
-        'date_of_birth': 'dateOfBirth'
+        'phone_number': 'phoneNumber'
     }
 
-    def __init__(self, first_name=None, middle_initial=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None, date_of_birth=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None):
         """
         Ptsv2payoutsRecipientInformation - a model defined in Swagger
         """
 
         self._first_name = None
-        self._middle_initial = None
         self._middle_name = None
         self._last_name = None
         self._address1 = None
@@ -72,12 +67,9 @@ class Ptsv2payoutsRecipientInformation(object):
         self._country = None
         self._postal_code = None
         self._phone_number = None
-        self._date_of_birth = None
 
         if first_name is not None:
           self.first_name = first_name
-        if middle_initial is not None:
-          self.middle_initial = middle_initial
         if middle_name is not None:
           self.middle_name = middle_name
         if last_name is not None:
@@ -94,8 +86,6 @@ class Ptsv2payoutsRecipientInformation(object):
           self.postal_code = postal_code
         if phone_number is not None:
           self.phone_number = phone_number
-        if date_of_birth is not None:
-          self.date_of_birth = date_of_birth
 
     @property
     def first_name(self):
@@ -119,29 +109,6 @@ class Ptsv2payoutsRecipientInformation(object):
         """
 
         self._first_name = first_name
-
-    @property
-    def middle_initial(self):
-        """
-        Gets the middle_initial of this Ptsv2payoutsRecipientInformation.
-        Middle Initial of recipient. Required only for FDCCompass. 
-
-        :return: The middle_initial of this Ptsv2payoutsRecipientInformation.
-        :rtype: str
-        """
-        return self._middle_initial
-
-    @middle_initial.setter
-    def middle_initial(self, middle_initial):
-        """
-        Sets the middle_initial of this Ptsv2payoutsRecipientInformation.
-        Middle Initial of recipient. Required only for FDCCompass. 
-
-        :param middle_initial: The middle_initial of this Ptsv2payoutsRecipientInformation.
-        :type: str
-        """
-
-        self._middle_initial = middle_initial
 
     @property
     def middle_name(self):
@@ -326,29 +293,6 @@ class Ptsv2payoutsRecipientInformation(object):
         """
 
         self._phone_number = phone_number
-
-    @property
-    def date_of_birth(self):
-        """
-        Gets the date_of_birth of this Ptsv2payoutsRecipientInformation.
-        Recipient date of birth in YYYYMMDD format. Required only for FDCCompass.
-
-        :return: The date_of_birth of this Ptsv2payoutsRecipientInformation.
-        :rtype: str
-        """
-        return self._date_of_birth
-
-    @date_of_birth.setter
-    def date_of_birth(self, date_of_birth):
-        """
-        Sets the date_of_birth of this Ptsv2payoutsRecipientInformation.
-        Recipient date of birth in YYYYMMDD format. Required only for FDCCompass.
-
-        :param date_of_birth: The date_of_birth of this Ptsv2payoutsRecipientInformation.
-        :type: str
-        """
-
-        self._date_of_birth = date_of_birth
 
     def to_dict(self):
         """

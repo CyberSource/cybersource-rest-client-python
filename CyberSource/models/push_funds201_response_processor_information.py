@@ -32,43 +32,33 @@ class PushFunds201ResponseProcessorInformation(object):
     swagger_types = {
         'transaction_id': 'int',
         'response_code': 'str',
-        'approval_code': 'str',
         'system_trace_audit_number': 'str',
-        'response_code_source': 'str',
         'retrieval_reference_number': 'str'
     }
 
     attribute_map = {
         'transaction_id': 'transactionId',
         'response_code': 'responseCode',
-        'approval_code': 'approvalCode',
         'system_trace_audit_number': 'systemTraceAuditNumber',
-        'response_code_source': 'responseCodeSource',
         'retrieval_reference_number': 'retrievalReferenceNumber'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, approval_code=None, system_trace_audit_number=None, response_code_source=None, retrieval_reference_number=None):
+    def __init__(self, transaction_id=None, response_code=None, system_trace_audit_number=None, retrieval_reference_number=None):
         """
         PushFunds201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._transaction_id = None
         self._response_code = None
-        self._approval_code = None
         self._system_trace_audit_number = None
-        self._response_code_source = None
         self._retrieval_reference_number = None
 
         if transaction_id is not None:
           self.transaction_id = transaction_id
         if response_code is not None:
           self.response_code = response_code
-        if approval_code is not None:
-          self.approval_code = approval_code
         if system_trace_audit_number is not None:
           self.system_trace_audit_number = system_trace_audit_number
-        if response_code_source is not None:
-          self.response_code_source = response_code_source
         if retrieval_reference_number is not None:
           self.retrieval_reference_number = retrieval_reference_number
 
@@ -119,33 +109,10 @@ class PushFunds201ResponseProcessorInformation(object):
         self._response_code = response_code
 
     @property
-    def approval_code(self):
-        """
-        Gets the approval_code of this PushFunds201ResponseProcessorInformation.
-        Issuer-generated approval code for the transaction. 
-
-        :return: The approval_code of this PushFunds201ResponseProcessorInformation.
-        :rtype: str
-        """
-        return self._approval_code
-
-    @approval_code.setter
-    def approval_code(self, approval_code):
-        """
-        Sets the approval_code of this PushFunds201ResponseProcessorInformation.
-        Issuer-generated approval code for the transaction. 
-
-        :param approval_code: The approval_code of this PushFunds201ResponseProcessorInformation.
-        :type: str
-        """
-
-        self._approval_code = approval_code
-
-    @property
     def system_trace_audit_number(self):
         """
         Gets the system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
-        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer's receipt. 
+        System audit number. Returned by authorization and incremental authorization services. 
 
         :return: The system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
         :rtype: str
@@ -156,7 +123,7 @@ class PushFunds201ResponseProcessorInformation(object):
     def system_trace_audit_number(self, system_trace_audit_number):
         """
         Sets the system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
-        System audit number. Returned by authorization and incremental authorization services.  Visa Platform Connect  System trace number that must be printed on the customer's receipt. 
+        System audit number. Returned by authorization and incremental authorization services. 
 
         :param system_trace_audit_number: The system_trace_audit_number of this PushFunds201ResponseProcessorInformation.
         :type: str
@@ -165,33 +132,10 @@ class PushFunds201ResponseProcessorInformation(object):
         self._system_trace_audit_number = system_trace_audit_number
 
     @property
-    def response_code_source(self):
-        """
-        Gets the response_code_source of this PushFunds201ResponseProcessorInformation.
-        Used by Visa only and contains the response source/reason code that identifies the source of the response decision. 
-
-        :return: The response_code_source of this PushFunds201ResponseProcessorInformation.
-        :rtype: str
-        """
-        return self._response_code_source
-
-    @response_code_source.setter
-    def response_code_source(self, response_code_source):
-        """
-        Sets the response_code_source of this PushFunds201ResponseProcessorInformation.
-        Used by Visa only and contains the response source/reason code that identifies the source of the response decision. 
-
-        :param response_code_source: The response_code_source of this PushFunds201ResponseProcessorInformation.
-        :type: str
-        """
-
-        self._response_code_source = response_code_source
-
-    @property
     def retrieval_reference_number(self):
         """
         Gets the retrieval_reference_number of this PushFunds201ResponseProcessorInformation.
-        Unique reference number returned by the processor that identifies the transaction at the network.  Supported by Mastercard Send 
+        Unique reference number returned by the processor that identifies the transaction at the network. 
 
         :return: The retrieval_reference_number of this PushFunds201ResponseProcessorInformation.
         :rtype: str
@@ -202,7 +146,7 @@ class PushFunds201ResponseProcessorInformation(object):
     def retrieval_reference_number(self, retrieval_reference_number):
         """
         Sets the retrieval_reference_number of this PushFunds201ResponseProcessorInformation.
-        Unique reference number returned by the processor that identifies the transaction at the network.  Supported by Mastercard Send 
+        Unique reference number returned by the processor that identifies the transaction at the network. 
 
         :param retrieval_reference_number: The retrieval_reference_number of this PushFunds201ResponseProcessorInformation.
         :type: str

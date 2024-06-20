@@ -35,7 +35,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
         'object': 'str',
         'state': 'str',
         'type': 'str',
-        'token_provisioning_information': 'TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation',
+        'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
         'tokenized_card': 'TmsEmbeddedInstrumentIdentifierTokenizedCard',
@@ -201,7 +201,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
     def type(self):
         """
         Gets the type of this TmsEmbeddedInstrumentIdentifier.
-        The type of Instrument Identifier. Possible Values: - enrollable card 
+        The type of Instrument Identifier. Possible Values: - enrollable card - enrollable token 
 
         :return: The type of this TmsEmbeddedInstrumentIdentifier.
         :rtype: str
@@ -212,7 +212,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
     def type(self, type):
         """
         Sets the type of this TmsEmbeddedInstrumentIdentifier.
-        The type of Instrument Identifier. Possible Values: - enrollable card 
+        The type of Instrument Identifier. Possible Values: - enrollable card - enrollable token 
 
         :param type: The type of this TmsEmbeddedInstrumentIdentifier.
         :type: str
@@ -226,7 +226,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
         Gets the token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
 
         :return: The token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
-        :rtype: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
+        :rtype: Ptsv2paymentsTokenInformationTokenProvisioningInformation
         """
         return self._token_provisioning_information
 
@@ -236,7 +236,7 @@ class TmsEmbeddedInstrumentIdentifier(object):
         Sets the token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
 
         :param token_provisioning_information: The token_provisioning_information of this TmsEmbeddedInstrumentIdentifier.
-        :type: TmsEmbeddedInstrumentIdentifierTokenProvisioningInformation
+        :type: Ptsv2paymentsTokenInformationTokenProvisioningInformation
         """
 
         self._token_provisioning_information = token_provisioning_information

@@ -65,7 +65,7 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this PushFunds201ResponseOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  Note For Visa Platform Conenct, FDC Compass, and Chase Paymentech processors, the maximum length for this field is 12 numbers.  Processor Amount Ranges: Visa Platform Connect: .01-9999999999.99  Mastercard Send: 1-9999999999.99  FDC Compass: .01- 9999999999.994  Chase Paymentech: .01-9999999999.99 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :return: The total_amount of this PushFunds201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -76,7 +76,7 @@ class PushFunds201ResponseOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this PushFunds201ResponseOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  Note For Visa Platform Conenct, FDC Compass, and Chase Paymentech processors, the maximum length for this field is 12 numbers.  Processor Amount Ranges: Visa Platform Connect: .01-9999999999.99  Mastercard Send: 1-9999999999.99  FDC Compass: .01- 9999999999.994  Chase Paymentech: .01-9999999999.99 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :param total_amount: The total_amount of this PushFunds201ResponseOrderInformationAmountDetails.
         :type: str

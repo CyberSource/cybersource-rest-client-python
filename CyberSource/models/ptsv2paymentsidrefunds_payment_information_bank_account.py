@@ -117,7 +117,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
     def encoder_id(self):
         """
         Gets the encoder_id of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :return: The encoder_id of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
         :rtype: str
@@ -128,7 +128,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBankAccount(object):
     def encoder_id(self, encoder_id):
         """
         Sets the encoder_id of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :param encoder_id: The encoder_id of this Ptsv2paymentsidrefundsPaymentInformationBankAccount.
         :type: str

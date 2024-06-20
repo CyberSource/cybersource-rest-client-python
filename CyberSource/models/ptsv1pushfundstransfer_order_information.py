@@ -30,31 +30,21 @@ class Ptsv1pushfundstransferOrderInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'amount_details': 'Ptsv1pushfundstransferOrderInformationAmountDetails',
-        'is_cryptocurrency_purchase': 'str',
-        'surcharge': 'Ptsv1pushfundstransferOrderInformationSurcharge'
+        'amount_details': 'Ptsv1pushfundstransferOrderInformationAmountDetails'
     }
 
     attribute_map = {
-        'amount_details': 'amountDetails',
-        'is_cryptocurrency_purchase': 'isCryptocurrencyPurchase',
-        'surcharge': 'surcharge'
+        'amount_details': 'amountDetails'
     }
 
-    def __init__(self, amount_details=None, is_cryptocurrency_purchase=None, surcharge=None):
+    def __init__(self, amount_details=None):
         """
         Ptsv1pushfundstransferOrderInformation - a model defined in Swagger
         """
 
         self._amount_details = None
-        self._is_cryptocurrency_purchase = None
-        self._surcharge = None
 
         self.amount_details = amount_details
-        if is_cryptocurrency_purchase is not None:
-          self.is_cryptocurrency_purchase = is_cryptocurrency_purchase
-        if surcharge is not None:
-          self.surcharge = surcharge
 
     @property
     def amount_details(self):
@@ -76,50 +66,6 @@ class Ptsv1pushfundstransferOrderInformation(object):
         """
 
         self._amount_details = amount_details
-
-    @property
-    def is_cryptocurrency_purchase(self):
-        """
-        Gets the is_cryptocurrency_purchase of this Ptsv1pushfundstransferOrderInformation.
-        This indicates that the funds transfer is for a crypto currency transaction. Optional Y/y, true N/n, false 
-
-        :return: The is_cryptocurrency_purchase of this Ptsv1pushfundstransferOrderInformation.
-        :rtype: str
-        """
-        return self._is_cryptocurrency_purchase
-
-    @is_cryptocurrency_purchase.setter
-    def is_cryptocurrency_purchase(self, is_cryptocurrency_purchase):
-        """
-        Sets the is_cryptocurrency_purchase of this Ptsv1pushfundstransferOrderInformation.
-        This indicates that the funds transfer is for a crypto currency transaction. Optional Y/y, true N/n, false 
-
-        :param is_cryptocurrency_purchase: The is_cryptocurrency_purchase of this Ptsv1pushfundstransferOrderInformation.
-        :type: str
-        """
-
-        self._is_cryptocurrency_purchase = is_cryptocurrency_purchase
-
-    @property
-    def surcharge(self):
-        """
-        Gets the surcharge of this Ptsv1pushfundstransferOrderInformation.
-
-        :return: The surcharge of this Ptsv1pushfundstransferOrderInformation.
-        :rtype: Ptsv1pushfundstransferOrderInformationSurcharge
-        """
-        return self._surcharge
-
-    @surcharge.setter
-    def surcharge(self, surcharge):
-        """
-        Sets the surcharge of this Ptsv1pushfundstransferOrderInformation.
-
-        :param surcharge: The surcharge of this Ptsv1pushfundstransferOrderInformation.
-        :type: Ptsv1pushfundstransferOrderInformationSurcharge
-        """
-
-        self._surcharge = surcharge
 
     def to_dict(self):
         """
