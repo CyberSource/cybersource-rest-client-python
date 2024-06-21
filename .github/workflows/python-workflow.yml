@@ -70,7 +70,7 @@ jobs:
                 else
                     echo "In Windows"
                     source ve/Scripts/activate
-                    version=$(python3 --version 2>&1 | awk '{print $2}')
+                    # version=$(python3 --version 2>&1 | awk '{print $2}')
                     # if [[ $version == 3.7.* ]]; then
                     #   pip install cryptography==41.0.7
                     # fi
@@ -111,3 +111,5 @@ jobs:
                 name: log-files-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
                 path: |
                   ${{env.SAMPLE_FOLDER}}/python_validation_results.pdf
+
+# Adding comment 
