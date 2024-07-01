@@ -59,6 +59,7 @@ jobs:
                 python-version: ${{matrix.pyth-version}}
             - name: Building the projects and running the Test Cases
               run: |
+                python --version
                 python -m pip install --upgrade pip
                 python -m venv ve
                 if [[ "$(uname -s)" == "Linux" ]]; then
@@ -91,9 +92,10 @@ jobs:
                 python-version: 3.12
             - name: Installing required python libraries and running the python programs to generate pdf report
               run : |
+                python --version
                 echo $VIRTUAL_ENV
                 echo "Before Running Report Generation"
-                echo "PWD"
+                echo "PWD" 
                 pwd
                 cd $SAMPLE_FOLDER
                 python -m pip install --upgrade pip
