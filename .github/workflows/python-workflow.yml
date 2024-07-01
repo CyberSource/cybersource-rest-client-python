@@ -24,11 +24,11 @@ jobs:
                 - operating-system: macos-13   # Checking support for mac os with python 3.7
                   pyth-version: '3.7'
               exclude:
-                - operating-system: ubuntu-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
+                - operating-system: ubuntu-latest  #arm 64 doesn't support python ver 3.7
                   pyth-version: '3.6'
-                - operating-system: macos-latest  # python 3.6 is unavailable for mac os latest becuase 3.6 doesnt support arm 64
+                - operating-system: macos-latest  #arm 64 doesn't support python ver 3.6
                   pyth-version: '3.6'
-                - operating-system: macos-latest  # python 3.7 is unavailable for mac os latest becuase 3.7 doesnt support arm 64
+                - operating-system: macos-latest  #arm 64 doesn't support python ver 3.7
                   pyth-version: '3.7'
         runs-on: ${{matrix.operating-system}}
         steps:
