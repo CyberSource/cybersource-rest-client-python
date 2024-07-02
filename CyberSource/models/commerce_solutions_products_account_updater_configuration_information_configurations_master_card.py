@@ -75,8 +75,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param merchant_id: The merchant_id of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsMasterCard.
         :type: str
         """
-        if merchant_id is None:
-            raise ValueError("Invalid value for `merchant_id`, must not be `None`")
 
         self._merchant_id = merchant_id
 
@@ -100,8 +98,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param interbank_card_association_number: The interbank_card_association_number of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsMasterCard.
         :type: str
         """
-        if interbank_card_association_number is None:
-            raise ValueError("Invalid value for `interbank_card_association_number`, must not be `None`")
 
         self._interbank_card_association_number = interbank_card_association_number
 

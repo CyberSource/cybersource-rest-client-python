@@ -96,8 +96,6 @@ class SaveAsymEgressKey(object):
         :param client_request_action: The client_request_action of this SaveAsymEgressKey.
         :type: str
         """
-        if client_request_action is None:
-            raise ValueError("Invalid value for `client_request_action`, must not be `None`")
 
         self._client_request_action = client_request_action
 
@@ -119,8 +117,6 @@ class SaveAsymEgressKey(object):
         :param key_information: The key_information of this SaveAsymEgressKey.
         :type: Kmsegressv2keysasymKeyInformation
         """
-        if key_information is None:
-            raise ValueError("Invalid value for `key_information`, must not be `None`")
 
         self._key_information = key_information
 

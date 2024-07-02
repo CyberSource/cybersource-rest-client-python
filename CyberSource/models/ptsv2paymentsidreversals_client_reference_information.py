@@ -137,7 +137,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Ptsv2paymentsidreversalsClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :rtype: str
@@ -148,7 +148,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Ptsv2paymentsidreversalsClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this Ptsv2paymentsidreversalsClientReferenceInformation.
         :type: str

@@ -146,8 +146,6 @@ class InlineResponse4008(object):
         :param message: The message of this InlineResponse4008.
         :type: str
         """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
 
         self._message = message
 
@@ -169,8 +167,6 @@ class InlineResponse4008(object):
         :param reason: The reason of this InlineResponse4008.
         :type: str
         """
-        if reason is None:
-            raise ValueError("Invalid value for `reason`, must not be `None`")
         allowed_values = ["INVALID_APIKEY", "INVALID_SHIPPING_INPUT_PARAMS", "CAPTURE_CONTEXT_INVALID", "CAPTURE_CONTEXT_EXPIRED", "SDK_XHR_ERROR", "UNIFIEDPAYMENTS_VALIDATION_PARAMS", "UNIFIEDPAYMENTS_VALIDATION_FIELDS", "UNIFIEDPAYMENT_PAYMENT_PARAMITERS", "CREATE_TOKEN_TIMEOUT", "CREATE_TOKEN_XHR_ERROR", "SHOW_LOAD_CONTAINER_SELECTOR", "SHOW_LOAD_INVALID_CONTAINER", "SHOW_TOKEN_TIMEOUT", "SHOW_TOKEN_XHR_ERROR", "SHOW_PAYMENT_TIMEOUT"]
         if reason not in allowed_values:
             raise ValueError(

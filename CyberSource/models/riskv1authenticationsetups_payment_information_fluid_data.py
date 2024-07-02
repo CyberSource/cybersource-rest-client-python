@@ -81,8 +81,6 @@ class Riskv1authenticationsetupsPaymentInformationFluidData(object):
         :param value: The value of this Riskv1authenticationsetupsPaymentInformationFluidData.
         :type: str
         """
-        if value is None:
-            raise ValueError("Invalid value for `value`, must not be `None`")
 
         self._value = value
 

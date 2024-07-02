@@ -70,8 +70,6 @@ class InlineResponse2011ProductInformationSetups(object):
         :param organization_id: The organization_id of this InlineResponse2011ProductInformationSetups.
         :type: str
         """
-        if organization_id is not None and not re.search('^[0-9a-zA-Z]+$', organization_id):
-            raise ValueError("Invalid value for `organization_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z]+$/`")
 
         self._organization_id = organization_id
 

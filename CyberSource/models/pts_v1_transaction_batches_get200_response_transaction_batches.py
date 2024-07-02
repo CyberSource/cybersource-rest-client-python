@@ -97,8 +97,6 @@ class PtsV1TransactionBatchesGet200ResponseTransactionBatches(object):
         :param id: The id of this PtsV1TransactionBatchesGet200ResponseTransactionBatches.
         :type: str
         """
-        if id is not None and not re.search('^[a-zA-Z0-9_+-]*$', id):
-            raise ValueError("Invalid value for `id`, must be a follow pattern or equal to `/^[a-zA-Z0-9_+-]*$/`")
 
         self._id = id
 

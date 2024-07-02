@@ -82,8 +82,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param solution_id: The solution_id of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if solution_id is not None and not re.search('^[0-9a-zA-Z_]+$', solution_id):
-            raise ValueError("Invalid value for `solution_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
 
         self._solution_id = solution_id
 
@@ -107,8 +105,6 @@ class InlineResponse2011IntegrationInformationTenantConfigurations(object):
         :param tenant_configuration_id: The tenant_configuration_id of this InlineResponse2011IntegrationInformationTenantConfigurations.
         :type: str
         """
-        if tenant_configuration_id is not None and not re.search('^[0-9a-zA-Z_]+$', tenant_configuration_id):
-            raise ValueError("Invalid value for `tenant_configuration_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
 
         self._tenant_configuration_id = tenant_configuration_id
 

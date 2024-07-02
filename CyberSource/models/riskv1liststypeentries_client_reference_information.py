@@ -76,8 +76,6 @@ class Riskv1liststypeentriesClientReferenceInformation(object):
         :param code: The code of this Riskv1liststypeentriesClientReferenceInformation.
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
 
         self._code = code
 

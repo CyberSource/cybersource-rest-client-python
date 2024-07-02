@@ -90,8 +90,6 @@ class InlineResponse4004(object):
         :param code: The code of this InlineResponse4004.
         :type: str
         """
-        if code is None:
-            raise ValueError("Invalid value for `code`, must not be `None`")
 
         self._code = code
 
@@ -115,8 +113,6 @@ class InlineResponse4004(object):
         :param message: The message of this InlineResponse4004.
         :type: str
         """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
 
         self._message = message
 

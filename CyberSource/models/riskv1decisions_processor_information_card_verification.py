@@ -51,7 +51,7 @@ class Riskv1decisionsProcessorInformationCardVerification(object):
     def result_code(self):
         """
         Gets the result_code of this Riskv1decisionsProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        CVN result code. 
 
         :return: The result_code of this Riskv1decisionsProcessorInformationCardVerification.
         :rtype: str
@@ -62,7 +62,7 @@ class Riskv1decisionsProcessorInformationCardVerification(object):
     def result_code(self, result_code):
         """
         Sets the result_code of this Riskv1decisionsProcessorInformationCardVerification.
-        CVN result code.  For details, see the `auth_cv_result` reply field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        CVN result code. 
 
         :param result_code: The result_code of this Riskv1decisionsProcessorInformationCardVerification.
         :type: str

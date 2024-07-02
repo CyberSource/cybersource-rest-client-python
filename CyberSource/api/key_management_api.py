@@ -124,14 +124,6 @@ class KeyManagementApi(object):
             params[key] = val
         del params['kwargs']
 
-        if 'expiration_start_date' in params and not re.search('yyyy-mm-dd', params['expiration_start_date']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `expiration_start_date` when calling `search_keys`, must conform to the pattern `/yyyy-mm-dd/`")
-            raise ValueError("Invalid value for parameter `expiration_start_date` when calling `search_keys`, must conform to the pattern `/yyyy-mm-dd/`")
-        if 'expiration_end_date' in params and not re.search('yyyy-mm-dd', params['expiration_end_date']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `expiration_end_date` when calling `search_keys`, must conform to the pattern `/yyyy-mm-dd/`")
-            raise ValueError("Invalid value for parameter `expiration_end_date` when calling `search_keys`, must conform to the pattern `/yyyy-mm-dd/`")
 
         collection_formats = {}
 

@@ -183,7 +183,7 @@ class Ptsv2billingagreementsClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Ptsv2billingagreementsClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this Ptsv2billingagreementsClientReferenceInformation.
         :rtype: str
@@ -194,7 +194,7 @@ class Ptsv2billingagreementsClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Ptsv2billingagreementsClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this Ptsv2billingagreementsClientReferenceInformation.
         :type: str

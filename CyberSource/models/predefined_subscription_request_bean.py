@@ -110,10 +110,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param report_definition_name: The report_definition_name of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-        if report_definition_name is None:
-            raise ValueError("Invalid value for `report_definition_name`, must not be `None`")
-        if report_definition_name is not None and not re.search('[a-zA-Z]+', report_definition_name):
-            raise ValueError("Invalid value for `report_definition_name`, must be a follow pattern or equal to `/[a-zA-Z]+/`")
 
         self._report_definition_name = report_definition_name
 
@@ -137,8 +133,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param subscription_type: The subscription_type of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-        if subscription_type is None:
-            raise ValueError("Invalid value for `subscription_type`, must not be `None`")
 
         self._subscription_type = subscription_type
 
@@ -160,8 +154,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param report_name: The report_name of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-        if report_name is not None and not re.search('[a-zA-Z0-9-_ ]+', report_name):
-            raise ValueError("Invalid value for `report_name`, must be a follow pattern or equal to `/[a-zA-Z0-9-_ ]+/`")
 
         self._report_name = report_name
 
@@ -231,8 +223,6 @@ class PredefinedSubscriptionRequestBean(object):
         :param report_interval: The report_interval of this PredefinedSubscriptionRequestBean.
         :type: str
         """
-        if report_interval is not None and not re.search('^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$', report_interval):
-            raise ValueError("Invalid value for `report_interval`, must be a follow pattern or equal to `/^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$/`")
 
         self._report_interval = report_interval
 

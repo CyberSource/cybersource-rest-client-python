@@ -71,10 +71,6 @@ class Boardingv1registrationsIntegrationInformationTenantConfigurations(object):
         :param solution_id: The solution_id of this Boardingv1registrationsIntegrationInformationTenantConfigurations.
         :type: str
         """
-        if solution_id is None:
-            raise ValueError("Invalid value for `solution_id`, must not be `None`")
-        if solution_id is not None and not re.search('^[0-9a-zA-Z_]+$', solution_id):
-            raise ValueError("Invalid value for `solution_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
 
         self._solution_id = solution_id
 

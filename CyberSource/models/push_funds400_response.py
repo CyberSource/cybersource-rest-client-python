@@ -168,7 +168,7 @@ class PushFunds400Response(object):
     def message(self):
         """
         Gets the message of this PushFunds400Response.
-        The detail message related to the status and reason listed above.  Possible values: - Declined - One or more fields in the request contains invalid data - Declined - The request is missing one or more fields - Declined - There is a problem with your CyberSource merchant configuration. 
+        The detail message related to the status and reason listed above.  Possible values: - One or more fields in the request contains invalid data. - The request is missing one or more required fields. - Declined - There is a problem with your CyberSource merchant configuration. 
 
         :return: The message of this PushFunds400Response.
         :rtype: str
@@ -179,7 +179,7 @@ class PushFunds400Response(object):
     def message(self, message):
         """
         Sets the message of this PushFunds400Response.
-        The detail message related to the status and reason listed above.  Possible values: - Declined - One or more fields in the request contains invalid data - Declined - The request is missing one or more fields - Declined - There is a problem with your CyberSource merchant configuration. 
+        The detail message related to the status and reason listed above.  Possible values: - One or more fields in the request contains invalid data. - The request is missing one or more required fields. - Declined - There is a problem with your CyberSource merchant configuration. 
 
         :param message: The message of this PushFunds400Response.
         :type: str

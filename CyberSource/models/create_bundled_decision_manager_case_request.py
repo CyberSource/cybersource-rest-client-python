@@ -223,8 +223,6 @@ class CreateBundledDecisionManagerCaseRequest(object):
         :param order_information: The order_information of this CreateBundledDecisionManagerCaseRequest.
         :type: Riskv1decisionsOrderInformation
         """
-        if order_information is None:
-            raise ValueError("Invalid value for `order_information`, must not be `None`")
 
         self._order_information = order_information
 

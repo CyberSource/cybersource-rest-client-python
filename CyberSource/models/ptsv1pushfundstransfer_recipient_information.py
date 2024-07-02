@@ -39,9 +39,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         'country': 'str',
         'first_name': 'str',
         'middle_name': 'str',
-        'middle_initial': 'str',
         'last_name': 'str',
-        'date_of_birth': 'str',
         'phone_number': 'str',
         'personal_identification': 'Ptsv1pushfundstransferRecipientInformationPersonalIdentification'
     }
@@ -56,14 +54,12 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         'country': 'country',
         'first_name': 'firstName',
         'middle_name': 'middleName',
-        'middle_initial': 'middleInitial',
         'last_name': 'lastName',
-        'date_of_birth': 'dateOfBirth',
         'phone_number': 'phoneNumber',
         'personal_identification': 'personalIdentification'
     }
 
-    def __init__(self, payment_information=None, address1=None, address2=None, locality=None, postal_code=None, administrative_area=None, country=None, first_name=None, middle_name=None, middle_initial=None, last_name=None, date_of_birth=None, phone_number=None, personal_identification=None):
+    def __init__(self, payment_information=None, address1=None, address2=None, locality=None, postal_code=None, administrative_area=None, country=None, first_name=None, middle_name=None, last_name=None, phone_number=None, personal_identification=None):
         """
         Ptsv1pushfundstransferRecipientInformation - a model defined in Swagger
         """
@@ -77,9 +73,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         self._country = None
         self._first_name = None
         self._middle_name = None
-        self._middle_initial = None
         self._last_name = None
-        self._date_of_birth = None
         self._phone_number = None
         self._personal_identification = None
 
@@ -101,12 +95,8 @@ class Ptsv1pushfundstransferRecipientInformation(object):
           self.first_name = first_name
         if middle_name is not None:
           self.middle_name = middle_name
-        if middle_initial is not None:
-          self.middle_initial = middle_initial
         if last_name is not None:
           self.last_name = last_name
-        if date_of_birth is not None:
-          self.date_of_birth = date_of_birth
         if phone_number is not None:
           self.phone_number = phone_number
         if personal_identification is not None:
@@ -137,7 +127,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv1pushfundstransferRecipientInformation.
-        First line of the recipient's address.  Required for Mastercard Send. This field is not supported for Visa Platform Connect. 
+        First line of the recipient's address. Required for card payments 
 
         :return: The address1 of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -148,7 +138,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv1pushfundstransferRecipientInformation.
-        First line of the recipient's address.  Required for Mastercard Send. This field is not supported for Visa Platform Connect. 
+        First line of the recipient's address. Required for card payments 
 
         :param address1: The address1 of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -160,7 +150,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def address2(self):
         """
         Gets the address2 of this Ptsv1pushfundstransferRecipientInformation.
-        Second line of the recipient's address  Optional for Mastercard Send. This field is not supported for Visa Platform Connect. 
+        Second line of the recipient's address 
 
         :return: The address2 of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -171,7 +161,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def address2(self, address2):
         """
         Sets the address2 of this Ptsv1pushfundstransferRecipientInformation.
-        Second line of the recipient's address  Optional for Mastercard Send. This field is not supported for Visa Platform Connect. 
+        Second line of the recipient's address 
 
         :param address2: The address2 of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -183,7 +173,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def locality(self):
         """
         Gets the locality of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient city.  Required for Mastercard Send. 
+        Recipient city. 
 
         :return: The locality of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -194,7 +184,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient city.  Required for Mastercard Send. 
+        Recipient city. 
 
         :param locality: The locality of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -206,7 +196,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Mastercard Send: Required for recipients in Canada and Canadian issued cards. 
+        Recipient postal code.   For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Mandatory for card payments. 
 
         :return: The postal_code of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -217,7 +207,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient postal code.  For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Mastercard Send: Required for recipients in Canada and Canadian issued cards. 
+        Recipient postal code.   For USA, this must be a valid value of 5 digits or 5 digits hyphen 4 digits, for example '63368', '63368-5555'. For other regions, this can be alphanumeric, length 1-10.  Mandatory for card payments. 
 
         :param postal_code: The postal_code of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -229,7 +219,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv1pushfundstransferRecipientInformation.
-        The recipient's province, state or territory. Conditional, required if recipient's country is USA or CAN. Must be an ISO 3166-2 uppercase alpha 2 or 3 character country subdivision code. For example, Missouri is MO.  Required only for FDCCompass.  This field is not supported for Visa Platform Connect. 
+        The recipient's province, state or territory. Conditional, required if recipient's country is USA or CAN. Must be an ISO 3166-2 uppercase alpha 2 or 3 character country subdivision code. For example, Missouri is MO.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Required for card payments. 
 
         :return: The administrative_area of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -240,7 +230,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv1pushfundstransferRecipientInformation.
-        The recipient's province, state or territory. Conditional, required if recipient's country is USA or CAN. Must be an ISO 3166-2 uppercase alpha 2 or 3 character country subdivision code. For example, Missouri is MO.  Required only for FDCCompass.  This field is not supported for Visa Platform Connect. 
+        The recipient's province, state or territory. Conditional, required if recipient's country is USA or CAN. Must be an ISO 3166-2 uppercase alpha 2 or 3 character country subdivision code. For example, Missouri is MO.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Required for card payments. 
 
         :param administrative_area: The administrative_area of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -252,7 +242,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def country(self):
         """
         Gets the country of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient country code. Use the ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Required for Mastercard Send. 
+        Recipient country code. Use the ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf 
 
         :return: The country of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -263,7 +253,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def country(self, country):
         """
         Sets the country of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient country code. Use the ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Required for Mastercard Send. 
+        Recipient country code. Use the ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf 
 
         :param country: The country of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -275,7 +265,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def first_name(self):
         """
         Gets the first_name of this Ptsv1pushfundstransferRecipientInformation.
-        First name of recipient.  Visa Platform Connect (14) Chase Paymentech (30) Mastercard Send (40)  This field is required for Mastercard Send. 
+        First name of recipient. 
 
         :return: The first_name of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -286,7 +276,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ptsv1pushfundstransferRecipientInformation.
-        First name of recipient.  Visa Platform Connect (14) Chase Paymentech (30) Mastercard Send (40)  This field is required for Mastercard Send. 
+        First name of recipient. 
 
         :param first_name: The first_name of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
@@ -318,33 +308,10 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         self._middle_name = middle_name
 
     @property
-    def middle_initial(self):
-        """
-        Gets the middle_initial of this Ptsv1pushfundstransferRecipientInformation.
-        Middle Initial of recipient.  This field is supported by FDC Compass. 
-
-        :return: The middle_initial of this Ptsv1pushfundstransferRecipientInformation.
-        :rtype: str
-        """
-        return self._middle_initial
-
-    @middle_initial.setter
-    def middle_initial(self, middle_initial):
-        """
-        Sets the middle_initial of this Ptsv1pushfundstransferRecipientInformation.
-        Middle Initial of recipient.  This field is supported by FDC Compass. 
-
-        :param middle_initial: The middle_initial of this Ptsv1pushfundstransferRecipientInformation.
-        :type: str
-        """
-
-        self._middle_initial = middle_initial
-
-    @property
     def last_name(self):
         """
         Gets the last_name of this Ptsv1pushfundstransferRecipientInformation.
-        Last name of recipient.  Visa Platform Connect (14) Paymentech (30) Mastercard Send (40)  This field is required for Mastercard Send. 
+        Last name of recipient. 
 
         :return: The last_name of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -355,36 +322,13 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ptsv1pushfundstransferRecipientInformation.
-        Last name of recipient.  Visa Platform Connect (14) Paymentech (30) Mastercard Send (40)  This field is required for Mastercard Send. 
+        Last name of recipient. 
 
         :param last_name: The last_name of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
 
         self._last_name = last_name
-
-    @property
-    def date_of_birth(self):
-        """
-        Gets the date_of_birth of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient date of birth in YYYYMMDD format. 
-
-        :return: The date_of_birth of this Ptsv1pushfundstransferRecipientInformation.
-        :rtype: str
-        """
-        return self._date_of_birth
-
-    @date_of_birth.setter
-    def date_of_birth(self, date_of_birth):
-        """
-        Sets the date_of_birth of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient date of birth in YYYYMMDD format. 
-
-        :param date_of_birth: The date_of_birth of this Ptsv1pushfundstransferRecipientInformation.
-        :type: str
-        """
-
-        self._date_of_birth = date_of_birth
 
     @property
     def phone_number(self):

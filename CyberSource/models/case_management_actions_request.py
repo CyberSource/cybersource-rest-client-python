@@ -69,8 +69,6 @@ class CaseManagementActionsRequest(object):
         :param decision_information: The decision_information of this CaseManagementActionsRequest.
         :type: Riskv1decisionsidactionsDecisionInformation
         """
-        if decision_information is None:
-            raise ValueError("Invalid value for `decision_information`, must not be `None`")
 
         self._decision_information = decision_information
 

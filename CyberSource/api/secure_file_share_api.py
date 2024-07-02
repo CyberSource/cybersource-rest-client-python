@@ -117,10 +117,6 @@ class SecureFileShareApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `file_id` when calling `get_file`")
             raise ValueError("Missing the required parameter `file_id` when calling `get_file`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 
@@ -247,14 +243,6 @@ class SecureFileShareApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_date` when calling `get_file_detail`")
             raise ValueError("Missing the required parameter `end_date` when calling `get_file_detail`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-        if 'name' in params and not re.search('[a-zA-Z0-9-_\\.]+', params['name']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `name` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_\\.]+/`")
-            raise ValueError("Invalid value for parameter `name` when calling `get_file_detail`, must conform to the pattern `/[a-zA-Z0-9-_\\.]+/`")
 
         collection_formats = {}
 

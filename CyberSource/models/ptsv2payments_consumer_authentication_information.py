@@ -400,7 +400,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self):
         """
         Gets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Raw electronic commerce indicator (ECI). 
 
         :return: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -411,7 +411,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Raw electronic commerce indicator (ECI). 
 
         :param eci_raw: The eci_raw of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -423,7 +423,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self):
         """
         Gets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Payer authentication response status. 
 
         :return: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -434,7 +434,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def pares_status(self, pares_status):
         """
         Sets the pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Payer authentication response status.  For details, see `pares_status` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Payer authentication response status. 
 
         :param pares_status: The pares_status of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -446,7 +446,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self):
         """
         Gets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Verification response enrollment status. 
 
         :return: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -457,7 +457,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def veres_enrolled(self, veres_enrolled):
         """
         Sets the veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Verification response enrollment status.  For details, see `veres_enrolled` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Verification response enrollment status. 
 
         :param veres_enrolled: The veres_enrolled of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -469,7 +469,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self):
         """
         Gets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Transaction identifier. 
 
         :return: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -480,7 +480,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def xid(self, xid):
         """
         Sets the xid of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Transaction identifier. 
 
         :param xid: The xid of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -492,7 +492,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_collection_indicator(self):
         """
         Gets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+        Universal cardholder authentication field (UCAF) collection indicator.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
 
         :return: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -503,7 +503,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_collection_indicator(self, ucaf_collection_indicator):
         """
         Sets the ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) collection indicator.  For details, see `ucaf_collection_indicator` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
+        Universal cardholder authentication field (UCAF) collection indicator.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR7 - Position: 5 - Field: Mastercard Electronic Commerce Indicators—UCAF Collection Indicator 
 
         :param ucaf_collection_indicator: The ucaf_collection_indicator of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -515,7 +515,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self):
         """
         Gets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Universal cardholder authentication field (UCAF) data. 
 
         :return: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -526,7 +526,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def ucaf_authentication_data(self, ucaf_authentication_data):
         """
         Sets the ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Universal cardholder authentication field (UCAF) data.  For details, see `ucaf_authentication_data` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Universal cardholder authentication field (UCAF) data. 
 
         :param ucaf_authentication_data: The ucaf_authentication_data of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str
@@ -835,7 +835,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def challenge_code(self):
         """
         Gets the challenge_code of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Possible values: - `01`: No preference - `02`: No challenge request - `03`: Challenge requested (3D Secure requestor preference) - `04`: Challenge requested (mandate) - `05`: No challenge requested (transactional risk analysis is already performed) - `06`: No challenge requested (Data share only) - `07`: No challenge requested (strong consumer authentication is already performed) - `08`: No challenge requested (utilize whitelist exemption if no challenge required) - `09`: Challenge requested (whitelist prompt requested if challenge required) **Note** This field will default to `01` on merchant configuration and can be overridden by the merchant. EMV 3D Secure version 2.1.0 supports values `01-04`. Version 2.2.0 supports values `01-09`.  For details, see `pa_challenge_code` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html) 
+        Possible values: - `01`: No preference - `02`: No challenge request - `03`: Challenge requested (3D Secure requestor preference) - `04`: Challenge requested (mandate) - `05`: No challenge requested (transactional risk analysis is already performed) - `06`: No challenge requested (Data share only) - `07`: No challenge requested (strong consumer authentication is already performed) - `08`: No challenge requested (utilize whitelist exemption if no challenge required) - `09`: Challenge requested (whitelist prompt requested if challenge required) **Note** This field will default to `01` on merchant configuration and can be overridden by the merchant. EMV 3D Secure version 2.1.0 supports values `01-04`. Version 2.2.0 supports values `01-09`. 
 
         :return: The challenge_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :rtype: str
@@ -846,7 +846,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
     def challenge_code(self, challenge_code):
         """
         Sets the challenge_code of this Ptsv2paymentsConsumerAuthenticationInformation.
-        Possible values: - `01`: No preference - `02`: No challenge request - `03`: Challenge requested (3D Secure requestor preference) - `04`: Challenge requested (mandate) - `05`: No challenge requested (transactional risk analysis is already performed) - `06`: No challenge requested (Data share only) - `07`: No challenge requested (strong consumer authentication is already performed) - `08`: No challenge requested (utilize whitelist exemption if no challenge required) - `09`: Challenge requested (whitelist prompt requested if challenge required) **Note** This field will default to `01` on merchant configuration and can be overridden by the merchant. EMV 3D Secure version 2.1.0 supports values `01-04`. Version 2.2.0 supports values `01-09`.  For details, see `pa_challenge_code` field description in [CyberSource Payer Authentication Using the SCMP API.] (https://apps.cybersource.com/library/documentation/dev_guides/Payer_Authentication_SCMP_API/html) 
+        Possible values: - `01`: No preference - `02`: No challenge request - `03`: Challenge requested (3D Secure requestor preference) - `04`: Challenge requested (mandate) - `05`: No challenge requested (transactional risk analysis is already performed) - `06`: No challenge requested (Data share only) - `07`: No challenge requested (strong consumer authentication is already performed) - `08`: No challenge requested (utilize whitelist exemption if no challenge required) - `09`: Challenge requested (whitelist prompt requested if challenge required) **Note** This field will default to `01` on merchant configuration and can be overridden by the merchant. EMV 3D Secure version 2.1.0 supports values `01-04`. Version 2.2.0 supports values `01-09`. 
 
         :param challenge_code: The challenge_code of this Ptsv2paymentsConsumerAuthenticationInformation.
         :type: str

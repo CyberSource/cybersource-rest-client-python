@@ -105,7 +105,7 @@ class Vasv2taxClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Vasv2taxClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this Vasv2taxClientReferenceInformation.
         :rtype: str
@@ -116,7 +116,7 @@ class Vasv2taxClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Vasv2taxClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this Vasv2taxClientReferenceInformation.
         :type: str

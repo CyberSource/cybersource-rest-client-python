@@ -117,7 +117,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
     def exchange_rate(self):
         """
         Gets the exchange_rate of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
-        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf) 
+        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places. 
 
         :return: The exchange_rate of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -128,7 +128,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
     def exchange_rate(self, exchange_rate):
         """
         Sets the exchange_rate of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
-        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  For details, see `exchange_rate` request-level field description in the [Dynamic Currency Conversion For First Data Using the SCMP API](http://apps.cybersource.com/library/documentation/dev_guides/DCC_FirstData_SCMP/DCC_FirstData_SCMP_API.pdf) 
+        Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places. 
 
         :param exchange_rate: The exchange_rate of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :type: str
@@ -140,7 +140,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
     def foreign_amount(self):
         """
         Gets the foreign_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Set this field to the converted amount that was returned by the DCC provider. 
 
         :return: The foreign_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :rtype: str
@@ -151,7 +151,7 @@ class PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails(object):
     def foreign_amount(self, foreign_amount):
         """
         Sets the foreign_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
-        Set this field to the converted amount that was returned by the DCC provider. For processor-specific information, see the `foreign_amount` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Set this field to the converted amount that was returned by the DCC provider. 
 
         :param foreign_amount: The foreign_amount of this PtsV2PaymentsRefundPost201ResponseOrderInformationAmountDetails.
         :type: str

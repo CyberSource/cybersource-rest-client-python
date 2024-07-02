@@ -110,8 +110,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param address1: The address1 of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if address1 is None:
-            raise ValueError("Invalid value for `address1`, must not be `None`")
 
         self._address1 = address1
 
@@ -181,8 +179,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param administrative_area: The administrative_area of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if administrative_area is None:
-            raise ValueError("Invalid value for `administrative_area`, must not be `None`")
 
         self._administrative_area = administrative_area
 
@@ -206,8 +202,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param country: The country of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if country is None:
-            raise ValueError("Invalid value for `country`, must not be `None`")
 
         self._country = country
 
@@ -254,8 +248,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param first_name: The first_name of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if first_name is None:
-            raise ValueError("Invalid value for `first_name`, must not be `None`")
 
         self._first_name = first_name
 
@@ -279,8 +271,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param last_name: The last_name of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if last_name is None:
-            raise ValueError("Invalid value for `last_name`, must not be `None`")
 
         self._last_name = last_name
 
@@ -311,7 +301,7 @@ class Riskv1authenticationsOrderInformationBillTo(object):
     def email(self):
         """
         Gets the email of this Riskv1authenticationsOrderInformationBillTo.
-        Customer's email address, including the full domain name.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  For processor-specific information, see the `customer_email` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### Invoicing Email address for the customer for sending the invoice. If the invoice is in SENT status and email is updated, the old email customer payment link won't work and you must resend the invoice with the new payment link.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Required when `processingInformation.billPaymentOptions.billPayment=true` and `pointOfSaleInformation.entryMode=keyed`.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
+        Customer's email address, including the full domain name.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### Invoicing Email address for the customer for sending the invoice. If the invoice is in SENT status and email is updated, the old email customer payment link won't work and you must resend the invoice with the new payment link.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Required when `processingInformation.billPaymentOptions.billPayment=true` and `pointOfSaleInformation.entryMode=keyed`.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
 
         :return: The email of this Riskv1authenticationsOrderInformationBillTo.
         :rtype: str
@@ -322,13 +312,11 @@ class Riskv1authenticationsOrderInformationBillTo(object):
     def email(self, email):
         """
         Sets the email of this Riskv1authenticationsOrderInformationBillTo.
-        Customer's email address, including the full domain name.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  For processor-specific information, see the `customer_email` request-level field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### Invoicing Email address for the customer for sending the invoice. If the invoice is in SENT status and email is updated, the old email customer payment link won't work and you must resend the invoice with the new payment link.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Required when `processingInformation.billPaymentOptions.billPayment=true` and `pointOfSaleInformation.entryMode=keyed`.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
+        Customer's email address, including the full domain name.  #### CyberSource through VisaNet Credit card networks cannot process transactions that contain non-ASCII characters. CyberSource through VisaNet accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the credit card networks prevent CyberSource through VisaNet from transmitting non-ASCII characters to the credit card networks. Therefore, CyberSource through VisaNet replaces non-ASCII characters with meaningless ASCII characters for transmission to the credit card networks.  **Important** It is your responsibility to determine whether a field is required for the transaction you are requesting.  #### Invoicing Email address for the customer for sending the invoice. If the invoice is in SENT status and email is updated, the old email customer payment link won't work and you must resend the invoice with the new payment link.  #### Chase Paymentech Solutions Optional field.  ####  Credit Mutuel-CIC Optional field.  #### OmniPay Direct Optional field.  #### SIX Optional field.  #### TSYS Acquiring Solutions Required when `processingInformation.billPaymentOptions.billPayment=true` and `pointOfSaleInformation.entryMode=keyed`.  #### Worldpay VAP Optional field.  #### All other processors Not used. 
 
         :param email: The email of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")
 
         self._email = email
 
@@ -352,8 +340,6 @@ class Riskv1authenticationsOrderInformationBillTo(object):
         :param postal_code: The postal_code of this Riskv1authenticationsOrderInformationBillTo.
         :type: str
         """
-        if postal_code is None:
-            raise ValueError("Invalid value for `postal_code`, must not be `None`")
 
         self._postal_code = postal_code
 

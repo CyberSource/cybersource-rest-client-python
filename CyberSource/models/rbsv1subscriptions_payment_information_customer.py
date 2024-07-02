@@ -66,8 +66,6 @@ class Rbsv1subscriptionsPaymentInformationCustomer(object):
         :param id: The id of this Rbsv1subscriptionsPaymentInformationCustomer.
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")
 
         self._id = id
 

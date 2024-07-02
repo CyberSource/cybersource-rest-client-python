@@ -31,6 +31,7 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
     """
     swagger_types = {
         'type': 'str',
+        'source': 'str',
         'state': 'str',
         'enrollment_id': 'str',
         'token_reference_id': 'str',
@@ -44,6 +45,7 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
 
     attribute_map = {
         'type': 'type',
+        'source': 'source',
         'state': 'state',
         'enrollment_id': 'enrollmentId',
         'token_reference_id': 'tokenReferenceId',
@@ -55,12 +57,13 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         'card': 'card'
     }
 
-    def __init__(self, type=None, state=None, enrollment_id=None, token_reference_id=None, reason=None, number=None, expiration_month=None, expiration_year=None, cryptogram=None, card=None):
+    def __init__(self, type=None, source=None, state=None, enrollment_id=None, token_reference_id=None, reason=None, number=None, expiration_month=None, expiration_year=None, cryptogram=None, card=None):
         """
         TmsEmbeddedInstrumentIdentifierTokenizedCard - a model defined in Swagger
         """
 
         self._type = None
+        self._source = None
         self._state = None
         self._enrollment_id = None
         self._token_reference_id = None
@@ -73,6 +76,8 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
 
         if type is not None:
           self.type = type
+        if source is not None:
+          self.source = source
         if state is not None:
           self.state = state
         if enrollment_id is not None:
@@ -114,6 +119,29 @@ class TmsEmbeddedInstrumentIdentifierTokenizedCard(object):
         """
 
         self._type = type
+
+    @property
+    def source(self):
+        """
+        Gets the source of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
+        This enumeration value indicates the origin of the payment instrument (PAN) and the technique employed to supply the payment instrument data. Possible Values: - TOKEN - ISSUER - ONFILE 
+
+        :return: The source of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """
+        Sets the source of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
+        This enumeration value indicates the origin of the payment instrument (PAN) and the technique employed to supply the payment instrument data. Possible Values: - TOKEN - ISSUER - ONFILE 
+
+        :param source: The source of this TmsEmbeddedInstrumentIdentifierTokenizedCard.
+        :type: str
+        """
+
+        self._source = source
 
     @property
     def state(self):

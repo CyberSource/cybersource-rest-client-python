@@ -104,8 +104,6 @@ class ECheckConfigUnderwriting(object):
         :param standard_entry_class_codes: The standard_entry_class_codes of this ECheckConfigUnderwriting.
         :type: str
         """
-        if standard_entry_class_codes is None:
-            raise ValueError("Invalid value for `standard_entry_class_codes`, must not be `None`")
 
         self._standard_entry_class_codes = standard_entry_class_codes
 
@@ -129,8 +127,6 @@ class ECheckConfigUnderwriting(object):
         :param enable_hold: The enable_hold of this ECheckConfigUnderwriting.
         :type: bool
         """
-        if enable_hold is None:
-            raise ValueError("Invalid value for `enable_hold`, must not be `None`")
 
         self._enable_hold = enable_hold
 
@@ -154,8 +150,6 @@ class ECheckConfigUnderwriting(object):
         :param monthly_total_transaction_amount_limit: The monthly_total_transaction_amount_limit of this ECheckConfigUnderwriting.
         :type: float
         """
-        if monthly_total_transaction_amount_limit is None:
-            raise ValueError("Invalid value for `monthly_total_transaction_amount_limit`, must not be `None`")
 
         self._monthly_total_transaction_amount_limit = monthly_total_transaction_amount_limit
 
@@ -179,8 +173,6 @@ class ECheckConfigUnderwriting(object):
         :param holding_days: The holding_days of this ECheckConfigUnderwriting.
         :type: float
         """
-        if holding_days is None:
-            raise ValueError("Invalid value for `holding_days`, must not be `None`")
 
         self._holding_days = holding_days
 
@@ -227,8 +219,6 @@ class ECheckConfigUnderwriting(object):
         :param transaction_amount_limit: The transaction_amount_limit of this ECheckConfigUnderwriting.
         :type: float
         """
-        if transaction_amount_limit is None:
-            raise ValueError("Invalid value for `transaction_amount_limit`, must not be `None`")
 
         self._transaction_amount_limit = transaction_amount_limit
 
@@ -252,8 +242,6 @@ class ECheckConfigUnderwriting(object):
         :param risk_reserve_method: The risk_reserve_method of this ECheckConfigUnderwriting.
         :type: str
         """
-        if risk_reserve_method is None:
-            raise ValueError("Invalid value for `risk_reserve_method`, must not be `None`")
 
         self._risk_reserve_method = risk_reserve_method
 
@@ -277,8 +265,6 @@ class ECheckConfigUnderwriting(object):
         :param risk_reserve_rate: The risk_reserve_rate of this ECheckConfigUnderwriting.
         :type: float
         """
-        if risk_reserve_rate is None:
-            raise ValueError("Invalid value for `risk_reserve_rate`, must not be `None`")
 
         self._risk_reserve_rate = risk_reserve_rate
 
@@ -302,8 +288,6 @@ class ECheckConfigUnderwriting(object):
         :param risk_reserve_target_amount: The risk_reserve_target_amount of this ECheckConfigUnderwriting.
         :type: float
         """
-        if risk_reserve_target_amount is None:
-            raise ValueError("Invalid value for `risk_reserve_target_amount`, must not be `None`")
 
         self._risk_reserve_target_amount = risk_reserve_target_amount
 

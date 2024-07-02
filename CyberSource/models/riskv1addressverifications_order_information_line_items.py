@@ -91,8 +91,6 @@ class Riskv1addressverificationsOrderInformationLineItems(object):
         :param unit_price: The unit_price of this Riskv1addressverificationsOrderInformationLineItems.
         :type: str
         """
-        if unit_price is None:
-            raise ValueError("Invalid value for `unit_price`, must not be `None`")
 
         self._unit_price = unit_price
 

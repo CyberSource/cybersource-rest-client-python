@@ -99,7 +99,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def security_code(self):
         """
         Gets the security_code of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        3-digit value that indicates the card Cvv2Value. Values can be 0-9.  This field is supported in Mastercard Send. 
+        3-digit value that indicates the card Cvv2Value. Values can be 0-9. 
 
         :return: The security_code of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -110,7 +110,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def security_code(self, security_code):
         """
         Sets the security_code of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        3-digit value that indicates the card Cvv2Value. Values can be 0-9.  This field is supported in Mastercard Send. 
+        3-digit value that indicates the card Cvv2Value. Values can be 0-9. 
 
         :param security_code: The security_code of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
@@ -122,7 +122,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def source_account_type(self):
         """
         Gets the source_account_type of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  Valid values for Visa Platform Connect: - `CHECKING`: Checking account - `CREDIT`: Credit card account - `SAVING`: Saving account - `LINE_OF_CREDIT`: Line of credit or credit portion of combo card - `PREPAID`: Prepaid card account or prepaid portion of combo card - `UNIVERSAL`: Universal account  Valid values for Mastercard Send: - `00`: Other, - `01`: RTN + Bank Account, - `02`: IBAN, - `03`: Card Account, - `04`: Email, - `05`: Phone Number, - `06`: Bank account number (BAN) + Bank Identification Сode (BIC), - `07`: Wallet ID, - `08`: Social Network ID. Numeric, 2 characters.  This field is supported in Mastercard Send. 
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process. 
 
         :return: The source_account_type of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -133,7 +133,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def source_account_type(self, source_account_type):
         """
         Sets the source_account_type of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  Valid values for Visa Platform Connect: - `CHECKING`: Checking account - `CREDIT`: Credit card account - `SAVING`: Saving account - `LINE_OF_CREDIT`: Line of credit or credit portion of combo card - `PREPAID`: Prepaid card account or prepaid portion of combo card - `UNIVERSAL`: Universal account  Valid values for Mastercard Send: - `00`: Other, - `01`: RTN + Bank Account, - `02`: IBAN, - `03`: Card Account, - `04`: Email, - `05`: Phone Number, - `06`: Bank account number (BAN) + Bank Identification Сode (BIC), - `07`: Wallet ID, - `08`: Social Network ID. Numeric, 2 characters.  This field is supported in Mastercard Send. 
+        Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process. 
 
         :param source_account_type: The source_account_type of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
@@ -145,7 +145,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def number(self):
         """
         Gets the number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        The customer's payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). 
 
         :return: The number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -156,7 +156,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def number(self, number):
         """
         Sets the number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        The customer's payment card number, also known as the Primary Account Number (PAN).  This field is supported in Mastercard Send. 
+        The customer's payment card number, also known as the Primary Account Number (PAN). 
 
         :param number: The number of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
@@ -168,7 +168,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def expiration_month(self):
         """
         Gets the expiration_month of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Two-digit month in which the payment card expires.  Format: MM.  Valid values: 01 through 12. Leading 0 is required.  This field is supported for Mastercard Send. 
+        Two-digit month in which the payment card expires.  Format: MM.  Valid values: 01 through 12. Leading 0 is required. 
 
         :return: The expiration_month of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -179,7 +179,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Two-digit month in which the payment card expires.  Format: MM.  Valid values: 01 through 12. Leading 0 is required.  This field is supported for Mastercard Send. 
+        Two-digit month in which the payment card expires.  Format: MM.  Valid values: 01 through 12. Leading 0 is required. 
 
         :param expiration_month: The expiration_month of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str
@@ -191,7 +191,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Four-digit year in which the payment card expires.  This field is supported for Mastercard Send. 
+        Four-digit year in which the payment card expires. 
 
         :return: The expiration_year of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :rtype: str
@@ -202,7 +202,7 @@ class Ptsv1pushfundstransferSenderInformationPaymentInformationCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
-        Four-digit year in which the payment card expires.  This field is supported for Mastercard Send. 
+        Four-digit year in which the payment card expires. 
 
         :param expiration_year: The expiration_year of this Ptsv1pushfundstransferSenderInformationPaymentInformationCard.
         :type: str

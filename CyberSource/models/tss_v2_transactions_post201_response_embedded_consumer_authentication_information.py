@@ -61,7 +61,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def xid(self):
         """
         Gets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Transaction identifier. 
 
         :return: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :rtype: str
@@ -72,7 +72,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def xid(self, xid):
         """
         Sets the xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Transaction identifier.  For details, see `xid` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Transaction identifier. 
 
         :param xid: The xid of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str
@@ -107,7 +107,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def eci_raw(self):
         """
         Gets the eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Raw electronic commerce indicator (ECI). 
 
         :return: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :rtype: str
@@ -118,7 +118,7 @@ class TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation(
     def eci_raw(self, eci_raw):
         """
         Sets the eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
-        Raw electronic commerce indicator (ECI).  For details, see `eci_raw` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Raw electronic commerce indicator (ECI). 
 
         :param eci_raw: The eci_raw of this TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation.
         :type: str

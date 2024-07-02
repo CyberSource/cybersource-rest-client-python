@@ -126,8 +126,6 @@ class PostRegistrationBody(object):
         :param organization_information: The organization_information of this PostRegistrationBody.
         :type: Boardingv1registrationsOrganizationInformation
         """
-        if organization_information is None:
-            raise ValueError("Invalid value for `organization_information`, must not be `None`")
 
         self._organization_information = organization_information
 

@@ -40,7 +40,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         'locality': 'str',
         'administrative_area': 'str',
         'country': 'str',
-        'vat_registration_number': 'str',
         'date_of_birth': 'str',
         'phone_number': 'str',
         'payment_information': 'Ptsv1pushfundstransferSenderInformationPaymentInformation',
@@ -60,7 +59,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
         'country': 'country',
-        'vat_registration_number': 'vatRegistrationNumber',
         'date_of_birth': 'dateOfBirth',
         'phone_number': 'phoneNumber',
         'payment_information': 'paymentInformation',
@@ -69,7 +67,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
         'personal_identification': 'personalIdentification'
     }
 
-    def __init__(self, name=None, first_name=None, last_name=None, middle_name=None, postal_code=None, address1=None, address2=None, locality=None, administrative_area=None, country=None, vat_registration_number=None, date_of_birth=None, phone_number=None, payment_information=None, reference_number=None, account=None, personal_identification=None):
+    def __init__(self, name=None, first_name=None, last_name=None, middle_name=None, postal_code=None, address1=None, address2=None, locality=None, administrative_area=None, country=None, date_of_birth=None, phone_number=None, payment_information=None, reference_number=None, account=None, personal_identification=None):
         """
         Ptsv1pushfundstransferSenderInformation - a model defined in Swagger
         """
@@ -84,7 +82,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
         self._locality = None
         self._administrative_area = None
         self._country = None
-        self._vat_registration_number = None
         self._date_of_birth = None
         self._phone_number = None
         self._payment_information = None
@@ -112,8 +109,6 @@ class Ptsv1pushfundstransferSenderInformation(object):
           self.administrative_area = administrative_area
         if country is not None:
           self.country = country
-        if vat_registration_number is not None:
-          self.vat_registration_number = vat_registration_number
         if date_of_birth is not None:
           self.date_of_birth = date_of_birth
         if phone_number is not None:
@@ -154,7 +149,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def first_name(self):
         """
         Gets the first_name of this Ptsv1pushfundstransferSenderInformation.
-        This field contains the first name of the entity funding the transaction. 
+        This field contains the first name of the entity funding the transaction Mandatory for card payments 
 
         :return: The first_name of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -165,7 +160,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ptsv1pushfundstransferSenderInformation.
-        This field contains the first name of the entity funding the transaction. 
+        This field contains the first name of the entity funding the transaction Mandatory for card payments 
 
         :param first_name: The first_name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -177,7 +172,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def last_name(self):
         """
         Gets the last_name of this Ptsv1pushfundstransferSenderInformation.
-        This field contains the last name of the entity funding the transaction. 
+        This field contains the last name of the entity funding the transaction Mandatory for card payments 
 
         :return: The last_name of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -188,7 +183,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ptsv1pushfundstransferSenderInformation.
-        This field contains the last name of the entity funding the transaction. 
+        This field contains the last name of the entity funding the transaction Mandatory for card payments 
 
         :param last_name: The last_name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -200,7 +195,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv1pushfundstransferSenderInformation.
-        Supported only for Mastercard  transactions. This field contains the  middle name of the entity funding the transaction 
+        This field contains the  middle name of the entity funding the transaction 
 
         :return: The middle_name of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -211,7 +206,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv1pushfundstransferSenderInformation.
-        Supported only for Mastercard  transactions. This field contains the  middle name of the entity funding the transaction 
+        This field contains the  middle name of the entity funding the transaction 
 
         :param middle_name: The middle_name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -246,7 +241,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv1pushfundstransferSenderInformation.
-        Street address of sender.  Funds Disbursement  This value is the address of the originator sending the funds disbursement.  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT. 
+        Street address of sender.  Funds Disbursement  This value is the address of the originator sending the funds disbursement.  Required for card transactions 
 
         :return: The address1 of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -257,7 +252,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv1pushfundstransferSenderInformation.
-        Street address of sender.  Funds Disbursement  This value is the address of the originator sending the funds disbursement.  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT. 
+        Street address of sender.  Funds Disbursement  This value is the address of the originator sending the funds disbursement.  Required for card transactions 
 
         :param address1: The address1 of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -269,7 +264,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def address2(self):
         """
         Gets the address2 of this Ptsv1pushfundstransferSenderInformation.
-        Used for additional address information. For example: Attention: Accounts Payable Optional field.  This field is supported for only Mastercard Send. 
+        Used for additional address information. For example: Attention: Accounts Payable  Optional field. 
 
         :return: The address2 of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -280,7 +275,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def address2(self, address2):
         """
         Sets the address2 of this Ptsv1pushfundstransferSenderInformation.
-        Used for additional address information. For example: Attention: Accounts Payable Optional field.  This field is supported for only Mastercard Send. 
+        Used for additional address information. For example: Attention: Accounts Payable  Optional field. 
 
         :param address2: The address2 of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -292,7 +287,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def locality(self):
         """
         Gets the locality of this Ptsv1pushfundstransferSenderInformation.
-        The sender's city  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT. 
+        The sender's city Mandatory for card payments 
 
         :return: The locality of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -303,7 +298,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv1pushfundstransferSenderInformation.
-        The sender's city  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT. 
+        The sender's city Mandatory for card payments 
 
         :param locality: The locality of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -315,7 +310,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv1pushfundstransferSenderInformation.
-        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
+        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Mandatory for card payments 
 
         :return: The administrative_area of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -326,7 +321,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv1pushfundstransferSenderInformation.
-        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf 
+        Sender's state. Use the State, Province, and Territory Codes for the United States and Canada.The sender's province, state or territory. Conditional, required if sender's country is USA or CAN. Must be uppercase alpha 2 or 3 character country subdivision code.  See https://developer.cybersource.com/library/documentation/sbc/quickref/states_and_provinces.pdf  Mandatory for card payments 
 
         :param administrative_area: The administrative_area of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -338,7 +333,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def country(self):
         """
         Gets the country of this Ptsv1pushfundstransferSenderInformation.
-        Sender's country code. Use ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT.  Required for Mastercard Send 
+        Sender's country code. Use ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf 
 
         :return: The country of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -349,36 +344,13 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def country(self, country):
         """
         Sets the country of this Ptsv1pushfundstransferSenderInformation.
-        Sender's country code. Use ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf  Visa Platform Connect Required for transactions using business application id of AA, BI, PP, and WT.  Required for Mastercard Send 
+        Sender's country code. Use ISO Standard Alpha Country Codes.  https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf 
 
         :param country: The country of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
 
         self._country = country
-
-    @property
-    def vat_registration_number(self):
-        """
-        Gets the vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
-        Customer's government-assigned tax identification number. 
-
-        :return: The vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
-        :rtype: str
-        """
-        return self._vat_registration_number
-
-    @vat_registration_number.setter
-    def vat_registration_number(self, vat_registration_number):
-        """
-        Sets the vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
-        Customer's government-assigned tax identification number. 
-
-        :param vat_registration_number: The vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
-        :type: str
-        """
-
-        self._vat_registration_number = vat_registration_number
 
     @property
     def date_of_birth(self):

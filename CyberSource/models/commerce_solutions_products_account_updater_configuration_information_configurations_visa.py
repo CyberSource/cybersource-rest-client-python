@@ -75,8 +75,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param merchant_id: The merchant_id of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsVisa.
         :type: str
         """
-        if merchant_id is None:
-            raise ValueError("Invalid value for `merchant_id`, must not be `None`")
 
         self._merchant_id = merchant_id
 
@@ -100,8 +98,6 @@ class CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurati
         :param segment_id: The segment_id of this CommerceSolutionsProductsAccountUpdaterConfigurationInformationConfigurationsVisa.
         :type: str
         """
-        if segment_id is None:
-            raise ValueError("Invalid value for `segment_id`, must not be `None`")
 
         self._segment_id = segment_id
 

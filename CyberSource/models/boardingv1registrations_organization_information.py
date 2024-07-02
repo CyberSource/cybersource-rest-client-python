@@ -104,8 +104,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param organization_id: The organization_id of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        if organization_id is not None and not re.search('^[0-9a-zA-Z_]+$', organization_id):
-            raise ValueError("Invalid value for `organization_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
 
         self._organization_id = organization_id
 
@@ -129,8 +127,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param parent_organization_id: The parent_organization_id of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        if parent_organization_id is not None and not re.search('^[0-9a-zA-Z_]+$', parent_organization_id):
-            raise ValueError("Invalid value for `parent_organization_id`, must be a follow pattern or equal to `/^[0-9a-zA-Z_]+$/`")
 
         self._parent_organization_id = parent_organization_id
 
@@ -254,8 +250,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param business_information: The business_information of this Boardingv1registrationsOrganizationInformation.
         :type: Boardingv1registrationsOrganizationInformationBusinessInformation
         """
-        if business_information is None:
-            raise ValueError("Invalid value for `business_information`, must not be `None`")
 
         self._business_information = business_information
 
