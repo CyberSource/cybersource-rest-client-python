@@ -28,7 +28,7 @@ runs:
         if [[ "${{inputs.lang}}" == "dotnet" ]] || [[ "${{inputs.lang}}" == "dotnetstandard" ]]; then
           export EXPECTED_RES_LANG=csharp
         fi
-        echo EXPECTED_RES_LANG
+        echo $EXPECTED_RES_LANG
         python --version
         echo "Before Running Report Generation"
         cd ${{inputs.sample-folder-name}}
