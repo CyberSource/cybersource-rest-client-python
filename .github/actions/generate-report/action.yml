@@ -28,6 +28,7 @@ runs:
         if [[ "${{inputs.lang}}" == "dotnet" ]] || [[ "${{inputs.lang}}" == "dotnetstandard" ]]; then
           export EXPECTED_RES_LANG=csharp
         fi
+        echo EXPECTED_RES_LANG
         python --version
         echo "Before Running Report Generation"
         cd ${{inputs.sample-folder-name}}
@@ -36,7 +37,7 @@ runs:
         pip install xhtml2pdf
         pip install bs4
         cd Validation
-        python sample_code_log_processor.py -l ../../${{inputs.sample-folder-name}}/{{inputs.log-file-name}} -o ../../${{inputs.sample-folder-name}}/${{inputs.lang}}_actual_results.json
+        python sample_code_log_processor.py -l ../../${{inputs.sample-folder-name}}/${{inputs.log-file-name}} -o ../../${{inputs.sample-folder-name}}/${{inputs.lang}}_actual_results.json
         python response_code_validator.py -e ExpectedResults/${EXPECTED_RES_LANG}_expected_results.json -a ../../${{inputs.sample-folder-name}}/${{inputs.lang}}_actual_results.json -o ${{inputs.lang}}_validation_results.json
         python json_to_prettified_html.py -i ${{inputs.lang}}_validation_results.json -o ${{inputs.lang}}_validation_results.html
         cp ${{inputs.lang}}_validation_results.pdf ../  #copying the file to flaatten the directory of the upload artifact,Github Actions doesn't support that as of jun 2024
