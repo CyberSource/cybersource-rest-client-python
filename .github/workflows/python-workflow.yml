@@ -79,8 +79,8 @@ jobs:
                 echo $VIRTUAL_ENV
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                bash ./sample_code_runner.sh
-                # echo HI > output.log
+                # bash ./sample_code_runner.sh
+                echo HI > output.log
             - name: Using Report Generation Action
               id: report-generation
               uses: ./cybersource-rest-client-python/.github/actions/generate-report

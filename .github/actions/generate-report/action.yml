@@ -33,6 +33,17 @@ runs:
         echo "Before Running Report Generation"
         cd ${{inputs.sample-folder-name}}
         python -m pip install --upgrade pip
+        python -m venv newve
+        if [[ "$(uname -s)" == "Linux" ]]; then
+            echo "In LINUX"
+            source newve/bin/activate
+        elif [[ "$(uname -s)" == "Darwin" ]]; then
+            echo "In MAC"
+            source newve/bin/activate
+        else
+            echo "In Windows"
+            source newve/Scripts/activate
+        fi
         pip install json2html
         pip install xhtml2pdf
         pip install bs4
