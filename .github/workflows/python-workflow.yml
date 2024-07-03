@@ -71,19 +71,14 @@ jobs:
                 else
                     echo "In Windows"
                     source ve/Scripts/activate
-                    # version=$(python3 --version 2>&1 | awk '{print $2}')
-                    # if [[ $version == 3.7.* ]]; then
-                    #   pip install cryptography==41.0.7
-                    # fi
-                    # # check if python version is 3.7 then "pip install cryptography==41.0.7"
                 fi
                 echo $VIRTUAL_ENV
                 cd $CLIENT_FOLDER
-                pip install -e .
+                # pip install -e .
                 cd ..
                 echo $VIRTUAL_ENV
                 cd $SAMPLE_FOLDER
-                pip install -e .
+                # pip install -e .
                 #bash ./sample_code_runner.sh
                 echo HI > output.log
             - name: Using Report Generation Action

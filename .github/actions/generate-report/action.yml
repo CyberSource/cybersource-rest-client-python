@@ -24,9 +24,9 @@ runs:
     - name: Installing required python libraries and running the python programs to generate pdf report
       id: generate
       run : |
-        export EXPECTED_RES_LANG = ${{inputs.lang}}
+        export EXPECTED_RES_LANG=${{inputs.lang}}
         if[(${{inputs.lang}} == 'dotnet') || (${{inputs.lang}} == 'dotnetstandard')] then;
-          export EXPECTED_RES_LANG = csharp
+          export EXPECTED_RES_LANG=csharp
         fi
         python --version
         echo "Before Running Report Generation"
