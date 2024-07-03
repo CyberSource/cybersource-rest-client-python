@@ -87,7 +87,7 @@ jobs:
                 # bash ./sample_code_runner.sh
                 echo $VIRTUAL_ENV
             - name: Using Custom Action
-              uses: ${{env.CLIENT_FOLDER}}/.github/actions/generate-report
+              uses: ./cybersource-rest-client-python/.github/actions/generate-report
             # - name: Setup Python v3.12 for report generation only
             #   uses: actions/setup-python@v5
             #   with:
