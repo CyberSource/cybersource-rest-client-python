@@ -79,11 +79,11 @@ jobs:
                 echo $VIRTUAL_ENV
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                # bash ./sample_code_runner.sh
-                echo HI > output.log
+                bash ./sample_code_runner.sh
+                # echo HI > output.log
             - name: Using Report Generation Action
               id: report-generation
-              uses: ./cybersource-rest-client-python/.github/actions/generate-report
+              uses: .//.github/actions/generate-report
               with:
                 lang: dotnet
                 sample-folder-name: ${{env.SAMPLE_FOLDER}}
@@ -91,7 +91,7 @@ jobs:
             - name: Upload Test Reports
               uses: actions/upload-artifact@v4
               with:
-                name: log-files-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}} 
+                name: sample-run-report-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
                 path: |
                   ${{env.SAMPLE_FOLDER}}/${{steps.report-generation.outputs.result-pdf-name}}
             # - name: Setup Python v3.12 for report generation only
