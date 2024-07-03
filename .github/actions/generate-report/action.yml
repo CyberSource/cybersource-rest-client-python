@@ -13,7 +13,7 @@ inputs:
 outputs:
   result-pdf-name:
     description: 'the name of the final generated pdf report'
-    value: {steps.generate.outputs.pdfname}
+    value: ${{steps.generate.outputs.pdfname}}
 runs:
   using: 'composite'
   steps:

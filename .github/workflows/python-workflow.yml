@@ -87,6 +87,7 @@ jobs:
                 #bash ./sample_code_runner.sh
                 echo HI > output.log
             - name: Using Report Generation Action
+              id: report-generation
               uses: ./cybersource-rest-client-python/.github/actions/generate-report
               with:
                 lang: python
