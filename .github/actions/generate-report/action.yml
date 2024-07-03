@@ -44,6 +44,7 @@ runs:
             echo "In Windows"
             source newve/Scripts/activate
         fi
+        echo $VIRTUAL_ENV
         pip install json2html
         pip install xhtml2pdf
         pip install bs4
