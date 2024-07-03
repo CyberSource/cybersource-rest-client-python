@@ -85,9 +85,12 @@ jobs:
                 cd $SAMPLE_FOLDER
                 pip install -e .
                 # bash ./sample_code_runner.sh
+                echo HI > output.log
                 echo $VIRTUAL_ENV
             - name: Using Custom Action
               uses: ./cybersource-rest-client-python/.github/actions/generate-report
+              with:
+                lang: python
             # - name: Setup Python v3.12 for report generation only
             #   uses: actions/setup-python@v5
             #   with:
