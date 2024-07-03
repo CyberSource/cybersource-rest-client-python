@@ -85,7 +85,7 @@ jobs:
               id: report-generation
               uses: ./cybersource-rest-client-python/.github/actions/generate-report
               with:
-                lang: dotnet
+                lang: python
                 sample-folder-name: ${{env.SAMPLE_FOLDER}}
                 log-file-name: output.log
             - name: Upload Test Reports
