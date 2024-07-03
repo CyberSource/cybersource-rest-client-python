@@ -74,18 +74,18 @@ jobs:
                 fi
                 echo $VIRTUAL_ENV
                 cd $CLIENT_FOLDER
-                # pip install -e .
+                pip install -e .
                 cd ..
                 echo $VIRTUAL_ENV
                 cd $SAMPLE_FOLDER
-                # pip install -e .
-                #bash ./sample_code_runner.sh
+                pip install -e .
+                bash ./sample_code_runner.sh
                 echo HI > output.log
             - name: Using Report Generation Action
               id: report-generation
               uses: ./cybersource-rest-client-python/.github/actions/generate-report
               with:
-                lang: python
+                lang: dotnet
                 sample-folder-name: ${{env.SAMPLE_FOLDER}}
                 log-file-name: output.log
             - name: Upload Test Reports
