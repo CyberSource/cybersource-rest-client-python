@@ -83,7 +83,7 @@ jobs:
                 # echo HI > output.log
             - name: Using Report Generation Action
               id: report-generation
-              uses: .//.github/actions/generate-report
+              uses: ./cybersource-rest-client-python/.github/actions/generate-report
               with:
                 lang: dotnet
                 sample-folder-name: ${{env.SAMPLE_FOLDER}}
@@ -94,32 +94,3 @@ jobs:
                 name: sample-run-report-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
                 path: |
                   ${{env.SAMPLE_FOLDER}}/${{steps.report-generation.outputs.result-pdf-name}}
-            # - name: Setup Python v3.12 for report generation only
-            #   uses: actions/setup-python@v5
-            #   with:
-            #     python-version: 3.12
-            # - name: Installing required python libraries and running the python programs to generate pdf report
-            #   run : |
-            #     python --version
-            #     echo $VIRTUAL_ENV
-            #     echo "Before Running Report Generation"
-            #     echo "PWD" 
-            #     pwd
-            #     cd $SAMPLE_FOLDER
-            #     python -m pip install --upgrade pip
-            #     pip install json2html
-            #     pip install xhtml2pdf
-            #     pip install bs4
-            #     cd Validation
-            #     python sample_code_log_processor.py -l ../../$SAMPLE_FOLDER/output.log -o ../../$SAMPLE_FOLDER/python_actual_results.json
-            #     python response_code_validator.py -e ExpectedResults/python_expected_results.json -a ../../$SAMPLE_FOLDER/python_actual_results.json -o python_validation_results.json
-            #     python json_to_prettified_html.py -i python_validation_results.json -o python_validation_results.html
-            #     cp python_validation_results.pdf ../  #copying the file to flaatten the directory of the upload artifact,Github Actions doesn't support that as of jun 2024
-            # - name: Upload Test Reports
-            #   uses: actions/upload-artifact@v4
-            #   with:
-            #     name: log-files-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
-            #     path: |
-            #       ${{env.SAMPLE_FOLDER}}/python_validation_results.pdf
-
-# Adding comment 
