@@ -66,8 +66,6 @@ class CaseManagementCommentsRequest(object):
         :param comments: The comments of this CaseManagementCommentsRequest.
         :type: str
         """
-        if comments is None:
-            raise ValueError("Invalid value for `comments`, must not be `None`")
 
         self._comments = comments
 

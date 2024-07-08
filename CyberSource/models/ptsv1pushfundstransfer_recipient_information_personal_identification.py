@@ -31,32 +31,37 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     """
     swagger_types = {
         'id': 'str',
-        'type': 'str'
+        'type': 'str',
+        'issuing_country': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'type': 'type'
+        'type': 'type',
+        'issuing_country': 'issuingCountry'
     }
 
-    def __init__(self, id=None, type=None):
+    def __init__(self, id=None, type=None, issuing_country=None):
         """
         Ptsv1pushfundstransferRecipientInformationPersonalIdentification - a model defined in Swagger
         """
 
         self._id = None
         self._type = None
+        self._issuing_country = None
 
         if id is not None:
           self.id = id
         if type is not None:
           self.type = type
+        if issuing_country is not None:
+          self.issuing_country = issuing_country
 
     @property
     def id(self):
         """
         Gets the id of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        The ID number/value.  Visa Platform Connect This tag will contain an acquirer-populated value associated with the API : senderInformation.personalIdType which will identify the personal ID type of the sender.  Mastercard Send(80) 
+        The ID number/value. Processor(35) 
 
         :return: The id of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :rtype: str
@@ -67,7 +72,7 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     def id(self, id):
         """
         Sets the id of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        The ID number/value.  Visa Platform Connect This tag will contain an acquirer-populated value associated with the API : senderInformation.personalIdType which will identify the personal ID type of the sender.  Mastercard Send(80) 
+        The ID number/value. Processor(35) 
 
         :param id: The id of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :type: str
@@ -79,7 +84,7 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     def type(self):
         """
         Gets the type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        This tag will contain the type of sender identification. The valid values are:  Visa Platform Connect: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number)  Mastercard Send: - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `EIDN`: (Employer Identification Number) - `IDNB`: (Identity Card Number) 
+        This tag will contain the type of sender identification. 
 
         :return: The type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :rtype: str
@@ -90,13 +95,36 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     def type(self, type):
         """
         Sets the type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        This tag will contain the type of sender identification. The valid values are:  Visa Platform Connect: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number)  Mastercard Send: - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `EIDN`: (Employer Identification Number) - `IDNB`: (Identity Card Number) 
+        This tag will contain the type of sender identification. 
 
         :param type: The type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :type: str
         """
 
         self._type = type
+
+    @property
+    def issuing_country(self):
+        """
+        Gets the issuing_country of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        Issuing country of the identification. The field format should be a 2 character ISO 3166-1 alpha-2 country code. 
+
+        :return: The issuing_country of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        :rtype: str
+        """
+        return self._issuing_country
+
+    @issuing_country.setter
+    def issuing_country(self, issuing_country):
+        """
+        Sets the issuing_country of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        Issuing country of the identification. The field format should be a 2 character ISO 3166-1 alpha-2 country code. 
+
+        :param issuing_country: The issuing_country of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        :type: str
+        """
+
+        self._issuing_country = issuing_country
 
     def to_dict(self):
         """

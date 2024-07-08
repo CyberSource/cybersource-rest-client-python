@@ -134,10 +134,6 @@ class PurchaseAndRefundDetailsApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `end_time` when calling `get_purchase_and_refund_details`")
             raise ValueError("Missing the required parameter `end_time` when calling `get_purchase_and_refund_details`")
 
-        if 'organization_id' in params and not re.search('[a-zA-Z0-9-_]+', params['organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
-            raise ValueError("Invalid value for parameter `organization_id` when calling `get_purchase_and_refund_details`, must conform to the pattern `/[a-zA-Z0-9-_]+/`")
 
         collection_formats = {}
 

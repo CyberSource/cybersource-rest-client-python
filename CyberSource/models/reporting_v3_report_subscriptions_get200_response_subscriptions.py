@@ -247,8 +247,6 @@ class ReportingV3ReportSubscriptionsGet200ResponseSubscriptions(object):
         :param report_interval: The report_interval of this ReportingV3ReportSubscriptionsGet200ResponseSubscriptions.
         :type: str
         """
-        if report_interval is not None and not re.search('^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$', report_interval):
-            raise ValueError("Invalid value for `report_interval`, must be a follow pattern or equal to `/^PT((([1-9]|1[0-9]|2[0-3])H(([1-9]|[1-4][0-9]|5[0-9])M)?)|((([1-9]|1[0-9]|2[0-3])H)?([1-9]|[1-4][0-9]|5[0-9])M))$/`")
 
         self._report_interval = report_interval
 

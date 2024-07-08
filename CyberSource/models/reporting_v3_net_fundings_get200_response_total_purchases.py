@@ -70,8 +70,6 @@ class ReportingV3NetFundingsGet200ResponseTotalPurchases(object):
         :param currency: The currency of this ReportingV3NetFundingsGet200ResponseTotalPurchases.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
 
         self._currency = currency
 
@@ -93,8 +91,6 @@ class ReportingV3NetFundingsGet200ResponseTotalPurchases(object):
         :param value: The value of this ReportingV3NetFundingsGet200ResponseTotalPurchases.
         :type: str
         """
-        if value is None:
-            raise ValueError("Invalid value for `value`, must not be `None`")
 
         self._value = value
 

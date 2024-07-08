@@ -168,7 +168,7 @@ class TransactionBatchesApi(object):
     def get_transaction_batch_id(self, id, **kwargs):
         """
         Get Individual Batch File
-        Provide the search range
+        This API provides details like upload date, completion date, transaction count and accepted and rejected transaction count of the individual batch file using the batch id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -198,7 +198,7 @@ class TransactionBatchesApi(object):
     def get_transaction_batch_id_with_http_info(self, id, **kwargs):
         """
         Get Individual Batch File
-        Provide the search range
+        This API provides details like upload date, completion date, transaction count and accepted and rejected transaction count of the individual batch file using the batch id
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -281,7 +281,7 @@ class TransactionBatchesApi(object):
     def get_transaction_batches(self, start_time, end_time, **kwargs):
         """
         Get a List of Batch Files
-        Provide the search range
+        Provide the date and time search range to get a list of Batch Files ready for settlement
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -312,7 +312,7 @@ class TransactionBatchesApi(object):
     def get_transaction_batches_with_http_info(self, start_time, end_time, **kwargs):
         """
         Get a List of Batch Files
-        Provide the search range
+        Provide the date and time search range to get a list of Batch Files ready for settlement
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

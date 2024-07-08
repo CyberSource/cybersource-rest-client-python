@@ -76,10 +76,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_holder_name: The account_holder_name of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-        if account_holder_name is None:
-            raise ValueError("Invalid value for `account_holder_name`, must not be `None`")
-        if account_holder_name is not None and not re.search('^[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$', account_holder_name):
-            raise ValueError("Invalid value for `account_holder_name`, must be a follow pattern or equal to `/^[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$/`")
 
         self._account_holder_name = account_holder_name
 
@@ -101,8 +97,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_type: The account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-        if account_type is None:
-            raise ValueError("Invalid value for `account_type`, must not be `None`")
         allowed_values = ["checking", "savings", "corporatechecking", "corporatesavings"]
         if account_type not in allowed_values:
             raise ValueError(
@@ -130,10 +124,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_routing_number: The account_routing_number of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-        if account_routing_number is None:
-            raise ValueError("Invalid value for `account_routing_number`, must not be `None`")
-        if account_routing_number is not None and not re.search('\\d{9}', account_routing_number):
-            raise ValueError("Invalid value for `account_routing_number`, must be a follow pattern or equal to `/\\d{9}/`")
 
         self._account_routing_number = account_routing_number
 
@@ -155,10 +145,6 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
         :param account_number: The account_number of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-        if account_number is None:
-            raise ValueError("Invalid value for `account_number`, must not be `None`")
-        if account_number is not None and not re.search('^\\d{5,17}$', account_number):
-            raise ValueError("Invalid value for `account_number`, must be a follow pattern or equal to `/^\\d{5,17}$/`")
 
         self._account_number = account_number
 

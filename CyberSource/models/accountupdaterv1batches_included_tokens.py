@@ -74,8 +74,6 @@ class Accountupdaterv1batchesIncludedTokens(object):
         :param id: The id of this Accountupdaterv1batchesIncludedTokens.
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")
 
         self._id = id
 

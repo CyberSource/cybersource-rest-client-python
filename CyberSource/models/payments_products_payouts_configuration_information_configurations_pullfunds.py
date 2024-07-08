@@ -117,8 +117,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param acquiring_bin: The acquiring_bin of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: int
         """
-        if acquiring_bin is None:
-            raise ValueError("Invalid value for `acquiring_bin`, must not be `None`")
 
         self._acquiring_bin = acquiring_bin
 
@@ -165,8 +163,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param card_acceptor_id: The card_acceptor_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: str
         """
-        if card_acceptor_id is None:
-            raise ValueError("Invalid value for `card_acceptor_id`, must not be `None`")
 
         self._card_acceptor_id = card_acceptor_id
 
@@ -236,8 +232,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds(obj
         :param card_terminal_id: The card_terminal_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPullfunds.
         :type: str
         """
-        if card_terminal_id is None:
-            raise ValueError("Invalid value for `card_terminal_id`, must not be `None`")
 
         self._card_terminal_id = card_terminal_id
 

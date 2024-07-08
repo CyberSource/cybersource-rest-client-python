@@ -103,8 +103,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param acquirer_country_code: The acquirer_country_code of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: int
         """
-        if acquirer_country_code is None:
-            raise ValueError("Invalid value for `acquirer_country_code`, must not be `None`")
 
         self._acquirer_country_code = acquirer_country_code
 
@@ -128,8 +126,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param acquiring_bin: The acquiring_bin of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: int
         """
-        if acquiring_bin is None:
-            raise ValueError("Invalid value for `acquiring_bin`, must not be `None`")
 
         self._acquiring_bin = acquiring_bin
 
@@ -245,8 +241,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param originator_business_application_id: The originator_business_application_id of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: str
         """
-        if originator_business_application_id is None:
-            raise ValueError("Invalid value for `originator_business_application_id`, must not be `None`")
 
         self._originator_business_application_id = originator_business_application_id
 
@@ -293,8 +287,6 @@ class PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds(obj
         :param processor_account: The processor_account of this PaymentsProductsPayoutsConfigurationInformationConfigurationsPushfunds.
         :type: list[PaymentsProductsPayoutsConfigurationInformationConfigurationsProcessorAccount]
         """
-        if processor_account is None:
-            raise ValueError("Invalid value for `processor_account`, must not be `None`")
 
         self._processor_account = processor_account
 

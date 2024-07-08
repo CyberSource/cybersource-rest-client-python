@@ -91,8 +91,6 @@ class ECheckConfigCommonProcessors(object):
         :param company_entry_description: The company_entry_description of this ECheckConfigCommonProcessors.
         :type: str
         """
-        if company_entry_description is None:
-            raise ValueError("Invalid value for `company_entry_description`, must not be `None`")
 
         self._company_entry_description = company_entry_description
 

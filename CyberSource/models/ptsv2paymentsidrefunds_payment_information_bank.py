@@ -87,7 +87,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def routing_number(self):
         """
         Gets the routing_number of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        Bank routing number. This is also called the _transit number_.  For details, see `ecp_rdfi` request field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the _transit number_. 
 
         :return: The routing_number of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :rtype: str
@@ -98,7 +98,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def routing_number(self, routing_number):
         """
         Sets the routing_number of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        Bank routing number. This is also called the _transit number_.  For details, see `ecp_rdfi` request field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the _transit number_. 
 
         :param routing_number: The routing_number of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :type: str
@@ -110,7 +110,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def iban(self):
         """
         Gets the iban of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :return: The iban of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :rtype: str
@@ -121,7 +121,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def iban(self, iban):
         """
         Sets the iban of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_iban` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        International Bank Account Number (IBAN) for the bank account. For some countries you can provide this number instead of the traditional bank account information. You can use this field only when scoring a direct debit transaction. 
 
         :param iban: The iban of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :type: str
@@ -133,7 +133,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def swift_code(self):
         """
         Gets the swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions. 
 
         :return: The swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :rtype: str
@@ -144,7 +144,7 @@ class Ptsv2paymentsidrefundsPaymentInformationBank(object):
     def swift_code(self, swift_code):
         """
         Sets the swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
-        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions.  For all possible values, see the `bank_swiftcode` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Bank's SWIFT code. You can use this field only when scoring a direct debit transaction. Required only for crossborder transactions. 
 
         :param swift_code: The swift_code of this Ptsv2paymentsidrefundsPaymentInformationBank.
         :type: str

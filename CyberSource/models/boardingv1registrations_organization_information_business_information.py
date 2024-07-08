@@ -129,10 +129,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param name: The name of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
-        if name is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', name):
-            raise ValueError("Invalid value for `name`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
 
         self._name = name
 
@@ -154,8 +150,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param doing_business_as: The doing_business_as of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if doing_business_as is not None and not re.search('^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/\'&\\,\\(\\)!$;:?@\\#¡-￿]+$', doing_business_as):
-            raise ValueError("Invalid value for `doing_business_as`, must be a follow pattern or equal to `/^[0-9a-zA-Z _\\-\\+\\.\\*\\\"\/'&\\,\\(\\)!$;:?@\\#¡-￿]+$/`")
 
         self._doing_business_as = doing_business_as
 
@@ -177,8 +171,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param description: The description of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if description is not None and not re.search('[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿ\\n\\ra-zA-Z0-9().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$', description):
-            raise ValueError("Invalid value for `description`, must be a follow pattern or equal to `/[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿ\\n\\ra-zA-Z0-9().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$/`")
 
         self._description = description
 
@@ -273,8 +265,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param website_url: The website_url of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if website_url is not None and not re.search('\\b((?:https?:\/\/|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s`!()\\[\\]{};:\'\".,<>?Â«Â»â€œâ€â€˜â€™]))', website_url):
-            raise ValueError("Invalid value for `website_url`, must be a follow pattern or equal to `/\\b((?:https?:\/\/|www\\d{0,3}[.]|[a-z0-9.\\-]+[.][a-z]{2,4}\/)(?:[^\\s()<>]+|\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\))+(?:\\(([^\\s()<>]+|(\\([^\\s()<>]+\\)))*\\)|[^\\s`!()\\[\\]{};:'\".,<>?Â«Â»â€œâ€â€˜â€™]))/`")
 
         self._website_url = website_url
 
@@ -325,8 +315,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param tax_id: The tax_id of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if tax_id is not None and not re.search('\\d{9}', tax_id):
-            raise ValueError("Invalid value for `tax_id`, must be a follow pattern or equal to `/\\d{9}/`")
 
         self._tax_id = tax_id
 
@@ -348,8 +336,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param phone_number: The phone_number of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if phone_number is not None and not re.search('^[0-9a-zA-Z\\\\+\\\\-]+$', phone_number):
-            raise ValueError("Invalid value for `phone_number`, must be a follow pattern or equal to `/^[0-9a-zA-Z\\\\+\\\\-]+$/`")
 
         self._phone_number = phone_number
 
@@ -436,8 +422,6 @@ class Boardingv1registrationsOrganizationInformationBusinessInformation(object):
         :param merchant_category_code: The merchant_category_code of this Boardingv1registrationsOrganizationInformationBusinessInformation.
         :type: str
         """
-        if merchant_category_code is not None and not re.search('^\\d{3,4}$', merchant_category_code):
-            raise ValueError("Invalid value for `merchant_category_code`, must be a follow pattern or equal to `/^\\d{3,4}$/`")
 
         self._merchant_category_code = merchant_category_code
 

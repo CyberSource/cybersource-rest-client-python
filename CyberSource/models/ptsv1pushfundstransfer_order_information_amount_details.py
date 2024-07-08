@@ -31,30 +31,40 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'total_amount': 'str',
-        'currency': 'str'
+        'currency': 'str',
+        'source_currency': 'str',
+        'destination_currency': 'str'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
-        'currency': 'currency'
+        'currency': 'currency',
+        'source_currency': 'sourceCurrency',
+        'destination_currency': 'destinationCurrency'
     }
 
-    def __init__(self, total_amount=None, currency=None):
+    def __init__(self, total_amount=None, currency=None, source_currency=None, destination_currency=None):
         """
         Ptsv1pushfundstransferOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._total_amount = None
         self._currency = None
+        self._source_currency = None
+        self._destination_currency = None
 
         self.total_amount = total_amount
         self.currency = currency
+        if source_currency is not None:
+          self.source_currency = source_currency
+        if destination_currency is not None:
+          self.destination_currency = destination_currency
 
     @property
     def total_amount(self):
         """
         Gets the total_amount of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  The disbursement amount. Numeric integer, 1-999999999999. The decimal point is implied based on the relevant currency exponent. For example, a US Dollar $53 amount is a value of 5300.  Processor Amount Ranges: Visa Platform Connect: .01-9999999999.99  Mastercard Send: 1-9999999999.99  FDC Compass: .01- 9999999999.99  Chase Paymentech: .01-9999999999.99 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :return: The total_amount of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :rtype: str
@@ -65,13 +75,11 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  The disbursement amount. Numeric integer, 1-999999999999. The decimal point is implied based on the relevant currency exponent. For example, a US Dollar $53 amount is a value of 5300.  Processor Amount Ranges: Visa Platform Connect: .01-9999999999.99  Mastercard Send: 1-9999999999.99  FDC Compass: .01- 9999999999.99  Chase Paymentech: .01-9999999999.99 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :param total_amount: The total_amount of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
-        if total_amount is None:
-            raise ValueError("Invalid value for `total_amount`, must not be `None`")
 
         self._total_amount = total_amount
 
@@ -79,7 +87,7 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Use a 3-character alpha currency code for currency of the sender.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf  Currency must be supported by the processor. 
+        Use a 3-character alpha currency code for currency of the funds transfer.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf  Currency must be supported by the processor. 
 
         :return: The currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :rtype: str
@@ -90,15 +98,59 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Use a 3-character alpha currency code for currency of the sender.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf  Currency must be supported by the processor. 
+        Use a 3-character alpha currency code for currency of the funds transfer.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf  Currency must be supported by the processor. 
 
         :param currency: The currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
-        if currency is None:
-            raise ValueError("Invalid value for `currency`, must not be `None`")
 
         self._currency = currency
+
+    @property
+    def source_currency(self):
+        """
+        Gets the source_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        Use a 3-character alpha currency code for source currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+
+        :return: The source_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._source_currency
+
+    @source_currency.setter
+    def source_currency(self, source_currency):
+        """
+        Sets the source_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        Use a 3-character alpha currency code for source currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+
+        :param source_currency: The source_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._source_currency = source_currency
+
+    @property
+    def destination_currency(self):
+        """
+        Gets the destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf NOTE: This field is supported only for Visa Platform Connect 
+
+        :return: The destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._destination_currency
+
+    @destination_currency.setter
+    def destination_currency(self, destination_currency):
+        """
+        Sets the destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf NOTE: This field is supported only for Visa Platform Connect 
+
+        :param destination_currency: The destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._destination_currency = destination_currency
 
     def to_dict(self):
         """

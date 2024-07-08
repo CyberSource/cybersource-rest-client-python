@@ -78,8 +78,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param submit_time_utc: The submit_time_utc of this Reportingv3ReportDownloadsGet400Response.
         :type: datetime
         """
-        if submit_time_utc is None:
-            raise ValueError("Invalid value for `submit_time_utc`, must not be `None`")
 
         self._submit_time_utc = submit_time_utc
 
@@ -103,8 +101,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param reason: The reason of this Reportingv3ReportDownloadsGet400Response.
         :type: str
         """
-        if reason is None:
-            raise ValueError("Invalid value for `reason`, must not be `None`")
 
         self._reason = reason
 
@@ -128,8 +124,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param message: The message of this Reportingv3ReportDownloadsGet400Response.
         :type: str
         """
-        if message is None:
-            raise ValueError("Invalid value for `message`, must not be `None`")
 
         self._message = message
 
@@ -153,8 +147,6 @@ class Reportingv3ReportDownloadsGet400Response(object):
         :param details: The details of this Reportingv3ReportDownloadsGet400Response.
         :type: list[Reportingv3ReportDownloadsGet400ResponseDetails]
         """
-        if details is None:
-            raise ValueError("Invalid value for `details`, must not be `None`")
 
         self._details = details
 

@@ -394,8 +394,6 @@ class CardProcessingConfigCommonProcessors(object):
         :param merchant_id: The merchant_id of this CardProcessingConfigCommonProcessors.
         :type: str
         """
-        if merchant_id is None:
-            raise ValueError("Invalid value for `merchant_id`, must not be `None`")
 
         self._merchant_id = merchant_id
 
@@ -1276,8 +1274,6 @@ class CardProcessingConfigCommonProcessors(object):
         :param merchant_tier: The merchant_tier of this CardProcessingConfigCommonProcessors.
         :type: str
         """
-        if merchant_tier is not None and not re.search('^[0-9]+$', merchant_tier):
-            raise ValueError("Invalid value for `merchant_tier`, must be a follow pattern or equal to `/^[0-9]+$/`")
 
         self._merchant_tier = merchant_tier
 

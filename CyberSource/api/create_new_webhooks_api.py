@@ -356,14 +356,6 @@ class CreateNewWebhooksApi(object):
                 self.logger.error("InvalidArgumentException : Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
             raise ValueError("Missing the required parameter `v_c_permissions` when calling `save_sym_egress_key`")
 
-        if 'v_c_sender_organization_id' in params and not re.search('^[A-Za-z0-9\\-_]+$', params['v_c_sender_organization_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\-_]+$/`")
-            raise ValueError("Invalid value for parameter `v_c_sender_organization_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\-_]+$/`")
-        if 'v_c_correlation_id' in params and not re.search('^[A-Za-z0-9\\.\\-_:]+$', params['v_c_correlation_id']):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\.\\-_:]+$/`")
-            raise ValueError("Invalid value for parameter `v_c_correlation_id` when calling `save_sym_egress_key`, must conform to the pattern `/^[A-Za-z0-9\\.\\-_:]+$/`")
 
         collection_formats = {}
 

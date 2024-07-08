@@ -127,7 +127,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def link_id(self):
         """
         Gets the link_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments 
 
         :return: The link_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -138,7 +138,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def link_id(self, link_id):
         """
         Sets the link_id of this Ptsv2paymentsidreversalsProcessingInformation.
-        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments  For details, see `link_to_request` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Value that links the current authorization request to the original authorization request. Set this value to the ID that was returned in the reply message from the original authorization request.  This value is used for:  - Partial authorizations - Split shipments 
 
         :param link_id: The link_id of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str
@@ -150,7 +150,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def report_group(self):
         """
         Gets the report_group of this Ptsv2paymentsidreversalsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**. 
 
         :return: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :rtype: str
@@ -161,7 +161,7 @@ class Ptsv2paymentsidreversalsProcessingInformation(object):
     def report_group(self, report_group):
         """
         Sets the report_group of this Ptsv2paymentsidreversalsProcessingInformation.
-        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**.  For details, see `report_group` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Attribute that lets you define custom grouping for your processor reports. This field is supported only for **Worldpay VAP**. 
 
         :param report_group: The report_group of this Ptsv2paymentsidreversalsProcessingInformation.
         :type: str

@@ -84,7 +84,7 @@ class Vasv2taxidClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Vasv2taxidClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :return: The comments of this Vasv2taxidClientReferenceInformation.
         :rtype: str
@@ -95,7 +95,7 @@ class Vasv2taxidClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Vasv2taxidClientReferenceInformation.
-        Comments
+        Brief description of the order or any comment you wish to add to the order.
 
         :param comments: The comments of this Vasv2taxidClientReferenceInformation.
         :type: str

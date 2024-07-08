@@ -120,10 +120,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param first_name: The first_name of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if first_name is None:
-            raise ValueError("Invalid value for `first_name`, must not be `None`")
-        if first_name is not None and not re.search('[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$', first_name):
-            raise ValueError("Invalid value for `first_name`, must be a follow pattern or equal to `/[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$/`")
 
         self._first_name = first_name
 
@@ -145,8 +141,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param middle_name: The middle_name of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if middle_name is not None and not re.search('[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$', middle_name):
-            raise ValueError("Invalid value for `middle_name`, must be a follow pattern or equal to `/[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$/`")
 
         self._middle_name = middle_name
 
@@ -168,10 +162,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param last_name: The last_name of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if last_name is None:
-            raise ValueError("Invalid value for `last_name`, must not be `None`")
-        if last_name is not None and not re.search('[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$', last_name):
-            raise ValueError("Invalid value for `last_name`, must be a follow pattern or equal to `/[À-ÖØ-öø-ǿÀ-ÖØ-öø-ǿa-zA-Z().\\-_#,;\/\\\\@$:&amp;!?%«»€₣«»€₣ ]{1,}$/`")
 
         self._last_name = last_name
 
@@ -195,8 +185,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param birth_date: The birth_date of this Boardingv1registrationsOrganizationInformationOwners.
         :type: date
         """
-        if birth_date is None:
-            raise ValueError("Invalid value for `birth_date`, must not be `None`")
 
         self._birth_date = birth_date
 
@@ -220,8 +208,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param is_primary: The is_primary of this Boardingv1registrationsOrganizationInformationOwners.
         :type: bool
         """
-        if is_primary is None:
-            raise ValueError("Invalid value for `is_primary`, must not be `None`")
 
         self._is_primary = is_primary
 
@@ -245,8 +231,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param ssn: The ssn of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if ssn is not None and not re.search('^\\d{3}-\\d{2}-\\d{4}$|^\\d{9,9}$', ssn):
-            raise ValueError("Invalid value for `ssn`, must be a follow pattern or equal to `/^\\d{3}-\\d{2}-\\d{4}$|^\\d{9,9}$/`")
 
         self._ssn = ssn
 
@@ -270,8 +254,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param passport_number: The passport_number of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if passport_number is not None and not re.search('^(?!^0+$)[a-zA-Z0-9]{3,20}$', passport_number):
-            raise ValueError("Invalid value for `passport_number`, must be a follow pattern or equal to `/^(?!^0+$)[a-zA-Z0-9]{3,20}$/`")
 
         self._passport_number = passport_number
 
@@ -293,8 +275,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param passport_country: The passport_country of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if passport_country is not None and not re.search('^[À-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/@$:!% ]{1,}$', passport_country):
-            raise ValueError("Invalid value for `passport_country`, must be a follow pattern or equal to `/^[À-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/@$:!% ]{1,}$/`")
 
         self._passport_country = passport_country
 
@@ -316,10 +296,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param job_title: The job_title of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if job_title is None:
-            raise ValueError("Invalid value for `job_title`, must not be `None`")
-        if job_title is not None and not re.search('^[À-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/@$:!% ]{1,}$', job_title):
-            raise ValueError("Invalid value for `job_title`, must be a follow pattern or equal to `/^[À-ÖØ-öø-ǿa-zA-Z0-9().\\-_#,;\/@$:!% ]{1,}$/`")
 
         self._job_title = job_title
 
@@ -343,8 +319,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param has_significant_responsability: The has_significant_responsability of this Boardingv1registrationsOrganizationInformationOwners.
         :type: bool
         """
-        if has_significant_responsability is None:
-            raise ValueError("Invalid value for `has_significant_responsability`, must not be `None`")
 
         self._has_significant_responsability = has_significant_responsability
 
@@ -368,8 +342,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param ownership_percentage: The ownership_percentage of this Boardingv1registrationsOrganizationInformationOwners.
         :type: float
         """
-        if ownership_percentage is None:
-            raise ValueError("Invalid value for `ownership_percentage`, must not be `None`")
 
         self._ownership_percentage = ownership_percentage
 
@@ -391,10 +363,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param phone_number: The phone_number of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if phone_number is None:
-            raise ValueError("Invalid value for `phone_number`, must not be `None`")
-        if phone_number is not None and not re.search('^[0-9a-zA-Z\\\\+\\\\-]+$', phone_number):
-            raise ValueError("Invalid value for `phone_number`, must be a follow pattern or equal to `/^[0-9a-zA-Z\\\\+\\\\-]+$/`")
 
         self._phone_number = phone_number
 
@@ -416,10 +384,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param email: The email of this Boardingv1registrationsOrganizationInformationOwners.
         :type: str
         """
-        if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")
-        if email is not None and not re.search('^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$', email):
-            raise ValueError("Invalid value for `email`, must be a follow pattern or equal to `/^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,50}|[0-9]{1,3})(\\]?)$/`")
 
         self._email = email
 
@@ -441,8 +405,6 @@ class Boardingv1registrationsOrganizationInformationOwners(object):
         :param address: The address of this Boardingv1registrationsOrganizationInformationOwners.
         :type: Boardingv1registrationsOrganizationInformationBusinessInformationAddress
         """
-        if address is None:
-            raise ValueError("Invalid value for `address`, must not be `None`")
 
         self._address = address
 

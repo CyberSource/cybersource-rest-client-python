@@ -87,8 +87,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :param tag: The tag of this TssV2PostEmvTags200ResponseEmvTagBreakdownList.
         :type: str
         """
-        if tag is not None and not re.search('^[0-9A-F]*$', tag):
-            raise ValueError("Invalid value for `tag`, must be a follow pattern or equal to `/^[0-9A-F]*$/`")
 
         self._tag = tag
 
@@ -158,8 +156,6 @@ class TssV2PostEmvTags200ResponseEmvTagBreakdownList(object):
         :param value: The value of this TssV2PostEmvTags200ResponseEmvTagBreakdownList.
         :type: str
         """
-        if value is not None and not re.search('^[0-9A-F|X]*$', value):
-            raise ValueError("Invalid value for `value`, must be a follow pattern or equal to `/^[0-9A-F|X]*$/`")
 
         self._value = value
 

@@ -34,7 +34,8 @@ class Ptsv2paymentsTokenInformation(object):
         'transient_token_jwt': 'str',
         'payment_instrument': 'Ptsv2paymentsTokenInformationPaymentInstrument',
         'shipping_address': 'Ptsv2paymentsTokenInformationShippingAddress',
-        'network_token_option': 'str'
+        'network_token_option': 'str',
+        'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class Ptsv2paymentsTokenInformation(object):
         'transient_token_jwt': 'transientTokenJwt',
         'payment_instrument': 'paymentInstrument',
         'shipping_address': 'shippingAddress',
-        'network_token_option': 'networkTokenOption'
+        'network_token_option': 'networkTokenOption',
+        'token_provisioning_information': 'tokenProvisioningInformation'
     }
 
-    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None, network_token_option=None):
+    def __init__(self, jti=None, transient_token_jwt=None, payment_instrument=None, shipping_address=None, network_token_option=None, token_provisioning_information=None):
         """
         Ptsv2paymentsTokenInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class Ptsv2paymentsTokenInformation(object):
         self._payment_instrument = None
         self._shipping_address = None
         self._network_token_option = None
+        self._token_provisioning_information = None
 
         if jti is not None:
           self.jti = jti
@@ -66,6 +69,8 @@ class Ptsv2paymentsTokenInformation(object):
           self.shipping_address = shipping_address
         if network_token_option is not None:
           self.network_token_option = network_token_option
+        if token_provisioning_information is not None:
+          self.token_provisioning_information = token_provisioning_information
 
     @property
     def jti(self):
@@ -177,6 +182,27 @@ class Ptsv2paymentsTokenInformation(object):
         """
 
         self._network_token_option = network_token_option
+
+    @property
+    def token_provisioning_information(self):
+        """
+        Gets the token_provisioning_information of this Ptsv2paymentsTokenInformation.
+
+        :return: The token_provisioning_information of this Ptsv2paymentsTokenInformation.
+        :rtype: Ptsv2paymentsTokenInformationTokenProvisioningInformation
+        """
+        return self._token_provisioning_information
+
+    @token_provisioning_information.setter
+    def token_provisioning_information(self, token_provisioning_information):
+        """
+        Sets the token_provisioning_information of this Ptsv2paymentsTokenInformation.
+
+        :param token_provisioning_information: The token_provisioning_information of this Ptsv2paymentsTokenInformation.
+        :type: Ptsv2paymentsTokenInformationTokenProvisioningInformation
+        """
+
+        self._token_provisioning_information = token_provisioning_information
 
     def to_dict(self):
         """

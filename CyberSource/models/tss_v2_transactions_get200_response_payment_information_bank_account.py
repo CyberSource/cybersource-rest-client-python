@@ -196,7 +196,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def check_digit(self):
         """
         Gets the check_digit of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Code used to validate the customer's account number. Required for some countries if you do not or are not allowed to provide the IBAN instead. You may use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_check_digit` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Code used to validate the customer's account number. Required for some countries if you do not or are not allowed to provide the IBAN instead. You may use this field only when scoring a direct debit transaction. 
 
         :return: The check_digit of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -207,7 +207,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def check_digit(self, check_digit):
         """
         Sets the check_digit of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Code used to validate the customer's account number. Required for some countries if you do not or are not allowed to provide the IBAN instead. You may use this field only when scoring a direct debit transaction.  For all possible values, see the `bank_check_digit` field description in the _Decision Manager Using the SCMP API Developer Guide_ on the [CyberSource Business Center.](https://ebc2.cybersource.com/ebc2/) Click **Decision Manager** > **Documentation** > **Guides** > _Decision Manager Using the SCMP API Developer Guide_ (PDF link). 
+        Code used to validate the customer's account number. Required for some countries if you do not or are not allowed to provide the IBAN instead. You may use this field only when scoring a direct debit transaction. 
 
         :param check_digit: The check_digit of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str
@@ -219,7 +219,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self):
         """
         Gets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :return: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :rtype: str
@@ -230,7 +230,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationBankAccount(object):
     def encoder_id(self, encoder_id):
         """
         Sets the encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
-        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor.  For details, see `account_encoder_id` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the bank that provided the customer's encoded account number.  To obtain the bank identifier, contact your processor. 
 
         :param encoder_id: The encoder_id of this TssV2TransactionsGet200ResponsePaymentInformationBankAccount.
         :type: str

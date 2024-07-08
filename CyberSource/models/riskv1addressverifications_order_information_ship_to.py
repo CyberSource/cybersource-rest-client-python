@@ -100,8 +100,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param address1: The address1 of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if address1 is None:
-            raise ValueError("Invalid value for `address1`, must not be `None`")
 
         self._address1 = address1
 
@@ -217,8 +215,6 @@ class Riskv1addressverificationsOrderInformationShipTo(object):
         :param country: The country of this Riskv1addressverificationsOrderInformationShipTo.
         :type: str
         """
-        if country is None:
-            raise ValueError("Invalid value for `country`, must not be `None`")
 
         self._country = country
 

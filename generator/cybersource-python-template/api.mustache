@@ -141,26 +141,6 @@ class {{classname}}(object):
 {{/allParams}}
 
 {{#allParams}}
-{{#hasValidation}}
-    {{#pattern}}
-        if '{{paramName}}' in params and not re.search('{{{vendorExtensions.x-regex}}}', params['{{paramName}}']{{#vendorExtensions.x-modifiers}}{{#-first}}, flags={{/-first}}re.{{.}}{{^-last}} | {{/-last}}{{/vendorExtensions.x-modifiers}}):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, must conform to the pattern `{{{pattern}}}`")
-            raise ValueError("Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, must conform to the pattern `{{{pattern}}}`")
-    {{/pattern}}
-    {{#maxItems}}
-        if '{{paramName}}' in params and len(params['{{paramName}}']) > {{maxItems}}:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, number of items must be less than or equal to `{{maxItems}}`")
-            raise ValueError("Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, number of items must be less than or equal to `{{maxItems}}`")
-    {{/maxItems}}
-    {{#minItems}}
-        if '{{paramName}}' in params and len(params['{{paramName}}']) < {{minItems}}:
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, number of items must be greater than or equal to `{{minItems}}`")
-            raise ValueError("Invalid value for parameter `{{paramName}}` when calling `{{operationId}}`, number of items must be greater than or equal to `{{minItems}}`")
-    {{/minItems}}
-{{/hasValidation}}
 {{#-last}}
 
 {{/-last}}
