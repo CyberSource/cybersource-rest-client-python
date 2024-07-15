@@ -98,8 +98,7 @@ jobs:
                 echo $VIRTUAL_ENV
                 cd $SAMPLE_FOLDER
                 pip install -e .
-                # bash ./sample_code_runner.sh
-                echo HI > output.log
+                bash ./sample_code_runner.sh
               continue-on-error: ${{matrix.allow-fail}}
             - name: Using Report Generation Action
               id: report-generation
