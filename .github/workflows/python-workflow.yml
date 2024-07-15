@@ -18,7 +18,7 @@ jobs:
               allowed-fail: false
           include:
             - pyth-version: '3.12'
-              allowed-fail: true
+              allowed-fail: false
     steps:
       - name: Allowed to fail step
         if: ${{matrix.pyth-version == '3.12'}} 
