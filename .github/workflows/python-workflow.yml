@@ -16,13 +16,26 @@ jobs:
             matrix:
               operating-system: [ubuntu-latest,macos-latest,windows-latest]
               pyth-version: ['3.6','3.7','3.8','3.9','3.10','3.11','3.12']
+              allow-fail: [false]
               include:
                 - operating-system: ubuntu-20.04   # Checking support for ubuntu os with python 3.6
                   pyth-version: '3.6'
+                  allow-fail: false
                 - operating-system: macos-13   # Checking support for mac os with python 3.6
                   pyth-version: '3.6'
+                  allow-fail: false
                 - operating-system: macos-13   # Checking support for mac os with python 3.7
                   pyth-version: '3.7'
+                  allow-fail: false
+                - operating-system: ubuntu-latest  #arm 64 doesn't support python ver 3.7
+                  pyth-version: '3.6'
+                  allow-fail: true
+                - operating-system: macos-latest  #arm 64 doesn't support python ver 3.6
+                  pyth-version: '3.6'
+                  allow-fail: true
+                - operating-system: macos-latest  #arm 64 doesn't support python ver 3.7
+                  pyth-version: '3.7'
+                  allow-fail: true
               exclude:
                 - operating-system: ubuntu-latest  #arm 64 doesn't support python ver 3.7
                   pyth-version: '3.6'
@@ -35,28 +48,34 @@ jobs:
             - run: echo "VCPKG_ROOT=$env:VCPKG_INSTALLATION_ROOT" | Out-File -FilePath $env:GITHUB_ENV -Append
               if: runner.os == 'Windows'
               shell: pwsh
+              continue-on-error: ${{matrix.allow-fail}}
             - run: vcpkg install openssl:x64-windows-static-md
               if: runner.os == 'Windows'
               shell: pwsh
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Creating separate folders for checkout repos
               run: |
                 rm -rf $CLIENT_FOLDER
                 rm -rf $SAMPLE_FOLDER
                 mkdir $CLIENT_FOLDER $SAMPLE_FOLDER
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Checkout cybersource-rest-client-python repo
               uses: actions/checkout@v4
               with:
                 path: ${{env.CLIENT_FOLDER}}
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Checkout cybersource-rest-samples-python repo
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
                 ref: 'testing-branch' # this is used for checking out a particular branch in repo
                 path: ${{env.SAMPLE_FOLDER}}
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Install Python
               uses: actions/setup-python@v5
               with:
                 python-version: ${{matrix.pyth-version}}
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Building the projects and running the Test Cases
               run: |
                 python --version
@@ -80,6 +99,7 @@ jobs:
                 cd $SAMPLE_FOLDER
                 pip install -e .
                 bash ./sample_code_runner.sh
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Using Report Generation Action
               id: report-generation
               uses: ./cybersource-rest-client-python/.github/actions/generate-report
@@ -87,9 +107,11 @@ jobs:
                 lang: python
                 sample-folder-name: ${{env.SAMPLE_FOLDER}}
                 log-file-name: output.log
+              continue-on-error: ${{matrix.allow-fail}}
             - name: Upload Test Reports
               uses: actions/upload-artifact@v4
               with:
                 name: sample-run-report-${{matrix.operating-system}}-python-ver-${{matrix.pyth-version}}
                 path: |
                   ${{env.SAMPLE_FOLDER}}/${{steps.report-generation.outputs.result-pdf-name}}
+              continue-on-error: ${{matrix.allow-fail}}
