@@ -20,15 +20,15 @@ jobs:
             - pyth-version: '3.12'
               allowed-fail: true
     steps:
-      - name: step1
-        run: echo "step 1"
-      - name:
-        if: ${{matrix.allowed-fail}}
-        run: exit 1
       - name: Allowed to fail step
-        if: ${{matrix.allowed-fail && failure()}} 
+        if: ${{matrix.allowed-fail}} 
         run: |
           echo "In ALLOWED TO FAIL"
         continue-on-error: true
+      - name: step2
+        run: echo "step 2"
+      - name:
+        if: ${{matrix.allowed-fail}}
+        run: exit 1
 
         
