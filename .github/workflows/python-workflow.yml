@@ -51,7 +51,7 @@ jobs:
               uses: actions/checkout@v4
               with:
                 repository: 'CyberSource/cybersource-rest-samples-python'
-                ref: 'testing-branch' # this is used for checking out a particular branch in repo
+                ref: 'master' # this is used for checking out a particular branch in repo
                 path: ${{env.SAMPLE_FOLDER}}
             - name: Install Python
               uses: actions/setup-python@v5
