@@ -57,7 +57,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'original_currency': 'str',
         'cashback_amount': 'str',
         'currency_conversion': 'Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion',
-        'order': 'Ptsv2paymentsOrderInformationAmountDetailsOrder'
+        'order': 'Ptsv2paymentsOrderInformationAmountDetailsOrder',
+        'anticipated_amount': 'str'
     }
 
     attribute_map = {
@@ -88,10 +89,11 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'original_currency': 'originalCurrency',
         'cashback_amount': 'cashbackAmount',
         'currency_conversion': 'currencyConversion',
-        'order': 'order'
+        'order': 'order',
+        'anticipated_amount': 'anticipatedAmount'
     }
 
-    def __init__(self, gift_wrap_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, order=None):
+    def __init__(self, gift_wrap_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, order=None, anticipated_amount=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -124,6 +126,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         self._cashback_amount = None
         self._currency_conversion = None
         self._order = None
+        self._anticipated_amount = None
 
         if gift_wrap_amount is not None:
           self.gift_wrap_amount = gift_wrap_amount
@@ -181,6 +184,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
           self.currency_conversion = currency_conversion
         if order is not None:
           self.order = order
+        if anticipated_amount is not None:
+          self.anticipated_amount = anticipated_amount
 
     @property
     def gift_wrap_amount(self):
@@ -815,6 +820,29 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         """
 
         self._order = order
+
+    @property
+    def anticipated_amount(self):
+        """
+        Gets the anticipated_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        This API Field contains the anticipated amount details. This supports use cases where the Merchant does not wish to have funds held against the account, but needs to confirm an amount prior to authorization, such as for a trial subscription, reservation service, or loyalty program. In an account verification, the anticipated amount is used to confirm the account has availability to accept purchases. 
+
+        :return: The anticipated_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._anticipated_amount
+
+    @anticipated_amount.setter
+    def anticipated_amount(self, anticipated_amount):
+        """
+        Sets the anticipated_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        This API Field contains the anticipated amount details. This supports use cases where the Merchant does not wish to have funds held against the account, but needs to confirm an amount prior to authorization, such as for a trial subscription, reservation service, or loyalty program. In an account verification, the anticipated amount is used to confirm the account has availability to accept purchases. 
+
+        :param anticipated_amount: The anticipated_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._anticipated_amount = anticipated_amount
 
     def to_dict(self):
         """

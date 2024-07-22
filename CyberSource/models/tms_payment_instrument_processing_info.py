@@ -56,7 +56,7 @@ class TmsPaymentInstrumentProcessingInfo(object):
     def bill_payment_program_enabled(self):
         """
         Gets the bill_payment_program_enabled of this TmsPaymentInstrumentProcessingInfo.
-        Flag that indicates that this is a payment for a bill or for an existing contractual loan. For processor-specific details, see the `bill_payment` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Possible Values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
+        Flag that indicates that this is a payment for a bill or for an existing contractual loan. Possible Values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
 
         :return: The bill_payment_program_enabled of this TmsPaymentInstrumentProcessingInfo.
         :rtype: bool
@@ -67,7 +67,7 @@ class TmsPaymentInstrumentProcessingInfo(object):
     def bill_payment_program_enabled(self, bill_payment_program_enabled):
         """
         Sets the bill_payment_program_enabled of this TmsPaymentInstrumentProcessingInfo.
-        Flag that indicates that this is a payment for a bill or for an existing contractual loan. For processor-specific details, see the `bill_payment` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  Possible Values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
+        Flag that indicates that this is a payment for a bill or for an existing contractual loan. Possible Values: - `true`: Bill payment or loan payment. - `false` (default): Not a bill payment or loan payment. 
 
         :param bill_payment_program_enabled: The bill_payment_program_enabled of this TmsPaymentInstrumentProcessingInfo.
         :type: bool

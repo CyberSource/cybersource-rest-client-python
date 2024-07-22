@@ -590,7 +590,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
     def specification_version(self):
         """
         Gets the specification_version of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
-        This field contains the 3D Secure version that was used to process the transaction. For example, 1.0.2 or 2.0.0. 
+        This field contains the 3D Secure version that was used to process the transaction. For example: 2.2.0 
 
         :return: The specification_version of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :rtype: str
@@ -601,7 +601,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
     def specification_version(self, specification_version):
         """
         Sets the specification_version of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
-        This field contains the 3D Secure version that was used to process the transaction. For example, 1.0.2 or 2.0.0. 
+        This field contains the 3D Secure version that was used to process the transaction. For example: 2.2.0 
 
         :param specification_version: The specification_version of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
         :type: str

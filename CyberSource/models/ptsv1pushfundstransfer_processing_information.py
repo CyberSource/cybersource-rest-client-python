@@ -31,26 +31,31 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     """
     swagger_types = {
         'business_application_id': 'str',
-        'payouts_options': 'Ptsv1pushfundstransferProcessingInformationPayoutsOptions'
+        'payouts_options': 'Ptsv1pushfundstransferProcessingInformationPayoutsOptions',
+        'enabler_id': 'str'
     }
 
     attribute_map = {
         'business_application_id': 'businessApplicationId',
-        'payouts_options': 'payoutsOptions'
+        'payouts_options': 'payoutsOptions',
+        'enabler_id': 'enablerId'
     }
 
-    def __init__(self, business_application_id=None, payouts_options=None):
+    def __init__(self, business_application_id=None, payouts_options=None, enabler_id=None):
         """
         Ptsv1pushfundstransferProcessingInformation - a model defined in Swagger
         """
 
         self._business_application_id = None
         self._payouts_options = None
+        self._enabler_id = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
         if payouts_options is not None:
           self.payouts_options = payouts_options
+        if enabler_id is not None:
+          self.enabler_id = enabler_id
 
     @property
     def business_application_id(self):
@@ -95,6 +100,29 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         """
 
         self._payouts_options = payouts_options
+
+    @property
+    def enabler_id(self):
+        """
+        Gets the enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+
+        :return: The enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._enabler_id
+
+    @enabler_id.setter
+    def enabler_id(self, enabler_id):
+        """
+        Sets the enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+
+        :param enabler_id: The enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._enabler_id = enabler_id
 
     def to_dict(self):
         """

@@ -150,7 +150,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
 
         :return: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :rtype: str
@@ -161,7 +161,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions.  For details, see `tax_amount` field description in [Level II and Level III Processing Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html/) 
+        Total tax to apply to the product. This value cannot be negative. The tax amount and the offer amount must be in the same currency. The tax amount field is additive.  The following example uses a two-exponent currency such as USD:  1. You include each line item in your request.     - 1st line item has `amount=10.00`, `quantity=1`, and `taxAmount=0.80`     - 2nd line item has `amount=20.00`, `quantity=1`, and `taxAmount=1.60` 2. The total amount authorized will be 32.40, not 30.00 with 2.40 of tax included.  This field is frequently used for Level II and Level III transactions. 
 
         :param tax_amount: The tax_amount of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str
@@ -196,7 +196,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def unit_price(self):
         """
         Gets the unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :return: The unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :rtype: str
@@ -207,7 +207,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems(object):
     def unit_price(self, unit_price):
         """
         Sets the unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
-        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places.  For processor-specific information, see the amount field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Per-item price of the product. This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. CyberSource truncates the amount to the correct number of decimal places. 
 
         :param unit_price: The unit_price of this TssV2TransactionsGet200ResponseOrderInformationLineItems.
         :type: str

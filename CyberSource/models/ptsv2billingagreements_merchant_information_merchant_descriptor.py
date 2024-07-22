@@ -89,7 +89,7 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
     def contact(self):
         """
         Gets the contact of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_contact` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
 
         :return: The contact of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -100,7 +100,7 @@ class Ptsv2billingagreementsMerchantInformationMerchantDescriptor(object):
     def contact(self, contact):
         """
         Sets the contact of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_contact` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
 
         :param contact: The contact of this Ptsv2billingagreementsMerchantInformationMerchantDescriptor.
         :type: str

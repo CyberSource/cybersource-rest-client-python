@@ -51,7 +51,7 @@ class Ptsv2paymentsIssuerInformation(object):
     def discretionary_data(self):
         """
         Gets the discretionary_data of this Ptsv2paymentsIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**. 
 
         :return: The discretionary_data of this Ptsv2paymentsIssuerInformation.
         :rtype: str
@@ -62,7 +62,7 @@ class Ptsv2paymentsIssuerInformation(object):
     def discretionary_data(self, discretionary_data):
         """
         Sets the discretionary_data of this Ptsv2paymentsIssuerInformation.
-        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**.  For details, see `issuer_additional_data` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Data defined by the issuer.  The value for this reply field will probably be the same as the value that you submitted in the authorization request, but it is possible for the processor, issuer, or acquirer to modify the value.  This field is supported only for Visa transactions on **CyberSource through VisaNet**. 
 
         :param discretionary_data: The discretionary_data of this Ptsv2paymentsIssuerInformation.
         :type: str

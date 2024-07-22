@@ -180,7 +180,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def sales_organization_id(self):
         """
         Gets the sales_organization_id of this Ptsv2paymentsMerchantInformation.
-        Company ID assigned to an independent sales organization. Get this value from Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Independent Sales Organization ID  This field is supported for Visa, Mastercard and Discover Transactions.  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  For processor-specific information, see the `sales_organization_ID` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Company ID assigned to an independent sales organization. Get this value from Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Independent Sales Organization ID  This field is supported for Visa, Mastercard and Discover Transactions.  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
 
         :return: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -191,7 +191,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def sales_organization_id(self, sales_organization_id):
         """
         Sets the sales_organization_id of this Ptsv2paymentsMerchantInformation.
-        Company ID assigned to an independent sales organization. Get this value from Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Independent Sales Organization ID  This field is supported for Visa, Mastercard and Discover Transactions.  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies.  For processor-specific information, see the `sales_organization_ID` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Company ID assigned to an independent sales organization. Get this value from Mastercard.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR6 - Position: 106-116 - Field: Independent Sales Organization ID  This field is supported for Visa, Mastercard and Discover Transactions.  **Note** The TC 33 Capture file contains information about the purchases and refunds that a merchant submits to CyberSource. CyberSource through VisaNet creates the TC 33 Capture file at the end of the day and sends it to the merchant's acquirer, who uses this information to facilitate end-of-day clearing processing with payment card companies. 
 
         :param sales_organization_id: The sales_organization_id of this Ptsv2paymentsMerchantInformation.
         :type: str
@@ -203,7 +203,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def category_code(self):
         """
         Gets the category_code of this Ptsv2paymentsMerchantInformation.
-        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the `merchant_category_code` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
+        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, CyberSource uses the value in your CyberSource account.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :return: The category_code of this Ptsv2paymentsMerchantInformation.
         :rtype: int
@@ -214,7 +214,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def category_code(self, category_code):
         """
         Sets the category_code of this Ptsv2paymentsMerchantInformation.
-        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, CyberSource uses the value in your CyberSource account.  For processor-specific information, see the `merchant_category_code` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
+        The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. When you do not include this field in your request, CyberSource uses the value in your CyberSource account.  #### CyberSource through VisaNet The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP01 TCR4 - Position: 150-153 - Field: Merchant Category Code 
 
         :param category_code: The category_code of this Ptsv2paymentsMerchantInformation.
         :type: int
@@ -249,7 +249,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def tax_id(self):
         """
         Gets the tax_id of this Ptsv2paymentsMerchantInformation.
-        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
 
         :return: The tax_id of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -260,7 +260,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def tax_id(self, tax_id):
         """
         Sets the tax_id of this Ptsv2paymentsMerchantInformation.
-        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1  For details, see `bill_merchant_tax_id` field description in the [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Your Cadastro Nacional da Pessoa Jurídica (CNPJ) number.  This field is supported only for BNDES transactions on CyberSource through VisaNet.  The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR6 - Position: 40-59 - Field: BNDES Reference Field 1 
 
         :param tax_id: The tax_id of this Ptsv2paymentsMerchantInformation.
         :type: str
@@ -272,7 +272,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this Ptsv2paymentsMerchantInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
 
         :return: The vat_registration_number of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -283,7 +283,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this Ptsv2paymentsMerchantInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20.  For other processor-specific information, see the `merchant_vat_registration_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  #### CyberSource through VisaNet For CtV processors, the maximum length is 20. 
 
         :param vat_registration_number: The vat_registration_number of this Ptsv2paymentsMerchantInformation.
         :type: str
@@ -295,7 +295,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def card_acceptor_reference_number(self):
         """
         Gets the card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
-        Reference number that facilitates card acceptor/corporation communication and record keeping.  For processor-specific information, see the `card_acceptor_ref_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Reference number that facilitates card acceptor/corporation communication and record keeping. 
 
         :return: The card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
         :rtype: str
@@ -306,7 +306,7 @@ class Ptsv2paymentsMerchantInformation(object):
     def card_acceptor_reference_number(self, card_acceptor_reference_number):
         """
         Sets the card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
-        Reference number that facilitates card acceptor/corporation communication and record keeping.  For processor-specific information, see the `card_acceptor_ref_number` field description in [Level II and Level III Processing Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/Level_2_3_SCMP_API/html) 
+        Reference number that facilitates card acceptor/corporation communication and record keeping. 
 
         :param card_acceptor_reference_number: The card_acceptor_reference_number of this Ptsv2paymentsMerchantInformation.
         :type: str

@@ -257,7 +257,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def company(self):
         """
         Gets the company of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Name of the customer's company.  For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Name of the customer's company. 
 
         :return: The company of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :rtype: str
@@ -268,7 +268,7 @@ class TssV2TransactionsGet200ResponseOrderInformationShipTo(object):
     def company(self, company):
         """
         Sets the company of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
-        Name of the customer's company.  For processor-specific information, see the company_name field in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        Name of the customer's company. 
 
         :param company: The company of this TssV2TransactionsGet200ResponseOrderInformationShipTo.
         :type: str

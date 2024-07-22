@@ -86,7 +86,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def account_id(self):
         """
         Gets the account_id of this Ptsv2paymentsRecipientInformation.
-        Identifier for the recipient's account. Use the first six digits and last four digits of the recipient's account number. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_account_id` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the recipient's account. Use the first six digits and last four digits of the recipient's account number. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.accountId` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :return: The account_id of this Ptsv2paymentsRecipientInformation.
         :rtype: str
@@ -97,7 +97,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def account_id(self, account_id):
         """
         Sets the account_id of this Ptsv2paymentsRecipientInformation.
-        Identifier for the recipient's account. Use the first six digits and last four digits of the recipient's account number. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_account_id` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Identifier for the recipient's account. Use the first six digits and last four digits of the recipient's account number. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.accountId` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :param account_id: The account_id of this Ptsv2paymentsRecipientInformation.
         :type: str
@@ -109,7 +109,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def last_name(self):
         """
         Gets the last_name of this Ptsv2paymentsRecipientInformation.
-        Recipient's last name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_lastname` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's last name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.lastName` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :return: The last_name of this Ptsv2paymentsRecipientInformation.
         :rtype: str
@@ -120,7 +120,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ptsv2paymentsRecipientInformation.
-        Recipient's last name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_lastname` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's last name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.lastName` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :param last_name: The last_name of this Ptsv2paymentsRecipientInformation.
         :type: str
@@ -132,7 +132,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv2paymentsRecipientInformation.
-        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_middlename` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.middleName` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :return: The middle_name of this Ptsv2paymentsRecipientInformation.
         :rtype: str
@@ -143,7 +143,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv2paymentsRecipientInformation.
-        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_middlename` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipientInformation.middleName` field description in the [REST API Fields](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf) 
 
         :param middle_name: The middle_name of this Ptsv2paymentsRecipientInformation.
         :type: str
@@ -155,7 +155,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2paymentsRecipientInformation.
-        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_postal_code` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :return: The postal_code of this Ptsv2paymentsRecipientInformation.
         :rtype: str
@@ -166,7 +166,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv2paymentsRecipientInformation.
-        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For details, see the `recipient_postal_code` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Partial postal code for the recipient's address. For example, if the postal code is **NN5 7SG**, the value for this field should be the first part of the postal code: **NN5**. This field is a _pass-through_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :param postal_code: The postal_code of this Ptsv2paymentsRecipientInformation.
         :type: str
@@ -178,7 +178,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def date_of_birth(self):
         """
         Gets the date_of_birth of this Ptsv2paymentsRecipientInformation.
-        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :return: The date_of_birth of this Ptsv2paymentsRecipientInformation.
         :rtype: str
@@ -189,7 +189,7 @@ class Ptsv2paymentsRecipientInformation(object):
     def date_of_birth(self, date_of_birth):
         """
         Sets the date_of_birth of this Ptsv2paymentsRecipientInformation.
-        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  For more details, see `recipient_date_of_birth` field description in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Recipient's date of birth. **Format**: `YYYYMMDD`.  This field is a `pass-through`, which means that CyberSource ensures that the value is eight numeric characters but otherwise does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
 
         :param date_of_birth: The date_of_birth of this Ptsv2paymentsRecipientInformation.
         :type: str

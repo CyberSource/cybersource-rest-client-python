@@ -79,7 +79,7 @@ class TmsEmbeddedInstrumentIdentifierBankAccount(object):
     def routing_number(self):
         """
         Gets the routing_number of this TmsEmbeddedInstrumentIdentifierBankAccount.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the transit number. 
 
         :return: The routing_number of this TmsEmbeddedInstrumentIdentifierBankAccount.
         :rtype: str
@@ -90,7 +90,7 @@ class TmsEmbeddedInstrumentIdentifierBankAccount(object):
     def routing_number(self, routing_number):
         """
         Sets the routing_number of this TmsEmbeddedInstrumentIdentifierBankAccount.
-        Bank routing number. This is also called the transit number.  For details, see `ecp_rdfi` field description in the [Electronic Check Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/EChecks_SCMP_API/html/) 
+        Bank routing number. This is also called the transit number. 
 
         :param routing_number: The routing_number of this TmsEmbeddedInstrumentIdentifierBankAccount.
         :type: str

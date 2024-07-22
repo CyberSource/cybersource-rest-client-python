@@ -51,7 +51,7 @@ class Ptsv2paymentsidrefundsProcessingInformationRecurringOptions(object):
     def loan_payment(self):
         """
         Gets the loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment  For processor-specific details, see `debt_indicator` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment 
 
         :return: The loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
         :rtype: bool
@@ -62,7 +62,7 @@ class Ptsv2paymentsidrefundsProcessingInformationRecurringOptions(object):
     def loan_payment(self, loan_payment):
         """
         Sets the loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment  For processor-specific details, see `debt_indicator` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment 
 
         :param loan_payment: The loan_payment of this Ptsv2paymentsidrefundsProcessingInformationRecurringOptions.
         :type: bool

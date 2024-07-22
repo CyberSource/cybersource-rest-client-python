@@ -170,7 +170,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        First line of the sub-merchant's street address.  For processor-specific details, see `submerchant_street` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The address1 of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -181,7 +181,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        First line of the sub-merchant's street address.  For processor-specific details, see `submerchant_street` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        First line of the sub-merchant's street address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param address1: The address1 of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
@@ -193,7 +193,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's city.  For processor-specific details, see `submerchant_city` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The locality of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -204,7 +204,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's city.  For processor-specific details, see `submerchant_city` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's city.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param locality: The locality of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
@@ -216,7 +216,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's state or province.  For possible values and also aggregator support, see `submerchant_state` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The administrative_area of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -227,7 +227,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's state or province.  For possible values and also aggregator support, see `submerchant_state` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Sub-merchant's state or province.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param administrative_area: The administrative_area of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
@@ -239,7 +239,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def region(self):
         """
         Gets the region of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's region.  **Example**\\ `NE` indicates that the sub-merchant is in the northeast region.  For processor-specific details, see `submerchant_region` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Sub-merchant's region.  **Example**\\ `NE` indicates that the sub-merchant is in the northeast region. 
 
         :return: The region of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -250,7 +250,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def region(self, region):
         """
         Sets the region of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's region.  **Example**\\ `NE` indicates that the sub-merchant is in the northeast region.  For processor-specific details, see `submerchant_region` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Sub-merchant's region.  **Example**\\ `NE` indicates that the sub-merchant is in the northeast region. 
 
         :param region: The region of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
@@ -262,7 +262,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant's address.  For processor-specific details, see `submerchant_postal_code` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The postal_code of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -273,7 +273,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def postal_code(self, postal_code):
         """
         Sets the postal_code of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Partial postal code for the sub-merchant's address.  For processor-specific details, see `submerchant_postal_code` request field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
+        Partial postal code for the sub-merchant's address.  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file5.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param postal_code: The postal_code of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str
@@ -285,7 +285,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def country(self):
         """
         Gets the country of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  For details, see the `submerchant_country` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters. 
 
         :return: The country of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :rtype: str
@@ -296,7 +296,7 @@ class Ptsv2paymentsAggregatorInformationSubMerchant(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2paymentsAggregatorInformationSubMerchant.
-        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters.  For details, see the `submerchant_country` request-level field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Sub-merchant's country. Use the [ISO Standard Country Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/countries_alpha_list.pdf).  #### CyberSource through VisaNet The value for this field does not map to the TC 33 capture file.  #### FDC Compass This value must consist of uppercase characters. 
 
         :param country: The country of this Ptsv2paymentsAggregatorInformationSubMerchant.
         :type: str

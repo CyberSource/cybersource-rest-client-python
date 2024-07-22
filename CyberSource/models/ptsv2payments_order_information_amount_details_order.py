@@ -229,7 +229,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
     def tax_amount(self):
         """
         Gets the tax_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
-        Total tax amount. When the purchaseTotals_ taxAmount and ap_subtotalAmount fields are included in the request, do not include the tax amount as part of the subtotal amount calculation.  
+        Total tax amount. When the purchaseTotals_ taxAmount and ap_subtotalAmount fields are included in the request, do not include the tax amount as part of the subtotal amount calculation. 
 
         :return: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :rtype: str
@@ -240,7 +240,7 @@ class Ptsv2paymentsOrderInformationAmountDetailsOrder(object):
     def tax_amount(self, tax_amount):
         """
         Sets the tax_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
-        Total tax amount. When the purchaseTotals_ taxAmount and ap_subtotalAmount fields are included in the request, do not include the tax amount as part of the subtotal amount calculation.  
+        Total tax amount. When the purchaseTotals_ taxAmount and ap_subtotalAmount fields are included in the request, do not include the tax amount as part of the subtotal amount calculation. 
 
         :param tax_amount: The tax_amount of this Ptsv2paymentsOrderInformationAmountDetailsOrder.
         :type: str
