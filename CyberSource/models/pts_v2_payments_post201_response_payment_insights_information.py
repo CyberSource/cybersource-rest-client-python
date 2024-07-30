@@ -30,22 +30,27 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'response_insights': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights'
+        'response_insights': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights',
+        'orchestration': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformationOrchestration'
     }
 
     attribute_map = {
-        'response_insights': 'responseInsights'
+        'response_insights': 'responseInsights',
+        'orchestration': 'orchestration'
     }
 
-    def __init__(self, response_insights=None):
+    def __init__(self, response_insights=None, orchestration=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInsightsInformation - a model defined in Swagger
         """
 
         self._response_insights = None
+        self._orchestration = None
 
         if response_insights is not None:
           self.response_insights = response_insights
+        if orchestration is not None:
+          self.orchestration = orchestration
 
     @property
     def response_insights(self):
@@ -67,6 +72,27 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformation(object):
         """
 
         self._response_insights = response_insights
+
+    @property
+    def orchestration(self):
+        """
+        Gets the orchestration of this PtsV2PaymentsPost201ResponsePaymentInsightsInformation.
+
+        :return: The orchestration of this PtsV2PaymentsPost201ResponsePaymentInsightsInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInsightsInformationOrchestration
+        """
+        return self._orchestration
+
+    @orchestration.setter
+    def orchestration(self, orchestration):
+        """
+        Sets the orchestration of this PtsV2PaymentsPost201ResponsePaymentInsightsInformation.
+
+        :param orchestration: The orchestration of this PtsV2PaymentsPost201ResponsePaymentInsightsInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInsightsInformationOrchestration
+        """
+
+        self._orchestration = orchestration
 
     def to_dict(self):
         """

@@ -30,7 +30,7 @@ class Ptsv2voidsProcessingInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_id': 'str'
+        'payment_id': 'object'
     }
 
     attribute_map = {
@@ -51,10 +51,10 @@ class Ptsv2voidsProcessingInformation(object):
     def payment_id(self):
         """
         Gets the payment_id of this Ptsv2voidsProcessingInformation.
-        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+        This field is to accept the id of credit/capture in the body of the requests so the type of void can be identified and processed correctly.
 
         :return: The payment_id of this Ptsv2voidsProcessingInformation.
-        :rtype: str
+        :rtype: object
         """
         return self._payment_id
 
@@ -62,10 +62,10 @@ class Ptsv2voidsProcessingInformation(object):
     def payment_id(self, payment_id):
         """
         Sets the payment_id of this Ptsv2voidsProcessingInformation.
-        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
+        This field is to accept the id of credit/capture in the body of the requests so the type of void can be identified and processed correctly.
 
         :param payment_id: The payment_id of this Ptsv2voidsProcessingInformation.
-        :type: str
+        :type: object
         """
 
         self._payment_id = payment_id

@@ -61,7 +61,7 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
     def category(self):
         """
         Gets the category of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
-        Categorization of response message from processor  Possible Values: - `APPROVED` - `ISSUER_WILL_NEVER_APPROVE` - `ISSUER_CANT_APPROVE_AT_THIS_TIME` - `ISSUER_CANT_APPROVE_WITH_THESE_DETAILS` - `GENERIC_ERROR` - `OTHERS` - `MATCH_NOT_FOUND` 
+        Categorization of response message from processor  Possible Values: - `ISSUER_WILL_NEVER_APPROVE` - `ISSUER_CANNOT_APPROVE_AT_THIS_TIME` - `ISSUER_CANNOT_APPROVE_WITH_THESE_DETAILS` - `GENERIC_ERROR` - `PAYMENT_INSIGHTS_INTERNAL_ERROR` - `OTHERS` - `PAYMENT_INSIGHTS_RESPONSE_CATEGORY_MATCH_NOT_FOUND` 
 
         :return: The category of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
         :rtype: str
@@ -72,7 +72,7 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
     def category(self, category):
         """
         Sets the category of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
-        Categorization of response message from processor  Possible Values: - `APPROVED` - `ISSUER_WILL_NEVER_APPROVE` - `ISSUER_CANT_APPROVE_AT_THIS_TIME` - `ISSUER_CANT_APPROVE_WITH_THESE_DETAILS` - `GENERIC_ERROR` - `OTHERS` - `MATCH_NOT_FOUND` 
+        Categorization of response message from processor  Possible Values: - `ISSUER_WILL_NEVER_APPROVE` - `ISSUER_CANNOT_APPROVE_AT_THIS_TIME` - `ISSUER_CANNOT_APPROVE_WITH_THESE_DETAILS` - `GENERIC_ERROR` - `PAYMENT_INSIGHTS_INTERNAL_ERROR` - `OTHERS` - `PAYMENT_INSIGHTS_RESPONSE_CATEGORY_MATCH_NOT_FOUND` 
 
         :param category: The category of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
         :type: str
@@ -84,7 +84,7 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
     def category_code(self):
         """
         Gets the category_code of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
-        Categorization Code of response message from processor  Possible Values: - `01` : Issuer Will Never Approve - `02` : Issuer Can't Approve at this Time - `03` : Issuer Can't Approve with these Details - `04` : Generic Error - `98` : Others - `99` : Payment Insights Response Category Match Not Found 
+        Categorization Code of response message from processor  Possible Values: - `01` : ISSUER_WILL_NEVER_APPROVE - `02` : ISSUER_CANNOT_APPROVE_AT_THIS_TIME - `03` : ISSUER_CANNOT_APPROVE_WITH_THESE_DETAILS - `04` : GENERIC_ERROR - `97` : PAYMENT_INSIGHTS_INTERNAL_ERROR - `98` : OTHERS - `99` : PAYMENT_INSIGHTS_RESPONSE_CATEGORY_MATCH_NOT_FOUND 
 
         :return: The category_code of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
         :rtype: str
@@ -95,7 +95,7 @@ class PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights(obj
     def category_code(self, category_code):
         """
         Sets the category_code of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
-        Categorization Code of response message from processor  Possible Values: - `01` : Issuer Will Never Approve - `02` : Issuer Can't Approve at this Time - `03` : Issuer Can't Approve with these Details - `04` : Generic Error - `98` : Others - `99` : Payment Insights Response Category Match Not Found 
+        Categorization Code of response message from processor  Possible Values: - `01` : ISSUER_WILL_NEVER_APPROVE - `02` : ISSUER_CANNOT_APPROVE_AT_THIS_TIME - `03` : ISSUER_CANNOT_APPROVE_WITH_THESE_DETAILS - `04` : GENERIC_ERROR - `97` : PAYMENT_INSIGHTS_INTERNAL_ERROR - `98` : OTHERS - `99` : PAYMENT_INSIGHTS_RESPONSE_CATEGORY_MATCH_NOT_FOUND 
 
         :param category_code: The category_code of this PtsV2PaymentsPost201ResponsePaymentInsightsInformationResponseInsights.
         :type: str

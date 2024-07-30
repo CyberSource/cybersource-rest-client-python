@@ -45,7 +45,6 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'str',
         'transaction_timeout': 'int',
         'intents_id': 'str',
-        'payment_id': 'str',
         'report_group': 'str',
         'visa_checkout_id': 'str',
         'industry_data_type': 'str',
@@ -66,7 +65,8 @@ class Ptsv2paymentsProcessingInformation(object):
         'timeout': 'int',
         'is_return_auth_record_enabled': 'bool',
         'network_partner_id': 'str',
-        'payment_type': 'str'
+        'payment_type': 'str',
+        'enabler_id': 'str'
     }
 
     attribute_map = {
@@ -85,7 +85,6 @@ class Ptsv2paymentsProcessingInformation(object):
         'purchase_level': 'purchaseLevel',
         'transaction_timeout': 'transactionTimeout',
         'intents_id': 'intentsId',
-        'payment_id': 'paymentId',
         'report_group': 'reportGroup',
         'visa_checkout_id': 'visaCheckoutId',
         'industry_data_type': 'industryDataType',
@@ -106,10 +105,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'timeout': 'timeout',
         'is_return_auth_record_enabled': 'isReturnAuthRecordEnabled',
         'network_partner_id': 'networkPartnerId',
-        'payment_type': 'paymentType'
+        'payment_type': 'paymentType',
+        'enabler_id': 'enablerId'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, payment_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -129,7 +129,6 @@ class Ptsv2paymentsProcessingInformation(object):
         self._purchase_level = None
         self._transaction_timeout = None
         self._intents_id = None
-        self._payment_id = None
         self._report_group = None
         self._visa_checkout_id = None
         self._industry_data_type = None
@@ -151,6 +150,7 @@ class Ptsv2paymentsProcessingInformation(object):
         self._is_return_auth_record_enabled = None
         self._network_partner_id = None
         self._payment_type = None
+        self._enabler_id = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -182,8 +182,6 @@ class Ptsv2paymentsProcessingInformation(object):
           self.transaction_timeout = transaction_timeout
         if intents_id is not None:
           self.intents_id = intents_id
-        if payment_id is not None:
-          self.payment_id = payment_id
         if report_group is not None:
           self.report_group = report_group
         if visa_checkout_id is not None:
@@ -226,6 +224,8 @@ class Ptsv2paymentsProcessingInformation(object):
           self.network_partner_id = network_partner_id
         if payment_type is not None:
           self.payment_type = payment_type
+        if enabler_id is not None:
+          self.enabler_id = enabler_id
 
     @property
     def action_list(self):
@@ -438,7 +438,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self):
         """
         Gets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the REST API.](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct.   - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :return: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -449,7 +449,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def payment_solution(self, payment_solution):
         """
         Sets the payment_solution of this Ptsv2paymentsProcessingInformation.
-        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/VCO_SCMP_API/html/)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct. For details, see \"Masterpass\" in the [Credit Card Services Using the SCMP API Guide.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/)  - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
+        Type of digital payment solution for the transaction. Possible Values:   - `visacheckout`: Visa Checkout. This value is required for Visa Checkout transactions. For details, see `payment_solution` field description in [Visa Checkout Using the REST API.](https://developer.cybersource.com/content/dam/docs/cybs/en-us/apifields/reference/all/rest/api-fields.pdf)  - `001`: Apple Pay.  - `004`: Cybersource In-App Solution.  - `005`: Masterpass. This value is required for Masterpass transactions on OmniPay Direct.   - `006`: Android Pay.  - `007`: Chase Pay.  - `008`: Samsung Pay.  - `012`: Google Pay.  - `013`: Cybersource P2PE Decryption  - `014`: Mastercard credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `015`: Visa credential on file (COF) payment network token. Returned in authorizations that use a payment network token associated with a TMS token.  - `027`: Click to Pay. 
 
         :param payment_solution: The payment_solution of this Ptsv2paymentsProcessingInformation.
         :type: str
@@ -571,29 +571,6 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._intents_id = intents_id
-
-    @property
-    def payment_id(self):
-        """
-        Gets the payment_id of this Ptsv2paymentsProcessingInformation.
-        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
-
-        :return: The payment_id of this Ptsv2paymentsProcessingInformation.
-        :rtype: str
-        """
-        return self._payment_id
-
-    @payment_id.setter
-    def payment_id(self, payment_id):
-        """
-        Sets the payment_id of this Ptsv2paymentsProcessingInformation.
-        This field is to accept the id of credit/capture in the body of L1 requests so the type of void can be identified and processed correctly downstream.
-
-        :param payment_id: The payment_id of this Ptsv2paymentsProcessingInformation.
-        :type: str
-        """
-
-        self._payment_id = payment_id
 
     @property
     def report_group(self):
@@ -1061,6 +1038,29 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def enabler_id(self):
+        """
+        Gets the enabler_id of this Ptsv2paymentsProcessingInformation.
+        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+
+        :return: The enabler_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._enabler_id
+
+    @enabler_id.setter
+    def enabler_id(self, enabler_id):
+        """
+        Sets the enabler_id of this Ptsv2paymentsProcessingInformation.
+        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+
+        :param enabler_id: The enabler_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._enabler_id = enabler_id
 
     def to_dict(self):
         """

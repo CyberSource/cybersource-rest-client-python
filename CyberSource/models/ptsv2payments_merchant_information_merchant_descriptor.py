@@ -139,7 +139,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def alternate_name(self):
         """
         Gets the alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        An alternate name for the merchant.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_alternate` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> 
+        An alternate name for the merchant. 
 
         :return: The alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -150,7 +150,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def alternate_name(self, alternate_name):
         """
         Sets the alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        An alternate name for the merchant.  For the descriptions, used-by information, data types, and lengths for these fields, see the `merchant_descriptor_alternate` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> 
+        An alternate name for the merchant. 
 
         :param alternate_name: The alternate_name of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
@@ -162,7 +162,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def contact(self):
         """
         Gets the contact of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_contact` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
 
         :return: The contact of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -173,7 +173,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def contact(self, contact):
         """
         Sets the contact of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_contact` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html)--> Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
+        Contact information for the merchant.  **Note** These are the maximum data lengths for the following payment processors: - FDCCompass (13) - Paymentech (13) 
 
         :param contact: The contact of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str
@@ -185,7 +185,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        First line of merchant's address. For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_street` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        First line of merchant's address. 
 
         :return: The address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :rtype: str
@@ -196,7 +196,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
-        First line of merchant's address. For the descriptions, used-by information, data types, and lengths for these fields, see `merchant_descriptor_street` field description in [Credit Card Services Using the SCMP API.](http://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html) 
+        First line of merchant's address. 
 
         :param address1: The address1 of this Ptsv2paymentsMerchantInformationMerchantDescriptor.
         :type: str

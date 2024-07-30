@@ -59,7 +59,7 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateWebhookRequest create_webhook_request: The webhook payload
-        :return: InlineResponse2013
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -92,7 +92,7 @@ class CreateNewWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param CreateWebhookRequest create_webhook_request: The webhook payload
-        :return: InlineResponse2013
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -147,7 +147,7 @@ class CreateNewWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2013',
+                                        response_type='InlineResponse2014',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -289,7 +289,7 @@ class CreateNewWebhooksApi(object):
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
-        :return: InlineResponse2012
+        :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -325,7 +325,7 @@ class CreateNewWebhooksApi(object):
         :param str v_c_permissions: Encoded user permissions returned by the CGK, for the entity user who initiated the boarding (required)
         :param str v_c_correlation_id: A globally unique id associated with your request
         :param SaveSymEgressKey save_sym_egress_key: Provide egress Symmetric key information to save (create or store or refresh)
-        :return: InlineResponse2012
+        :return: InlineResponse2013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -396,7 +396,7 @@ class CreateNewWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2012',
+                                        response_type='InlineResponse2013',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -44,7 +44,8 @@ class Ptsv2paymentsPaymentInformation(object):
         'payment_type': 'Ptsv2paymentsPaymentInformationPaymentType',
         'initiation_channel': 'str',
         'sepa': 'Ptsv2paymentsPaymentInformationSepa',
-        'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet'
+        'e_wallet': 'Ptsv2paymentsPaymentInformationEWallet',
+        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class Ptsv2paymentsPaymentInformation(object):
         'payment_type': 'paymentType',
         'initiation_channel': 'initiationChannel',
         'sepa': 'sepa',
-        'e_wallet': 'eWallet'
+        'e_wallet': 'eWallet',
+        'payment_account_reference': 'paymentAccountReference'
     }
 
-    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None):
+    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None, payment_account_reference=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class Ptsv2paymentsPaymentInformation(object):
         self._initiation_channel = None
         self._sepa = None
         self._e_wallet = None
+        self._payment_account_reference = None
 
         if card is not None:
           self.card = card
@@ -116,6 +119,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.sepa = sepa
         if e_wallet is not None:
           self.e_wallet = e_wallet
+        if payment_account_reference is not None:
+          self.payment_account_reference = payment_account_reference
 
     @property
     def card(self):
@@ -433,6 +438,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._e_wallet = e_wallet
+
+    @property
+    def payment_account_reference(self):
+        """
+        Gets the payment_account_reference of this Ptsv2paymentsPaymentInformation.
+
+        :return: The payment_account_reference of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentAccountReference
+        """
+        return self._payment_account_reference
+
+    @payment_account_reference.setter
+    def payment_account_reference(self, payment_account_reference):
+        """
+        Sets the payment_account_reference of this Ptsv2paymentsPaymentInformation.
+
+        :param payment_account_reference: The payment_account_reference of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentAccountReference
+        """
+
+        self._payment_account_reference = payment_account_reference
 
     def to_dict(self):
         """

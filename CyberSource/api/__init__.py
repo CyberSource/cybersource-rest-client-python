@@ -4,6 +4,7 @@ from __future__ import absolute_import
 from .o_auth_api import OAuthApi
 from .asymmetric_key_management_api import AsymmetricKeyManagementApi
 from .batches_api import BatchesApi
+from .bin_lookup_api import BinLookupApi
 from .chargeback_details_api import ChargebackDetailsApi
 from .chargeback_summaries_api import ChargebackSummariesApi
 from .conversion_details_api import ConversionDetailsApi

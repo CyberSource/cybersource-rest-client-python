@@ -40,7 +40,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'shipping_address': 'Ptsv2paymentsPaymentInformationShippingAddress',
         'legacy_token': 'Ptsv2paymentsPaymentInformationLegacyToken',
         'payment_type': 'Ptsv2paymentsidrefundsPaymentInformationPaymentType',
-        'e_wallet': 'Ptsv2paymentsidrefundsPaymentInformationEWallet'
+        'e_wallet': 'Ptsv2paymentsidrefundsPaymentInformationEWallet',
+        'payment_account_reference': 'Ptsv2paymentsPaymentInformationPaymentAccountReference'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         'shipping_address': 'shippingAddress',
         'legacy_token': 'legacyToken',
         'payment_type': 'paymentType',
-        'e_wallet': 'eWallet'
+        'e_wallet': 'eWallet',
+        'payment_account_reference': 'paymentAccountReference'
     }
 
-    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None, e_wallet=None):
+    def __init__(self, card=None, bank=None, tokenized_card=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, payment_type=None, e_wallet=None, payment_account_reference=None):
         """
         Ptsv2paymentsidrefundsPaymentInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         self._legacy_token = None
         self._payment_type = None
         self._e_wallet = None
+        self._payment_account_reference = None
 
         if card is not None:
           self.card = card
@@ -96,6 +99,8 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
           self.payment_type = payment_type
         if e_wallet is not None:
           self.e_wallet = e_wallet
+        if payment_account_reference is not None:
+          self.payment_account_reference = payment_account_reference
 
     @property
     def card(self):
@@ -327,6 +332,27 @@ class Ptsv2paymentsidrefundsPaymentInformation(object):
         """
 
         self._e_wallet = e_wallet
+
+    @property
+    def payment_account_reference(self):
+        """
+        Gets the payment_account_reference of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :return: The payment_account_reference of this Ptsv2paymentsidrefundsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationPaymentAccountReference
+        """
+        return self._payment_account_reference
+
+    @payment_account_reference.setter
+    def payment_account_reference(self, payment_account_reference):
+        """
+        Sets the payment_account_reference of this Ptsv2paymentsidrefundsPaymentInformation.
+
+        :param payment_account_reference: The payment_account_reference of this Ptsv2paymentsidrefundsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationPaymentAccountReference
+        """
+
+        self._payment_account_reference = payment_account_reference
 
     def to_dict(self):
         """

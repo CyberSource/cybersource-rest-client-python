@@ -56,7 +56,7 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
     def loan_payment(self):
         """
         Gets the loan_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment  For processor-specific details, see `debt_indicator` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment 
 
         :return: The loan_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
         :rtype: bool
@@ -67,7 +67,7 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
     def loan_payment(self, loan_payment):
         """
         Sets the loan_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
-        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment  For processor-specific details, see `debt_indicator` field description in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this is a payment towards an existing contractual loan.  Possible values: - `true`: Loan payment - `false`: (default) Not a loan payment 
 
         :param loan_payment: The loan_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
         :type: bool
@@ -79,7 +79,7 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
     def first_recurring_payment(self):
         """
         Gets the first_recurring_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
-        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments.  For details, see `auth_first_recurring_payment` field description and \"Recurring Payments\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
 
         :return: The first_recurring_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
         :rtype: bool
@@ -90,7 +90,7 @@ class Ptsv2paymentsProcessingInformationRecurringOptions(object):
     def first_recurring_payment(self, first_recurring_payment):
         """
         Sets the first_recurring_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
-        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments.  For details, see `auth_first_recurring_payment` field description and \"Recurring Payments\" in [Credit Card Services Using the SCMP API.](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/) 
+        Flag that indicates whether this transaction is the first in a series of recurring payments.  This field is supported only for **Atos**, **FDC Nashville Global**, and **OmniPay Direct**.  Possible values:  - `true` Indicates this is the first payment in a series of recurring payments  - `false` (default) Indicates this is not the first payment in a series of recurring payments. 
 
         :param first_recurring_payment: The first_recurring_payment of this Ptsv2paymentsProcessingInformationRecurringOptions.
         :type: bool
