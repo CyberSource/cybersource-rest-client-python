@@ -3,8 +3,9 @@ import ssl
 
 from jwcrypto import jwk
 
+from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.serialization import pkcs12, Encoding
+from cryptography.hazmat.primitives.serialization import pkcs12
 
 from authenticationsdk.util.GlobalLabelParameters import *
 
@@ -32,7 +33,7 @@ class FileCache:
                 backend=default_backend()
             )
 
-            cert_pem = certificate.public_bytes(Encoding.PEM)
+            cert_pem = certificate.public_bytes(serialization.Encoding.PEM)
             cert_pem_str = cert_pem.decode('utf-8')
             der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_pem_str))
 
@@ -47,7 +48,7 @@ class FileCache:
                 backend=default_backend()
             )
 
-            cert_pem = certificate.public_bytes(Encoding.PEM)
+            cert_pem = certificate.public_bytes(serialization.Encoding.PEM)
             cert_pem_str = cert_pem.decode('utf-8')
             der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_pem_str))
 
