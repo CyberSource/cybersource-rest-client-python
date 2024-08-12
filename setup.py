@@ -23,7 +23,6 @@ setup(
         "certifi",
         "pycryptodome",
         "PyJWT",
-        "pyOpenSSL<=23.2.0",
         "DateTime",
         "setuptools",
         "six",
