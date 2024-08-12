@@ -27,10 +27,9 @@ setup(
         "setuptools",
         "six",
         "urllib3",
+        "cryptography",
         "jwcrypto==1.5.1;python_version<='3.7'",
-        "jwcrypto>=1.5.6;python_version>'3.7'",
-        "cryptography==40.0.2;python_version<='3.6'",
-        "cryptography<41.1.0;python_version>'3.6'"
+        "jwcrypto>=1.5.6;python_version>'3.7'"
     ],
     packages=find_packages(),
     include_package_data=True,
