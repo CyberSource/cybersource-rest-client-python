@@ -33,8 +33,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'authentication_transaction_id': 'str',
         'authentication_transaction_context': 'str',
         'otp_token': 'str',
-        'authentication_type': 'str',
-        'effective_authentication_type': 'str',
         'response_access_token': 'str',
         'signed_pares_status_reason': 'str',
         'signed_pares': 'str',
@@ -46,8 +44,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'authentication_transaction_id': 'authenticationTransactionId',
         'authentication_transaction_context': 'authenticationTransactionContext',
         'otp_token': 'otpToken',
-        'authentication_type': 'authenticationType',
-        'effective_authentication_type': 'effectiveAuthenticationType',
         'response_access_token': 'responseAccessToken',
         'signed_pares_status_reason': 'signedParesStatusReason',
         'signed_pares': 'signedPares',
@@ -55,7 +51,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         'credential_encrypted': 'credentialEncrypted'
     }
 
-    def __init__(self, authentication_transaction_id=None, authentication_transaction_context=None, otp_token=None, authentication_type=None, effective_authentication_type=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None, credential_encrypted=None):
+    def __init__(self, authentication_transaction_id=None, authentication_transaction_context=None, otp_token=None, response_access_token=None, signed_pares_status_reason=None, signed_pares=None, white_list_status=None, credential_encrypted=None):
         """
         Riskv1authenticationresultsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -63,24 +59,17 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         self._authentication_transaction_id = None
         self._authentication_transaction_context = None
         self._otp_token = None
-        self._authentication_type = None
-        self._effective_authentication_type = None
         self._response_access_token = None
         self._signed_pares_status_reason = None
         self._signed_pares = None
         self._white_list_status = None
         self._credential_encrypted = None
 
-        if authentication_transaction_id is not None:
-          self.authentication_transaction_id = authentication_transaction_id
+        self.authentication_transaction_id = authentication_transaction_id
         if authentication_transaction_context is not None:
           self.authentication_transaction_context = authentication_transaction_context
         if otp_token is not None:
           self.otp_token = otp_token
-        if authentication_type is not None:
-          self.authentication_type = authentication_type
-        if effective_authentication_type is not None:
-          self.effective_authentication_type = effective_authentication_type
         if response_access_token is not None:
           self.response_access_token = response_access_token
         if signed_pares_status_reason is not None:
@@ -160,52 +149,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation(object):
         """
 
         self._otp_token = otp_token
-
-    @property
-    def authentication_type(self):
-        """
-        Gets the authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
-
-        :return: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._authentication_type
-
-    @authentication_type.setter
-    def authentication_type(self, authentication_type):
-        """
-        Sets the authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
-
-        :param authentication_type: The authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._authentication_type = authentication_type
-
-    @property
-    def effective_authentication_type(self):
-        """
-        Gets the effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
-
-        :return: The effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._effective_authentication_type
-
-    @effective_authentication_type.setter
-    def effective_authentication_type(self, effective_authentication_type):
-        """
-        Sets the effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
-
-        :param effective_authentication_type: The effective_authentication_type of this Riskv1authenticationresultsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._effective_authentication_type = effective_authentication_type
 
     @property
     def response_access_token(self):

@@ -36,6 +36,7 @@ class CreatePaymentRequest(object):
         'payment_information': 'Ptsv2paymentsPaymentInformation',
         'order_information': 'Ptsv2paymentsOrderInformation',
         'buyer_information': 'Ptsv2paymentsBuyerInformation',
+        'sender_information': 'Ptsv2paymentsSenderInformation',
         'recipient_information': 'Ptsv2paymentsRecipientInformation',
         'device_information': 'Ptsv2paymentsDeviceInformation',
         'merchant_information': 'Ptsv2paymentsMerchantInformation',
@@ -66,6 +67,7 @@ class CreatePaymentRequest(object):
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
         'buyer_information': 'buyerInformation',
+        'sender_information': 'senderInformation',
         'recipient_information': 'recipientInformation',
         'device_information': 'deviceInformation',
         'merchant_information': 'merchantInformation',
@@ -89,7 +91,7 @@ class CreatePaymentRequest(object):
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, sender_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -100,6 +102,7 @@ class CreatePaymentRequest(object):
         self._payment_information = None
         self._order_information = None
         self._buyer_information = None
+        self._sender_information = None
         self._recipient_information = None
         self._device_information = None
         self._merchant_information = None
@@ -134,6 +137,8 @@ class CreatePaymentRequest(object):
           self.order_information = order_information
         if buyer_information is not None:
           self.buyer_information = buyer_information
+        if sender_information is not None:
+          self.sender_information = sender_information
         if recipient_information is not None:
           self.recipient_information = recipient_information
         if device_information is not None:
@@ -302,6 +307,27 @@ class CreatePaymentRequest(object):
         """
 
         self._buyer_information = buyer_information
+
+    @property
+    def sender_information(self):
+        """
+        Gets the sender_information of this CreatePaymentRequest.
+
+        :return: The sender_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsSenderInformation
+        """
+        return self._sender_information
+
+    @sender_information.setter
+    def sender_information(self, sender_information):
+        """
+        Sets the sender_information of this CreatePaymentRequest.
+
+        :param sender_information: The sender_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsSenderInformation
+        """
+
+        self._sender_information = sender_information
 
     @property
     def recipient_information(self):

@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **pay_by_link** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 **unified_checkout** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
 **receivables_manager** | [**PaymentsProductsTax**](PaymentsProductsTax.md) |  | [optional] 
+**service_fee** | [**PaymentsProductsServiceFee**](PaymentsProductsServiceFee.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

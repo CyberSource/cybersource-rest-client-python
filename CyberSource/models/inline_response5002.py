@@ -30,7 +30,7 @@ class InlineResponse5002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
+        'submit_time_utc': 'date',
         'status': 'str',
         'reason': 'str',
         'message': 'str'
@@ -66,10 +66,10 @@ class InlineResponse5002(object):
     def submit_time_utc(self):
         """
         Gets the submit_time_utc of this InlineResponse5002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :return: The submit_time_utc of this InlineResponse5002.
-        :rtype: str
+        :rtype: date
         """
         return self._submit_time_utc
 
@@ -77,10 +77,10 @@ class InlineResponse5002(object):
     def submit_time_utc(self, submit_time_utc):
         """
         Sets the submit_time_utc of this InlineResponse5002.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse5002.
-        :type: str
+        :type: date
         """
 
         self._submit_time_utc = submit_time_utc
@@ -89,7 +89,7 @@ class InlineResponse5002(object):
     def status(self):
         """
         Gets the status of this InlineResponse5002.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
+        The http status description of the submitted request.
 
         :return: The status of this InlineResponse5002.
         :rtype: str
@@ -100,7 +100,7 @@ class InlineResponse5002(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse5002.
-        The status of the submitted request.  Possible values:  - SERVER_ERROR 
+        The http status description of the submitted request.
 
         :param status: The status of this InlineResponse5002.
         :type: str
@@ -112,7 +112,7 @@ class InlineResponse5002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse5002.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'SYSTEM_ERROR' 
 
         :return: The reason of this InlineResponse5002.
         :rtype: str
@@ -123,11 +123,17 @@ class InlineResponse5002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse5002.
-        The reason of the status.  Possible values:  - SYSTEM_ERROR  - SERVER_TIMEOUT  - SERVICE_TIMEOUT 
+        Documented reason codes. Client should be able to use the key for generating their own error message Possible Values:   - 'SYSTEM_ERROR' 
 
         :param reason: The reason of this InlineResponse5002.
         :type: str
         """
+        allowed_values = ["SYSTEM_ERROR"]
+        if reason not in allowed_values:
+            raise ValueError(
+                "Invalid value for `reason` ({0}), must be one of {1}"
+                .format(reason, allowed_values)
+            )
 
         self._reason = reason
 
@@ -135,7 +141,7 @@ class InlineResponse5002(object):
     def message(self):
         """
         Gets the message of this InlineResponse5002.
-        The detail message related to the status and reason listed above.
+        Descriptive message for the error.
 
         :return: The message of this InlineResponse5002.
         :rtype: str
@@ -146,7 +152,7 @@ class InlineResponse5002(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse5002.
-        The detail message related to the status and reason listed above.
+        Descriptive message for the error.
 
         :param message: The message of this InlineResponse5002.
         :type: str

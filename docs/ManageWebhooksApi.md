@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_webhook_subscription_by_id**
-> InlineResponse2005 get_webhook_subscription_by_id(webhook_id)
+> InlineResponse2004 get_webhook_subscription_by_id(webhook_id)
 
 Get Details On a Single Webhook
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_webhook_subscriptions_by_org**
-> list[InlineResponse2004] get_webhook_subscriptions_by_org(organization_id, product_id, event_type)
+> list[InlineResponse2003] get_webhook_subscriptions_by_org(organization_id, product_id, event_type)
 
 Get Details On All Created Webhooks
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2004]**](InlineResponse2004.md)
+[**list[InlineResponse2003]**](InlineResponse2003.md)
 
 ### Authorization
 

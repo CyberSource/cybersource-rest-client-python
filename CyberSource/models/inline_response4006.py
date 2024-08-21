@@ -30,117 +30,108 @@ class InlineResponse4006(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'reason': 'str',
+        'correlation_id': 'str',
+        'details': 'list[InlineResponse4006Details]',
+        'information_link': 'str',
         'message': 'str',
-        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
+        'reason': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'reason': 'reason',
+        'correlation_id': 'correlationId',
+        'details': 'details',
+        'information_link': 'informationLink',
         'message': 'message',
-        'details': 'details'
+        'reason': 'reason'
     }
 
-    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
+    def __init__(self, correlation_id=None, details=None, information_link=None, message=None, reason=None):
         """
         InlineResponse4006 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
-        self._reason = None
-        self._message = None
+        self._correlation_id = None
         self._details = None
+        self._information_link = None
+        self._message = None
+        self._reason = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if reason is not None:
-          self.reason = reason
-        if message is not None:
-          self.message = message
+        if correlation_id is not None:
+          self.correlation_id = correlation_id
         if details is not None:
           self.details = details
+        if information_link is not None:
+          self.information_link = information_link
+        self.message = message
+        self.reason = reason
 
     @property
-    def submit_time_utc(self):
+    def correlation_id(self):
         """
-        Gets the submit_time_utc of this InlineResponse4006.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the correlation_id of this InlineResponse4006.
 
-        :return: The submit_time_utc of this InlineResponse4006.
+        :return: The correlation_id of this InlineResponse4006.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._correlation_id
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @correlation_id.setter
+    def correlation_id(self, correlation_id):
         """
-        Sets the submit_time_utc of this InlineResponse4006.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the correlation_id of this InlineResponse4006.
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse4006.
+        :param correlation_id: The correlation_id of this InlineResponse4006.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._correlation_id = correlation_id
 
     @property
-    def status(self):
+    def details(self):
         """
-        Gets the status of this InlineResponse4006.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        Gets the details of this InlineResponse4006.
 
-        :return: The status of this InlineResponse4006.
+        :return: The details of this InlineResponse4006.
+        :rtype: list[InlineResponse4006Details]
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse4006.
+
+        :param details: The details of this InlineResponse4006.
+        :type: list[InlineResponse4006Details]
+        """
+
+        self._details = details
+
+    @property
+    def information_link(self):
+        """
+        Gets the information_link of this InlineResponse4006.
+
+        :return: The information_link of this InlineResponse4006.
         :rtype: str
         """
-        return self._status
+        return self._information_link
 
-    @status.setter
-    def status(self, status):
+    @information_link.setter
+    def information_link(self, information_link):
         """
-        Sets the status of this InlineResponse4006.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        Sets the information_link of this InlineResponse4006.
 
-        :param status: The status of this InlineResponse4006.
+        :param information_link: The information_link of this InlineResponse4006.
         :type: str
         """
 
-        self._status = status
-
-    @property
-    def reason(self):
-        """
-        Gets the reason of this InlineResponse4006.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
-
-        :return: The reason of this InlineResponse4006.
-        :rtype: str
-        """
-        return self._reason
-
-    @reason.setter
-    def reason(self, reason):
-        """
-        Sets the reason of this InlineResponse4006.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA 
-
-        :param reason: The reason of this InlineResponse4006.
-        :type: str
-        """
-
-        self._reason = reason
+        self._information_link = information_link
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4006.
-        The detail message related to the status and reason listed above.
 
         :return: The message of this InlineResponse4006.
         :rtype: str
@@ -151,7 +142,6 @@ class InlineResponse4006(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4006.
-        The detail message related to the status and reason listed above.
 
         :param message: The message of this InlineResponse4006.
         :type: str
@@ -160,25 +150,31 @@ class InlineResponse4006(object):
         self._message = message
 
     @property
-    def details(self):
+    def reason(self):
         """
-        Gets the details of this InlineResponse4006.
+        Gets the reason of this InlineResponse4006.
 
-        :return: The details of this InlineResponse4006.
-        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :return: The reason of this InlineResponse4006.
+        :rtype: str
         """
-        return self._details
+        return self._reason
 
-    @details.setter
-    def details(self, details):
+    @reason.setter
+    def reason(self, reason):
         """
-        Sets the details of this InlineResponse4006.
+        Sets the reason of this InlineResponse4006.
 
-        :param details: The details of this InlineResponse4006.
-        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
+        :param reason: The reason of this InlineResponse4006.
+        :type: str
         """
+        allowed_values = ["INVALID_APIKEY", "INVALID_SHIPPING_INPUT_PARAMS", "CAPTURE_CONTEXT_INVALID", "CAPTURE_CONTEXT_EXPIRED", "SDK_XHR_ERROR", "UNIFIEDPAYMENTS_VALIDATION_PARAMS", "UNIFIEDPAYMENTS_VALIDATION_FIELDS", "UNIFIEDPAYMENT_PAYMENT_PARAMITERS", "CREATE_TOKEN_TIMEOUT", "CREATE_TOKEN_XHR_ERROR", "SHOW_LOAD_CONTAINER_SELECTOR", "SHOW_LOAD_INVALID_CONTAINER", "SHOW_TOKEN_TIMEOUT", "SHOW_TOKEN_XHR_ERROR", "SHOW_PAYMENT_TIMEOUT"]
+        if reason not in allowed_values:
+            raise ValueError(
+                "Invalid value for `reason` ({0}), must be one of {1}"
+                .format(reason, allowed_values)
+            )
 
-        self._details = details
+        self._reason = reason
 
     def to_dict(self):
         """

@@ -61,7 +61,7 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION(object):
     def status(self):
         """
         Gets the status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION.
-        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `INVALID_REQUEST` - `AUTHENTICATION_FAILED` 
+        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `AUTHENTICATION_FAILED` 
 
         :return: The status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION.
         :rtype: str
@@ -72,7 +72,7 @@ class PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION(object):
     def status(self, status):
         """
         Sets the status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION.
-        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `INVALID_REQUEST` - `AUTHENTICATION_FAILED` 
+        The status for payerAuthentication 201 enroll and validate calls. Possible values are: - `AUTHENTICATION_SUCCESSFUL` - `PENDING_AUTHENTICATION` - `AUTHENTICATION_FAILED` 
 
         :param status: The status of this PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION.
         :type: str

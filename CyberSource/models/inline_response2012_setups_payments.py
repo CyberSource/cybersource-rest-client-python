@@ -46,7 +46,8 @@ class InlineResponse2012SetupsPayments(object):
         'payouts': 'InlineResponse2012SetupsPaymentsCardProcessing',
         'pay_by_link': 'InlineResponse2012SetupsPaymentsDigitalPayments',
         'unified_checkout': 'InlineResponse2012SetupsPaymentsDigitalPayments',
-        'receivables_manager': 'InlineResponse2012SetupsPaymentsDigitalPayments'
+        'receivables_manager': 'InlineResponse2012SetupsPaymentsDigitalPayments',
+        'service_fee': 'InlineResponse2012SetupsPaymentsCardProcessing'
     }
 
     attribute_map = {
@@ -66,10 +67,11 @@ class InlineResponse2012SetupsPayments(object):
         'payouts': 'payouts',
         'pay_by_link': 'payByLink',
         'unified_checkout': 'unifiedCheckout',
-        'receivables_manager': 'receivablesManager'
+        'receivables_manager': 'receivablesManager',
+        'service_fee': 'serviceFee'
     }
 
-    def __init__(self, card_processing=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None):
+    def __init__(self, card_processing=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
         """
         InlineResponse2012SetupsPayments - a model defined in Swagger
         """
@@ -91,6 +93,7 @@ class InlineResponse2012SetupsPayments(object):
         self._pay_by_link = None
         self._unified_checkout = None
         self._receivables_manager = None
+        self._service_fee = None
 
         if card_processing is not None:
           self.card_processing = card_processing
@@ -126,6 +129,8 @@ class InlineResponse2012SetupsPayments(object):
           self.unified_checkout = unified_checkout
         if receivables_manager is not None:
           self.receivables_manager = receivables_manager
+        if service_fee is not None:
+          self.service_fee = service_fee
 
     @property
     def card_processing(self):
@@ -483,6 +488,27 @@ class InlineResponse2012SetupsPayments(object):
         """
 
         self._receivables_manager = receivables_manager
+
+    @property
+    def service_fee(self):
+        """
+        Gets the service_fee of this InlineResponse2012SetupsPayments.
+
+        :return: The service_fee of this InlineResponse2012SetupsPayments.
+        :rtype: InlineResponse2012SetupsPaymentsCardProcessing
+        """
+        return self._service_fee
+
+    @service_fee.setter
+    def service_fee(self, service_fee):
+        """
+        Sets the service_fee of this InlineResponse2012SetupsPayments.
+
+        :param service_fee: The service_fee of this InlineResponse2012SetupsPayments.
+        :type: InlineResponse2012SetupsPaymentsCardProcessing
+        """
+
+        self._service_fee = service_fee
 
     def to_dict(self):
         """

@@ -51,7 +51,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'deferred_auth_indicator': 'bool',
         'cash_advance_indicator': 'bool',
         'split_payment_transaction': 'bool',
-        'card_verification_indicator': 'bool'
+        'card_verification_indicator': 'bool',
+        'aft_indicator': 'bool'
     }
 
     attribute_map = {
@@ -76,10 +77,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'deferred_auth_indicator': 'deferredAuthIndicator',
         'cash_advance_indicator': 'cashAdvanceIndicator',
         'split_payment_transaction': 'splitPaymentTransaction',
-        'card_verification_indicator': 'cardVerificationIndicator'
+        'card_verification_indicator': 'cardVerificationIndicator',
+        'aft_indicator': 'aftIndicator'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None, aft_indicator=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -106,6 +108,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._cash_advance_indicator = None
         self._split_payment_transaction = None
         self._card_verification_indicator = None
+        self._aft_indicator = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -151,6 +154,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.split_payment_transaction = split_payment_transaction
         if card_verification_indicator is not None:
           self.card_verification_indicator = card_verification_indicator
+        if aft_indicator is not None:
+          self.aft_indicator = aft_indicator
 
     @property
     def auth_type(self):
@@ -655,6 +660,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._card_verification_indicator = card_verification_indicator
+
+    @property
+    def aft_indicator(self):
+        """
+        Gets the aft_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Indicates whether the transaction is an Account Funding Transaction (AFT).  This field is mandatory for Account Funding Transactions (AFT).   Possible values:   - `true` (This is an AFT transaction)   - `false` (default value) (This is not an AFT transaction) 
+
+        :return: The aft_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._aft_indicator
+
+    @aft_indicator.setter
+    def aft_indicator(self, aft_indicator):
+        """
+        Sets the aft_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Indicates whether the transaction is an Account Funding Transaction (AFT).  This field is mandatory for Account Funding Transactions (AFT).   Possible values:   - `true` (This is an AFT transaction)   - `false` (default value) (This is not an AFT transaction) 
+
+        :param aft_indicator: The aft_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._aft_indicator = aft_indicator
 
     def to_dict(self):
         """
