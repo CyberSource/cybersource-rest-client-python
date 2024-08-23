@@ -41,6 +41,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_category_code': 'str',
         'forwarded_acquirer_code': 'str',
         'settlement_date': 'str',
+        'sequence_number': 'str',
         'avs': 'PtsV2PaymentsPost201ResponseProcessorInformationAvs',
         'card_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationCardVerification',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
@@ -82,6 +83,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'response_category_code': 'responseCategoryCode',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'settlement_date': 'settlementDate',
+        'sequence_number': 'sequenceNumber',
         'avs': 'avs',
         'card_verification': 'cardVerification',
         'merchant_advice': 'merchantAdvice',
@@ -111,7 +113,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'device_url': 'deviceUrl'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -127,6 +129,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._response_category_code = None
         self._forwarded_acquirer_code = None
         self._settlement_date = None
+        self._sequence_number = None
         self._avs = None
         self._card_verification = None
         self._merchant_advice = None
@@ -177,6 +180,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.forwarded_acquirer_code = forwarded_acquirer_code
         if settlement_date is not None:
           self.settlement_date = settlement_date
+        if sequence_number is not None:
+          self.sequence_number = sequence_number
         if avs is not None:
           self.avs = avs
         if card_verification is not None:
@@ -484,6 +489,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._settlement_date = settlement_date
+
+    @property
+    def sequence_number(self):
+        """
+        Gets the sequence_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        This field serves as a unique identifier for initial and subsequent recurring transactions, specific to the payment brand, and is crucial for transaction tracking and recurrence management. Not all processors provide this value. Returned by the authorization service. 
+
+        :return: The sequence_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._sequence_number
+
+    @sequence_number.setter
+    def sequence_number(self, sequence_number):
+        """
+        Sets the sequence_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        This field serves as a unique identifier for initial and subsequent recurring transactions, specific to the payment brand, and is crucial for transaction tracking and recurrence management. Not all processors provide this value. Returned by the authorization service. 
+
+        :param sequence_number: The sequence_number of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._sequence_number = sequence_number
 
     @property
     def avs(self):

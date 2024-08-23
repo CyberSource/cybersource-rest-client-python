@@ -2,7 +2,6 @@ from __future__ import absolute_import
 
 # import apis into api package
 from .o_auth_api import OAuthApi
-from .asymmetric_key_management_api import AsymmetricKeyManagementApi
 from .batches_api import BatchesApi
 from .bin_lookup_api import BinLookupApi
 from .chargeback_details_api import ChargebackDetailsApi
@@ -40,7 +39,6 @@ from .retrieval_summaries_api import RetrievalSummariesApi
 from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
 from .subscriptions_api import SubscriptionsApi
-from .symmetric_key_management_api import SymmetricKeyManagementApi
 from .token_api import TokenApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
@@ -54,10 +52,6 @@ from .capture_api import CaptureApi
 from .credit_api import CreditApi
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
-from .key_management_api import KeyManagementApi
-from .key_management_password_api import KeyManagementPasswordApi
-from .key_management_pgp_api import KeyManagementPgpApi
-from .key_management_scmp_api import KeyManagementScmpApi
 from .payments_api import PaymentsApi
 from .refund_api import RefundApi
 from .reversal_api import ReversalApi

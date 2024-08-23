@@ -30,7 +30,6 @@ class Riskv1authenticationresultsPaymentInformationCard(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'bin': 'str',
         'type': 'str',
         'expiration_month': 'str',
         'expiration_year': 'str',
@@ -38,26 +37,22 @@ class Riskv1authenticationresultsPaymentInformationCard(object):
     }
 
     attribute_map = {
-        'bin': 'bin',
         'type': 'type',
         'expiration_month': 'expirationMonth',
         'expiration_year': 'expirationYear',
         'number': 'number'
     }
 
-    def __init__(self, bin=None, type=None, expiration_month=None, expiration_year=None, number=None):
+    def __init__(self, type=None, expiration_month=None, expiration_year=None, number=None):
         """
         Riskv1authenticationresultsPaymentInformationCard - a model defined in Swagger
         """
 
-        self._bin = None
         self._type = None
         self._expiration_month = None
         self._expiration_year = None
         self._number = None
 
-        if bin is not None:
-          self.bin = bin
         if type is not None:
           self.type = type
         if expiration_month is not None:
@@ -66,29 +61,6 @@ class Riskv1authenticationresultsPaymentInformationCard(object):
           self.expiration_year = expiration_year
         if number is not None:
           self.number = number
-
-    @property
-    def bin(self):
-        """
-        Gets the bin of this Riskv1authenticationresultsPaymentInformationCard.
-        description: The BIN is the first six digits of the card's Primary Account Number (PAN). 
-
-        :return: The bin of this Riskv1authenticationresultsPaymentInformationCard.
-        :rtype: str
-        """
-        return self._bin
-
-    @bin.setter
-    def bin(self, bin):
-        """
-        Sets the bin of this Riskv1authenticationresultsPaymentInformationCard.
-        description: The BIN is the first six digits of the card's Primary Account Number (PAN). 
-
-        :param bin: The bin of this Riskv1authenticationresultsPaymentInformationCard.
-        :type: str
-        """
-
-        self._bin = bin
 
     @property
     def type(self):

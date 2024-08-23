@@ -175,7 +175,7 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -208,7 +208,7 @@ class ManageWebhooksApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -268,7 +268,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='InlineResponse2004',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -293,7 +293,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier. (required)
         :param str event_type: The Event Type. (required)
-        :return: list[InlineResponse2004]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -328,7 +328,7 @@ class ManageWebhooksApi(object):
         :param str organization_id: The Organization Identifier. (required)
         :param str product_id: The Product Identifier. (required)
         :param str event_type: The Event Type. (required)
-        :return: list[InlineResponse2004]
+        :return: list[InlineResponse2003]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -401,7 +401,7 @@ class ManageWebhooksApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='list[InlineResponse2004]',
+                                        response_type='list[InlineResponse2003]',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

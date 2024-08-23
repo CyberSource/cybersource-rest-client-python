@@ -83,24 +83,16 @@ class Riskv1authenticationsDeviceInformation(object):
           self.raw_data = raw_data
         if http_accept_browser_value is not None:
           self.http_accept_browser_value = http_accept_browser_value
-        if http_accept_content is not None:
-          self.http_accept_content = http_accept_content
-        if http_browser_language is not None:
-          self.http_browser_language = http_browser_language
-        if http_browser_java_enabled is not None:
-          self.http_browser_java_enabled = http_browser_java_enabled
+        self.http_accept_content = http_accept_content
+        self.http_browser_language = http_browser_language
+        self.http_browser_java_enabled = http_browser_java_enabled
         if http_browser_java_script_enabled is not None:
           self.http_browser_java_script_enabled = http_browser_java_script_enabled
-        if http_browser_color_depth is not None:
-          self.http_browser_color_depth = http_browser_color_depth
-        if http_browser_screen_height is not None:
-          self.http_browser_screen_height = http_browser_screen_height
-        if http_browser_screen_width is not None:
-          self.http_browser_screen_width = http_browser_screen_width
-        if http_browser_time_difference is not None:
-          self.http_browser_time_difference = http_browser_time_difference
-        if user_agent_browser_value is not None:
-          self.user_agent_browser_value = user_agent_browser_value
+        self.http_browser_color_depth = http_browser_color_depth
+        self.http_browser_screen_height = http_browser_screen_height
+        self.http_browser_screen_width = http_browser_screen_width
+        self.http_browser_time_difference = http_browser_time_difference
+        self.user_agent_browser_value = user_agent_browser_value
 
     @property
     def ip_address(self):

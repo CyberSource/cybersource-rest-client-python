@@ -30,7 +30,7 @@ class ValidateRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
+        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
         'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
         'order_information': 'Riskv1authenticationresultsOrderInformation',
         'payment_information': 'Riskv1authenticationresultsPaymentInformation',
@@ -83,7 +83,7 @@ class ValidateRequest(object):
         Gets the client_reference_information of this ValidateRequest.
 
         :return: The client_reference_information of this ValidateRequest.
-        :rtype: Riskv1decisionsClientReferenceInformation
+        :rtype: Riskv1authenticationsetupsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -93,7 +93,7 @@ class ValidateRequest(object):
         Sets the client_reference_information of this ValidateRequest.
 
         :param client_reference_information: The client_reference_information of this ValidateRequest.
-        :type: Riskv1decisionsClientReferenceInformation
+        :type: Riskv1authenticationsetupsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

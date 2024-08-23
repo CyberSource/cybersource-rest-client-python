@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **find_products_to_subscribe**
-> list[InlineResponse2003] find_products_to_subscribe(organization_id)
+> list[InlineResponse2002] find_products_to_subscribe(organization_id)
 
 Find Products You Can Subscribe To
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2003]**](InlineResponse2003.md)
+[**list[InlineResponse2002]**](InlineResponse2002.md)
 
 ### Authorization
 

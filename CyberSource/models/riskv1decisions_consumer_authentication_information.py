@@ -31,7 +31,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
     """
     swagger_types = {
         'strong_authentication': 'Riskv1decisionsConsumerAuthenticationInformationStrongAuthentication',
-        'authentication_type': 'str',
         'acs_window_size': 'str',
         'alternate_authentication_data': 'str',
         'alternate_authentication_date': 'str',
@@ -76,7 +75,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
 
     attribute_map = {
         'strong_authentication': 'strongAuthentication',
-        'authentication_type': 'authenticationType',
         'acs_window_size': 'acsWindowSize',
         'alternate_authentication_data': 'alternateAuthenticationData',
         'alternate_authentication_date': 'alternateAuthenticationDate',
@@ -119,13 +117,12 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'score_request': 'scoreRequest'
     }
 
-    def __init__(self, strong_authentication=None, authentication_type=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
+    def __init__(self, strong_authentication=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
         """
         Riskv1decisionsConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._strong_authentication = None
-        self._authentication_type = None
         self._acs_window_size = None
         self._alternate_authentication_data = None
         self._alternate_authentication_date = None
@@ -169,8 +166,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
 
         if strong_authentication is not None:
           self.strong_authentication = strong_authentication
-        if authentication_type is not None:
-          self.authentication_type = authentication_type
         if acs_window_size is not None:
           self.acs_window_size = acs_window_size
         if alternate_authentication_data is not None:
@@ -199,8 +194,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.decoupled_authentication_max_time = decoupled_authentication_max_time
         if default_card is not None:
           self.default_card = default_card
-        if device_channel is not None:
-          self.device_channel = device_channel
+        self.device_channel = device_channel
         if installment_total_count is not None:
           self.installment_total_count = installment_total_count
         if merchant_fraud_rate is not None:
@@ -272,29 +266,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         """
 
         self._strong_authentication = strong_authentication
-
-    @property
-    def authentication_type(self):
-        """
-        Gets the authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
-
-        :return: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._authentication_type
-
-    @authentication_type.setter
-    def authentication_type(self, authentication_type):
-        """
-        Sets the authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
-
-        :param authentication_type: The authentication_type of this Riskv1decisionsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._authentication_type = authentication_type
 
     @property
     def acs_window_size(self):

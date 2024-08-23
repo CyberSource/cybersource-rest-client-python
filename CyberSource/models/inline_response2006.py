@@ -30,52 +30,67 @@ class InlineResponse2006(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'list[InlineResponse2006Links]',
-        'object': 'str',
-        'offset': 'int',
-        'limit': 'int',
-        'count': 'int',
-        'total': 'int',
-        'embedded': 'InlineResponse2006Embedded'
+        'links': 'InlineResponse2006Links',
+        'batch_id': 'str',
+        'batch_created_date': 'str',
+        'batch_source': 'str',
+        'merchant_reference': 'str',
+        'batch_ca_endpoints': 'str',
+        'status': 'str',
+        'totals': 'InlineResponse2005EmbeddedTotals',
+        'billing': 'InlineResponse2006Billing',
+        'description': 'str'
     }
 
     attribute_map = {
         'links': '_links',
-        'object': 'object',
-        'offset': 'offset',
-        'limit': 'limit',
-        'count': 'count',
-        'total': 'total',
-        'embedded': '_embedded'
+        'batch_id': 'batchId',
+        'batch_created_date': 'batchCreatedDate',
+        'batch_source': 'batchSource',
+        'merchant_reference': 'merchantReference',
+        'batch_ca_endpoints': 'batchCaEndpoints',
+        'status': 'status',
+        'totals': 'totals',
+        'billing': 'billing',
+        'description': 'description'
     }
 
-    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
+    def __init__(self, links=None, batch_id=None, batch_created_date=None, batch_source=None, merchant_reference=None, batch_ca_endpoints=None, status=None, totals=None, billing=None, description=None):
         """
         InlineResponse2006 - a model defined in Swagger
         """
 
         self._links = None
-        self._object = None
-        self._offset = None
-        self._limit = None
-        self._count = None
-        self._total = None
-        self._embedded = None
+        self._batch_id = None
+        self._batch_created_date = None
+        self._batch_source = None
+        self._merchant_reference = None
+        self._batch_ca_endpoints = None
+        self._status = None
+        self._totals = None
+        self._billing = None
+        self._description = None
 
         if links is not None:
           self.links = links
-        if object is not None:
-          self.object = object
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if count is not None:
-          self.count = count
-        if total is not None:
-          self.total = total
-        if embedded is not None:
-          self.embedded = embedded
+        if batch_id is not None:
+          self.batch_id = batch_id
+        if batch_created_date is not None:
+          self.batch_created_date = batch_created_date
+        if batch_source is not None:
+          self.batch_source = batch_source
+        if merchant_reference is not None:
+          self.merchant_reference = merchant_reference
+        if batch_ca_endpoints is not None:
+          self.batch_ca_endpoints = batch_ca_endpoints
+        if status is not None:
+          self.status = status
+        if totals is not None:
+          self.totals = totals
+        if billing is not None:
+          self.billing = billing
+        if description is not None:
+          self.description = description
 
     @property
     def links(self):
@@ -83,7 +98,7 @@ class InlineResponse2006(object):
         Gets the links of this InlineResponse2006.
 
         :return: The links of this InlineResponse2006.
-        :rtype: list[InlineResponse2006Links]
+        :rtype: InlineResponse2006Links
         """
         return self._links
 
@@ -93,136 +108,209 @@ class InlineResponse2006(object):
         Sets the links of this InlineResponse2006.
 
         :param links: The links of this InlineResponse2006.
-        :type: list[InlineResponse2006Links]
+        :type: InlineResponse2006Links
         """
 
         self._links = links
 
     @property
-    def object(self):
+    def batch_id(self):
         """
-        Gets the object of this InlineResponse2006.
+        Gets the batch_id of this InlineResponse2006.
+        Unique identification number assigned to the submitted request.
 
-        :return: The object of this InlineResponse2006.
+        :return: The batch_id of this InlineResponse2006.
         :rtype: str
         """
-        return self._object
+        return self._batch_id
 
-    @object.setter
-    def object(self, object):
+    @batch_id.setter
+    def batch_id(self, batch_id):
         """
-        Sets the object of this InlineResponse2006.
+        Sets the batch_id of this InlineResponse2006.
+        Unique identification number assigned to the submitted request.
 
-        :param object: The object of this InlineResponse2006.
+        :param batch_id: The batch_id of this InlineResponse2006.
         :type: str
         """
 
-        self._object = object
+        self._batch_id = batch_id
 
     @property
-    def offset(self):
+    def batch_created_date(self):
         """
-        Gets the offset of this InlineResponse2006.
+        Gets the batch_created_date of this InlineResponse2006.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :return: The offset of this InlineResponse2006.
-        :rtype: int
+        :return: The batch_created_date of this InlineResponse2006.
+        :rtype: str
         """
-        return self._offset
+        return self._batch_created_date
 
-    @offset.setter
-    def offset(self, offset):
+    @batch_created_date.setter
+    def batch_created_date(self, batch_created_date):
         """
-        Sets the offset of this InlineResponse2006.
+        Sets the batch_created_date of this InlineResponse2006.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :param offset: The offset of this InlineResponse2006.
-        :type: int
+        :param batch_created_date: The batch_created_date of this InlineResponse2006.
+        :type: str
         """
 
-        self._offset = offset
+        self._batch_created_date = batch_created_date
 
     @property
-    def limit(self):
+    def batch_source(self):
         """
-        Gets the limit of this InlineResponse2006.
+        Gets the batch_source of this InlineResponse2006.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
 
-        :return: The limit of this InlineResponse2006.
-        :rtype: int
+        :return: The batch_source of this InlineResponse2006.
+        :rtype: str
         """
-        return self._limit
+        return self._batch_source
 
-    @limit.setter
-    def limit(self, limit):
+    @batch_source.setter
+    def batch_source(self, batch_source):
         """
-        Sets the limit of this InlineResponse2006.
+        Sets the batch_source of this InlineResponse2006.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
 
-        :param limit: The limit of this InlineResponse2006.
-        :type: int
+        :param batch_source: The batch_source of this InlineResponse2006.
+        :type: str
         """
 
-        self._limit = limit
+        self._batch_source = batch_source
 
     @property
-    def count(self):
+    def merchant_reference(self):
         """
-        Gets the count of this InlineResponse2006.
+        Gets the merchant_reference of this InlineResponse2006.
+        Reference used by merchant to identify batch.
 
-        :return: The count of this InlineResponse2006.
-        :rtype: int
+        :return: The merchant_reference of this InlineResponse2006.
+        :rtype: str
         """
-        return self._count
+        return self._merchant_reference
 
-    @count.setter
-    def count(self, count):
+    @merchant_reference.setter
+    def merchant_reference(self, merchant_reference):
         """
-        Sets the count of this InlineResponse2006.
+        Sets the merchant_reference of this InlineResponse2006.
+        Reference used by merchant to identify batch.
 
-        :param count: The count of this InlineResponse2006.
-        :type: int
+        :param merchant_reference: The merchant_reference of this InlineResponse2006.
+        :type: str
         """
 
-        self._count = count
+        self._merchant_reference = merchant_reference
 
     @property
-    def total(self):
+    def batch_ca_endpoints(self):
         """
-        Gets the total of this InlineResponse2006.
+        Gets the batch_ca_endpoints of this InlineResponse2006.
 
-        :return: The total of this InlineResponse2006.
-        :rtype: int
+        :return: The batch_ca_endpoints of this InlineResponse2006.
+        :rtype: str
         """
-        return self._total
+        return self._batch_ca_endpoints
 
-    @total.setter
-    def total(self, total):
+    @batch_ca_endpoints.setter
+    def batch_ca_endpoints(self, batch_ca_endpoints):
         """
-        Sets the total of this InlineResponse2006.
+        Sets the batch_ca_endpoints of this InlineResponse2006.
 
-        :param total: The total of this InlineResponse2006.
-        :type: int
+        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2006.
+        :type: str
         """
 
-        self._total = total
+        self._batch_ca_endpoints = batch_ca_endpoints
 
     @property
-    def embedded(self):
+    def status(self):
         """
-        Gets the embedded of this InlineResponse2006.
+        Gets the status of this InlineResponse2006.
+        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
 
-        :return: The embedded of this InlineResponse2006.
-        :rtype: InlineResponse2006Embedded
+        :return: The status of this InlineResponse2006.
+        :rtype: str
         """
-        return self._embedded
+        return self._status
 
-    @embedded.setter
-    def embedded(self, embedded):
+    @status.setter
+    def status(self, status):
         """
-        Sets the embedded of this InlineResponse2006.
+        Sets the status of this InlineResponse2006.
+        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
 
-        :param embedded: The embedded of this InlineResponse2006.
-        :type: InlineResponse2006Embedded
+        :param status: The status of this InlineResponse2006.
+        :type: str
         """
 
-        self._embedded = embedded
+        self._status = status
+
+    @property
+    def totals(self):
+        """
+        Gets the totals of this InlineResponse2006.
+
+        :return: The totals of this InlineResponse2006.
+        :rtype: InlineResponse2005EmbeddedTotals
+        """
+        return self._totals
+
+    @totals.setter
+    def totals(self, totals):
+        """
+        Sets the totals of this InlineResponse2006.
+
+        :param totals: The totals of this InlineResponse2006.
+        :type: InlineResponse2005EmbeddedTotals
+        """
+
+        self._totals = totals
+
+    @property
+    def billing(self):
+        """
+        Gets the billing of this InlineResponse2006.
+
+        :return: The billing of this InlineResponse2006.
+        :rtype: InlineResponse2006Billing
+        """
+        return self._billing
+
+    @billing.setter
+    def billing(self, billing):
+        """
+        Sets the billing of this InlineResponse2006.
+
+        :param billing: The billing of this InlineResponse2006.
+        :type: InlineResponse2006Billing
+        """
+
+        self._billing = billing
+
+    @property
+    def description(self):
+        """
+        Gets the description of this InlineResponse2006.
+
+        :return: The description of this InlineResponse2006.
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """
+        Sets the description of this InlineResponse2006.
+
+        :param description: The description of this InlineResponse2006.
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """

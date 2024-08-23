@@ -30,71 +30,69 @@ class InlineResponse2006Links(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'rel': 'str',
-        'href': 'str'
+        '_self': 'InlineResponse202LinksStatus',
+        'report': 'list[InlineResponse2006LinksReport]'
     }
 
     attribute_map = {
-        'rel': 'rel',
-        'href': 'href'
+        '_self': 'self',
+        'report': 'report'
     }
 
-    def __init__(self, rel=None, href=None):
+    def __init__(self, _self=None, report=None):
         """
         InlineResponse2006Links - a model defined in Swagger
         """
 
-        self._rel = None
-        self._href = None
+        self.__self = None
+        self._report = None
 
-        if rel is not None:
-          self.rel = rel
-        if href is not None:
-          self.href = href
-
-    @property
-    def rel(self):
-        """
-        Gets the rel of this InlineResponse2006Links.
-        Valid Values:   * self   * first   * last   * prev   * next 
-
-        :return: The rel of this InlineResponse2006Links.
-        :rtype: str
-        """
-        return self._rel
-
-    @rel.setter
-    def rel(self, rel):
-        """
-        Sets the rel of this InlineResponse2006Links.
-        Valid Values:   * self   * first   * last   * prev   * next 
-
-        :param rel: The rel of this InlineResponse2006Links.
-        :type: str
-        """
-
-        self._rel = rel
+        if _self is not None:
+          self._self = _self
+        if report is not None:
+          self.report = report
 
     @property
-    def href(self):
+    def _self(self):
         """
-        Gets the href of this InlineResponse2006Links.
+        Gets the _self of this InlineResponse2006Links.
 
-        :return: The href of this InlineResponse2006Links.
-        :rtype: str
+        :return: The _self of this InlineResponse2006Links.
+        :rtype: InlineResponse202LinksStatus
         """
-        return self._href
+        return self.__self
 
-    @href.setter
-    def href(self, href):
+    @_self.setter
+    def _self(self, _self):
         """
-        Sets the href of this InlineResponse2006Links.
+        Sets the _self of this InlineResponse2006Links.
 
-        :param href: The href of this InlineResponse2006Links.
-        :type: str
+        :param _self: The _self of this InlineResponse2006Links.
+        :type: InlineResponse202LinksStatus
         """
 
-        self._href = href
+        self.__self = _self
+
+    @property
+    def report(self):
+        """
+        Gets the report of this InlineResponse2006Links.
+
+        :return: The report of this InlineResponse2006Links.
+        :rtype: list[InlineResponse2006LinksReport]
+        """
+        return self._report
+
+    @report.setter
+    def report(self, report):
+        """
+        Sets the report of this InlineResponse2006Links.
+
+        :param report: The report of this InlineResponse2006Links.
+        :type: list[InlineResponse2006LinksReport]
+        """
+
+        self._report = report
 
     def to_dict(self):
         """
