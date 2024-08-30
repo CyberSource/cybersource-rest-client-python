@@ -30,7 +30,7 @@ class PayerAuthSetupRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
+        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
         'payment_information': 'Riskv1authenticationsetupsPaymentInformation',
         'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
         'token_information': 'Riskv1authenticationsetupsTokenInformation'
@@ -68,7 +68,7 @@ class PayerAuthSetupRequest(object):
         Gets the client_reference_information of this PayerAuthSetupRequest.
 
         :return: The client_reference_information of this PayerAuthSetupRequest.
-        :rtype: Riskv1decisionsClientReferenceInformation
+        :rtype: Riskv1authenticationsetupsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -78,7 +78,7 @@ class PayerAuthSetupRequest(object):
         Sets the client_reference_information of this PayerAuthSetupRequest.
 
         :param client_reference_information: The client_reference_information of this PayerAuthSetupRequest.
-        :type: Riskv1decisionsClientReferenceInformation
+        :type: Riskv1authenticationsetupsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

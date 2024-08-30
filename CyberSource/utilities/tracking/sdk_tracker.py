@@ -2,8 +2,6 @@ import json
 
 class SdkTracker:
     inclusion_list = [
-        'create_p12_keys_request', 
-        'delete_bulk_p12_keys_request',
         'capture_payment_request',
         'create_credit_request',
         'add_negative_list_request',
@@ -21,9 +19,6 @@ class SdkTracker:
         'mit_reversal_request',
         'create_subscription_request',
         'update_subscription',
-        'create_shared_secret_keys_request',
-        'create_shared_secret_keys_verifi_request',
-        'delete_bulk_symmetric_keys_request',
         'tax_request',
         'void_tax_request',
         'validate_export_compliance_request',

@@ -30,7 +30,7 @@ class Riskv1authenticationsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'Riskv1authenticationsPaymentInformationCard',
+        'card': 'Riskv1authenticationsetupsPaymentInformationCard',
         'tokenized_card': 'Riskv1authenticationsPaymentInformationTokenizedCard',
         'fluid_data': 'Riskv1authenticationsetupsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer'
@@ -68,7 +68,7 @@ class Riskv1authenticationsPaymentInformation(object):
         Gets the card of this Riskv1authenticationsPaymentInformation.
 
         :return: The card of this Riskv1authenticationsPaymentInformation.
-        :rtype: Riskv1authenticationsPaymentInformationCard
+        :rtype: Riskv1authenticationsetupsPaymentInformationCard
         """
         return self._card
 
@@ -78,7 +78,7 @@ class Riskv1authenticationsPaymentInformation(object):
         Sets the card of this Riskv1authenticationsPaymentInformation.
 
         :param card: The card of this Riskv1authenticationsPaymentInformation.
-        :type: Riskv1authenticationsPaymentInformationCard
+        :type: Riskv1authenticationsetupsPaymentInformationCard
         """
 
         self._card = card

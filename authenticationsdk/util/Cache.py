@@ -1,8 +1,11 @@
 import base64
 import ssl
 
-from OpenSSL import crypto
 from jwcrypto import jwk
+
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.serialization import pkcs12
 
 from authenticationsdk.util.GlobalLabelParameters import *
 
@@ -24,24 +27,30 @@ class FileCache:
 
         if filename not in self.filecache:
 
-            p12 = crypto.load_pkcs12(open(
-                os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,
-                'rb').read(), mconfig.key_password)
-            cert_str = crypto.dump_certificate(crypto.FILETYPE_PEM, p12.get_certificate())
-            der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_str.decode("utf-8")))
-            private_key = crypto.dump_privatekey(crypto.FILETYPE_PEM, p12.get_privatekey()).decode("utf-8")
+            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
+                open(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,'rb').read() ,
+                password=(mconfig.key_password).encode(), 
+                backend=default_backend()
+            )
+
+            cert_pem = certificate.public_bytes(serialization.Encoding.PEM)
+            cert_pem_str = cert_pem.decode('utf-8')
+            der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_pem_str))
 
             self.filecache.setdefault(str(filename), []).append(der_cert_string)
             self.filecache.setdefault(str(filename), []).append(private_key)
             self.filecache.setdefault(str(filename), []).append(file_mod_time)
 
         if file_mod_time != self.filecache[filename][2]:
-            p12 = crypto.load_pkcs12(open(
-                os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX,
-                'rb').read(), mconfig.key_password)
-            cert_str = crypto.dump_certificate(crypto.FILETYPE_PEM, p12.get_certificate())
-            der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_str.decode("utf-8")))
-            private_key = crypto.dump_privatekey(crypto.FILETYPE_PEM, p12.get_privatekey()).decode("utf-8")
+            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
+                open(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,'rb').read() ,
+                password=(mconfig.key_password).encode(), 
+                backend=default_backend()
+            )
+
+            cert_pem = certificate.public_bytes(serialization.Encoding.PEM)
+            cert_pem_str = cert_pem.decode('utf-8')
+            der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_pem_str))
 
             self.filecache.setdefault(str(filename), []).append(der_cert_string)
             self.filecache.setdefault(str(filename), []).append(private_key)

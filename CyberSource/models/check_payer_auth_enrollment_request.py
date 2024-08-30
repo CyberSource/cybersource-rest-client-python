@@ -30,7 +30,7 @@ class CheckPayerAuthEnrollmentRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'client_reference_information': 'Riskv1decisionsClientReferenceInformation',
+        'client_reference_information': 'Riskv1authenticationsetupsClientReferenceInformation',
         'order_information': 'Riskv1authenticationsOrderInformation',
         'payment_information': 'Riskv1authenticationsPaymentInformation',
         'processing_information': 'Riskv1authenticationsetupsProcessingInformation',
@@ -118,7 +118,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Gets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :return: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :rtype: Riskv1decisionsClientReferenceInformation
+        :rtype: Riskv1authenticationsetupsClientReferenceInformation
         """
         return self._client_reference_information
 
@@ -128,7 +128,7 @@ class CheckPayerAuthEnrollmentRequest(object):
         Sets the client_reference_information of this CheckPayerAuthEnrollmentRequest.
 
         :param client_reference_information: The client_reference_information of this CheckPayerAuthEnrollmentRequest.
-        :type: Riskv1decisionsClientReferenceInformation
+        :type: Riskv1authenticationsetupsClientReferenceInformation
         """
 
         self._client_reference_information = client_reference_information

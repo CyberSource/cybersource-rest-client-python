@@ -30,183 +30,199 @@ class InlineResponse2001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'total_count': 'int',
-        'offset': 'int',
-        'limit': 'int',
-        'sort': 'str',
-        'keys': 'list[InlineResponse2001Keys]'
+        'registration_information': 'Boardingv1registrationsRegistrationInformation',
+        'integration_information': 'InlineResponse2001IntegrationInformation',
+        'organization_information': 'Boardingv1registrationsOrganizationInformation',
+        'product_information': 'Boardingv1registrationsProductInformation',
+        'product_information_setups': 'list[InlineResponse2012ProductInformationSetups]',
+        'document_information': 'Boardingv1registrationsDocumentInformation',
+        'details': 'dict(str, list[object])'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'total_count': 'totalCount',
-        'offset': 'offset',
-        'limit': 'limit',
-        'sort': 'sort',
-        'keys': 'keys'
+        'registration_information': 'registrationInformation',
+        'integration_information': 'integrationInformation',
+        'organization_information': 'organizationInformation',
+        'product_information': 'productInformation',
+        'product_information_setups': 'productInformationSetups',
+        'document_information': 'documentInformation',
+        'details': 'details'
     }
 
-    def __init__(self, submit_time_utc=None, total_count=None, offset=None, limit=None, sort=None, keys=None):
+    def __init__(self, registration_information=None, integration_information=None, organization_information=None, product_information=None, product_information_setups=None, document_information=None, details=None):
         """
         InlineResponse2001 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._total_count = None
-        self._offset = None
-        self._limit = None
-        self._sort = None
-        self._keys = None
+        self._registration_information = None
+        self._integration_information = None
+        self._organization_information = None
+        self._product_information = None
+        self._product_information_setups = None
+        self._document_information = None
+        self._details = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if total_count is not None:
-          self.total_count = total_count
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if sort is not None:
-          self.sort = sort
-        if keys is not None:
-          self.keys = keys
-
-    @property
-    def submit_time_utc(self):
-        """
-        Gets the submit_time_utc of this InlineResponse2001.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :return: The submit_time_utc of this InlineResponse2001.
-        :rtype: str
-        """
-        return self._submit_time_utc
-
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
-        """
-        Sets the submit_time_utc of this InlineResponse2001.
-        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
-
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2001.
-        :type: str
-        """
-
-        self._submit_time_utc = submit_time_utc
+        if registration_information is not None:
+          self.registration_information = registration_information
+        if integration_information is not None:
+          self.integration_information = integration_information
+        if organization_information is not None:
+          self.organization_information = organization_information
+        if product_information is not None:
+          self.product_information = product_information
+        if product_information_setups is not None:
+          self.product_information_setups = product_information_setups
+        if document_information is not None:
+          self.document_information = document_information
+        if details is not None:
+          self.details = details
 
     @property
-    def total_count(self):
+    def registration_information(self):
         """
-        Gets the total_count of this InlineResponse2001.
-        Specifies the total number of items found based on the request
+        Gets the registration_information of this InlineResponse2001.
 
-        :return: The total_count of this InlineResponse2001.
-        :rtype: int
+        :return: The registration_information of this InlineResponse2001.
+        :rtype: Boardingv1registrationsRegistrationInformation
         """
-        return self._total_count
+        return self._registration_information
 
-    @total_count.setter
-    def total_count(self, total_count):
+    @registration_information.setter
+    def registration_information(self, registration_information):
         """
-        Sets the total_count of this InlineResponse2001.
-        Specifies the total number of items found based on the request
+        Sets the registration_information of this InlineResponse2001.
 
-        :param total_count: The total_count of this InlineResponse2001.
-        :type: int
+        :param registration_information: The registration_information of this InlineResponse2001.
+        :type: Boardingv1registrationsRegistrationInformation
         """
 
-        self._total_count = total_count
+        self._registration_information = registration_information
 
     @property
-    def offset(self):
+    def integration_information(self):
         """
-        Gets the offset of this InlineResponse2001.
-        Specifies the record offset from the records are returned part of the response
+        Gets the integration_information of this InlineResponse2001.
 
-        :return: The offset of this InlineResponse2001.
-        :rtype: int
+        :return: The integration_information of this InlineResponse2001.
+        :rtype: InlineResponse2001IntegrationInformation
         """
-        return self._offset
+        return self._integration_information
 
-    @offset.setter
-    def offset(self, offset):
+    @integration_information.setter
+    def integration_information(self, integration_information):
         """
-        Sets the offset of this InlineResponse2001.
-        Specifies the record offset from the records are returned part of the response
+        Sets the integration_information of this InlineResponse2001.
 
-        :param offset: The offset of this InlineResponse2001.
-        :type: int
+        :param integration_information: The integration_information of this InlineResponse2001.
+        :type: InlineResponse2001IntegrationInformation
         """
 
-        self._offset = offset
+        self._integration_information = integration_information
 
     @property
-    def limit(self):
+    def organization_information(self):
         """
-        Gets the limit of this InlineResponse2001.
-        Specifies the maximum number of records requested part of the response
+        Gets the organization_information of this InlineResponse2001.
 
-        :return: The limit of this InlineResponse2001.
-        :rtype: int
+        :return: The organization_information of this InlineResponse2001.
+        :rtype: Boardingv1registrationsOrganizationInformation
         """
-        return self._limit
+        return self._organization_information
 
-    @limit.setter
-    def limit(self, limit):
+    @organization_information.setter
+    def organization_information(self, organization_information):
         """
-        Sets the limit of this InlineResponse2001.
-        Specifies the maximum number of records requested part of the response
+        Sets the organization_information of this InlineResponse2001.
 
-        :param limit: The limit of this InlineResponse2001.
-        :type: int
+        :param organization_information: The organization_information of this InlineResponse2001.
+        :type: Boardingv1registrationsOrganizationInformation
         """
 
-        self._limit = limit
+        self._organization_information = organization_information
 
     @property
-    def sort(self):
+    def product_information(self):
         """
-        Gets the sort of this InlineResponse2001.
-        Specifies a comma separated list of field names based on which the result is sorted.
+        Gets the product_information of this InlineResponse2001.
 
-        :return: The sort of this InlineResponse2001.
-        :rtype: str
+        :return: The product_information of this InlineResponse2001.
+        :rtype: Boardingv1registrationsProductInformation
         """
-        return self._sort
+        return self._product_information
 
-    @sort.setter
-    def sort(self, sort):
+    @product_information.setter
+    def product_information(self, product_information):
         """
-        Sets the sort of this InlineResponse2001.
-        Specifies a comma separated list of field names based on which the result is sorted.
+        Sets the product_information of this InlineResponse2001.
 
-        :param sort: The sort of this InlineResponse2001.
-        :type: str
+        :param product_information: The product_information of this InlineResponse2001.
+        :type: Boardingv1registrationsProductInformation
         """
 
-        self._sort = sort
+        self._product_information = product_information
 
     @property
-    def keys(self):
+    def product_information_setups(self):
         """
-        Gets the keys of this InlineResponse2001.
+        Gets the product_information_setups of this InlineResponse2001.
 
-        :return: The keys of this InlineResponse2001.
-        :rtype: list[InlineResponse2001Keys]
+        :return: The product_information_setups of this InlineResponse2001.
+        :rtype: list[InlineResponse2012ProductInformationSetups]
         """
-        return self._keys
+        return self._product_information_setups
 
-    @keys.setter
-    def keys(self, keys):
+    @product_information_setups.setter
+    def product_information_setups(self, product_information_setups):
         """
-        Sets the keys of this InlineResponse2001.
+        Sets the product_information_setups of this InlineResponse2001.
 
-        :param keys: The keys of this InlineResponse2001.
-        :type: list[InlineResponse2001Keys]
+        :param product_information_setups: The product_information_setups of this InlineResponse2001.
+        :type: list[InlineResponse2012ProductInformationSetups]
         """
 
-        self._keys = keys
+        self._product_information_setups = product_information_setups
+
+    @property
+    def document_information(self):
+        """
+        Gets the document_information of this InlineResponse2001.
+
+        :return: The document_information of this InlineResponse2001.
+        :rtype: Boardingv1registrationsDocumentInformation
+        """
+        return self._document_information
+
+    @document_information.setter
+    def document_information(self, document_information):
+        """
+        Sets the document_information of this InlineResponse2001.
+
+        :param document_information: The document_information of this InlineResponse2001.
+        :type: Boardingv1registrationsDocumentInformation
+        """
+
+        self._document_information = document_information
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse2001.
+
+        :return: The details of this InlineResponse2001.
+        :rtype: dict(str, list[object])
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse2001.
+
+        :param details: The details of this InlineResponse2001.
+        :type: dict(str, list[object])
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

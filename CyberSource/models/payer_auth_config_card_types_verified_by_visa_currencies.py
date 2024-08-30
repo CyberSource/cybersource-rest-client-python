@@ -61,6 +61,7 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
     def currency_codes(self):
         """
         Gets the currency_codes of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
+        Supported currency codes are numeric ISO 4217 codes, such as 840 for US Dollar and 978 for Euro.  For backward compatibility, we also support the 'ALL' code, which represents all currencies.  In the UI, 'ALL' is displayed as 'Default'. 
 
         :return: The currency_codes of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
         :rtype: list[str]
@@ -71,6 +72,7 @@ class PayerAuthConfigCardTypesVerifiedByVisaCurrencies(object):
     def currency_codes(self, currency_codes):
         """
         Sets the currency_codes of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
+        Supported currency codes are numeric ISO 4217 codes, such as 840 for US Dollar and 978 for Euro.  For backward compatibility, we also support the 'ALL' code, which represents all currencies.  In the UI, 'ALL' is displayed as 'Default'. 
 
         :param currency_codes: The currency_codes of this PayerAuthConfigCardTypesVerifiedByVisaCurrencies.
         :type: list[str]

@@ -94,7 +94,7 @@ class RiskV1AuthenticationsPost400Response1(object):
     def status(self):
         """
         Gets the status of this RiskV1AuthenticationsPost400Response1.
-        The status for payerAuthentication 201 enroll and validate calls. Value is: - `INVALID_REQUEST` 
+        The status for payerAuthentication 400 enroll and validate calls. Value is: - `INVALID_REQUEST` 
 
         :return: The status of this RiskV1AuthenticationsPost400Response1.
         :rtype: str
@@ -105,7 +105,7 @@ class RiskV1AuthenticationsPost400Response1(object):
     def status(self, status):
         """
         Sets the status of this RiskV1AuthenticationsPost400Response1.
-        The status for payerAuthentication 201 enroll and validate calls. Value is: - `INVALID_REQUEST` 
+        The status for payerAuthentication 400 enroll and validate calls. Value is: - `INVALID_REQUEST` 
 
         :param status: The status of this RiskV1AuthenticationsPost400Response1.
         :type: str

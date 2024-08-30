@@ -31,8 +31,11 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
     """
     swagger_types = {
         'acs_rendering_type': 'str',
+        'acs_reference_number': 'str',
         'acs_transaction_id': 'str',
+        'acs_operator_id': 'str',
         'authentication_result': 'str',
+        'authentication_type': 'str',
         'authentication_status_msg': 'str',
         'authentication_transaction_id': 'str',
         'authentication_transaction_context_id': 'str',
@@ -40,8 +43,10 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'authorization_payload': 'str',
         'cavv': 'str',
         'cavv_algorithm': 'str',
+        'challenge_cancel_code': 'str',
         'directory_server_error_code': 'str',
         'directory_server_error_description': 'str',
+        'effective_authentication_type': 'str',
         'indicator': 'str',
         'interaction_counter': 'str',
         'eci': 'str',
@@ -60,8 +65,11 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
 
     attribute_map = {
         'acs_rendering_type': 'acsRenderingType',
+        'acs_reference_number': 'acsReferenceNumber',
         'acs_transaction_id': 'acsTransactionId',
+        'acs_operator_id': 'acsOperatorID',
         'authentication_result': 'authenticationResult',
+        'authentication_type': 'authenticationType',
         'authentication_status_msg': 'authenticationStatusMsg',
         'authentication_transaction_id': 'authenticationTransactionId',
         'authentication_transaction_context_id': 'authenticationTransactionContextId',
@@ -69,8 +77,10 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'authorization_payload': 'authorizationPayload',
         'cavv': 'cavv',
         'cavv_algorithm': 'cavvAlgorithm',
+        'challenge_cancel_code': 'challengeCancelCode',
         'directory_server_error_code': 'directoryServerErrorCode',
         'directory_server_error_description': 'directoryServerErrorDescription',
+        'effective_authentication_type': 'effectiveAuthenticationType',
         'indicator': 'indicator',
         'interaction_counter': 'interactionCounter',
         'eci': 'eci',
@@ -87,14 +97,17 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         'directory_server_transaction_id': 'directoryServerTransactionId'
     }
 
-    def __init__(self, acs_rendering_type=None, acs_transaction_id=None, authentication_result=None, authentication_status_msg=None, authentication_transaction_id=None, authentication_transaction_context_id=None, transaction_token=None, authorization_payload=None, cavv=None, cavv_algorithm=None, directory_server_error_code=None, directory_server_error_description=None, indicator=None, interaction_counter=None, eci=None, eci_raw=None, pares_status=None, sdk_transaction_id=None, specification_version=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, white_list_status=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
+    def __init__(self, acs_rendering_type=None, acs_reference_number=None, acs_transaction_id=None, acs_operator_id=None, authentication_result=None, authentication_type=None, authentication_status_msg=None, authentication_transaction_id=None, authentication_transaction_context_id=None, transaction_token=None, authorization_payload=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, directory_server_error_code=None, directory_server_error_description=None, effective_authentication_type=None, indicator=None, interaction_counter=None, eci=None, eci_raw=None, pares_status=None, sdk_transaction_id=None, specification_version=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, white_list_status=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None):
         """
         RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
 
         self._acs_rendering_type = None
+        self._acs_reference_number = None
         self._acs_transaction_id = None
+        self._acs_operator_id = None
         self._authentication_result = None
+        self._authentication_type = None
         self._authentication_status_msg = None
         self._authentication_transaction_id = None
         self._authentication_transaction_context_id = None
@@ -102,8 +115,10 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._authorization_payload = None
         self._cavv = None
         self._cavv_algorithm = None
+        self._challenge_cancel_code = None
         self._directory_server_error_code = None
         self._directory_server_error_description = None
+        self._effective_authentication_type = None
         self._indicator = None
         self._interaction_counter = None
         self._eci = None
@@ -121,10 +136,16 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
 
         if acs_rendering_type is not None:
           self.acs_rendering_type = acs_rendering_type
+        if acs_reference_number is not None:
+          self.acs_reference_number = acs_reference_number
         if acs_transaction_id is not None:
           self.acs_transaction_id = acs_transaction_id
+        if acs_operator_id is not None:
+          self.acs_operator_id = acs_operator_id
         if authentication_result is not None:
           self.authentication_result = authentication_result
+        if authentication_type is not None:
+          self.authentication_type = authentication_type
         if authentication_status_msg is not None:
           self.authentication_status_msg = authentication_status_msg
         if authentication_transaction_id is not None:
@@ -139,10 +160,14 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
           self.cavv = cavv
         if cavv_algorithm is not None:
           self.cavv_algorithm = cavv_algorithm
+        if challenge_cancel_code is not None:
+          self.challenge_cancel_code = challenge_cancel_code
         if directory_server_error_code is not None:
           self.directory_server_error_code = directory_server_error_code
         if directory_server_error_description is not None:
           self.directory_server_error_description = directory_server_error_description
+        if effective_authentication_type is not None:
+          self.effective_authentication_type = effective_authentication_type
         if indicator is not None:
           self.indicator = indicator
         if interaction_counter is not None:
@@ -196,6 +221,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._acs_rendering_type = acs_rendering_type
 
     @property
+    def acs_reference_number(self):
+        """
+        Gets the acs_reference_number of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :return: The acs_reference_number of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_reference_number
+
+    @acs_reference_number.setter
+    def acs_reference_number(self, acs_reference_number):
+        """
+        Sets the acs_reference_number of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :param acs_reference_number: The acs_reference_number of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_reference_number = acs_reference_number
+
+    @property
     def acs_transaction_id(self):
         """
         Gets the acs_transaction_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -219,6 +267,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._acs_transaction_id = acs_transaction_id
 
     @property
+    def acs_operator_id(self):
+        """
+        Gets the acs_operator_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :return: The acs_operator_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_operator_id
+
+    @acs_operator_id.setter
+    def acs_operator_id(self, acs_operator_id):
+        """
+        Sets the acs_operator_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Directory Server assigned ACS identifier.
+
+        :param acs_operator_id: The acs_operator_id of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_operator_id = acs_operator_id
+
+    @property
     def authentication_result(self):
         """
         Gets the authentication_result of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -240,6 +311,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._authentication_result = authentication_result
+
+    @property
+    def authentication_type(self):
+        """
+        Gets the authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+
+        :return: The authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_type
+
+    @authentication_type.setter
+    def authentication_type(self, authentication_type):
+        """
+        Sets the authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        Indicates the type of authentication that will be used to challenge the card holder.  Possible Values:  01 - Static  02 - Dynamic  03 - OOB (Out of Band)  04 - Decoupled  20 - OTP hosted at merchant end. (Rupay S2S flow) **NOTE**:  EMV 3-D Secure version 2.1.0 supports values 01-03.  Version 2.2.0 supports values 01-04.  Decoupled authentication is not supported at this time. 
+
+        :param authentication_type: The authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_type = authentication_type
 
     @property
     def authentication_status_msg(self):
@@ -403,6 +497,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         self._cavv_algorithm = cavv_algorithm
 
     @property
+    def challenge_cancel_code(self):
+        """
+        Gets the challenge_cancel_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
+
+        :return: The challenge_cancel_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._challenge_cancel_code
+
+    @challenge_cancel_code.setter
+    def challenge_cancel_code(self, challenge_cancel_code):
+        """
+        Sets the challenge_cancel_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
+
+        :param challenge_cancel_code: The challenge_cancel_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._challenge_cancel_code = challenge_cancel_code
+
+    @property
     def directory_server_error_code(self):
         """
         Gets the directory_server_error_code of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
@@ -447,6 +564,29 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
         """
 
         self._directory_server_error_description = directory_server_error_description
+
+    @property
+    def effective_authentication_type(self):
+        """
+        Gets the effective_authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
+
+        :return: The effective_authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._effective_authentication_type
+
+    @effective_authentication_type.setter
+    def effective_authentication_type(self, effective_authentication_type):
+        """
+        Sets the effective_authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        This field describes the type of 3DS transaction flow that took place.  It can be one of three possible flows; CH - Challenge FR - Frictionless FD - Frictionless with delegation, (challenge not generated by the issuer but by the scheme on behalf of the issuer). 
+
+        :param effective_authentication_type: The effective_authentication_type of this RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._effective_authentication_type = effective_authentication_type
 
     @property
     def indicator(self):
