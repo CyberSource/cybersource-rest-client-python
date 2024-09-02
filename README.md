@@ -1,6 +1,8 @@
 
 # Python Client SDK for the CyberSource REST API
 
+[![BUILD](https://github.com/CyberSource/cybersource-rest-client-python/actions/workflows/python-workflow.yml/badge.svg?branch=adding-workflows)](https://github.com/CyberSource/cybersource-rest-client-python/actions/workflows/python-workflow.yml)
+
 ## Description
 
 The CyberSource Python client provides convenient access to the [CyberSource REST API](https://developer.cybersource.com/api/reference/api-reference.html) from your Python application.
