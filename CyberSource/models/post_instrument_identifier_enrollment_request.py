@@ -38,7 +38,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
         'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
-        'tokenized_card': 'TmsEmbeddedInstrumentIdentifierTokenizedCard',
+        'tokenized_card': 'Tmsv2TokenizedCard',
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
         'processing_information': 'TmsEmbeddedInstrumentIdentifierProcessingInformation',
         'bill_to': 'TmsEmbeddedInstrumentIdentifierBillTo',
@@ -289,7 +289,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
         Gets the tokenized_card of this PostInstrumentIdentifierEnrollmentRequest.
 
         :return: The tokenized_card of this PostInstrumentIdentifierEnrollmentRequest.
-        :rtype: TmsEmbeddedInstrumentIdentifierTokenizedCard
+        :rtype: Tmsv2TokenizedCard
         """
         return self._tokenized_card
 
@@ -299,7 +299,7 @@ class PostInstrumentIdentifierEnrollmentRequest(object):
         Sets the tokenized_card of this PostInstrumentIdentifierEnrollmentRequest.
 
         :param tokenized_card: The tokenized_card of this PostInstrumentIdentifierEnrollmentRequest.
-        :type: TmsEmbeddedInstrumentIdentifierTokenizedCard
+        :type: Tmsv2TokenizedCard
         """
 
         self._tokenized_card = tokenized_card

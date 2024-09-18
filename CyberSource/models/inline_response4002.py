@@ -94,7 +94,7 @@ class InlineResponse4002(object):
     def status(self):
         """
         Gets the status of this InlineResponse4002.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        The status of the submitted transaction. Possible values: - `INVALID_REQUEST` 
 
         :return: The status of this InlineResponse4002.
         :rtype: str
@@ -105,7 +105,7 @@ class InlineResponse4002(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse4002.
-        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+        The status of the submitted transaction. Possible values: - `INVALID_REQUEST` 
 
         :param status: The status of this InlineResponse4002.
         :type: str
@@ -117,7 +117,7 @@ class InlineResponse4002(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
+        The reason of the status. Possible Values: - `INVALID_DATA` 
 
         :return: The reason of this InlineResponse4002.
         :rtype: str
@@ -128,7 +128,7 @@ class InlineResponse4002(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse4002.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION 
+        The reason of the status. Possible Values: - `INVALID_DATA` 
 
         :param reason: The reason of this InlineResponse4002.
         :type: str
@@ -140,7 +140,7 @@ class InlineResponse4002(object):
     def message(self):
         """
         Gets the message of this InlineResponse4002.
-        The detail message related to the status and reason listed above.
+        Input request error.
 
         :return: The message of this InlineResponse4002.
         :rtype: str
@@ -151,7 +151,7 @@ class InlineResponse4002(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4002.
-        The detail message related to the status and reason listed above.
+        Input request error.
 
         :param message: The message of this InlineResponse4002.
         :type: str

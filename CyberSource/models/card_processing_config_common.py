@@ -50,7 +50,9 @@ class CardProcessingConfigCommon(object):
         'sub_merchant_id': 'str',
         'sub_merchant_business_name': 'str',
         'prefer_cobadged_secondary_brand': 'bool',
-        'merchant_descriptor_information': 'CardProcessingConfigCommonMerchantDescriptorInformation'
+        'merchant_descriptor_information': 'CardProcessingConfigCommonMerchantDescriptorInformation',
+        'government_controlled': 'bool',
+        'drop_billing_info': 'bool'
     }
 
     attribute_map = {
@@ -74,10 +76,12 @@ class CardProcessingConfigCommon(object):
         'sub_merchant_id': 'subMerchantId',
         'sub_merchant_business_name': 'subMerchantBusinessName',
         'prefer_cobadged_secondary_brand': 'preferCobadgedSecondaryBrand',
-        'merchant_descriptor_information': 'merchantDescriptorInformation'
+        'merchant_descriptor_information': 'merchantDescriptorInformation',
+        'government_controlled': 'governmentControlled',
+        'drop_billing_info': 'dropBillingInfo'
     }
 
-    def __init__(self, processors=None, amex_vendor_code=None, default_auth_type_code=None, master_card_assigned_id=None, enable_partial_auth=None, merchant_category_code=None, sic_code=None, food_and_consumer_service_id=None, enable_split_shipment=None, enable_interchange_optimization=None, visa_delegated_authentication_id=None, credit_card_refund_limit_percent=None, business_center_credit_card_refund_limit_percent=None, allow_captures_greater_than_authorizations=None, enable_duplicate_merchant_reference_number_blocking=None, domestic_merchant_id=None, process_level3_data=None, sub_merchant_id=None, sub_merchant_business_name=None, prefer_cobadged_secondary_brand=None, merchant_descriptor_information=None):
+    def __init__(self, processors=None, amex_vendor_code=None, default_auth_type_code=None, master_card_assigned_id=None, enable_partial_auth=None, merchant_category_code=None, sic_code=None, food_and_consumer_service_id=None, enable_split_shipment=None, enable_interchange_optimization=None, visa_delegated_authentication_id=None, credit_card_refund_limit_percent=None, business_center_credit_card_refund_limit_percent=None, allow_captures_greater_than_authorizations=None, enable_duplicate_merchant_reference_number_blocking=None, domestic_merchant_id=None, process_level3_data=None, sub_merchant_id=None, sub_merchant_business_name=None, prefer_cobadged_secondary_brand=None, merchant_descriptor_information=None, government_controlled=None, drop_billing_info=None):
         """
         CardProcessingConfigCommon - a model defined in Swagger
         """
@@ -103,6 +107,8 @@ class CardProcessingConfigCommon(object):
         self._sub_merchant_business_name = None
         self._prefer_cobadged_secondary_brand = None
         self._merchant_descriptor_information = None
+        self._government_controlled = None
+        self._drop_billing_info = None
 
         if processors is not None:
           self.processors = processors
@@ -146,6 +152,10 @@ class CardProcessingConfigCommon(object):
           self.prefer_cobadged_secondary_brand = prefer_cobadged_secondary_brand
         if merchant_descriptor_information is not None:
           self.merchant_descriptor_information = merchant_descriptor_information
+        if government_controlled is not None:
+          self.government_controlled = government_controlled
+        if drop_billing_info is not None:
+          self.drop_billing_info = drop_billing_info
 
     @property
     def processors(self):
@@ -633,6 +643,52 @@ class CardProcessingConfigCommon(object):
         """
 
         self._merchant_descriptor_information = merchant_descriptor_information
+
+    @property
+    def government_controlled(self):
+        """
+        Gets the government_controlled of this CardProcessingConfigCommon.
+        Indicates whether the merchant is government controlled. Applicable for VPC processors.
+
+        :return: The government_controlled of this CardProcessingConfigCommon.
+        :rtype: bool
+        """
+        return self._government_controlled
+
+    @government_controlled.setter
+    def government_controlled(self, government_controlled):
+        """
+        Sets the government_controlled of this CardProcessingConfigCommon.
+        Indicates whether the merchant is government controlled. Applicable for VPC processors.
+
+        :param government_controlled: The government_controlled of this CardProcessingConfigCommon.
+        :type: bool
+        """
+
+        self._government_controlled = government_controlled
+
+    @property
+    def drop_billing_info(self):
+        """
+        Gets the drop_billing_info of this CardProcessingConfigCommon.
+        This field is used to indicate whether the merchant wants to drop the billing information from the request. If this field is set to true, then the billing information will be dropped from the request. If this field is set to false, then the billing information will be sent in the request.
+
+        :return: The drop_billing_info of this CardProcessingConfigCommon.
+        :rtype: bool
+        """
+        return self._drop_billing_info
+
+    @drop_billing_info.setter
+    def drop_billing_info(self, drop_billing_info):
+        """
+        Sets the drop_billing_info of this CardProcessingConfigCommon.
+        This field is used to indicate whether the merchant wants to drop the billing information from the request. If this field is set to true, then the billing information will be dropped from the request. If this field is set to false, then the billing information will be sent in the request.
+
+        :param drop_billing_info: The drop_billing_info of this CardProcessingConfigCommon.
+        :type: bool
+        """
+
+        self._drop_billing_info = drop_billing_info
 
     def to_dict(self):
         """

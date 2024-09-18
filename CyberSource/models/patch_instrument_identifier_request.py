@@ -38,7 +38,7 @@ class PatchInstrumentIdentifierRequest(object):
         'token_provisioning_information': 'Ptsv2paymentsTokenInformationTokenProvisioningInformation',
         'card': 'TmsEmbeddedInstrumentIdentifierCard',
         'bank_account': 'TmsEmbeddedInstrumentIdentifierBankAccount',
-        'tokenized_card': 'TmsEmbeddedInstrumentIdentifierTokenizedCard',
+        'tokenized_card': 'Tmsv2TokenizedCard',
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
         'processing_information': 'TmsEmbeddedInstrumentIdentifierProcessingInformation',
         'bill_to': 'TmsEmbeddedInstrumentIdentifierBillTo',
@@ -289,7 +289,7 @@ class PatchInstrumentIdentifierRequest(object):
         Gets the tokenized_card of this PatchInstrumentIdentifierRequest.
 
         :return: The tokenized_card of this PatchInstrumentIdentifierRequest.
-        :rtype: TmsEmbeddedInstrumentIdentifierTokenizedCard
+        :rtype: Tmsv2TokenizedCard
         """
         return self._tokenized_card
 
@@ -299,7 +299,7 @@ class PatchInstrumentIdentifierRequest(object):
         Sets the tokenized_card of this PatchInstrumentIdentifierRequest.
 
         :param tokenized_card: The tokenized_card of this PatchInstrumentIdentifierRequest.
-        :type: TmsEmbeddedInstrumentIdentifierTokenizedCard
+        :type: Tmsv2TokenizedCard
         """
 
         self._tokenized_card = tokenized_card
