@@ -33,6 +33,8 @@ class CardProcessingConfigCommonAcquirer(object):
         'institution_id': 'str',
         'interbank_card_association_id': 'str',
         'discover_institution_id': 'str',
+        'union_pay_institution_id': 'str',
+        'diners_club_institution_id': 'str',
         'country_code': 'str',
         'file_destination_bin': 'str'
     }
@@ -41,11 +43,13 @@ class CardProcessingConfigCommonAcquirer(object):
         'institution_id': 'institutionId',
         'interbank_card_association_id': 'interbankCardAssociationId',
         'discover_institution_id': 'discoverInstitutionId',
+        'union_pay_institution_id': 'unionPayInstitutionId',
+        'diners_club_institution_id': 'dinersClubInstitutionId',
         'country_code': 'countryCode',
         'file_destination_bin': 'fileDestinationBin'
     }
 
-    def __init__(self, institution_id=None, interbank_card_association_id=None, discover_institution_id=None, country_code=None, file_destination_bin=None):
+    def __init__(self, institution_id=None, interbank_card_association_id=None, discover_institution_id=None, union_pay_institution_id=None, diners_club_institution_id=None, country_code=None, file_destination_bin=None):
         """
         CardProcessingConfigCommonAcquirer - a model defined in Swagger
         """
@@ -53,6 +57,8 @@ class CardProcessingConfigCommonAcquirer(object):
         self._institution_id = None
         self._interbank_card_association_id = None
         self._discover_institution_id = None
+        self._union_pay_institution_id = None
+        self._diners_club_institution_id = None
         self._country_code = None
         self._file_destination_bin = None
 
@@ -62,6 +68,10 @@ class CardProcessingConfigCommonAcquirer(object):
           self.interbank_card_association_id = interbank_card_association_id
         if discover_institution_id is not None:
           self.discover_institution_id = discover_institution_id
+        if union_pay_institution_id is not None:
+          self.union_pay_institution_id = union_pay_institution_id
+        if diners_club_institution_id is not None:
+          self.diners_club_institution_id = diners_club_institution_id
         if country_code is not None:
           self.country_code = country_code
         if file_destination_bin is not None:
@@ -135,6 +145,52 @@ class CardProcessingConfigCommonAcquirer(object):
         """
 
         self._discover_institution_id = discover_institution_id
+
+    @property
+    def union_pay_institution_id(self):
+        """
+        Gets the union_pay_institution_id of this CardProcessingConfigCommonAcquirer.
+        Assigned by China Union Pay to identify the acquirer. Applicable for VPC processors.
+
+        :return: The union_pay_institution_id of this CardProcessingConfigCommonAcquirer.
+        :rtype: str
+        """
+        return self._union_pay_institution_id
+
+    @union_pay_institution_id.setter
+    def union_pay_institution_id(self, union_pay_institution_id):
+        """
+        Sets the union_pay_institution_id of this CardProcessingConfigCommonAcquirer.
+        Assigned by China Union Pay to identify the acquirer. Applicable for VPC processors.
+
+        :param union_pay_institution_id: The union_pay_institution_id of this CardProcessingConfigCommonAcquirer.
+        :type: str
+        """
+
+        self._union_pay_institution_id = union_pay_institution_id
+
+    @property
+    def diners_club_institution_id(self):
+        """
+        Gets the diners_club_institution_id of this CardProcessingConfigCommonAcquirer.
+        Assigned by Diners Club to identify the acquirer. Applicable for VPC processors.
+
+        :return: The diners_club_institution_id of this CardProcessingConfigCommonAcquirer.
+        :rtype: str
+        """
+        return self._diners_club_institution_id
+
+    @diners_club_institution_id.setter
+    def diners_club_institution_id(self, diners_club_institution_id):
+        """
+        Sets the diners_club_institution_id of this CardProcessingConfigCommonAcquirer.
+        Assigned by Diners Club to identify the acquirer. Applicable for VPC processors.
+
+        :param diners_club_institution_id: The diners_club_institution_id of this CardProcessingConfigCommonAcquirer.
+        :type: str
+        """
+
+        self._diners_club_institution_id = diners_club_institution_id
 
     @property
     def country_code(self):

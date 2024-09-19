@@ -44,8 +44,7 @@ class Riskv1authenticationsetupsPaymentInformationCustomer(object):
 
         self._customer_id = None
 
-        if customer_id is not None:
-          self.customer_id = customer_id
+        self.customer_id = customer_id
 
     @property
     def customer_id(self):

@@ -30,69 +30,73 @@ class InlineResponse4006Details(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'location': 'str',
-        'message': 'str'
+        'field': 'str',
+        'reason': 'str'
     }
 
     attribute_map = {
-        'location': 'location',
-        'message': 'message'
+        'field': 'field',
+        'reason': 'reason'
     }
 
-    def __init__(self, location=None, message=None):
+    def __init__(self, field=None, reason=None):
         """
         InlineResponse4006Details - a model defined in Swagger
         """
 
-        self._location = None
-        self._message = None
+        self._field = None
+        self._reason = None
 
-        if location is not None:
-          self.location = location
-        if message is not None:
-          self.message = message
+        if field is not None:
+          self.field = field
+        if reason is not None:
+          self.reason = reason
 
     @property
-    def location(self):
+    def field(self):
         """
-        Gets the location of this InlineResponse4006Details.
+        Gets the field of this InlineResponse4006Details.
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
-        :return: The location of this InlineResponse4006Details.
+        :return: The field of this InlineResponse4006Details.
         :rtype: str
         """
-        return self._location
+        return self._field
 
-    @location.setter
-    def location(self, location):
+    @field.setter
+    def field(self, field):
         """
-        Sets the location of this InlineResponse4006Details.
+        Sets the field of this InlineResponse4006Details.
+        This is the flattened JSON object field name/path that is either missing or invalid.
 
-        :param location: The location of this InlineResponse4006Details.
+        :param field: The field of this InlineResponse4006Details.
         :type: str
         """
 
-        self._location = location
+        self._field = field
 
     @property
-    def message(self):
+    def reason(self):
         """
-        Gets the message of this InlineResponse4006Details.
+        Gets the reason of this InlineResponse4006Details.
+        Possible reasons for the error.
 
-        :return: The message of this InlineResponse4006Details.
+        :return: The reason of this InlineResponse4006Details.
         :rtype: str
         """
-        return self._message
+        return self._reason
 
-    @message.setter
-    def message(self, message):
+    @reason.setter
+    def reason(self, reason):
         """
-        Sets the message of this InlineResponse4006Details.
+        Sets the reason of this InlineResponse4006Details.
+        Possible reasons for the error.
 
-        :param message: The message of this InlineResponse4006Details.
+        :param reason: The reason of this InlineResponse4006Details.
         :type: str
         """
 
-        self._message = message
+        self._reason = reason
 
     def to_dict(self):
         """

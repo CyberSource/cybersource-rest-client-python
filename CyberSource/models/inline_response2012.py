@@ -31,7 +31,7 @@ class InlineResponse2012(object):
     """
     swagger_types = {
         'id': 'str',
-        'submit_time_utc': 'date',
+        'submit_time_utc': 'datetime',
         'status': 'str',
         'registration_information': 'InlineResponse2012RegistrationInformation',
         'integration_information': 'InlineResponse2012IntegrationInformation',

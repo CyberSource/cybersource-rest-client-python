@@ -39,6 +39,9 @@ class CardProcessingConfigCommonProcessors(object):
         'terminal_id': 'str',
         'payment_types': 'dict(str, CardProcessingConfigCommonPaymentTypes)',
         'currencies': 'dict(str, CardProcessingConfigCommonCurrencies1)',
+        'visa_aggregator_id': 'str',
+        'amex_aggregator_id': 'str',
+        'master_card_aggregator_id': 'str',
         'sic_code': 'str',
         'allow_multiple_bills': 'bool',
         'allow_merchant_descriptor_override': 'bool',
@@ -86,6 +89,9 @@ class CardProcessingConfigCommonProcessors(object):
         'terminal_id': 'terminalId',
         'payment_types': 'paymentTypes',
         'currencies': 'currencies',
+        'visa_aggregator_id': 'visaAggregatorId',
+        'amex_aggregator_id': 'amexAggregatorId',
+        'master_card_aggregator_id': 'masterCardAggregatorId',
         'sic_code': 'sicCode',
         'allow_multiple_bills': 'allowMultipleBills',
         'allow_merchant_descriptor_override': 'allowMerchantDescriptorOverride',
@@ -123,7 +129,7 @@ class CardProcessingConfigCommonProcessors(object):
         'merchant_tier': 'merchantTier'
     }
 
-    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
+    def __init__(self, batch_group=None, business_application_id=None, merchant_verification_value=None, aba_number=None, acquirer=None, merchant_id=None, terminal_id=None, payment_types=None, currencies=None, visa_aggregator_id=None, amex_aggregator_id=None, master_card_aggregator_id=None, sic_code=None, allow_multiple_bills=None, allow_merchant_descriptor_override=None, enhanced_data=None, fire_safety_indicator=None, quasi_cash=None, acquirer_merchant_id=None, avs_format=None, enable_long_trans_ref_no=None, enable_level2=None, enable_multiple_transaction_advice_addendum=None, amex_transaction_advice_addendum1=None, enable_multi_line_items=None, enable_transaction_reference_number=None, enable_auto_auth_reversal_after_void=None, enable_expresspay_pan_translation=None, enable_credit_auth=None, industry_code=None, send_amex_level2_data=None, soft_descriptor_type=None, vital_number=None, bank_number=None, chain_number=None, merchant_bin_number=None, merchant_location_number=None, store_id=None, travel_agency_code=None, travel_agency_name=None, settlement_currency=None, enable_least_cost_routing=None, enable_cvv_response_indicator=None, enable_multi_currency_processing=None, enable_pos_network_switching=None, enable_dynamic_currency_conversion=None, merchant_tier=None):
         """
         CardProcessingConfigCommonProcessors - a model defined in Swagger
         """
@@ -137,6 +143,9 @@ class CardProcessingConfigCommonProcessors(object):
         self._terminal_id = None
         self._payment_types = None
         self._currencies = None
+        self._visa_aggregator_id = None
+        self._amex_aggregator_id = None
+        self._master_card_aggregator_id = None
         self._sic_code = None
         self._allow_multiple_bills = None
         self._allow_merchant_descriptor_override = None
@@ -190,6 +199,12 @@ class CardProcessingConfigCommonProcessors(object):
           self.payment_types = payment_types
         if currencies is not None:
           self.currencies = currencies
+        if visa_aggregator_id is not None:
+          self.visa_aggregator_id = visa_aggregator_id
+        if amex_aggregator_id is not None:
+          self.amex_aggregator_id = amex_aggregator_id
+        if master_card_aggregator_id is not None:
+          self.master_card_aggregator_id = master_card_aggregator_id
         if sic_code is not None:
           self.sic_code = sic_code
         if allow_multiple_bills is not None:
@@ -465,6 +480,75 @@ class CardProcessingConfigCommonProcessors(object):
         """
 
         self._currencies = currencies
+
+    @property
+    def visa_aggregator_id(self):
+        """
+        Gets the visa_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Visa payment type is selected
+
+        :return: The visa_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._visa_aggregator_id
+
+    @visa_aggregator_id.setter
+    def visa_aggregator_id(self, visa_aggregator_id):
+        """
+        Sets the visa_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Visa payment type is selected
+
+        :param visa_aggregator_id: The visa_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._visa_aggregator_id = visa_aggregator_id
+
+    @property
+    def amex_aggregator_id(self):
+        """
+        Gets the amex_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Amex payment type is selected
+
+        :return: The amex_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._amex_aggregator_id
+
+    @amex_aggregator_id.setter
+    def amex_aggregator_id(self, amex_aggregator_id):
+        """
+        Sets the amex_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Amex payment type is selected
+
+        :param amex_aggregator_id: The amex_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._amex_aggregator_id = amex_aggregator_id
+
+    @property
+    def master_card_aggregator_id(self):
+        """
+        Gets the master_card_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Master Card payment type is selected
+
+        :return: The master_card_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :rtype: str
+        """
+        return self._master_card_aggregator_id
+
+    @master_card_aggregator_id.setter
+    def master_card_aggregator_id(self, master_card_aggregator_id):
+        """
+        Sets the master_card_aggregator_id of this CardProcessingConfigCommonProcessors.
+        This field is used as aggregator Id when Master Card payment type is selected
+
+        :param master_card_aggregator_id: The master_card_aggregator_id of this CardProcessingConfigCommonProcessors.
+        :type: str
+        """
+
+        self._master_card_aggregator_id = master_card_aggregator_id
 
     @property
     def sic_code(self):

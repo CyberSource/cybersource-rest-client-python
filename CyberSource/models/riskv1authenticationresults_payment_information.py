@@ -33,7 +33,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
         'card': 'Riskv1authenticationresultsPaymentInformationCard',
         'tokenized_card': 'Riskv1authenticationresultsPaymentInformationTokenizedCard',
         'fluid_data': 'Riskv1authenticationresultsPaymentInformationFluidData',
-        'customer': 'Ptsv2paymentsPaymentInformationCustomer'
+        'customer': 'Riskv1authenticationsPaymentInformationCustomer'
     }
 
     attribute_map = {
@@ -131,7 +131,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
         Gets the customer of this Riskv1authenticationresultsPaymentInformation.
 
         :return: The customer of this Riskv1authenticationresultsPaymentInformation.
-        :rtype: Ptsv2paymentsPaymentInformationCustomer
+        :rtype: Riskv1authenticationsPaymentInformationCustomer
         """
         return self._customer
 
@@ -141,7 +141,7 @@ class Riskv1authenticationresultsPaymentInformation(object):
         Sets the customer of this Riskv1authenticationresultsPaymentInformation.
 
         :param customer: The customer of this Riskv1authenticationresultsPaymentInformation.
-        :type: Ptsv2paymentsPaymentInformationCustomer
+        :type: Riskv1authenticationsPaymentInformationCustomer
         """
 
         self._customer = customer
