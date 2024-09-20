@@ -509,7 +509,7 @@ class InstrumentIdentifierApi(object):
             body_params = params['patch_instrument_identifier_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_instrument_identifier_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_instrument_identifier_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
@@ -626,7 +626,7 @@ class InstrumentIdentifierApi(object):
             body_params = params['post_instrument_identifier_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_instrument_identifier_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_instrument_identifier_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
@@ -753,7 +753,7 @@ class InstrumentIdentifierApi(object):
             body_params = params['post_instrument_identifier_enrollment_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_instrument_identifier_enrollment_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_instrument_identifier_enrollment_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
