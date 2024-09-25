@@ -28,7 +28,7 @@ setup(
         "six",
         "urllib3",
         "jwcrypto",
-        "cryptography",
+        "cryptography"
     ],
     packages=find_packages(),
     include_package_data=True,
