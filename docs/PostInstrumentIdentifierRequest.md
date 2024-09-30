@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **token_provisioning_information** | [**Ptsv2paymentsTokenInformationTokenProvisioningInformation**](Ptsv2paymentsTokenInformationTokenProvisioningInformation.md) |  | [optional] 
 **card** | [**TmsEmbeddedInstrumentIdentifierCard**](TmsEmbeddedInstrumentIdentifierCard.md) |  | [optional] 
 **bank_account** | [**TmsEmbeddedInstrumentIdentifierBankAccount**](TmsEmbeddedInstrumentIdentifierBankAccount.md) |  | [optional] 
-**tokenized_card** | [**TmsEmbeddedInstrumentIdentifierTokenizedCard**](TmsEmbeddedInstrumentIdentifierTokenizedCard.md) |  | [optional] 
+**tokenized_card** | [**Tmsv2TokenizedCard**](Tmsv2TokenizedCard.md) |  | [optional] 
 **issuer** | [**TmsEmbeddedInstrumentIdentifierIssuer**](TmsEmbeddedInstrumentIdentifierIssuer.md) |  | [optional] 
 **processing_information** | [**TmsEmbeddedInstrumentIdentifierProcessingInformation**](TmsEmbeddedInstrumentIdentifierProcessingInformation.md) |  | [optional] 
 **bill_to** | [**TmsEmbeddedInstrumentIdentifierBillTo**](TmsEmbeddedInstrumentIdentifierBillTo.md) |  | [optional] 

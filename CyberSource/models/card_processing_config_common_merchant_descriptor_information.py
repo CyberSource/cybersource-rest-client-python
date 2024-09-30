@@ -37,7 +37,8 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         'state': 'str',
         'street': 'str',
         'zip': 'str',
-        'url': 'str'
+        'url': 'str',
+        'country_of_origin': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         'state': 'state',
         'street': 'street',
         'zip': 'zip',
-        'url': 'url'
+        'url': 'url',
+        'country_of_origin': 'countryOfOrigin'
     }
 
-    def __init__(self, name=None, city=None, country=None, phone=None, state=None, street=None, zip=None, url=None):
+    def __init__(self, name=None, city=None, country=None, phone=None, state=None, street=None, zip=None, url=None, country_of_origin=None):
         """
         CardProcessingConfigCommonMerchantDescriptorInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         self._street = None
         self._zip = None
         self._url = None
+        self._country_of_origin = None
 
         if name is not None:
           self.name = name
@@ -81,6 +84,8 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
           self.zip = zip
         if url is not None:
           self.url = url
+        if country_of_origin is not None:
+          self.country_of_origin = country_of_origin
 
     @property
     def name(self):
@@ -265,6 +270,29 @@ class CardProcessingConfigCommonMerchantDescriptorInformation(object):
         """
 
         self._url = url
+
+    @property
+    def country_of_origin(self):
+        """
+        Gets the country_of_origin of this CardProcessingConfigCommonMerchantDescriptorInformation.
+        Country Cf Origin of merchant is applicable for VPC Processors and is dependent on governmentControlled attribute.
+
+        :return: The country_of_origin of this CardProcessingConfigCommonMerchantDescriptorInformation.
+        :rtype: str
+        """
+        return self._country_of_origin
+
+    @country_of_origin.setter
+    def country_of_origin(self, country_of_origin):
+        """
+        Sets the country_of_origin of this CardProcessingConfigCommonMerchantDescriptorInformation.
+        Country Cf Origin of merchant is applicable for VPC Processors and is dependent on governmentControlled attribute.
+
+        :param country_of_origin: The country_of_origin of this CardProcessingConfigCommonMerchantDescriptorInformation.
+        :type: str
+        """
+
+        self._country_of_origin = country_of_origin
 
     def to_dict(self):
         """

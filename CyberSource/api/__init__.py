@@ -15,6 +15,7 @@ from .decision_manager_api import DecisionManagerApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi
 from .emv_tag_details_api import EMVTagDetailsApi
+from .flex_api_api import FlexAPIApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
 from .manage_webhooks_api import ManageWebhooksApi

@@ -32,6 +32,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     swagger_types = {
         'approval_code': 'str',
         'transaction_id': 'str',
+        'network_transaction_id': 'str',
         'response_code': 'str',
         'system_trace_audit_number': 'str',
         'response_details': 'str',
@@ -42,6 +43,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
     attribute_map = {
         'approval_code': 'approvalCode',
         'transaction_id': 'transactionId',
+        'network_transaction_id': 'networkTransactionId',
         'response_code': 'responseCode',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_details': 'responseDetails',
@@ -49,13 +51,14 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'seller_protection': 'sellerProtection'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, seller_protection=None):
+    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, seller_protection=None):
         """
         PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._approval_code = None
         self._transaction_id = None
+        self._network_transaction_id = None
         self._response_code = None
         self._system_trace_audit_number = None
         self._response_details = None
@@ -66,6 +69,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
           self.approval_code = approval_code
         if transaction_id is not None:
           self.transaction_id = transaction_id
+        if network_transaction_id is not None:
+          self.network_transaction_id = network_transaction_id
         if response_code is not None:
           self.response_code = response_code
         if system_trace_audit_number is not None:
@@ -122,6 +127,29 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         """
 
         self._transaction_id = transaction_id
+
+    @property
+    def network_transaction_id(self):
+        """
+        Gets the network_transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :return: The network_transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._network_transaction_id
+
+    @network_transaction_id.setter
+    def network_transaction_id(self, network_transaction_id):
+        """
+        Sets the network_transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :param network_transaction_id: The network_transaction_id of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._network_transaction_id = network_transaction_id
 
     @property
     def response_code(self):
