@@ -142,7 +142,7 @@ class ReversalApi(object):
             body_params = params['auth_reversal_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'auth_reversal_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'auth_reversal_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -255,7 +255,7 @@ class ReversalApi(object):
             body_params = params['mit_reversal_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'mit_reversal_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'mit_reversal_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 

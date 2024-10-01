@@ -136,7 +136,7 @@ class ReportsApi(object):
             body_params = params['create_adhoc_report_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_adhoc_report_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_adhoc_report_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json'])
 

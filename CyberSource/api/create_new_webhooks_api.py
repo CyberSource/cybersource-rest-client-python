@@ -130,7 +130,7 @@ class CreateNewWebhooksApi(object):
             body_params = params['create_webhook_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
@@ -379,7 +379,7 @@ class CreateNewWebhooksApi(object):
             body_params = params['save_sym_egress_key']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_sym_egress_key', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_sym_egress_key', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 

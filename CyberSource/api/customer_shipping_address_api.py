@@ -539,7 +539,7 @@ class CustomerShippingAddressApi(object):
             body_params = params['patch_customer_shipping_address_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_customer_shipping_address_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'patch_customer_shipping_address_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
@@ -666,7 +666,7 @@ class CustomerShippingAddressApi(object):
             body_params = params['post_customer_shipping_address_request']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_customer_shipping_address_request', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_customer_shipping_address_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
