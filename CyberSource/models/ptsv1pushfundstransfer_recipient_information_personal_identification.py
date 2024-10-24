@@ -32,16 +32,18 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     swagger_types = {
         'id': 'str',
         'type': 'str',
-        'issuing_country': 'str'
+        'issuing_country': 'str',
+        'personal_id_type': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'type': 'type',
-        'issuing_country': 'issuingCountry'
+        'issuing_country': 'issuingCountry',
+        'personal_id_type': 'personalIdType'
     }
 
-    def __init__(self, id=None, type=None, issuing_country=None):
+    def __init__(self, id=None, type=None, issuing_country=None, personal_id_type=None):
         """
         Ptsv1pushfundstransferRecipientInformationPersonalIdentification - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
         self._id = None
         self._type = None
         self._issuing_country = None
+        self._personal_id_type = None
 
         if id is not None:
           self.id = id
@@ -56,6 +59,8 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
           self.type = type
         if issuing_country is not None:
           self.issuing_country = issuing_country
+        if personal_id_type is not None:
+          self.personal_id_type = personal_id_type
 
     @property
     def id(self):
@@ -84,7 +89,7 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     def type(self):
         """
         Gets the type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        This tag will contain the type of sender identification. 
+        This tag will contain the type of sender identification. The valid values are: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
 
         :return: The type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :rtype: str
@@ -95,7 +100,7 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
     def type(self, type):
         """
         Sets the type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
-        This tag will contain the type of sender identification. 
+        This tag will contain the type of sender identification. The valid values are: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
 
         :param type: The type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
         :type: str
@@ -125,6 +130,29 @@ class Ptsv1pushfundstransferRecipientInformationPersonalIdentification(object):
         """
 
         self._issuing_country = issuing_country
+
+    @property
+    def personal_id_type(self):
+        """
+        Gets the personal_id_type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are:  - `B` (Business) - `I` (Individual) 
+
+        :return: The personal_id_type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        :rtype: str
+        """
+        return self._personal_id_type
+
+    @personal_id_type.setter
+    def personal_id_type(self, personal_id_type):
+        """
+        Sets the personal_id_type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are:  - `B` (Business) - `I` (Individual) 
+
+        :param personal_id_type: The personal_id_type of this Ptsv1pushfundstransferRecipientInformationPersonalIdentification.
+        :type: str
+        """
+
+        self._personal_id_type = personal_id_type
 
     def to_dict(self):
         """

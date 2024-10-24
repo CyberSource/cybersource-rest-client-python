@@ -53,6 +53,7 @@ from .capture_api import CaptureApi
 from .credit_api import CreditApi
 from .invoice_settings_api import InvoiceSettingsApi
 from .invoices_api import InvoicesApi
+from .orders_api import OrdersApi
 from .payments_api import PaymentsApi
 from .refund_api import RefundApi
 from .reversal_api import ReversalApi

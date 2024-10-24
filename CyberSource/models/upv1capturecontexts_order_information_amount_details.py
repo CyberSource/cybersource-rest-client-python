@@ -56,6 +56,7 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this Upv1capturecontextsOrderInformationAmountDetails.
+        This field defines the total order amount. 
 
         :return: The total_amount of this Upv1capturecontextsOrderInformationAmountDetails.
         :rtype: str
@@ -66,6 +67,7 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Upv1capturecontextsOrderInformationAmountDetails.
+        This field defines the total order amount. 
 
         :param total_amount: The total_amount of this Upv1capturecontextsOrderInformationAmountDetails.
         :type: str
@@ -77,6 +79,7 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
     def currency(self):
         """
         Gets the currency of this Upv1capturecontextsOrderInformationAmountDetails.
+        This field defines the currency applicable to the order. 
 
         :return: The currency of this Upv1capturecontextsOrderInformationAmountDetails.
         :rtype: str
@@ -87,6 +90,7 @@ class Upv1capturecontextsOrderInformationAmountDetails(object):
     def currency(self, currency):
         """
         Sets the currency of this Upv1capturecontextsOrderInformationAmountDetails.
+        This field defines the currency applicable to the order. 
 
         :param currency: The currency of this Upv1capturecontextsOrderInformationAmountDetails.
         :type: str

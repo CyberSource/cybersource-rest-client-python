@@ -31,10 +31,13 @@ class Ptsv1pushfundstransferSenderInformation(object):
     """
     swagger_types = {
         'name': 'str',
+        'email': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'middle_name': 'str',
         'postal_code': 'str',
+        'building_number': 'str',
+        'street_name': 'str',
         'address1': 'str',
         'address2': 'str',
         'locality': 'str',
@@ -45,15 +48,20 @@ class Ptsv1pushfundstransferSenderInformation(object):
         'payment_information': 'Ptsv1pushfundstransferSenderInformationPaymentInformation',
         'reference_number': 'str',
         'account': 'Ptsv1pushfundstransferSenderInformationAccount',
-        'personal_identification': 'Ptsv1pushfundstransferSenderInformationPersonalIdentification'
+        'personal_identification': 'Ptsv1pushfundstransferSenderInformationPersonalIdentification',
+        'type': 'str',
+        'vat_registration_number': 'str'
     }
 
     attribute_map = {
         'name': 'name',
+        'email': 'email',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'middle_name': 'middleName',
         'postal_code': 'postalCode',
+        'building_number': 'buildingNumber',
+        'street_name': 'streetName',
         'address1': 'address1',
         'address2': 'address2',
         'locality': 'locality',
@@ -64,19 +72,24 @@ class Ptsv1pushfundstransferSenderInformation(object):
         'payment_information': 'paymentInformation',
         'reference_number': 'referenceNumber',
         'account': 'account',
-        'personal_identification': 'personalIdentification'
+        'personal_identification': 'personalIdentification',
+        'type': 'type',
+        'vat_registration_number': 'vatRegistrationNumber'
     }
 
-    def __init__(self, name=None, first_name=None, last_name=None, middle_name=None, postal_code=None, address1=None, address2=None, locality=None, administrative_area=None, country=None, date_of_birth=None, phone_number=None, payment_information=None, reference_number=None, account=None, personal_identification=None):
+    def __init__(self, name=None, email=None, first_name=None, last_name=None, middle_name=None, postal_code=None, building_number=None, street_name=None, address1=None, address2=None, locality=None, administrative_area=None, country=None, date_of_birth=None, phone_number=None, payment_information=None, reference_number=None, account=None, personal_identification=None, type=None, vat_registration_number=None):
         """
         Ptsv1pushfundstransferSenderInformation - a model defined in Swagger
         """
 
         self._name = None
+        self._email = None
         self._first_name = None
         self._last_name = None
         self._middle_name = None
         self._postal_code = None
+        self._building_number = None
+        self._street_name = None
         self._address1 = None
         self._address2 = None
         self._locality = None
@@ -88,9 +101,13 @@ class Ptsv1pushfundstransferSenderInformation(object):
         self._reference_number = None
         self._account = None
         self._personal_identification = None
+        self._type = None
+        self._vat_registration_number = None
 
         if name is not None:
           self.name = name
+        if email is not None:
+          self.email = email
         if first_name is not None:
           self.first_name = first_name
         if last_name is not None:
@@ -99,6 +116,10 @@ class Ptsv1pushfundstransferSenderInformation(object):
           self.middle_name = middle_name
         if postal_code is not None:
           self.postal_code = postal_code
+        if building_number is not None:
+          self.building_number = building_number
+        if street_name is not None:
+          self.street_name = street_name
         if address1 is not None:
           self.address1 = address1
         if address2 is not None:
@@ -121,12 +142,16 @@ class Ptsv1pushfundstransferSenderInformation(object):
           self.account = account
         if personal_identification is not None:
           self.personal_identification = personal_identification
+        if type is not None:
+          self.type = type
+        if vat_registration_number is not None:
+          self.vat_registration_number = vat_registration_number
 
     @property
     def name(self):
         """
         Gets the name of this Ptsv1pushfundstransferSenderInformation.
-        Name of sender.  Funds Disbursement  This value is the name of the originator sending the funds disbursement. 
+        Name of sender.  Funds Disbursement  This value is the name of the originator sending the funds disbursement.  Government entities should use this field 
 
         :return: The name of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -137,13 +162,36 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def name(self, name):
         """
         Sets the name of this Ptsv1pushfundstransferSenderInformation.
-        Name of sender.  Funds Disbursement  This value is the name of the originator sending the funds disbursement. 
+        Name of sender.  Funds Disbursement  This value is the name of the originator sending the funds disbursement.  Government entities should use this field 
 
         :param name: The name of this Ptsv1pushfundstransferSenderInformation.
         :type: str
         """
 
         self._name = name
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv1pushfundstransferSenderInformation.
+        Customer's email address, including the full domain name. 
+
+        :return: The email of this Ptsv1pushfundstransferSenderInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv1pushfundstransferSenderInformation.
+        Customer's email address, including the full domain name. 
+
+        :param email: The email of this Ptsv1pushfundstransferSenderInformation.
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def first_name(self):
@@ -236,6 +284,52 @@ class Ptsv1pushfundstransferSenderInformation(object):
         """
 
         self._postal_code = postal_code
+
+    @property
+    def building_number(self):
+        """
+        Gets the building_number of this Ptsv1pushfundstransferSenderInformation.
+        Building number in the street address.  For example, if the street address is: Rua da Quitanda 187 then the building number is 187.  Applicable to domestic Colombia transactions only. 
+
+        :return: The building_number of this Ptsv1pushfundstransferSenderInformation.
+        :rtype: str
+        """
+        return self._building_number
+
+    @building_number.setter
+    def building_number(self, building_number):
+        """
+        Sets the building_number of this Ptsv1pushfundstransferSenderInformation.
+        Building number in the street address.  For example, if the street address is: Rua da Quitanda 187 then the building number is 187.  Applicable to domestic Colombia transactions only. 
+
+        :param building_number: The building_number of this Ptsv1pushfundstransferSenderInformation.
+        :type: str
+        """
+
+        self._building_number = building_number
+
+    @property
+    def street_name(self):
+        """
+        Gets the street_name of this Ptsv1pushfundstransferSenderInformation.
+        This field contains the street name of the recipient's address.  Applicable to domestic Colombia transactions only. 
+
+        :return: The street_name of this Ptsv1pushfundstransferSenderInformation.
+        :rtype: str
+        """
+        return self._street_name
+
+    @street_name.setter
+    def street_name(self, street_name):
+        """
+        Sets the street_name of this Ptsv1pushfundstransferSenderInformation.
+        This field contains the street name of the recipient's address.  Applicable to domestic Colombia transactions only. 
+
+        :param street_name: The street_name of this Ptsv1pushfundstransferSenderInformation.
+        :type: str
+        """
+
+        self._street_name = street_name
 
     @property
     def address1(self):
@@ -379,7 +473,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv1pushfundstransferSenderInformation.
-        Sender's phone number. 
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S. 
 
         :return: The phone_number of this Ptsv1pushfundstransferSenderInformation.
         :rtype: str
@@ -390,7 +484,7 @@ class Ptsv1pushfundstransferSenderInformation(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv1pushfundstransferSenderInformation.
-        Sender's phone number. 
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S. 
 
         :param phone_number: The phone_number of this Ptsv1pushfundstransferSenderInformation.
         :type: str
@@ -483,6 +577,52 @@ class Ptsv1pushfundstransferSenderInformation(object):
         """
 
         self._personal_identification = personal_identification
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv1pushfundstransferSenderInformation.
+        `B` for Business or `I` for individual. 
+
+        :return: The type of this Ptsv1pushfundstransferSenderInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv1pushfundstransferSenderInformation.
+        `B` for Business or `I` for individual. 
+
+        :param type: The type of this Ptsv1pushfundstransferSenderInformation.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def vat_registration_number(self):
+        """
+        Gets the vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
+        Customer's government-assigned tax identification number. 
+
+        :return: The vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
+        :rtype: str
+        """
+        return self._vat_registration_number
+
+    @vat_registration_number.setter
+    def vat_registration_number(self, vat_registration_number):
+        """
+        Sets the vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
+        Customer's government-assigned tax identification number. 
+
+        :param vat_registration_number: The vat_registration_number of this Ptsv1pushfundstransferSenderInformation.
+        :type: str
+        """
+
+        self._vat_registration_number = vat_registration_number
 
     def to_dict(self):
         """

@@ -32,28 +32,33 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
     swagger_types = {
         'type': 'str',
         'eligibility': 'str',
+        'dispute_categories': 'list[str]',
         'eligibility_type': 'str'
     }
 
     attribute_map = {
         'type': 'type',
         'eligibility': 'eligibility',
+        'dispute_categories': 'disputeCategories',
         'eligibility_type': 'eligibilityType'
     }
 
-    def __init__(self, type=None, eligibility=None, eligibility_type=None):
+    def __init__(self, type=None, eligibility=None, dispute_categories=None, eligibility_type=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection - a model defined in Swagger
         """
 
         self._type = None
         self._eligibility = None
+        self._dispute_categories = None
         self._eligibility_type = None
 
         if type is not None:
           self.type = type
         if eligibility is not None:
           self.eligibility = eligibility
+        if dispute_categories is not None:
+          self.dispute_categories = dispute_categories
         if eligibility_type is not None:
           self.eligibility_type = eligibility_type
 
@@ -84,7 +89,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
     def eligibility(self):
         """
         Gets the eligibility of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
-        The level of seller protection in force for the transaction. Possible values: - `ELIGIBLE` - `PARTIALLY_ELIGIBLE` - `INELIGIBLE` 
+        Indicates whether the transaction is eligible for seller protection. The values returned are described below. Possible values: - `ELIGIBLE` - `PARTIALLY_ELIGIBLE` - `INELIGIBLE` - `NOT_ELIGIBLE` 
 
         :return: The eligibility of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
         :rtype: str
@@ -95,13 +100,36 @@ class PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection(object):
     def eligibility(self, eligibility):
         """
         Sets the eligibility of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
-        The level of seller protection in force for the transaction. Possible values: - `ELIGIBLE` - `PARTIALLY_ELIGIBLE` - `INELIGIBLE` 
+        Indicates whether the transaction is eligible for seller protection. The values returned are described below. Possible values: - `ELIGIBLE` - `PARTIALLY_ELIGIBLE` - `INELIGIBLE` - `NOT_ELIGIBLE` 
 
         :param eligibility: The eligibility of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
         :type: str
         """
 
         self._eligibility = eligibility
+
+    @property
+    def dispute_categories(self):
+        """
+        Gets the dispute_categories of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
+        An array of conditions that are covered for the transaction. 
+
+        :return: The dispute_categories of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
+        :rtype: list[str]
+        """
+        return self._dispute_categories
+
+    @dispute_categories.setter
+    def dispute_categories(self, dispute_categories):
+        """
+        Sets the dispute_categories of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
+        An array of conditions that are covered for the transaction. 
+
+        :param dispute_categories: The dispute_categories of this PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection.
+        :type: list[str]
+        """
+
+        self._dispute_categories = dispute_categories
 
     @property
     def eligibility_type(self):

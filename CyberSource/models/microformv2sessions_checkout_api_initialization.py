@@ -243,6 +243,7 @@ class Microformv2sessionsCheckoutApiInitialization(object):
     def locale(self):
         """
         Gets the locale of this Microformv2sessionsCheckoutApiInitialization.
+        Locale where application is being used.  This field controls aspects of the application such as the language it will be rendered in. 
 
         :return: The locale of this Microformv2sessionsCheckoutApiInitialization.
         :rtype: str
@@ -253,6 +254,7 @@ class Microformv2sessionsCheckoutApiInitialization(object):
     def locale(self, locale):
         """
         Sets the locale of this Microformv2sessionsCheckoutApiInitialization.
+        Locale where application is being used.  This field controls aspects of the application such as the language it will be rendered in. 
 
         :param locale: The locale of this Microformv2sessionsCheckoutApiInitialization.
         :type: str

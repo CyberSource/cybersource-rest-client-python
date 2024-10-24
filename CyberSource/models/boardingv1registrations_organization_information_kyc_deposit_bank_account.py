@@ -83,6 +83,7 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
     def account_type(self):
         """
         Gets the account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
+        Possible values: - checking - savings - corporatechecking - corporatesavings
 
         :return: The account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :rtype: str
@@ -93,16 +94,11 @@ class Boardingv1registrationsOrganizationInformationKYCDepositBankAccount(object
     def account_type(self, account_type):
         """
         Sets the account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
+        Possible values: - checking - savings - corporatechecking - corporatesavings
 
         :param account_type: The account_type of this Boardingv1registrationsOrganizationInformationKYCDepositBankAccount.
         :type: str
         """
-        allowed_values = ["checking", "savings", "corporatechecking", "corporatesavings"]
-        if account_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `account_type` ({0}), must be one of {1}"
-                .format(account_type, allowed_values)
-            )
 
         self._account_type = account_type
 

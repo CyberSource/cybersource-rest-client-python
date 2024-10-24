@@ -18,11 +18,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.tss_v2_transactions_post201_response_embedded_buyer_information import TssV2TransactionsPost201ResponseEmbeddedBuyerInformation
+from CyberSource.models.ptsv2intents_order_information_amount_details import Ptsv2intentsOrderInformationAmountDetails
 
 
-class TestTssV2TransactionsPost201ResponseEmbeddedBuyerInformation(unittest.TestCase):
-    """ TssV2TransactionsPost201ResponseEmbeddedBuyerInformation unit test stubs """
+class TestPtsv2intentsOrderInformationAmountDetails(unittest.TestCase):
+    """ Ptsv2intentsOrderInformationAmountDetails unit test stubs """
 
     def setUp(self):
         pass
@@ -30,12 +30,12 @@ class TestTssV2TransactionsPost201ResponseEmbeddedBuyerInformation(unittest.Test
     def tearDown(self):
         pass
 
-    def testTssV2TransactionsPost201ResponseEmbeddedBuyerInformation(self):
+    def testPtsv2intentsOrderInformationAmountDetails(self):
         """
-        Test TssV2TransactionsPost201ResponseEmbeddedBuyerInformation
+        Test Ptsv2intentsOrderInformationAmountDetails
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.tss_v2_transactions_post201_response_embedded_buyer_information.TssV2TransactionsPost201ResponseEmbeddedBuyerInformation()
+        #model = CyberSource.models.ptsv2intents_order_information_amount_details.Ptsv2intentsOrderInformationAmountDetails()
         pass
 
 

@@ -207,7 +207,7 @@ class CardProcessingConfigCommon(object):
     def default_auth_type_code(self):
         """
         Gets the default_auth_type_code of this CardProcessingConfigCommon.
-        Authorization Finality indicator. Please note that the input can be in small case or capitals but response is in small case as of now. It will be made capitals everywhere in the next version. Applicable for Elavon Americas (elavonamericas), TSYS (tsys), Barclays (barclays2), Streamline (streamline2), Six (six), Barclays HISO (barclayshiso), GPN (gpn), FDI Global (fdiglobal), GPX (gpx), Paymentech Tampa (paymentechtampa), FDC Nashville (smartfdc), VPC and Chase Paymentech Salem (chasepaymentechsalem) processors.  Validation details (for selected processors)...  <table> <thead><tr><th>Processor</th><th>Acceptance Type</th><th>Required</th><th>Default Value</th></tr></thead> <tr><td>Barclays</td><td>cnp, cp, hybrid</td><td>No</td><td>FINAL</td></tr> <tr><td>Barclays HISO</td><td>cnp, cp, hybrid</td><td>Yes</td><td>FINAL</td></tr> </table> 
+        Authorization Finality indicator. Please note that the input can be in small case or capitals but response is in small case as of now. It will be made capitals everywhere in the next version. Applicable for Elavon Americas (elavonamericas), TSYS (tsys), Barclays (barclays2), Streamline (streamline2), Six (six), Barclays HISO (barclayshiso), GPN (gpn), FDI Global (fdiglobal), GPX (gpx), Paymentech Tampa (paymentechtampa), FDC Nashville (smartfdc), VPC and Chase Paymentech Salem (chasepaymentechsalem) processors.  Validation details (for selected processors)...  <table> <thead><tr><th>Processor</th><th>Acceptance Type</th><th>Required</th><th>Default Value</th></tr></thead> <tr><td>Barclays</td><td>cnp, cp, hybrid</td><td>No</td><td>FINAL</td></tr> <tr><td>Barclays HISO</td><td>cnp, cp, hybrid</td><td>Yes</td><td>FINAL</td></tr> </table>   Possible values: - PRE - FINAL - UNDEFINED
 
         :return: The default_auth_type_code of this CardProcessingConfigCommon.
         :rtype: str
@@ -218,17 +218,11 @@ class CardProcessingConfigCommon(object):
     def default_auth_type_code(self, default_auth_type_code):
         """
         Sets the default_auth_type_code of this CardProcessingConfigCommon.
-        Authorization Finality indicator. Please note that the input can be in small case or capitals but response is in small case as of now. It will be made capitals everywhere in the next version. Applicable for Elavon Americas (elavonamericas), TSYS (tsys), Barclays (barclays2), Streamline (streamline2), Six (six), Barclays HISO (barclayshiso), GPN (gpn), FDI Global (fdiglobal), GPX (gpx), Paymentech Tampa (paymentechtampa), FDC Nashville (smartfdc), VPC and Chase Paymentech Salem (chasepaymentechsalem) processors.  Validation details (for selected processors)...  <table> <thead><tr><th>Processor</th><th>Acceptance Type</th><th>Required</th><th>Default Value</th></tr></thead> <tr><td>Barclays</td><td>cnp, cp, hybrid</td><td>No</td><td>FINAL</td></tr> <tr><td>Barclays HISO</td><td>cnp, cp, hybrid</td><td>Yes</td><td>FINAL</td></tr> </table> 
+        Authorization Finality indicator. Please note that the input can be in small case or capitals but response is in small case as of now. It will be made capitals everywhere in the next version. Applicable for Elavon Americas (elavonamericas), TSYS (tsys), Barclays (barclays2), Streamline (streamline2), Six (six), Barclays HISO (barclayshiso), GPN (gpn), FDI Global (fdiglobal), GPX (gpx), Paymentech Tampa (paymentechtampa), FDC Nashville (smartfdc), VPC and Chase Paymentech Salem (chasepaymentechsalem) processors.  Validation details (for selected processors)...  <table> <thead><tr><th>Processor</th><th>Acceptance Type</th><th>Required</th><th>Default Value</th></tr></thead> <tr><td>Barclays</td><td>cnp, cp, hybrid</td><td>No</td><td>FINAL</td></tr> <tr><td>Barclays HISO</td><td>cnp, cp, hybrid</td><td>Yes</td><td>FINAL</td></tr> </table>   Possible values: - PRE - FINAL - UNDEFINED
 
         :param default_auth_type_code: The default_auth_type_code of this CardProcessingConfigCommon.
         :type: str
         """
-        allowed_values = ["PRE", "FINAL", "UNDEFINED"]
-        if default_auth_type_code not in allowed_values:
-            raise ValueError(
-                "Invalid value for `default_auth_type_code` ({0}), must be one of {1}"
-                .format(default_auth_type_code, allowed_values)
-            )
 
         self._default_auth_type_code = default_auth_type_code
 

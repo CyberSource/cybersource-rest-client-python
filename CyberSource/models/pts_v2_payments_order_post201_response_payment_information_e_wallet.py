@@ -32,16 +32,18 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
     swagger_types = {
         'account_id': 'str',
         'funding_source': 'str',
-        'funding_source_sale': 'str'
+        'funding_source_sale': 'str',
+        'user_name': 'str'
     }
 
     attribute_map = {
         'account_id': 'accountId',
         'funding_source': 'fundingSource',
-        'funding_source_sale': 'fundingSourceSale'
+        'funding_source_sale': 'fundingSourceSale',
+        'user_name': 'userName'
     }
 
-    def __init__(self, account_id=None, funding_source=None, funding_source_sale=None):
+    def __init__(self, account_id=None, funding_source=None, funding_source_sale=None, user_name=None):
         """
         PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
         self._account_id = None
         self._funding_source = None
         self._funding_source_sale = None
+        self._user_name = None
 
         if account_id is not None:
           self.account_id = account_id
@@ -56,6 +59,8 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
           self.funding_source = funding_source
         if funding_source_sale is not None:
           self.funding_source_sale = funding_source_sale
+        if user_name is not None:
+          self.user_name = user_name
 
     @property
     def account_id(self):
@@ -125,6 +130,29 @@ class PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet(object):
         """
 
         self._funding_source_sale = funding_source_sale
+
+    @property
+    def user_name(self):
+        """
+        Gets the user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
+        The Venmo user name chosen by the user, also know as a Venmo handle. 
+
+        :return: The user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
+        :rtype: str
+        """
+        return self._user_name
+
+    @user_name.setter
+    def user_name(self, user_name):
+        """
+        Sets the user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
+        The Venmo user name chosen by the user, also know as a Venmo handle. 
+
+        :param user_name: The user_name of this PtsV2PaymentsOrderPost201ResponsePaymentInformationEWallet.
+        :type: str
+        """
+
+        self._user_name = user_name
 
     def to_dict(self):
         """

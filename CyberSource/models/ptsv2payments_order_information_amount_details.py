@@ -57,6 +57,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'original_currency': 'str',
         'cashback_amount': 'str',
         'currency_conversion': 'Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion',
+        'oct_surcharge': 'Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge',
         'order': 'Ptsv2paymentsOrderInformationAmountDetailsOrder',
         'anticipated_amount': 'str'
     }
@@ -89,11 +90,12 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'original_currency': 'originalCurrency',
         'cashback_amount': 'cashbackAmount',
         'currency_conversion': 'currencyConversion',
+        'oct_surcharge': 'oct-surcharge',
         'order': 'order',
         'anticipated_amount': 'anticipatedAmount'
     }
 
-    def __init__(self, gift_wrap_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, order=None, anticipated_amount=None):
+    def __init__(self, gift_wrap_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, oct_surcharge=None, order=None, anticipated_amount=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -125,6 +127,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         self._original_currency = None
         self._cashback_amount = None
         self._currency_conversion = None
+        self._oct_surcharge = None
         self._order = None
         self._anticipated_amount = None
 
@@ -182,6 +185,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
           self.cashback_amount = cashback_amount
         if currency_conversion is not None:
           self.currency_conversion = currency_conversion
+        if oct_surcharge is not None:
+          self.oct_surcharge = oct_surcharge
         if order is not None:
           self.order = order
         if anticipated_amount is not None:
@@ -799,6 +804,27 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         """
 
         self._currency_conversion = currency_conversion
+
+    @property
+    def oct_surcharge(self):
+        """
+        Gets the oct_surcharge of this Ptsv2paymentsOrderInformationAmountDetails.
+
+        :return: The oct_surcharge of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge
+        """
+        return self._oct_surcharge
+
+    @oct_surcharge.setter
+    def oct_surcharge(self, oct_surcharge):
+        """
+        Sets the oct_surcharge of this Ptsv2paymentsOrderInformationAmountDetails.
+
+        :param oct_surcharge: The oct_surcharge of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge
+        """
+
+        self._oct_surcharge = oct_surcharge
 
     @property
     def order(self):

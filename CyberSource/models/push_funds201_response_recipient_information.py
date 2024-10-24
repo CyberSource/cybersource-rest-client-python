@@ -30,22 +30,27 @@ class PushFunds201ResponseRecipientInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card': 'PushFunds201ResponseRecipientInformationCard'
+        'card': 'PushFunds201ResponseRecipientInformationCard',
+        'email': 'str'
     }
 
     attribute_map = {
-        'card': 'card'
+        'card': 'card',
+        'email': 'email'
     }
 
-    def __init__(self, card=None):
+    def __init__(self, card=None, email=None):
         """
         PushFunds201ResponseRecipientInformation - a model defined in Swagger
         """
 
         self._card = None
+        self._email = None
 
         if card is not None:
           self.card = card
+        if email is not None:
+          self.email = email
 
     @property
     def card(self):
@@ -67,6 +72,29 @@ class PushFunds201ResponseRecipientInformation(object):
         """
 
         self._card = card
+
+    @property
+    def email(self):
+        """
+        Gets the email of this PushFunds201ResponseRecipientInformation.
+        Customer's email address, including the full domain name. 
+
+        :return: The email of this PushFunds201ResponseRecipientInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this PushFunds201ResponseRecipientInformation.
+        Customer's email address, including the full domain name. 
+
+        :param email: The email of this PushFunds201ResponseRecipientInformation.
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """

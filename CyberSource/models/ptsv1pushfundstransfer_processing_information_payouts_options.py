@@ -31,32 +31,47 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     """
     swagger_types = {
         'source_currency': 'str',
-        'destination_currency': 'str'
+        'destination_currency': 'str',
+        'source_amount': 'str',
+        'retrieval_reference_number': 'str',
+        'account_funding_reference_id': 'str'
     }
 
     attribute_map = {
         'source_currency': 'sourceCurrency',
-        'destination_currency': 'destinationCurrency'
+        'destination_currency': 'destinationCurrency',
+        'source_amount': 'sourceAmount',
+        'retrieval_reference_number': 'retrievalReferenceNumber',
+        'account_funding_reference_id': 'accountFundingReferenceId'
     }
 
-    def __init__(self, source_currency=None, destination_currency=None):
+    def __init__(self, source_currency=None, destination_currency=None, source_amount=None, retrieval_reference_number=None, account_funding_reference_id=None):
         """
         Ptsv1pushfundstransferProcessingInformationPayoutsOptions - a model defined in Swagger
         """
 
         self._source_currency = None
         self._destination_currency = None
+        self._source_amount = None
+        self._retrieval_reference_number = None
+        self._account_funding_reference_id = None
 
         if source_currency is not None:
           self.source_currency = source_currency
         if destination_currency is not None:
           self.destination_currency = destination_currency
+        if source_amount is not None:
+          self.source_amount = source_amount
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
+        if account_funding_reference_id is not None:
+          self.account_funding_reference_id = account_funding_reference_id
 
     @property
     def source_currency(self):
         """
         Gets the source_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Use a 3-character alpha currency code for source currency of the funds transfer.  Yellow Pepper Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+        Use a 3-character alpha currency code for source currency of the funds transfer.  Required if sending processingInformation.payoutsOptions.sourceAmount.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :return: The source_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :rtype: str
@@ -67,7 +82,7 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     def source_currency(self, source_currency):
         """
         Sets the source_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Use a 3-character alpha currency code for source currency of the funds transfer.  Yellow Pepper Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+        Use a 3-character alpha currency code for source currency of the funds transfer.  Required if sending processingInformation.payoutsOptions.sourceAmount.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :param source_currency: The source_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :type: str
@@ -79,7 +94,7 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     def destination_currency(self):
         """
         Gets the destination_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Use a 3-character alpha currency code for destination currency of the funds transfer.  Yellow Pepper Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+        Use a 3-character alpha currency code for destination currency of the funds transfer.  Yellow Pepper  Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :return: The destination_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :rtype: str
@@ -90,13 +105,82 @@ class Ptsv1pushfundstransferProcessingInformationPayoutsOptions(object):
     def destination_currency(self, destination_currency):
         """
         Sets the destination_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
-        Use a 3-character alpha currency code for destination currency of the funds transfer.  Yellow Pepper Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
+        Use a 3-character alpha currency code for destination currency of the funds transfer.  Yellow Pepper  Supported for cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :param destination_currency: The destination_currency of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
         :type: str
         """
 
         self._destination_currency = destination_currency
+
+    @property
+    def source_amount(self):
+        """
+        Gets the source_amount of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Source Amount is required in certain markets to identify the transaction amount entered in the sender's currency code prior to FX conversion by the originating entity.  Format:  Minimum Value: 0  Maximum value: 999999999.99  Allowed fractional digits: 2 
+
+        :return: The source_amount of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :rtype: str
+        """
+        return self._source_amount
+
+    @source_amount.setter
+    def source_amount(self, source_amount):
+        """
+        Sets the source_amount of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Source Amount is required in certain markets to identify the transaction amount entered in the sender's currency code prior to FX conversion by the originating entity.  Format:  Minimum Value: 0  Maximum value: 999999999.99  Allowed fractional digits: 2 
+
+        :param source_amount: The source_amount of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :type: str
+        """
+
+        self._source_amount = source_amount
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Unique reference number returned by the processor that identifies the transaction at the network. 
+
+        :return: The retrieval_reference_number of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Unique reference number returned by the processor that identifies the transaction at the network. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
+
+    @property
+    def account_funding_reference_id(self):
+        """
+        Gets the account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. 
+
+        :return: The account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :rtype: str
+        """
+        return self._account_funding_reference_id
+
+    @account_funding_reference_id.setter
+    def account_funding_reference_id(self, account_funding_reference_id):
+        """
+        Sets the account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        Visa-generated transaction identifier (TID) that is unique for each original authorization and financial request. 
+
+        :param account_funding_reference_id: The account_funding_reference_id of this Ptsv1pushfundstransferProcessingInformationPayoutsOptions.
+        :type: str
+        """
+
+        self._account_funding_reference_id = account_funding_reference_id
 
     def to_dict(self):
         """

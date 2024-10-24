@@ -89,7 +89,7 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
     def personal_id_type(self):
         """
         Gets the personal_id_type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
-        Visa Platform Connect This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: • B (Business) • I (Individual) 
+        This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: - `B` (Business) - `I` (Individual) 
 
         :return: The personal_id_type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
         :rtype: str
@@ -100,7 +100,7 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
     def personal_id_type(self, personal_id_type):
         """
         Sets the personal_id_type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
-        Visa Platform Connect This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: • B (Business) • I (Individual) 
+        This tag will denote whether the tax ID is a business or individual tax ID when personal ID Type contains the value of TXIN (Tax identification).  The valid values are: - `B` (Business) - `I` (Individual) 
 
         :param personal_id_type: The personal_id_type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
         :type: str
@@ -112,7 +112,7 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
     def type(self):
         """
         Gets the type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
-        This tag will contain the type of sender identification. The valid values are:  Visa Platform Connect: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
+        This tag will contain the type of sender identification. The valid values are:  - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
 
         :return: The type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
         :rtype: str
@@ -123,7 +123,7 @@ class Ptsv1pushfundstransferSenderInformationPersonalIdentification(object):
     def type(self, type):
         """
         Sets the type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
-        This tag will contain the type of sender identification. The valid values are:  Visa Platform Connect: - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
+        This tag will contain the type of sender identification. The valid values are:  - `BTHD`: (Date of birth) - `CUID`: (Customer identification (unspecified)) - `NTID`: (National identification) - `PASN`: (Passport number) - `DRLN`: (Driver license) - `TXIN`: (Tax identification) - `CPNY`: (Company registration number) - `PRXY`: (Proxy identification) - `SSNB`: (Social security number) - `ARNB`: (Alien registration number) - `LAWE`: (Law enforcement identification) - `MILI`: (Military identification) - `TRVL`: (Travel identification (non-passport)) - `EMAL`: (Email) - `PHON`: (Phone number) 
 
         :param type: The type of this Ptsv1pushfundstransferSenderInformationPersonalIdentification.
         :type: str

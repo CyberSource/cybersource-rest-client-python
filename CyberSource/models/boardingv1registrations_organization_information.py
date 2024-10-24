@@ -171,12 +171,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param type: The type of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        allowed_values = ["TRANSACTING", "STRUCTURAL", "MERCHANT"]
-        if type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"
-                .format(type, allowed_values)
-            )
 
         self._type = type
 
@@ -200,12 +194,6 @@ class Boardingv1registrationsOrganizationInformation(object):
         :param status: The status of this Boardingv1registrationsOrganizationInformation.
         :type: str
         """
-        allowed_values = ["LIVE", "TEST", "DRAFT"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
