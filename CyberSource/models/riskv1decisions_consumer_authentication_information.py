@@ -38,7 +38,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'authentication_date': 'str',
         'authentication_transaction_id': 'str',
         'transaction_flow_indicator': 'int',
-        'challenge_cancel_code': 'str',
         'challenge_code': 'str',
         'challenge_status': 'str',
         'customer_card_alias': 'str',
@@ -82,7 +81,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'authentication_date': 'authenticationDate',
         'authentication_transaction_id': 'authenticationTransactionId',
         'transaction_flow_indicator': 'transactionFlowIndicator',
-        'challenge_cancel_code': 'challengeCancelCode',
         'challenge_code': 'challengeCode',
         'challenge_status': 'challengeStatus',
         'customer_card_alias': 'customerCardAlias',
@@ -117,7 +115,7 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         'score_request': 'scoreRequest'
     }
 
-    def __init__(self, strong_authentication=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
+    def __init__(self, strong_authentication=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, transaction_flow_indicator=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, score_request=None):
         """
         Riskv1decisionsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -130,7 +128,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         self._authentication_date = None
         self._authentication_transaction_id = None
         self._transaction_flow_indicator = None
-        self._challenge_cancel_code = None
         self._challenge_code = None
         self._challenge_status = None
         self._customer_card_alias = None
@@ -180,8 +177,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
           self.authentication_transaction_id = authentication_transaction_id
         if transaction_flow_indicator is not None:
           self.transaction_flow_indicator = transaction_flow_indicator
-        if challenge_cancel_code is not None:
-          self.challenge_cancel_code = challenge_cancel_code
         if challenge_code is not None:
           self.challenge_code = challenge_code
         if challenge_status is not None:
@@ -427,29 +422,6 @@ class Riskv1decisionsConsumerAuthenticationInformation(object):
         """
 
         self._transaction_flow_indicator = transaction_flow_indicator
-
-    @property
-    def challenge_cancel_code(self):
-        """
-        Gets the challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
-
-        :return: The challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        :rtype: str
-        """
-        return self._challenge_cancel_code
-
-    @challenge_cancel_code.setter
-    def challenge_cancel_code(self, challenge_cancel_code):
-        """
-        Sets the challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        An indicator as to why the transaction was canceled. Possible Values:  - `01`: Cardholder selected Cancel. - `02`: Reserved for future EMVCo use (values invalid until defined by EMVCo). - `03`: Transaction Timed Out—Decoupled Authentication - `04`: Transaction timed out at ACS—other timeouts - `05`: Transaction Timed out at ACS - First CReq not received by ACS - `06`: Transaction Error - `07`: Unknown - `08`: Transaction Timed Out at SDK 
-
-        :param challenge_cancel_code: The challenge_cancel_code of this Riskv1decisionsConsumerAuthenticationInformation.
-        :type: str
-        """
-
-        self._challenge_cancel_code = challenge_cancel_code
 
     @property
     def challenge_code(self):

@@ -74,10 +74,8 @@ class Ptsv2paymentsRecurringPaymentInformation(object):
         self._maximum_amount = None
         self._reference_number = None
 
-        if end_date is not None:
-          self.end_date = end_date
-        if frequency is not None:
-          self.frequency = frequency
+        self.end_date = end_date
+        self.frequency = frequency
         if number_of_payments is not None:
           self.number_of_payments = number_of_payments
         if original_purchase_date is not None:
