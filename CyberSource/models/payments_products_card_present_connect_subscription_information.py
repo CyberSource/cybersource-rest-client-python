@@ -77,7 +77,7 @@ class PaymentsProductsCardPresentConnectSubscriptionInformation(object):
     def self_serviceability(self):
         """
         Gets the self_serviceability of this PaymentsProductsCardPresentConnectSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.
+        Indicates if the organization can enable this product using self service.  Possible values: - NOT_SELF_SERVICEABLE
 
         :return: The self_serviceability of this PaymentsProductsCardPresentConnectSubscriptionInformation.
         :rtype: str
@@ -88,17 +88,11 @@ class PaymentsProductsCardPresentConnectSubscriptionInformation(object):
     def self_serviceability(self, self_serviceability):
         """
         Sets the self_serviceability of this PaymentsProductsCardPresentConnectSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.
+        Indicates if the organization can enable this product using self service.  Possible values: - NOT_SELF_SERVICEABLE
 
         :param self_serviceability: The self_serviceability of this PaymentsProductsCardPresentConnectSubscriptionInformation.
         :type: str
         """
-        allowed_values = ["NOT_SELF_SERVICEABLE"]
-        if self_serviceability not in allowed_values:
-            raise ValueError(
-                "Invalid value for `self_serviceability` ({0}), must be one of {1}"
-                .format(self_serviceability, allowed_values)
-            )
 
         self._self_serviceability = self_serviceability
 

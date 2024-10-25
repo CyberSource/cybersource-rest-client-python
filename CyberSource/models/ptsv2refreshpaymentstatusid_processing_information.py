@@ -51,7 +51,7 @@ class Ptsv2refreshpaymentstatusidProcessingInformation(object):
     def action_list(self):
         """
         Gets the action_list of this Ptsv2refreshpaymentstatusidProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_STATUS`: Use this when Alternative Payment check status service is requested.   - `AP_SESSION_STATUS`: Use this when Alternative Payment check status service for Paypal, Klarna is requested.   - `AP_INITIATE_STATUS`: Use this when Alternative Payment check status service for KCP is requested. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_STATUS`: Use this when Alternative Payment check status service is requested.   - `AP_SESSION_STATUS`: Use this when Alternative Payment check status service for Paypal, Klarna is requested.   - `AP_INITIATE_STATUS`: Use this when Alternative Payment check status service for KCP is requested.   - `AP_ORDER_STATUS`: Use this when Alternative Payment check status service for order status request.   - `AP_AUTH_STATUS`: Use this when Alternative Payment check status service for auth status request.   - `AP_CAPTURE_STATUS`: Use this when Alternative Payment check status service for capture status request.   - `AP_REFUND_STATUS`: Use this when Alternative Payment check status service for refund status request. 
 
         :return: The action_list of this Ptsv2refreshpaymentstatusidProcessingInformation.
         :rtype: list[str]
@@ -62,7 +62,7 @@ class Ptsv2refreshpaymentstatusidProcessingInformation(object):
     def action_list(self, action_list):
         """
         Sets the action_list of this Ptsv2refreshpaymentstatusidProcessingInformation.
-        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_STATUS`: Use this when Alternative Payment check status service is requested.   - `AP_SESSION_STATUS`: Use this when Alternative Payment check status service for Paypal, Klarna is requested.   - `AP_INITIATE_STATUS`: Use this when Alternative Payment check status service for KCP is requested. 
+        Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_STATUS`: Use this when Alternative Payment check status service is requested.   - `AP_SESSION_STATUS`: Use this when Alternative Payment check status service for Paypal, Klarna is requested.   - `AP_INITIATE_STATUS`: Use this when Alternative Payment check status service for KCP is requested.   - `AP_ORDER_STATUS`: Use this when Alternative Payment check status service for order status request.   - `AP_AUTH_STATUS`: Use this when Alternative Payment check status service for auth status request.   - `AP_CAPTURE_STATUS`: Use this when Alternative Payment check status service for capture status request.   - `AP_REFUND_STATUS`: Use this when Alternative Payment check status service for refund status request. 
 
         :param action_list: The action_list of this Ptsv2refreshpaymentstatusidProcessingInformation.
         :type: list[str]

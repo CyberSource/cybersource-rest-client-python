@@ -27,6 +27,7 @@ class MerchantConfiguration:
         self.key_file_path = None
         self.run_environment = None
         self.IntermediateHost = None
+        self.defaultDeveloperId = None
         self.default_headers = None
         self.key_alias = None
         self.key_password = None
@@ -92,6 +93,10 @@ class MerchantConfiguration:
     def set_IntermediateHost(self, value):
         if not (value.get('IntermediateHost') is None):
             self.IntermediateHost = value['IntermediateHost']
+
+    def set_defaultDeveloperId(self, value):
+        if not (value.get('defaultDeveloperId') is None):
+            self.defaultDeveloperId = value['defaultDeveloperId']
 
     def set_default_headers(self, value):
         if not (value.get('default_headers') is None):
@@ -189,6 +194,7 @@ class MerchantConfiguration:
         self.set_portfolio_id(val)
         self.set_run_environment(val)
         self.set_IntermediateHost(val)
+        self.set_defaultDeveloperId(val)
         self.set_default_headers(val)
         self.set_merchant_id(val)
         self.set_authentication_type(val)

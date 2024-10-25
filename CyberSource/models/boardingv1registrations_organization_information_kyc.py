@@ -100,6 +100,7 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
     def when_is_customer_charged(self):
         """
         Gets the when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
+        Possible values: - ONETIMEBEFORE - ONETIMEAFTER - OTHER
 
         :return: The when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
         :rtype: str
@@ -110,16 +111,11 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
     def when_is_customer_charged(self, when_is_customer_charged):
         """
         Sets the when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
+        Possible values: - ONETIMEBEFORE - ONETIMEAFTER - OTHER
 
         :param when_is_customer_charged: The when_is_customer_charged of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-        allowed_values = ["ONETIMEBEFORE", "ONETIMEAFTER", "OTHER"]
-        if when_is_customer_charged not in allowed_values:
-            raise ValueError(
-                "Invalid value for `when_is_customer_charged` ({0}), must be one of {1}"
-                .format(when_is_customer_charged, allowed_values)
-            )
 
         self._when_is_customer_charged = when_is_customer_charged
 
@@ -253,6 +249,7 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
     def time_to_product_delivery(self):
         """
         Gets the time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
+        Possible values: - INSTANT - UPTO2 - UPTO5 - UPTO10 - GREATERTHAN10
 
         :return: The time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
         :rtype: str
@@ -263,16 +260,11 @@ class Boardingv1registrationsOrganizationInformationKYC(object):
     def time_to_product_delivery(self, time_to_product_delivery):
         """
         Sets the time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
+        Possible values: - INSTANT - UPTO2 - UPTO5 - UPTO10 - GREATERTHAN10
 
         :param time_to_product_delivery: The time_to_product_delivery of this Boardingv1registrationsOrganizationInformationKYC.
         :type: str
         """
-        allowed_values = ["INSTANT", "UPTO2", "UPTO5", "UPTO10", "GREATERTHAN10"]
-        if time_to_product_delivery not in allowed_values:
-            raise ValueError(
-                "Invalid value for `time_to_product_delivery` ({0}), must be one of {1}"
-                .format(time_to_product_delivery, allowed_values)
-            )
 
         self._time_to_product_delivery = time_to_product_delivery
 

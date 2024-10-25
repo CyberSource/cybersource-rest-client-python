@@ -18,11 +18,11 @@ import unittest
 
 import CyberSource
 from CyberSource.rest import ApiException
-from CyberSource.models.bin_lookupv400_response import BinLookupv400Response
+from CyberSource.models.ptsv2intentsid_order_information import Ptsv2intentsidOrderInformation
 
 
-class TestBinLookupv400Response(unittest.TestCase):
-    """ BinLookupv400Response unit test stubs """
+class TestPtsv2intentsidOrderInformation(unittest.TestCase):
+    """ Ptsv2intentsidOrderInformation unit test stubs """
 
     def setUp(self):
         pass
@@ -30,12 +30,12 @@ class TestBinLookupv400Response(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBinLookupv400Response(self):
+    def testPtsv2intentsidOrderInformation(self):
         """
-        Test BinLookupv400Response
+        Test Ptsv2intentsidOrderInformation
         """
         # FIXME: construct object with mandatory attributes with example values
-        #model = CyberSource.models.bin_lookupv400_response.BinLookupv400Response()
+        #model = CyberSource.models.ptsv2intentsid_order_information.Ptsv2intentsidOrderInformation()
         pass
 
 

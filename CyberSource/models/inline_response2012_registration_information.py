@@ -98,12 +98,6 @@ class InlineResponse2012RegistrationInformation(object):
         :param mode: The mode of this InlineResponse2012RegistrationInformation.
         :type: str
         """
-        allowed_values = ["COMPLETE", "PARTIAL"]
-        if mode not in allowed_values:
-            raise ValueError(
-                "Invalid value for `mode` ({0}), must be one of {1}"
-                .format(mode, allowed_values)
-            )
 
         self._mode = mode
 

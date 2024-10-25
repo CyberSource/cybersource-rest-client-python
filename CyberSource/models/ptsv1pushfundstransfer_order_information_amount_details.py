@@ -33,17 +33,19 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         'total_amount': 'str',
         'currency': 'str',
         'source_currency': 'str',
-        'destination_currency': 'str'
+        'destination_currency': 'str',
+        'surcharge': 'Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge'
     }
 
     attribute_map = {
         'total_amount': 'totalAmount',
         'currency': 'currency',
         'source_currency': 'sourceCurrency',
-        'destination_currency': 'destinationCurrency'
+        'destination_currency': 'destinationCurrency',
+        'surcharge': 'surcharge'
     }
 
-    def __init__(self, total_amount=None, currency=None, source_currency=None, destination_currency=None):
+    def __init__(self, total_amount=None, currency=None, source_currency=None, destination_currency=None, surcharge=None):
         """
         Ptsv1pushfundstransferOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
         self._currency = None
         self._source_currency = None
         self._destination_currency = None
+        self._surcharge = None
 
         self.total_amount = total_amount
         self.currency = currency
@@ -59,6 +62,8 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
           self.source_currency = source_currency
         if destination_currency is not None:
           self.destination_currency = destination_currency
+        if surcharge is not None:
+          self.surcharge = surcharge
 
     @property
     def total_amount(self):
@@ -133,7 +138,7 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     def destination_currency(self):
         """
         Gets the destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf NOTE: This field is supported only for Visa Platform Connect 
+        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :return: The destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :rtype: str
@@ -144,13 +149,34 @@ class Ptsv1pushfundstransferOrderInformationAmountDetails(object):
     def destination_currency(self, destination_currency):
         """
         Sets the destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
-        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf NOTE: This field is supported only for Visa Platform Connect 
+        Use a 3-character alpha currency code for destination currency of the funds transfer. Supported for card and bank account based cross border funds transfers.  ISO standard currencies: http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf 
 
         :param destination_currency: The destination_currency of this Ptsv1pushfundstransferOrderInformationAmountDetails.
         :type: str
         """
 
         self._destination_currency = destination_currency
+
+    @property
+    def surcharge(self):
+        """
+        Gets the surcharge of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+
+        :return: The surcharge of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :rtype: Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge
+        """
+        return self._surcharge
+
+    @surcharge.setter
+    def surcharge(self, surcharge):
+        """
+        Sets the surcharge of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+
+        :param surcharge: The surcharge of this Ptsv1pushfundstransferOrderInformationAmountDetails.
+        :type: Ptsv2paymentsOrderInformationAmountDetailsOctsurcharge
+        """
+
+        self._surcharge = surcharge
 
     def to_dict(self):
         """

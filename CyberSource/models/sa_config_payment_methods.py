@@ -65,13 +65,6 @@ class SAConfigPaymentMethods(object):
         :param enabled_payment_methods: The enabled_payment_methods of this SAConfigPaymentMethods.
         :type: list[str]
         """
-        allowed_values = ["CARD", "ECHECK", "VISACHECKOUT", "PAYPAL"]
-        if not set(enabled_payment_methods).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `enabled_payment_methods` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(enabled_payment_methods)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._enabled_payment_methods = enabled_payment_methods
 

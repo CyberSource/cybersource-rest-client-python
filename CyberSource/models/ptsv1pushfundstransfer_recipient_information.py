@@ -41,7 +41,11 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         'middle_name': 'str',
         'last_name': 'str',
         'phone_number': 'str',
-        'personal_identification': 'Ptsv1pushfundstransferRecipientInformationPersonalIdentification'
+        'email': 'str',
+        'personal_identification': 'Ptsv1pushfundstransferRecipientInformationPersonalIdentification',
+        'building_number': 'str',
+        'street_name': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
@@ -56,10 +60,14 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         'middle_name': 'middleName',
         'last_name': 'lastName',
         'phone_number': 'phoneNumber',
-        'personal_identification': 'personalIdentification'
+        'email': 'email',
+        'personal_identification': 'personalIdentification',
+        'building_number': 'buildingNumber',
+        'street_name': 'streetName',
+        'type': 'type'
     }
 
-    def __init__(self, payment_information=None, address1=None, address2=None, locality=None, postal_code=None, administrative_area=None, country=None, first_name=None, middle_name=None, last_name=None, phone_number=None, personal_identification=None):
+    def __init__(self, payment_information=None, address1=None, address2=None, locality=None, postal_code=None, administrative_area=None, country=None, first_name=None, middle_name=None, last_name=None, phone_number=None, email=None, personal_identification=None, building_number=None, street_name=None, type=None):
         """
         Ptsv1pushfundstransferRecipientInformation - a model defined in Swagger
         """
@@ -75,7 +83,11 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         self._middle_name = None
         self._last_name = None
         self._phone_number = None
+        self._email = None
         self._personal_identification = None
+        self._building_number = None
+        self._street_name = None
+        self._type = None
 
         if payment_information is not None:
           self.payment_information = payment_information
@@ -99,8 +111,16 @@ class Ptsv1pushfundstransferRecipientInformation(object):
           self.last_name = last_name
         if phone_number is not None:
           self.phone_number = phone_number
+        if email is not None:
+          self.email = email
         if personal_identification is not None:
           self.personal_identification = personal_identification
+        if building_number is not None:
+          self.building_number = building_number
+        if street_name is not None:
+          self.street_name = street_name
+        if type is not None:
+          self.type = type
 
     @property
     def payment_information(self):
@@ -334,7 +354,7 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def phone_number(self):
         """
         Gets the phone_number of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient phone number.  This field is supported by FDC Compass.  Mastercard Send: Max length is 15 with no dashes or spaces. 
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S. 
 
         :return: The phone_number of this Ptsv1pushfundstransferRecipientInformation.
         :rtype: str
@@ -345,13 +365,36 @@ class Ptsv1pushfundstransferRecipientInformation(object):
     def phone_number(self, phone_number):
         """
         Sets the phone_number of this Ptsv1pushfundstransferRecipientInformation.
-        Recipient phone number.  This field is supported by FDC Compass.  Mastercard Send: Max length is 15 with no dashes or spaces. 
+        Customer's phone number.  It is recommended that you include the country code when the order is from outside the U.S. 
 
         :param phone_number: The phone_number of this Ptsv1pushfundstransferRecipientInformation.
         :type: str
         """
 
         self._phone_number = phone_number
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv1pushfundstransferRecipientInformation.
+        Customer's email address, including the full domain name. 
+
+        :return: The email of this Ptsv1pushfundstransferRecipientInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv1pushfundstransferRecipientInformation.
+        Customer's email address, including the full domain name. 
+
+        :param email: The email of this Ptsv1pushfundstransferRecipientInformation.
+        :type: str
+        """
+
+        self._email = email
 
     @property
     def personal_identification(self):
@@ -373,6 +416,75 @@ class Ptsv1pushfundstransferRecipientInformation(object):
         """
 
         self._personal_identification = personal_identification
+
+    @property
+    def building_number(self):
+        """
+        Gets the building_number of this Ptsv1pushfundstransferRecipientInformation.
+        Building number in the street address.  For example, if the street address is: Rua da Quitanda 187 then the building number is 187.  Applicable to domestic Colombia transactions only. 
+
+        :return: The building_number of this Ptsv1pushfundstransferRecipientInformation.
+        :rtype: str
+        """
+        return self._building_number
+
+    @building_number.setter
+    def building_number(self, building_number):
+        """
+        Sets the building_number of this Ptsv1pushfundstransferRecipientInformation.
+        Building number in the street address.  For example, if the street address is: Rua da Quitanda 187 then the building number is 187.  Applicable to domestic Colombia transactions only. 
+
+        :param building_number: The building_number of this Ptsv1pushfundstransferRecipientInformation.
+        :type: str
+        """
+
+        self._building_number = building_number
+
+    @property
+    def street_name(self):
+        """
+        Gets the street_name of this Ptsv1pushfundstransferRecipientInformation.
+        This field contains the street name of the recipient's address.  Applicable to domestic Colombia transactions only. 
+
+        :return: The street_name of this Ptsv1pushfundstransferRecipientInformation.
+        :rtype: str
+        """
+        return self._street_name
+
+    @street_name.setter
+    def street_name(self, street_name):
+        """
+        Sets the street_name of this Ptsv1pushfundstransferRecipientInformation.
+        This field contains the street name of the recipient's address.  Applicable to domestic Colombia transactions only. 
+
+        :param street_name: The street_name of this Ptsv1pushfundstransferRecipientInformation.
+        :type: str
+        """
+
+        self._street_name = street_name
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Ptsv1pushfundstransferRecipientInformation.
+        `B` for Business or `I` for individual. 
+
+        :return: The type of this Ptsv1pushfundstransferRecipientInformation.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Ptsv1pushfundstransferRecipientInformation.
+        `B` for Business or `I` for individual. 
+
+        :param type: The type of this Ptsv1pushfundstransferRecipientInformation.
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """

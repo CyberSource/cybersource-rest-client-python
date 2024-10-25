@@ -148,6 +148,7 @@ class InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus(object):
     def status(self):
         """
         Gets the status of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
+        Possible values: - SUCCESS - PARTIAL - PENDING - NOT_SETUP
 
         :return: The status of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
         :rtype: str
@@ -158,16 +159,11 @@ class InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
+        Possible values: - SUCCESS - PARTIAL - PENDING - NOT_SETUP
 
         :param status: The status of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-        allowed_values = ["SUCCESS", "PARTIAL", "PENDING", "NOT_SETUP"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
@@ -175,6 +171,7 @@ class InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
+        Possible values: - PENDING_PROVISIONING_PROCESS - MISSING_DATA - INVALID_DATA - DUPLICATE_FIELD - NOT_APPLICABLE
 
         :return: The reason of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
         :rtype: str
@@ -185,16 +182,11 @@ class InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
+        Possible values: - PENDING_PROVISIONING_PROCESS - MISSING_DATA - INVALID_DATA - DUPLICATE_FIELD - NOT_APPLICABLE
 
         :param reason: The reason of this InlineResponse2012SetupsPaymentsCardProcessingConfigurationStatus.
         :type: str
         """
-        allowed_values = ["PENDING_PROVISIONING_PROCESS", "MISSING_DATA", "INVALID_DATA", "DUPLICATE_FIELD", "NOT_APPLICABLE"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

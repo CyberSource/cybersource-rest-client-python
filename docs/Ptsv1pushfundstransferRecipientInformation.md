@@ -13,8 +13,12 @@ Name | Type | Description | Notes
 **first_name** | **str** | First name of recipient.  | [optional] 
 **middle_name** | **str** | Sender&#39;s middle name. This field is a passthrough, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor.  | [optional] 
 **last_name** | **str** | Last name of recipient.  | [optional] 
-**phone_number** | **str** | Recipient phone number.  This field is supported by FDC Compass.  Mastercard Send: Max length is 15 with no dashes or spaces.  | [optional] 
+**phone_number** | **str** | Customer&#39;s phone number.  It is recommended that you include the country code when the order is from outside the U.S.  | [optional] 
+**email** | **str** | Customer&#39;s email address, including the full domain name.  | [optional] 
 **personal_identification** | [**Ptsv1pushfundstransferRecipientInformationPersonalIdentification**](Ptsv1pushfundstransferRecipientInformationPersonalIdentification.md) |  | [optional] 
+**building_number** | **str** | Building number in the street address.  For example, if the street address is: Rua da Quitanda 187 then the building number is 187.  Applicable to domestic Colombia transactions only.  | [optional] 
+**street_name** | **str** | This field contains the street name of the recipient&#39;s address.  Applicable to domestic Colombia transactions only.  | [optional] 
+**type** | **str** | &#x60;B&#x60; for Business or &#x60;I&#x60; for individual.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

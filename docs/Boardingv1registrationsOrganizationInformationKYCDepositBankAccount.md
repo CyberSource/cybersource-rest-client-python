@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_holder_name** | **str** |  | 
-**account_type** | **str** |  | 
+**account_type** | **str** | Possible values: - checking - savings - corporatechecking - corporatesavings | 
 **account_routing_number** | **str** |  | 
 **account_number** | **str** |  | 
 

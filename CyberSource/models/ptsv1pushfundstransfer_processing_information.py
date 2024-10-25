@@ -32,36 +32,56 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     swagger_types = {
         'business_application_id': 'str',
         'payouts_options': 'Ptsv1pushfundstransferProcessingInformationPayoutsOptions',
-        'enabler_id': 'str'
+        'fee_program_id': 'str',
+        'network_partner_id': 'str',
+        'processing_code': 'str',
+        'sharing_group_code': 'str',
+        'purpose_of_payment': 'str'
     }
 
     attribute_map = {
         'business_application_id': 'businessApplicationId',
         'payouts_options': 'payoutsOptions',
-        'enabler_id': 'enablerId'
+        'fee_program_id': 'feeProgramId',
+        'network_partner_id': 'networkPartnerId',
+        'processing_code': 'processingCode',
+        'sharing_group_code': 'sharingGroupCode',
+        'purpose_of_payment': 'purposeOfPayment'
     }
 
-    def __init__(self, business_application_id=None, payouts_options=None, enabler_id=None):
+    def __init__(self, business_application_id=None, payouts_options=None, fee_program_id=None, network_partner_id=None, processing_code=None, sharing_group_code=None, purpose_of_payment=None):
         """
         Ptsv1pushfundstransferProcessingInformation - a model defined in Swagger
         """
 
         self._business_application_id = None
         self._payouts_options = None
-        self._enabler_id = None
+        self._fee_program_id = None
+        self._network_partner_id = None
+        self._processing_code = None
+        self._sharing_group_code = None
+        self._purpose_of_payment = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
         if payouts_options is not None:
           self.payouts_options = payouts_options
-        if enabler_id is not None:
-          self.enabler_id = enabler_id
+        if fee_program_id is not None:
+          self.fee_program_id = fee_program_id
+        if network_partner_id is not None:
+          self.network_partner_id = network_partner_id
+        if processing_code is not None:
+          self.processing_code = processing_code
+        if sharing_group_code is not None:
+          self.sharing_group_code = sharing_group_code
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
 
     @property
     def business_application_id(self):
         """
         Gets the business_application_id of this Ptsv1pushfundstransferProcessingInformation.
-        Payouts transaction type.  Business Application ID: - `PP`: Person to person. - `FD`: Funds disbursement (general) 
+        Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `TU`: Prepaid Card Loan - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer - `PP`: P2P Money Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay  - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service 
 
         :return: The business_application_id of this Ptsv1pushfundstransferProcessingInformation.
         :rtype: str
@@ -72,7 +92,7 @@ class Ptsv1pushfundstransferProcessingInformation(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this Ptsv1pushfundstransferProcessingInformation.
-        Payouts transaction type.  Business Application ID: - `PP`: Person to person. - `FD`: Funds disbursement (general) 
+        Money Transfer (MT) - `AA`: Account to Account - `BI`: Bank-Initiated Money Transfer - `CD`: Cash Deposit - `FT`: Funds Transfer - `TU`: Prepaid Card Loan - `WT`: Wallet Transfer-Staged Digital Wallet (SDW) Transfer - `PP`: P2P Money Transfer  Funds Disbursement (FD) - `BB`: Business-to-business Supplier Payments - `BP`: Non-Card Bill Pay  - `CP`: Credit Card Bill Pay - `FD`: General Funds Disbursements - `GD`: Government Disbursements and Government Initiated Tax Refunds - `GP`: Gambling/Gaming Payouts (other than online gaming) - `LO`: Loyalty Payments - `MD`: Merchant Settlement - `MI`: Faster Refunds - `OG`: Online Gambling Payouts - `PD`: Payroll and Pension Disbursements - `RP`: Request-to-Pay Service 
 
         :param business_application_id: The business_application_id of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
@@ -102,27 +122,119 @@ class Ptsv1pushfundstransferProcessingInformation(object):
         self._payouts_options = payouts_options
 
     @property
-    def enabler_id(self):
+    def fee_program_id(self):
         """
-        Gets the enabler_id of this Ptsv1pushfundstransferProcessingInformation.
-        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+        Gets the fee_program_id of this Ptsv1pushfundstransferProcessingInformation.
+        Fee Program Indicator. This field identifies the interchange fee program applicable to each financial transaction. Fee program indicator (FPI) values correspond to the fee descriptor and rate for each existing fee program. 
 
-        :return: The enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        :return: The fee_program_id of this Ptsv1pushfundstransferProcessingInformation.
         :rtype: str
         """
-        return self._enabler_id
+        return self._fee_program_id
 
-    @enabler_id.setter
-    def enabler_id(self, enabler_id):
+    @fee_program_id.setter
+    def fee_program_id(self, fee_program_id):
         """
-        Sets the enabler_id of this Ptsv1pushfundstransferProcessingInformation.
-        Enablers are payment processing entities that are not acquiring members and are often the primary relationship owner with merchants and originators. Enablers own technical solutions through which the merchant or originator will access acceptance. The Enabler ID is a five-character hexadecimal identifier that will be used by Visa to identify enablers. Enabler ID assignment will be determined by Visa. Visa will communicate Enablers assignments to enablers. 
+        Sets the fee_program_id of this Ptsv1pushfundstransferProcessingInformation.
+        Fee Program Indicator. This field identifies the interchange fee program applicable to each financial transaction. Fee program indicator (FPI) values correspond to the fee descriptor and rate for each existing fee program. 
 
-        :param enabler_id: The enabler_id of this Ptsv1pushfundstransferProcessingInformation.
+        :param fee_program_id: The fee_program_id of this Ptsv1pushfundstransferProcessingInformation.
         :type: str
         """
 
-        self._enabler_id = enabler_id
+        self._fee_program_id = fee_program_id
+
+    @property
+    def network_partner_id(self):
+        """
+        Gets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
+
+        :return: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._network_partner_id
+
+    @network_partner_id.setter
+    def network_partner_id(self, network_partner_id):
+        """
+        Sets the network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
+        Merchant payment gateway ID that is assigned by Mastercard and is provided by the acquirer when a registered merchant payment gateway service provider is involved in the transaction. 
+
+        :param network_partner_id: The network_partner_id of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._network_partner_id = network_partner_id
+
+    @property
+    def processing_code(self):
+        """
+        Gets the processing_code of this Ptsv1pushfundstransferProcessingInformation.
+        This field contains coding that identifies (1) the customer transaction type and (2) the customer account types affected by the transaction.  Default: 5402 (Original Credit Transaction)  Contains codes that combined with some other fields such as the BAI (Business Application Id) identify some unique use cases. For Sales Tax rebates this field should be populated with the value 5120 (Value-added tax/Sales Tax) along with the businessApplicationId field set to the value 'FD' which indicates this push funds transfer is being conducted in order to facilitate a sales tax refund. 
+
+        :return: The processing_code of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._processing_code
+
+    @processing_code.setter
+    def processing_code(self, processing_code):
+        """
+        Sets the processing_code of this Ptsv1pushfundstransferProcessingInformation.
+        This field contains coding that identifies (1) the customer transaction type and (2) the customer account types affected by the transaction.  Default: 5402 (Original Credit Transaction)  Contains codes that combined with some other fields such as the BAI (Business Application Id) identify some unique use cases. For Sales Tax rebates this field should be populated with the value 5120 (Value-added tax/Sales Tax) along with the businessApplicationId field set to the value 'FD' which indicates this push funds transfer is being conducted in order to facilitate a sales tax refund. 
+
+        :param processing_code: The processing_code of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._processing_code = processing_code
+
+    @property
+    def sharing_group_code(self):
+        """
+        Gets the sharing_group_code of this Ptsv1pushfundstransferProcessingInformation.
+        This U.S.-only field is optionally used by PIN Debit Gateway Service participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for a network specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on issuer preference. If an preference exists for multiple specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on acquirer routing priorities.  Valid Values:  ACCEL_EXCHANGE_E  CU24_C  INTERLINK_G  MAESTRO_8  NYCE_Y  NYCE_F  PULSE_S  PULSE_L  PULSE_H  STAR_N  STAR_W  STAR_Z  STAR_Q  STAR_M  VISA_V 
+
+        :return: The sharing_group_code of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._sharing_group_code
+
+    @sharing_group_code.setter
+    def sharing_group_code(self, sharing_group_code):
+        """
+        Sets the sharing_group_code of this Ptsv1pushfundstransferProcessingInformation.
+        This U.S.-only field is optionally used by PIN Debit Gateway Service participants (merchants and acquirers) to specify the network access priority. VisaNet checks to determine if there are issuer routing preferences for a network specified by the sharing group code. If an issuer preference exists for one of the specified debit networks, VisaNet makes a routing selection based on issuer preference. If an preference exists for multiple specified debit networks, or if no issuer preference exists, VisaNet makes a selection based on acquirer routing priorities.  Valid Values:  ACCEL_EXCHANGE_E  CU24_C  INTERLINK_G  MAESTRO_8  NYCE_Y  NYCE_F  PULSE_S  PULSE_L  PULSE_H  STAR_N  STAR_W  STAR_Z  STAR_Q  STAR_M  VISA_V 
+
+        :param sharing_group_code: The sharing_group_code of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._sharing_group_code = sharing_group_code
+
+    @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Ptsv1pushfundstransferProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :return: The purpose_of_payment of this Ptsv1pushfundstransferProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Ptsv1pushfundstransferProcessingInformation.
+        This will send purpose of funds code for original credit transactions (OCTs). 
+
+        :param purpose_of_payment: The purpose_of_payment of this Ptsv1pushfundstransferProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
 
     def to_dict(self):
         """

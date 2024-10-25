@@ -31,26 +31,31 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
     """
     swagger_types = {
         'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor',
-        'approval_code': 'str'
+        'approval_code': 'str',
+        'retrieval_reference_number': 'str'
     }
 
     attribute_map = {
         'processor': 'processor',
-        'approval_code': 'approvalCode'
+        'approval_code': 'approvalCode',
+        'retrieval_reference_number': 'retrievalReferenceNumber'
     }
 
-    def __init__(self, processor=None, approval_code=None):
+    def __init__(self, processor=None, approval_code=None, retrieval_reference_number=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedProcessorInformation - a model defined in Swagger
         """
 
         self._processor = None
         self._approval_code = None
+        self._retrieval_reference_number = None
 
         if processor is not None:
           self.processor = processor
         if approval_code is not None:
           self.approval_code = approval_code
+        if retrieval_reference_number is not None:
+          self.retrieval_reference_number = retrieval_reference_number
 
     @property
     def processor(self):
@@ -95,6 +100,29 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         """
 
         self._approval_code = approval_code
+
+    @property
+    def retrieval_reference_number(self):
+        """
+        Gets the retrieval_reference_number of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :return: The retrieval_reference_number of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :rtype: str
+        """
+        return self._retrieval_reference_number
+
+    @retrieval_reference_number.setter
+    def retrieval_reference_number(self, retrieval_reference_number):
+        """
+        Sets the retrieval_reference_number of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        #### Ingenico ePayments Unique number that CyberSource generates to identify the transaction. You can use this value to identify transactions in the Ingenico ePayments Collections Report, which provides settlement information. Contact customer support for information about the report.  ### CyberSource through VisaNet Retrieval request number. 
+
+        :param retrieval_reference_number: The retrieval_reference_number of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :type: str
+        """
+
+        self._retrieval_reference_number = retrieval_reference_number
 
     def to_dict(self):
         """

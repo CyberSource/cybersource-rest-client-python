@@ -32,16 +32,18 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
     swagger_types = {
         'capture_sequence_number': 'int',
         'total_capture_count': 'int',
-        'is_final': 'str'
+        'is_final': 'str',
+        'notes': 'str'
     }
 
     attribute_map = {
         'capture_sequence_number': 'captureSequenceNumber',
         'total_capture_count': 'totalCaptureCount',
-        'is_final': 'isFinal'
+        'is_final': 'isFinal',
+        'notes': 'notes'
     }
 
-    def __init__(self, capture_sequence_number=None, total_capture_count=None, is_final=None):
+    def __init__(self, capture_sequence_number=None, total_capture_count=None, is_final=None, notes=None):
         """
         Ptsv2paymentsidcapturesProcessingInformationCaptureOptions - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         self._capture_sequence_number = None
         self._total_capture_count = None
         self._is_final = None
+        self._notes = None
 
         if capture_sequence_number is not None:
           self.capture_sequence_number = capture_sequence_number
@@ -56,6 +59,8 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
           self.total_capture_count = total_capture_count
         if is_final is not None:
           self.is_final = is_final
+        if notes is not None:
+          self.notes = notes
 
     @property
     def capture_sequence_number(self):
@@ -125,6 +130,29 @@ class Ptsv2paymentsidcapturesProcessingInformationCaptureOptions(object):
         """
 
         self._is_final = is_final
+
+    @property
+    def notes(self):
+        """
+        Gets the notes of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
+        An informational note about this settlement. Appears in both the payer's transaction history and the emails that the payer receives. 
+
+        :return: The notes of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
+        :rtype: str
+        """
+        return self._notes
+
+    @notes.setter
+    def notes(self, notes):
+        """
+        Sets the notes of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
+        An informational note about this settlement. Appears in both the payer's transaction history and the emails that the payer receives. 
+
+        :param notes: The notes of this Ptsv2paymentsidcapturesProcessingInformationCaptureOptions.
+        :type: str
+        """
+
+        self._notes = notes
 
     def to_dict(self):
         """

@@ -91,6 +91,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def target_origins(self):
         """
         Gets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
 
         :return: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -101,6 +102,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def target_origins(self, target_origins):
         """
         Sets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
 
         :param target_origins: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
@@ -112,7 +114,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def client_version(self):
         """
         Gets the client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
-        version number of Unified Checkout being used
+        Specify the version of Unified Checkout that you want to use.
 
         :return: The client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: str
@@ -123,7 +125,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def client_version(self, client_version):
         """
         Sets the client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
-        version number of Unified Checkout being used
+        Specify the version of Unified Checkout that you want to use.
 
         :param client_version: The client_version of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: str
@@ -135,6 +137,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_card_networks(self):
         """
         Gets the allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:   - VISA   - MASTERCARD   - AMEX   - DISCOVER   - DINERSCLUB   - JCB 
 
         :return: The allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -145,6 +148,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_card_networks(self, allowed_card_networks):
         """
         Sets the allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:   - VISA   - MASTERCARD   - AMEX   - DISCOVER   - DINERSCLUB   - JCB 
 
         :param allowed_card_networks: The allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
@@ -156,6 +160,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self):
         """
         Gets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - PANENTRY                 - GOOGLEPAY   - SRC   - CHECK <br><br>  Possible values when launching Unified Checkout with Checkout API: - PANENTRY               - SRC <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - SRC and CLICKTOPAY are only available for Visa, Mastercard and AMEX. 
 
         :return: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -166,6 +171,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self, allowed_payment_types):
         """
         Sets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - PANENTRY                 - GOOGLEPAY   - SRC   - CHECK <br><br>  Possible values when launching Unified Checkout with Checkout API: - PANENTRY               - SRC <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - SRC and CLICKTOPAY are only available for Visa, Mastercard and AMEX. 
 
         :param allowed_payment_types: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
@@ -177,7 +183,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def country(self):
         """
         Gets the country of this GenerateUnifiedCheckoutCaptureContextRequest.
-        Country the purchase is originating from (e.g. country of the merchant). Use the two- character ISO Standard
+        Country the purchase is originating from (e.g. country of the merchant).  Use the two-character ISO Standard 
 
         :return: The country of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: str
@@ -188,7 +194,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def country(self, country):
         """
         Sets the country of this GenerateUnifiedCheckoutCaptureContextRequest.
-        Country the purchase is originating from (e.g. country of the merchant). Use the two- character ISO Standard
+        Country the purchase is originating from (e.g. country of the merchant).  Use the two-character ISO Standard 
 
         :param country: The country of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: str
@@ -200,7 +206,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def locale(self):
         """
         Gets the locale of this GenerateUnifiedCheckoutCaptureContextRequest.
-        Localization of the User experience conforming to the ISO 639-1 language standards and two-character ISO Standard Country Code
+        Localization of the User experience conforming to the ISO 639-1 language standards and two-character ISO Standard Country Code.  Please refer to list of [supported locales through Unified Checkout](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-appendix-languages.html) 
 
         :return: The locale of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: str
@@ -211,7 +217,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def locale(self, locale):
         """
         Sets the locale of this GenerateUnifiedCheckoutCaptureContextRequest.
-        Localization of the User experience conforming to the ISO 639-1 language standards and two-character ISO Standard Country Code
+        Localization of the User experience conforming to the ISO 639-1 language standards and two-character ISO Standard Country Code.  Please refer to list of [supported locales through Unified Checkout](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-appendix-languages.html) 
 
         :param locale: The locale of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: str

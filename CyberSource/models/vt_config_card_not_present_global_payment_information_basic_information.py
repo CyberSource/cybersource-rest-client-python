@@ -158,6 +158,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
     def default_transaction_type(self):
         """
         Gets the default_transaction_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
+        Possible values: - AUTHORIZATION - SALE
 
         :return: The default_transaction_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :rtype: str
@@ -168,16 +169,11 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
     def default_transaction_type(self, default_transaction_type):
         """
         Sets the default_transaction_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
+        Possible values: - AUTHORIZATION - SALE
 
         :param default_transaction_type: The default_transaction_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: str
         """
-        allowed_values = ["AUTHORIZATION", "SALE"]
-        if default_transaction_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `default_transaction_type` ({0}), must be one of {1}"
-                .format(default_transaction_type, allowed_values)
-            )
 
         self._default_transaction_type = default_transaction_type
 
@@ -185,6 +181,7 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
     def default_payment_type(self):
         """
         Gets the default_payment_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
+        Possible values: - CREDIT_CARD - ECHECK
 
         :return: The default_payment_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :rtype: str
@@ -195,16 +192,11 @@ class VTConfigCardNotPresentGlobalPaymentInformationBasicInformation(object):
     def default_payment_type(self, default_payment_type):
         """
         Sets the default_payment_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
+        Possible values: - CREDIT_CARD - ECHECK
 
         :param default_payment_type: The default_payment_type of this VTConfigCardNotPresentGlobalPaymentInformationBasicInformation.
         :type: str
         """
-        allowed_values = ["CREDIT_CARD", "ECHECK"]
-        if default_payment_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `default_payment_type` ({0}), must be one of {1}"
-                .format(default_payment_type, allowed_values)
-            )
 
         self._default_payment_type = default_payment_type
 

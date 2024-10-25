@@ -140,7 +140,7 @@ class PushFunds502Response(object):
     def reason(self):
         """
         Gets the reason of this PushFunds502Response.
-        The reason of the status.  Possible values: - SYSTEM_ERROR 
+        The reason of the status.  Possible values: - SYSTEM_ERROR - SERVICE_TIMEOUT 
 
         :return: The reason of this PushFunds502Response.
         :rtype: str
@@ -151,7 +151,7 @@ class PushFunds502Response(object):
     def reason(self, reason):
         """
         Sets the reason of this PushFunds502Response.
-        The reason of the status.  Possible values: - SYSTEM_ERROR 
+        The reason of the status.  Possible values: - SYSTEM_ERROR - SERVICE_TIMEOUT 
 
         :param reason: The reason of this PushFunds502Response.
         :type: str
@@ -163,7 +163,7 @@ class PushFunds502Response(object):
     def message(self):
         """
         Gets the message of this PushFunds502Response.
-        The detail message related to the status and reason listed above.  Possible values: - Error - General system failure. 
+        The detail message related to the status and reason listed above.  Possible values: - Error - General system failure. - The request was received, but a service did not finish running in time. 
 
         :return: The message of this PushFunds502Response.
         :rtype: str
@@ -174,7 +174,7 @@ class PushFunds502Response(object):
     def message(self, message):
         """
         Sets the message of this PushFunds502Response.
-        The detail message related to the status and reason listed above.  Possible values: - Error - General system failure. 
+        The detail message related to the status and reason listed above.  Possible values: - Error - General system failure. - The request was received, but a service did not finish running in time. 
 
         :param message: The message of this PushFunds502Response.
         :type: str

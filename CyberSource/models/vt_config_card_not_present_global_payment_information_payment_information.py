@@ -125,13 +125,6 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param display_card_verification_value: The display_card_verification_value of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
-        allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
-        if not set(display_card_verification_value).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `display_card_verification_value` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(display_card_verification_value)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._display_card_verification_value = display_card_verification_value
 
@@ -153,13 +146,6 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param require_card_verification_value: The require_card_verification_value of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
-        allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
-        if not set(require_card_verification_value).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `require_card_verification_value` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(require_card_verification_value)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._require_card_verification_value = require_card_verification_value
 
@@ -181,13 +167,6 @@ class VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation(object):
         :param accepted_card_types: The accepted_card_types of this VTConfigCardNotPresentGlobalPaymentInformationPaymentInformation.
         :type: list[str]
         """
-        allowed_values = ["VISA", "MASTER_CARD", "AMEX", "DISCOVER", "DINERS_CLUB", "CARTE_BLANCHE", "JCB", "ENROUTE", "JAL", "SWITCH_SOLO", "DELTA", "VISA_ELECTRON", "DANKORT", "LASER", "CARTE_SBANCAIRES", "CARTASI", "MAESTRO_INTERNATIONAL", "GE_MONEY_UK_CARD", "HIPER_CARD", "ELO"]
-        if not set(accepted_card_types).issubset(set(allowed_values)):
-            raise ValueError(
-                "Invalid values for `accepted_card_types` [{0}], must be a subset of [{1}]"
-                .format(", ".join(map(str, set(accepted_card_types)-set(allowed_values))),
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._accepted_card_types = accepted_card_types
 

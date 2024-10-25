@@ -94,6 +94,7 @@ class InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus(object):
     def status(self):
         """
         Gets the status of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
+        Possible values: - SUCCESS - FAILURE - PARTIAL - PENDING
 
         :return: The status of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
         :rtype: str
@@ -104,16 +105,11 @@ class InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
+        Possible values: - SUCCESS - FAILURE - PARTIAL - PENDING
 
         :param status: The status of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
         :type: str
         """
-        allowed_values = ["SUCCESS", "FAILURE", "PARTIAL", "PENDING"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
@@ -121,6 +117,7 @@ class InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus(object):
     def reason(self):
         """
         Gets the reason of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
+        Possible values: - DEPENDENT_PRODUCT_NOT_CONTRACTED - DEPENDENT_FEATURE_NOT_CHOSEN - MISSING_DATA - INVALID_DATA - DUPLICATE_FIELD
 
         :return: The reason of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
         :rtype: str
@@ -131,16 +128,11 @@ class InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus(object):
     def reason(self, reason):
         """
         Sets the reason of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
+        Possible values: - DEPENDENT_PRODUCT_NOT_CONTRACTED - DEPENDENT_FEATURE_NOT_CHOSEN - MISSING_DATA - INVALID_DATA - DUPLICATE_FIELD
 
         :param reason: The reason of this InlineResponse2012SetupsPaymentsCardProcessingSubscriptionStatus.
         :type: str
         """
-        allowed_values = ["DEPENDENT_PRODUCT_NOT_CONTRACTED", "DEPENDENT_FEATURE_NOT_CHOSEN", "MISSING_DATA", "INVALID_DATA", "DUPLICATE_FIELD"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 

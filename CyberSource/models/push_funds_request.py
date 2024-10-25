@@ -30,40 +30,77 @@ class PushFundsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'aggregator_information': 'Ptsv1pushfundstransferAggregatorInformation',
         'client_reference_information': 'Ptsv1pushfundstransferClientReferenceInformation',
         'order_information': 'Ptsv1pushfundstransferOrderInformation',
         'processing_information': 'Ptsv1pushfundstransferProcessingInformation',
         'recipient_information': 'Ptsv1pushfundstransferRecipientInformation',
-        'sender_information': 'Ptsv1pushfundstransferSenderInformation'
+        'sender_information': 'Ptsv1pushfundstransferSenderInformation',
+        'merchant_information': 'Ptsv1pushfundstransferMerchantInformation',
+        'point_of_service_information': 'Ptsv1pushfundstransferPointOfServiceInformation'
     }
 
     attribute_map = {
+        'aggregator_information': 'aggregatorInformation',
         'client_reference_information': 'clientReferenceInformation',
         'order_information': 'orderInformation',
         'processing_information': 'processingInformation',
         'recipient_information': 'recipientInformation',
-        'sender_information': 'senderInformation'
+        'sender_information': 'senderInformation',
+        'merchant_information': 'merchantInformation',
+        'point_of_service_information': 'pointOfServiceInformation'
     }
 
-    def __init__(self, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None):
+    def __init__(self, aggregator_information=None, client_reference_information=None, order_information=None, processing_information=None, recipient_information=None, sender_information=None, merchant_information=None, point_of_service_information=None):
         """
         PushFundsRequest - a model defined in Swagger
         """
 
+        self._aggregator_information = None
         self._client_reference_information = None
         self._order_information = None
         self._processing_information = None
         self._recipient_information = None
         self._sender_information = None
+        self._merchant_information = None
+        self._point_of_service_information = None
 
+        if aggregator_information is not None:
+          self.aggregator_information = aggregator_information
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
         self.order_information = order_information
-        self.processing_information = processing_information
+        if processing_information is not None:
+          self.processing_information = processing_information
         if recipient_information is not None:
           self.recipient_information = recipient_information
         if sender_information is not None:
           self.sender_information = sender_information
+        if merchant_information is not None:
+          self.merchant_information = merchant_information
+        if point_of_service_information is not None:
+          self.point_of_service_information = point_of_service_information
+
+    @property
+    def aggregator_information(self):
+        """
+        Gets the aggregator_information of this PushFundsRequest.
+
+        :return: The aggregator_information of this PushFundsRequest.
+        :rtype: Ptsv1pushfundstransferAggregatorInformation
+        """
+        return self._aggregator_information
+
+    @aggregator_information.setter
+    def aggregator_information(self, aggregator_information):
+        """
+        Sets the aggregator_information of this PushFundsRequest.
+
+        :param aggregator_information: The aggregator_information of this PushFundsRequest.
+        :type: Ptsv1pushfundstransferAggregatorInformation
+        """
+
+        self._aggregator_information = aggregator_information
 
     @property
     def client_reference_information(self):
@@ -169,6 +206,48 @@ class PushFundsRequest(object):
         """
 
         self._sender_information = sender_information
+
+    @property
+    def merchant_information(self):
+        """
+        Gets the merchant_information of this PushFundsRequest.
+
+        :return: The merchant_information of this PushFundsRequest.
+        :rtype: Ptsv1pushfundstransferMerchantInformation
+        """
+        return self._merchant_information
+
+    @merchant_information.setter
+    def merchant_information(self, merchant_information):
+        """
+        Sets the merchant_information of this PushFundsRequest.
+
+        :param merchant_information: The merchant_information of this PushFundsRequest.
+        :type: Ptsv1pushfundstransferMerchantInformation
+        """
+
+        self._merchant_information = merchant_information
+
+    @property
+    def point_of_service_information(self):
+        """
+        Gets the point_of_service_information of this PushFundsRequest.
+
+        :return: The point_of_service_information of this PushFundsRequest.
+        :rtype: Ptsv1pushfundstransferPointOfServiceInformation
+        """
+        return self._point_of_service_information
+
+    @point_of_service_information.setter
+    def point_of_service_information(self, point_of_service_information):
+        """
+        Sets the point_of_service_information of this PushFundsRequest.
+
+        :param point_of_service_information: The point_of_service_information of this PushFundsRequest.
+        :type: Ptsv1pushfundstransferPointOfServiceInformation
+        """
+
+        self._point_of_service_information = point_of_service_information
 
     def to_dict(self):
         """

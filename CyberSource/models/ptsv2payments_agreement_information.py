@@ -30,28 +30,33 @@ class Ptsv2paymentsAgreementInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'agreement_id': 'str'
+        'agreement_id': 'str',
+        'id': 'str'
     }
 
     attribute_map = {
-        'agreement_id': 'agreementId'
+        'agreement_id': 'agreementId',
+        'id': 'id'
     }
 
-    def __init__(self, agreement_id=None):
+    def __init__(self, agreement_id=None, id=None):
         """
         Ptsv2paymentsAgreementInformation - a model defined in Swagger
         """
 
         self._agreement_id = None
+        self._id = None
 
         if agreement_id is not None:
           self.agreement_id = agreement_id
+        if id is not None:
+          self.id = id
 
     @property
     def agreement_id(self):
         """
         Gets the agreement_id of this Ptsv2paymentsAgreementInformation.
-        Identifier for the mandate being signed for. This mandate id is required for all the subsequent transactions.  
+        Identifier for the mandate being signed for. This mandate id is required for all the subsequent transactions. 
 
         :return: The agreement_id of this Ptsv2paymentsAgreementInformation.
         :rtype: str
@@ -62,13 +67,36 @@ class Ptsv2paymentsAgreementInformation(object):
     def agreement_id(self, agreement_id):
         """
         Sets the agreement_id of this Ptsv2paymentsAgreementInformation.
-        Identifier for the mandate being signed for. This mandate id is required for all the subsequent transactions.  
+        Identifier for the mandate being signed for. This mandate id is required for all the subsequent transactions. 
 
         :param agreement_id: The agreement_id of this Ptsv2paymentsAgreementInformation.
         :type: str
         """
 
         self._agreement_id = agreement_id
+
+    @property
+    def id(self):
+        """
+        Gets the id of this Ptsv2paymentsAgreementInformation.
+        The processor specific billing agreement ID. References an approved recurring payment for goods or services. This value is sent by merchant via Cybersource to processor. The value sent in this field is procured by the merchant from the processor. 
+
+        :return: The id of this Ptsv2paymentsAgreementInformation.
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """
+        Sets the id of this Ptsv2paymentsAgreementInformation.
+        The processor specific billing agreement ID. References an approved recurring payment for goods or services. This value is sent by merchant via Cybersource to processor. The value sent in this field is procured by the merchant from the processor. 
+
+        :param id: The id of this Ptsv2paymentsAgreementInformation.
+        :type: str
+        """
+
+        self._id = id
 
     def to_dict(self):
         """

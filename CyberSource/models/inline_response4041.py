@@ -30,7 +30,7 @@ class InlineResponse4041(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'date',
+        'submit_time_utc': 'datetime',
         'status': 'str',
         'reason': 'str',
         'message': 'str',
@@ -74,7 +74,7 @@ class InlineResponse4041(object):
         Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :return: The submit_time_utc of this InlineResponse4041.
-        :rtype: date
+        :rtype: datetime
         """
         return self._submit_time_utc
 
@@ -85,7 +85,7 @@ class InlineResponse4041(object):
         Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this InlineResponse4041.
-        :type: date
+        :type: datetime
         """
 
         self._submit_time_utc = submit_time_utc
@@ -133,12 +133,6 @@ class InlineResponse4041(object):
         :param reason: The reason of this InlineResponse4041.
         :type: str
         """
-        allowed_values = ["RESOURCE_NOT_FOUND"]
-        if reason not in allowed_values:
-            raise ValueError(
-                "Invalid value for `reason` ({0}), must be one of {1}"
-                .format(reason, allowed_values)
-            )
 
         self._reason = reason
 
