@@ -68,7 +68,12 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'transaction_expiry_date': 'str',
         'custom_url': 'str',
         'scheme_assigned_id': 'str',
-        'device_url': 'str'
+        'device_url': 'str',
+        'disbursement_mode': 'str',
+        'update_time_utc': 'str',
+        'expiration_time_utc': 'str',
+        'order_id': 'str',
+        'order_status': 'str'
     }
 
     attribute_map = {
@@ -110,10 +115,15 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'transaction_expiry_date': 'transactionExpiryDate',
         'custom_url': 'customUrl',
         'scheme_assigned_id': 'schemeAssignedId',
-        'device_url': 'deviceUrl'
+        'device_url': 'deviceUrl',
+        'disbursement_mode': 'disbursementMode',
+        'update_time_utc': 'updateTimeUtc',
+        'expiration_time_utc': 'expirationTimeUtc',
+        'order_id': 'orderId',
+        'order_status': 'orderStatus'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -157,6 +167,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._custom_url = None
         self._scheme_assigned_id = None
         self._device_url = None
+        self._disbursement_mode = None
+        self._update_time_utc = None
+        self._expiration_time_utc = None
+        self._order_id = None
+        self._order_status = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -236,6 +251,16 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.scheme_assigned_id = scheme_assigned_id
         if device_url is not None:
           self.device_url = device_url
+        if disbursement_mode is not None:
+          self.disbursement_mode = disbursement_mode
+        if update_time_utc is not None:
+          self.update_time_utc = update_time_utc
+        if expiration_time_utc is not None:
+          self.expiration_time_utc = expiration_time_utc
+        if order_id is not None:
+          self.order_id = order_id
+        if order_status is not None:
+          self.order_status = order_status
 
     @property
     def auth_indicator(self):
@@ -356,7 +381,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_code(self):
         """
         Gets the response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3)  #### paypalgateway Processor generated ID for the itemized detail. 
 
         :return: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :rtype: str
@@ -367,7 +392,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
     def response_code(self, response_code):
         """
         Sets the response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3)  #### paypalgateway Processor generated ID for the itemized detail. 
 
         :param response_code: The response_code of this PtsV2PaymentsPost201ResponseProcessorInformation.
         :type: str
@@ -1111,6 +1136,121 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._device_url = device_url
+
+    @property
+    def disbursement_mode(self):
+        """
+        Gets the disbursement_mode of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The funds are released to the merchant immediately. INSTANT The funds are released to the merchant immediately. DELAYED The funds are held for a finite number of days. The actual duration depends on the region and type of integration. You can release the funds through a referenced payout. Otherwise, the funds disbursed automatically after the specified duration. 
+
+        :return: The disbursement_mode of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._disbursement_mode
+
+    @disbursement_mode.setter
+    def disbursement_mode(self, disbursement_mode):
+        """
+        Sets the disbursement_mode of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The funds are released to the merchant immediately. INSTANT The funds are released to the merchant immediately. DELAYED The funds are held for a finite number of days. The actual duration depends on the region and type of integration. You can release the funds through a referenced payout. Otherwise, the funds disbursed automatically after the specified duration. 
+
+        :param disbursement_mode: The disbursement_mode of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._disbursement_mode = disbursement_mode
+
+    @property
+    def update_time_utc(self):
+        """
+        Gets the update_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date and time when the transaction was last updated, in Internet date and time format. 
+
+        :return: The update_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._update_time_utc
+
+    @update_time_utc.setter
+    def update_time_utc(self, update_time_utc):
+        """
+        Sets the update_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date and time when the transaction was last updated, in Internet date and time format. 
+
+        :param update_time_utc: The update_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._update_time_utc = update_time_utc
+
+    @property
+    def expiration_time_utc(self):
+        """
+        Gets the expiration_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date and time when the authorized payment expires, in Internet date and time format. 
+
+        :return: The expiration_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._expiration_time_utc
+
+    @expiration_time_utc.setter
+    def expiration_time_utc(self, expiration_time_utc):
+        """
+        Sets the expiration_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The date and time when the authorized payment expires, in Internet date and time format. 
+
+        :param expiration_time_utc: The expiration_time_utc of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._expiration_time_utc = expiration_time_utc
+
+    @property
+    def order_id(self):
+        """
+        Gets the order_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The id of the order 
+
+        :return: The order_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._order_id
+
+    @order_id.setter
+    def order_id(self, order_id):
+        """
+        Sets the order_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The id of the order 
+
+        :param order_id: The order_id of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._order_id = order_id
+
+    @property
+    def order_status(self):
+        """
+        Gets the order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` 
+
+        :return: The order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._order_status
+
+    @order_status.setter
+    def order_status(self, order_status):
+        """
+        Sets the order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        The order status.  Possible values: - `CREATED` - `VOIDED` - `COMPLETED` - `PAYER_ACTION_REQUIRED` 
+
+        :param order_status: The order_status of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._order_status = order_status
 
     def to_dict(self):
         """

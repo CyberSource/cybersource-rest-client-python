@@ -37,7 +37,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'response_code': 'str',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'network_transaction_id': 'str',
-        'settlement_date': 'str'
+        'settlement_date': 'str',
+        'update_time_utc': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         'response_code': 'responseCode',
         'ach_verification': 'achVerification',
         'network_transaction_id': 'networkTransactionId',
-        'settlement_date': 'settlementDate'
+        'settlement_date': 'settlementDate',
+        'update_time_utc': 'updateTimeUtc'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None):
+    def __init__(self, approval_code=None, transaction_id=None, forwarded_acquirer_code=None, merchant_number=None, response_code=None, ach_verification=None, network_transaction_id=None, settlement_date=None, update_time_utc=None):
         """
         PtsV2PaymentsRefundPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         self._ach_verification = None
         self._network_transaction_id = None
         self._settlement_date = None
+        self._update_time_utc = None
 
         if approval_code is not None:
           self.approval_code = approval_code
@@ -81,6 +84,8 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
           self.network_transaction_id = network_transaction_id
         if settlement_date is not None:
           self.settlement_date = settlement_date
+        if update_time_utc is not None:
+          self.update_time_utc = update_time_utc
 
     @property
     def approval_code(self):
@@ -178,7 +183,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
     def response_code(self):
         """
         Gets the response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3)  #### paypalgateway Processor generated ID for the itemized detail. 
 
         :return: The response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :rtype: str
@@ -189,7 +194,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
     def response_code(self, response_code):
         """
         Sets the response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
-        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3) 
+        For most processors, this is the error message sent directly from the bank. Returned only when the processor returns this value.  **Important** Do not use this field to evaluate the result of the authorization.  #### PIN debit Response value that is returned by the processor or bank. **Important** Do not use this field to evaluate the results of the transaction request.  Returned by PIN debit credit, PIN debit purchase, and PIN debit reversal.  #### AIBMS If this value is `08`, you can accept the transaction if the customer provides you with identification.  #### Atos This value is the response code sent from Atos and it might also include the response code from the bank. Format: `aa,bb` with the two values separated by a comma and where: - `aa` is the two-digit error message from Atos. - `bb` is the optional two-digit error message from the bank.  #### Comercio Latino This value is the status code and the error or response code received from the processor separated by a colon. Format: [status code]:E[error code] or [status code]:R[response code] Example `2:R06`  #### JCN Gateway Processor-defined detail error code. The associated response category code is in the `processorInformation.responseCategoryCode` field. String (3)  #### paypalgateway Processor generated ID for the itemized detail. 
 
         :param response_code: The response_code of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
         :type: str
@@ -263,6 +268,29 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation(object):
         """
 
         self._settlement_date = settlement_date
+
+    @property
+    def update_time_utc(self):
+        """
+        Gets the update_time_utc of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        The date and time when the transaction was last updated, in Internet date and time format. 
+
+        :return: The update_time_utc of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._update_time_utc
+
+    @update_time_utc.setter
+    def update_time_utc(self, update_time_utc):
+        """
+        Sets the update_time_utc of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        The date and time when the transaction was last updated, in Internet date and time format. 
+
+        :param update_time_utc: The update_time_utc of this PtsV2PaymentsRefundPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._update_time_utc = update_time_utc
 
     def to_dict(self):
         """

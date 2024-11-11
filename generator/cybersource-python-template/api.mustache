@@ -183,7 +183,7 @@ class {{classname}}(object):
             body_params = params['{{paramName}}']
         
             sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, '{{paramName}}', self.api_client.mconfig.run_environment)
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, '{{paramName}}', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
 {{/bodyParam}}
 {{^bodyParam}}
         if '{{httpMethod}}' in ('POST'):

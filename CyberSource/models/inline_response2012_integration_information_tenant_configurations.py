@@ -112,6 +112,7 @@ class InlineResponse2012IntegrationInformationTenantConfigurations(object):
     def status(self):
         """
         Gets the status of this InlineResponse2012IntegrationInformationTenantConfigurations.
+        Possible values: - LIVE - INACTIVE - TEST
 
         :return: The status of this InlineResponse2012IntegrationInformationTenantConfigurations.
         :rtype: str
@@ -122,16 +123,11 @@ class InlineResponse2012IntegrationInformationTenantConfigurations(object):
     def status(self, status):
         """
         Sets the status of this InlineResponse2012IntegrationInformationTenantConfigurations.
+        Possible values: - LIVE - INACTIVE - TEST
 
         :param status: The status of this InlineResponse2012IntegrationInformationTenantConfigurations.
         :type: str
         """
-        allowed_values = ["LIVE", "INACTIVE", "TEST"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 

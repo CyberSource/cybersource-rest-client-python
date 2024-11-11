@@ -35,7 +35,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         'merchant_id': 'str',
         'status': 'str',
         'application_information': 'TssV2TransactionsPost201ResponseEmbeddedApplicationInformation',
-        'buyer_information': 'TssV2TransactionsPost201ResponseEmbeddedBuyerInformation',
+        'buyer_information': 'PtsV2CreateOrderPost201ResponseBuyerInformation',
         'client_reference_information': 'TssV2TransactionsPost201ResponseEmbeddedClientReferenceInformation',
         'consumer_authentication_information': 'TssV2TransactionsPost201ResponseEmbeddedConsumerAuthenticationInformation',
         'device_information': 'Riskv1authenticationresultsDeviceInformation',
@@ -261,7 +261,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Gets the buyer_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :return: The buyer_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :rtype: TssV2TransactionsPost201ResponseEmbeddedBuyerInformation
+        :rtype: PtsV2CreateOrderPost201ResponseBuyerInformation
         """
         return self._buyer_information
 
@@ -271,7 +271,7 @@ class TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries(object):
         Sets the buyer_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
 
         :param buyer_information: The buyer_information of this TssV2TransactionsPost201ResponseEmbeddedTransactionSummaries.
-        :type: TssV2TransactionsPost201ResponseEmbeddedBuyerInformation
+        :type: PtsV2CreateOrderPost201ResponseBuyerInformation
         """
 
         self._buyer_information = buyer_information

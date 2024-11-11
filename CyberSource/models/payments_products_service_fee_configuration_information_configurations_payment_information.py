@@ -71,7 +71,7 @@ class PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInf
     def payment_type(self):
         """
         Gets the payment_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
-        Payment types accepted by this merchant. The supported values are: MASTERDEBIT, MASTERCREDIT, VISACREDIT, VISADEBIT, DISCOVERCREDIT, AMEXCREDIT, ECHECK
+        Payment types accepted by this merchant. The supported values are: MASTERDEBIT, MASTERCREDIT, VISACREDIT, VISADEBIT, DISCOVERCREDIT, AMEXCREDIT, ECHECK  Possible values: - MASTERDEBIT - MASTERCREDIT - VISACREDIT - VISADEBIT - DISCOVERCREDIT - AMEXCREDIT - ECHECK
 
         :return: The payment_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
         :rtype: str
@@ -82,17 +82,11 @@ class PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInf
     def payment_type(self, payment_type):
         """
         Sets the payment_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
-        Payment types accepted by this merchant. The supported values are: MASTERDEBIT, MASTERCREDIT, VISACREDIT, VISADEBIT, DISCOVERCREDIT, AMEXCREDIT, ECHECK
+        Payment types accepted by this merchant. The supported values are: MASTERDEBIT, MASTERCREDIT, VISACREDIT, VISADEBIT, DISCOVERCREDIT, AMEXCREDIT, ECHECK  Possible values: - MASTERDEBIT - MASTERCREDIT - VISACREDIT - VISADEBIT - DISCOVERCREDIT - AMEXCREDIT - ECHECK
 
         :param payment_type: The payment_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
         :type: str
         """
-        allowed_values = ["MASTERDEBIT", "MASTERCREDIT", "VISACREDIT", "VISADEBIT", "DISCOVERCREDIT", "AMEXCREDIT", "ECHECK"]
-        if payment_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `payment_type` ({0}), must be one of {1}"
-                .format(payment_type, allowed_values)
-            )
 
         self._payment_type = payment_type
 
@@ -100,7 +94,7 @@ class PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInf
     def fee_type(self):
         """
         Gets the fee_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
-        Fee type for the selected payment type. Supported values are: Flat or Percentage. 
+        Fee type for the selected payment type. Supported values are: Flat or Percentage.   Possible values: - FLAT - PERCENTAGE
 
         :return: The fee_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
         :rtype: str
@@ -111,17 +105,11 @@ class PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInf
     def fee_type(self, fee_type):
         """
         Sets the fee_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
-        Fee type for the selected payment type. Supported values are: Flat or Percentage. 
+        Fee type for the selected payment type. Supported values are: Flat or Percentage.   Possible values: - FLAT - PERCENTAGE
 
         :param fee_type: The fee_type of this PaymentsProductsServiceFeeConfigurationInformationConfigurationsPaymentInformation.
         :type: str
         """
-        allowed_values = ["FLAT", "PERCENTAGE"]
-        if fee_type not in allowed_values:
-            raise ValueError(
-                "Invalid value for `fee_type` ({0}), must be one of {1}"
-                .format(fee_type, allowed_values)
-            )
 
         self._fee_type = fee_type
 

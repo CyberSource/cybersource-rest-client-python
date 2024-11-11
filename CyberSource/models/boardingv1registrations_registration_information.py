@@ -31,7 +31,7 @@ class Boardingv1registrationsRegistrationInformation(object):
     """
     swagger_types = {
         'boarding_registration_id': 'str',
-        'submit_time_utc': 'date',
+        'submit_time_utc': 'datetime',
         'status': 'str',
         'boarding_package_id': 'str',
         'boarding_flow': 'str',
@@ -105,7 +105,7 @@ class Boardingv1registrationsRegistrationInformation(object):
         Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :return: The submit_time_utc of this Boardingv1registrationsRegistrationInformation.
-        :rtype: date
+        :rtype: datetime
         """
         return self._submit_time_utc
 
@@ -116,7 +116,7 @@ class Boardingv1registrationsRegistrationInformation(object):
         Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
 
         :param submit_time_utc: The submit_time_utc of this Boardingv1registrationsRegistrationInformation.
-        :type: date
+        :type: datetime
         """
 
         self._submit_time_utc = submit_time_utc
@@ -141,12 +141,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param status: The status of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-        allowed_values = ["PROCESSING", "SUCCESS", "FAILURE", "PARTIAL"]
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"
-                .format(status, allowed_values)
-            )
 
         self._status = status
 
@@ -191,12 +185,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param boarding_flow: The boarding_flow of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-        allowed_values = ["ENTERPRISE", "SMB", "ADDPRODUCT"]
-        if boarding_flow not in allowed_values:
-            raise ValueError(
-                "Invalid value for `boarding_flow` ({0}), must be one of {1}"
-                .format(boarding_flow, allowed_values)
-            )
 
         self._boarding_flow = boarding_flow
 
@@ -220,12 +208,6 @@ class Boardingv1registrationsRegistrationInformation(object):
         :param mode: The mode of this Boardingv1registrationsRegistrationInformation.
         :type: str
         """
-        allowed_values = ["COMPLETE", "PARTIAL"]
-        if mode not in allowed_values:
-            raise ValueError(
-                "Invalid value for `mode` ({0}), must be one of {1}"
-                .format(mode, allowed_values)
-            )
 
         self._mode = mode
 

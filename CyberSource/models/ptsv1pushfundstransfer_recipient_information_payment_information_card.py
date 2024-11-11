@@ -86,7 +86,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def type(self):
         """
         Gets the type of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        Three-digit value that indicates the card type.  Possible values:  Visa Platform Connect - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `033`: Visa Electron - `024`: Maestro  Mastercard Send: - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  FDC Compass: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  Chase Paymentech: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  Yellow Pepper: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `005`: Diners Club - `033`: Visa Electron - `024`: Intl Maestro 
+        - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `033`: Visa Electron - `024`: Maestro - `042`: Maestro International 
 
         :return: The type of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :rtype: str
@@ -97,7 +97,7 @@ class Ptsv1pushfundstransferRecipientInformationPaymentInformationCard(object):
     def type(self, type):
         """
         Sets the type of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
-        Three-digit value that indicates the card type.  Possible values:  Visa Platform Connect - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `033`: Visa Electron - `024`: Maestro  Mastercard Send: - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  FDC Compass: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  Chase Paymentech: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard.  Yellow Pepper: - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `005`: Diners Club - `033`: Visa Electron - `024`: Intl Maestro 
+        - `001`: Visa - `002`: Mastercard, Eurocard, which is a European regional brand of Mastercard. - `033`: Visa Electron - `024`: Maestro - `042`: Maestro International 
 
         :param type: The type of this Ptsv1pushfundstransferRecipientInformationPaymentInformationCard.
         :type: str

@@ -33,7 +33,7 @@ class SdkTracker:
     def __init__(self):
         pass
 
-    def insert_developer_id_tracker(self, request_obj, request_class, run_environment):
+    def insert_developer_id_tracker(self, request_obj, request_class, run_environment, merchantConfig_developerId):
         request_obj = request_obj.replace('\"_', '\"')
         if request_class in self.inclusion_list:
             developer_id_value = ''
@@ -43,6 +43,9 @@ class SdkTracker:
                 developer_id_value = 'J0TV2I9S'
             else:
                 developer_id_value = 'KZUR4KZ4'
+
+            if merchantConfig_developerId is not None and merchantConfig_developerId.strip() != "":
+                developer_id_value = merchantConfig_developerId.strip()
 
             if 'client_reference_information' not in tester:
                 tester['client_reference_information'] = {}

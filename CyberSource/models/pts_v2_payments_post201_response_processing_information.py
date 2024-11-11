@@ -32,16 +32,18 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
     swagger_types = {
         'bank_transfer_options': 'PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions',
         'payment_solution': 'str',
-        'enhanced_data_enabled': 'bool'
+        'enhanced_data_enabled': 'bool',
+        'capture_options': 'PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions'
     }
 
     attribute_map = {
         'bank_transfer_options': 'bankTransferOptions',
         'payment_solution': 'paymentSolution',
-        'enhanced_data_enabled': 'enhancedDataEnabled'
+        'enhanced_data_enabled': 'enhancedDataEnabled',
+        'capture_options': 'captureOptions'
     }
 
-    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None):
+    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None, capture_options=None):
         """
         PtsV2PaymentsPost201ResponseProcessingInformation - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         self._bank_transfer_options = None
         self._payment_solution = None
         self._enhanced_data_enabled = None
+        self._capture_options = None
 
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
@@ -56,6 +59,8 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
           self.payment_solution = payment_solution
         if enhanced_data_enabled is not None:
           self.enhanced_data_enabled = enhanced_data_enabled
+        if capture_options is not None:
+          self.capture_options = capture_options
 
     @property
     def bank_transfer_options(self):
@@ -123,6 +128,27 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         """
 
         self._enhanced_data_enabled = enhanced_data_enabled
+
+    @property
+    def capture_options(self):
+        """
+        Gets the capture_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :return: The capture_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions
+        """
+        return self._capture_options
+
+    @capture_options.setter
+    def capture_options(self, capture_options):
+        """
+        Sets the capture_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :param capture_options: The capture_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions
+        """
+
+        self._capture_options = capture_options
 
     def to_dict(self):
         """

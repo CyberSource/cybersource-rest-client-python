@@ -39,7 +39,8 @@ class PtsV2PaymentsCapturesPost201Response(object):
         'processor_information': 'PtsV2PaymentsCapturesPost201ResponseProcessorInformation',
         'order_information': 'PtsV2PaymentsCapturesPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation',
-        'processing_information': 'PtsV2PaymentsCapturesPost201ResponseProcessingInformation'
+        'processing_information': 'PtsV2PaymentsCapturesPost201ResponseProcessingInformation',
+        'embedded_actions': 'PtsV2PaymentsCapturesPost201ResponseEmbeddedActions'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class PtsV2PaymentsCapturesPost201Response(object):
         'processor_information': 'processorInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation',
-        'processing_information': 'processingInformation'
+        'processing_information': 'processingInformation',
+        'embedded_actions': 'embeddedActions'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, processor_information=None, order_information=None, point_of_sale_information=None, processing_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, processor_information=None, order_information=None, point_of_sale_information=None, processing_information=None, embedded_actions=None):
         """
         PtsV2PaymentsCapturesPost201Response - a model defined in Swagger
         """
@@ -70,6 +72,7 @@ class PtsV2PaymentsCapturesPost201Response(object):
         self._order_information = None
         self._point_of_sale_information = None
         self._processing_information = None
+        self._embedded_actions = None
 
         if links is not None:
           self.links = links
@@ -91,6 +94,8 @@ class PtsV2PaymentsCapturesPost201Response(object):
           self.point_of_sale_information = point_of_sale_information
         if processing_information is not None:
           self.processing_information = processing_information
+        if embedded_actions is not None:
+          self.embedded_actions = embedded_actions
 
     @property
     def links(self):
@@ -309,6 +314,27 @@ class PtsV2PaymentsCapturesPost201Response(object):
         """
 
         self._processing_information = processing_information
+
+    @property
+    def embedded_actions(self):
+        """
+        Gets the embedded_actions of this PtsV2PaymentsCapturesPost201Response.
+
+        :return: The embedded_actions of this PtsV2PaymentsCapturesPost201Response.
+        :rtype: PtsV2PaymentsCapturesPost201ResponseEmbeddedActions
+        """
+        return self._embedded_actions
+
+    @embedded_actions.setter
+    def embedded_actions(self, embedded_actions):
+        """
+        Sets the embedded_actions of this PtsV2PaymentsCapturesPost201Response.
+
+        :param embedded_actions: The embedded_actions of this PtsV2PaymentsCapturesPost201Response.
+        :type: PtsV2PaymentsCapturesPost201ResponseEmbeddedActions
+        """
+
+        self._embedded_actions = embedded_actions
 
     def to_dict(self):
         """

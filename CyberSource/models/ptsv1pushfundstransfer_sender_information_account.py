@@ -56,7 +56,7 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
     def funds_source(self):
         """
         Gets the funds_source of this Ptsv1pushfundstransferSenderInformationAccount.
-        Source of funds. Possible values:  Chase Paymentech, FDC Compass, Visa Platform Connect:  - `01`: Credit card - `02`: Debit card - `03`: Prepaid card  Chase Paymentech, Visa Platform Connect:  - `04`: Cash - `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, and proprietary debit or ATM cards. - `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.  FDC Compass: - `04`: Deposit Account  Funds Disbursement This value is most likely 05 to identify that the originator used a deposit account to fund the disbursement.  Credit Card Bill Payment This value must be 02, 03, 04, or 05. 
+        Source of funds. Possible values:  - `01`: Credit card - `02`: Debit card - `03`: Prepaid card - `04`: Cash/Deposit Account - `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, and proprietary debit or ATM cards. - `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.  Funds Disbursement This value is most likely 05 to identify that the originator used a deposit account to fund the disbursement.  Credit Card Bill Payment This value must be 02, 03, 04, or 05. 
 
         :return: The funds_source of this Ptsv1pushfundstransferSenderInformationAccount.
         :rtype: str
@@ -67,7 +67,7 @@ class Ptsv1pushfundstransferSenderInformationAccount(object):
     def funds_source(self, funds_source):
         """
         Sets the funds_source of this Ptsv1pushfundstransferSenderInformationAccount.
-        Source of funds. Possible values:  Chase Paymentech, FDC Compass, Visa Platform Connect:  - `01`: Credit card - `02`: Debit card - `03`: Prepaid card  Chase Paymentech, Visa Platform Connect:  - `04`: Cash - `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, and proprietary debit or ATM cards. - `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.  FDC Compass: - `04`: Deposit Account  Funds Disbursement This value is most likely 05 to identify that the originator used a deposit account to fund the disbursement.  Credit Card Bill Payment This value must be 02, 03, 04, or 05. 
+        Source of funds. Possible values:  - `01`: Credit card - `02`: Debit card - `03`: Prepaid card - `04`: Cash/Deposit Account - `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, and proprietary debit or ATM cards. - `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.  Funds Disbursement This value is most likely 05 to identify that the originator used a deposit account to fund the disbursement.  Credit Card Bill Payment This value must be 02, 03, 04, or 05. 
 
         :param funds_source: The funds_source of this Ptsv1pushfundstransferSenderInformationAccount.
         :type: str

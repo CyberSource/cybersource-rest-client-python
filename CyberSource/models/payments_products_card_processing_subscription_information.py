@@ -82,7 +82,7 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
     def self_serviceability(self):
         """
         Gets the self_serviceability of this PaymentsProductsCardProcessingSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.
+        Indicates if the organization can enable this product using self service.  Possible values: - SELF_SERVICEABLE - NOT_SELF_SERVICEABLE - SELF_SERVICE_ONLY
 
         :return: The self_serviceability of this PaymentsProductsCardProcessingSubscriptionInformation.
         :rtype: str
@@ -93,17 +93,11 @@ class PaymentsProductsCardProcessingSubscriptionInformation(object):
     def self_serviceability(self, self_serviceability):
         """
         Sets the self_serviceability of this PaymentsProductsCardProcessingSubscriptionInformation.
-        Indicates if the organization can enable this product using self service.
+        Indicates if the organization can enable this product using self service.  Possible values: - SELF_SERVICEABLE - NOT_SELF_SERVICEABLE - SELF_SERVICE_ONLY
 
         :param self_serviceability: The self_serviceability of this PaymentsProductsCardProcessingSubscriptionInformation.
         :type: str
         """
-        allowed_values = ["SELF_SERVICEABLE", "NOT_SELF_SERVICEABLE", "SELF_SERVICE_ONLY"]
-        if self_serviceability not in allowed_values:
-            raise ValueError(
-                "Invalid value for `self_serviceability` ({0}), must be one of {1}"
-                .format(self_serviceability, allowed_values)
-            )
 
         self._self_serviceability = self_serviceability
 

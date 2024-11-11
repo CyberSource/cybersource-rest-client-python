@@ -76,7 +76,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def billing_type(self):
         """
         Gets the billing_type of this Upv1capturecontextsCaptureMandate.
-        This field defines the type of Billing Address information captured through the Manual card Entry UX. FULL, PARTIAL
+        Configure Unified Checkout to capture billing address information.  Possible values: - FULL: Capture complete billing address information. - PARTIAL: Capture first name, last name, country and postal/zip code only. - NONE: Capture only first name and last name. 
 
         :return: The billing_type of this Upv1capturecontextsCaptureMandate.
         :rtype: str
@@ -87,7 +87,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def billing_type(self, billing_type):
         """
         Sets the billing_type of this Upv1capturecontextsCaptureMandate.
-        This field defines the type of Billing Address information captured through the Manual card Entry UX. FULL, PARTIAL
+        Configure Unified Checkout to capture billing address information.  Possible values: - FULL: Capture complete billing address information. - PARTIAL: Capture first name, last name, country and postal/zip code only. - NONE: Capture only first name and last name. 
 
         :param billing_type: The billing_type of this Upv1capturecontextsCaptureMandate.
         :type: str
@@ -99,7 +99,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_email(self):
         """
         Gets the request_email of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer email address.  Possible values:  - True  - False 
 
         :return: The request_email of this Upv1capturecontextsCaptureMandate.
         :rtype: bool
@@ -110,7 +110,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_email(self, request_email):
         """
         Sets the request_email of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer email address.  Possible values:  - True  - False 
 
         :param request_email: The request_email of this Upv1capturecontextsCaptureMandate.
         :type: bool
@@ -122,7 +122,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_phone(self):
         """
         Gets the request_phone of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer phone number.  Possible values: - True - False 
 
         :return: The request_phone of this Upv1capturecontextsCaptureMandate.
         :rtype: bool
@@ -133,7 +133,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_phone(self, request_phone):
         """
         Sets the request_phone of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer phone number.  Possible values: - True - False 
 
         :param request_phone: The request_phone of this Upv1capturecontextsCaptureMandate.
         :type: bool
@@ -145,7 +145,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_shipping(self):
         """
         Gets the request_shipping of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer shipping details.  Possible values: - True - False 
 
         :return: The request_shipping of this Upv1capturecontextsCaptureMandate.
         :rtype: bool
@@ -156,7 +156,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def request_shipping(self, request_shipping):
         """
         Sets the request_shipping of this Upv1capturecontextsCaptureMandate.
-        Capture email contact information in the manual card acceptance screens.
+        Configure Unified Checkout to capture customer shipping details.  Possible values: - True - False 
 
         :param request_shipping: The request_shipping of this Upv1capturecontextsCaptureMandate.
         :type: bool
@@ -168,7 +168,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def ship_to_countries(self):
         """
         Gets the ship_to_countries of this Upv1capturecontextsCaptureMandate.
-        List of countries available to ship to. Use the two- character ISO Standard Country Codes.
+        List of countries available to ship to.   Use the two-character ISO Standard Country Codes. 
 
         :return: The ship_to_countries of this Upv1capturecontextsCaptureMandate.
         :rtype: list[str]
@@ -179,7 +179,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def ship_to_countries(self, ship_to_countries):
         """
         Sets the ship_to_countries of this Upv1capturecontextsCaptureMandate.
-        List of countries available to ship to. Use the two- character ISO Standard Country Codes.
+        List of countries available to ship to.   Use the two-character ISO Standard Country Codes. 
 
         :param ship_to_countries: The ship_to_countries of this Upv1capturecontextsCaptureMandate.
         :type: list[str]
@@ -191,7 +191,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def show_accepted_network_icons(self):
         """
         Gets the show_accepted_network_icons of this Upv1capturecontextsCaptureMandate.
-        Show the list of accepted payment icons in the payment button
+        Configure Unified Checkout to display the list of accepted card networks beneath the payment button  Possible values: - True - False 
 
         :return: The show_accepted_network_icons of this Upv1capturecontextsCaptureMandate.
         :rtype: bool
@@ -202,7 +202,7 @@ class Upv1capturecontextsCaptureMandate(object):
     def show_accepted_network_icons(self, show_accepted_network_icons):
         """
         Sets the show_accepted_network_icons of this Upv1capturecontextsCaptureMandate.
-        Show the list of accepted payment icons in the payment button
+        Configure Unified Checkout to display the list of accepted card networks beneath the payment button  Possible values: - True - False 
 
         :param show_accepted_network_icons: The show_accepted_network_icons of this Upv1capturecontextsCaptureMandate.
         :type: bool
