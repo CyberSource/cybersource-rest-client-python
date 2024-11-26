@@ -44,6 +44,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'start_month': 'str',
         'start_year': 'str',
         'product_name': 'str',
+        'product_subtype': 'str',
         'type_selection_indicator': 'str'
     }
 
@@ -62,10 +63,11 @@ class Ptsv2paymentsPaymentInformationCard(object):
         'start_month': 'startMonth',
         'start_year': 'startYear',
         'product_name': 'productName',
+        'product_subtype': 'productSubtype',
         'type_selection_indicator': 'typeSelectionIndicator'
     }
 
-    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, source_account_type_details=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None, type_selection_indicator=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, use_as=None, source_account_type=None, source_account_type_details=None, security_code=None, security_code_indicator=None, account_encoder_id=None, issue_number=None, start_month=None, start_year=None, product_name=None, product_subtype=None, type_selection_indicator=None):
         """
         Ptsv2paymentsPaymentInformationCard - a model defined in Swagger
         """
@@ -84,6 +86,7 @@ class Ptsv2paymentsPaymentInformationCard(object):
         self._start_month = None
         self._start_year = None
         self._product_name = None
+        self._product_subtype = None
         self._type_selection_indicator = None
 
         if number is not None:
@@ -114,6 +117,8 @@ class Ptsv2paymentsPaymentInformationCard(object):
           self.start_year = start_year
         if product_name is not None:
           self.product_name = product_name
+        if product_subtype is not None:
+          self.product_subtype = product_subtype
         if type_selection_indicator is not None:
           self.type_selection_indicator = type_selection_indicator
 
@@ -438,6 +443,29 @@ class Ptsv2paymentsPaymentInformationCard(object):
         """
 
         self._product_name = product_name
+
+    @property
+    def product_subtype(self):
+        """
+        Gets the product_subtype of this Ptsv2paymentsPaymentInformationCard.
+        This field would contain the indicator for transaction type  Possible values: - AC: Agriculture Maintenance Account - AE: Agriculture Debit Account/Electron  - AG: Agriculture  - AI: Agriculture Investment Loan - CG: Brazil Cargo - CS: Construction  - DS: Distribution  - HC: Healthcare - LP: Visa Large Purchase Advantage - MA: Visa Mobile Agent - MB: Interoperable Mobile Branchless Banking - MG: Visa Mobile General - VA: Visa Vale - Supermarket - VF: Visa Vale - Fuel - VR: Visa Vale - Restaurant 
+
+        :return: The product_subtype of this Ptsv2paymentsPaymentInformationCard.
+        :rtype: str
+        """
+        return self._product_subtype
+
+    @product_subtype.setter
+    def product_subtype(self, product_subtype):
+        """
+        Sets the product_subtype of this Ptsv2paymentsPaymentInformationCard.
+        This field would contain the indicator for transaction type  Possible values: - AC: Agriculture Maintenance Account - AE: Agriculture Debit Account/Electron  - AG: Agriculture  - AI: Agriculture Investment Loan - CG: Brazil Cargo - CS: Construction  - DS: Distribution  - HC: Healthcare - LP: Visa Large Purchase Advantage - MA: Visa Mobile Agent - MB: Interoperable Mobile Branchless Banking - MG: Visa Mobile General - VA: Visa Vale - Supermarket - VF: Visa Vale - Fuel - VR: Visa Vale - Restaurant 
+
+        :param product_subtype: The product_subtype of this Ptsv2paymentsPaymentInformationCard.
+        :type: str
+        """
+
+        self._product_subtype = product_subtype
 
     @property
     def type_selection_indicator(self):

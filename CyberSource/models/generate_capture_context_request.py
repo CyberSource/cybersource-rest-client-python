@@ -30,37 +30,60 @@ class GenerateCaptureContextRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'client_version': 'str',
         'target_origins': 'list[str]',
         'allowed_card_networks': 'list[str]',
-        'client_version': 'str',
         'checkout_api_initialization': 'Microformv2sessionsCheckoutApiInitialization'
     }
 
     attribute_map = {
+        'client_version': 'clientVersion',
         'target_origins': 'targetOrigins',
         'allowed_card_networks': 'allowedCardNetworks',
-        'client_version': 'clientVersion',
         'checkout_api_initialization': 'checkoutApiInitialization'
     }
 
-    def __init__(self, target_origins=None, allowed_card_networks=None, client_version=None, checkout_api_initialization=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, checkout_api_initialization=None):
         """
         GenerateCaptureContextRequest - a model defined in Swagger
         """
 
+        self._client_version = None
         self._target_origins = None
         self._allowed_card_networks = None
-        self._client_version = None
         self._checkout_api_initialization = None
 
+        if client_version is not None:
+          self.client_version = client_version
         if target_origins is not None:
           self.target_origins = target_origins
         if allowed_card_networks is not None:
           self.allowed_card_networks = allowed_card_networks
-        if client_version is not None:
-          self.client_version = client_version
         if checkout_api_initialization is not None:
           self.checkout_api_initialization = checkout_api_initialization
+
+    @property
+    def client_version(self):
+        """
+        Gets the client_version of this GenerateCaptureContextRequest.
+        Specify the version of Microform that you want to use. 
+
+        :return: The client_version of this GenerateCaptureContextRequest.
+        :rtype: str
+        """
+        return self._client_version
+
+    @client_version.setter
+    def client_version(self, client_version):
+        """
+        Sets the client_version of this GenerateCaptureContextRequest.
+        Specify the version of Microform that you want to use. 
+
+        :param client_version: The client_version of this GenerateCaptureContextRequest.
+        :type: str
+        """
+
+        self._client_version = client_version
 
     @property
     def target_origins(self):
@@ -89,7 +112,7 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self):
         """
         Gets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MAESTRO - MASTERCARD - AMEX - DISCOVER - DINERSCLUB - JCB - CUP - CARTESBANCAIRES - CARNET 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA 
 
         :return: The allowed_card_networks of this GenerateCaptureContextRequest.
         :rtype: list[str]
@@ -100,36 +123,13 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self, allowed_card_networks):
         """
         Sets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MAESTRO - MASTERCARD - AMEX - DISCOVER - DINERSCLUB - JCB - CUP - CARTESBANCAIRES - CARNET 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA 
 
         :param allowed_card_networks: The allowed_card_networks of this GenerateCaptureContextRequest.
         :type: list[str]
         """
 
         self._allowed_card_networks = allowed_card_networks
-
-    @property
-    def client_version(self):
-        """
-        Gets the client_version of this GenerateCaptureContextRequest.
-        Specify the version of Microform that you want to use. 
-
-        :return: The client_version of this GenerateCaptureContextRequest.
-        :rtype: str
-        """
-        return self._client_version
-
-    @client_version.setter
-    def client_version(self, client_version):
-        """
-        Sets the client_version of this GenerateCaptureContextRequest.
-        Specify the version of Microform that you want to use. 
-
-        :param client_version: The client_version of this GenerateCaptureContextRequest.
-        :type: str
-        """
-
-        self._client_version = client_version
 
     @property
     def checkout_api_initialization(self):

@@ -89,7 +89,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
     def business_application_id(self):
         """
         Gets the business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
-        Payouts transaction type. Required for OCT transactions. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. **Note** When the request includes this field, this value overrides the information in your CyberSource account. 
+        Required for AFT and OCT transactions.  Given below is a list of all the BAI values available. However, the processors may support only few specific BAI values.  - AA : Account-to-account  - BB : Supplier Payments - BI : Bank-Initiated P2P Money Transfer - BP : Non-Card Bill Pay/Bill Pay - CD : Cash Deposit - CP : Credit card Bill Payment - FD : Funds disbursement  - FT : Funds transfer - GD : Government Disbursement - GP : Gambling payout (non-online gambling) - LO : Loyalty credits and rebates - MD : Merchant Settlement - OG : Online Gambling Payout - PD : Payroll and pension disbursement - PP : Person-to-Person or Peer-to-Peer - TU : Top up, prepaid load - WT : Digital wallet  
 
         :return: The business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :rtype: str
@@ -100,7 +100,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessingInformation(object):
     def business_application_id(self, business_application_id):
         """
         Sets the business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
-        Payouts transaction type. Required for OCT transactions. This field is a pass-through, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. **Note** When the request includes this field, this value overrides the information in your CyberSource account. 
+        Required for AFT and OCT transactions.  Given below is a list of all the BAI values available. However, the processors may support only few specific BAI values.  - AA : Account-to-account  - BB : Supplier Payments - BI : Bank-Initiated P2P Money Transfer - BP : Non-Card Bill Pay/Bill Pay - CD : Cash Deposit - CP : Credit card Bill Payment - FD : Funds disbursement  - FT : Funds transfer - GD : Government Disbursement - GP : Gambling payout (non-online gambling) - LO : Loyalty credits and rebates - MD : Merchant Settlement - OG : Online Gambling Payout - PD : Payroll and pension disbursement - PP : Person-to-Person or Peer-to-Peer - TU : Top up, prepaid load - WT : Digital wallet  
 
         :param business_application_id: The business_application_id of this TssV2TransactionsPost201ResponseEmbeddedProcessingInformation.
         :type: str

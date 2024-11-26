@@ -30,14 +30,14 @@ class ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors(object)
                             and the value is json key in definition.
     """
     swagger_types = {
-        'avs_version': 'object'
+        'avs_version': 'str'
     }
 
     attribute_map = {
         'avs_version': 'avsVersion'
     }
 
-    def __init__(self, avs_version=None):
+    def __init__(self, avs_version='2'):
         """
         ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors - a model defined in Swagger
         """
@@ -51,10 +51,10 @@ class ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors(object)
     def avs_version(self):
         """
         Gets the avs_version of this ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - 2
 
         :return: The avs_version of this ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._avs_version
 
@@ -62,10 +62,10 @@ class ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors(object)
     def avs_version(self, avs_version):
         """
         Sets the avs_version of this ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - 2
 
         :param avs_version: The avs_version of this ECheckConfigFeaturesAccountValidationServiceInternalOnlyProcessors.
-        :type: object
+        :type: str
         """
 
         self._avs_version = avs_version

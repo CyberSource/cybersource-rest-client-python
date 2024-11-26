@@ -31,11 +31,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
     """
     swagger_types = {
         'payment_method': 'str',
-        'bonuses': 'str',
-        'bonus_month': 'str',
-        'second_bonus_month': 'str',
-        'bonus_amount': 'str',
-        'second_bonus_amount': 'str',
+        'bonuses': 'list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]',
         'preapproval_type': 'str',
         'installments': 'str',
         'terminal_id': 'str',
@@ -49,10 +45,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
     attribute_map = {
         'payment_method': 'paymentMethod',
         'bonuses': 'bonuses',
-        'bonus_month': 'bonusMonth',
-        'second_bonus_month': 'secondBonusMonth',
-        'bonus_amount': 'bonusAmount',
-        'second_bonus_amount': 'secondBonusAmount',
         'preapproval_type': 'preapprovalType',
         'installments': 'installments',
         'terminal_id': 'terminalId',
@@ -63,17 +55,13 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
         'business_name_alpha_numeric': 'businessNameAlphaNumeric'
     }
 
-    def __init__(self, payment_method=None, bonuses=None, bonus_month=None, second_bonus_month=None, bonus_amount=None, second_bonus_amount=None, preapproval_type=None, installments=None, terminal_id=None, first_billing_month=None, business_name=None, business_name_katakana=None, jis2_track_data=None, business_name_alpha_numeric=None):
+    def __init__(self, payment_method=None, bonuses=None, preapproval_type=None, installments=None, terminal_id=None, first_billing_month=None, business_name=None, business_name_katakana=None, jis2_track_data=None, business_name_alpha_numeric=None):
         """
         Ptsv2paymentsProcessingInformationJapanPaymentOptions - a model defined in Swagger
         """
 
         self._payment_method = None
         self._bonuses = None
-        self._bonus_month = None
-        self._second_bonus_month = None
-        self._bonus_amount = None
-        self._second_bonus_amount = None
         self._preapproval_type = None
         self._installments = None
         self._terminal_id = None
@@ -87,14 +75,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
           self.payment_method = payment_method
         if bonuses is not None:
           self.bonuses = bonuses
-        if bonus_month is not None:
-          self.bonus_month = bonus_month
-        if second_bonus_month is not None:
-          self.second_bonus_month = second_bonus_month
-        if bonus_amount is not None:
-          self.bonus_amount = bonus_amount
-        if second_bonus_amount is not None:
-          self.second_bonus_amount = second_bonus_amount
         if preapproval_type is not None:
           self.preapproval_type = preapproval_type
         if installments is not None:
@@ -139,10 +119,10 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
     def bonuses(self):
         """
         Gets the bonuses of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the Number of Bonuses. Valid value from 1 to 6. 
+        An array of objects, each of which contains a bonus month and bonus amount.  Length of bonuses array is equal to the number of bonuses.  Max length = 6.  In case of bonus month and amount not specified, null objects to be returned in the array. Example: bonuses : [ {\"month\": \"1\",\"amount\": \"200\"}, {\"month\": \"3\",\"amount\": \"2500\"}, null] 
 
         :return: The bonuses of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :rtype: str
+        :rtype: list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]
         """
         return self._bonuses
 
@@ -150,105 +130,13 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions(object):
     def bonuses(self, bonuses):
         """
         Sets the bonuses of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the Number of Bonuses. Valid value from 1 to 6. 
+        An array of objects, each of which contains a bonus month and bonus amount.  Length of bonuses array is equal to the number of bonuses.  Max length = 6.  In case of bonus month and amount not specified, null objects to be returned in the array. Example: bonuses : [ {\"month\": \"1\",\"amount\": \"200\"}, {\"month\": \"3\",\"amount\": \"2500\"}, null] 
 
         :param bonuses: The bonuses of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :type: str
+        :type: list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]
         """
 
         self._bonuses = bonuses
-
-    @property
-    def bonus_month(self):
-        """
-        Gets the bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the first bonus month. Valid value from 1 to 12. 
-
-        :return: The bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :rtype: str
-        """
-        return self._bonus_month
-
-    @bonus_month.setter
-    def bonus_month(self, bonus_month):
-        """
-        Sets the bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the first bonus month. Valid value from 1 to 12. 
-
-        :param bonus_month: The bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :type: str
-        """
-
-        self._bonus_month = bonus_month
-
-    @property
-    def second_bonus_month(self):
-        """
-        Gets the second_bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the second bonus month. Valid value from 1 to 12. 
-
-        :return: The second_bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :rtype: str
-        """
-        return self._second_bonus_month
-
-    @second_bonus_month.setter
-    def second_bonus_month(self, second_bonus_month):
-        """
-        Sets the second_bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value is a 2-digit code indicating the second bonus month. Valid value from 1 to 12. 
-
-        :param second_bonus_month: The second_bonus_month of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :type: str
-        """
-
-        self._second_bonus_month = second_bonus_month
-
-    @property
-    def bonus_amount(self):
-        """
-        Gets the bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value contains the bonus amount of the first month. Maximum value without decimal 99999999. 
-
-        :return: The bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :rtype: str
-        """
-        return self._bonus_amount
-
-    @bonus_amount.setter
-    def bonus_amount(self, bonus_amount):
-        """
-        Sets the bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value contains the bonus amount of the first month. Maximum value without decimal 99999999. 
-
-        :param bonus_amount: The bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :type: str
-        """
-
-        self._bonus_amount = bonus_amount
-
-    @property
-    def second_bonus_amount(self):
-        """
-        Gets the second_bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value contains the bonus amount of the second month. Maximum value without decimal 99999999. 
-
-        :return: The second_bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :rtype: str
-        """
-        return self._second_bonus_amount
-
-    @second_bonus_amount.setter
-    def second_bonus_amount(self, second_bonus_amount):
-        """
-        Sets the second_bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        This value contains the bonus amount of the second month. Maximum value without decimal 99999999. 
-
-        :param second_bonus_amount: The second_bonus_amount of this Ptsv2paymentsProcessingInformationJapanPaymentOptions.
-        :type: str
-        """
-
-        self._second_bonus_amount = second_bonus_amount
 
     @property
     def preapproval_type(self):

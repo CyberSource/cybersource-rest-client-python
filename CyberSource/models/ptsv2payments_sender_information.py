@@ -31,8 +31,8 @@ class Ptsv2paymentsSenderInformation(object):
     """
     swagger_types = {
         'first_name': 'str',
-        'last_name': 'str',
         'middle_name': 'str',
+        'last_name': 'str',
         'address1': 'str',
         'locality': 'str',
         'administrative_area': 'str',
@@ -41,22 +41,22 @@ class Ptsv2paymentsSenderInformation(object):
 
     attribute_map = {
         'first_name': 'firstName',
-        'last_name': 'lastName',
         'middle_name': 'middleName',
+        'last_name': 'lastName',
         'address1': 'address1',
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
         'country_code': 'countryCode'
     }
 
-    def __init__(self, first_name=None, last_name=None, middle_name=None, address1=None, locality=None, administrative_area=None, country_code=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None):
         """
         Ptsv2paymentsSenderInformation - a model defined in Swagger
         """
 
         self._first_name = None
-        self._last_name = None
         self._middle_name = None
+        self._last_name = None
         self._address1 = None
         self._locality = None
         self._administrative_area = None
@@ -64,10 +64,10 @@ class Ptsv2paymentsSenderInformation(object):
 
         if first_name is not None:
           self.first_name = first_name
-        if last_name is not None:
-          self.last_name = last_name
         if middle_name is not None:
           self.middle_name = middle_name
+        if last_name is not None:
+          self.last_name = last_name
         if address1 is not None:
           self.address1 = address1
         if locality is not None:
@@ -81,7 +81,7 @@ class Ptsv2paymentsSenderInformation(object):
     def first_name(self):
         """
         Gets the first_name of this Ptsv2paymentsSenderInformation.
-        First name of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.         Values exceeding the above limits will be truncated. 
+        First name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported.Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to the processor. 
 
         :return: The first_name of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -92,7 +92,7 @@ class Ptsv2paymentsSenderInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ptsv2paymentsSenderInformation.
-        First name of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.         Values exceeding the above limits will be truncated. 
+        First name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported.Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to the processor. 
 
         :param first_name: The first_name of this Ptsv2paymentsSenderInformation.
         :type: str
@@ -101,33 +101,10 @@ class Ptsv2paymentsSenderInformation(object):
         self._first_name = first_name
 
     @property
-    def last_name(self):
-        """
-        Gets the last_name of this Ptsv2paymentsSenderInformation.
-        Last name of the sender.  **Applicable for Barclays AFT transactions only.** This field is optional for Visa and not applicable for Mastercard AFT.  Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.  Values exceeding these limits will be truncated. 
-
-        :return: The last_name of this Ptsv2paymentsSenderInformation.
-        :rtype: str
-        """
-        return self._last_name
-
-    @last_name.setter
-    def last_name(self, last_name):
-        """
-        Sets the last_name of this Ptsv2paymentsSenderInformation.
-        Last name of the sender.  **Applicable for Barclays AFT transactions only.** This field is optional for Visa and not applicable for Mastercard AFT.  Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.  Values exceeding these limits will be truncated. 
-
-        :param last_name: The last_name of this Ptsv2paymentsSenderInformation.
-        :type: str
-        """
-
-        self._last_name = last_name
-
-    @property
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv2paymentsSenderInformation.
-        Middle name of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.        Values exceeding these limits will be truncated. 
+        Middle name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The middle_name of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -138,7 +115,7 @@ class Ptsv2paymentsSenderInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv2paymentsSenderInformation.
-        Middle name of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to Barclays.  For Visa, the maximum length of First Name, Middle Name and Last Name is 30 characters.        Values exceeding these limits will be truncated. 
+        Middle name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param middle_name: The middle_name of this Ptsv2paymentsSenderInformation.
         :type: str
@@ -147,10 +124,33 @@ class Ptsv2paymentsSenderInformation(object):
         self._middle_name = middle_name
 
     @property
+    def last_name(self):
+        """
+        Gets the last_name of this Ptsv2paymentsSenderInformation.
+        Last name of the sender. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
+
+        :return: The last_name of this Ptsv2paymentsSenderInformation.
+        :rtype: str
+        """
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, last_name):
+        """
+        Sets the last_name of this Ptsv2paymentsSenderInformation.
+        Last name of the sender. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
+
+        :param last_name: The last_name of this Ptsv2paymentsSenderInformation.
+        :type: str
+        """
+
+        self._last_name = last_name
+
+    @property
     def address1(self):
         """
         Gets the address1 of this Ptsv2paymentsSenderInformation.
-        The street address of the sender.    **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.     Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to Barclays.             The field has a maximum length of 35 characters.  Values exceeding these limits will be truncated. 
+        The street address of the sender. This field is applicable for AFT transactions.     Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The address1 of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -161,7 +161,7 @@ class Ptsv2paymentsSenderInformation(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv2paymentsSenderInformation.
-        The street address of the sender.    **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.     Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to Barclays.             The field has a maximum length of 35 characters.  Values exceeding these limits will be truncated. 
+        The street address of the sender. This field is applicable for AFT transactions.     Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :param address1: The address1 of this Ptsv2paymentsSenderInformation.
         :type: str
@@ -173,7 +173,7 @@ class Ptsv2paymentsSenderInformation(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2paymentsSenderInformation.
-        The city or locality of the sender.in  **Applicable for Barclays AFT transactions only.** The field is optional for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to Barclays.  The field has a maximum length of 25 characters.  Values exceeding these limits will be truncated. 
+        The city or locality of the sender. This field is applicable for AFT transactions.  Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The locality of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -184,7 +184,7 @@ class Ptsv2paymentsSenderInformation(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2paymentsSenderInformation.
-        The city or locality of the sender.in  **Applicable for Barclays AFT transactions only.** The field is optional for Visa and not applicable for Mastercard AFT.   Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to Barclays.  The field has a maximum length of 25 characters.  Values exceeding these limits will be truncated. 
+        The city or locality of the sender. This field is applicable for AFT transactions.  Only alpha numeric values are supported.  Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :param locality: The locality of this Ptsv2paymentsSenderInformation.
         :type: str
@@ -196,7 +196,7 @@ class Ptsv2paymentsSenderInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2paymentsSenderInformation.
-        The state or province of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa AFT when the sender country is US or CA else it is optional for Visa AFT. This field is not applicable for Mastercard AFT.  Must be a two character value 
+        The state or province of the sender. This field is applicable for AFT transactions when the sender country is US or CA. Else it is optional.  Must be a two character value 
 
         :return: The administrative_area of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -207,7 +207,7 @@ class Ptsv2paymentsSenderInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2paymentsSenderInformation.
-        The state or province of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa AFT when the sender country is US or CA else it is optional for Visa AFT. This field is not applicable for Mastercard AFT.  Must be a two character value 
+        The state or province of the sender. This field is applicable for AFT transactions when the sender country is US or CA. Else it is optional.  Must be a two character value 
 
         :param administrative_area: The administrative_area of this Ptsv2paymentsSenderInformation.
         :type: str
@@ -219,7 +219,7 @@ class Ptsv2paymentsSenderInformation(object):
     def country_code(self):
         """
         Gets the country_code of this Ptsv2paymentsSenderInformation.
-        The country associated with the address of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
+        The country associated with the address of the sender. This field is applicable for AFT transactions.   Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
 
         :return: The country_code of this Ptsv2paymentsSenderInformation.
         :rtype: str
@@ -230,7 +230,7 @@ class Ptsv2paymentsSenderInformation(object):
     def country_code(self, country_code):
         """
         Sets the country_code of this Ptsv2paymentsSenderInformation.
-        The country associated with the address of the sender.  **Applicable for Barclays AFT transactions only.** The field is mandatory for Visa and not applicable for Mastercard AFT.   Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
+        The country associated with the address of the sender. This field is applicable for AFT transactions.   Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
 
         :param country_code: The country_code of this Ptsv2paymentsSenderInformation.
         :type: str
