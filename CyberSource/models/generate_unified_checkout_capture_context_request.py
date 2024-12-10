@@ -30,8 +30,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'target_origins': 'list[str]',
         'client_version': 'str',
+        'target_origins': 'list[str]',
         'allowed_card_networks': 'list[str]',
         'allowed_payment_types': 'list[str]',
         'country': 'str',
@@ -42,8 +42,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     }
 
     attribute_map = {
-        'target_origins': 'targetOrigins',
         'client_version': 'clientVersion',
+        'target_origins': 'targetOrigins',
         'allowed_card_networks': 'allowedCardNetworks',
         'allowed_payment_types': 'allowedPaymentTypes',
         'country': 'country',
@@ -53,13 +53,13 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'checkout_api_initialization': 'checkoutApiInitialization'
     }
 
-    def __init__(self, target_origins=None, client_version=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None, checkout_api_initialization=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None, checkout_api_initialization=None):
         """
         GenerateUnifiedCheckoutCaptureContextRequest - a model defined in Swagger
         """
 
-        self._target_origins = None
         self._client_version = None
+        self._target_origins = None
         self._allowed_card_networks = None
         self._allowed_payment_types = None
         self._country = None
@@ -68,10 +68,10 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._order_information = None
         self._checkout_api_initialization = None
 
-        if target_origins is not None:
-          self.target_origins = target_origins
         if client_version is not None:
           self.client_version = client_version
+        if target_origins is not None:
+          self.target_origins = target_origins
         if allowed_card_networks is not None:
           self.allowed_card_networks = allowed_card_networks
         if allowed_payment_types is not None:
@@ -86,29 +86,6 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
           self.order_information = order_information
         if checkout_api_initialization is not None:
           self.checkout_api_initialization = checkout_api_initialization
-
-    @property
-    def target_origins(self):
-        """
-        Gets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
-
-        :return: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
-        :rtype: list[str]
-        """
-        return self._target_origins
-
-    @target_origins.setter
-    def target_origins(self, target_origins):
-        """
-        Sets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
-
-        :param target_origins: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
-        :type: list[str]
-        """
-
-        self._target_origins = target_origins
 
     @property
     def client_version(self):
@@ -134,10 +111,33 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._client_version = client_version
 
     @property
+    def target_origins(self):
+        """
+        Gets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
+
+        :return: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :rtype: list[str]
+        """
+        return self._target_origins
+
+    @target_origins.setter
+    def target_origins(self, target_origins):
+        """
+        Sets the target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        The [target origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the website on which you will be launching Unified Checkout is defined by the scheme (protocol), hostname (domain) and port number (if used).    You must use https://hostname (unless you use http://localhost) Wildcards are NOT supported.  Ensure that subdomains are included. Any valid top-level domain is supported (e.g. .com, .co.uk, .gov.br etc)  Examples:   - https://example.com   - https://subdomain.example.com   - https://example.com:8080<br><br>  If you are embedding within multiple nested iframes you need to specify the origins of all the browser contexts used, for example:    targetOrigins: [     \"https://example.com\",     \"https://basket.example.com\",     \"https://ecom.example.com\"   ] 
+
+        :param target_origins: The target_origins of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :type: list[str]
+        """
+
+        self._target_origins = target_origins
+
+    @property
     def allowed_card_networks(self):
         """
         Gets the allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:   - VISA   - MASTERCARD   - AMEX   - DISCOVER   - DINERSCLUB   - JCB 
+        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:     - VISA     - MASTERCARD     - AMEX     - CARNET     - CARTESBANCAIRES     - CUP     - DINERSCLUB     - DISCOVER     - EFTPOS     - ELO     - JCB     - JCREW     - MADA     - MAESTRO     - MEEZA 
 
         :return: The allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -148,7 +148,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_card_networks(self, allowed_card_networks):
         """
         Sets the allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:   - VISA   - MASTERCARD   - AMEX   - DISCOVER   - DINERSCLUB   - JCB 
+        The list of card networks you want to use for this Unified Checkout transaction.  Unified Checkout currently supports the following card networks:     - VISA     - MASTERCARD     - AMEX     - CARNET     - CARTESBANCAIRES     - CUP     - DINERSCLUB     - DISCOVER     - EFTPOS     - ELO     - JCB     - JCREW     - MADA     - MAESTRO     - MEEZA 
 
         :param allowed_card_networks: The allowed_card_networks of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]

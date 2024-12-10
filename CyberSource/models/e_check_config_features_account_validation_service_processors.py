@@ -33,11 +33,11 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         'avs_account_ownership_service': 'bool',
         'avs_account_status_service': 'bool',
         'avs_signed_agreement': 'bool',
-        'avs_calculated_response_behavior': 'object',
+        'avs_calculated_response_behavior': 'str',
         'avs_additional_id': 'str',
         'enable_avs': 'bool',
         'avs_entity_id': 'str',
-        'avs_result_mode': 'object',
+        'avs_result_mode': 'str',
         'enable_avs_token_creation': 'bool'
     }
 
@@ -53,7 +53,7 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
         'enable_avs_token_creation': 'enableAvsTokenCreation'
     }
 
-    def __init__(self, avs_account_ownership_service=None, avs_account_status_service=None, avs_signed_agreement=None, avs_calculated_response_behavior=None, avs_additional_id=None, enable_avs=True, avs_entity_id=None, avs_result_mode=None, enable_avs_token_creation=False):
+    def __init__(self, avs_account_ownership_service=None, avs_account_status_service=None, avs_signed_agreement=None, avs_calculated_response_behavior='continue', avs_additional_id=None, enable_avs=True, avs_entity_id=None, avs_result_mode=None, enable_avs_token_creation=False):
         """
         ECheckConfigFeaturesAccountValidationServiceProcessors - a model defined in Swagger
         """
@@ -160,10 +160,10 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
     def avs_calculated_response_behavior(self):
         """
         Gets the avs_calculated_response_behavior of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        *NEW*
+        *NEW*  Possible values: - continue
 
         :return: The avs_calculated_response_behavior of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._avs_calculated_response_behavior
 
@@ -171,10 +171,10 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
     def avs_calculated_response_behavior(self, avs_calculated_response_behavior):
         """
         Sets the avs_calculated_response_behavior of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        *NEW*
+        *NEW*  Possible values: - continue
 
         :param avs_calculated_response_behavior: The avs_calculated_response_behavior of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        :type: object
+        :type: str
         """
 
         self._avs_calculated_response_behavior = avs_calculated_response_behavior
@@ -252,10 +252,10 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
     def avs_result_mode(self):
         """
         Gets the avs_result_mode of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        *NEW*
+        *NEW*  Possible values: - FULL_RESPONSE - LOGIC_BOX
 
         :return: The avs_result_mode of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._avs_result_mode
 
@@ -263,10 +263,10 @@ class ECheckConfigFeaturesAccountValidationServiceProcessors(object):
     def avs_result_mode(self, avs_result_mode):
         """
         Sets the avs_result_mode of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        *NEW*
+        *NEW*  Possible values: - FULL_RESPONSE - LOGIC_BOX
 
         :param avs_result_mode: The avs_result_mode of this ECheckConfigFeaturesAccountValidationServiceProcessors.
-        :type: object
+        :type: str
         """
 
         self._avs_result_mode = avs_result_mode

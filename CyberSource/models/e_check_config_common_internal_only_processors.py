@@ -34,8 +34,8 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         'terminal_id': 'str',
         'enable15an_transaction_reference_number': 'bool',
         'portal_supported_paytypes': 'str',
-        'settlement_method': 'object',
-        'verification_level': 'object',
+        'settlement_method': 'str',
+        'verification_level': 'str',
         'set_completed_state': 'bool'
     }
 
@@ -49,7 +49,7 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
         'set_completed_state': 'setCompletedState'
     }
 
-    def __init__(self, enable_ccs=None, terminal_id=None, enable15an_transaction_reference_number=True, portal_supported_paytypes='CHECK', settlement_method=None, verification_level=None, set_completed_state=False):
+    def __init__(self, enable_ccs=None, terminal_id=None, enable15an_transaction_reference_number=True, portal_supported_paytypes='CHECK', settlement_method='BEST_GUESS', verification_level='VALIDATION', set_completed_state=False):
         """
         ECheckConfigCommonInternalOnlyProcessors - a model defined in Swagger
         """
@@ -173,10 +173,10 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
     def settlement_method(self):
         """
         Gets the settlement_method of this ECheckConfigCommonInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - BEST_GUESS
 
         :return: The settlement_method of this ECheckConfigCommonInternalOnlyProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._settlement_method
 
@@ -184,10 +184,10 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
     def settlement_method(self, settlement_method):
         """
         Sets the settlement_method of this ECheckConfigCommonInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - BEST_GUESS
 
         :param settlement_method: The settlement_method of this ECheckConfigCommonInternalOnlyProcessors.
-        :type: object
+        :type: str
         """
 
         self._settlement_method = settlement_method
@@ -196,10 +196,10 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
     def verification_level(self):
         """
         Gets the verification_level of this ECheckConfigCommonInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - VALIDATION
 
         :return: The verification_level of this ECheckConfigCommonInternalOnlyProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._verification_level
 
@@ -207,10 +207,10 @@ class ECheckConfigCommonInternalOnlyProcessors(object):
     def verification_level(self, verification_level):
         """
         Sets the verification_level of this ECheckConfigCommonInternalOnlyProcessors.
-        *NEW*
+        *NEW*  Possible values: - VALIDATION
 
         :param verification_level: The verification_level of this ECheckConfigCommonInternalOnlyProcessors.
-        :type: object
+        :type: str
         """
 
         self._verification_level = verification_level

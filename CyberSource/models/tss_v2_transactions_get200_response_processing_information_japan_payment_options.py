@@ -33,17 +33,27 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         'payment_method': 'str',
         'terminal_id': 'str',
         'business_name': 'str',
-        'business_name_katakana': 'str'
+        'business_name_katakana': 'str',
+        'business_name_english': 'str',
+        'bonuses': 'list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]',
+        'first_billing_month': 'str',
+        'number_of_installments': 'str',
+        'pre_approval_type': 'str'
     }
 
     attribute_map = {
         'payment_method': 'paymentMethod',
         'terminal_id': 'terminalId',
         'business_name': 'businessName',
-        'business_name_katakana': 'businessNameKatakana'
+        'business_name_katakana': 'businessNameKatakana',
+        'business_name_english': 'businessNameEnglish',
+        'bonuses': 'bonuses',
+        'first_billing_month': 'firstBillingMonth',
+        'number_of_installments': 'numberOfInstallments',
+        'pre_approval_type': 'preApprovalType'
     }
 
-    def __init__(self, payment_method=None, terminal_id=None, business_name=None, business_name_katakana=None):
+    def __init__(self, payment_method=None, terminal_id=None, business_name=None, business_name_katakana=None, business_name_english=None, bonuses=None, first_billing_month=None, number_of_installments=None, pre_approval_type=None):
         """
         TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions - a model defined in Swagger
         """
@@ -52,6 +62,11 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         self._terminal_id = None
         self._business_name = None
         self._business_name_katakana = None
+        self._business_name_english = None
+        self._bonuses = None
+        self._first_billing_month = None
+        self._number_of_installments = None
+        self._pre_approval_type = None
 
         if payment_method is not None:
           self.payment_method = payment_method
@@ -61,6 +76,16 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
           self.business_name = business_name
         if business_name_katakana is not None:
           self.business_name_katakana = business_name_katakana
+        if business_name_english is not None:
+          self.business_name_english = business_name_english
+        if bonuses is not None:
+          self.bonuses = bonuses
+        if first_billing_month is not None:
+          self.first_billing_month = first_billing_month
+        if number_of_installments is not None:
+          self.number_of_installments = number_of_installments
+        if pre_approval_type is not None:
+          self.pre_approval_type = pre_approval_type
 
     @property
     def payment_method(self):
@@ -153,6 +178,121 @@ class TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions(ob
         """
 
         self._business_name_katakana = business_name_katakana
+
+    @property
+    def business_name_english(self):
+        """
+        Gets the business_name_english of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Business name in English characters. This field is supported only on JCN Gateway and for the Sumitomo Mitsui Card Co. acquirer on CyberSource through VisaNet. 
+
+        :return: The business_name_english of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :rtype: str
+        """
+        return self._business_name_english
+
+    @business_name_english.setter
+    def business_name_english(self, business_name_english):
+        """
+        Sets the business_name_english of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Business name in English characters. This field is supported only on JCN Gateway and for the Sumitomo Mitsui Card Co. acquirer on CyberSource through VisaNet. 
+
+        :param business_name_english: The business_name_english of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :type: str
+        """
+
+        self._business_name_english = business_name_english
+
+    @property
+    def bonuses(self):
+        """
+        Gets the bonuses of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        An array of objects, each of which contains a bonus month and bonus amount.  Length of bonuses array is equal to the number of bonuses.  Max length = 6.  In case of bonus month and amount not specified, null objects to be returned in the array. Example: bonuses : [ {\"month\": \"1\",\"amount\": \"200\"}, {\"month\": \"3\",\"amount\": \"2500\"}, null] 
+
+        :return: The bonuses of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :rtype: list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]
+        """
+        return self._bonuses
+
+    @bonuses.setter
+    def bonuses(self, bonuses):
+        """
+        Sets the bonuses of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        An array of objects, each of which contains a bonus month and bonus amount.  Length of bonuses array is equal to the number of bonuses.  Max length = 6.  In case of bonus month and amount not specified, null objects to be returned in the array. Example: bonuses : [ {\"month\": \"1\",\"amount\": \"200\"}, {\"month\": \"3\",\"amount\": \"2500\"}, null] 
+
+        :param bonuses: The bonuses of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :type: list[Ptsv2paymentsProcessingInformationJapanPaymentOptionsBonuses]
+        """
+
+        self._bonuses = bonuses
+
+    @property
+    def first_billing_month(self):
+        """
+        Gets the first_billing_month of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Billing month in MM format. 
+
+        :return: The first_billing_month of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :rtype: str
+        """
+        return self._first_billing_month
+
+    @first_billing_month.setter
+    def first_billing_month(self, first_billing_month):
+        """
+        Sets the first_billing_month of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Billing month in MM format. 
+
+        :param first_billing_month: The first_billing_month of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :type: str
+        """
+
+        self._first_billing_month = first_billing_month
+
+    @property
+    def number_of_installments(self):
+        """
+        Gets the number_of_installments of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Number of Installments. 
+
+        :return: The number_of_installments of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :rtype: str
+        """
+        return self._number_of_installments
+
+    @number_of_installments.setter
+    def number_of_installments(self, number_of_installments):
+        """
+        Sets the number_of_installments of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        Number of Installments. 
+
+        :param number_of_installments: The number_of_installments of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :type: str
+        """
+
+        self._number_of_installments = number_of_installments
+
+    @property
+    def pre_approval_type(self):
+        """
+        Gets the pre_approval_type of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        This will contain the details of the kind of transaction that has been processe. Used only for Japan. Possible Values: - 0 = Normal (authorization with amount and clearing/settlement; data capture or paper draft) - 1 = Negative card authorization (authorization-only with 0 or 1 amount) - 2 = Reservation of authorization (authorization-only with amount) - 3 = Cancel transaction - 4 = Merchant-initiated reversal/refund transactions - 5 = Cancel reservation of authorization - 6 = Post authorization 
+
+        :return: The pre_approval_type of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :rtype: str
+        """
+        return self._pre_approval_type
+
+    @pre_approval_type.setter
+    def pre_approval_type(self, pre_approval_type):
+        """
+        Sets the pre_approval_type of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        This will contain the details of the kind of transaction that has been processe. Used only for Japan. Possible Values: - 0 = Normal (authorization with amount and clearing/settlement; data capture or paper draft) - 1 = Negative card authorization (authorization-only with 0 or 1 amount) - 2 = Reservation of authorization (authorization-only with amount) - 3 = Cancel transaction - 4 = Merchant-initiated reversal/refund transactions - 5 = Cancel reservation of authorization - 6 = Post authorization 
+
+        :param pre_approval_type: The pre_approval_type of this TssV2TransactionsGet200ResponseProcessingInformationJapanPaymentOptions.
+        :type: str
+        """
+
+        self._pre_approval_type = pre_approval_type
 
     def to_dict(self):
         """

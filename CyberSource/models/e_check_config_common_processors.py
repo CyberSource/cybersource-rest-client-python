@@ -34,7 +34,7 @@ class ECheckConfigCommonProcessors(object):
         'company_id': 'str',
         'batch_group': 'str',
         'enable_accuity_for_avs': 'bool',
-        'accuity_check_type': 'object',
+        'accuity_check_type': 'str',
         'set_completed_state': 'bool'
     }
 
@@ -47,7 +47,7 @@ class ECheckConfigCommonProcessors(object):
         'set_completed_state': 'setCompletedState'
     }
 
-    def __init__(self, company_entry_description=None, company_id=None, batch_group=None, enable_accuity_for_avs=True, accuity_check_type=None, set_completed_state=False):
+    def __init__(self, company_entry_description=None, company_id=None, batch_group=None, enable_accuity_for_avs=True, accuity_check_type='ALWAYS', set_completed_state=False):
         """
         ECheckConfigCommonProcessors - a model defined in Swagger
         """
@@ -167,10 +167,10 @@ class ECheckConfigCommonProcessors(object):
     def accuity_check_type(self):
         """
         Gets the accuity_check_type of this ECheckConfigCommonProcessors.
-        *NEW*
+        *NEW*  Possible values: - ALWAYS
 
         :return: The accuity_check_type of this ECheckConfigCommonProcessors.
-        :rtype: object
+        :rtype: str
         """
         return self._accuity_check_type
 
@@ -178,10 +178,10 @@ class ECheckConfigCommonProcessors(object):
     def accuity_check_type(self, accuity_check_type):
         """
         Sets the accuity_check_type of this ECheckConfigCommonProcessors.
-        *NEW*
+        *NEW*  Possible values: - ALWAYS
 
         :param accuity_check_type: The accuity_check_type of this ECheckConfigCommonProcessors.
-        :type: object
+        :type: str
         """
 
         self._accuity_check_type = accuity_check_type

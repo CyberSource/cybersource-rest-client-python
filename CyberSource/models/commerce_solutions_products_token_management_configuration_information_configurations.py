@@ -30,22 +30,27 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurat
                             and the value is json key in definition.
     """
     swagger_types = {
-        'parent_profile_id': 'str'
+        'parent_profile_id': 'str',
+        'vault': 'CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurationsVault'
     }
 
     attribute_map = {
-        'parent_profile_id': 'parentProfileId'
+        'parent_profile_id': 'parentProfileId',
+        'vault': 'vault'
     }
 
-    def __init__(self, parent_profile_id=None):
+    def __init__(self, parent_profile_id=None, vault=None):
         """
         CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations - a model defined in Swagger
         """
 
         self._parent_profile_id = None
+        self._vault = None
 
         if parent_profile_id is not None:
           self.parent_profile_id = parent_profile_id
+        if vault is not None:
+          self.vault = vault
 
     @property
     def parent_profile_id(self):
@@ -69,6 +74,27 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurat
         """
 
         self._parent_profile_id = parent_profile_id
+
+    @property
+    def vault(self):
+        """
+        Gets the vault of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+
+        :return: The vault of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+        :rtype: CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurationsVault
+        """
+        return self._vault
+
+    @vault.setter
+    def vault(self, vault):
+        """
+        Sets the vault of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+
+        :param vault: The vault of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+        :type: CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurationsVault
+        """
+
+        self._vault = vault
 
     def to_dict(self):
         """
