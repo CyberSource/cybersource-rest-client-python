@@ -75,6 +75,7 @@ class GlobalLabelParameters:
     REQUEST_JSON_EMPTY = "RequestJsonPath not provided"
     INVALID_REQUEST_TYPE_METHOD = "Entered Request Type should be (GET/POST/PUT/PATCH)"
     RUN_ENVIRONMENT_EMPTY = "RunEnvironment Is Mandatory."
+    MLE_AUTH_ERROR = "MLE is only supported in JWT auth type"
     DEFAULT_LOG_FILE_NAME = "Log File Name Empty/None.Using Default Value"
     DEFAULT_ENABLE_LOG = False
     DEFAULT_ENABLE_MASKING = False
@@ -86,6 +87,7 @@ class GlobalLabelParameters:
     DEFAULT_LOG_DIRECTORY =os.path.join(os.getcwd(),"Logs")
     DEFAULT_PROXY_PORT = 443
     DEFAULT_KEY_FILE_PATH = os.path.join(os.getcwd(),"resources")
+    DEFAULT_MLE_ALIAS_FOR_CERT = "CyberSource_SJC_US"
     ENABLE_LOG_DEFAULT_MESSAGE = "Enable log value Empty/None.Using Default Value"
     LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE = "Log Maximum Size Empty/None.Using Default Value"
     LOG_DIRECTORY_DEFAULT_MESSAGE = "Log Directory value Empty/None.Using Default Value"
