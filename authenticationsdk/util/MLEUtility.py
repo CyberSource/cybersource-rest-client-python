@@ -3,22 +3,15 @@
 class MLEUtility:
     @staticmethod
     def check_is_mle_for_api(merchant_config, isMLESupportedByCybsForApi, operationId):
-        
-        # isMLE for an api is false by default
         isMLEForAPI = False
-
         if isMLESupportedByCybsForApi and merchant_config.get_useMLEGlobally():
             isMLEForAPI = True
-
         operation_array = [op_id.strip() for op_id in operationId.split(",")]
-
-        # Control the MLE only from map
         if merchant_config.get_mapToControlMLEonAPI() and merchant_config.get_mapToControlMLEonAPI():
             for op_id in operation_array:
                 if op_id in merchant_config.get_mapToControlMLEonAPI():
                     isMLEForAPI = merchant_config.get_mapToControlMLEonAPI()[op_id]
                     break
-
         return isMLEForAPI
     
     @staticmethod
