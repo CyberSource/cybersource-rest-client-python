@@ -22,6 +22,7 @@ from six import iteritems
 from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
+from authenticationsdk.util.MLEUtility import MLEUtility
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class DecisionManagerApi(object):
@@ -143,6 +144,11 @@ class DecisionManagerApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'case_management_actions_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "action_decision_manager_case,action_decision_manager_case_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
@@ -266,6 +272,11 @@ class DecisionManagerApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'add_negative_list_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "add_negative,add_negative_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -389,6 +400,11 @@ class DecisionManagerApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'case_management_comments_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "comment_decision_manager_case,comment_decision_manager_case_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
 
@@ -502,6 +518,11 @@ class DecisionManagerApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_bundled_decision_manager_case_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_bundled_decision_manager_case,create_bundled_decision_manager_case_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -625,6 +646,11 @@ class DecisionManagerApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'fraud_marking_action_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "fraud_update,fraud_update_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
