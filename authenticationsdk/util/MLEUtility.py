@@ -1,12 +1,11 @@
 
-
 class MLEUtility:
     @staticmethod
-    def check_is_mle_for_api(merchant_config, isMLESupportedByCybsForApi, operationId):
+    def check_is_mle_for_api(merchant_config, isMLESupportedByCybsForApi, operationIds):
         isMLEForAPI = False
         if isMLESupportedByCybsForApi and merchant_config.get_useMLEGlobally():
             isMLEForAPI = True
-        operation_array = [op_id.strip() for op_id in operationId.split(",")]
+        operation_array = [op_id.strip() for op_id in operationIds.split(",")]
         if merchant_config.get_mapToControlMLEonAPI():
             for op_id in operation_array:
                 if op_id in merchant_config.get_mapToControlMLEonAPI():
@@ -20,4 +19,3 @@ class MLEUtility:
 
         # return encrypted requestBody
         return requestBody
-
