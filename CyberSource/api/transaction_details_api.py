@@ -22,6 +22,7 @@ from six import iteritems
 from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
+from authenticationsdk.util.MLEUtility import MLEUtility
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class TransactionDetailsApi(object):
@@ -133,6 +134,11 @@ class TransactionDetailsApi(object):
         body_params = None
         if 'GET' in ('POST'):
             body_params = '{}'
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_transaction,get_transaction_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 

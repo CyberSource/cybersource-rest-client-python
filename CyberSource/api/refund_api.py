@@ -22,6 +22,7 @@ from six import iteritems
 from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
+from authenticationsdk.util.MLEUtility import MLEUtility
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class RefundApi(object):
@@ -143,6 +144,11 @@ class RefundApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'refund_capture_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = True
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "refund_capture,refund_capture_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
@@ -266,6 +272,11 @@ class RefundApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'refund_payment_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        is_mle_supported_by_cybs_for_api = True
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "refund_payment,refund_payment_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
