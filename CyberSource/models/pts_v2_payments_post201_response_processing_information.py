@@ -33,17 +33,21 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         'bank_transfer_options': 'PtsV2PaymentsPost201ResponseProcessingInformationBankTransferOptions',
         'payment_solution': 'str',
         'enhanced_data_enabled': 'bool',
-        'capture_options': 'PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions'
+        'capture_options': 'PtsV2PaymentsPost201ResponseProcessingInformationCaptureOptions',
+        'authorization_options': 'PtsV2PaymentsPost201ResponseProcessingInformationAuthorizationOptions',
+        'purchase_options': 'PtsV2PaymentsPost201ResponseProcessingInformationPurchaseOptions'
     }
 
     attribute_map = {
         'bank_transfer_options': 'bankTransferOptions',
         'payment_solution': 'paymentSolution',
         'enhanced_data_enabled': 'enhancedDataEnabled',
-        'capture_options': 'captureOptions'
+        'capture_options': 'captureOptions',
+        'authorization_options': 'authorizationOptions',
+        'purchase_options': 'purchaseOptions'
     }
 
-    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None, capture_options=None):
+    def __init__(self, bank_transfer_options=None, payment_solution=None, enhanced_data_enabled=None, capture_options=None, authorization_options=None, purchase_options=None):
         """
         PtsV2PaymentsPost201ResponseProcessingInformation - a model defined in Swagger
         """
@@ -52,6 +56,8 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         self._payment_solution = None
         self._enhanced_data_enabled = None
         self._capture_options = None
+        self._authorization_options = None
+        self._purchase_options = None
 
         if bank_transfer_options is not None:
           self.bank_transfer_options = bank_transfer_options
@@ -61,6 +67,10 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
           self.enhanced_data_enabled = enhanced_data_enabled
         if capture_options is not None:
           self.capture_options = capture_options
+        if authorization_options is not None:
+          self.authorization_options = authorization_options
+        if purchase_options is not None:
+          self.purchase_options = purchase_options
 
     @property
     def bank_transfer_options(self):
@@ -149,6 +159,48 @@ class PtsV2PaymentsPost201ResponseProcessingInformation(object):
         """
 
         self._capture_options = capture_options
+
+    @property
+    def authorization_options(self):
+        """
+        Gets the authorization_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :return: The authorization_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessingInformationAuthorizationOptions
+        """
+        return self._authorization_options
+
+    @authorization_options.setter
+    def authorization_options(self, authorization_options):
+        """
+        Sets the authorization_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :param authorization_options: The authorization_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessingInformationAuthorizationOptions
+        """
+
+        self._authorization_options = authorization_options
+
+    @property
+    def purchase_options(self):
+        """
+        Gets the purchase_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :return: The purchase_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :rtype: PtsV2PaymentsPost201ResponseProcessingInformationPurchaseOptions
+        """
+        return self._purchase_options
+
+    @purchase_options.setter
+    def purchase_options(self, purchase_options):
+        """
+        Sets the purchase_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+
+        :param purchase_options: The purchase_options of this PtsV2PaymentsPost201ResponseProcessingInformation.
+        :type: PtsV2PaymentsPost201ResponseProcessingInformationPurchaseOptions
+        """
+
+        self._purchase_options = purchase_options
 
     def to_dict(self):
         """

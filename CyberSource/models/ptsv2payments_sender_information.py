@@ -36,7 +36,11 @@ class Ptsv2paymentsSenderInformation(object):
         'address1': 'str',
         'locality': 'str',
         'administrative_area': 'str',
-        'country_code': 'str'
+        'country_code': 'str',
+        'alias_name': 'str',
+        'reference_number': 'str',
+        'account': 'Ptsv2paymentsSenderInformationAccount',
+        'postal_code': 'str'
     }
 
     attribute_map = {
@@ -46,10 +50,14 @@ class Ptsv2paymentsSenderInformation(object):
         'address1': 'address1',
         'locality': 'locality',
         'administrative_area': 'administrativeArea',
-        'country_code': 'countryCode'
+        'country_code': 'countryCode',
+        'alias_name': 'aliasName',
+        'reference_number': 'referenceNumber',
+        'account': 'account',
+        'postal_code': 'postalCode'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country_code=None, alias_name=None, reference_number=None, account=None, postal_code=None):
         """
         Ptsv2paymentsSenderInformation - a model defined in Swagger
         """
@@ -61,6 +69,10 @@ class Ptsv2paymentsSenderInformation(object):
         self._locality = None
         self._administrative_area = None
         self._country_code = None
+        self._alias_name = None
+        self._reference_number = None
+        self._account = None
+        self._postal_code = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -76,6 +88,14 @@ class Ptsv2paymentsSenderInformation(object):
           self.administrative_area = administrative_area
         if country_code is not None:
           self.country_code = country_code
+        if alias_name is not None:
+          self.alias_name = alias_name
+        if reference_number is not None:
+          self.reference_number = reference_number
+        if account is not None:
+          self.account = account
+        if postal_code is not None:
+          self.postal_code = postal_code
 
     @property
     def first_name(self):
@@ -237,6 +257,96 @@ class Ptsv2paymentsSenderInformation(object):
         """
 
         self._country_code = country_code
+
+    @property
+    def alias_name(self):
+        """
+        Gets the alias_name of this Ptsv2paymentsSenderInformation.
+        Sender's alias name.
+
+        :return: The alias_name of this Ptsv2paymentsSenderInformation.
+        :rtype: str
+        """
+        return self._alias_name
+
+    @alias_name.setter
+    def alias_name(self, alias_name):
+        """
+        Sets the alias_name of this Ptsv2paymentsSenderInformation.
+        Sender's alias name.
+
+        :param alias_name: The alias_name of this Ptsv2paymentsSenderInformation.
+        :type: str
+        """
+
+        self._alias_name = alias_name
+
+    @property
+    def reference_number(self):
+        """
+        Gets the reference_number of this Ptsv2paymentsSenderInformation.
+        This field is applicable for AFT transactions.   Contains a transaction reference number provided by the Merchant. Only alpha numeric values are supported. 
+
+        :return: The reference_number of this Ptsv2paymentsSenderInformation.
+        :rtype: str
+        """
+        return self._reference_number
+
+    @reference_number.setter
+    def reference_number(self, reference_number):
+        """
+        Sets the reference_number of this Ptsv2paymentsSenderInformation.
+        This field is applicable for AFT transactions.   Contains a transaction reference number provided by the Merchant. Only alpha numeric values are supported. 
+
+        :param reference_number: The reference_number of this Ptsv2paymentsSenderInformation.
+        :type: str
+        """
+
+        self._reference_number = reference_number
+
+    @property
+    def account(self):
+        """
+        Gets the account of this Ptsv2paymentsSenderInformation.
+
+        :return: The account of this Ptsv2paymentsSenderInformation.
+        :rtype: Ptsv2paymentsSenderInformationAccount
+        """
+        return self._account
+
+    @account.setter
+    def account(self, account):
+        """
+        Sets the account of this Ptsv2paymentsSenderInformation.
+
+        :param account: The account of this Ptsv2paymentsSenderInformation.
+        :type: Ptsv2paymentsSenderInformationAccount
+        """
+
+        self._account = account
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this Ptsv2paymentsSenderInformation.
+        Postal code of sender. 
+
+        :return: The postal_code of this Ptsv2paymentsSenderInformation.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this Ptsv2paymentsSenderInformation.
+        Postal code of sender. 
+
+        :param postal_code: The postal_code of this Ptsv2paymentsSenderInformation.
+        :type: str
+        """
+
+        self._postal_code = postal_code
 
     def to_dict(self):
         """

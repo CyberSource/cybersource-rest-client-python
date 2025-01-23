@@ -47,7 +47,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         'pinless_debit': 'str',
         'signature_debit': 'str',
         'prepaid': 'str',
-        'regulated': 'str'
+        'regulated': 'str',
+        'account_holder_type': 'str'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         'pinless_debit': 'pinlessDebit',
         'signature_debit': 'signatureDebit',
         'prepaid': 'prepaid',
-        'regulated': 'regulated'
+        'regulated': 'regulated',
+        'account_holder_type': 'accountHolderType'
     }
 
-    def __init__(self, account_type=None, account_status=None, balances=None, balance_amount=None, balance_amount_type=None, currency=None, balance_sign=None, affluence_indicator=None, category=None, commercial=None, group=None, health_care=None, payroll=None, level3_eligible=None, pinless_debit=None, signature_debit=None, prepaid=None, regulated=None):
+    def __init__(self, account_type=None, account_status=None, balances=None, balance_amount=None, balance_amount_type=None, currency=None, balance_sign=None, affluence_indicator=None, category=None, commercial=None, group=None, health_care=None, payroll=None, level3_eligible=None, pinless_debit=None, signature_debit=None, prepaid=None, regulated=None, account_holder_type=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         self._signature_debit = None
         self._prepaid = None
         self._regulated = None
+        self._account_holder_type = None
 
         if account_type is not None:
           self.account_type = account_type
@@ -131,6 +134,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
           self.prepaid = prepaid
         if regulated is not None:
           self.regulated = regulated
+        if account_holder_type is not None:
+          self.account_holder_type = account_holder_type
 
     @property
     def account_type(self):
@@ -545,6 +550,29 @@ class PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures(object):
         """
 
         self._regulated = regulated
+
+    @property
+    def account_holder_type(self):
+        """
+        Gets the account_holder_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        This is the account owner information, valid values are: - `01` : primary account holder - `02` : secondary account holder This is returned in the response of an account verification transaction by the Issuer.  
+
+        :return: The account_holder_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        :rtype: str
+        """
+        return self._account_holder_type
+
+    @account_holder_type.setter
+    def account_holder_type(self, account_holder_type):
+        """
+        Sets the account_holder_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        This is the account owner information, valid values are: - `01` : primary account holder - `02` : secondary account holder This is returned in the response of an account verification transaction by the Issuer.  
+
+        :param account_holder_type: The account_holder_type of this PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures.
+        :type: str
+        """
+
+        self._account_holder_type = account_holder_type
 
     def to_dict(self):
         """

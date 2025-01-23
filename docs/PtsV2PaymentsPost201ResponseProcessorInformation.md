@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **expiration_time_utc** | **str** | The date and time when the authorized payment expires, in Internet date and time format.  | [optional] 
 **order_id** | **str** | The id of the order  | [optional] 
 **order_status** | **str** | The order status.  Possible values: - &#x60;CREATED&#x60; - &#x60;VOIDED&#x60; - &#x60;COMPLETED&#x60; - &#x60;PAYER_ACTION_REQUIRED&#x60;  | [optional] 
+**merchant_risk_prediction** | **str** | Mastercard is introducing the Merchant Risk Predict Service in the middle East/Africa Region. A newly launched service comprised of seven independent artificial intelligence (AI)-powered scores intended to augment existing merchant risk management practices.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

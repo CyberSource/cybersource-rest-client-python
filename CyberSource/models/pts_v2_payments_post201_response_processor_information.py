@@ -73,7 +73,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'update_time_utc': 'str',
         'expiration_time_utc': 'str',
         'order_id': 'str',
-        'order_status': 'str'
+        'order_status': 'str',
+        'merchant_risk_prediction': 'str'
     }
 
     attribute_map = {
@@ -120,10 +121,11 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         'update_time_utc': 'updateTimeUtc',
         'expiration_time_utc': 'expirationTimeUtc',
         'order_id': 'orderId',
-        'order_status': 'orderStatus'
+        'order_status': 'orderStatus',
+        'merchant_risk_prediction': 'merchantRiskPrediction'
     }
 
-    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None):
+    def __init__(self, auth_indicator=None, approval_code=None, card_reference_data=None, transaction_id=None, network_transaction_id=None, response_code=None, response_code_source=None, response_details=None, response_category_code=None, forwarded_acquirer_code=None, settlement_date=None, sequence_number=None, avs=None, card_verification=None, merchant_advice=None, electronic_verification_results=None, ach_verification=None, customer=None, consumer_authentication_response=None, system_trace_audit_number=None, payment_account_reference_number=None, transaction_integrity_code=None, amex_verbal_auth_reference_number=None, master_card_service_code=None, master_card_service_reply_code=None, master_card_authentication_type=None, name=None, routing=None, merchant_number=None, retrieval_reference_number=None, payment_url=None, complete_url=None, signature=None, public_key=None, seller_protection=None, transaction_expiry_date=None, custom_url=None, scheme_assigned_id=None, device_url=None, disbursement_mode=None, update_time_utc=None, expiration_time_utc=None, order_id=None, order_status=None, merchant_risk_prediction=None):
         """
         PtsV2PaymentsPost201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -172,6 +174,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         self._expiration_time_utc = None
         self._order_id = None
         self._order_status = None
+        self._merchant_risk_prediction = None
 
         if auth_indicator is not None:
           self.auth_indicator = auth_indicator
@@ -261,6 +264,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
           self.order_id = order_id
         if order_status is not None:
           self.order_status = order_status
+        if merchant_risk_prediction is not None:
+          self.merchant_risk_prediction = merchant_risk_prediction
 
     @property
     def auth_indicator(self):
@@ -1251,6 +1256,29 @@ class PtsV2PaymentsPost201ResponseProcessorInformation(object):
         """
 
         self._order_status = order_status
+
+    @property
+    def merchant_risk_prediction(self):
+        """
+        Gets the merchant_risk_prediction of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Mastercard is introducing the Merchant Risk Predict Service in the middle East/Africa Region. A newly launched service comprised of seven independent artificial intelligence (AI)-powered scores intended to augment existing merchant risk management practices. 
+
+        :return: The merchant_risk_prediction of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._merchant_risk_prediction
+
+    @merchant_risk_prediction.setter
+    def merchant_risk_prediction(self, merchant_risk_prediction):
+        """
+        Sets the merchant_risk_prediction of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        Mastercard is introducing the Merchant Risk Predict Service in the middle East/Africa Region. A newly launched service comprised of seven independent artificial intelligence (AI)-powered scores intended to augment existing merchant risk management practices. 
+
+        :param merchant_risk_prediction: The merchant_risk_prediction of this PtsV2PaymentsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._merchant_risk_prediction = merchant_risk_prediction
 
     def to_dict(self):
         """

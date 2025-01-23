@@ -33,17 +33,17 @@ class GenerateCaptureContextRequest(object):
         'client_version': 'str',
         'target_origins': 'list[str]',
         'allowed_card_networks': 'list[str]',
-        'checkout_api_initialization': 'Microformv2sessionsCheckoutApiInitialization'
+        'allowed_payment_types': 'list[str]'
     }
 
     attribute_map = {
         'client_version': 'clientVersion',
         'target_origins': 'targetOrigins',
         'allowed_card_networks': 'allowedCardNetworks',
-        'checkout_api_initialization': 'checkoutApiInitialization'
+        'allowed_payment_types': 'allowedPaymentTypes'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, checkout_api_initialization=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None):
         """
         GenerateCaptureContextRequest - a model defined in Swagger
         """
@@ -51,7 +51,7 @@ class GenerateCaptureContextRequest(object):
         self._client_version = None
         self._target_origins = None
         self._allowed_card_networks = None
-        self._checkout_api_initialization = None
+        self._allowed_payment_types = None
 
         if client_version is not None:
           self.client_version = client_version
@@ -59,8 +59,8 @@ class GenerateCaptureContextRequest(object):
           self.target_origins = target_origins
         if allowed_card_networks is not None:
           self.allowed_card_networks = allowed_card_networks
-        if checkout_api_initialization is not None:
-          self.checkout_api_initialization = checkout_api_initialization
+        if allowed_payment_types is not None:
+          self.allowed_payment_types = allowed_payment_types
 
     @property
     def client_version(self):
@@ -112,7 +112,7 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self):
         """
         Gets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Accept Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (Accept Check) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Accept Card) and Microform (Accept Check) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
 
         :return: The allowed_card_networks of this GenerateCaptureContextRequest.
         :rtype: list[str]
@@ -123,7 +123,7 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self, allowed_card_networks):
         """
         Sets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Accept Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (Accept Check) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Accept Card) and Microform (Accept Check) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
 
         :param allowed_card_networks: The allowed_card_networks of this GenerateCaptureContextRequest.
         :type: list[str]
@@ -132,25 +132,27 @@ class GenerateCaptureContextRequest(object):
         self._allowed_card_networks = allowed_card_networks
 
     @property
-    def checkout_api_initialization(self):
+    def allowed_payment_types(self):
         """
-        Gets the checkout_api_initialization of this GenerateCaptureContextRequest.
+        Gets the allowed_payment_types of this GenerateCaptureContextRequest.
+        The payment types that are allowed for the merchant.    Possible values when launching Microform: - CARD - CHECK <br><br> 
 
-        :return: The checkout_api_initialization of this GenerateCaptureContextRequest.
-        :rtype: Microformv2sessionsCheckoutApiInitialization
+        :return: The allowed_payment_types of this GenerateCaptureContextRequest.
+        :rtype: list[str]
         """
-        return self._checkout_api_initialization
+        return self._allowed_payment_types
 
-    @checkout_api_initialization.setter
-    def checkout_api_initialization(self, checkout_api_initialization):
+    @allowed_payment_types.setter
+    def allowed_payment_types(self, allowed_payment_types):
         """
-        Sets the checkout_api_initialization of this GenerateCaptureContextRequest.
+        Sets the allowed_payment_types of this GenerateCaptureContextRequest.
+        The payment types that are allowed for the merchant.    Possible values when launching Microform: - CARD - CHECK <br><br> 
 
-        :param checkout_api_initialization: The checkout_api_initialization of this GenerateCaptureContextRequest.
-        :type: Microformv2sessionsCheckoutApiInitialization
+        :param allowed_payment_types: The allowed_payment_types of this GenerateCaptureContextRequest.
+        :type: list[str]
         """
 
-        self._checkout_api_initialization = checkout_api_initialization
+        self._allowed_payment_types = allowed_payment_types
 
     def to_dict(self):
         """

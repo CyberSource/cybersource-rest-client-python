@@ -177,6 +177,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostInstrumentIdentifierRequest
                  If the method is called asynchronously,
                  returns the request thread.
@@ -208,12 +209,13 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostInstrumentIdentifierRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['instrument_identifier_id', 'profile_id']
+        all_params = ['instrument_identifier_id', 'profile_id', 'retrieve_bin_details']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -243,6 +245,8 @@ class InstrumentIdentifierApi(object):
             instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:
@@ -294,6 +298,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: PaymentInstrumentList1
@@ -327,6 +332,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param int offset: Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0.
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100.
         :return: PaymentInstrumentList1
@@ -334,7 +340,7 @@ class InstrumentIdentifierApi(object):
                  returns the request thread.
         """
 
-        all_params = ['instrument_identifier_id', 'profile_id', 'offset', 'limit']
+        all_params = ['instrument_identifier_id', 'profile_id', 'retrieve_bin_details', 'offset', 'limit']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -364,6 +370,8 @@ class InstrumentIdentifierApi(object):
             instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
         if 'offset' in params:
             query_params.append(('offset', params['offset']))
         if 'limit' in params:
@@ -420,6 +428,7 @@ class InstrumentIdentifierApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction Id to update. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: PatchInstrumentIdentifierRequest
                  If the method is called asynchronously,
@@ -453,13 +462,14 @@ class InstrumentIdentifierApi(object):
         :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
         :param PatchInstrumentIdentifierRequest patch_instrument_identifier_request: Specify the previous transaction Id to update. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: PatchInstrumentIdentifierRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['instrument_identifier_id', 'patch_instrument_identifier_request', 'profile_id', 'if_match']
+        all_params = ['instrument_identifier_id', 'patch_instrument_identifier_request', 'profile_id', 'retrieve_bin_details', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -494,6 +504,8 @@ class InstrumentIdentifierApi(object):
             instrumentIdentifierId=instrument_identifier_id
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:
@@ -550,6 +562,7 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostInstrumentIdentifierRequest
                  If the method is called asynchronously,
                  returns the request thread.
@@ -581,12 +594,13 @@ class InstrumentIdentifierApi(object):
             for asynchronous request. (optional)
         :param PostInstrumentIdentifierRequest post_instrument_identifier_request: Specify either a Card, Bank Account or Enrollable Card (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostInstrumentIdentifierRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['post_instrument_identifier_request', 'profile_id']
+        all_params = ['post_instrument_identifier_request', 'profile_id', 'retrieve_bin_details']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -613,6 +627,8 @@ class InstrumentIdentifierApi(object):
         path_params = {}
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:

@@ -38,7 +38,12 @@ class Ptsv2payoutsRecipientInformation(object):
         'administrative_area': 'str',
         'country': 'str',
         'postal_code': 'str',
-        'phone_number': 'str'
+        'phone_number': 'str',
+        'alias_name': 'str',
+        'nationality': 'str',
+        'country_of_birth': 'str',
+        'occupation': 'str',
+        'email': 'str'
     }
 
     attribute_map = {
@@ -50,10 +55,15 @@ class Ptsv2payoutsRecipientInformation(object):
         'administrative_area': 'administrativeArea',
         'country': 'country',
         'postal_code': 'postalCode',
-        'phone_number': 'phoneNumber'
+        'phone_number': 'phoneNumber',
+        'alias_name': 'aliasName',
+        'nationality': 'nationality',
+        'country_of_birth': 'countryOfBirth',
+        'occupation': 'occupation',
+        'email': 'email'
     }
 
-    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, address1=None, locality=None, administrative_area=None, country=None, postal_code=None, phone_number=None, alias_name=None, nationality=None, country_of_birth=None, occupation=None, email=None):
         """
         Ptsv2payoutsRecipientInformation - a model defined in Swagger
         """
@@ -67,6 +77,11 @@ class Ptsv2payoutsRecipientInformation(object):
         self._country = None
         self._postal_code = None
         self._phone_number = None
+        self._alias_name = None
+        self._nationality = None
+        self._country_of_birth = None
+        self._occupation = None
+        self._email = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -86,6 +101,16 @@ class Ptsv2payoutsRecipientInformation(object):
           self.postal_code = postal_code
         if phone_number is not None:
           self.phone_number = phone_number
+        if alias_name is not None:
+          self.alias_name = alias_name
+        if nationality is not None:
+          self.nationality = nationality
+        if country_of_birth is not None:
+          self.country_of_birth = country_of_birth
+        if occupation is not None:
+          self.occupation = occupation
+        if email is not None:
+          self.email = email
 
     @property
     def first_name(self):
@@ -293,6 +318,121 @@ class Ptsv2payoutsRecipientInformation(object):
         """
 
         self._phone_number = phone_number
+
+    @property
+    def alias_name(self):
+        """
+        Gets the alias_name of this Ptsv2payoutsRecipientInformation.
+        Account owner alias name. 
+
+        :return: The alias_name of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._alias_name
+
+    @alias_name.setter
+    def alias_name(self, alias_name):
+        """
+        Sets the alias_name of this Ptsv2payoutsRecipientInformation.
+        Account owner alias name. 
+
+        :param alias_name: The alias_name of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._alias_name = alias_name
+
+    @property
+    def nationality(self):
+        """
+        Gets the nationality of this Ptsv2payoutsRecipientInformation.
+        Account Owner Nationality
+
+        :return: The nationality of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._nationality
+
+    @nationality.setter
+    def nationality(self, nationality):
+        """
+        Sets the nationality of this Ptsv2payoutsRecipientInformation.
+        Account Owner Nationality
+
+        :param nationality: The nationality of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._nationality = nationality
+
+    @property
+    def country_of_birth(self):
+        """
+        Gets the country_of_birth of this Ptsv2payoutsRecipientInformation.
+        Account Owner Country of Birth
+
+        :return: The country_of_birth of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._country_of_birth
+
+    @country_of_birth.setter
+    def country_of_birth(self, country_of_birth):
+        """
+        Sets the country_of_birth of this Ptsv2payoutsRecipientInformation.
+        Account Owner Country of Birth
+
+        :param country_of_birth: The country_of_birth of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._country_of_birth = country_of_birth
+
+    @property
+    def occupation(self):
+        """
+        Gets the occupation of this Ptsv2payoutsRecipientInformation.
+        Account Owner Occupation
+
+        :return: The occupation of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._occupation
+
+    @occupation.setter
+    def occupation(self, occupation):
+        """
+        Sets the occupation of this Ptsv2payoutsRecipientInformation.
+        Account Owner Occupation
+
+        :param occupation: The occupation of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._occupation = occupation
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2payoutsRecipientInformation.
+        Account Owner email address
+
+        :return: The email of this Ptsv2payoutsRecipientInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2payoutsRecipientInformation.
+        Account Owner email address
+
+        :param email: The email of this Ptsv2payoutsRecipientInformation.
+        :type: str
+        """
+
+        self._email = email
 
     def to_dict(self):
         """

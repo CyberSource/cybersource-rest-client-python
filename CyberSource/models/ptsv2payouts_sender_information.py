@@ -47,7 +47,8 @@ class Ptsv2payoutsSenderInformation(object):
         'vat_registration_number': 'str',
         'personal_id_type': 'str',
         'type': 'str',
-        'identification_number': 'str'
+        'identification_number': 'str',
+        'alias_name': 'str'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class Ptsv2payoutsSenderInformation(object):
         'vat_registration_number': 'vatRegistrationNumber',
         'personal_id_type': 'personalIdType',
         'type': 'type',
-        'identification_number': 'identificationNumber'
+        'identification_number': 'identificationNumber',
+        'alias_name': 'aliasName'
     }
 
-    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None, personal_id_type=None, type=None, identification_number=None):
+    def __init__(self, reference_number=None, account=None, first_name=None, middle_initial=None, middle_name=None, last_name=None, name=None, address1=None, locality=None, administrative_area=None, country_code=None, postal_code=None, phone_number=None, date_of_birth=None, vat_registration_number=None, personal_id_type=None, type=None, identification_number=None, alias_name=None):
         """
         Ptsv2payoutsSenderInformation - a model defined in Swagger
         """
@@ -94,6 +96,7 @@ class Ptsv2payoutsSenderInformation(object):
         self._personal_id_type = None
         self._type = None
         self._identification_number = None
+        self._alias_name = None
 
         if reference_number is not None:
           self.reference_number = reference_number
@@ -131,6 +134,8 @@ class Ptsv2payoutsSenderInformation(object):
           self.type = type
         if identification_number is not None:
           self.identification_number = identification_number
+        if alias_name is not None:
+          self.alias_name = alias_name
 
     @property
     def reference_number(self):
@@ -543,6 +548,29 @@ class Ptsv2payoutsSenderInformation(object):
         """
 
         self._identification_number = identification_number
+
+    @property
+    def alias_name(self):
+        """
+        Gets the alias_name of this Ptsv2payoutsSenderInformation.
+        Sender's alias name.
+
+        :return: The alias_name of this Ptsv2payoutsSenderInformation.
+        :rtype: str
+        """
+        return self._alias_name
+
+    @alias_name.setter
+    def alias_name(self, alias_name):
+        """
+        Sets the alias_name of this Ptsv2payoutsSenderInformation.
+        Sender's alias name.
+
+        :param alias_name: The alias_name of this Ptsv2payoutsSenderInformation.
+        :type: str
+        """
+
+        self._alias_name = alias_name
 
     def to_dict(self):
         """

@@ -84,9 +84,12 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'secure_corporate_payment_indicator': 'str',
         'transaction_mode': 'str',
         'white_list_status': 'str',
+        'authentication_brand': 'str',
         'effective_authentication_type': 'str',
         'signed_pares_status_reason': 'str',
-        'signed_pares': 'str'
+        'signed_pares': 'str',
+        'acs_reference_number': 'str',
+        'ds_reference_number': 'str'
     }
 
     attribute_map = {
@@ -144,12 +147,15 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         'secure_corporate_payment_indicator': 'secureCorporatePaymentIndicator',
         'transaction_mode': 'transactionMode',
         'white_list_status': 'whiteListStatus',
+        'authentication_brand': 'authenticationBrand',
         'effective_authentication_type': 'effectiveAuthenticationType',
         'signed_pares_status_reason': 'signedParesStatusReason',
-        'signed_pares': 'signedPares'
+        'signed_pares': 'signedPares',
+        'acs_reference_number': 'acsReferenceNumber',
+        'ds_reference_number': 'dsReferenceNumber'
     }
 
-    def __init__(self, cavv=None, transaction_flow_indicator=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None):
+    def __init__(self, cavv=None, transaction_flow_indicator=None, cavv_algorithm=None, eci_raw=None, pares_status=None, veres_enrolled=None, xid=None, ucaf_collection_indicator=None, ucaf_authentication_data=None, strong_authentication=None, directory_server_transaction_id=None, pa_specification_version=None, authentication_type=None, response_access_token=None, acs_transaction_id=None, acs_window_size=None, alternate_authentication_data=None, alternate_authentication_date=None, alternate_authentication_method=None, authentication_date=None, authentication_transaction_id=None, challenge_cancel_code=None, challenge_code=None, challenge_status=None, customer_card_alias=None, decoupled_authentication_indicator=None, decoupled_authentication_max_time=None, default_card=None, device_channel=None, installment_total_count=None, merchant_fraud_rate=None, marketing_opt_in=None, marketing_source=None, mcc=None, merchant_score=None, message_category=None, network_score=None, npa_code=None, override_payment_method=None, override_country_code=None, prior_authentication_data=None, prior_authentication_method=None, prior_authentication_reference_id=None, prior_authentication_time=None, product_code=None, return_url=None, requestor_id=None, requestor_initiated_authentication_indicator=None, requestor_name=None, reference_id=None, sdk_max_timeout=None, secure_corporate_payment_indicator=None, transaction_mode=None, white_list_status=None, authentication_brand=None, effective_authentication_type=None, signed_pares_status_reason=None, signed_pares=None, acs_reference_number=None, ds_reference_number=None):
         """
         Ptsv2paymentsConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -208,9 +214,12 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._secure_corporate_payment_indicator = None
         self._transaction_mode = None
         self._white_list_status = None
+        self._authentication_brand = None
         self._effective_authentication_type = None
         self._signed_pares_status_reason = None
         self._signed_pares = None
+        self._acs_reference_number = None
+        self._ds_reference_number = None
 
         if cavv is not None:
           self.cavv = cavv
@@ -320,12 +329,18 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
           self.transaction_mode = transaction_mode
         if white_list_status is not None:
           self.white_list_status = white_list_status
+        if authentication_brand is not None:
+          self.authentication_brand = authentication_brand
         if effective_authentication_type is not None:
           self.effective_authentication_type = effective_authentication_type
         if signed_pares_status_reason is not None:
           self.signed_pares_status_reason = signed_pares_status_reason
         if signed_pares is not None:
           self.signed_pares = signed_pares
+        if acs_reference_number is not None:
+          self.acs_reference_number = acs_reference_number
+        if ds_reference_number is not None:
+          self.ds_reference_number = ds_reference_number
 
     @property
     def cavv(self):
@@ -1568,6 +1583,29 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         self._white_list_status = white_list_status
 
     @property
+    def authentication_brand(self):
+        """
+        Gets the authentication_brand of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Indicates which directory server was used while authentication process, this data is useful in case of scenarios  when domestic scheme directory server is not present and authentication fallbacks to global scheme directory server. Possible values: - VISA - Returned for Mada VISA Co-badged cards, when authentication falls back to VISA Directory Server - MASTERCARD - Returned for Mada MasterCard Co-badged cards, when authentication falls back to MasterCard Directory Server 
+
+        :return: The authentication_brand of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._authentication_brand
+
+    @authentication_brand.setter
+    def authentication_brand(self, authentication_brand):
+        """
+        Sets the authentication_brand of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Indicates which directory server was used while authentication process, this data is useful in case of scenarios  when domestic scheme directory server is not present and authentication fallbacks to global scheme directory server. Possible values: - VISA - Returned for Mada VISA Co-badged cards, when authentication falls back to VISA Directory Server - MASTERCARD - Returned for Mada MasterCard Co-badged cards, when authentication falls back to MasterCard Directory Server 
+
+        :param authentication_brand: The authentication_brand of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._authentication_brand = authentication_brand
+
+    @property
     def effective_authentication_type(self):
         """
         Gets the effective_authentication_type of this Ptsv2paymentsConsumerAuthenticationInformation.
@@ -1635,6 +1673,52 @@ class Ptsv2paymentsConsumerAuthenticationInformation(object):
         """
 
         self._signed_pares = signed_pares
+
+    @property
+    def acs_reference_number(self):
+        """
+        Gets the acs_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :return: The acs_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._acs_reference_number
+
+    @acs_reference_number.setter
+    def acs_reference_number(self, acs_reference_number):
+        """
+        Sets the acs_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
+
+        :param acs_reference_number: The acs_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._acs_reference_number = acs_reference_number
+
+    @property
+    def ds_reference_number(self):
+        """
+        Gets the ds_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        EMVCo-assigned unique identifier. This field is required in Cardholder Initiated 3DS fully authenticated mada transactions. When you request the payer authentication and authorization services separately, get the value for this field from the payerAuthEnrollReply_dsReferenceNumber or payerAuthValidateReply_dsReferenceNumber response field. 
+
+        :return: The ds_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._ds_reference_number
+
+    @ds_reference_number.setter
+    def ds_reference_number(self, ds_reference_number):
+        """
+        Sets the ds_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        EMVCo-assigned unique identifier. This field is required in Cardholder Initiated 3DS fully authenticated mada transactions. When you request the payer authentication and authorization services separately, get the value for this field from the payerAuthEnrollReply_dsReferenceNumber or payerAuthValidateReply_dsReferenceNumber response field. 
+
+        :param ds_reference_number: The ds_reference_number of this Ptsv2paymentsConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._ds_reference_number = ds_reference_number
 
     def to_dict(self):
         """

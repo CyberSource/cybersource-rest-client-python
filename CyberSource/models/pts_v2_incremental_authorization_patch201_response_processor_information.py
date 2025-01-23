@@ -37,6 +37,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'system_trace_audit_number': 'str',
         'response_details': 'str',
         'merchant_advice': 'PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
+        'merchant_risk_prediction': 'str',
         'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection'
     }
 
@@ -48,10 +49,11 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_details': 'responseDetails',
         'merchant_advice': 'merchantAdvice',
+        'merchant_risk_prediction': 'merchantRiskPrediction',
         'seller_protection': 'sellerProtection'
     }
 
-    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, seller_protection=None):
+    def __init__(self, approval_code=None, transaction_id=None, network_transaction_id=None, response_code=None, system_trace_audit_number=None, response_details=None, merchant_advice=None, merchant_risk_prediction=None, seller_protection=None):
         """
         PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation - a model defined in Swagger
         """
@@ -63,6 +65,7 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         self._system_trace_audit_number = None
         self._response_details = None
         self._merchant_advice = None
+        self._merchant_risk_prediction = None
         self._seller_protection = None
 
         if approval_code is not None:
@@ -79,6 +82,8 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
           self.response_details = response_details
         if merchant_advice is not None:
           self.merchant_advice = merchant_advice
+        if merchant_risk_prediction is not None:
+          self.merchant_risk_prediction = merchant_risk_prediction
         if seller_protection is not None:
           self.seller_protection = seller_protection
 
@@ -240,6 +245,29 @@ class PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation(object):
         """
 
         self._merchant_advice = merchant_advice
+
+    @property
+    def merchant_risk_prediction(self):
+        """
+        Gets the merchant_risk_prediction of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        Mastercard is introducing the Merchant Risk Predict Service in the middle East/Africa Region. A newly launched service comprised of seven independent artificial intelligence (AI)-powered scores intended to augment existing merchant risk management practices. 
+
+        :return: The merchant_risk_prediction of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._merchant_risk_prediction
+
+    @merchant_risk_prediction.setter
+    def merchant_risk_prediction(self, merchant_risk_prediction):
+        """
+        Sets the merchant_risk_prediction of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        Mastercard is introducing the Merchant Risk Predict Service in the middle East/Africa Region. A newly launched service comprised of seven independent artificial intelligence (AI)-powered scores intended to augment existing merchant risk management practices. 
+
+        :param merchant_risk_prediction: The merchant_risk_prediction of this PtsV2IncrementalAuthorizationPatch201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._merchant_risk_prediction = merchant_risk_prediction
 
     @property
     def seller_protection(self):

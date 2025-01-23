@@ -177,6 +177,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostPaymentInstrumentRequest
                  If the method is called asynchronously,
                  returns the request thread.
@@ -208,12 +209,13 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostPaymentInstrumentRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['payment_instrument_id', 'profile_id']
+        all_params = ['payment_instrument_id', 'profile_id', 'retrieve_bin_details']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -243,6 +245,8 @@ class PaymentInstrumentApi(object):
             paymentInstrumentId=payment_instrument_id
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:
@@ -295,6 +299,7 @@ class PaymentInstrumentApi(object):
         :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param PatchPaymentInstrumentRequest patch_payment_instrument_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: PatchPaymentInstrumentRequest
                  If the method is called asynchronously,
@@ -328,13 +333,14 @@ class PaymentInstrumentApi(object):
         :param str payment_instrument_id: The Id of a payment instrument. (required)
         :param PatchPaymentInstrumentRequest patch_payment_instrument_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :param str if_match: Contains an ETag value from a GET request to make the request conditional.
         :return: PatchPaymentInstrumentRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['payment_instrument_id', 'patch_payment_instrument_request', 'profile_id', 'if_match']
+        all_params = ['payment_instrument_id', 'patch_payment_instrument_request', 'profile_id', 'retrieve_bin_details', 'if_match']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -369,6 +375,8 @@ class PaymentInstrumentApi(object):
             paymentInstrumentId=payment_instrument_id
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:
@@ -425,6 +433,7 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param PostPaymentInstrumentRequest post_payment_instrument_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostPaymentInstrumentRequest
                  If the method is called asynchronously,
                  returns the request thread.
@@ -456,12 +465,13 @@ class PaymentInstrumentApi(object):
             for asynchronous request. (optional)
         :param PostPaymentInstrumentRequest post_payment_instrument_request: (required)
         :param str profile_id: The Id of a profile containing user specific TMS configuration.
+        :param bool retrieve_bin_details: Retrieve the Bin Details of PAN or network token
         :return: PostPaymentInstrumentRequest
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['post_payment_instrument_request', 'profile_id']
+        all_params = ['post_payment_instrument_request', 'profile_id', 'retrieve_bin_details']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -488,6 +498,8 @@ class PaymentInstrumentApi(object):
         path_params = {}
 
         query_params = []
+        if 'retrieve_bin_details' in params:
+            query_params.append(('retrieveBinDetails', params['retrieve_bin_details']))
 
         header_params = {}
         if 'profile_id' in params:

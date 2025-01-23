@@ -31,26 +31,41 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
     """
     swagger_types = {
         'is_electronic_benefits_transfer': 'bool',
-        'type': 'str'
+        'type': 'str',
+        'eligibility_indicator': 'str',
+        'benefit_amount': 'str',
+        'benefit_type': 'str'
     }
 
     attribute_map = {
         'is_electronic_benefits_transfer': 'isElectronicBenefitsTransfer',
-        'type': 'type'
+        'type': 'type',
+        'eligibility_indicator': 'eligibilityIndicator',
+        'benefit_amount': 'benefitAmount',
+        'benefit_type': 'benefitType'
     }
 
-    def __init__(self, is_electronic_benefits_transfer=None, type=None):
+    def __init__(self, is_electronic_benefits_transfer=None, type=None, eligibility_indicator=None, benefit_amount=None, benefit_type=None):
         """
         Ptsv2paymentsProcessingInformationPurchaseOptions - a model defined in Swagger
         """
 
         self._is_electronic_benefits_transfer = None
         self._type = None
+        self._eligibility_indicator = None
+        self._benefit_amount = None
+        self._benefit_type = None
 
         if is_electronic_benefits_transfer is not None:
           self.is_electronic_benefits_transfer = is_electronic_benefits_transfer
         if type is not None:
           self.type = type
+        if eligibility_indicator is not None:
+          self.eligibility_indicator = eligibility_indicator
+        if benefit_amount is not None:
+          self.benefit_amount = benefit_amount
+        if benefit_type is not None:
+          self.benefit_type = benefit_type
 
     @property
     def is_electronic_benefits_transfer(self):
@@ -97,6 +112,75 @@ class Ptsv2paymentsProcessingInformationPurchaseOptions(object):
         """
 
         self._type = type
+
+    @property
+    def eligibility_indicator(self):
+        """
+        Gets the eligibility_indicator of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        This field contains installment data defined by MasterCard. Possible values:   - Y = eligible   - N = not eligile 
+
+        :return: The eligibility_indicator of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :rtype: str
+        """
+        return self._eligibility_indicator
+
+    @eligibility_indicator.setter
+    def eligibility_indicator(self, eligibility_indicator):
+        """
+        Sets the eligibility_indicator of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        This field contains installment data defined by MasterCard. Possible values:   - Y = eligible   - N = not eligile 
+
+        :param eligibility_indicator: The eligibility_indicator of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :type: str
+        """
+
+        self._eligibility_indicator = eligibility_indicator
+
+    @property
+    def benefit_amount(self):
+        """
+        Gets the benefit_amount of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        Workplace benefit amount.
+
+        :return: The benefit_amount of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :rtype: str
+        """
+        return self._benefit_amount
+
+    @benefit_amount.setter
+    def benefit_amount(self, benefit_amount):
+        """
+        Sets the benefit_amount of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        Workplace benefit amount.
+
+        :param benefit_amount: The benefit_amount of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :type: str
+        """
+
+        self._benefit_amount = benefit_amount
+
+    @property
+    def benefit_type(self):
+        """
+        Gets the benefit_type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        Workplace benefit type. Possible values: - 70 = employee benefit - 4T = transportation / transit - 52 = general benefit - 53 = meal voucher - 54 = fuel - 55 = ecological / sustainability - 58 = philanthropy / patronage / consumption - 59 = gift - 5S = sport / culture - 5T = book / education 
+
+        :return: The benefit_type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :rtype: str
+        """
+        return self._benefit_type
+
+    @benefit_type.setter
+    def benefit_type(self, benefit_type):
+        """
+        Sets the benefit_type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        Workplace benefit type. Possible values: - 70 = employee benefit - 4T = transportation / transit - 52 = general benefit - 53 = meal voucher - 54 = fuel - 55 = ecological / sustainability - 58 = philanthropy / patronage / consumption - 59 = gift - 5S = sport / culture - 5T = book / education 
+
+        :param benefit_type: The benefit_type of this Ptsv2paymentsProcessingInformationPurchaseOptions.
+        :type: str
+        """
+
+        self._benefit_type = benefit_type
 
     def to_dict(self):
         """

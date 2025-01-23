@@ -30,22 +30,27 @@ class Tmsv2TokenizedCardMetadata(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'card_art': 'Tmsv2TokenizedCardMetadataCardArt'
+        'card_art': 'TmsCardArt',
+        'issuer': 'Tmsv2TokenizedCardMetadataIssuer'
     }
 
     attribute_map = {
-        'card_art': 'cardArt'
+        'card_art': 'cardArt',
+        'issuer': 'issuer'
     }
 
-    def __init__(self, card_art=None):
+    def __init__(self, card_art=None, issuer=None):
         """
         Tmsv2TokenizedCardMetadata - a model defined in Swagger
         """
 
         self._card_art = None
+        self._issuer = None
 
         if card_art is not None:
           self.card_art = card_art
+        if issuer is not None:
+          self.issuer = issuer
 
     @property
     def card_art(self):
@@ -53,7 +58,7 @@ class Tmsv2TokenizedCardMetadata(object):
         Gets the card_art of this Tmsv2TokenizedCardMetadata.
 
         :return: The card_art of this Tmsv2TokenizedCardMetadata.
-        :rtype: Tmsv2TokenizedCardMetadataCardArt
+        :rtype: TmsCardArt
         """
         return self._card_art
 
@@ -63,10 +68,31 @@ class Tmsv2TokenizedCardMetadata(object):
         Sets the card_art of this Tmsv2TokenizedCardMetadata.
 
         :param card_art: The card_art of this Tmsv2TokenizedCardMetadata.
-        :type: Tmsv2TokenizedCardMetadataCardArt
+        :type: TmsCardArt
         """
 
         self._card_art = card_art
+
+    @property
+    def issuer(self):
+        """
+        Gets the issuer of this Tmsv2TokenizedCardMetadata.
+
+        :return: The issuer of this Tmsv2TokenizedCardMetadata.
+        :rtype: Tmsv2TokenizedCardMetadataIssuer
+        """
+        return self._issuer
+
+    @issuer.setter
+    def issuer(self, issuer):
+        """
+        Sets the issuer of this Tmsv2TokenizedCardMetadata.
+
+        :param issuer: The issuer of this Tmsv2TokenizedCardMetadata.
+        :type: Tmsv2TokenizedCardMetadataIssuer
+        """
+
+        self._issuer = issuer
 
     def to_dict(self):
         """
