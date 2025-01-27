@@ -1,4 +1,3 @@
-
 import json
 import time
 # from jose import jwe
@@ -29,8 +28,7 @@ from jwcrypto import jwk, jwe
 from cryptography import x509
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
-
-
+from jwcrypto.common import json_encode
 
 class MLEUtility:
     class MLEException(Exception):
@@ -55,23 +53,101 @@ class MLEUtility:
 
 
 
-    @staticmethod
-    def encrypt_request_payload(merchant_config, requestBody):
-        # Load the x509 certificate
-        cert = MLEUtility.get_certificate(merchant_config)
+    # @staticmethod
+    # def encrypt_request_payload_jwcrypto_without_headers(merchant_config, requestBody):
+    # # Load the X.509 certificate
+    #     cert = MLEUtility.get_certificate(merchant_config)
+    
+    # # Extract the public key from the certificate
+    #     public_key = cert.public_key()
+    
+    # # Convert the public key to a JWK (JSON Web Key)
+    #     jwk_key = jwk.JWK.from_pyca(public_key)
         
-        # Extract the public key from the certificate
-        public_key = cert.public_key()
+    #     payload = json_encode(requestBody).encode('utf-8')
         
-        # Extract the serial number from the certificate
-        serial_number = MLEUtility.extract_serial_number(cert)
-        
-        #encrypt using jose or jwcrypto
-        
-        return requestBody
-        
-        # return encrypted_json
+    #     print("payload", payload)
 
+    
+    # # Create a JWE object
+    #     jwetoken = jwe.JWE(plaintext=payload, 
+    #                        protected={"alg": "RSA-OAEP", "enc": "A256GCM"})
+    
+    
+    # # Encrypt the payload using the public key
+    #     jwetoken.add_recipient(jwk_key)
+    
+    # # Serialize the JWE token to compact format
+    #     encrypted_request_body = jwetoken.serialize(compact=True)
+        
+    #     print("encrypted_request_body", encrypted_request_body)
+
+    
+    # # Return the encrypted request body in JSON format
+    #     return json.dumps({"encryptedRequest": encrypted_request_body})
+    
+    
+
+    # @staticmethod
+    # def encrypt_request_payload_jwcrypto_with_headers(merchant_config, requestBody):
+    #     if requestBody is not None:
+    #         token = MLEUtility.generate_jwe_token(requestBody, merchant_config)
+    #         print("token", token)
+
+    #         return token
+    #     else:
+    #         return requestBody
+
+    # @staticmethod
+    # def generate_jwe_token(requestBody, merchant_config):
+    #     print("requestBody", requestBody)
+    
+
+        
+    #     # Get the MLE cert and verify the expiry of cert
+    #     cert = MLEUtility.get_certificate(merchant_config)
+    #     print("A")
+    #     # is_cert_expired = MLEUtility.verify_is_certificate_expired(cert, merchant_config.get_mleKeyAlias(), logger)
+    #     # if is_cert_expired:
+    #     #     raise Exception(f"Certificate for MLE with alias {merchant_config.get_mleKeyAlias()} is expired in {merchant_config.key_file_name}.p12")
+
+    #     custom_headers = {
+    #         "iat": int(time.time())  # epoch time in seconds
+    #     }
+    #     print("B")
+    #     serial_number = MLEUtility.extract_serial_number(cert)
+    #     print("C")
+    #     headers = {
+    #         "alg": "RSA-OAEP-256",
+    #         "enc": "A256GCM",
+    #         "cty": "JWT",
+    #         "kid": serial_number,
+    #         **custom_headers
+    #     }
+    #     print("D")
+
+
+    #     # if isinstance(requestBody, dict):
+    #     #     requestBody = json.dumps(requestBody)
+            
+    #     print("requestBody11", requestBody)
+
+    #     payload = requestBody.encode()
+    #     print("E")
+    #     public_key = cert.public_key()
+    #     print("F")
+    #     jwk_key = jwk.JWK.from_pyca(public_key)
+    #     print("G")
+
+    #     jwetoken = jwe.JWE(plaintext=payload, protected=headers)
+    #     print("H")
+    #     jwetoken.add_recipient(jwk_key)
+    #     print("I")
+        
+    #     encrypted_request_body = jwetoken.serialize(compact=True)
+
+
+    #     return json.dumps({"encryptedRequest": encrypted_request_body})
 
 
     @staticmethod
