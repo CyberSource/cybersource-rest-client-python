@@ -67,7 +67,7 @@ class MLEUtility:
             jwe_token.add_recipient(jwk_key)
 
             encrypted_request_body = jwe_token.serialize(compact=True)
-            MLEUtility.logger.info(f"Request payload encrypted successfully. {encrypted_request_body}")
+            MLEUtility.logger.debug(f"Request payload encrypted successfully. {encrypted_request_body}")
             return MLEUtility.create_json_object(encrypted_request_body)
         except Exception as e:
             MLEUtility.logger.error(f"Error encrypting request payload: {str(e)}")
@@ -78,11 +78,11 @@ class MLEUtility:
         cache_obj = FileCache()
         try:
             cert_data = cache_obj.grab_file_mle(merchant_config, merchant_config.key_file_path,
-                                                merchant_config.key_file_name)
+                                                merchant_config.key_file_name, True)
             certificate = cert_data[0]
             if certificate is not None:
                 MLEUtility.validate_certificate_expiry(certificate, merchant_config.get_mleKeyAlias())
-                MLEUtility.logger.info(f"Certificate found for MLE with alias {merchant_config.get_mleKeyAlias()}")
+                MLEUtility.logger.debug(f"Certificate found for MLE with alias {merchant_config.get_mleKeyAlias()}")
                 return certificate
             else:
                 MLEUtility.logger.error(
@@ -127,7 +127,7 @@ class MLEUtility:
     def validate_certificate_expiry(certificate, key_alias):
         try:
             if certificate.not_valid_after_utc is None:
-                MLEUtility.logger.info("Certificate for MLE doesn't have an expiry date.")
+                MLEUtility.logger.debug("Certificate for MLE doesn't have an expiry date.")
             elif certificate.not_valid_after_utc < datetime.now(timezone.utc):
                 MLEUtility.logger.warning(
                     f"Certificate with MLE alias {key_alias} is expired as of {certificate.not_valid_after_utc}. Please update p12 file.")
