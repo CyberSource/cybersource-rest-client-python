@@ -94,3 +94,4 @@ class GlobalLabelParameters:
     LOG_DIRECTORY_INCORRECT_MESSAGE = "Log Directory value Incorrect.Using Default Value"
     INVALID_CYBS_PATH = "The Cybs.Json Path Provided Is Incorrect"
     DEPRECATED_RUN_ENVIRONMENT = "The value provided for this field `RunEnvironment` has been deprecated and will not be used anymore.\n\nPlease refer to the README file [ https://github.com/CyberSource/cybersource-rest-samples-node/blob/master/README.md ] for information about the new values that are accepted."
+    CERTIFICATE_EXPIRY_DATE_WARNING_DAYS = 90
