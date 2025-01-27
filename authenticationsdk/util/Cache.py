@@ -2,6 +2,7 @@ import base64
 import ssl
 
 from jwcrypto import jwk
+from cryptography import x509
 
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
@@ -21,15 +22,96 @@ class FileCache:
             private_key = jwk.JWK.from_pem(cert.encode('utf-8'))
             return private_key
 
-    def grab_file(self, mconfig, filepath, filename):
+    def grab_file_mle(self, mconfig, filepath, filename):
+        file_mod_time = os.stat(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX).st_mtime
 
-        file_mod_time = os.stat(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX).st_mtime
-
-        if filename not in self.filecache:
+        if "MLE_CERT" not in self.filecache:
+            print("Cache miss: MLE_CERT not found in cache. Loading from file.")
 
             private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
-                open(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,'rb').read() ,
-                password=(mconfig.key_password).encode(), 
+                open(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX, 'rb').read(),
+                password=(mconfig.key_password).encode(),
+                backend=default_backend()
+            )
+
+            mle_cert = None
+
+            # Check the main certificate
+            for attribute in certificate.subject:
+                if attribute.oid.dotted_string == '2.5.4.3':  # OID for CN
+                    cn_value = attribute.value
+                    if cn_value == GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT:
+                        mle_cert = certificate
+                        break
+
+            # Check the additional certificates if not found in the main certificate
+            if not mle_cert:
+                for cert in additional_certificates:
+                    for attribute in cert.subject:
+                        if attribute.oid.dotted_string == '2.5.4.3':  # OID for CN
+                            cn_value = attribute.value
+                            if cn_value == GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT:
+                                mle_cert = cert
+                                print("m here")
+                                break
+                    if mle_cert:
+                        break
+
+            if mle_cert:
+                self.filecache["MLE_CERT"] = [mle_cert, file_mod_time]
+            else:
+                raise ValueError(f"No certificate found matching the MLE key alias: {GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT}")
+
+        if file_mod_time != self.filecache["MLE_CERT"][1]:
+            print("Cache invalid: File modification time has changed. Reloading from file.")
+
+            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
+                open(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX, 'rb').read(),
+                password=(mconfig.key_password).encode(),
+                backend=default_backend()
+            )
+
+            mle_cert = None
+
+            # Check the main certificate
+            for attribute in certificate.subject:
+                if attribute.oid.dotted_string == '2.5.4.3':  # OID for CN
+                    cn_value = attribute.value
+                    if cn_value == GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT:
+                        mle_cert = certificate
+                        break
+
+            # Check the additional certificates if not found in the main certificate
+            if not mle_cert:
+                for cert in additional_certificates:
+                    for attribute in cert.subject:
+                        if attribute.oid.dotted_string == '2.5.4.3':  # OID for CN
+                            cn_value = attribute.value
+                            if cn_value == GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT:
+                                mle_cert = cert
+                                print("m there")
+
+                                break
+                    if mle_cert:
+                        break
+
+            if mle_cert:
+                self.filecache["MLE_CERT"] = [mle_cert, file_mod_time]
+            else:
+                raise ValueError(f"No certificate found matching the MLE key alias: {GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT}")
+
+        print(self.filecache["MLE_CERT"])
+
+        return self.filecache["MLE_CERT"]
+    
+    
+    def grab_file(self, mconfig, filepath, filename):
+        file_mod_time = os.stat(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX).st_mtime
+
+        if filename not in self.filecache:
+            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
+                open(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX, 'rb').read(),
+                password=(mconfig.key_password).encode(),
                 backend=default_backend()
             )
 
@@ -43,18 +125,22 @@ class FileCache:
 
         if file_mod_time != self.filecache[filename][2]:
             private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
-                open(os.path.join(filepath, filename)+GlobalLabelParameters.P12_PREFIX,'rb').read() ,
-                password=(mconfig.key_password).encode(), 
+                open(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX, 'rb').read(),
+                password=(mconfig.key_password).encode(),
                 backend=default_backend()
             )
 
             cert_pem = certificate.public_bytes(serialization.Encoding.PEM)
             cert_pem_str = cert_pem.decode('utf-8')
+            print("cert_pem_str (updated):", cert_pem_str)
+
             der_cert_string = base64.b64encode(ssl.PEM_cert_to_DER_cert(cert_pem_str))
+            print("der_cert_string (updated):", der_cert_string)
 
             self.filecache.setdefault(str(filename), []).append(der_cert_string)
             self.filecache.setdefault(str(filename), []).append(private_key)
             self.filecache.setdefault(str(filename), []).append(file_mod_time)
+            print("self.filecache (after update):", self.filecache)
 
         return self.filecache[filename]
 
@@ -65,5 +151,3 @@ class FileCache:
             self.filecache.setdefault(str(cache_key), []).append(private_key)
             self.filecache.setdefault(str(cache_key), []).append(file_mod_time)
         return self.filecache[str(cache_key)][0]
-
-
