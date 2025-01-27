@@ -29,6 +29,8 @@ from cryptography import x509
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
 from jwcrypto.common import json_encode
+from datetime import datetime, timezone
+
 
 class MLEUtility:
     class MLEException(Exception):
@@ -88,66 +90,66 @@ class MLEUtility:
     
     
 
-    # @staticmethod
-    # def encrypt_request_payload_jwcrypto_with_headers(merchant_config, requestBody):
-    #     if requestBody is not None:
-    #         token = MLEUtility.generate_jwe_token(requestBody, merchant_config)
-    #         print("token", token)
+    @staticmethod
+    def encrypt_request_payload(merchant_config, requestBody):
+        if requestBody is not None:
+            token = MLEUtility.generate_jwe_token(requestBody, merchant_config)
+            print("token", token)
 
-    #         return token
-    #     else:
-    #         return requestBody
+            return token
+        else:
+            return requestBody
 
-    # @staticmethod
-    # def generate_jwe_token(requestBody, merchant_config):
-    #     print("requestBody", requestBody)
+    @staticmethod
+    def generate_jwe_token(requestBody, merchant_config):
+        print("requestBody", requestBody)
     
 
         
-    #     # Get the MLE cert and verify the expiry of cert
-    #     cert = MLEUtility.get_certificate(merchant_config)
-    #     print("A")
-    #     # is_cert_expired = MLEUtility.verify_is_certificate_expired(cert, merchant_config.get_mleKeyAlias(), logger)
-    #     # if is_cert_expired:
-    #     #     raise Exception(f"Certificate for MLE with alias {merchant_config.get_mleKeyAlias()} is expired in {merchant_config.key_file_name}.p12")
+        # Get the MLE cert and verify the expiry of cert
+        cert = MLEUtility.get_certificate(merchant_config)
+        print("A")
+        # is_cert_expired = MLEUtility.verify_is_certificate_expired(cert, merchant_config.get_mleKeyAlias(), logger)
+        # if is_cert_expired:
+        #     raise Exception(f"Certificate for MLE with alias {merchant_config.get_mleKeyAlias()} is expired in {merchant_config.key_file_name}.p12")
 
-    #     custom_headers = {
-    #         "iat": int(time.time())  # epoch time in seconds
-    #     }
-    #     print("B")
-    #     serial_number = MLEUtility.extract_serial_number(cert)
-    #     print("C")
-    #     headers = {
-    #         "alg": "RSA-OAEP-256",
-    #         "enc": "A256GCM",
-    #         "cty": "JWT",
-    #         "kid": serial_number,
-    #         **custom_headers
-    #     }
-    #     print("D")
+        custom_headers = {
+            "iat": int(time.time())  # epoch time in seconds
+        }
+        print("B")
+        serial_number = MLEUtility.extract_serial_number(cert)
+        print("C")
+        headers = {
+            "alg": "RSA-OAEP-256",
+            "enc": "A256GCM",
+            "cty": "JWT",
+            "kid": serial_number,
+            **custom_headers
+        }
+        print("D")
 
 
-    #     # if isinstance(requestBody, dict):
-    #     #     requestBody = json.dumps(requestBody)
+        # if isinstance(requestBody, dict):
+        #     requestBody = json.dumps(requestBody)
             
-    #     print("requestBody11", requestBody)
+        print("requestBody11", requestBody)
 
-    #     payload = requestBody.encode()
-    #     print("E")
-    #     public_key = cert.public_key()
-    #     print("F")
-    #     jwk_key = jwk.JWK.from_pyca(public_key)
-    #     print("G")
+        payload = requestBody.encode()
+        print("E")
+        public_key = cert.public_key()
+        print("F")
+        jwk_key = jwk.JWK.from_pyca(public_key)
+        print("G")
 
-    #     jwetoken = jwe.JWE(plaintext=payload, protected=headers)
-    #     print("H")
-    #     jwetoken.add_recipient(jwk_key)
-    #     print("I")
+        jwetoken = jwe.JWE(plaintext=payload, protected=headers)
+        print("H")
+        jwetoken.add_recipient(jwk_key)
+        print("I")
         
-    #     encrypted_request_body = jwetoken.serialize(compact=True)
+        encrypted_request_body = jwetoken.serialize(compact=True)
 
 
-    #     return json.dumps({"encryptedRequest": encrypted_request_body})
+        return json.dumps({"encryptedRequest": encrypted_request_body})
 
 
     @staticmethod
@@ -156,6 +158,7 @@ class MLEUtility:
         try:
             cert_data = cache_obj.grab_file_mle(merchant_config, merchant_config.key_file_path, merchant_config.key_file_name)
             certificate = cert_data[0]
+            MLEUtility.validate_certificate_expiry(certificate, merchant_config.get_mleKeyAlias())
             if certificate is not None:
                 return certificate
             else:
@@ -189,7 +192,22 @@ class MLEUtility:
                 serial_number = str(x509_certificate.serial_number)
         print("serial number", serial_number)
         return serial_number
-     
+
+    @staticmethod
+    def validate_certificate_expiry(certificate, key_alias):
+        try:
+            print("inside validate method")
+            if certificate.not_valid_after_utc is None:
+                print("Certificate for MLE doesn't have an expiry date.")
+            elif certificate.not_valid_after_utc < datetime.now(timezone.utc):
+                print(f"Certificate with MLE alias {key_alias} is expired as of {certificate.not_valid_after_utc}. Please update p12 file.")
+            else:
+                time_to_expire = (certificate.not_valid_after_utc - datetime.now(timezone.utc)).total_seconds()
+                if time_to_expire < GlobalLabelParameters.CERTIFICATE_EXPIRY_DATE_WARNING_DAYS * 24 * 60 * 60:
+                    print(f"Certificate for MLE with alias {key_alias} is going to expire on {certificate.not_valid_after_utc}. Please update p12 file before that.")
+        except Exception as e:
+            logging.error(f"Error validating certificate expiry: {e}")
+            raise
     # @staticmethod
     # def create_json_object(jwe_token):
     #     return json.dumps({"encryptedRequest": jwe_token})
