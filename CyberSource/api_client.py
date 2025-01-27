@@ -464,14 +464,8 @@ class ApiClient(object):
         
         if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
             post_params = body
-        
         if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            temp_body = body.replace("\"_", "\"")
-            request_body = self.replace_underscore(json.loads(temp_body))
-            body = json.dumps(request_body)
-            body = body.replace("companyTaxId", "companyTaxID")
-            body = body.replace("productSku", "productSKU")
-            body = body.replace("secCode", "SECCode")
+            body = self.process_body(body=body)
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
             self.mconfig.request_target = query_param_path
@@ -480,7 +474,6 @@ class ApiClient(object):
         
         if self.mconfig.authentication_type.upper() != GlobalLabelParameters.MUTUAL_AUTH.upper():
             self.call_authentication_header(method, header_params, body)
-        
         """
         Makes the HTTP request (synchronous) and return the deserialized data.
         To make an async request, define a function for callback.
@@ -830,3 +823,12 @@ class ApiClient(object):
         instance = klass(**kwargs)     
 
         return instance
+
+    def process_body(self, body):
+        temp_body = body.replace("\"_", "\"")
+        request_body = self.replace_underscore(json.loads(temp_body))
+        body = json.dumps(request_body)
+        body = body.replace("companyTaxId", "companyTaxID")
+        body = body.replace("productSku", "productSKU")
+        body = body.replace("secCode", "SECCode")
+        return body
