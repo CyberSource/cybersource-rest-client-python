@@ -25,6 +25,7 @@ class MLEUtility:
     def check_is_mle_for_api(merchant_config, is_mle_supported_by_cybs_for_api, operation_ids):
         if MLEUtility.logger is None:
             MLEUtility.setup_logger(merchant_config)
+        # MLEUtility.initialize_logger(merchant_config)
         is_mle_for_api = False
         if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGlobally():
             is_mle_for_api = True
@@ -56,7 +57,7 @@ class MLEUtility:
 
             jwk_key = jwk.JWK.from_pyca(public_key)
             
-            MLEUtility.logger.debug("LOG_REQUEST_BEFORE_MLE: ", payload)
+            MLEUtility.logger.debug("LOG_REQUEST_BEFORE_MLE: ", request_body)
 
             payload = request_body.encode('utf-8')
 
