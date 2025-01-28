@@ -88,7 +88,6 @@ class GlobalLabelParameters:
     DEFAULT_PROXY_PORT = 443
     DEFAULT_KEY_FILE_PATH = os.path.join(os.getcwd(),"resources")
     DEFAULT_MLE_ALIAS_FOR_CERT = "CyberSource_SJC_US"
-    MLE_CERT="MLE_CERT"
     ENABLE_LOG_DEFAULT_MESSAGE = "Enable log value Empty/None.Using Default Value"
     LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE = "Log Maximum Size Empty/None.Using Default Value"
     LOG_DIRECTORY_DEFAULT_MESSAGE = "Log Directory value Empty/None.Using Default Value"

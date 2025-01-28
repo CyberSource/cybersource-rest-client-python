@@ -39,6 +39,10 @@ class MLEUtility:
 
     @staticmethod
     def encrypt_request_payload(merchant_config, request_body):
+        
+        if request_body is None or request_body == "":
+            return request_body
+
         try:
             cert = MLEUtility.get_certificate(merchant_config)
         except Exception as e:
@@ -47,11 +51,14 @@ class MLEUtility:
         try:
             public_key = cert.public_key()
             serial_number = MLEUtility.extract_serial_number(cert)
+            if serial_number is None:
+                raise ValueError("Serial number could not be fetched")
 
             jwk_key = jwk.JWK.from_pyca(public_key)
+            
+            MLEUtility.logger.debug("LOG_REQUEST_BEFORE_MLE: ", payload)
 
             payload = request_body.encode('utf-8')
-
 
             header = {
                 "alg": "RSA-OAEP-256",
@@ -77,9 +84,9 @@ class MLEUtility:
     def get_certificate(merchant_config):
         cache_obj = FileCache()
         try:
-            cert_data = cache_obj.grab_file_mle(merchant_config, merchant_config.key_file_path,
-                                                merchant_config.key_file_name, True)
-            certificate = cert_data[0]
+            cert_data = cache_obj.grab_file(merchant_config, merchant_config.key_file_path,
+                                                merchant_config.key_file_name)
+            certificate = cert_data[3]
             if certificate is not None:
                 MLEUtility.validate_certificate_expiry(certificate, merchant_config.get_mleKeyAlias())
                 MLEUtility.logger.debug(f"Certificate found for MLE with alias {merchant_config.get_mleKeyAlias()}")
@@ -101,22 +108,14 @@ class MLEUtility:
     @staticmethod
     def extract_serial_number(x509_certificate):
         serial_number = None
-        serial_number_prefix = "SERIALNUMBER="
-        principal = x509_certificate.subject.rfc4514_string().upper()
-        beg = principal.find(serial_number_prefix)
-        if beg >= 0:
-            end = principal.find(",", beg)
-            if end == -1:
-                end = len(principal)
-            serial_number = principal[beg + len(serial_number_prefix):end]
-        else:
-            for attribute in x509_certificate.subject:
-                if attribute.oid == x509.NameOID.SERIAL_NUMBER:
-                    serial_number = attribute.value
-                    break
-            else:
-                MLEUtility.logger.warning("Serial number not found in MLE certificate for alias.")
-                serial_number = str(x509_certificate.serial_number)
+
+        for attribute in x509_certificate.subject:
+            if attribute.oid == x509.NameOID.SERIAL_NUMBER:
+                serial_number = attribute.value
+                break
+        if serial_number is None:
+            MLEUtility.logger.warning("Serial number not found in MLE certificate for alias.")
+            serial_number = str(x509_certificate.serial_number)
         return serial_number
 
     @staticmethod

@@ -464,8 +464,6 @@ class ApiClient(object):
         
         if header_params['Content-Type'] == 'application/x-www-form-urlencoded':
             post_params = body
-        if method.upper() == GlobalLabelParameters.POST or method.upper() == GlobalLabelParameters.PUT or method.upper() == GlobalLabelParameters.PATCH:
-            body = self.process_body(body=body)
         query_param_path = self.set_query_params(resource_path, query_params)
         if query_param_path:
             self.mconfig.request_target = query_param_path
