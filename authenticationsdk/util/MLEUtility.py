@@ -57,7 +57,7 @@ class MLEUtility:
 
             jwk_key = jwk.JWK.from_pyca(public_key)
             
-            MLEUtility.logger.debug("LOG_REQUEST_BEFORE_MLE: ", request_body)
+            MLEUtility.logger.debug(f"Request payload encrypted successfully. {request_body}")
 
             payload = request_body.encode('utf-8')
 
