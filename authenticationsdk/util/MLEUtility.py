@@ -48,31 +48,34 @@ class MLEUtility:
         cert = MLEUtility.get_mle_certificate(merchant_config)
         
         try:
-            public_key = cert.public_key()
-            serial_number = MLEUtility.extract_serial_number(cert)
-
-            jwk_key = jwk.JWK.from_pyca(public_key)
-            
-            payload = request_body.encode('utf-8')
-
-            header = {
-                "alg": "RSA-OAEP-256",
-                "enc": "A256GCM",
-                "cty": "JWT",
-                "kid": serial_number,
-                "iat": int(time.time())
-            }
-
-            jwe_token = jwe.JWE(plaintext=payload,
-                                protected=json.dumps(header))
-
-            jwe_token.add_recipient(jwk_key)
-
-            serialized_jwe_token = jwe_token.serialize(compact=True)
+            serialized_jwe_token = MLEUtility.generate_token(cert, request_body)
             return MLEUtility.create_json_object(serialized_jwe_token)
+        
         except Exception as e:
             MLEUtility.logger.error(f"Error encrypting request payload: {str(e)}")
             raise MLEUtility.MLEException(f"Error encrypting request payload: {str(e)}")
+        
+    @staticmethod
+    def generate_token(cert, request_body):
+        public_key = cert.public_key()
+        serial_number = MLEUtility.extract_serial_number(cert)
+
+        jwk_key = jwk.JWK.from_pyca(public_key)
+        payload = request_body.encode('utf-8')
+
+        header = {
+            "alg": "RSA-OAEP-256",
+            "enc": "A256GCM",
+            "cty": "JWT",
+            "kid": serial_number,
+            "iat": int(time.time())
+        }
+
+        jwe_token = jwe.JWE(plaintext=payload, protected=json.dumps(header))
+        jwe_token.add_recipient(jwk_key)
+
+        return jwe_token.serialize(compact=True)
+
 
     @staticmethod
     def get_mle_certificate(merchant_config):
