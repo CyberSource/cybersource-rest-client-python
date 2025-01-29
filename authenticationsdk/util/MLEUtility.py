@@ -23,9 +23,7 @@ class MLEUtility:
 
     @staticmethod
     def check_is_mle_for_api(merchant_config, is_mle_supported_by_cybs_for_api, operation_ids):
-        if MLEUtility.logger is None:
-            MLEUtility.setup_logger(merchant_config)
-        # MLEUtility.initialize_logger(merchant_config)
+
         is_mle_for_api = False
         if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGlobally():
             is_mle_for_api = True
@@ -41,24 +39,20 @@ class MLEUtility:
     @staticmethod
     def encrypt_request_payload(merchant_config, request_body):
         
+        if MLEUtility.logger is None:
+            MLEUtility.setup_logger(merchant_config)
+        
         if request_body is None or request_body == "":
             return request_body
 
-        try:
-            cert = MLEUtility.get_certificate(merchant_config)
-        except Exception as e:
-            raise MLEUtility.MLEException(f"Unable to load certificate: {str(e)}")
-
+        cert = MLEUtility.get_mle_certificate(merchant_config)
+        
         try:
             public_key = cert.public_key()
             serial_number = MLEUtility.extract_serial_number(cert)
-            if serial_number is None:
-                raise ValueError("Serial number could not be fetched")
 
             jwk_key = jwk.JWK.from_pyca(public_key)
             
-            MLEUtility.logger.debug(f"Request payload encrypted successfully. {request_body}")
-
             payload = request_body.encode('utf-8')
 
             header = {
@@ -74,23 +68,20 @@ class MLEUtility:
 
             jwe_token.add_recipient(jwk_key)
 
-            encrypted_request_body = jwe_token.serialize(compact=True)
-            MLEUtility.logger.debug(f"Request payload encrypted successfully. {encrypted_request_body}")
-            return MLEUtility.create_json_object(encrypted_request_body)
+            serialized_jwe_token = jwe_token.serialize(compact=True)
+            return MLEUtility.create_json_object(serialized_jwe_token)
         except Exception as e:
             MLEUtility.logger.error(f"Error encrypting request payload: {str(e)}")
             raise MLEUtility.MLEException(f"Error encrypting request payload: {str(e)}")
 
     @staticmethod
-    def get_certificate(merchant_config):
+    def get_mle_certificate(merchant_config):
         cache_obj = FileCache()
         try:
-            cert_data = cache_obj.grab_file(merchant_config, merchant_config.key_file_path,
-                                                merchant_config.key_file_name)
+            cert_data = cache_obj.grab_file(merchant_config, merchant_config.key_file_path, merchant_config.key_file_name)
             certificate = cert_data[3]
             if certificate is not None:
                 MLEUtility.validate_certificate_expiry(certificate, merchant_config.get_mleKeyAlias())
-                MLEUtility.logger.debug(f"Certificate found for MLE with alias {merchant_config.get_mleKeyAlias()}")
                 return certificate
             else:
                 MLEUtility.logger.error(
@@ -99,9 +90,9 @@ class MLEUtility:
                     f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
         except KeyError:
             MLEUtility.logger.error(
-                f"No certificate found matching the MLE key alias: {merchant_config.get_mleKeyAlias()}")
+                f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
             raise MLEUtility.MLEException(
-                f"No certificate found matching the MLE key alias: {merchant_config.get_mleKeyAlias()}")
+                f"No certificate found for MLE for given mleKeyAlias {merchant_config.get_mleKeyAlias()} in p12 file {merchant_config.key_file_name}.p12")
         except Exception as e:
             MLEUtility.logger.error(f"Unable to load certificate: {str(e)}")
             raise MLEUtility.MLEException(f"Unable to load PEM file: {str(e)}")
@@ -126,9 +117,7 @@ class MLEUtility:
     @staticmethod
     def validate_certificate_expiry(certificate, key_alias):
         try:
-            if certificate.not_valid_after_utc is None:
-                MLEUtility.logger.debug("Certificate for MLE doesn't have an expiry date.")
-            elif certificate.not_valid_after_utc < datetime.now(timezone.utc):
+            if certificate.not_valid_after_utc < datetime.now(timezone.utc):
                 MLEUtility.logger.warning(
                     f"Certificate with MLE alias {key_alias} is expired as of {certificate.not_valid_after_utc}. Please update p12 file.")
             else:
