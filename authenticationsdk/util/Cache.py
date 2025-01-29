@@ -70,6 +70,8 @@ class FileCache:
         self.filecache.setdefault(str(filename), []).append(private_key)
         self.filecache.setdefault(str(filename), []).append(file_mod_time)
         self.filecache.setdefault(str(filename), []).append(mle_cert)
+        
+        # self.filecache[str(filename)] = [jwt_der_cert_string, private_key, file_mod_time, mle_cert]
 
     def grab_file(self, mconfig, filepath, filename):
         file_mod_time = os.stat(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX).st_mtime

@@ -123,6 +123,7 @@ class MLEUtility:
             if certificate.not_valid_after_utc < datetime.now(timezone.utc):
                 MLEUtility.logger.warning(
                     f"Certificate with MLE alias {key_alias} is expired as of {certificate.not_valid_after_utc}. Please update p12 file.")
+                    # raise Exception(f"Certificate with MLE alias {key_alias} is expired.")
             else:
                 time_to_expire = (certificate.not_valid_after_utc - datetime.now(timezone.utc)).total_seconds()
                 if time_to_expire < GlobalLabelParameters.CERTIFICATE_EXPIRY_DATE_WARNING_DAYS * 24 * 60 * 60:
