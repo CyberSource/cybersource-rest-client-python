@@ -23,6 +23,8 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
 from authenticationsdk.util.MLEUtility import MLEUtility
+from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
+from authenticationsdk.util.Utility import process_body
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class PayerAuthenticationApi(object):
@@ -134,6 +136,9 @@ class PayerAuthenticationApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'check_payer_auth_enrollment_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
 
         is_mle_supported_by_cybs_for_api = True
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "check_payer_auth_enrollment,check_payer_auth_enrollment_with_http_info"):
@@ -253,6 +258,9 @@ class PayerAuthenticationApi(object):
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'payer_auth_setup_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
 
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
+
         is_mle_supported_by_cybs_for_api = True
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "payer_auth_setup,payer_auth_setup_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
@@ -370,6 +378,9 @@ class PayerAuthenticationApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'validate_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
 
         is_mle_supported_by_cybs_for_api = True
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "validate_authentication_results,validate_authentication_results_with_http_info"):

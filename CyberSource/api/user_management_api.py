@@ -23,6 +23,8 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
 from authenticationsdk.util.MLEUtility import MLEUtility
+from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
+from authenticationsdk.util.Utility import process_body
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class UserManagementApi(object):
@@ -140,6 +142,9 @@ class UserManagementApi(object):
         body_params = None
         if 'GET' in ('POST'):
             body_params = '{}'
+
+        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
 
         is_mle_supported_by_cybs_for_api = False
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_users,get_users_with_http_info"):

@@ -23,6 +23,8 @@ from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
 from authenticationsdk.util.MLEUtility import MLEUtility
+from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
+from authenticationsdk.util.Utility import process_body
 
 from ..utilities.tracking.sdk_tracker import SdkTracker
 class TokenApi(object):
@@ -148,6 +150,9 @@ class TokenApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_payment_credentials_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
 
         is_mle_supported_by_cybs_for_api = False
         if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_token_payment_credentials,post_token_payment_credentials_with_http_info"):

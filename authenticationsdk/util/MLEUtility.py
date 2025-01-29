@@ -39,17 +39,21 @@ class MLEUtility:
     @staticmethod
     def encrypt_request_payload(merchant_config, request_body):
         
+        if request_body is None or request_body == "":
+            return request_body
+        
         if MLEUtility.logger is None:
             MLEUtility.setup_logger(merchant_config)
         
-        if request_body is None or request_body == "":
-            return request_body
+        MLEUtility.logger.debug(f"Request before MLE: {request_body}")
 
         cert = MLEUtility.get_mle_certificate(merchant_config)
         
         try:
             serialized_jwe_token = MLEUtility.generate_token(cert, request_body)
-            return MLEUtility.create_json_object(serialized_jwe_token)
+            mleRequest = MLEUtility.create_json_object(serialized_jwe_token)
+            MLEUtility.logger.debug(f"Request after MLE: {mleRequest}")
+            return mleRequest
         
         except Exception as e:
             MLEUtility.logger.error(f"Error encrypting request payload: {str(e)}")
