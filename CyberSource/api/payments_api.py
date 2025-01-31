@@ -139,7 +139,7 @@ class PaymentsApi(object):
 
         form_params = []
         local_var_files = {}
-
+        body_params = None
         if 'order_payment_request' in params:
             body_params = params['order_payment_request']
         
@@ -266,7 +266,7 @@ class PaymentsApi(object):
         
             sdkTracker = SdkTracker()
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_payment_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-
+        
         if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
             body_params = process_body(body_params)
 
