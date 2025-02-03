@@ -85,6 +85,7 @@ class SensitiveFormatter(logging.Formatter):
                 s=s.replace(matchedString,replaceString)
 
         return s
+
     def format(self, record):
         original = logging.Formatter.format(self, record)
         return self._filter(original)
