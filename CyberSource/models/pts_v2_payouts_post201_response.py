@@ -42,7 +42,8 @@ class PtsV2PayoutsPost201Response(object):
         'processor_information': 'PtsV2PayoutsPost201ResponseProcessorInformation',
         'recipient_information': 'PtsV2PayoutsPost201ResponseRecipientInformation',
         'issuer_information': 'PtsV2PayoutsPost201ResponseIssuerInformation',
-        'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation'
+        'token_information': 'PtsV2PaymentsPost201ResponseTokenInformation',
+        'processing_information': 'PtsV2PayoutsPost201ResponseProcessingInformation'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class PtsV2PayoutsPost201Response(object):
         'processor_information': 'processorInformation',
         'recipient_information': 'recipientInformation',
         'issuer_information': 'issuerInformation',
-        'token_information': 'tokenInformation'
+        'token_information': 'tokenInformation',
+        'processing_information': 'processingInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None, issuer_information=None, token_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, error_information=None, client_reference_information=None, merchant_information=None, order_information=None, processor_information=None, recipient_information=None, issuer_information=None, token_information=None, processing_information=None):
         """
         PtsV2PayoutsPost201Response - a model defined in Swagger
         """
@@ -79,6 +81,7 @@ class PtsV2PayoutsPost201Response(object):
         self._recipient_information = None
         self._issuer_information = None
         self._token_information = None
+        self._processing_information = None
 
         if links is not None:
           self.links = links
@@ -106,6 +109,8 @@ class PtsV2PayoutsPost201Response(object):
           self.issuer_information = issuer_information
         if token_information is not None:
           self.token_information = token_information
+        if processing_information is not None:
+          self.processing_information = processing_information
 
     @property
     def links(self):
@@ -387,6 +392,27 @@ class PtsV2PayoutsPost201Response(object):
         """
 
         self._token_information = token_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this PtsV2PayoutsPost201Response.
+
+        :return: The processing_information of this PtsV2PayoutsPost201Response.
+        :rtype: PtsV2PayoutsPost201ResponseProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this PtsV2PayoutsPost201Response.
+
+        :param processing_information: The processing_information of this PtsV2PayoutsPost201Response.
+        :type: PtsV2PayoutsPost201ResponseProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     def to_dict(self):
         """

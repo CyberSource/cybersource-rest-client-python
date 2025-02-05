@@ -67,6 +67,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status_source': 'str',
         'xid': 'str',
         'directory_server_transaction_id': 'str',
+        'data_quality_indicator': 'str',
         'authentication_result': 'str',
         'authentication_status_msg': 'str',
         'indicator': 'str',
@@ -112,6 +113,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status_source': 'whiteListStatusSource',
         'xid': 'xid',
         'directory_server_transaction_id': 'directoryServerTransactionId',
+        'data_quality_indicator': 'dataQualityIndicator',
         'authentication_result': 'authenticationResult',
         'authentication_status_msg': 'authenticationStatusMsg',
         'indicator': 'indicator',
@@ -119,7 +121,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         'white_list_status': 'whiteListStatus'
     }
 
-    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, strong_authentication=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
+    def __init__(self, access_token=None, acs_rendering_type=None, acs_transaction_id=None, acs_url=None, authentication_path=None, authorization_payload=None, authentication_transaction_id=None, cardholder_message=None, cavv=None, cavv_algorithm=None, challenge_cancel_code=None, challenge_required=None, decoupled_authentication_indicator=None, directory_server_error_code=None, directory_server_error_description=None, ecommerce_indicator=None, eci=None, eci_raw=None, effective_authentication_type=None, ivr=None, strong_authentication=None, network_score=None, pareq=None, pares_status=None, proof_xml=None, proxy_pan=None, sdk_transaction_id=None, signed_pares_status_reason=None, specification_version=None, step_up_url=None, three_ds_server_transaction_id=None, ucaf_authentication_data=None, ucaf_collection_indicator=None, veres_enrolled=None, white_list_status_source=None, xid=None, directory_server_transaction_id=None, data_quality_indicator=None, authentication_result=None, authentication_status_msg=None, indicator=None, interaction_counter=None, white_list_status=None):
         """
         PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation - a model defined in Swagger
         """
@@ -161,6 +163,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         self._white_list_status_source = None
         self._xid = None
         self._directory_server_transaction_id = None
+        self._data_quality_indicator = None
         self._authentication_result = None
         self._authentication_status_msg = None
         self._indicator = None
@@ -241,6 +244,8 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
           self.xid = xid
         if directory_server_transaction_id is not None:
           self.directory_server_transaction_id = directory_server_transaction_id
+        if data_quality_indicator is not None:
+          self.data_quality_indicator = data_quality_indicator
         if authentication_result is not None:
           self.authentication_result = authentication_result
         if authentication_status_msg is not None:
@@ -1098,6 +1103,29 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation(object):
         """
 
         self._directory_server_transaction_id = directory_server_transaction_id
+
+    @property
+    def data_quality_indicator(self):
+        """
+        Gets the data_quality_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        The field is used to indicate that a transaction does not meet the Visa Secure authentication data quality requirements.
+
+        :return: The data_quality_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :rtype: str
+        """
+        return self._data_quality_indicator
+
+    @data_quality_indicator.setter
+    def data_quality_indicator(self, data_quality_indicator):
+        """
+        Sets the data_quality_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        The field is used to indicate that a transaction does not meet the Visa Secure authentication data quality requirements.
+
+        :param data_quality_indicator: The data_quality_indicator of this PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation.
+        :type: str
+        """
+
+        self._data_quality_indicator = data_quality_indicator
 
     @property
     def authentication_result(self):

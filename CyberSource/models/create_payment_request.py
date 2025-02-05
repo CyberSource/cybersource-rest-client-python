@@ -56,6 +56,7 @@ class CreatePaymentRequest(object):
         'risk_information': 'Ptsv2paymentsRiskInformation',
         'acquirer_information': 'Ptsv2paymentsAcquirerInformation',
         'recurring_payment_information': 'Ptsv2paymentsRecurringPaymentInformation',
+        'unscheduled_payment_information': 'Ptsv2paymentsUnscheduledPaymentInformation',
         'hosted_payment_information': 'Ptsv2paymentsHostedPaymentInformation',
         'watchlist_screening_information': 'Ptsv2paymentsWatchlistScreeningInformation'
     }
@@ -87,11 +88,12 @@ class CreatePaymentRequest(object):
         'risk_information': 'riskInformation',
         'acquirer_information': 'acquirerInformation',
         'recurring_payment_information': 'recurringPaymentInformation',
+        'unscheduled_payment_information': 'unscheduledPaymentInformation',
         'hosted_payment_information': 'hostedPaymentInformation',
         'watchlist_screening_information': 'watchlistScreeningInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, sender_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, issuer_information=None, payment_information=None, order_information=None, buyer_information=None, sender_information=None, recipient_information=None, device_information=None, merchant_information=None, aggregator_information=None, consumer_authentication_information=None, point_of_sale_information=None, merchant_defined_information=None, merchant_defined_secure_information=None, installment_information=None, travel_information=None, health_care_information=None, promotion_information=None, token_information=None, invoice_details=None, processor_information=None, agreement_information=None, risk_information=None, acquirer_information=None, recurring_payment_information=None, unscheduled_payment_information=None, hosted_payment_information=None, watchlist_screening_information=None):
         """
         CreatePaymentRequest - a model defined in Swagger
         """
@@ -122,6 +124,7 @@ class CreatePaymentRequest(object):
         self._risk_information = None
         self._acquirer_information = None
         self._recurring_payment_information = None
+        self._unscheduled_payment_information = None
         self._hosted_payment_information = None
         self._watchlist_screening_information = None
 
@@ -177,6 +180,8 @@ class CreatePaymentRequest(object):
           self.acquirer_information = acquirer_information
         if recurring_payment_information is not None:
           self.recurring_payment_information = recurring_payment_information
+        if unscheduled_payment_information is not None:
+          self.unscheduled_payment_information = unscheduled_payment_information
         if hosted_payment_information is not None:
           self.hosted_payment_information = hosted_payment_information
         if watchlist_screening_information is not None:
@@ -729,6 +734,27 @@ class CreatePaymentRequest(object):
         """
 
         self._recurring_payment_information = recurring_payment_information
+
+    @property
+    def unscheduled_payment_information(self):
+        """
+        Gets the unscheduled_payment_information of this CreatePaymentRequest.
+
+        :return: The unscheduled_payment_information of this CreatePaymentRequest.
+        :rtype: Ptsv2paymentsUnscheduledPaymentInformation
+        """
+        return self._unscheduled_payment_information
+
+    @unscheduled_payment_information.setter
+    def unscheduled_payment_information(self, unscheduled_payment_information):
+        """
+        Sets the unscheduled_payment_information of this CreatePaymentRequest.
+
+        :param unscheduled_payment_information: The unscheduled_payment_information of this CreatePaymentRequest.
+        :type: Ptsv2paymentsUnscheduledPaymentInformation
+        """
+
+        self._unscheduled_payment_information = unscheduled_payment_information
 
     @property
     def hosted_payment_information(self):

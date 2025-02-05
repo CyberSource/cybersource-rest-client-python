@@ -117,7 +117,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
     def extend_auth_indicator(self):
         """
         Gets the extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is an extended authorization. 
+        Indicates Authorization extension transaction. Extension transaction is used to prolong the settlement period by one additional settlement cycle period.  Possible values: - true: Transaction is an Authorization Extension transaction.  - false: Transaction is not an Authorization Extension transaction. 
 
         :return: The extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -128,7 +128,7 @@ class TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions(o
     def extend_auth_indicator(self, extend_auth_indicator):
         """
         Sets the extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is an extended authorization. 
+        Indicates Authorization extension transaction. Extension transaction is used to prolong the settlement period by one additional settlement cycle period.  Possible values: - true: Transaction is an Authorization Extension transaction.  - false: Transaction is not an Authorization Extension transaction. 
 
         :param extend_auth_indicator: The extend_auth_indicator of this TssV2TransactionsGet200ResponseProcessingInformationAuthorizationOptions.
         :type: str

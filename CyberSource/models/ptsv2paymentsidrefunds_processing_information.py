@@ -40,7 +40,8 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'recurring_options': 'Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
         'industry_data_type': 'str',
         'payment_type': 'str',
-        'refund_options': 'Ptsv2paymentsidrefundsProcessingInformationRefundOptions'
+        'refund_options': 'Ptsv2paymentsidrefundsProcessingInformationRefundOptions',
+        'transaction_type_indicator': 'str'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         'recurring_options': 'recurringOptions',
         'industry_data_type': 'industryDataType',
         'payment_type': 'paymentType',
-        'refund_options': 'refundOptions'
+        'refund_options': 'refundOptions',
+        'transaction_type_indicator': 'transactionTypeIndicator'
     }
 
-    def __init__(self, action_list=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None, payment_type=None, refund_options=None):
+    def __init__(self, action_list=None, payment_solution=None, reconciliation_id=None, link_id=None, report_group=None, visa_checkout_id=None, purchase_level=None, recurring_options=None, industry_data_type=None, payment_type=None, refund_options=None, transaction_type_indicator=None):
         """
         Ptsv2paymentsidrefundsProcessingInformation - a model defined in Swagger
         """
@@ -73,6 +75,7 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         self._industry_data_type = None
         self._payment_type = None
         self._refund_options = None
+        self._transaction_type_indicator = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -96,6 +99,8 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
           self.payment_type = payment_type
         if refund_options is not None:
           self.refund_options = refund_options
+        if transaction_type_indicator is not None:
+          self.transaction_type_indicator = transaction_type_indicator
 
     @property
     def action_list(self):
@@ -345,6 +350,29 @@ class Ptsv2paymentsidrefundsProcessingInformation(object):
         """
 
         self._refund_options = refund_options
+
+    @property
+    def transaction_type_indicator(self):
+        """
+        Gets the transaction_type_indicator of this Ptsv2paymentsidrefundsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :return: The transaction_type_indicator of this Ptsv2paymentsidrefundsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_type_indicator
+
+    @transaction_type_indicator.setter
+    def transaction_type_indicator(self, transaction_type_indicator):
+        """
+        Sets the transaction_type_indicator of this Ptsv2paymentsidrefundsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :param transaction_type_indicator: The transaction_type_indicator of this Ptsv2paymentsidrefundsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_type_indicator = transaction_type_indicator
 
     def to_dict(self):
         """

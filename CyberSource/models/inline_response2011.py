@@ -33,8 +33,8 @@ class InlineResponse2011(object):
         'id': 'str',
         'submit_time_utc': 'str',
         'status': 'str',
-        'payment_account_information': 'InlineResponse2011PaymentAccountInformation',
-        'issuer_information': 'InlineResponse2011IssuerInformation',
+        'payment_account_information': 'TmsBinLookupPaymentAccountInformation',
+        'issuer_information': 'TmsBinLookupIssuerInformation',
         'payout_information': 'InlineResponse2011PayoutInformation'
     }
 
@@ -147,7 +147,7 @@ class InlineResponse2011(object):
         Gets the payment_account_information of this InlineResponse2011.
 
         :return: The payment_account_information of this InlineResponse2011.
-        :rtype: InlineResponse2011PaymentAccountInformation
+        :rtype: TmsBinLookupPaymentAccountInformation
         """
         return self._payment_account_information
 
@@ -157,7 +157,7 @@ class InlineResponse2011(object):
         Sets the payment_account_information of this InlineResponse2011.
 
         :param payment_account_information: The payment_account_information of this InlineResponse2011.
-        :type: InlineResponse2011PaymentAccountInformation
+        :type: TmsBinLookupPaymentAccountInformation
         """
 
         self._payment_account_information = payment_account_information
@@ -168,7 +168,7 @@ class InlineResponse2011(object):
         Gets the issuer_information of this InlineResponse2011.
 
         :return: The issuer_information of this InlineResponse2011.
-        :rtype: InlineResponse2011IssuerInformation
+        :rtype: TmsBinLookupIssuerInformation
         """
         return self._issuer_information
 
@@ -178,7 +178,7 @@ class InlineResponse2011(object):
         Sets the issuer_information of this InlineResponse2011.
 
         :param issuer_information: The issuer_information of this InlineResponse2011.
-        :type: InlineResponse2011IssuerInformation
+        :type: TmsBinLookupIssuerInformation
         """
 
         self._issuer_information = issuer_information

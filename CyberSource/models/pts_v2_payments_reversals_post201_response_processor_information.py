@@ -32,6 +32,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     swagger_types = {
         'transaction_id': 'str',
         'response_code': 'str',
+        'network_transaction_id': 'str',
         'response_category_code': 'str',
         'forwarded_acquirer_code': 'str',
         'master_card_service_code': 'str',
@@ -43,6 +44,7 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
     attribute_map = {
         'transaction_id': 'transactionId',
         'response_code': 'responseCode',
+        'network_transaction_id': 'networkTransactionId',
         'response_category_code': 'responseCategoryCode',
         'forwarded_acquirer_code': 'forwardedAcquirerCode',
         'master_card_service_code': 'masterCardServiceCode',
@@ -51,13 +53,14 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         'provider_response': 'providerResponse'
     }
 
-    def __init__(self, transaction_id=None, response_code=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None):
+    def __init__(self, transaction_id=None, response_code=None, network_transaction_id=None, response_category_code=None, forwarded_acquirer_code=None, master_card_service_code=None, master_card_service_reply_code=None, response_details=None, provider_response=None):
         """
         PtsV2PaymentsReversalsPost201ResponseProcessorInformation - a model defined in Swagger
         """
 
         self._transaction_id = None
         self._response_code = None
+        self._network_transaction_id = None
         self._response_category_code = None
         self._forwarded_acquirer_code = None
         self._master_card_service_code = None
@@ -69,6 +72,8 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
           self.transaction_id = transaction_id
         if response_code is not None:
           self.response_code = response_code
+        if network_transaction_id is not None:
+          self.network_transaction_id = network_transaction_id
         if response_category_code is not None:
           self.response_category_code = response_category_code
         if forwarded_acquirer_code is not None:
@@ -127,6 +132,29 @@ class PtsV2PaymentsReversalsPost201ResponseProcessorInformation(object):
         """
 
         self._response_code = response_code
+
+    @property
+    def network_transaction_id(self):
+        """
+        Gets the network_transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :return: The network_transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._network_transaction_id
+
+    @network_transaction_id.setter
+    def network_transaction_id(self, network_transaction_id):
+        """
+        Sets the network_transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        Same value as `processorInformation.transactionId`
+
+        :param network_transaction_id: The network_transaction_id of this PtsV2PaymentsReversalsPost201ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._network_transaction_id = network_transaction_id
 
     @property
     def response_category_code(self):

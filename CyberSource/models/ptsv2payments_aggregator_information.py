@@ -32,16 +32,26 @@ class Ptsv2paymentsAggregatorInformation(object):
     swagger_types = {
         'aggregator_id': 'str',
         'name': 'str',
-        'sub_merchant': 'Ptsv2paymentsAggregatorInformationSubMerchant'
+        'sub_merchant': 'Ptsv2paymentsAggregatorInformationSubMerchant',
+        'street_address': 'str',
+        'city': 'str',
+        'state': 'str',
+        'postal_code': 'str',
+        'country': 'str'
     }
 
     attribute_map = {
         'aggregator_id': 'aggregatorId',
         'name': 'name',
-        'sub_merchant': 'subMerchant'
+        'sub_merchant': 'subMerchant',
+        'street_address': 'streetAddress',
+        'city': 'city',
+        'state': 'state',
+        'postal_code': 'postalCode',
+        'country': 'country'
     }
 
-    def __init__(self, aggregator_id=None, name=None, sub_merchant=None):
+    def __init__(self, aggregator_id=None, name=None, sub_merchant=None, street_address=None, city=None, state=None, postal_code=None, country=None):
         """
         Ptsv2paymentsAggregatorInformation - a model defined in Swagger
         """
@@ -49,6 +59,11 @@ class Ptsv2paymentsAggregatorInformation(object):
         self._aggregator_id = None
         self._name = None
         self._sub_merchant = None
+        self._street_address = None
+        self._city = None
+        self._state = None
+        self._postal_code = None
+        self._country = None
 
         if aggregator_id is not None:
           self.aggregator_id = aggregator_id
@@ -56,6 +71,16 @@ class Ptsv2paymentsAggregatorInformation(object):
           self.name = name
         if sub_merchant is not None:
           self.sub_merchant = sub_merchant
+        if street_address is not None:
+          self.street_address = street_address
+        if city is not None:
+          self.city = city
+        if state is not None:
+          self.state = state
+        if postal_code is not None:
+          self.postal_code = postal_code
+        if country is not None:
+          self.country = country
 
     @property
     def aggregator_id(self):
@@ -123,6 +148,121 @@ class Ptsv2paymentsAggregatorInformation(object):
         """
 
         self._sub_merchant = sub_merchant
+
+    @property
+    def street_address(self):
+        """
+        Gets the street_address of this Ptsv2paymentsAggregatorInformation.
+        Acquirer street name.
+
+        :return: The street_address of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._street_address
+
+    @street_address.setter
+    def street_address(self, street_address):
+        """
+        Sets the street_address of this Ptsv2paymentsAggregatorInformation.
+        Acquirer street name.
+
+        :param street_address: The street_address of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._street_address = street_address
+
+    @property
+    def city(self):
+        """
+        Gets the city of this Ptsv2paymentsAggregatorInformation.
+        Acquirer city.
+
+        :return: The city of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._city
+
+    @city.setter
+    def city(self, city):
+        """
+        Sets the city of this Ptsv2paymentsAggregatorInformation.
+        Acquirer city.
+
+        :param city: The city of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._city = city
+
+    @property
+    def state(self):
+        """
+        Gets the state of this Ptsv2paymentsAggregatorInformation.
+        Acquirer state.
+
+        :return: The state of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """
+        Sets the state of this Ptsv2paymentsAggregatorInformation.
+        Acquirer state.
+
+        :param state: The state of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._state = state
+
+    @property
+    def postal_code(self):
+        """
+        Gets the postal_code of this Ptsv2paymentsAggregatorInformation.
+        Acquirer postal code.
+
+        :return: The postal_code of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._postal_code
+
+    @postal_code.setter
+    def postal_code(self, postal_code):
+        """
+        Sets the postal_code of this Ptsv2paymentsAggregatorInformation.
+        Acquirer postal code.
+
+        :param postal_code: The postal_code of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._postal_code = postal_code
+
+    @property
+    def country(self):
+        """
+        Gets the country of this Ptsv2paymentsAggregatorInformation.
+        Acquirer country.
+
+        :return: The country of this Ptsv2paymentsAggregatorInformation.
+        :rtype: str
+        """
+        return self._country
+
+    @country.setter
+    def country(self, country):
+        """
+        Sets the country of this Ptsv2paymentsAggregatorInformation.
+        Acquirer country.
+
+        :param country: The country of this Ptsv2paymentsAggregatorInformation.
+        :type: str
+        """
+
+        self._country = country
 
     def to_dict(self):
         """
