@@ -42,7 +42,8 @@ class PatchInstrumentIdentifierRequest(object):
         'issuer': 'TmsEmbeddedInstrumentIdentifierIssuer',
         'processing_information': 'TmsEmbeddedInstrumentIdentifierProcessingInformation',
         'bill_to': 'TmsEmbeddedInstrumentIdentifierBillTo',
-        'metadata': 'TmsEmbeddedInstrumentIdentifierMetadata'
+        'metadata': 'TmsEmbeddedInstrumentIdentifierMetadata',
+        'embedded': 'TmsEmbeddedInstrumentIdentifierEmbedded'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class PatchInstrumentIdentifierRequest(object):
         'issuer': 'issuer',
         'processing_information': 'processingInformation',
         'bill_to': 'billTo',
-        'metadata': 'metadata'
+        'metadata': 'metadata',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, links=None, id=None, object=None, state=None, type=None, token_provisioning_information=None, card=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None):
+    def __init__(self, links=None, id=None, object=None, state=None, type=None, token_provisioning_information=None, card=None, bank_account=None, tokenized_card=None, issuer=None, processing_information=None, bill_to=None, metadata=None, embedded=None):
         """
         PatchInstrumentIdentifierRequest - a model defined in Swagger
         """
@@ -79,6 +81,7 @@ class PatchInstrumentIdentifierRequest(object):
         self._processing_information = None
         self._bill_to = None
         self._metadata = None
+        self._embedded = None
 
         if links is not None:
           self.links = links
@@ -106,6 +109,8 @@ class PatchInstrumentIdentifierRequest(object):
           self.bill_to = bill_to
         if metadata is not None:
           self.metadata = metadata
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
     def links(self):
@@ -387,6 +392,27 @@ class PatchInstrumentIdentifierRequest(object):
         """
 
         self._metadata = metadata
+
+    @property
+    def embedded(self):
+        """
+        Gets the embedded of this PatchInstrumentIdentifierRequest.
+
+        :return: The embedded of this PatchInstrumentIdentifierRequest.
+        :rtype: TmsEmbeddedInstrumentIdentifierEmbedded
+        """
+        return self._embedded
+
+    @embedded.setter
+    def embedded(self, embedded):
+        """
+        Sets the embedded of this PatchInstrumentIdentifierRequest.
+
+        :param embedded: The embedded of this PatchInstrumentIdentifierRequest.
+        :type: TmsEmbeddedInstrumentIdentifierEmbedded
+        """
+
+        self._embedded = embedded
 
     def to_dict(self):
         """

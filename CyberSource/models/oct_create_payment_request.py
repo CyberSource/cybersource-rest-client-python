@@ -36,7 +36,8 @@ class OctCreatePaymentRequest(object):
         'recipient_information': 'Ptsv2payoutsRecipientInformation',
         'sender_information': 'Ptsv2payoutsSenderInformation',
         'processing_information': 'Ptsv2payoutsProcessingInformation',
-        'payment_information': 'Ptsv2payoutsPaymentInformation'
+        'payment_information': 'Ptsv2payoutsPaymentInformation',
+        'aggregator_information': 'Ptsv2payoutsAggregatorInformation'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class OctCreatePaymentRequest(object):
         'recipient_information': 'recipientInformation',
         'sender_information': 'senderInformation',
         'processing_information': 'processingInformation',
-        'payment_information': 'paymentInformation'
+        'payment_information': 'paymentInformation',
+        'aggregator_information': 'aggregatorInformation'
     }
 
-    def __init__(self, client_reference_information=None, order_information=None, merchant_information=None, recipient_information=None, sender_information=None, processing_information=None, payment_information=None):
+    def __init__(self, client_reference_information=None, order_information=None, merchant_information=None, recipient_information=None, sender_information=None, processing_information=None, payment_information=None, aggregator_information=None):
         """
         OctCreatePaymentRequest - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class OctCreatePaymentRequest(object):
         self._sender_information = None
         self._processing_information = None
         self._payment_information = None
+        self._aggregator_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -76,6 +79,8 @@ class OctCreatePaymentRequest(object):
           self.processing_information = processing_information
         if payment_information is not None:
           self.payment_information = payment_information
+        if aggregator_information is not None:
+          self.aggregator_information = aggregator_information
 
     @property
     def client_reference_information(self):
@@ -223,6 +228,27 @@ class OctCreatePaymentRequest(object):
         """
 
         self._payment_information = payment_information
+
+    @property
+    def aggregator_information(self):
+        """
+        Gets the aggregator_information of this OctCreatePaymentRequest.
+
+        :return: The aggregator_information of this OctCreatePaymentRequest.
+        :rtype: Ptsv2payoutsAggregatorInformation
+        """
+        return self._aggregator_information
+
+    @aggregator_information.setter
+    def aggregator_information(self, aggregator_information):
+        """
+        Sets the aggregator_information of this OctCreatePaymentRequest.
+
+        :param aggregator_information: The aggregator_information of this OctCreatePaymentRequest.
+        :type: Ptsv2payoutsAggregatorInformation
+        """
+
+        self._aggregator_information = aggregator_information
 
     def to_dict(self):
         """

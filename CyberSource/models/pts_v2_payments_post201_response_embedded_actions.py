@@ -34,7 +34,9 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         'decision': 'PtsV2PaymentsPost201ResponseEmbeddedActionsDECISION',
         'consumer_authentication': 'PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION',
         'validate_consumer_authentication': 'PtsV2PaymentsPost201ResponseEmbeddedActionsCONSUMERAUTHENTICATION',
-        'watchlist_screening': 'PtsV2PaymentsPost201ResponseEmbeddedActionsWATCHLISTSCREENING'
+        'watchlist_screening': 'PtsV2PaymentsPost201ResponseEmbeddedActionsWATCHLISTSCREENING',
+        'token_create': 'PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENCREATE',
+        'token_update': 'PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENUPDATE'
     }
 
     attribute_map = {
@@ -42,10 +44,12 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         'decision': 'DECISION',
         'consumer_authentication': 'CONSUMER_AUTHENTICATION',
         'validate_consumer_authentication': 'VALIDATE_CONSUMER_AUTHENTICATION',
-        'watchlist_screening': 'WATCHLIST_SCREENING'
+        'watchlist_screening': 'WATCHLIST_SCREENING',
+        'token_create': 'TOKEN_CREATE',
+        'token_update': 'TOKEN_UPDATE'
     }
 
-    def __init__(self, capture=None, decision=None, consumer_authentication=None, validate_consumer_authentication=None, watchlist_screening=None):
+    def __init__(self, capture=None, decision=None, consumer_authentication=None, validate_consumer_authentication=None, watchlist_screening=None, token_create=None, token_update=None):
         """
         PtsV2PaymentsPost201ResponseEmbeddedActions - a model defined in Swagger
         """
@@ -55,6 +59,8 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         self._consumer_authentication = None
         self._validate_consumer_authentication = None
         self._watchlist_screening = None
+        self._token_create = None
+        self._token_update = None
 
         if capture is not None:
           self.capture = capture
@@ -66,6 +72,10 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
           self.validate_consumer_authentication = validate_consumer_authentication
         if watchlist_screening is not None:
           self.watchlist_screening = watchlist_screening
+        if token_create is not None:
+          self.token_create = token_create
+        if token_update is not None:
+          self.token_update = token_update
 
     @property
     def capture(self):
@@ -171,6 +181,48 @@ class PtsV2PaymentsPost201ResponseEmbeddedActions(object):
         """
 
         self._watchlist_screening = watchlist_screening
+
+    @property
+    def token_create(self):
+        """
+        Gets the token_create of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+
+        :return: The token_create of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+        :rtype: PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENCREATE
+        """
+        return self._token_create
+
+    @token_create.setter
+    def token_create(self, token_create):
+        """
+        Sets the token_create of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+
+        :param token_create: The token_create of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+        :type: PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENCREATE
+        """
+
+        self._token_create = token_create
+
+    @property
+    def token_update(self):
+        """
+        Gets the token_update of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+
+        :return: The token_update of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+        :rtype: PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENUPDATE
+        """
+        return self._token_update
+
+    @token_update.setter
+    def token_update(self, token_update):
+        """
+        Sets the token_update of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+
+        :param token_update: The token_update of this PtsV2PaymentsPost201ResponseEmbeddedActions.
+        :type: PtsV2PaymentsPost201ResponseEmbeddedActionsTOKENUPDATE
+        """
+
+        self._token_update = token_update
 
     def to_dict(self):
         """

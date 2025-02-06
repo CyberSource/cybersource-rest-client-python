@@ -52,7 +52,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'cash_advance_indicator': 'bool',
         'split_payment_transaction': 'bool',
         'card_verification_indicator': 'bool',
-        'aft_indicator': 'bool'
+        'transaction_mode': 'str',
+        'aft_indicator': 'bool',
+        'service_type': 'str',
+        'balance_update': 'bool',
+        'money_load': 'bool'
     }
 
     attribute_map = {
@@ -78,10 +82,14 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         'cash_advance_indicator': 'cashAdvanceIndicator',
         'split_payment_transaction': 'splitPaymentTransaction',
         'card_verification_indicator': 'cardVerificationIndicator',
-        'aft_indicator': 'aftIndicator'
+        'transaction_mode': 'transactionMode',
+        'aft_indicator': 'aftIndicator',
+        'service_type': 'serviceType',
+        'balance_update': 'balanceUpdate',
+        'money_load': 'moneyLoad'
     }
 
-    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None, aft_indicator=None):
+    def __init__(self, auth_type=None, pan_return_indicator=None, verbal_auth_code=None, verbal_auth_transaction_id=None, auth_indicator=None, partial_auth_indicator=None, extend_auth_indicator=None, balance_inquiry=None, ignore_avs_result=False, decline_avs_flags=None, ignore_cv_result=False, initiator=None, bill_payment=None, bill_payment_type=None, redemption_inquiry=None, transportation_mode=None, aggregated_auth_indicator=None, debt_recovery_indicator=None, deferred_auth_indicator=None, cash_advance_indicator=None, split_payment_transaction=None, card_verification_indicator=None, transaction_mode=None, aft_indicator=None, service_type=None, balance_update=None, money_load=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptions - a model defined in Swagger
         """
@@ -108,7 +116,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._cash_advance_indicator = None
         self._split_payment_transaction = None
         self._card_verification_indicator = None
+        self._transaction_mode = None
         self._aft_indicator = None
+        self._service_type = None
+        self._balance_update = None
+        self._money_load = None
 
         if auth_type is not None:
           self.auth_type = auth_type
@@ -154,8 +166,16 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
           self.split_payment_transaction = split_payment_transaction
         if card_verification_indicator is not None:
           self.card_verification_indicator = card_verification_indicator
+        if transaction_mode is not None:
+          self.transaction_mode = transaction_mode
         if aft_indicator is not None:
           self.aft_indicator = aft_indicator
+        if service_type is not None:
+          self.service_type = service_type
+        if balance_update is not None:
+          self.balance_update = balance_update
+        if money_load is not None:
+          self.money_load = money_load
 
     @property
     def auth_type(self):
@@ -299,7 +319,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def extend_auth_indicator(self):
         """
         Gets the extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is an extended authorization. 
+        Indicates Authorization extension transaction. Extension transaction is used to prolong the settlement period by one additional settlement cycle period.  Possible values: - true: Transaction is an Authorization Extension transaction.  - false: Transaction is not an Authorization Extension transaction. 
 
         :return: The extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -310,7 +330,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def extend_auth_indicator(self, extend_auth_indicator):
         """
         Sets the extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Flag that indicates whether the transaction is an extended authorization. 
+        Indicates Authorization extension transaction. Extension transaction is used to prolong the settlement period by one additional settlement cycle period.  Possible values: - true: Transaction is an Authorization Extension transaction.  - false: Transaction is not an Authorization Extension transaction. 
 
         :param extend_auth_indicator: The extend_auth_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -458,7 +478,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self):
         """
         Gets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Public utilities / Utility payment - 002: Government services - 003: Cellular / Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment - 006: Billing payment - 007: Tax payment - 008: Tax payment refunds  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :return: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :rtype: str
@@ -469,7 +489,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
     def bill_payment_type(self, bill_payment_type):
         """
         Sets the bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
-        Reason for the payment.  Possible values: - 001: Utility payment - 002: Government services - 003: Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
+        Reason for the payment.  Possible values: - 001: Public utilities / Utility payment - 002: Government services - 003: Cellular / Mobile phone top-up - 004: Coupon payment - 005: Installment based repayment - 006: Billing payment - 007: Tax payment - 008: Tax payment refunds  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Brazil): - Record: CP07 TCR0 - Position: 48-50 - Field: Bill Payment Transaction Type Identifier  The value for this field corresponds to the following data in the TC 33A capture file (applicable to Installment) based Repayment): - Record: CP01 TCR6 - Position: 154-156 - Field: Bill Payment Transaction Type Identifier   This field is supported for 1. Bill payments in Brazil with Mastercard on CyberSource through VisaNet. 2. Installment based repayment transactions on Cybersource through VisaNet. 
 
         :param bill_payment_type: The bill_payment_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
         :type: str
@@ -662,6 +682,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         self._card_verification_indicator = card_verification_indicator
 
     @property
+    def transaction_mode(self):
+        """
+        Gets the transaction_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Transaction mode identifier. Identifies the specific channel from which the transaction originates.  Possible values: - M – Mobile Order - T – Telephone Order 
+
+        :return: The transaction_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._transaction_mode
+
+    @transaction_mode.setter
+    def transaction_mode(self, transaction_mode):
+        """
+        Sets the transaction_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Transaction mode identifier. Identifies the specific channel from which the transaction originates.  Possible values: - M – Mobile Order - T – Telephone Order 
+
+        :param transaction_mode: The transaction_mode of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._transaction_mode = transaction_mode
+
+    @property
     def aft_indicator(self):
         """
         Gets the aft_indicator of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
@@ -683,6 +726,75 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions(object):
         """
 
         self._aft_indicator = aft_indicator
+
+    @property
+    def service_type(self):
+        """
+        Gets the service_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Field is used for back-to-back funding transaction and can be defined as a payment flow that automatically transfers funds through a real-time  funding or a live-load. This type of transaction can also be connected to a purchase.  In back-to-back funding of general purpose card that is used to make a purchase, two separate accounts are involved:  - account one is used to make the purchase - account two is used to automatically fund or reimburse account one  Possible values: - 0B = back to back funding transaction - 00 = normal transaction - 01 = originator hold - 02 = Visa deferred OCT hold, default interval - 03 = Visa deferred OCT hold, user-defined interval - 09 = Cancel pending deferred OCT request - 0I = Visa Direct custom program 1 - 0Q = uery the status of the deferred OCT - A0 = Alias Directory 2 
+
+        :return: The service_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: str
+        """
+        return self._service_type
+
+    @service_type.setter
+    def service_type(self, service_type):
+        """
+        Sets the service_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Field is used for back-to-back funding transaction and can be defined as a payment flow that automatically transfers funds through a real-time  funding or a live-load. This type of transaction can also be connected to a purchase.  In back-to-back funding of general purpose card that is used to make a purchase, two separate accounts are involved:  - account one is used to make the purchase - account two is used to automatically fund or reimburse account one  Possible values: - 0B = back to back funding transaction - 00 = normal transaction - 01 = originator hold - 02 = Visa deferred OCT hold, default interval - 03 = Visa deferred OCT hold, user-defined interval - 09 = Cancel pending deferred OCT request - 0I = Visa Direct custom program 1 - 0Q = uery the status of the deferred OCT - A0 = Alias Directory 2 
+
+        :param service_type: The service_type of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: str
+        """
+
+        self._service_type = service_type
+
+    @property
+    def balance_update(self):
+        """
+        Gets the balance_update of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Merchant to inform Cybersource whether a transaction is Money load with Balance Update.  Possible values:   - `true` (This is a Money load with balance update transaction)   - `false` (default value) (This is not a Money load with balance update transaction) 
+
+        :return: The balance_update of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._balance_update
+
+    @balance_update.setter
+    def balance_update(self, balance_update):
+        """
+        Sets the balance_update of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Merchant to inform Cybersource whether a transaction is Money load with Balance Update.  Possible values:   - `true` (This is a Money load with balance update transaction)   - `false` (default value) (This is not a Money load with balance update transaction) 
+
+        :param balance_update: The balance_update of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._balance_update = balance_update
+
+    @property
+    def money_load(self):
+        """
+        Gets the money_load of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Merchant to inform Cybersource whether a transaction is Money load with Money load only.  Possible values:   - `true` (This is a money load transaction)   - `false` (default value) (This is not a money load transaction) 
+
+        :return: The money_load of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :rtype: bool
+        """
+        return self._money_load
+
+    @money_load.setter
+    def money_load(self, money_load):
+        """
+        Sets the money_load of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        Merchant to inform Cybersource whether a transaction is Money load with Money load only.  Possible values:   - `true` (This is a money load transaction)   - `false` (default value) (This is not a money load transaction) 
+
+        :param money_load: The money_load of this Ptsv2paymentsProcessingInformationAuthorizationOptions.
+        :type: bool
+        """
+
+        self._money_load = money_load
 
     def to_dict(self):
         """

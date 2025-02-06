@@ -32,16 +32,18 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
     swagger_types = {
         'reason': 'str',
         'previous_transaction_id': 'str',
-        'original_authorized_amount': 'str'
+        'original_authorized_amount': 'str',
+        'agreement_id': 'str'
     }
 
     attribute_map = {
         'reason': 'reason',
         'previous_transaction_id': 'previousTransactionId',
-        'original_authorized_amount': 'originalAuthorizedAmount'
+        'original_authorized_amount': 'originalAuthorizedAmount',
+        'agreement_id': 'agreementId'
     }
 
-    def __init__(self, reason=None, previous_transaction_id=None, original_authorized_amount=None):
+    def __init__(self, reason=None, previous_transaction_id=None, original_authorized_amount=None, agreement_id=None):
         """
         Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction - a model defined in Swagger
         """
@@ -49,6 +51,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         self._reason = None
         self._previous_transaction_id = None
         self._original_authorized_amount = None
+        self._agreement_id = None
 
         if reason is not None:
           self.reason = reason
@@ -56,6 +59,8 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
           self.previous_transaction_id = previous_transaction_id
         if original_authorized_amount is not None:
           self.original_authorized_amount = original_authorized_amount
+        if agreement_id is not None:
+          self.agreement_id = agreement_id
 
     @property
     def reason(self):
@@ -125,6 +130,29 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantIni
         """
 
         self._original_authorized_amount = original_authorized_amount
+
+    @property
+    def agreement_id(self):
+        """
+        Gets the agreement_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        An API to carry the agreement ID generated for recurring and unscheduled Card on file transaction. the merchant generates this per card holder or per payment agreement and shares the generated unique ID in the subsequent transactions. This can contain foreign/arabic character set also. Cybersource forwards this value to the Saudi Payment processor. 
+
+        :return: The agreement_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :rtype: str
+        """
+        return self._agreement_id
+
+    @agreement_id.setter
+    def agreement_id(self, agreement_id):
+        """
+        Sets the agreement_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        An API to carry the agreement ID generated for recurring and unscheduled Card on file transaction. the merchant generates this per card holder or per payment agreement and shares the generated unique ID in the subsequent transactions. This can contain foreign/arabic character set also. Cybersource forwards this value to the Saudi Payment processor. 
+
+        :param agreement_id: The agreement_id of this Ptsv2paymentsProcessingInformationAuthorizationOptionsInitiatorMerchantInitiatedTransaction.
+        :type: str
+        """
+
+        self._agreement_id = agreement_id
 
     def to_dict(self):
         """

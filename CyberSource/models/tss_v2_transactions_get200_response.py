@@ -51,7 +51,7 @@ class TssV2TransactionsGet200Response(object):
         'payment_information': 'TssV2TransactionsGet200ResponsePaymentInformation',
         'payment_insights_information': 'PtsV2PaymentsPost201ResponsePaymentInsightsInformation',
         'payout_options': 'TssV2TransactionsGet200ResponsePayoutOptions',
-        'unscheduled_payment_information': 'TssV2TransactionsGet200ResponseUnscheduledPaymentInformation',
+        'unscheduled_payment_information': 'Ptsv2paymentsUnscheduledPaymentInformation',
         'processing_information': 'TssV2TransactionsGet200ResponseProcessingInformation',
         'processor_information': 'TssV2TransactionsGet200ResponseProcessorInformation',
         'recurring_payment_information': 'TssV2TransactionsGet200ResponseRecurringPaymentInformation',
@@ -653,7 +653,7 @@ class TssV2TransactionsGet200Response(object):
         Gets the unscheduled_payment_information of this TssV2TransactionsGet200Response.
 
         :return: The unscheduled_payment_information of this TssV2TransactionsGet200Response.
-        :rtype: TssV2TransactionsGet200ResponseUnscheduledPaymentInformation
+        :rtype: Ptsv2paymentsUnscheduledPaymentInformation
         """
         return self._unscheduled_payment_information
 
@@ -663,7 +663,7 @@ class TssV2TransactionsGet200Response(object):
         Sets the unscheduled_payment_information of this TssV2TransactionsGet200Response.
 
         :param unscheduled_payment_information: The unscheduled_payment_information of this TssV2TransactionsGet200Response.
-        :type: TssV2TransactionsGet200ResponseUnscheduledPaymentInformation
+        :type: Ptsv2paymentsUnscheduledPaymentInformation
         """
 
         self._unscheduled_payment_information = unscheduled_payment_information

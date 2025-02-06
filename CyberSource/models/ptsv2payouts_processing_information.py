@@ -37,7 +37,9 @@ class Ptsv2payoutsProcessingInformation(object):
         'payouts_options': 'Ptsv2payoutsProcessingInformationPayoutsOptions',
         'transaction_reason': 'str',
         'purpose_of_payment': 'str',
-        'funding_options': 'Ptsv2payoutsProcessingInformationFundingOptions'
+        'funding_options': 'Ptsv2payoutsProcessingInformationFundingOptions',
+        'language_code': 'str',
+        'purchase_options': 'Ptsv2payoutsProcessingInformationPurchaseOptions'
     }
 
     attribute_map = {
@@ -48,10 +50,12 @@ class Ptsv2payoutsProcessingInformation(object):
         'payouts_options': 'payoutsOptions',
         'transaction_reason': 'transactionReason',
         'purpose_of_payment': 'purposeOfPayment',
-        'funding_options': 'fundingOptions'
+        'funding_options': 'fundingOptions',
+        'language_code': 'languageCode',
+        'purchase_options': 'purchaseOptions'
     }
 
-    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None, funding_options=None):
+    def __init__(self, business_application_id=None, network_routing_order=None, commerce_indicator=None, reconciliation_id=None, payouts_options=None, transaction_reason=None, purpose_of_payment=None, funding_options=None, language_code=None, purchase_options=None):
         """
         Ptsv2payoutsProcessingInformation - a model defined in Swagger
         """
@@ -64,6 +68,8 @@ class Ptsv2payoutsProcessingInformation(object):
         self._transaction_reason = None
         self._purpose_of_payment = None
         self._funding_options = None
+        self._language_code = None
+        self._purchase_options = None
 
         if business_application_id is not None:
           self.business_application_id = business_application_id
@@ -81,6 +87,10 @@ class Ptsv2payoutsProcessingInformation(object):
           self.purpose_of_payment = purpose_of_payment
         if funding_options is not None:
           self.funding_options = funding_options
+        if language_code is not None:
+          self.language_code = language_code
+        if purchase_options is not None:
+          self.purchase_options = purchase_options
 
     @property
     def business_application_id(self):
@@ -261,6 +271,50 @@ class Ptsv2payoutsProcessingInformation(object):
         """
 
         self._funding_options = funding_options
+
+    @property
+    def language_code(self):
+        """
+        Gets the language_code of this Ptsv2payoutsProcessingInformation.
+        Contains the ISO 639-2 defined language Code 
+
+        :return: The language_code of this Ptsv2payoutsProcessingInformation.
+        :rtype: str
+        """
+        return self._language_code
+
+    @language_code.setter
+    def language_code(self, language_code):
+        """
+        Sets the language_code of this Ptsv2payoutsProcessingInformation.
+        Contains the ISO 639-2 defined language Code 
+
+        :param language_code: The language_code of this Ptsv2payoutsProcessingInformation.
+        :type: str
+        """
+
+        self._language_code = language_code
+
+    @property
+    def purchase_options(self):
+        """
+        Gets the purchase_options of this Ptsv2payoutsProcessingInformation.
+
+        :return: The purchase_options of this Ptsv2payoutsProcessingInformation.
+        :rtype: Ptsv2payoutsProcessingInformationPurchaseOptions
+        """
+        return self._purchase_options
+
+    @purchase_options.setter
+    def purchase_options(self, purchase_options):
+        """
+        Sets the purchase_options of this Ptsv2payoutsProcessingInformation.
+
+        :param purchase_options: The purchase_options of this Ptsv2payoutsProcessingInformation.
+        :type: Ptsv2payoutsProcessingInformationPurchaseOptions
+        """
+
+        self._purchase_options = purchase_options
 
     def to_dict(self):
         """

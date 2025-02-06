@@ -30,7 +30,7 @@ class PushFundsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'aggregator_information': 'Ptsv1pushfundstransferAggregatorInformation',
+        'aggregator_information': 'Ptsv2payoutsAggregatorInformation',
         'client_reference_information': 'Ptsv1pushfundstransferClientReferenceInformation',
         'order_information': 'Ptsv1pushfundstransferOrderInformation',
         'processing_information': 'Ptsv1pushfundstransferProcessingInformation',
@@ -87,7 +87,7 @@ class PushFundsRequest(object):
         Gets the aggregator_information of this PushFundsRequest.
 
         :return: The aggregator_information of this PushFundsRequest.
-        :rtype: Ptsv1pushfundstransferAggregatorInformation
+        :rtype: Ptsv2payoutsAggregatorInformation
         """
         return self._aggregator_information
 
@@ -97,7 +97,7 @@ class PushFundsRequest(object):
         Sets the aggregator_information of this PushFundsRequest.
 
         :param aggregator_information: The aggregator_information of this PushFundsRequest.
-        :type: Ptsv1pushfundstransferAggregatorInformation
+        :type: Ptsv2payoutsAggregatorInformation
         """
 
         self._aggregator_information = aggregator_information

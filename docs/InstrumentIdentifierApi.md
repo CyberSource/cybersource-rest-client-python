@@ -62,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier**
-> PostInstrumentIdentifierRequest get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
+> PostInstrumentIdentifierRequest get_instrument_identifier(instrument_identifier_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
 
 Retrieve an Instrument Identifier
 
@@ -80,10 +80,11 @@ from pprint import pprint
 api_instance = CyberSource.InstrumentIdentifierApi()
 instrument_identifier_id = 'instrument_identifier_id_example' # str | The Id of an Instrument Identifier.
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 
 try: 
     # Retrieve an Instrument Identifier
-    api_response = api_instance.get_instrument_identifier(instrument_identifier_id, profile_id=profile_id)
+    api_response = api_instance.get_instrument_identifier(instrument_identifier_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InstrumentIdentifierApi->get_instrument_identifier: %s\n" % e)
@@ -95,6 +96,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instrument_identifier_id** | **str**| The Id of an Instrument Identifier. | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
 
 ### Return type
 
@@ -112,7 +114,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_instrument_identifier_payment_instruments_list**
-> PaymentInstrumentList1 get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, offset=offset, limit=limit)
+> PaymentInstrumentList1 get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, offset=offset, limit=limit)
 
 List Payment Instruments for an Instrument Identifier
 
@@ -130,12 +132,13 @@ from pprint import pprint
 api_instance = CyberSource.InstrumentIdentifierApi()
 instrument_identifier_id = 'instrument_identifier_id_example' # str | The Id of an Instrument Identifier.
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 offset = 0 # int | Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0. (optional) (default to 0)
 limit = 20 # int | The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. (optional) (default to 20)
 
 try: 
     # List Payment Instruments for an Instrument Identifier
-    api_response = api_instance.get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, offset=offset, limit=limit)
+    api_response = api_instance.get_instrument_identifier_payment_instruments_list(instrument_identifier_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, offset=offset, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InstrumentIdentifierApi->get_instrument_identifier_payment_instruments_list: %s\n" % e)
@@ -147,6 +150,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instrument_identifier_id** | **str**| The Id of an Instrument Identifier. | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
  **offset** | **int**| Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0. | [optional] [default to 0]
  **limit** | **int**| The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. | [optional] [default to 20]
 
@@ -166,7 +170,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_instrument_identifier**
-> PatchInstrumentIdentifierRequest patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
+> PatchInstrumentIdentifierRequest patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, if_match=if_match)
 
 Update an Instrument Identifier
 
@@ -185,11 +189,12 @@ api_instance = CyberSource.InstrumentIdentifierApi()
 instrument_identifier_id = 'instrument_identifier_id_example' # str | The Id of an Instrument Identifier.
 patch_instrument_identifier_request = CyberSource.PatchInstrumentIdentifierRequest() # PatchInstrumentIdentifierRequest | Specify the previous transaction Id to update.
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 if_match = 'if_match_example' # str | Contains an ETag value from a GET request to make the request conditional. (optional)
 
 try: 
     # Update an Instrument Identifier
-    api_response = api_instance.patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, if_match=if_match)
+    api_response = api_instance.patch_instrument_identifier(instrument_identifier_id, patch_instrument_identifier_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, if_match=if_match)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InstrumentIdentifierApi->patch_instrument_identifier: %s\n" % e)
@@ -202,6 +207,7 @@ Name | Type | Description  | Notes
  **instrument_identifier_id** | **str**| The Id of an Instrument Identifier. | 
  **patch_instrument_identifier_request** | [**PatchInstrumentIdentifierRequest**](PatchInstrumentIdentifierRequest.md)| Specify the previous transaction Id to update. | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
  **if_match** | **str**| Contains an ETag value from a GET request to make the request conditional. | [optional] 
 
 ### Return type
@@ -220,7 +226,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_instrument_identifier**
-> PostInstrumentIdentifierRequest post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
+> PostInstrumentIdentifierRequest post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
 
 Create an Instrument Identifier
 
@@ -238,10 +244,11 @@ from pprint import pprint
 api_instance = CyberSource.InstrumentIdentifierApi()
 post_instrument_identifier_request = CyberSource.PostInstrumentIdentifierRequest() # PostInstrumentIdentifierRequest | Specify either a Card, Bank Account or Enrollable Card
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 
 try: 
     # Create an Instrument Identifier
-    api_response = api_instance.post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id)
+    api_response = api_instance.post_instrument_identifier(post_instrument_identifier_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InstrumentIdentifierApi->post_instrument_identifier: %s\n" % e)
@@ -253,6 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **post_instrument_identifier_request** | [**PostInstrumentIdentifierRequest**](PostInstrumentIdentifierRequest.md)| Specify either a Card, Bank Account or Enrollable Card | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
 
 ### Return type
 

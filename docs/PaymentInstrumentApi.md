@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_payment_instrument**
-> PostPaymentInstrumentRequest get_payment_instrument(payment_instrument_id, profile_id=profile_id)
+> PostPaymentInstrumentRequest get_payment_instrument(payment_instrument_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
 
 Retrieve a Payment Instrument
 
@@ -78,10 +78,11 @@ from pprint import pprint
 api_instance = CyberSource.PaymentInstrumentApi()
 payment_instrument_id = 'payment_instrument_id_example' # str | The Id of a payment instrument.
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 
 try: 
     # Retrieve a Payment Instrument
-    api_response = api_instance.get_payment_instrument(payment_instrument_id, profile_id=profile_id)
+    api_response = api_instance.get_payment_instrument(payment_instrument_id, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->get_payment_instrument: %s\n" % e)
@@ -93,6 +94,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_instrument_id** | **str**| The Id of a payment instrument. | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
 
 ### Return type
 
@@ -110,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_payment_instrument**
-> PatchPaymentInstrumentRequest patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, if_match=if_match)
+> PatchPaymentInstrumentRequest patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, if_match=if_match)
 
 Update a Payment Instrument
 
@@ -129,11 +131,12 @@ api_instance = CyberSource.PaymentInstrumentApi()
 payment_instrument_id = 'payment_instrument_id_example' # str | The Id of a payment instrument.
 patch_payment_instrument_request = CyberSource.PatchPaymentInstrumentRequest() # PatchPaymentInstrumentRequest | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 if_match = 'if_match_example' # str | Contains an ETag value from a GET request to make the request conditional. (optional)
 
 try: 
     # Update a Payment Instrument
-    api_response = api_instance.patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, if_match=if_match)
+    api_response = api_instance.patch_payment_instrument(payment_instrument_id, patch_payment_instrument_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details, if_match=if_match)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->patch_payment_instrument: %s\n" % e)
@@ -146,6 +149,7 @@ Name | Type | Description  | Notes
  **payment_instrument_id** | **str**| The Id of a payment instrument. | 
  **patch_payment_instrument_request** | [**PatchPaymentInstrumentRequest**](PatchPaymentInstrumentRequest.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
  **if_match** | **str**| Contains an ETag value from a GET request to make the request conditional. | [optional] 
 
 ### Return type
@@ -164,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_payment_instrument**
-> PostPaymentInstrumentRequest post_payment_instrument(post_payment_instrument_request, profile_id=profile_id)
+> PostPaymentInstrumentRequest post_payment_instrument(post_payment_instrument_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
 
 Create a Payment Instrument
 
@@ -182,10 +186,11 @@ from pprint import pprint
 api_instance = CyberSource.PaymentInstrumentApi()
 post_payment_instrument_request = CyberSource.PostPaymentInstrumentRequest() # PostPaymentInstrumentRequest | 
 profile_id = 'profile_id_example' # str | The Id of a profile containing user specific TMS configuration. (optional)
+retrieve_bin_details = true # bool | Retrieve the Bin Details of PAN or network token (optional)
 
 try: 
     # Create a Payment Instrument
-    api_response = api_instance.post_payment_instrument(post_payment_instrument_request, profile_id=profile_id)
+    api_response = api_instance.post_payment_instrument(post_payment_instrument_request, profile_id=profile_id, retrieve_bin_details=retrieve_bin_details)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PaymentInstrumentApi->post_payment_instrument: %s\n" % e)
@@ -197,6 +202,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **post_payment_instrument_request** | [**PostPaymentInstrumentRequest**](PostPaymentInstrumentRequest.md)|  | 
  **profile_id** | **str**| The Id of a profile containing user specific TMS configuration. | [optional] 
+ **retrieve_bin_details** | **bool**| Retrieve the Bin Details of PAN or network token | [optional] 
 
 ### Return type
 

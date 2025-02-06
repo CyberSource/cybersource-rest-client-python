@@ -67,7 +67,11 @@ class Ptsv2paymentsProcessingInformation(object):
         'network_partner_id': 'str',
         'payment_type': 'str',
         'enabler_id': 'str',
-        'processing_instruction': 'str'
+        'processing_instruction': 'str',
+        'transaction_type_indicator': 'str',
+        'purpose_of_payment': 'str',
+        'language_code': 'str',
+        'original_payment_id': 'str'
     }
 
     attribute_map = {
@@ -108,10 +112,14 @@ class Ptsv2paymentsProcessingInformation(object):
         'network_partner_id': 'networkPartnerId',
         'payment_type': 'paymentType',
         'enabler_id': 'enablerId',
-        'processing_instruction': 'processingInstruction'
+        'processing_instruction': 'processingInstruction',
+        'transaction_type_indicator': 'transactionTypeIndicator',
+        'purpose_of_payment': 'purposeOfPayment',
+        'language_code': 'languageCode',
+        'original_payment_id': 'originalPaymentId'
     }
 
-    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None):
+    def __init__(self, action_list=None, enable_escrow_option=None, action_token_types=None, bin_source=None, capture=False, processor_id=None, business_application_id=None, commerce_indicator=None, commerce_indicator_label=None, payment_solution=None, reconciliation_id=None, link_id=None, purchase_level=None, transaction_timeout=None, intents_id=None, report_group=None, visa_checkout_id=None, industry_data_type=None, authorization_options=None, capture_options=None, recurring_options=None, bank_transfer_options=None, purchase_options=None, electronic_benefits_transfer=None, loan_options=None, wallet_type=None, national_net_domestic_data=None, japan_payment_options=None, mobile_remote_payment_type=None, extended_credit_total_count=None, network_routing_order=None, pay_by_points_indicator=None, timeout=None, is_return_auth_record_enabled=None, network_partner_id=None, payment_type=None, enabler_id=None, processing_instruction=None, transaction_type_indicator=None, purpose_of_payment=None, language_code=None, original_payment_id=None):
         """
         Ptsv2paymentsProcessingInformation - a model defined in Swagger
         """
@@ -154,6 +162,10 @@ class Ptsv2paymentsProcessingInformation(object):
         self._payment_type = None
         self._enabler_id = None
         self._processing_instruction = None
+        self._transaction_type_indicator = None
+        self._purpose_of_payment = None
+        self._language_code = None
+        self._original_payment_id = None
 
         if action_list is not None:
           self.action_list = action_list
@@ -231,6 +243,14 @@ class Ptsv2paymentsProcessingInformation(object):
           self.enabler_id = enabler_id
         if processing_instruction is not None:
           self.processing_instruction = processing_instruction
+        if transaction_type_indicator is not None:
+          self.transaction_type_indicator = transaction_type_indicator
+        if purpose_of_payment is not None:
+          self.purpose_of_payment = purpose_of_payment
+        if language_code is not None:
+          self.language_code = language_code
+        if original_payment_id is not None:
+          self.original_payment_id = original_payment_id
 
     @property
     def action_list(self):
@@ -1089,6 +1109,98 @@ class Ptsv2paymentsProcessingInformation(object):
         """
 
         self._processing_instruction = processing_instruction
+
+    @property
+    def transaction_type_indicator(self):
+        """
+        Gets the transaction_type_indicator of this Ptsv2paymentsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :return: The transaction_type_indicator of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_type_indicator
+
+    @transaction_type_indicator.setter
+    def transaction_type_indicator(self, transaction_type_indicator):
+        """
+        Sets the transaction_type_indicator of this Ptsv2paymentsProcessingInformation.
+        This field is used identify the type of payment transaction taking place. This field is applicable for MasterCard transactions only. Possible values: - 201- Mastercard Rebate - 202- rePower Load Value - 203- Gaming Re-pay - 204- General Person-to-Person - 205- General Transfer to Own Account - 206- Agent Cash Out - 207- Payment of Own Credit Card Bill - 208- Business Disbursement - 209- Government/Non-Profit Disbursement - 210- Rapid Merchant Settlement - 211- Cash in at ATM (Usage limited to specific countries) - 212- Cash in at Point of Sale (Usage limited to specific countries) - 213- General Business to Business Transfer - 214- Mastercard Merchant Presented QR - 215- Mastercard Merchant Presented QR Refund Payment - 216- Utility Payments (for Brazil domestic use only) - 217- Government Services (for Brazil domestic use only) - 218- Mobile phone top-ups (for Brazil domestic use only) - 219- Coupon booklet payments (for Brazil domestic use only) - 220- General Person-to-Person Transfer - 221- Person-to-Person Transfer to Card Account - 222- General Transfer to Own Account - 223- Agent Cash Out - 224- Payment of Own Credit Card Bill - 225- Business Disbursement - 226- Transfer to Own Staged Digital Wallet Account - 227- Transfer to Own Debit or Prepaid Account - 228- General Business-to-Business Transfer - 229- Installment-based repayment - 230- Mastercard ATM Cash Pick-Up Transaction - 231- Cryptocurrency - 232- High-risk Securities 
+
+        :param transaction_type_indicator: The transaction_type_indicator of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_type_indicator = transaction_type_indicator
+
+    @property
+    def purpose_of_payment(self):
+        """
+        Gets the purpose_of_payment of this Ptsv2paymentsProcessingInformation.
+         Possible values: - `16` :  High Risk Security  Other values can also be accommodated in future for different transactions.  Currently this field is only used in OCT, we could not find any existing valid values for the past 30 days in production. Issuer may decline invalid purpose of payment code with response code 93.  This field is also applicable for AFT transactions. For list of supported values, please refer to Developer Guide. 
+
+        :return: The purpose_of_payment of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._purpose_of_payment
+
+    @purpose_of_payment.setter
+    def purpose_of_payment(self, purpose_of_payment):
+        """
+        Sets the purpose_of_payment of this Ptsv2paymentsProcessingInformation.
+         Possible values: - `16` :  High Risk Security  Other values can also be accommodated in future for different transactions.  Currently this field is only used in OCT, we could not find any existing valid values for the past 30 days in production. Issuer may decline invalid purpose of payment code with response code 93.  This field is also applicable for AFT transactions. For list of supported values, please refer to Developer Guide. 
+
+        :param purpose_of_payment: The purpose_of_payment of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._purpose_of_payment = purpose_of_payment
+
+    @property
+    def language_code(self):
+        """
+        Gets the language_code of this Ptsv2paymentsProcessingInformation.
+        Contains the ISO 639-2 defined language Code 
+
+        :return: The language_code of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._language_code
+
+    @language_code.setter
+    def language_code(self, language_code):
+        """
+        Sets the language_code of this Ptsv2paymentsProcessingInformation.
+        Contains the ISO 639-2 defined language Code 
+
+        :param language_code: The language_code of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._language_code = language_code
+
+    @property
+    def original_payment_id(self):
+        """
+        Gets the original_payment_id of this Ptsv2paymentsProcessingInformation.
+        This value is used for linking Authorization extension transaction to the original Authorization transaction  and for linking MIT (Merchant initiated transaction) with the respective CIT (Customer initiated transaction). 
+
+        :return: The original_payment_id of this Ptsv2paymentsProcessingInformation.
+        :rtype: str
+        """
+        return self._original_payment_id
+
+    @original_payment_id.setter
+    def original_payment_id(self, original_payment_id):
+        """
+        Sets the original_payment_id of this Ptsv2paymentsProcessingInformation.
+        This value is used for linking Authorization extension transaction to the original Authorization transaction  and for linking MIT (Merchant initiated transaction) with the respective CIT (Customer initiated transaction). 
+
+        :param original_payment_id: The original_payment_id of this Ptsv2paymentsProcessingInformation.
+        :type: str
+        """
+
+        self._original_payment_id = original_payment_id
 
     def to_dict(self):
         """

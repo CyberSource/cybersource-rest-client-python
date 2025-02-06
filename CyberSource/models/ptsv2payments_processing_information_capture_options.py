@@ -34,7 +34,9 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         'total_capture_count': 'int',
         'date_to_capture': 'str',
         'is_final': 'str',
-        'notes': 'str'
+        'notes': 'str',
+        'reconciliation_id': 'str',
+        'reconciliation_id_alternate': 'str'
     }
 
     attribute_map = {
@@ -42,10 +44,12 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         'total_capture_count': 'totalCaptureCount',
         'date_to_capture': 'dateToCapture',
         'is_final': 'isFinal',
-        'notes': 'notes'
+        'notes': 'notes',
+        'reconciliation_id': 'reconciliationId',
+        'reconciliation_id_alternate': 'reconciliationIdAlternate'
     }
 
-    def __init__(self, capture_sequence_number=None, total_capture_count=None, date_to_capture=None, is_final=None, notes=None):
+    def __init__(self, capture_sequence_number=None, total_capture_count=None, date_to_capture=None, is_final=None, notes=None, reconciliation_id=None, reconciliation_id_alternate=None):
         """
         Ptsv2paymentsProcessingInformationCaptureOptions - a model defined in Swagger
         """
@@ -55,6 +59,8 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         self._date_to_capture = None
         self._is_final = None
         self._notes = None
+        self._reconciliation_id = None
+        self._reconciliation_id_alternate = None
 
         if capture_sequence_number is not None:
           self.capture_sequence_number = capture_sequence_number
@@ -66,6 +72,10 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
           self.is_final = is_final
         if notes is not None:
           self.notes = notes
+        if reconciliation_id is not None:
+          self.reconciliation_id = reconciliation_id
+        if reconciliation_id_alternate is not None:
+          self.reconciliation_id_alternate = reconciliation_id_alternate
 
     @property
     def capture_sequence_number(self):
@@ -181,6 +191,52 @@ class Ptsv2paymentsProcessingInformationCaptureOptions(object):
         """
 
         self._notes = notes
+
+    @property
+    def reconciliation_id(self):
+        """
+        Gets the reconciliation_id of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Used for authbill request when capture field equals true
+
+        :return: The reconciliation_id of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :rtype: str
+        """
+        return self._reconciliation_id
+
+    @reconciliation_id.setter
+    def reconciliation_id(self, reconciliation_id):
+        """
+        Sets the reconciliation_id of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Used for authbill request when capture field equals true
+
+        :param reconciliation_id: The reconciliation_id of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :type: str
+        """
+
+        self._reconciliation_id = reconciliation_id
+
+    @property
+    def reconciliation_id_alternate(self):
+        """
+        Gets the reconciliation_id_alternate of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Used by Nike merchant to send 12 digit order number
+
+        :return: The reconciliation_id_alternate of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :rtype: str
+        """
+        return self._reconciliation_id_alternate
+
+    @reconciliation_id_alternate.setter
+    def reconciliation_id_alternate(self, reconciliation_id_alternate):
+        """
+        Sets the reconciliation_id_alternate of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        Used by Nike merchant to send 12 digit order number
+
+        :param reconciliation_id_alternate: The reconciliation_id_alternate of this Ptsv2paymentsProcessingInformationCaptureOptions.
+        :type: str
+        """
+
+        self._reconciliation_id_alternate = reconciliation_id_alternate
 
     def to_dict(self):
         """

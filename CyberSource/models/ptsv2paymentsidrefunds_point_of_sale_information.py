@@ -30,22 +30,27 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'emv': 'Ptsv2paymentsidcapturesPointOfSaleInformationEmv'
+        'emv': 'Ptsv2paymentsidcapturesPointOfSaleInformationEmv',
+        'terminal_category': 'str'
     }
 
     attribute_map = {
-        'emv': 'emv'
+        'emv': 'emv',
+        'terminal_category': 'terminalCategory'
     }
 
-    def __init__(self, emv=None):
+    def __init__(self, emv=None, terminal_category=None):
         """
         Ptsv2paymentsidrefundsPointOfSaleInformation - a model defined in Swagger
         """
 
         self._emv = None
+        self._terminal_category = None
 
         if emv is not None:
           self.emv = emv
+        if terminal_category is not None:
+          self.terminal_category = terminal_category
 
     @property
     def emv(self):
@@ -67,6 +72,29 @@ class Ptsv2paymentsidrefundsPointOfSaleInformation(object):
         """
 
         self._emv = emv
+
+    @property
+    def terminal_category(self):
+        """
+        Gets the terminal_category of this Ptsv2paymentsidrefundsPointOfSaleInformation.
+        Indicates the type of terminal.   Possible values: - `AFD`: Automated Fuel Dispenser 
+
+        :return: The terminal_category of this Ptsv2paymentsidrefundsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_category
+
+    @terminal_category.setter
+    def terminal_category(self, terminal_category):
+        """
+        Sets the terminal_category of this Ptsv2paymentsidrefundsPointOfSaleInformation.
+        Indicates the type of terminal.   Possible values: - `AFD`: Automated Fuel Dispenser 
+
+        :param terminal_category: The terminal_category of this Ptsv2paymentsidrefundsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._terminal_category = terminal_category
 
     def to_dict(self):
         """

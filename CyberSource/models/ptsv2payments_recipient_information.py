@@ -36,12 +36,19 @@ class Ptsv2paymentsRecipientInformation(object):
         'middle_name': 'str',
         'last_name': 'str',
         'address1': 'str',
+        'administrative_area': 'str',
         'postal_code': 'str',
         'country': 'str',
         'date_of_birth': 'str',
         'beneficiary_id': 'str',
         'beneficiary_name': 'str',
-        'beneficiary_address': 'str'
+        'beneficiary_address': 'str',
+        'alias_name': 'str',
+        'nationality': 'str',
+        'country_of_birth': 'str',
+        'occupation': 'str',
+        'email': 'str',
+        'locality': 'str'
     }
 
     attribute_map = {
@@ -51,15 +58,22 @@ class Ptsv2paymentsRecipientInformation(object):
         'middle_name': 'middleName',
         'last_name': 'lastName',
         'address1': 'address1',
+        'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
         'country': 'country',
         'date_of_birth': 'dateOfBirth',
         'beneficiary_id': 'beneficiaryId',
         'beneficiary_name': 'beneficiaryName',
-        'beneficiary_address': 'beneficiaryAddress'
+        'beneficiary_address': 'beneficiaryAddress',
+        'alias_name': 'aliasName',
+        'nationality': 'nationality',
+        'country_of_birth': 'countryOfBirth',
+        'occupation': 'occupation',
+        'email': 'email',
+        'locality': 'locality'
     }
 
-    def __init__(self, account_id=None, account_type=None, first_name=None, middle_name=None, last_name=None, address1=None, postal_code=None, country=None, date_of_birth=None, beneficiary_id=None, beneficiary_name=None, beneficiary_address=None):
+    def __init__(self, account_id=None, account_type=None, first_name=None, middle_name=None, last_name=None, address1=None, administrative_area=None, postal_code=None, country=None, date_of_birth=None, beneficiary_id=None, beneficiary_name=None, beneficiary_address=None, alias_name=None, nationality=None, country_of_birth=None, occupation=None, email=None, locality=None):
         """
         Ptsv2paymentsRecipientInformation - a model defined in Swagger
         """
@@ -70,12 +84,19 @@ class Ptsv2paymentsRecipientInformation(object):
         self._middle_name = None
         self._last_name = None
         self._address1 = None
+        self._administrative_area = None
         self._postal_code = None
         self._country = None
         self._date_of_birth = None
         self._beneficiary_id = None
         self._beneficiary_name = None
         self._beneficiary_address = None
+        self._alias_name = None
+        self._nationality = None
+        self._country_of_birth = None
+        self._occupation = None
+        self._email = None
+        self._locality = None
 
         if account_id is not None:
           self.account_id = account_id
@@ -89,6 +110,8 @@ class Ptsv2paymentsRecipientInformation(object):
           self.last_name = last_name
         if address1 is not None:
           self.address1 = address1
+        if administrative_area is not None:
+          self.administrative_area = administrative_area
         if postal_code is not None:
           self.postal_code = postal_code
         if country is not None:
@@ -101,6 +124,18 @@ class Ptsv2paymentsRecipientInformation(object):
           self.beneficiary_name = beneficiary_name
         if beneficiary_address is not None:
           self.beneficiary_address = beneficiary_address
+        if alias_name is not None:
+          self.alias_name = alias_name
+        if nationality is not None:
+          self.nationality = nationality
+        if country_of_birth is not None:
+          self.country_of_birth = country_of_birth
+        if occupation is not None:
+          self.occupation = occupation
+        if email is not None:
+          self.email = email
+        if locality is not None:
+          self.locality = locality
 
     @property
     def account_id(self):
@@ -241,6 +276,29 @@ class Ptsv2paymentsRecipientInformation(object):
         self._address1 = address1
 
     @property
+    def administrative_area(self):
+        """
+        Gets the administrative_area of this Ptsv2paymentsRecipientInformation.
+        The state or province of the recipient. This field is applicable for AFT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
+
+        :return: The administrative_area of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._administrative_area
+
+    @administrative_area.setter
+    def administrative_area(self, administrative_area):
+        """
+        Sets the administrative_area of this Ptsv2paymentsRecipientInformation.
+        The state or province of the recipient. This field is applicable for AFT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
+
+        :param administrative_area: The administrative_area of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._administrative_area = administrative_area
+
+    @property
     def postal_code(self):
         """
         Gets the postal_code of this Ptsv2paymentsRecipientInformation.
@@ -377,6 +435,144 @@ class Ptsv2paymentsRecipientInformation(object):
         """
 
         self._beneficiary_address = beneficiary_address
+
+    @property
+    def alias_name(self):
+        """
+        Gets the alias_name of this Ptsv2paymentsRecipientInformation.
+        Account owner alias name. 
+
+        :return: The alias_name of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._alias_name
+
+    @alias_name.setter
+    def alias_name(self, alias_name):
+        """
+        Sets the alias_name of this Ptsv2paymentsRecipientInformation.
+        Account owner alias name. 
+
+        :param alias_name: The alias_name of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._alias_name = alias_name
+
+    @property
+    def nationality(self):
+        """
+        Gets the nationality of this Ptsv2paymentsRecipientInformation.
+        Account Owner Nationality
+
+        :return: The nationality of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._nationality
+
+    @nationality.setter
+    def nationality(self, nationality):
+        """
+        Sets the nationality of this Ptsv2paymentsRecipientInformation.
+        Account Owner Nationality
+
+        :param nationality: The nationality of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._nationality = nationality
+
+    @property
+    def country_of_birth(self):
+        """
+        Gets the country_of_birth of this Ptsv2paymentsRecipientInformation.
+        Account Owner Country of Birth
+
+        :return: The country_of_birth of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._country_of_birth
+
+    @country_of_birth.setter
+    def country_of_birth(self, country_of_birth):
+        """
+        Sets the country_of_birth of this Ptsv2paymentsRecipientInformation.
+        Account Owner Country of Birth
+
+        :param country_of_birth: The country_of_birth of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._country_of_birth = country_of_birth
+
+    @property
+    def occupation(self):
+        """
+        Gets the occupation of this Ptsv2paymentsRecipientInformation.
+        Account Owner Occupation
+
+        :return: The occupation of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._occupation
+
+    @occupation.setter
+    def occupation(self, occupation):
+        """
+        Sets the occupation of this Ptsv2paymentsRecipientInformation.
+        Account Owner Occupation
+
+        :param occupation: The occupation of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._occupation = occupation
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2paymentsRecipientInformation.
+        Account Owner email address
+
+        :return: The email of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2paymentsRecipientInformation.
+        Account Owner email address
+
+        :param email: The email of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def locality(self):
+        """
+        Gets the locality of this Ptsv2paymentsRecipientInformation.
+        The city of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
+
+        :return: The locality of this Ptsv2paymentsRecipientInformation.
+        :rtype: str
+        """
+        return self._locality
+
+    @locality.setter
+    def locality(self, locality):
+        """
+        Sets the locality of this Ptsv2paymentsRecipientInformation.
+        The city of the recipient. This field is applicable for AFT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
+
+        :param locality: The locality of this Ptsv2paymentsRecipientInformation.
+        :type: str
+        """
+
+        self._locality = locality
 
     def to_dict(self):
         """

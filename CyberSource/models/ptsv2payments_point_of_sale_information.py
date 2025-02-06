@@ -43,6 +43,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'track_data': 'str',
         'store_and_forward_indicator': 'str',
         'cardholder_verification_method': 'list[str]',
+        'terminal_category': 'str',
         'terminal_input_capability': 'list[str]',
         'terminal_card_capture_capability': 'str',
         'terminal_output_capability': 'str',
@@ -75,6 +76,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'track_data': 'trackData',
         'store_and_forward_indicator': 'storeAndForwardIndicator',
         'cardholder_verification_method': 'cardholderVerificationMethod',
+        'terminal_category': 'terminalCategory',
         'terminal_input_capability': 'terminalInputCapability',
         'terminal_card_capture_capability': 'terminalCardCaptureCapability',
         'terminal_output_capability': 'terminalOutputCapability',
@@ -93,7 +95,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         'service_code': 'serviceCode'
     }
 
-    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, pin_entry_solution=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
+    def __init__(self, terminal_id=None, terminal_serial_number=None, cardholder_verification_method_used=None, lane_number=None, cat_level=None, entry_mode=None, terminal_capability=None, operating_environment=None, emv=None, amex_capn_data=None, track_data=None, store_and_forward_indicator=None, cardholder_verification_method=None, terminal_category=None, terminal_input_capability=None, terminal_card_capture_capability=None, terminal_output_capability=None, terminal_pin_capability=None, pin_entry_solution=None, device_id=None, pin_block_encoding_format=None, encrypted_pin=None, encrypted_key_serial_number=None, partner_sdk_version=None, emv_application_identifier_and_dedicated_file_name=None, terminal_compliance=None, is_dedicated_hardware_terminal=None, terminal_model=None, terminal_make=None, service_code=None):
         """
         Ptsv2paymentsPointOfSaleInformation - a model defined in Swagger
         """
@@ -111,6 +113,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         self._track_data = None
         self._store_and_forward_indicator = None
         self._cardholder_verification_method = None
+        self._terminal_category = None
         self._terminal_input_capability = None
         self._terminal_card_capture_capability = None
         self._terminal_output_capability = None
@@ -154,6 +157,8 @@ class Ptsv2paymentsPointOfSaleInformation(object):
           self.store_and_forward_indicator = store_and_forward_indicator
         if cardholder_verification_method is not None:
           self.cardholder_verification_method = cardholder_verification_method
+        if terminal_category is not None:
+          self.terminal_category = terminal_category
         if terminal_input_capability is not None:
           self.terminal_input_capability = terminal_input_capability
         if terminal_card_capture_capability is not None:
@@ -237,7 +242,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cardholder_verification_method_used(self):
         """
         Gets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
-        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM   - `4`: Biometric   - `5`: OTP 
 
         :return: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
         :rtype: int
@@ -248,7 +253,7 @@ class Ptsv2paymentsPointOfSaleInformation(object):
     def cardholder_verification_method_used(self, cardholder_verification_method_used):
         """
         Sets the cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
-        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM 
+        Method that was used to verify the cardholder's identity. Possible values:    - `0`: No verification   - `1`: Signature   - `2`: PIN   - `3`: Cardholder device CVM   - `4`: Biometric   - `5`: OTP 
 
         :param cardholder_verification_method_used: The cardholder_verification_method_used of this Ptsv2paymentsPointOfSaleInformation.
         :type: int
@@ -483,6 +488,29 @@ class Ptsv2paymentsPointOfSaleInformation(object):
         """
 
         self._cardholder_verification_method = cardholder_verification_method
+
+    @property
+    def terminal_category(self):
+        """
+        Gets the terminal_category of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates the type of terminal.   Possible values: - `AFD`: Automated Fuel Dispenser 
+
+        :return: The terminal_category of this Ptsv2paymentsPointOfSaleInformation.
+        :rtype: str
+        """
+        return self._terminal_category
+
+    @terminal_category.setter
+    def terminal_category(self, terminal_category):
+        """
+        Sets the terminal_category of this Ptsv2paymentsPointOfSaleInformation.
+        Indicates the type of terminal.   Possible values: - `AFD`: Automated Fuel Dispenser 
+
+        :param terminal_category: The terminal_category of this Ptsv2paymentsPointOfSaleInformation.
+        :type: str
+        """
+
+        self._terminal_category = terminal_category
 
     @property
     def terminal_input_capability(self):

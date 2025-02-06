@@ -37,8 +37,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'str',
         'locale': 'str',
         'capture_mandate': 'Upv1capturecontextsCaptureMandate',
-        'order_information': 'Upv1capturecontextsOrderInformation',
-        'checkout_api_initialization': 'Upv1capturecontextsCheckoutApiInitialization'
+        'order_information': 'Upv1capturecontextsOrderInformation'
     }
 
     attribute_map = {
@@ -49,11 +48,10 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'country',
         'locale': 'locale',
         'capture_mandate': 'captureMandate',
-        'order_information': 'orderInformation',
-        'checkout_api_initialization': 'checkoutApiInitialization'
+        'order_information': 'orderInformation'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None, checkout_api_initialization=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None):
         """
         GenerateUnifiedCheckoutCaptureContextRequest - a model defined in Swagger
         """
@@ -66,7 +64,6 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._locale = None
         self._capture_mandate = None
         self._order_information = None
-        self._checkout_api_initialization = None
 
         if client_version is not None:
           self.client_version = client_version
@@ -84,8 +81,6 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
           self.capture_mandate = capture_mandate
         if order_information is not None:
           self.order_information = order_information
-        if checkout_api_initialization is not None:
-          self.checkout_api_initialization = checkout_api_initialization
 
     @property
     def client_version(self):
@@ -160,7 +155,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self):
         """
         Gets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - PANENTRY                 - GOOGLEPAY   - SRC   - CHECK <br><br>  Possible values when launching Unified Checkout with Checkout API: - PANENTRY               - SRC <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - SRC and CLICKTOPAY are only available for Visa, Mastercard and AMEX. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field. 
 
         :return: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :rtype: list[str]
@@ -171,7 +166,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
     def allowed_payment_types(self, allowed_payment_types):
         """
         Sets the allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
-        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - PANENTRY                 - GOOGLEPAY   - SRC   - CHECK <br><br>  Possible values when launching Unified Checkout with Checkout API: - PANENTRY               - SRC <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - SRC and CLICKTOPAY are only available for Visa, Mastercard and AMEX. 
+        The payment types that are allowed for the merchant.    Possible values when launching Unified Checkout:   - APPLEPAY   - CHECK   - CLICKTOPAY   - GOOGLEPAY   - PANENTRY                 - PAZE <br><br>  Possible values when launching Click To Pay Drop-In UI: - CLICKTOPAY <br><br>  **Important:**    - CLICKTOPAY only available for Visa, Mastercard and AMEX for saved cards.   - Visa and Mastercard will look to tokenize using network tokenization for all Click to Pay requests.  Click to Pay uses Click to Pay token requester IDs and not the merchant's existing token requester.   - Apple Pay, Google Pay, Check, and Paze can be used independently without requiring PAN entry in the allowedPaymentTypes field. 
 
         :param allowed_payment_types: The allowed_payment_types of this GenerateUnifiedCheckoutCaptureContextRequest.
         :type: list[str]
@@ -266,27 +261,6 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         """
 
         self._order_information = order_information
-
-    @property
-    def checkout_api_initialization(self):
-        """
-        Gets the checkout_api_initialization of this GenerateUnifiedCheckoutCaptureContextRequest.
-
-        :return: The checkout_api_initialization of this GenerateUnifiedCheckoutCaptureContextRequest.
-        :rtype: Upv1capturecontextsCheckoutApiInitialization
-        """
-        return self._checkout_api_initialization
-
-    @checkout_api_initialization.setter
-    def checkout_api_initialization(self, checkout_api_initialization):
-        """
-        Sets the checkout_api_initialization of this GenerateUnifiedCheckoutCaptureContextRequest.
-
-        :param checkout_api_initialization: The checkout_api_initialization of this GenerateUnifiedCheckoutCaptureContextRequest.
-        :type: Upv1capturecontextsCheckoutApiInitialization
-        """
-
-        self._checkout_api_initialization = checkout_api_initialization
 
     def to_dict(self):
         """

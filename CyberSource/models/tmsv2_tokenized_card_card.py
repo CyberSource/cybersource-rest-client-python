@@ -30,61 +30,71 @@ class Tmsv2TokenizedCardCard(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'suffix': 'str',
+        'number': 'str',
         'expiration_month': 'str',
-        'expiration_year': 'str'
+        'expiration_year': 'str',
+        'type': 'str',
+        'suffix': 'str'
     }
 
     attribute_map = {
-        'suffix': 'suffix',
+        'number': 'number',
         'expiration_month': 'expirationMonth',
-        'expiration_year': 'expirationYear'
+        'expiration_year': 'expirationYear',
+        'type': 'type',
+        'suffix': 'suffix'
     }
 
-    def __init__(self, suffix=None, expiration_month=None, expiration_year=None):
+    def __init__(self, number=None, expiration_month=None, expiration_year=None, type=None, suffix=None):
         """
         Tmsv2TokenizedCardCard - a model defined in Swagger
         """
 
-        self._suffix = None
+        self._number = None
         self._expiration_month = None
         self._expiration_year = None
+        self._type = None
+        self._suffix = None
 
-        if suffix is not None:
-          self.suffix = suffix
+        if number is not None:
+          self.number = number
         if expiration_month is not None:
           self.expiration_month = expiration_month
         if expiration_year is not None:
           self.expiration_year = expiration_year
+        if type is not None:
+          self.type = type
+        if suffix is not None:
+          self.suffix = suffix
 
     @property
-    def suffix(self):
+    def number(self):
         """
-        Gets the suffix of this Tmsv2TokenizedCardCard.
-        The customer's latest payment card number suffix 
+        Gets the number of this Tmsv2TokenizedCardCard.
+        The customer's payment card number, also known as the Primary Account Number (PAN). 
 
-        :return: The suffix of this Tmsv2TokenizedCardCard.
+        :return: The number of this Tmsv2TokenizedCardCard.
         :rtype: str
         """
-        return self._suffix
+        return self._number
 
-    @suffix.setter
-    def suffix(self, suffix):
+    @number.setter
+    def number(self, number):
         """
-        Sets the suffix of this Tmsv2TokenizedCardCard.
-        The customer's latest payment card number suffix 
+        Sets the number of this Tmsv2TokenizedCardCard.
+        The customer's payment card number, also known as the Primary Account Number (PAN). 
 
-        :param suffix: The suffix of this Tmsv2TokenizedCardCard.
+        :param number: The number of this Tmsv2TokenizedCardCard.
         :type: str
         """
 
-        self._suffix = suffix
+        self._number = number
 
     @property
     def expiration_month(self):
         """
         Gets the expiration_month of this Tmsv2TokenizedCardCard.
-         Two-digit month in which the customer's latest payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :return: The expiration_month of this Tmsv2TokenizedCardCard.
         :rtype: str
@@ -95,7 +105,7 @@ class Tmsv2TokenizedCardCard(object):
     def expiration_month(self, expiration_month):
         """
         Sets the expiration_month of this Tmsv2TokenizedCardCard.
-         Two-digit month in which the customer's latest payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
+        Two-digit month in which the payment card expires.  Format: `MM`.  Possible Values: `01` through `12`. 
 
         :param expiration_month: The expiration_month of this Tmsv2TokenizedCardCard.
         :type: str
@@ -107,7 +117,7 @@ class Tmsv2TokenizedCardCard(object):
     def expiration_year(self):
         """
         Gets the expiration_year of this Tmsv2TokenizedCardCard.
-        Four-digit year in which the customer's latest payment card expires.  Format: `YYYY`. 
+        Four-digit year in which the credit card expires.  Format: `YYYY`. 
 
         :return: The expiration_year of this Tmsv2TokenizedCardCard.
         :rtype: str
@@ -118,13 +128,59 @@ class Tmsv2TokenizedCardCard(object):
     def expiration_year(self, expiration_year):
         """
         Sets the expiration_year of this Tmsv2TokenizedCardCard.
-        Four-digit year in which the customer's latest payment card expires.  Format: `YYYY`. 
+        Four-digit year in which the credit card expires.  Format: `YYYY`. 
 
         :param expiration_year: The expiration_year of this Tmsv2TokenizedCardCard.
         :type: str
         """
 
         self._expiration_year = expiration_year
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Tmsv2TokenizedCardCard.
+        The type of card(Card network). Possible Values: 001: visa 
+
+        :return: The type of this Tmsv2TokenizedCardCard.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Tmsv2TokenizedCardCard.
+        The type of card(Card network). Possible Values: 001: visa 
+
+        :param type: The type of this Tmsv2TokenizedCardCard.
+        :type: str
+        """
+
+        self._type = type
+
+    @property
+    def suffix(self):
+        """
+        Gets the suffix of this Tmsv2TokenizedCardCard.
+        The customer's latest payment card number suffix. 
+
+        :return: The suffix of this Tmsv2TokenizedCardCard.
+        :rtype: str
+        """
+        return self._suffix
+
+    @suffix.setter
+    def suffix(self, suffix):
+        """
+        Sets the suffix of this Tmsv2TokenizedCardCard.
+        The customer's latest payment card number suffix. 
+
+        :param suffix: The suffix of this Tmsv2TokenizedCardCard.
+        :type: str
+        """
+
+        self._suffix = suffix
 
     def to_dict(self):
         """
