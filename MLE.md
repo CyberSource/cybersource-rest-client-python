@@ -32,6 +32,13 @@ Another optional parameter for MLE is `mleKeyAlias`, which specifies the key ali
 - **Default**: `CyberSource_SJC_US`
 - **Description**: By default, CyberSource uses the `CyberSource_SJC_US` public certificate to encrypt the payload. However, users can override this default value by setting their own key alias.
 
+## Notes
+
+- If `useMLEGlobally` is set to true, it will enable MLE for all API calls that support MLE by CyberSource, unless overridden by `mapToControlMLEonAPI`.
+- If `mapToControlMLEonAPI` is not provided or does not contain a specific API function name, the global `useMLEGlobally` setting will be applied.
+- The `mleKeyAlias` parameter is optional and defaults to `CyberSource_SJC_US` if not specified by the user. Users can override this default value by setting their own key alias.
+- Example configurations contain only properties related to MLE.
+
 ## Example Configuration
 
 ### Option 1: Enable MLE globally for all MLE supported APIs
@@ -158,13 +165,6 @@ In the above examples:
 
 Please refer to the given link for sample codes with MLE:
 <!-- https://github.com/CyberSource/cybersource-rest-samples-java/tree/master/src/main/java/samples/MLEFeature -->
-
-## Notes
-
-- If `useMLEGlobally` is set to true, it will enable MLE for all API calls that support MLE by CyberSource, unless overridden by `mapToControlMLEonAPI`.
-- If `mapToControlMLEonAPI` is not provided or does not contain a specific API function name, the global `useMLEGlobally` setting will be applied.
-- The `mleKeyAlias` parameter is optional and defaults to `CyberSource_SJC_US` if not specified by the user. Users can override this default value by setting their own key alias.
-- Example configurations contain only properties related to MLE.
 
 ## Additional Information
 
