@@ -61,8 +61,8 @@ class Configuration:
 configuration_dictionary = {
   "useMLEGlobally": True,  # Globally MLE will be enabled for all MLE supported APIs
   "mapToControlMLEonAPI": {
-    "apiFunctionName1": False,  # Disable MLE for this API
-    "apiFunctionName2": True  # Enable MLE for this API
+    "apiFunctionName1": False,  # if want to disable the particular API from list of MLE supported APIs
+    "apiFunctionName2": True  # if want to enable MLE on API which is not in the list of supported MLE APIs for used version of REST SDK
   },
   "mleKeyAlias": "Custom_Key_Alias"  # Optional custom value provided by Cybs
 }
@@ -73,11 +73,11 @@ class Configuration:
   def __init__(self):
     self.useMLEGlobally = True
     self.mapToControlMLEonAPI = {
-      "apiFunctionName1": False,  # Disable MLE for this API
-      "apiFunctionName2": True  # Enable MLE for this API
+      "apiFunctionName1": False,  # if want to disable the particular API from list of MLE supported APIs
+      "apiFunctionName2": True  # if want to enable MLE on API which is not in the list of supported MLE APIs for used version of REST SDK
     }
-    self.mleKeyAlias = "Custom_Key_Alias"
-```
+    self.mleKeyAlias = "Custom_Key_Alias"  # Optional custom value provided by Cybs
+``` 
 
 ### Option 3: Disable MLE globally and enable for specific APIs
 
@@ -85,10 +85,10 @@ class Configuration:
 configuration_dictionary = {
   "useMLEGlobally": False,  # Globally MLE will be disabled for all APIs
   "mapToControlMLEonAPI": {
-    "apiFunctionName1": True,  # Enable MLE for this API
-    "apiFunctionName2": True  # Enable MLE for this API
+    "apiFunctionName1": True,  # if want to enable MLE for API1
+    "apiFunctionName2": True  # if want to enable MLE for API2
   },
-  "mleKeyAlias": "Custom_Key_Alias"
+  "mleKeyAlias": "Custom_Key_Alias" # optional if any custom value provided by Cybs
 }
 
 # OR
@@ -97,64 +97,10 @@ class Configuration:
   def __init__(self):
     self.useMLEGlobally = False  # Globally MLE will be disabled for all APIs
     self.mapToControlMLEonAPI = {
-      "apiFunctionName1": True,  # Enable MLE for this API
-      "apiFunctionName2": True  # Enable MLE for this API
-    }
-    self.mleKeyAlias = "Custom_Key_Alias"
-```
-
-### Another example with MLE enabled globally
-
-```python
-mle_map = {
-  "apiFunctionName1": False,  # Disable MLE for this API
-  "apiFunctionName2": True  # Enable MLE for this API
-}
-
-configuration_dictionary = {
-  "useMLEGlobally": True,  # Globally MLE will be enabled for all APIs
-  "mapToControlMLEonAPI": mle_map,
-  "mleKeyAlias": "Custom_Key_Alias"
-}
-
-# OR
-
-class Configuration:
-  def __init__(self):
-    self.useMLEGlobally = True  # Globally MLE will be enabled for all APIs
-    mle_map = {
-      "apiFunctionName1": False,  # Disable MLE for this API
-      "apiFunctionName2": True  # Enable MLE for this API
-    }
-    self.mapToControlMLEonAPI = mle_map
-    self.mleKeyAlias = "Custom_Key_Alias"
-```
-
-### Another example with MLE disabled globally
-
-```python
-mle_map = {
-  "apiFunctionName1": True,  # Enable MLE for this API
-  "apiFunctionName2": True  # Enable MLE for this API
-}
-
-configuration_dictionary = {
-  "useMLEGlobally": False,  # Globally MLE will be disabled for all APIs
-  "mapToControlMLEonAPI": mle_map,
-  "mleKeyAlias": "Custom_Key_Alias"
-}
-
-# OR
-
-class Configuration:
-  def __init__(self):
-    self.useMLEGlobally = False  # Globally MLE will be disabled for all APIs
-    mle_map = {
-      "apiFunctionName1": True,  # Enable MLE for this API
-      "apiFunctionName2": True  # Enable MLE for this API
-    }
-    self.mapToControlMLEonAPI = mle_map
-    self.mleKeyAlias = "Custom_Key_Alias"
+      "apiFunctionName1": True,  # if want to enable MLE for API1
+      "apiFunctionName2": True  # if want to enable MLE for API2
+    },
+    self.mleKeyAlias = "Custom_Key_Alias" # optional if any custom value provided by Cybs
 ```
 
 In the above examples:
