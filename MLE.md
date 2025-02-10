@@ -20,7 +20,7 @@ In the `merchantConfig` object, set the `useMLEGlobally` variable to enable or d
 Optionally, you can control the MLE feature at the API level using the `mapToControlMLEonAPI` variable in the `merchantConfig` object.
 
 - **Variable**: `mapToControlMLEonAPI`
-- **Type**: `Map<String,Boolean>`
+- **Type**: `Dictionary<String,Boolean>`
 - **Description**: Overrides the global MLE setting for specific APIs. The key is the function name of the API in the SDK, and the value is a boolean indicating whether MLE should be enabled (`true`) or disabled (`false`) for that specific API call.
 
 ### MLE Key Alias
@@ -164,7 +164,7 @@ In the above examples:
 - `mleKeyAlias` is set to `Custom_Key_Alias`, overriding the default value.
 
 Please refer to the given link for sample codes with MLE:
-<!-- https://github.com/CyberSource/cybersource-rest-samples-java/tree/master/src/main/java/samples/MLEFeature -->
+https://github.com/CyberSource/cybersource-rest-samples-python/tree/master/samples/MLEFeature
 
 ## Additional Information
 
