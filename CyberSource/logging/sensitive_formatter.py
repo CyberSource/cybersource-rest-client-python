@@ -14,6 +14,7 @@ class SensitiveFormatter(logging.Formatter):
         s = re.sub(r'"firstName"\s*:\s*"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"firstName":"xxxxxx"', s)
         s = re.sub(r'"lastName"\s*:\s*"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"lastName":"xxxxxx"', s)
         s = re.sub(r'"phoneNumber"\s*:\s*"(\\+[0-9]{1,2})?\\([0-9]{3}\\)?[.-]?[0-9]{3}[ .-]?[0-9]{4}"', r'"phoneNumber":"xxxxxx"', s)
+        s = re.sub(r'"phoneNumber"\s*:\s*"\+?[0-9]{0,2}[.-]?[0-9]{3}[.-]?[0-9]{3}[.-]?[0-9]{4}"', r'"phoneNumber":"xxxxxx"', s)
         s = re.sub(r'"type"\s*:\s*"[-A-Za-z0-9 ]+"', r'"type":"xxxxx"', s)
         s = re.sub(r'"token"\s*:\s*"[-.A-Za-z0-9+/= ]+"', r'"token":"xxxxx"', s)
         s = re.sub(r'signature="[-.A-Za-z0-9+/= ]+"', r'signature="xxxxxxxx"', s)
