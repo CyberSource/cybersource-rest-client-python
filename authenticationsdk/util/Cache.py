@@ -13,7 +13,17 @@ from authenticationsdk.util.GlobalLabelParameters import *
 
 class FileCache:
 
-    def __init__(self):
+    _instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if not cls._instance:
+            cls._instance = super(FileCache, cls).__new__(cls, *args, **kwargs)
+            # Initialize your cache here
+            cls._instance._initialize_cache()
+        return cls._instance
+
+    def _initialize_cache(self):
+        # Your cache initialization code here
         self.filecache = {}
 
     def get_private_key_from_pem(self, pem_file_path):
