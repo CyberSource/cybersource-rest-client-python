@@ -76,12 +76,7 @@ class FileCache:
         
         mle_cert = self.get_cert_based_on_key_alias(certificate, additional_certificates, mconfig.get_mleKeyAlias())
         
-        self.filecache.setdefault(str(filename), []).append(jwt_der_cert_string)
-        self.filecache.setdefault(str(filename), []).append(private_key)
-        self.filecache.setdefault(str(filename), []).append(file_mod_time)
-        self.filecache.setdefault(str(filename), []).append(mle_cert)
-        
-        # self.filecache[str(filename)] = [jwt_der_cert_string, private_key, file_mod_time, mle_cert]
+        self.filecache[str(filename)] = [jwt_der_cert_string, private_key, file_mod_time, mle_cert]
 
     def grab_file(self, mconfig, filepath, filename):
         file_mod_time = os.stat(os.path.join(filepath, filename) + GlobalLabelParameters.P12_PREFIX).st_mtime
@@ -93,6 +88,5 @@ class FileCache:
         file_mod_time = os.stat(file_path).st_mtime
         if (cache_key not in self.filecache) or file_mod_time != self.filecache[str(cache_key)][1]:
             private_key = self.get_private_key_from_pem(file_path)
-            self.filecache.setdefault(str(cache_key), []).append(private_key)
-            self.filecache.setdefault(str(cache_key), []).append(file_mod_time)
+            self.filecache[str(cache_key)] = [private_key, file_mod_time]
         return self.filecache[str(cache_key)][0]
