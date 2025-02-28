@@ -31,26 +31,31 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurat
     """
     swagger_types = {
         'parent_profile_id': 'str',
-        'vault': 'CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurationsVault'
+        'vault': 'CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurationsVault',
+        'network_token_enrollment': 'NetworkTokenEnrollment'
     }
 
     attribute_map = {
         'parent_profile_id': 'parentProfileId',
-        'vault': 'vault'
+        'vault': 'vault',
+        'network_token_enrollment': 'networkTokenEnrollment'
     }
 
-    def __init__(self, parent_profile_id=None, vault=None):
+    def __init__(self, parent_profile_id=None, vault=None, network_token_enrollment=None):
         """
         CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations - a model defined in Swagger
         """
 
         self._parent_profile_id = None
         self._vault = None
+        self._network_token_enrollment = None
 
         if parent_profile_id is not None:
           self.parent_profile_id = parent_profile_id
         if vault is not None:
           self.vault = vault
+        if network_token_enrollment is not None:
+          self.network_token_enrollment = network_token_enrollment
 
     @property
     def parent_profile_id(self):
@@ -95,6 +100,27 @@ class CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurat
         """
 
         self._vault = vault
+
+    @property
+    def network_token_enrollment(self):
+        """
+        Gets the network_token_enrollment of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+
+        :return: The network_token_enrollment of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+        :rtype: NetworkTokenEnrollment
+        """
+        return self._network_token_enrollment
+
+    @network_token_enrollment.setter
+    def network_token_enrollment(self, network_token_enrollment):
+        """
+        Sets the network_token_enrollment of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+
+        :param network_token_enrollment: The network_token_enrollment of this CommerceSolutionsProductsTokenManagementConfigurationInformationConfigurations.
+        :type: NetworkTokenEnrollment
+        """
+
+        self._network_token_enrollment = network_token_enrollment
 
     def to_dict(self):
         """

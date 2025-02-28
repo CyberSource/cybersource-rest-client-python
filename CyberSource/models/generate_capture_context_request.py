@@ -33,17 +33,19 @@ class GenerateCaptureContextRequest(object):
         'client_version': 'str',
         'target_origins': 'list[str]',
         'allowed_card_networks': 'list[str]',
-        'allowed_payment_types': 'list[str]'
+        'allowed_payment_types': 'list[str]',
+        'transient_token_response_options': 'Microformv2sessionsTransientTokenResponseOptions'
     }
 
     attribute_map = {
         'client_version': 'clientVersion',
         'target_origins': 'targetOrigins',
         'allowed_card_networks': 'allowedCardNetworks',
-        'allowed_payment_types': 'allowedPaymentTypes'
+        'allowed_payment_types': 'allowedPaymentTypes',
+        'transient_token_response_options': 'transientTokenResponseOptions'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, transient_token_response_options=None):
         """
         GenerateCaptureContextRequest - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class GenerateCaptureContextRequest(object):
         self._target_origins = None
         self._allowed_card_networks = None
         self._allowed_payment_types = None
+        self._transient_token_response_options = None
 
         if client_version is not None:
           self.client_version = client_version
@@ -61,6 +64,8 @@ class GenerateCaptureContextRequest(object):
           self.allowed_card_networks = allowed_card_networks
         if allowed_payment_types is not None:
           self.allowed_payment_types = allowed_payment_types
+        if transient_token_response_options is not None:
+          self.transient_token_response_options = transient_token_response_options
 
     @property
     def client_version(self):
@@ -112,7 +117,7 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self):
         """
         Gets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Accept Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (Accept Check) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Accept Card) and Microform (Accept Check) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (ACH/Echeck) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Card) and Microform (ACH/Echeck) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
 
         :return: The allowed_card_networks of this GenerateCaptureContextRequest.
         :rtype: list[str]
@@ -123,7 +128,7 @@ class GenerateCaptureContextRequest(object):
     def allowed_card_networks(self, allowed_card_networks):
         """
         Sets the allowed_card_networks of this GenerateCaptureContextRequest.
-        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Accept Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (Accept Check) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Accept Card) and Microform (Accept Check) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
+        The list of card networks you want to use for this Microform transaction.  Microform currently supports the following card networks: - VISA - MASTERCARD - AMEX - CARNET - CARTESBANCAIRES - CUP - DINERSCLUB - DISCOVER - EFTPOS - ELO - JCB - JCREW - MADA - MAESTRO - MEEZA  **Important:**    - When integrating Microform (Card) at least one card network should be specified in the allowedCardNetworks field in the capture context request.   - When integrating Microform (ACH/Echeck) the allowedCardNetworks field is not required in the capture context request.   - When integrating both Microform (Card) and Microform (ACH/Echeck) at least one card network should be specified in the allowedCardNetworks field in the capture context request. 
 
         :param allowed_card_networks: The allowed_card_networks of this GenerateCaptureContextRequest.
         :type: list[str]
@@ -153,6 +158,27 @@ class GenerateCaptureContextRequest(object):
         """
 
         self._allowed_payment_types = allowed_payment_types
+
+    @property
+    def transient_token_response_options(self):
+        """
+        Gets the transient_token_response_options of this GenerateCaptureContextRequest.
+
+        :return: The transient_token_response_options of this GenerateCaptureContextRequest.
+        :rtype: Microformv2sessionsTransientTokenResponseOptions
+        """
+        return self._transient_token_response_options
+
+    @transient_token_response_options.setter
+    def transient_token_response_options(self, transient_token_response_options):
+        """
+        Sets the transient_token_response_options of this GenerateCaptureContextRequest.
+
+        :param transient_token_response_options: The transient_token_response_options of this GenerateCaptureContextRequest.
+        :type: Microformv2sessionsTransientTokenResponseOptions
+        """
+
+        self._transient_token_response_options = transient_token_response_options
 
     def to_dict(self):
         """
