@@ -8,6 +8,8 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import pkcs12
 
+from typing_extensions import deprecated
+
 from authenticationsdk.util.GlobalLabelParameters import *
 
 
@@ -26,6 +28,7 @@ class FileCache:
         # Your cache initialization code here
         self.filecache = {}
 
+    @deprecated("This method has been marked as Deprecated and will be removed in coming releases.")
     def get_private_key_from_pem(self, pem_file_path):
         with open(pem_file_path, 'r') as pem_file:
             cert = pem_file.read()
@@ -83,7 +86,8 @@ class FileCache:
         if filename not in self.filecache or file_mod_time != self.filecache[filename][2]:
             self.update_cache(mconfig, filepath, filename)
         return self.filecache[filename]
-    
+
+    @deprecated("This method has been marked as Deprecated and will be removed in coming releases.")
     def get_cached_private_key_from_pem(self, file_path, cache_key):
         file_mod_time = os.stat(file_path).st_mtime
         if (cache_key not in self.filecache) or file_mod_time != self.filecache[str(cache_key)][1]:
