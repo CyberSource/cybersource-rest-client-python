@@ -1,7 +1,6 @@
 certifi==2025.1.31
 cffi==1.17.1
 cryptography==44.0.2
-cybersource-rest-client-python @ file:///C:/New_Software/GitHub/cybersource-rest-client-python
 DateTime==5.5
 jwcrypto==1.5.6
 pycparser==2.22

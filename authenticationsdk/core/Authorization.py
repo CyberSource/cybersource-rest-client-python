@@ -38,12 +38,9 @@ class Authorization:
                     # Logging the Digest when Request_type_method is Post
                     if mconfig.request_type_method.upper() == GlobalLabelParameters.POST or mconfig.request_type_method.upper() == GlobalLabelParameters.PUT:
                         digest_obj = DigestAndPayload()
-                        encoded_digest = digest_obj.string_digest_generation(
-                            mconfig.request_json_path_data)
-                        self.logger.info(
-                            GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (
-                                encoded_digest).decode("utf-8"))
-                    self.logger.info("Signature:     " + sig_token)
+                        encoded_digest = digest_obj.string_digest_generation(mconfig.request_json_path_data)
+                        # self.logger.info(GlobalLabelParameters.DIGEST + ":" + GlobalLabelParameters.DIGEST_PREFIX + (encoded_digest).decode("utf-8"))
+                    # self.logger.info("Signature:     " + sig_token)
 
                 return sig_token
             # JWT-Call
