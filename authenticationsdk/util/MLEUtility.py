@@ -37,16 +37,16 @@ class MLEUtility:
 
         logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
              
-        # if merchant_config.log_config.enable_log:
-        #     logger.debug(f"Request before MLE: {request_body}")
+        if merchant_config.log_config.enable_log:
+            logger.debug(f"{GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST}{request_body}")
 
         cert = MLEUtility.get_mle_certificate(merchant_config, logger)
 
         try:
             serialized_jwe_token = MLEUtility.generate_token(cert, request_body, merchant_config.log_config, logger)
             mleRequest = MLEUtility.create_json_object(serialized_jwe_token)
-            # if merchant_config.log_config.enable_log:
-            #     logger.debug(f"Request after MLE: {mleRequest}")
+            if merchant_config.log_config.enable_log:
+                logger.debug(f"{GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST}{mleRequest}")
             return mleRequest
 
         except Exception as e:

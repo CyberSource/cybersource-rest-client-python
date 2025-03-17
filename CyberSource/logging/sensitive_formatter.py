@@ -1,6 +1,7 @@
 import logging
 import json
 import re
+from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 
 
 class SensitiveFormatter(logging.Formatter):
@@ -18,7 +19,8 @@ class SensitiveFormatter(logging.Formatter):
         "type",
         "token",
         "signature",
-        "keyid"
+        "keyid",
+        "encryptedRequest"
     ]
 
     """Formatter that removes sensitive information in urls."""
@@ -32,6 +34,11 @@ class SensitiveFormatter(logging.Formatter):
 
     @staticmethod
     def _filter(s):
+        if isinstance(s, str) and (s.startswith(GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST) or s.startswith(GlobalLabelParameters.MESSAGE_AFTER_MLE_REQUEST)):
+            splits = s.split(": ", 1)
+            new_log_message = splits[0] + ": " + SensitiveFormatter._filter(splits[1])
+            return new_log_message
+
         if SensitiveFormatter.is_json_string(s):
             json_msg = json.loads(s)
 
@@ -67,6 +74,7 @@ class SensitiveFormatter(logging.Formatter):
             splits = s.split("     ")
             new_log_message = splits[0] + "     XXXXX"
             return new_log_message
+
         else:
             return s
 
