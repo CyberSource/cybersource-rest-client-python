@@ -1,92 +1,76 @@
 import logging
+import json
 import re
 
 
 class SensitiveFormatter(logging.Formatter):
+    sensitive_fields = [
+        "securityCode",
+        "cardNumber",
+        "number",
+        "expirationMonth",
+        "expirationYear",
+        "routingNumber",
+        "email",
+        "firstName",
+        "lastName",
+        "phoneNumber",
+        "type",
+        "token",
+        "signature",
+        "keyid"
+    ]
+
     """Formatter that removes sensitive information in urls."""
     @staticmethod
+    def is_json_string(message):
+        try:
+            json.loads(message)
+            return True
+        except ValueError:
+            return False
+
+    @staticmethod
     def _filter(s):
-        s = re.sub(r'"securityCode"\s*:\s*"[0-9]{3,4}"', r'"securityCode":"xxxxx"', s)
-        s = re.sub(r'"expirationMonth"\s*:\s*"[0-1][0-9]"', r'"expirationMonth":"xxxx"', s)
-        s = re.sub(r'"expirationYear"\s*:\s*"2[0-9][0-9][0-9]"', r'"expirationYear":"xxxx"', s)
-        s = re.sub(r'"routingNumber"\s*:\s*"[0-9]+"', r'"routingNumber":"xxxxx"', s)
-        s = re.sub(r'"email"\s*:\s*"[a-z0-9!#$.%&*+\/=?^_`{|}~-]+(?:.[a-z0-9.!#$%&*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"', r'"email":"xxxxx"', s)
-        s = re.sub(r'"firstName"\s*:\s*"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"firstName":"xxxxxx"', s)
-        s = re.sub(r'"lastName"\s*:\s*"([a-zA-Z]+( )?[a-zA-Z]*?-?[a-zA-Z]*( )?([a-zA-Z]*)?)"', r'"lastName":"xxxxxx"', s)
-        s = re.sub(r'"phoneNumber"\s*:\s*"(\\+[0-9]{1,2})?\\([0-9]{3}\\)?[.-]?[0-9]{3}[ .-]?[0-9]{4}"', r'"phoneNumber":"xxxxxx"', s)
-        s = re.sub(r'"phoneNumber"\s*:\s*"\+?[0-9]{0,2}[.-]?[0-9]{3}[.-]?[0-9]{3}[.-]?[0-9]{4}"', r'"phoneNumber":"xxxxxx"', s)
-        s = re.sub(r'"type"\s*:\s*"[-A-Za-z0-9 ]+"', r'"type":"xxxxx"', s)
-        s = re.sub(r'"token"\s*:\s*"[-.A-Za-z0-9+/= ]+"', r'"token":"xxxxx"', s)
-        s = re.sub(r'signature="[-.A-Za-z0-9+/= ]+"', r'signature="xxxxxxxx"', s)
-        s = re.sub(r'keyid="[-.A-Za-z0-9+/= ]+"', r'keyid="xxxxxxxx"', s)
+        if SensitiveFormatter.is_json_string(s):
+            json_msg = json.loads(s)
 
-        # masking cardNumber
-        matches = re.search(r'"cardNumber"\s*:\s*"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
-        if matches:
-            matchedString= matches.group(0)            
-            matchString= matchedString.replace(" ","")
-            matchString= matchString.replace("-","")
-            pats = re.findall(r'"cardNumber"\s*:\s*"[0-9]+"', matchString)
-            if len(pats) > 0:
-                pat = pats[0]
-                pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
-                replaceString = re.sub(r'"cardNumber"\s*:\s*"[0-9]+"', pat, matchString)
-                s=s.replace(matchedString,replaceString)
-        
-        # masking number
-        matches = re.search(r'"number"\s*:\s*"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
-        if matches:
-            matchedString= matches.group(0)
-            matchString= matchedString.replace(" ","")
-            matchString= matchString.replace("-","")
-            pats = re.findall(r'"number"\s*:\s*"[0-9]+"', matchString)
-            if len(pats) > 0:
-                pat = pats[0]
-                pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
-                replaceString = re.sub(r'"number"\s*:\s*"[0-9]+"', pat, matchString)
-                s=s.replace(matchedString,replaceString)
-        
-        # masking account
-        matches = re.search(r'"account"\s*:\s*"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
-        if matches:
-            matchedString= matches.group(0)
-            matchString= matchedString.replace(" ","")
-            matchString= matchString.replace("-","")
-            pats = re.findall(r'"account"\s*:\s*"[0-9]+"', matchString)
-            if len(pats) > 0:
-                pat = pats[0]
-                pat = re.sub(r'[0-9](?=.*.{5})', r'x', pat)
-                replaceString = re.sub(r'"account"\s*:\s*"[0-9]+"', pat, matchString)
-                s=s.replace(matchedString,replaceString)
-            
-        # masking prefix
-        matches = re.search(r'"prefix"\s*:\s*"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
-        if matches:
-            matchedString= matches.group(0)
-            matchString= matchedString.replace(" ","")
-            matchString= matchString.replace("-","")
-            pats = re.findall(r'"prefix"\s*:\s*"[0-9]+"', matchString)
-            if len(pats) > 0:
-                pat = pats[0]
-                pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
-                replaceString = re.sub(r'"prefix"\s*:\s*"[0-9]+"', pat, matchString)
-                s=s.replace(matchedString,replaceString)
-                
-        # masking bin
-        matches = re.search(r'"bin"\s*:\s*"(((\s*[s/-]*\s*)+[0-9](\s*[s/-]*\s*)+)+)"', s)
-        if matches:
-            matchedString= matches.group(0)
-            matchString= matchedString.replace(" ","")
-            matchString= matchString.replace("-","")
-            pats = re.findall(r'"bin"\s*:\s*"[0-9]+"', matchString)
-            if len(pats) > 0:
-                pat = pats[0]
-                pat = re.sub(r'(?<=["])([0-9]{6})', r'x', pat)
-                replaceString = re.sub(r'"bin"\s*:\s*"[0-9]+"', pat, matchString)
-                s=s.replace(matchedString,replaceString)
+            if isinstance(json_msg, dict):
+                for prop in json_msg:
+                    is_field_sensitive = prop in SensitiveFormatter.sensitive_fields
+                    if is_field_sensitive:
+                        if json_msg[prop] is not None:
+                            if isinstance(json_msg[prop], str) and len(json_msg[prop]) > 0:
+                                json_msg[prop] = 'X' * len(json_msg[prop])
+                            else:
+                                json_msg[prop] = json.loads(SensitiveFormatter._filter(json.dumps(json_msg[prop])))
+                    else:
+                        json_msg[prop] = json.loads(SensitiveFormatter._filter(json.dumps(json_msg[prop])))
 
-        return s
+            return json.dumps(json_msg)
+
+        elif "Signature:" in s:
+            splits = s.split("     ")
+            start_split = splits[0]
+            splits = splits[1].split(",")
+            split_keyid = splits[0].split("=")
+            split_signature = splits[-1].split("=")
+            new_log_message = start_split + "     " + split_keyid[0] + "=\"XXXXX\", " + splits[1] + ", " + splits[2] + ", " + split_signature[0] + "\"XXXXX\""
+            return new_log_message
+        
+        elif "Digest:" in s:
+            splits = s.split("=", 1)
+            new_log_message = splits[0] + "=XXXXX"
+            return new_log_message
+        
+        elif "Authorization Bearer:" in s:
+            splits = s.split("     ")
+            new_log_message = splits[0] + "     XXXXX"
+            return new_log_message
+        else:
+            return s
 
     def format(self, record):
-        original = logging.Formatter.format(self, record)
-        return self._filter(original)
+        new_message = self._filter(record.msg)
+        new_record = logging.LogRecord(record.name, record.levelno, record.pathname, record.lineno, new_message, record.args, record.exc_info)
+        return logging.Formatter.format(self, new_record)

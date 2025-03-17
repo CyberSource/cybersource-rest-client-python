@@ -13,7 +13,7 @@ class Authorization:
         self.logger = None
 
     # This method generates and return a encrypted signature based on the Authentication type
-    def get_token(self, mconfig, date_time, logger = None):        
+    def get_token(self, mconfig, date_time, logger = None):
         authentication_type = mconfig.authentication_type
         self.validate_request_type_method(mconfig)
         # Initializing the logger object
