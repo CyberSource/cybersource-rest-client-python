@@ -75,9 +75,10 @@ class GlobalLabelParameters:
     REQUEST_JSON_EMPTY = "RequestJsonPath not provided"
     INVALID_REQUEST_TYPE_METHOD = "Entered Request Type should be (GET/POST/PUT/PATCH)"
     RUN_ENVIRONMENT_EMPTY = "RunEnvironment Is Mandatory."
+    MLE_AUTH_ERROR = "MLE is only supported in JWT auth type"
     DEFAULT_LOG_FILE_NAME = "Log File Name Empty/None.Using Default Value"
     DEFAULT_ENABLE_LOG = False
-    DEFAULT_ENABLE_MASKING = False
+    DEFAULT_ENABLE_MASKING = True
     DEFAULT_MAXIMUM_SIZE = 10487560
     DEFAULT_LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
     DEFAULT_LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -86,9 +87,13 @@ class GlobalLabelParameters:
     DEFAULT_LOG_DIRECTORY =os.path.join(os.getcwd(),"Logs")
     DEFAULT_PROXY_PORT = 443
     DEFAULT_KEY_FILE_PATH = os.path.join(os.getcwd(),"resources")
+    DEFAULT_MLE_ALIAS_FOR_CERT = "CyberSource_SJC_US"
     ENABLE_LOG_DEFAULT_MESSAGE = "Enable log value Empty/None.Using Default Value"
     LOG_MAXIMUM_SIZE_DEFAULT_MESSAGE = "Log Maximum Size Empty/None.Using Default Value"
     LOG_DIRECTORY_DEFAULT_MESSAGE = "Log Directory value Empty/None.Using Default Value"
     LOG_DIRECTORY_INCORRECT_MESSAGE = "Log Directory value Incorrect.Using Default Value"
     INVALID_CYBS_PATH = "The Cybs.Json Path Provided Is Incorrect"
     DEPRECATED_RUN_ENVIRONMENT = "The value provided for this field `RunEnvironment` has been deprecated and will not be used anymore.\n\nPlease refer to the README file [ https://github.com/CyberSource/cybersource-rest-samples-node/blob/master/README.md ] for information about the new values that are accepted."
+    CERTIFICATE_EXPIRY_DATE_WARNING_DAYS = 90
+    MESSAGE_BEFORE_MLE_REQUEST = "Request before MLE: "
+    MESSAGE_AFTER_MLE_REQUEST = "Request after MLE: "

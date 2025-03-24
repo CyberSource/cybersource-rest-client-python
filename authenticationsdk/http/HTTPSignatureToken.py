@@ -40,9 +40,6 @@ class HTTPSignatureToken(TokenGeneration):
         return self.signature_header()
 
     def signature_header(self):
-
-        # Initializing the logger object
-
         header_list = ([])
         # Key id is the key obtained from EBC
         header_list.append(

@@ -50,6 +50,9 @@ class MerchantConfiguration:
         self.solution_id = None
         self.log_config = None
         self.__jwePEMFileDirectory = None
+        self.useMLEGlobally = None
+        self.mapToControlMLEonAPI = None
+        self.mleKeyAlias = None 
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
 
     def set_merchant_keyid(self, value):
@@ -180,6 +183,36 @@ class MerchantConfiguration:
 
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
+    
+    def set_useMLEGlobally(self, value):
+        if not (value.get('useMLEGlobally') is None):
+            self.useMLEGlobally = value['useMLEGlobally']
+        else:
+            self.useMLEGlobally = False
+
+    def get_useMLEGlobally(self):
+        return self.useMLEGlobally
+    
+    def set_mapToControlMLEonAPI(self, value):
+        map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
+        if map_to_control_mle_on_api is not None:
+            if isinstance(map_to_control_mle_on_api, dict) and all(isinstance(v, (str, bool)) for v in map_to_control_mle_on_api.values()):
+                self.mapToControlMLEonAPI = map_to_control_mle_on_api
+            else:
+                raise ValueError("mapToControlMLEonAPI in merchantConfig must be a dictionary with string : boolean values.")
+
+    def get_mapToControlMLEonAPI(self):
+        return self.mapToControlMLEonAPI
+    
+    def set_mleKeyAlias(self, value):
+        if value.get('mleKeyAlias') is not None and value.get('mleKeyAlias').strip():
+            self.mleKeyAlias = value['mleKeyAlias'].strip()
+        else:
+            self.mleKeyAlias = GlobalLabelParameters.DEFAULT_MLE_ALIAS_FOR_CERT
+
+    def get_mleKeyAlias(self):
+        return self.mleKeyAlias
+
 
     # This method sets the Merchant Configuration Variables to its respective values after reading from cybs.properties
     def set_merchantconfig(self, val):
@@ -212,6 +245,9 @@ class MerchantConfiguration:
         self.set_refresh_token(val)
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
+        self.set_useMLEGlobally(val)
+        self.set_mapToControlMLEonAPI(val)
+        self.set_mleKeyAlias(val)
 
     # Returns the time in format as defined by RFC7231
     def get_time(self):
@@ -337,6 +373,19 @@ class MerchantConfiguration:
         else:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,
+                                                                               self.log_config)
+        # useMLEGlobally check for auth Type
+        if self.useMLEGlobally is True or self.mapToControlMLEonAPI is not None:
+            if self.useMLEGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                 authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                               GlobalLabelParameters.MLE_AUTH_ERROR,
+                                                                               self.log_config)
+            
+            if self.mapToControlMLEonAPI is not None and len(self.mapToControlMLEonAPI) != 0:
+                has_true_value = any(value is True for value in self.mapToControlMLEonAPI.values())
+                if has_true_value and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+                     authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
+                                                                               GlobalLabelParameters.MLE_AUTH_ERROR,
                                                                                self.log_config)
 
         log_items = GlobalLabelParameters.HIDE_MERCHANT_CONFIG_PROPS

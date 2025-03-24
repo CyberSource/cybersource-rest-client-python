@@ -37,7 +37,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'str',
         'locale': 'str',
         'capture_mandate': 'Upv1capturecontextsCaptureMandate',
-        'order_information': 'Upv1capturecontextsOrderInformation'
+        'order_information': 'Upv1capturecontextsOrderInformation',
+        'transient_token_response_options': 'Microformv2sessionsTransientTokenResponseOptions'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'country',
         'locale': 'locale',
         'capture_mandate': 'captureMandate',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'transient_token_response_options': 'transientTokenResponseOptions'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None, transient_token_response_options=None):
         """
         GenerateUnifiedCheckoutCaptureContextRequest - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._locale = None
         self._capture_mandate = None
         self._order_information = None
+        self._transient_token_response_options = None
 
         if client_version is not None:
           self.client_version = client_version
@@ -81,6 +84,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
           self.capture_mandate = capture_mandate
         if order_information is not None:
           self.order_information = order_information
+        if transient_token_response_options is not None:
+          self.transient_token_response_options = transient_token_response_options
 
     @property
     def client_version(self):
@@ -261,6 +266,27 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def transient_token_response_options(self):
+        """
+        Gets the transient_token_response_options of this GenerateUnifiedCheckoutCaptureContextRequest.
+
+        :return: The transient_token_response_options of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :rtype: Microformv2sessionsTransientTokenResponseOptions
+        """
+        return self._transient_token_response_options
+
+    @transient_token_response_options.setter
+    def transient_token_response_options(self, transient_token_response_options):
+        """
+        Sets the transient_token_response_options of this GenerateUnifiedCheckoutCaptureContextRequest.
+
+        :param transient_token_response_options: The transient_token_response_options of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :type: Microformv2sessionsTransientTokenResponseOptions
+        """
+
+        self._transient_token_response_options = transient_token_response_options
 
     def to_dict(self):
         """

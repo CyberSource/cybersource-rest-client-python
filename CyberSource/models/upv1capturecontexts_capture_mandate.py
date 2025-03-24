@@ -35,7 +35,9 @@ class Upv1capturecontextsCaptureMandate(object):
         'request_phone': 'bool',
         'request_shipping': 'bool',
         'ship_to_countries': 'list[str]',
-        'show_accepted_network_icons': 'bool'
+        'show_accepted_network_icons': 'bool',
+        'request_save_card': 'bool',
+        'combo_card': 'bool'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class Upv1capturecontextsCaptureMandate(object):
         'request_phone': 'requestPhone',
         'request_shipping': 'requestShipping',
         'ship_to_countries': 'shipToCountries',
-        'show_accepted_network_icons': 'showAcceptedNetworkIcons'
+        'show_accepted_network_icons': 'showAcceptedNetworkIcons',
+        'request_save_card': 'requestSaveCard',
+        'combo_card': 'comboCard'
     }
 
-    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None):
+    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None, request_save_card=None, combo_card=None):
         """
         Upv1capturecontextsCaptureMandate - a model defined in Swagger
         """
@@ -58,6 +62,8 @@ class Upv1capturecontextsCaptureMandate(object):
         self._request_shipping = None
         self._ship_to_countries = None
         self._show_accepted_network_icons = None
+        self._request_save_card = None
+        self._combo_card = None
 
         if billing_type is not None:
           self.billing_type = billing_type
@@ -71,6 +77,10 @@ class Upv1capturecontextsCaptureMandate(object):
           self.ship_to_countries = ship_to_countries
         if show_accepted_network_icons is not None:
           self.show_accepted_network_icons = show_accepted_network_icons
+        if request_save_card is not None:
+          self.request_save_card = request_save_card
+        if combo_card is not None:
+          self.combo_card = combo_card
 
     @property
     def billing_type(self):
@@ -209,6 +219,52 @@ class Upv1capturecontextsCaptureMandate(object):
         """
 
         self._show_accepted_network_icons = show_accepted_network_icons
+
+    @property
+    def request_save_card(self):
+        """
+        Gets the request_save_card of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display the \"Save card for future use\" checkbox.<br>  Configurable check box that will show in a Manual card entry flow to allow a Cardholder to give consent to store their manually entered credential with the Merchant that they are paying.<br>  Applicable when manually entering the details and not enrolling in Click to Pay.  Possible values:  - True   - False<br><br>  **Use Cases:**  **Offer consumers option to save their card in Unified Checkout:**  - Include the captureMandate.requestSaveCard field in the capture context request and set it to true. - When set to true, this will show a checkbox with the message 'Save card for future use' in Unified Checkout. - When selected this provides a response in both the Transient Token and Get Credentials API response.<br><br>  **Do not offer consumers the option to save their card in Unified Checkout:**  - Include the captureMandate.requestSaveCard field in the capture context request and set it to false OR omit the field from the capture context request. - When set to false, the save card option is not shown to consumers when manually entering card details. 
+
+        :return: The request_save_card of this Upv1capturecontextsCaptureMandate.
+        :rtype: bool
+        """
+        return self._request_save_card
+
+    @request_save_card.setter
+    def request_save_card(self, request_save_card):
+        """
+        Sets the request_save_card of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display the \"Save card for future use\" checkbox.<br>  Configurable check box that will show in a Manual card entry flow to allow a Cardholder to give consent to store their manually entered credential with the Merchant that they are paying.<br>  Applicable when manually entering the details and not enrolling in Click to Pay.  Possible values:  - True   - False<br><br>  **Use Cases:**  **Offer consumers option to save their card in Unified Checkout:**  - Include the captureMandate.requestSaveCard field in the capture context request and set it to true. - When set to true, this will show a checkbox with the message 'Save card for future use' in Unified Checkout. - When selected this provides a response in both the Transient Token and Get Credentials API response.<br><br>  **Do not offer consumers the option to save their card in Unified Checkout:**  - Include the captureMandate.requestSaveCard field in the capture context request and set it to false OR omit the field from the capture context request. - When set to false, the save card option is not shown to consumers when manually entering card details. 
+
+        :param request_save_card: The request_save_card of this Upv1capturecontextsCaptureMandate.
+        :type: bool
+        """
+
+        self._request_save_card = request_save_card
+
+    @property
+    def combo_card(self):
+        """
+        Gets the combo_card of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display combo card at checkout.<br>  A combo debit/credit card is a single card that functions both as a Debit/Credit card.  Unified Checkout / Click to Pay Drop-in UI allows the Cardholder to choose whether they would like the transaction to be paid for using either debit or credit card. **Important:** This is applicable to Visa cards only.  Possible values: - True  - False<br><br>  **Use Cases:**  **Offer Combo Card at Checkout:**  - Include the captureMandate.comboCard field in the capture context request and set it to true. - When set to true, Combo Card selection is shown at checkout <br><br>  **Do not offer Combo Card at Checkout:**  - Include the captureMandate.comboCard field in the capture context request and set it to false OR omit the field from the capture context request. - The Combo Card selection is not shown at checkout. 
+
+        :return: The combo_card of this Upv1capturecontextsCaptureMandate.
+        :rtype: bool
+        """
+        return self._combo_card
+
+    @combo_card.setter
+    def combo_card(self, combo_card):
+        """
+        Sets the combo_card of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display combo card at checkout.<br>  A combo debit/credit card is a single card that functions both as a Debit/Credit card.  Unified Checkout / Click to Pay Drop-in UI allows the Cardholder to choose whether they would like the transaction to be paid for using either debit or credit card. **Important:** This is applicable to Visa cards only.  Possible values: - True  - False<br><br>  **Use Cases:**  **Offer Combo Card at Checkout:**  - Include the captureMandate.comboCard field in the capture context request and set it to true. - When set to true, Combo Card selection is shown at checkout <br><br>  **Do not offer Combo Card at Checkout:**  - Include the captureMandate.comboCard field in the capture context request and set it to false OR omit the field from the capture context request. - The Combo Card selection is not shown at checkout. 
+
+        :param combo_card: The combo_card of this Upv1capturecontextsCaptureMandate.
+        :type: bool
+        """
+
+        self._combo_card = combo_card
 
     def to_dict(self):
         """
