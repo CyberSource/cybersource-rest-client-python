@@ -54,6 +54,14 @@ class TestTransactionBatchesApi(unittest.TestCase):
         """
         pass
 
+    def test_upload_transaction_batch(self):
+        """
+        Test case for upload_transaction_batch
+
+        Upload a Batch File
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -31,27 +31,32 @@ class PtsV2PaymentsPost201Response1PaymentInformation(object):
     """
     swagger_types = {
         'payment_type': 'PtsV2PaymentsPost201Response1PaymentInformationPaymentType',
+        'e_wallet': 'PtsV2PaymentsPost201Response1PaymentInformationEWallet',
         'customer': 'Ptsv2refreshpaymentstatusidPaymentInformationCustomer',
         'bank': 'PtsV2PaymentsPost201Response1PaymentInformationBank'
     }
 
     attribute_map = {
         'payment_type': 'paymentType',
+        'e_wallet': 'eWallet',
         'customer': 'customer',
         'bank': 'bank'
     }
 
-    def __init__(self, payment_type=None, customer=None, bank=None):
+    def __init__(self, payment_type=None, e_wallet=None, customer=None, bank=None):
         """
         PtsV2PaymentsPost201Response1PaymentInformation - a model defined in Swagger
         """
 
         self._payment_type = None
+        self._e_wallet = None
         self._customer = None
         self._bank = None
 
         if payment_type is not None:
           self.payment_type = payment_type
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
         if customer is not None:
           self.customer = customer
         if bank is not None:
@@ -77,6 +82,27 @@ class PtsV2PaymentsPost201Response1PaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this PtsV2PaymentsPost201Response1PaymentInformation.
+
+        :return: The e_wallet of this PtsV2PaymentsPost201Response1PaymentInformation.
+        :rtype: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this PtsV2PaymentsPost201Response1PaymentInformation.
+
+        :param e_wallet: The e_wallet of this PtsV2PaymentsPost201Response1PaymentInformation.
+        :type: PtsV2PaymentsPost201Response1PaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     @property
     def customer(self):

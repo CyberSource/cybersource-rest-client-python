@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_batch_report**
-> InlineResponse2007 get_batch_report(batch_id)
+> InlineResponse2004 get_batch_report(batch_id)
 
 Retrieve a Batch Report
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batch_status**
-> InlineResponse2006 get_batch_status(batch_id)
+> InlineResponse2003 get_batch_status(batch_id)
 
 Retrieve a Batch Status
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_batches_list**
-> InlineResponse2005 get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
+> InlineResponse2002 get_batches_list(offset=offset, limit=limit, from_date=from_date, to_date=to_date)
 
 List Batches
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

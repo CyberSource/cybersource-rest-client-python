@@ -116,7 +116,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def first_name(self):
         """
         Gets the first_name of this Ptsv2payoutsRecipientInformation.
-        First name of recipient. characters. * CTV (14) * Paymentech (30) 
+        First name of the recipient.    This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The first_name of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -127,7 +127,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ptsv2payoutsRecipientInformation.
-        First name of recipient. characters. * CTV (14) * Paymentech (30) 
+        First name of the recipient.    This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param first_name: The first_name of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -139,7 +139,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv2payoutsRecipientInformation.
-        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Middle name of the recipient.    This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The middle_name of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -150,7 +150,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv2payoutsRecipientInformation.
-        Recipient's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Middle name of the recipient.    This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param middle_name: The middle_name of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -162,7 +162,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def last_name(self):
         """
         Gets the last_name of this Ptsv2payoutsRecipientInformation.
-        Last name of recipient. characters. * CTV (14) * Paymentech (30) 
+        Last name of the recipient.  This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The last_name of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -173,7 +173,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ptsv2payoutsRecipientInformation.
-        Last name of recipient. characters. * CTV (14) * Paymentech (30) 
+        Last name of the recipient.  This field is applicable for AFT & OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param last_name: The last_name of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -185,7 +185,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def address1(self):
         """
         Gets the address1 of this Ptsv2payoutsRecipientInformation.
-        Recipient address information. Required only for FDCCompass.
+        The street address of the recipient This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The address1 of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -196,7 +196,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def address1(self, address1):
         """
         Sets the address1 of this Ptsv2payoutsRecipientInformation.
-        Recipient address information. Required only for FDCCompass.
+        The street address of the recipient This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :param address1: The address1 of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -208,7 +208,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def locality(self):
         """
         Gets the locality of this Ptsv2payoutsRecipientInformation.
-        Recipient city. Required only for FDCCompass.
+        The city of the recipient. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The locality of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -219,7 +219,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def locality(self, locality):
         """
         Sets the locality of this Ptsv2payoutsRecipientInformation.
-        Recipient city. Required only for FDCCompass.
+        The city of the recipient. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set are not supported and will be stripped before being sent to sent to the processor. 
 
         :param locality: The locality of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -231,7 +231,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def administrative_area(self):
         """
         Gets the administrative_area of this Ptsv2payoutsRecipientInformation.
-        Recipient State. Required only for FDCCompass.
+        The state or province of the recipient. This field is applicable for AFT and OCT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
 
         :return: The administrative_area of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -242,7 +242,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def administrative_area(self, administrative_area):
         """
         Sets the administrative_area of this Ptsv2payoutsRecipientInformation.
-        Recipient State. Required only for FDCCompass.
+        The state or province of the recipient. This field is applicable for AFT and OCT transactions when the recipient country is US or CA. Else it is optional.  Must be a two character value 
 
         :param administrative_area: The administrative_area of this Ptsv2payoutsRecipientInformation.
         :type: str
@@ -254,7 +254,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def country(self):
         """
         Gets the country of this Ptsv2payoutsRecipientInformation.
-        Recipient country code. Required only for FDCCompass.
+        The country associated with the address of the recipient. This field is applicable for AFT and OCT transactions.  Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
 
         :return: The country of this Ptsv2payoutsRecipientInformation.
         :rtype: str
@@ -265,7 +265,7 @@ class Ptsv2payoutsRecipientInformation(object):
     def country(self, country):
         """
         Sets the country of this Ptsv2payoutsRecipientInformation.
-        Recipient country code. Required only for FDCCompass.
+        The country associated with the address of the recipient. This field is applicable for AFT and OCT transactions.  Must be a two character ISO country code.  For example, see [ISO Country Code](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.html) 
 
         :param country: The country of this Ptsv2payoutsRecipientInformation.
         :type: str

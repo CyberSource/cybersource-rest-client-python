@@ -425,3 +425,123 @@ class TransactionBatchesApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
+
+    def upload_transaction_batch(self, file, **kwargs):
+        """
+        Upload a Batch File
+        This endpoint enables the upload of a batch file containing transactions for processing.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.upload_transaction_batch(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: The file to upload. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `upload_transaction_batch` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.upload_transaction_batch_with_http_info(file, **kwargs)
+        else:
+            (data) = self.upload_transaction_batch_with_http_info(file, **kwargs)
+            return data
+
+    def upload_transaction_batch_with_http_info(self, file, **kwargs):
+        """
+        Upload a Batch File
+        This endpoint enables the upload of a batch file containing transactions for processing.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.upload_transaction_batch_with_http_info(file, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param file file: The file to upload. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method upload_transaction_batch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'file' is set
+        if ('file' not in params) or (params['file'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `file` when calling `upload_transaction_batch`")
+            raise ValueError("Missing the required parameter `file` when calling `upload_transaction_batch`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            local_var_files['file'] = params['file']
+
+        body_params = None
+        if 'POST' in ('POST'):
+            body_params = '{}'
+
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "upload_transaction_batch,upload_transaction_batch_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/pts/v1/transaction-batch-upload', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)

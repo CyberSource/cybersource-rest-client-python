@@ -37,7 +37,9 @@ class PtsV2PaymentsPost201Response1(object):
         'reconciliation_id': 'str',
         'payment_information': 'PtsV2PaymentsPost201Response1PaymentInformation',
         'order_information': 'PtsV2PaymentsPost201Response1OrderInformation',
-        'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation'
+        'client_reference_information': 'PtsV2IncrementalAuthorizationPatch201ResponseClientReferenceInformation',
+        'issuer_information': 'PtsV2PaymentsPost201Response1IssuerInformation',
+        'error_information': 'PtsV2PaymentsPost201Response1ErrorInformation'
     }
 
     attribute_map = {
@@ -48,10 +50,12 @@ class PtsV2PaymentsPost201Response1(object):
         'reconciliation_id': 'reconciliationId',
         'payment_information': 'paymentInformation',
         'order_information': 'orderInformation',
-        'client_reference_information': 'clientReferenceInformation'
+        'client_reference_information': 'clientReferenceInformation',
+        'issuer_information': 'issuerInformation',
+        'error_information': 'errorInformation'
     }
 
-    def __init__(self, id=None, status=None, submit_time_utc=None, processor_information=None, reconciliation_id=None, payment_information=None, order_information=None, client_reference_information=None):
+    def __init__(self, id=None, status=None, submit_time_utc=None, processor_information=None, reconciliation_id=None, payment_information=None, order_information=None, client_reference_information=None, issuer_information=None, error_information=None):
         """
         PtsV2PaymentsPost201Response1 - a model defined in Swagger
         """
@@ -64,6 +68,8 @@ class PtsV2PaymentsPost201Response1(object):
         self._payment_information = None
         self._order_information = None
         self._client_reference_information = None
+        self._issuer_information = None
+        self._error_information = None
 
         if id is not None:
           self.id = id
@@ -81,6 +87,10 @@ class PtsV2PaymentsPost201Response1(object):
           self.order_information = order_information
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
+        if issuer_information is not None:
+          self.issuer_information = issuer_information
+        if error_information is not None:
+          self.error_information = error_information
 
     @property
     def id(self):
@@ -257,6 +267,48 @@ class PtsV2PaymentsPost201Response1(object):
         """
 
         self._client_reference_information = client_reference_information
+
+    @property
+    def issuer_information(self):
+        """
+        Gets the issuer_information of this PtsV2PaymentsPost201Response1.
+
+        :return: The issuer_information of this PtsV2PaymentsPost201Response1.
+        :rtype: PtsV2PaymentsPost201Response1IssuerInformation
+        """
+        return self._issuer_information
+
+    @issuer_information.setter
+    def issuer_information(self, issuer_information):
+        """
+        Sets the issuer_information of this PtsV2PaymentsPost201Response1.
+
+        :param issuer_information: The issuer_information of this PtsV2PaymentsPost201Response1.
+        :type: PtsV2PaymentsPost201Response1IssuerInformation
+        """
+
+        self._issuer_information = issuer_information
+
+    @property
+    def error_information(self):
+        """
+        Gets the error_information of this PtsV2PaymentsPost201Response1.
+
+        :return: The error_information of this PtsV2PaymentsPost201Response1.
+        :rtype: PtsV2PaymentsPost201Response1ErrorInformation
+        """
+        return self._error_information
+
+    @error_information.setter
+    def error_information(self, error_information):
+        """
+        Sets the error_information of this PtsV2PaymentsPost201Response1.
+
+        :param error_information: The error_information of this PtsV2PaymentsPost201Response1.
+        :type: PtsV2PaymentsPost201Response1ErrorInformation
+        """
+
+        self._error_information = error_information
 
     def to_dict(self):
         """

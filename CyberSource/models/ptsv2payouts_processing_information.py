@@ -232,7 +232,7 @@ class Ptsv2payoutsProcessingInformation(object):
     def purpose_of_payment(self):
         """
         Gets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
-        This will send purpose of funds code for original credit transactions (OCTs). 
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
 
         :return: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
         :rtype: str
@@ -243,7 +243,7 @@ class Ptsv2payoutsProcessingInformation(object):
     def purpose_of_payment(self, purpose_of_payment):
         """
         Sets the purpose_of_payment of this Ptsv2payoutsProcessingInformation.
-        This will send purpose of funds code for original credit transactions (OCTs). 
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
 
         :param purpose_of_payment: The purpose_of_payment of this Ptsv2payoutsProcessingInformation.
         :type: str

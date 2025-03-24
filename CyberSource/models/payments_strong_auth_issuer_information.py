@@ -34,7 +34,8 @@ class PaymentsStrongAuthIssuerInformation(object):
         'trusted_merchant_exemption_result': 'str',
         'low_value_exemption_result': 'str',
         'secure_corporate_payment_result': 'str',
-        'transaction_risk_analysis_exemption_result': 'str'
+        'transaction_risk_analysis_exemption_result': 'str',
+        'delegated_authentication_result': 'str'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class PaymentsStrongAuthIssuerInformation(object):
         'trusted_merchant_exemption_result': 'trustedMerchantExemptionResult',
         'low_value_exemption_result': 'lowValueExemptionResult',
         'secure_corporate_payment_result': 'secureCorporatePaymentResult',
-        'transaction_risk_analysis_exemption_result': 'transactionRiskAnalysisExemptionResult'
+        'transaction_risk_analysis_exemption_result': 'transactionRiskAnalysisExemptionResult',
+        'delegated_authentication_result': 'delegatedAuthenticationResult'
     }
 
-    def __init__(self, risk_analysis_exemption_result=None, trusted_merchant_exemption_result=None, low_value_exemption_result=None, secure_corporate_payment_result=None, transaction_risk_analysis_exemption_result=None):
+    def __init__(self, risk_analysis_exemption_result=None, trusted_merchant_exemption_result=None, low_value_exemption_result=None, secure_corporate_payment_result=None, transaction_risk_analysis_exemption_result=None, delegated_authentication_result=None):
         """
         PaymentsStrongAuthIssuerInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class PaymentsStrongAuthIssuerInformation(object):
         self._low_value_exemption_result = None
         self._secure_corporate_payment_result = None
         self._transaction_risk_analysis_exemption_result = None
+        self._delegated_authentication_result = None
 
         if risk_analysis_exemption_result is not None:
           self.risk_analysis_exemption_result = risk_analysis_exemption_result
@@ -66,6 +69,8 @@ class PaymentsStrongAuthIssuerInformation(object):
           self.secure_corporate_payment_result = secure_corporate_payment_result
         if transaction_risk_analysis_exemption_result is not None:
           self.transaction_risk_analysis_exemption_result = transaction_risk_analysis_exemption_result
+        if delegated_authentication_result is not None:
+          self.delegated_authentication_result = delegated_authentication_result
 
     @property
     def risk_analysis_exemption_result(self):
@@ -181,6 +186,29 @@ class PaymentsStrongAuthIssuerInformation(object):
         """
 
         self._transaction_risk_analysis_exemption_result = transaction_risk_analysis_exemption_result
+
+    @property
+    def delegated_authentication_result(self):
+        """
+        Gets the delegated_authentication_result of this PaymentsStrongAuthIssuerInformation.
+        This will be the value returned by Visanet when delegated authentication has been requested. 
+
+        :return: The delegated_authentication_result of this PaymentsStrongAuthIssuerInformation.
+        :rtype: str
+        """
+        return self._delegated_authentication_result
+
+    @delegated_authentication_result.setter
+    def delegated_authentication_result(self, delegated_authentication_result):
+        """
+        Sets the delegated_authentication_result of this PaymentsStrongAuthIssuerInformation.
+        This will be the value returned by Visanet when delegated authentication has been requested. 
+
+        :param delegated_authentication_result: The delegated_authentication_result of this PaymentsStrongAuthIssuerInformation.
+        :type: str
+        """
+
+        self._delegated_authentication_result = delegated_authentication_result
 
     def to_dict(self):
         """

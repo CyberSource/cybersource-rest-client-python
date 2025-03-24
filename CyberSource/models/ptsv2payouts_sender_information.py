@@ -185,7 +185,7 @@ class Ptsv2payoutsSenderInformation(object):
     def first_name(self):
         """
         Gets the first_name of this Ptsv2payoutsSenderInformation.
-        First name of sender (Optional). * CTV (14) * Paymentech (30) 
+        First name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported.Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to the processor. 
 
         :return: The first_name of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -196,7 +196,7 @@ class Ptsv2payoutsSenderInformation(object):
     def first_name(self, first_name):
         """
         Sets the first_name of this Ptsv2payoutsSenderInformation.
-        First name of sender (Optional). * CTV (14) * Paymentech (30) 
+        First name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported.Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to the processor. 
 
         :param first_name: The first_name of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -231,7 +231,7 @@ class Ptsv2payoutsSenderInformation(object):
     def middle_name(self):
         """
         Gets the middle_name of this Ptsv2payoutsSenderInformation.
-        Sender's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Middle name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The middle_name of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -242,7 +242,7 @@ class Ptsv2payoutsSenderInformation(object):
     def middle_name(self, middle_name):
         """
         Sets the middle_name of this Ptsv2payoutsSenderInformation.
-        Sender's middle name. This field is a _passthrough_, which means that CyberSource does not verify the value or modify it in any way before sending it to the processor. If the field is not required for the transaction, CyberSource does not forward it to the processor. 
+        Middle name of the sender. This field is applicable for AFT and OCT transactions.   Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param middle_name: The middle_name of this Ptsv2payoutsSenderInformation.
         :type: str
@@ -254,7 +254,7 @@ class Ptsv2payoutsSenderInformation(object):
     def last_name(self):
         """
         Gets the last_name of this Ptsv2payoutsSenderInformation.
-        Recipient last name (Optional). * CTV (14) * Paymentech (30) 
+        Last name of the sender. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :return: The last_name of this Ptsv2payoutsSenderInformation.
         :rtype: str
@@ -265,7 +265,7 @@ class Ptsv2payoutsSenderInformation(object):
     def last_name(self, last_name):
         """
         Sets the last_name of this Ptsv2payoutsSenderInformation.
-        Recipient last name (Optional). * CTV (14) * Paymentech (30) 
+        Last name of the sender. This field is applicable for AFT and OCT transactions.  Only alpha numeric values are supported. Special characters not in the standard ASCII character set, are not supported and will be stripped before being sent to sent to the processor. 
 
         :param last_name: The last_name of this Ptsv2payoutsSenderInformation.
         :type: str

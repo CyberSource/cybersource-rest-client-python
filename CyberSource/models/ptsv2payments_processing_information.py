@@ -1137,7 +1137,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def purpose_of_payment(self):
         """
         Gets the purpose_of_payment of this Ptsv2paymentsProcessingInformation.
-         Possible values: - `16` :  High Risk Security  Other values can also be accommodated in future for different transactions.  Currently this field is only used in OCT, we could not find any existing valid values for the past 30 days in production. Issuer may decline invalid purpose of payment code with response code 93.  This field is also applicable for AFT transactions. For list of supported values, please refer to Developer Guide. 
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
 
         :return: The purpose_of_payment of this Ptsv2paymentsProcessingInformation.
         :rtype: str
@@ -1148,7 +1148,7 @@ class Ptsv2paymentsProcessingInformation(object):
     def purpose_of_payment(self, purpose_of_payment):
         """
         Sets the purpose_of_payment of this Ptsv2paymentsProcessingInformation.
-         Possible values: - `16` :  High Risk Security  Other values can also be accommodated in future for different transactions.  Currently this field is only used in OCT, we could not find any existing valid values for the past 30 days in production. Issuer may decline invalid purpose of payment code with response code 93.  This field is also applicable for AFT transactions. For list of supported values, please refer to Developer Guide. 
+        This field is applicable for AFT and OCT transactions. For list of supported values, please refer to Developer Guide. 
 
         :param purpose_of_payment: The purpose_of_payment of this Ptsv2paymentsProcessingInformation.
         :type: str

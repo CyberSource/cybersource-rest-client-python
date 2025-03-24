@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_transaction_batch_details**](TransactionBatchesApi.md#get_transaction_batch_details) | **GET** /pts/v1/transaction-batch-details/{id} | Get Transaction Details for a given Batch Id
 [**get_transaction_batch_id**](TransactionBatchesApi.md#get_transaction_batch_id) | **GET** /pts/v1/transaction-batches/{id} | Get Individual Batch File
 [**get_transaction_batches**](TransactionBatchesApi.md#get_transaction_batches) | **GET** /pts/v1/transaction-batches | Get a List of Batch Files
+[**upload_transaction_batch**](TransactionBatchesApi.md#upload_transaction_batch) | **POST** /pts/v1/transaction-batch-upload | Upload a Batch File
 
 
 # **get_transaction_batch_details**
@@ -155,6 +156,53 @@ No authorization required
 
  - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/hal+json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **upload_transaction_batch**
+> upload_transaction_batch(file)
+
+Upload a Batch File
+
+This endpoint enables the upload of a batch file containing transactions for processing.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import CyberSource
+from CyberSource.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = CyberSource.TransactionBatchesApi()
+file = '/path/to/file.txt' # file | The file to upload.
+
+try: 
+    # Upload a Batch File
+    api_instance.upload_transaction_batch(file)
+except ApiException as e:
+    print("Exception when calling TransactionBatchesApi->upload_transaction_batch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **file**| The file to upload. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

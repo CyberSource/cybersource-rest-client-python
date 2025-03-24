@@ -31,26 +31,31 @@ class PtsV2PaymentsPost201Response1OrderInformation(object):
     """
     swagger_types = {
         'bill_to': 'PtsV2PaymentsPost201Response1OrderInformationBillTo',
-        'ship_to': 'PtsV2PaymentsPost201Response1OrderInformationShipTo'
+        'ship_to': 'PtsV2PaymentsPost201Response1OrderInformationShipTo',
+        'amount_details': 'PtsV2PaymentsPost201Response1OrderInformationAmountDetails'
     }
 
     attribute_map = {
         'bill_to': 'billTo',
-        'ship_to': 'shipTo'
+        'ship_to': 'shipTo',
+        'amount_details': 'amountDetails'
     }
 
-    def __init__(self, bill_to=None, ship_to=None):
+    def __init__(self, bill_to=None, ship_to=None, amount_details=None):
         """
         PtsV2PaymentsPost201Response1OrderInformation - a model defined in Swagger
         """
 
         self._bill_to = None
         self._ship_to = None
+        self._amount_details = None
 
         if bill_to is not None:
           self.bill_to = bill_to
         if ship_to is not None:
           self.ship_to = ship_to
+        if amount_details is not None:
+          self.amount_details = amount_details
 
     @property
     def bill_to(self):
@@ -93,6 +98,27 @@ class PtsV2PaymentsPost201Response1OrderInformation(object):
         """
 
         self._ship_to = ship_to
+
+    @property
+    def amount_details(self):
+        """
+        Gets the amount_details of this PtsV2PaymentsPost201Response1OrderInformation.
+
+        :return: The amount_details of this PtsV2PaymentsPost201Response1OrderInformation.
+        :rtype: PtsV2PaymentsPost201Response1OrderInformationAmountDetails
+        """
+        return self._amount_details
+
+    @amount_details.setter
+    def amount_details(self, amount_details):
+        """
+        Sets the amount_details of this PtsV2PaymentsPost201Response1OrderInformation.
+
+        :param amount_details: The amount_details of this PtsV2PaymentsPost201Response1OrderInformation.
+        :type: PtsV2PaymentsPost201Response1OrderInformationAmountDetails
+        """
+
+        self._amount_details = amount_details
 
     def to_dict(self):
         """
