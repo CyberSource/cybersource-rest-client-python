@@ -30,401 +30,287 @@ class InlineResponse2004(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'webhook_id': 'str',
-        'organization_id': 'str',
-        'products': 'list[Notificationsubscriptionsv1webhooksProducts]',
-        'webhook_url': 'str',
-        'health_check_url': 'str',
-        'notification_scope': 'Notificationsubscriptionsv1webhooksNotificationScope',
-        'status': 'str',
-        'name': 'str',
-        'description': 'str',
-        'retry_policy': 'Notificationsubscriptionsv1webhooksRetryPolicy',
-        'security_policy': 'Notificationsubscriptionsv1webhooksSecurityPolicy',
-        'created_on': 'str',
-        'updated_on': 'str',
-        'additional_attributes': 'list[dict(str, str)]'
+        'version': 'str',
+        'report_created_date': 'str',
+        'batch_id': 'str',
+        'batch_source': 'str',
+        'batch_ca_endpoints': 'str',
+        'batch_created_date': 'str',
+        'merchant_reference': 'str',
+        'totals': 'InlineResponse2002EmbeddedTotals',
+        'billing': 'InlineResponse2003Billing',
+        'records': 'list[InlineResponse2004Records]'
     }
 
     attribute_map = {
-        'webhook_id': 'webhookId',
-        'organization_id': 'organizationId',
-        'products': 'products',
-        'webhook_url': 'webhookUrl',
-        'health_check_url': 'healthCheckUrl',
-        'notification_scope': 'notificationScope',
-        'status': 'status',
-        'name': 'name',
-        'description': 'description',
-        'retry_policy': 'retryPolicy',
-        'security_policy': 'securityPolicy',
-        'created_on': 'createdOn',
-        'updated_on': 'updatedOn',
-        'additional_attributes': 'additionalAttributes'
+        'version': 'version',
+        'report_created_date': 'reportCreatedDate',
+        'batch_id': 'batchId',
+        'batch_source': 'batchSource',
+        'batch_ca_endpoints': 'batchCaEndpoints',
+        'batch_created_date': 'batchCreatedDate',
+        'merchant_reference': 'merchantReference',
+        'totals': 'totals',
+        'billing': 'billing',
+        'records': 'records'
     }
 
-    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, notification_scope=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, updated_on=None, additional_attributes=None):
+    def __init__(self, version=None, report_created_date=None, batch_id=None, batch_source=None, batch_ca_endpoints=None, batch_created_date=None, merchant_reference=None, totals=None, billing=None, records=None):
         """
         InlineResponse2004 - a model defined in Swagger
         """
 
-        self._webhook_id = None
-        self._organization_id = None
-        self._products = None
-        self._webhook_url = None
-        self._health_check_url = None
-        self._notification_scope = None
-        self._status = None
-        self._name = None
-        self._description = None
-        self._retry_policy = None
-        self._security_policy = None
-        self._created_on = None
-        self._updated_on = None
-        self._additional_attributes = None
+        self._version = None
+        self._report_created_date = None
+        self._batch_id = None
+        self._batch_source = None
+        self._batch_ca_endpoints = None
+        self._batch_created_date = None
+        self._merchant_reference = None
+        self._totals = None
+        self._billing = None
+        self._records = None
 
-        if webhook_id is not None:
-          self.webhook_id = webhook_id
-        if organization_id is not None:
-          self.organization_id = organization_id
-        if products is not None:
-          self.products = products
-        if webhook_url is not None:
-          self.webhook_url = webhook_url
-        if health_check_url is not None:
-          self.health_check_url = health_check_url
-        if notification_scope is not None:
-          self.notification_scope = notification_scope
-        if status is not None:
-          self.status = status
-        if name is not None:
-          self.name = name
-        if description is not None:
-          self.description = description
-        if retry_policy is not None:
-          self.retry_policy = retry_policy
-        if security_policy is not None:
-          self.security_policy = security_policy
-        if created_on is not None:
-          self.created_on = created_on
-        if updated_on is not None:
-          self.updated_on = updated_on
-        if additional_attributes is not None:
-          self.additional_attributes = additional_attributes
+        if version is not None:
+          self.version = version
+        if report_created_date is not None:
+          self.report_created_date = report_created_date
+        if batch_id is not None:
+          self.batch_id = batch_id
+        if batch_source is not None:
+          self.batch_source = batch_source
+        if batch_ca_endpoints is not None:
+          self.batch_ca_endpoints = batch_ca_endpoints
+        if batch_created_date is not None:
+          self.batch_created_date = batch_created_date
+        if merchant_reference is not None:
+          self.merchant_reference = merchant_reference
+        if totals is not None:
+          self.totals = totals
+        if billing is not None:
+          self.billing = billing
+        if records is not None:
+          self.records = records
 
     @property
-    def webhook_id(self):
+    def version(self):
         """
-        Gets the webhook_id of this InlineResponse2004.
-        Webhook Id. This is generated by the server.
+        Gets the version of this InlineResponse2004.
 
-        :return: The webhook_id of this InlineResponse2004.
+        :return: The version of this InlineResponse2004.
         :rtype: str
         """
-        return self._webhook_id
+        return self._version
 
-    @webhook_id.setter
-    def webhook_id(self, webhook_id):
+    @version.setter
+    def version(self, version):
         """
-        Sets the webhook_id of this InlineResponse2004.
-        Webhook Id. This is generated by the server.
+        Sets the version of this InlineResponse2004.
 
-        :param webhook_id: The webhook_id of this InlineResponse2004.
+        :param version: The version of this InlineResponse2004.
         :type: str
         """
 
-        self._webhook_id = webhook_id
+        self._version = version
 
     @property
-    def organization_id(self):
+    def report_created_date(self):
         """
-        Gets the organization_id of this InlineResponse2004.
-        Organization ID.
+        Gets the report_created_date of this InlineResponse2004.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :return: The organization_id of this InlineResponse2004.
+        :return: The report_created_date of this InlineResponse2004.
         :rtype: str
         """
-        return self._organization_id
+        return self._report_created_date
 
-    @organization_id.setter
-    def organization_id(self, organization_id):
+    @report_created_date.setter
+    def report_created_date(self, report_created_date):
         """
-        Sets the organization_id of this InlineResponse2004.
-        Organization ID.
+        Sets the report_created_date of this InlineResponse2004.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :param organization_id: The organization_id of this InlineResponse2004.
+        :param report_created_date: The report_created_date of this InlineResponse2004.
         :type: str
         """
 
-        self._organization_id = organization_id
+        self._report_created_date = report_created_date
 
     @property
-    def products(self):
+    def batch_id(self):
         """
-        Gets the products of this InlineResponse2004.
+        Gets the batch_id of this InlineResponse2004.
+        Unique identification number assigned to the submitted request.
 
-        :return: The products of this InlineResponse2004.
-        :rtype: list[Notificationsubscriptionsv1webhooksProducts]
-        """
-        return self._products
-
-    @products.setter
-    def products(self, products):
-        """
-        Sets the products of this InlineResponse2004.
-
-        :param products: The products of this InlineResponse2004.
-        :type: list[Notificationsubscriptionsv1webhooksProducts]
-        """
-
-        self._products = products
-
-    @property
-    def webhook_url(self):
-        """
-        Gets the webhook_url of this InlineResponse2004.
-        The client's endpoint (URL) to receive webhooks.
-
-        :return: The webhook_url of this InlineResponse2004.
+        :return: The batch_id of this InlineResponse2004.
         :rtype: str
         """
-        return self._webhook_url
+        return self._batch_id
 
-    @webhook_url.setter
-    def webhook_url(self, webhook_url):
+    @batch_id.setter
+    def batch_id(self, batch_id):
         """
-        Sets the webhook_url of this InlineResponse2004.
-        The client's endpoint (URL) to receive webhooks.
+        Sets the batch_id of this InlineResponse2004.
+        Unique identification number assigned to the submitted request.
 
-        :param webhook_url: The webhook_url of this InlineResponse2004.
+        :param batch_id: The batch_id of this InlineResponse2004.
         :type: str
         """
 
-        self._webhook_url = webhook_url
+        self._batch_id = batch_id
 
     @property
-    def health_check_url(self):
+    def batch_source(self):
         """
-        Gets the health_check_url of this InlineResponse2004.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        Gets the batch_source of this InlineResponse2004.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
 
-        :return: The health_check_url of this InlineResponse2004.
+        :return: The batch_source of this InlineResponse2004.
         :rtype: str
         """
-        return self._health_check_url
+        return self._batch_source
 
-    @health_check_url.setter
-    def health_check_url(self, health_check_url):
+    @batch_source.setter
+    def batch_source(self, batch_source):
         """
-        Sets the health_check_url of this InlineResponse2004.
-        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+        Sets the batch_source of this InlineResponse2004.
+        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
 
-        :param health_check_url: The health_check_url of this InlineResponse2004.
+        :param batch_source: The batch_source of this InlineResponse2004.
         :type: str
         """
 
-        self._health_check_url = health_check_url
+        self._batch_source = batch_source
 
     @property
-    def notification_scope(self):
+    def batch_ca_endpoints(self):
         """
-        Gets the notification_scope of this InlineResponse2004.
+        Gets the batch_ca_endpoints of this InlineResponse2004.
 
-        :return: The notification_scope of this InlineResponse2004.
-        :rtype: Notificationsubscriptionsv1webhooksNotificationScope
-        """
-        return self._notification_scope
-
-    @notification_scope.setter
-    def notification_scope(self, notification_scope):
-        """
-        Sets the notification_scope of this InlineResponse2004.
-
-        :param notification_scope: The notification_scope of this InlineResponse2004.
-        :type: Notificationsubscriptionsv1webhooksNotificationScope
-        """
-
-        self._notification_scope = notification_scope
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2004.
-        Webhook status.
-
-        :return: The status of this InlineResponse2004.
+        :return: The batch_ca_endpoints of this InlineResponse2004.
         :rtype: str
         """
-        return self._status
+        return self._batch_ca_endpoints
 
-    @status.setter
-    def status(self, status):
+    @batch_ca_endpoints.setter
+    def batch_ca_endpoints(self, batch_ca_endpoints):
         """
-        Sets the status of this InlineResponse2004.
-        Webhook status.
+        Sets the batch_ca_endpoints of this InlineResponse2004.
 
-        :param status: The status of this InlineResponse2004.
+        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2004.
         :type: str
         """
 
-        self._status = status
+        self._batch_ca_endpoints = batch_ca_endpoints
 
     @property
-    def name(self):
+    def batch_created_date(self):
         """
-        Gets the name of this InlineResponse2004.
-        Client friendly webhook name.
+        Gets the batch_created_date of this InlineResponse2004.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :return: The name of this InlineResponse2004.
+        :return: The batch_created_date of this InlineResponse2004.
         :rtype: str
         """
-        return self._name
+        return self._batch_created_date
 
-    @name.setter
-    def name(self, name):
+    @batch_created_date.setter
+    def batch_created_date(self, batch_created_date):
         """
-        Sets the name of this InlineResponse2004.
-        Client friendly webhook name.
+        Sets the batch_created_date of this InlineResponse2004.
+        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
 
-        :param name: The name of this InlineResponse2004.
+        :param batch_created_date: The batch_created_date of this InlineResponse2004.
         :type: str
         """
 
-        self._name = name
+        self._batch_created_date = batch_created_date
 
     @property
-    def description(self):
+    def merchant_reference(self):
         """
-        Gets the description of this InlineResponse2004.
-        Client friendly webhook description.
+        Gets the merchant_reference of this InlineResponse2004.
+        Reference used by merchant to identify batch.
 
-        :return: The description of this InlineResponse2004.
+        :return: The merchant_reference of this InlineResponse2004.
         :rtype: str
         """
-        return self._description
+        return self._merchant_reference
 
-    @description.setter
-    def description(self, description):
+    @merchant_reference.setter
+    def merchant_reference(self, merchant_reference):
         """
-        Sets the description of this InlineResponse2004.
-        Client friendly webhook description.
+        Sets the merchant_reference of this InlineResponse2004.
+        Reference used by merchant to identify batch.
 
-        :param description: The description of this InlineResponse2004.
+        :param merchant_reference: The merchant_reference of this InlineResponse2004.
         :type: str
         """
 
-        self._description = description
+        self._merchant_reference = merchant_reference
 
     @property
-    def retry_policy(self):
+    def totals(self):
         """
-        Gets the retry_policy of this InlineResponse2004.
+        Gets the totals of this InlineResponse2004.
 
-        :return: The retry_policy of this InlineResponse2004.
-        :rtype: Notificationsubscriptionsv1webhooksRetryPolicy
+        :return: The totals of this InlineResponse2004.
+        :rtype: InlineResponse2002EmbeddedTotals
         """
-        return self._retry_policy
+        return self._totals
 
-    @retry_policy.setter
-    def retry_policy(self, retry_policy):
+    @totals.setter
+    def totals(self, totals):
         """
-        Sets the retry_policy of this InlineResponse2004.
+        Sets the totals of this InlineResponse2004.
 
-        :param retry_policy: The retry_policy of this InlineResponse2004.
-        :type: Notificationsubscriptionsv1webhooksRetryPolicy
+        :param totals: The totals of this InlineResponse2004.
+        :type: InlineResponse2002EmbeddedTotals
         """
 
-        self._retry_policy = retry_policy
+        self._totals = totals
 
     @property
-    def security_policy(self):
+    def billing(self):
         """
-        Gets the security_policy of this InlineResponse2004.
+        Gets the billing of this InlineResponse2004.
 
-        :return: The security_policy of this InlineResponse2004.
-        :rtype: Notificationsubscriptionsv1webhooksSecurityPolicy
+        :return: The billing of this InlineResponse2004.
+        :rtype: InlineResponse2003Billing
         """
-        return self._security_policy
+        return self._billing
 
-    @security_policy.setter
-    def security_policy(self, security_policy):
+    @billing.setter
+    def billing(self, billing):
         """
-        Sets the security_policy of this InlineResponse2004.
+        Sets the billing of this InlineResponse2004.
 
-        :param security_policy: The security_policy of this InlineResponse2004.
-        :type: Notificationsubscriptionsv1webhooksSecurityPolicy
+        :param billing: The billing of this InlineResponse2004.
+        :type: InlineResponse2003Billing
         """
 
-        self._security_policy = security_policy
+        self._billing = billing
 
     @property
-    def created_on(self):
+    def records(self):
         """
-        Gets the created_on of this InlineResponse2004.
-        Date on which webhook was created/registered.
+        Gets the records of this InlineResponse2004.
 
-        :return: The created_on of this InlineResponse2004.
-        :rtype: str
+        :return: The records of this InlineResponse2004.
+        :rtype: list[InlineResponse2004Records]
         """
-        return self._created_on
+        return self._records
 
-    @created_on.setter
-    def created_on(self, created_on):
+    @records.setter
+    def records(self, records):
         """
-        Sets the created_on of this InlineResponse2004.
-        Date on which webhook was created/registered.
+        Sets the records of this InlineResponse2004.
 
-        :param created_on: The created_on of this InlineResponse2004.
-        :type: str
+        :param records: The records of this InlineResponse2004.
+        :type: list[InlineResponse2004Records]
         """
 
-        self._created_on = created_on
-
-    @property
-    def updated_on(self):
-        """
-        Gets the updated_on of this InlineResponse2004.
-        Date on which webhook was most recently updated.
-
-        :return: The updated_on of this InlineResponse2004.
-        :rtype: str
-        """
-        return self._updated_on
-
-    @updated_on.setter
-    def updated_on(self, updated_on):
-        """
-        Sets the updated_on of this InlineResponse2004.
-        Date on which webhook was most recently updated.
-
-        :param updated_on: The updated_on of this InlineResponse2004.
-        :type: str
-        """
-
-        self._updated_on = updated_on
-
-    @property
-    def additional_attributes(self):
-        """
-        Gets the additional_attributes of this InlineResponse2004.
-        Additional, free form configuration data.
-
-        :return: The additional_attributes of this InlineResponse2004.
-        :rtype: list[dict(str, str)]
-        """
-        return self._additional_attributes
-
-    @additional_attributes.setter
-    def additional_attributes(self, additional_attributes):
-        """
-        Sets the additional_attributes of this InlineResponse2004.
-        Additional, free form configuration data.
-
-        :param additional_attributes: The additional_attributes of this InlineResponse2004.
-        :type: list[dict(str, str)]
-        """
-
-        self._additional_attributes = additional_attributes
+        self._records = records
 
     def to_dict(self):
         """

@@ -30,22 +30,6 @@ class TestCreateNewWebhooksApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_webhook_subscription(self):
-        """
-        Test case for create_webhook_subscription
-
-        Create a Webhook
-        """
-        pass
-
-    def test_find_products_to_subscribe(self):
-        """
-        Test case for find_products_to_subscribe
-
-        Find Products You Can Subscribe To
-        """
-        pass
-
     def test_save_sym_egress_key(self):
         """
         Test case for save_sym_egress_key

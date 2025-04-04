@@ -37,6 +37,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         'reconciliation_id': 'str',
         'client_reference_information': 'PtsV2PaymentsRefundPost201ResponseClientReferenceInformation',
         'refund_amount_details': 'PtsV2PaymentsRefundPost201ResponseRefundAmountDetails',
+        'processing_information': 'PtsV2PaymentsCapturesPost201ResponseProcessingInformation',
         'processor_information': 'PtsV2PaymentsRefundPost201ResponseProcessorInformation',
         'order_information': 'PtsV2PaymentsRefundPost201ResponseOrderInformation',
         'point_of_sale_information': 'PtsV2PaymentsCapturesPost201ResponsePointOfSaleInformation'
@@ -50,12 +51,13 @@ class PtsV2PaymentsRefundPost201Response(object):
         'reconciliation_id': 'reconciliationId',
         'client_reference_information': 'clientReferenceInformation',
         'refund_amount_details': 'refundAmountDetails',
+        'processing_information': 'processingInformation',
         'processor_information': 'processorInformation',
         'order_information': 'orderInformation',
         'point_of_sale_information': 'pointOfSaleInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, refund_amount_details=None, processor_information=None, order_information=None, point_of_sale_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, reconciliation_id=None, client_reference_information=None, refund_amount_details=None, processing_information=None, processor_information=None, order_information=None, point_of_sale_information=None):
         """
         PtsV2PaymentsRefundPost201Response - a model defined in Swagger
         """
@@ -67,6 +69,7 @@ class PtsV2PaymentsRefundPost201Response(object):
         self._reconciliation_id = None
         self._client_reference_information = None
         self._refund_amount_details = None
+        self._processing_information = None
         self._processor_information = None
         self._order_information = None
         self._point_of_sale_information = None
@@ -85,6 +88,8 @@ class PtsV2PaymentsRefundPost201Response(object):
           self.client_reference_information = client_reference_information
         if refund_amount_details is not None:
           self.refund_amount_details = refund_amount_details
+        if processing_information is not None:
+          self.processing_information = processing_information
         if processor_information is not None:
           self.processor_information = processor_information
         if order_information is not None:
@@ -246,6 +251,27 @@ class PtsV2PaymentsRefundPost201Response(object):
         """
 
         self._refund_amount_details = refund_amount_details
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this PtsV2PaymentsRefundPost201Response.
+
+        :return: The processing_information of this PtsV2PaymentsRefundPost201Response.
+        :rtype: PtsV2PaymentsCapturesPost201ResponseProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this PtsV2PaymentsRefundPost201Response.
+
+        :param processing_information: The processing_information of this PtsV2PaymentsRefundPost201Response.
+        :type: PtsV2PaymentsCapturesPost201ResponseProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     @property
     def processor_information(self):

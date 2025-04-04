@@ -33,6 +33,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         'transaction_id': 'str',
         'trade_number': 'str',
         'raw_response': 'str',
+        'raw_response_local': 'str',
+        'response_details': 'str',
         'response_code': 'str',
         'seller_protection': 'PtsV2PaymentsPost201ResponseProcessorInformationSellerProtection',
         'avs': 'PtsV2PaymentsPost201Response1ProcessorInformationAvs'
@@ -42,12 +44,14 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         'transaction_id': 'transactionId',
         'trade_number': 'tradeNumber',
         'raw_response': 'rawResponse',
+        'raw_response_local': 'rawResponseLocal',
+        'response_details': 'responseDetails',
         'response_code': 'responseCode',
         'seller_protection': 'sellerProtection',
         'avs': 'avs'
     }
 
-    def __init__(self, transaction_id=None, trade_number=None, raw_response=None, response_code=None, seller_protection=None, avs=None):
+    def __init__(self, transaction_id=None, trade_number=None, raw_response=None, raw_response_local=None, response_details=None, response_code=None, seller_protection=None, avs=None):
         """
         PtsV2PaymentsPost201Response1ProcessorInformation - a model defined in Swagger
         """
@@ -55,6 +59,8 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         self._transaction_id = None
         self._trade_number = None
         self._raw_response = None
+        self._raw_response_local = None
+        self._response_details = None
         self._response_code = None
         self._seller_protection = None
         self._avs = None
@@ -65,6 +71,10 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
           self.trade_number = trade_number
         if raw_response is not None:
           self.raw_response = raw_response
+        if raw_response_local is not None:
+          self.raw_response_local = raw_response_local
+        if response_details is not None:
+          self.response_details = response_details
         if response_code is not None:
           self.response_code = response_code
         if seller_protection is not None:
@@ -140,6 +150,52 @@ class PtsV2PaymentsPost201Response1ProcessorInformation(object):
         """
 
         self._raw_response = raw_response
+
+    @property
+    def raw_response_local(self):
+        """
+        Gets the raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        This field is set to the value of failure reason returned by the processor in the local language of the processor. 
+
+        :return: The raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :rtype: str
+        """
+        return self._raw_response_local
+
+    @raw_response_local.setter
+    def raw_response_local(self, raw_response_local):
+        """
+        Sets the raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        This field is set to the value of failure reason returned by the processor in the local language of the processor. 
+
+        :param raw_response_local: The raw_response_local of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :type: str
+        """
+
+        self._raw_response_local = raw_response_local
+
+    @property
+    def response_details(self):
+        """
+        Gets the response_details of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        This field might contain information about a decline. 
+
+        :return: The response_details of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :rtype: str
+        """
+        return self._response_details
+
+    @response_details.setter
+    def response_details(self, response_details):
+        """
+        Sets the response_details of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        This field might contain information about a decline. 
+
+        :param response_details: The response_details of this PtsV2PaymentsPost201Response1ProcessorInformation.
+        :type: str
+        """
+
+        self._response_details = response_details
 
     @property
     def response_code(self):

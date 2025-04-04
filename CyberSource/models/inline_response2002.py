@@ -30,99 +30,199 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'product_id': 'str',
-        'product_name': 'str',
-        'event_types': 'list[Notificationsubscriptionsv1productsorganizationIdEventTypes]'
+        'links': 'list[InlineResponse2002Links]',
+        'object': 'str',
+        'offset': 'int',
+        'limit': 'int',
+        'count': 'int',
+        'total': 'int',
+        'embedded': 'InlineResponse2002Embedded'
     }
 
     attribute_map = {
-        'product_id': 'productId',
-        'product_name': 'productName',
-        'event_types': 'eventTypes'
+        'links': '_links',
+        'object': 'object',
+        'offset': 'offset',
+        'limit': 'limit',
+        'count': 'count',
+        'total': 'total',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, product_id=None, product_name=None, event_types=None):
+    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
         """
         InlineResponse2002 - a model defined in Swagger
         """
 
-        self._product_id = None
-        self._product_name = None
-        self._event_types = None
+        self._links = None
+        self._object = None
+        self._offset = None
+        self._limit = None
+        self._count = None
+        self._total = None
+        self._embedded = None
 
-        if product_id is not None:
-          self.product_id = product_id
-        if product_name is not None:
-          self.product_name = product_name
-        if event_types is not None:
-          self.event_types = event_types
+        if links is not None:
+          self.links = links
+        if object is not None:
+          self.object = object
+        if offset is not None:
+          self.offset = offset
+        if limit is not None:
+          self.limit = limit
+        if count is not None:
+          self.count = count
+        if total is not None:
+          self.total = total
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
-    def product_id(self):
+    def links(self):
         """
-        Gets the product_id of this InlineResponse2002.
-        Product ID.
+        Gets the links of this InlineResponse2002.
 
-        :return: The product_id of this InlineResponse2002.
+        :return: The links of this InlineResponse2002.
+        :rtype: list[InlineResponse2002Links]
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this InlineResponse2002.
+
+        :param links: The links of this InlineResponse2002.
+        :type: list[InlineResponse2002Links]
+        """
+
+        self._links = links
+
+    @property
+    def object(self):
+        """
+        Gets the object of this InlineResponse2002.
+
+        :return: The object of this InlineResponse2002.
         :rtype: str
         """
-        return self._product_id
+        return self._object
 
-    @product_id.setter
-    def product_id(self, product_id):
+    @object.setter
+    def object(self, object):
         """
-        Sets the product_id of this InlineResponse2002.
-        Product ID.
+        Sets the object of this InlineResponse2002.
 
-        :param product_id: The product_id of this InlineResponse2002.
+        :param object: The object of this InlineResponse2002.
         :type: str
         """
 
-        self._product_id = product_id
+        self._object = object
 
     @property
-    def product_name(self):
+    def offset(self):
         """
-        Gets the product_name of this InlineResponse2002.
-        Product Name.
+        Gets the offset of this InlineResponse2002.
 
-        :return: The product_name of this InlineResponse2002.
-        :rtype: str
+        :return: The offset of this InlineResponse2002.
+        :rtype: int
         """
-        return self._product_name
+        return self._offset
 
-    @product_name.setter
-    def product_name(self, product_name):
+    @offset.setter
+    def offset(self, offset):
         """
-        Sets the product_name of this InlineResponse2002.
-        Product Name.
+        Sets the offset of this InlineResponse2002.
 
-        :param product_name: The product_name of this InlineResponse2002.
-        :type: str
+        :param offset: The offset of this InlineResponse2002.
+        :type: int
         """
 
-        self._product_name = product_name
+        self._offset = offset
 
     @property
-    def event_types(self):
+    def limit(self):
         """
-        Gets the event_types of this InlineResponse2002.
+        Gets the limit of this InlineResponse2002.
 
-        :return: The event_types of this InlineResponse2002.
-        :rtype: list[Notificationsubscriptionsv1productsorganizationIdEventTypes]
+        :return: The limit of this InlineResponse2002.
+        :rtype: int
         """
-        return self._event_types
+        return self._limit
 
-    @event_types.setter
-    def event_types(self, event_types):
+    @limit.setter
+    def limit(self, limit):
         """
-        Sets the event_types of this InlineResponse2002.
+        Sets the limit of this InlineResponse2002.
 
-        :param event_types: The event_types of this InlineResponse2002.
-        :type: list[Notificationsubscriptionsv1productsorganizationIdEventTypes]
+        :param limit: The limit of this InlineResponse2002.
+        :type: int
         """
 
-        self._event_types = event_types
+        self._limit = limit
+
+    @property
+    def count(self):
+        """
+        Gets the count of this InlineResponse2002.
+
+        :return: The count of this InlineResponse2002.
+        :rtype: int
+        """
+        return self._count
+
+    @count.setter
+    def count(self, count):
+        """
+        Sets the count of this InlineResponse2002.
+
+        :param count: The count of this InlineResponse2002.
+        :type: int
+        """
+
+        self._count = count
+
+    @property
+    def total(self):
+        """
+        Gets the total of this InlineResponse2002.
+
+        :return: The total of this InlineResponse2002.
+        :rtype: int
+        """
+        return self._total
+
+    @total.setter
+    def total(self, total):
+        """
+        Sets the total of this InlineResponse2002.
+
+        :param total: The total of this InlineResponse2002.
+        :type: int
+        """
+
+        self._total = total
+
+    @property
+    def embedded(self):
+        """
+        Gets the embedded of this InlineResponse2002.
+
+        :return: The embedded of this InlineResponse2002.
+        :rtype: InlineResponse2002Embedded
+        """
+        return self._embedded
+
+    @embedded.setter
+    def embedded(self, embedded):
+        """
+        Sets the embedded of this InlineResponse2002.
+
+        :param embedded: The embedded of this InlineResponse2002.
+        :type: InlineResponse2002Embedded
+        """
+
+        self._embedded = embedded
 
     def to_dict(self):
         """

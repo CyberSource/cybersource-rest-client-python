@@ -52,8 +52,10 @@ class SaveSymEgressKey(object):
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
-        self.client_request_action = client_request_action
-        self.key_information = key_information
+        if client_request_action is not None:
+          self.client_request_action = client_request_action
+        if key_information is not None:
+          self.key_information = key_information
 
     @property
     def client_reference_information(self):

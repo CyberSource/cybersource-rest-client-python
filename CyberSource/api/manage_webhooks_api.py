@@ -47,22 +47,22 @@ class ManageWebhooksApi(object):
 
 
 
-    def delete_webhook_subscription(self, webhook_id, **kwargs):
+    def notification_subscriptions_v1_webhooks_webhook_id_post(self, webhook_id, **kwargs):
         """
-        Delete a Webhook Subscription
-        Delete the webhook. Please note that deleting a particular webhook does not delete the history of the webhook notifications.
+        Test a Webhook Configuration
+        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_webhook_subscription(webhook_id, callback=callback_function)
+        >>> thread = api.notification_subscriptions_v1_webhooks_webhook_id_post(webhook_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str webhook_id: The webhook identifier. (required)
-        :return: None
+        :param str webhook_id: The Webhook Identifier. (required)
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
 
@@ -71,31 +71,31 @@ class ManageWebhooksApi(object):
         """
 
         if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `delete_webhook_subscription` STARTED")
+            self.logger.info("CALL TO METHOD `notification_subscriptions_v1_webhooks_webhook_id_post` STARTED")
 
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.delete_webhook_subscription_with_http_info(webhook_id, **kwargs)
+            return self.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, **kwargs)
         else:
-            (data) = self.delete_webhook_subscription_with_http_info(webhook_id, **kwargs)
+            (data) = self.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, **kwargs)
             return data
 
-    def delete_webhook_subscription_with_http_info(self, webhook_id, **kwargs):
+    def notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(self, webhook_id, **kwargs):
         """
-        Delete a Webhook Subscription
-        Delete the webhook. Please note that deleting a particular webhook does not delete the history of the webhook notifications.
+        Test a Webhook Configuration
+        Test the webhook configuration by sending a sample webhook. Calling this endpoint sends a sample webhook to the endpoint identified in the user's subscription.   It will contain sample values for the product & eventType based on values present in your subscription along with a sample message in the payload.   Based on the webhook response users can make any necessary modifications or rest assured knowing their setup is configured correctly. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.delete_webhook_subscription_with_http_info(webhook_id, callback=callback_function)
+        >>> thread = api.notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info(webhook_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str webhook_id: The webhook identifier. (required)
-        :return: None
+        :param str webhook_id: The Webhook Identifier. (required)
+        :return: InlineResponse2014
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -111,15 +111,15 @@ class ManageWebhooksApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_webhook_subscription" % key
+                    " to method notification_subscriptions_v1_webhooks_webhook_id_post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'webhook_id' is set
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
             if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `delete_webhook_subscription`")
+                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
+            raise ValueError("Missing the required parameter `webhook_id` when calling `notification_subscriptions_v1_webhooks_webhook_id_post`")
 
 
         collection_formats = {}
@@ -137,18 +137,18 @@ class ManageWebhooksApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'DELETE' in ('POST'):
+        if 'POST' in ('POST'):
             body_params = '{}'
 
-        if 'DELETE' == GlobalLabelParameters.POST or 'DELETE' == GlobalLabelParameters.PUT or 'DELETE' == GlobalLabelParameters.PATCH:
+        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
             body_params = process_body(body_params)
 
         is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "delete_webhook_subscription,delete_webhook_subscription_with_http_info"):
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "notification_subscriptions_v1_webhooks_webhook_id_post,notification_subscriptions_v1_webhooks_webhook_id_post_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -156,279 +156,14 @@ class ManageWebhooksApi(object):
         # Authentication setting
         auth_settings = []
 
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'DELETE',
+        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def get_webhook_subscription_by_id(self, webhook_id, **kwargs):
-        """
-        Get Details On a Single Webhook
-        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_webhook_subscription_by_id(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2004
-                 If the method is called asynchronously,
-                 returns the request thread.
-
-        DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
-        """
-
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_webhook_subscription_by_id` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_webhook_subscription_by_id_with_http_info(webhook_id, **kwargs)
-        else:
-            (data) = self.get_webhook_subscription_by_id_with_http_info(webhook_id, **kwargs)
-            return data
-
-    def get_webhook_subscription_by_id_with_http_info(self, webhook_id, **kwargs):
-        """
-        Get Details On a Single Webhook
-        Retrieve the details of a specific webhook by supplying the webhook ID in the path.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_webhook_subscription_by_id_with_http_info(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The webhook Identifier (required)
-        :return: InlineResponse2004
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['webhook_id']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_webhook_subscription_by_id" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'webhook_id' is set
-        if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `get_webhook_subscription_by_id`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'webhook_id' in params:
-            path_params['webhookId'] = params['webhook_id']
-            webhookId=webhook_id
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_webhook_subscription_by_id,get_webhook_subscription_by_id_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='InlineResponse2004',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def get_webhook_subscriptions_by_org(self, organization_id, product_id, event_type, **kwargs):
-        """
-        Get Details On All Created Webhooks
-        Retrieve a list of all previously created webhooks.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_webhook_subscriptions_by_org(organization_id, product_id, event_type, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str organization_id: The Organization Identifier. (required)
-        :param str product_id: The Product Identifier. (required)
-        :param str event_type: The Event Type. (required)
-        :return: list[InlineResponse2003]
-                 If the method is called asynchronously,
-                 returns the request thread.
-
-        DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
-        """
-
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `get_webhook_subscriptions_by_org` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, **kwargs)
-        else:
-            (data) = self.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, **kwargs)
-            return data
-
-    def get_webhook_subscriptions_by_org_with_http_info(self, organization_id, product_id, event_type, **kwargs):
-        """
-        Get Details On All Created Webhooks
-        Retrieve a list of all previously created webhooks.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.get_webhook_subscriptions_by_org_with_http_info(organization_id, product_id, event_type, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str organization_id: The Organization Identifier. (required)
-        :param str product_id: The Product Identifier. (required)
-        :param str event_type: The Event Type. (required)
-        :return: list[InlineResponse2003]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['organization_id', 'product_id', 'event_type']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_webhook_subscriptions_by_org" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'organization_id' is set
-        if ('organization_id' not in params) or (params['organization_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
-            raise ValueError("Missing the required parameter `organization_id` when calling `get_webhook_subscriptions_by_org`")
-        # verify the required parameter 'product_id' is set
-        if ('product_id' not in params) or (params['product_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `product_id` when calling `get_webhook_subscriptions_by_org`")
-            raise ValueError("Missing the required parameter `product_id` when calling `get_webhook_subscriptions_by_org`")
-        # verify the required parameter 'event_type' is set
-        if ('event_type' not in params) or (params['event_type'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
-            raise ValueError("Missing the required parameter `event_type` when calling `get_webhook_subscriptions_by_org`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-        if 'organization_id' in params:
-            query_params.append(('organizationId', params['organization_id']))
-        if 'product_id' in params:
-            query_params.append(('productId', params['product_id']))
-        if 'event_type' in params:
-            query_params.append(('eventType', params['event_type']))
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_webhook_subscriptions_by_org,get_webhook_subscriptions_by_org_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks', 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='list[InlineResponse2003]',
+                                        response_type='InlineResponse2014',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -559,7 +294,7 @@ class ManageWebhooksApi(object):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+        header_params['Accept'] = self.api_client.select_header_accept(['application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
@@ -575,135 +310,6 @@ class ManageWebhooksApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='InlineResponse2015',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def update_webhook_subscription(self, webhook_id, **kwargs):
-        """
-        Update a Webhook Subscription
-        Update the webhook subscription using PATCH.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.update_webhook_subscription(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhookRequest update_webhook_request: The webhook payload or changes to apply.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-
-        DISCLAIMER:
-                Cybersource may allow Customer to access, use, and/or test a Cybersource product or service that may still be in development or has not been market-tested ("Beta Product") solely for the purpose of evaluating the functionality or marketability of the Beta Product (a "Beta Evaluation"). Notwithstanding any language to the contrary, the following terms shall apply with respect to Customer's participation in any Beta Evaluation (and the Beta Product(s)) accessed thereunder): The Parties will enter into a separate form agreement detailing the scope of the Beta Evaluation, requirements, pricing, the length of the beta evaluation period ("Beta Product Form"). Beta Products are not, and may not become, Transaction Services and have not yet been publicly released and are offered for the sole purpose of internal testing and non-commercial evaluation. Customer's use of the Beta Product shall be solely for the purpose of conducting the Beta Evaluation. Customer accepts all risks arising out of the access and use of the Beta Products. Cybersource may, in its sole discretion, at any time, terminate or discontinue the Beta Evaluation. Customer acknowledges and agrees that any Beta Product may still be in development and that Beta Product is provided "AS IS" and may not perform at the level of a commercially available service, may not operate as expected and may be modified prior to release. CYBERSOURCE SHALL NOT BE RESPONSIBLE OR LIABLE UNDER ANY CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE RELATING TO A BETA PRODUCT OR THE BETA EVALUATION (A) FOR LOSS OR INACCURACY OF DATA OR COST OF PROCUREMENT OF SUBSTITUTE GOODS, SERVICES OR TECHNOLOGY, (B) ANY CLAIM, LOSSES, DAMAGES, OR CAUSE OF ACTION ARISING IN CONNECTION WITH THE BETA PRODUCT; OR (C) FOR ANY INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED TO, LOSS OF REVENUES AND LOSS OF PROFITS.
-        """
-
-        if self.api_client.mconfig.log_config.enable_log:
-            self.logger.info("CALL TO METHOD `update_webhook_subscription` STARTED")
-
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.update_webhook_subscription_with_http_info(webhook_id, **kwargs)
-        else:
-            (data) = self.update_webhook_subscription_with_http_info(webhook_id, **kwargs)
-            return data
-
-    def update_webhook_subscription_with_http_info(self, webhook_id, **kwargs):
-        """
-        Update a Webhook Subscription
-        Update the webhook subscription using PATCH.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.update_webhook_subscription_with_http_info(webhook_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str webhook_id: The Webhook Identifier. (required)
-        :param UpdateWebhookRequest update_webhook_request: The webhook payload or changes to apply.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['webhook_id', 'update_webhook_request']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_webhook_subscription" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'webhook_id' is set
-        if ('webhook_id' not in params) or (params['webhook_id'] is None):
-            if self.api_client.mconfig.log_config.enable_log:
-                self.logger.error("InvalidArgumentException : Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
-            raise ValueError("Missing the required parameter `webhook_id` when calling `update_webhook_subscription`")
-
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'webhook_id' in params:
-            path_params['webhookId'] = params['webhook_id']
-            webhookId=webhook_id
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'update_webhook_request' in params:
-            body_params = params['update_webhook_request']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'update_webhook_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-
-        if 'PATCH' == GlobalLabelParameters.POST or 'PATCH' == GlobalLabelParameters.PUT or 'PATCH' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "update_webhook_subscription,update_webhook_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(f'/notification-subscriptions/v1/webhooks/{webhookId}', 'PATCH',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

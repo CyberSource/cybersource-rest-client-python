@@ -30,27 +30,11 @@ class TestManageWebhooksApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_delete_webhook_subscription(self):
+    def test_notification_subscriptions_v1_webhooks_webhook_id_post(self):
         """
-        Test case for delete_webhook_subscription
+        Test case for notification_subscriptions_v1_webhooks_webhook_id_post
 
-        Delete a Webhook Subscription
-        """
-        pass
-
-    def test_get_webhook_subscription_by_id(self):
-        """
-        Test case for get_webhook_subscription_by_id
-
-        Get Details On a Single Webhook
-        """
-        pass
-
-    def test_get_webhook_subscriptions_by_org(self):
-        """
-        Test case for get_webhook_subscriptions_by_org
-
-        Get Details On All Created Webhooks
+        Test a Webhook Configuration
         """
         pass
 
@@ -59,14 +43,6 @@ class TestManageWebhooksApi(unittest.TestCase):
         Test case for save_asym_egress_key
 
         Message Level Encryption
-        """
-        pass
-
-    def test_update_webhook_subscription(self):
-        """
-        Test case for update_webhook_subscription
-
-        Update a Webhook Subscription
         """
         pass
 

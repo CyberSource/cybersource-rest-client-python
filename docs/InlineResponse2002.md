@@ -3,9 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_id** | **str** | Product ID. | [optional] 
-**product_name** | **str** | Product Name. | [optional] 
-**event_types** | [**list[Notificationsubscriptionsv1productsorganizationIdEventTypes]**](Notificationsubscriptionsv1productsorganizationIdEventTypes.md) |  | [optional] 
+**links** | [**list[InlineResponse2002Links]**](InlineResponse2002Links.md) |  | [optional] 
+**object** | **str** |  | [optional] 
+**offset** | **int** |  | [optional] 
+**limit** | **int** |  | [optional] 
+**count** | **int** |  | [optional] 
+**total** | **int** |  | [optional] 
+**embedded** | [**InlineResponse2002Embedded**](InlineResponse2002Embedded.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

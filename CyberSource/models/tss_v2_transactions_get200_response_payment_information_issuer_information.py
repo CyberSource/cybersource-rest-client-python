@@ -33,17 +33,19 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         'name': 'str',
         'country': 'str',
         'bin_length': 'str',
-        'phone_number': 'str'
+        'phone_number': 'str',
+        'transaction_information': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'country': 'country',
         'bin_length': 'binLength',
-        'phone_number': 'phoneNumber'
+        'phone_number': 'phoneNumber',
+        'transaction_information': 'transactionInformation'
     }
 
-    def __init__(self, name=None, country=None, bin_length=None, phone_number=None):
+    def __init__(self, name=None, country=None, bin_length=None, phone_number=None, transaction_information=None):
         """
         TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         self._country = None
         self._bin_length = None
         self._phone_number = None
+        self._transaction_information = None
 
         if name is not None:
           self.name = name
@@ -61,6 +64,8 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
           self.bin_length = bin_length
         if phone_number is not None:
           self.phone_number = phone_number
+        if transaction_information is not None:
+          self.transaction_information = transaction_information
 
     @property
     def name(self):
@@ -153,6 +158,29 @@ class TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation(object)
         """
 
         self._phone_number = phone_number
+
+    @property
+    def transaction_information(self):
+        """
+        Gets the transaction_information of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
+        In a Mastercard Transaction, this field contains the unique identifier (Transaction Link ID) for the first transaction in a transaction life cycle.  This ID is crucial for maintaining continuity and linking subsequent operations to the original transaction. 
+
+        :return: The transaction_information of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
+        :rtype: str
+        """
+        return self._transaction_information
+
+    @transaction_information.setter
+    def transaction_information(self, transaction_information):
+        """
+        Sets the transaction_information of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
+        In a Mastercard Transaction, this field contains the unique identifier (Transaction Link ID) for the first transaction in a transaction life cycle.  This ID is crucial for maintaining continuity and linking subsequent operations to the original transaction. 
+
+        :param transaction_information: The transaction_information of this TssV2TransactionsGet200ResponsePaymentInformationIssuerInformation.
+        :type: str
+        """
+
+        self._transaction_information = transaction_information
 
     def to_dict(self):
         """

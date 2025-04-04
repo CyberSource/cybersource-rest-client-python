@@ -51,8 +51,8 @@ class MLEUtility:
 
         except Exception as e:
             if merchant_config.log_config.enable_log:
-                logger.error(f"Error encrypting request payload: {str(e)}")
-            raise MLEUtility.MLEException(f"Error encrypting request payload: {str(e)}")
+                logger.error(f"Error encrypting request payload.")
+            raise MLEUtility.MLEException(f"Error encrypting request payload.")
 
     @staticmethod
     def generate_token(cert, request_body, log_config, logger):
