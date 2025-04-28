@@ -30,199 +30,127 @@ class InlineResponse2001(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'registration_information': 'Boardingv1registrationsRegistrationInformation',
-        'integration_information': 'InlineResponse2001IntegrationInformation',
-        'organization_information': 'Boardingv1registrationsOrganizationInformation',
-        'product_information': 'Boardingv1registrationsProductInformation',
-        'product_information_setups': 'list[InlineResponse2012ProductInformationSetups]',
-        'document_information': 'Boardingv1registrationsDocumentInformation',
-        'details': 'dict(str, list[object])'
+        'id': 'str',
+        'submit_time_utc': 'str',
+        'status': 'str',
+        'embedded': 'InlineResponse2001Embedded'
     }
 
     attribute_map = {
-        'registration_information': 'registrationInformation',
-        'integration_information': 'integrationInformation',
-        'organization_information': 'organizationInformation',
-        'product_information': 'productInformation',
-        'product_information_setups': 'productInformationSetups',
-        'document_information': 'documentInformation',
-        'details': 'details'
+        'id': 'id',
+        'submit_time_utc': 'submitTimeUtc',
+        'status': 'status',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, registration_information=None, integration_information=None, organization_information=None, product_information=None, product_information_setups=None, document_information=None, details=None):
+    def __init__(self, id=None, submit_time_utc=None, status=None, embedded=None):
         """
         InlineResponse2001 - a model defined in Swagger
         """
 
-        self._registration_information = None
-        self._integration_information = None
-        self._organization_information = None
-        self._product_information = None
-        self._product_information_setups = None
-        self._document_information = None
-        self._details = None
+        self._id = None
+        self._submit_time_utc = None
+        self._status = None
+        self._embedded = None
 
-        if registration_information is not None:
-          self.registration_information = registration_information
-        if integration_information is not None:
-          self.integration_information = integration_information
-        if organization_information is not None:
-          self.organization_information = organization_information
-        if product_information is not None:
-          self.product_information = product_information
-        if product_information_setups is not None:
-          self.product_information_setups = product_information_setups
-        if document_information is not None:
-          self.document_information = document_information
-        if details is not None:
-          self.details = details
+        if id is not None:
+          self.id = id
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
-    def registration_information(self):
+    def id(self):
         """
-        Gets the registration_information of this InlineResponse2001.
+        Gets the id of this InlineResponse2001.
+        UUID uniquely generated for this comments. 
 
-        :return: The registration_information of this InlineResponse2001.
-        :rtype: Boardingv1registrationsRegistrationInformation
+        :return: The id of this InlineResponse2001.
+        :rtype: str
         """
-        return self._registration_information
+        return self._id
 
-    @registration_information.setter
-    def registration_information(self, registration_information):
+    @id.setter
+    def id(self, id):
         """
-        Sets the registration_information of this InlineResponse2001.
+        Sets the id of this InlineResponse2001.
+        UUID uniquely generated for this comments. 
 
-        :param registration_information: The registration_information of this InlineResponse2001.
-        :type: Boardingv1registrationsRegistrationInformation
+        :param id: The id of this InlineResponse2001.
+        :type: str
         """
 
-        self._registration_information = registration_information
+        self._id = id
 
     @property
-    def integration_information(self):
+    def submit_time_utc(self):
         """
-        Gets the integration_information of this InlineResponse2001.
+        Gets the submit_time_utc of this InlineResponse2001.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :return: The integration_information of this InlineResponse2001.
-        :rtype: InlineResponse2001IntegrationInformation
+        :return: The submit_time_utc of this InlineResponse2001.
+        :rtype: str
         """
-        return self._integration_information
+        return self._submit_time_utc
 
-    @integration_information.setter
-    def integration_information(self, integration_information):
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
         """
-        Sets the integration_information of this InlineResponse2001.
+        Sets the submit_time_utc of this InlineResponse2001.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :param integration_information: The integration_information of this InlineResponse2001.
-        :type: InlineResponse2001IntegrationInformation
+        :param submit_time_utc: The submit_time_utc of this InlineResponse2001.
+        :type: str
         """
 
-        self._integration_information = integration_information
+        self._submit_time_utc = submit_time_utc
 
     @property
-    def organization_information(self):
+    def status(self):
         """
-        Gets the organization_information of this InlineResponse2001.
+        Gets the status of this InlineResponse2001.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :return: The organization_information of this InlineResponse2001.
-        :rtype: Boardingv1registrationsOrganizationInformation
+        :return: The status of this InlineResponse2001.
+        :rtype: str
         """
-        return self._organization_information
+        return self._status
 
-    @organization_information.setter
-    def organization_information(self, organization_information):
+    @status.setter
+    def status(self, status):
         """
-        Sets the organization_information of this InlineResponse2001.
+        Sets the status of this InlineResponse2001.
+        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
 
-        :param organization_information: The organization_information of this InlineResponse2001.
-        :type: Boardingv1registrationsOrganizationInformation
+        :param status: The status of this InlineResponse2001.
+        :type: str
         """
 
-        self._organization_information = organization_information
+        self._status = status
 
     @property
-    def product_information(self):
+    def embedded(self):
         """
-        Gets the product_information of this InlineResponse2001.
+        Gets the embedded of this InlineResponse2001.
 
-        :return: The product_information of this InlineResponse2001.
-        :rtype: Boardingv1registrationsProductInformation
+        :return: The embedded of this InlineResponse2001.
+        :rtype: InlineResponse2001Embedded
         """
-        return self._product_information
+        return self._embedded
 
-    @product_information.setter
-    def product_information(self, product_information):
+    @embedded.setter
+    def embedded(self, embedded):
         """
-        Sets the product_information of this InlineResponse2001.
+        Sets the embedded of this InlineResponse2001.
 
-        :param product_information: The product_information of this InlineResponse2001.
-        :type: Boardingv1registrationsProductInformation
-        """
-
-        self._product_information = product_information
-
-    @property
-    def product_information_setups(self):
-        """
-        Gets the product_information_setups of this InlineResponse2001.
-
-        :return: The product_information_setups of this InlineResponse2001.
-        :rtype: list[InlineResponse2012ProductInformationSetups]
-        """
-        return self._product_information_setups
-
-    @product_information_setups.setter
-    def product_information_setups(self, product_information_setups):
-        """
-        Sets the product_information_setups of this InlineResponse2001.
-
-        :param product_information_setups: The product_information_setups of this InlineResponse2001.
-        :type: list[InlineResponse2012ProductInformationSetups]
+        :param embedded: The embedded of this InlineResponse2001.
+        :type: InlineResponse2001Embedded
         """
 
-        self._product_information_setups = product_information_setups
-
-    @property
-    def document_information(self):
-        """
-        Gets the document_information of this InlineResponse2001.
-
-        :return: The document_information of this InlineResponse2001.
-        :rtype: Boardingv1registrationsDocumentInformation
-        """
-        return self._document_information
-
-    @document_information.setter
-    def document_information(self, document_information):
-        """
-        Sets the document_information of this InlineResponse2001.
-
-        :param document_information: The document_information of this InlineResponse2001.
-        :type: Boardingv1registrationsDocumentInformation
-        """
-
-        self._document_information = document_information
-
-    @property
-    def details(self):
-        """
-        Gets the details of this InlineResponse2001.
-
-        :return: The details of this InlineResponse2001.
-        :rtype: dict(str, list[object])
-        """
-        return self._details
-
-    @details.setter
-    def details(self, details):
-        """
-        Sets the details of this InlineResponse2001.
-
-        :param details: The details of this InlineResponse2001.
-        :type: dict(str, list[object])
-        """
-
-        self._details = details
+        self._embedded = embedded
 
     def to_dict(self):
         """

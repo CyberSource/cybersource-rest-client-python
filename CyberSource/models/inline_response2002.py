@@ -30,199 +30,199 @@ class InlineResponse2002(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'list[InlineResponse2002Links]',
-        'object': 'str',
-        'offset': 'int',
-        'limit': 'int',
-        'count': 'int',
-        'total': 'int',
-        'embedded': 'InlineResponse2002Embedded'
+        'registration_information': 'Boardingv1registrationsRegistrationInformation',
+        'integration_information': 'InlineResponse2002IntegrationInformation',
+        'organization_information': 'Boardingv1registrationsOrganizationInformation',
+        'product_information': 'Boardingv1registrationsProductInformation',
+        'product_information_setups': 'list[InlineResponse2012ProductInformationSetups]',
+        'document_information': 'Boardingv1registrationsDocumentInformation',
+        'details': 'dict(str, list[object])'
     }
 
     attribute_map = {
-        'links': '_links',
-        'object': 'object',
-        'offset': 'offset',
-        'limit': 'limit',
-        'count': 'count',
-        'total': 'total',
-        'embedded': '_embedded'
+        'registration_information': 'registrationInformation',
+        'integration_information': 'integrationInformation',
+        'organization_information': 'organizationInformation',
+        'product_information': 'productInformation',
+        'product_information_setups': 'productInformationSetups',
+        'document_information': 'documentInformation',
+        'details': 'details'
     }
 
-    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
+    def __init__(self, registration_information=None, integration_information=None, organization_information=None, product_information=None, product_information_setups=None, document_information=None, details=None):
         """
         InlineResponse2002 - a model defined in Swagger
         """
 
-        self._links = None
-        self._object = None
-        self._offset = None
-        self._limit = None
-        self._count = None
-        self._total = None
-        self._embedded = None
+        self._registration_information = None
+        self._integration_information = None
+        self._organization_information = None
+        self._product_information = None
+        self._product_information_setups = None
+        self._document_information = None
+        self._details = None
 
-        if links is not None:
-          self.links = links
-        if object is not None:
-          self.object = object
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if count is not None:
-          self.count = count
-        if total is not None:
-          self.total = total
-        if embedded is not None:
-          self.embedded = embedded
-
-    @property
-    def links(self):
-        """
-        Gets the links of this InlineResponse2002.
-
-        :return: The links of this InlineResponse2002.
-        :rtype: list[InlineResponse2002Links]
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse2002.
-
-        :param links: The links of this InlineResponse2002.
-        :type: list[InlineResponse2002Links]
-        """
-
-        self._links = links
+        if registration_information is not None:
+          self.registration_information = registration_information
+        if integration_information is not None:
+          self.integration_information = integration_information
+        if organization_information is not None:
+          self.organization_information = organization_information
+        if product_information is not None:
+          self.product_information = product_information
+        if product_information_setups is not None:
+          self.product_information_setups = product_information_setups
+        if document_information is not None:
+          self.document_information = document_information
+        if details is not None:
+          self.details = details
 
     @property
-    def object(self):
+    def registration_information(self):
         """
-        Gets the object of this InlineResponse2002.
+        Gets the registration_information of this InlineResponse2002.
 
-        :return: The object of this InlineResponse2002.
-        :rtype: str
+        :return: The registration_information of this InlineResponse2002.
+        :rtype: Boardingv1registrationsRegistrationInformation
         """
-        return self._object
+        return self._registration_information
 
-    @object.setter
-    def object(self, object):
+    @registration_information.setter
+    def registration_information(self, registration_information):
         """
-        Sets the object of this InlineResponse2002.
+        Sets the registration_information of this InlineResponse2002.
 
-        :param object: The object of this InlineResponse2002.
-        :type: str
+        :param registration_information: The registration_information of this InlineResponse2002.
+        :type: Boardingv1registrationsRegistrationInformation
         """
 
-        self._object = object
+        self._registration_information = registration_information
 
     @property
-    def offset(self):
+    def integration_information(self):
         """
-        Gets the offset of this InlineResponse2002.
+        Gets the integration_information of this InlineResponse2002.
 
-        :return: The offset of this InlineResponse2002.
-        :rtype: int
+        :return: The integration_information of this InlineResponse2002.
+        :rtype: InlineResponse2002IntegrationInformation
         """
-        return self._offset
+        return self._integration_information
 
-    @offset.setter
-    def offset(self, offset):
+    @integration_information.setter
+    def integration_information(self, integration_information):
         """
-        Sets the offset of this InlineResponse2002.
+        Sets the integration_information of this InlineResponse2002.
 
-        :param offset: The offset of this InlineResponse2002.
-        :type: int
+        :param integration_information: The integration_information of this InlineResponse2002.
+        :type: InlineResponse2002IntegrationInformation
         """
 
-        self._offset = offset
+        self._integration_information = integration_information
 
     @property
-    def limit(self):
+    def organization_information(self):
         """
-        Gets the limit of this InlineResponse2002.
+        Gets the organization_information of this InlineResponse2002.
 
-        :return: The limit of this InlineResponse2002.
-        :rtype: int
+        :return: The organization_information of this InlineResponse2002.
+        :rtype: Boardingv1registrationsOrganizationInformation
         """
-        return self._limit
+        return self._organization_information
 
-    @limit.setter
-    def limit(self, limit):
+    @organization_information.setter
+    def organization_information(self, organization_information):
         """
-        Sets the limit of this InlineResponse2002.
+        Sets the organization_information of this InlineResponse2002.
 
-        :param limit: The limit of this InlineResponse2002.
-        :type: int
+        :param organization_information: The organization_information of this InlineResponse2002.
+        :type: Boardingv1registrationsOrganizationInformation
         """
 
-        self._limit = limit
+        self._organization_information = organization_information
 
     @property
-    def count(self):
+    def product_information(self):
         """
-        Gets the count of this InlineResponse2002.
+        Gets the product_information of this InlineResponse2002.
 
-        :return: The count of this InlineResponse2002.
-        :rtype: int
+        :return: The product_information of this InlineResponse2002.
+        :rtype: Boardingv1registrationsProductInformation
         """
-        return self._count
+        return self._product_information
 
-    @count.setter
-    def count(self, count):
+    @product_information.setter
+    def product_information(self, product_information):
         """
-        Sets the count of this InlineResponse2002.
+        Sets the product_information of this InlineResponse2002.
 
-        :param count: The count of this InlineResponse2002.
-        :type: int
+        :param product_information: The product_information of this InlineResponse2002.
+        :type: Boardingv1registrationsProductInformation
         """
 
-        self._count = count
+        self._product_information = product_information
 
     @property
-    def total(self):
+    def product_information_setups(self):
         """
-        Gets the total of this InlineResponse2002.
+        Gets the product_information_setups of this InlineResponse2002.
 
-        :return: The total of this InlineResponse2002.
-        :rtype: int
+        :return: The product_information_setups of this InlineResponse2002.
+        :rtype: list[InlineResponse2012ProductInformationSetups]
         """
-        return self._total
+        return self._product_information_setups
 
-    @total.setter
-    def total(self, total):
+    @product_information_setups.setter
+    def product_information_setups(self, product_information_setups):
         """
-        Sets the total of this InlineResponse2002.
+        Sets the product_information_setups of this InlineResponse2002.
 
-        :param total: The total of this InlineResponse2002.
-        :type: int
+        :param product_information_setups: The product_information_setups of this InlineResponse2002.
+        :type: list[InlineResponse2012ProductInformationSetups]
         """
 
-        self._total = total
+        self._product_information_setups = product_information_setups
 
     @property
-    def embedded(self):
+    def document_information(self):
         """
-        Gets the embedded of this InlineResponse2002.
+        Gets the document_information of this InlineResponse2002.
 
-        :return: The embedded of this InlineResponse2002.
-        :rtype: InlineResponse2002Embedded
+        :return: The document_information of this InlineResponse2002.
+        :rtype: Boardingv1registrationsDocumentInformation
         """
-        return self._embedded
+        return self._document_information
 
-    @embedded.setter
-    def embedded(self, embedded):
+    @document_information.setter
+    def document_information(self, document_information):
         """
-        Sets the embedded of this InlineResponse2002.
+        Sets the document_information of this InlineResponse2002.
 
-        :param embedded: The embedded of this InlineResponse2002.
-        :type: InlineResponse2002Embedded
+        :param document_information: The document_information of this InlineResponse2002.
+        :type: Boardingv1registrationsDocumentInformation
         """
 
-        self._embedded = embedded
+        self._document_information = document_information
+
+    @property
+    def details(self):
+        """
+        Gets the details of this InlineResponse2002.
+
+        :return: The details of this InlineResponse2002.
+        :rtype: dict(str, list[object])
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """
+        Sets the details of this InlineResponse2002.
+
+        :param details: The details of this InlineResponse2002.
+        :type: dict(str, list[object])
+        """
+
+        self._details = details
 
     def to_dict(self):
         """

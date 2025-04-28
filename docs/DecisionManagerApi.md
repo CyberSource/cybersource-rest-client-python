@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **action_decision_manager_case**
-> InlineResponse200 action_decision_manager_case(id, case_management_actions_request)
+> InlineResponse2001 action_decision_manager_case(id, case_management_actions_request)
 
 Take action on a DM post-transactional case
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

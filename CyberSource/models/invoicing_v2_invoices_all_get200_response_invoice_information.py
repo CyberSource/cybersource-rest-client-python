@@ -30,22 +30,27 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'due_date': 'date'
+        'due_date': 'date',
+        'expiration_date': 'date'
     }
 
     attribute_map = {
-        'due_date': 'dueDate'
+        'due_date': 'dueDate',
+        'expiration_date': 'expirationDate'
     }
 
-    def __init__(self, due_date=None):
+    def __init__(self, due_date=None, expiration_date=None):
         """
         InvoicingV2InvoicesAllGet200ResponseInvoiceInformation - a model defined in Swagger
         """
 
         self._due_date = None
+        self._expiration_date = None
 
         if due_date is not None:
           self.due_date = due_date
+        if expiration_date is not None:
+          self.expiration_date = expiration_date
 
     @property
     def due_date(self):
@@ -69,6 +74,29 @@ class InvoicingV2InvoicesAllGet200ResponseInvoiceInformation(object):
         """
 
         self._due_date = due_date
+
+    @property
+    def expiration_date(self):
+        """
+        Gets the expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :return: The expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
+        :rtype: date
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """
+        Sets the expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :param expiration_date: The expiration_date of this InvoicingV2InvoicesAllGet200ResponseInvoiceInformation.
+        :type: date
+        """
+
+        self._expiration_date = expiration_date
 
     def to_dict(self):
         """

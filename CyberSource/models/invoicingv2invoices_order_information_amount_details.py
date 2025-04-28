@@ -33,9 +33,9 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         'total_amount': 'str',
         'currency': 'str',
         'discount_amount': 'str',
-        'discount_percent': 'float',
-        'sub_amount': 'float',
-        'minimum_partial_amount': 'float',
+        'discount_percent': 'str',
+        'sub_amount': 'str',
+        'minimum_partial_amount': 'str',
         'tax_details': 'Invoicingv2invoicesOrderInformationAmountDetailsTaxDetails',
         'freight': 'Invoicingv2invoicesOrderInformationAmountDetailsFreight'
     }
@@ -65,10 +65,8 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         self._tax_details = None
         self._freight = None
 
-        if total_amount is not None:
-          self.total_amount = total_amount
-        if currency is not None:
-          self.currency = currency
+        self.total_amount = total_amount
+        self.currency = currency
         if discount_amount is not None:
           self.discount_amount = discount_amount
         if discount_percent is not None:
@@ -86,7 +84,7 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def total_amount(self):
         """
         Gets the total_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths.  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.   #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request.   #### DCC for First Data Not used. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths.  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.   #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing / Pay By Link Required for creating a new invoice or payment link.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request.   #### DCC for First Data Not used. 
 
         :return: The total_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
         :rtype: str
@@ -97,7 +95,7 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def total_amount(self, total_amount):
         """
         Sets the total_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths.  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.   #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing Required for creating a new invoice.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request.   #### DCC for First Data Not used. 
+        Grand total for the order. This value cannot be negative. You can include a decimal point (.), but no other special characters. CyberSource truncates the amount to the correct number of decimal places.  **Note** For CTV, FDCCompass, Paymentech processors, the maximum length for this field is 12.  **Important** Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths.  If your processor supports zero amount authorizations, you can set this field to 0 for the authorization to check if the card is lost or stolen.   #### Card Present Required to include either this field or `orderInformation.lineItems[].unitPrice` for the order.  #### Invoicing / Pay By Link Required for creating a new invoice or payment link.  #### PIN Debit Amount you requested for the PIN debit purchase. This value is returned for partial authorizations. The issuing bank can approve a partial amount if the balance on the debit card is less than the requested transaction amount.  Required field for PIN Debit purchase and PIN Debit credit requests. Optional field for PIN Debit reversal requests.  #### GPX This field is optional for reversing an authorization or credit; however, for all other processors, these fields are required.  #### DCC with a Third-Party Provider Set this field to the converted amount that was returned by the DCC provider. You must include either this field or the 1st line item in the order and the specific line-order amount in your request.   #### DCC for First Data Not used. 
 
         :param total_amount: The total_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
         :type: str
@@ -155,10 +153,10 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def discount_percent(self):
         """
         Gets the discount_percent of this Invoicingv2invoicesOrderInformationAmountDetails.
-        The total discount percentage applied to the invoice.
+        The total discount percentage applied to the order.
 
         :return: The discount_percent of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :rtype: float
+        :rtype: str
         """
         return self._discount_percent
 
@@ -166,10 +164,10 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def discount_percent(self, discount_percent):
         """
         Sets the discount_percent of this Invoicingv2invoicesOrderInformationAmountDetails.
-        The total discount percentage applied to the invoice.
+        The total discount percentage applied to the order.
 
         :param discount_percent: The discount_percent of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :type: float
+        :type: str
         """
 
         self._discount_percent = discount_percent
@@ -178,10 +176,10 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def sub_amount(self):
         """
         Gets the sub_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        Sub-amount of the invoice.
+        Sub-amount of the order.
 
         :return: The sub_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :rtype: float
+        :rtype: str
         """
         return self._sub_amount
 
@@ -189,10 +187,10 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
     def sub_amount(self, sub_amount):
         """
         Sets the sub_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        Sub-amount of the invoice.
+        Sub-amount of the order.
 
         :param sub_amount: The sub_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :type: float
+        :type: str
         """
 
         self._sub_amount = sub_amount
@@ -204,7 +202,7 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         The minimum partial amount required to pay the invoice.
 
         :return: The minimum_partial_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :rtype: float
+        :rtype: str
         """
         return self._minimum_partial_amount
 
@@ -215,7 +213,7 @@ class Invoicingv2invoicesOrderInformationAmountDetails(object):
         The minimum partial amount required to pay the invoice.
 
         :param minimum_partial_amount: The minimum_partial_amount of this Invoicingv2invoicesOrderInformationAmountDetails.
-        :type: float
+        :type: str
         """
 
         self._minimum_partial_amount = minimum_partial_amount

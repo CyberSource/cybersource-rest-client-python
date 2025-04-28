@@ -50,7 +50,7 @@ class InvoicesApi(object):
     def create_invoice(self, create_invoice_request, **kwargs):
         """
         Create a New Invoice
-        The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments.
+        The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments. The availability of API features for a merchant can depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -80,7 +80,7 @@ class InvoicesApi(object):
     def create_invoice_with_http_info(self, create_invoice_request, **kwargs):
         """
         Create a New Invoice
-        The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments.
+        The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments. The availability of API features for a merchant can depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -184,7 +184,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param int offset: Page offset number. (required)
         :param int limit: Maximum number of items you would like returned. (required)
-        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING 
+        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED 
         :return: InvoicingV2InvoicesAllGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -216,7 +216,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param int offset: Page offset number. (required)
         :param int limit: Maximum number of items you would like returned. (required)
-        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING 
+        :param str status: The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED 
         :return: InvoicingV2InvoicesAllGet200Response
                  If the method is called asynchronously,
                  returns the request thread.
@@ -437,7 +437,7 @@ class InvoicesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesCancel200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -467,7 +467,7 @@ class InvoicesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesCancel200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -535,7 +535,7 @@ class InvoicesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InvoicingV2InvoicesPost201Response',
+                                        response_type='InvoicingV2InvoicesCancel200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -558,7 +558,7 @@ class InvoicesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesSend200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -588,7 +588,7 @@ class InvoicesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesSend200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -656,7 +656,7 @@ class InvoicesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InvoicingV2InvoicesPost201Response',
+                                        response_type='InvoicingV2InvoicesSend200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -680,7 +680,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
         :param UpdateInvoiceRequest update_invoice_request: Updating the invoice does not resend the invoice automatically. You must resend the invoice separately. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesPut200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -711,7 +711,7 @@ class InvoicesApi(object):
             for asynchronous request. (optional)
         :param str id: The invoice number. (required)
         :param UpdateInvoiceRequest update_invoice_request: Updating the invoice does not resend the invoice automatically. You must resend the invoice separately. (required)
-        :return: InvoicingV2InvoicesPost201Response
+        :return: InvoicingV2InvoicesPut200Response
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -787,7 +787,7 @@ class InvoicesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InvoicingV2InvoicesPost201Response',
+                                        response_type='InvoicingV2InvoicesPut200Response',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

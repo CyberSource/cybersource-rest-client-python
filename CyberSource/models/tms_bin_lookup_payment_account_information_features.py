@@ -38,7 +38,17 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'card_platform': 'str',
         'combo_card': 'str',
         'corporate_purchase': 'bool',
-        'health_card': 'bool'
+        'health_card': 'bool',
+        'shared_bin': 'bool',
+        'pos_domestic_only': 'bool',
+        'gambling_allowed': 'bool',
+        'commercial_card_level2': 'bool',
+        'commercial_card_level3': 'bool',
+        'exempt_bin': 'bool',
+        'account_level_management': 'bool',
+        'online_gambling_block': 'bool',
+        'auto_substantiation': 'bool',
+        'flex_credential': 'bool'
     }
 
     attribute_map = {
@@ -50,10 +60,20 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         'card_platform': 'cardPlatform',
         'combo_card': 'comboCard',
         'corporate_purchase': 'corporatePurchase',
-        'health_card': 'healthCard'
+        'health_card': 'healthCard',
+        'shared_bin': 'sharedBIN',
+        'pos_domestic_only': 'posDomesticOnly',
+        'gambling_allowed': 'gamblingAllowed',
+        'commercial_card_level2': 'commercialCardLevel2',
+        'commercial_card_level3': 'commercialCardLevel3',
+        'exempt_bin': 'exemptBIN',
+        'account_level_management': 'accountLevelManagement',
+        'online_gambling_block': 'onlineGamblingBlock',
+        'auto_substantiation': 'autoSubstantiation',
+        'flex_credential': 'flexCredential'
     }
 
-    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None):
+    def __init__(self, account_funding_source=None, account_funding_source_sub_type=None, card_product=None, message_type=None, acceptance_level=None, card_platform=None, combo_card=None, corporate_purchase=None, health_card=None, shared_bin=None, pos_domestic_only=None, gambling_allowed=None, commercial_card_level2=None, commercial_card_level3=None, exempt_bin=None, account_level_management=None, online_gambling_block=None, auto_substantiation=None, flex_credential=None):
         """
         TmsBinLookupPaymentAccountInformationFeatures - a model defined in Swagger
         """
@@ -67,6 +87,16 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
         self._combo_card = None
         self._corporate_purchase = None
         self._health_card = None
+        self._shared_bin = None
+        self._pos_domestic_only = None
+        self._gambling_allowed = None
+        self._commercial_card_level2 = None
+        self._commercial_card_level3 = None
+        self._exempt_bin = None
+        self._account_level_management = None
+        self._online_gambling_block = None
+        self._auto_substantiation = None
+        self._flex_credential = None
 
         if account_funding_source is not None:
           self.account_funding_source = account_funding_source
@@ -86,6 +116,26 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
           self.corporate_purchase = corporate_purchase
         if health_card is not None:
           self.health_card = health_card
+        if shared_bin is not None:
+          self.shared_bin = shared_bin
+        if pos_domestic_only is not None:
+          self.pos_domestic_only = pos_domestic_only
+        if gambling_allowed is not None:
+          self.gambling_allowed = gambling_allowed
+        if commercial_card_level2 is not None:
+          self.commercial_card_level2 = commercial_card_level2
+        if commercial_card_level3 is not None:
+          self.commercial_card_level3 = commercial_card_level3
+        if exempt_bin is not None:
+          self.exempt_bin = exempt_bin
+        if account_level_management is not None:
+          self.account_level_management = account_level_management
+        if online_gambling_block is not None:
+          self.online_gambling_block = online_gambling_block
+        if auto_substantiation is not None:
+          self.auto_substantiation = auto_substantiation
+        if flex_credential is not None:
+          self.flex_credential = flex_credential
 
     @property
     def account_funding_source(self):
@@ -206,7 +256,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def card_platform(self):
         """
         Gets the card_platform of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field contains the type of card platform. Possible values:   - `BUSINESS`   - `CONSUMER`   - `COMMERCIAL`   - `GOVERNMENT` 
+        This field contains the type of card platform. Possible values:   - `BUSINESS`   - `CONSUMER`   - `CORPORATE`   - `COMMERCIAL`   - `GOVERNMENT` 
 
         :return: The card_platform of this TmsBinLookupPaymentAccountInformationFeatures.
         :rtype: str
@@ -217,7 +267,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def card_platform(self, card_platform):
         """
         Sets the card_platform of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field contains the type of card platform. Possible values:   - `BUSINESS`   - `CONSUMER`   - `COMMERCIAL`   - `GOVERNMENT` 
+        This field contains the type of card platform. Possible values:   - `BUSINESS`   - `CONSUMER`   - `CORPORATE`   - `COMMERCIAL`   - `GOVERNMENT` 
 
         :param card_platform: The card_platform of this TmsBinLookupPaymentAccountInformationFeatures.
         :type: str
@@ -252,7 +302,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def corporate_purchase(self):
         """
         Gets the corporate_purchase of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates whether the card can be used for corporate purchasing. This field is only applicable for American Express cards. Possible values:   - `true`   - `false` 
+        This field indicates if the instrument can be used for corporate purchasing. This field is only applicable for American Express cards. Possible values:   - `true`   - `false` 
 
         :return: The corporate_purchase of this TmsBinLookupPaymentAccountInformationFeatures.
         :rtype: bool
@@ -263,7 +313,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def corporate_purchase(self, corporate_purchase):
         """
         Sets the corporate_purchase of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates whether the card can be used for corporate purchasing. This field is only applicable for American Express cards. Possible values:   - `true`   - `false` 
+        This field indicates if the instrument can be used for corporate purchasing. This field is only applicable for American Express cards. Possible values:   - `true`   - `false` 
 
         :param corporate_purchase: The corporate_purchase of this TmsBinLookupPaymentAccountInformationFeatures.
         :type: bool
@@ -275,7 +325,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def health_card(self):
         """
         Gets the health_card of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates if the entered card is a healthcare BIN. Currently, this field is only supported for Visa BINs. Possible values:     - `true`     - `false`       
+        This field indicates if the BIN is for healthcare (HSA/FSA). Currently, this field is only supported for Visa BINs. Possible values:     - `true`     - `false` 
 
         :return: The health_card of this TmsBinLookupPaymentAccountInformationFeatures.
         :rtype: bool
@@ -286,13 +336,243 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def health_card(self, health_card):
         """
         Sets the health_card of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates if the entered card is a healthcare BIN. Currently, this field is only supported for Visa BINs. Possible values:     - `true`     - `false`       
+        This field indicates if the BIN is for healthcare (HSA/FSA). Currently, this field is only supported for Visa BINs. Possible values:     - `true`     - `false` 
 
         :param health_card: The health_card of this TmsBinLookupPaymentAccountInformationFeatures.
         :type: bool
         """
 
         self._health_card = health_card
+
+    @property
+    def shared_bin(self):
+        """
+        Gets the shared_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is shared by multiple issuers Possible values:     - `true`     - `false` 
+
+        :return: The shared_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._shared_bin
+
+    @shared_bin.setter
+    def shared_bin(self, shared_bin):
+        """
+        Sets the shared_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is shared by multiple issuers Possible values:     - `true`     - `false` 
+
+        :param shared_bin: The shared_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._shared_bin = shared_bin
+
+    @property
+    def pos_domestic_only(self):
+        """
+        Gets the pos_domestic_only of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is valid only for POS domestic usage. Possible values:     - `true`     - `false` 
+
+        :return: The pos_domestic_only of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._pos_domestic_only
+
+    @pos_domestic_only.setter
+    def pos_domestic_only(self, pos_domestic_only):
+        """
+        Sets the pos_domestic_only of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN is valid only for POS domestic usage. Possible values:     - `true`     - `false` 
+
+        :param pos_domestic_only: The pos_domestic_only of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._pos_domestic_only = pos_domestic_only
+
+    @property
+    def gambling_allowed(self):
+        """
+        Gets the gambling_allowed of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if gambling transactions are allowed on the BIN. Possible values:     - `true`     - `false` 
+
+        :return: The gambling_allowed of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._gambling_allowed
+
+    @gambling_allowed.setter
+    def gambling_allowed(self, gambling_allowed):
+        """
+        Sets the gambling_allowed of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if gambling transactions are allowed on the BIN. Possible values:     - `true`     - `false` 
+
+        :param gambling_allowed: The gambling_allowed of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._gambling_allowed = gambling_allowed
+
+    @property
+    def commercial_card_level2(self):
+        """
+        Gets the commercial_card_level2 of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for level 2 interchange rates. Possible values:     - `true`     - `false` 
+
+        :return: The commercial_card_level2 of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._commercial_card_level2
+
+    @commercial_card_level2.setter
+    def commercial_card_level2(self, commercial_card_level2):
+        """
+        Sets the commercial_card_level2 of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for level 2 interchange rates. Possible values:     - `true`     - `false` 
+
+        :param commercial_card_level2: The commercial_card_level2 of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._commercial_card_level2 = commercial_card_level2
+
+    @property
+    def commercial_card_level3(self):
+        """
+        Gets the commercial_card_level3 of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for level 3 interchange rates. Possible values:     - `true`     - `false` 
+
+        :return: The commercial_card_level3 of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._commercial_card_level3
+
+    @commercial_card_level3.setter
+    def commercial_card_level3(self, commercial_card_level3):
+        """
+        Sets the commercial_card_level3 of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for level 3 interchange rates. Possible values:     - `true`     - `false` 
+
+        :param commercial_card_level3: The commercial_card_level3 of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._commercial_card_level3 = commercial_card_level3
+
+    @property
+    def exempt_bin(self):
+        """
+        Gets the exempt_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for government exempt interchange fee. Possible values:     - `true`     - `false` 
+
+        :return: The exempt_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._exempt_bin
+
+    @exempt_bin.setter
+    def exempt_bin(self, exempt_bin):
+        """
+        Sets the exempt_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if a transaction on the instrument qualifies for government exempt interchange fee. Possible values:     - `true`     - `false` 
+
+        :param exempt_bin: The exempt_bin of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._exempt_bin = exempt_bin
+
+    @property
+    def account_level_management(self):
+        """
+        Gets the account_level_management of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN participates in Account Level Management (ALM). Possible values:     - `true`     - `false` 
+
+        :return: The account_level_management of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._account_level_management
+
+    @account_level_management.setter
+    def account_level_management(self, account_level_management):
+        """
+        Sets the account_level_management of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the BIN participates in Account Level Management (ALM). Possible values:     - `true`     - `false` 
+
+        :param account_level_management: The account_level_management of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._account_level_management = account_level_management
+
+    @property
+    def online_gambling_block(self):
+        """
+        Gets the online_gambling_block of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if online gambling is blocked on the BIN. Possible values:     - `true`     - `false` 
+
+        :return: The online_gambling_block of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._online_gambling_block
+
+    @online_gambling_block.setter
+    def online_gambling_block(self, online_gambling_block):
+        """
+        Sets the online_gambling_block of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if online gambling is blocked on the BIN. Possible values:     - `true`     - `false` 
+
+        :param online_gambling_block: The online_gambling_block of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._online_gambling_block = online_gambling_block
+
+    @property
+    def auto_substantiation(self):
+        """
+        Gets the auto_substantiation of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if auto-substantiation is enabled on the BIN. Possible values:     - `true`     - `false` 
+
+        :return: The auto_substantiation of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._auto_substantiation
+
+    @auto_substantiation.setter
+    def auto_substantiation(self, auto_substantiation):
+        """
+        Sets the auto_substantiation of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if auto-substantiation is enabled on the BIN. Possible values:     - `true`     - `false` 
+
+        :param auto_substantiation: The auto_substantiation of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._auto_substantiation = auto_substantiation
+
+    @property
+    def flex_credential(self):
+        """
+        Gets the flex_credential of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the instrument is a flex credential. Possible values:     - `true`     - `false` 
+
+        :return: The flex_credential of this TmsBinLookupPaymentAccountInformationFeatures.
+        :rtype: bool
+        """
+        return self._flex_credential
+
+    @flex_credential.setter
+    def flex_credential(self, flex_credential):
+        """
+        Sets the flex_credential of this TmsBinLookupPaymentAccountInformationFeatures.
+        This field indicates if the instrument is a flex credential. Possible values:     - `true`     - `false` 
+
+        :param flex_credential: The flex_credential of this TmsBinLookupPaymentAccountInformationFeatures.
+        :type: bool
+        """
+
+        self._flex_credential = flex_credential
 
     def to_dict(self):
         """

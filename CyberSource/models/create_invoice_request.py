@@ -30,32 +30,61 @@ class CreateInvoiceRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'client_reference_information': 'Invoicingv2invoicesClientReferenceInformation',
         'customer_information': 'Invoicingv2invoicesCustomerInformation',
+        'processing_information': 'Invoicingv2invoicesProcessingInformation',
         'invoice_information': 'Invoicingv2invoicesInvoiceInformation',
         'order_information': 'Invoicingv2invoicesOrderInformation'
     }
 
     attribute_map = {
+        'client_reference_information': 'clientReferenceInformation',
         'customer_information': 'customerInformation',
+        'processing_information': 'processingInformation',
         'invoice_information': 'invoiceInformation',
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, customer_information=None, invoice_information=None, order_information=None):
+    def __init__(self, client_reference_information=None, customer_information=None, processing_information=None, invoice_information=None, order_information=None):
         """
         CreateInvoiceRequest - a model defined in Swagger
         """
 
+        self._client_reference_information = None
         self._customer_information = None
+        self._processing_information = None
         self._invoice_information = None
         self._order_information = None
 
+        if client_reference_information is not None:
+          self.client_reference_information = client_reference_information
         if customer_information is not None:
           self.customer_information = customer_information
-        if invoice_information is not None:
-          self.invoice_information = invoice_information
-        if order_information is not None:
-          self.order_information = order_information
+        if processing_information is not None:
+          self.processing_information = processing_information
+        self.invoice_information = invoice_information
+        self.order_information = order_information
+
+    @property
+    def client_reference_information(self):
+        """
+        Gets the client_reference_information of this CreateInvoiceRequest.
+
+        :return: The client_reference_information of this CreateInvoiceRequest.
+        :rtype: Invoicingv2invoicesClientReferenceInformation
+        """
+        return self._client_reference_information
+
+    @client_reference_information.setter
+    def client_reference_information(self, client_reference_information):
+        """
+        Sets the client_reference_information of this CreateInvoiceRequest.
+
+        :param client_reference_information: The client_reference_information of this CreateInvoiceRequest.
+        :type: Invoicingv2invoicesClientReferenceInformation
+        """
+
+        self._client_reference_information = client_reference_information
 
     @property
     def customer_information(self):
@@ -77,6 +106,27 @@ class CreateInvoiceRequest(object):
         """
 
         self._customer_information = customer_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this CreateInvoiceRequest.
+
+        :return: The processing_information of this CreateInvoiceRequest.
+        :rtype: Invoicingv2invoicesProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this CreateInvoiceRequest.
+
+        :param processing_information: The processing_information of this CreateInvoiceRequest.
+        :type: Invoicingv2invoicesProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     @property
     def invoice_information(self):

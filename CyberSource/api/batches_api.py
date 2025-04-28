@@ -62,7 +62,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2004
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -92,7 +92,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2004
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -160,7 +160,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2004',
+                                        response_type='InlineResponse2007',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -183,7 +183,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2003
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -213,7 +213,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2003
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -281,7 +281,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2003',
+                                        response_type='InlineResponse2006',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -307,7 +307,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse2002
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -340,7 +340,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse2002
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -408,7 +408,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2002',
+                                        response_type='InlineResponse2005',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -419,7 +419,7 @@ class BatchesApi(object):
     def post_batch(self, body, **kwargs):
         """
         Create a Batch
-        **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. 
+        **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. The availability of API features for a merchant may depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -449,7 +449,7 @@ class BatchesApi(object):
     def post_batch_with_http_info(self, body, **kwargs):
         """
         Create a Batch
-        **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. 
+        **Create a Batch**<br>This resource accepts TMS tokens ids of a Customer, Payment Instrument or Instrument Identifier. <br> The card numbers for the supplied tokens ids are then sent to the relevant card associations to check for updates.<br>The following type of batches can be submitted: -  **oneOff** batch containing tokens id for Visa or MasterCard card numbers. - **amexRegistration** batch containing tokens id for Amex card numbers.  A batch id will be returned on a successful response which can be used to get the batch status and the batch report. The availability of API features for a merchant may depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -30,287 +30,99 @@ class InlineResponse2003(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2003Links',
-        'batch_id': 'str',
-        'batch_created_date': 'str',
-        'batch_source': 'str',
-        'merchant_reference': 'str',
-        'batch_ca_endpoints': 'str',
-        'status': 'str',
-        'totals': 'InlineResponse2002EmbeddedTotals',
-        'billing': 'InlineResponse2003Billing',
-        'description': 'str'
+        'product_id': 'str',
+        'product_name': 'str',
+        'event_types': 'list[Notificationsubscriptionsv2productsorganizationIdEventTypes]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'batch_id': 'batchId',
-        'batch_created_date': 'batchCreatedDate',
-        'batch_source': 'batchSource',
-        'merchant_reference': 'merchantReference',
-        'batch_ca_endpoints': 'batchCaEndpoints',
-        'status': 'status',
-        'totals': 'totals',
-        'billing': 'billing',
-        'description': 'description'
+        'product_id': 'productId',
+        'product_name': 'productName',
+        'event_types': 'eventTypes'
     }
 
-    def __init__(self, links=None, batch_id=None, batch_created_date=None, batch_source=None, merchant_reference=None, batch_ca_endpoints=None, status=None, totals=None, billing=None, description=None):
+    def __init__(self, product_id=None, product_name=None, event_types=None):
         """
         InlineResponse2003 - a model defined in Swagger
         """
 
-        self._links = None
-        self._batch_id = None
-        self._batch_created_date = None
-        self._batch_source = None
-        self._merchant_reference = None
-        self._batch_ca_endpoints = None
-        self._status = None
-        self._totals = None
-        self._billing = None
-        self._description = None
+        self._product_id = None
+        self._product_name = None
+        self._event_types = None
 
-        if links is not None:
-          self.links = links
-        if batch_id is not None:
-          self.batch_id = batch_id
-        if batch_created_date is not None:
-          self.batch_created_date = batch_created_date
-        if batch_source is not None:
-          self.batch_source = batch_source
-        if merchant_reference is not None:
-          self.merchant_reference = merchant_reference
-        if batch_ca_endpoints is not None:
-          self.batch_ca_endpoints = batch_ca_endpoints
-        if status is not None:
-          self.status = status
-        if totals is not None:
-          self.totals = totals
-        if billing is not None:
-          self.billing = billing
-        if description is not None:
-          self.description = description
+        if product_id is not None:
+          self.product_id = product_id
+        if product_name is not None:
+          self.product_name = product_name
+        if event_types is not None:
+          self.event_types = event_types
 
     @property
-    def links(self):
+    def product_id(self):
         """
-        Gets the links of this InlineResponse2003.
+        Gets the product_id of this InlineResponse2003.
+        Product ID.
 
-        :return: The links of this InlineResponse2003.
-        :rtype: InlineResponse2003Links
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse2003.
-
-        :param links: The links of this InlineResponse2003.
-        :type: InlineResponse2003Links
-        """
-
-        self._links = links
-
-    @property
-    def batch_id(self):
-        """
-        Gets the batch_id of this InlineResponse2003.
-        Unique identification number assigned to the submitted request.
-
-        :return: The batch_id of this InlineResponse2003.
+        :return: The product_id of this InlineResponse2003.
         :rtype: str
         """
-        return self._batch_id
+        return self._product_id
 
-    @batch_id.setter
-    def batch_id(self, batch_id):
+    @product_id.setter
+    def product_id(self, product_id):
         """
-        Sets the batch_id of this InlineResponse2003.
-        Unique identification number assigned to the submitted request.
+        Sets the product_id of this InlineResponse2003.
+        Product ID.
 
-        :param batch_id: The batch_id of this InlineResponse2003.
+        :param product_id: The product_id of this InlineResponse2003.
         :type: str
         """
 
-        self._batch_id = batch_id
+        self._product_id = product_id
 
     @property
-    def batch_created_date(self):
+    def product_name(self):
         """
-        Gets the batch_created_date of this InlineResponse2003.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Gets the product_name of this InlineResponse2003.
+        Product Name.
 
-        :return: The batch_created_date of this InlineResponse2003.
+        :return: The product_name of this InlineResponse2003.
         :rtype: str
         """
-        return self._batch_created_date
+        return self._product_name
 
-    @batch_created_date.setter
-    def batch_created_date(self, batch_created_date):
+    @product_name.setter
+    def product_name(self, product_name):
         """
-        Sets the batch_created_date of this InlineResponse2003.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Sets the product_name of this InlineResponse2003.
+        Product Name.
 
-        :param batch_created_date: The batch_created_date of this InlineResponse2003.
+        :param product_name: The product_name of this InlineResponse2003.
         :type: str
         """
 
-        self._batch_created_date = batch_created_date
+        self._product_name = product_name
 
     @property
-    def batch_source(self):
+    def event_types(self):
         """
-        Gets the batch_source of this InlineResponse2003.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Gets the event_types of this InlineResponse2003.
 
-        :return: The batch_source of this InlineResponse2003.
-        :rtype: str
+        :return: The event_types of this InlineResponse2003.
+        :rtype: list[Notificationsubscriptionsv2productsorganizationIdEventTypes]
         """
-        return self._batch_source
+        return self._event_types
 
-    @batch_source.setter
-    def batch_source(self, batch_source):
+    @event_types.setter
+    def event_types(self, event_types):
         """
-        Sets the batch_source of this InlineResponse2003.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Sets the event_types of this InlineResponse2003.
 
-        :param batch_source: The batch_source of this InlineResponse2003.
-        :type: str
+        :param event_types: The event_types of this InlineResponse2003.
+        :type: list[Notificationsubscriptionsv2productsorganizationIdEventTypes]
         """
 
-        self._batch_source = batch_source
-
-    @property
-    def merchant_reference(self):
-        """
-        Gets the merchant_reference of this InlineResponse2003.
-        Reference used by merchant to identify batch.
-
-        :return: The merchant_reference of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._merchant_reference
-
-    @merchant_reference.setter
-    def merchant_reference(self, merchant_reference):
-        """
-        Sets the merchant_reference of this InlineResponse2003.
-        Reference used by merchant to identify batch.
-
-        :param merchant_reference: The merchant_reference of this InlineResponse2003.
-        :type: str
-        """
-
-        self._merchant_reference = merchant_reference
-
-    @property
-    def batch_ca_endpoints(self):
-        """
-        Gets the batch_ca_endpoints of this InlineResponse2003.
-
-        :return: The batch_ca_endpoints of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._batch_ca_endpoints
-
-    @batch_ca_endpoints.setter
-    def batch_ca_endpoints(self, batch_ca_endpoints):
-        """
-        Sets the batch_ca_endpoints of this InlineResponse2003.
-
-        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2003.
-        :type: str
-        """
-
-        self._batch_ca_endpoints = batch_ca_endpoints
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2003.
-        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
-
-        :return: The status of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2003.
-        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
-
-        :param status: The status of this InlineResponse2003.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def totals(self):
-        """
-        Gets the totals of this InlineResponse2003.
-
-        :return: The totals of this InlineResponse2003.
-        :rtype: InlineResponse2002EmbeddedTotals
-        """
-        return self._totals
-
-    @totals.setter
-    def totals(self, totals):
-        """
-        Sets the totals of this InlineResponse2003.
-
-        :param totals: The totals of this InlineResponse2003.
-        :type: InlineResponse2002EmbeddedTotals
-        """
-
-        self._totals = totals
-
-    @property
-    def billing(self):
-        """
-        Gets the billing of this InlineResponse2003.
-
-        :return: The billing of this InlineResponse2003.
-        :rtype: InlineResponse2003Billing
-        """
-        return self._billing
-
-    @billing.setter
-    def billing(self, billing):
-        """
-        Sets the billing of this InlineResponse2003.
-
-        :param billing: The billing of this InlineResponse2003.
-        :type: InlineResponse2003Billing
-        """
-
-        self._billing = billing
-
-    @property
-    def description(self):
-        """
-        Gets the description of this InlineResponse2003.
-
-        :return: The description of this InlineResponse2003.
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """
-        Sets the description of this InlineResponse2003.
-
-        :param description: The description of this InlineResponse2003.
-        :type: str
-        """
-
-        self._description = description
+        self._event_types = event_types
 
     def to_dict(self):
         """

@@ -30,6 +30,14 @@ class TestTokenApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_get_card_art_asset(self):
+        """
+        Test case for get_card_art_asset
+
+        Retrieve Card Art
+        """
+        pass
+
     def test_post_token_payment_credentials(self):
         """
         Test case for post_token_payment_credentials

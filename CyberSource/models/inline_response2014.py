@@ -30,250 +30,83 @@ class InlineResponse2014(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'event_date': 'str',
-        'event_type': 'str',
+        'webhook_id': 'str',
         'organization_id': 'str',
-        'payloads': 'InlineResponse2014Payloads',
-        'product_id': 'str',
-        'request_type': 'str',
-        'retry_number': 'int',
-        'transaction_trace_id': 'str',
-        'webhook_id': 'str'
+        'products': 'list[Notificationsubscriptionsv2webhooksProducts]',
+        'webhook_url': 'str',
+        'health_check_url': 'str',
+        'status': 'str',
+        'name': 'str',
+        'description': 'str',
+        'retry_policy': 'Notificationsubscriptionsv2webhooksRetryPolicy',
+        'security_policy': 'Notificationsubscriptionsv2webhooksSecurityPolicy',
+        'created_on': 'str',
+        'updated_on': 'str'
     }
 
     attribute_map = {
-        'event_date': 'eventDate',
-        'event_type': 'eventType',
+        'webhook_id': 'webhookId',
         'organization_id': 'organizationId',
-        'payloads': 'payloads',
-        'product_id': 'productId',
-        'request_type': 'requestType',
-        'retry_number': 'retryNumber',
-        'transaction_trace_id': 'transactionTraceId',
-        'webhook_id': 'webhookId'
+        'products': 'products',
+        'webhook_url': 'webhookUrl',
+        'health_check_url': 'healthCheckUrl',
+        'status': 'status',
+        'name': 'name',
+        'description': 'description',
+        'retry_policy': 'retryPolicy',
+        'security_policy': 'securityPolicy',
+        'created_on': 'createdOn',
+        'updated_on': 'updatedOn'
     }
 
-    def __init__(self, event_date=None, event_type=None, organization_id=None, payloads=None, product_id=None, request_type=None, retry_number=None, transaction_trace_id=None, webhook_id=None):
+    def __init__(self, webhook_id=None, organization_id=None, products=None, webhook_url=None, health_check_url=None, status='INACTIVE', name=None, description=None, retry_policy=None, security_policy=None, created_on=None, updated_on=None):
         """
         InlineResponse2014 - a model defined in Swagger
         """
 
-        self._event_date = None
-        self._event_type = None
-        self._organization_id = None
-        self._payloads = None
-        self._product_id = None
-        self._request_type = None
-        self._retry_number = None
-        self._transaction_trace_id = None
         self._webhook_id = None
+        self._organization_id = None
+        self._products = None
+        self._webhook_url = None
+        self._health_check_url = None
+        self._status = None
+        self._name = None
+        self._description = None
+        self._retry_policy = None
+        self._security_policy = None
+        self._created_on = None
+        self._updated_on = None
 
-        if event_date is not None:
-          self.event_date = event_date
-        if event_type is not None:
-          self.event_type = event_type
-        if organization_id is not None:
-          self.organization_id = organization_id
-        if payloads is not None:
-          self.payloads = payloads
-        if product_id is not None:
-          self.product_id = product_id
-        if request_type is not None:
-          self.request_type = request_type
-        if retry_number is not None:
-          self.retry_number = retry_number
-        if transaction_trace_id is not None:
-          self.transaction_trace_id = transaction_trace_id
         if webhook_id is not None:
           self.webhook_id = webhook_id
-
-    @property
-    def event_date(self):
-        """
-        Gets the event_date of this InlineResponse2014.
-        Date that the webhook was delivered
-
-        :return: The event_date of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._event_date
-
-    @event_date.setter
-    def event_date(self, event_date):
-        """
-        Sets the event_date of this InlineResponse2014.
-        Date that the webhook was delivered
-
-        :param event_date: The event_date of this InlineResponse2014.
-        :type: str
-        """
-
-        self._event_date = event_date
-
-    @property
-    def event_type(self):
-        """
-        Gets the event_type of this InlineResponse2014.
-        The event name the webhook was delivered for
-
-        :return: The event_type of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._event_type
-
-    @event_type.setter
-    def event_type(self, event_type):
-        """
-        Sets the event_type of this InlineResponse2014.
-        The event name the webhook was delivered for
-
-        :param event_type: The event_type of this InlineResponse2014.
-        :type: str
-        """
-
-        self._event_type = event_type
-
-    @property
-    def organization_id(self):
-        """
-        Gets the organization_id of this InlineResponse2014.
-        The Organization Identifier.
-
-        :return: The organization_id of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._organization_id
-
-    @organization_id.setter
-    def organization_id(self, organization_id):
-        """
-        Sets the organization_id of this InlineResponse2014.
-        The Organization Identifier.
-
-        :param organization_id: The organization_id of this InlineResponse2014.
-        :type: str
-        """
-
-        self._organization_id = organization_id
-
-    @property
-    def payloads(self):
-        """
-        Gets the payloads of this InlineResponse2014.
-
-        :return: The payloads of this InlineResponse2014.
-        :rtype: InlineResponse2014Payloads
-        """
-        return self._payloads
-
-    @payloads.setter
-    def payloads(self, payloads):
-        """
-        Sets the payloads of this InlineResponse2014.
-
-        :param payloads: The payloads of this InlineResponse2014.
-        :type: InlineResponse2014Payloads
-        """
-
-        self._payloads = payloads
-
-    @property
-    def product_id(self):
-        """
-        Gets the product_id of this InlineResponse2014.
-        The product the webhook was delivered for
-
-        :return: The product_id of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._product_id
-
-    @product_id.setter
-    def product_id(self, product_id):
-        """
-        Sets the product_id of this InlineResponse2014.
-        The product the webhook was delivered for
-
-        :param product_id: The product_id of this InlineResponse2014.
-        :type: str
-        """
-
-        self._product_id = product_id
-
-    @property
-    def request_type(self):
-        """
-        Gets the request_type of this InlineResponse2014.
-        Identifies the the type of request
-
-        :return: The request_type of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._request_type
-
-    @request_type.setter
-    def request_type(self, request_type):
-        """
-        Sets the request_type of this InlineResponse2014.
-        Identifies the the type of request
-
-        :param request_type: The request_type of this InlineResponse2014.
-        :type: str
-        """
-
-        self._request_type = request_type
-
-    @property
-    def retry_number(self):
-        """
-        Gets the retry_number of this InlineResponse2014.
-        The number of retry attempts for a given webhook
-
-        :return: The retry_number of this InlineResponse2014.
-        :rtype: int
-        """
-        return self._retry_number
-
-    @retry_number.setter
-    def retry_number(self, retry_number):
-        """
-        Sets the retry_number of this InlineResponse2014.
-        The number of retry attempts for a given webhook
-
-        :param retry_number: The retry_number of this InlineResponse2014.
-        :type: int
-        """
-
-        self._retry_number = retry_number
-
-    @property
-    def transaction_trace_id(self):
-        """
-        Gets the transaction_trace_id of this InlineResponse2014.
-        The identifier for the webhook
-
-        :return: The transaction_trace_id of this InlineResponse2014.
-        :rtype: str
-        """
-        return self._transaction_trace_id
-
-    @transaction_trace_id.setter
-    def transaction_trace_id(self, transaction_trace_id):
-        """
-        Sets the transaction_trace_id of this InlineResponse2014.
-        The identifier for the webhook
-
-        :param transaction_trace_id: The transaction_trace_id of this InlineResponse2014.
-        :type: str
-        """
-
-        self._transaction_trace_id = transaction_trace_id
+        if organization_id is not None:
+          self.organization_id = organization_id
+        if products is not None:
+          self.products = products
+        if webhook_url is not None:
+          self.webhook_url = webhook_url
+        if health_check_url is not None:
+          self.health_check_url = health_check_url
+        if status is not None:
+          self.status = status
+        if name is not None:
+          self.name = name
+        if description is not None:
+          self.description = description
+        if retry_policy is not None:
+          self.retry_policy = retry_policy
+        if security_policy is not None:
+          self.security_policy = security_policy
+        if created_on is not None:
+          self.created_on = created_on
+        if updated_on is not None:
+          self.updated_on = updated_on
 
     @property
     def webhook_id(self):
         """
         Gets the webhook_id of this InlineResponse2014.
-        The identifier of the subscription
+        Webhook Id. This is generated by the server.
 
         :return: The webhook_id of this InlineResponse2014.
         :rtype: str
@@ -284,13 +117,260 @@ class InlineResponse2014(object):
     def webhook_id(self, webhook_id):
         """
         Sets the webhook_id of this InlineResponse2014.
-        The identifier of the subscription
+        Webhook Id. This is generated by the server.
 
         :param webhook_id: The webhook_id of this InlineResponse2014.
         :type: str
         """
 
         self._webhook_id = webhook_id
+
+    @property
+    def organization_id(self):
+        """
+        Gets the organization_id of this InlineResponse2014.
+        Organization ID.
+
+        :return: The organization_id of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._organization_id
+
+    @organization_id.setter
+    def organization_id(self, organization_id):
+        """
+        Sets the organization_id of this InlineResponse2014.
+        Organization ID.
+
+        :param organization_id: The organization_id of this InlineResponse2014.
+        :type: str
+        """
+
+        self._organization_id = organization_id
+
+    @property
+    def products(self):
+        """
+        Gets the products of this InlineResponse2014.
+
+        :return: The products of this InlineResponse2014.
+        :rtype: list[Notificationsubscriptionsv2webhooksProducts]
+        """
+        return self._products
+
+    @products.setter
+    def products(self, products):
+        """
+        Sets the products of this InlineResponse2014.
+
+        :param products: The products of this InlineResponse2014.
+        :type: list[Notificationsubscriptionsv2webhooksProducts]
+        """
+
+        self._products = products
+
+    @property
+    def webhook_url(self):
+        """
+        Gets the webhook_url of this InlineResponse2014.
+        The client's endpoint (URL) to receive webhooks.
+
+        :return: The webhook_url of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._webhook_url
+
+    @webhook_url.setter
+    def webhook_url(self, webhook_url):
+        """
+        Sets the webhook_url of this InlineResponse2014.
+        The client's endpoint (URL) to receive webhooks.
+
+        :param webhook_url: The webhook_url of this InlineResponse2014.
+        :type: str
+        """
+
+        self._webhook_url = webhook_url
+
+    @property
+    def health_check_url(self):
+        """
+        Gets the health_check_url of this InlineResponse2014.
+        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+
+        :return: The health_check_url of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._health_check_url
+
+    @health_check_url.setter
+    def health_check_url(self, health_check_url):
+        """
+        Sets the health_check_url of this InlineResponse2014.
+        The client's health check endpoint (URL). This should be as close as possible to the actual webhookUrl.
+
+        :param health_check_url: The health_check_url of this InlineResponse2014.
+        :type: str
+        """
+
+        self._health_check_url = health_check_url
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse2014.
+        Webhook status.
+
+        :return: The status of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse2014.
+        Webhook status.
+
+        :param status: The status of this InlineResponse2014.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def name(self):
+        """
+        Gets the name of this InlineResponse2014.
+        Client friendly webhook name.
+
+        :return: The name of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """
+        Sets the name of this InlineResponse2014.
+        Client friendly webhook name.
+
+        :param name: The name of this InlineResponse2014.
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def description(self):
+        """
+        Gets the description of this InlineResponse2014.
+        Client friendly webhook description.
+
+        :return: The description of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """
+        Sets the description of this InlineResponse2014.
+        Client friendly webhook description.
+
+        :param description: The description of this InlineResponse2014.
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def retry_policy(self):
+        """
+        Gets the retry_policy of this InlineResponse2014.
+
+        :return: The retry_policy of this InlineResponse2014.
+        :rtype: Notificationsubscriptionsv2webhooksRetryPolicy
+        """
+        return self._retry_policy
+
+    @retry_policy.setter
+    def retry_policy(self, retry_policy):
+        """
+        Sets the retry_policy of this InlineResponse2014.
+
+        :param retry_policy: The retry_policy of this InlineResponse2014.
+        :type: Notificationsubscriptionsv2webhooksRetryPolicy
+        """
+
+        self._retry_policy = retry_policy
+
+    @property
+    def security_policy(self):
+        """
+        Gets the security_policy of this InlineResponse2014.
+
+        :return: The security_policy of this InlineResponse2014.
+        :rtype: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+        return self._security_policy
+
+    @security_policy.setter
+    def security_policy(self, security_policy):
+        """
+        Sets the security_policy of this InlineResponse2014.
+
+        :param security_policy: The security_policy of this InlineResponse2014.
+        :type: Notificationsubscriptionsv2webhooksSecurityPolicy
+        """
+
+        self._security_policy = security_policy
+
+    @property
+    def created_on(self):
+        """
+        Gets the created_on of this InlineResponse2014.
+        Date on which webhook was created/registered.
+
+        :return: The created_on of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """
+        Sets the created_on of this InlineResponse2014.
+        Date on which webhook was created/registered.
+
+        :param created_on: The created_on of this InlineResponse2014.
+        :type: str
+        """
+
+        self._created_on = created_on
+
+    @property
+    def updated_on(self):
+        """
+        Gets the updated_on of this InlineResponse2014.
+        Date on which webhook was most recently updated.
+
+        :return: The updated_on of this InlineResponse2014.
+        :rtype: str
+        """
+        return self._updated_on
+
+    @updated_on.setter
+    def updated_on(self, updated_on):
+        """
+        Sets the updated_on of this InlineResponse2014.
+        Date on which webhook was most recently updated.
+
+        :param updated_on: The updated_on of this InlineResponse2014.
+        :type: str
+        """
+
+        self._updated_on = updated_on
 
     def to_dict(self):
         """

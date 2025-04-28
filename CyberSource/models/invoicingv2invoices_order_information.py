@@ -47,8 +47,7 @@ class Invoicingv2invoicesOrderInformation(object):
         self._amount_details = None
         self._line_items = None
 
-        if amount_details is not None:
-          self.amount_details = amount_details
+        self.amount_details = amount_details
         if line_items is not None:
           self.line_items = line_items
 
@@ -77,6 +76,7 @@ class Invoicingv2invoicesOrderInformation(object):
     def line_items(self):
         """
         Gets the line_items of this Invoicingv2invoicesOrderInformation.
+        List of the line items from the order.
 
         :return: The line_items of this Invoicingv2invoicesOrderInformation.
         :rtype: list[Invoicingv2invoicesOrderInformationLineItems]
@@ -87,6 +87,7 @@ class Invoicingv2invoicesOrderInformation(object):
     def line_items(self, line_items):
         """
         Sets the line_items of this Invoicingv2invoicesOrderInformation.
+        List of the line items from the order.
 
         :param line_items: The line_items of this Invoicingv2invoicesOrderInformation.
         :type: list[Invoicingv2invoicesOrderInformationLineItems]

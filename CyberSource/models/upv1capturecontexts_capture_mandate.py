@@ -37,7 +37,8 @@ class Upv1capturecontextsCaptureMandate(object):
         'ship_to_countries': 'list[str]',
         'show_accepted_network_icons': 'bool',
         'request_save_card': 'bool',
-        'combo_card': 'bool'
+        'combo_card': 'bool',
+        'cpf': 'bool'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class Upv1capturecontextsCaptureMandate(object):
         'ship_to_countries': 'shipToCountries',
         'show_accepted_network_icons': 'showAcceptedNetworkIcons',
         'request_save_card': 'requestSaveCard',
-        'combo_card': 'comboCard'
+        'combo_card': 'comboCard',
+        'cpf': 'CPF'
     }
 
-    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None, request_save_card=None, combo_card=None):
+    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None, request_save_card=None, combo_card=None, cpf=None):
         """
         Upv1capturecontextsCaptureMandate - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Upv1capturecontextsCaptureMandate(object):
         self._show_accepted_network_icons = None
         self._request_save_card = None
         self._combo_card = None
+        self._cpf = None
 
         if billing_type is not None:
           self.billing_type = billing_type
@@ -81,6 +84,8 @@ class Upv1capturecontextsCaptureMandate(object):
           self.request_save_card = request_save_card
         if combo_card is not None:
           self.combo_card = combo_card
+        if cpf is not None:
+          self.cpf = cpf
 
     @property
     def billing_type(self):
@@ -265,6 +270,29 @@ class Upv1capturecontextsCaptureMandate(object):
         """
 
         self._combo_card = combo_card
+
+    @property
+    def cpf(self):
+        """
+        Gets the cpf of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display and capture the CPF number (Cadastro de Pessoas Físicas).  The CPF number is a unique 11-digit identifier issued to Brazilian citizens and residents for tax purposes.  Possible values: - True - False<br><br>  This field is optional.   If set to true the field is required. If set to false the field is optional. If the field is not included in the capture context then it is not captured.<br><br>  **Important:**  - If PANENTRY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout regardless of what card number is entered.  - If CLICKTOPAY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout only when a Visa Click To Pay card is entered. 
+
+        :return: The cpf of this Upv1capturecontextsCaptureMandate.
+        :rtype: bool
+        """
+        return self._cpf
+
+    @cpf.setter
+    def cpf(self, cpf):
+        """
+        Sets the cpf of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display and capture the CPF number (Cadastro de Pessoas Físicas).  The CPF number is a unique 11-digit identifier issued to Brazilian citizens and residents for tax purposes.  Possible values: - True - False<br><br>  This field is optional.   If set to true the field is required. If set to false the field is optional. If the field is not included in the capture context then it is not captured.<br><br>  **Important:**  - If PANENTRY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout regardless of what card number is entered.  - If CLICKTOPAY is specified in the allowedPaymentTypes field, the CPF number will be displayed in Unified Checkout only when a Visa Click To Pay card is entered. 
+
+        :param cpf: The cpf of this Upv1capturecontextsCaptureMandate.
+        :type: bool
+        """
+
+        self._cpf = cpf
 
     def to_dict(self):
         """

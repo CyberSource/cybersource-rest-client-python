@@ -37,6 +37,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'str',
         'locale': 'str',
         'capture_mandate': 'Upv1capturecontextsCaptureMandate',
+        'complete_mandate': 'Upv1capturecontextsCompleteMandate',
         'order_information': 'Upv1capturecontextsOrderInformation',
         'transient_token_response_options': 'Microformv2sessionsTransientTokenResponseOptions'
     }
@@ -49,11 +50,12 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         'country': 'country',
         'locale': 'locale',
         'capture_mandate': 'captureMandate',
+        'complete_mandate': 'completeMandate',
         'order_information': 'orderInformation',
         'transient_token_response_options': 'transientTokenResponseOptions'
     }
 
-    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, order_information=None, transient_token_response_options=None):
+    def __init__(self, client_version=None, target_origins=None, allowed_card_networks=None, allowed_payment_types=None, country=None, locale=None, capture_mandate=None, complete_mandate=None, order_information=None, transient_token_response_options=None):
         """
         GenerateUnifiedCheckoutCaptureContextRequest - a model defined in Swagger
         """
@@ -65,6 +67,7 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         self._country = None
         self._locale = None
         self._capture_mandate = None
+        self._complete_mandate = None
         self._order_information = None
         self._transient_token_response_options = None
 
@@ -82,6 +85,8 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
           self.locale = locale
         if capture_mandate is not None:
           self.capture_mandate = capture_mandate
+        if complete_mandate is not None:
+          self.complete_mandate = complete_mandate
         if order_information is not None:
           self.order_information = order_information
         if transient_token_response_options is not None:
@@ -245,6 +250,27 @@ class GenerateUnifiedCheckoutCaptureContextRequest(object):
         """
 
         self._capture_mandate = capture_mandate
+
+    @property
+    def complete_mandate(self):
+        """
+        Gets the complete_mandate of this GenerateUnifiedCheckoutCaptureContextRequest.
+
+        :return: The complete_mandate of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :rtype: Upv1capturecontextsCompleteMandate
+        """
+        return self._complete_mandate
+
+    @complete_mandate.setter
+    def complete_mandate(self, complete_mandate):
+        """
+        Sets the complete_mandate of this GenerateUnifiedCheckoutCaptureContextRequest.
+
+        :param complete_mandate: The complete_mandate of this GenerateUnifiedCheckoutCaptureContextRequest.
+        :type: Upv1capturecontextsCompleteMandate
+        """
+
+        self._complete_mandate = complete_mandate
 
     @property
     def order_information(self):

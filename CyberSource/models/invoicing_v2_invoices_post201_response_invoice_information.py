@@ -33,6 +33,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         'invoice_number': 'str',
         'description': 'str',
         'due_date': 'date',
+        'expiration_date': 'date',
         'allow_partial_payments': 'bool',
         'payment_link': 'str',
         'delivery_mode': 'str'
@@ -42,12 +43,13 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         'invoice_number': 'invoiceNumber',
         'description': 'description',
         'due_date': 'dueDate',
+        'expiration_date': 'expirationDate',
         'allow_partial_payments': 'allowPartialPayments',
         'payment_link': 'paymentLink',
         'delivery_mode': 'deliveryMode'
     }
 
-    def __init__(self, invoice_number=None, description=None, due_date=None, allow_partial_payments=None, payment_link=None, delivery_mode=None):
+    def __init__(self, invoice_number=None, description=None, due_date=None, expiration_date=None, allow_partial_payments=False, payment_link=None, delivery_mode=None):
         """
         InvoicingV2InvoicesPost201ResponseInvoiceInformation - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         self._invoice_number = None
         self._description = None
         self._due_date = None
+        self._expiration_date = None
         self._allow_partial_payments = None
         self._payment_link = None
         self._delivery_mode = None
@@ -65,6 +68,8 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
           self.description = description
         if due_date is not None:
           self.due_date = due_date
+        if expiration_date is not None:
+          self.expiration_date = expiration_date
         if allow_partial_payments is not None:
           self.allow_partial_payments = allow_partial_payments
         if payment_link is not None:
@@ -142,6 +147,29 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
         self._due_date = due_date
 
     @property
+    def expiration_date(self):
+        """
+        Gets the expiration_date of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :return: The expiration_date of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        :rtype: date
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """
+        Sets the expiration_date of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :param expiration_date: The expiration_date of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
+        :type: date
+        """
+
+        self._expiration_date = expiration_date
+
+    @property
     def allow_partial_payments(self):
         """
         Gets the allow_partial_payments of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
@@ -191,7 +219,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
     def delivery_mode(self):
         """
         Gets the delivery_mode of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
-        If set to `None`, the invoice is created, and its status is set to 'CREATED', but no email is sent.    Possible values:        - `None`   - `Email`  
+        If this field is set to 'None', an invoice will be generated with the status 'CREATED', but no email will be dispatched.    Possible values:        - `None`   - `Email`    
 
         :return: The delivery_mode of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
         :rtype: str
@@ -202,7 +230,7 @@ class InvoicingV2InvoicesPost201ResponseInvoiceInformation(object):
     def delivery_mode(self, delivery_mode):
         """
         Sets the delivery_mode of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
-        If set to `None`, the invoice is created, and its status is set to 'CREATED', but no email is sent.    Possible values:        - `None`   - `Email`  
+        If this field is set to 'None', an invoice will be generated with the status 'CREATED', but no email will be dispatched.    Possible values:        - `None`   - `Email`    
 
         :param delivery_mode: The delivery_mode of this InvoicingV2InvoicesPost201ResponseInvoiceInformation.
         :type: str

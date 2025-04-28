@@ -47,6 +47,147 @@ class TokenApi(object):
 
 
 
+    def get_card_art_asset(self, instrument_identifier_id, token_provider, asset_type, **kwargs):
+        """
+        Retrieve Card Art
+        Retrieves Card Art for a specific Instrument Identifier. The Card Art is a visual representation of the cardholder's payment card. Card Art is only available if a Network Token is successfully provisioned. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_card_art_asset(instrument_identifier_id, token_provider, asset_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
+        :param str token_provider: The token provider. (required)
+        :param str asset_type: The type of asset. (required)
+        :return: InlineResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `get_card_art_asset` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_card_art_asset_with_http_info(instrument_identifier_id, token_provider, asset_type, **kwargs)
+        else:
+            (data) = self.get_card_art_asset_with_http_info(instrument_identifier_id, token_provider, asset_type, **kwargs)
+            return data
+
+    def get_card_art_asset_with_http_info(self, instrument_identifier_id, token_provider, asset_type, **kwargs):
+        """
+        Retrieve Card Art
+        Retrieves Card Art for a specific Instrument Identifier. The Card Art is a visual representation of the cardholder's payment card. Card Art is only available if a Network Token is successfully provisioned. 
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_card_art_asset_with_http_info(instrument_identifier_id, token_provider, asset_type, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str instrument_identifier_id: The Id of an Instrument Identifier. (required)
+        :param str token_provider: The token provider. (required)
+        :param str asset_type: The type of asset. (required)
+        :return: InlineResponse200
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['instrument_identifier_id', 'token_provider', 'asset_type']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_card_art_asset" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'instrument_identifier_id' is set
+        if ('instrument_identifier_id' not in params) or (params['instrument_identifier_id'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `instrument_identifier_id` when calling `get_card_art_asset`")
+            raise ValueError("Missing the required parameter `instrument_identifier_id` when calling `get_card_art_asset`")
+        # verify the required parameter 'token_provider' is set
+        if ('token_provider' not in params) or (params['token_provider'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `token_provider` when calling `get_card_art_asset`")
+            raise ValueError("Missing the required parameter `token_provider` when calling `get_card_art_asset`")
+        # verify the required parameter 'asset_type' is set
+        if ('asset_type' not in params) or (params['asset_type'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `asset_type` when calling `get_card_art_asset`")
+            raise ValueError("Missing the required parameter `asset_type` when calling `get_card_art_asset`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'instrument_identifier_id' in params:
+            path_params['instrumentIdentifierId'] = params['instrument_identifier_id']
+            instrumentIdentifierId=instrument_identifier_id
+        if 'token_provider' in params:
+            path_params['tokenProvider'] = params['token_provider']
+            tokenProvider=token_provider
+        if 'asset_type' in params:
+            path_params['assetType'] = params['asset_type']
+            assetType=asset_type
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+
+        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
+            body_params = process_body(body_params)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_card_art_asset,get_card_art_asset_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/tms/v2/tokens/{instrumentIdentifierId}/{tokenProvider}/assets/{assetType}', 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='InlineResponse200',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def post_token_payment_credentials(self, token_id, post_payment_credentials_request, **kwargs):
         """
         Generate Payment Credentials for a TMS Token

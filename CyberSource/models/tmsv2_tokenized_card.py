@@ -40,6 +40,9 @@ class Tmsv2TokenizedCard(object):
         'state': 'str',
         'reason': 'str',
         'number': 'str',
+        'expiration_month': 'str',
+        'expiration_year': 'str',
+        'type': 'str',
         'cryptogram': 'str',
         'security_code': 'str',
         'eci': 'str',
@@ -63,6 +66,9 @@ class Tmsv2TokenizedCard(object):
         'state': 'state',
         'reason': 'reason',
         'number': 'number',
+        'expiration_month': 'expirationMonth',
+        'expiration_year': 'expirationYear',
+        'type': 'type',
         'cryptogram': 'cryptogram',
         'security_code': 'securityCode',
         'eci': 'eci',
@@ -75,7 +81,7 @@ class Tmsv2TokenizedCard(object):
         'metadata': 'metadata'
     }
 
-    def __init__(self, links=None, id=None, object=None, account_reference_id=None, consumer_id=None, create_instrument_identifier=None, source=None, state=None, reason=None, number=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, enrollment_id=None, token_reference_id=None, payment_account_reference=None, card=None, passcode=None, metadata=None):
+    def __init__(self, links=None, id=None, object=None, account_reference_id=None, consumer_id=None, create_instrument_identifier=None, source=None, state=None, reason=None, number=None, expiration_month=None, expiration_year=None, type=None, cryptogram=None, security_code=None, eci=None, requestor_id=None, enrollment_id=None, token_reference_id=None, payment_account_reference=None, card=None, passcode=None, metadata=None):
         """
         Tmsv2TokenizedCard - a model defined in Swagger
         """
@@ -90,6 +96,9 @@ class Tmsv2TokenizedCard(object):
         self._state = None
         self._reason = None
         self._number = None
+        self._expiration_month = None
+        self._expiration_year = None
+        self._type = None
         self._cryptogram = None
         self._security_code = None
         self._eci = None
@@ -121,6 +130,12 @@ class Tmsv2TokenizedCard(object):
           self.reason = reason
         if number is not None:
           self.number = number
+        if expiration_month is not None:
+          self.expiration_month = expiration_month
+        if expiration_year is not None:
+          self.expiration_year = expiration_year
+        if type is not None:
+          self.type = type
         if cryptogram is not None:
           self.cryptogram = cryptogram
         if security_code is not None:
@@ -369,6 +384,75 @@ class Tmsv2TokenizedCard(object):
         """
 
         self._number = number
+
+    @property
+    def expiration_month(self):
+        """
+        Gets the expiration_month of this Tmsv2TokenizedCard.
+        Two-digit month in which the network token expires. Format: `MM`. Possible Values: `01` through `12`. 
+
+        :return: The expiration_month of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._expiration_month
+
+    @expiration_month.setter
+    def expiration_month(self, expiration_month):
+        """
+        Sets the expiration_month of this Tmsv2TokenizedCard.
+        Two-digit month in which the network token expires. Format: `MM`. Possible Values: `01` through `12`. 
+
+        :param expiration_month: The expiration_month of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._expiration_month = expiration_month
+
+    @property
+    def expiration_year(self):
+        """
+        Gets the expiration_year of this Tmsv2TokenizedCard.
+        Four-digit year in which the network token expires. Format: `YYYY`. 
+
+        :return: The expiration_year of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._expiration_year
+
+    @expiration_year.setter
+    def expiration_year(self, expiration_year):
+        """
+        Sets the expiration_year of this Tmsv2TokenizedCard.
+        Four-digit year in which the network token expires. Format: `YYYY`. 
+
+        :param expiration_year: The expiration_year of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._expiration_year = expiration_year
+
+    @property
+    def type(self):
+        """
+        Gets the type of this Tmsv2TokenizedCard.
+        The type of card (Card Network). Possible Values: - visa - mastercard - americanexpress 
+
+        :return: The type of this Tmsv2TokenizedCard.
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """
+        Sets the type of this Tmsv2TokenizedCard.
+        The type of card (Card Network). Possible Values: - visa - mastercard - americanexpress 
+
+        :param type: The type of this Tmsv2TokenizedCard.
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def cryptogram(self):
