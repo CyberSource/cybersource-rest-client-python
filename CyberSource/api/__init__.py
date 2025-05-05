@@ -18,6 +18,8 @@ from .emv_tag_details_api import EMVTagDetailsApi
 from .flex_api_api import FlexAPIApi
 from .instrument_identifier_api import InstrumentIdentifierApi
 from .interchange_clearing_level_details_api import InterchangeClearingLevelDetailsApi
+from .invoice_settings_api import InvoiceSettingsApi
+from .invoices_api import InvoicesApi
 from .manage_webhooks_api import ManageWebhooksApi
 from .merchant_boarding_api import MerchantBoardingApi
 from .microform_integration_api import MicroformIntegrationApi
@@ -26,6 +28,7 @@ from .notification_of_changes_api import NotificationOfChangesApi
 from .payer_authentication_api import PayerAuthenticationApi
 from .payment_batch_summaries_api import PaymentBatchSummariesApi
 from .payment_instrument_api import PaymentInstrumentApi
+from .payment_links_api import PaymentLinksApi
 from .payouts_api import PayoutsApi
 from .plans_api import PlansApi
 from .purchase_and_refund_details_api import PurchaseAndRefundDetailsApi
@@ -39,7 +42,9 @@ from .retrieval_summaries_api import RetrievalSummariesApi
 from .search_transactions_api import SearchTransactionsApi
 from .secure_file_share_api import SecureFileShareApi
 from .subscriptions_api import SubscriptionsApi
+from .subscriptions_follow_ons_api import SubscriptionsFollowOnsApi
 from .token_api import TokenApi
+from .tokenized_card_api import TokenizedCardApi
 from .transaction_batches_api import TransactionBatchesApi
 from .transaction_details_api import TransactionDetailsApi
 from .transient_token_data_api import TransientTokenDataApi
@@ -50,8 +55,6 @@ from .verification_api import VerificationApi
 from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi
 from .credit_api import CreditApi
-from .invoice_settings_api import InvoiceSettingsApi
-from .invoices_api import InvoicesApi
 from .orders_api import OrdersApi
 from .payments_api import PaymentsApi
 from .refund_api import RefundApi

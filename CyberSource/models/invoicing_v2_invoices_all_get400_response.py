@@ -117,7 +117,7 @@ class InvoicingV2InvoicesAllGet400Response(object):
     def reason(self):
         """
         Gets the reason of this InvoicingV2InvoicesAllGet400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE 
+        The reason of the status.  Possible values: - DUPLICATE_RECORD - ACTION_NOT_ALLOWED - VALIDATION_ERRORS - INVALID_IMAGE - INVALID_TRANSIENT_TOKEN 
 
         :return: The reason of this InvoicingV2InvoicesAllGet400Response.
         :rtype: str
@@ -128,7 +128,7 @@ class InvoicingV2InvoicesAllGet400Response(object):
     def reason(self, reason):
         """
         Sets the reason of this InvoicingV2InvoicesAllGet400Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE 
+        The reason of the status.  Possible values: - DUPLICATE_RECORD - ACTION_NOT_ALLOWED - VALIDATION_ERRORS - INVALID_IMAGE - INVALID_TRANSIENT_TOKEN 
 
         :param reason: The reason of this InvoicingV2InvoicesAllGet400Response.
         :type: str

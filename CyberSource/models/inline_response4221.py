@@ -34,7 +34,7 @@ class InlineResponse4221(object):
         'status': 'str',
         'reason': 'str',
         'message': 'str',
-        'details': 'list[InlineResponse4006Details]'
+        'details': 'list[InlineResponse4007Details]'
     }
 
     attribute_map = {
@@ -165,7 +165,7 @@ class InlineResponse4221(object):
         Gets the details of this InlineResponse4221.
 
         :return: The details of this InlineResponse4221.
-        :rtype: list[InlineResponse4006Details]
+        :rtype: list[InlineResponse4007Details]
         """
         return self._details
 
@@ -175,7 +175,7 @@ class InlineResponse4221(object):
         Sets the details of this InlineResponse4221.
 
         :param details: The details of this InlineResponse4221.
-        :type: list[InlineResponse4006Details]
+        :type: list[InlineResponse4007Details]
         """
 
         self._details = details

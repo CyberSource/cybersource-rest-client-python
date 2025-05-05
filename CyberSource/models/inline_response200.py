@@ -31,42 +31,42 @@ class InlineResponse200(object):
     """
     swagger_types = {
         'id': 'str',
-        'submit_time_utc': 'str',
-        'status': 'str',
-        'embedded': 'InlineResponse200Embedded'
+        'type': 'str',
+        'provider': 'str',
+        'content': 'list[InlineResponse200Content]'
     }
 
     attribute_map = {
         'id': 'id',
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status',
-        'embedded': '_embedded'
+        'type': 'type',
+        'provider': 'provider',
+        'content': 'content'
     }
 
-    def __init__(self, id=None, submit_time_utc=None, status=None, embedded=None):
+    def __init__(self, id=None, type=None, provider=None, content=None):
         """
         InlineResponse200 - a model defined in Swagger
         """
 
         self._id = None
-        self._submit_time_utc = None
-        self._status = None
-        self._embedded = None
+        self._type = None
+        self._provider = None
+        self._content = None
 
         if id is not None:
           self.id = id
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
-        if embedded is not None:
-          self.embedded = embedded
+        if type is not None:
+          self.type = type
+        if provider is not None:
+          self.provider = provider
+        if content is not None:
+          self.content = content
 
     @property
     def id(self):
         """
         Gets the id of this InlineResponse200.
-        UUID uniquely generated for this comments. 
+        Unique identifier for the Card Art Asset. 
 
         :return: The id of this InlineResponse200.
         :rtype: str
@@ -77,7 +77,7 @@ class InlineResponse200(object):
     def id(self, id):
         """
         Sets the id of this InlineResponse200.
-        UUID uniquely generated for this comments. 
+        Unique identifier for the Card Art Asset. 
 
         :param id: The id of this InlineResponse200.
         :type: str
@@ -86,71 +86,73 @@ class InlineResponse200(object):
         self._id = id
 
     @property
-    def submit_time_utc(self):
+    def type(self):
         """
-        Gets the submit_time_utc of this InlineResponse200.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Gets the type of this InlineResponse200.
+        The type of Card Art Asset. 
 
-        :return: The submit_time_utc of this InlineResponse200.
+        :return: The type of this InlineResponse200.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._type
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @type.setter
+    def type(self, type):
         """
-        Sets the submit_time_utc of this InlineResponse200.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
+        Sets the type of this InlineResponse200.
+        The type of Card Art Asset. 
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse200.
+        :param type: The type of this InlineResponse200.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._type = type
 
     @property
-    def status(self):
+    def provider(self):
         """
-        Gets the status of this InlineResponse200.
-        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
+        Gets the provider of this InlineResponse200.
+        The provider of the Card Art Asset. 
 
-        :return: The status of this InlineResponse200.
+        :return: The provider of this InlineResponse200.
         :rtype: str
         """
-        return self._status
+        return self._provider
 
-    @status.setter
-    def status(self, status):
+    @provider.setter
+    def provider(self, provider):
         """
-        Sets the status of this InlineResponse200.
-        The status of the submitted transaction. Possible values are: - `ACCEPTED` - `REJECTED` 
+        Sets the provider of this InlineResponse200.
+        The provider of the Card Art Asset. 
 
-        :param status: The status of this InlineResponse200.
+        :param provider: The provider of this InlineResponse200.
         :type: str
         """
 
-        self._status = status
+        self._provider = provider
 
     @property
-    def embedded(self):
+    def content(self):
         """
-        Gets the embedded of this InlineResponse200.
+        Gets the content of this InlineResponse200.
+        Array of content objects representing the Card Art Asset. 
 
-        :return: The embedded of this InlineResponse200.
-        :rtype: InlineResponse200Embedded
+        :return: The content of this InlineResponse200.
+        :rtype: list[InlineResponse200Content]
         """
-        return self._embedded
+        return self._content
 
-    @embedded.setter
-    def embedded(self, embedded):
+    @content.setter
+    def content(self, content):
         """
-        Sets the embedded of this InlineResponse200.
+        Sets the content of this InlineResponse200.
+        Array of content objects representing the Card Art Asset. 
 
-        :param embedded: The embedded of this InlineResponse200.
-        :type: InlineResponse200Embedded
+        :param content: The content of this InlineResponse200.
+        :type: list[InlineResponse200Content]
         """
 
-        self._embedded = embedded
+        self._content = content
 
     def to_dict(self):
         """

@@ -30,22 +30,27 @@ class PostPaymentCredentialsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_credential_type': 'str'
+        'payment_credential_type': 'str',
+        'transaction_type': 'str'
     }
 
     attribute_map = {
-        'payment_credential_type': 'paymentCredentialType'
+        'payment_credential_type': 'paymentCredentialType',
+        'transaction_type': 'transactionType'
     }
 
-    def __init__(self, payment_credential_type=None):
+    def __init__(self, payment_credential_type=None, transaction_type=None):
         """
         PostPaymentCredentialsRequest - a model defined in Swagger
         """
 
         self._payment_credential_type = None
+        self._transaction_type = None
 
         if payment_credential_type is not None:
           self.payment_credential_type = payment_credential_type
+        if transaction_type is not None:
+          self.transaction_type = transaction_type
 
     @property
     def payment_credential_type(self):
@@ -69,6 +74,29 @@ class PostPaymentCredentialsRequest(object):
         """
 
         self._payment_credential_type = payment_credential_type
+
+    @property
+    def transaction_type(self):
+        """
+        Gets the transaction_type of this PostPaymentCredentialsRequest.
+        Specifies the type of transaction for which the network token credentials are required. Possible Values:   - ECOM: Ecommerce transaction. If transactionType is not provided, ECOM is set as the default.   - AFT: Account Funding Transaction. This is only supported for VISA and paymentCredentialType of CRYPTOGRAM. 
+
+        :return: The transaction_type of this PostPaymentCredentialsRequest.
+        :rtype: str
+        """
+        return self._transaction_type
+
+    @transaction_type.setter
+    def transaction_type(self, transaction_type):
+        """
+        Sets the transaction_type of this PostPaymentCredentialsRequest.
+        Specifies the type of transaction for which the network token credentials are required. Possible Values:   - ECOM: Ecommerce transaction. If transactionType is not provided, ECOM is set as the default.   - AFT: Account Funding Transaction. This is only supported for VISA and paymentCredentialType of CRYPTOGRAM. 
+
+        :param transaction_type: The transaction_type of this PostPaymentCredentialsRequest.
+        :type: str
+        """
+
+        self._transaction_type = transaction_type
 
     def to_dict(self):
         """

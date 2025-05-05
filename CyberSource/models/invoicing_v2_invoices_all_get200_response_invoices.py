@@ -33,6 +33,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         'links': 'InvoicingV2InvoicesAllGet200ResponseLinks',
         'id': 'str',
         'status': 'str',
+        'created_date': 'str',
         'customer_information': 'InvoicingV2InvoicesAllGet200ResponseCustomerInformation',
         'invoice_information': 'InvoicingV2InvoicesAllGet200ResponseInvoiceInformation',
         'order_information': 'InvoicingV2InvoicesAllGet200ResponseOrderInformation'
@@ -42,12 +43,13 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         'links': '_links',
         'id': 'id',
         'status': 'status',
+        'created_date': 'createdDate',
         'customer_information': 'customerInformation',
         'invoice_information': 'invoiceInformation',
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, links=None, id=None, status=None, customer_information=None, invoice_information=None, order_information=None):
+    def __init__(self, links=None, id=None, status=None, created_date=None, customer_information=None, invoice_information=None, order_information=None):
         """
         InvoicingV2InvoicesAllGet200ResponseInvoices - a model defined in Swagger
         """
@@ -55,6 +57,7 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         self._links = None
         self._id = None
         self._status = None
+        self._created_date = None
         self._customer_information = None
         self._invoice_information = None
         self._order_information = None
@@ -65,6 +68,8 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
           self.id = id
         if status is not None:
           self.status = status
+        if created_date is not None:
+          self.created_date = created_date
         if customer_information is not None:
           self.customer_information = customer_information
         if invoice_information is not None:
@@ -138,6 +143,29 @@ class InvoicingV2InvoicesAllGet200ResponseInvoices(object):
         """
 
         self._status = status
+
+    @property
+    def created_date(self):
+        """
+        Gets the created_date of this InvoicingV2InvoicesAllGet200ResponseInvoices.
+        Date and time (UTC) the invoice was created.  Format: YYYY-MM-DDThh:mm:ssZ Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The created_date of this InvoicingV2InvoicesAllGet200ResponseInvoices.
+        :rtype: str
+        """
+        return self._created_date
+
+    @created_date.setter
+    def created_date(self, created_date):
+        """
+        Sets the created_date of this InvoicingV2InvoicesAllGet200ResponseInvoices.
+        Date and time (UTC) the invoice was created.  Format: YYYY-MM-DDThh:mm:ssZ Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param created_date: The created_date of this InvoicingV2InvoicesAllGet200ResponseInvoices.
+        :type: str
+        """
+
+        self._created_date = created_date
 
     @property
     def customer_information(self):

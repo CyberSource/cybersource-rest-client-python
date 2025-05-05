@@ -32,6 +32,8 @@ class Invoicingv2invoicesidInvoiceInformation(object):
     swagger_types = {
         'description': 'str',
         'due_date': 'date',
+        'expiration_date': 'date',
+        'send_immediately': 'bool',
         'allow_partial_payments': 'bool',
         'delivery_mode': 'str'
     }
@@ -39,24 +41,30 @@ class Invoicingv2invoicesidInvoiceInformation(object):
     attribute_map = {
         'description': 'description',
         'due_date': 'dueDate',
+        'expiration_date': 'expirationDate',
+        'send_immediately': 'sendImmediately',
         'allow_partial_payments': 'allowPartialPayments',
         'delivery_mode': 'deliveryMode'
     }
 
-    def __init__(self, description=None, due_date=None, allow_partial_payments=None, delivery_mode=None):
+    def __init__(self, description=None, due_date=None, expiration_date=None, send_immediately=False, allow_partial_payments=False, delivery_mode=None):
         """
         Invoicingv2invoicesidInvoiceInformation - a model defined in Swagger
         """
 
         self._description = None
         self._due_date = None
+        self._expiration_date = None
+        self._send_immediately = None
         self._allow_partial_payments = None
         self._delivery_mode = None
 
-        if description is not None:
-          self.description = description
-        if due_date is not None:
-          self.due_date = due_date
+        self.description = description
+        self.due_date = due_date
+        if expiration_date is not None:
+          self.expiration_date = expiration_date
+        if send_immediately is not None:
+          self.send_immediately = send_immediately
         if allow_partial_payments is not None:
           self.allow_partial_payments = allow_partial_payments
         if delivery_mode is not None:
@@ -109,6 +117,52 @@ class Invoicingv2invoicesidInvoiceInformation(object):
         self._due_date = due_date
 
     @property
+    def expiration_date(self):
+        """
+        Gets the expiration_date of this Invoicingv2invoicesidInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :return: The expiration_date of this Invoicingv2invoicesidInvoiceInformation.
+        :rtype: date
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """
+        Sets the expiration_date of this Invoicingv2invoicesidInvoiceInformation.
+        Define an expiration date for the link.  Format: `YYYY-MM-DD`, where `YYYY` = year, `MM` = month, and `DD` = day 
+
+        :param expiration_date: The expiration_date of this Invoicingv2invoicesidInvoiceInformation.
+        :type: date
+        """
+
+        self._expiration_date = expiration_date
+
+    @property
+    def send_immediately(self):
+        """
+        Gets the send_immediately of this Invoicingv2invoicesidInvoiceInformation.
+        If set to `true`, we send the invoice immediately. If set to `false`, the invoice remains in draft mode.
+
+        :return: The send_immediately of this Invoicingv2invoicesidInvoiceInformation.
+        :rtype: bool
+        """
+        return self._send_immediately
+
+    @send_immediately.setter
+    def send_immediately(self, send_immediately):
+        """
+        Sets the send_immediately of this Invoicingv2invoicesidInvoiceInformation.
+        If set to `true`, we send the invoice immediately. If set to `false`, the invoice remains in draft mode.
+
+        :param send_immediately: The send_immediately of this Invoicingv2invoicesidInvoiceInformation.
+        :type: bool
+        """
+
+        self._send_immediately = send_immediately
+
+    @property
     def allow_partial_payments(self):
         """
         Gets the allow_partial_payments of this Invoicingv2invoicesidInvoiceInformation.
@@ -135,7 +189,7 @@ class Invoicingv2invoicesidInvoiceInformation(object):
     def delivery_mode(self):
         """
         Gets the delivery_mode of this Invoicingv2invoicesidInvoiceInformation.
-        If set to `None`, the invoice is created, and its status is set to 'CREATED', but no email is sent.    Possible values:        - `None`   - `Email`  
+        If this field is set to 'None', an invoice will be generated with the status 'CREATED', but no email will be dispatched.    Possible values:        - `None`   - `Email`    
 
         :return: The delivery_mode of this Invoicingv2invoicesidInvoiceInformation.
         :rtype: str
@@ -146,7 +200,7 @@ class Invoicingv2invoicesidInvoiceInformation(object):
     def delivery_mode(self, delivery_mode):
         """
         Sets the delivery_mode of this Invoicingv2invoicesidInvoiceInformation.
-        If set to `None`, the invoice is created, and its status is set to 'CREATED', but no email is sent.    Possible values:        - `None`   - `Email`  
+        If this field is set to 'None', an invoice will be generated with the status 'CREATED', but no email will be dispatched.    Possible values:        - `None`   - `Email`    
 
         :param delivery_mode: The delivery_mode of this Invoicingv2invoicesidInvoiceInformation.
         :type: str

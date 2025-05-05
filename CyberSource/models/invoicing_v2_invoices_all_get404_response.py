@@ -117,7 +117,7 @@ class InvoicingV2InvoicesAllGet404Response(object):
     def reason(self):
         """
         Gets the reason of this InvoicingV2InvoicesAllGet404Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE 
+        The reason of the status.  Possible values: - NOTFOUND 
 
         :return: The reason of this InvoicingV2InvoicesAllGet404Response.
         :rtype: str
@@ -128,7 +128,7 @@ class InvoicingV2InvoicesAllGet404Response(object):
     def reason(self, reason):
         """
         Sets the reason of this InvoicingV2InvoicesAllGet404Response.
-        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE 
+        The reason of the status.  Possible values: - NOTFOUND 
 
         :param reason: The reason of this InvoicingV2InvoicesAllGet404Response.
         :type: str

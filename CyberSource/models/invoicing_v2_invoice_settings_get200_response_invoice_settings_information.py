@@ -39,7 +39,11 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'default_currency_code': 'str',
         'payer_authentication3_ds_version': 'bool',
         'show_vat_number': 'bool',
-        'vat_registration_number': 'str'
+        'vat_registration_number': 'str',
+        'ship_to': 'bool',
+        'phone_number': 'bool',
+        'email': 'bool',
+        'enable_merchant_email_notifications': 'bool'
     }
 
     attribute_map = {
@@ -52,10 +56,14 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         'default_currency_code': 'defaultCurrencyCode',
         'payer_authentication3_ds_version': 'payerAuthentication3DSVersion',
         'show_vat_number': 'showVatNumber',
-        'vat_registration_number': 'vatRegistrationNumber'
+        'vat_registration_number': 'vatRegistrationNumber',
+        'ship_to': 'shipTo',
+        'phone_number': 'phoneNumber',
+        'email': 'email',
+        'enable_merchant_email_notifications': 'enableMerchantEmailNotifications'
     }
 
-    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=False, show_vat_number=False, vat_registration_number=None):
+    def __init__(self, merchant_logo=None, merchant_display_name=None, custom_email_message=None, enable_reminders=None, header_style=None, delivery_language=None, default_currency_code=None, payer_authentication3_ds_version=False, show_vat_number=False, vat_registration_number=None, ship_to=False, phone_number=False, email=False, enable_merchant_email_notifications=False):
         """
         InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation - a model defined in Swagger
         """
@@ -70,6 +78,10 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
         self._payer_authentication3_ds_version = None
         self._show_vat_number = None
         self._vat_registration_number = None
+        self._ship_to = None
+        self._phone_number = None
+        self._email = None
+        self._enable_merchant_email_notifications = None
 
         if merchant_logo is not None:
           self.merchant_logo = merchant_logo
@@ -91,6 +103,14 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
           self.show_vat_number = show_vat_number
         if vat_registration_number is not None:
           self.vat_registration_number = vat_registration_number
+        if ship_to is not None:
+          self.ship_to = ship_to
+        if phone_number is not None:
+          self.phone_number = phone_number
+        if email is not None:
+          self.email = email
+        if enable_merchant_email_notifications is not None:
+          self.enable_merchant_email_notifications = enable_merchant_email_notifications
 
     @property
     def merchant_logo(self):
@@ -301,7 +321,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
     def vat_registration_number(self):
         """
         Gets the vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.       
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  
 
         :return: The vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
         :rtype: str
@@ -312,13 +332,105 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation(object)
     def vat_registration_number(self, vat_registration_number):
         """
         Sets the vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
-        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.       
+        Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.  
 
         :param vat_registration_number: The vat_registration_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
         :type: str
         """
 
         self._vat_registration_number = vat_registration_number
+
+    @property
+    def ship_to(self):
+        """
+        Gets the ship_to of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers shipping address.
+
+        :return: The ship_to of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._ship_to
+
+    @ship_to.setter
+    def ship_to(self, ship_to):
+        """
+        Sets the ship_to of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers shipping address.
+
+        :param ship_to: The ship_to of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._ship_to = ship_to
+
+    @property
+    def phone_number(self):
+        """
+        Gets the phone_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers phone number.
+
+        :return: The phone_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """
+        Sets the phone_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers phone number.
+
+        :param phone_number: The phone_number of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def email(self):
+        """
+        Gets the email of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers email address when the email address is not known or confirm it if it is known at the time of invoice creation.
+
+        :return: The email of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Collect the payers email address when the email address is not known or confirm it if it is known at the time of invoice creation.
+
+        :param email: The email of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._email = email
+
+    @property
+    def enable_merchant_email_notifications(self):
+        """
+        Gets the enable_merchant_email_notifications of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Whether you would like to receive payment notification for successful transaction
+
+        :return: The enable_merchant_email_notifications of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :rtype: bool
+        """
+        return self._enable_merchant_email_notifications
+
+    @enable_merchant_email_notifications.setter
+    def enable_merchant_email_notifications(self, enable_merchant_email_notifications):
+        """
+        Sets the enable_merchant_email_notifications of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        Whether you would like to receive payment notification for successful transaction
+
+        :param enable_merchant_email_notifications: The enable_merchant_email_notifications of this InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation.
+        :type: bool
+        """
+
+        self._enable_merchant_email_notifications = enable_merchant_email_notifications
 
     def to_dict(self):
         """

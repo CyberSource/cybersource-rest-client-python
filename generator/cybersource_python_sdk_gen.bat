@@ -12,7 +12,7 @@ rd /s /q ..\test
 
 REM Command to generate SDK
 
-java -jar swagger-codegen-cli-2.4.38.jar generate -t cybersource-python-template -i cybersource-rest-spec.json -l python -o ../ -c cybersource-python-config.json
+java -jar swagger-codegen-cli-2.4.38.jar generate -t cybersource-python-template -i cybersource-rest-spec-python.json -l python -o ../ -c cybersource-python-config.json
 
 REM Fixing file names
 powershell -Command "(Get-Content ..\CyberSource\__init__.py) | ForEach-Object { $_ -replace 'from .models.error__links import ErrorLinks', 'from .models.error_links import ErrorLinks'} | Set-Content ..\CyberSource\__init__.py"

@@ -35,7 +35,7 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         'quantity': 'int',
         'unit_price': 'str',
         'discount_amount': 'str',
-        'discount_rate': 'str',
+        'discount_percent': 'str',
         'tax_amount': 'str',
         'tax_rate': 'str',
         'total_amount': 'str'
@@ -47,13 +47,13 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         'quantity': 'quantity',
         'unit_price': 'unitPrice',
         'discount_amount': 'discountAmount',
-        'discount_rate': 'discountRate',
+        'discount_percent': 'discountPercent',
         'tax_amount': 'taxAmount',
         'tax_rate': 'taxRate',
         'total_amount': 'totalAmount'
     }
 
-    def __init__(self, product_sku=None, product_name=None, quantity=None, unit_price=None, discount_amount=None, discount_rate=None, tax_amount=None, tax_rate=None, total_amount=None):
+    def __init__(self, product_sku=None, product_name=None, quantity=None, unit_price=None, discount_amount=None, discount_percent=None, tax_amount=None, tax_rate=None, total_amount=None):
         """
         Invoicingv2invoicesOrderInformationLineItems - a model defined in Swagger
         """
@@ -63,7 +63,7 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         self._quantity = None
         self._unit_price = None
         self._discount_amount = None
-        self._discount_rate = None
+        self._discount_percent = None
         self._tax_amount = None
         self._tax_rate = None
         self._total_amount = None
@@ -78,8 +78,8 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
           self.unit_price = unit_price
         if discount_amount is not None:
           self.discount_amount = discount_amount
-        if discount_rate is not None:
-          self.discount_rate = discount_rate
+        if discount_percent is not None:
+          self.discount_percent = discount_percent
         if tax_amount is not None:
           self.tax_amount = tax_amount
         if tax_rate is not None:
@@ -203,27 +203,27 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
         self._discount_amount = discount_amount
 
     @property
-    def discount_rate(self):
+    def discount_percent(self):
         """
-        Gets the discount_rate of this Invoicingv2invoicesOrderInformationLineItems.
+        Gets the discount_percent of this Invoicingv2invoicesOrderInformationLineItems.
         Rate the item is discounted. Maximum of 2 decimal places.  Example 5.25 (=5.25%) 
 
-        :return: The discount_rate of this Invoicingv2invoicesOrderInformationLineItems.
+        :return: The discount_percent of this Invoicingv2invoicesOrderInformationLineItems.
         :rtype: str
         """
-        return self._discount_rate
+        return self._discount_percent
 
-    @discount_rate.setter
-    def discount_rate(self, discount_rate):
+    @discount_percent.setter
+    def discount_percent(self, discount_percent):
         """
-        Sets the discount_rate of this Invoicingv2invoicesOrderInformationLineItems.
+        Sets the discount_percent of this Invoicingv2invoicesOrderInformationLineItems.
         Rate the item is discounted. Maximum of 2 decimal places.  Example 5.25 (=5.25%) 
 
-        :param discount_rate: The discount_rate of this Invoicingv2invoicesOrderInformationLineItems.
+        :param discount_percent: The discount_percent of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str
         """
 
-        self._discount_rate = discount_rate
+        self._discount_percent = discount_percent
 
     @property
     def tax_amount(self):
@@ -252,7 +252,7 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
     def tax_rate(self):
         """
         Gets the tax_rate of this Invoicingv2invoicesOrderInformationLineItems.
-        Tax rate applied to the item.  **Visa**: Valid range is 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated).  **Mastercard**: Valid range is 0.00001 to 0.99999 (0.001% to 99.999%). 
+        Valid range: 1% to 99%, with only whole percentage values accepted; values with additional  decimal places will be truncated  For processor-specific details, see the alternate_tax_amount, vat_rate, vat_tax_rate, local_tax, national_tax, vat_tax_amount or other_tax#_rate field descriptions in the Level II and Level III Processing Using the SCMP API Guide. 
 
         :return: The tax_rate of this Invoicingv2invoicesOrderInformationLineItems.
         :rtype: str
@@ -263,7 +263,7 @@ class Invoicingv2invoicesOrderInformationLineItems(object):
     def tax_rate(self, tax_rate):
         """
         Sets the tax_rate of this Invoicingv2invoicesOrderInformationLineItems.
-        Tax rate applied to the item.  **Visa**: Valid range is 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated).  **Mastercard**: Valid range is 0.00001 to 0.99999 (0.001% to 99.999%). 
+        Valid range: 1% to 99%, with only whole percentage values accepted; values with additional  decimal places will be truncated  For processor-specific details, see the alternate_tax_amount, vat_rate, vat_tax_rate, local_tax, national_tax, vat_tax_amount or other_tax#_rate field descriptions in the Level II and Level III Processing Using the SCMP API Guide. 
 
         :param tax_rate: The tax_rate of this Invoicingv2invoicesOrderInformationLineItems.
         :type: str

@@ -77,6 +77,7 @@ class InvoicingV2InvoicesPost201ResponseOrderInformation(object):
     def line_items(self):
         """
         Gets the line_items of this InvoicingV2InvoicesPost201ResponseOrderInformation.
+        List of the line items from the order.
 
         :return: The line_items of this InvoicingV2InvoicesPost201ResponseOrderInformation.
         :rtype: list[Invoicingv2invoicesOrderInformationLineItems]
@@ -87,6 +88,7 @@ class InvoicingV2InvoicesPost201ResponseOrderInformation(object):
     def line_items(self, line_items):
         """
         Sets the line_items of this InvoicingV2InvoicesPost201ResponseOrderInformation.
+        List of the line items from the order.
 
         :param line_items: The line_items of this InvoicingV2InvoicesPost201ResponseOrderInformation.
         :type: list[Invoicingv2invoicesOrderInformationLineItems]

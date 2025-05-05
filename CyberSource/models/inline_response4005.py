@@ -30,74 +30,117 @@ class InlineResponse4005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'code': 'str',
+        'submit_time_utc': 'str',
+        'status': 'str',
+        'reason': 'str',
         'message': 'str',
-        'localization_key': 'str',
-        'correlation_id': 'str',
-        'detail': 'str',
-        'fields': 'list[InlineResponse4005Fields]'
+        'details': 'list[PtsV2PaymentsPost201ResponseErrorInformationDetails]'
     }
 
     attribute_map = {
-        'code': 'code',
+        'submit_time_utc': 'submitTimeUtc',
+        'status': 'status',
+        'reason': 'reason',
         'message': 'message',
-        'localization_key': 'localizationKey',
-        'correlation_id': 'correlationId',
-        'detail': 'detail',
-        'fields': 'fields'
+        'details': 'details'
     }
 
-    def __init__(self, code=None, message=None, localization_key=None, correlation_id=None, detail=None, fields=None):
+    def __init__(self, submit_time_utc=None, status=None, reason=None, message=None, details=None):
         """
         InlineResponse4005 - a model defined in Swagger
         """
 
-        self._code = None
+        self._submit_time_utc = None
+        self._status = None
+        self._reason = None
         self._message = None
-        self._localization_key = None
-        self._correlation_id = None
-        self._detail = None
-        self._fields = None
+        self._details = None
 
-        self.code = code
-        self.message = message
-        if localization_key is not None:
-          self.localization_key = localization_key
-        if correlation_id is not None:
-          self.correlation_id = correlation_id
-        if detail is not None:
-          self.detail = detail
-        if fields is not None:
-          self.fields = fields
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
+        if status is not None:
+          self.status = status
+        if reason is not None:
+          self.reason = reason
+        if message is not None:
+          self.message = message
+        if details is not None:
+          self.details = details
 
     @property
-    def code(self):
+    def submit_time_utc(self):
         """
-        Gets the code of this InlineResponse4005.
-        Error code
+        Gets the submit_time_utc of this InlineResponse4005.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :return: The code of this InlineResponse4005.
+        :return: The submit_time_utc of this InlineResponse4005.
         :rtype: str
         """
-        return self._code
+        return self._submit_time_utc
 
-    @code.setter
-    def code(self, code):
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
         """
-        Sets the code of this InlineResponse4005.
-        Error code
+        Sets the submit_time_utc of this InlineResponse4005.
+        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services. 
 
-        :param code: The code of this InlineResponse4005.
+        :param submit_time_utc: The submit_time_utc of this InlineResponse4005.
         :type: str
         """
 
-        self._code = code
+        self._submit_time_utc = submit_time_utc
+
+    @property
+    def status(self):
+        """
+        Gets the status of this InlineResponse4005.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+
+        :return: The status of this InlineResponse4005.
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """
+        Sets the status of this InlineResponse4005.
+        The status of the submitted transaction.  Possible values:  - INVALID_REQUEST 
+
+        :param status: The status of this InlineResponse4005.
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def reason(self):
+        """
+        Gets the reason of this InlineResponse4005.
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
+
+        :return: The reason of this InlineResponse4005.
+        :rtype: str
+        """
+        return self._reason
+
+    @reason.setter
+    def reason(self, reason):
+        """
+        Sets the reason of this InlineResponse4005.
+        The reason of the status.  Possible values:  - MISSING_FIELD  - INVALID_DATA  - DUPLICATE_REQUEST  - INVALID_MERCHANT_CONFIGURATION  - PROCESSOR_UNAVAILABLE  - INVALID_FOLLOW_ON_TRANSACTION_STATUS 
+
+        :param reason: The reason of this InlineResponse4005.
+        :type: str
+        """
+
+        self._reason = reason
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse4005.
-        Error message
+        The detail message related to the status and reason listed above.
 
         :return: The message of this InlineResponse4005.
         :rtype: str
@@ -108,7 +151,7 @@ class InlineResponse4005(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse4005.
-        Error message
+        The detail message related to the status and reason listed above.
 
         :param message: The message of this InlineResponse4005.
         :type: str
@@ -117,96 +160,25 @@ class InlineResponse4005(object):
         self._message = message
 
     @property
-    def localization_key(self):
+    def details(self):
         """
-        Gets the localization_key of this InlineResponse4005.
-        Localization Key Name
+        Gets the details of this InlineResponse4005.
 
-        :return: The localization_key of this InlineResponse4005.
-        :rtype: str
+        :return: The details of this InlineResponse4005.
+        :rtype: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
-        return self._localization_key
+        return self._details
 
-    @localization_key.setter
-    def localization_key(self, localization_key):
+    @details.setter
+    def details(self, details):
         """
-        Sets the localization_key of this InlineResponse4005.
-        Localization Key Name
+        Sets the details of this InlineResponse4005.
 
-        :param localization_key: The localization_key of this InlineResponse4005.
-        :type: str
+        :param details: The details of this InlineResponse4005.
+        :type: list[PtsV2PaymentsPost201ResponseErrorInformationDetails]
         """
 
-        self._localization_key = localization_key
-
-    @property
-    def correlation_id(self):
-        """
-        Gets the correlation_id of this InlineResponse4005.
-        Correlation Id
-
-        :return: The correlation_id of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._correlation_id
-
-    @correlation_id.setter
-    def correlation_id(self, correlation_id):
-        """
-        Sets the correlation_id of this InlineResponse4005.
-        Correlation Id
-
-        :param correlation_id: The correlation_id of this InlineResponse4005.
-        :type: str
-        """
-
-        self._correlation_id = correlation_id
-
-    @property
-    def detail(self):
-        """
-        Gets the detail of this InlineResponse4005.
-        Error Detail
-
-        :return: The detail of this InlineResponse4005.
-        :rtype: str
-        """
-        return self._detail
-
-    @detail.setter
-    def detail(self, detail):
-        """
-        Sets the detail of this InlineResponse4005.
-        Error Detail
-
-        :param detail: The detail of this InlineResponse4005.
-        :type: str
-        """
-
-        self._detail = detail
-
-    @property
-    def fields(self):
-        """
-        Gets the fields of this InlineResponse4005.
-        Error fields List
-
-        :return: The fields of this InlineResponse4005.
-        :rtype: list[InlineResponse4005Fields]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """
-        Sets the fields of this InlineResponse4005.
-        Error fields List
-
-        :param fields: The fields of this InlineResponse4005.
-        :type: list[InlineResponse4005Fields]
-        """
-
-        self._fields = fields
+        self._details = details
 
     def to_dict(self):
         """

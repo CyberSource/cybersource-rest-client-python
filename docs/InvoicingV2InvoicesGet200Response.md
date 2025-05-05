@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **submit_time_utc** | **str** | Time of request in UTC. Format: &#x60;YYYY-MM-DDThh:mm:ssZ&#x60; **Example** &#x60;2016-08-11T22:47:57Z&#x60; equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The &#x60;T&#x60; separates the date and the time. The &#x60;Z&#x60; indicates UTC.  Returned by Cybersource for all services.  | [optional] 
 **status** | **str** | The status of the invoice.  Possible values: - DRAFT - CREATED - SENT - PARTIAL - PAID - CANCELED - PENDING  | [optional] 
 **customer_information** | [**Invoicingv2invoicesCustomerInformation**](Invoicingv2invoicesCustomerInformation.md) |  | [optional] 
+**processing_information** | [**Invoicingv2invoicesProcessingInformation**](Invoicingv2invoicesProcessingInformation.md) |  | [optional] 
 **invoice_information** | [**InvoicingV2InvoicesPost201ResponseInvoiceInformation**](InvoicingV2InvoicesPost201ResponseInvoiceInformation.md) |  | [optional] 
 **order_information** | [**InvoicingV2InvoicesPost201ResponseOrderInformation**](InvoicingV2InvoicesPost201ResponseOrderInformation.md) |  | [optional] 
 **invoice_history** | [**list[InvoicingV2InvoicesGet200ResponseInvoiceHistory]**](InvoicingV2InvoicesGet200ResponseInvoiceHistory.md) |  | [optional] 

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create a New Invoice
 
-The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments.
+The invoicing product enables you to bill any customer with an email address and accept digital payments securely from any connected device. You can either use the system generated email or use the invoice payment link in your own communication. You can add discounts and taxes for the entire invoice or for each line item. To customize the invoice to match your brand see [Invoice Settings](https://developer.cybersource.com/api-reference-assets/index.html#invoicing_invoice-settings_update-invoice-settings). The invoice payment page uses Unified Checkout to process the payments. The availability of API features for a merchant can depend on the portfolio configuration and may need to be enabled at the portfolio level before they can be added to merchant accounts.
 
 ### Example 
 ```python
@@ -79,7 +79,7 @@ from pprint import pprint
 api_instance = CyberSource.InvoicesApi()
 offset = 56 # int | Page offset number.
 limit = 56 # int | Maximum number of items you would like returned.
-status = 'status_example' # str | The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING  (optional)
+status = 'status_example' # str | The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED  (optional)
 
 try: 
     # Get a List of Invoices
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **offset** | **int**| Page offset number. | 
  **limit** | **int**| Maximum number of items you would like returned. | 
- **status** | **str**| The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED   - PENDING  | [optional] 
+ **status** | **str**| The status of the invoice.  Possible values:   - DRAFT   - CREATED   - SENT   - PARTIAL   - PAID   - CANCELED  | [optional] 
 
 ### Return type
 
@@ -161,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **perform_cancel_action**
-> InvoicingV2InvoicesPost201Response perform_cancel_action(id)
+> InvoicingV2InvoicesCancel200Response perform_cancel_action(id)
 
 Cancel an Invoice
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesCancel200Response**](InvoicingV2InvoicesCancel200Response.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **perform_send_action**
-> InvoicingV2InvoicesPost201Response perform_send_action(id)
+> InvoicingV2InvoicesSend200Response perform_send_action(id)
 
 Send an Invoice
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesSend200Response**](InvoicingV2InvoicesSend200Response.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_invoice**
-> InvoicingV2InvoicesPost201Response update_invoice(id, update_invoice_request)
+> InvoicingV2InvoicesPut200Response update_invoice(id, update_invoice_request)
 
 Update an Invoice
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoicingV2InvoicesPost201Response**](InvoicingV2InvoicesPost201Response.md)
+[**InvoicingV2InvoicesPut200Response**](InvoicingV2InvoicesPut200Response.md)
 
 ### Authorization
 

@@ -140,7 +140,7 @@ class Tmsv2TokenizedCardCard(object):
     def type(self):
         """
         Gets the type of this Tmsv2TokenizedCardCard.
-        The type of card(Card network). Possible Values: 001: visa 
+        The type of card (Card Network). Possible Values: - 001: visa 
 
         :return: The type of this Tmsv2TokenizedCardCard.
         :rtype: str
@@ -151,7 +151,7 @@ class Tmsv2TokenizedCardCard(object):
     def type(self, type):
         """
         Sets the type of this Tmsv2TokenizedCardCard.
-        The type of card(Card network). Possible Values: 001: visa 
+        The type of card (Card Network). Possible Values: - 001: visa 
 
         :param type: The type of this Tmsv2TokenizedCardCard.
         :type: str

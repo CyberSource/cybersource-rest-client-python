@@ -35,6 +35,7 @@ class InvoicingV2InvoicesPost201Response(object):
         'submit_time_utc': 'str',
         'status': 'str',
         'customer_information': 'Invoicingv2invoicesCustomerInformation',
+        'processing_information': 'Invoicingv2invoicesProcessingInformation',
         'invoice_information': 'InvoicingV2InvoicesPost201ResponseInvoiceInformation',
         'order_information': 'InvoicingV2InvoicesPost201ResponseOrderInformation'
     }
@@ -45,11 +46,12 @@ class InvoicingV2InvoicesPost201Response(object):
         'submit_time_utc': 'submitTimeUtc',
         'status': 'status',
         'customer_information': 'customerInformation',
+        'processing_information': 'processingInformation',
         'invoice_information': 'invoiceInformation',
         'order_information': 'orderInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, customer_information=None, invoice_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, status=None, customer_information=None, processing_information=None, invoice_information=None, order_information=None):
         """
         InvoicingV2InvoicesPost201Response - a model defined in Swagger
         """
@@ -59,6 +61,7 @@ class InvoicingV2InvoicesPost201Response(object):
         self._submit_time_utc = None
         self._status = None
         self._customer_information = None
+        self._processing_information = None
         self._invoice_information = None
         self._order_information = None
 
@@ -72,6 +75,8 @@ class InvoicingV2InvoicesPost201Response(object):
           self.status = status
         if customer_information is not None:
           self.customer_information = customer_information
+        if processing_information is not None:
+          self.processing_information = processing_information
         if invoice_information is not None:
           self.invoice_information = invoice_information
         if order_information is not None:
@@ -187,6 +192,27 @@ class InvoicingV2InvoicesPost201Response(object):
         """
 
         self._customer_information = customer_information
+
+    @property
+    def processing_information(self):
+        """
+        Gets the processing_information of this InvoicingV2InvoicesPost201Response.
+
+        :return: The processing_information of this InvoicingV2InvoicesPost201Response.
+        :rtype: Invoicingv2invoicesProcessingInformation
+        """
+        return self._processing_information
+
+    @processing_information.setter
+    def processing_information(self, processing_information):
+        """
+        Sets the processing_information of this InvoicingV2InvoicesPost201Response.
+
+        :param processing_information: The processing_information of this InvoicingV2InvoicesPost201Response.
+        :type: Invoicingv2invoicesProcessingInformation
+        """
+
+        self._processing_information = processing_information
 
     @property
     def invoice_information(self):
