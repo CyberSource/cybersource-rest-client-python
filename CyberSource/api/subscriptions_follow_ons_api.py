@@ -22,6 +22,7 @@ from six import iteritems
 from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
+from CyberSource.utilities.MultipartHelpers import MultipartHelpers
 from authenticationsdk.util.MLEUtility import MLEUtility
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 from authenticationsdk.util.Utility import process_body
@@ -140,26 +141,24 @@ class SubscriptionsFollowOnsApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'create_subscription_request' in params:
-            body_params = params['create_subscription_request']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-
-        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_follow_on_subscription,create_follow_on_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'create_subscription_request' in params:
+            body_params = params['create_subscription_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_subscription_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "create_follow_on_subscription,create_follow_on_subscription_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 
@@ -264,23 +263,25 @@ class SubscriptionsFollowOnsApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_follow_on_subscription,get_follow_on_subscription_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json', 'application/hal+json', 'application/json;charset=utf-8', 'application/hal+json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_follow_on_subscription,get_follow_on_subscription_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 
