@@ -80,7 +80,7 @@ REM powershell -Command " rename-item -Path ..\docs\RiskV1AuthenticationExemptio
 
 @REM replace sdkLinks fieldName to links for supporting links field name in request/response body
 echo "starting of replacing the links keyword in pbl_payment_links_all_get200_response.py model"
-powershell -Command "Set-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py ((Get-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py -Raw) -replace '''sdk_links'': ''sdk_links''', '''sdk_links'': ''links''')"
+powershell -Command "Set-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py ((Get-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py -Raw) -replace '''sdk_links'': ''sdkLinks''', '''sdk_links'': ''links''')"
 echo "completed the task of replacing the links keyword in pbl_payment_links_all_get200_response.py model"
 
 git checkout ..\README.md
