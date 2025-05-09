@@ -10,6 +10,11 @@ rd /s /q ..\CyberSource\apis
 rd /s /q ..\CyberSource\models
 rd /s /q ..\test
 
+setlocal enabledelayedexpansion
+python replaceFieldNamesForPaths.py -i cybersource-rest-spec.json -o cybersource-rest-spec-python.json > replaceFieldLogs.log
+del replaceFieldLogs.log
+endlocal
+
 REM Command to generate SDK
 
 java -jar swagger-codegen-cli-2.4.38.jar generate -t cybersource-python-template -i cybersource-rest-spec-python.json -l python -o ../ -c cybersource-python-config.json
@@ -72,6 +77,11 @@ powershell -Command " rename-item -Path ..\docs\Tmsv2customersEmbeddedDefaultPay
 powershell -Command " rename-item -Path ..\docs\Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifierProcessingInformationAuthorizationOptionsInitiator.md  -newname Tmsv2customersEmbeddedAuthorizationOptionsInitiator.md"
 
 REM powershell -Command " rename-item -Path ..\docs\RiskV1AuthenticationExemptionsPost201ResponseConsumerAuthenticationInformationStrongAuthentication.md   -newname RiskV1AuthenticationExemptionsPost201ResponseStrongAuthentication.md"
+
+@REM replace sdkLinks fieldName to links for supporting links field name in request/response body
+echo "starting of replacing the links keyword in pbl_payment_links_all_get200_response.py model"
+powershell -Command "Set-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py ((Get-Content ..\CyberSource\models\pbl_payment_links_all_get200_response.py -Raw) -replace '''sdk_links'': ''sdk_links''', '''sdk_links'': ''links''')"
+echo "completed the task of replacing the links keyword in pbl_payment_links_all_get200_response.py model"
 
 git checkout ..\README.md
 
