@@ -31,26 +31,31 @@ class RiskProducts(object):
     """
     swagger_types = {
         'fraud_management_essentials': 'RiskProductsFraudManagementEssentials',
-        'decision_manager': 'RiskProductsDecisionManager'
+        'decision_manager': 'RiskProductsDecisionManager',
+        'portfolio_risk_controls': 'RiskProductsPortfolioRiskControls'
     }
 
     attribute_map = {
         'fraud_management_essentials': 'fraudManagementEssentials',
-        'decision_manager': 'decisionManager'
+        'decision_manager': 'decisionManager',
+        'portfolio_risk_controls': 'portfolioRiskControls'
     }
 
-    def __init__(self, fraud_management_essentials=None, decision_manager=None):
+    def __init__(self, fraud_management_essentials=None, decision_manager=None, portfolio_risk_controls=None):
         """
         RiskProducts - a model defined in Swagger
         """
 
         self._fraud_management_essentials = None
         self._decision_manager = None
+        self._portfolio_risk_controls = None
 
         if fraud_management_essentials is not None:
           self.fraud_management_essentials = fraud_management_essentials
         if decision_manager is not None:
           self.decision_manager = decision_manager
+        if portfolio_risk_controls is not None:
+          self.portfolio_risk_controls = portfolio_risk_controls
 
     @property
     def fraud_management_essentials(self):
@@ -93,6 +98,27 @@ class RiskProducts(object):
         """
 
         self._decision_manager = decision_manager
+
+    @property
+    def portfolio_risk_controls(self):
+        """
+        Gets the portfolio_risk_controls of this RiskProducts.
+
+        :return: The portfolio_risk_controls of this RiskProducts.
+        :rtype: RiskProductsPortfolioRiskControls
+        """
+        return self._portfolio_risk_controls
+
+    @portfolio_risk_controls.setter
+    def portfolio_risk_controls(self, portfolio_risk_controls):
+        """
+        Sets the portfolio_risk_controls of this RiskProducts.
+
+        :param portfolio_risk_controls: The portfolio_risk_controls of this RiskProducts.
+        :type: RiskProductsPortfolioRiskControls
+        """
+
+        self._portfolio_risk_controls = portfolio_risk_controls
 
     def to_dict(self):
         """

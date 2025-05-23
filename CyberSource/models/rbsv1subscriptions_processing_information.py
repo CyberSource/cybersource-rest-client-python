@@ -56,7 +56,7 @@ class Rbsv1subscriptionsProcessingInformation(object):
     def commerce_indicator(self):
         """
         Gets the commerce_indicator of this Rbsv1subscriptionsProcessingInformation.
-        Commerce Indicator is a way to identify the type of transaction. Some payment card companies use this information when determining discount rates.  Valid values: - `MOTO` - `RECURRING` - `INTERNET`  Please add the ecommerce indicator based on the rules defined by your gateway/processor. Some gateways may not accept the Commerce Indicator `RECURRING` with a Zero Dollar Authorization, that is done for subscriptions starting at a future date. 
+        > This field is ignored when you provide the `subscriptionInformation.originalTransactionId` or update the subscription.  Commerce Indicator is a way to identify the type of transaction. Some payment card companies use this information when determining discount rates.  Valid values: - `MOTO` - `RECURRING` - `INTERNET`  Please add the ecommerce indicator based on the rules defined by your gateway/processor. Some gateways may not accept the Commerce Indicator `RECURRING` with a Zero Dollar Authorization, that is done for subscriptions starting at a future date. 
 
         :return: The commerce_indicator of this Rbsv1subscriptionsProcessingInformation.
         :rtype: str
@@ -67,7 +67,7 @@ class Rbsv1subscriptionsProcessingInformation(object):
     def commerce_indicator(self, commerce_indicator):
         """
         Sets the commerce_indicator of this Rbsv1subscriptionsProcessingInformation.
-        Commerce Indicator is a way to identify the type of transaction. Some payment card companies use this information when determining discount rates.  Valid values: - `MOTO` - `RECURRING` - `INTERNET`  Please add the ecommerce indicator based on the rules defined by your gateway/processor. Some gateways may not accept the Commerce Indicator `RECURRING` with a Zero Dollar Authorization, that is done for subscriptions starting at a future date. 
+        > This field is ignored when you provide the `subscriptionInformation.originalTransactionId` or update the subscription.  Commerce Indicator is a way to identify the type of transaction. Some payment card companies use this information when determining discount rates.  Valid values: - `MOTO` - `RECURRING` - `INTERNET`  Please add the ecommerce indicator based on the rules defined by your gateway/processor. Some gateways may not accept the Commerce Indicator `RECURRING` with a Zero Dollar Authorization, that is done for subscriptions starting at a future date. 
 
         :param commerce_indicator: The commerce_indicator of this Rbsv1subscriptionsProcessingInformation.
         :type: str

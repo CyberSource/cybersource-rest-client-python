@@ -30,7 +30,7 @@ class CommerceSolutionsProductsTokenManagement(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'subscription_information': 'PaymentsProductsPayerAuthenticationSubscriptionInformation',
+        'subscription_information': 'PaymentsProductsAlternativePaymentMethodsSubscriptionInformation',
         'configuration_information': 'CommerceSolutionsProductsTokenManagementConfigurationInformation'
     }
 
@@ -58,7 +58,7 @@ class CommerceSolutionsProductsTokenManagement(object):
         Gets the subscription_information of this CommerceSolutionsProductsTokenManagement.
 
         :return: The subscription_information of this CommerceSolutionsProductsTokenManagement.
-        :rtype: PaymentsProductsPayerAuthenticationSubscriptionInformation
+        :rtype: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
         """
         return self._subscription_information
 
@@ -68,7 +68,7 @@ class CommerceSolutionsProductsTokenManagement(object):
         Sets the subscription_information of this CommerceSolutionsProductsTokenManagement.
 
         :param subscription_information: The subscription_information of this CommerceSolutionsProductsTokenManagement.
-        :type: PaymentsProductsPayerAuthenticationSubscriptionInformation
+        :type: PaymentsProductsAlternativePaymentMethodsSubscriptionInformation
         """
 
         self._subscription_information = subscription_information

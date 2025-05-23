@@ -32,7 +32,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     swagger_types = {
         'code': 'str',
         'comments': 'str',
-        'partner': 'Riskv1decisionsClientReferenceInformationPartner',
+        'partner': 'Rbsv1subscriptionsClientReferenceInformationPartner',
         'application_name': 'str',
         'application_version': 'str',
         'application_user': 'str'
@@ -76,7 +76,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def code(self):
         """
         Gets the code of this Rbsv1subscriptionsClientReferenceInformation.
-        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        > Deprecated: This field is ignored.  Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :return: The code of this Rbsv1subscriptionsClientReferenceInformation.
         :rtype: str
@@ -87,7 +87,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def code(self, code):
         """
         Sets the code of this Rbsv1subscriptionsClientReferenceInformation.
-        Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
+        > Deprecated: This field is ignored.  Merchant-generated order reference or tracking number. It is recommended that you send a unique value for each transaction so that you can perform meaningful searches for the transaction.  #### Used by **Authorization** Required field.  #### PIN Debit Requests for PIN debit reversals need to use the same merchant reference number that was used in the transaction that is being reversed.  Required field for all PIN Debit requests (purchase, credit, and reversal).  #### FDC Nashville Global Certain circumstances can cause the processor to truncate this value to 15 or 17 characters for Level II and Level III processing, which can cause a discrepancy between the value you submit and the value included in some processor reports. 
 
         :param code: The code of this Rbsv1subscriptionsClientReferenceInformation.
         :type: str
@@ -99,7 +99,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def comments(self):
         """
         Gets the comments of this Rbsv1subscriptionsClientReferenceInformation.
-        Brief description of the order or any comment you wish to add to the order. 
+        > Deprecated: This field is ignored.  Brief description of the order or any comment you wish to add to the order. 
 
         :return: The comments of this Rbsv1subscriptionsClientReferenceInformation.
         :rtype: str
@@ -110,7 +110,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def comments(self, comments):
         """
         Sets the comments of this Rbsv1subscriptionsClientReferenceInformation.
-        Brief description of the order or any comment you wish to add to the order. 
+        > Deprecated: This field is ignored.  Brief description of the order or any comment you wish to add to the order. 
 
         :param comments: The comments of this Rbsv1subscriptionsClientReferenceInformation.
         :type: str
@@ -124,7 +124,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
         Gets the partner of this Rbsv1subscriptionsClientReferenceInformation.
 
         :return: The partner of this Rbsv1subscriptionsClientReferenceInformation.
-        :rtype: Riskv1decisionsClientReferenceInformationPartner
+        :rtype: Rbsv1subscriptionsClientReferenceInformationPartner
         """
         return self._partner
 
@@ -134,7 +134,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
         Sets the partner of this Rbsv1subscriptionsClientReferenceInformation.
 
         :param partner: The partner of this Rbsv1subscriptionsClientReferenceInformation.
-        :type: Riskv1decisionsClientReferenceInformationPartner
+        :type: Rbsv1subscriptionsClientReferenceInformationPartner
         """
 
         self._partner = partner
@@ -143,7 +143,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_name(self):
         """
         Gets the application_name of this Rbsv1subscriptionsClientReferenceInformation.
-        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
+        > Deprecated: This field is ignored.  The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :return: The application_name of this Rbsv1subscriptionsClientReferenceInformation.
         :rtype: str
@@ -154,7 +154,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_name(self, application_name):
         """
         Sets the application_name of this Rbsv1subscriptionsClientReferenceInformation.
-        The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
+        > Deprecated: This field is ignored.  The name of the Connection Method client (such as Virtual Terminal or SOAP Toolkit API) that the merchant uses to send a transaction request to CyberSource. 
 
         :param application_name: The application_name of this Rbsv1subscriptionsClientReferenceInformation.
         :type: str
@@ -166,7 +166,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_version(self):
         """
         Gets the application_version of this Rbsv1subscriptionsClientReferenceInformation.
-        Version of the CyberSource application or integration used for a transaction. 
+        > Deprecated: This field is ignored.  Version of the CyberSource application or integration used for a transaction. 
 
         :return: The application_version of this Rbsv1subscriptionsClientReferenceInformation.
         :rtype: str
@@ -177,7 +177,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_version(self, application_version):
         """
         Sets the application_version of this Rbsv1subscriptionsClientReferenceInformation.
-        Version of the CyberSource application or integration used for a transaction. 
+        > Deprecated: This field is ignored.  Version of the CyberSource application or integration used for a transaction. 
 
         :param application_version: The application_version of this Rbsv1subscriptionsClientReferenceInformation.
         :type: str
@@ -189,7 +189,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_user(self):
         """
         Gets the application_user of this Rbsv1subscriptionsClientReferenceInformation.
-        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
+        > Deprecated: This field is ignored.  The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :return: The application_user of this Rbsv1subscriptionsClientReferenceInformation.
         :rtype: str
@@ -200,7 +200,7 @@ class Rbsv1subscriptionsClientReferenceInformation(object):
     def application_user(self, application_user):
         """
         Sets the application_user of this Rbsv1subscriptionsClientReferenceInformation.
-        The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
+        > Deprecated: This field is ignored.  The entity that is responsible for running the transaction and submitting the processing request to CyberSource. This could be a person, a system, or a connection method. 
 
         :param application_user: The application_user of this Rbsv1subscriptionsClientReferenceInformation.
         :type: str

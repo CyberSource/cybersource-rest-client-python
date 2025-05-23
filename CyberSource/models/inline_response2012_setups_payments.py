@@ -31,6 +31,7 @@ class InlineResponse2012SetupsPayments(object):
     """
     swagger_types = {
         'card_processing': 'InlineResponse2012SetupsPaymentsCardProcessing',
+        'alternative_payment_methods': 'InlineResponse2012SetupsPaymentsAlternativePaymentMethods',
         'card_present_connect': 'InlineResponse2012SetupsPaymentsCardProcessing',
         'e_check': 'InlineResponse2012SetupsPaymentsCardProcessing',
         'payer_authentication': 'InlineResponse2012SetupsPaymentsCardProcessing',
@@ -52,6 +53,7 @@ class InlineResponse2012SetupsPayments(object):
 
     attribute_map = {
         'card_processing': 'cardProcessing',
+        'alternative_payment_methods': 'alternativePaymentMethods',
         'card_present_connect': 'cardPresentConnect',
         'e_check': 'eCheck',
         'payer_authentication': 'payerAuthentication',
@@ -71,12 +73,13 @@ class InlineResponse2012SetupsPayments(object):
         'service_fee': 'serviceFee'
     }
 
-    def __init__(self, card_processing=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, cybs_ready_terminal=None, payment_orchestration=None, payouts=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
         """
         InlineResponse2012SetupsPayments - a model defined in Swagger
         """
 
         self._card_processing = None
+        self._alternative_payment_methods = None
         self._card_present_connect = None
         self._e_check = None
         self._payer_authentication = None
@@ -97,6 +100,8 @@ class InlineResponse2012SetupsPayments(object):
 
         if card_processing is not None:
           self.card_processing = card_processing
+        if alternative_payment_methods is not None:
+          self.alternative_payment_methods = alternative_payment_methods
         if card_present_connect is not None:
           self.card_present_connect = card_present_connect
         if e_check is not None:
@@ -152,6 +157,27 @@ class InlineResponse2012SetupsPayments(object):
         """
 
         self._card_processing = card_processing
+
+    @property
+    def alternative_payment_methods(self):
+        """
+        Gets the alternative_payment_methods of this InlineResponse2012SetupsPayments.
+
+        :return: The alternative_payment_methods of this InlineResponse2012SetupsPayments.
+        :rtype: InlineResponse2012SetupsPaymentsAlternativePaymentMethods
+        """
+        return self._alternative_payment_methods
+
+    @alternative_payment_methods.setter
+    def alternative_payment_methods(self, alternative_payment_methods):
+        """
+        Sets the alternative_payment_methods of this InlineResponse2012SetupsPayments.
+
+        :param alternative_payment_methods: The alternative_payment_methods of this InlineResponse2012SetupsPayments.
+        :type: InlineResponse2012SetupsPaymentsAlternativePaymentMethods
+        """
+
+        self._alternative_payment_methods = alternative_payment_methods
 
     @property
     def card_present_connect(self):

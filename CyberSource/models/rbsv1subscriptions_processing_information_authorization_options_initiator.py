@@ -51,7 +51,7 @@ class Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator(objec
     def type(self):
         """
         Gets the type of this Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator.
-        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
+        > This field is ignored when you provide the `subscriptionInformation.originalTransactionId` or update the subscription.  This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
 
         :return: The type of this Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator.
         :rtype: str
@@ -62,7 +62,7 @@ class Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator(objec
     def type(self, type):
         """
         Sets the type of this Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator.
-        This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
+        > This field is ignored when you provide the `subscriptionInformation.originalTransactionId` or update the subscription.  This field indicates whether the transaction is a merchant-initiated transaction or customer-initiated transaction.  Valid values: - **customer** - **merchant** 
 
         :param type: The type of this Rbsv1subscriptionsProcessingInformationAuthorizationOptionsInitiator.
         :type: str

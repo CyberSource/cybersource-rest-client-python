@@ -33,17 +33,21 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         'code': 'str',
         'plan_id': 'str',
         'name': 'str',
-        'start_date': 'str'
+        'start_date': 'str',
+        'original_transaction_id': 'str',
+        'original_transaction_authorized_amount': 'str'
     }
 
     attribute_map = {
         'code': 'code',
         'plan_id': 'planId',
         'name': 'name',
-        'start_date': 'startDate'
+        'start_date': 'startDate',
+        'original_transaction_id': 'originalTransactionId',
+        'original_transaction_authorized_amount': 'originalTransactionAuthorizedAmount'
     }
 
-    def __init__(self, code=None, plan_id=None, name=None, start_date=None):
+    def __init__(self, code=None, plan_id=None, name=None, start_date=None, original_transaction_id=None, original_transaction_authorized_amount=None):
         """
         Rbsv1subscriptionsSubscriptionInformation - a model defined in Swagger
         """
@@ -52,6 +56,8 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         self._plan_id = None
         self._name = None
         self._start_date = None
+        self._original_transaction_id = None
+        self._original_transaction_authorized_amount = None
 
         if code is not None:
           self.code = code
@@ -59,6 +65,10 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
           self.plan_id = plan_id
         self.name = name
         self.start_date = start_date
+        if original_transaction_id is not None:
+          self.original_transaction_id = original_transaction_id
+        if original_transaction_authorized_amount is not None:
+          self.original_transaction_authorized_amount = original_transaction_authorized_amount
 
     @property
     def code(self):
@@ -151,6 +161,52 @@ class Rbsv1subscriptionsSubscriptionInformation(object):
         """
 
         self._start_date = start_date
+
+    @property
+    def original_transaction_id(self):
+        """
+        Gets the original_transaction_id of this Rbsv1subscriptionsSubscriptionInformation.
+        Network transaction identifier that was returned in the payment response field _processorInformation.transactionId_ in the reply message for the original subscription-initializing payment. 
+
+        :return: The original_transaction_id of this Rbsv1subscriptionsSubscriptionInformation.
+        :rtype: str
+        """
+        return self._original_transaction_id
+
+    @original_transaction_id.setter
+    def original_transaction_id(self, original_transaction_id):
+        """
+        Sets the original_transaction_id of this Rbsv1subscriptionsSubscriptionInformation.
+        Network transaction identifier that was returned in the payment response field _processorInformation.transactionId_ in the reply message for the original subscription-initializing payment. 
+
+        :param original_transaction_id: The original_transaction_id of this Rbsv1subscriptionsSubscriptionInformation.
+        :type: str
+        """
+
+        self._original_transaction_id = original_transaction_id
+
+    @property
+    def original_transaction_authorized_amount(self):
+        """
+        Gets the original_transaction_authorized_amount of this Rbsv1subscriptionsSubscriptionInformation.
+        Amount of the original subscription-initializing payment.  *Required when using a Diners or Discover card*. 
+
+        :return: The original_transaction_authorized_amount of this Rbsv1subscriptionsSubscriptionInformation.
+        :rtype: str
+        """
+        return self._original_transaction_authorized_amount
+
+    @original_transaction_authorized_amount.setter
+    def original_transaction_authorized_amount(self, original_transaction_authorized_amount):
+        """
+        Sets the original_transaction_authorized_amount of this Rbsv1subscriptionsSubscriptionInformation.
+        Amount of the original subscription-initializing payment.  *Required when using a Diners or Discover card*. 
+
+        :param original_transaction_authorized_amount: The original_transaction_authorized_amount of this Rbsv1subscriptionsSubscriptionInformation.
+        :type: str
+        """
+
+        self._original_transaction_authorized_amount = original_transaction_authorized_amount
 
     def to_dict(self):
         """

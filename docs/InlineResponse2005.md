@@ -3,13 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**links** | [**list[InlineResponse2005Links]**](InlineResponse2005Links.md) |  | [optional] 
-**object** | **str** |  | [optional] 
-**offset** | **int** |  | [optional] 
-**limit** | **int** |  | [optional] 
-**count** | **int** |  | [optional] 
-**total** | **int** |  | [optional] 
-**embedded** | [**InlineResponse2005Embedded**](InlineResponse2005Embedded.md) |  | [optional] 
+**status** | **str** | Possible values: - OK | [optional] 
+**devices** | [**list[Dmsv3devicesdeassociateDevices]**](Dmsv3devicesdeassociateDevices.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

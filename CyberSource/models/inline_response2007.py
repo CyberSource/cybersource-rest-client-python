@@ -30,287 +30,199 @@ class InlineResponse2007(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'version': 'str',
-        'report_created_date': 'str',
-        'batch_id': 'str',
-        'batch_source': 'str',
-        'batch_ca_endpoints': 'str',
-        'batch_created_date': 'str',
-        'merchant_reference': 'str',
-        'totals': 'InlineResponse2005EmbeddedTotals',
-        'billing': 'InlineResponse2006Billing',
-        'records': 'list[InlineResponse2007Records]'
+        'links': 'list[InlineResponse2007Links]',
+        'object': 'str',
+        'offset': 'int',
+        'limit': 'int',
+        'count': 'int',
+        'total': 'int',
+        'embedded': 'InlineResponse2007Embedded'
     }
 
     attribute_map = {
-        'version': 'version',
-        'report_created_date': 'reportCreatedDate',
-        'batch_id': 'batchId',
-        'batch_source': 'batchSource',
-        'batch_ca_endpoints': 'batchCaEndpoints',
-        'batch_created_date': 'batchCreatedDate',
-        'merchant_reference': 'merchantReference',
-        'totals': 'totals',
-        'billing': 'billing',
-        'records': 'records'
+        'links': '_links',
+        'object': 'object',
+        'offset': 'offset',
+        'limit': 'limit',
+        'count': 'count',
+        'total': 'total',
+        'embedded': '_embedded'
     }
 
-    def __init__(self, version=None, report_created_date=None, batch_id=None, batch_source=None, batch_ca_endpoints=None, batch_created_date=None, merchant_reference=None, totals=None, billing=None, records=None):
+    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
         """
         InlineResponse2007 - a model defined in Swagger
         """
 
-        self._version = None
-        self._report_created_date = None
-        self._batch_id = None
-        self._batch_source = None
-        self._batch_ca_endpoints = None
-        self._batch_created_date = None
-        self._merchant_reference = None
-        self._totals = None
-        self._billing = None
-        self._records = None
+        self._links = None
+        self._object = None
+        self._offset = None
+        self._limit = None
+        self._count = None
+        self._total = None
+        self._embedded = None
 
-        if version is not None:
-          self.version = version
-        if report_created_date is not None:
-          self.report_created_date = report_created_date
-        if batch_id is not None:
-          self.batch_id = batch_id
-        if batch_source is not None:
-          self.batch_source = batch_source
-        if batch_ca_endpoints is not None:
-          self.batch_ca_endpoints = batch_ca_endpoints
-        if batch_created_date is not None:
-          self.batch_created_date = batch_created_date
-        if merchant_reference is not None:
-          self.merchant_reference = merchant_reference
-        if totals is not None:
-          self.totals = totals
-        if billing is not None:
-          self.billing = billing
-        if records is not None:
-          self.records = records
+        if links is not None:
+          self.links = links
+        if object is not None:
+          self.object = object
+        if offset is not None:
+          self.offset = offset
+        if limit is not None:
+          self.limit = limit
+        if count is not None:
+          self.count = count
+        if total is not None:
+          self.total = total
+        if embedded is not None:
+          self.embedded = embedded
 
     @property
-    def version(self):
+    def links(self):
         """
-        Gets the version of this InlineResponse2007.
+        Gets the links of this InlineResponse2007.
 
-        :return: The version of this InlineResponse2007.
+        :return: The links of this InlineResponse2007.
+        :rtype: list[InlineResponse2007Links]
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """
+        Sets the links of this InlineResponse2007.
+
+        :param links: The links of this InlineResponse2007.
+        :type: list[InlineResponse2007Links]
+        """
+
+        self._links = links
+
+    @property
+    def object(self):
+        """
+        Gets the object of this InlineResponse2007.
+
+        :return: The object of this InlineResponse2007.
         :rtype: str
         """
-        return self._version
+        return self._object
 
-    @version.setter
-    def version(self, version):
+    @object.setter
+    def object(self, object):
         """
-        Sets the version of this InlineResponse2007.
+        Sets the object of this InlineResponse2007.
 
-        :param version: The version of this InlineResponse2007.
+        :param object: The object of this InlineResponse2007.
         :type: str
         """
 
-        self._version = version
+        self._object = object
 
     @property
-    def report_created_date(self):
+    def offset(self):
         """
-        Gets the report_created_date of this InlineResponse2007.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Gets the offset of this InlineResponse2007.
 
-        :return: The report_created_date of this InlineResponse2007.
-        :rtype: str
+        :return: The offset of this InlineResponse2007.
+        :rtype: int
         """
-        return self._report_created_date
+        return self._offset
 
-    @report_created_date.setter
-    def report_created_date(self, report_created_date):
+    @offset.setter
+    def offset(self, offset):
         """
-        Sets the report_created_date of this InlineResponse2007.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Sets the offset of this InlineResponse2007.
 
-        :param report_created_date: The report_created_date of this InlineResponse2007.
-        :type: str
+        :param offset: The offset of this InlineResponse2007.
+        :type: int
         """
 
-        self._report_created_date = report_created_date
+        self._offset = offset
 
     @property
-    def batch_id(self):
+    def limit(self):
         """
-        Gets the batch_id of this InlineResponse2007.
-        Unique identification number assigned to the submitted request.
+        Gets the limit of this InlineResponse2007.
 
-        :return: The batch_id of this InlineResponse2007.
-        :rtype: str
+        :return: The limit of this InlineResponse2007.
+        :rtype: int
         """
-        return self._batch_id
+        return self._limit
 
-    @batch_id.setter
-    def batch_id(self, batch_id):
+    @limit.setter
+    def limit(self, limit):
         """
-        Sets the batch_id of this InlineResponse2007.
-        Unique identification number assigned to the submitted request.
+        Sets the limit of this InlineResponse2007.
 
-        :param batch_id: The batch_id of this InlineResponse2007.
-        :type: str
+        :param limit: The limit of this InlineResponse2007.
+        :type: int
         """
 
-        self._batch_id = batch_id
+        self._limit = limit
 
     @property
-    def batch_source(self):
+    def count(self):
         """
-        Gets the batch_source of this InlineResponse2007.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Gets the count of this InlineResponse2007.
 
-        :return: The batch_source of this InlineResponse2007.
-        :rtype: str
+        :return: The count of this InlineResponse2007.
+        :rtype: int
         """
-        return self._batch_source
+        return self._count
 
-    @batch_source.setter
-    def batch_source(self, batch_source):
+    @count.setter
+    def count(self, count):
         """
-        Sets the batch_source of this InlineResponse2007.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Sets the count of this InlineResponse2007.
 
-        :param batch_source: The batch_source of this InlineResponse2007.
-        :type: str
+        :param count: The count of this InlineResponse2007.
+        :type: int
         """
 
-        self._batch_source = batch_source
+        self._count = count
 
     @property
-    def batch_ca_endpoints(self):
+    def total(self):
         """
-        Gets the batch_ca_endpoints of this InlineResponse2007.
+        Gets the total of this InlineResponse2007.
 
-        :return: The batch_ca_endpoints of this InlineResponse2007.
-        :rtype: str
+        :return: The total of this InlineResponse2007.
+        :rtype: int
         """
-        return self._batch_ca_endpoints
+        return self._total
 
-    @batch_ca_endpoints.setter
-    def batch_ca_endpoints(self, batch_ca_endpoints):
+    @total.setter
+    def total(self, total):
         """
-        Sets the batch_ca_endpoints of this InlineResponse2007.
+        Sets the total of this InlineResponse2007.
 
-        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2007.
-        :type: str
+        :param total: The total of this InlineResponse2007.
+        :type: int
         """
 
-        self._batch_ca_endpoints = batch_ca_endpoints
+        self._total = total
 
     @property
-    def batch_created_date(self):
+    def embedded(self):
         """
-        Gets the batch_created_date of this InlineResponse2007.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Gets the embedded of this InlineResponse2007.
 
-        :return: The batch_created_date of this InlineResponse2007.
-        :rtype: str
+        :return: The embedded of this InlineResponse2007.
+        :rtype: InlineResponse2007Embedded
         """
-        return self._batch_created_date
+        return self._embedded
 
-    @batch_created_date.setter
-    def batch_created_date(self, batch_created_date):
+    @embedded.setter
+    def embedded(self, embedded):
         """
-        Sets the batch_created_date of this InlineResponse2007.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Sets the embedded of this InlineResponse2007.
 
-        :param batch_created_date: The batch_created_date of this InlineResponse2007.
-        :type: str
+        :param embedded: The embedded of this InlineResponse2007.
+        :type: InlineResponse2007Embedded
         """
 
-        self._batch_created_date = batch_created_date
-
-    @property
-    def merchant_reference(self):
-        """
-        Gets the merchant_reference of this InlineResponse2007.
-        Reference used by merchant to identify batch.
-
-        :return: The merchant_reference of this InlineResponse2007.
-        :rtype: str
-        """
-        return self._merchant_reference
-
-    @merchant_reference.setter
-    def merchant_reference(self, merchant_reference):
-        """
-        Sets the merchant_reference of this InlineResponse2007.
-        Reference used by merchant to identify batch.
-
-        :param merchant_reference: The merchant_reference of this InlineResponse2007.
-        :type: str
-        """
-
-        self._merchant_reference = merchant_reference
-
-    @property
-    def totals(self):
-        """
-        Gets the totals of this InlineResponse2007.
-
-        :return: The totals of this InlineResponse2007.
-        :rtype: InlineResponse2005EmbeddedTotals
-        """
-        return self._totals
-
-    @totals.setter
-    def totals(self, totals):
-        """
-        Sets the totals of this InlineResponse2007.
-
-        :param totals: The totals of this InlineResponse2007.
-        :type: InlineResponse2005EmbeddedTotals
-        """
-
-        self._totals = totals
-
-    @property
-    def billing(self):
-        """
-        Gets the billing of this InlineResponse2007.
-
-        :return: The billing of this InlineResponse2007.
-        :rtype: InlineResponse2006Billing
-        """
-        return self._billing
-
-    @billing.setter
-    def billing(self, billing):
-        """
-        Sets the billing of this InlineResponse2007.
-
-        :param billing: The billing of this InlineResponse2007.
-        :type: InlineResponse2006Billing
-        """
-
-        self._billing = billing
-
-    @property
-    def records(self):
-        """
-        Gets the records of this InlineResponse2007.
-
-        :return: The records of this InlineResponse2007.
-        :rtype: list[InlineResponse2007Records]
-        """
-        return self._records
-
-    @records.setter
-    def records(self, records):
-        """
-        Sets the records of this InlineResponse2007.
-
-        :param records: The records of this InlineResponse2007.
-        :type: list[InlineResponse2007Records]
-        """
-
-        self._records = records
+        self._embedded = embedded
 
     def to_dict(self):
         """
