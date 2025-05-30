@@ -3,16 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**links** | [**InlineResponse2006Links**](InlineResponse2006Links.md) |  | [optional] 
-**batch_id** | **str** | Unique identification number assigned to the submitted request. | [optional] 
-**batch_created_date** | **str** | ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ | [optional] 
-**batch_source** | **str** | Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE  | [optional] 
-**merchant_reference** | **str** | Reference used by merchant to identify batch. | [optional] 
-**batch_ca_endpoints** | **str** |  | [optional] 
-**status** | **str** | Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED  | [optional] 
-**totals** | [**InlineResponse2005EmbeddedTotals**](InlineResponse2005EmbeddedTotals.md) |  | [optional] 
-**billing** | [**InlineResponse2006Billing**](InlineResponse2006Billing.md) |  | [optional] 
-**description** | **str** |  | [optional] 
+**total_count** | **int** | Total number of results. | [optional] 
+**offset** | **int** | Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit&#x3D;5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  &#x60;offset&#x3D;0&#x60; &#x60;offset&#x3D;5&#x60; &#x60;offset&#x3D;10&#x60;  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned.  | [optional] 
+**limit** | **int** | Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500.  | [optional] 
+**sort** | **str** | A comma separated list of the following form:  &#x60;terminalCreationDate:desc or serialNumber or terminalUpdationDate&#x60;  | [optional] 
+**count** | **int** | Results for this page, this could be below the limit. | [optional] 
+**devices** | [**list[InlineResponse2006Devices]**](InlineResponse2006Devices.md) | A collection of devices | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

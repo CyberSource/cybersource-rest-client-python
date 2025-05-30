@@ -22,6 +22,7 @@ from six import iteritems
 from ..configuration import Configuration
 from ..api_client import ApiClient
 import CyberSource.logging.log_factory as LogFactory
+from CyberSource.utilities.MultipartHelpers import MultipartHelpers
 from authenticationsdk.util.MLEUtility import MLEUtility
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 from authenticationsdk.util.Utility import process_body
@@ -62,7 +63,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -92,7 +93,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2007
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -133,23 +134,25 @@ class BatchesApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_report,get_batch_report_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_report,get_batch_report_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 
@@ -160,7 +163,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2007',
+                                        response_type='InlineResponse2009',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -183,7 +186,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -213,7 +216,7 @@ class BatchesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str batch_id: Unique identification number assigned to the submitted request. (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -254,23 +257,25 @@ class BatchesApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_status,get_batch_status_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_status,get_batch_status_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 
@@ -281,7 +286,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2006',
+                                        response_type='InlineResponse2008',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -307,7 +312,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse2005
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -340,7 +345,7 @@ class BatchesApi(object):
         :param int limit: The maximum number that can be returned in the array starting from the offset record in zero-based dataset.
         :param str from_date: ISO-8601 format: yyyyMMddTHHmmssZ
         :param str to_date: ISO-8601 format: yyyyMMddTHHmmssZ
-        :return: InlineResponse2005
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -381,23 +386,25 @@ class BatchesApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'GET' in ('POST'):
-            body_params = '{}'
-
-        if 'GET' == GlobalLabelParameters.POST or 'GET' == GlobalLabelParameters.PUT or 'GET' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batches_list,get_batches_list_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'GET' in ('POST'):
+            body_params = '{}'
+        
+        file_post_body_and_delimiter = MultipartHelpers.build_post_body_for_files(local_var_files)
+        if file_post_body_and_delimiter is not None:
+            body_params = file_post_body_and_delimiter[0]
+            header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batches_list,get_batches_list_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 
@@ -408,7 +415,7 @@ class BatchesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2005',
+                                        response_type='InlineResponse2007',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -499,26 +506,24 @@ class BatchesApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        
-            sdkTracker = SdkTracker()
-            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
-
-        if 'POST' == GlobalLabelParameters.POST or 'POST' == GlobalLabelParameters.PUT or 'POST' == GlobalLabelParameters.PATCH:
-            body_params = process_body(body_params)
-
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_batch,post_batch_with_http_info"):
-                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
-        
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=utf-8'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=utf-8'])
 
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_batch,post_batch_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
         # Authentication setting
         auth_settings = []
 

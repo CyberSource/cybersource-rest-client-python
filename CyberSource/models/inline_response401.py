@@ -30,187 +30,66 @@ class InlineResponse401(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse401Links',
+        'status': 'str',
+        'message': 'str',
         'code': 'str',
-        'correlation_id': 'str',
-        'detail': 'str',
-        'fields': 'list[InlineResponse401Fields]',
-        'localization_key': 'str',
-        'message': 'str'
+        'submit_time_utc': 'str'
     }
 
     attribute_map = {
-        'links': '_links',
+        'status': 'status',
+        'message': 'message',
         'code': 'code',
-        'correlation_id': 'correlationId',
-        'detail': 'detail',
-        'fields': 'fields',
-        'localization_key': 'localizationKey',
-        'message': 'message'
+        'submit_time_utc': 'submitTimeUtc'
     }
 
-    def __init__(self, links=None, code=None, correlation_id=None, detail=None, fields=None, localization_key=None, message=None):
+    def __init__(self, status=None, message=None, code=None, submit_time_utc=None):
         """
         InlineResponse401 - a model defined in Swagger
         """
 
-        self._links = None
-        self._code = None
-        self._correlation_id = None
-        self._detail = None
-        self._fields = None
-        self._localization_key = None
+        self._status = None
         self._message = None
+        self._code = None
+        self._submit_time_utc = None
 
-        if links is not None:
-          self.links = links
-        if code is not None:
-          self.code = code
-        if correlation_id is not None:
-          self.correlation_id = correlation_id
-        if detail is not None:
-          self.detail = detail
-        if fields is not None:
-          self.fields = fields
-        if localization_key is not None:
-          self.localization_key = localization_key
+        if status is not None:
+          self.status = status
         if message is not None:
           self.message = message
+        if code is not None:
+          self.code = code
+        if submit_time_utc is not None:
+          self.submit_time_utc = submit_time_utc
 
     @property
-    def links(self):
+    def status(self):
         """
-        Gets the links of this InlineResponse401.
+        Gets the status of this InlineResponse401.
+        The status of the submitted request.   Possible values: - UNAUTHORIZED
 
-        :return: The links of this InlineResponse401.
-        :rtype: InlineResponse401Links
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse401.
-
-        :param links: The links of this InlineResponse401.
-        :type: InlineResponse401Links
-        """
-
-        self._links = links
-
-    @property
-    def code(self):
-        """
-        Gets the code of this InlineResponse401.
-        Valid Values:   * FORBIDDEN_RESPONSE   * VALIDATION_ERROR   * UNSUPPORTED_MEDIA_TYPE   * MALFORMED_PAYLOAD_ERROR   * SERVER_ERROR 
-
-        :return: The code of this InlineResponse401.
+        :return: The status of this InlineResponse401.
         :rtype: str
         """
-        return self._code
+        return self._status
 
-    @code.setter
-    def code(self, code):
+    @status.setter
+    def status(self, status):
         """
-        Sets the code of this InlineResponse401.
-        Valid Values:   * FORBIDDEN_RESPONSE   * VALIDATION_ERROR   * UNSUPPORTED_MEDIA_TYPE   * MALFORMED_PAYLOAD_ERROR   * SERVER_ERROR 
+        Sets the status of this InlineResponse401.
+        The status of the submitted request.   Possible values: - UNAUTHORIZED
 
-        :param code: The code of this InlineResponse401.
+        :param status: The status of this InlineResponse401.
         :type: str
         """
 
-        self._code = code
-
-    @property
-    def correlation_id(self):
-        """
-        Gets the correlation_id of this InlineResponse401.
-
-        :return: The correlation_id of this InlineResponse401.
-        :rtype: str
-        """
-        return self._correlation_id
-
-    @correlation_id.setter
-    def correlation_id(self, correlation_id):
-        """
-        Sets the correlation_id of this InlineResponse401.
-
-        :param correlation_id: The correlation_id of this InlineResponse401.
-        :type: str
-        """
-
-        self._correlation_id = correlation_id
-
-    @property
-    def detail(self):
-        """
-        Gets the detail of this InlineResponse401.
-
-        :return: The detail of this InlineResponse401.
-        :rtype: str
-        """
-        return self._detail
-
-    @detail.setter
-    def detail(self, detail):
-        """
-        Sets the detail of this InlineResponse401.
-
-        :param detail: The detail of this InlineResponse401.
-        :type: str
-        """
-
-        self._detail = detail
-
-    @property
-    def fields(self):
-        """
-        Gets the fields of this InlineResponse401.
-
-        :return: The fields of this InlineResponse401.
-        :rtype: list[InlineResponse401Fields]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """
-        Sets the fields of this InlineResponse401.
-
-        :param fields: The fields of this InlineResponse401.
-        :type: list[InlineResponse401Fields]
-        """
-
-        self._fields = fields
-
-    @property
-    def localization_key(self):
-        """
-        Gets the localization_key of this InlineResponse401.
-        Valid Values:   * cybsapi.forbidden.response   * cybsapi.validation.error   * cybsapi.media.notsupported 
-
-        :return: The localization_key of this InlineResponse401.
-        :rtype: str
-        """
-        return self._localization_key
-
-    @localization_key.setter
-    def localization_key(self, localization_key):
-        """
-        Sets the localization_key of this InlineResponse401.
-        Valid Values:   * cybsapi.forbidden.response   * cybsapi.validation.error   * cybsapi.media.notsupported 
-
-        :param localization_key: The localization_key of this InlineResponse401.
-        :type: str
-        """
-
-        self._localization_key = localization_key
+        self._status = status
 
     @property
     def message(self):
         """
         Gets the message of this InlineResponse401.
+        The detail message related to the status and reason listed above.
 
         :return: The message of this InlineResponse401.
         :rtype: str
@@ -221,12 +100,59 @@ class InlineResponse401(object):
     def message(self, message):
         """
         Sets the message of this InlineResponse401.
+        The detail message related to the status and reason listed above.
 
         :param message: The message of this InlineResponse401.
         :type: str
         """
 
         self._message = message
+
+    @property
+    def code(self):
+        """
+        Gets the code of this InlineResponse401.
+        An optional short string which identifies the exact error.
+
+        :return: The code of this InlineResponse401.
+        :rtype: str
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """
+        Sets the code of this InlineResponse401.
+        An optional short string which identifies the exact error.
+
+        :param code: The code of this InlineResponse401.
+        :type: str
+        """
+
+        self._code = code
+
+    @property
+    def submit_time_utc(self):
+        """
+        Gets the submit_time_utc of this InlineResponse401.
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :return: The submit_time_utc of this InlineResponse401.
+        :rtype: str
+        """
+        return self._submit_time_utc
+
+    @submit_time_utc.setter
+    def submit_time_utc(self, submit_time_utc):
+        """
+        Sets the submit_time_utc of this InlineResponse401.
+        Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC. 
+
+        :param submit_time_utc: The submit_time_utc of this InlineResponse401.
+        :type: str
+        """
+
+        self._submit_time_utc = submit_time_utc
 
     def to_dict(self):
         """

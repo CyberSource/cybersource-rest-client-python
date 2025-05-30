@@ -31,6 +31,7 @@ class PaymentsProducts(object):
     """
     swagger_types = {
         'card_processing': 'PaymentsProductsCardProcessing',
+        'alternative_payment_methods': 'PaymentsProductsAlternativePaymentMethods',
         'card_present_connect': 'PaymentsProductsCardPresentConnect',
         'cybs_ready_terminal': 'PaymentsProductsCybsReadyTerminal',
         'e_check': 'PaymentsProductsECheck',
@@ -53,6 +54,7 @@ class PaymentsProducts(object):
 
     attribute_map = {
         'card_processing': 'cardProcessing',
+        'alternative_payment_methods': 'alternativePaymentMethods',
         'card_present_connect': 'cardPresentConnect',
         'cybs_ready_terminal': 'cybsReadyTerminal',
         'e_check': 'eCheck',
@@ -73,12 +75,13 @@ class PaymentsProducts(object):
         'service_fee': 'serviceFee'
     }
 
-    def __init__(self, card_processing=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
+    def __init__(self, card_processing=None, alternative_payment_methods=None, card_present_connect=None, cybs_ready_terminal=None, e_check=None, payer_authentication=None, digital_payments=None, secure_acceptance=None, virtual_terminal=None, currency_conversion=None, tax=None, customer_invoicing=None, recurring_billing=None, payment_orchestration=None, payouts=None, differential_fee=None, pay_by_link=None, unified_checkout=None, receivables_manager=None, service_fee=None):
         """
         PaymentsProducts - a model defined in Swagger
         """
 
         self._card_processing = None
+        self._alternative_payment_methods = None
         self._card_present_connect = None
         self._cybs_ready_terminal = None
         self._e_check = None
@@ -100,6 +103,8 @@ class PaymentsProducts(object):
 
         if card_processing is not None:
           self.card_processing = card_processing
+        if alternative_payment_methods is not None:
+          self.alternative_payment_methods = alternative_payment_methods
         if card_present_connect is not None:
           self.card_present_connect = card_present_connect
         if cybs_ready_terminal is not None:
@@ -157,6 +162,27 @@ class PaymentsProducts(object):
         """
 
         self._card_processing = card_processing
+
+    @property
+    def alternative_payment_methods(self):
+        """
+        Gets the alternative_payment_methods of this PaymentsProducts.
+
+        :return: The alternative_payment_methods of this PaymentsProducts.
+        :rtype: PaymentsProductsAlternativePaymentMethods
+        """
+        return self._alternative_payment_methods
+
+    @alternative_payment_methods.setter
+    def alternative_payment_methods(self, alternative_payment_methods):
+        """
+        Sets the alternative_payment_methods of this PaymentsProducts.
+
+        :param alternative_payment_methods: The alternative_payment_methods of this PaymentsProducts.
+        :type: PaymentsProductsAlternativePaymentMethods
+        """
+
+        self._alternative_payment_methods = alternative_payment_methods
 
     @property
     def card_present_connect(self):

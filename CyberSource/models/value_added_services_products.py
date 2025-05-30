@@ -31,26 +31,31 @@ class ValueAddedServicesProducts(object):
     """
     swagger_types = {
         'reporting': 'PaymentsProductsTax',
-        'transaction_search': 'PaymentsProductsTax'
+        'transaction_search': 'PaymentsProductsTax',
+        'bank_account_validation': 'PaymentsProductsTax'
     }
 
     attribute_map = {
         'reporting': 'reporting',
-        'transaction_search': 'transactionSearch'
+        'transaction_search': 'transactionSearch',
+        'bank_account_validation': 'bankAccountValidation'
     }
 
-    def __init__(self, reporting=None, transaction_search=None):
+    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None):
         """
         ValueAddedServicesProducts - a model defined in Swagger
         """
 
         self._reporting = None
         self._transaction_search = None
+        self._bank_account_validation = None
 
         if reporting is not None:
           self.reporting = reporting
         if transaction_search is not None:
           self.transaction_search = transaction_search
+        if bank_account_validation is not None:
+          self.bank_account_validation = bank_account_validation
 
     @property
     def reporting(self):
@@ -93,6 +98,27 @@ class ValueAddedServicesProducts(object):
         """
 
         self._transaction_search = transaction_search
+
+    @property
+    def bank_account_validation(self):
+        """
+        Gets the bank_account_validation of this ValueAddedServicesProducts.
+
+        :return: The bank_account_validation of this ValueAddedServicesProducts.
+        :rtype: PaymentsProductsTax
+        """
+        return self._bank_account_validation
+
+    @bank_account_validation.setter
+    def bank_account_validation(self, bank_account_validation):
+        """
+        Sets the bank_account_validation of this ValueAddedServicesProducts.
+
+        :param bank_account_validation: The bank_account_validation of this ValueAddedServicesProducts.
+        :type: PaymentsProductsTax
+        """
+
+        self._bank_account_validation = bank_account_validation
 
     def to_dict(self):
         """

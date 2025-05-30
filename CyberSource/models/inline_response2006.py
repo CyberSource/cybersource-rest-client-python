@@ -30,287 +30,185 @@ class InlineResponse2006(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'InlineResponse2006Links',
-        'batch_id': 'str',
-        'batch_created_date': 'str',
-        'batch_source': 'str',
-        'merchant_reference': 'str',
-        'batch_ca_endpoints': 'str',
-        'status': 'str',
-        'totals': 'InlineResponse2005EmbeddedTotals',
-        'billing': 'InlineResponse2006Billing',
-        'description': 'str'
+        'total_count': 'int',
+        'offset': 'int',
+        'limit': 'int',
+        'sort': 'str',
+        'count': 'int',
+        'devices': 'list[InlineResponse2006Devices]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'batch_id': 'batchId',
-        'batch_created_date': 'batchCreatedDate',
-        'batch_source': 'batchSource',
-        'merchant_reference': 'merchantReference',
-        'batch_ca_endpoints': 'batchCaEndpoints',
-        'status': 'status',
-        'totals': 'totals',
-        'billing': 'billing',
-        'description': 'description'
+        'total_count': 'totalCount',
+        'offset': 'offset',
+        'limit': 'limit',
+        'sort': 'sort',
+        'count': 'count',
+        'devices': 'devices'
     }
 
-    def __init__(self, links=None, batch_id=None, batch_created_date=None, batch_source=None, merchant_reference=None, batch_ca_endpoints=None, status=None, totals=None, billing=None, description=None):
+    def __init__(self, total_count=None, offset=None, limit=None, sort=None, count=None, devices=None):
         """
         InlineResponse2006 - a model defined in Swagger
         """
 
-        self._links = None
-        self._batch_id = None
-        self._batch_created_date = None
-        self._batch_source = None
-        self._merchant_reference = None
-        self._batch_ca_endpoints = None
-        self._status = None
-        self._totals = None
-        self._billing = None
-        self._description = None
+        self._total_count = None
+        self._offset = None
+        self._limit = None
+        self._sort = None
+        self._count = None
+        self._devices = None
 
-        if links is not None:
-          self.links = links
-        if batch_id is not None:
-          self.batch_id = batch_id
-        if batch_created_date is not None:
-          self.batch_created_date = batch_created_date
-        if batch_source is not None:
-          self.batch_source = batch_source
-        if merchant_reference is not None:
-          self.merchant_reference = merchant_reference
-        if batch_ca_endpoints is not None:
-          self.batch_ca_endpoints = batch_ca_endpoints
-        if status is not None:
-          self.status = status
-        if totals is not None:
-          self.totals = totals
-        if billing is not None:
-          self.billing = billing
-        if description is not None:
-          self.description = description
+        if total_count is not None:
+          self.total_count = total_count
+        if offset is not None:
+          self.offset = offset
+        if limit is not None:
+          self.limit = limit
+        if sort is not None:
+          self.sort = sort
+        if count is not None:
+          self.count = count
+        if devices is not None:
+          self.devices = devices
 
     @property
-    def links(self):
+    def total_count(self):
         """
-        Gets the links of this InlineResponse2006.
+        Gets the total_count of this InlineResponse2006.
+        Total number of results.
 
-        :return: The links of this InlineResponse2006.
-        :rtype: InlineResponse2006Links
+        :return: The total_count of this InlineResponse2006.
+        :rtype: int
         """
-        return self._links
+        return self._total_count
 
-    @links.setter
-    def links(self, links):
+    @total_count.setter
+    def total_count(self, total_count):
         """
-        Sets the links of this InlineResponse2006.
+        Sets the total_count of this InlineResponse2006.
+        Total number of results.
 
-        :param links: The links of this InlineResponse2006.
-        :type: InlineResponse2006Links
+        :param total_count: The total_count of this InlineResponse2006.
+        :type: int
         """
 
-        self._links = links
+        self._total_count = total_count
 
     @property
-    def batch_id(self):
+    def offset(self):
         """
-        Gets the batch_id of this InlineResponse2006.
-        Unique identification number assigned to the submitted request.
+        Gets the offset of this InlineResponse2006.
+        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
 
-        :return: The batch_id of this InlineResponse2006.
+        :return: The offset of this InlineResponse2006.
+        :rtype: int
+        """
+        return self._offset
+
+    @offset.setter
+    def offset(self, offset):
+        """
+        Sets the offset of this InlineResponse2006.
+        Controls the starting point within the collection of results, which defaults to 0. The first item in the collection is retrieved by setting a zero offset.  For example, if you have a collection of 15 items to be retrieved from a resource and you specify limit=5, you can retrieve the entire set of results in 3 successive requests by varying the offset value like this:  `offset=0` `offset=5` `offset=10`  **Note:** If an offset larger than the number of results is provided, this will result in no embedded object being returned. 
+
+        :param offset: The offset of this InlineResponse2006.
+        :type: int
+        """
+
+        self._offset = offset
+
+    @property
+    def limit(self):
+        """
+        Gets the limit of this InlineResponse2006.
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
+
+        :return: The limit of this InlineResponse2006.
+        :rtype: int
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """
+        Sets the limit of this InlineResponse2006.
+        Controls the maximum number of items that may be returned for a single request. The default is 20, the maximum is 2500. 
+
+        :param limit: The limit of this InlineResponse2006.
+        :type: int
+        """
+
+        self._limit = limit
+
+    @property
+    def sort(self):
+        """
+        Gets the sort of this InlineResponse2006.
+        A comma separated list of the following form:  `terminalCreationDate:desc or serialNumber or terminalUpdationDate` 
+
+        :return: The sort of this InlineResponse2006.
         :rtype: str
         """
-        return self._batch_id
+        return self._sort
 
-    @batch_id.setter
-    def batch_id(self, batch_id):
+    @sort.setter
+    def sort(self, sort):
         """
-        Sets the batch_id of this InlineResponse2006.
-        Unique identification number assigned to the submitted request.
+        Sets the sort of this InlineResponse2006.
+        A comma separated list of the following form:  `terminalCreationDate:desc or serialNumber or terminalUpdationDate` 
 
-        :param batch_id: The batch_id of this InlineResponse2006.
+        :param sort: The sort of this InlineResponse2006.
         :type: str
         """
 
-        self._batch_id = batch_id
+        self._sort = sort
 
     @property
-    def batch_created_date(self):
+    def count(self):
         """
-        Gets the batch_created_date of this InlineResponse2006.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Gets the count of this InlineResponse2006.
+        Results for this page, this could be below the limit.
 
-        :return: The batch_created_date of this InlineResponse2006.
-        :rtype: str
+        :return: The count of this InlineResponse2006.
+        :rtype: int
         """
-        return self._batch_created_date
+        return self._count
 
-    @batch_created_date.setter
-    def batch_created_date(self, batch_created_date):
+    @count.setter
+    def count(self, count):
         """
-        Sets the batch_created_date of this InlineResponse2006.
-        ISO-8601 format: yyyy-MM-ddTHH:mm:ssZ
+        Sets the count of this InlineResponse2006.
+        Results for this page, this could be below the limit.
 
-        :param batch_created_date: The batch_created_date of this InlineResponse2006.
-        :type: str
+        :param count: The count of this InlineResponse2006.
+        :type: int
         """
 
-        self._batch_created_date = batch_created_date
+        self._count = count
 
     @property
-    def batch_source(self):
+    def devices(self):
         """
-        Gets the batch_source of this InlineResponse2006.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Gets the devices of this InlineResponse2006.
+        A collection of devices
 
-        :return: The batch_source of this InlineResponse2006.
-        :rtype: str
+        :return: The devices of this InlineResponse2006.
+        :rtype: list[InlineResponse2006Devices]
         """
-        return self._batch_source
+        return self._devices
 
-    @batch_source.setter
-    def batch_source(self, batch_source):
+    @devices.setter
+    def devices(self, devices):
         """
-        Sets the batch_source of this InlineResponse2006.
-        Valid Values:   * SCHEDULER   * TOKEN_API   * CREDIT_CARD_FILE_UPLOAD   * AMEX_REGSITRY   * AMEX_REGISTRY_API   * AMEX_MAINTENANCE 
+        Sets the devices of this InlineResponse2006.
+        A collection of devices
 
-        :param batch_source: The batch_source of this InlineResponse2006.
-        :type: str
-        """
-
-        self._batch_source = batch_source
-
-    @property
-    def merchant_reference(self):
-        """
-        Gets the merchant_reference of this InlineResponse2006.
-        Reference used by merchant to identify batch.
-
-        :return: The merchant_reference of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._merchant_reference
-
-    @merchant_reference.setter
-    def merchant_reference(self, merchant_reference):
-        """
-        Sets the merchant_reference of this InlineResponse2006.
-        Reference used by merchant to identify batch.
-
-        :param merchant_reference: The merchant_reference of this InlineResponse2006.
-        :type: str
+        :param devices: The devices of this InlineResponse2006.
+        :type: list[InlineResponse2006Devices]
         """
 
-        self._merchant_reference = merchant_reference
-
-    @property
-    def batch_ca_endpoints(self):
-        """
-        Gets the batch_ca_endpoints of this InlineResponse2006.
-
-        :return: The batch_ca_endpoints of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._batch_ca_endpoints
-
-    @batch_ca_endpoints.setter
-    def batch_ca_endpoints(self, batch_ca_endpoints):
-        """
-        Sets the batch_ca_endpoints of this InlineResponse2006.
-
-        :param batch_ca_endpoints: The batch_ca_endpoints of this InlineResponse2006.
-        :type: str
-        """
-
-        self._batch_ca_endpoints = batch_ca_endpoints
-
-    @property
-    def status(self):
-        """
-        Gets the status of this InlineResponse2006.
-        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
-
-        :return: The status of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """
-        Sets the status of this InlineResponse2006.
-        Valid Values:   * REJECTED   * RECEIVED   * VALIDATED   * DECLINED   * PROCESSING   * COMPLETED 
-
-        :param status: The status of this InlineResponse2006.
-        :type: str
-        """
-
-        self._status = status
-
-    @property
-    def totals(self):
-        """
-        Gets the totals of this InlineResponse2006.
-
-        :return: The totals of this InlineResponse2006.
-        :rtype: InlineResponse2005EmbeddedTotals
-        """
-        return self._totals
-
-    @totals.setter
-    def totals(self, totals):
-        """
-        Sets the totals of this InlineResponse2006.
-
-        :param totals: The totals of this InlineResponse2006.
-        :type: InlineResponse2005EmbeddedTotals
-        """
-
-        self._totals = totals
-
-    @property
-    def billing(self):
-        """
-        Gets the billing of this InlineResponse2006.
-
-        :return: The billing of this InlineResponse2006.
-        :rtype: InlineResponse2006Billing
-        """
-        return self._billing
-
-    @billing.setter
-    def billing(self, billing):
-        """
-        Sets the billing of this InlineResponse2006.
-
-        :param billing: The billing of this InlineResponse2006.
-        :type: InlineResponse2006Billing
-        """
-
-        self._billing = billing
-
-    @property
-    def description(self):
-        """
-        Gets the description of this InlineResponse2006.
-
-        :return: The description of this InlineResponse2006.
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """
-        Sets the description of this InlineResponse2006.
-
-        :param description: The description of this InlineResponse2006.
-        :type: str
-        """
-
-        self._description = description
+        self._devices = devices
 
     def to_dict(self):
         """

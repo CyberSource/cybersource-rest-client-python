@@ -31,26 +31,31 @@ class InlineResponse2012SetupsValueAddedServices(object):
     """
     swagger_types = {
         'reporting': 'InlineResponse2012SetupsPaymentsDigitalPayments',
-        'transaction_search': 'InlineResponse2012SetupsPaymentsDigitalPayments'
+        'transaction_search': 'InlineResponse2012SetupsPaymentsDigitalPayments',
+        'bank_account_validation': 'InlineResponse2012SetupsPaymentsDigitalPayments'
     }
 
     attribute_map = {
         'reporting': 'reporting',
-        'transaction_search': 'transactionSearch'
+        'transaction_search': 'transactionSearch',
+        'bank_account_validation': 'bankAccountValidation'
     }
 
-    def __init__(self, reporting=None, transaction_search=None):
+    def __init__(self, reporting=None, transaction_search=None, bank_account_validation=None):
         """
         InlineResponse2012SetupsValueAddedServices - a model defined in Swagger
         """
 
         self._reporting = None
         self._transaction_search = None
+        self._bank_account_validation = None
 
         if reporting is not None:
           self.reporting = reporting
         if transaction_search is not None:
           self.transaction_search = transaction_search
+        if bank_account_validation is not None:
+          self.bank_account_validation = bank_account_validation
 
     @property
     def reporting(self):
@@ -93,6 +98,27 @@ class InlineResponse2012SetupsValueAddedServices(object):
         """
 
         self._transaction_search = transaction_search
+
+    @property
+    def bank_account_validation(self):
+        """
+        Gets the bank_account_validation of this InlineResponse2012SetupsValueAddedServices.
+
+        :return: The bank_account_validation of this InlineResponse2012SetupsValueAddedServices.
+        :rtype: InlineResponse2012SetupsPaymentsDigitalPayments
+        """
+        return self._bank_account_validation
+
+    @bank_account_validation.setter
+    def bank_account_validation(self, bank_account_validation):
+        """
+        Sets the bank_account_validation of this InlineResponse2012SetupsValueAddedServices.
+
+        :param bank_account_validation: The bank_account_validation of this InlineResponse2012SetupsValueAddedServices.
+        :type: InlineResponse2012SetupsPaymentsDigitalPayments
+        """
+
+        self._bank_account_validation = bank_account_validation
 
     def to_dict(self):
         """

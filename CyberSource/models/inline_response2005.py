@@ -30,199 +30,71 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'list[InlineResponse2005Links]',
-        'object': 'str',
-        'offset': 'int',
-        'limit': 'int',
-        'count': 'int',
-        'total': 'int',
-        'embedded': 'InlineResponse2005Embedded'
+        'status': 'str',
+        'devices': 'list[Dmsv3devicesdeassociateDevices]'
     }
 
     attribute_map = {
-        'links': '_links',
-        'object': 'object',
-        'offset': 'offset',
-        'limit': 'limit',
-        'count': 'count',
-        'total': 'total',
-        'embedded': '_embedded'
+        'status': 'status',
+        'devices': 'devices'
     }
 
-    def __init__(self, links=None, object=None, offset=None, limit=None, count=None, total=None, embedded=None):
+    def __init__(self, status=None, devices=None):
         """
         InlineResponse2005 - a model defined in Swagger
         """
 
-        self._links = None
-        self._object = None
-        self._offset = None
-        self._limit = None
-        self._count = None
-        self._total = None
-        self._embedded = None
+        self._status = None
+        self._devices = None
 
-        if links is not None:
-          self.links = links
-        if object is not None:
-          self.object = object
-        if offset is not None:
-          self.offset = offset
-        if limit is not None:
-          self.limit = limit
-        if count is not None:
-          self.count = count
-        if total is not None:
-          self.total = total
-        if embedded is not None:
-          self.embedded = embedded
+        if status is not None:
+          self.status = status
+        if devices is not None:
+          self.devices = devices
 
     @property
-    def links(self):
+    def status(self):
         """
-        Gets the links of this InlineResponse2005.
+        Gets the status of this InlineResponse2005.
+        Possible values: - OK
 
-        :return: The links of this InlineResponse2005.
-        :rtype: list[InlineResponse2005Links]
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """
-        Sets the links of this InlineResponse2005.
-
-        :param links: The links of this InlineResponse2005.
-        :type: list[InlineResponse2005Links]
-        """
-
-        self._links = links
-
-    @property
-    def object(self):
-        """
-        Gets the object of this InlineResponse2005.
-
-        :return: The object of this InlineResponse2005.
+        :return: The status of this InlineResponse2005.
         :rtype: str
         """
-        return self._object
+        return self._status
 
-    @object.setter
-    def object(self, object):
+    @status.setter
+    def status(self, status):
         """
-        Sets the object of this InlineResponse2005.
+        Sets the status of this InlineResponse2005.
+        Possible values: - OK
 
-        :param object: The object of this InlineResponse2005.
+        :param status: The status of this InlineResponse2005.
         :type: str
         """
 
-        self._object = object
+        self._status = status
 
     @property
-    def offset(self):
+    def devices(self):
         """
-        Gets the offset of this InlineResponse2005.
+        Gets the devices of this InlineResponse2005.
 
-        :return: The offset of this InlineResponse2005.
-        :rtype: int
+        :return: The devices of this InlineResponse2005.
+        :rtype: list[Dmsv3devicesdeassociateDevices]
         """
-        return self._offset
+        return self._devices
 
-    @offset.setter
-    def offset(self, offset):
+    @devices.setter
+    def devices(self, devices):
         """
-        Sets the offset of this InlineResponse2005.
+        Sets the devices of this InlineResponse2005.
 
-        :param offset: The offset of this InlineResponse2005.
-        :type: int
-        """
-
-        self._offset = offset
-
-    @property
-    def limit(self):
-        """
-        Gets the limit of this InlineResponse2005.
-
-        :return: The limit of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """
-        Sets the limit of this InlineResponse2005.
-
-        :param limit: The limit of this InlineResponse2005.
-        :type: int
+        :param devices: The devices of this InlineResponse2005.
+        :type: list[Dmsv3devicesdeassociateDevices]
         """
 
-        self._limit = limit
-
-    @property
-    def count(self):
-        """
-        Gets the count of this InlineResponse2005.
-
-        :return: The count of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """
-        Sets the count of this InlineResponse2005.
-
-        :param count: The count of this InlineResponse2005.
-        :type: int
-        """
-
-        self._count = count
-
-    @property
-    def total(self):
-        """
-        Gets the total of this InlineResponse2005.
-
-        :return: The total of this InlineResponse2005.
-        :rtype: int
-        """
-        return self._total
-
-    @total.setter
-    def total(self, total):
-        """
-        Sets the total of this InlineResponse2005.
-
-        :param total: The total of this InlineResponse2005.
-        :type: int
-        """
-
-        self._total = total
-
-    @property
-    def embedded(self):
-        """
-        Gets the embedded of this InlineResponse2005.
-
-        :return: The embedded of this InlineResponse2005.
-        :rtype: InlineResponse2005Embedded
-        """
-        return self._embedded
-
-    @embedded.setter
-    def embedded(self, embedded):
-        """
-        Sets the embedded of this InlineResponse2005.
-
-        :param embedded: The embedded of this InlineResponse2005.
-        :type: InlineResponse2005Embedded
-        """
-
-        self._embedded = embedded
+        self._devices = devices
 
     def to_dict(self):
         """

@@ -117,7 +117,7 @@ class Ptsv2paymentreferencesBuyerInformation(object):
     def language(self):
         """
         Gets the language of this Ptsv2paymentreferencesBuyerInformation.
-        language setting of the user
+        language setting of the user.  Supports 2-character language codes (e.g., en, fr) and 5-character locale values (e.g., en-US, fr-CA). 
 
         :return: The language of this Ptsv2paymentreferencesBuyerInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class Ptsv2paymentreferencesBuyerInformation(object):
     def language(self, language):
         """
         Sets the language of this Ptsv2paymentreferencesBuyerInformation.
-        language setting of the user
+        language setting of the user.  Supports 2-character language codes (e.g., en, fr) and 5-character locale values (e.g., en-US, fr-CA). 
 
         :param language: The language of this Ptsv2paymentreferencesBuyerInformation.
         :type: str
