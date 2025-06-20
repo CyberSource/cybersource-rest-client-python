@@ -34,7 +34,7 @@ class MutualAuthUpload:
         cert_file_password: str,
         server_trust_cert_path: str = None,
         verify_ssl: bool = True,
-    ) -> None:
+    ) -> str:
         """
         Handle upload operation using certificate file.
 
@@ -46,6 +46,7 @@ class MutualAuthUpload:
         :param server_trust_cert_path: Path to the server trust certificate (optional)
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises Exception: If there's an error during the upload process
+        :return: The response data from the server as a string
         """
         try:
             self.logger.info("Handling upload operation with certificate")
@@ -55,7 +56,7 @@ class MutualAuthUpload:
                     "SSL verification is disabled. This should only be used in development environments."
                 )
 
-            self.upload_file(
+            return self.upload_file(
                 encrypted_pgp_bytes,
                 endpoint_url,
                 file_name,
@@ -82,7 +83,7 @@ class MutualAuthUpload:
         server_trust_cert_path: str = None,
         client_cert_password: str = None,
         verify_ssl: bool = True,
-    ) -> None:
+    ) -> str:
         """
         Handle upload operation using private key and certificates.
 
@@ -95,6 +96,7 @@ class MutualAuthUpload:
         :param client_cert_password: Password for the client certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
+        :return: The response data from the server as a string
         """
         try:
             if self.logger is not None:
@@ -105,7 +107,7 @@ class MutualAuthUpload:
                     self.logger.warning(
                         "SSL verification is disabled. This should only be used in development environments."
                     )
-            self.upload_file(
+            return self.upload_file(
                 encrypted_pgp_bytes,
                 endpoint_url,
                 file_name,
@@ -132,7 +134,7 @@ class MutualAuthUpload:
         ca_cert_path: str = None,
         cert_password: str = None,
         verify_ssl: bool = True,
-    ) -> None:
+    ) -> str:
         """
         Upload encrypted PGP file to the specified endpoint.
 
@@ -145,6 +147,7 @@ class MutualAuthUpload:
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
+        :return: The response data from the server as a string
         """
         try:
             if self.logger is not None:
@@ -162,7 +165,7 @@ class MutualAuthUpload:
                 cert_password,
                 verify_ssl,
             )
-            self._handle_response(response)
+            return self._handle_response(response)
         except HTTPError as e:
             if self.logger is not None:
                 self.logger.error(f"HTTPError in upload_file: {str(e)}")
@@ -241,12 +244,13 @@ class MutualAuthUpload:
             fields={field_name: (filename, file_data, content_type)},
         )
 
-    def _handle_response(self, response: urllib3.HTTPResponse) -> None:
+    def _handle_response(self, response: urllib3.HTTPResponse) -> str:
         """
         Handle the HTTP response.
 
         :param response: HTTP response
         :raises urllib3.exceptions.HTTPError: If the response status is not 201
+        :return: The response data as a string
         """
         status_code = response.status
         self.logger.info(f"Upload completed. Response status code: {status_code}")
@@ -254,6 +258,8 @@ class MutualAuthUpload:
         if status_code == 201:
             if self.logger is not None:
                 self.logger.info("File uploaded successfully")
+            # Decode the response data to a string
+            return response.data.decode('utf-8')
         else:
             error_message = f"File upload failed. Status code: {status_code}, body: {response.data.decode('utf-8')}"
             if self.logger is not None:

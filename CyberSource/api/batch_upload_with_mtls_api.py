@@ -69,7 +69,7 @@ class BatchUploadWithMTLSApi:
         server_trust_cert_path: str = None,
         client_cert_password: Optional[str] = None,
         verify_ssl: bool = True,
-    ) -> None:
+    ) -> str:
         """
         Upload a batch file using separate key and certificate files.
 
@@ -85,6 +85,9 @@ class BatchUploadWithMTLSApi:
             server_trust_cert_path: Path to the server trust certificate file (optional)
             client_cert_password: Optional password for the client certificate file
             verify_ssl: Whether to verify SSL certificates (default: True). Set to False only for development purposes.
+
+        Returns:
+            str: The response data from the server as a string
 
         Raises:
             ValueError: If required parameters are missing or invalid
@@ -140,7 +143,7 @@ class BatchUploadWithMTLSApi:
                     "SSL certificate verification is disabled. This should only be used in development environments."
                 )
                 
-            self.mutual_auth_upload.handle_upload_operation_using_private_key_and_certs(
+            response_data = self.mutual_auth_upload.handle_upload_operation_using_private_key_and_certs(
                 encrypted_pgp_bytes=encrypted_pgp_bytes,
                 endpoint_url=endpoint_url,
                 file_name=file_name,
@@ -152,6 +155,7 @@ class BatchUploadWithMTLSApi:
             )
             if self.logger is not None:
                 self.logger.info("Batch file uploaded successfully")
+            return response_data
         except ValueError as e:
             if self.logger is not None:
                 self.logger.error(f"Validation error: {str(e)}")
