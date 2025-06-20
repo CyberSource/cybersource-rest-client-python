@@ -27,34 +27,10 @@ from typing import Optional
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.utilities.pgpBatchUpload.mutual_auth_upload import MutualAuthUpload
 from CyberSource.utilities.pgpBatchUpload.pgp_encryption import PgpEncryption
+from CyberSource.utilities.file_utils import validate_paths
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
-
-
-def _validate_paths(paths: list) -> None:
-    """
-    Validate that all specified paths exist.
-
-    Args:
-        paths: List of tuples containing (path, description)
-
-    Raises:
-        ValueError: If a required path is None or empty
-        FileNotFoundError: If any of the paths don't exist
-    """
-    for path, description in paths:
-        # Check if this is an optional parameter (currently only "Server trust certificate")
-        is_optional = "Server trust certificate" in description
-        
-        if path is None:
-            if is_optional:
-                continue  # Skip validation for None paths that are optional
-            else:
-                raise ValueError(f"{description} is required but was None")
-                
-        if not path:
-            raise ValueError(f"{description} path is required")
-        if not Path(path).exists():
-            raise FileNotFoundError(f"{description} not found: {path}")
+from CyberSource.rest import ApiException
+from urllib3.exceptions import HTTPError
 
 
 class BatchUploadWithMTLSApi:
@@ -164,6 +140,7 @@ class BatchUploadWithMTLSApi:
             ValueError: If required parameters are missing or invalid (e.g., file too large)
             FileNotFoundError: If any of the required files don't exist
             urllib3.exceptions.HTTPError: If there's an error during the upload process
+            CyberSource.rest.ApiException: If the response status is not successful (2xx)
             Exception: For any other unexpected errors
 
         Example:
@@ -188,14 +165,15 @@ class BatchUploadWithMTLSApi:
             endpoint_url = self.get_base_url(environment_hostname) + self._end_point
 
             # Step 2: Validations
-            _validate_paths(
+            validate_paths(
                 [
                     (input_file_path, "Input file"),
                     (pgp_encryption_public_key_path, "PGP public key"),
                     (client_cert_path, "Client certificate"),
                     (client_key_path, "Client private key"),
                     (server_trust_cert_path, "Server trust certificate"),
-                ]
+                ],
+                self.logger,
             )
 
             # Validate file size (maximum 75 MB)
@@ -252,10 +230,18 @@ class BatchUploadWithMTLSApi:
             if self.logger is not None:
                 self.logger.error(f"File not found: {str(e)}")
             raise
+        except HTTPError as e:
+            if self.logger is not None:
+                self.logger.error(f"HTTP error: {str(e)}")
+            raise
+        except ApiException as e:
+            if self.logger is not None:
+                self.logger.error(f"API error: {str(e)}")
+            raise
         except Exception as e:
             if self.logger is not None:
                 self.logger.error(
-                    f"Error in upload_batch_api_with_separate_key_and_cert_file: {str(e)}"
+                    f"Error in upload_batch_api_with_key_and_certs_file: {str(e)}"
                 )
             raise
 

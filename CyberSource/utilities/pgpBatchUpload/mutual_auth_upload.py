@@ -8,6 +8,7 @@ from urllib3.exceptions import HTTPError
 
 import CyberSource.logging.log_factory as LogFactory
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
+from CyberSource.rest import ApiException
 
 
 def _prepare_files(encrypted_pgp_bytes: bytes, file_name: str) -> tuple:
@@ -48,6 +49,7 @@ class MutualAuthUpload:
         :param client_key_password: Password for the client key file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
+        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
         :return: A tuple containing (response_data, status_code, headers)
         """
         try:
@@ -69,7 +71,7 @@ class MutualAuthUpload:
                 cert_password=client_key_password,
                 verify_ssl=verify_ssl,
             )
-        except HTTPError as e:
+        except (HTTPError, ApiException) as e:
             if self.logger is not None:
                 self.logger.error(
                     f"Error in handle_upload_operation_using_private_key_and_certs: {str(e)}"
@@ -99,6 +101,7 @@ class MutualAuthUpload:
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
+        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
         :return: A tuple containing (response_data, status_code, headers)
         """
         try:
@@ -121,6 +124,10 @@ class MutualAuthUpload:
         except HTTPError as e:
             if self.logger is not None:
                 self.logger.error(f"HTTPError in upload_file: {str(e)}")
+            raise
+        except ApiException as e:
+            if self.logger is not None:
+                self.logger.error(f"ApiException in upload_file: {str(e)}")
             raise
 
     def _create_headers(self) -> dict:
@@ -152,56 +159,72 @@ class MutualAuthUpload:
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :return: HTTP response
+        :raises urllib3.exceptions.HTTPError: If there's an error during the HTTP request
+        :raises ssl.SSLError: If there's an SSL-related error
+        :raises Exception: For any other unexpected errors
         """
         if self.logger is not None:
             self.logger.info(f"Sending HTTP POST request to URL: {endpoint_url}")
 
-        if verify_ssl:
-            # Create SSL context with default CA certificates
-            ssl_context = ssl.create_default_context(cafile=certifi.where())
+        try:
+            if verify_ssl:
+                # Create SSL context with default CA certificates
+                ssl_context = ssl.create_default_context(cafile=certifi.where())
 
-            # If server trust cert path is provided, add it to the context
-            if ca_cert_path:
-                ssl_context.load_verify_locations(cafile=ca_cert_path)
+                # If server trust cert path is provided, add it to the context
+                if ca_cert_path:
+                    ssl_context.load_verify_locations(cafile=ca_cert_path)
 
-            # Create a pool manager with the SSL context
-            http = urllib3.PoolManager(
-                cert_file=client_cert_path,
-                key_file=client_key_path,
-                key_password=cert_password,
-                ssl_context=ssl_context,
+                # Create a pool manager with the SSL context
+                http = urllib3.PoolManager(
+                    cert_file=client_cert_path,
+                    key_file=client_key_path,
+                    key_password=cert_password,
+                    ssl_context=ssl_context,
+                )
+            else:
+                # Create a pool manager with SSL verification disabled
+                if self.logger is not None:
+                    self.logger.warning("SSL certificate verification is disabled")
+
+                # Use direct parameters to disable SSL verification
+                http = urllib3.PoolManager(
+                    cert_file=client_cert_path,
+                    key_file=client_key_path,
+                    key_password=cert_password,
+                    cert_reqs=ssl.CERT_NONE,
+                    assert_hostname=False,
+                )
+
+            # Prepare multipart form data
+            field_name, filename, file_data, content_type = file_tuple
+
+            # Send the request
+            return http.request(
+                "POST",
+                endpoint_url,
+                headers=headers,
+                fields={field_name: (filename, file_data, content_type)},
             )
-        else:
-            # Create a pool manager with SSL verification disabled
+        except HTTPError as e:
             if self.logger is not None:
-                self.logger.warning("SSL certificate verification is disabled")
-            
-            # Use direct parameters to disable SSL verification
-            http = urllib3.PoolManager(
-                cert_file=client_cert_path,
-                key_file=client_key_path,
-                key_password=cert_password,
-                cert_reqs=ssl.CERT_NONE,
-                assert_hostname=False,
-            )
-
-        # Prepare multipart form data
-        field_name, filename, file_data, content_type = file_tuple
-
-        # Send the request
-        return http.request(
-            "POST",
-            endpoint_url,
-            headers=headers,
-            fields={field_name: (filename, file_data, content_type)},
-        )
+                self.logger.error(f"HTTP error in _send_request: {str(e)}")
+            raise
+        except ssl.SSLError as e:
+            if self.logger is not None:
+                self.logger.error(f"SSL error in _send_request: {str(e)}")
+            raise HTTPError(f"SSL error: {str(e)}")
+        except Exception as e:
+            if self.logger is not None:
+                self.logger.error(f"Unexpected error in _send_request: {str(e)}")
+            raise HTTPError(f"Unexpected error during HTTP request: {str(e)}")
 
     def _handle_response(self, response: urllib3.HTTPResponse) -> tuple:
         """
         Handle the HTTP response.
 
         :param response: HTTP response
-        :raises urllib3.exceptions.HTTPError: If the response status is not successful (2xx)
+        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
         :return: A tuple containing (response_data, status_code, headers)
         """
         status_code = response.status
@@ -211,10 +234,11 @@ class MutualAuthUpload:
             if self.logger is not None:
                 self.logger.info("File uploaded successfully")
             # Decode the response data to a string
-            response_data = response.data.decode('utf-8')
-            return (response_data, status_code, response.headers)
+            response_data = response.data.decode("utf-8")
+            return response_data, status_code, response.headers
         else:
             error_message = f"File upload failed. Status code: {status_code}, body: {response.data.decode('utf-8')}"
             if self.logger is not None:
                 self.logger.error(error_message)
-            raise HTTPError(error_message)
+            # Throw ApiException instead of HTTPError for consistency with rest.py
+            raise ApiException(http_resp=response)

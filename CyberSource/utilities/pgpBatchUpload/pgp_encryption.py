@@ -7,11 +7,11 @@ supporting both file-based and in-memory operations with various configuration o
 
 import os
 from datetime import datetime
-from pathlib import Path
 
 import pgpy
 
 import CyberSource.logging.log_factory as LogFactory
+from CyberSource.utilities.file_utils import validate_path
 
 
 class PgpEncryption:
@@ -59,8 +59,8 @@ class PgpEncryption:
             if input_file is None or pgp_public_key is None:
                 raise ValueError("Missing required options for encrypt operation")
 
-            self.validate_path(input_file, "Input file")
-            self.validate_path(pgp_public_key, "Public key")
+            validate_path(input_file, "Input file", self.logger)
+            validate_path(pgp_public_key, "Public key", self.logger)
             input_file_name = os.path.basename(input_file)
 
             public_key = self.load_public_key(pgp_public_key)
@@ -250,26 +250,6 @@ class PgpEncryption:
 
         if not can_encrypt:
             raise ValueError("The public key cannot be used for encryption")
-
-    def validate_path(self, path: str, path_type: str) -> None:
-        """
-        Validate that a path exists, creating directories if necessary.
-
-        Args:
-            path: The path to validate
-            path_type: Description of the path type for error messages
-
-        Raises:
-            FileNotFoundError: If the path doesn't exist and isn't an output directory
-        """
-        file_path = Path(path)
-        if path_type == "Output directory":
-            if not file_path.exists():
-                file_path.mkdir(parents=True, exist_ok=True)
-                if self.logger is not None:
-                    self.logger.info(f"Created output directory: {path}")
-        elif not file_path.exists():
-            raise FileNotFoundError(f"{path_type} does not exist: {path}")
 
     def __enter__(self):
         """
