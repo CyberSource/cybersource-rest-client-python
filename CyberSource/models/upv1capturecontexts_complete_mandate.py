@@ -31,32 +31,37 @@ class Upv1capturecontextsCompleteMandate(object):
     """
     swagger_types = {
         'type': 'str',
-        'decision_manager': 'bool'
+        'decision_manager': 'bool',
+        'consumer_authentication': 'bool'
     }
 
     attribute_map = {
         'type': 'type',
-        'decision_manager': 'decisionManager'
+        'decision_manager': 'decisionManager',
+        'consumer_authentication': 'consumerAuthentication'
     }
 
-    def __init__(self, type=None, decision_manager=None):
+    def __init__(self, type=None, decision_manager=None, consumer_authentication=None):
         """
         Upv1capturecontextsCompleteMandate - a model defined in Swagger
         """
 
         self._type = None
         self._decision_manager = None
+        self._consumer_authentication = None
 
         if type is not None:
           self.type = type
         if decision_manager is not None:
           self.decision_manager = decision_manager
+        if consumer_authentication is not None:
+          self.consumer_authentication = consumer_authentication
 
     @property
     def type(self):
         """
         Gets the type of this Upv1capturecontextsCompleteMandate.
-        This field is used to indicate how a payment should be processed.  Possible values: - AUTH: Use this value when you want to authorize a payment without capturing it immediately.  Payment types that initiate an immediate transfer of funds are not allowed.  If a capture context request includes a payment type incompatible with this mode, a 400 error will be returned.<br><br>   - CAPTURE: Use this value when you want to capture the payment immediately during the transaction.  Note: Some payment types may return a PENDING status, requiring an additional status check call to determine the final outcome of the payment.<br><br> - PREFER_AUTH: Use this value to offer multiple alternative payment options during the Unified Checkout experience. This option authorizes the payment without immediate capture, where available. Payment types like account-to-account transfers that initiate an immediate transfer of funds are allowed and presented to the customer. If selected, an immediate transfer of funds occurs; otherwise, a final backend call is needed to capture the payment. Transactions can be AUTHORIZED, CAPTURED, or PENDING. 
+        This field is used to indicate how a payment should be processed.  Possible values: - AUTH: Use this value when you want to authorize a payment within Unified Checkout without capturing it immediately.  Payment types that initiate an immediate transfer of funds are NOT allowed.  If a capture context request includes a payment type incompatible with this mode, a 400 error will be returned.  A merchant would need to perform their own capture via API where applicable.<br><br>   - CAPTURE: Use this value when you want to perform a sale within Unified Checkout and capture the payment immediately during the transaction.  Note: Some payment types may return a PENDING status, requiring an additional status check call to determine the final outcome of the payment.<br><br> - PREFER_AUTH: Use this value to offer multiple alternative payment options during the Unified Checkout experience. This option authorizes the payment without immediate capture, where available.  It will perform a \"CAPTURE\" where an \"AUTH\" is not allowed by the payment type.  Transactions can be AUTHORIZED, CAPTURED, or PENDING.  If an \"AUTH\" is performed, a merchant would need to perform their own capture via API where applicable. 
 
         :return: The type of this Upv1capturecontextsCompleteMandate.
         :rtype: str
@@ -67,7 +72,7 @@ class Upv1capturecontextsCompleteMandate(object):
     def type(self, type):
         """
         Sets the type of this Upv1capturecontextsCompleteMandate.
-        This field is used to indicate how a payment should be processed.  Possible values: - AUTH: Use this value when you want to authorize a payment without capturing it immediately.  Payment types that initiate an immediate transfer of funds are not allowed.  If a capture context request includes a payment type incompatible with this mode, a 400 error will be returned.<br><br>   - CAPTURE: Use this value when you want to capture the payment immediately during the transaction.  Note: Some payment types may return a PENDING status, requiring an additional status check call to determine the final outcome of the payment.<br><br> - PREFER_AUTH: Use this value to offer multiple alternative payment options during the Unified Checkout experience. This option authorizes the payment without immediate capture, where available. Payment types like account-to-account transfers that initiate an immediate transfer of funds are allowed and presented to the customer. If selected, an immediate transfer of funds occurs; otherwise, a final backend call is needed to capture the payment. Transactions can be AUTHORIZED, CAPTURED, or PENDING. 
+        This field is used to indicate how a payment should be processed.  Possible values: - AUTH: Use this value when you want to authorize a payment within Unified Checkout without capturing it immediately.  Payment types that initiate an immediate transfer of funds are NOT allowed.  If a capture context request includes a payment type incompatible with this mode, a 400 error will be returned.  A merchant would need to perform their own capture via API where applicable.<br><br>   - CAPTURE: Use this value when you want to perform a sale within Unified Checkout and capture the payment immediately during the transaction.  Note: Some payment types may return a PENDING status, requiring an additional status check call to determine the final outcome of the payment.<br><br> - PREFER_AUTH: Use this value to offer multiple alternative payment options during the Unified Checkout experience. This option authorizes the payment without immediate capture, where available.  It will perform a \"CAPTURE\" where an \"AUTH\" is not allowed by the payment type.  Transactions can be AUTHORIZED, CAPTURED, or PENDING.  If an \"AUTH\" is performed, a merchant would need to perform their own capture via API where applicable. 
 
         :param type: The type of this Upv1capturecontextsCompleteMandate.
         :type: str
@@ -79,7 +84,7 @@ class Upv1capturecontextsCompleteMandate(object):
     def decision_manager(self):
         """
         Gets the decision_manager of this Upv1capturecontextsCompleteMandate.
-        Configure Unified Checkout to determine whether Decision Manager is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True indicates that device fingerprinting will be executed to add additional information for risk service Setting this value to False indicates that you do not wish to run device fingerprinting and skip decision manager services. 
+        Configure Unified Checkout to determine whether Decision Manager is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True indicates that device fingerprinting will be executed to add additional information for risk service Setting this value to False (or not provided) indicates that you do not wish to run device fingerprinting and skip decision manager services. 
 
         :return: The decision_manager of this Upv1capturecontextsCompleteMandate.
         :rtype: bool
@@ -90,13 +95,36 @@ class Upv1capturecontextsCompleteMandate(object):
     def decision_manager(self, decision_manager):
         """
         Sets the decision_manager of this Upv1capturecontextsCompleteMandate.
-        Configure Unified Checkout to determine whether Decision Manager is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True indicates that device fingerprinting will be executed to add additional information for risk service Setting this value to False indicates that you do not wish to run device fingerprinting and skip decision manager services. 
+        Configure Unified Checkout to determine whether Decision Manager is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True indicates that device fingerprinting will be executed to add additional information for risk service Setting this value to False (or not provided) indicates that you do not wish to run device fingerprinting and skip decision manager services. 
 
         :param decision_manager: The decision_manager of this Upv1capturecontextsCompleteMandate.
         :type: bool
         """
 
         self._decision_manager = decision_manager
+
+    @property
+    def consumer_authentication(self):
+        """
+        Gets the consumer_authentication of this Upv1capturecontextsCompleteMandate.
+        Configure Unified Checkout to determine whether Consumer Authentication is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True will attempt to perform authentication using the Payer Authentication Service. Setting this value to False (or not provided) indicates that you do not wish to perform authentication using the Payer Authentication Service. 
+
+        :return: The consumer_authentication of this Upv1capturecontextsCompleteMandate.
+        :rtype: bool
+        """
+        return self._consumer_authentication
+
+    @consumer_authentication.setter
+    def consumer_authentication(self, consumer_authentication):
+        """
+        Sets the consumer_authentication of this Upv1capturecontextsCompleteMandate.
+        Configure Unified Checkout to determine whether Consumer Authentication is invoked during service orchestration.  Possible values:  - True  - False<br><br>  Setting this value to True will attempt to perform authentication using the Payer Authentication Service. Setting this value to False (or not provided) indicates that you do not wish to perform authentication using the Payer Authentication Service. 
+
+        :param consumer_authentication: The consumer_authentication of this Upv1capturecontextsCompleteMandate.
+        :type: bool
+        """
+
+        self._consumer_authentication = consumer_authentication
 
     def to_dict(self):
         """

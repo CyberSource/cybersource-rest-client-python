@@ -42,6 +42,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'card_verification': 'Riskv1decisionsProcessorInformationCardVerification',
         'ach_verification': 'PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
         'electronic_verification_results': 'TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationResults',
+        'event_status': 'str',
         'system_trace_audit_number': 'str',
         'response_code_source': 'str',
         'payment_account_reference_number': 'str'
@@ -60,12 +61,13 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         'card_verification': 'cardVerification',
         'ach_verification': 'achVerification',
         'electronic_verification_results': 'electronicVerificationResults',
+        'event_status': 'eventStatus',
         'system_trace_audit_number': 'systemTraceAuditNumber',
         'response_code_source': 'responseCodeSource',
         'payment_account_reference_number': 'paymentAccountReferenceNumber'
     }
 
-    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None):
+    def __init__(self, processor=None, multi_processor_routing=None, transaction_id=None, network_transaction_id=None, retrieval_reference_number=None, response_id=None, approval_code=None, response_code=None, avs=None, card_verification=None, ach_verification=None, electronic_verification_results=None, event_status=None, system_trace_audit_number=None, response_code_source=None, payment_account_reference_number=None):
         """
         TssV2TransactionsGet200ResponseProcessorInformation - a model defined in Swagger
         """
@@ -82,6 +84,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         self._card_verification = None
         self._ach_verification = None
         self._electronic_verification_results = None
+        self._event_status = None
         self._system_trace_audit_number = None
         self._response_code_source = None
         self._payment_account_reference_number = None
@@ -110,6 +113,8 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
           self.ach_verification = ach_verification
         if electronic_verification_results is not None:
           self.electronic_verification_results = electronic_verification_results
+        if event_status is not None:
+          self.event_status = event_status
         if system_trace_audit_number is not None:
           self.system_trace_audit_number = system_trace_audit_number
         if response_code_source is not None:
@@ -382,6 +387,29 @@ class TssV2TransactionsGet200ResponseProcessorInformation(object):
         """
 
         self._electronic_verification_results = electronic_verification_results
+
+    @property
+    def event_status(self):
+        """
+        Gets the event_status of this TssV2TransactionsGet200ResponseProcessorInformation.
+        The event status. 
+
+        :return: The event_status of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :rtype: str
+        """
+        return self._event_status
+
+    @event_status.setter
+    def event_status(self, event_status):
+        """
+        Sets the event_status of this TssV2TransactionsGet200ResponseProcessorInformation.
+        The event status. 
+
+        :param event_status: The event_status of this TssV2TransactionsGet200ResponseProcessorInformation.
+        :type: str
+        """
+
+        self._event_status = event_status
 
     @property
     def system_trace_audit_number(self):

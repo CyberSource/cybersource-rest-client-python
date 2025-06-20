@@ -47,7 +47,7 @@ class PaymentsProducts(object):
         'payouts': 'PaymentsProductsPayouts',
         'differential_fee': 'PaymentsProductsDifferentialFee',
         'pay_by_link': 'PaymentsProductsTax',
-        'unified_checkout': 'PaymentsProductsTax',
+        'unified_checkout': 'PaymentsProductsUnifiedCheckout',
         'receivables_manager': 'PaymentsProductsTax',
         'service_fee': 'PaymentsProductsServiceFee'
     }
@@ -505,7 +505,7 @@ class PaymentsProducts(object):
         Gets the unified_checkout of this PaymentsProducts.
 
         :return: The unified_checkout of this PaymentsProducts.
-        :rtype: PaymentsProductsTax
+        :rtype: PaymentsProductsUnifiedCheckout
         """
         return self._unified_checkout
 
@@ -515,7 +515,7 @@ class PaymentsProducts(object):
         Sets the unified_checkout of this PaymentsProducts.
 
         :param unified_checkout: The unified_checkout of this PaymentsProducts.
-        :type: PaymentsProductsTax
+        :type: PaymentsProductsUnifiedCheckout
         """
 
         self._unified_checkout = unified_checkout

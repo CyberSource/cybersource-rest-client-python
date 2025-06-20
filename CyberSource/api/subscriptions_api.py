@@ -51,7 +51,7 @@ class SubscriptionsApi(object):
     def activate_subscription(self, id, **kwargs):
         """
         Activate a Subscription
-        Activate a `CANCELLED` Or `SUSPENDED` Subscription 
+        Activate a `SUSPENDED` Subscription 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -63,6 +63,7 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
+        :param bool process_skipped_payments: Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true.
         :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -81,7 +82,7 @@ class SubscriptionsApi(object):
     def activate_subscription_with_http_info(self, id, **kwargs):
         """
         Activate a Subscription
-        Activate a `CANCELLED` Or `SUSPENDED` Subscription 
+        Activate a `SUSPENDED` Subscription 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -93,12 +94,13 @@ class SubscriptionsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str id: Subscription Id (required)
+        :param bool process_skipped_payments: Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true.
         :return: ActivateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id']
+        all_params = ['id', 'process_skipped_payments']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -128,6 +130,8 @@ class SubscriptionsApi(object):
             id=id
 
         query_params = []
+        if 'process_skipped_payments' in params:
+            query_params.append(('processSkippedPayments', params['process_skipped_payments']))
 
         header_params = {}
 

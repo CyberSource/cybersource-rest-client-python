@@ -48,9 +48,128 @@ class DeviceSearchApi(object):
 
 
 
+    def post_search_query(self, post_device_search_request, **kwargs):
+        """
+        Retrieve List of Devices for a given search query V2
+        Retrieves list of terminals in paginated format.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_search_query(post_device_search_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PostDeviceSearchRequest post_device_search_request: (required)
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        if self.api_client.mconfig.log_config.enable_log:
+            self.logger.info("CALL TO METHOD `post_search_query` STARTED")
+
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.post_search_query_with_http_info(post_device_search_request, **kwargs)
+        else:
+            (data) = self.post_search_query_with_http_info(post_device_search_request, **kwargs)
+            return data
+
+    def post_search_query_with_http_info(self, post_device_search_request, **kwargs):
+        """
+        Retrieve List of Devices for a given search query V2
+        Retrieves list of terminals in paginated format.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.post_search_query_with_http_info(post_device_search_request, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param PostDeviceSearchRequest post_device_search_request: (required)
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['post_device_search_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_search_query" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'post_device_search_request' is set
+        if ('post_device_search_request' not in params) or (params['post_device_search_request'] is None):
+            if self.api_client.mconfig.log_config.enable_log:
+                self.logger.error("InvalidArgumentException : Missing the required parameter `post_device_search_request` when calling `post_search_query`")
+            raise ValueError("Missing the required parameter `post_device_search_request` when calling `post_search_query`")
+
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(['application/json;charset=UTF-8'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(['application/json;charset=UTF-8'])
+
+        body_params = None
+        if 'post_device_search_request' in params:
+            body_params = params['post_device_search_request']
+        
+            sdkTracker = SdkTracker()
+            body_params = sdkTracker.insert_developer_id_tracker(body_params, 'post_device_search_request', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
+            body_params = process_body(body_params)
+
+        is_mle_supported_by_cybs_for_api = False
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_search_query,post_search_query_with_http_info"):
+                body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
+        
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(f'/dms/v2/devices/search', 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='InlineResponse2005',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def post_search_query_v3(self, post_device_search_request_v3, **kwargs):
         """
-        Retrieve List of Devices for a given search query V3
+        Retrieve List of Devices for a given search query
         Search for devices matching a given search query.  The search query supports serialNumber, readerId, terminalId, status, statusChangeReason or organizationId  Matching results are paginated. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -63,7 +182,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -80,7 +199,7 @@ class DeviceSearchApi(object):
 
     def post_search_query_v3_with_http_info(self, post_device_search_request_v3, **kwargs):
         """
-        Retrieve List of Devices for a given search query V3
+        Retrieve List of Devices for a given search query
         Search for devices matching a given search query.  The search query supports serialNumber, readerId, terminalId, status, statusChangeReason or organizationId  Matching results are paginated. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
@@ -93,7 +212,7 @@ class DeviceSearchApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param PostDeviceSearchRequestV3 post_device_search_request_v3: (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -159,7 +278,7 @@ class DeviceSearchApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='InlineResponse2006',
+                                        response_type='InlineResponse2007',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
