@@ -142,6 +142,11 @@ class BatchUploadWithMTLSApi:
             urllib3.exceptions.HTTPError: If there's an error during the upload process
             CyberSource.rest.ApiException: If the response status is not successful (2xx)
             Exception: For any other unexpected errors
+            
+        Notes:
+            This method will log warnings but not raise exceptions if:
+            - The provided PGP key is not a public key
+            - The PGP public key has expired
 
         Example:
             ```python

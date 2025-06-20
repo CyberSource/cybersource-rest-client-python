@@ -11,9 +11,9 @@ from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 from CyberSource.rest import ApiException
 
 
-def _prepare_files(encrypted_pgp_bytes: bytes, file_name: str) -> tuple:
+def _create_file_form_field_tuple(encrypted_pgp_bytes: bytes, file_name: str) -> tuple:
     """
-    Prepare the file data for multipart/form-data upload with urllib3.
+    Create a tuple that represents a file field for a multipart/form-data upload with urllib3.
 
     :param encrypted_pgp_bytes: Encrypted PGP file content
     :param file_name: Name of the file to be uploaded
@@ -108,7 +108,7 @@ class MutualAuthUpload:
             if self.logger is not None:
                 self.logger.info("Starting file upload process")
             headers = self._create_headers()
-            file_tuple = _prepare_files(encrypted_pgp_bytes, file_name)
+            file_tuple = _create_file_form_field_tuple(encrypted_pgp_bytes, file_name)
 
             response = self._send_request(
                 endpoint_url,
@@ -242,4 +242,4 @@ class MutualAuthUpload:
             if self.logger is not None:
                 self.logger.error(error_message)
             # Throw ApiException instead of HTTPError for consistency with rest.py
-            raise ApiException(http_resp=response)
+            raise ApiException(http_resp=response, status=status_code, reason=error_message)

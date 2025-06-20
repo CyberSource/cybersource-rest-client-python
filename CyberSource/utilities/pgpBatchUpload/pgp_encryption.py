@@ -54,6 +54,11 @@ class PgpEncryption:
             FileNotFoundError: If input file or public key file doesn't exist
             pgpy.errors.PGPError: If there's an error in PGP operations
             IOError: If there's an error reading or writing files
+
+        Notes:
+            This method will log warnings but not raise exceptions if:
+            - The provided key is not a public key
+            - The public key has expired
         """
         try:
             if input_file is None or pgp_public_key is None:
@@ -208,18 +213,13 @@ class PgpEncryption:
 
         Args:
             key: The PGP key to validate
-
-        Raises:
-            ValueError: If the key is not suitable for encryption
         """
-        # Enforce that the key must be a public key
+        # Check if the key is a public key (log warning instead of raising exception)
         if not key.is_public:
             if self.logger is not None:
-                self.logger.error("The provided key is not a public key")
-            raise ValueError("Only public keys can be used for encryption")
+                self.logger.warning("The provided key is not a public key. This may cause issues with encryption.")
 
-        # Check if key has expired
-
+        # Check if key has expired (log warning instead of raising exception)
         now = datetime.utcnow()
         if key.expires_at is not None:
             expires_at = key.expires_at
@@ -228,28 +228,8 @@ class PgpEncryption:
                 # If expires_at is timezone-aware, convert to naive UTC for comparison
                 expires_at = expires_at.replace(tzinfo=None)
             if now > expires_at:
-                raise ValueError(f"The public key has expired on {expires_at}")
-
-        # Check if key can be used for encryption
-        # PGP keys typically have usage flags that indicate their capabilities
-        # We'll check if the key or any of its subkeys can be used for encryption
-        can_encrypt = False
-
-        # Check if the primary key can encrypt
-        if hasattr(key, "key_algorithm"):
-            # RSA, ElGamal, and some other algorithms support encryption
-            can_encrypt = True
-
-        # If primary key can't encrypt, check subkeys
-        if not can_encrypt and hasattr(key, "subkeys"):
-            for subkey in key.subkeys.values():
-                # Check if this subkey can be used for encryption
-                if hasattr(subkey, "key_algorithm"):
-                    can_encrypt = True
-                    break
-
-        if not can_encrypt:
-            raise ValueError("The public key cannot be used for encryption")
+                if self.logger is not None:
+                    self.logger.warning(f"The public key has expired on {expires_at}. This may cause issues with encryption.")
 
     def __enter__(self):
         """
