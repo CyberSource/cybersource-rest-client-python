@@ -25,54 +25,6 @@ class MutualAuthUpload:
     def __init__(self, log_config=None):
         self.logger = LogFactory.setup_logger(self.__class__.__name__, log_config)
 
-    def handle_upload_operation_with_certificate(
-        self,
-        encrypted_pgp_bytes: bytes,
-        endpoint_url: str,
-        file_name: str,
-        cert_file_path: str,
-        cert_file_password: str,
-        server_trust_cert_path: str = None,
-        verify_ssl: bool = True,
-    ) -> str:
-        """
-        Handle upload operation using certificate file.
-
-        :param encrypted_pgp_bytes: Encrypted PGP file content
-        :param endpoint_url: URL to upload the file
-        :param file_name: Name of the file to be uploaded
-        :param cert_file_path: Path to the certificate file
-        :param cert_file_password: Password for the certificate file
-        :param server_trust_cert_path: Path to the server trust certificate (optional)
-        :param verify_ssl: Whether to verify SSL certificates (default: True)
-        :raises Exception: If there's an error during the upload process
-        :return: The response data from the server as a string
-        """
-        try:
-            self.logger.info("Handling upload operation with certificate")
-            
-            if not verify_ssl and self.logger is not None:
-                self.logger.warning(
-                    "SSL verification is disabled. This should only be used in development environments."
-                )
-
-            return self.upload_file(
-                encrypted_pgp_bytes,
-                endpoint_url,
-                file_name,
-                client_cert_path=cert_file_path,
-                client_key_path=cert_file_path,
-                ca_cert_path=server_trust_cert_path,
-                cert_password=cert_file_password,
-                verify_ssl=verify_ssl,
-            )
-        except HTTPError as e:
-            if self.logger is not None:
-                self.logger.error(
-                    f"Error in handle_upload_operation_with_certificate: {str(e)}"
-                )
-            raise
-
     def handle_upload_operation_using_private_key_and_certs(
         self,
         encrypted_pgp_bytes: bytes,
@@ -81,9 +33,9 @@ class MutualAuthUpload:
         client_private_key_path: str,
         client_cert_path: str,
         server_trust_cert_path: str = None,
-        client_cert_password: str = None,
+        client_key_password: str = None,
         verify_ssl: bool = True,
-    ) -> str:
+    ) -> tuple:
         """
         Handle upload operation using private key and certificates.
 
@@ -93,10 +45,10 @@ class MutualAuthUpload:
         :param client_private_key_path: Path to the client private key file
         :param client_cert_path: Path to the client certificate file
         :param server_trust_cert_path: Path to the server trust certificate file
-        :param client_cert_password: Password for the client certificate file
+        :param client_key_password: Password for the client key file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
-        :return: The response data from the server as a string
+        :return: A tuple containing (response_data, status_code, headers)
         """
         try:
             if self.logger is not None:
@@ -114,7 +66,7 @@ class MutualAuthUpload:
                 client_cert_path=client_cert_path,
                 client_key_path=client_private_key_path,
                 ca_cert_path=server_trust_cert_path,
-                cert_password=client_cert_password,
+                cert_password=client_key_password,
                 verify_ssl=verify_ssl,
             )
         except HTTPError as e:
@@ -134,7 +86,7 @@ class MutualAuthUpload:
         ca_cert_path: str = None,
         cert_password: str = None,
         verify_ssl: bool = True,
-    ) -> str:
+    ) -> tuple:
         """
         Upload encrypted PGP file to the specified endpoint.
 
@@ -147,7 +99,7 @@ class MutualAuthUpload:
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
-        :return: The response data from the server as a string
+        :return: A tuple containing (response_data, status_code, headers)
         """
         try:
             if self.logger is not None:
@@ -244,22 +196,23 @@ class MutualAuthUpload:
             fields={field_name: (filename, file_data, content_type)},
         )
 
-    def _handle_response(self, response: urllib3.HTTPResponse) -> str:
+    def _handle_response(self, response: urllib3.HTTPResponse) -> tuple:
         """
         Handle the HTTP response.
 
         :param response: HTTP response
-        :raises urllib3.exceptions.HTTPError: If the response status is not 201
-        :return: The response data as a string
+        :raises urllib3.exceptions.HTTPError: If the response status is not successful (2xx)
+        :return: A tuple containing (response_data, status_code, headers)
         """
         status_code = response.status
         self.logger.info(f"Upload completed. Response status code: {status_code}")
 
-        if status_code == 201:
+        if 200 <= status_code < 300:
             if self.logger is not None:
                 self.logger.info("File uploaded successfully")
             # Decode the response data to a string
-            return response.data.decode('utf-8')
+            response_data = response.data.decode('utf-8')
+            return (response_data, status_code, response.headers)
         else:
             error_message = f"File upload failed. Status code: {status_code}, body: {response.data.decode('utf-8')}"
             if self.logger is not None:

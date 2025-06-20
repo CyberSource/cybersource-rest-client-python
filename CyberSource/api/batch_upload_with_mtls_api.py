@@ -1,8 +1,24 @@
 """
 Batch Upload with mTLS API for CyberSource.
 
-This module provides functionality for batch uploads to CyberSource using mTLS authentication,
-supporting both file-based and in-memory operations with various configuration options.
+This module provides functionality for batch uploads to CyberSource using mutual TLS (mTLS) authentication.
+It enables secure transmission of batch transaction files to CyberSource's batch processing system
+by combining PGP encryption with mTLS authentication for enhanced security.
+
+Key features:
+- PGP encryption of batch files before transmission
+- Mutual TLS authentication for secure server communication
+- Support for various certificate and key configurations
+- File validation including size and format checks
+- Comprehensive error handling and logging
+
+Typical use cases include:
+- Batch processing of payment transactions
+- Uploading large volumes of transaction data securely
+- Automated scheduled batch uploads in production environments
+
+This module is designed to work with CyberSource's batch upload API endpoint and
+requires proper configuration of certificates and keys for successful operation.
 """
 
 from pathlib import Path
@@ -11,6 +27,7 @@ from typing import Optional
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.utilities.pgpBatchUpload.mutual_auth_upload import MutualAuthUpload
 from CyberSource.utilities.pgpBatchUpload.pgp_encryption import PgpEncryption
+from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 
 
 def _validate_paths(paths: list) -> None:
@@ -21,11 +38,19 @@ def _validate_paths(paths: list) -> None:
         paths: List of tuples containing (path, description)
 
     Raises:
+        ValueError: If a required path is None or empty
         FileNotFoundError: If any of the paths don't exist
     """
     for path, description in paths:
+        # Check if this is an optional parameter (currently only "Server trust certificate")
+        is_optional = "Server trust certificate" in description
+        
         if path is None:
-            continue  # Skip validation for None paths
+            if is_optional:
+                continue  # Skip validation for None paths that are optional
+            else:
+                raise ValueError(f"{description} is required but was None")
+                
         if not path:
             raise ValueError(f"{description} path is required")
         if not Path(path).exists():
@@ -37,8 +62,18 @@ class BatchUploadWithMTLSApi:
     A class for handling batch uploads to CyberSource using mTLS authentication.
 
     This class provides methods for encrypting and uploading batch files to CyberSource
-    using PGP encryption and mutual TLS authentication. It supports various authentication
-    methods including separate key/cert files.
+    using PGP encryption and mutual TLS authentication. It orchestrates the entire process
+    from file validation, PGP encryption, to secure transmission via mTLS.
+
+    The class follows a secure workflow:
+    1. Validates input files and certificates
+    2. Encrypts the input file using PGP encryption
+    3. Establishes a secure mTLS connection with CyberSource
+    4. Uploads the encrypted file to CyberSource's batch processing endpoint
+    5. Handles responses and provides comprehensive error reporting
+
+    This class supports various authentication methods including separate key/cert files
+    and can be used either directly or as a context manager with the 'with' statement.
 
     Attributes:
         logger: Logger instance for logging operations and errors
@@ -47,52 +82,106 @@ class BatchUploadWithMTLSApi:
     """
 
     _end_point = "/pts/v1/transaction-batch-upload"
+    _max_size_bytes = 75 * 1024 * 1024  # 75 MB in bytes
 
     def __init__(self, log_config=None):
         """
         Initialize the BatchUploadWithMTLSApi.
 
         Args:
-            log_config: Optional configuration for the logger
+            log_config: Optional configuration for the logger. If provided, it should be
+                        a LogConfiguration instance with appropriate settings.
+
+        Example:
+            ```python
+            from CyberSource.logging.log_configuration import LogConfiguration
+
+            # Create and configure the logger
+            log_config = LogConfiguration()
+            log_config.set_enable_log(True)
+            log_config.set_log_directory("logs")
+            log_config.set_log_file_name("cybersource_batch.log")
+            log_config.set_log_maximum_size(10 * 1024 * 1024)  # 10 MB
+            log_config.set_log_level("INFO")
+            log_config.set_enable_masking(True)
+            log_config.set_log_format("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+            log_config.set_log_date_format("%Y-%m-%d %H:%M:%S")
+
+            # Create the batch upload API instance with logging
+            batch_api = BatchUploadWithMTLSApi(log_config)
+            ```
         """
         self.logger = LogFactory.setup_logger(self.__class__.__name__, log_config)
         self.pgp_encryption = PgpEncryption(log_config)
         self.mutual_auth_upload = MutualAuthUpload(log_config)
 
-    def upload_batch_api_with_separate_key_and_cert_file(
+    def upload_batch_api_with_key_and_certs_file(
         self,
-        input_file: str,
+        input_file_path: str,
         environment_hostname: str,
         pgp_encryption_public_key_path: str,
         client_cert_path: str,
         client_key_path: str,
         server_trust_cert_path: str = None,
-        client_cert_password: Optional[str] = None,
+        client_key_password: Optional[str] = None,
         verify_ssl: bool = True,
-    ) -> str:
+    ) -> tuple:
         """
         Upload a batch file using separate key and certificate files.
 
-        This method encrypts the input file using PGP and uploads it to CyberSource
-        using mutual TLS authentication with separate key and certificate files.
+        This method handles the complete process of batch file upload to CyberSource:
+        1. Validates all input parameters and files
+        2. Checks file size (must be under 75MB) and format (must be .csv)
+        3. Encrypts the input file using PGP with the provided public key
+        4. Uploads the encrypted file to CyberSource using mutual TLS authentication
+        5. Returns the server response or raises appropriate exceptions
+
+        The method supports secure communication through mutual TLS authentication,
+        where both the client and server authenticate each other using certificates.
 
         Args:
-            input_file: Path to the file to upload
-            environment_hostname: CyberSource environment hostname
-            pgp_encryption_public_key_path: Path to the PGP public key file
-            client_cert_path: Path to the client certificate file
-            client_key_path: Path to the client private key file
+            input_file_path: Path to the CSV file to upload (must exist and be under 75MB)
+            environment_hostname: CyberSource environment hostname (e.g., "apitest.cybersource.com")
+            pgp_encryption_public_key_path: Path to the PGP public key file for encryption
+            client_cert_path: Path to the client certificate file (.pem or .crt)
+            client_key_path: Path to the client private key file (.key)
             server_trust_cert_path: Path to the server trust certificate file (optional)
-            client_cert_password: Optional password for the client certificate file
-            verify_ssl: Whether to verify SSL certificates (default: True). Set to False only for development purposes.
+                                   If not provided, system CA certificates will be used
+            client_key_password: Optional password for the client private key if it's encrypted
+            verify_ssl: Whether to verify SSL certificates (default: True)
+                       Set to False only for development/testing purposes.
+                       WARNING: Disabling SSL verification poses a significant security risk
+                       and should never be used in production environments as it makes the
+                       connection vulnerable to man-in-the-middle attacks.
 
         Returns:
-            str: The response data from the server as a string
+            tuple: A tuple containing (response_data, status_code, headers) where:
+                  - response_data: The response data from the server as a string, typically containing a batch ID and status information
+                  - status_code: The HTTP status code of the response
+                  - headers: The HTTP headers of the response
 
         Raises:
-            ValueError: If required parameters are missing or invalid
+            ValueError: If required parameters are missing or invalid (e.g., file too large)
             FileNotFoundError: If any of the required files don't exist
-            requests.exceptions.RequestException: If there's an error during the upload process
+            urllib3.exceptions.HTTPError: If there's an error during the upload process
+            Exception: For any other unexpected errors
+
+        Example:
+            ```python
+            batch_api = BatchUploadWithMTLSApi()
+            try:
+                response = batch_api.upload_batch_api_with_key_and_certs_file(
+                    input_file_path="path/to/transactions.csv",
+                    environment_hostname="apitest.cybersource.com",
+                    pgp_encryption_public_key_path="path/to/cybersource_public.asc",
+                    client_cert_path="path/to/client.crt",
+                    client_key_path="path/to/client.key",
+                    server_trust_cert_path="path/to/server_ca.crt"
+                )
+                print(f"Upload successful. Response: {response}")
+            except Exception as e:
+                print(f"Upload failed: {str(e)}")
+            ```
         """
         try:
             # Step 1: Create endpoint URL
@@ -101,7 +190,7 @@ class BatchUploadWithMTLSApi:
             # Step 2: Validations
             _validate_paths(
                 [
-                    (input_file, "Input file"),
+                    (input_file_path, "Input file"),
                     (pgp_encryption_public_key_path, "PGP public key"),
                     (client_cert_path, "Client certificate"),
                     (client_key_path, "Client private key"),
@@ -110,16 +199,15 @@ class BatchUploadWithMTLSApi:
             )
 
             # Validate file size (maximum 75 MB)
-            file_size = Path(input_file).stat().st_size
-            max_size_bytes = 75 * 1024 * 1024  # 75 MB in bytes
-            if file_size > max_size_bytes:
-                error_msg = f"Input file size ({file_size} bytes) exceeds the maximum allowed size of 75 MB ({max_size_bytes} bytes)"
+            file_size = Path(input_file_path).stat().st_size
+            if file_size > self._max_size_bytes:
+                error_msg = f"Input file size ({file_size} bytes) exceeds the maximum allowed size of 75 MB ({self._max_size_bytes} bytes)"
                 if self.logger is not None:
                     self.logger.error(error_msg)
                 raise ValueError(error_msg)
 
             # Validate file extension (.csv)
-            file_extension = Path(input_file).suffix.lower()
+            file_extension = Path(input_file_path).suffix.lower()
             if file_extension != ".csv":
                 error_msg = (
                     f"Input file must have a .csv extension, but got '{file_extension}'"
@@ -130,32 +218,32 @@ class BatchUploadWithMTLSApi:
 
             # Step 3: PGP encryption
             encrypted_pgp_bytes = self.pgp_encryption.handle_encrypt_operation(
-                input_file, pgp_encryption_public_key_path
+                input_file_path, pgp_encryption_public_key_path
             )
 
             # Step 4: Upload the encrypted PGP file using mTLS
             # Replace the file extension with .pgp
-            file_name = Path(input_file).stem + ".pgp"
-            
+            file_name = Path(input_file_path).stem + ".pgp"
+
             # Log a warning if SSL verification is disabled
             if not verify_ssl and self.logger is not None:
                 self.logger.warning(
-                    "SSL certificate verification is disabled. This should only be used in development environments."
+                    "SSL certificate verification is disabled. This should not be used in production environments."
                 )
-                
-            response_data = self.mutual_auth_upload.handle_upload_operation_using_private_key_and_certs(
+
+            response_tuple = self.mutual_auth_upload.handle_upload_operation_using_private_key_and_certs(
                 encrypted_pgp_bytes=encrypted_pgp_bytes,
                 endpoint_url=endpoint_url,
                 file_name=file_name,
                 client_private_key_path=client_key_path,
                 client_cert_path=client_cert_path,
                 server_trust_cert_path=server_trust_cert_path,
-                client_cert_password=client_cert_password,
+                client_key_password=client_key_password,
                 verify_ssl=verify_ssl,
             )
             if self.logger is not None:
                 self.logger.info("Batch file uploaded successfully")
-            return response_data
+            return response_tuple
         except ValueError as e:
             if self.logger is not None:
                 self.logger.error(f"Validation error: {str(e)}")
@@ -176,37 +264,26 @@ class BatchUploadWithMTLSApi:
         """
         Get the base URL from the environment hostname.
 
+        This method ensures that the environment hostname is properly formatted as a URL
+        by adding the 'https://' prefix if not already present. It also validates that
+        the hostname is not empty.
+
         Args:
-            environment_hostname: CyberSource environment hostname
+            environment_hostname: CyberSource environment hostname (e.g., "apitest.cybersource.com")
 
         Returns:
-            str: The base URL with https:// prefix if not already present
+            str: The base URL with https:// prefix (e.g., "https://apitest.cybersource.com")
+
+        Raises:
+            ValueError: If the environment hostname is None, empty, or consists only of whitespace
+
         """
         if not environment_hostname:
-            raise ValueError("Environment hostname is required")
+            raise ValueError(
+                "Environment Host Name for Batch Upload API cannot be null or empty."
+            )
 
         base_url = environment_hostname.strip()
-        if not base_url.startswith("https://"):
-            base_url = "https://" + base_url
+        if not base_url.startswith(GlobalLabelParameters.HTTP_URL_PREFIX):
+            base_url = GlobalLabelParameters.HTTP_URL_PREFIX + base_url
         return base_url
-
-    def __enter__(self):
-        """
-        Enter the context manager.
-
-        Returns:
-            BatchUploadWithMTLSApi: The instance itself
-        """
-        return self
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        """
-        Exit the context manager.
-
-        Args:
-            exc_type: Exception type if an exception was raised
-            exc_val: Exception value if an exception was raised
-            exc_tb: Exception traceback if an exception was raised
-        """
-        # Currently no resources to clean up
-        pass
