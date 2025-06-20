@@ -228,7 +228,8 @@ class MutualAuthUpload:
         :return: A tuple containing (response_data, status_code, headers)
         """
         status_code = response.status
-        self.logger.info(f"Upload completed. Response status code: {status_code}")
+        if self.logger is not None:
+            self.logger.info(f"Upload completed. Response status code: {status_code}")
 
         if 200 <= status_code < 300:
             if self.logger is not None:
