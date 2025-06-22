@@ -1,10 +1,3 @@
-"""
-PGP Encryption Utility for CyberSource Batch Upload.
-
-This module provides functionality for PGP encryption operations,
-supporting both file-based and in-memory operations with various configuration options.
-"""
-
 import os
 from datetime import datetime
 
@@ -64,8 +57,7 @@ class PgpEncryption:
             if input_file is None or pgp_public_key is None:
                 raise ValueError("Missing required options for encrypt operation")
 
-            validate_path(input_file, "Input file", self.logger)
-            validate_path(pgp_public_key, "Public key", self.logger)
+            validate_path([(input_file, "Input file"), (pgp_public_key, "Public key")])
             input_file_name = os.path.basename(input_file)
 
             public_key = self.load_public_key(pgp_public_key)
@@ -217,7 +209,9 @@ class PgpEncryption:
         # Check if the key is a public key (log warning instead of raising exception)
         if not key.is_public:
             if self.logger is not None:
-                self.logger.warning("The provided key is not a public key. This may cause issues with encryption.")
+                self.logger.warning(
+                    "The provided key is not a public key. This may cause issues with encryption."
+                )
 
         # Check if key has expired (log warning instead of raising exception)
         now = datetime.utcnow()
@@ -229,7 +223,9 @@ class PgpEncryption:
                 expires_at = expires_at.replace(tzinfo=None)
             if now > expires_at:
                 if self.logger is not None:
-                    self.logger.warning(f"The public key has expired on {expires_at}. This may cause issues with encryption.")
+                    self.logger.warning(
+                        f"The public key has expired on {expires_at}. This may cause issues with encryption."
+                    )
 
     def __enter__(self):
         """

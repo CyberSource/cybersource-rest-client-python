@@ -1,36 +1,12 @@
-"""
-Batch Upload with mTLS API for CyberSource.
-
-This module provides functionality for batch uploads to CyberSource using mutual TLS (mTLS) authentication.
-It enables secure transmission of batch transaction files to CyberSource's batch processing system
-by combining PGP encryption with mTLS authentication for enhanced security.
-
-Key features:
-- PGP encryption of batch files before transmission
-- Mutual TLS authentication for secure server communication
-- Support for various certificate and key configurations
-- File validation including size and format checks
-- Comprehensive error handling and logging
-
-Typical use cases include:
-- Batch processing of payment transactions
-- Uploading large volumes of transaction data securely
-- Automated scheduled batch uploads in production environments
-
-This module is designed to work with CyberSource's batch upload API endpoint and
-requires proper configuration of certificates and keys for successful operation.
-"""
-
 from pathlib import Path
 from typing import Optional
 
 import CyberSource.logging.log_factory as LogFactory
 from CyberSource.utilities.pgpBatchUpload.mutual_auth_upload import MutualAuthUpload
 from CyberSource.utilities.pgpBatchUpload.pgp_encryption import PgpEncryption
-from CyberSource.utilities.file_utils import validate_paths
+from CyberSource.utilities.file_utils import validate_path
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
 from CyberSource.rest import ApiException
-from urllib3.exceptions import HTTPError
 
 
 class BatchUploadWithMTLSApi:
@@ -139,10 +115,9 @@ class BatchUploadWithMTLSApi:
         Raises:
             ValueError: If required parameters are missing or invalid (e.g., file too large)
             FileNotFoundError: If any of the required files don't exist
-            urllib3.exceptions.HTTPError: If there's an error during the upload process
-            CyberSource.rest.ApiException: If the response status is not successful (2xx)
+            CyberSource.rest.ApiException: If there's an error during the upload process or if the response status is not successful (2xx)
             Exception: For any other unexpected errors
-            
+
         Notes:
             This method will log warnings but not raise exceptions if:
             - The provided PGP key is not a public key
@@ -170,15 +145,14 @@ class BatchUploadWithMTLSApi:
             endpoint_url = self.get_base_url(environment_hostname) + self._end_point
 
             # Step 2: Validations
-            validate_paths(
+            validate_path(
                 [
                     (input_file_path, "Input file"),
                     (pgp_encryption_public_key_path, "PGP public key"),
                     (client_cert_path, "Client certificate"),
                     (client_key_path, "Client private key"),
                     (server_trust_cert_path, "Server trust certificate"),
-                ],
-                self.logger,
+                ]
             )
 
             # Validate file size (maximum 75 MB)
@@ -211,7 +185,7 @@ class BatchUploadWithMTLSApi:
             # Log a warning if SSL verification is disabled
             if not verify_ssl and self.logger is not None:
                 self.logger.warning(
-                    "SSL certificate verification is disabled. This should not be used in production environments."
+                    "SSL verification is disabled. This should not be used in production environments."
                 )
 
             response_tuple = self.mutual_auth_upload.handle_upload_operation_using_private_key_and_certs(
@@ -234,10 +208,6 @@ class BatchUploadWithMTLSApi:
         except FileNotFoundError as e:
             if self.logger is not None:
                 self.logger.error(f"File not found: {str(e)}")
-            raise
-        except HTTPError as e:
-            if self.logger is not None:
-                self.logger.error(f"HTTP error: {str(e)}")
             raise
         except ApiException as e:
             if self.logger is not None:

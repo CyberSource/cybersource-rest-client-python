@@ -4,7 +4,6 @@ import uuid
 import certifi
 import urllib3
 from urllib3 import BaseHTTPResponse
-from urllib3.exceptions import HTTPError
 
 import CyberSource.logging.log_factory as LogFactory
 from authenticationsdk.util.GlobalLabelParameters import GlobalLabelParameters
@@ -48,8 +47,7 @@ class MutualAuthUpload:
         :param server_trust_cert_path: Path to the server trust certificate file
         :param client_key_password: Password for the client key file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
-        :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
-        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
+        :raises CyberSource.rest.ApiException: If there's an error during the upload process or if the response status is not successful (2xx)
         :return: A tuple containing (response_data, status_code, headers)
         """
         try:
@@ -57,10 +55,6 @@ class MutualAuthUpload:
                 self.logger.info(
                     "Handling upload operation with private key and certificates"
                 )
-                if not verify_ssl and self.logger is not None:
-                    self.logger.warning(
-                        "SSL verification is disabled. This should only be used in development environments."
-                    )
             return self.upload_file(
                 encrypted_pgp_bytes,
                 endpoint_url,
@@ -71,7 +65,7 @@ class MutualAuthUpload:
                 cert_password=client_key_password,
                 verify_ssl=verify_ssl,
             )
-        except (HTTPError, ApiException) as e:
+        except ApiException as e:
             if self.logger is not None:
                 self.logger.error(
                     f"Error in handle_upload_operation_using_private_key_and_certs: {str(e)}"
@@ -100,8 +94,7 @@ class MutualAuthUpload:
         :param ca_cert_path: Path to the CA certificate file
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
-        :raises urllib3.exceptions.HTTPError: If there's an error during the upload process
-        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
+        :raises CyberSource.rest.ApiException: If there's an error during the upload process or if the response status is not successful (2xx)
         :return: A tuple containing (response_data, status_code, headers)
         """
         try:
@@ -121,10 +114,6 @@ class MutualAuthUpload:
                 verify_ssl,
             )
             return self._handle_response(response)
-        except HTTPError as e:
-            if self.logger is not None:
-                self.logger.error(f"HTTPError in upload_file: {str(e)}")
-            raise
         except ApiException as e:
             if self.logger is not None:
                 self.logger.error(f"ApiException in upload_file: {str(e)}")
@@ -159,9 +148,7 @@ class MutualAuthUpload:
         :param cert_password: Password for the certificate file
         :param verify_ssl: Whether to verify SSL certificates (default: True)
         :return: HTTP response
-        :raises urllib3.exceptions.HTTPError: If there's an error during the HTTP request
-        :raises ssl.SSLError: If there's an SSL-related error
-        :raises Exception: For any other unexpected errors
+        :raises CyberSource.rest.ApiException: If there's an error during the HTTP request, including SSL errors or any other unexpected errors
         """
         if self.logger is not None:
             self.logger.info(f"Sending HTTP POST request to URL: {endpoint_url}")
@@ -206,26 +193,45 @@ class MutualAuthUpload:
                 headers=headers,
                 fields={field_name: (filename, file_data, content_type)},
             )
-        except HTTPError as e:
+        except urllib3.exceptions.HTTPError as e:
             if self.logger is not None:
                 self.logger.error(f"HTTP error in _send_request: {str(e)}")
-            raise
+            raise ApiException(
+                status=None,
+                reason=f"HTTP error during request: {str(e)}",
+            )
         except ssl.SSLError as e:
             if self.logger is not None:
                 self.logger.error(f"SSL error in _send_request: {str(e)}")
-            raise HTTPError(f"SSL error: {str(e)}")
+            raise ApiException(
+                status=None,
+                reason=f"SSL error: {str(e)}",
+            )
         except Exception as e:
             if self.logger is not None:
                 self.logger.error(f"Unexpected error in _send_request: {str(e)}")
-            raise HTTPError(f"Unexpected error during HTTP request: {str(e)}")
+            raise ApiException(
+                status=None,
+                reason=f"Unexpected error during HTTP request: {str(e)}",
+            )
 
     def _handle_response(self, response: urllib3.HTTPResponse) -> tuple:
         """
-        Handle the HTTP response.
+        Handle the HTTP response from the file upload operation.
 
-        :param response: HTTP response
-        :raises CyberSource.rest.ApiException: If the response status is not successful (2xx)
+        This method processes the HTTP response, checks the status code, and decodes the response body.
+        For successful responses (status code 2xx), it returns the decoded response data along with
+        status code and headers. For unsuccessful responses, it raises an ApiException.
+
+        :param response: HTTP response from the upload request
+        :raises CyberSource.rest.ApiException: If any of the following conditions occur:
+               - The response status code is not in the 2xx range (indicating failure)
+               - The response body cannot be decoded using the specified encoding
+               - The response body cannot be decoded using UTF-8 as a fallback
         :return: A tuple containing (response_data, status_code, headers)
+                 - response_data: Decoded response body as a string
+                 - status_code: HTTP status code of the response
+                 - headers: HTTP headers from the response
         """
         status_code = response.status
         if self.logger is not None:
@@ -234,12 +240,62 @@ class MutualAuthUpload:
         if 200 <= status_code < 300:
             if self.logger is not None:
                 self.logger.info("File uploaded successfully")
-            # Decode the response data to a string
-            response_data = response.data.decode("utf-8")
+
+            # Determine encoding from Content-Type header or default to UTF-8
+            content_type = response.headers.get("Content-Type", "").lower()
+            encoding = "utf-8"  # Default to UTF-8
+            if "charset=" in content_type:
+                encoding = content_type.split("charset=")[-1]
+
+            # Attempt to decode the response data
+            try:
+                response_data = response.data.decode(encoding)
+            except UnicodeDecodeError as e:
+                if self.logger is not None:
+                    self.logger.error(
+                        f"Decoding error with {encoding} encoding: {str(e)}"
+                    )
+
+                # Fall back to UTF-8 if the specified encoding fails and it's not already UTF-8
+                if encoding.lower() != "utf-8":
+                    try:
+                        response_data = response.data.decode("utf-8")
+                        if self.logger is not None:
+                            self.logger.info(
+                                "Successfully decoded response with UTF-8 fallback"
+                            )
+                    except Exception as e:
+                        if self.logger is not None:
+                            self.logger.error(
+                                f"UTF-8 fallback decoding error: {str(e)}"
+                            )
+                        raise ApiException(
+                            http_resp=response,
+                            status=status_code,
+                            reason=f"Failed to decode response data: {str(e)}",
+                        )
+                else:
+                    raise ApiException(
+                        http_resp=response,
+                        status=status_code,
+                        reason=f"Failed to decode response data: {str(e)}",
+                    )
+
             return response_data, status_code, response.headers
         else:
-            error_message = f"File upload failed. Status code: {status_code}, body: {response.data.decode('utf-8')}"
+            try:
+                error_body = response.data.decode("utf-8")
+            except Exception as e:
+                if self.logger is not None:
+                    self.logger.error(f"Error decoding error response: {str(e)}")
+                error_body = "<Unable to decode response body>"
+
+            error_message = (
+                f"File upload failed. Status code: {status_code}, body: {error_body}"
+            )
             if self.logger is not None:
                 self.logger.error(error_message)
             # Throw ApiException instead of HTTPError for consistency with rest.py
-            raise ApiException(http_resp=response, status=status_code, reason=error_message)
+            raise ApiException(
+                http_resp=response, status=status_code, reason=error_message
+            )
