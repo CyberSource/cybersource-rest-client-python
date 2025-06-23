@@ -1469,6 +1469,7 @@ from .models.void_tax_request import VoidTaxRequest
 
 # import api into sdk package
 from .api.o_auth_api import OAuthApi
+from .api.batch_upload_with_mtls_api import BatchUploadWithMTLSApi
 from .api.batches_api import BatchesApi
 from .api.bin_lookup_api import BinLookupApi
 from .api.chargeback_details_api import ChargebackDetailsApi
