@@ -113,10 +113,11 @@ class BatchUploadWithMTLSApi:
                   - headers: The HTTP headers of the response
 
         Raises:
-            ValueError: If required parameters are missing or invalid (e.g., file too large)
-            FileNotFoundError: If any of the required files don't exist
-            CyberSource.rest.ApiException: If there's an error during the upload process or if the response status is not successful (2xx)
-            Exception: For any other unexpected errors
+            CyberSource.rest.ApiException: If there's an error during the upload process, including:
+                - Validation errors (status 400): If required parameters are missing or invalid (e.g., file too large)
+                - File not found errors (status 400): If any of the required files don't exist
+                - API errors: If the response status is not successful (2xx)
+                - Unexpected errors (status 500): For any other unexpected errors
 
         Notes:
             This method will log warnings but not raise exceptions if:
@@ -136,8 +137,10 @@ class BatchUploadWithMTLSApi:
                     server_trust_cert_path="path/to/server_ca.crt"
                 )
                 print(f"Upload successful. Response: {response}")
-            except Exception as e:
+            except ApiException as e:
                 print(f"Upload failed: {str(e)}")
+                print(f"Status code: {e.status}")
+                print(f"Response body: {e.body}")
             ```
         """
         try:
@@ -158,20 +161,24 @@ class BatchUploadWithMTLSApi:
             # Validate file size (maximum 75 MB)
             file_size = Path(input_file_path).stat().st_size
             if file_size > self._max_size_bytes:
-                error_msg = f"Input file size ({file_size} bytes) exceeds the maximum allowed size of 75 MB ({self._max_size_bytes} bytes)"
+                error_msg = "Input file size exceeds the maximum allowed size of 75 MB"
                 if self.logger is not None:
                     self.logger.error(error_msg)
-                raise ValueError(error_msg)
+                raise ApiException(
+                    status=400,
+                    reason="Validation error: Input file size exceeds the maximum allowed size of 75 MB",
+                )
 
             # Validate file extension (.csv)
             file_extension = Path(input_file_path).suffix.lower()
             if file_extension != ".csv":
-                error_msg = (
-                    f"Input file must have a .csv extension, but got '{file_extension}'"
-                )
+                error_msg = "Input file must have a .csv extension"
                 if self.logger is not None:
                     self.logger.error(error_msg)
-                raise ValueError(error_msg)
+                raise ApiException(
+                    status=400,
+                    reason="Validation error: Input file must have a .csv extension",
+                )
 
             # Step 3: PGP encryption
             encrypted_pgp_bytes = self.pgp_encryption.handle_encrypt_operation(
@@ -201,24 +208,35 @@ class BatchUploadWithMTLSApi:
             if self.logger is not None:
                 self.logger.info("Batch file uploaded successfully")
             return response_tuple
-        except ValueError as e:
-            if self.logger is not None:
-                self.logger.error(f"Validation error: {str(e)}")
-            raise
-        except FileNotFoundError as e:
-            if self.logger is not None:
-                self.logger.error(f"File not found: {str(e)}")
-            raise
-        except ApiException as e:
-            if self.logger is not None:
-                self.logger.error(f"API error: {str(e)}")
-            raise
-        except Exception as e:
+        except ValueError:
             if self.logger is not None:
                 self.logger.error(
-                    f"Error in upload_batch_api_with_key_and_certs_file: {str(e)}"
+                    "Validation error: Input parameters failed validation requirements"
+                )
+            raise ApiException(
+                status=400,
+                reason="Validation error: Input parameters failed validation requirements",
+            )
+        except FileNotFoundError:
+            if self.logger is not None:
+                self.logger.error("File not found: Required file could not be located")
+            raise ApiException(
+                status=400, reason="File not found: Required file could not be located"
+            )
+        except ApiException:
+            if self.logger is not None:
+                self.logger.error(
+                    "API error: Batch upload request to CyberSource Batch Upload API failed"
                 )
             raise
+        except Exception:
+            if self.logger is not None:
+                self.logger.error(
+                    "Error in upload_batch_api_with_key_and_certs_file: Batch upload operation failed"
+                )
+            raise ApiException(
+                status=500, reason="Unexpected error during batch upload operation"
+            )
 
     @staticmethod
     def get_base_url(environment_hostname: str) -> str:
@@ -236,12 +254,13 @@ class BatchUploadWithMTLSApi:
             str: The base URL with https:// prefix (e.g., "https://apitest.cybersource.com")
 
         Raises:
-            ValueError: If the environment hostname is None, empty, or consists only of whitespace
+            CyberSource.rest.ApiException: If the environment hostname is None, empty, or consists only of whitespace
 
         """
         if not environment_hostname:
-            raise ValueError(
-                "Environment Host Name for Batch Upload API cannot be null or empty."
+            raise ApiException(
+                status=400,
+                reason="Environment Host Name for Batch Upload API cannot be null or empty.",
             )
 
         base_url = environment_hostname.strip()

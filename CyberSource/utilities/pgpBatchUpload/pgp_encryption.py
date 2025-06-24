@@ -71,26 +71,32 @@ class PgpEncryption:
             return encrypted_pgp_bytes
         except ValueError as e:
             if self.logger is not None:
-                self.logger.error(f"Value error in handle_encrypt_operation: {str(e)}")
+                self.logger.error(
+                    "Value error in handle_encrypt_operation: Missing or invalid parameters for encryption"
+                )
             raise
         except FileNotFoundError as e:
             if self.logger is not None:
                 self.logger.error(
-                    f"File not found in handle_encrypt_operation: {str(e)}"
+                    "File not found in handle_encrypt_operation: Input file or public key file could not be found"
                 )
             raise
         except pgpy.errors.PGPError as e:
             if self.logger is not None:
-                self.logger.error(f"PGP error in handle_encrypt_operation: {str(e)}")
+                self.logger.error(
+                    "PGP error in handle_encrypt_operation: Failed to perform PGP encryption operation"
+                )
             raise
         except IOError as e:
             if self.logger is not None:
-                self.logger.error(f"I/O error in handle_encrypt_operation: {str(e)}")
+                self.logger.error(
+                    "I/O error in handle_encrypt_operation: Failed to read input file or write output"
+                )
             raise
         except Exception as e:
             if self.logger is not None:
                 self.logger.error(
-                    f"Unexpected error in handle_encrypt_operation: {str(e)}"
+                    "Unexpected error in handle_encrypt_operation: Failure during encryption process"
                 )
             raise
 
@@ -119,15 +125,21 @@ class PgpEncryption:
                 return self.encrypt_data(file_data, public_key)
         except IOError as e:
             if self.logger is not None:
-                self.logger.error(f"I/O error in encrypt_file: {str(e)}")
+                self.logger.error(
+                    "I/O error in encrypt_file: Failed to read input file for encryption"
+                )
             raise
         except pgpy.errors.PGPError as e:
             if self.logger is not None:
-                self.logger.error(f"PGP error in encrypt_file: {str(e)}")
+                self.logger.error(
+                    "PGP error in encrypt_file: Failed to encrypt file with PGP"
+                )
             raise
         except Exception as e:
             if self.logger is not None:
-                self.logger.error(f"Unexpected error in encrypt_file: {str(e)}")
+                self.logger.error(
+                    "Unexpected error in encrypt_file: Failure during file encryption"
+                )
             raise
 
     def encrypt_data(
@@ -158,11 +170,15 @@ class PgpEncryption:
             return bytes(encrypted_message)
         except pgpy.errors.PGPError as e:
             if self.logger is not None:
-                self.logger.error(f"PGP error in encrypt_data: {str(e)}")
+                self.logger.error(
+                    "PGP error in encrypt_data: Failed to encrypt data with PGP"
+                )
             raise
         except Exception as e:
             if self.logger is not None:
-                self.logger.error(f"Unexpected error in encrypt_data: {str(e)}")
+                self.logger.error(
+                    "Unexpected error in encrypt_data: Failure during data encryption"
+                )
             raise
 
     def load_public_key(self, key_path: str) -> pgpy.PGPKey:
@@ -188,15 +204,21 @@ class PgpEncryption:
                 return key
         except IOError as e:
             if self.logger is not None:
-                self.logger.error(f"I/O error loading public key: {str(e)}")
+                self.logger.error(
+                    "I/O error loading public key: Failed to read public key file"
+                )
             raise
         except pgpy.errors.PGPError as e:
             if self.logger is not None:
-                self.logger.error(f"PGP error loading public key: {str(e)}")
+                self.logger.error(
+                    "PGP error loading public key: Invalid or corrupted PGP key format"
+                )
             raise
         except Exception as e:
             if self.logger is not None:
-                self.logger.error(f"Unexpected error loading public key: {str(e)}")
+                self.logger.error(
+                    "Unexpected error loading public key: Failure during key loading"
+                )
             raise
 
     def _validate_key_for_encryption(self, key: pgpy.PGPKey) -> None:

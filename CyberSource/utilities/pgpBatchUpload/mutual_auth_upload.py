@@ -65,10 +65,10 @@ class MutualAuthUpload:
                 cert_password=client_key_password,
                 verify_ssl=verify_ssl,
             )
-        except ApiException as e:
+        except ApiException:
             if self.logger is not None:
                 self.logger.error(
-                    f"Error in handle_upload_operation_using_private_key_and_certs: {str(e)}"
+                    "Error in handle_upload_operation_using_private_key_and_certs: Failed to upload file using mTLS authentication"
                 )
             raise
 
@@ -114,9 +114,11 @@ class MutualAuthUpload:
                 verify_ssl,
             )
             return self._handle_response(response)
-        except ApiException as e:
+        except ApiException:
             if self.logger is not None:
-                self.logger.error(f"ApiException in upload_file: {str(e)}")
+                self.logger.error(
+                    "ApiException in upload_file: File upload operation failed"
+                )
             raise
 
     def _create_headers(self) -> dict:
@@ -193,26 +195,32 @@ class MutualAuthUpload:
                 headers=headers,
                 fields={field_name: (filename, file_data, content_type)},
             )
-        except urllib3.exceptions.HTTPError as e:
+        except urllib3.exceptions.HTTPError:
             if self.logger is not None:
-                self.logger.error(f"HTTP error in _send_request: {str(e)}")
+                self.logger.error(
+                    "HTTP error in _send_request: Network communication failure during file upload"
+                )
             raise ApiException(
                 status=None,
-                reason=f"HTTP error during request: {str(e)}",
+                reason="HTTP communication error occurred during file upload",
             )
-        except ssl.SSLError as e:
+        except ssl.SSLError:
             if self.logger is not None:
-                self.logger.error(f"SSL error in _send_request: {str(e)}")
+                self.logger.error(
+                    "SSL error in _send_request: Certificate validation or secure connection failure"
+                )
             raise ApiException(
                 status=None,
-                reason=f"SSL error: {str(e)}",
+                reason="SSL certificate or connection error occurred",
             )
-        except Exception as e:
+        except Exception:
             if self.logger is not None:
-                self.logger.error(f"Unexpected error in _send_request: {str(e)}")
+                self.logger.error(
+                    "Unexpected error in _send_request: Failure during HTTP request processing"
+                )
             raise ApiException(
                 status=None,
-                reason=f"Unexpected error during HTTP request: {str(e)}",
+                reason="An unexpected error occurred during file upload",
             )
 
     def _handle_response(self, response: urllib3.HTTPResponse) -> tuple:
@@ -241,61 +249,54 @@ class MutualAuthUpload:
             if self.logger is not None:
                 self.logger.info("File uploaded successfully")
 
-            # Determine encoding from Content-Type header or default to UTF-8
-            content_type = response.headers.get("Content-Type", "").lower()
-            encoding = "utf-8"  # Default to UTF-8
-            if "charset=" in content_type:
-                encoding = content_type.split("charset=")[-1]
-
-            # Attempt to decode the response data
             try:
-                response_data = response.data.decode(encoding)
-            except UnicodeDecodeError as e:
+                # Check the type of response.data
+                if isinstance(response.data, bytes):
+                    response_data = response.data.decode("utf-8")
+                else:
+                    # Already a string (Python 2 case)
+                    response_data = response.data
+                if self.logger is not None:
+                    self.logger.info("Successfully processed response data")
+            except Exception:
                 if self.logger is not None:
                     self.logger.error(
-                        f"Decoding error with {encoding} encoding: {str(e)}"
+                        "Response data processing error: Unable to decode or process server response"
                     )
-
-                # Fall back to UTF-8 if the specified encoding fails and it's not already UTF-8
-                if encoding.lower() != "utf-8":
-                    try:
-                        response_data = response.data.decode("utf-8")
-                        if self.logger is not None:
-                            self.logger.info(
-                                "Successfully decoded response with UTF-8 fallback"
-                            )
-                    except Exception as e:
-                        if self.logger is not None:
-                            self.logger.error(
-                                f"UTF-8 fallback decoding error: {str(e)}"
-                            )
-                        raise ApiException(
-                            http_resp=response,
-                            status=status_code,
-                            reason=f"Failed to decode response data: {str(e)}",
-                        )
-                else:
-                    raise ApiException(
-                        http_resp=response,
-                        status=status_code,
-                        reason=f"Failed to decode response data: {str(e)}",
-                    )
+                raise ApiException(
+                    http_resp=response,
+                    status=status_code,
+                    reason="Failed to process response data",
+                )
 
             return response_data, status_code, response.headers
         else:
             try:
-                error_body = response.data.decode("utf-8")
-            except Exception as e:
+                if isinstance(response.data, bytes):
+                    error_body = response.data.decode("utf-8")
+                else:
+                    error_body = response.data
+            except Exception:
                 if self.logger is not None:
-                    self.logger.error(f"Error decoding error response: {str(e)}")
-                error_body = "<Unable to decode response body>"
+                    self.logger.error(
+                        "Error processing error response: Unable to decode error response from server"
+                    )
+                raise ApiException(
+                    http_resp=response,
+                    status=status_code,
+                    reason="Unable to process error response from server",
+                )
 
-            error_message = (
-                f"File upload failed. Status code: {status_code}, body: {error_body}"
-            )
             if self.logger is not None:
-                self.logger.error(error_message)
-            # Throw ApiException instead of HTTPError for consistency with rest.py
+                self.logger.error(f"File upload failed. Status code: {status_code}")
+
+            if 400 <= status_code < 500:
+                error_message = f"File upload failed due to client error (Status code: {status_code}). Details: {error_body}"
+            elif 500 <= status_code < 600:
+                error_message = f"File upload failed due to server error (Status code: {status_code}). Details: {error_body}"
+            else:
+                error_message = f"File upload failed (Status code: {status_code}). Details: {error_body}"
+
             raise ApiException(
                 http_resp=response, status=status_code, reason=error_message
             )
