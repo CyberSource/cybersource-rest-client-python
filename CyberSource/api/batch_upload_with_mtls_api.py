@@ -93,7 +93,7 @@ class BatchUploadWithMTLSApi:
 
         Args:
             input_file_path: Path to the CSV file to upload (must exist and be under 75MB)
-            environment_hostname: CyberSource environment hostname (e.g., "apitest.cybersource.com")
+            environment_hostname: CyberSource environment hostname (e.g., "secure-batch-test.cybersource.com")
             pgp_encryption_public_key_path: Path to the PGP public key file for encryption
             client_cert_path: Path to the client certificate file (.pem or .crt)
             client_key_path: Path to the client private key file (.key)
