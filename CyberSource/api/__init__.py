@@ -63,3 +63,4 @@ from .refund_api import RefundApi
 from .reversal_api import ReversalApi
 from .taxes_api import TaxesApi
 from .void_api import VoidApi
+from .batch_upload_with_mtls_api import BatchUploadWithMTLSApi

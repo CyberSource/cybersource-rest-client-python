@@ -14,6 +14,7 @@ from .models.unauthorized_client_error import UnauthorizedClientError
 {{/model}}{{/models}}
 # import api into sdk package
 from .api.o_auth_api import OAuthApi
+from .api.batch_upload_with_mtls_api import BatchUploadWithMTLSApi
 {{#apiInfo}}{{#apis}}from .api.{{classVarName}} import {{classname}}
 {{/apis}}{{/apiInfo}}
 

@@ -42,6 +42,7 @@ git checkout ..\README.md
 git checkout ..\setup.py
 
 git checkout ..\CyberSource\api\o_auth_api.py
+git checkout ..\CyberSource\api\batch_upload_with_mtls_api.py
 git checkout ..\CyberSource\models\access_token_response.py
 git checkout ..\CyberSource\models\bad_request_error.py
 git checkout ..\CyberSource\models\create_access_token_request.py
