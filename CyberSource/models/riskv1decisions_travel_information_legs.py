@@ -33,17 +33,19 @@ class Riskv1decisionsTravelInformationLegs(object):
         'origination': 'str',
         'destination': 'str',
         'carrier_code': 'str',
-        'departure_date': 'str'
+        'departure_date': 'str',
+        'departure_time': 'int'
     }
 
     attribute_map = {
         'origination': 'origination',
         'destination': 'destination',
         'carrier_code': 'carrierCode',
-        'departure_date': 'departureDate'
+        'departure_date': 'departureDate',
+        'departure_time': 'departureTime'
     }
 
-    def __init__(self, origination=None, destination=None, carrier_code=None, departure_date=None):
+    def __init__(self, origination=None, destination=None, carrier_code=None, departure_date=None, departure_time=None):
         """
         Riskv1decisionsTravelInformationLegs - a model defined in Swagger
         """
@@ -52,6 +54,7 @@ class Riskv1decisionsTravelInformationLegs(object):
         self._destination = None
         self._carrier_code = None
         self._departure_date = None
+        self._departure_time = None
 
         if origination is not None:
           self.origination = origination
@@ -61,6 +64,8 @@ class Riskv1decisionsTravelInformationLegs(object):
           self.carrier_code = carrier_code
         if departure_date is not None:
           self.departure_date = departure_date
+        if departure_time is not None:
+          self.departure_time = departure_time
 
     @property
     def origination(self):
@@ -153,6 +158,29 @@ class Riskv1decisionsTravelInformationLegs(object):
         """
 
         self._departure_date = departure_date
+
+    @property
+    def departure_time(self):
+        """
+        Gets the departure_time of this Riskv1decisionsTravelInformationLegs.
+        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59`. Format: English characters only. Optional request field for travel legs. 
+
+        :return: The departure_time of this Riskv1decisionsTravelInformationLegs.
+        :rtype: int
+        """
+        return self._departure_time
+
+    @departure_time.setter
+    def departure_time(self, departure_time):
+        """
+        Sets the departure_time of this Riskv1decisionsTravelInformationLegs.
+        Time of departure for this leg of the trip. The format is military time and HHMM: If not all zeros, then the hours must be `00-23` and the minutes must be `00-59`. Format: English characters only. Optional request field for travel legs. 
+
+        :param departure_time: The departure_time of this Riskv1decisionsTravelInformationLegs.
+        :type: int
+        """
+
+        self._departure_time = departure_time
 
     def to_dict(self):
         """

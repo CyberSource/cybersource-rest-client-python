@@ -12,7 +12,7 @@ from .customer_api import CustomerApi
 from .customer_payment_instrument_api import CustomerPaymentInstrumentApi
 from .customer_shipping_address_api import CustomerShippingAddressApi
 from .decision_manager_api import DecisionManagerApi
-from .device_de_association_v3_api import DeviceDeAssociationV3Api
+from .device_de_association_api import DeviceDeAssociationApi
 from .device_search_api import DeviceSearchApi
 from .download_dtd_api import DownloadDTDApi
 from .download_xsd_api import DownloadXSDApi

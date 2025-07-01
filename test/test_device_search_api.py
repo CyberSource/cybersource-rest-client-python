@@ -30,11 +30,19 @@ class TestDeviceSearchApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_post_search_query(self):
+        """
+        Test case for post_search_query
+
+        Retrieve List of Devices for a given search query V2
+        """
+        pass
+
     def test_post_search_query_v3(self):
         """
         Test case for post_search_query_v3
 
-        Retrieve List of Devices for a given search query V3
+        Retrieve List of Devices for a given search query
         """
         pass
 

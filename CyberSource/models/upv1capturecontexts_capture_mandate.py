@@ -36,6 +36,7 @@ class Upv1capturecontextsCaptureMandate(object):
         'request_shipping': 'bool',
         'ship_to_countries': 'list[str]',
         'show_accepted_network_icons': 'bool',
+        'show_confirmation_step': 'bool',
         'request_save_card': 'bool',
         'combo_card': 'bool',
         'cpf': 'bool'
@@ -48,12 +49,13 @@ class Upv1capturecontextsCaptureMandate(object):
         'request_shipping': 'requestShipping',
         'ship_to_countries': 'shipToCountries',
         'show_accepted_network_icons': 'showAcceptedNetworkIcons',
+        'show_confirmation_step': 'showConfirmationStep',
         'request_save_card': 'requestSaveCard',
         'combo_card': 'comboCard',
         'cpf': 'CPF'
     }
 
-    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None, request_save_card=None, combo_card=None, cpf=None):
+    def __init__(self, billing_type=None, request_email=None, request_phone=None, request_shipping=None, ship_to_countries=None, show_accepted_network_icons=None, show_confirmation_step=None, request_save_card=None, combo_card=None, cpf=None):
         """
         Upv1capturecontextsCaptureMandate - a model defined in Swagger
         """
@@ -64,6 +66,7 @@ class Upv1capturecontextsCaptureMandate(object):
         self._request_shipping = None
         self._ship_to_countries = None
         self._show_accepted_network_icons = None
+        self._show_confirmation_step = None
         self._request_save_card = None
         self._combo_card = None
         self._cpf = None
@@ -80,6 +83,8 @@ class Upv1capturecontextsCaptureMandate(object):
           self.ship_to_countries = ship_to_countries
         if show_accepted_network_icons is not None:
           self.show_accepted_network_icons = show_accepted_network_icons
+        if show_confirmation_step is not None:
+          self.show_confirmation_step = show_confirmation_step
         if request_save_card is not None:
           self.request_save_card = request_save_card
         if combo_card is not None:
@@ -224,6 +229,29 @@ class Upv1capturecontextsCaptureMandate(object):
         """
 
         self._show_accepted_network_icons = show_accepted_network_icons
+
+    @property
+    def show_confirmation_step(self):
+        """
+        Gets the show_confirmation_step of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display the final confirmation screen when using Click to Pay.<br> Where 'BillingType'= NONE and 'requestShipping'= FALSE and the customer is using an existing Click to Pay card as their chosen payment method, a final confirmation screen can be removed allowing the customer to check out as soon as they have selected their payment method from within their Click to Pay card tray.  Possible values: - True - False 
+
+        :return: The show_confirmation_step of this Upv1capturecontextsCaptureMandate.
+        :rtype: bool
+        """
+        return self._show_confirmation_step
+
+    @show_confirmation_step.setter
+    def show_confirmation_step(self, show_confirmation_step):
+        """
+        Sets the show_confirmation_step of this Upv1capturecontextsCaptureMandate.
+        Configure Unified Checkout to display the final confirmation screen when using Click to Pay.<br> Where 'BillingType'= NONE and 'requestShipping'= FALSE and the customer is using an existing Click to Pay card as their chosen payment method, a final confirmation screen can be removed allowing the customer to check out as soon as they have selected their payment method from within their Click to Pay card tray.  Possible values: - True - False 
+
+        :param show_confirmation_step: The show_confirmation_step of this Upv1capturecontextsCaptureMandate.
+        :type: bool
+        """
+
+        self._show_confirmation_step = show_confirmation_step
 
     @property
     def request_save_card(self):

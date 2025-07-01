@@ -36,7 +36,8 @@ class GetSubscriptionResponse(object):
         'plan_information': 'GetAllSubscriptionsResponsePlanInformation',
         'subscription_information': 'GetAllSubscriptionsResponseSubscriptionInformation',
         'payment_information': 'GetAllSubscriptionsResponsePaymentInformation',
-        'order_information': 'GetAllSubscriptionsResponseOrderInformation'
+        'order_information': 'GetAllSubscriptionsResponseOrderInformation',
+        'reactivation_information': 'GetSubscriptionResponseReactivationInformation'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class GetSubscriptionResponse(object):
         'plan_information': 'planInformation',
         'subscription_information': 'subscriptionInformation',
         'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'reactivation_information': 'reactivationInformation'
     }
 
-    def __init__(self, links=None, id=None, submit_time_utc=None, plan_information=None, subscription_information=None, payment_information=None, order_information=None):
+    def __init__(self, links=None, id=None, submit_time_utc=None, plan_information=None, subscription_information=None, payment_information=None, order_information=None, reactivation_information=None):
         """
         GetSubscriptionResponse - a model defined in Swagger
         """
@@ -61,6 +63,7 @@ class GetSubscriptionResponse(object):
         self._subscription_information = None
         self._payment_information = None
         self._order_information = None
+        self._reactivation_information = None
 
         if links is not None:
           self.links = links
@@ -76,6 +79,8 @@ class GetSubscriptionResponse(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if reactivation_information is not None:
+          self.reactivation_information = reactivation_information
 
     @property
     def links(self):
@@ -227,6 +232,27 @@ class GetSubscriptionResponse(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def reactivation_information(self):
+        """
+        Gets the reactivation_information of this GetSubscriptionResponse.
+
+        :return: The reactivation_information of this GetSubscriptionResponse.
+        :rtype: GetSubscriptionResponseReactivationInformation
+        """
+        return self._reactivation_information
+
+    @reactivation_information.setter
+    def reactivation_information(self, reactivation_information):
+        """
+        Sets the reactivation_information of this GetSubscriptionResponse.
+
+        :param reactivation_information: The reactivation_information of this GetSubscriptionResponse.
+        :type: GetSubscriptionResponseReactivationInformation
+        """
+
+        self._reactivation_information = reactivation_information
 
     def to_dict(self):
         """

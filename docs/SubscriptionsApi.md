@@ -15,11 +15,11 @@ Method | HTTP request | Description
 
 
 # **activate_subscription**
-> ActivateSubscriptionResponse activate_subscription(id)
+> ActivateSubscriptionResponse activate_subscription(id, process_skipped_payments=process_skipped_payments)
 
 Activate a Subscription
 
-Activate a `CANCELLED` Or `SUSPENDED` Subscription 
+Activate a `SUSPENDED` Subscription 
 
 ### Example 
 ```python
@@ -32,10 +32,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = CyberSource.SubscriptionsApi()
 id = 'id_example' # str | Subscription Id
+process_skipped_payments = true # bool | Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true. (optional) (default to true)
 
 try: 
     # Activate a Subscription
-    api_response = api_instance.activate_subscription(id)
+    api_response = api_instance.activate_subscription(id, process_skipped_payments=process_skipped_payments)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->activate_subscription: %s\n" % e)
@@ -46,6 +47,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| Subscription Id | 
+ **process_skipped_payments** | **bool**| Indicates if skipped payments should be processed from the period when the subscription was suspended. By default, this is set to true. | [optional] [default to true]
 
 ### Return type
 
