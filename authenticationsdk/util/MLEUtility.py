@@ -17,7 +17,6 @@ class MLEUtility:
 
     @staticmethod
     def check_is_mle_for_api(merchant_config, inbound_mle_status, operation_ids):
-
         is_mle_for_api = False
         is_mle_supported_by_cybs_for_api = False
         
@@ -30,7 +29,7 @@ class MLEUtility:
             
         logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
     
-        if inbound_mle_status and inbound_mle_status.lower() == "mandatory" and not merchant_config.useMLEGloballyForRequest():
+        if inbound_mle_status and inbound_mle_status.lower() == "mandatory" and not merchant_config.get_useMLEGloballyForRequest():
             is_mle_for_api = True
             logger.warning(
                 "MLE is required for this operation (mandatory), but the global MLE flag is disabled. "
