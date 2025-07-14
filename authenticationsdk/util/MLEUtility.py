@@ -16,11 +16,27 @@ class MLEUtility:
             self.errors = errors
 
     @staticmethod
-    def check_is_mle_for_api(merchant_config, is_mle_supported_by_cybs_for_api, operation_ids):
+    def check_is_mle_for_api(merchant_config, inbound_mle_status, operation_ids):
 
         is_mle_for_api = False
-        if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGlobally():
+        is_mle_supported_by_cybs_for_api = False
+        
+        # Check if MLE is supported by Cybs for API
+        if inbound_mle_status and inbound_mle_status.lower() in ("optional", "mandatory"):
+            is_mle_supported_by_cybs_for_api = True
+
+        if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGloballyForRequest():
             is_mle_for_api = True
+            
+        logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
+    
+        if inbound_mle_status and inbound_mle_status.lower() == "mandatory" and not merchant_config.useMLEGloballyForRequest():
+            is_mle_for_api = True
+            logger.warning(
+                "MLE is required for this operation (mandatory), but the global MLE flag is disabled. "
+                "Enabling MLE for this API call as required by CyberSource."
+            )
+        
         operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
         map_to_control_mle = merchant_config.get_mapToControlMLEonAPI()
         if map_to_control_mle is not None and map_to_control_mle:

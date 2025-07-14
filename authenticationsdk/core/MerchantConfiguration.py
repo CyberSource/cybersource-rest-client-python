@@ -51,6 +51,7 @@ class MerchantConfiguration:
         self.log_config = None
         self.__jwePEMFileDirectory = None
         self.useMLEGlobally = None
+        self.useMLEGloballyForRequest = None
         self.mapToControlMLEonAPI = None
         self.mleKeyAlias = None 
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
@@ -184,14 +185,22 @@ class MerchantConfiguration:
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
     
-    def set_useMLEGlobally(self, value):
-        if not (value.get('useMLEGlobally') is None):
-            self.useMLEGlobally = value['useMLEGlobally']
+    def set_useMLEGloballyForRequest(self, value):
+        if value.get('useMLEGloballyForRequest') is not None:
+            self.useMLEGloballyForRequest = value['useMLEGloballyForRequest']
+        elif value.get('useMLEGlobally') is not None:
+            self.useMLEGloballyForRequest = value['useMLEGlobally']
         else:
-            self.useMLEGlobally = False
+            self.useMLEGloballyForRequest = False
+            
+        # self.useMLEGloballyForRequest = (
+        #     value.get('useMLEGloballyForRequest')
+        #     or value.get('useMLEGlobally')
+        #     or False
+        # )
 
-    def get_useMLEGlobally(self):
-        return self.useMLEGlobally
+    def get_useMLEGloballyForRequest(self):
+        return self.useMLEGloballyForRequest
     
     def set_mapToControlMLEonAPI(self, value):
         map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
@@ -245,7 +254,7 @@ class MerchantConfiguration:
         self.set_refresh_token(val)
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
-        self.set_useMLEGlobally(val)
+        self.set_useMLEGloballyForRequest(val)
         self.set_mapToControlMLEonAPI(val)
         self.set_mleKeyAlias(val)
 
@@ -375,8 +384,8 @@ class MerchantConfiguration:
                                                                                GlobalLabelParameters.AUTH_ERROR,
                                                                                self.log_config)
         # useMLEGlobally check for auth Type
-        if self.useMLEGlobally is True or self.mapToControlMLEonAPI is not None:
-            if self.useMLEGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+        if self.useMLEGloballyForRequest is True or self.mapToControlMLEonAPI is not None:
+            if self.useMLEGloballyForRequest is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
                  authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MLE_AUTH_ERROR,
                                                                                self.log_config)
