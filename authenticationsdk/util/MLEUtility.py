@@ -27,8 +27,12 @@ class MLEUtility:
         if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGloballyForRequest():
             is_mle_for_api = True
             
-        logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-    
+        # Only create logger once per class, not per call
+        logger = getattr(MLEUtility, "_logger", None)
+        if logger is None:
+            logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
+            setattr(MLEUtility, "_logger", logger)
+            
         if inbound_mle_status and inbound_mle_status.lower() == "mandatory" and not merchant_config.get_useMLEGloballyForRequest():
             is_mle_for_api = True
             logger.warning(
@@ -50,8 +54,12 @@ class MLEUtility:
         if request_body is None or request_body == "":
             return request_body
 
-        logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-             
+        # Only create logger once per class, not per call
+        logger = getattr(MLEUtility, "_logger", None)
+        if logger is None:
+            logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
+            setattr(MLEUtility, "_logger", logger)
+                      
         if merchant_config.log_config.enable_log:
             logger.debug(f"{GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST}{request_body}")
 
