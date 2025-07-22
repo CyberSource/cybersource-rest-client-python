@@ -30,73 +30,267 @@ class InlineResponse2016(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'submit_time_utc': 'str',
-        'status': 'str'
+        'event_date': 'str',
+        'event_type': 'str',
+        'organization_id': 'str',
+        'payloads': 'InlineResponse2016Payloads',
+        'product_id': 'str',
+        'request_type': 'str',
+        'retry_number': 'int',
+        'transaction_trace_id': 'str',
+        'webhook_id': 'str'
     }
 
     attribute_map = {
-        'submit_time_utc': 'submitTimeUtc',
-        'status': 'status'
+        'event_date': 'eventDate',
+        'event_type': 'eventType',
+        'organization_id': 'organizationId',
+        'payloads': 'payloads',
+        'product_id': 'productId',
+        'request_type': 'requestType',
+        'retry_number': 'retryNumber',
+        'transaction_trace_id': 'transactionTraceId',
+        'webhook_id': 'webhookId'
     }
 
-    def __init__(self, submit_time_utc=None, status=None):
+    def __init__(self, event_date=None, event_type=None, organization_id=None, payloads=None, product_id=None, request_type=None, retry_number=None, transaction_trace_id=None, webhook_id=None):
         """
         InlineResponse2016 - a model defined in Swagger
         """
 
-        self._submit_time_utc = None
-        self._status = None
+        self._event_date = None
+        self._event_type = None
+        self._organization_id = None
+        self._payloads = None
+        self._product_id = None
+        self._request_type = None
+        self._retry_number = None
+        self._transaction_trace_id = None
+        self._webhook_id = None
 
-        if submit_time_utc is not None:
-          self.submit_time_utc = submit_time_utc
-        if status is not None:
-          self.status = status
+        if event_date is not None:
+          self.event_date = event_date
+        if event_type is not None:
+          self.event_type = event_type
+        if organization_id is not None:
+          self.organization_id = organization_id
+        if payloads is not None:
+          self.payloads = payloads
+        if product_id is not None:
+          self.product_id = product_id
+        if request_type is not None:
+          self.request_type = request_type
+        if retry_number is not None:
+          self.retry_number = retry_number
+        if transaction_trace_id is not None:
+          self.transaction_trace_id = transaction_trace_id
+        if webhook_id is not None:
+          self.webhook_id = webhook_id
 
     @property
-    def submit_time_utc(self):
+    def event_date(self):
         """
-        Gets the submit_time_utc of this InlineResponse2016.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Gets the event_date of this InlineResponse2016.
+        Date that the webhook was delivered
 
-        :return: The submit_time_utc of this InlineResponse2016.
+        :return: The event_date of this InlineResponse2016.
         :rtype: str
         """
-        return self._submit_time_utc
+        return self._event_date
 
-    @submit_time_utc.setter
-    def submit_time_utc(self, submit_time_utc):
+    @event_date.setter
+    def event_date(self, event_date):
         """
-        Sets the submit_time_utc of this InlineResponse2016.
-        Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` Example `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC. 
+        Sets the event_date of this InlineResponse2016.
+        Date that the webhook was delivered
 
-        :param submit_time_utc: The submit_time_utc of this InlineResponse2016.
+        :param event_date: The event_date of this InlineResponse2016.
         :type: str
         """
 
-        self._submit_time_utc = submit_time_utc
+        self._event_date = event_date
 
     @property
-    def status(self):
+    def event_type(self):
         """
-        Gets the status of this InlineResponse2016.
-        The status of the submitted transaction. Possible values:  - ACCEPTED 
+        Gets the event_type of this InlineResponse2016.
+        The event name the webhook was delivered for
 
-        :return: The status of this InlineResponse2016.
+        :return: The event_type of this InlineResponse2016.
         :rtype: str
         """
-        return self._status
+        return self._event_type
 
-    @status.setter
-    def status(self, status):
+    @event_type.setter
+    def event_type(self, event_type):
         """
-        Sets the status of this InlineResponse2016.
-        The status of the submitted transaction. Possible values:  - ACCEPTED 
+        Sets the event_type of this InlineResponse2016.
+        The event name the webhook was delivered for
 
-        :param status: The status of this InlineResponse2016.
+        :param event_type: The event_type of this InlineResponse2016.
         :type: str
         """
 
-        self._status = status
+        self._event_type = event_type
+
+    @property
+    def organization_id(self):
+        """
+        Gets the organization_id of this InlineResponse2016.
+        The Organization Identifier.
+
+        :return: The organization_id of this InlineResponse2016.
+        :rtype: str
+        """
+        return self._organization_id
+
+    @organization_id.setter
+    def organization_id(self, organization_id):
+        """
+        Sets the organization_id of this InlineResponse2016.
+        The Organization Identifier.
+
+        :param organization_id: The organization_id of this InlineResponse2016.
+        :type: str
+        """
+
+        self._organization_id = organization_id
+
+    @property
+    def payloads(self):
+        """
+        Gets the payloads of this InlineResponse2016.
+
+        :return: The payloads of this InlineResponse2016.
+        :rtype: InlineResponse2016Payloads
+        """
+        return self._payloads
+
+    @payloads.setter
+    def payloads(self, payloads):
+        """
+        Sets the payloads of this InlineResponse2016.
+
+        :param payloads: The payloads of this InlineResponse2016.
+        :type: InlineResponse2016Payloads
+        """
+
+        self._payloads = payloads
+
+    @property
+    def product_id(self):
+        """
+        Gets the product_id of this InlineResponse2016.
+        The product the webhook was delivered for
+
+        :return: The product_id of this InlineResponse2016.
+        :rtype: str
+        """
+        return self._product_id
+
+    @product_id.setter
+    def product_id(self, product_id):
+        """
+        Sets the product_id of this InlineResponse2016.
+        The product the webhook was delivered for
+
+        :param product_id: The product_id of this InlineResponse2016.
+        :type: str
+        """
+
+        self._product_id = product_id
+
+    @property
+    def request_type(self):
+        """
+        Gets the request_type of this InlineResponse2016.
+        Identifies the the type of request
+
+        :return: The request_type of this InlineResponse2016.
+        :rtype: str
+        """
+        return self._request_type
+
+    @request_type.setter
+    def request_type(self, request_type):
+        """
+        Sets the request_type of this InlineResponse2016.
+        Identifies the the type of request
+
+        :param request_type: The request_type of this InlineResponse2016.
+        :type: str
+        """
+
+        self._request_type = request_type
+
+    @property
+    def retry_number(self):
+        """
+        Gets the retry_number of this InlineResponse2016.
+        The number of retry attempts for a given webhook
+
+        :return: The retry_number of this InlineResponse2016.
+        :rtype: int
+        """
+        return self._retry_number
+
+    @retry_number.setter
+    def retry_number(self, retry_number):
+        """
+        Sets the retry_number of this InlineResponse2016.
+        The number of retry attempts for a given webhook
+
+        :param retry_number: The retry_number of this InlineResponse2016.
+        :type: int
+        """
+
+        self._retry_number = retry_number
+
+    @property
+    def transaction_trace_id(self):
+        """
+        Gets the transaction_trace_id of this InlineResponse2016.
+        The identifier for the webhook
+
+        :return: The transaction_trace_id of this InlineResponse2016.
+        :rtype: str
+        """
+        return self._transaction_trace_id
+
+    @transaction_trace_id.setter
+    def transaction_trace_id(self, transaction_trace_id):
+        """
+        Sets the transaction_trace_id of this InlineResponse2016.
+        The identifier for the webhook
+
+        :param transaction_trace_id: The transaction_trace_id of this InlineResponse2016.
+        :type: str
+        """
+
+        self._transaction_trace_id = transaction_trace_id
+
+    @property
+    def webhook_id(self):
+        """
+        Gets the webhook_id of this InlineResponse2016.
+        The identifier of the subscription
+
+        :return: The webhook_id of this InlineResponse2016.
+        :rtype: str
+        """
+        return self._webhook_id
+
+    @webhook_id.setter
+    def webhook_id(self, webhook_id):
+        """
+        Sets the webhook_id of this InlineResponse2016.
+        The identifier of the subscription
+
+        :param webhook_id: The webhook_id of this InlineResponse2016.
+        :type: str
+        """
+
+        self._webhook_id = webhook_id
 
     def to_dict(self):
         """

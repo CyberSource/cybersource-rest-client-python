@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_registration**
-> InlineResponse2012 post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
+> InlineResponse2013 post_registration(post_registration_body, v_c_idempotency_id=v_c_idempotency_id)
 
 Create a boarding registration
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2012**](InlineResponse2012.md)
+[**InlineResponse2013**](InlineResponse2013.md)
 
 ### Authorization
 

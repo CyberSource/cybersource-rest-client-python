@@ -2,6 +2,7 @@ from __future__ import absolute_import
 
 # import apis into api package
 from .o_auth_api import OAuthApi
+from .batch_upload_with_mtls_api import BatchUploadWithMTLSApi
 from .batches_api import BatchesApi
 from .bin_lookup_api import BinLookupApi
 from .chargeback_details_api import ChargebackDetailsApi
@@ -58,9 +59,9 @@ from .billing_agreements_api import BillingAgreementsApi
 from .capture_api import CaptureApi
 from .credit_api import CreditApi
 from .orders_api import OrdersApi
+from .payment_tokens_api import PaymentTokensApi
 from .payments_api import PaymentsApi
 from .refund_api import RefundApi
 from .reversal_api import ReversalApi
 from .taxes_api import TaxesApi
 from .void_api import VoidApi
-from .batch_upload_with_mtls_api import BatchUploadWithMTLSApi

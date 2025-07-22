@@ -279,7 +279,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def combo_card(self):
         """
         Gets the combo_card of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates the type of combo card. Possible values:   - 0 (Not a combo card)   - 1 (Credit and Prepaid Combo card)   - 2 (Credit and Debit Combo card) 
+        This field indicates the type of combo card. Possible values:   - 0 (Not a combo card)   - 1 (Credit and Prepaid Combo card)   - 2 (Credit and Debit Combo card)   - 3 (Prepaid Credit and Prepaid Debit combo card) 
 
         :return: The combo_card of this TmsBinLookupPaymentAccountInformationFeatures.
         :rtype: str
@@ -290,7 +290,7 @@ class TmsBinLookupPaymentAccountInformationFeatures(object):
     def combo_card(self, combo_card):
         """
         Sets the combo_card of this TmsBinLookupPaymentAccountInformationFeatures.
-        This field indicates the type of combo card. Possible values:   - 0 (Not a combo card)   - 1 (Credit and Prepaid Combo card)   - 2 (Credit and Debit Combo card) 
+        This field indicates the type of combo card. Possible values:   - 0 (Not a combo card)   - 1 (Credit and Prepaid Combo card)   - 2 (Credit and Debit Combo card)   - 3 (Prepaid Credit and Prepaid Debit combo card) 
 
         :param combo_card: The combo_card of this TmsBinLookupPaymentAccountInformationFeatures.
         :type: str
