@@ -128,4 +128,4 @@ class CertificateUtility:
             certs.append(cert)
         if additional_certs is not None:
             certs.extend(additional_certs)
-        return certs
+        return private_key, certs
