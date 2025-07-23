@@ -36,7 +36,7 @@ class JwtSignatureToken(TokenGeneration):
         jwt_body = {GlobalLabelParameters.JWT_TIME: self.date}
         # reading the p12 file from cache memory
         cache_obj = FileCache()
-        cache_memory = cache_obj.fetch_cached_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
+        cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
         der_cert_string = cache_memory.certificate
         private_key = cache_memory.private_key
         # setting the headers  -merchant_id and the public key
@@ -61,7 +61,7 @@ class JwtSignatureToken(TokenGeneration):
         jwt_body = {GlobalLabelParameters.JWT_DIGEST: digest.decode("utf-8"), GlobalLabelParameters.JWT_ALGORITHM: "SHA-256", GlobalLabelParameters.JWT_TIME: self.date}
         # reading the p12 file from cache memory
         cache_obj = FileCache()
-        cache_memory = cache_obj.fetch_cached_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
+        cache_memory = cache_obj.fetch_cached_p12_certificate(self.merchant_config, self.merchant_config.p12KeyFilePath, self.merchant_config.key_password)
         der_cert_string = cache_memory.certificate
         private_key = cache_memory.private_key
         # setting the headers  -merchant_id and the public key

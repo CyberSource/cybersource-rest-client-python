@@ -40,7 +40,7 @@ class FileCache:
         self.mlecache = {}
         self._mle_cache_lock = threading.RLock()
 
-    def fetch_cached_certificate(self, merchant_config, p12_file_path, key_password):
+    def fetch_cached_p12_certificate(self, merchant_config, p12_file_path, key_password):
         try:
             file_last_modified_time = os.stat(p12_file_path).st_mtime
             filename_without_ext = os.path.splitext(os.path.basename(p12_file_path))[0]
