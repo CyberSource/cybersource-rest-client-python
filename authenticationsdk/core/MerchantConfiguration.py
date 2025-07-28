@@ -51,7 +51,8 @@ class MerchantConfiguration:
         self.log_config = None
         self.__jwePEMFileDirectory = None
         self.useMLEGlobally = None
-        self.useMLEGloballyForRequest = None
+        self.enableRequestMLEForOptionalApisGlobally = None
+        self.disableRequestMLEForMandatoryApisGlobally = None
         self.mapToControlMLEonAPI = None
         self.mleKeyAlias = None 
         self.logger = LogFactory.setup_logger(self.__class__.__name__)
@@ -185,22 +186,26 @@ class MerchantConfiguration:
     def get_jwePEMFileDirectory(self):
         return self.__jwePEMFileDirectory
     
-    def set_useMLEGloballyForRequest(self, value):
-        if value.get('useMLEGloballyForRequest') is not None:
-            self.useMLEGloballyForRequest = value['useMLEGloballyForRequest']
-        elif value.get('useMLEGlobally') is not None:
-            self.useMLEGloballyForRequest = value['useMLEGlobally']
-        else:
-            self.useMLEGloballyForRequest = False
+    def set_enableRequestMLEForOptionalApisGlobally(self, value):
             
-        # self.useMLEGloballyForRequest = (
-        #     value.get('useMLEGloballyForRequest')
-        #     or value.get('useMLEGlobally')
-        #     or False
-        # )
+        self.enableRequestMLEForOptionalApisGlobally = (
+            value.get('enableRequestMLEForOptionalApisGlobally')
+            or value.get('useMLEGlobally')
+            or False
+        )
 
-    def get_useMLEGloballyForRequest(self):
-        return self.useMLEGloballyForRequest
+    def get_enableRequestMLEForOptionalApisGlobally(self):
+        return self.enableRequestMLEForOptionalApisGlobally
+    
+
+    def set_disableRequestMLEForMandatoryApisGlobally(self, value):
+        self.disableRequestMLEForMandatoryApisGlobally = (
+            value.get('disableRequestMLEForMandatoryApisGlobally')
+            or False
+        )
+
+    def get_disableRequestMLEForMandatoryApisGlobally(self):
+        return self.disableRequestMLEForMandatoryApisGlobally
     
     def set_mapToControlMLEonAPI(self, value):
         map_to_control_mle_on_api = value.get('mapToControlMLEonAPI')
@@ -254,7 +259,8 @@ class MerchantConfiguration:
         self.set_refresh_token(val)
         self.set_log_configuration(val)
         self.set_jwePEMFileDirectory(val)
-        self.set_useMLEGloballyForRequest(val)
+        self.set_enableRequestMLEForOptionalApisGlobally(val)
+        self.set_disableRequestMLEForMandatoryApisGlobally(val)
         self.set_mapToControlMLEonAPI(val)
         self.set_mleKeyAlias(val)
 
@@ -383,9 +389,16 @@ class MerchantConfiguration:
             authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.AUTH_ERROR,
                                                                                self.log_config)
+            
+        use_mle = self.useMLEGlobally
+        enable_mle = self.enableRequestMLEForOptionalApisGlobally
+
+        if use_mle is not None and enable_mle is not None and use_mle != enable_mle:
+            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
+        
         # useMLEGlobally check for auth Type
-        if self.useMLEGloballyForRequest is True or self.mapToControlMLEonAPI is not None:
-            if self.useMLEGloballyForRequest is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
+        if self.enableRequestMLEForOptionalApisGlobally is True or self.mapToControlMLEonAPI is not None:
+            if self.enableRequestMLEForOptionalApisGlobally is True and self.authentication_type.lower() != GlobalLabelParameters.JWT.lower():
                  authenticationsdk.util.ExceptionAuth.validate_merchant_details_log(self.logger,
                                                                                GlobalLabelParameters.MLE_AUTH_ERROR,
                                                                                self.log_config)

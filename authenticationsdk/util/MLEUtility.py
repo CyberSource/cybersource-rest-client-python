@@ -18,27 +18,13 @@ class MLEUtility:
     @staticmethod
     def check_is_mle_for_api(merchant_config, inbound_mle_status, operation_ids):
         is_mle_for_api = False
-        is_mle_supported_by_cybs_for_api = False
-        
-        # Check if MLE is supported by Cybs for API
-        if inbound_mle_status and inbound_mle_status.lower() in ("optional", "mandatory"):
-            is_mle_supported_by_cybs_for_api = True
 
-        if is_mle_supported_by_cybs_for_api and merchant_config.get_useMLEGloballyForRequest():
+        if str(inbound_mle_status).lower() == "optional" and merchant_config.get_enableRequestMLEForOptionalApisGlobally():
             is_mle_for_api = True
-            
-        # Only create logger once per class, not per call
-        logger = getattr(MLEUtility, "_logger", None)
-        if logger is None:
-            logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-            setattr(MLEUtility, "_logger", logger)
-            
-        if inbound_mle_status and inbound_mle_status.lower() == "mandatory" and not merchant_config.get_useMLEGloballyForRequest():
-            is_mle_for_api = True
-            logger.warning(
-                "MLE is required for this operation (mandatory), but the global MLE flag is disabled. "
-                "Enabling MLE for this API call as required by CyberSource."
-            )
+
+        if str(inbound_mle_status).lower() == "mandatory":
+            is_mle_for_api = not merchant_config.get_disableRequestMLEForMandatoryApisGlobally()
+
         
         operation_array = [op_id.strip() for op_id in operation_ids.split(",")]
         map_to_control_mle = merchant_config.get_mapToControlMLEonAPI()
@@ -54,7 +40,6 @@ class MLEUtility:
         if request_body is None or request_body == "":
             return request_body
 
-        # Only create logger once per class, not per call
         logger = getattr(MLEUtility, "_logger", None)
         if logger is None:
             logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
