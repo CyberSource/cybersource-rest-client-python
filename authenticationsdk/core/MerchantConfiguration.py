@@ -187,11 +187,14 @@ class MerchantConfiguration:
         return self.__jwePEMFileDirectory
     
     def set_enableRequestMLEForOptionalApisGlobally(self, value):
-            
+        enable_mle = value.get('enableRequestMLEForOptionalApisGlobally')
+        use_mle = value.get('useMLEGlobally')
+
+        if enable_mle is not None and use_mle is not None and enable_mle != use_mle:
+            raise ValueError("useMLEGlobally and enableRequestMLEForOptionalApisGlobally must have the same value.")
+
         self.enableRequestMLEForOptionalApisGlobally = (
-            value.get('enableRequestMLEForOptionalApisGlobally')
-            or value.get('useMLEGlobally')
-            or False
+            enable_mle if enable_mle is not None else (use_mle if use_mle is not None else False)
         )
 
     def get_enableRequestMLEForOptionalApisGlobally(self):
