@@ -149,8 +149,8 @@ class BatchesApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_report,get_batch_report_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_report,get_batch_report_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -272,8 +272,8 @@ class BatchesApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batch_status,get_batch_status_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batch_status,get_batch_status_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -401,8 +401,8 @@ class BatchesApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "get_batches_list,get_batches_list_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "get_batches_list,get_batches_list_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -520,8 +520,8 @@ class BatchesApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'body', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "post_batch,post_batch_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "post_batch,post_batch_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting

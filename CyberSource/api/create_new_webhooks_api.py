@@ -149,8 +149,8 @@ class CreateNewWebhooksApi(object):
             body_params = file_post_body_and_delimiter[0]
             header_params['Content-Type'] = f"multipart/form-data; boundary={file_post_body_and_delimiter[1]}" 
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "find_products_to_subscribe,find_products_to_subscribe_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "find_products_to_subscribe,find_products_to_subscribe_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -263,8 +263,8 @@ class CreateNewWebhooksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'create_webhook', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "notification_subscriptions_v2_webhooks_post,notification_subscriptions_v2_webhooks_post_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "notification_subscriptions_v2_webhooks_post,notification_subscriptions_v2_webhooks_post_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
@@ -399,8 +399,8 @@ class CreateNewWebhooksApi(object):
             body_params = sdkTracker.insert_developer_id_tracker(body_params, 'save_sym_egress_key', self.api_client.mconfig.run_environment, self.api_client.mconfig.defaultDeveloperId)
             body_params = process_body(body_params)
 
-        is_mle_supported_by_cybs_for_api = False
-        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, is_mle_supported_by_cybs_for_api, "save_sym_egress_key,save_sym_egress_key_with_http_info"):
+        inbound_mle_status = "false"
+        if MLEUtility.check_is_mle_for_api(self.api_client.mconfig, inbound_mle_status, "save_sym_egress_key,save_sym_egress_key_with_http_info"):
                 body_params = MLEUtility.encrypt_request_payload(self.api_client.mconfig, body_params)
         
         # Authentication setting
