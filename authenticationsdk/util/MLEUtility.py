@@ -40,10 +40,7 @@ class MLEUtility:
         if request_body is None or request_body == "":
             return request_body
 
-        logger = getattr(MLEUtility, "_logger", None)
-        if logger is None:
-            logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
-            setattr(MLEUtility, "_logger", logger)
+        logger = LogFactory.setup_logger(__name__, merchant_config.log_config)
                       
         if merchant_config.log_config.enable_log:
             logger.debug(f"{GlobalLabelParameters.MESSAGE_BEFORE_MLE_REQUEST}{request_body}")
