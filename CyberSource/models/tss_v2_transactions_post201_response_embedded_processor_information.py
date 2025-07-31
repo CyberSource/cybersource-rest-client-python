@@ -33,6 +33,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         'processor': 'TssV2TransactionsGet200ResponseProcessorInformationProcessor',
         'provider_transaction_id': 'str',
         'approval_code': 'str',
+        'event_status': 'str',
         'retrieval_reference_number': 'str'
     }
 
@@ -40,10 +41,11 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         'processor': 'processor',
         'provider_transaction_id': 'providerTransactionId',
         'approval_code': 'approvalCode',
+        'event_status': 'eventStatus',
         'retrieval_reference_number': 'retrievalReferenceNumber'
     }
 
-    def __init__(self, processor=None, provider_transaction_id=None, approval_code=None, retrieval_reference_number=None):
+    def __init__(self, processor=None, provider_transaction_id=None, approval_code=None, event_status=None, retrieval_reference_number=None):
         """
         TssV2TransactionsPost201ResponseEmbeddedProcessorInformation - a model defined in Swagger
         """
@@ -51,6 +53,7 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         self._processor = None
         self._provider_transaction_id = None
         self._approval_code = None
+        self._event_status = None
         self._retrieval_reference_number = None
 
         if processor is not None:
@@ -59,6 +62,8 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
           self.provider_transaction_id = provider_transaction_id
         if approval_code is not None:
           self.approval_code = approval_code
+        if event_status is not None:
+          self.event_status = event_status
         if retrieval_reference_number is not None:
           self.retrieval_reference_number = retrieval_reference_number
 
@@ -128,6 +133,29 @@ class TssV2TransactionsPost201ResponseEmbeddedProcessorInformation(object):
         """
 
         self._approval_code = approval_code
+
+    @property
+    def event_status(self):
+        """
+        Gets the event_status of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        The event status. 
+
+        :return: The event_status of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :rtype: str
+        """
+        return self._event_status
+
+    @event_status.setter
+    def event_status(self, event_status):
+        """
+        Sets the event_status of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        The event status. 
+
+        :param event_status: The event_status of this TssV2TransactionsPost201ResponseEmbeddedProcessorInformation.
+        :type: str
+        """
+
+        self._event_status = event_status
 
     @property
     def retrieval_reference_number(self):

@@ -38,7 +38,9 @@ class Ptsv2intentsOrderInformationShipTo(object):
         'administrative_area': 'str',
         'postal_code': 'str',
         'country': 'str',
-        'method': 'str'
+        'method': 'str',
+        'email': 'str',
+        'phone_number': 'str'
     }
 
     attribute_map = {
@@ -50,10 +52,12 @@ class Ptsv2intentsOrderInformationShipTo(object):
         'administrative_area': 'administrativeArea',
         'postal_code': 'postalCode',
         'country': 'country',
-        'method': 'method'
+        'method': 'method',
+        'email': 'email',
+        'phone_number': 'phoneNumber'
     }
 
-    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, method=None):
+    def __init__(self, first_name=None, last_name=None, address1=None, address2=None, locality=None, administrative_area=None, postal_code=None, country=None, method=None, email=None, phone_number=None):
         """
         Ptsv2intentsOrderInformationShipTo - a model defined in Swagger
         """
@@ -67,6 +71,8 @@ class Ptsv2intentsOrderInformationShipTo(object):
         self._postal_code = None
         self._country = None
         self._method = None
+        self._email = None
+        self._phone_number = None
 
         if first_name is not None:
           self.first_name = first_name
@@ -86,6 +92,10 @@ class Ptsv2intentsOrderInformationShipTo(object):
           self.country = country
         if method is not None:
           self.method = method
+        if email is not None:
+          self.email = email
+        if phone_number is not None:
+          self.phone_number = phone_number
 
     @property
     def first_name(self):
@@ -293,6 +303,52 @@ class Ptsv2intentsOrderInformationShipTo(object):
         """
 
         self._method = method
+
+    @property
+    def email(self):
+        """
+        Gets the email of this Ptsv2intentsOrderInformationShipTo.
+        Customer's email address, including the full domain name. 
+
+        :return: The email of this Ptsv2intentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """
+        Sets the email of this Ptsv2intentsOrderInformationShipTo.
+        Customer's email address, including the full domain name. 
+
+        :param email: The email of this Ptsv2intentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def phone_number(self):
+        """
+        Gets the phone_number of this Ptsv2intentsOrderInformationShipTo.
+        Phone number associated with the shipping address. 
+
+        :return: The phone_number of this Ptsv2intentsOrderInformationShipTo.
+        :rtype: str
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """
+        Sets the phone_number of this Ptsv2intentsOrderInformationShipTo.
+        Phone number associated with the shipping address. 
+
+        :param phone_number: The phone_number of this Ptsv2intentsOrderInformationShipTo.
+        :type: str
+        """
+
+        self._phone_number = phone_number
 
     def to_dict(self):
         """

@@ -117,7 +117,7 @@ class TmsBinLookupIssuerInformation(object):
     def bin_length(self):
         """
         Gets the bin_length of this TmsBinLookupIssuerInformation.
-        This field contains the length of the BIN. 
+        This field contains the length of the BIN. In some cases, this field may be absent if we do not receive accurate information from the network source. 
 
         :return: The bin_length of this TmsBinLookupIssuerInformation.
         :rtype: str
@@ -128,7 +128,7 @@ class TmsBinLookupIssuerInformation(object):
     def bin_length(self, bin_length):
         """
         Sets the bin_length of this TmsBinLookupIssuerInformation.
-        This field contains the length of the BIN. 
+        This field contains the length of the BIN. In some cases, this field may be absent if we do not receive accurate information from the network source. 
 
         :param bin_length: The bin_length of this TmsBinLookupIssuerInformation.
         :type: str
@@ -140,7 +140,7 @@ class TmsBinLookupIssuerInformation(object):
     def account_prefix(self):
         """
         Gets the account_prefix of this TmsBinLookupIssuerInformation.
-        This field contains the first 6 to 8 digits of a primary account number (PAN). The length of the field is determined by [PCI-DSS standards for truncation](https://pcissc.secure.force.com/faq/articles/Frequently_Asked_Question/What-are-acceptable-formats-for-truncation-of-primary-account-numbers). 
+        This field contains the first 6 to 8 digits of a primary account number (PAN). The length of the field is determined by [PCI-DSS standards for truncation](https://pcissc.secure.force.com/faq/articles/Frequently_Asked_Question/What-are-acceptable-formats-for-truncation-of-primary-account-numbers).In case the input is not the full intrument (PAN or TOKEN), this field may be truncated. 
 
         :return: The account_prefix of this TmsBinLookupIssuerInformation.
         :rtype: str
@@ -151,7 +151,7 @@ class TmsBinLookupIssuerInformation(object):
     def account_prefix(self, account_prefix):
         """
         Sets the account_prefix of this TmsBinLookupIssuerInformation.
-        This field contains the first 6 to 8 digits of a primary account number (PAN). The length of the field is determined by [PCI-DSS standards for truncation](https://pcissc.secure.force.com/faq/articles/Frequently_Asked_Question/What-are-acceptable-formats-for-truncation-of-primary-account-numbers). 
+        This field contains the first 6 to 8 digits of a primary account number (PAN). The length of the field is determined by [PCI-DSS standards for truncation](https://pcissc.secure.force.com/faq/articles/Frequently_Asked_Question/What-are-acceptable-formats-for-truncation-of-primary-account-numbers).In case the input is not the full intrument (PAN or TOKEN), this field may be truncated. 
 
         :param account_prefix: The account_prefix of this TmsBinLookupIssuerInformation.
         :type: str

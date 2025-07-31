@@ -32,6 +32,7 @@ class Ptsv2paymentsPaymentInformation(object):
     swagger_types = {
         'card': 'Ptsv2paymentsPaymentInformationCard',
         'tokenized_card': 'Ptsv2paymentsPaymentInformationTokenizedCard',
+        'tokenized_payment_method': 'Ptsv2paymentsPaymentInformationTokenizedPaymentMethod',
         'direct_debit': 'Ptsv2paymentsPaymentInformationDirectDebit',
         'fluid_data': 'Ptsv2paymentsPaymentInformationFluidData',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
@@ -51,6 +52,7 @@ class Ptsv2paymentsPaymentInformation(object):
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
+        'tokenized_payment_method': 'tokenizedPaymentMethod',
         'direct_debit': 'directDebit',
         'fluid_data': 'fluidData',
         'customer': 'customer',
@@ -67,13 +69,14 @@ class Ptsv2paymentsPaymentInformation(object):
         'payment_account_reference': 'paymentAccountReference'
     }
 
-    def __init__(self, card=None, tokenized_card=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None, payment_account_reference=None):
+    def __init__(self, card=None, tokenized_card=None, tokenized_payment_method=None, direct_debit=None, fluid_data=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, legacy_token=None, bank=None, options=None, payment_type=None, initiation_channel=None, sepa=None, e_wallet=None, payment_account_reference=None):
         """
         Ptsv2paymentsPaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._tokenized_payment_method = None
         self._direct_debit = None
         self._fluid_data = None
         self._customer = None
@@ -93,6 +96,8 @@ class Ptsv2paymentsPaymentInformation(object):
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if tokenized_payment_method is not None:
+          self.tokenized_payment_method = tokenized_payment_method
         if direct_debit is not None:
           self.direct_debit = direct_debit
         if fluid_data is not None:
@@ -163,6 +168,27 @@ class Ptsv2paymentsPaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def tokenized_payment_method(self):
+        """
+        Gets the tokenized_payment_method of this Ptsv2paymentsPaymentInformation.
+
+        :return: The tokenized_payment_method of this Ptsv2paymentsPaymentInformation.
+        :rtype: Ptsv2paymentsPaymentInformationTokenizedPaymentMethod
+        """
+        return self._tokenized_payment_method
+
+    @tokenized_payment_method.setter
+    def tokenized_payment_method(self, tokenized_payment_method):
+        """
+        Sets the tokenized_payment_method of this Ptsv2paymentsPaymentInformation.
+
+        :param tokenized_payment_method: The tokenized_payment_method of this Ptsv2paymentsPaymentInformation.
+        :type: Ptsv2paymentsPaymentInformationTokenizedPaymentMethod
+        """
+
+        self._tokenized_payment_method = tokenized_payment_method
 
     @property
     def direct_debit(self):
