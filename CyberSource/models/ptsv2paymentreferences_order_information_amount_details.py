@@ -38,6 +38,7 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         'exchange_rate': 'str',
         'exchange_rate_time_stamp': 'str',
         'settlement_currency': 'str',
+        'invoice_amount': 'str',
         'giftwrap_amount': 'str',
         'handling_amount': 'str',
         'shipping_amount': 'str',
@@ -54,6 +55,7 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         'exchange_rate': 'exchangeRate',
         'exchange_rate_time_stamp': 'exchangeRateTimeStamp',
         'settlement_currency': 'settlementCurrency',
+        'invoice_amount': 'invoiceAmount',
         'giftwrap_amount': 'giftwrapAmount',
         'handling_amount': 'handlingAmount',
         'shipping_amount': 'shippingAmount',
@@ -61,7 +63,7 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         'insurance_amount': 'insuranceAmount'
     }
 
-    def __init__(self, total_amount=None, currency=None, discount_amount=None, tax_amount=None, duty_amount=None, exchange_rate=None, exchange_rate_time_stamp=None, settlement_currency=None, giftwrap_amount=None, handling_amount=None, shipping_amount=None, shipping_discount_amount=None, insurance_amount=None):
+    def __init__(self, total_amount=None, currency=None, discount_amount=None, tax_amount=None, duty_amount=None, exchange_rate=None, exchange_rate_time_stamp=None, settlement_currency=None, invoice_amount=None, giftwrap_amount=None, handling_amount=None, shipping_amount=None, shipping_discount_amount=None, insurance_amount=None):
         """
         Ptsv2paymentreferencesOrderInformationAmountDetails - a model defined in Swagger
         """
@@ -74,6 +76,7 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         self._exchange_rate = None
         self._exchange_rate_time_stamp = None
         self._settlement_currency = None
+        self._invoice_amount = None
         self._giftwrap_amount = None
         self._handling_amount = None
         self._shipping_amount = None
@@ -96,6 +99,8 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
           self.exchange_rate_time_stamp = exchange_rate_time_stamp
         if settlement_currency is not None:
           self.settlement_currency = settlement_currency
+        if invoice_amount is not None:
+          self.invoice_amount = invoice_amount
         if giftwrap_amount is not None:
           self.giftwrap_amount = giftwrap_amount
         if handling_amount is not None:
@@ -290,6 +295,29 @@ class Ptsv2paymentreferencesOrderInformationAmountDetails(object):
         """
 
         self._settlement_currency = settlement_currency
+
+    @property
+    def invoice_amount(self):
+        """
+        Gets the invoice_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
+        Invoice amount.  The invoice amount issued by the Merchant to the Cardholder, which includes VAT (excluding items such as TIPS or CASHBACK). For transactions that do not have applicable Benefit Laws, the field may be entered as zeros.  This field is only applicable for Uruguay market.  Example: 100.00  Uruguay  The value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR9 - Position: 7-18 - Field: Invoice Amount 
+
+        :return: The invoice_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._invoice_amount
+
+    @invoice_amount.setter
+    def invoice_amount(self, invoice_amount):
+        """
+        Sets the invoice_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
+        Invoice amount.  The invoice amount issued by the Merchant to the Cardholder, which includes VAT (excluding items such as TIPS or CASHBACK). For transactions that do not have applicable Benefit Laws, the field may be entered as zeros.  This field is only applicable for Uruguay market.  Example: 100.00  Uruguay  The value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR9 - Position: 7-18 - Field: Invoice Amount 
+
+        :param invoice_amount: The invoice_amount of this Ptsv2paymentreferencesOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._invoice_amount = invoice_amount
 
     @property
     def giftwrap_amount(self):

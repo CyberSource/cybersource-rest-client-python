@@ -32,6 +32,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
     swagger_types = {
         'card': 'PtsV2PaymentsPost201ResponsePaymentAccountInformationCard',
         'tokenized_card': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCard',
+        'tokenized_payment_method': 'PtsV2PaymentsPost201ResponsePaymentInformationTokenizedPaymentMethod',
         'account_features': 'PtsV2PaymentsPost201ResponsePaymentInformationAccountFeatures',
         'bank': 'PtsV2PaymentsPost201ResponsePaymentInformationBank',
         'customer': 'Ptsv2paymentsPaymentInformationCustomer',
@@ -49,6 +50,7 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
     attribute_map = {
         'card': 'card',
         'tokenized_card': 'tokenizedCard',
+        'tokenized_payment_method': 'tokenizedPaymentMethod',
         'account_features': 'accountFeatures',
         'bank': 'bank',
         'customer': 'customer',
@@ -63,13 +65,14 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         'e_wallet': 'eWallet'
     }
 
-    def __init__(self, card=None, tokenized_card=None, account_features=None, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, scheme=None, bin=None, account_type=None, issuer=None, bin_country=None, e_wallet=None):
+    def __init__(self, card=None, tokenized_card=None, tokenized_payment_method=None, account_features=None, bank=None, customer=None, payment_instrument=None, instrument_identifier=None, shipping_address=None, scheme=None, bin=None, account_type=None, issuer=None, bin_country=None, e_wallet=None):
         """
         PtsV2PaymentsPost201ResponsePaymentInformation - a model defined in Swagger
         """
 
         self._card = None
         self._tokenized_card = None
+        self._tokenized_payment_method = None
         self._account_features = None
         self._bank = None
         self._customer = None
@@ -87,6 +90,8 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
           self.card = card
         if tokenized_card is not None:
           self.tokenized_card = tokenized_card
+        if tokenized_payment_method is not None:
+          self.tokenized_payment_method = tokenized_payment_method
         if account_features is not None:
           self.account_features = account_features
         if bank is not None:
@@ -153,6 +158,27 @@ class PtsV2PaymentsPost201ResponsePaymentInformation(object):
         """
 
         self._tokenized_card = tokenized_card
+
+    @property
+    def tokenized_payment_method(self):
+        """
+        Gets the tokenized_payment_method of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :return: The tokenized_payment_method of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :rtype: PtsV2PaymentsPost201ResponsePaymentInformationTokenizedPaymentMethod
+        """
+        return self._tokenized_payment_method
+
+    @tokenized_payment_method.setter
+    def tokenized_payment_method(self, tokenized_payment_method):
+        """
+        Sets the tokenized_payment_method of this PtsV2PaymentsPost201ResponsePaymentInformation.
+
+        :param tokenized_payment_method: The tokenized_payment_method of this PtsV2PaymentsPost201ResponsePaymentInformation.
+        :type: PtsV2PaymentsPost201ResponsePaymentInformationTokenizedPaymentMethod
+        """
+
+        self._tokenized_payment_method = tokenized_payment_method
 
     @property
     def account_features(self):

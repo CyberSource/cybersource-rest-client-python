@@ -33,7 +33,7 @@ class UpdateOrderRequest(object):
         'client_reference_information': 'Ptsv2intentsClientReferenceInformation',
         'order_information': 'Ptsv2intentsidOrderInformation',
         'merchant_information': 'Ptsv2intentsidMerchantInformation',
-        'payment_information': 'Ptsv2intentsPaymentInformation',
+        'payment_information': 'Ptsv2intentsidPaymentInformation',
         'processing_information': 'Ptsv2intentsidProcessingInformation'
     }
 
@@ -136,7 +136,7 @@ class UpdateOrderRequest(object):
         Gets the payment_information of this UpdateOrderRequest.
 
         :return: The payment_information of this UpdateOrderRequest.
-        :rtype: Ptsv2intentsPaymentInformation
+        :rtype: Ptsv2intentsidPaymentInformation
         """
         return self._payment_information
 
@@ -146,7 +146,7 @@ class UpdateOrderRequest(object):
         Sets the payment_information of this UpdateOrderRequest.
 
         :param payment_information: The payment_information of this UpdateOrderRequest.
-        :type: Ptsv2intentsPaymentInformation
+        :type: Ptsv2intentsidPaymentInformation
         """
 
         self._payment_information = payment_information

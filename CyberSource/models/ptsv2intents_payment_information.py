@@ -30,22 +30,37 @@ class Ptsv2intentsPaymentInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'payment_type': 'Ptsv2intentsPaymentInformationPaymentType'
+        'payment_type': 'Ptsv2intentsPaymentInformationPaymentType',
+        'tokenized_payment_method': 'Ptsv2intentsPaymentInformationTokenizedPaymentMethod',
+        'industry_type': 'str',
+        'e_wallet': 'Ptsv2intentsPaymentInformationEWallet'
     }
 
     attribute_map = {
-        'payment_type': 'paymentType'
+        'payment_type': 'paymentType',
+        'tokenized_payment_method': 'tokenizedPaymentMethod',
+        'industry_type': 'industryType',
+        'e_wallet': 'eWallet'
     }
 
-    def __init__(self, payment_type=None):
+    def __init__(self, payment_type=None, tokenized_payment_method=None, industry_type=None, e_wallet=None):
         """
         Ptsv2intentsPaymentInformation - a model defined in Swagger
         """
 
         self._payment_type = None
+        self._tokenized_payment_method = None
+        self._industry_type = None
+        self._e_wallet = None
 
         if payment_type is not None:
           self.payment_type = payment_type
+        if tokenized_payment_method is not None:
+          self.tokenized_payment_method = tokenized_payment_method
+        if industry_type is not None:
+          self.industry_type = industry_type
+        if e_wallet is not None:
+          self.e_wallet = e_wallet
 
     @property
     def payment_type(self):
@@ -67,6 +82,71 @@ class Ptsv2intentsPaymentInformation(object):
         """
 
         self._payment_type = payment_type
+
+    @property
+    def tokenized_payment_method(self):
+        """
+        Gets the tokenized_payment_method of this Ptsv2intentsPaymentInformation.
+
+        :return: The tokenized_payment_method of this Ptsv2intentsPaymentInformation.
+        :rtype: Ptsv2intentsPaymentInformationTokenizedPaymentMethod
+        """
+        return self._tokenized_payment_method
+
+    @tokenized_payment_method.setter
+    def tokenized_payment_method(self, tokenized_payment_method):
+        """
+        Sets the tokenized_payment_method of this Ptsv2intentsPaymentInformation.
+
+        :param tokenized_payment_method: The tokenized_payment_method of this Ptsv2intentsPaymentInformation.
+        :type: Ptsv2intentsPaymentInformationTokenizedPaymentMethod
+        """
+
+        self._tokenized_payment_method = tokenized_payment_method
+
+    @property
+    def industry_type(self):
+        """
+        Gets the industry_type of this Ptsv2intentsPaymentInformation.
+        Indicates the industry type. Possible Values: - \"Events\" - \"Ticketing\" - \"Fuel\" - \"GAMING\" - \"DIGITAL GOODS\" - \"TELCO\" - \"Token Service Providers\" - \"Gambling\" - \"CFDs\" - \"car rental\" - \"hotel\" - \"transportation\" - \"travel package\" - \"Cruise Line\" - \"P2P\" - \"Retail\" - \"Food\" - \"Groceries\" - \"Ride Sharing\" - \"Taxi\" - \"Remittance\" - \"Crypto\" - \"Marketplaces\" 
+
+        :return: The industry_type of this Ptsv2intentsPaymentInformation.
+        :rtype: str
+        """
+        return self._industry_type
+
+    @industry_type.setter
+    def industry_type(self, industry_type):
+        """
+        Sets the industry_type of this Ptsv2intentsPaymentInformation.
+        Indicates the industry type. Possible Values: - \"Events\" - \"Ticketing\" - \"Fuel\" - \"GAMING\" - \"DIGITAL GOODS\" - \"TELCO\" - \"Token Service Providers\" - \"Gambling\" - \"CFDs\" - \"car rental\" - \"hotel\" - \"transportation\" - \"travel package\" - \"Cruise Line\" - \"P2P\" - \"Retail\" - \"Food\" - \"Groceries\" - \"Ride Sharing\" - \"Taxi\" - \"Remittance\" - \"Crypto\" - \"Marketplaces\" 
+
+        :param industry_type: The industry_type of this Ptsv2intentsPaymentInformation.
+        :type: str
+        """
+
+        self._industry_type = industry_type
+
+    @property
+    def e_wallet(self):
+        """
+        Gets the e_wallet of this Ptsv2intentsPaymentInformation.
+
+        :return: The e_wallet of this Ptsv2intentsPaymentInformation.
+        :rtype: Ptsv2intentsPaymentInformationEWallet
+        """
+        return self._e_wallet
+
+    @e_wallet.setter
+    def e_wallet(self, e_wallet):
+        """
+        Sets the e_wallet of this Ptsv2intentsPaymentInformation.
+
+        :param e_wallet: The e_wallet of this Ptsv2intentsPaymentInformation.
+        :type: Ptsv2intentsPaymentInformationEWallet
+        """
+
+        self._e_wallet = e_wallet
 
     def to_dict(self):
         """

@@ -34,7 +34,11 @@ class CreateOrderRequest(object):
         'processing_information': 'Ptsv2intentsProcessingInformation',
         'merchant_information': 'Ptsv2intentsMerchantInformation',
         'payment_information': 'Ptsv2intentsPaymentInformation',
-        'order_information': 'Ptsv2intentsOrderInformation'
+        'order_information': 'Ptsv2intentsOrderInformation',
+        'sender_information': 'Ptsv2intentsSenderInformation',
+        'event_information': 'Ptsv2intentsEventInformation',
+        'travel_information': 'Ptsv2intentsTravelInformation',
+        'recipient_information': 'Ptsv2intentsRecipientInformation'
     }
 
     attribute_map = {
@@ -42,10 +46,14 @@ class CreateOrderRequest(object):
         'processing_information': 'processingInformation',
         'merchant_information': 'merchantInformation',
         'payment_information': 'paymentInformation',
-        'order_information': 'orderInformation'
+        'order_information': 'orderInformation',
+        'sender_information': 'senderInformation',
+        'event_information': 'eventInformation',
+        'travel_information': 'travelInformation',
+        'recipient_information': 'recipientInformation'
     }
 
-    def __init__(self, client_reference_information=None, processing_information=None, merchant_information=None, payment_information=None, order_information=None):
+    def __init__(self, client_reference_information=None, processing_information=None, merchant_information=None, payment_information=None, order_information=None, sender_information=None, event_information=None, travel_information=None, recipient_information=None):
         """
         CreateOrderRequest - a model defined in Swagger
         """
@@ -55,6 +63,10 @@ class CreateOrderRequest(object):
         self._merchant_information = None
         self._payment_information = None
         self._order_information = None
+        self._sender_information = None
+        self._event_information = None
+        self._travel_information = None
+        self._recipient_information = None
 
         if client_reference_information is not None:
           self.client_reference_information = client_reference_information
@@ -66,6 +78,14 @@ class CreateOrderRequest(object):
           self.payment_information = payment_information
         if order_information is not None:
           self.order_information = order_information
+        if sender_information is not None:
+          self.sender_information = sender_information
+        if event_information is not None:
+          self.event_information = event_information
+        if travel_information is not None:
+          self.travel_information = travel_information
+        if recipient_information is not None:
+          self.recipient_information = recipient_information
 
     @property
     def client_reference_information(self):
@@ -171,6 +191,90 @@ class CreateOrderRequest(object):
         """
 
         self._order_information = order_information
+
+    @property
+    def sender_information(self):
+        """
+        Gets the sender_information of this CreateOrderRequest.
+
+        :return: The sender_information of this CreateOrderRequest.
+        :rtype: Ptsv2intentsSenderInformation
+        """
+        return self._sender_information
+
+    @sender_information.setter
+    def sender_information(self, sender_information):
+        """
+        Sets the sender_information of this CreateOrderRequest.
+
+        :param sender_information: The sender_information of this CreateOrderRequest.
+        :type: Ptsv2intentsSenderInformation
+        """
+
+        self._sender_information = sender_information
+
+    @property
+    def event_information(self):
+        """
+        Gets the event_information of this CreateOrderRequest.
+
+        :return: The event_information of this CreateOrderRequest.
+        :rtype: Ptsv2intentsEventInformation
+        """
+        return self._event_information
+
+    @event_information.setter
+    def event_information(self, event_information):
+        """
+        Sets the event_information of this CreateOrderRequest.
+
+        :param event_information: The event_information of this CreateOrderRequest.
+        :type: Ptsv2intentsEventInformation
+        """
+
+        self._event_information = event_information
+
+    @property
+    def travel_information(self):
+        """
+        Gets the travel_information of this CreateOrderRequest.
+
+        :return: The travel_information of this CreateOrderRequest.
+        :rtype: Ptsv2intentsTravelInformation
+        """
+        return self._travel_information
+
+    @travel_information.setter
+    def travel_information(self, travel_information):
+        """
+        Sets the travel_information of this CreateOrderRequest.
+
+        :param travel_information: The travel_information of this CreateOrderRequest.
+        :type: Ptsv2intentsTravelInformation
+        """
+
+        self._travel_information = travel_information
+
+    @property
+    def recipient_information(self):
+        """
+        Gets the recipient_information of this CreateOrderRequest.
+
+        :return: The recipient_information of this CreateOrderRequest.
+        :rtype: Ptsv2intentsRecipientInformation
+        """
+        return self._recipient_information
+
+    @recipient_information.setter
+    def recipient_information(self, recipient_information):
+        """
+        Sets the recipient_information of this CreateOrderRequest.
+
+        :param recipient_information: The recipient_information of this CreateOrderRequest.
+        :type: Ptsv2intentsRecipientInformation
+        """
+
+        self._recipient_information = recipient_information
 
     def to_dict(self):
         """

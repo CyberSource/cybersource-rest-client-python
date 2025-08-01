@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **exchange_rate** | **str** | Exchange rate returned by the DCC service. Includes a decimal point and a maximum of 4 decimal places.  | [optional] 
 **exchange_rate_time_stamp** | **str** | Time stamp for the exchange rate. This value is returned by the DCC service.  Format: &#x60;YYYYMMDD~HH:MM&#x60;  where ~ denotes a space.  | [optional] 
 **settlement_currency** | **str** | This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer to bill the cardholder&#39;s account. This field is returned for OCT transactions.  | [optional] 
+**invoice_amount** | **str** | Invoice amount.  The invoice amount issued by the Merchant to the Cardholder, which includes VAT (excluding items such as TIPS or CASHBACK). For transactions that do not have applicable Benefit Laws, the field may be entered as zeros.  This field is only applicable for Uruguay market.  Example: 100.00  Uruguay  The value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR9 - Position: 7-18 - Field: Invoice Amount  | [optional] 
 **giftwrap_amount** | **str** | giftwrap amount (RFU). | [optional] 
 **handling_amount** | **str** | handling amount (RFU) | [optional] 
 **shipping_amount** | **str** | shipping amount (RFU) | [optional] 

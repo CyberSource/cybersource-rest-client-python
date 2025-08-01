@@ -44,7 +44,8 @@ class Ptsv2paymentsInstallmentInformation(object):
         'grace_period_duration_type': 'str',
         'first_installment_amount': 'str',
         'validation_indicator': 'str',
-        'identifier': 'str'
+        'identifier': 'str',
+        'annual_interest_rate': 'str'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class Ptsv2paymentsInstallmentInformation(object):
         'grace_period_duration_type': 'gracePeriodDurationType',
         'first_installment_amount': 'firstInstallmentAmount',
         'validation_indicator': 'validationIndicator',
-        'identifier': 'identifier'
+        'identifier': 'identifier',
+        'annual_interest_rate': 'annualInterestRate'
     }
 
-    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None, validation_indicator=None, identifier=None):
+    def __init__(self, amount=None, frequency=None, plan_type=None, sequence=None, total_amount=None, total_count=None, first_installment_date=None, invoice_data=None, payment_type=None, eligibility_inquiry=None, grace_period_duration=None, grace_period_duration_type=None, first_installment_amount=None, validation_indicator=None, identifier=None, annual_interest_rate=None):
         """
         Ptsv2paymentsInstallmentInformation - a model defined in Swagger
         """
@@ -85,6 +87,7 @@ class Ptsv2paymentsInstallmentInformation(object):
         self._first_installment_amount = None
         self._validation_indicator = None
         self._identifier = None
+        self._annual_interest_rate = None
 
         if amount is not None:
           self.amount = amount
@@ -116,6 +119,8 @@ class Ptsv2paymentsInstallmentInformation(object):
           self.validation_indicator = validation_indicator
         if identifier is not None:
           self.identifier = identifier
+        if annual_interest_rate is not None:
+          self.annual_interest_rate = annual_interest_rate
 
     @property
     def amount(self):
@@ -461,6 +466,29 @@ class Ptsv2paymentsInstallmentInformation(object):
         """
 
         self._identifier = identifier
+
+    @property
+    def annual_interest_rate(self):
+        """
+        Gets the annual_interest_rate of this Ptsv2paymentsInstallmentInformation.
+        Annual interest rate.  This field is returned only for two kinds of installment payments on Visa Platform Connect: - Crediario with Visa in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments. - Mastercard in all countries except Brazil, Croatia, Georgia, and Greece.   Example: A value of 1.0 specifies 1%.  Example: A value of 4.0 specifies 4%.  #### Brazil The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate   #### Other Countries The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 58-62 SCMP API Fields| 216 - Field: Mastercard Annual Percentage Rate 
+
+        :return: The annual_interest_rate of this Ptsv2paymentsInstallmentInformation.
+        :rtype: str
+        """
+        return self._annual_interest_rate
+
+    @annual_interest_rate.setter
+    def annual_interest_rate(self, annual_interest_rate):
+        """
+        Sets the annual_interest_rate of this Ptsv2paymentsInstallmentInformation.
+        Annual interest rate.  This field is returned only for two kinds of installment payments on Visa Platform Connect: - Crediario with Visa in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments. - Mastercard in all countries except Brazil, Croatia, Georgia, and Greece.   Example: A value of 1.0 specifies 1%.  Example: A value of 4.0 specifies 4%.  #### Brazil The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR9 - Position: 151-157 - Field: Annual Interest Rate   #### Other Countries The value for this field corresponds to the following data in the TC 33 capture file: - Record: CP01 TCR5 - Position: 58-62 SCMP API Fields| 216 - Field: Mastercard Annual Percentage Rate 
+
+        :param annual_interest_rate: The annual_interest_rate of this Ptsv2paymentsInstallmentInformation.
+        :type: str
+        """
+
+        self._annual_interest_rate = annual_interest_rate
 
     def to_dict(self):
         """

@@ -31,6 +31,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
     """
     swagger_types = {
         'gift_wrap_amount': 'str',
+        'invoice_amount': 'str',
         'total_amount': 'str',
         'sub_total_amount': 'str',
         'currency': 'str',
@@ -64,6 +65,7 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
 
     attribute_map = {
         'gift_wrap_amount': 'giftWrapAmount',
+        'invoice_amount': 'invoiceAmount',
         'total_amount': 'totalAmount',
         'sub_total_amount': 'subTotalAmount',
         'currency': 'currency',
@@ -95,12 +97,13 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         'anticipated_amount': 'anticipatedAmount'
     }
 
-    def __init__(self, gift_wrap_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, oct_surcharge=None, order=None, anticipated_amount=None):
+    def __init__(self, gift_wrap_amount=None, invoice_amount=None, total_amount=None, sub_total_amount=None, currency=None, discount_amount=None, duty_amount=None, gratuity_amount=None, tax_amount=None, national_tax_included=None, tax_applied_after_discount=None, tax_applied_level=None, tax_type_code=None, freight_amount=None, foreign_amount=None, foreign_currency=None, exchange_rate=None, exchange_rate_time_stamp=None, surcharge=None, settlement_amount=None, settlement_currency=None, amex_additional_amounts=None, tax_details=None, service_fee_amount=None, original_amount=None, original_currency=None, cashback_amount=None, currency_conversion=None, oct_surcharge=None, order=None, anticipated_amount=None):
         """
         Ptsv2paymentsOrderInformationAmountDetails - a model defined in Swagger
         """
 
         self._gift_wrap_amount = None
+        self._invoice_amount = None
         self._total_amount = None
         self._sub_total_amount = None
         self._currency = None
@@ -133,6 +136,8 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
 
         if gift_wrap_amount is not None:
           self.gift_wrap_amount = gift_wrap_amount
+        if invoice_amount is not None:
+          self.invoice_amount = invoice_amount
         if total_amount is not None:
           self.total_amount = total_amount
         if sub_total_amount is not None:
@@ -214,6 +219,29 @@ class Ptsv2paymentsOrderInformationAmountDetails(object):
         """
 
         self._gift_wrap_amount = gift_wrap_amount
+
+    @property
+    def invoice_amount(self):
+        """
+        Gets the invoice_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Invoice amount.  The invoice amount issued by the Merchant to the Cardholder, which includes VAT (excluding items such as TIPS or CASHBACK). For transactions that do not have applicable Benefit Laws, the field may be entered as zeros.  This field is only applicable for Uruguay market.  Example: 100.00  Uruguay  The value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR9 - Position: 7-18 - Field: Invoice Amount 
+
+        :return: The invoice_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :rtype: str
+        """
+        return self._invoice_amount
+
+    @invoice_amount.setter
+    def invoice_amount(self, invoice_amount):
+        """
+        Sets the invoice_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        Invoice amount.  The invoice amount issued by the Merchant to the Cardholder, which includes VAT (excluding items such as TIPS or CASHBACK). For transactions that do not have applicable Benefit Laws, the field may be entered as zeros.  This field is only applicable for Uruguay market.  Example: 100.00  Uruguay  The value for this field corresponds to the following data in the TC 33 capture file:  - Record: CP01 TCR9 - Position: 7-18 - Field: Invoice Amount 
+
+        :param invoice_amount: The invoice_amount of this Ptsv2paymentsOrderInformationAmountDetails.
+        :type: str
+        """
+
+        self._invoice_amount = invoice_amount
 
     @property
     def total_amount(self):

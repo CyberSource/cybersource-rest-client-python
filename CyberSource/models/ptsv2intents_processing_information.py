@@ -32,16 +32,40 @@ class Ptsv2intentsProcessingInformation(object):
     swagger_types = {
         'processing_instruction': 'str',
         'authorization_options': 'Ptsv2intentsProcessingInformationAuthorizationOptions',
-        'action_list': 'list[str]'
+        'action_list': 'list[str]',
+        'high_risk_transaction_flag': 'str',
+        'transaction_retry': 'str',
+        'last_one_hr_transaction_count': 'str',
+        'last_one_day_transaction_count': 'str',
+        'last_three_months_txn_count': 'str',
+        'total_transaction_count': 'str',
+        'pin_verification': 'str',
+        'face_id_verification': 'str',
+        'user_passed_verification': 'str',
+        'ip_address': 'str',
+        'transaction_date': 'str',
+        'tangible': 'str'
     }
 
     attribute_map = {
         'processing_instruction': 'processingInstruction',
         'authorization_options': 'authorizationOptions',
-        'action_list': 'actionList'
+        'action_list': 'actionList',
+        'high_risk_transaction_flag': 'highRiskTransactionFlag',
+        'transaction_retry': 'transactionRetry',
+        'last_one_hr_transaction_count': 'lastOneHrTransactionCount',
+        'last_one_day_transaction_count': 'lastOneDayTransactionCount',
+        'last_three_months_txn_count': 'lastThreeMonthsTxnCount',
+        'total_transaction_count': 'totalTransactionCount',
+        'pin_verification': 'pinVerification',
+        'face_id_verification': 'faceIdVerification',
+        'user_passed_verification': 'userPassedVerification',
+        'ip_address': 'ipAddress',
+        'transaction_date': 'transactionDate',
+        'tangible': 'tangible'
     }
 
-    def __init__(self, processing_instruction=None, authorization_options=None, action_list=None):
+    def __init__(self, processing_instruction=None, authorization_options=None, action_list=None, high_risk_transaction_flag=None, transaction_retry=None, last_one_hr_transaction_count=None, last_one_day_transaction_count=None, last_three_months_txn_count=None, total_transaction_count=None, pin_verification=None, face_id_verification=None, user_passed_verification=None, ip_address=None, transaction_date=None, tangible=None):
         """
         Ptsv2intentsProcessingInformation - a model defined in Swagger
         """
@@ -49,6 +73,18 @@ class Ptsv2intentsProcessingInformation(object):
         self._processing_instruction = None
         self._authorization_options = None
         self._action_list = None
+        self._high_risk_transaction_flag = None
+        self._transaction_retry = None
+        self._last_one_hr_transaction_count = None
+        self._last_one_day_transaction_count = None
+        self._last_three_months_txn_count = None
+        self._total_transaction_count = None
+        self._pin_verification = None
+        self._face_id_verification = None
+        self._user_passed_verification = None
+        self._ip_address = None
+        self._transaction_date = None
+        self._tangible = None
 
         if processing_instruction is not None:
           self.processing_instruction = processing_instruction
@@ -56,6 +92,30 @@ class Ptsv2intentsProcessingInformation(object):
           self.authorization_options = authorization_options
         if action_list is not None:
           self.action_list = action_list
+        if high_risk_transaction_flag is not None:
+          self.high_risk_transaction_flag = high_risk_transaction_flag
+        if transaction_retry is not None:
+          self.transaction_retry = transaction_retry
+        if last_one_hr_transaction_count is not None:
+          self.last_one_hr_transaction_count = last_one_hr_transaction_count
+        if last_one_day_transaction_count is not None:
+          self.last_one_day_transaction_count = last_one_day_transaction_count
+        if last_three_months_txn_count is not None:
+          self.last_three_months_txn_count = last_three_months_txn_count
+        if total_transaction_count is not None:
+          self.total_transaction_count = total_transaction_count
+        if pin_verification is not None:
+          self.pin_verification = pin_verification
+        if face_id_verification is not None:
+          self.face_id_verification = face_id_verification
+        if user_passed_verification is not None:
+          self.user_passed_verification = user_passed_verification
+        if ip_address is not None:
+          self.ip_address = ip_address
+        if transaction_date is not None:
+          self.transaction_date = transaction_date
+        if tangible is not None:
+          self.tangible = tangible
 
     @property
     def processing_instruction(self):
@@ -123,6 +183,282 @@ class Ptsv2intentsProcessingInformation(object):
         """
 
         self._action_list = action_list
+
+    @property
+    def high_risk_transaction_flag(self):
+        """
+        Gets the high_risk_transaction_flag of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction is flagged as high risk. 
+
+        :return: The high_risk_transaction_flag of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._high_risk_transaction_flag
+
+    @high_risk_transaction_flag.setter
+    def high_risk_transaction_flag(self, high_risk_transaction_flag):
+        """
+        Sets the high_risk_transaction_flag of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction is flagged as high risk. 
+
+        :param high_risk_transaction_flag: The high_risk_transaction_flag of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._high_risk_transaction_flag = high_risk_transaction_flag
+
+    @property
+    def transaction_retry(self):
+        """
+        Gets the transaction_retry of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction is a retry. 
+
+        :return: The transaction_retry of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_retry
+
+    @transaction_retry.setter
+    def transaction_retry(self, transaction_retry):
+        """
+        Sets the transaction_retry of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction is a retry. 
+
+        :param transaction_retry: The transaction_retry of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_retry = transaction_retry
+
+    @property
+    def last_one_hr_transaction_count(self):
+        """
+        Gets the last_one_hr_transaction_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last one hour. 
+
+        :return: The last_one_hr_transaction_count of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._last_one_hr_transaction_count
+
+    @last_one_hr_transaction_count.setter
+    def last_one_hr_transaction_count(self, last_one_hr_transaction_count):
+        """
+        Sets the last_one_hr_transaction_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last one hour. 
+
+        :param last_one_hr_transaction_count: The last_one_hr_transaction_count of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._last_one_hr_transaction_count = last_one_hr_transaction_count
+
+    @property
+    def last_one_day_transaction_count(self):
+        """
+        Gets the last_one_day_transaction_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last one day. 
+
+        :return: The last_one_day_transaction_count of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._last_one_day_transaction_count
+
+    @last_one_day_transaction_count.setter
+    def last_one_day_transaction_count(self, last_one_day_transaction_count):
+        """
+        Sets the last_one_day_transaction_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last one day. 
+
+        :param last_one_day_transaction_count: The last_one_day_transaction_count of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._last_one_day_transaction_count = last_one_day_transaction_count
+
+    @property
+    def last_three_months_txn_count(self):
+        """
+        Gets the last_three_months_txn_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last three months. 
+
+        :return: The last_three_months_txn_count of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._last_three_months_txn_count
+
+    @last_three_months_txn_count.setter
+    def last_three_months_txn_count(self, last_three_months_txn_count):
+        """
+        Sets the last_three_months_txn_count of this Ptsv2intentsProcessingInformation.
+        The number of transactions in the last three months. 
+
+        :param last_three_months_txn_count: The last_three_months_txn_count of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._last_three_months_txn_count = last_three_months_txn_count
+
+    @property
+    def total_transaction_count(self):
+        """
+        Gets the total_transaction_count of this Ptsv2intentsProcessingInformation.
+        The total number of transactions. 
+
+        :return: The total_transaction_count of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._total_transaction_count
+
+    @total_transaction_count.setter
+    def total_transaction_count(self, total_transaction_count):
+        """
+        Sets the total_transaction_count of this Ptsv2intentsProcessingInformation.
+        The total number of transactions. 
+
+        :param total_transaction_count: The total_transaction_count of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._total_transaction_count = total_transaction_count
+
+    @property
+    def pin_verification(self):
+        """
+        Gets the pin_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if PIN verification is required. 
+
+        :return: The pin_verification of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._pin_verification
+
+    @pin_verification.setter
+    def pin_verification(self, pin_verification):
+        """
+        Sets the pin_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if PIN verification is required. 
+
+        :param pin_verification: The pin_verification of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._pin_verification = pin_verification
+
+    @property
+    def face_id_verification(self):
+        """
+        Gets the face_id_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if face ID verification is required. 
+
+        :return: The face_id_verification of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._face_id_verification
+
+    @face_id_verification.setter
+    def face_id_verification(self, face_id_verification):
+        """
+        Sets the face_id_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if face ID verification is required. 
+
+        :param face_id_verification: The face_id_verification of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._face_id_verification = face_id_verification
+
+    @property
+    def user_passed_verification(self):
+        """
+        Gets the user_passed_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if the user passed verification. 
+
+        :return: The user_passed_verification of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._user_passed_verification
+
+    @user_passed_verification.setter
+    def user_passed_verification(self, user_passed_verification):
+        """
+        Sets the user_passed_verification of this Ptsv2intentsProcessingInformation.
+        Indicates if the user passed verification. 
+
+        :param user_passed_verification: The user_passed_verification of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._user_passed_verification = user_passed_verification
+
+    @property
+    def ip_address(self):
+        """
+        Gets the ip_address of this Ptsv2intentsProcessingInformation.
+        The IP address of the user. 
+
+        :return: The ip_address of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._ip_address
+
+    @ip_address.setter
+    def ip_address(self, ip_address):
+        """
+        Sets the ip_address of this Ptsv2intentsProcessingInformation.
+        The IP address of the user. 
+
+        :param ip_address: The ip_address of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._ip_address = ip_address
+
+    @property
+    def transaction_date(self):
+        """
+        Gets the transaction_date of this Ptsv2intentsProcessingInformation.
+        The date of the transaction. 
+
+        :return: The transaction_date of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._transaction_date
+
+    @transaction_date.setter
+    def transaction_date(self, transaction_date):
+        """
+        Sets the transaction_date of this Ptsv2intentsProcessingInformation.
+        The date of the transaction. 
+
+        :param transaction_date: The transaction_date of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._transaction_date = transaction_date
+
+    @property
+    def tangible(self):
+        """
+        Gets the tangible of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction involves tangible goods. 
+
+        :return: The tangible of this Ptsv2intentsProcessingInformation.
+        :rtype: str
+        """
+        return self._tangible
+
+    @tangible.setter
+    def tangible(self, tangible):
+        """
+        Sets the tangible of this Ptsv2intentsProcessingInformation.
+        Indicates if the transaction involves tangible goods. 
+
+        :param tangible: The tangible of this Ptsv2intentsProcessingInformation.
+        :type: str
+        """
+
+        self._tangible = tangible
 
     def to_dict(self):
         """
