@@ -24,15 +24,19 @@ class HTTPSignatureToken(TokenGeneration):
         self.http_merchant_id = None
         self.http_get_id = None
         self.date_time = None
+        self.request_target = None
+        self.request_json_path_data = None
 
-    def http_signature_token(self, mconfig,date_time):
+    def http_signature_token(self, mconfig, date_time, request_type_method, request_target=None, request_json_path_data=None):
 
         self.merchant_config_sighead = mconfig
         self.merchant_key_id_sig = str(mconfig.merchant_keyid)
         self.merchant_secret_key_sig = str(mconfig.merchant_secretkey)
-        self.http_method_sig = mconfig.request_type_method
+        self.http_method_sig = request_type_method
         self.http_merchant_id = mconfig.merchant_id
         self.date_time = date_time
+        self.request_target = request_target
+        self.request_json_path_data = request_json_path_data
 		
 
     def get_token(self):
@@ -68,7 +72,9 @@ class HTTPSignatureToken(TokenGeneration):
         signature = get_signature_paramobj.get_signature_parameter(self.merchant_config_sighead,
                                                                    self.merchant_secret_key_sig,
                                                                    self.http_merchant_id, self.http_method_sig,
-                                                             self.date_time)
+                                                                   self.date_time,
+                                                                   self.request_target,
+                                                                   self.request_json_path_data)
 
         header_list.append(
             GlobalLabelParameters.SIGNATURE_HEADER + signature + "\"")
