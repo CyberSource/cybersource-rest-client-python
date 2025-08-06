@@ -179,7 +179,7 @@ class ApiClient(object):
             # header_params['v-c-solution-id'] = self.mconfig.solution_id
 
         auth = Authorization()
-        token = auth.get_token(self.mconfig, self.mconfig.get_time(), method, request_target, body)
+        token = auth.get_token(self.mconfig, time, method, request_target, body)
         if self.mconfig.authentication_type.upper() == GlobalLabelParameters.HTTP.upper():
             header_params['Accept-Encoding'] = '*'
             header_params['v-c-merchant-id'] = self.mconfig.merchant_id
